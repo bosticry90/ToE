@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+    "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+)
+A_TRANSPORT_FUNCTIONAL_EMBEDDING_REVIEW_TARGET = (
     "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result"
 )
 A_TRANSPORT_FUNCTIONAL_EMBEDDING_PACKET_TARGET = (
@@ -1550,7 +1553,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+    "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1567,7 +1570,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeATransportConsistencyCKFunctionalEmbeddingPacketResultReview.lean"
+    / "ToeNativeATransportConsistencyCKAdmissibilityRuleCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3218,10 +3221,17 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_"
         "NO_ACTION_VARIATION"
     )
+    a_transport_functional_embedding_short_result = (
+        "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+    )
     a_transport_functional_embedding_review_result = (
         "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_"
         "RESULT_REVIEW_ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_"
         "OR_PROMOTION"
+    )
+    a_transport_closeout_result = (
+        "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSED_AS_"
+        "VACUUM_U1_DERIVATION_CHAIN_STABILITY_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
     )
 
     a_transport_active_workstream = active_workstream(payload)
@@ -3234,35 +3244,35 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_transport_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_"
-        "RESULT_REVIEW_20260623_v0.json"
+        "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSEOUT_"
+        "20260623_v0.json"
     )
     assert a_transport_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert a_transport_active_workstream["outcome_id"] == (
+    assert a_transport_active_workstream["outcome_id"] == a_transport_closeout_result
+    assert a_transport_active_workstream["packet_result"] == "CLOSEOUT_ACCEPTED"
+    assert a_transport_active_workstream["closeout_result"] == a_transport_closeout_result
+    assert a_transport_active_workstream["functional_embedding_review_outcome"] == (
         a_transport_functional_embedding_review_result
     )
-    assert a_transport_active_workstream["packet_result"] == "REVIEW_ACCEPTED"
-    assert a_transport_active_workstream["review_result"] == (
+    assert a_transport_active_workstream["functional_embedding_review_result"] == (
         a_transport_functional_embedding_review_result
     )
     assert a_transport_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_transport_consistency_ck_functional_embedding_result_review_"
-        "accepts_admissibility_only_route_no_action_variation_or_promotion"
+        "toe_native_A_transport_consistency_ck_admissibility_rule_closeout_closes_"
+        "vacuum_u1_derivation_chain_stability_rule_no_action_variation_or_promotion"
     )
     assert a_transport_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_transport_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_transport_consistency_ck_admissibility_rule_closeout_preparation"
-    assert a_transport_active_workstream["result_token"] == (
-        a_transport_functional_embedding_review_result
-    )
+    ] == "toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_preparation"
+    assert a_transport_active_workstream["result_token"] == a_transport_closeout_result
     assert a_transport_active_workstream["embedding_packet_outcome"] == (
         a_transport_functional_embedding_packet_result
     )
     assert a_transport_active_workstream["embedding_packet_result"] == (
-        "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+        a_transport_functional_embedding_short_result
     )
     assert a_transport_active_workstream["selected_A_ck_option_class"] == (
         "transport_consistency_constraint"
@@ -3323,15 +3333,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> "
         "C_source^A -> C_bridge^A -> bounded residual/regime-facing route"
     )
-    assert a_transport_active_workstream["embedding_route_count"] == 3
-    assert a_transport_active_workstream["review_criteria_count"] == 13
-    assert a_transport_active_workstream["review_criteria_accepted_count"] == 13
+    assert a_transport_active_workstream["closeout_criteria_count"] == 13
+    assert a_transport_active_workstream["closeout_criteria_accepted_count"] == 13
+    assert a_transport_active_workstream[
+        "A_ck_admissibility_rule_family_contains_count"
+    ] == 3
     assert a_transport_active_workstream["closed_A_ck_rule_roles"] == [
         "source admissibility",
         "bridge admissibility",
         "transport consistency",
     ]
-    assert a_transport_active_workstream["closed_A_ck_rule_family_count_after_review"] == 3
     assert a_transport_active_workstream["selected_embedding_route_id"] == (
         "A_transport_ck_admissibility_only_route"
     )
@@ -3345,43 +3356,57 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "direct_dynamical_law_interpretation_id"
     ] == "A_transport_ck_direct_dynamical_law_interpretation"
     assert a_transport_active_workstream[
-        "third_A_relevant_ck_admissibility_rule_candidate_classification"
-    ] == "third_A_relevant_ck_vacuum_u1_transport_consistency_rule_candidate"
+        "transport_closeout_rule_classification"
+    ] == "vacuum U(1) transport-consistency rule candidate"
+    assert a_transport_active_workstream["transport_rule_role"] == (
+        "derivation-chain stability rule"
+    )
     for key in [
         "accepted",
         "prepared",
-        "review_prepared",
-        "functional_embedding_result_review_prepared",
-        "functional_embedding_result_review_accepted",
-        "review_accepts_admissibility_only_route",
-        "packet_result_review_accepts_admissibility_only_route",
-        "admissibility_rule_closeout_authorized",
-        "transport_admissibility_rule_closeout_authorized",
-        "functional_embedding_packet_prepared",
-        "functional_embedding_options_recorded",
+        "admissibility_rule_closeout_prepared",
+        "admissibility_rule_closeout_accepted",
+        "third_A_relevant_ck_admissibility_rule_candidate_closed",
+        "A_transport_consistency_rule_candidate_closed",
+        "vacuum_U1_transport_consistency_rule_closed",
+        "derivation_chain_stability_rule_closed",
+        "transport_admissibility_rule_closed_as_vacuum_U1_derivation_chain_stability_rule",
+        "candidate_recorded_as_rule_only",
         "admissibility_only_route_selected",
         "admissibility_only_interpretation_retained",
         "constraint_as_admissibility_rule_selected",
-        "transport_constraint_preserved",
-        "transport_tuple_preserved",
-        "transport_components_preserved",
-        "source_and_bridge_context_retained",
+        "transport_tuple_carried_forward",
+        "transport_constraint_carried_forward",
+        "transport_components_carried_forward",
+        "transport_components_preserved_unproved",
+        "source_and_bridge_context_preserved",
         "vacuum_u1_scope_preserved",
-        "known_A_chain_retained",
-        "lagrange_multiplier_route_recorded",
+        "known_A_chain_preserved",
         "lagrange_multiplier_route_blocked",
-        "penalty_route_recorded",
         "penalty_route_unlicensed",
-        "direct_dynamical_law_interpretation_recorded",
         "direct_dynamical_law_interpretation_blocked",
         "dynamical_action_embedding_not_assumed",
-        "penalty_would_change_dynamics",
+        "three_rule_family_synthesis_packet_authorized",
+        "source_admissibility_rule_synthesis_entry_preserved",
+        "bridge_admissibility_rule_synthesis_entry_preserved",
+        "transport_consistency_rule_synthesis_entry_preserved",
+        "A_ck_source_bridge_transport_triad_ready_for_synthesis",
+        "source_admissibility_rule_closed",
+        "bridge_admissibility_rule_closed",
+        "transport_consistency_rule_closed",
     ]:
         assert a_transport_active_workstream[key] == "yes", key
     for key in [
-        "admissibility_rule_closeout_prepared",
+        "candidate_recorded_as_action_term",
+        "candidate_recorded_as_new_physical_law",
+        "candidate_recorded_as_new_dynamical_law",
+        "constraint_as_action_term_selected",
+        "dynamical_action_embedding_selected",
+        "penalty_route_licensed",
         "direct_dynamical_law_interpretation_selected",
-        "transport_components_proved",
+        "three_rule_family_synthesis_packet_prepared",
+        "A_ck_source_bridge_transport_rule_family_synthesized",
+        "another_A_route_selected",
         "transport_candidate_functional_defined",
         "transport_candidate_functional_selected",
         "transport_candidate_recorded_as_action_term",
@@ -3408,7 +3433,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "ck_action_embedding_selected",
         "C_k_action_embedding_constructed",
         "candidate_action_insertion_executed",
-        "constraint_as_action_term_selected",
         "constraint_term_selected",
         "ck_variation_executed",
         "C_k_variation_executed",
@@ -3446,22 +3470,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert a_transport_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "accepts the admissibility-only route C_transport^A = 0",
-        "not as an action term or dynamical law",
-        "preserves C_transport^A = 0",
-        "keeps the multiplier/action route blocked",
-        "keeps the penalty route unlicensed",
-        "keeps direct dynamical-law interpretation blocked",
-        "does not functionalize C_transport^A",
-        "does not define a fully concrete C_transport^A functional",
-        "does not embed C_transport^A into the action",
-        "does not define a C_k action term",
-        "does not select Lambda_transport",
-        "does not select transport-map domains/codomains",
-        "does not license the penalty route",
-        "does not interpret the candidate as a direct dynamical law",
-        "does not execute C_k variation",
+        "closes C_transport^A = 0 only as an admissibility-only",
+        "route-stability rule",
+        "not an action term",
+        "not a dynamical law",
         "does not prove transport consistency",
+        "does not prove any transport component",
+        "does not prove route-chain compatibility",
+        "does not define a concrete C_transport^A functional",
+        "does not embed C_transport^A into the action",
+        "does not execute C_k variation",
         "does not derive J^nu",
         "does not derive sourced Maxwell",
         "does not prove matter/current exchange",
@@ -3470,13 +3488,40 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "does not authorize Phase 2",
         "records no Phase 2 authorization",
         "does not promote the master action",
+        LIVE_TARGET,
         "NOT_RUN",
     ]:
         assert phrase in a_transport_active_workstream[
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_transport_embedding_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_transport_closeout = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_transport_closeout["status"] == "paused"
+    assert consumed_a_transport_closeout["packet_result"] == "CLOSEOUT_ACCEPTED"
+    assert consumed_a_transport_closeout["outcome_id"] == a_transport_closeout_result
+    assert consumed_a_transport_closeout["closeout_result"] == a_transport_closeout_result
+    assert consumed_a_transport_closeout["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_transport_closeout[
+        "selected_next_target_kind"
+    ] == "toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_preparation"
+    assert consumed_a_transport_closeout[
+        "three_rule_family_synthesis_packet_authorized"
+    ] == "yes"
+    assert consumed_a_transport_closeout[
+        "three_rule_family_synthesis_packet_prepared"
+    ] == "no"
+    assert consumed_a_transport_closeout["transport_consistency_rule_closed"] == "yes"
+    assert consumed_a_transport_closeout["transport_consistency_proved"] == "no"
+    assert consumed_a_transport_closeout["C_k_variation_executed"] == "no"
+    assert consumed_a_transport_closeout["J_nu_derived"] == "no"
+    assert consumed_a_transport_closeout["sourced_maxwell_equation_derived"] == "no"
+    assert consumed_a_transport_closeout["full_em_closure_claimed"] == "no"
+    assert consumed_a_transport_closeout["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_transport_closeout["master_action_promoted"] == "no"
+
+    consumed_a_transport_embedding_review = _workstream(
+        payload, A_TRANSPORT_FUNCTIONAL_EMBEDDING_REVIEW_TARGET
+    )
     assert consumed_a_transport_embedding_review["status"] == "paused"
     assert consumed_a_transport_embedding_review["packet_result"] == "REVIEW_ACCEPTED"
     assert consumed_a_transport_embedding_review["outcome_id"] == (
@@ -3485,7 +3530,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_transport_embedding_review["review_result"] == (
         a_transport_functional_embedding_review_result
     )
-    assert consumed_a_transport_embedding_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_transport_embedding_review["selected_next_target"] == (
+        PREVIOUS_LIVE_TARGET
+    )
     assert consumed_a_transport_embedding_review[
         "selected_next_target_kind"
     ] == "toe_native_A_transport_consistency_ck_admissibility_rule_closeout_preparation"
@@ -3525,7 +3572,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_transport_embedding["outcome_id"] == (
         a_transport_functional_embedding_packet_result
     )
-    assert consumed_a_transport_embedding["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_transport_embedding["selected_next_target"] == (
+        A_TRANSPORT_FUNCTIONAL_EMBEDDING_REVIEW_TARGET
+    )
     assert consumed_a_transport_embedding["transport_candidate_id"] == (
         "A_transport_derivation_chain_stability_ck_candidate"
     )

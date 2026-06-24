@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A transport-consistency C_k functional-embedding result review accepts C_transport^A = 0 with tuple C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A) only as an admissibility-only vacuum U(1) derivation-chain stability rule after the closed source and bridge rules C_source^A = 0 and C_bridge^A = 0. It selects only the admissibility-only route, keeps the multiplier/action route blocked, keeps the penalty route unlicensed, keeps direct dynamical-law interpretation blocked, and authorizes only the transport admissibility-rule closeout. It proves no transport component, transport consistency, or route-chain compatibility, defines no concrete C_transport^A functional, embeds no C_k action term, executes no C_k variation, derives no J^nu or sourced Maxwell route, proves no matter/current exchange, closes no EM or QFT-GR seam, authorizes no semiclassical coupling or Phase 2, claims no empirical validation, and promotes no master action."
+        "ToE-native A transport-consistency C_k admissibility-rule closeout closes C_transport^A = 0 with tuple C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A) only as an admissibility-only vacuum U(1) derivation-chain stability / route-stability rule after the closed source and bridge rules C_source^A = 0 and C_bridge^A = 0. It keeps the multiplier/action route blocked, keeps the penalty route unlicensed, keeps direct dynamical-law interpretation blocked, and authorizes only the A/C_k source-bridge-transport rule-family synthesis packet. It proves no transport component, transport consistency, or route-chain compatibility, defines no concrete C_transport^A functional, embeds no C_k action term, executes no C_k variation, derives no J^nu or sourced Maxwell route, proves no matter/current exchange, closes no EM or QFT-GR seam, authorizes no semiclassical coupling or Phase 2, claims no empirical validation, and promotes no master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+        "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a closed admissibility-only source rule C_source^{A,nu}[g,A] = 0, a closed bridge-admissibility rule C_bridge^A = 0, and a reviewed A transport-consistency C_k functional-embedding packet accepting C_transport^A = 0 only as an admissibility-only vacuum U(1) derivation-chain stability rule. The review keeps multiplier/action and penalty routes blocked or unlicensed, blocks direct dynamical-law interpretation, and authorizes only transport admissibility-rule closeout. No concrete C_transport^A functional, transport proof, route-chain compatibility theorem, bridge admissibility proof, route-alignment verification, full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a closed admissibility-only source rule C_source^{A,nu}[g,A] = 0, a closed bridge-admissibility rule C_bridge^A = 0, and a closed A transport-consistency C_k admissibility rule C_transport^A = 0 only as an admissibility-only vacuum U(1) derivation-chain stability / route-stability rule. The closeout keeps multiplier/action and penalty routes blocked or unlicensed, blocks direct dynamical-law interpretation, and authorizes only A/C_k source-bridge-transport rule-family synthesis. No concrete C_transport^A functional, transport proof, route-chain compatibility theorem, bridge admissibility proof, route-alignment verification, full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+        "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A transport embedding review. -/
+/-- Previous live target consumed by the ToE-native A transport closeout. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result"
-
-/-- Current live target after the ToE-native A transport embedding review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+
+/-- Current live target after the ToE-native A transport closeout. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
+    "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
