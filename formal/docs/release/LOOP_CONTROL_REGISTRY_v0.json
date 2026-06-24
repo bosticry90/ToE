@@ -1,5 +1,5 @@
 {
-  "active_lane": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+  "active_lane": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
   "allowed_statuses": [
     "active",
     "retained",
@@ -12,7 +12,7 @@
   ],
   "authority_boundary": "Focused validation surface only; not enrolled in GOVERNANCE_TEST_MANIFEST_v1.json until promotion escrow passes.",
   "candidate_live_next_targets": [
-    "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
+    "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -224,7 +224,8 @@
     "prepare_toe_native_A_bridge_admissibility_ck_admissibility_rule_closeout",
     "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
     "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
-    "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result"
+    "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+    "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
   ],
   "consumed_targets": [
     {
@@ -779,6 +780,14 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
       "target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
       "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+    },
+    {
+      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+      "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+      "target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     }
   ],
   "controls": [
@@ -1141,9 +1150,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+    "active_lane": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
     "candidate_live_next_targets": [
-      "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
+      "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result"
     ],
     "completed_targets": [
       "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result",
@@ -1340,7 +1349,8 @@
       "review_toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result",
       "prepare_toe_native_A_bridge_admissibility_ck_admissibility_rule_closeout",
       "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
-      "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result"
+      "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+      "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
     ],
     "consumed_targets": [
       {
@@ -2006,6 +2016,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
         "target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
         "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+      },
+      {
+        "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+        "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+        "target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+        "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
       }
     ],
     "current_target_coverage": [
@@ -3056,12 +3074,12 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
+    "live_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_preparation",
-    "live_next_target_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
-    "live_next_target_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
+    "live_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_result_review",
+    "live_next_target_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
     "next_strict_target_coverage": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "audit_master_action_citation_language_against_retained_boundaries",
@@ -3486,9 +3504,10 @@
       "prepare_toe_native_A_bridge_admissibility_ck_admissibility_rule_closeout",
       "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
       "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
-      "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
+      "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result"
     ],
-    "non_claim_boundary": "This review accepts C_transport^A = 0 only as an admissibility-only vacuum U(1) derivation-chain stability candidate. It does not define a fully concrete C_transport^A functional, does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select a multiplier/action route, does not select a penalty route, does not interpret the candidate as a direct dynamical law, does not execute C_k variation, does not vary lambda_k, A, or g, does not prove any transport component, does not prove transport consistency, does not prove full route alignment, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not claim empirical validation, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this review.",
+    "non_claim_boundary": "This packet records A transport functional-embedding options and selects the admissibility-only route C_transport^A = 0. It does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select Lambda_transport or any multiplier type, does not select a component pairing rule, does not select transport-map domains/codomains, does not prove covariance of the multiplier pairing, does not control boundary or regime projection terms, does not select an embedding variation policy, does not license the penalty route, does not define a norm over the heterogeneous transport tuple, does not interpret the candidate as a direct dynamical law, does not select a fully concrete C_transport^A functional, does not define a fully concrete C_transport^A functional, does not execute C_k variation, does not vary Lambda_transport, A, or g, does not prove transport consistency, does not prove full route alignment, does not prove any transport component, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, does not claim empirical validation, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
     "paused_lanes": [
       "scalar_qft_a2a15a1",
       "qm_stat_transport_residual",
@@ -3768,10 +3787,11 @@
       "prepare_toe_native_A_bridge_admissibility_ck_admissibility_rule_closeout",
       "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
       "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
-      "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result"
+      "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+      "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+    "previous_live_next_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -4095,6 +4115,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
         "target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
         "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+      },
+      {
+        "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+        "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+        "target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+        "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
       }
     ]
   },
@@ -4695,12 +4723,12 @@
       "archived"
     ]
   },
-  "live_next_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
-  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
+  "live_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
   "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-  "live_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_preparation",
-  "live_next_target_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
-  "live_next_target_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
+  "live_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_result_review",
+  "live_next_target_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+  "live_next_target_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
   "next_strict_target_coverage": [
     "analyze_qft_gr_minimal_working_model_candidate_only",
     "audit_master_action_citation_language_against_retained_boundaries",
@@ -5127,9 +5155,10 @@
     "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
     "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
     "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
-    "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
+    "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+    "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result"
   ],
-  "non_claim_boundary": "This review accepts C_transport^A = 0 only as an admissibility-only vacuum U(1) derivation-chain stability candidate. It does not define a fully concrete C_transport^A functional, does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select a multiplier/action route, does not select a penalty route, does not interpret the candidate as a direct dynamical law, does not execute C_k variation, does not vary lambda_k, A, or g, does not prove any transport component, does not prove transport consistency, does not prove full route alignment, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not claim empirical validation, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this review.",
+  "non_claim_boundary": "This packet records A transport functional-embedding options and selects the admissibility-only route C_transport^A = 0. It does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select Lambda_transport or any multiplier type, does not select a component pairing rule, does not select transport-map domains/codomains, does not prove covariance of the multiplier pairing, does not control boundary or regime projection terms, does not select an embedding variation policy, does not license the penalty route, does not define a norm over the heterogeneous transport tuple, does not interpret the candidate as a direct dynamical law, does not select a fully concrete C_transport^A functional, does not define a fully concrete C_transport^A functional, does not execute C_k variation, does not vary Lambda_transport, A, or g, does not prove transport consistency, does not prove full route alignment, does not prove any transport component, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, does not claim empirical validation, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
   "non_promotion_assertions": {
     "empirical_claimed": false,
     "governance_manifest_enrollment_authorized": false,
@@ -5416,9 +5445,10 @@
     "prepare_toe_native_A_bridge_admissibility_ck_admissibility_rule_closeout",
     "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
     "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
-    "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result"
+    "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+    "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet"
   ],
-  "previous_live_next_target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+  "previous_live_next_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
   "promotion_escrow": {
     "current_tranche_governance_manifest_enrollment": "not_authorized",
     "required_steps": [
@@ -5434,12 +5464,12 @@
     ]
   },
   "release_family_current_surfaces": {
-    "ACTIVE_LANE_v0": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
-    "CURRENT_LIVE_NEXT_TARGET_v0": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
-    "CURRENT_LIVE_TARGET_EVIDENCE_v0": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
-    "CURRENT_LIVE_TARGET_OUTCOME_v0": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
-    "CURRENT_LIVE_TARGET_REPORT_v0": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
-    "PREVIOUS_LIVE_NEXT_TARGET_v0": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+    "ACTIVE_LANE_v0": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+    "CURRENT_LIVE_NEXT_TARGET_v0": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+    "CURRENT_LIVE_TARGET_EVIDENCE_v0": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+    "CURRENT_LIVE_TARGET_OUTCOME_v0": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+    "CURRENT_LIVE_TARGET_REPORT_v0": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+    "PREVIOUS_LIVE_NEXT_TARGET_v0": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
     "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction": {
       "kind": "qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_execution",
       "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
@@ -6378,6 +6408,13 @@
       "target": "review_toe_native_A_surface_variation_and_source_route_result",
       "token": "TOE_NATIVE_A_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_GAUGE_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_GAUGE_GROUP_CURRENT_DOMAIN_AND_CK_CONTENT"
     },
+    "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result": {
+      "kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_result_review",
+      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+      "status": "active_live_next_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+      "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+    },
     "review_toe_native_A_vacuum_source_admissibility_identity_packet_result": {
       "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeAVacuumSourceAdmissibilityIdentityResultReview.lean",
       "outcome": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_RESULT_REVIEW_ACCEPTS_ON_SHELL_DIVERGENCE_IDENTITY_NO_CURRENT_OR_EM_CLOSURE",
@@ -6447,6 +6484,14 @@
       "selected_next_target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacket.lean",
       "target": "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet"
+    },
+    "toe_native_a_transport_consistency_ck_functional_embedding_packet_v0": {
+      "kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+      "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "status": "completed_current_surface_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+      "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     }
   },
   "retained_blocker_coverage": [
@@ -7201,6 +7246,14 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
       "target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
       "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+    },
+    {
+      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+      "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+      "target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     }
   ],
   "token_family_coverage": [
@@ -67360,7 +67413,6 @@
       "A_bridge_source_residual_match": "C_source^A - nabla_mu T_A^{mu nu} = 0",
       "A_bridge_stress_energy_match": "T_A^master - T_A^vacuum_U1_route = 0",
       "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
-      "A_variation_executed": "no",
       "A_variation_of_candidate_executed": "no",
       "C_k_action_embedding_constructed": "no",
       "C_k_action_embedding_selected": "no",
@@ -67369,25 +67421,35 @@
       "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
       "J_nu_derived": "no",
       "acceptance_criteria": {
+        "action_routes_not_licensed": true,
+        "admissibility_only_selected": true,
         "aggregate_recorded_not_run": true,
-        "bridge_route_context_exact": true,
-        "candidate_only_boundary_carried_forward": true,
-        "consumes_expected_review_target": true,
-        "criteria_all_accepted": true,
-        "known_chain_exact": true,
-        "no_functionalization_variation_current_closure_or_promotion": true,
+        "bridge_components_exact": true,
+        "consumes_expected_target": true,
+        "direct_dynamical_law_blocked": true,
+        "known_transport_chain_exact": true,
+        "multiplier_route_blocked": true,
+        "next_review_target_selected": true,
+        "penalty_route_not_licensed": true,
+        "review_rows_all_accepted": true,
         "source_bridge_context_exact": true,
+        "three_routes_recorded": true,
         "transport_candidate_exact": true,
         "transport_components_exact_unproved": true,
-        "vacuum_u1_scope_preserved": true
+        "vacuum_u1_context_exact": true
       },
       "accepted": "yes",
       "active_lane": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "admissibility_only_interpretation_retained": "yes",
+      "admissibility_only_route_selected": "yes",
       "aggregate_lean_validation_status_for_packet": "NOT_RUN",
-      "artifact_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
-      "authorized_next_strict_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "artifact_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+      "authorized_next_strict_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
       "authorized_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "boundary_regime_projection_control_missing": "yes",
+      "boundary_regime_projection_controlled": "no",
+      "boundary_terms_controlled": "no",
       "bridge_admissibility_constraint_form": "C_bridge^A = 0",
       "bridge_admissibility_proved": "no",
       "bridge_closeout_outcome": "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_VACUUM_U1_ROUTE_CONSISTENCY_RULE_NO_ACTION_VARIATION_OR_PROMOTION",
@@ -67395,37 +67457,52 @@
       "candidate_action_insertion_executed": "no",
       "candidate_packet_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE",
       "candidate_packet_result": "A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE",
+      "candidate_review_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
+      "candidate_review_result": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
       "canonical_master_action_promoted": "no",
       "captured_at_utc": "2026-06-23T00:00:00Z",
       "ck_action_embedding_claimed": "no",
       "ck_action_embedding_constructed": "no",
       "ck_action_embedding_selected": "no",
+      "ck_functional_formula_fully_defined": "no",
+      "ck_functional_formula_selected": "no",
       "ck_variation_authorized": "no",
       "ck_variation_executed": "no",
-      "closed_A_ck_rule_family_count_after_review": 3,
+      "closed_A_ck_rule_family_count_after_packet": 3,
       "closed_A_ck_rule_roles": [
         "source admissibility",
         "bridge admissibility",
         "transport consistency"
       ],
+      "closed_A_ck_rule_roles_plain": "source admissibility -> bridge admissibility -> transport consistency",
+      "component_pairing_rule_missing": "yes",
+      "component_pairing_rule_selected": "no",
       "concrete_ck_functional_defined": "no",
       "concrete_ck_functional_selected": "no",
       "constraint_as_action_term_selected": "no",
+      "constraint_as_admissibility_rule_selected": "yes",
+      "constraint_multiplier_type_selected": "no",
       "constraint_term_selected": "no",
-      "consumed_target": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
+      "consumed_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "covariance_of_multiplier_pairing_established": "no",
+      "covariance_rule_missing": "yes",
       "critical_gate_fail_conditions": [
-        "functionalize or embed C_transport^A as an action term",
-        "select a multiplier/action route",
-        "select a penalty route",
-        "interpret C_transport^A as a direct dynamical law",
-        "execute C_k or lambda variation",
-        "execute A or metric variation of the transport candidate",
+        "claim the multiplier route is selected as an action term",
+        "claim the penalty route is licensed",
+        "claim the direct dynamical-law interpretation is selected",
+        "select Lambda_transport or a multiplier type",
+        "select a component pairing rule",
+        "select transport-map domains/codomains",
+        "claim covariance of the multiplier pairing is established",
+        "claim boundary or regime projection terms are controlled",
+        "select an embedding variation policy",
+        "execute C_k or Lambda_transport variation",
+        "execute A or metric variation of the candidate",
+        "claim a norm over C_transport^A is defined",
         "claim transport consistency is proved",
         "claim full route alignment is proved",
         "claim any transport component is proved",
         "derive J^nu",
-        "derive a psi-current route",
-        "derive an external-current native route",
         "derive sourced Maxwell",
         "prove matter/current exchange",
         "claim full EM closure",
@@ -67440,20 +67517,76 @@
       "current_conservation_theorem_claimed": "no",
       "current_route_derived": "no",
       "current_source_route_constructed": "no",
-      "derivation_chain_stability_candidate_accepted": "yes",
+      "direct_dynamical_law_blocking_reasons": [
+        "C_transport^A is an admissibility rule candidate",
+        "no transport evolution operator is defined",
+        "no dynamical variation policy is selected",
+        "no transport proof or full route-alignment proof is available"
+      ],
+      "direct_dynamical_law_interpretation_blocked": "yes",
+      "direct_dynamical_law_interpretation_id": "A_transport_ck_direct_dynamical_law_interpretation",
+      "direct_dynamical_law_interpretation_recorded": "yes",
       "direct_dynamical_law_interpretation_selected": "no",
-      "direct_dynamical_law_interpretation_test_authorized": "yes",
+      "dynamical_action_embedding_not_assumed": "yes",
+      "dynamical_action_embedding_selected": "no",
       "em_closure_claimed": "no",
       "em_qft_closure_claimed": "no",
+      "embedding_route_count": 3,
+      "embedding_routes": [
+        {
+          "action_term_selected": false,
+          "action_variation_executed": false,
+          "constraint_form": "C_transport^A = 0",
+          "plain_meaning": "The vacuum U(1) A route is admitted only if its field-equation route, stress-energy route, source-admissibility rule, and bridge-admissibility rule remain coherent through the derivation chain.",
+          "route_id": "A_transport_ck_admissibility_only_route",
+          "route_type": "admissibility_only_vacuum_u1_derivation_chain_stability_rule",
+          "selected_for_current_packet": true,
+          "status": "selected_non_dynamical_vacuum_u1_derivation_chain_stability_rule"
+        },
+        {
+          "action_form": "S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A",
+          "action_term_selected": false,
+          "action_variation_executed": false,
+          "blocking_reasons": [
+            "missing multiplier type",
+            "missing component pairing rule",
+            "missing transport-map domains/codomains",
+            "missing covariance rule",
+            "missing boundary/regime projection control",
+            "missing embedding variation policy",
+            "C_transport^A is a route-level tuple, not a scalar action density"
+          ],
+          "route_id": "A_transport_ck_lagrange_multiplier_action_route",
+          "route_type": "lagrange_multiplier_action_embedding",
+          "selected_for_current_packet": false,
+          "status": "blocked_by_route_component_domain_pairing_covariance_boundary_regime_projection_and_variation_scope"
+        },
+        {
+          "action_form": "S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2",
+          "action_term_selected": false,
+          "action_variation_executed": false,
+          "blocking_reasons": [
+            "norm over heterogeneous route-consistency tuple not defined",
+            "penalty term would change the dynamics",
+            "transport component metric/regularity weights not selected",
+            "boundary/regime projection control not established"
+          ],
+          "route_id": "A_transport_ck_penalty_route",
+          "route_type": "quadratic_or_norm_penalty_embedding",
+          "selected_for_current_packet": false,
+          "status": "recorded_not_licensed"
+        }
+      ],
+      "embedding_variation_policy_missing": "yes",
       "empirical_validation_claimed": "no",
       "external_current_native_derivation_selected": "no",
       "external_current_policy_selected": "no",
       "field_equations_derived": "no",
       "files": {
-        "candidate_packet_file": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_20260623_v0.json",
+        "candidate_review_file": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
         "current_target_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
-        "json_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
-        "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.lean",
+        "json_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+        "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
         "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
         "qftgr_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
         "release_current_authority_aggregate_file": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
@@ -67467,10 +67600,11 @@
       "full_toeformal_aggregate_timed_out": "no",
       "fully_concrete_ck_functional_defined": "no",
       "fully_concrete_ck_functional_selected": "no",
-      "functional_embedding_executed": "no",
-      "functional_embedding_packet_authorized": "yes",
-      "functional_embedding_packet_prepared": "no",
+      "functional_embedding_options_recorded": "yes",
+      "functional_embedding_packet_prepared": "yes",
       "gauge_group_policy": "U(1) / Abelian test route",
+      "heterogeneous_tuple_norm_defined": "no",
+      "known_A_chain_preserved": "yes",
       "known_A_chain_retained": "yes",
       "known_A_transport_chain_form": "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> C_source^A -> C_bridge^A -> bounded residual/regime-facing route",
       "known_A_transport_chain_steps": [
@@ -67481,9 +67615,12 @@
         "C_bridge^A",
         "bounded residual/regime-facing route"
       ],
+      "lagrange_multiplier_action_form": "S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A",
+      "lagrange_multiplier_route_blocked": "yes",
+      "lagrange_multiplier_route_recorded": "yes",
       "lambda_variation_executed": "no",
       "lane_level_lean_targets": [
-        "ToeFormal.Derivation.ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview",
+        "ToeFormal.Derivation.ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket",
         "ToeFormal.Derivation.QFTGR",
         "ToeFormal.Derivation.CurrentTarget",
         "ToeFormal.Release.CurrentAuthority"
@@ -67491,32 +67628,35 @@
       "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
-      "mathematical_statement": "The review accepts the ToE-native A transport-consistency C_k candidate as an admissibility-only vacuum U(1) derivation-chain stability rule candidate: C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A), with condition C_transport^A = 0. The source and bridge rules remain context; no transport proof, action embedding, current derivation, EM closure, or promotion is claimed.",
+      "mathematical_statement": "The functional-embedding packet records three routes for the ToE-native A transport-consistency C_k candidate. The admissibility-only route C_transport^A = 0 is selected as a non-dynamical vacuum U(1) derivation-chain stability rule. The multiplier/action route S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A is blocked because C_transport^A is a route-level tuple and lacks multiplier type, component pairing, transport-map domains/codomains, covariance, boundary/regime projection control, and embedding variation policy. The penalty route S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2 is recorded but not licensed. No action variation is executed.",
       "matter_current_J_nu_derived": "no",
       "matter_current_exchange_route_proved": "no",
       "matter_gauge_energy_exchange_claimed": "no",
       "matter_gauge_energy_exchange_proved": "no",
       "maxwell_equation_derived": "no",
       "maxwell_equations_derived": "no",
-      "metric_variation_executed": "no",
       "metric_variation_of_candidate_executed": "no",
-      "multiplier_action_route_selected": "no",
-      "multiplier_action_route_test_authorized": "yes",
+      "missing_multiplier_type": "yes",
+      "multiplier_domain_selected": "no",
+      "multiplier_type_selected": "no",
       "new_conservation_proof_claimed": "no",
       "new_source_admissibility_proof_claimed": "no",
-      "non_claim_boundary": "This review accepts C_transport^A = 0 only as an admissibility-only vacuum U(1) derivation-chain stability candidate. It does not define a fully concrete C_transport^A functional, does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select a multiplier/action route, does not select a penalty route, does not interpret the candidate as a direct dynamical law, does not execute C_k variation, does not vary lambda_k, A, or g, does not prove any transport component, does not prove transport consistency, does not prove full route alignment, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not claim empirical validation, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this review.",
+      "non_claim_boundary": "This packet records A transport functional-embedding options and selects the admissibility-only route C_transport^A = 0. It does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select Lambda_transport or any multiplier type, does not select a component pairing rule, does not select transport-map domains/codomains, does not prove covariance of the multiplier pairing, does not control boundary or regime projection terms, does not select an embedding variation policy, does not license the penalty route, does not define a norm over the heterogeneous transport tuple, does not interpret the candidate as a direct dynamical law, does not select a fully concrete C_transport^A functional, does not define a fully concrete C_transport^A functional, does not execute C_k variation, does not vary Lambda_transport, A, or g, does not prove transport consistency, does not prove full route alignment, does not prove any transport component, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, does not claim empirical validation, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
       "nonabelian_route_selected": "no",
       "on_shell_vacuum_conservation_identity": "nabla_mu T_A^{mu nu} = 0",
-      "outcome_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
-      "packet_classification": "toe_native_A_transport_consistency_ck_constraint_candidate_result_review_accepts_vacuum_u1_derivation_chain_stability_candidate_no_functionalization_or_promotion",
-      "packet_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_v0",
-      "packet_result": "REVIEW_ACCEPTED",
-      "penalty_route_selected": "no",
-      "penalty_route_test_authorized": "yes",
+      "outcome_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "packet_classification": "toe_native_A_transport_consistency_ck_functional_embedding_packet_records_options_and_selects_admissibility_only_no_action_variation",
+      "packet_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_v0",
+      "packet_result": "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "penalty_action_form": "S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2",
+      "penalty_route_licensed": "no",
+      "penalty_route_recorded": "yes",
+      "penalty_variation_executed": "no",
+      "penalty_would_change_dynamics": "yes",
       "phase2_readiness_claim": "no",
       "pillar_completion_inferred": "no",
       "prepared": "yes",
-      "proof_depth_label": "A_TRANSPORT_CONSISTENCY_CK_CANDIDATE_REVIEW_ACCEPTED_NO_FUNCTIONALIZATION",
+      "proof_depth_label": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_ADMISSIBILITY_ONLY",
       "psi_current_route_constructed": "no",
       "psi_derived_current": "no",
       "public_readiness_claimed": "no",
@@ -67525,30 +67665,35 @@
       "qft_gr_seam_closed": "no",
       "qft_gr_solved": "no",
       "qft_gr_source_map_closure_authorized": "no",
-      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
-      "result_token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
-      "review_accepts_vacuum_u1_derivation_chain_stability_candidate": "yes",
-      "review_criteria": [
+      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+      "result_review_pending": "no",
+      "result_review_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "result_token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "review_prepared": "no",
+      "review_result": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
+      "review_row_accepted_count": 12,
+      "review_row_count": 12,
+      "review_rows": [
         {
-          "assessment": "The active A transport candidate result-review target is consumed.",
-          "evidence": "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result",
-          "row_id": "transport_candidate_review_target_consumed",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The A transport derivation-chain stability tuple is preserved exactly.",
-          "evidence": "C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A)",
-          "row_id": "C_transport_A_tuple_preserved_exactly",
+          "assessment": "The A transport candidate review authorized this packet.",
+          "evidence": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+          "row_id": "consumes_expected_functional_embedding_target",
           "status": "accepted"
         },
         {
           "assessment": "The condition C_transport^A = 0 is preserved.",
           "evidence": "C_transport^A = 0",
-          "row_id": "C_transport_A_equation_preserved_exactly",
+          "row_id": "transport_constraint_carried_forward",
           "status": "accepted"
         },
         {
-          "assessment": "The transport components are retained without proving any component.",
+          "assessment": "The vacuum U(1) derivation-chain stability tuple is carried forward.",
+          "evidence": "C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A)",
+          "row_id": "transport_tuple_carried_forward",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The transport components are preserved as unproved route checks.",
           "evidence": [
             "Transport_ACTION_VARIATION^A = 0",
             "Transport_VARIATION_STRESS_ENERGY^A = 0",
@@ -67556,18 +67701,7 @@
             "Transport_SOURCE_BRIDGE^A = 0",
             "Transport_BRIDGE_RESIDUAL^A = 0"
           ],
-          "row_id": "transport_components_preserved_unproved",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The candidate remains scoped to the selected vacuum U(1) route.",
-          "evidence": [
-            "U(1) / Abelian test route",
-            "smooth real 1-form A on the selected spacetime domain",
-            "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
-            "nabla_mu F^{mu nu} = 0"
-          ],
-          "row_id": "vacuum_u1_scope_preserved",
+          "row_id": "transport_components_carried_forward",
           "status": "accepted"
         },
         {
@@ -67576,95 +67710,86 @@
             "C_source^{A,nu}[g,A] = 0",
             "C_bridge^A = 0"
           ],
-          "row_id": "source_and_bridge_rules_retained_as_context",
+          "row_id": "source_and_bridge_context_preserved",
           "status": "accepted"
         },
         {
-          "assessment": "The known vacuum U(1) A route chain remains the grounding chain.",
-          "evidence": "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> C_source^A -> C_bridge^A -> bounded residual/regime-facing route",
-          "row_id": "known_A_chain_retained",
+          "assessment": "The admissibility-only, multiplier, and penalty routes are recorded.",
+          "evidence": [
+            "A_transport_ck_admissibility_only_route",
+            "A_transport_ck_lagrange_multiplier_action_route",
+            "A_transport_ck_penalty_route"
+          ],
+          "row_id": "three_embedding_routes_recorded",
           "status": "accepted"
         },
         {
-          "assessment": "The transport rule remains an admissibility-only candidate.",
-          "evidence": "admissibility-only vacuum U(1) transport-stability rule candidate",
-          "row_id": "admissibility_only_classification_preserved",
+          "assessment": "Only the non-dynamical vacuum U(1) route-stability rule is selected.",
+          "evidence": "C_transport^A = 0",
+          "row_id": "admissibility_only_route_selected",
           "status": "accepted"
         },
         {
-          "assessment": "No transport proof or concrete C_transport^A functional is claimed.",
+          "assessment": "The multiplier/action route is blocked by missing type, pairing, domains/codomains, covariance, boundary/regime projection, variation policy, and scalar-density status.",
+          "evidence": "S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A",
+          "row_id": "multiplier_action_route_blocked",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The penalty route is recorded but not licensed because no norm over the heterogeneous route tuple is defined.",
+          "evidence": "S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2",
+          "row_id": "penalty_route_not_licensed",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The direct dynamical-law interpretation is blocked; C_transport^A remains admissibility-only.",
+          "evidence": "A_transport_ck_direct_dynamical_law_interpretation",
+          "row_id": "direct_dynamical_law_interpretation_blocked",
+          "status": "accepted"
+        },
+        {
+          "assessment": "No action variation is executed in this packet.",
+          "evidence": [
+            "C_k_variation_executed=false",
+            "lambda_variation_executed=false",
+            "A_variation_of_candidate_executed=false",
+            "metric_variation_of_candidate_executed=false"
+          ],
+          "row_id": "no_action_variation_executed",
+          "status": "accepted"
+        },
+        {
+          "assessment": "No transport proof, current route, closure, Phase 2, or promotion is claimed.",
           "evidence": [
             "transport_consistency_proved=false",
-            "transport_candidate_functional_defined=false"
-          ],
-          "row_id": "no_transport_proof_or_concrete_functional",
-          "status": "accepted"
-        },
-        {
-          "assessment": "No C_k action embedding or variation is executed.",
-          "evidence": [
-            "C_k_action_embedding_constructed=false",
-            "candidate_action_insertion_executed=false",
-            "C_k_variation_executed=false"
-          ],
-          "row_id": "no_ck_action_embedding_or_variation",
-          "status": "accepted"
-        },
-        {
-          "assessment": "No current, sourced Maxwell, or exchange route is introduced.",
-          "evidence": [
             "J_nu_derived=false",
-            "psi_current_route_constructed=false",
-            "external_current_native_derivation_selected=false",
             "sourced_maxwell_equation_derived=false",
-            "matter_current_exchange_route_proved=false"
-          ],
-          "row_id": "no_current_sourced_maxwell_or_exchange_route",
-          "status": "accepted"
-        },
-        {
-          "assessment": "No closure, coupling, validation, Phase 2, or promotion follows.",
-          "evidence": [
             "full_em_closure_claimed=false",
             "qft_gr_closure_claimed=false",
-            "semiclassical_coupling_authorized=false",
-            "empirical_validation_claimed=false",
             "phase2_readiness_claim=false",
             "master_action_promoted=false"
           ],
-          "row_id": "no_closure_coupling_validation_phase_or_promotion",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The full ToeFormal aggregate remains recorded as NOT_RUN.",
-          "evidence": "NOT_RUN",
-          "row_id": "full_toeformal_aggregate_recorded_not_run",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The next bounded packet may test and likely block action embedding routes for C_transport^A.",
-          "evidence": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
-          "row_id": "functional_embedding_packet_selected",
+          "row_id": "no_transport_current_closure_phase_or_promotion",
           "status": "accepted"
         }
       ],
-      "review_criteria_accepted_count": 14,
-      "review_criteria_count": 14,
-      "review_result": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
       "route_chain_compatibility_proved": "no",
       "route_consistency_tuple_proved": "no",
-      "schema_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0",
+      "schema_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0",
       "seam_closure_claim": "no",
       "selected_A_ck_constraint_family": "A_transport_consistency_constraint_family",
       "selected_A_ck_option_class": "transport_consistency_constraint",
-      "selected_next_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
-      "selected_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_preparation",
+      "selected_embedding_route_id": "A_transport_ck_admissibility_only_route",
+      "selected_next_authorization_token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "selected_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_result_review",
       "semiclassical_coupling_authorized": "no",
       "semiclassical_coupling_claimed": "no",
       "semiclassical_einstein_equation_derived": "no",
       "semiclassical_source_established": "no",
       "source_admissibility_constraint_form": "C_source^{A,nu}[g,A] = 0",
       "source_admissibility_proved": "no",
+      "source_and_bridge_context_preserved": "yes",
       "source_and_bridge_context_retained": "yes",
       "source_candidate_constraint_form": "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}",
       "source_candidate_constraint_id": "A_source_vacuum_conservation_residual_ck_candidate",
@@ -67674,9 +67799,9 @@
       "sourced_maxwell_closure_claimed": "no",
       "sourced_maxwell_equation_derived": "no",
       "sourced_maxwell_route_derived": "no",
-      "status": "active",
+      "status": "paused",
+      "transport_action_embedding_chain_form": "ACTION -> VARIATION -> STRESS_ENERGY -> SOURCE -> BRIDGE -> RESIDUAL",
       "transport_admissibility_constraint_form": "C_transport^A = 0",
-      "transport_candidate_classified_as_admissibility_only": "yes",
       "transport_candidate_functional_defined": "no",
       "transport_candidate_functional_selected": "no",
       "transport_candidate_id": "A_transport_derivation_chain_stability_ck_candidate",
@@ -67692,17 +67817,36 @@
         "Transport_SOURCE_BRIDGE^A = 0",
         "Transport_BRIDGE_RESIDUAL^A = 0"
       ],
+      "transport_components_carried_forward": "yes",
       "transport_components_preserved": "yes",
       "transport_components_proved": "no",
       "transport_consistency_claimed": "no",
       "transport_consistency_proved": "no",
+      "transport_constraint_carried_forward": "yes",
       "transport_constraint_equation": "C_transport^A = 0",
       "transport_constraint_form": "C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A)",
-      "transport_constraint_preserved": "yes",
+      "transport_functional_selected": "no",
+      "transport_map_domains_codomains_missing": "yes",
+      "transport_map_domains_codomains_selected": "no",
+      "transport_multiplier_blocking_reasons": [
+        "missing multiplier type",
+        "missing component pairing rule",
+        "missing transport-map domains/codomains",
+        "missing covariance rule",
+        "missing boundary/regime projection control",
+        "missing embedding variation policy",
+        "C_transport^A is a route-level tuple, not a scalar action density"
+      ],
+      "transport_penalty_blocking_reasons": [
+        "norm over heterogeneous route-consistency tuple not defined",
+        "penalty term would change the dynamics",
+        "transport component metric/regularity weights not selected",
+        "boundary/regime projection control not established"
+      ],
       "transport_proof_claimed": "no",
       "transport_rule_classification": "admissibility-only vacuum U(1) transport-stability rule candidate",
       "transport_rule_epistemic_status": "admissibility-only",
-      "transport_tuple_preserved": "yes",
+      "transport_tuple_carried_forward": "yes",
       "vacuum_euler_lagrange_route": "nabla_mu F^{mu nu} = 0",
       "vacuum_u1_scope_preserved": "yes",
       "validation_policy": {
@@ -67712,7 +67856,7 @@
           "NOT_RUN"
         ],
         "aggregate_lean_validation_status_for_packet": "NOT_RUN",
-        "checkpoint_type": "toe_native_A_transport_consistency_ck_constraint_candidate_packet_result_review",
+        "checkpoint_type": "toe_native_A_transport_consistency_ck_functional_embedding_packet",
         "full_ci_parity_required": false,
         "full_governance_suite_required": false,
         "full_pytest_required": false,
@@ -67731,7 +67875,481 @@
         "tiered_lean_validation_policy_formalized": true,
         "toeformal_import_update_requires_preservation_status": true
       },
+      "variation_policy_for_embedding_selected": "no",
       "workstream_id": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "yang_mills_equations_derived": "no"
+    },
+    {
+      "A_bridge_constraint_equation": "C_bridge^A = 0",
+      "A_bridge_constraint_form": "C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu})",
+      "A_bridge_field_equation_match": "E_A^master - E_A^vacuum_U1_route = 0",
+      "A_bridge_source_residual_match": "C_source^A - nabla_mu T_A^{mu nu} = 0",
+      "A_bridge_stress_energy_match": "T_A^master - T_A^vacuum_U1_route = 0",
+      "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
+      "A_variation_of_candidate_executed": "no",
+      "C_k_action_embedding_constructed": "no",
+      "C_k_action_embedding_selected": "no",
+      "C_k_variation_authorized": "no",
+      "C_k_variation_executed": "no",
+      "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "J_nu_derived": "no",
+      "acceptance_criteria": {
+        "action_routes_not_licensed": true,
+        "admissibility_only_selected": true,
+        "aggregate_recorded_not_run": true,
+        "bridge_components_exact": true,
+        "consumes_expected_target": true,
+        "direct_dynamical_law_blocked": true,
+        "known_transport_chain_exact": true,
+        "multiplier_route_blocked": true,
+        "next_review_target_selected": true,
+        "penalty_route_not_licensed": true,
+        "review_rows_all_accepted": true,
+        "source_bridge_context_exact": true,
+        "three_routes_recorded": true,
+        "transport_candidate_exact": true,
+        "transport_components_exact_unproved": true,
+        "vacuum_u1_context_exact": true
+      },
+      "accepted": "yes",
+      "active_lane": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "admissibility_only_interpretation_retained": "yes",
+      "admissibility_only_route_selected": "yes",
+      "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+      "artifact_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+      "authorized_next_strict_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "authorized_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "boundary_regime_projection_control_missing": "yes",
+      "boundary_regime_projection_controlled": "no",
+      "boundary_terms_controlled": "no",
+      "bridge_admissibility_constraint_form": "C_bridge^A = 0",
+      "bridge_admissibility_proved": "no",
+      "bridge_closeout_outcome": "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_VACUUM_U1_ROUTE_CONSISTENCY_RULE_NO_ACTION_VARIATION_OR_PROMOTION",
+      "bridge_route_alignment_verified": "no",
+      "candidate_action_insertion_executed": "no",
+      "candidate_packet_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE",
+      "candidate_packet_result": "A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE",
+      "candidate_review_outcome": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
+      "candidate_review_result": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION",
+      "canonical_master_action_promoted": "no",
+      "captured_at_utc": "2026-06-23T00:00:00Z",
+      "ck_action_embedding_claimed": "no",
+      "ck_action_embedding_constructed": "no",
+      "ck_action_embedding_selected": "no",
+      "ck_functional_formula_fully_defined": "no",
+      "ck_functional_formula_selected": "no",
+      "ck_variation_authorized": "no",
+      "ck_variation_executed": "no",
+      "closed_A_ck_rule_family_count_after_packet": 3,
+      "closed_A_ck_rule_roles": [
+        "source admissibility",
+        "bridge admissibility",
+        "transport consistency"
+      ],
+      "closed_A_ck_rule_roles_plain": "source admissibility -> bridge admissibility -> transport consistency",
+      "component_pairing_rule_missing": "yes",
+      "component_pairing_rule_selected": "no",
+      "concrete_ck_functional_defined": "no",
+      "concrete_ck_functional_selected": "no",
+      "constraint_as_action_term_selected": "no",
+      "constraint_as_admissibility_rule_selected": "yes",
+      "constraint_multiplier_type_selected": "no",
+      "constraint_term_selected": "no",
+      "consumed_target": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+      "covariance_of_multiplier_pairing_established": "no",
+      "covariance_rule_missing": "yes",
+      "critical_gate_fail_conditions": [
+        "claim the multiplier route is selected as an action term",
+        "claim the penalty route is licensed",
+        "claim the direct dynamical-law interpretation is selected",
+        "select Lambda_transport or a multiplier type",
+        "select a component pairing rule",
+        "select transport-map domains/codomains",
+        "claim covariance of the multiplier pairing is established",
+        "claim boundary or regime projection terms are controlled",
+        "select an embedding variation policy",
+        "execute C_k or Lambda_transport variation",
+        "execute A or metric variation of the candidate",
+        "claim a norm over C_transport^A is defined",
+        "claim transport consistency is proved",
+        "claim full route alignment is proved",
+        "claim any transport component is proved",
+        "derive J^nu",
+        "derive sourced Maxwell",
+        "prove matter/current exchange",
+        "claim full EM closure",
+        "claim QFT-GR closure",
+        "claim semiclassical coupling",
+        "authorize Phase 2",
+        "promote the master action",
+        "claim empirical validation or public readiness",
+        "record full ToeFormal aggregate as passed, failed, or timed out"
+      ],
+      "current_conservation_proved": "no",
+      "current_conservation_theorem_claimed": "no",
+      "current_route_derived": "no",
+      "current_source_route_constructed": "no",
+      "direct_dynamical_law_blocking_reasons": [
+        "C_transport^A is an admissibility rule candidate",
+        "no transport evolution operator is defined",
+        "no dynamical variation policy is selected",
+        "no transport proof or full route-alignment proof is available"
+      ],
+      "direct_dynamical_law_interpretation_blocked": "yes",
+      "direct_dynamical_law_interpretation_id": "A_transport_ck_direct_dynamical_law_interpretation",
+      "direct_dynamical_law_interpretation_recorded": "yes",
+      "direct_dynamical_law_interpretation_selected": "no",
+      "dynamical_action_embedding_not_assumed": "yes",
+      "dynamical_action_embedding_selected": "no",
+      "em_closure_claimed": "no",
+      "em_qft_closure_claimed": "no",
+      "embedding_route_count": 3,
+      "embedding_routes": [
+        {
+          "action_term_selected": false,
+          "action_variation_executed": false,
+          "constraint_form": "C_transport^A = 0",
+          "plain_meaning": "The vacuum U(1) A route is admitted only if its field-equation route, stress-energy route, source-admissibility rule, and bridge-admissibility rule remain coherent through the derivation chain.",
+          "route_id": "A_transport_ck_admissibility_only_route",
+          "route_type": "admissibility_only_vacuum_u1_derivation_chain_stability_rule",
+          "selected_for_current_packet": true,
+          "status": "selected_non_dynamical_vacuum_u1_derivation_chain_stability_rule"
+        },
+        {
+          "action_form": "S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A",
+          "action_term_selected": false,
+          "action_variation_executed": false,
+          "blocking_reasons": [
+            "missing multiplier type",
+            "missing component pairing rule",
+            "missing transport-map domains/codomains",
+            "missing covariance rule",
+            "missing boundary/regime projection control",
+            "missing embedding variation policy",
+            "C_transport^A is a route-level tuple, not a scalar action density"
+          ],
+          "route_id": "A_transport_ck_lagrange_multiplier_action_route",
+          "route_type": "lagrange_multiplier_action_embedding",
+          "selected_for_current_packet": false,
+          "status": "blocked_by_route_component_domain_pairing_covariance_boundary_regime_projection_and_variation_scope"
+        },
+        {
+          "action_form": "S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2",
+          "action_term_selected": false,
+          "action_variation_executed": false,
+          "blocking_reasons": [
+            "norm over heterogeneous route-consistency tuple not defined",
+            "penalty term would change the dynamics",
+            "transport component metric/regularity weights not selected",
+            "boundary/regime projection control not established"
+          ],
+          "route_id": "A_transport_ck_penalty_route",
+          "route_type": "quadratic_or_norm_penalty_embedding",
+          "selected_for_current_packet": false,
+          "status": "recorded_not_licensed"
+        }
+      ],
+      "embedding_variation_policy_missing": "yes",
+      "empirical_validation_claimed": "no",
+      "external_current_native_derivation_selected": "no",
+      "external_current_policy_selected": "no",
+      "field_equations_derived": "no",
+      "files": {
+        "candidate_review_file": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_20260623_v0.json",
+        "current_target_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+        "json_report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+        "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket.lean",
+        "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+        "qftgr_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+        "release_current_authority_aggregate_file": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+      },
+      "full_em_closure_claimed": "no",
+      "full_route_alignment_proof_claimed": "no",
+      "full_route_alignment_proved": "no",
+      "full_toeformal_aggregate_failed": "no",
+      "full_toeformal_aggregate_passed": "no",
+      "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+      "full_toeformal_aggregate_timed_out": "no",
+      "fully_concrete_ck_functional_defined": "no",
+      "fully_concrete_ck_functional_selected": "no",
+      "functional_embedding_options_recorded": "yes",
+      "functional_embedding_packet_prepared": "yes",
+      "gauge_group_policy": "U(1) / Abelian test route",
+      "heterogeneous_tuple_norm_defined": "no",
+      "known_A_chain_preserved": "yes",
+      "known_A_chain_retained": "yes",
+      "known_A_transport_chain_form": "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> C_source^A -> C_bridge^A -> bounded residual/regime-facing route",
+      "known_A_transport_chain_steps": [
+        "S_A^vacuum_U1",
+        "E_A^vacuum_U1",
+        "T_A^vacuum_U1",
+        "C_source^A",
+        "C_bridge^A",
+        "bounded residual/regime-facing route"
+      ],
+      "lagrange_multiplier_action_form": "S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A",
+      "lagrange_multiplier_route_blocked": "yes",
+      "lagrange_multiplier_route_recorded": "yes",
+      "lambda_variation_executed": "no",
+      "lane_level_lean_targets": [
+        "ToeFormal.Derivation.ToeNativeATransportConsistencyCKFunctionalEmbeddingPacket",
+        "ToeFormal.Derivation.QFTGR",
+        "ToeFormal.Derivation.CurrentTarget",
+        "ToeFormal.Release.CurrentAuthority"
+      ],
+      "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "mathematical_statement": "The functional-embedding packet records three routes for the ToE-native A transport-consistency C_k candidate. The admissibility-only route C_transport^A = 0 is selected as a non-dynamical vacuum U(1) derivation-chain stability rule. The multiplier/action route S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A is blocked because C_transport^A is a route-level tuple and lacks multiplier type, component pairing, transport-map domains/codomains, covariance, boundary/regime projection control, and embedding variation policy. The penalty route S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2 is recorded but not licensed. No action variation is executed.",
+      "matter_current_J_nu_derived": "no",
+      "matter_current_exchange_route_proved": "no",
+      "matter_gauge_energy_exchange_claimed": "no",
+      "matter_gauge_energy_exchange_proved": "no",
+      "maxwell_equation_derived": "no",
+      "maxwell_equations_derived": "no",
+      "metric_variation_of_candidate_executed": "no",
+      "missing_multiplier_type": "yes",
+      "multiplier_domain_selected": "no",
+      "multiplier_type_selected": "no",
+      "new_conservation_proof_claimed": "no",
+      "new_source_admissibility_proof_claimed": "no",
+      "non_claim_boundary": "This packet records A transport functional-embedding options and selects the admissibility-only route C_transport^A = 0. It does not functionalize C_transport^A, does not embed C_transport^A into the action, does not define a C_k action term, does not select Lambda_transport or any multiplier type, does not select a component pairing rule, does not select transport-map domains/codomains, does not prove covariance of the multiplier pairing, does not control boundary or regime projection terms, does not select an embedding variation policy, does not license the penalty route, does not define a norm over the heterogeneous transport tuple, does not interpret the candidate as a direct dynamical law, does not select a fully concrete C_transport^A functional, does not define a fully concrete C_transport^A functional, does not execute C_k variation, does not vary Lambda_transport, A, or g, does not prove transport consistency, does not prove full route alignment, does not prove any transport component, does not prove source admissibility, does not prove bridge admissibility, does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not derive sourced Maxwell, does not prove matter/current exchange, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not authorize Phase 2, records no Phase 2 authorization, does not promote the master action, does not claim empirical validation, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "nonabelian_route_selected": "no",
+      "on_shell_vacuum_conservation_identity": "nabla_mu T_A^{mu nu} = 0",
+      "outcome_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "packet_classification": "toe_native_A_transport_consistency_ck_functional_embedding_packet_records_options_and_selects_admissibility_only_no_action_variation",
+      "packet_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_v0",
+      "packet_result": "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "penalty_action_form": "S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2",
+      "penalty_route_licensed": "no",
+      "penalty_route_recorded": "yes",
+      "penalty_variation_executed": "no",
+      "penalty_would_change_dynamics": "yes",
+      "phase2_readiness_claim": "no",
+      "pillar_completion_inferred": "no",
+      "prepared": "yes",
+      "proof_depth_label": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_ADMISSIBILITY_ONLY",
+      "psi_current_route_constructed": "no",
+      "psi_derived_current": "no",
+      "public_readiness_claimed": "no",
+      "public_submission_authorized": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "qft_gr_solved": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "report": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0.json",
+      "result_review_pending": "yes",
+      "result_review_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "result_token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "review_prepared": "no",
+      "review_result": "PENDING",
+      "review_row_accepted_count": 12,
+      "review_row_count": 12,
+      "review_rows": [
+        {
+          "assessment": "The A transport candidate review authorized this packet.",
+          "evidence": "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet",
+          "row_id": "consumes_expected_functional_embedding_target",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The condition C_transport^A = 0 is preserved.",
+          "evidence": "C_transport^A = 0",
+          "row_id": "transport_constraint_carried_forward",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The vacuum U(1) derivation-chain stability tuple is carried forward.",
+          "evidence": "C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A)",
+          "row_id": "transport_tuple_carried_forward",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The transport components are preserved as unproved route checks.",
+          "evidence": [
+            "Transport_ACTION_VARIATION^A = 0",
+            "Transport_VARIATION_STRESS_ENERGY^A = 0",
+            "Transport_STRESS_ENERGY_SOURCE^A = 0",
+            "Transport_SOURCE_BRIDGE^A = 0",
+            "Transport_BRIDGE_RESIDUAL^A = 0"
+          ],
+          "row_id": "transport_components_carried_forward",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The closed A source and bridge rules remain context.",
+          "evidence": [
+            "C_source^{A,nu}[g,A] = 0",
+            "C_bridge^A = 0"
+          ],
+          "row_id": "source_and_bridge_context_preserved",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The admissibility-only, multiplier, and penalty routes are recorded.",
+          "evidence": [
+            "A_transport_ck_admissibility_only_route",
+            "A_transport_ck_lagrange_multiplier_action_route",
+            "A_transport_ck_penalty_route"
+          ],
+          "row_id": "three_embedding_routes_recorded",
+          "status": "accepted"
+        },
+        {
+          "assessment": "Only the non-dynamical vacuum U(1) route-stability rule is selected.",
+          "evidence": "C_transport^A = 0",
+          "row_id": "admissibility_only_route_selected",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The multiplier/action route is blocked by missing type, pairing, domains/codomains, covariance, boundary/regime projection, variation policy, and scalar-density status.",
+          "evidence": "S_C^A_transport = integral_M dVol_g Lambda_transport dot C_transport^A",
+          "row_id": "multiplier_action_route_blocked",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The penalty route is recorded but not licensed because no norm over the heterogeneous route tuple is defined.",
+          "evidence": "S_C^A_transport = integral_M dVol_g norm(C_transport^A)^2",
+          "row_id": "penalty_route_not_licensed",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The direct dynamical-law interpretation is blocked; C_transport^A remains admissibility-only.",
+          "evidence": "A_transport_ck_direct_dynamical_law_interpretation",
+          "row_id": "direct_dynamical_law_interpretation_blocked",
+          "status": "accepted"
+        },
+        {
+          "assessment": "No action variation is executed in this packet.",
+          "evidence": [
+            "C_k_variation_executed=false",
+            "lambda_variation_executed=false",
+            "A_variation_of_candidate_executed=false",
+            "metric_variation_of_candidate_executed=false"
+          ],
+          "row_id": "no_action_variation_executed",
+          "status": "accepted"
+        },
+        {
+          "assessment": "No transport proof, current route, closure, Phase 2, or promotion is claimed.",
+          "evidence": [
+            "transport_consistency_proved=false",
+            "J_nu_derived=false",
+            "sourced_maxwell_equation_derived=false",
+            "full_em_closure_claimed=false",
+            "qft_gr_closure_claimed=false",
+            "phase2_readiness_claim=false",
+            "master_action_promoted=false"
+          ],
+          "row_id": "no_transport_current_closure_phase_or_promotion",
+          "status": "accepted"
+        }
+      ],
+      "route_chain_compatibility_proved": "no",
+      "route_consistency_tuple_proved": "no",
+      "schema_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260623_v0",
+      "seam_closure_claim": "no",
+      "selected_A_ck_constraint_family": "A_transport_consistency_constraint_family",
+      "selected_A_ck_option_class": "transport_consistency_constraint",
+      "selected_embedding_route_id": "A_transport_ck_admissibility_only_route",
+      "selected_next_authorization_token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+      "selected_next_target": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
+      "selected_next_target_kind": "toe_native_A_transport_consistency_ck_functional_embedding_packet_result_review",
+      "semiclassical_coupling_authorized": "no",
+      "semiclassical_coupling_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
+      "semiclassical_source_established": "no",
+      "source_admissibility_constraint_form": "C_source^{A,nu}[g,A] = 0",
+      "source_admissibility_proved": "no",
+      "source_and_bridge_context_preserved": "yes",
+      "source_and_bridge_context_retained": "yes",
+      "source_candidate_constraint_form": "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}",
+      "source_candidate_constraint_id": "A_source_vacuum_conservation_residual_ck_candidate",
+      "source_conservation_proved": "no",
+      "source_route_still_blocked": "nabla_mu F^{mu nu} = J^nu",
+      "source_rule_closeout_outcome": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_VACUUM_GAUGE_SOURCE_RULE_NO_ACTION_VARIATION_OR_PROMOTION",
+      "sourced_maxwell_closure_claimed": "no",
+      "sourced_maxwell_equation_derived": "no",
+      "sourced_maxwell_route_derived": "no",
+      "status": "active",
+      "transport_action_embedding_chain_form": "ACTION -> VARIATION -> STRESS_ENERGY -> SOURCE -> BRIDGE -> RESIDUAL",
+      "transport_admissibility_constraint_form": "C_transport^A = 0",
+      "transport_candidate_functional_defined": "no",
+      "transport_candidate_functional_selected": "no",
+      "transport_candidate_id": "A_transport_derivation_chain_stability_ck_candidate",
+      "transport_candidate_recorded_as_action_term": "no",
+      "transport_candidate_recorded_as_new_dynamical_law": "no",
+      "transport_candidate_rule_proved": "no",
+      "transport_candidate_type": "vacuum_U1_derivation_chain_stability_admissibility_rule",
+      "transport_component_count": 5,
+      "transport_component_forms": [
+        "Transport_ACTION_VARIATION^A = 0",
+        "Transport_VARIATION_STRESS_ENERGY^A = 0",
+        "Transport_STRESS_ENERGY_SOURCE^A = 0",
+        "Transport_SOURCE_BRIDGE^A = 0",
+        "Transport_BRIDGE_RESIDUAL^A = 0"
+      ],
+      "transport_components_carried_forward": "yes",
+      "transport_components_preserved": "yes",
+      "transport_components_proved": "no",
+      "transport_consistency_claimed": "no",
+      "transport_consistency_proved": "no",
+      "transport_constraint_carried_forward": "yes",
+      "transport_constraint_equation": "C_transport^A = 0",
+      "transport_constraint_form": "C_transport^A := (Transport_ACTION_VARIATION^A, Transport_VARIATION_STRESS_ENERGY^A, Transport_STRESS_ENERGY_SOURCE^A, Transport_SOURCE_BRIDGE^A, Transport_BRIDGE_RESIDUAL^A)",
+      "transport_functional_selected": "no",
+      "transport_map_domains_codomains_missing": "yes",
+      "transport_map_domains_codomains_selected": "no",
+      "transport_multiplier_blocking_reasons": [
+        "missing multiplier type",
+        "missing component pairing rule",
+        "missing transport-map domains/codomains",
+        "missing covariance rule",
+        "missing boundary/regime projection control",
+        "missing embedding variation policy",
+        "C_transport^A is a route-level tuple, not a scalar action density"
+      ],
+      "transport_penalty_blocking_reasons": [
+        "norm over heterogeneous route-consistency tuple not defined",
+        "penalty term would change the dynamics",
+        "transport component metric/regularity weights not selected",
+        "boundary/regime projection control not established"
+      ],
+      "transport_proof_claimed": "no",
+      "transport_rule_classification": "admissibility-only vacuum U(1) transport-stability rule candidate",
+      "transport_rule_epistemic_status": "admissibility-only",
+      "transport_tuple_carried_forward": "yes",
+      "vacuum_euler_lagrange_route": "nabla_mu F^{mu nu} = 0",
+      "vacuum_u1_scope_preserved": "yes",
+      "validation_policy": {
+        "aggregate_lean_validation_completion_claimed": false,
+        "aggregate_lean_validation_mathematical_failure_claimed": false,
+        "aggregate_lean_validation_status_allowed_values": [
+          "NOT_RUN"
+        ],
+        "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+        "checkpoint_type": "toe_native_A_transport_consistency_ck_functional_embedding_packet",
+        "full_ci_parity_required": false,
+        "full_governance_suite_required": false,
+        "full_pytest_required": false,
+        "full_toeformal_aggregate_failed": false,
+        "full_toeformal_aggregate_passed": false,
+        "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+        "full_toeformal_aggregate_timed_out": false,
+        "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+        "release_preservation_validation": "full ToeFormal aggregate when feasible",
+        "routine_packet_validation_tiers": [
+          "touched Lean marker",
+          "smallest affected Lake target",
+          "lane aggregate",
+          "current authority target"
+        ],
+        "tiered_lean_validation_policy_formalized": true,
+        "toeformal_import_update_requires_preservation_status": true
+      },
+      "variation_policy_for_embedding_selected": "no",
+      "workstream_id": "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
       "yang_mills_equations_derived": "no"
     }
   ]
