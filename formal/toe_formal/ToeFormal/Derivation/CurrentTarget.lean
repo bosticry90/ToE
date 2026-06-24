@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeATransportConsistencyCKConstraintCandidatePacket
+import ToeFormal.Derivation.ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeATransportConsistencyCKConstraintCandidatePacket.selectedNextTarget
+  ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeATransportConsistencyCKConstraintCandidatePacket.packetId
+  ToeNativeATransportConsistencyCKConstraintCandidatePacketResultReview.packetId
 
-theorem current_target_points_to_a_transport_consistency_candidate_review :
+theorem current_target_points_to_a_transport_consistency_functional_embedding :
     currentLiveTarget =
-      "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result" := by
+      "prepare_toe_native_A_transport_consistency_ck_functional_embedding_packet" := by
   rfl
 
 end CurrentTarget
