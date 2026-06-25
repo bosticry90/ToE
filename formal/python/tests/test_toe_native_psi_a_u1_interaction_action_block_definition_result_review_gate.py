@@ -8,6 +8,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
 from formal.python.tools.toe_native_psi_a_u1_interaction_action_block_definition_result_review_report import (
@@ -229,25 +230,34 @@ def test_psi_a_u1_action_block_definition_result_review_validation_policy_is_bou
 
 
 def test_psi_a_u1_action_block_definition_result_review_rotates_to_current_derivation_packet() -> None:
-    assert_current_target_consistent()
-    assert_frontier_matches_registry()
-    assert_public_surfaces_match_registry()
-
     registry = _json(REGISTRY_PATH)
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=CONSUMED_TARGET,
+        live_target=NEXT_TARGET,
+        evidence=str(LEAN_PACKET_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        lane=NEXT_TARGET,
+    )
+    if is_current:
+        assert_current_target_consistent()
+        assert_frontier_matches_registry()
+        assert_public_surfaces_match_registry()
+
     state = registry["current_target_state"]
     active = [row for row in registry["workstreams"] if row.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["active_lane"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == str(
-        LEAN_PACKET_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert state["live_next_target_report"] == str(
-        DEFAULT_OUT.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert state["live_next_target_outcome"] == OUTCOME_ID
-    assert state["live_next_target_kind"] == NEXT_TARGET_KIND
+    if is_current:
+        assert state["previous_live_next_target"] == CONSUMED_TARGET
+        assert state["live_next_target"] == NEXT_TARGET
+        assert state["active_lane"] == NEXT_TARGET
+        assert state["live_next_target_evidence"] == str(
+            LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert state["live_next_target_report"] == str(
+            DEFAULT_OUT.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert state["live_next_target_outcome"] == OUTCOME_ID
+        assert state["live_next_target_kind"] == NEXT_TARGET_KIND
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
@@ -262,22 +272,23 @@ def test_psi_a_u1_action_block_definition_result_review_rotates_to_current_deriv
     assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active_row = active[0]
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["consumed_action_block_definition_result_review"] == OUTCOME_ID
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["current_derivation_packet_preparation_authorized"] == "yes"
-    assert active_row["current_derivation_packet_prepared"] == "no"
-    assert active_row["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
-    assert active_row["action_block_statement"] == ACTION_BLOCK_STATEMENT
-    assert active_row["A_variation_result_derived"] == "no"
-    assert active_row["J_nu_derived"] == "no"
-    assert active_row["sourced_maxwell_equation_derived"] == "no"
-    assert active_row["matter_gauge_exchange_proved"] == "no"
-    assert active_row["qft_gr_closure_claimed"] == "no"
-    assert active_row["master_action_promoted"] == "no"
+    if is_current:
+        active_row = active[0]
+        assert active_row["workstream_id"] == NEXT_TARGET
+        assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert active_row["consumed_target"] == CONSUMED_TARGET
+        assert active_row["consumed_action_block_definition_result_review"] == OUTCOME_ID
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["current_derivation_packet_preparation_authorized"] == "yes"
+        assert active_row["current_derivation_packet_prepared"] == "no"
+        assert active_row["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
+        assert active_row["action_block_statement"] == ACTION_BLOCK_STATEMENT
+        assert active_row["A_variation_result_derived"] == "no"
+        assert active_row["J_nu_derived"] == "no"
+        assert active_row["sourced_maxwell_equation_derived"] == "no"
+        assert active_row["matter_gauge_exchange_proved"] == "no"
+        assert active_row["qft_gr_closure_claimed"] == "no"
+        assert active_row["master_action_promoted"] == "no"
 
 
 def test_psi_a_u1_action_block_definition_result_review_lean_and_surface_mirrors() -> None:
