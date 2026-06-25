@@ -8,38 +8,39 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
-    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet_report import (
+from formal.python.tools.toe_native_psi_a_u1_interaction_action_block_definition_packet_report import (
+    ACTION_BLOCK_DEFINITION_PACKET_RESULT,
+    ACTION_BLOCK_DENSITY,
+    ACTION_BLOCK_GAUGE_TERM,
+    ACTION_BLOCK_ID,
+    ACTION_BLOCK_MATTER_TERM,
+    ACTION_BLOCK_STATEMENT,
     BLOCKED_CLAIMS,
+    CONSUMED_TARGET,
     COVARIANT_DERIVATIVE_POLICY,
-    C_EXCHANGE_EQUATION_PREVIEW,
-    C_EXCHANGE_POLICY_PREVIEW,
-    CURRENT_CANDIDATE_POLICY,
+    CURRENT_CANDIDATE_PREVIEW,
     CURRENT_TARGET_AGGREGATE_PATH,
     DEFAULT_OUT,
-    GAUGE_EXCHANGE_PREVIEW,
+    FIELD_STRENGTH_POLICY,
+    GAUGE_COVARIANT_DERIVATIVE_TRANSFORM,
     GAUGE_TRANSFORMATION_POLICY,
+    INTERACTION_TERM_SHAPE,
     LEAN_PACKET_PATH,
     LEAN_VALIDATION_POLICY_ID,
     LEAN_VALIDATION_POLICY_PATH,
-    MATTER_EXCHANGE_PREVIEW,
+    MINIMAL_COUPLING_EXPANSION,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
-    OBLIGATION_PACKET_RESULT,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
-    POLICY_PACKET_OUTCOME,
-    POLICY_PACKET_PATH,
     QFTGR_AGGREGATE_PATH,
     RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
     SCHEMA_ID,
     SELECTED_INTERACTION_ROUTE,
-    SOURCED_GAUGE_EQUATION_PREVIEW,
-    TOTAL_EXCHANGE_PREVIEW,
-    build_toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet,
+    build_toe_native_psi_a_u1_interaction_action_block_definition_packet,
 )
 
 
@@ -49,7 +50,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet_report.py"
+    / "toe_native_psi_a_u1_interaction_action_block_definition_packet_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 SURFACES_PATH = (
@@ -70,9 +71,6 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
 )
-CONSUMED_TARGET = (
-    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
-)
 
 
 def _read(path: Path) -> str:
@@ -91,9 +89,8 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_psi_a_u1_obligation_packet_files_exist() -> None:
+def test_psi_a_u1_action_block_definition_packet_files_exist() -> None:
     for path in [
-        POLICY_PACKET_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -105,105 +102,89 @@ def test_psi_a_u1_obligation_packet_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_psi_a_u1_obligation_packet_indexes_obligations_without_derivation() -> None:
-    policy = _json(POLICY_PACKET_PATH)
+def test_psi_a_u1_action_block_definition_packet_records_bounded_action() -> None:
     packet = _json(DEFAULT_OUT)
-    assert policy["outcome_id"] == POLICY_PACKET_OUTCOME
-    assert policy["selected_next_target"] == packet["consumed_target"]
-
     assert packet["schema_id"] == SCHEMA_ID
     assert packet["packet_id"] == PACKET_ID
     assert packet["prepared"] is True
     assert packet["accepted"] is True
     assert packet["outcome_id"] == OUTCOME_ID
-    assert packet["obligation_packet_result"] == OBLIGATION_PACKET_RESULT
+    assert packet["action_block_definition_packet_result"] == ACTION_BLOCK_DEFINITION_PACKET_RESULT
     assert packet["packet_classification"] == PACKET_CLASSIFICATION
+    assert packet["consumed_target"] == CONSUMED_TARGET
     assert packet["selected_next_target"] == NEXT_TARGET
     assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert build_toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet() == packet
+    assert build_toe_native_psi_a_u1_interaction_action_block_definition_packet() == packet
 
-
-def test_psi_a_u1_obligation_packet_records_o1_to_o10() -> None:
-    packet = _json(DEFAULT_OUT)
-    assert packet["derivation_obligation_count"] == 10
-    assert packet["obligation_ids"] == [
-        "O1",
-        "O2",
-        "O3",
-        "O4",
-        "O5",
-        "O6",
-        "O7",
-        "O8",
-        "O9",
-        "O10",
-    ]
-    assert all(
-        row["status"] == "indexed_pending_future_packet"
-        for row in packet["derivation_obligations"]
-    )
+    assert packet["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
+    assert packet["action_block_id"] == ACTION_BLOCK_ID
+    assert packet["action_block_statement"] == ACTION_BLOCK_STATEMENT
+    assert packet["action_block_density"] == ACTION_BLOCK_DENSITY
+    assert packet["action_block_matter_term"] == ACTION_BLOCK_MATTER_TERM
+    assert packet["action_block_gauge_term"] == ACTION_BLOCK_GAUGE_TERM
     assert packet["covariant_derivative_policy"] == COVARIANT_DERIVATIVE_POLICY
+    assert packet["field_strength_policy"] == FIELD_STRENGTH_POLICY
     assert packet["gauge_transformation_policy"] == GAUGE_TRANSFORMATION_POLICY
-    assert packet["current_candidate_policy"] == CURRENT_CANDIDATE_POLICY
-    assert packet["sourced_gauge_equation_preview"] == SOURCED_GAUGE_EQUATION_PREVIEW
-    assert packet["gauge_exchange_preview"] == GAUGE_EXCHANGE_PREVIEW
-    assert packet["matter_exchange_preview"] == MATTER_EXCHANGE_PREVIEW
-    assert packet["total_exchange_preview"] == TOTAL_EXCHANGE_PREVIEW
-    assert packet["c_exchange_policy_preview"] == C_EXCHANGE_POLICY_PREVIEW
-    assert packet["c_exchange_equation_preview"] == C_EXCHANGE_EQUATION_PREVIEW
+    assert packet["gauge_covariant_derivative_transform"] == GAUGE_COVARIANT_DERIVATIVE_TRANSFORM
+    assert packet["minimal_coupling_expansion"] == MINIMAL_COUPLING_EXPANSION
+    assert packet["interaction_term_shape"] == INTERACTION_TERM_SHAPE
+    assert packet["current_candidate_preview"] == CURRENT_CANDIDATE_PREVIEW
 
 
-def test_psi_a_u1_obligation_packet_preserves_blocked_claims() -> None:
+def test_psi_a_u1_action_block_definition_packet_preserves_nonclaims() -> None:
     packet = _json(DEFAULT_OUT)
     assert packet["blocked_claims"] == BLOCKED_CLAIMS
-    assert packet["blocked_claim_count"] == 16
+    assert packet["blocked_claim_count"] == 15
     for key in [
-        "interaction_action_block_defined",
-        "gauge_covariance_proved",
-        "psi_field_equation_derived",
+        "A_variation_result_derived",
         "A_variation_current_derived",
-        "current_derived",
+        "psi_variation_result_derived",
+        "psi_field_equation_derived",
         "J_nu_derived",
+        "matter_current_J_nu_derived",
+        "current_derived",
         "current_conservation_proved",
         "sourced_maxwell_equation_derived",
         "dirac_equation_derived",
         "psi_stress_energy_derived",
+        "A_psi_exchange_identity_proved",
         "gauge_matter_exchange_proved",
         "matter_gauge_exchange_proved",
         "total_stress_energy_conservation_proved",
+        "C_exchange_definition_closeout",
         "C_exchange_closeout",
-        "c_exchange_rule_family_decided",
         "c_exchange_functional_defined",
+        "c_exchange_rule_proved",
         "em_qft_closure_claimed",
         "qft_gr_closure_claimed",
-        "standard_model_derivation_claimed",
-        "quantized_electromagnetism_claimed",
-        "anomaly_analysis_performed",
-        "empirical_validation_claimed",
         "phase2_authorized",
+        "empirical_validation_claimed",
         "master_action_promoted",
     ]:
         assert packet[key] is False, key
     for phrase in [
-        "indexes proof obligations only",
-        "does not derive J^nu",
-        "does not prove current conservation",
-        "does not derive sourced Maxwell",
-        "does not derive the Dirac equation",
-        "does not derive psi stress-energy",
-        "does not prove gauge-matter exchange",
-        "does not prove total stress-energy conservation",
-        "does not close C_exchange",
-        "does not close EM-QFT",
-        "does not close QFT-GR",
-        "does not authorize Phase 2",
-        "does not promote the master action",
+        "action-block definition packet only",
+        "no A-variation result",
+        "no psi variation result",
+        "no J^nu derivation",
+        "no current conservation proof",
+        "no sourced Maxwell derivation",
+        "no Dirac derivation",
+        "no psi stress-energy derivation",
+        "no A/psi exchange identity",
+        "no total stress-energy conservation proof",
+        "no C_exchange definition closeout",
+        "no EM-QFT closure",
+        "no QFT-GR closure",
+        "no Phase 2 authorization",
+        "no empirical validation",
+        "no master-action promotion",
         "full ToeFormal aggregate is recorded as NOT_RUN",
     ]:
         assert phrase in packet["non_claim_boundary"], phrase
 
 
-def test_psi_a_u1_obligation_packet_validation_policy_is_bounded() -> None:
+def test_psi_a_u1_action_block_definition_packet_validation_policy_is_bounded() -> None:
     packet = _json(DEFAULT_OUT)
     policy = packet["validation_policy"]
     assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
@@ -214,55 +195,65 @@ def test_psi_a_u1_obligation_packet_validation_policy_is_bounded() -> None:
     assert policy["full_toeformal_aggregate_timed_out"] is False
 
 
-def test_psi_a_u1_obligation_packet_rotates_live_target_to_action_block_packet() -> None:
+def test_psi_a_u1_action_block_definition_packet_rotates_live_target_to_review() -> None:
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
     registry = _json(REGISTRY_PATH)
+    state = registry["current_target_state"]
     active = [row for row in registry["workstreams"] if row.get("status") == "active"]
     assert len(active) == 1
-    assert_historical_target_recorded(
-        payload=registry,
-        previous_target=CONSUMED_TARGET,
-        live_target=NEXT_TARGET,
-        evidence=str(LEAN_PACKET_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
-        lane=NEXT_TARGET,
-    )
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET
+    assert state["active_lane"] == NEXT_TARGET
+    assert state["live_next_target_evidence"] == str(
+        LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert state["live_next_target_report"] == str(
+        DEFAULT_OUT.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert state["live_next_target_outcome"] == OUTCOME_ID
+    assert state["live_next_target_kind"] == NEXT_TARGET_KIND
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
-    assert consumed["obligation_packet_result"] == OUTCOME_ID
+    assert consumed["action_block_definition_packet_result"] == OUTCOME_ID
+    assert consumed["packet_result"] == OUTCOME_ID
     assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["derivation_obligation_count"] == "10"
-    assert consumed["current_derivation_obligations_indexed"] == "yes"
-    assert consumed["exchange_proof_obligations_indexed"] == "yes"
-    assert consumed["C_exchange_closeout"] == "no"
+    assert consumed["action_block_definition_packet_prepared"] == "yes"
+    assert consumed["interaction_action_block_defined"] == "yes"
+    assert consumed["minimal_u1_dirac_gauge_action_block_recorded"] == "yes"
     assert consumed["J_nu_derived"] == "no"
-    assert consumed["current_conservation_proved"] == "no"
     assert consumed["sourced_maxwell_equation_derived"] == "no"
     assert consumed["matter_gauge_exchange_proved"] == "no"
     assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    action_row = _workstream(registry, NEXT_TARGET)
-    assert action_row["status"] in {"active", "paused"}
-    assert action_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert action_row["consumed_target"] == CONSUMED_TARGET
-    assert action_row["consumed_obligation_packet_result"] == OUTCOME_ID
-    assert action_row["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
-    assert action_row["covariant_derivative_policy"] == COVARIANT_DERIVATIVE_POLICY
-    assert action_row["action_block_definition_packet_preparation_authorized"] == "yes"
-    assert action_row["J_nu_derived"] == "no"
-    assert action_row["sourced_maxwell_equation_derived"] == "no"
-    assert action_row["matter_gauge_exchange_proved"] == "no"
-    assert action_row["qft_gr_closure_claimed"] == "no"
-    assert action_row["master_action_promoted"] == "no"
+    active_row = active[0]
+    assert active_row["workstream_id"] == NEXT_TARGET
+    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_row["consumed_target"] == CONSUMED_TARGET
+    assert active_row["consumed_action_block_definition_packet_result"] == OUTCOME_ID
+    assert active_row["packet_result"] == "PENDING"
+    assert active_row["result_review_pending"] == "yes"
+    assert active_row["result_review_completed"] == "no"
+    assert active_row["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
+    assert active_row["action_block_statement"] == ACTION_BLOCK_STATEMENT
+    assert active_row["minimal_coupling_expansion"] == MINIMAL_COUPLING_EXPANSION
+    assert active_row["interaction_term_shape"] == INTERACTION_TERM_SHAPE
+    assert active_row["A_variation_result_derived"] == "no"
+    assert active_row["psi_variation_result_derived"] == "no"
+    assert active_row["J_nu_derived"] == "no"
+    assert active_row["sourced_maxwell_equation_derived"] == "no"
+    assert active_row["matter_gauge_exchange_proved"] == "no"
+    assert active_row["qft_gr_closure_claimed"] == "no"
+    assert active_row["master_action_promoted"] == "no"
 
 
-def test_psi_a_u1_obligation_packet_lean_and_surface_mirrors() -> None:
+def test_psi_a_u1_action_block_definition_packet_lean_and_surface_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -285,32 +276,36 @@ def test_psi_a_u1_obligation_packet_lean_and_surface_mirrors() -> None:
     for token in [
         PACKET_ID,
         OUTCOME_ID,
-        OBLIGATION_PACKET_RESULT,
+        ACTION_BLOCK_DEFINITION_PACKET_RESULT,
         PACKET_CLASSIFICATION,
-        "ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket",
+        "ToeNativePsiAU1InteractionActionBlockDefinitionPacket",
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
         "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+        ACTION_BLOCK_STATEMENT,
         COVARIANT_DERIVATIVE_POLICY,
+        FIELD_STRENGTH_POLICY,
         GAUGE_TRANSFORMATION_POLICY,
-        CURRENT_CANDIDATE_POLICY,
-        TOTAL_EXCHANGE_PREVIEW,
-        C_EXCHANGE_POLICY_PREVIEW,
-        "does not derive J^nu",
-        "does not derive sourced Maxwell",
-        "does not prove gauge-matter exchange",
-        "does not close C_exchange",
-        "does not close EM-QFT",
-        "does not close QFT-GR",
-        "does not promote the master action",
+        GAUGE_COVARIANT_DERIVATIVE_TRANSFORM,
+        MINIMAL_COUPLING_EXPANSION,
+        INTERACTION_TERM_SHAPE,
+        "no A-variation result",
+        "no psi variation result",
+        "no J^nu derivation",
+        "no sourced Maxwell derivation",
+        "no A/psi exchange identity",
+        "no C_exchange definition closeout",
+        "no EM-QFT closure",
+        "no QFT-GR closure",
+        "no master-action promotion",
         "full ToeFormal aggregate is recorded as NOT_RUN",
     ]:
         assert token in joined
 
 
-def test_psi_a_u1_obligation_packet_not_manifest_enrolled() -> None:
+def test_psi_a_u1_action_block_definition_packet_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet_gate.py"
+        "test_toe_native_psi_a_u1_interaction_action_block_definition_packet_gate.py"
     )

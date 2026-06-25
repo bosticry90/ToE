@@ -328,9 +328,9 @@ def test_psi_a_u1_policy_packet_lean_and_surface_mirrors() -> None:
         "ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket",
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+        "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+        "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
         COVARIANT_DERIVATIVE_POLICY,
         GAUGE_TRANSFORMATION_POLICY,
         CURRENT_CANDIDATE_POLICY,

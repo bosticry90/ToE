@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+    "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
+    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+    "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket.lean"
+    / "ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3271,6 +3271,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_"
         "NO_DERIVATION_OR_EM_QFT_CLOSURE"
     )
+    psi_a_action_block_result = (
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_"
+        "ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3282,26 +3286,33 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_"
         "20260624_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["outcome_id"] == psi_a_obligation_result
+    assert interaction_active_workstream["outcome_id"] == psi_a_action_block_result
+    assert interaction_active_workstream[
+        "consumed_action_block_definition_packet_result"
+    ] == (
+        psi_a_action_block_result
+    )
     assert interaction_active_workstream["consumed_obligation_packet_result"] == (
         psi_a_obligation_result
     )
     assert interaction_active_workstream["consumed_policy_packet_result"] == (
         psi_a_policy_result
     )
-    assert interaction_active_workstream["result_token"] == psi_a_obligation_result
+    assert interaction_active_workstream["result_token"] == psi_a_action_block_result
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
     ] == (
-        "toe_native_psi_A_u1_interaction_action_block_definition_packet_preparation"
+        "toe_native_psi_A_u1_interaction_action_block_definition_packet_result_review"
     )
     assert interaction_active_workstream["packet_result"] == "PENDING"
-    assert interaction_active_workstream["action_block_definition_packet_result"] == "PENDING"
+    assert interaction_active_workstream["result_review_packet_result"] == "PENDING"
+    assert interaction_active_workstream["result_review_pending"] == "yes"
+    assert interaction_active_workstream["result_review_completed"] == "no"
     assert interaction_active_workstream["selected_interaction_route"] == (
         "psi_A_u1_current_and_exchange_route"
     )
@@ -3313,6 +3324,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "psi as Dirac-like spinor or finite spinor multiplet"
     )
     assert interaction_active_workstream["gauge_group_policy"] == "U(1)"
+    assert interaction_active_workstream["field_strength_policy"] == (
+        "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
+    )
     assert interaction_active_workstream["covariant_derivative_policy"] == (
         "D_mu psi = (nabla_mu + i q A_mu) psi"
     )
@@ -3324,25 +3338,40 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A "
         "variation"
     )
-    assert interaction_active_workstream["exchange_policy"] == (
-        "separate-sector exchange may be nonzero; total conservation is the policy "
-        "target"
+    assert interaction_active_workstream["gauge_covariant_derivative_transform"] == (
+        "D_mu psi -> exp(-i q chi) D_mu psi"
+    )
+    assert interaction_active_workstream["action_block_statement"] == (
+        "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi "
+        "- 1/4 F_{mu nu}F^{mu nu} ]"
+    )
+    assert interaction_active_workstream["minimal_coupling_expansion"] == (
+        "i gamma^mu D_mu psi = i gamma^mu nabla_mu psi - q gamma^mu A_mu psi"
+    )
+    assert interaction_active_workstream["interaction_term_shape"] == (
+        "- q psibar gamma^mu A_mu psi"
     )
     assert interaction_active_workstream["c_exchange_policy_preview"] == (
         "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})"
     )
     for key in [
-        "obligation_packet_prepared",
-        "current_derivation_obligations_indexed",
-        "exchange_proof_obligations_indexed",
-        "c_exchange_decision_obligation_indexed",
-        "action_block_definition_packet_preparation_authorized",
+        "action_block_definition_packet_prepared",
+        "interaction_action_block_defined",
+        "minimal_u1_dirac_gauge_action_block_recorded",
+        "plus_sign_covariant_derivative_preserved",
+        "field_strength_definition_preserved",
+        "gauge_transformation_policy_preserved",
+        "gauge_covariant_derivative_transform_recorded",
+        "minimal_coupling_expansion_recorded",
+        "interaction_term_shape_recorded",
+        "current_candidate_preview_retained",
+        "action_variation_future_packet_enabled",
+        "result_review_preparation_authorized",
     ]:
         assert interaction_active_workstream[key] == "yes", key
     for key in [
-        "action_block_definition_packet_prepared",
-        "interaction_action_block_defined",
-        "gauge_covariance_proved",
+        "A_variation_result_derived",
+        "psi_variation_result_derived",
         "psi_field_equation_derived",
         "A_variation_current_derived",
         "J_nu_derived",
@@ -3352,6 +3381,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "matter_gauge_exchange_proved",
         "psi_stress_energy_derived",
         "total_stress_energy_conservation_proved",
+        "C_exchange_definition_closeout",
         "em_qft_closure_claimed",
         "qft_gr_closure_claimed",
         "quantized_electromagnetism_claimed",

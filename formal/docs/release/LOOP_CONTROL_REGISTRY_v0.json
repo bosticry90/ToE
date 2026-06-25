@@ -1,5 +1,5 @@
 {
-  "active_lane": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+  "active_lane": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
   "allowed_statuses": [
     "active",
     "retained",
@@ -17,7 +17,8 @@
     "select_next_master_action_interaction_after_A_ck_triad",
     "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
     "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
-    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+    "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -238,7 +239,8 @@
     "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout",
     "select_next_master_action_interaction_after_A_ck_triad",
     "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
+    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
   ],
   "consumed_targets": [
     {
@@ -849,6 +851,14 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket.lean",
       "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
       "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE"
+    },
+    {
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+      "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+      "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+      "token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
     }
   ],
   "controls": [
@@ -1210,8 +1220,8 @@
       "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
     }
   ],
-  "current_live_next_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
-  "current_live_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+  "current_live_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+  "current_live_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
   "current_target_coverage": [
     {
       "report": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_20260624_v0.json",
@@ -1227,15 +1237,24 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
       "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
       "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
+    },
+    {
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+      "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+      "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+      "token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+    "active_lane": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
     "candidate_live_next_targets": [
       "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
       "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
       "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
-      "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+      "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+      "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result"
     ],
     "completed_targets": [
       "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result",
@@ -1440,7 +1459,8 @@
       "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
       "select_next_master_action_interaction_after_A_ck_triad",
       "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
+      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
     ],
     "consumed_targets": [
       {
@@ -2034,6 +2054,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
         "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
         "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
+      },
+      {
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+        "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+        "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+        "token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
       }
     ],
     "current_target_coverage": [
@@ -3089,6 +3117,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
         "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
         "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
+      },
+      {
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+        "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+        "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+        "token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
       }
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
@@ -3099,14 +3135,14 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+    "live_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
     "live_next_target_authority": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket.lean",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
     "live_next_target_frontier_mirror": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_preparation",
-    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE",
-    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_20260624_v0.json",
+    "live_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_result_review",
+    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
     "next_strict_target_coverage": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "audit_master_action_citation_language_against_retained_boundaries",
@@ -3540,9 +3576,10 @@
       "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
       "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
       "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
-      "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+      "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+      "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result"
     ],
-    "non_claim_boundary": "This obligation packet indexes proof obligations only. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not derive psi stress-energy, does not prove gauge-matter exchange, does not prove total stress-energy conservation, does not close C_exchange, does not close EM-QFT, does not close QFT-GR, does not derive the Standard Model, does not quantize electromagnetism, does not perform anomaly analysis, does not claim empirical validation, does not authorize Phase 2, records no Phase 2 authorization, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+    "non_claim_boundary": "This is an action-block definition packet only; no A-variation result; no psi variation result; no J^nu derivation; no current conservation proof; no sourced Maxwell derivation; no Dirac derivation; no psi stress-energy derivation; no A/psi exchange identity; no total stress-energy conservation proof; no C_exchange definition closeout; no EM-QFT closure; no QFT-GR closure; no Phase 2 authorization; no empirical validation; no master-action promotion; full ToeFormal aggregate is recorded as NOT_RUN.",
     "paused_lanes": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "artifact_retention_enforcement_plan",
@@ -3831,10 +3868,11 @@
       "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
       "select_next_master_action_interaction_after_A_ck_triad",
       "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
+      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+    "previous_live_next_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
@@ -4526,6 +4564,14 @@
         "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
         "status": "completed_consumed_live_target",
         "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+      },
+      {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+        "outcome": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+        "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+        "status": "completed_consumed_live_target",
+        "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
       }
     ]
   },
@@ -5100,7 +5146,7 @@
     "stronger_evidence_object",
     "failed_assumption_refutation"
   ],
-  "latest_surface": "toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet_v0",
+  "latest_surface": "toe_native_psi_a_u1_interaction_action_block_definition_packet_v0",
   "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket.lean",
   "latest_surface_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_20260624_v0.json",
   "latest_surface_token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE",
@@ -5130,12 +5176,12 @@
       "archived"
     ]
   },
-  "live_next_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
-  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket.lean",
+  "live_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
   "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-  "live_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_preparation",
-  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE",
-  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_20260624_v0.json",
+  "live_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_result_review",
+  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
   "next_strict_target_coverage": [
     "analyze_qft_gr_minimal_working_model_candidate_only",
     "audit_master_action_citation_language_against_retained_boundaries",
@@ -5571,7 +5617,8 @@
     "select_next_master_action_interaction_after_A_ck_triad",
     "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
     "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
-    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+    "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result"
   ],
   "non_claim_boundary": "This obligation packet indexes proof obligations only. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not derive psi stress-energy, does not prove gauge-matter exchange, does not prove total stress-energy conservation, does not close C_exchange, does not close EM-QFT, does not close QFT-GR, does not derive the Standard Model, does not quantize electromagnetism, does not perform anomaly analysis, does not claim empirical validation, does not authorize Phase 2, records no Phase 2 authorization, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
   "non_promotion_assertions": {
@@ -5868,9 +5915,10 @@
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review",
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
     "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
+    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+    "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
   ],
-  "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+  "previous_live_next_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
   "promotion_escrow": {
     "current_tranche_governance_manifest_enrollment": "not_authorized",
     "required_steps": [
@@ -7780,6 +7828,14 @@
       "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
       "status": "completed_consumed_live_target",
       "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+    },
+    {
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+      "outcome": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+      "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
     }
   ],
   "token_family_coverage": [
@@ -71798,8 +71854,8 @@
       "T_total_conservation_proved": "no",
       "action_block_definition_obligation_indexed": "yes",
       "action_block_definition_packet_preparation_authorized": "yes",
-      "action_block_definition_packet_prepared": "no",
-      "action_block_definition_packet_result": "PENDING",
+      "action_block_definition_packet_prepared": "yes",
+      "action_block_definition_packet_result": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
       "active_lane": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
       "anomaly_analysis_performed": "no",
       "anomaly_cancellation_claimed": "no",
@@ -71837,18 +71893,18 @@
       "gauge_group_policy": "U(1)",
       "gauge_matter_exchange_proved": "no",
       "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
-      "guardrail_status": "active_under_loop_control_registry_v0",
-      "interaction_action_block_defined": "no",
+      "guardrail_status": "paused_after_psi_A_u1_interaction_action_block_definition_packet",
+      "interaction_action_block_defined": "yes",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
       "matter_current_J_nu_derived": "no",
       "matter_exchange_preview": "nabla_mu T_psi^{mu nu} = + F^nu_alpha J^alpha",
       "matter_gauge_exchange_proved": "no",
       "matter_surface_policy": "psi as Dirac-like spinor or finite spinor multiplet",
-      "non_claim_boundary": "This obligation packet indexes proof obligations only. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not derive psi stress-energy, does not prove gauge-matter exchange, does not prove total stress-energy conservation, does not close C_exchange, does not close EM-QFT, does not close QFT-GR, does not derive the Standard Model, does not quantize electromagnetism, does not perform anomaly analysis, does not claim empirical validation, does not authorize Phase 2, records no Phase 2 authorization, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "non_claim_boundary": "This is an action-block definition packet only; no A-variation result; no psi variation result; no J^nu derivation; no current conservation proof; no sourced Maxwell derivation; no Dirac derivation; no psi stress-energy derivation; no A/psi exchange identity; no total stress-energy conservation proof; no C_exchange definition closeout; no EM-QFT closure; no QFT-GR closure; no Phase 2 authorization; no empirical validation; no master-action promotion; full ToeFormal aggregate is recorded as NOT_RUN.",
       "obligation_packet_prepared": "yes",
-      "outcome_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE",
-      "packet_result": "PENDING",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "packet_result": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
       "phase2_authorized": "no",
       "pillar_completion_inferred": "no",
       "psi_field_equation_derived": "no",
@@ -71856,8 +71912,8 @@
       "psi_variation_obligation_indexed": "yes",
       "qft_gr_closure_claimed": "no",
       "quantized_electromagnetism_claimed": "no",
-      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_20260624_v0.json",
-      "result_token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+      "result_token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
       "seam_closure_claim": "no",
       "selected_gauge_group": "U(1)",
       "selected_interaction_fields": [
@@ -71866,21 +71922,192 @@
       ],
       "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
       "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
-      "selected_next_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
-      "selected_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_preparation",
+      "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "selected_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_result_review",
       "sourced_gauge_equation_preview": "nabla_mu F^{mu nu} = J^nu",
       "sourced_maxwell_equation_derived": "no",
       "sourced_maxwell_obligation_indexed": "yes",
       "sourced_maxwell_route_derived": "no",
       "standard_model_derivation_claimed": "no",
-      "status": "active",
+      "status": "paused",
       "stress_energy_definition_obligation_indexed": "yes",
       "stress_energy_policy": "T_A, T_psi, and T_total = T_A + T_psi named as policy objects; T_psi not derived",
-      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket.lean",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
       "total_conservation_obligation_indexed": "yes",
       "total_exchange_preview": "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0",
       "total_stress_energy_conservation_proved": "no",
-      "workstream_id": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet"
+      "workstream_id": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+      "packet_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_v0",
+      "schema_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0",
+      "token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "minimal_u1_dirac_gauge_action_block_recorded": "yes",
+      "plus_sign_covariant_derivative_preserved": "yes",
+      "field_strength_definition_preserved": "yes",
+      "gauge_transformation_policy_preserved": "yes",
+      "gauge_covariant_derivative_transform_recorded": "yes",
+      "minimal_coupling_expansion_recorded": "yes",
+      "interaction_term_shape_recorded": "yes",
+      "current_candidate_preview_retained": "yes",
+      "action_variation_future_packet_enabled": "yes",
+      "result_review_preparation_authorized": "yes",
+      "action_block_id": "S_{psi A}",
+      "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+      "action_block_density": "sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+      "action_block_matter_term": "psibar (i gamma^mu D_mu - m) psi",
+      "action_block_gauge_term": "- 1/4 F_{mu nu}F^{mu nu}",
+      "gauge_covariant_derivative_transform": "D_mu psi -> exp(-i q chi) D_mu psi",
+      "minimal_coupling_expansion": "i gamma^mu D_mu psi = i gamma^mu nabla_mu psi - q gamma^mu A_mu psi",
+      "interaction_term_shape": "- q psibar gamma^mu A_mu psi",
+      "current_candidate_preview": "J^mu = q psibar gamma^mu psi",
+      "blocked_claims": [
+        "A-variation result",
+        "psi variation result",
+        "J^nu derivation",
+        "current conservation proof",
+        "sourced Maxwell derivation",
+        "Dirac derivation",
+        "psi stress-energy derivation",
+        "A/psi exchange identity",
+        "total stress-energy conservation proof",
+        "C_exchange definition closeout",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "blocked_claim_count": "15",
+      "review_criteria_count": "6",
+      "review_criteria_accepted_count": "6",
+      "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+      "A_variation_result_derived": "no",
+      "psi_variation_result_derived": "no",
+      "A_psi_exchange_identity_proved": "no",
+      "C_exchange_definition_closeout": "no"
+    },
+    {
+      "workstream_id": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "status": "active",
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "active_lane": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "authorized_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "authorized_next_strict_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+      "consumed_target": "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+      "consumed_action_block_definition_packet_result": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "consumed_obligation_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_DERIVATION_OBLIGATION_PACKET_PREPARED_CURRENT_DERIVATION_AND_EXCHANGE_PROOF_OBLIGATIONS_INDEXED_NO_DERIVATION_OR_EM_QFT_CLOSURE",
+      "consumed_policy_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "schema_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0",
+      "packet_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_v0",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionActionBlockDefinitionPacket.lean",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_20260624_v0.json",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "result_token": "TOE_NATIVE_PSI_A_U1_INTERACTION_ACTION_BLOCK_DEFINITION_PACKET_PREPARED_ACTION_BLOCK_DEFINED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "packet_result": "PENDING",
+      "result_review_packet_result": "PENDING",
+      "result_review_pending": "yes",
+      "result_review_completed": "no",
+      "result_review_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "selected_next_target": "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+      "selected_next_target_kind": "toe_native_psi_A_u1_interaction_action_block_definition_packet_result_review",
+      "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+      "selected_gauge_group": "U(1)",
+      "selected_interaction_fields": [
+        "psi",
+        "A"
+      ],
+      "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
+      "matter_surface_policy": "psi as Dirac-like spinor or finite spinor multiplet",
+      "gauge_group_policy": "U(1)",
+      "gauge_field_policy": "A_mu as smooth real U(1) gauge potential one-form",
+      "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+      "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+      "gauge_covariant_derivative_transform": "D_mu psi -> exp(-i q chi) D_mu psi",
+      "current_candidate_policy": "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A variation",
+      "stress_energy_policy": "T_A, T_psi, and T_total = T_A + T_psi named as policy objects; T_psi not derived",
+      "action_block_definition_packet_prepared": "yes",
+      "interaction_action_block_defined": "yes",
+      "minimal_u1_dirac_gauge_action_block_recorded": "yes",
+      "plus_sign_covariant_derivative_preserved": "yes",
+      "field_strength_definition_preserved": "yes",
+      "gauge_transformation_policy_preserved": "yes",
+      "gauge_covariant_derivative_transform_recorded": "yes",
+      "minimal_coupling_expansion_recorded": "yes",
+      "interaction_term_shape_recorded": "yes",
+      "current_candidate_preview_retained": "yes",
+      "action_variation_future_packet_enabled": "yes",
+      "result_review_preparation_authorized": "yes",
+      "action_block_id": "S_{psi A}",
+      "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+      "action_block_density": "sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+      "action_block_matter_term": "psibar (i gamma^mu D_mu - m) psi",
+      "action_block_gauge_term": "- 1/4 F_{mu nu}F^{mu nu}",
+      "minimal_coupling_expansion": "i gamma^mu D_mu psi = i gamma^mu nabla_mu psi - q gamma^mu A_mu psi",
+      "interaction_term_shape": "- q psibar gamma^mu A_mu psi",
+      "current_candidate_preview": "J^mu = q psibar gamma^mu psi",
+      "sourced_gauge_equation_preview": "nabla_mu F^{mu nu} = J^nu",
+      "gauge_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu_alpha J^alpha",
+      "matter_exchange_preview": "nabla_mu T_psi^{mu nu} = + F^nu_alpha J^alpha",
+      "total_exchange_preview": "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0",
+      "c_exchange_policy_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+      "c_exchange_equation_preview": "C_exchange^{Apsi,nu} = 0",
+      "blocked_claims": [
+        "A-variation result",
+        "psi variation result",
+        "J^nu derivation",
+        "current conservation proof",
+        "sourced Maxwell derivation",
+        "Dirac derivation",
+        "psi stress-energy derivation",
+        "A/psi exchange identity",
+        "total stress-energy conservation proof",
+        "C_exchange definition closeout",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "blocked_claim_count": "15",
+      "non_claim_boundary": "This is an action-block definition packet only; no A-variation result; no psi variation result; no J^nu derivation; no current conservation proof; no sourced Maxwell derivation; no Dirac derivation; no psi stress-energy derivation; no A/psi exchange identity; no total stress-energy conservation proof; no C_exchange definition closeout; no EM-QFT closure; no QFT-GR closure; no Phase 2 authorization; no empirical validation; no master-action promotion; full ToeFormal aggregate is recorded as NOT_RUN.",
+      "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+      "A_variation_result_derived": "no",
+      "A_variation_current_derived": "no",
+      "psi_variation_result_derived": "no",
+      "psi_field_equation_derived": "no",
+      "J_nu_derived": "no",
+      "matter_current_J_nu_derived": "no",
+      "current_derived": "no",
+      "current_route_derived": "no",
+      "current_conservation_proved": "no",
+      "sourced_maxwell_equation_derived": "no",
+      "sourced_maxwell_route_derived": "no",
+      "dirac_equation_derived": "no",
+      "psi_stress_energy_derived": "no",
+      "T_psi_derived": "no",
+      "A_psi_exchange_identity_proved": "no",
+      "gauge_matter_exchange_proved": "no",
+      "matter_gauge_exchange_proved": "no",
+      "total_stress_energy_conservation_proved": "no",
+      "T_total_conservation_proved": "no",
+      "C_exchange_definition_closeout": "no",
+      "C_exchange_closeout": "no",
+      "c_exchange_rule_family_decided": "no",
+      "c_exchange_functional_defined": "no",
+      "c_exchange_rule_proved": "no",
+      "em_qft_closure_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "standard_model_derivation_claimed": "no",
+      "quantized_electromagnetism_claimed": "no",
+      "anomaly_analysis_performed": "no",
+      "anomaly_cancellation_claimed": "no",
+      "empirical_validation_claimed": "no",
+      "phase2_authorized": "no",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no"
     }
   ]
 }
