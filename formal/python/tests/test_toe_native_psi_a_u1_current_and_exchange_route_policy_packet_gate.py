@@ -6,6 +6,7 @@ from pathlib import Path
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
+    assert_historical_target_recorded,
 )
 from formal.python.tools.master_action_interaction_selection_after_a_ck_triad_report import (
     DEFAULT_OUT as SELECTOR_PATH,
@@ -241,28 +242,38 @@ def test_psi_a_u1_policy_packet_validation_policy_is_bounded() -> None:
 
 def test_psi_a_u1_policy_packet_rotates_live_target_to_obligation_packet() -> None:
     registry = _json(REGISTRY_PATH)
+    transition_is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target="prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+        live_target=NEXT_TARGET,
+        evidence=(
+            "formal/toe_formal/ToeFormal/Derivation/"
+            "ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean"
+        ),
+        lane=NEXT_TARGET,
+    )
     state = registry["current_target_state"]
-    active = [row for row in registry["workstreams"] if row.get("status") == "active"]
-    assert len(active) == 1
-    assert state["previous_live_next_target"] == (
-        "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
-    )
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["active_lane"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean"
-    )
-    assert state["live_next_target_report"] == (
-        "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json"
-    )
-    assert state["live_next_target_outcome"] == OUTCOME_ID
-    assert state["live_next_target_kind"] == NEXT_TARGET_KIND
-    assert state["previous_live_next_target"] in registry["completed_targets"]
+    if transition_is_current:
+        assert state["previous_live_next_target"] == (
+            "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+        )
+        assert state["live_next_target"] == NEXT_TARGET
+        assert state["active_lane"] == NEXT_TARGET
+        assert state["live_next_target_evidence"] == (
+            "formal/toe_formal/ToeFormal/Derivation/"
+            "ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean"
+        )
+        assert state["live_next_target_report"] == (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json"
+        )
+        assert state["live_next_target_outcome"] == OUTCOME_ID
+        assert state["live_next_target_kind"] == NEXT_TARGET_KIND
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
-    consumed = _workstream(registry, state["previous_live_next_target"])
+    consumed = _workstream(
+        registry, "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+    )
     assert consumed["status"] == "paused"
     assert consumed["policy_packet_result"] == OUTCOME_ID
     assert consumed["selected_next_target"] == NEXT_TARGET
@@ -278,23 +289,15 @@ def test_psi_a_u1_policy_packet_rotates_live_target_to_obligation_packet() -> No
     assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active_row = active[0]
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["consumed_target"] == state["previous_live_next_target"]
-    assert active_row["consumed_policy_packet_result"] == OUTCOME_ID
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["obligation_packet_result"] == "PENDING"
-    assert active_row["policy_packet_result"] == "PENDING"
-    assert active_row["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
-    assert active_row["covariant_derivative_policy"] == COVARIANT_DERIVATIVE_POLICY
-    assert active_row["obligation_packet_preparation_authorized"] == "yes"
-    assert active_row["obligation_packet_prepared"] == "no"
-    assert active_row["J_nu_derived"] == "no"
-    assert active_row["sourced_maxwell_equation_derived"] == "no"
-    assert active_row["matter_gauge_exchange_proved"] == "no"
-    assert active_row["qft_gr_closure_claimed"] == "no"
-    assert active_row["master_action_promoted"] == "no"
+    obligation_row = _workstream(registry, NEXT_TARGET)
+    assert obligation_row["selected_interaction_route"] == SELECTED_INTERACTION_ROUTE
+    assert obligation_row["covariant_derivative_policy"] == COVARIANT_DERIVATIVE_POLICY
+    assert obligation_row["obligation_packet_prepared"] in {"yes", "no"}
+    assert obligation_row["J_nu_derived"] == "no"
+    assert obligation_row["sourced_maxwell_equation_derived"] == "no"
+    assert obligation_row["matter_gauge_exchange_proved"] == "no"
+    assert obligation_row["qft_gr_closure_claimed"] == "no"
+    assert obligation_row["master_action_promoted"] == "no"
 
 
 def test_psi_a_u1_policy_packet_lean_and_surface_mirrors() -> None:
@@ -325,9 +328,9 @@ def test_psi_a_u1_policy_packet_lean_and_surface_mirrors() -> None:
         "ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket",
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+        "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+        "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
         COVARIANT_DERIVATIVE_POLICY,
         GAUGE_TRANSFORMATION_POLICY,
         CURRENT_CANDIDATE_POLICY,
