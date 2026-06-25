@@ -8,6 +8,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
 from formal.python.tools.toe_native_psi_a_u1_current_conservation_obligation_packet_report import (
@@ -223,25 +224,34 @@ def test_psi_a_u1_current_conservation_obligation_packet_preserves_nonclaims() -
 
 
 def test_psi_a_u1_current_conservation_obligation_packet_rotates_to_dirac_route() -> None:
-    assert_current_target_consistent()
-    assert_frontier_matches_registry()
-    assert_public_surfaces_match_registry()
-
     registry = _json(REGISTRY_PATH)
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=CONSUMED_TARGET,
+        live_target=NEXT_TARGET,
+        evidence=str(LEAN_PACKET_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        lane=NEXT_TARGET,
+    )
+    if is_current:
+        assert_current_target_consistent()
+        assert_frontier_matches_registry()
+        assert_public_surfaces_match_registry()
+
     state = registry["current_target_state"]
     active = [row for row in registry["workstreams"] if row.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["active_lane"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == str(
-        LEAN_PACKET_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert state["live_next_target_report"] == str(
-        DEFAULT_OUT.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert state["live_next_target_outcome"] == OUTCOME_ID
-    assert state["live_next_target_kind"] == NEXT_TARGET_KIND
+    if is_current:
+        assert state["previous_live_next_target"] == CONSUMED_TARGET
+        assert state["live_next_target"] == NEXT_TARGET
+        assert state["active_lane"] == NEXT_TARGET
+        assert state["live_next_target_evidence"] == str(
+            LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert state["live_next_target_report"] == str(
+            DEFAULT_OUT.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert state["live_next_target_outcome"] == OUTCOME_ID
+        assert state["live_next_target_kind"] == NEXT_TARGET_KIND
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
@@ -259,54 +269,64 @@ def test_psi_a_u1_current_conservation_obligation_packet_rotates_to_dirac_route(
     assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active_row = active[0]
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["consumed_current_conservation_obligation_packet_result"] == OUTCOME_ID
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["psi_variation_dirac_route_packet_result"] == "PENDING"
-    assert active_row["psi_variation_dirac_route_packet_preparation_authorized"] == "yes"
-    assert active_row["psi_variation_dirac_route_packet_prepared"] == "no"
-    assert active_row["target_conservation_law"] == TARGET_CONSERVATION_LAW
-    assert active_row["current_candidate_policy"] == CURRENT_CANDIDATE_POLICY
-    assert active_row["proof_route_count"] == "3"
-    assert active_row["dirac_route_equation"] == DIRAC_ROUTE_EQUATION
-    assert active_row["adjoint_dirac_route_obligation"] == ADJOINT_DIRAC_ROUTE_OBLIGATION
-    for key in [
-        "current_conservation_obligation_packet_prepared",
-        "current_conservation_requirements_indexed",
-        "current_candidate_preserved",
-        "target_conservation_law_indexed",
-        "proof_routes_indexed",
-        "gauge_symmetry_route_indexed",
-        "field_equation_route_indexed",
-        "sourced_maxwell_consistency_route_indexed",
-        "field_equation_route_selected_as_next",
-        "psi_variation_dirac_route_packet_selected",
-    ]:
-        assert active_row[key] == "yes", key
-    for key in [
-        "current_conservation_proved",
-        "psi_variation_result_derived",
-        "psi_field_equation_derived",
-        "dirac_equation_derived",
-        "adjoint_dirac_equation_derived",
-        "sourced_maxwell_closure_claimed",
-        "sourced_maxwell_equation_derived",
-        "stress_energy_derived",
-        "exchange_identity_proved",
-        "total_conservation_proved",
-        "C_exchange_definition_closeout",
-        "em_qft_closure_claimed",
-        "qft_gr_closure_claimed",
-        "quantized_electromagnetism_claimed",
-        "anomaly_analysis_performed",
-        "phase2_authorized",
-        "empirical_validation_claimed",
-        "master_action_promoted",
-    ]:
-        assert active_row[key] == "no", key
+    if is_current:
+        active_row = active[0]
+        assert active_row["workstream_id"] == NEXT_TARGET
+        assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert active_row["consumed_target"] == CONSUMED_TARGET
+        assert (
+            active_row["consumed_current_conservation_obligation_packet_result"]
+            == OUTCOME_ID
+        )
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["psi_variation_dirac_route_packet_result"] == "PENDING"
+        assert (
+            active_row["psi_variation_dirac_route_packet_preparation_authorized"]
+            == "yes"
+        )
+        assert active_row["psi_variation_dirac_route_packet_prepared"] == "no"
+        assert active_row["target_conservation_law"] == TARGET_CONSERVATION_LAW
+        assert active_row["current_candidate_policy"] == CURRENT_CANDIDATE_POLICY
+        assert active_row["proof_route_count"] == "3"
+        assert active_row["dirac_route_equation"] == DIRAC_ROUTE_EQUATION
+        assert (
+            active_row["adjoint_dirac_route_obligation"]
+            == ADJOINT_DIRAC_ROUTE_OBLIGATION
+        )
+        for key in [
+            "current_conservation_obligation_packet_prepared",
+            "current_conservation_requirements_indexed",
+            "current_candidate_preserved",
+            "target_conservation_law_indexed",
+            "proof_routes_indexed",
+            "gauge_symmetry_route_indexed",
+            "field_equation_route_indexed",
+            "sourced_maxwell_consistency_route_indexed",
+            "field_equation_route_selected_as_next",
+            "psi_variation_dirac_route_packet_selected",
+        ]:
+            assert active_row[key] == "yes", key
+        for key in [
+            "current_conservation_proved",
+            "psi_variation_result_derived",
+            "psi_field_equation_derived",
+            "dirac_equation_derived",
+            "adjoint_dirac_equation_derived",
+            "sourced_maxwell_closure_claimed",
+            "sourced_maxwell_equation_derived",
+            "stress_energy_derived",
+            "exchange_identity_proved",
+            "total_conservation_proved",
+            "C_exchange_definition_closeout",
+            "em_qft_closure_claimed",
+            "qft_gr_closure_claimed",
+            "quantized_electromagnetism_claimed",
+            "anomaly_analysis_performed",
+            "phase2_authorized",
+            "empirical_validation_claimed",
+            "master_action_promoted",
+        ]:
+            assert active_row[key] == "no", key
 
 
 def test_psi_a_u1_current_conservation_obligation_packet_lean_and_surface_mirrors() -> None:

@@ -1,5 +1,5 @@
 {
-  "active_lane": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+  "active_lane": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
   "allowed_statuses": [
     "active",
     "retained",
@@ -22,7 +22,8 @@
     "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
     "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
     "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
-    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
+    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+    "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -248,7 +249,8 @@
     "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
     "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
     "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
-    "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+    "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
+    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
   ],
   "consumed_targets": [
     {
@@ -899,6 +901,14 @@
       "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "status": "completed_consumed_live_target",
       "target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+    },
+    {
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
     }
   ],
   "controls": [
@@ -1260,8 +1270,8 @@
       "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
     }
   ],
-  "current_live_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
-  "current_live_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+  "current_live_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+  "current_live_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
   "current_target_coverage": [
     {
       "report": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_20260624_v0.json",
@@ -1317,10 +1327,18 @@
       "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "status": "completed_consumed_live_target",
       "target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+    },
+    {
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+    "active_lane": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
     "candidate_live_next_targets": [
       "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
       "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
@@ -1330,7 +1348,8 @@
       "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
       "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
       "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
-      "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
+      "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+      "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
     ],
     "completed_targets": [
       "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result",
@@ -1540,7 +1559,8 @@
       "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
       "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
       "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
-      "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+      "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
+      "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
     ],
     "consumed_targets": [
       {
@@ -2174,6 +2194,14 @@
         "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
         "status": "completed_consumed_live_target",
         "target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+      },
+      {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+        "outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+        "status": "completed_consumed_live_target",
+        "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
       }
     ],
     "current_target_coverage": [
@@ -3269,6 +3297,14 @@
         "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
         "status": "completed_consumed_live_target",
         "target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+      },
+      {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+        "outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+        "status": "completed_consumed_live_target",
+        "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
       }
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
@@ -3279,14 +3315,14 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+    "live_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
     "live_next_target_authority": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationObligationPacket.lean",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
     "live_next_target_frontier_mirror": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_kind": "toe_native_psi_A_u1_psi_variation_dirac_route_packet_preparation",
-    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
-    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_20260624_v0.json",
+    "live_next_target_kind": "toe_native_psi_A_u1_adjoint_dirac_route_packet_preparation",
+    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
     "next_strict_target_coverage": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "audit_master_action_citation_language_against_retained_boundaries",
@@ -3725,9 +3761,10 @@
       "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
       "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
       "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
-      "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
+      "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+      "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
     ],
-    "non_claim_boundary": "current-conservation obligation packet only; indexes nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi and records gauge-symmetry, field-equation, and sourced-Maxwell consistency routes; no current conservation proof; no psi variation or Dirac derivation; no adjoint Dirac derivation; no sourced Maxwell closure; no stress-energy derivation; no exchange identity; no total conservation proof; no C_exchange closeout; no EM-QFT closure; no QFT-GR closure; no quantized electromagnetism; no anomaly analysis; no Phase 2 authorization; no empirical validation; no master-action promotion; full ToeFormal aggregate is recorded as NOT_RUN.",
+    "non_claim_boundary": "This is a psi-variation / Dirac route packet only; it records delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0 as a bounded psi equation route. It records no adjoint Dirac derivation, no current conservation proof, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
     "paused_lanes": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "artifact_retention_enforcement_plan",
@@ -4021,10 +4058,11 @@
       "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
       "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
       "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
-      "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+      "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
+      "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
+    "previous_live_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
@@ -4756,6 +4794,14 @@
         "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
         "status": "completed_consumed_live_target",
         "target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+      },
+      {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+        "outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+        "status": "completed_consumed_live_target",
+        "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
       }
     ]
   },
@@ -5330,10 +5376,10 @@
     "stronger_evidence_object",
     "failed_assumption_refutation"
   ],
-  "latest_surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationObligationPacket.lean",
-  "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationObligationPacket.lean",
-  "latest_surface_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_20260624_v0.json",
-  "latest_surface_token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
+  "latest_surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+  "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+  "latest_surface_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+  "latest_surface_token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
   "legal_transitions": {
     "active": [
       "retained",
@@ -5360,12 +5406,12 @@
       "archived"
     ]
   },
-  "live_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
-  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationObligationPacket.lean",
+  "live_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
   "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-  "live_next_target_kind": "toe_native_psi_A_u1_psi_variation_dirac_route_packet_preparation",
-  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
-  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_20260624_v0.json",
+  "live_next_target_kind": "toe_native_psi_A_u1_adjoint_dirac_route_packet_preparation",
+  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
   "next_strict_target_coverage": [
     "analyze_qft_gr_minimal_working_model_candidate_only",
     "audit_master_action_citation_language_against_retained_boundaries",
@@ -5806,7 +5852,8 @@
     "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
     "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
     "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
-    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
+    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+    "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
   ],
   "non_claim_boundary": "current-conservation obligation packet only; indexes nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi and records gauge-symmetry, field-equation, and sourced-Maxwell consistency routes; no current conservation proof; no psi variation or Dirac derivation; no adjoint Dirac derivation; no sourced Maxwell closure; no stress-energy derivation; no exchange identity; no total conservation proof; no C_exchange closeout; no EM-QFT closure; no QFT-GR closure; no quantized electromagnetism; no anomaly analysis; no Phase 2 authorization; no empirical validation; no master-action promotion; full ToeFormal aggregate is recorded as NOT_RUN.",
   "non_promotion_assertions": {
@@ -6108,7 +6155,8 @@
     "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
     "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
     "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result",
-    "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+    "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
+    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
   ],
   "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
   "promotion_escrow": {
@@ -8060,6 +8108,14 @@
       "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "status": "completed_consumed_live_target",
       "target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
+    },
+    {
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "outcome": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
     }
   ],
   "token_family_coverage": [
@@ -8478,6 +8534,18 @@
     {
       "source": "formal/python/tests/test_toe_native_psi_a_u1_current_conservation_obligation_packet_gate.py",
       "token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE"
+    },
+    {
+      "source": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED"
+    },
+    {
+      "source": "formal/python/tools/toe_native_psi_a_u1_psi_variation_dirac_route_packet_report.py",
+      "token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED"
+    },
+    {
+      "source": "formal/python/tests/test_toe_native_psi_a_u1_psi_variation_dirac_route_packet_gate.py",
+      "token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED"
     }
   ],
   "workstreams": [
@@ -72935,29 +73003,29 @@
       "adjoint_dirac_equation_derived": "no"
     },
     {
-      "schema_id": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_20260624_v0",
-      "packet_id": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_v0",
-      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationObligationPacket.lean",
-      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_20260624_v0.json",
-      "outcome_id": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
-      "result_token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
-      "token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
-      "packet_result": "PENDING",
-      "psi_variation_dirac_route_packet_result": "PENDING",
+      "schema_id": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0",
+      "packet_id": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_v0",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "result_token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
       "workstream_id": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
-      "status": "active",
-      "guardrail_status": "active_under_loop_control_registry_v0",
+      "status": "paused",
+      "guardrail_status": "paused_after_psi_variation_dirac_route_packet",
       "active_lane": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "authorized_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationObligationPacket.lean",
-      "consumed_target": "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "consumed_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "consumed_current_conservation_obligation_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
       "consumed_current_derivation_result_review": "TOE_NATIVE_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_RESULT_REVIEW_ACCEPTS_A_VARIATION_CURRENT_CANDIDATE_NO_CURRENT_CONSERVATION_OR_EXCHANGE_PROOF",
-      "selected_next_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
-      "selected_next_target_kind": "toe_native_psi_A_u1_psi_variation_dirac_route_packet_preparation",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "selected_next_target_kind": "toe_native_psi_A_u1_adjoint_dirac_route_packet_preparation",
       "psi_variation_dirac_route_packet_preparation_authorized": "yes",
-      "psi_variation_dirac_route_packet_prepared": "no",
+      "psi_variation_dirac_route_packet_prepared": "yes",
       "result_review_pending": "no",
       "result_review_completed": "yes",
       "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
@@ -73039,9 +73107,8 @@
       ],
       "obligation_count": "6",
       "blocked_claims": [
-        "current conservation proof",
-        "psi variation / Dirac derivation",
         "adjoint Dirac derivation",
+        "current conservation proof",
         "sourced Maxwell closure",
         "stress-energy derivation",
         "exchange identity",
@@ -73055,8 +73122,8 @@
         "empirical validation",
         "master-action promotion"
       ],
-      "blocked_claim_count": "15",
-      "non_claim_boundary": "This is a current-conservation obligation packet only; it records nabla_mu J^mu = 0 as the target law for J^mu = q psibar gamma^mu psi and indexes gauge-symmetry, field-equation, and sourced-Maxwell consistency routes. It records no current conservation proof, no psi variation or Dirac derivation, no adjoint Dirac derivation, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "blocked_claim_count": "14",
+      "non_claim_boundary": "This is a psi-variation / Dirac route packet only; it records delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0 as a bounded psi equation route. It records no adjoint Dirac derivation, no current conservation proof, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
       "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
       "current_conservation_obligation_packet_prepared": "yes",
       "current_conservation_requirements_indexed": "yes",
@@ -73095,7 +73162,201 @@
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
       "pillar_completion_inferred": "no",
-      "seam_closure_claim": "no"
+      "seam_closure_claim": "no",
+      "packet_classification": "toe_native_psi_A_u1_psi_variation_dirac_route_packet_prepared_psi_equation_route_recorded_adjoint_and_conservation_still_blocked",
+      "consumed_psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "primary_variation_variable": "psibar",
+      "psibar_variation_route": "delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0",
+      "psi_equation_route": "(i gamma^mu D_mu - m) psi = 0",
+      "psi_equation_route_status": "bounded psi equation route recorded from psibar variation; no adjoint route or current conservation proof",
+      "adjoint_route_preview": "delta_psi S_{psi A} -> adjoint Dirac equation route",
+      "current_conservation_from_pair_preview": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
+      "sourced_maxwell_compatibility_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+      "exchange_route_preview": "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions",
+      "indexed_future_routes": [
+        {
+          "proof_claimed": false,
+          "route_id": "adjoint_dirac_route",
+          "route_shape": "delta_psi S_{psi A} -> adjoint Dirac equation route",
+          "status": "indexed_not_derived"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "current_conservation_from_dirac_pair_route",
+          "route_shape": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
+          "status": "indexed_requires_psi_and_adjoint_equations"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "sourced_maxwell_compatibility_route",
+          "route_shape": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+          "status": "indexed_not_sourced_maxwell_closure"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "exchange_route",
+          "route_shape": "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions",
+          "status": "indexed_not_stress_energy_or_exchange_proof"
+        }
+      ],
+      "psibar_variation_route_recorded": "yes",
+      "psi_equation_route_recorded": "yes",
+      "dirac_route_from_psibar_variation_recorded": "yes",
+      "adjoint_route_indexed": "yes",
+      "current_conservation_route_indexed": "yes",
+      "sourced_maxwell_compatibility_route_indexed": "yes",
+      "exchange_route_indexed": "yes",
+      "adjoint_dirac_route_packet_selected": "yes",
+      "adjoint_dirac_route_packet_preparation_authorized": "yes",
+      "current_conservation_from_dirac_pair_target_indexed": "yes",
+      "psi_equation_derived": "no",
+      "full_dirac_derivation_closed": "no",
+      "adjoint_dirac_derivation_claimed": "no",
+      "indexed_future_route_count": "4",
+      "review_criteria_count": "7",
+      "review_criteria_accepted_count": "7",
+      "follow_on_current_conservation_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+    },
+    {
+      "schema_id": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0",
+      "packet_id": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_v0",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "result_token": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "packet_result": "PENDING",
+      "packet_classification": "toe_native_psi_A_u1_psi_variation_dirac_route_packet_prepared_psi_equation_route_recorded_adjoint_and_conservation_still_blocked",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_20260624_v0.json",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1PsiVariationDiracRoutePacket.lean",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "selected_next_target_kind": "toe_native_psi_A_u1_adjoint_dirac_route_packet_preparation",
+      "consumed_target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
+      "consumed_psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "consumed_current_conservation_obligation_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
+      "psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "blocked_claims": [
+        "adjoint Dirac derivation",
+        "current conservation proof",
+        "sourced Maxwell closure",
+        "stress-energy derivation",
+        "exchange identity",
+        "total conservation proof",
+        "C_exchange closeout",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "quantized electromagnetism",
+        "anomaly analysis",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "blocked_claim_count": "14",
+      "non_claim_boundary": "This is a psi-variation / Dirac route packet only; it records delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0 as a bounded psi equation route. It records no adjoint Dirac derivation, no current conservation proof, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+      "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+      "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+      "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+      "current_candidate_from_A_variation": "J^nu = q psibar gamma^nu psi",
+      "current_candidate_policy": "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate only, not yet conserved",
+      "bounded_route_shape": "nabla_mu F^{mu nu} = J^nu",
+      "target_conservation_law": "nabla_mu J^mu = 0",
+      "current_conservation_question": "Does the candidate current satisfy nabla_mu J^mu = 0?",
+      "field_equation_route_preview": "psi equation + psibar equation -> current conservation",
+      "sourced_maxwell_consistency_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+      "primary_variation_variable": "psibar",
+      "psibar_variation_route": "delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0",
+      "psi_equation_route": "(i gamma^mu D_mu - m) psi = 0",
+      "dirac_route_equation": "(i gamma^mu D_mu - m) psi = 0",
+      "psi_equation_route_status": "bounded psi equation route recorded from psibar variation; no adjoint route or current conservation proof",
+      "adjoint_dirac_route_obligation": "derive the adjoint equation for psibar under the selected adjoint convention",
+      "adjoint_route_preview": "delta_psi S_{psi A} -> adjoint Dirac equation route",
+      "current_conservation_from_pair_preview": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
+      "sourced_maxwell_compatibility_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+      "exchange_route_preview": "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions",
+      "indexed_future_routes": [
+        {
+          "proof_claimed": false,
+          "route_id": "adjoint_dirac_route",
+          "route_shape": "delta_psi S_{psi A} -> adjoint Dirac equation route",
+          "status": "indexed_not_derived"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "current_conservation_from_dirac_pair_route",
+          "route_shape": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
+          "status": "indexed_requires_psi_and_adjoint_equations"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "sourced_maxwell_compatibility_route",
+          "route_shape": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+          "status": "indexed_not_sourced_maxwell_closure"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "exchange_route",
+          "route_shape": "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions",
+          "status": "indexed_not_stress_energy_or_exchange_proof"
+        }
+      ],
+      "psi_variation_dirac_route_packet_prepared": "yes",
+      "psibar_variation_route_recorded": "yes",
+      "psi_equation_route_recorded": "yes",
+      "dirac_route_from_psibar_variation_recorded": "yes",
+      "adjoint_route_indexed": "yes",
+      "current_conservation_route_indexed": "yes",
+      "sourced_maxwell_compatibility_route_indexed": "yes",
+      "exchange_route_indexed": "yes",
+      "adjoint_dirac_route_packet_selected": "yes",
+      "adjoint_dirac_route_packet_preparation_authorized": "yes",
+      "current_conservation_from_dirac_pair_target_indexed": "yes",
+      "psi_variation_result_derived": "no",
+      "psi_field_equation_derived": "no",
+      "psi_equation_derived": "no",
+      "dirac_equation_derived": "no",
+      "full_dirac_derivation_closed": "no",
+      "adjoint_dirac_equation_derived": "no",
+      "adjoint_dirac_derivation_claimed": "no",
+      "current_conservation_proved": "no",
+      "sourced_maxwell_closure_claimed": "no",
+      "sourced_maxwell_equation_derived": "no",
+      "stress_energy_derived": "no",
+      "psi_stress_energy_derived": "no",
+      "exchange_identity_proved": "no",
+      "gauge_matter_exchange_proved": "no",
+      "matter_gauge_exchange_proved": "no",
+      "total_conservation_proved": "no",
+      "total_stress_energy_conservation_proved": "no",
+      "C_exchange_closeout": "no",
+      "C_exchange_definition_closeout": "no",
+      "em_qft_closure_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "quantized_electromagnetism_claimed": "no",
+      "anomaly_analysis_performed": "no",
+      "anomaly_cancellation_claimed": "no",
+      "phase2_authorized": "no",
+      "empirical_validation_claimed": "no",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "indexed_future_route_count": "4",
+      "review_criteria_count": "7",
+      "review_criteria_accepted_count": "7",
+      "follow_on_current_conservation_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+      "workstream_id": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "status": "active",
+      "active_lane": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "authorized_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+      "adjoint_dirac_route_packet_result": "PENDING",
+      "adjoint_dirac_route_packet_prepared": "no",
+      "result_review_pending": "yes",
+      "result_review_completed": "no",
+      "A_variation_residual": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu"
     }
   ]
 }
