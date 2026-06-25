@@ -290,9 +290,9 @@ def test_psi_a_u1_obligation_packet_lean_and_surface_mirrors() -> None:
         "ToeNativePsiAU1CurrentAndExchangeDerivationObligationPacket",
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
+        "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_interaction_action_block_definition_packet",
+        "review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result",
         COVARIANT_DERIVATIVE_POLICY,
         GAUGE_TRANSFORMATION_POLICY,
         CURRENT_CANDIDATE_POLICY,
