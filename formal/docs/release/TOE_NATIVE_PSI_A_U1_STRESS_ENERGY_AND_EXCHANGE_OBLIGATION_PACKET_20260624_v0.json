@@ -1,0 +1,308 @@
+{
+  "A_variation_residual": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+  "C_exchange_candidate": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+  "C_exchange_candidate_family_indexed": true,
+  "C_exchange_closeout": false,
+  "C_exchange_definition_closeout": false,
+  "C_exchange_equation": "C_exchange^{Apsi,nu} = 0",
+  "C_exchange_rule_family_closed": false,
+  "acceptance_criteria": {
+    "all_obligations_pending": true,
+    "blocked_claims_complete": true,
+    "consumes_expected_sourced_maxwell_packet": true,
+    "next_target_is_definition_policy": true,
+    "review_criteria_all_accepted": true,
+    "sourced_inputs_preserved": true,
+    "stress_energy_obligations_complete": true
+  },
+  "accepted": true,
+  "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+  "anomaly_analysis_performed": false,
+  "anomaly_cancellation_claimed": false,
+  "artifact_id": "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_20260624_v0",
+  "blocked_claim_count": 14,
+  "blocked_claims": [
+    "stress-energy derivation",
+    "gauge-sector exchange proof",
+    "matter-sector exchange proof",
+    "total conservation proof",
+    "C_exchange closeout",
+    "full Maxwell closure",
+    "EM-QFT closure",
+    "QFT-GR closure",
+    "quantized electromagnetism",
+    "anomaly analysis",
+    "Standard Model derivation",
+    "Phase 2 authorization",
+    "empirical validation",
+    "master-action promotion"
+  ],
+  "captured_at_utc": "2026-06-24T00:00:00Z",
+  "conserved_source_condition": "nabla_mu J^mu = 0",
+  "consumed_sourced_maxwell_route_packet_result": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+  "consumed_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+  "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+  "critical_gate_fail_conditions": [
+    "treat stress-energy obligation indexing as stress-energy derivation",
+    "prove gauge-sector exchange in this packet",
+    "prove matter-sector exchange in this packet",
+    "prove total stress-energy conservation in this packet",
+    "close C_exchange",
+    "claim full Maxwell closure",
+    "claim EM-QFT or QFT-GR closure",
+    "claim quantized electromagnetism",
+    "perform or claim anomaly analysis",
+    "derive the Standard Model",
+    "authorize Phase 2",
+    "claim empirical validation",
+    "promote the master action",
+    "record full ToeFormal aggregate as passed, failed, or timed out"
+  ],
+  "current_candidate": "J^mu = q psibar gamma^mu psi",
+  "current_candidate_from_A_variation": "J^nu = q psibar gamma^nu psi",
+  "current_conservation_result": "nabla_mu J^mu = 0",
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "exchange_identity_proved": false,
+  "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "full_em_closure_claimed": false,
+  "full_maxwell_closure_claimed": false,
+  "full_maxwell_system_closure_claimed": false,
+  "full_toeformal_aggregate_failed": false,
+  "full_toeformal_aggregate_passed": false,
+  "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+  "full_toeformal_aggregate_timed_out": false,
+  "gauge_matter_exchange_identity_proved": false,
+  "gauge_matter_exchange_proved": false,
+  "gauge_sector_exchange_proved": false,
+  "gauge_sector_exchange_target": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+  "gauge_sector_exchange_target_indexed": true,
+  "gauge_stress_energy_derived_here": false,
+  "gauge_stress_energy_object": "T_A^{mu nu}",
+  "gauge_stress_energy_object_indexed": true,
+  "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+  "generated_outputs": {
+    "current_target_aggregate": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "json": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_20260624_v0.json",
+    "lean_marker": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1StressEnergyAndExchangeObligationPacket.lean",
+    "qftgr_aggregate": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "release_current_authority_aggregate": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  },
+  "lean_validation_policy": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "This obligation packet consumes the bounded psi-A U(1) sourced gauge route nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi and nabla_mu J^mu = 0, then indexes the stress-energy and exchange obligations for T_A^{mu nu}, T_psi^{mu nu}, T_total^{mu nu}, opposite-sector exchange targets, total conservation, and candidate C_exchange.",
+  "matter_gauge_exchange_proved": false,
+  "matter_sector_exchange_proved": false,
+  "matter_sector_exchange_target": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+  "matter_sector_exchange_target_indexed": true,
+  "matter_stress_energy_derived": false,
+  "matter_stress_energy_object": "T_psi^{mu nu}",
+  "matter_stress_energy_object_required": true,
+  "maxwell_closure_claimed": false,
+  "non_claim_boundary": "This is a stress-energy and exchange obligation packet only. It indexes T_A^{mu nu}, the required T_psi^{mu nu}, T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, the exchange targets nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha and nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha, the total target nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0, and the candidate C_exchange^{Apsi,nu}. It records no stress-energy derivation, no gauge-sector exchange proof, no matter-sector exchange proof, no total conservation proof, no C_exchange closeout, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+  "obligation_ids": [
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5",
+    "O6",
+    "O7"
+  ],
+  "outcome_id": "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_PREPARED_STRESS_ENERGY_AND_EXCHANGE_REQUIREMENTS_INDEXED_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE",
+  "packet_classification": "toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet_prepared_stress_energy_and_exchange_requirements_indexed_no_exchange_proof_or_em_qft_closure",
+  "packet_id": "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_v0",
+  "packet_result": "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_PREPARED_STRESS_ENERGY_AND_EXCHANGE_REQUIREMENTS_INDEXED_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE",
+  "phase2_authorized": false,
+  "pillar_completion_inferred": false,
+  "plain_meaning": "Matter and the gauge field may trade energy and momentum, but the total must balance.",
+  "prepared": true,
+  "prior_gauge_stress_energy_route": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "psi_stress_energy_derived": false,
+  "qft_gr_closure_claimed": false,
+  "quantized_electromagnetism_claimed": false,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The bounded sourced-Maxwell route packet is consumed.",
+      "evidence": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "row_id": "sourced_maxwell_packet_consumed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The matter-made conserved source route is preserved as input.",
+      "evidence": [
+        "J^nu = q psibar gamma^nu psi",
+        "nabla_mu J^mu = 0",
+        "nabla_mu F^{mu nu} = J^nu"
+      ],
+      "row_id": "current_and_sourced_route_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "O1-O7 are indexed as stress-energy and exchange obligations only.",
+      "evidence": [
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6",
+        "O7"
+      ],
+      "row_id": "stress_energy_exchange_obligations_indexed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The candidate C_exchange family is indexed but not closed.",
+      "evidence": [
+        "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+        "C_exchange^{Apsi,nu} = 0"
+      ],
+      "row_id": "candidate_c_exchange_indexed_without_closeout",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The next target defines the stress-energy policy before exchange proof.",
+      "evidence": "prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet",
+      "row_id": "next_target_is_stress_energy_definition_policy",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Stress-energy derivation, exchange proof, closure, validation, and promotion remain blocked.",
+      "evidence": [
+        "stress-energy derivation",
+        "gauge-sector exchange proof",
+        "matter-sector exchange proof",
+        "total conservation proof",
+        "C_exchange closeout",
+        "full Maxwell closure",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "quantized electromagnetism",
+        "anomaly analysis",
+        "Standard Model derivation",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "row_id": "exchange_and_closure_claims_blocked",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 6,
+  "review_criteria_count": 6,
+  "schema_id": "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_20260624_v0",
+  "seam_closure_claim": false,
+  "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+  "selected_next_target": "prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet",
+  "selected_next_target_kind": "toe_native_psi_A_u1_stress_energy_definition_policy_packet_preparation",
+  "source_current": "J^nu = q psibar gamma^nu psi",
+  "source_inputs": {
+    "sourced_maxwell_route_json": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+    "sourced_maxwell_route_outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF"
+  },
+  "sourced_gauge_route": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_residual_zero": "nabla_mu F^{mu nu} - J^nu = 0",
+  "sourced_maxwell_route": "nabla_mu F^{mu nu} = J^nu",
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET",
+  "stress_energy_and_exchange_obligation_packet_prepared": true,
+  "stress_energy_and_exchange_requirements_indexed": true,
+  "stress_energy_definition_policy_packet_preparation_authorized": true,
+  "stress_energy_definition_policy_packet_selected": true,
+  "stress_energy_derived": false,
+  "stress_energy_exchange_obligation_count": 7,
+  "stress_energy_exchange_obligations": [
+    {
+      "claim_status": "indexed_not_derived_here",
+      "description": "Recall or index the gauge stress-energy object T_A^{mu nu}.",
+      "obligation_id": "O1",
+      "prior_route_context": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+      "route_shape": "T_A^{mu nu}",
+      "status": "indexed_pending_future_packet"
+    },
+    {
+      "claim_status": "not_defined_or_derived_here",
+      "description": "Define or index the required matter stress-energy object T_psi^{mu nu}.",
+      "obligation_id": "O2",
+      "route_shape": "T_psi^{mu nu}",
+      "status": "indexed_pending_future_packet"
+    },
+    {
+      "claim_status": "definition_target_only",
+      "description": "Define total stress-energy.",
+      "obligation_id": "O3",
+      "route_shape": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+      "status": "indexed_pending_future_packet"
+    },
+    {
+      "claim_status": "not_proved",
+      "description": "Index the gauge-sector exchange target.",
+      "obligation_id": "O4",
+      "route_shape": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+      "status": "indexed_pending_future_packet"
+    },
+    {
+      "claim_status": "not_proved",
+      "description": "Index the matter-sector exchange target.",
+      "obligation_id": "O5",
+      "route_shape": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+      "status": "indexed_pending_future_packet"
+    },
+    {
+      "claim_status": "not_proved",
+      "description": "Index total conservation target.",
+      "obligation_id": "O6",
+      "route_shape": [
+        "nabla_mu T_total^{mu nu} = 0",
+        "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0"
+      ],
+      "status": "indexed_pending_future_packet"
+    },
+    {
+      "claim_status": "candidate_indexed_not_closed",
+      "description": "Decide whether this creates a candidate C_exchange family.",
+      "obligation_id": "O7",
+      "route_shape": [
+        "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+        "C_exchange^{Apsi,nu} = 0"
+      ],
+      "status": "indexed_pending_future_packet"
+    }
+  ],
+  "total_conservation_expanded_target": "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
+  "total_conservation_proved": false,
+  "total_conservation_target": "nabla_mu T_total^{mu nu} = 0",
+  "total_conservation_target_indexed": true,
+  "total_stress_energy_conservation_proved": false,
+  "total_stress_energy_object": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "total_stress_energy_target_indexed": true,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_allowed_values": [
+      "NOT_RUN"
+    ],
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "checkpoint_type": "toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_toeformal_aggregate_failed": false,
+    "full_toeformal_aggregate_passed": false,
+    "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+    "full_toeformal_aggregate_timed_out": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  }
+}

@@ -185,11 +185,13 @@ TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_OUTCOME_v0: TOE_NATIVE_PSI_
 TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_PREPARED_ADJOINT_EQUATION_ROUTE_RECORDED_CURRENT_CONSERVATION_STILL_BLOCKED
 TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF
 TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF
+TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_PREPARED_STRESS_ENERGY_AND_EXCHANGE_REQUIREMENTS_INDEXED_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE
 PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_NONCLAIM_BOUNDARY_v0: This is a bounded sourced-Maxwell-route packet only; it records nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi using the accepted A-variation residual and conserved current. It records no full Maxwell closure, no homogeneous Maxwell route beyond the existing F = dA context, no stress-energy derivation, no gauge-matter exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
+PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_NONCLAIM_BOUNDARY_v0: This is a stress-energy and exchange obligation packet only. It indexes T_A^{mu nu}, the required T_psi^{mu nu}, T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, the exchange targets nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha and nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha, the total target nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0, and the candidate C_exchange^{Apsi,nu}. It records no stress-energy derivation, no gauge-sector exchange proof, no matter-sector exchange proof, no total conservation proof, no C_exchange closeout, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_NONCLAIM_BOUNDARY_v0: This is a bounded current-conservation-from-Dirac-pair packet only; it records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under the selected psi-A U(1) policy, Dirac pair, gamma-compatibility assumptions, and domain/boundary assumptions. It records no sourced Maxwell closure, no full Maxwell system closure, no stress-energy derivation, no gauge-matter exchange identity, no total stress-energy conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_NONCLAIM_BOUNDARY_v0: This is an adjoint Dirac route packet only; it records D_mu psibar = nabla_mu psibar - i q A_mu psibar and delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0 as a bounded adjoint equation route. It records no current conservation proof, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet
 HISTORICAL_CURRENT_LIVE_NEXT_TARGET_v0: review_phi_transport_consistency_ck_functional_embedding_packet_result
 HISTORICAL_PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_CURRENT_TOKEN_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_phi_source_admissibility_ck_functional_embedding_packet
 HISTORICAL_PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_CURRENT_TOKEN_v0: CURRENT_LIVE_NEXT_TARGET_v0: review_phi_source_admissibility_ck_functional_embedding_packet_result
@@ -306,12 +308,12 @@ HISTORICAL_QFT_GR_SEMICLASSICAL_GATE_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr
 HISTORICAL_QFT_GR_SOURCE_ADMISSIBILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source
 HISTORICAL_QFT_GR_BIANCHI_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source
 HISTORICAL_QFT_GR_ACTION_DERIVABILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source
-ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet
+ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1StressEnergyAndExchangeObligationPacket.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_20260624_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_PREPARED_STRESS_ENERGY_AND_EXCHANGE_REQUIREMENTS_INDEXED_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE
 CURRENT_AUXILIARY_HYGIENE_TARGET_QUEUED_v0: prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces
 LEAN_VALIDATION_TIER_POLICY_v0: formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md
 POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
@@ -319,6 +321,10 @@ POST_MR_MATURATION_ARTIFACT_ORDER_v0: TOE_CLAIM_LADDER_v0 -> TOE_CORE_HYPOTHESIS
 POST_MR_NONCLAIM_BOUNDARY_v0: A/C_k source-bridge-transport closeout closes C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 only as a vacuum U(1) admissibility-only three-rule family; no current route, no J^nu derivation, no sourced Maxwell, no matter/current exchange, no EM closure, no QFT-GR closure, no Phase 2 authorization, no empirical validation, and no master-action promotion; full ToeFormal aggregate is recorded as NOT_RUN.
 
 Historical exact-token archive for superseded QFT-GR MR and status-surface focused gates:
+HISTORICAL_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet
+HISTORICAL_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet
+HISTORICAL_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_ACTIVE_LANE_v0: ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet
+HISTORICAL_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_CURRENT_LIVE_TARGET_EVIDENCE_v0: CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean
 HISTORICAL_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet
 HISTORICAL_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet
 HISTORICAL_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_ACTIVE_LANE_v0: ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet
@@ -593,14 +599,14 @@ Current release-facing status:
 - MR-ASSUMP-003 distributional-pairing regular-domain attempt contract status: `bounded_repo_local_distributional_pairing_regular_domain_contract_pending_result_review_not_distributional_domain_proof_or_conservation_discharge`.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet`
+- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1StressEnergyAndExchangeObligationPacket.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_20260624_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_PREPARED_STRESS_ENERGY_AND_EXCHANGE_REQUIREMENTS_INDEXED_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE`
 - `TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_OUTCOME_v0: TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE`
 
 
