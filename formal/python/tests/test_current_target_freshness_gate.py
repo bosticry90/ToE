@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
+    "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
+    "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet"
+    "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1PsiVariationDiracRoutePacket.lean"
+    / "ToeNativePsiAU1AdjointDiracRoutePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3299,6 +3299,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_"
         "PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED"
     )
+    psi_a_adjoint_dirac_route_result = (
+        "TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_PREPARED_"
+        "ADJOINT_EQUATION_ROUTE_RECORDED_CURRENT_CONSERVATION_STILL_BLOCKED"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3310,12 +3314,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_"
+        "TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_"
         "20260624_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["outcome_id"] == (
-        psi_a_psi_variation_dirac_route_result
+        psi_a_adjoint_dirac_route_result
+    )
+    assert interaction_active_workstream[
+        "consumed_adjoint_dirac_route_packet_result"
+    ] == psi_a_adjoint_dirac_route_result
+    assert interaction_active_workstream["adjoint_dirac_route_packet_result"] == (
+        psi_a_adjoint_dirac_route_result
     )
     assert interaction_active_workstream[
         "consumed_psi_variation_dirac_route_packet_result"
@@ -3327,23 +3337,28 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "consumed_current_conservation_obligation_packet_result"
     ] == psi_a_current_conservation_obligation_result
     assert interaction_active_workstream["result_token"] == (
-        psi_a_psi_variation_dirac_route_result
+        psi_a_adjoint_dirac_route_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_psi_A_u1_adjoint_dirac_route_packet_preparation"
+    ] == "toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet_preparation"
     assert interaction_active_workstream["packet_result"] == "PENDING"
-    assert interaction_active_workstream["adjoint_dirac_route_packet_result"] == (
-        "PENDING"
-    )
+    assert interaction_active_workstream[
+        "current_conservation_from_dirac_pair_packet_result"
+    ] == "PENDING"
     assert (
         interaction_active_workstream[
-            "adjoint_dirac_route_packet_preparation_authorized"
+            "current_conservation_from_dirac_pair_packet_preparation_authorized"
         ]
         == "yes"
     )
-    assert interaction_active_workstream["adjoint_dirac_route_packet_prepared"] == "no"
+    assert interaction_active_workstream[
+        "current_conservation_from_dirac_pair_packet_prepared"
+    ] == "no"
+    assert interaction_active_workstream[
+        "adjoint_dirac_route_packet_prepared"
+    ] == "yes"
     assert interaction_active_workstream["selected_interaction_route"] == (
         "psi_A_u1_current_and_exchange_route"
     )
@@ -3387,7 +3402,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["sourced_maxwell_consistency_route_preview"] == (
         "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0"
     )
-    assert interaction_active_workstream["primary_variation_variable"] == "psibar"
+    assert interaction_active_workstream["primary_variation_variable"] == "psi"
     assert interaction_active_workstream["psibar_variation_route"] == (
         "delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0"
     )
@@ -3397,17 +3412,29 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["dirac_route_equation"] == (
         "(i gamma^mu D_mu - m) psi = 0"
     )
-    assert interaction_active_workstream["psi_equation_route_status"] == (
-        "bounded psi equation route recorded from psibar variation; no adjoint route "
-        "or current conservation proof"
-    )
     assert interaction_active_workstream["adjoint_dirac_route_obligation"] == (
         "derive the adjoint equation for psibar under the selected adjoint convention"
     )
-    assert interaction_active_workstream["adjoint_route_preview"] == (
-        "delta_psi S_{psi A} -> adjoint Dirac equation route"
+    assert interaction_active_workstream["adjoint_derivative_policy"] == (
+        "D_mu psibar = nabla_mu psibar - i q A_mu psibar"
+    )
+    assert interaction_active_workstream["adjoint_variation_route"] == (
+        "delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0"
+    )
+    assert interaction_active_workstream["adjoint_equation_route"] == (
+        "i (D_mu psibar) gamma^mu + m psibar = 0"
+    )
+    assert interaction_active_workstream["left_acting_adjoint_notation"] == (
+        "psibar (i overleftarrow{D}_mu gamma^mu + m) = 0"
+    )
+    assert interaction_active_workstream["adjoint_equation_route_status"] == (
+        "bounded adjoint equation route recorded from psi variation; no current "
+        "conservation proof"
     )
     assert interaction_active_workstream["current_conservation_from_pair_preview"] == (
+        "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0"
+    )
+    assert interaction_active_workstream["current_conservation_route_preview"] == (
         "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0"
     )
     assert interaction_active_workstream["sourced_maxwell_compatibility_route_preview"] == (
@@ -3416,29 +3443,33 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["exchange_route_preview"] == (
         "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions"
     )
-    assert interaction_active_workstream["indexed_future_route_count"] == "4"
+    assert interaction_active_workstream["proof_pair_status"] == (
+        "psi and adjoint equation routes are both recorded; conservation proof "
+        "remains blocked"
+    )
+    assert interaction_active_workstream["indexed_future_route_count"] == "3"
     assert interaction_active_workstream["review_criteria_count"] == "7"
+    assert interaction_active_workstream["blocked_claim_count"] == "13"
     for key in [
         "psi_variation_dirac_route_packet_prepared",
         "psibar_variation_route_recorded",
         "psi_equation_route_recorded",
         "dirac_route_from_psibar_variation_recorded",
-        "adjoint_route_indexed",
+        "adjoint_dirac_route_packet_prepared",
+        "psi_variation_adjoint_route_recorded",
+        "adjoint_equation_route_recorded",
+        "opposite_gauge_sign_adjoint_derivative_indexed",
+        "left_acting_adjoint_notation_recorded",
+        "psi_and_adjoint_pair_indexed",
+        "current_conservation_from_dirac_pair_packet_selected",
+        "current_conservation_from_dirac_pair_packet_preparation_authorized",
         "current_conservation_route_indexed",
         "sourced_maxwell_compatibility_route_indexed",
         "exchange_route_indexed",
-        "adjoint_dirac_route_packet_selected",
-        "adjoint_dirac_route_packet_preparation_authorized",
-        "current_conservation_from_dirac_pair_target_indexed",
     ]:
         assert interaction_active_workstream[key] == "yes", key
     for key in [
         "current_conservation_proved",
-        "psi_variation_result_derived",
-        "psi_field_equation_derived",
-        "psi_equation_derived",
-        "dirac_equation_derived",
-        "full_dirac_derivation_closed",
         "adjoint_dirac_equation_derived",
         "adjoint_dirac_derivation_claimed",
         "sourced_maxwell_closure_claimed",

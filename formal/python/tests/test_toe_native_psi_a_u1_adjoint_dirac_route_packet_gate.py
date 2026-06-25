@@ -11,24 +11,24 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.toe_native_psi_a_u1_psi_variation_dirac_route_packet_report import (
-    ADJOINT_DIRAC_ROUTE_OBLIGATION,
-    ADJOINT_ROUTE_PREVIEW,
+from formal.python.tools.toe_native_psi_a_u1_adjoint_dirac_route_packet_report import (
+    ADJOINT_DERIVATIVE_POLICY,
+    ADJOINT_EQUATION_ROUTE,
+    ADJOINT_EQUATION_ROUTE_STATUS,
+    ADJOINT_VARIATION_ROUTE,
     BLOCKED_CLAIMS,
     CONSUMED_TARGET,
     COVARIANT_DERIVATIVE_POLICY,
     CURRENT_CANDIDATE_POLICY,
     CURRENT_CONSERVATION_FROM_PAIR_PREVIEW,
-    CURRENT_CONSERVATION_OBLIGATION_OUTCOME,
-    CURRENT_CONSERVATION_OBLIGATION_PATH,
+    CURRENT_CONSERVATION_ROUTE_PREVIEW,
     DEFAULT_OUT,
     EXCHANGE_ROUTE_PREVIEW,
-    FIELD_STRENGTH_POLICY,
-    GAUGE_TRANSFORMATION_POLICY,
     INDEXED_FUTURE_ROUTES,
     LEAN_PACKET_PATH,
     LEAN_VALIDATION_POLICY_ID,
     LEAN_VALIDATION_POLICY_PATH,
+    LEFT_ACTING_ADJOINT_NOTATION,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OUTCOME_ID,
@@ -36,13 +36,15 @@ from formal.python.tools.toe_native_psi_a_u1_psi_variation_dirac_route_packet_re
     PACKET_ID,
     PRIMARY_VARIATION_VARIABLE,
     PSI_EQUATION_ROUTE,
+    PSI_VARIATION_DIRAC_ROUTE_OUTCOME,
+    PSI_VARIATION_DIRAC_ROUTE_PATH,
     PSIBAR_VARIATION_ROUTE,
     QFTGR_AGGREGATE_PATH,
     RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
     SCHEMA_ID,
     SOURCED_MAXWELL_COMPATIBILITY_ROUTE_PREVIEW,
     TARGET_CONSERVATION_LAW,
-    build_toe_native_psi_a_u1_psi_variation_dirac_route_packet,
+    build_toe_native_psi_a_u1_adjoint_dirac_route_packet,
 )
 
 
@@ -52,7 +54,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "toe_native_psi_a_u1_psi_variation_dirac_route_packet_report.py"
+    / "toe_native_psi_a_u1_adjoint_dirac_route_packet_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 SURFACES_PATH = (
@@ -99,9 +101,9 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_files_exist() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_files_exist() -> None:
     for path in [
-        CURRENT_CONSERVATION_OBLIGATION_PATH,
+        PSI_VARIATION_DIRAC_ROUTE_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -113,11 +115,11 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_builds() -> None:
-    current_obligation = _json(CURRENT_CONSERVATION_OBLIGATION_PATH)
+def test_psi_a_u1_adjoint_dirac_route_packet_builds() -> None:
+    psi_variation = _json(PSI_VARIATION_DIRAC_ROUTE_PATH)
     packet = _json(DEFAULT_OUT)
-    assert current_obligation["outcome_id"] == CURRENT_CONSERVATION_OBLIGATION_OUTCOME
-    assert current_obligation["selected_next_target"] == CONSUMED_TARGET
+    assert psi_variation["outcome_id"] == PSI_VARIATION_DIRAC_ROUTE_OUTCOME
+    assert psi_variation["selected_next_target"] == CONSUMED_TARGET
 
     assert packet["schema_id"] == SCHEMA_ID
     assert packet["packet_id"] == PACKET_ID
@@ -128,64 +130,60 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_builds() -> None:
     assert packet["packet_classification"] == PACKET_CLASSIFICATION
     assert packet["consumed_target"] == CONSUMED_TARGET
     assert (
-        packet["consumed_current_conservation_obligation_packet_result"]
-        == CURRENT_CONSERVATION_OBLIGATION_OUTCOME
+        packet["consumed_psi_variation_dirac_route_packet_result"]
+        == PSI_VARIATION_DIRAC_ROUTE_OUTCOME
     )
     assert packet["selected_next_target"] == NEXT_TARGET
     assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert build_toe_native_psi_a_u1_psi_variation_dirac_route_packet() == packet
+    assert build_toe_native_psi_a_u1_adjoint_dirac_route_packet() == packet
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_records_route_only() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_records_route_only() -> None:
     packet = _json(DEFAULT_OUT)
     assert packet["primary_variation_variable"] == PRIMARY_VARIATION_VARIABLE
     assert packet["psibar_variation_route"] == PSIBAR_VARIATION_ROUTE
     assert packet["psi_equation_route"] == PSI_EQUATION_ROUTE
-    assert packet["dirac_route_equation"] == PSI_EQUATION_ROUTE
     assert packet["covariant_derivative_policy"] == COVARIANT_DERIVATIVE_POLICY
-    assert packet["field_strength_policy"] == FIELD_STRENGTH_POLICY
-    assert packet["gauge_transformation_policy"] == GAUGE_TRANSFORMATION_POLICY
     assert packet["current_candidate_policy"] == CURRENT_CANDIDATE_POLICY
     assert packet["target_conservation_law"] == TARGET_CONSERVATION_LAW
-    assert packet["adjoint_dirac_route_obligation"] == ADJOINT_DIRAC_ROUTE_OBLIGATION
-    assert packet["adjoint_route_preview"] == ADJOINT_ROUTE_PREVIEW
+    assert packet["adjoint_derivative_policy"] == ADJOINT_DERIVATIVE_POLICY
+    assert packet["adjoint_variation_route"] == ADJOINT_VARIATION_ROUTE
+    assert packet["adjoint_equation_route"] == ADJOINT_EQUATION_ROUTE
+    assert packet["left_acting_adjoint_notation"] == LEFT_ACTING_ADJOINT_NOTATION
+    assert packet["adjoint_equation_route_status"] == ADJOINT_EQUATION_ROUTE_STATUS
     assert (
         packet["current_conservation_from_pair_preview"]
         == CURRENT_CONSERVATION_FROM_PAIR_PREVIEW
     )
+    assert packet["current_conservation_route_preview"] == CURRENT_CONSERVATION_ROUTE_PREVIEW
     assert (
         packet["sourced_maxwell_compatibility_route_preview"]
         == SOURCED_MAXWELL_COMPATIBILITY_ROUTE_PREVIEW
     )
     assert packet["exchange_route_preview"] == EXCHANGE_ROUTE_PREVIEW
     assert packet["indexed_future_routes"] == INDEXED_FUTURE_ROUTES
-    assert packet["indexed_future_route_count"] == 4
+    assert packet["indexed_future_route_count"] == 3
     for key in [
-        "psi_variation_dirac_route_packet_prepared",
-        "psibar_variation_route_recorded",
-        "psi_equation_route_recorded",
-        "dirac_route_from_psibar_variation_recorded",
-        "adjoint_route_indexed",
+        "adjoint_dirac_route_packet_prepared",
+        "psi_variation_adjoint_route_recorded",
+        "adjoint_equation_route_recorded",
+        "opposite_gauge_sign_adjoint_derivative_indexed",
+        "left_acting_adjoint_notation_recorded",
+        "psi_and_adjoint_pair_indexed",
+        "current_conservation_from_dirac_pair_packet_selected",
+        "current_conservation_from_dirac_pair_packet_preparation_authorized",
         "current_conservation_route_indexed",
         "sourced_maxwell_compatibility_route_indexed",
         "exchange_route_indexed",
-        "adjoint_dirac_route_packet_selected",
-        "adjoint_dirac_route_packet_preparation_authorized",
-        "current_conservation_from_dirac_pair_target_indexed",
     ]:
         assert packet[key] is True, key
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_preserves_nonclaims() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_preserves_nonclaims() -> None:
     packet = _json(DEFAULT_OUT)
     assert packet["blocked_claims"] == BLOCKED_CLAIMS
-    assert packet["blocked_claim_count"] == 14
+    assert packet["blocked_claim_count"] == 13
     for key in [
-        "psi_variation_result_derived",
-        "psi_field_equation_derived",
-        "psi_equation_derived",
-        "dirac_equation_derived",
-        "full_dirac_derivation_closed",
         "adjoint_dirac_equation_derived",
         "adjoint_dirac_derivation_claimed",
         "current_conservation_proved",
@@ -210,10 +208,10 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_preserves_nonclaims() -> None
     ]:
         assert packet[key] is False, key
     for phrase in [
-        "psi-variation / Dirac route packet only",
-        "delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0",
-        "bounded psi equation route",
-        "no adjoint Dirac derivation",
+        "adjoint Dirac route packet only",
+        "D_mu psibar = nabla_mu psibar - i q A_mu psibar",
+        "delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0",
+        "bounded adjoint equation route",
         "no current conservation proof",
         "no sourced Maxwell closure",
         "no stress-energy derivation",
@@ -232,7 +230,7 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_preserves_nonclaims() -> None
         assert phrase in packet["non_claim_boundary"], phrase
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_rotates_to_adjoint_route() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_rotates_to_conservation_pair() -> None:
     registry = _json(REGISTRY_PATH)
     is_current = assert_historical_target_recorded(
         payload=registry,
@@ -267,16 +265,17 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_rotates_to_adjoint_route() ->
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
     assert consumed["packet_result"] == OUTCOME_ID
-    assert consumed["psi_variation_dirac_route_packet_result"] == OUTCOME_ID
+    assert consumed["adjoint_dirac_route_packet_result"] == OUTCOME_ID
     assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["primary_variation_variable"] == PRIMARY_VARIATION_VARIABLE
-    assert consumed["psibar_variation_route"] == PSIBAR_VARIATION_ROUTE
-    assert consumed["psi_equation_route"] == PSI_EQUATION_ROUTE
-    assert consumed["psibar_variation_route_recorded"] == "yes"
-    assert consumed["psi_equation_route_recorded"] == "yes"
-    assert consumed["adjoint_route_indexed"] == "yes"
+    assert consumed["adjoint_derivative_policy"] == ADJOINT_DERIVATIVE_POLICY
+    assert consumed["adjoint_variation_route"] == ADJOINT_VARIATION_ROUTE
+    assert consumed["adjoint_equation_route"] == ADJOINT_EQUATION_ROUTE
+    assert consumed["left_acting_adjoint_notation"] == LEFT_ACTING_ADJOINT_NOTATION
+    assert consumed["opposite_gauge_sign_adjoint_derivative_indexed"] == "yes"
+    assert consumed["left_acting_adjoint_notation_recorded"] == "yes"
     assert consumed["current_conservation_proved"] == "no"
     assert consumed["adjoint_dirac_equation_derived"] == "no"
+    assert consumed["sourced_maxwell_closure_claimed"] == "no"
     assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
@@ -285,31 +284,46 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_rotates_to_adjoint_route() ->
         assert active_row["workstream_id"] == NEXT_TARGET
         assert active_row["authorized_next_strict_target"] == NEXT_TARGET
         assert active_row["consumed_target"] == CONSUMED_TARGET
-        assert active_row["consumed_psi_variation_dirac_route_packet_result"] == OUTCOME_ID
+        assert active_row["consumed_adjoint_dirac_route_packet_result"] == OUTCOME_ID
         assert active_row["packet_result"] == "PENDING"
-        assert active_row["adjoint_dirac_route_packet_result"] == "PENDING"
-        assert active_row["adjoint_dirac_route_packet_preparation_authorized"] == "yes"
-        assert active_row["adjoint_dirac_route_packet_prepared"] == "no"
-        assert active_row["psi_variation_dirac_route_packet_result"] == OUTCOME_ID
-        assert active_row["primary_variation_variable"] == PRIMARY_VARIATION_VARIABLE
-        assert active_row["psibar_variation_route"] == PSIBAR_VARIATION_ROUTE
-        assert active_row["psi_equation_route"] == PSI_EQUATION_ROUTE
+        assert active_row["current_conservation_from_dirac_pair_packet_result"] == (
+            "PENDING"
+        )
+        assert (
+            active_row[
+                "current_conservation_from_dirac_pair_packet_preparation_authorized"
+            ]
+            == "yes"
+        )
+        assert active_row["current_conservation_from_dirac_pair_packet_prepared"] == "no"
+        assert active_row["adjoint_derivative_policy"] == ADJOINT_DERIVATIVE_POLICY
+        assert active_row["adjoint_variation_route"] == ADJOINT_VARIATION_ROUTE
+        assert active_row["adjoint_equation_route"] == ADJOINT_EQUATION_ROUTE
+        assert active_row["left_acting_adjoint_notation"] == LEFT_ACTING_ADJOINT_NOTATION
+        assert active_row["current_conservation_route_preview"] == (
+            CURRENT_CONSERVATION_ROUTE_PREVIEW
+        )
+        assert active_row["proof_pair_status"].endswith("conservation proof remains blocked")
         for key in [
-            "psi_variation_dirac_route_packet_prepared",
-            "psibar_variation_route_recorded",
-            "psi_equation_route_recorded",
-            "dirac_route_from_psibar_variation_recorded",
-            "adjoint_route_indexed",
+            "adjoint_dirac_route_packet_prepared",
+            "psi_variation_adjoint_route_recorded",
+            "adjoint_equation_route_recorded",
+            "opposite_gauge_sign_adjoint_derivative_indexed",
+            "left_acting_adjoint_notation_recorded",
+            "psi_and_adjoint_pair_indexed",
+            "current_conservation_from_dirac_pair_packet_selected",
+            "current_conservation_from_dirac_pair_packet_preparation_authorized",
             "current_conservation_route_indexed",
             "sourced_maxwell_compatibility_route_indexed",
             "exchange_route_indexed",
-            "adjoint_dirac_route_packet_selected",
         ]:
             assert active_row[key] == "yes", key
         for key in [
             "current_conservation_proved",
             "adjoint_dirac_equation_derived",
+            "adjoint_dirac_derivation_claimed",
             "sourced_maxwell_closure_claimed",
+            "sourced_maxwell_equation_derived",
             "stress_energy_derived",
             "exchange_identity_proved",
             "total_conservation_proved",
@@ -325,7 +339,7 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_rotates_to_adjoint_route() ->
             assert active_row[key] == "no", key
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_lean_and_surface_mirrors() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_lean_and_surface_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -349,19 +363,19 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_lean_and_surface_mirrors() ->
         PACKET_ID,
         OUTCOME_ID,
         PACKET_CLASSIFICATION,
-        "ToeNativePsiAU1PsiVariationDiracRoutePacket",
+        "ToeNativePsiAU1AdjointDiracRoutePacket",
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+        "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
-        PSIBAR_VARIATION_ROUTE,
-        PSI_EQUATION_ROUTE,
-        ADJOINT_ROUTE_PREVIEW,
-        CURRENT_CONSERVATION_FROM_PAIR_PREVIEW,
+        "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
+        ADJOINT_DERIVATIVE_POLICY,
+        ADJOINT_VARIATION_ROUTE,
+        ADJOINT_EQUATION_ROUTE,
+        LEFT_ACTING_ADJOINT_NOTATION,
+        CURRENT_CONSERVATION_ROUTE_PREVIEW,
         SOURCED_MAXWELL_COMPATIBILITY_ROUTE_PREVIEW,
         EXCHANGE_ROUTE_PREVIEW,
-        "no adjoint Dirac derivation",
         "no current conservation proof",
         "no sourced Maxwell closure",
         "no stress-energy derivation",
@@ -376,7 +390,7 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_lean_and_surface_mirrors() ->
         assert token in joined
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_validation_policy_is_bounded() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_validation_policy_is_bounded() -> None:
     packet = _json(DEFAULT_OUT)
     policy = packet["validation_policy"]
     assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
@@ -387,7 +401,7 @@ def test_psi_a_u1_psi_variation_dirac_route_packet_validation_policy_is_bounded(
     assert policy["full_toeformal_aggregate_timed_out"] is False
 
 
-def test_psi_a_u1_psi_variation_dirac_route_packet_not_manifest_enrolled() -> None:
+def test_psi_a_u1_adjoint_dirac_route_packet_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_toe_native_psi_a_u1_psi_variation_dirac_route_packet_gate.py"
+        "test_toe_native_psi_a_u1_adjoint_dirac_route_packet_gate.py"
     )
