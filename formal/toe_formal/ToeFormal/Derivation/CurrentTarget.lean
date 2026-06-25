@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePsiAU1AdjointDiracRoutePacket
+import ToeFormal.Derivation.ToeNativePsiAU1CurrentConservationFromDiracPairPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePsiAU1AdjointDiracRoutePacket.selectedNextTarget
+  ToeNativePsiAU1CurrentConservationFromDiracPairPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePsiAU1AdjointDiracRoutePacket.packetId
+  ToeNativePsiAU1CurrentConservationFromDiracPairPacket.packetId
 
-theorem current_target_points_to_psi_a_u1_current_conservation_from_dirac_pair_packet :
+theorem current_target_points_to_psi_a_u1_sourced_maxwell_route_packet :
     currentLiveTarget =
-      "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet" := by
+      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet" := by
   rfl
 
 end CurrentTarget
