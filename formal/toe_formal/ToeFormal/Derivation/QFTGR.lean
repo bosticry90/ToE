@@ -81,6 +81,7 @@ import ToeFormal.Derivation.ToeNativePsiAU1AdjointDiracRoutePacket
 import ToeFormal.Derivation.ToeNativePsiAU1CurrentConservationFromDiracPairPacket
 import ToeFormal.Derivation.ToeNativePsiAU1SourcedMaxwellRoutePacket
 import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyAndExchangeObligationPacket
+import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyDefinitionPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -102,16 +103,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePsiAU1StressEnergyAndExchangeObligationPacket.outcomeId
+  ToeNativePsiAU1StressEnergyDefinitionPolicyPacket.outcomeId
 
 def currentPacketId : String :=
-  ToeNativePsiAU1StressEnergyAndExchangeObligationPacket.packetId
+  ToeNativePsiAU1StressEnergyDefinitionPolicyPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_a_u1_stress_energy_exchange_obligation_packet :
+theorem qft_gr_lane_aggregate_exposes_psi_a_u1_stress_energy_definition_policy_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_" ++
-          "PREPARED_STRESS_ENERGY_AND_EXCHANGE_REQUIREMENTS_INDEXED_" ++
+        "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_PACKET_PREPARED_" ++
+          "STRESS_ENERGY_POLICY_INDEXED_" ++
           "NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE" := by
   native_decide
 
