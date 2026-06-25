@@ -74,6 +74,7 @@ import ToeFormal.Derivation.ToeNativePsiAU1CurrentAndExchangeDerivationObligatio
 import ToeFormal.Derivation.ToeNativePsiAU1InteractionActionBlockDefinitionPacket
 import ToeFormal.Derivation.ToeNativePsiAU1InteractionActionBlockDefinitionResultReview
 import ToeFormal.Derivation.ToeNativePsiAU1CurrentDerivationFromAVariationPacket
+import ToeFormal.Derivation.ToeNativePsiAU1CurrentDerivationFromAVariationResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -95,16 +96,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePsiAU1CurrentDerivationFromAVariationPacket.outcomeId
+  ToeNativePsiAU1CurrentDerivationFromAVariationResultReview.outcomeId
 
 def currentPacketId : String :=
-  ToeNativePsiAU1CurrentDerivationFromAVariationPacket.packetId
+  ToeNativePsiAU1CurrentDerivationFromAVariationResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_a_u1_current_derivation_from_A_variation_packet :
+theorem qft_gr_lane_aggregate_exposes_psi_a_u1_current_derivation_from_A_variation_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_PACKET_PREPARED_" ++
-          "A_VARIATION_CURRENT_CANDIDATE_RECORDED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF" := by
+        "TOE_NATIVE_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_RESULT_REVIEW_" ++
+          "ACCEPTS_A_VARIATION_CURRENT_CANDIDATE_NO_CURRENT_CONSERVATION_OR_EXCHANGE_PROOF" := by
   native_decide
 
 end QFTGR

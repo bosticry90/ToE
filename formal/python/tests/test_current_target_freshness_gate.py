@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result"
+    "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet"
+    "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result"
+    "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1CurrentDerivationFromAVariationPacket.lean"
+    / "ToeNativePsiAU1CurrentDerivationFromAVariationResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3284,6 +3284,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "A_VARIATION_CURRENT_CANDIDATE_RECORDED_NO_SOURCED_MAXWELL_CLOSURE_"
         "OR_EXCHANGE_PROOF"
     )
+    psi_a_current_derivation_review_result = (
+        "TOE_NATIVE_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_RESULT_REVIEW_"
+        "ACCEPTS_A_VARIATION_CURRENT_CANDIDATE_NO_CURRENT_CONSERVATION_OR_"
+        "EXCHANGE_PROOF"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3295,33 +3300,45 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_PACKET_"
+        "TOE_NATIVE_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_RESULT_REVIEW_"
         "20260624_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["outcome_id"] == psi_a_current_derivation_result
+    assert interaction_active_workstream["outcome_id"] == (
+        psi_a_current_derivation_review_result
+    )
+    assert interaction_active_workstream[
+        "consumed_current_derivation_result_review"
+    ] == psi_a_current_derivation_review_result
     assert interaction_active_workstream["consumed_current_derivation_packet_result"] == (
         psi_a_current_derivation_result
     )
-    assert interaction_active_workstream["consumed_action_block_definition_result_review"] == (
-        psi_a_action_block_review_result
+    assert interaction_active_workstream["result_token"] == (
+        psi_a_current_derivation_review_result
     )
-    assert interaction_active_workstream["result_token"] == psi_a_current_derivation_result
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
     ] == (
-        "toe_native_psi_A_u1_current_derivation_from_A_variation_packet_result_review"
+        "toe_native_psi_A_u1_current_conservation_obligation_packet_preparation"
     )
     assert interaction_active_workstream["packet_result"] == "PENDING"
-    assert interaction_active_workstream["result_review_pending"] == "yes"
-    assert interaction_active_workstream["result_review_completed"] == "no"
-    assert interaction_active_workstream["result_review_target"] == LIVE_TARGET
+    assert interaction_active_workstream["current_conservation_obligation_packet_result"] == (
+        "PENDING"
+    )
+    assert (
+        interaction_active_workstream[
+            "current_conservation_obligation_packet_preparation_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["current_conservation_obligation_packet_prepared"]
+        == "no"
+    )
     assert interaction_active_workstream["current_derivation_packet_result"] == (
         psi_a_current_derivation_result
     )
-    assert interaction_active_workstream["current_derivation_packet_prepared"] == "yes"
-    assert interaction_active_workstream["A_variation_current_derivation_packet_prepared"] == "yes"
     assert interaction_active_workstream["variation_variable"] == "A_mu"
     assert interaction_active_workstream["selected_interaction_route"] == (
         "psi_A_u1_current_and_exchange_route"
@@ -3345,7 +3362,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "D_mu convention"
     )
     assert interaction_active_workstream["current_candidate_policy"] == (
-        "J^nu = q psibar gamma^nu psi; recorded as an A-variation candidate only, "
+        "J^nu = q psibar gamma^nu psi; accepted as an A-variation candidate only, "
         "not a current-conservation proof or sourced Maxwell closure"
     )
     assert interaction_active_workstream["gauge_covariant_derivative_transform"] == (
@@ -3383,20 +3400,31 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["bounded_route_shape"] == (
         "nabla_mu F^{mu nu} = J^nu"
     )
+    assert interaction_active_workstream["current_conservation_question"] == (
+        "Does the candidate current satisfy nabla_mu J^mu = 0?"
+    )
+    assert interaction_active_workstream["gauge_symmetry_route_preview"] == (
+        "gauge invariance -> current conservation"
+    )
+    assert interaction_active_workstream["field_equation_route_preview"] == (
+        "psi equation + psibar equation -> current conservation"
+    )
     for key in [
-        "A_variation_route_recorded",
-        "A_variation_result_recorded",
-        "A_variation_current_candidate_recorded",
-        "bounded_A_variation_residual_recorded",
-        "matter_A_dependent_term_identified",
-        "matter_A_variation_term_recorded",
-        "gauge_A_variation_term_recorded",
-        "candidate_current_identified",
-        "bounded_sourced_gauge_route_shape_recorded",
-        "sourced_gauge_equation_route_shape_recorded",
-        "psi_supplies_candidate_source_current",
+        "A_variation_route_shape_accepted",
+        "A_variation_route_shape_recorded",
+        "current_candidate_accepted",
+        "current_candidate_indexed",
+        "candidate_current_from_A_variation_accepted",
+        "sourced_gauge_residual_shape_accepted",
+        "sourced_gauge_residual_shape_recorded",
+        "bounded_current_route_accepted",
+        "bounded_sourced_gauge_route_shape_accepted",
+        "plus_sign_D_mu_convention_preserved",
         "selected_conventions_preserved",
-        "result_review_preparation_authorized",
+        "current_conservation_obligation_packet_selected",
+        "current_conservation_obligation_packet_preparation_authorized",
+        "gauge_symmetry_route_indexed",
+        "field_equation_route_indexed",
     ]:
         assert interaction_active_workstream[key] == "yes", key
     for key in [
