@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.MasterActionInteractionSelectionAfterACKTriad
+import ToeFormal.Derivation.ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  MasterActionInteractionSelectionAfterACKTriad.selectedNextTarget
+  ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  MasterActionInteractionSelectionAfterACKTriad.packetId
+  ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.packetId
 
-theorem current_target_points_to_psi_a_u1_policy_packet :
+theorem current_target_points_to_psi_a_u1_obligation_packet :
     currentLiveTarget =
-      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet" := by
+      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet" := by
   rfl
 
 end CurrentTarget

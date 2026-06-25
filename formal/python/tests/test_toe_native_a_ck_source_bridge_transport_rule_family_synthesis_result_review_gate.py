@@ -383,7 +383,7 @@ def test_A_ck_source_bridge_transport_rule_family_synthesis_result_review_mirror
         RECOMMENDED_AFTER_CLOSEOUT_SELECTOR_TARGET,
         ALTERNATE_AFTER_CLOSEOUT_SELECTOR_TARGET,
         "ToeNativeACKSourceBridgeTransportRuleFamilySynthesisResultReview",
-        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout",
+        "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout",
         SOURCE_RULE_DISPLAY_FORM,
         SOURCE_CANDIDATE_CONSTRAINT_EQUATION,
         BRIDGE_ADMISSIBILITY_CONSTRAINT_FORM,

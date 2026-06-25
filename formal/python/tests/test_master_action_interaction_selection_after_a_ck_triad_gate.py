@@ -321,15 +321,15 @@ def test_master_action_interaction_selection_after_a_ck_triad_mirrors() -> None:
         "MasterActionInteractionSelectionAfterACKTriad",
         (
             "CURRENT_LIVE_NEXT_TARGET_v0: "
-            "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+            "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
         ),
         (
             "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-            "select_next_master_action_interaction_after_A_ck_triad"
+            "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
         ),
         (
             "ACTIVE_LANE_v0: "
-            "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+            "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
         ),
         CURRENT_CANDIDATE_PREVIEW,
         TOTAL_EXCHANGE_PREVIEW,

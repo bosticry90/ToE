@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A/C_k source-bridge-transport rule-family closeout closes C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as a vacuum U(1) three-rule admissibility family only. The post-A-triad interaction selector selects psi_A_u1_current_and_exchange_route for policy-packet preparation only. It records conventional D_mu psi, J^mu, sourced Maxwell, and matter-gauge exchange shapes as policy inputs only, not as derived equations. It proves no current, current conservation, sourced Maxwell, Dirac equation, matter-gauge exchange, C_exchange functional, EM-QFT closure, QFT-GR closure, quantization, anomaly cancellation, empirical, Phase 2, or master-action promotion claim. The next target is only the psi-A U(1) current and exchange policy packet."
+        "ToE-native A/C_k source-bridge-transport rule-family closeout closes C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as a vacuum U(1) three-rule admissibility family only. The post-A-triad interaction selector selected psi_A_u1_current_and_exchange_route, and the psi-A U(1) current and exchange route policy packet is now prepared. It pins psi matter, U(1), A_mu, F = dA, q, plus-sign D_mu psi, gauge transformation signs, spin geometry placeholders, psibar, domains, boundary variation, current candidate, stress-energy names, and exchange policy only. It proves no current, current conservation, sourced Maxwell, Dirac equation, matter-gauge exchange, psi stress-energy, total stress-energy conservation, C_exchange functional, EM-QFT closure, QFT-GR closure, quantization, anomaly cancellation, empirical, Phase 2, or master-action promotion claim. The next target is only the psi-A U(1) current and exchange derivation-obligation packet."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+        "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch closes its A/C_k source-bridge-transport family: C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as vacuum U(1) admissibility-only source, bridge, and transport rules. The post-A-triad interaction selector now selects psi_A_u1_current_and_exchange_route for policy-packet preparation. This supports only the bounded architecture claim that C_k is behaving like a reusable seam-admissibility layer across isolated phi and vacuum A and now must be tested against interacting psi-A exchange. No current route derivation, J^nu derivation, current conservation proof, sourced Maxwell derivation, Dirac equation derivation, matter-gauge exchange proof, C_exchange functional closure, Maxwell/Yang-Mills closure, C_k action embedding, C_k variation, EM-QFT closure, QFT-GR closure, quantization, anomaly cancellation, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch closes its A/C_k source-bridge-transport family: C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as vacuum U(1) admissibility-only source, bridge, and transport rules. The post-A-triad interaction selector selected psi_A_u1_current_and_exchange_route, and the psi-A U(1) current and exchange policy packet is prepared as policy only. This supports only the bounded architecture claim that C_k is behaving like a reusable seam-admissibility layer across isolated phi and vacuum A and now must be tested against interacting psi-A exchange. No current route derivation, J^nu derivation, current conservation proof, sourced Maxwell derivation, Dirac equation derivation, matter-gauge exchange proof, psi stress-energy derivation, total stress-energy conservation proof, C_exchange functional closure, Maxwell/Yang-Mills closure, C_k action embedding, C_k variation, EM-QFT closure, QFT-GR closure, quantization, anomaly cancellation, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+        "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-A/C_k interaction selector. -/
+/-- Previous live target consumed by the psi-A U(1) policy packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_master_action_interaction_after_A_ck_triad"
-
-/-- Current live target after the post-A/C_k interaction selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+
+/-- Current live target after the psi-A U(1) policy packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

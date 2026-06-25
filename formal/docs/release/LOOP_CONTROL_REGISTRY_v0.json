@@ -1,5 +1,5 @@
 {
-  "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+  "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
   "allowed_statuses": [
     "active",
     "retained",
@@ -15,7 +15,8 @@
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
     "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout",
     "select_next_master_action_interaction_after_A_ck_triad",
-    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -234,7 +235,8 @@
     "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
     "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout",
-    "select_next_master_action_interaction_after_A_ck_triad"
+    "select_next_master_action_interaction_after_A_ck_triad",
+    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
   ],
   "consumed_targets": [
     {
@@ -820,6 +822,14 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeACKSourceBridgeTransportRuleFamilySynthesisPacket.lean",
       "target": "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
       "token": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE"
+    },
+    {
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+      "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
     }
   ],
   "controls": [
@@ -1181,8 +1191,8 @@
       "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
     }
   ],
-  "current_live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-  "current_live_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+  "current_live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+  "current_live_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
   "current_target_coverage": [
     {
       "report": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_20260624_v0.json",
@@ -1190,13 +1200,22 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeACKSourceBridgeTransportRuleFamilySynthesisPacket.lean",
       "target": "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
       "token": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE"
+    },
+    {
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+      "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+    "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
     "candidate_live_next_targets": [
       "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
-      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
     ],
     "completed_targets": [
       "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result",
@@ -1399,7 +1418,8 @@
       "review_toe_native_A_transport_consistency_ck_functional_embedding_packet_result",
       "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout",
       "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
-      "select_next_master_action_interaction_after_A_ck_triad"
+      "select_next_master_action_interaction_after_A_ck_triad",
+      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
     ],
     "consumed_targets": [
       {
@@ -1985,6 +2005,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeACKSourceBridgeTransportRuleFamilySynthesisPacket.lean",
         "target": "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
         "token": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE"
+      },
+      {
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+        "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+        "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
       }
     ],
     "current_target_coverage": [
@@ -3032,6 +3060,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeACKSourceBridgeTransportRuleFamilySynthesisPacket.lean",
         "target": "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
         "token": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE"
+      },
+      {
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+        "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+        "token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED"
       }
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
@@ -3042,14 +3078,14 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+    "live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
     "live_next_target_authority": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
     "live_next_target_frontier_mirror": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
-    "live_next_target_outcome": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-    "live_next_target_report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
+    "live_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet_preparation",
+    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
     "next_strict_target_coverage": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "audit_master_action_citation_language_against_retained_boundaries",
@@ -3481,9 +3517,10 @@
       "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout",
       "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
       "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
-      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
     ],
-    "non_claim_boundary": "This synthesis packet records the source, bridge, and transport A/C_k admissibility-rule family only. The three rules are vacuum U(1) admissibility-only rules, not action terms, not dynamical laws, not current-coupled rules, not sourced Maxwell, not EM closure, not QFT-GR closure, and not master-action promotion. It does not derive J^nu, does not derive a psi-current route, does not derive an external-current native route, does not prove matter/current exchange, does not execute C_k variation, does not embed any rule in an action, does not prove transport consistency, does not prove full route alignment, does not prove source admissibility, does not prove bridge admissibility, does not claim semiclassical coupling, records no Phase 2 authorization, does not claim empirical validation, and does not authorize public readiness. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+    "non_claim_boundary": "This policy packet prepares the psi-A U(1) current and exchange route only as policy. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not derive psi stress-energy, does not prove total stress-energy conservation, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, records no Phase 2 authorization, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
     "paused_lanes": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "artifact_retention_enforcement_plan",
@@ -3770,10 +3807,11 @@
       "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate",
       "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review",
       "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
-      "select_next_master_action_interaction_after_A_ck_triad"
+      "select_next_master_action_interaction_after_A_ck_triad",
+      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "select_next_master_action_interaction_after_A_ck_triad",
+    "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
@@ -4457,7 +4495,15 @@
         "target": "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout",
         "token": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSED_AS_VACUUM_U1_DERIVATION_CHAIN_STABILITY_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
       },
-      "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
+      "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet",
+      {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+        "outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+        "status": "completed_consumed_live_target",
+        "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+      }
     ]
   },
   "cycle_waivers": [],
@@ -5031,10 +5077,10 @@
     "stronger_evidence_object",
     "failed_assumption_refutation"
   ],
-  "latest_surface": "toe_native_a_ck_source_bridge_transport_rule_family_closeout_v0",
-  "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeACKSourceBridgeTransportRuleFamilyCloseout.lean",
-  "latest_surface_report": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSEOUT_20260624_v0.json",
-  "latest_surface_token": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
+  "latest_surface": "toe_native_psi_a_u1_current_and_exchange_route_policy_packet_v0",
+  "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+  "latest_surface_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+  "latest_surface_token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
   "legal_transitions": {
     "active": [
       "retained",
@@ -5061,12 +5107,12 @@
       "archived"
     ]
   },
-  "live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
+  "live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
   "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-  "live_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
-  "live_next_target_outcome": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-  "live_next_target_report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
+  "live_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet_preparation",
+  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
   "next_strict_target_coverage": [
     "analyze_qft_gr_minimal_working_model_candidate_only",
     "audit_master_action_citation_language_against_retained_boundaries",
@@ -5500,9 +5546,10 @@
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
     "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout",
     "select_next_master_action_interaction_after_A_ck_triad",
-    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
+    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+    "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
   ],
-  "non_claim_boundary": "This closeout records the first A-relevant three-rule C_k family only, in vacuum U(1) scope. It closes source-admissibility, bridge-admissibility, and transport-consistency as admissibility-only rule candidates: not action-embedded, not varied, not action terms, not dynamical laws, not current-coupled, not sourced Maxwell, no EM closure, no QFT-GR closure, and no master-action promotion. It records no current route, no J^nu derivation, no psi-current route, no external-current native derivation, no sourced Maxwell derivation, no matter/current exchange, no source-admissibility proof, no bridge-admissibility proof, no transport proof, no full route-alignment proof, no semiclassical coupling, no empirical validation, no Phase 2 authorization, and no public-readiness authorization. The full ToeFormal aggregate is recorded as NOT_RUN for this closeout. The next target is a selector for the next master-action interaction after the A/C_k triad, with psi_A_u1_current_and_exchange_route recommended but not selected here.",
+  "non_claim_boundary": "This policy packet prepares the psi-A U(1) current and exchange route only as policy. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not derive psi stress-energy, does not prove total stress-energy conservation, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, records no Phase 2 authorization, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
   "non_promotion_assertions": {
     "empirical_claimed": false,
     "governance_manifest_enrollment_authorized": false,
@@ -5795,9 +5842,10 @@
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate",
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate",
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review",
-    "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review"
+    "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
+    "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
   ],
-  "previous_live_next_target": "select_next_master_action_interaction_after_A_ck_triad",
+  "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
   "promotion_escrow": {
     "current_tranche_governance_manifest_enrollment": "not_authorized",
     "required_steps": [
@@ -7699,6 +7747,14 @@
       "report": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSEOUT_20260624_v0.json",
       "to_target": "select_next_master_action_interaction_after_A_ck_triad",
       "transition": "toe_native_A_ck_source_bridge_transport_rule_family_closeout_to_interaction_selector"
+    },
+    {
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+      "outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet"
     }
   ],
   "token_family_coverage": [
@@ -70409,6 +70465,17 @@
       "C_k_action_embedding_constructed": "no",
       "C_k_variation_executed": "no",
       "J_nu_derived": "no",
+      "a_ck_triad_closeout_outcome": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
+      "a_ck_triad_closeout_result": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
+      "a_ck_triad_family_classification": "first A-relevant three-rule C_k admissibility family",
+      "a_ck_triad_reopened": "no",
+      "a_ck_triad_rule_family_classification": "first A-relevant three-rule C_k admissibility family",
+      "a_ck_triad_rule_forms": [
+        "C_source^A = 0",
+        "C_bridge^A = 0",
+        "C_transport^A = 0"
+      ],
+      "a_ck_triad_scope": "vacuum U(1)",
       "acceptance_criteria": {
         "a_ck_triad_closed_as_vacuum_template": true,
         "blocked_claims_enumerated": true,
@@ -70424,6 +70491,11 @@
       },
       "accepted": "yes",
       "active_lane": "select_next_master_action_interaction_after_A_ck_triad",
+      "aggregate_lean_validation_completion_claimed": "no",
+      "aggregate_lean_validation_mathematical_failure_claimed": "no",
+      "aggregate_lean_validation_status_allowed_values": [
+        "NOT_RUN"
+      ],
       "aggregate_lean_validation_status_for_packet": "NOT_RUN",
       "all_three_rules_admissibility_only": "yes",
       "all_three_rules_not_action_embedded": "yes",
@@ -70432,10 +70504,29 @@
       "all_three_rules_not_dynamical_laws": "yes",
       "all_three_rules_not_varied": "yes",
       "all_three_rules_rule_candidates": "yes",
+      "anomaly_cancellation_claimed": "no",
+      "another_isolated_field_triad_selected": "no",
+      "architectural_result_not_new_law_of_nature": "yes",
       "artifact_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0",
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
       "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
       "authorized_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "blocked_claim_count": 13,
+      "blocked_claims": [
+        "J^nu derived",
+        "current conservation proved",
+        "sourced Maxwell derived",
+        "Dirac equation derived",
+        "matter-gauge exchange proved",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "quantized electromagnetism",
+        "anomaly cancellation",
+        "Standard Model derivation",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
       "bridge_admissibility_constraint_form": "C_bridge^A = 0",
       "bridge_admissibility_proved": "no",
       "bridge_admissibility_rule_closed": "yes",
@@ -70443,6 +70534,11 @@
       "bridge_constraint_form": "C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu})",
       "bridge_rule_classification": "bridge-admissibility rule",
       "bridge_rule_epistemic_status": "admissibility-only",
+      "c_exchange_candidate_equation_preview": "C_exchange^{Apsi,nu} = 0",
+      "c_exchange_candidate_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+      "c_exchange_functional_defined": "no",
+      "c_exchange_rule_family_introduced_as_likely_policy_target": "yes",
+      "c_exchange_rule_proved": "no",
       "c_k_bridge_permission_role_closed": "yes",
       "c_k_source_permission_role_closed": "yes",
       "c_k_transport_stability_role_closed": "yes",
@@ -70450,6 +70546,7 @@
       "candidate_recorded_as_new_physical_law": "no",
       "canonical_master_action_promoted": "no",
       "captured_at_utc": "2026-06-24T00:00:00Z",
+      "checkpoint_type": "master_action_interaction_selection_after_a_ck_triad",
       "ck_action_embedding_claimed": "no",
       "ck_variation_authorized": "no",
       "ck_variation_executed": "no",
@@ -70545,6 +70642,7 @@
       ],
       "constraint_as_action_term_selected": "no",
       "consumed_target": "select_next_master_action_interaction_after_A_ck_triad",
+      "covariant_derivative_policy_preview": "D_mu psi = (nabla_mu + i q A_mu) psi",
       "critical_gate_fail_conditions": [
         "select another isolated-field triad as the next target",
         "select an external current route as native current derivation",
@@ -70564,14 +70662,32 @@
         "promote the master action",
         "record full ToeFormal aggregate as passed, failed, or timed out"
       ],
+      "current_candidate_preview": "J^mu = q psibar gamma^mu psi",
+      "current_conservation_proved": "no",
       "current_route_derived": "no",
       "current_source_route_constructed": "no",
+      "dirac_equation_derived": "no",
+      "downstream_progression": [
+        {
+          "decision": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+          "reason": "The first post-triad interaction test should determine whether psi can supply a U(1) current and whether A and psi can exchange energy-momentum while preserving a total rule.",
+          "stage": "master_action_interaction_selection_after_A_ck_triad",
+          "status": "SELECTED_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_FOR_POLICY_PACKET"
+        },
+        {
+          "decision": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+          "reason": "The policy packet may pin conventions and domains; it may not claim the current, equations, exchange, quantization, closure, or promotion by selection alone.",
+          "stage": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+          "status": "NEXT_TARGET_AUTHORIZED_FOR_PREPARATION_ONLY"
+        }
+      ],
       "dynamical_action_embedding_selected": "no",
       "dynamical_law_claimed": "no",
       "em_closure_claimed": "no",
       "em_qft_closure_claimed": "no",
       "empirical_validation_claimed": "no",
       "external_current_native_derivation_selected": "no",
+      "external_current_route_selected": "no",
       "family_classification": "first A-relevant three-rule C_k admissibility family",
       "family_epistemic_status": "admissibility-only",
       "family_scope": "vacuum U(1)",
@@ -70584,7 +70700,10 @@
         "release_current_authority_aggregate_file": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
         "triad_result_review_file": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_20260624_v0.json"
       },
+      "full_ci_parity_required": "no",
       "full_em_closure_claimed": "no",
+      "full_governance_suite_required": "no",
+      "full_pytest_required": "no",
       "full_route_alignment_proof_claimed": "no",
       "full_route_alignment_proved": "no",
       "full_toeformal_aggregate_failed": "no",
@@ -70592,10 +70711,73 @@
       "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
       "full_toeformal_aggregate_timed_out": "no",
       "fully_concrete_ck_functional_defined": "no",
+      "further_vacuum_ck_rule_elaboration_selected": "no",
+      "gauge_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu_alpha J^alpha",
       "gauge_group_policy": "U(1) / Abelian test route",
+      "illegal_loss_vs_legal_transfer_distinction_required": "yes",
+      "interaction_option_count": 5,
+      "interaction_options": [
+        {
+          "candidate_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+          "current_derivation_claimed": false,
+          "em_qft_closure_claimed": false,
+          "exchange_proved": false,
+          "execution_status": "not_executed",
+          "fields": [
+            "psi",
+            "A"
+          ],
+          "gauge_group": "U(1)",
+          "policy_packet_preparation_authorized": true,
+          "route_label": "psi-A U(1) current and exchange route",
+          "route_option_id": "psi_A_u1_current_and_exchange_route",
+          "selection_reason": "After the phi and vacuum A C_k triads, psi-A U(1) is the first natural interaction route because it tests whether the rule system can organize a matter-generated current and balanced matter-gauge exchange instead of another isolated field.",
+          "sourced_maxwell_derived": false,
+          "status": "selected_for_policy_packet_preparation"
+        },
+        {
+          "execution_status": "not_executed",
+          "route_option_id": "another_isolated_field_ck_triad",
+          "selection_reason": "Deferred because the branch boundary now requires an interaction test, not another isolated source-bridge-transport triad.",
+          "status": "deferred_not_rejected"
+        },
+        {
+          "execution_status": "not_executed",
+          "route_option_id": "external_current_A_route",
+          "selection_reason": "Deferred because inserting an unexplained external J^nu would not test whether the current comes from the matter field psi.",
+          "status": "deferred_not_selected"
+        },
+        {
+          "execution_status": "not_executed",
+          "route_option_id": "nonabelian_or_full_em_qft_route",
+          "selection_reason": "Deferred because full non-Abelian, quantized, anomaly-aware closure is too broad before the classical or semiclassical U(1) psi-A policy surface is pinned.",
+          "status": "deferred_not_rejected"
+        },
+        {
+          "execution_status": "not_executed",
+          "route_option_id": "further_vacuum_ck_rule_elaboration",
+          "selection_reason": "Deferred to avoid extending vacuum-only rule vocabulary before testing lawful exchange between sectors.",
+          "status": "deferred_not_rejected"
+        }
+      ],
+      "interaction_options_deferred_count": 4,
+      "interaction_options_selected_count": 1,
+      "interaction_route_candidates": [
+        "psi_A_u1_current_and_exchange_route",
+        "another_isolated_field_ck_triad",
+        "external_current_A_route",
+        "nonabelian_or_full_em_qft_route",
+        "further_vacuum_ck_rule_elaboration"
+      ],
       "interaction_selector_executed": "no",
       "known_A_transport_chain_form": "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> C_source^A -> C_bridge^A -> bounded residual/regime-facing route",
       "lambda_variation_executed": "no",
+      "lane_level_lean_target_files": [
+        "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
+        "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+        "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+        "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+      ],
       "lane_level_lean_targets": [
         "ToeFormal.Derivation.MasterActionInteractionSelectionAfterACKTriad",
         "ToeFormal.Derivation.QFTGR",
@@ -70605,39 +70787,79 @@
       "latest_surface": "master_action_interaction_selection_after_a_ck_triad_v0",
       "latest_surface_report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
       "latest_surface_token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+      "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
+      "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
       "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+      "master_action_interaction_selection_executed": "yes",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
       "mathematical_statement": "The selector chooses psi_A_u1_current_and_exchange_route as the first master-action interaction target after the closed A/C_k triad and authorizes only preparation of the psi-A U(1) current and exchange policy packet. The selector records conventional route shapes for D_mu psi, a candidate J^mu, sourced Maxwell, and sector exchange as policy inputs, not as derived or proved results.",
       "matter_current_J_nu_derived": "no",
       "matter_current_exchange_route_proved": "no",
+      "matter_equation_shape_preview": "(i gamma^mu D_mu - m) psi = 0",
+      "matter_exchange_preview": "nabla_mu T_psi^{mu nu} = + F^nu_alpha J^alpha",
       "matter_gauge_energy_exchange_proved": "no",
+      "matter_gauge_exchange_proved": "no",
       "metric_variation_executed": "no",
       "native_generation_theorem_claimed": "no",
       "non_claim_boundary": "This selector records psi_A_u1_current_and_exchange_route as selected for policy-packet preparation only. It treats the phi and A source-bridge-transport triads as bounded isolated-field architecture and does not reopen either triad. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this selector.",
+      "nonabelian_or_full_em_qft_route_selected": "no",
       "on_shell_vacuum_conservation_identity": "nabla_mu T_A^{mu nu} = 0",
       "outcome_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
       "packet_classification": "master_action_interaction_selection_after_a_ck_triad_selects_psi_a_u1_current_and_exchange_route_no_current_derivation_or_em_qft_closure",
       "packet_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_v0",
+      "phase2_authorized": "no",
       "phase2_readiness_claim": "no",
+      "phi_ck_triad_reopened": "no",
       "pillar_completion_inferred": "no",
+      "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+      "policy_packet_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
+      "policy_packet_preparation_authorized": "yes",
+      "policy_packet_required_pin_count": 12,
+      "policy_packet_required_pins": [
+        "matter type: Dirac spinor or finite spinor multiplet",
+        "gauge group: U(1)",
+        "charge convention: q and sign convention",
+        "covariant derivative: exact D_mu definition",
+        "spin geometry: gamma matrices, tetrad, and spin connection policy",
+        "adjoint: definition of psibar",
+        "field domains: regularity and boundary conditions for psi and A",
+        "gauge transformations: psi and A_mu transformation signs",
+        "current policy: J^mu candidate and whether it is derived by A variation",
+        "stress-energy policy: T_psi, T_A, and total T",
+        "exchange policy: separate-sector versus total conservation",
+        "background: flat or curved spacetime scope"
+      ],
+      "policy_packet_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
       "post_closeout_selector_authorized": "yes",
       "post_closeout_selector_target_recommended": "select_next_master_action_interaction_after_A_ck_triad",
       "prepared": "yes",
       "psi_A_current_exchange_policy_packet_prepared": "no",
       "psi_A_current_exchange_route_selected": "no",
+      "psi_A_u1_current_and_exchange_route_selected": "yes",
+      "psi_A_u1_policy_packet_preparation_selected": "yes",
+      "psi_A_u1_policy_packet_prepared": "no",
       "psi_current_route_constructed": "no",
       "public_readiness_claimed": "no",
       "public_submission_authorized": "no",
       "qft_gr_closure_claimed": "no",
       "qft_gr_seam_closed": "no",
       "qft_gr_solved": "no",
+      "quantized_electromagnetism_claimed": "no",
       "recommended_interaction_route": "psi_A_u1_current_and_exchange_route",
       "recommended_next_policy_packet": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "release_preservation_validation": "full ToeFormal aggregate when feasible",
       "report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
       "result_token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
       "review_accepted": "yes",
       "route_alignment_verified": "no",
+      "route_selection_result": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+      "routine_packet_validation_tiers": [
+        "touched Lean marker",
+        "smallest affected Lake target",
+        "lane aggregate",
+        "current authority target"
+      ],
       "rule_family_classification": "first A-relevant three-rule C_k admissibility family",
       "rule_family_display_forms": [
         "C_source^A = 0",
@@ -70646,17 +70868,134 @@
       ],
       "schema_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0",
       "seam_closure_claim": "no",
+      "selected_gauge_group": "U(1)",
+      "selected_interaction_fields": [
+        "psi",
+        "A"
+      ],
+      "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+      "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
       "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
       "selected_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
+      "selected_route_execution_authorized": "no",
+      "selected_route_execution_status": "not_executed",
+      "selected_route_label": "psi-A U(1) current and exchange route",
+      "selected_route_packet_authorized": "yes",
+      "selected_route_status": "selected_for_policy_packet_preparation",
+      "selected_route_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "selection_criteria": [
+        {
+          "assessment": "The selector consumes the active post-A/C_k-triad interaction target.",
+          "evidence": "select_next_master_action_interaction_after_A_ck_triad",
+          "row_id": "selector_consumes_post_a_ck_triad_interaction_target",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The A/C_k source-bridge-transport triad is closed only as a vacuum U(1) admissibility template.",
+          "evidence": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
+          "row_id": "a_ck_triad_closed_as_vacuum_template",
+          "status": "accepted"
+        },
+        {
+          "assessment": "Reuse of the triad pattern is treated as an architectural result, not as a new law of nature.",
+          "evidence": [
+            "phi triad closed",
+            "A triad closed",
+            "source-bridge-transport pattern reusable across isolated scalar and vacuum gauge fields"
+          ],
+          "row_id": "phi_and_a_triad_reuse_recorded_as_architecture",
+          "status": "accepted"
+        },
+        {
+          "assessment": "psi-A U(1) is selected because it tests a matter-generated current and lawful exchange between interacting sectors.",
+          "evidence": "psi_A_u1_current_and_exchange_route",
+          "row_id": "psi_a_u1_route_selected_as_first_interaction_test",
+          "status": "accepted"
+        },
+        {
+          "assessment": "An unexplained external current is not selected as the native route.",
+          "evidence": "external_current_A_route",
+          "row_id": "external_current_route_deferred",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The next target is a policy packet to pin conventions before any derivation claim.",
+          "evidence": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+          "row_id": "policy_packet_only_authorized",
+          "status": "accepted"
+        },
+        {
+          "assessment": "Route shapes are recorded as convention-sensitive policy inputs, not as derived equations.",
+          "evidence": [
+            "D_mu psi = (nabla_mu + i q A_mu) psi",
+            "J^mu = q psibar gamma^mu psi",
+            "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0"
+          ],
+          "row_id": "current_and_exchange_shapes_recorded_as_policy_inputs",
+          "status": "accepted"
+        },
+        {
+          "assessment": "C_exchange is recorded as a likely future rule family to pin, not as a constructed C_k functional.",
+          "evidence": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+          "row_id": "c_exchange_candidate_recorded_without_definition_or_proof",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The first psi-A packet must define policy before derivation.",
+          "evidence": [
+            "matter type: Dirac spinor or finite spinor multiplet",
+            "gauge group: U(1)",
+            "charge convention: q and sign convention",
+            "covariant derivative: exact D_mu definition",
+            "spin geometry: gamma matrices, tetrad, and spin connection policy",
+            "adjoint: definition of psibar",
+            "field domains: regularity and boundary conditions for psi and A",
+            "gauge transformations: psi and A_mu transformation signs",
+            "current policy: J^mu candidate and whether it is derived by A variation",
+            "stress-energy policy: T_psi, T_A, and total T",
+            "exchange policy: separate-sector versus total conservation",
+            "background: flat or curved spacetime scope"
+          ],
+          "row_id": "required_policy_pins_enumerated",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The selector blocks derivation, exchange proof, closure, quantization, anomaly, empirical, Phase 2, and promotion claims.",
+          "evidence": [
+            "J^nu derived",
+            "current conservation proved",
+            "sourced Maxwell derived",
+            "Dirac equation derived",
+            "matter-gauge exchange proved",
+            "EM-QFT closure",
+            "QFT-GR closure",
+            "quantized electromagnetism",
+            "anomaly cancellation",
+            "Standard Model derivation",
+            "Phase 2 authorization",
+            "empirical validation",
+            "master-action promotion"
+          ],
+          "row_id": "no_current_derivation_exchange_proof_closure_or_promotion",
+          "status": "accepted"
+        }
+      ],
+      "selection_criteria_accepted_count": 10,
+      "selection_criteria_count": 10,
+      "selection_executed": "yes",
       "selection_result": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
       "selector_executed": "no",
+      "selector_target_accepted": "yes",
+      "selector_target_prepared": "yes",
       "semiclassical_coupling_authorized": "no",
       "semiclassical_coupling_claimed": "no",
       "semiclassical_einstein_equation_derived": "no",
+      "separate_sector_exchange_visible": "yes",
       "source_admissibility_constraint_form": "C_source^{A,nu}[g,A] = 0",
       "source_admissibility_proved": "no",
       "source_admissibility_rule_closed": "yes",
       "source_bridge_transport_family_closed": "yes",
+      "source_bridge_transport_pattern_reuse_result": "architectural_reuse_witness_for_isolated_phi_and_vacuum_A",
       "source_candidate_constraint_equation": "C_source^{A,nu}[g,A] = 0",
       "source_candidate_constraint_form": "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}",
       "source_candidate_constraint_id": "A_source_vacuum_conservation_residual_ck_candidate",
@@ -70665,13 +71004,18 @@
       "source_rule_classification": "source-admissibility rule",
       "source_rule_display_form": "C_source^A = 0",
       "source_rule_epistemic_status": "admissibility-only",
+      "sourced_gauge_equation_preview": "nabla_mu F^{mu nu} = J^nu",
       "sourced_maxwell_equation_derived": "no",
       "sourced_maxwell_route_derived": "no",
       "standard_model_derivation_claimed": "no",
       "status": "paused",
       "three_rule_vacuum_u1_admissibility_family_closed": "yes",
+      "tiered_lean_validation_policy_formalized": "yes",
       "toe_native_matter_derivation_claimed": "no",
+      "toeformal_import_update_requires_preservation_status": "yes",
       "token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+      "total_conservation_policy_required": "yes",
+      "total_exchange_preview": "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0",
       "transport_admissibility_constraint_form": "C_transport^A = 0",
       "transport_candidate_functional_defined": "no",
       "transport_candidate_id": "A_transport_derivation_chain_stability_ck_candidate",
@@ -70724,299 +71068,14 @@
         "toeformal_import_update_requires_preservation_status": true
       },
       "workstream_id": "select_next_master_action_interaction_after_A_ck_triad",
-      "a_ck_triad_closeout_outcome": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
-      "a_ck_triad_closeout_result": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
-      "a_ck_triad_family_classification": "first A-relevant three-rule C_k admissibility family",
-      "a_ck_triad_reopened": "no",
-      "a_ck_triad_rule_family_classification": "first A-relevant three-rule C_k admissibility family",
-      "a_ck_triad_rule_forms": [
-        "C_source^A = 0",
-        "C_bridge^A = 0",
-        "C_transport^A = 0"
-      ],
-      "a_ck_triad_scope": "vacuum U(1)",
-      "aggregate_lean_validation_completion_claimed": "no",
-      "aggregate_lean_validation_mathematical_failure_claimed": "no",
-      "aggregate_lean_validation_status_allowed_values": [
-        "NOT_RUN"
-      ],
-      "anomaly_cancellation_claimed": "no",
-      "another_isolated_field_triad_selected": "no",
-      "architectural_result_not_new_law_of_nature": "yes",
-      "blocked_claim_count": 13,
-      "blocked_claims": [
-        "J^nu derived",
-        "current conservation proved",
-        "sourced Maxwell derived",
-        "Dirac equation derived",
-        "matter-gauge exchange proved",
-        "EM-QFT closure",
-        "QFT-GR closure",
-        "quantized electromagnetism",
-        "anomaly cancellation",
-        "Standard Model derivation",
-        "Phase 2 authorization",
-        "empirical validation",
-        "master-action promotion"
-      ],
-      "c_exchange_candidate_equation_preview": "C_exchange^{Apsi,nu} = 0",
-      "c_exchange_candidate_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
-      "c_exchange_functional_defined": "no",
-      "c_exchange_rule_family_introduced_as_likely_policy_target": "yes",
-      "c_exchange_rule_proved": "no",
-      "checkpoint_type": "master_action_interaction_selection_after_a_ck_triad",
-      "covariant_derivative_policy_preview": "D_mu psi = (nabla_mu + i q A_mu) psi",
-      "current_candidate_preview": "J^mu = q psibar gamma^mu psi",
-      "current_conservation_proved": "no",
-      "dirac_equation_derived": "no",
-      "downstream_progression": [
-        {
-          "decision": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-          "reason": "The first post-triad interaction test should determine whether psi can supply a U(1) current and whether A and psi can exchange energy-momentum while preserving a total rule.",
-          "stage": "master_action_interaction_selection_after_A_ck_triad",
-          "status": "SELECTED_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_FOR_POLICY_PACKET"
-        },
-        {
-          "decision": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-          "reason": "The policy packet may pin conventions and domains; it may not claim the current, equations, exchange, quantization, closure, or promotion by selection alone.",
-          "stage": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-          "status": "NEXT_TARGET_AUTHORIZED_FOR_PREPARATION_ONLY"
-        }
-      ],
-      "external_current_route_selected": "no",
-      "full_ci_parity_required": "no",
-      "full_governance_suite_required": "no",
-      "full_pytest_required": "no",
-      "further_vacuum_ck_rule_elaboration_selected": "no",
-      "gauge_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu_alpha J^alpha",
-      "illegal_loss_vs_legal_transfer_distinction_required": "yes",
-      "interaction_option_count": 5,
-      "interaction_options": [
-        {
-          "candidate_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-          "current_derivation_claimed": false,
-          "em_qft_closure_claimed": false,
-          "exchange_proved": false,
-          "execution_status": "not_executed",
-          "fields": [
-            "psi",
-            "A"
-          ],
-          "gauge_group": "U(1)",
-          "policy_packet_preparation_authorized": true,
-          "route_label": "psi-A U(1) current and exchange route",
-          "route_option_id": "psi_A_u1_current_and_exchange_route",
-          "selection_reason": "After the phi and vacuum A C_k triads, psi-A U(1) is the first natural interaction route because it tests whether the rule system can organize a matter-generated current and balanced matter-gauge exchange instead of another isolated field.",
-          "sourced_maxwell_derived": false,
-          "status": "selected_for_policy_packet_preparation"
-        },
-        {
-          "execution_status": "not_executed",
-          "route_option_id": "another_isolated_field_ck_triad",
-          "selection_reason": "Deferred because the branch boundary now requires an interaction test, not another isolated source-bridge-transport triad.",
-          "status": "deferred_not_rejected"
-        },
-        {
-          "execution_status": "not_executed",
-          "route_option_id": "external_current_A_route",
-          "selection_reason": "Deferred because inserting an unexplained external J^nu would not test whether the current comes from the matter field psi.",
-          "status": "deferred_not_selected"
-        },
-        {
-          "execution_status": "not_executed",
-          "route_option_id": "nonabelian_or_full_em_qft_route",
-          "selection_reason": "Deferred because full non-Abelian, quantized, anomaly-aware closure is too broad before the classical or semiclassical U(1) psi-A policy surface is pinned.",
-          "status": "deferred_not_rejected"
-        },
-        {
-          "execution_status": "not_executed",
-          "route_option_id": "further_vacuum_ck_rule_elaboration",
-          "selection_reason": "Deferred to avoid extending vacuum-only rule vocabulary before testing lawful exchange between sectors.",
-          "status": "deferred_not_rejected"
-        }
-      ],
-      "interaction_options_deferred_count": 4,
-      "interaction_options_selected_count": 1,
-      "interaction_route_candidates": [
-        "psi_A_u1_current_and_exchange_route",
-        "another_isolated_field_ck_triad",
-        "external_current_A_route",
-        "nonabelian_or_full_em_qft_route",
-        "further_vacuum_ck_rule_elaboration"
-      ],
-      "lane_level_lean_target_files": [
-        "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
-        "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
-        "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
-        "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
-      ],
-      "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
-      "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
-      "master_action_interaction_selection_executed": "yes",
-      "matter_equation_shape_preview": "(i gamma^mu D_mu - m) psi = 0",
-      "matter_exchange_preview": "nabla_mu T_psi^{mu nu} = + F^nu_alpha J^alpha",
-      "matter_gauge_exchange_proved": "no",
-      "nonabelian_or_full_em_qft_route_selected": "no",
-      "phase2_authorized": "no",
-      "phi_ck_triad_reopened": "no",
-      "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
-      "policy_packet_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
-      "policy_packet_preparation_authorized": "yes",
-      "policy_packet_required_pin_count": 12,
-      "policy_packet_required_pins": [
-        "matter type: Dirac spinor or finite spinor multiplet",
-        "gauge group: U(1)",
-        "charge convention: q and sign convention",
-        "covariant derivative: exact D_mu definition",
-        "spin geometry: gamma matrices, tetrad, and spin connection policy",
-        "adjoint: definition of psibar",
-        "field domains: regularity and boundary conditions for psi and A",
-        "gauge transformations: psi and A_mu transformation signs",
-        "current policy: J^mu candidate and whether it is derived by A variation",
-        "stress-energy policy: T_psi, T_A, and total T",
-        "exchange policy: separate-sector versus total conservation",
-        "background: flat or curved spacetime scope"
-      ],
-      "policy_packet_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "psi_A_u1_current_and_exchange_route_selected": "yes",
-      "psi_A_u1_policy_packet_preparation_selected": "yes",
-      "psi_A_u1_policy_packet_prepared": "no",
-      "quantized_electromagnetism_claimed": "no",
-      "release_preservation_validation": "full ToeFormal aggregate when feasible",
-      "route_selection_result": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-      "routine_packet_validation_tiers": [
-        "touched Lean marker",
-        "smallest affected Lake target",
-        "lane aggregate",
-        "current authority target"
-      ],
-      "selected_gauge_group": "U(1)",
-      "selected_interaction_fields": [
-        "psi",
-        "A"
-      ],
-      "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
-      "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
-      "selected_route_execution_authorized": "no",
-      "selected_route_execution_status": "not_executed",
-      "selected_route_label": "psi-A U(1) current and exchange route",
-      "selected_route_packet_authorized": "yes",
-      "selected_route_status": "selected_for_policy_packet_preparation",
-      "selected_route_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "selection_criteria": [
-        {
-          "assessment": "The selector consumes the active post-A/C_k-triad interaction target.",
-          "evidence": "select_next_master_action_interaction_after_A_ck_triad",
-          "row_id": "selector_consumes_post_a_ck_triad_interaction_target",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The A/C_k source-bridge-transport triad is closed only as a vacuum U(1) admissibility template.",
-          "evidence": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
-          "row_id": "a_ck_triad_closed_as_vacuum_template",
-          "status": "accepted"
-        },
-        {
-          "assessment": "Reuse of the triad pattern is treated as an architectural result, not as a new law of nature.",
-          "evidence": [
-            "phi triad closed",
-            "A triad closed",
-            "source-bridge-transport pattern reusable across isolated scalar and vacuum gauge fields"
-          ],
-          "row_id": "phi_and_a_triad_reuse_recorded_as_architecture",
-          "status": "accepted"
-        },
-        {
-          "assessment": "psi-A U(1) is selected because it tests a matter-generated current and lawful exchange between interacting sectors.",
-          "evidence": "psi_A_u1_current_and_exchange_route",
-          "row_id": "psi_a_u1_route_selected_as_first_interaction_test",
-          "status": "accepted"
-        },
-        {
-          "assessment": "An unexplained external current is not selected as the native route.",
-          "evidence": "external_current_A_route",
-          "row_id": "external_current_route_deferred",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The next target is a policy packet to pin conventions before any derivation claim.",
-          "evidence": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-          "row_id": "policy_packet_only_authorized",
-          "status": "accepted"
-        },
-        {
-          "assessment": "Route shapes are recorded as convention-sensitive policy inputs, not as derived equations.",
-          "evidence": [
-            "D_mu psi = (nabla_mu + i q A_mu) psi",
-            "J^mu = q psibar gamma^mu psi",
-            "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0"
-          ],
-          "row_id": "current_and_exchange_shapes_recorded_as_policy_inputs",
-          "status": "accepted"
-        },
-        {
-          "assessment": "C_exchange is recorded as a likely future rule family to pin, not as a constructed C_k functional.",
-          "evidence": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
-          "row_id": "c_exchange_candidate_recorded_without_definition_or_proof",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The first psi-A packet must define policy before derivation.",
-          "evidence": [
-            "matter type: Dirac spinor or finite spinor multiplet",
-            "gauge group: U(1)",
-            "charge convention: q and sign convention",
-            "covariant derivative: exact D_mu definition",
-            "spin geometry: gamma matrices, tetrad, and spin connection policy",
-            "adjoint: definition of psibar",
-            "field domains: regularity and boundary conditions for psi and A",
-            "gauge transformations: psi and A_mu transformation signs",
-            "current policy: J^mu candidate and whether it is derived by A variation",
-            "stress-energy policy: T_psi, T_A, and total T",
-            "exchange policy: separate-sector versus total conservation",
-            "background: flat or curved spacetime scope"
-          ],
-          "row_id": "required_policy_pins_enumerated",
-          "status": "accepted"
-        },
-        {
-          "assessment": "The selector blocks derivation, exchange proof, closure, quantization, anomaly, empirical, Phase 2, and promotion claims.",
-          "evidence": [
-            "J^nu derived",
-            "current conservation proved",
-            "sourced Maxwell derived",
-            "Dirac equation derived",
-            "matter-gauge exchange proved",
-            "EM-QFT closure",
-            "QFT-GR closure",
-            "quantized electromagnetism",
-            "anomaly cancellation",
-            "Standard Model derivation",
-            "Phase 2 authorization",
-            "empirical validation",
-            "master-action promotion"
-          ],
-          "row_id": "no_current_derivation_exchange_proof_closure_or_promotion",
-          "status": "accepted"
-        }
-      ],
-      "selection_criteria_accepted_count": 10,
-      "selection_criteria_count": 10,
-      "selection_executed": "yes",
-      "selector_target_accepted": "yes",
-      "selector_target_prepared": "yes",
-      "separate_sector_exchange_visible": "yes",
-      "source_bridge_transport_pattern_reuse_result": "architectural_reuse_witness_for_isolated_phi_and_vacuum_A",
-      "sourced_gauge_equation_preview": "nabla_mu F^{mu nu} = J^nu",
-      "tiered_lean_validation_policy_formalized": "yes",
-      "toeformal_import_update_requires_preservation_status": "yes",
-      "total_conservation_policy_required": "yes",
-      "total_exchange_preview": "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0",
       "x_a_exchange_preview": "X_A^nu := nabla_mu T_A^{mu nu} + F^nu_alpha J^alpha",
       "x_psi_exchange_preview": "X_psi^nu := nabla_mu T_psi^{mu nu} - F^nu_alpha J^alpha"
     },
     {
+      "F_equals_dA_selected": "yes",
       "J_nu_derived": "no",
+      "T_psi_derived": "no",
+      "T_total_conservation_proved": "no",
       "a_ck_triad_closeout_outcome": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
       "a_ck_triad_closeout_result": "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE",
       "a_ck_triad_family_classification": "first A-relevant three-rule C_k admissibility family",
@@ -71042,17 +71101,25 @@
         "selector_only_no_route_execution": true
       },
       "accepted": "yes",
+      "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "adjoint_policy": "psibar = psi^dagger gamma^0 under the selected gamma convention",
       "aggregate_lean_validation_completion_claimed": "no",
       "aggregate_lean_validation_mathematical_failure_claimed": "no",
       "aggregate_lean_validation_status_allowed_values": [
         "NOT_RUN"
       ],
       "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+      "alternate_covariant_derivative_rejected": "D_mu psi = (nabla_mu - i q A_mu) psi not selected for this packet",
       "anomaly_cancellation_claimed": "no",
       "another_isolated_field_triad_selected": "no",
       "architectural_result_not_new_law_of_nature": "yes",
       "artifact_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0",
-      "blocked_claim_count": 13,
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
+      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "authorized_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "background_scope_policy": "flat or curved spacetime scope retained; curved route requires tetrad and spin connection domains",
+      "background_scope_policy_selected": "yes",
+      "blocked_claim_count": "15",
       "blocked_claims": [
         "J^nu derived",
         "current conservation proved",
@@ -71068,15 +71135,24 @@
         "empirical validation",
         "master-action promotion"
       ],
+      "boundary_terms_controlled": "no",
+      "boundary_variation_policy": "compact-support or fixed-boundary variations for psi, psibar, and A",
+      "boundary_variation_policy_selected": "yes",
       "c_exchange_candidate_equation_preview": "C_exchange^{Apsi,nu} = 0",
       "c_exchange_candidate_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+      "c_exchange_equation_preview": "C_exchange^{Apsi,nu} = 0",
       "c_exchange_functional_defined": "no",
+      "c_exchange_policy_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
       "c_exchange_rule_family_introduced_as_likely_policy_target": "yes",
+      "c_exchange_rule_family_preview_recorded": "yes",
       "c_exchange_rule_proved": "no",
       "canonical_master_action_promoted": "no",
       "captured_at_utc": "2026-06-24T00:00:00Z",
+      "charge_convention_selected": "yes",
+      "charge_policy": "real charge q with plus-sign covariant derivative convention",
       "checkpoint_type": "master_action_interaction_selection_after_a_ck_triad",
-      "consumed_target": "select_next_master_action_interaction_after_A_ck_triad",
+      "consumed_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
       "covariant_derivative_policy_preview": "D_mu psi = (nabla_mu + i q A_mu) psi",
       "critical_gate_fail_conditions": [
         "select another isolated-field triad as the next target",
@@ -71097,10 +71173,13 @@
         "promote the master action",
         "record full ToeFormal aggregate as passed, failed, or timed out"
       ],
+      "current_candidate_policy": "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A variation",
       "current_candidate_preview": "J^mu = q psibar gamma^mu psi",
+      "current_candidate_recorded": "yes",
       "current_conservation_proved": "no",
       "current_route_derived": "no",
       "current_source_route_constructed": "no",
+      "derivation_packet": "no",
       "dirac_equation_derived": "no",
       "downstream_progression": [
         {
@@ -71119,7 +71198,13 @@
       "em_closure_claimed": "no",
       "em_qft_closure_claimed": "no",
       "empirical_validation_claimed": "no",
+      "exchange_policy": "separate-sector exchange may be nonzero; total conservation is the policy target",
+      "exchange_policy_selected": "yes",
+      "explicit_gamma_representation_selected": "no",
       "external_current_route_selected": "no",
+      "field_domain_policy": "smooth finite-action psi and A on the selected spacetime domain; singular and operator-valued quantum domains not selected",
+      "field_domains_selected": "yes",
+      "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
       "full_ci_parity_required": "no",
       "full_em_closure_claimed": "no",
       "full_governance_suite_required": "no",
@@ -71129,7 +71214,15 @@
       "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
       "full_toeformal_aggregate_timed_out": "no",
       "further_vacuum_ck_rule_elaboration_selected": "no",
+      "gamma_matrices_policy_selected": "yes",
+      "gamma_matrix_policy": "gamma^mu = e_a^mu gamma^a with Clifford relation pinned by the selected metric and signature policy; explicit representation not selected",
       "gauge_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu_alpha J^alpha",
+      "gauge_field_A_mu_selected": "yes",
+      "gauge_field_policy": "A_mu as smooth real U(1) gauge potential one-form",
+      "gauge_group_policy": "U(1)",
+      "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+      "gauge_transformation_policy_selected": "yes",
+      "guardrail_status": "paused_after_psi_A_u1_policy_packet_preparation",
       "illegal_loss_vs_legal_transfer_distinction_required": "yes",
       "interaction_option_count": 5,
       "interaction_options": [
@@ -71178,6 +71271,7 @@
       ],
       "interaction_options_deferred_count": 4,
       "interaction_options_selected_count": 1,
+      "interaction_policy_selected": "yes",
       "interaction_route_candidates": [
         "psi_A_u1_current_and_exchange_route",
         "another_isolated_field_ck_triad",
@@ -71197,6 +71291,9 @@
         "ToeFormal.Derivation.CurrentTarget",
         "ToeFormal.Release.CurrentAuthority"
       ],
+      "latest_surface": "toe_native_psi_a_u1_current_and_exchange_route_policy_packet_v0",
+      "latest_surface_report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
+      "latest_surface_token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
       "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
       "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
       "master_action_interaction_selection_executed": "yes",
@@ -71209,18 +71306,27 @@
       "matter_exchange_preview": "nabla_mu T_psi^{mu nu} = + F^nu_alpha J^alpha",
       "matter_gauge_energy_exchange_proved": "no",
       "matter_gauge_exchange_proved": "no",
+      "matter_surface_policy": "psi as Dirac-like spinor or finite spinor multiplet",
+      "matter_surface_policy_selected": "yes",
+      "minus_sign_covariant_derivative_selected": "no",
       "native_generation_theorem_claimed": "no",
-      "non_claim_boundary": "This selector records psi_A_u1_current_and_exchange_route as selected for policy-packet preparation only. It treats the phi and A source-bridge-transport triads as bounded isolated-field architecture and does not reopen either triad. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this selector.",
+      "non_claim_boundary": "This policy packet prepares the psi-A U(1) current and exchange route only as policy. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not derive psi stress-energy, does not prove total stress-energy conservation, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, records no Phase 2 authorization, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
       "nonabelian_or_full_em_qft_route_selected": "no",
-      "outcome_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-      "packet_classification": "master_action_interaction_selection_after_a_ck_triad_selects_psi_a_u1_current_and_exchange_route_no_current_derivation_or_em_qft_closure",
+      "operator_valued_quantum_domain_selected": "no",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "packet_classification": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_selects_interaction_policy_and_blocks_current_exchange_derivation",
       "packet_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_v0",
+      "packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
       "phase2_authorized": "no",
       "phase2_readiness_claim": "no",
       "phi_ck_triad_reopened": "no",
       "pillar_completion_inferred": "no",
+      "plus_sign_covariant_derivative_selected": "yes",
+      "policy_blocked_count": "1",
       "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+      "policy_item_count": "18",
       "policy_packet_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
+      "policy_packet_only": "yes",
       "policy_packet_preparation_authorized": "yes",
       "policy_packet_required_pin_count": 12,
       "policy_packet_required_pins": [
@@ -71237,12 +71343,19 @@
         "exchange policy: separate-sector versus total conservation",
         "background: flat or curved spacetime scope"
       ],
+      "policy_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
       "policy_packet_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "policy_selected_count": "14",
+      "policy_status": "psi_A_u1_interaction_policy_selected_current_and_exchange_derivation_still_blocked",
       "prepared": "yes",
+      "psi_A_current_exchange_policy_packet_prepared": "no",
+      "psi_A_u1_current_and_exchange_route_indexed": "yes",
       "psi_A_u1_current_and_exchange_route_selected": "yes",
       "psi_A_u1_policy_packet_preparation_selected": "yes",
-      "psi_A_u1_policy_packet_prepared": "no",
+      "psi_A_u1_policy_packet_prepared": "yes",
       "psi_current_route_constructed": "no",
+      "psi_stress_energy_derived": "no",
+      "psibar_adjoint_policy_selected": "yes",
       "public_readiness_claimed": "no",
       "public_submission_authorized": "no",
       "qft_gr_closure_claimed": "no",
@@ -71250,6 +71363,10 @@
       "qft_gr_solved": "no",
       "quantized_electromagnetism_claimed": "no",
       "release_preservation_validation": "full ToeFormal aggregate when feasible",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+      "result_token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+      "review_criteria_accepted_count": "13",
+      "review_criteria_count": "13",
       "route_selection_result": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
       "routine_packet_validation_tiers": [
         "touched Lean marker",
@@ -71266,7 +71383,7 @@
       ],
       "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
       "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
-      "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
       "selected_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_preparation",
       "selected_route_execution_authorized": "no",
       "selected_route_execution_status": "not_executed",
@@ -71385,13 +71502,25 @@
       "sourced_gauge_equation_preview": "nabla_mu F^{mu nu} = J^nu",
       "sourced_maxwell_equation_derived": "no",
       "sourced_maxwell_route_derived": "no",
+      "spin_connection_policy": "spin connection included in nabla_mu psi; explicit coefficients not derived",
+      "spin_connection_policy_selected": "yes",
+      "spin_geometry_policy": "curved-background capable spin geometry policy requires gamma matrices, tetrad/frame, and spin connection placeholders",
+      "spin_geometry_policy_selected": "yes",
       "standard_model_derivation_claimed": "no",
-      "status": "active",
+      "status": "paused",
+      "stress_energy_policy": "T_A, T_psi, and T_total = T_A + T_psi named as policy objects; T_psi not derived",
+      "stress_energy_policy_selected": "yes",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+      "tetrad_frame_policy_selected": "yes",
+      "tetrad_policy": "tetrad/frame required for curved scope; flat scope may take the trivial frame",
       "tiered_lean_validation_policy_formalized": "yes",
       "toe_native_matter_derivation_claimed": "no",
       "toeformal_import_update_requires_preservation_status": "yes",
+      "token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
       "total_conservation_policy_required": "yes",
       "total_exchange_preview": "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0",
+      "total_stress_energy_conservation_proved": "no",
+      "u1_gauge_group_selected": "yes",
       "validation_policy": {
         "aggregate_lean_validation_completion_claimed": false,
         "aggregate_lean_validation_mathematical_failure_claimed": false,
@@ -71418,22 +71547,60 @@
         "tiered_lean_validation_policy_formalized": true,
         "toeformal_import_update_requires_preservation_status": true
       },
-      "x_a_exchange_preview": "X_A^nu := nabla_mu T_A^{mu nu} + F^nu_alpha J^alpha",
-      "x_psi_exchange_preview": "X_psi^nu := nabla_mu T_psi^{mu nu} - F^nu_alpha J^alpha",
       "workstream_id": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "authorized_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionInteractionSelectionAfterACKTriad.lean",
-      "report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
-      "result_token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-      "token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
-      "latest_surface": "master_action_interaction_selection_after_a_ck_triad_v0",
-      "latest_surface_report": "formal/docs/release/MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0.json",
-      "latest_surface_token": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+      "x_a_exchange_preview": "X_A^nu := nabla_mu T_A^{mu nu} + F^nu_alpha J^alpha",
+      "x_psi_exchange_preview": "X_psi^nu := nabla_mu T_psi^{mu nu} - F^nu_alpha J^alpha"
+    },
+    {
+      "J_nu_derived": "no",
+      "active_lane": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "anomaly_cancellation_claimed": "no",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "authorized_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "c_exchange_policy_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+      "consumed_policy_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "consumed_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+      "current_candidate_policy": "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A variation",
+      "current_conservation_proved": "no",
+      "current_derivation_obligation_packet_prepared": "no",
+      "dirac_equation_derived": "no",
+      "em_qft_closure_claimed": "no",
+      "empirical_validation_claimed": "no",
+      "exchange_derivation_obligation_packet_prepared": "no",
+      "exchange_policy": "separate-sector exchange may be nonzero; total conservation is the policy target",
+      "gauge_group_policy": "U(1)",
+      "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "master_action_promoted": "no",
+      "matter_gauge_exchange_proved": "no",
+      "matter_surface_policy": "psi as Dirac-like spinor or finite spinor multiplet",
+      "non_claim_boundary": "This policy packet prepares the psi-A U(1) current and exchange route only as policy. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not derive psi stress-energy, does not prove total stress-energy conservation, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, records no Phase 2 authorization, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "obligation_packet_preparation_authorized": "yes",
+      "obligation_packet_prepared": "no",
+      "obligation_packet_result": "PENDING",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
       "packet_result": "PENDING",
+      "phase2_authorized": "no",
+      "policy_packet_prepared": "yes",
       "policy_packet_result": "PENDING",
-      "psi_A_current_exchange_policy_packet_prepared": "no"
+      "psi_stress_energy_derived": "no",
+      "qft_gr_closure_claimed": "no",
+      "quantized_electromagnetism_claimed": "no",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0.json",
+      "result_token": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "selected_gauge_group": "U(1)",
+      "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+      "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "selected_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet_preparation",
+      "sourced_maxwell_equation_derived": "no",
+      "standard_model_derivation_claimed": "no",
+      "status": "active",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+      "total_stress_energy_conservation_proved": "no",
+      "workstream_id": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet"
     }
   ]
 }

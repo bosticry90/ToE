@@ -1,0 +1,509 @@
+{
+  "F_equals_dA_selected": true,
+  "J_nu_derived": false,
+  "T_psi_derived": false,
+  "T_total_conservation_proved": false,
+  "acceptance_criteria": {
+    "blocked_claims_complete": true,
+    "c_exchange_preview_recorded_without_completed_functional": true,
+    "consumes_expected_psi_a_policy_packet_target": true,
+    "current_candidate_recorded_not_derived": true,
+    "exchange_policy_recorded_not_proved": true,
+    "gauge_transformation_matches_plus_sign_convention": true,
+    "next_target_is_obligation_packet_preparation": true,
+    "plus_sign_derivative_selected": true,
+    "policy_rows_complete": true,
+    "review_criteria_all_accepted": true,
+    "selected_fields_and_group_preserved": true,
+    "selector_authorized_policy_preparation_only": true
+  },
+  "accepted": true,
+  "adjoint_policy": "psibar = psi^dagger gamma^0 under the selected gamma convention",
+  "aggregate_lean_validation_completion_claimed": false,
+  "aggregate_lean_validation_mathematical_failure_claimed": false,
+  "aggregate_lean_validation_status_allowed_values": [
+    "NOT_RUN"
+  ],
+  "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+  "alternate_covariant_derivative_rejected": "D_mu psi = (nabla_mu - i q A_mu) psi not selected for this packet",
+  "anomaly_cancellation_claimed": false,
+  "artifact_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0",
+  "background_scope_policy": "flat or curved spacetime scope retained; curved route requires tetrad and spin connection domains",
+  "background_scope_policy_selected": true,
+  "blocked_claim_count": 15,
+  "blocked_claims": [
+    "J^nu derivation",
+    "current conservation proof",
+    "sourced Maxwell derivation",
+    "Dirac equation derivation",
+    "matter-gauge exchange proof",
+    "psi stress-energy derivation",
+    "total stress-energy conservation proof",
+    "EM-QFT closure",
+    "QFT-GR closure",
+    "quantized electromagnetism",
+    "anomaly cancellation",
+    "Standard Model derivation",
+    "Phase 2 authorization",
+    "empirical validation",
+    "master-action promotion"
+  ],
+  "boundary_terms_controlled": false,
+  "boundary_variation_policy": "compact-support or fixed-boundary variations for psi, psibar, and A",
+  "boundary_variation_policy_selected": true,
+  "c_exchange_equation_preview": "C_exchange^{Apsi,nu} = 0",
+  "c_exchange_functional_defined": false,
+  "c_exchange_policy_preview": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+  "c_exchange_rule_family_preview_recorded": true,
+  "c_exchange_rule_proved": false,
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-24T00:00:00Z",
+  "charge_convention_selected": true,
+  "charge_policy": "real charge q with plus-sign covariant derivative convention",
+  "checkpoint_type": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+  "consumed_target": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+  "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+  "critical_gate_fail_conditions": [
+    "treat policy selection as J^nu derivation",
+    "claim current conservation",
+    "derive sourced Maxwell",
+    "derive the Dirac equation",
+    "prove matter-gauge exchange",
+    "derive T_psi or total stress-energy conservation",
+    "define C_exchange as a completed functional",
+    "claim EM-QFT closure",
+    "claim QFT-GR closure",
+    "claim quantized electromagnetism",
+    "claim anomaly cancellation",
+    "claim Standard Model derivation",
+    "authorize Phase 2",
+    "claim empirical validation",
+    "promote the master action",
+    "record full ToeFormal aggregate as passed, failed, or timed out"
+  ],
+  "current_candidate_policy": "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A variation",
+  "current_candidate_preview": "J^mu = q psibar gamma^mu psi",
+  "current_candidate_recorded": true,
+  "current_conservation_proved": false,
+  "current_route_derived": false,
+  "current_source_route_constructed": false,
+  "derivation_packet": false,
+  "dirac_equation_derived": false,
+  "downstream_progression": [
+    {
+      "decision": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+      "reason": "The packet pins the psi-A U(1) convention surface before any current, sourced equation, or exchange derivation.",
+      "stage": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "status": "INTERACTION_POLICY_SELECTED_DERIVATION_STILL_BLOCKED"
+    },
+    {
+      "decision": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "reason": "The next packet may enumerate the exact derivation obligations for current and exchange without closing them by policy selection.",
+      "stage": "toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+      "status": "NEXT_TARGET_AUTHORIZED_FOR_PREPARATION_ONLY"
+    }
+  ],
+  "em_closure_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "exchange_policy": "separate-sector exchange may be nonzero; total conservation is the policy target",
+  "exchange_policy_selected": true,
+  "explicit_gamma_representation_selected": false,
+  "field_domain_policy": "smooth finite-action psi and A on the selected spacetime domain; singular and operator-valued quantum domains not selected",
+  "field_domains_selected": true,
+  "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "full_ci_parity_required": false,
+  "full_em_closure_claimed": false,
+  "full_governance_suite_required": false,
+  "full_pytest_required": false,
+  "full_toeformal_aggregate_failed": false,
+  "full_toeformal_aggregate_passed": false,
+  "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+  "full_toeformal_aggregate_timed_out": false,
+  "gamma_matrices_policy_selected": true,
+  "gamma_matrix_policy": "gamma^mu = e_a^mu gamma^a with Clifford relation pinned by the selected metric and signature policy; explicit representation not selected",
+  "gauge_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu_alpha J^alpha",
+  "gauge_field_A_mu_selected": true,
+  "gauge_field_policy": "A_mu as smooth real U(1) gauge potential one-form",
+  "gauge_group_policy": "U(1)",
+  "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+  "gauge_transformation_policy_selected": true,
+  "illegal_loss_vs_legal_transfer_distinction_required": true,
+  "interaction_policy_selected": true,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentAndExchangeRoutePolicyPacket.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "This policy packet selects the first ToE-native psi-A U(1) interaction policy surface. It pins psi as Dirac-like spinor matter or a finite spinor multiplet, A_mu as the U(1) gauge potential, F = dA, real charge q, the plus-sign convention D_mu psi = (nabla_mu + i q A_mu) psi, matching gauge transforms, spin-geometry placeholders, psibar, field domains, boundary variation policy, a current candidate, stress-energy names, and the total-exchange policy target.",
+  "matter_current_J_nu_derived": false,
+  "matter_current_exchange_route_proved": false,
+  "matter_equation_shape_policy": "(i gamma^mu D_mu - m) psi = 0",
+  "matter_equation_shape_recorded": true,
+  "matter_exchange_preview": "nabla_mu T_psi^{mu nu} = + F^nu_alpha J^alpha",
+  "matter_gauge_energy_exchange_proved": false,
+  "matter_gauge_exchange_proved": false,
+  "matter_surface_policy": "psi as Dirac-like spinor or finite spinor multiplet",
+  "matter_surface_policy_selected": true,
+  "minus_sign_covariant_derivative_selected": false,
+  "native_generation_theorem_claimed": false,
+  "non_claim_boundary": "This policy packet prepares the psi-A U(1) current and exchange route only as policy. It does not derive J^nu, does not prove current conservation, does not derive sourced Maxwell, does not derive the Dirac equation, does not prove matter-gauge exchange, does not derive psi stress-energy, does not prove total stress-energy conservation, does not define or prove a completed C_exchange functional, does not close EM-QFT, does not close QFT-GR, does not quantize electromagnetism, does not prove anomaly cancellation, does not derive the Standard Model, does not authorize Phase 2, records no Phase 2 authorization, does not claim empirical validation, and does not promote the master action. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+  "operator_valued_quantum_domain_selected": false,
+  "outcome_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+  "packet_classification": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet_selects_interaction_policy_and_blocks_current_exchange_derivation",
+  "packet_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_v0",
+  "phase2_authorized": false,
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "plus_sign_covariant_derivative_selected": true,
+  "policy_blocked_count": 1,
+  "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "policy_item_count": 18,
+  "policy_item_expected_count": 18,
+  "policy_items": [
+    {
+      "decision": "psi as Dirac-like spinor or finite spinor multiplet",
+      "policy_id": "matter_surface",
+      "reason": "The current must come from psi, not from an unexplained external source.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "U(1)",
+      "policy_id": "gauge_group",
+      "reason": "The first interaction route is the minimal Abelian gauge test.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "A_mu as smooth real U(1) gauge potential one-form",
+      "policy_id": "gauge_field",
+      "reason": "The A route already supplies the vacuum gauge field surface.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "policy_id": "field_strength",
+      "reason": "The U(1) curvature surface remains F = dA.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "real charge q with plus-sign covariant derivative convention",
+      "policy_id": "charge_sign_convention",
+      "reason": "A stable q and derivative sign are needed before variation is attempted.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "D_mu psi = (nabla_mu + i q A_mu) psi",
+      "policy_id": "covariant_derivative",
+      "reason": "The packet selects the plus-sign D_mu convention for psi.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "D_mu psi = (nabla_mu - i q A_mu) psi not selected for this packet",
+      "policy_id": "alternate_derivative_convention",
+      "reason": "The minus-sign convention is not used in this route packet.",
+      "status": "blocked_for_this_packet"
+    },
+    {
+      "decision": "gamma^mu = e_a^mu gamma^a with Clifford relation pinned by the selected metric and signature policy; explicit representation not selected",
+      "policy_id": "gamma_matrices",
+      "reason": "The spinor route needs a gamma policy before a Dirac variation.",
+      "status": "selected_as_policy_placeholder"
+    },
+    {
+      "decision": "tetrad/frame required for curved scope; flat scope may take the trivial frame",
+      "policy_id": "tetrad_frame_policy",
+      "reason": "Curved-scope spinor coupling needs a frame policy.",
+      "status": "selected_as_policy_placeholder"
+    },
+    {
+      "decision": "spin connection included in nabla_mu psi; explicit coefficients not derived",
+      "policy_id": "spin_connection",
+      "reason": "nabla_mu psi must include the spin connection policy.",
+      "status": "selected_as_policy_placeholder"
+    },
+    {
+      "decision": "psibar = psi^dagger gamma^0 under the selected gamma convention",
+      "policy_id": "psibar_adjoint",
+      "reason": "The current candidate and matter action need psibar fixed.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "smooth finite-action psi and A on the selected spacetime domain; singular and operator-valued quantum domains not selected",
+      "policy_id": "field_domains",
+      "reason": "Field regularity and domain scope must be fixed before derivation.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "compact-support or fixed-boundary variations for psi, psibar, and A",
+      "policy_id": "boundary_variation",
+      "reason": "The future route needs boundary terms controlled or removed.",
+      "status": "selected_for_future_variation_attempt"
+    },
+    {
+      "decision": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+      "policy_id": "gauge_transformations",
+      "reason": "The plus-sign D_mu convention fixes the matching gauge transformation signs.",
+      "status": "selected_for_interaction_policy"
+    },
+    {
+      "decision": "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A variation",
+      "policy_id": "current_candidate",
+      "reason": "J^mu is a candidate only until A-variation is carried out.",
+      "status": "recorded_as_candidate_not_derived"
+    },
+    {
+      "decision": "T_A, T_psi, and T_total = T_A + T_psi named as policy objects; T_psi not derived",
+      "policy_id": "stress_energy_policy",
+      "reason": "T_psi and total stress-energy are named, not constructed.",
+      "status": "recorded_as_policy_not_derived"
+    },
+    {
+      "decision": "separate-sector exchange may be nonzero; total conservation is the policy target",
+      "policy_id": "exchange_policy",
+      "reason": "The packet distinguishes legal transfer from illegal loss without proof.",
+      "status": "recorded_as_policy_target_not_proved"
+    },
+    {
+      "decision": "flat or curved spacetime scope retained; curved route requires tetrad and spin connection domains",
+      "policy_id": "background_scope",
+      "reason": "The route remains compatible with flat and curved downstream scopes.",
+      "status": "selected_for_interaction_policy"
+    }
+  ],
+  "policy_items_expected": [
+    "matter surface",
+    "gauge group",
+    "gauge field",
+    "field strength",
+    "charge sign convention",
+    "covariant derivative",
+    "alternate derivative convention",
+    "gamma matrices",
+    "tetrad/frame policy",
+    "spin connection",
+    "psibar adjoint",
+    "field domains",
+    "boundary variation",
+    "gauge transformations",
+    "current candidate",
+    "stress-energy policy",
+    "exchange policy",
+    "background scope"
+  ],
+  "policy_packet_only": true,
+  "policy_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_PREPARED_INTERACTION_POLICY_SELECTED_CURRENT_AND_EXCHANGE_DERIVATION_STILL_BLOCKED",
+  "policy_selected_count": 14,
+  "policy_status": "psi_A_u1_interaction_policy_selected_current_and_exchange_derivation_still_blocked",
+  "prepared": true,
+  "psi_A_u1_current_and_exchange_route_indexed": true,
+  "psi_A_u1_policy_packet_prepared": true,
+  "psi_current_route_constructed": false,
+  "psi_stress_energy_derived": false,
+  "psibar_adjoint_policy_selected": true,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "quantized_electromagnetism_claimed": false,
+  "record_validated": true,
+  "release_preservation_validation": "full ToeFormal aggregate when feasible",
+  "review_criteria": [
+    {
+      "assessment": "The selector authorized this policy packet and no route execution.",
+      "evidence": "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+      "row_id": "consumes_expected_psi_a_policy_packet_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet consumes the selected psi-A U(1) interaction route.",
+      "evidence": "psi_A_u1_current_and_exchange_route",
+      "row_id": "psi_a_u1_route_selected_by_selector",
+      "status": "accepted"
+    },
+    {
+      "assessment": "psi is pinned as Dirac-like matter or a finite spinor multiplet.",
+      "evidence": "psi as Dirac-like spinor or finite spinor multiplet",
+      "row_id": "matter_surface_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The route uses the U(1) A_mu and F = dA surface.",
+      "evidence": [
+        "U(1)",
+        "A_mu as smooth real U(1) gauge potential one-form",
+        "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
+      ],
+      "row_id": "u1_gauge_policy_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet chooses the plus-sign D_mu psi convention.",
+      "evidence": "D_mu psi = (nabla_mu + i q A_mu) psi",
+      "row_id": "plus_sign_covariant_derivative_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The alternate sign is blocked for this packet.",
+      "evidence": "D_mu psi = (nabla_mu - i q A_mu) psi not selected for this packet",
+      "row_id": "minus_sign_derivative_convention_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Gamma, tetrad, spin connection, and psibar policies are pinned.",
+      "evidence": [
+        "gamma^mu = e_a^mu gamma^a with Clifford relation pinned by the selected metric and signature policy; explicit representation not selected",
+        "tetrad/frame required for curved scope; flat scope may take the trivial frame",
+        "spin connection included in nabla_mu psi; explicit coefficients not derived",
+        "psibar = psi^dagger gamma^0 under the selected gamma convention"
+      ],
+      "row_id": "spin_geometry_policy_pinned",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet fixes field domains, variations, and gauge signs.",
+      "evidence": [
+        "smooth finite-action psi and A on the selected spacetime domain; singular and operator-valued quantum domains not selected",
+        "compact-support or fixed-boundary variations for psi, psibar, and A",
+        "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention"
+      ],
+      "row_id": "domain_boundary_and_gauge_transforms_pinned",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The current is only a candidate until A variation is performed.",
+      "evidence": "J^mu_candidate = q psibar gamma^mu psi; candidate only, not derived by A variation",
+      "row_id": "current_candidate_recorded_not_derived",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Separate-sector exchange and total balance remain policy targets.",
+      "evidence": [
+        "T_A, T_psi, and T_total = T_A + T_psi named as policy objects; T_psi not derived",
+        "separate-sector exchange may be nonzero; total conservation is the policy target"
+      ],
+      "row_id": "stress_energy_and_exchange_policy_recorded_not_proved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "C_exchange is a future rule-family preview, not a completed functional.",
+      "evidence": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+      "row_id": "c_exchange_preview_recorded_without_functional",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Flat and curved downstream scopes remain bounded by spin geometry policy.",
+      "evidence": "flat or curved spacetime scope retained; curved route requires tetrad and spin connection domains",
+      "row_id": "background_scope_retained",
+      "status": "accepted"
+    },
+    {
+      "assessment": "All derivation, closure, empirical, Phase 2, and promotion claims remain blocked.",
+      "evidence": [
+        "J^nu derivation",
+        "current conservation proof",
+        "sourced Maxwell derivation",
+        "Dirac equation derivation",
+        "matter-gauge exchange proof",
+        "psi stress-energy derivation",
+        "total stress-energy conservation proof",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "quantized electromagnetism",
+        "anomaly cancellation",
+        "Standard Model derivation",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "row_id": "no_current_exchange_derivation_closure_or_promotion",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 13,
+  "review_criteria_count": 13,
+  "routine_packet_validation_tiers": [
+    "touched Lean marker",
+    "smallest affected Lake target",
+    "lane aggregate",
+    "current authority target"
+  ],
+  "schema_id": "TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET_20260624_v0",
+  "seam_closure_claim": false,
+  "selected_gauge_group": "U(1)",
+  "selected_interaction_fields": [
+    "psi",
+    "A"
+  ],
+  "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+  "selected_matter_type_scope": "Dirac spinor or finite spinor multiplet",
+  "selected_next_target": "prepare_toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet",
+  "selected_next_target_kind": "toe_native_psi_A_u1_current_and_exchange_derivation_obligation_packet_preparation",
+  "selector_outcome": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_SELECTS_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_QFT_CLOSURE",
+  "selector_packet_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_v0",
+  "selector_schema_id": "MASTER_ACTION_INTERACTION_SELECTION_AFTER_A_CK_TRIAD_20260624_v0",
+  "selector_selected_route": "psi_A_u1_current_and_exchange_route",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "separate_sector_exchange_visible": true,
+  "sourced_gauge_equation_preview": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_equation_derived": false,
+  "sourced_maxwell_route_derived": false,
+  "spin_connection_policy": "spin connection included in nabla_mu psi; explicit coefficients not derived",
+  "spin_connection_policy_selected": true,
+  "spin_geometry_policy": "curved-background capable spin geometry policy requires gamma matrices, tetrad/frame, and spin connection placeholders",
+  "spin_geometry_policy_selected": true,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_TOE_NATIVE_PSI_A_U1_CURRENT_AND_EXCHANGE_ROUTE_POLICY_PACKET",
+  "stress_energy_policy": "T_A, T_psi, and T_total = T_A + T_psi named as policy objects; T_psi not derived",
+  "stress_energy_policy_selected": true,
+  "tetrad_frame_policy_selected": true,
+  "tetrad_policy": "tetrad/frame required for curved scope; flat scope may take the trivial frame",
+  "tiered_lean_validation_policy_formalized": true,
+  "toe_native_matter_derivation_claimed": false,
+  "toeformal_import_update_requires_preservation_status": true,
+  "total_conservation_policy_required": true,
+  "total_exchange_preview": "nabla_mu (T_A^{mu nu} + T_psi^{mu nu}) = 0",
+  "total_stress_energy_conservation_proved": false,
+  "u1_gauge_group_selected": true,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_allowed_values": [
+      "NOT_RUN"
+    ],
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "checkpoint_type": "toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_toeformal_aggregate_failed": false,
+    "full_toeformal_aggregate_passed": false,
+    "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+    "full_toeformal_aggregate_timed_out": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "x_a_policy_preview": "X_A^nu := nabla_mu T_A^{mu nu} + F^nu_alpha J^alpha",
+  "x_psi_policy_preview": "X_psi^nu := nabla_mu T_psi^{mu nu} - F^nu_alpha J^alpha"
+}
