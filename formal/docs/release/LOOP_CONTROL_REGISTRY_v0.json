@@ -1,5 +1,5 @@
 {
-  "active_lane": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+  "active_lane": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
   "allowed_statuses": [
     "active",
     "retained",
@@ -25,7 +25,8 @@
     "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
     "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
     "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
-    "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
+    "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+    "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -254,7 +255,8 @@
     "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
     "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
     "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
-    "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+    "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+    "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
   ],
   "consumed_targets": [
     {
@@ -929,6 +931,13 @@
       "selected_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
       "status": "completed_consumed_live_target",
       "target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+    },
+    {
+      "outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
     }
   ],
   "controls": [
@@ -1290,8 +1299,8 @@
       "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
     }
   ],
-  "current_live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
-  "current_live_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+  "current_live_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+  "current_live_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
   "current_target_coverage": [
     {
       "report": "formal/docs/release/TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_20260624_v0.json",
@@ -1360,7 +1369,7 @@
     "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
   ],
   "current_target_state": {
-    "active_lane": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+    "active_lane": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
     "candidate_live_next_targets": [
       "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result",
       "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet",
@@ -1373,7 +1382,8 @@
       "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
       "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
-      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
+      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+      "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet"
     ],
     "completed_targets": [
       "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result",
@@ -1586,7 +1596,8 @@
       "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
       "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
-      "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+      "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
     ],
     "consumed_targets": [
       {
@@ -3359,14 +3370,14 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+    "live_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
     "live_next_target_authority": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
     "live_next_target_frontier_mirror": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_kind": "toe_native_psi_A_u1_sourced_maxwell_route_packet_preparation",
-    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
-    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_20260624_v0.json",
+    "live_next_target_kind": "toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet_preparation",
+    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
     "next_strict_target_coverage": [
       "analyze_qft_gr_minimal_working_model_candidate_only",
       "audit_master_action_citation_language_against_retained_boundaries",
@@ -3808,7 +3819,8 @@
       "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
       "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
-      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
+      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+      "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet"
     ],
     "non_claim_boundary": "This is a bounded current-conservation-from-Dirac-pair packet only; it records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under the selected psi-A U(1) policy, Dirac pair, gamma-compatibility assumptions, and domain/boundary assumptions. It records no sourced Maxwell closure, no full Maxwell system closure, no stress-energy derivation, no gauge-matter exchange identity, no total stress-energy conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
     "paused_lanes": [
@@ -4107,10 +4119,11 @@
       "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
       "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
       "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
-      "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+      "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+      "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+    "previous_live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
@@ -4866,6 +4879,13 @@
         "selected_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
         "status": "completed_consumed_live_target",
         "target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+      },
+      {
+        "outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+        "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+        "selected_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+        "status": "completed_consumed_live_target",
+        "target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
       }
     ]
   },
@@ -5440,10 +5460,10 @@
     "stronger_evidence_object",
     "failed_assumption_refutation"
   ],
-  "latest_surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
-  "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
-  "latest_surface_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_20260624_v0.json",
-  "latest_surface_token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+  "latest_surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
+  "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
+  "latest_surface_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+  "latest_surface_token": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
   "legal_transitions": {
     "active": [
       "retained",
@@ -5470,12 +5490,12 @@
       "archived"
     ]
   },
-  "live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
-  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
+  "live_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
   "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-  "live_next_target_kind": "toe_native_psi_A_u1_sourced_maxwell_route_packet_preparation",
-  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
-  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_20260624_v0.json",
+  "live_next_target_kind": "toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet_preparation",
+  "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
   "next_strict_target_coverage": [
     "analyze_qft_gr_minimal_working_model_candidate_only",
     "audit_master_action_citation_language_against_retained_boundaries",
@@ -5919,7 +5939,8 @@
     "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
     "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
     "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
-    "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
+    "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+    "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet"
   ],
   "non_claim_boundary": "This is a bounded current-conservation-from-Dirac-pair packet only; it records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under the selected psi-A U(1) policy, Dirac pair, gamma-compatibility assumptions, and domain/boundary assumptions. It records no sourced Maxwell closure, no full Maxwell system closure, no stress-energy derivation, no gauge-matter exchange identity, no total stress-energy conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
   "non_promotion_assertions": {
@@ -6224,9 +6245,10 @@
     "prepare_toe_native_psi_A_u1_current_conservation_obligation_packet",
     "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet",
     "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
-    "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet"
+    "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+    "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
   ],
-  "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+  "previous_live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
   "promotion_escrow": {
     "current_tranche_governance_manifest_enrollment": "not_authorized",
     "required_steps": [
@@ -6256,10 +6278,10 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelReattemptPacketForWeakConservationObstructionResultReview.lean",
       "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_REATTEMPT_ONLY"
     },
-    "live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
-    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
-    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_20260624_v0.json",
+    "live_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
+    "live_next_target_outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
     "non_claim_boundary": "This result review accepts the source, bridge, and transport ToE-native A/C_k admissibility-rule synthesis only. The review records no action embedding, no action term, no C_k variation, no dynamical-law claim, no current route, no J^nu derivation, no sourced Maxwell derivation, no matter/current exchange, no source-admissibility proof, no bridge-admissibility proof, no transport proof, no full route-alignment proof, no EM closure, no QFT-GR closure, no semiclassical coupling, no empirical validation, no Phase 2 authorization, no master-action promotion, and no public-readiness authorization. The full ToeFormal aggregate is recorded as NOT_RUN for this review, not passed, not failed, and not timed out.",
     "prepare_phi_ck_admissibility_rule_family_synthesis_closeout": {
       "kind": "phi_ck_admissibility_rule_family_synthesis_closeout",
@@ -6400,7 +6422,7 @@
       "target": "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy",
       "token": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_PACKET_PREPARED_VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE"
     },
-    "previous_live_next_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+    "previous_live_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
     "qft_gr_action_derivability_retry_with_provisional_matter_sector_v0": {
       "classification": "qft_gr_action_derivability_retry_with_provisional_matter_sector_constructs_scalar_stress_energy_variation_nonpromotionally",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
@@ -8189,6 +8211,13 @@
       "selected_next_target": "prepare_toe_native_psi_A_u1_adjoint_dirac_route_packet",
       "status": "completed_consumed_live_target",
       "target": "prepare_toe_native_psi_A_u1_psi_variation_dirac_route_packet"
+    },
+    {
+      "outcome": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "status": "completed_consumed_live_target",
+      "target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
     }
   ],
   "token_family_coverage": [
@@ -73678,8 +73707,11 @@
     },
     {
       "A_variation_residual": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+      "A_variation_residual_consumed": "yes",
       "C_exchange_closeout": "no",
       "C_exchange_definition_closeout": "no",
+      "C_exchange_future_route_indexed": "yes",
+      "F_equals_dA_context_preserved": "yes",
       "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
       "active_lane": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
       "adjoint_derivative_policy": "D_mu psibar = nabla_mu psibar - i q A_mu psibar",
@@ -73699,39 +73731,44 @@
       "adjoint_variation_route": "delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0",
       "anomaly_analysis_performed": "no",
       "anomaly_cancellation_claimed": "no",
-      "assumption_count": "4",
+      "assumption_count": 5,
       "assumptions": [
         {
           "assumption_id": "selected_u1_policy",
-          "statement": "D_mu psi = nabla_mu psi + i q A_mu psi; D_mu psibar = nabla_mu psibar - i q A_mu psibar",
+          "statement": "D_mu psi = (nabla_mu + i q A_mu) psi",
           "status": "indexed"
         },
         {
-          "assumption_id": "dirac_pair_validity",
-          "statement": "psi equation and adjoint equation routes are admitted as bounded inputs",
-          "status": "indexed"
+          "assumption_id": "a_variation_residual_admitted",
+          "statement": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+          "status": "consumed"
         },
         {
-          "assumption_id": "gamma_compatibility",
-          "statement": "spin/tetrad connection is gamma-compatible for the divergence route",
-          "status": "indexed"
+          "assumption_id": "current_conservation_admitted",
+          "statement": "nabla_mu J^mu = 0",
+          "status": "consumed"
+        },
+        {
+          "assumption_id": "field_strength_context",
+          "statement": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+          "status": "preserved_as_existing_F_equals_dA_context"
         },
         {
           "assumption_id": "field_domain_regular_boundary",
-          "statement": "psi, psibar, and A have sufficient regularity and boundary behavior",
+          "statement": "psi, psibar, and A satisfy the bounded domain and boundary policy",
           "status": "indexed"
         }
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
-      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
-      "authorized_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
-      "blocked_claim_count": "14",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
+      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "authorized_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "blocked_claim_count": 14,
       "blocked_claims": [
-        "sourced Maxwell closure",
-        "full Maxwell system closure",
+        "full Maxwell closure",
+        "homogeneous Maxwell route beyond existing F = dA context",
         "stress-energy derivation",
         "gauge-matter exchange identity",
-        "total stress-energy conservation proof",
+        "total conservation proof",
         "C_exchange closeout",
         "EM-QFT closure",
         "QFT-GR closure",
@@ -73745,16 +73782,21 @@
       "bounded_current_conservation_proved": "yes",
       "bounded_current_conservation_route_constructed": "yes",
       "bounded_route_shape": "nabla_mu F^{mu nu} = J^nu",
+      "bounded_sourced_maxwell_route_derived": "yes",
+      "bounded_sourced_maxwell_route_recorded": "yes",
+      "conserved_source_condition": "nabla_mu J^mu = 0",
       "consumed_adjoint_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_PREPARED_ADJOINT_EQUATION_ROUTE_RECORDED_CURRENT_CONSERVATION_STILL_BLOCKED",
       "consumed_current_conservation_from_dirac_pair_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
       "consumed_current_conservation_obligation_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
       "consumed_psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
-      "consumed_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+      "consumed_sourced_maxwell_route_packet_result": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "consumed_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
       "covariant_derivative_pair_policy": "D_mu psi = nabla_mu psi + i q A_mu psi; D_mu psibar = nabla_mu psibar - i q A_mu psibar",
       "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
       "current_candidate": "J^mu = q psibar gamma^mu psi",
       "current_candidate_from_A_variation": "J^nu = q psibar gamma^nu psi",
       "current_candidate_policy": "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate and conserved under the bounded Dirac-pair route",
+      "current_conservation_consumed": "yes",
       "current_conservation_from_dirac_pair_packet_preparation_authorized": "yes",
       "current_conservation_from_dirac_pair_packet_prepared": "yes",
       "current_conservation_from_dirac_pair_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
@@ -73769,6 +73811,9 @@
       "current_conservation_route_indexed": "yes",
       "current_conservation_route_preview": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
       "current_conservation_route_status": "bounded current-conservation route constructed under the selected psi-A U(1) policy, Dirac equation route, adjoint equation route, gamma-compatibility assumptions, and domain/boundary assumptions",
+      "current_conserved_source_admitted_for_bounded_route": "yes",
+      "current_consistency_status": "the source current is conserved under the bounded Dirac-pair route and is therefore consistent as the source for the recorded gauge route",
+      "current_consistent_sourced_gauge_route_recorded": "yes",
       "current_divergence_route": "nabla_mu J^mu = q [(D_mu psibar) gamma^mu psi + psibar gamma^mu D_mu psi]",
       "dirac_equation_derived": "no",
       "dirac_pair_route_inputs": [
@@ -73789,43 +73834,55 @@
       "follow_on_current_conservation_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
       "full_dirac_derivation_closed": "no",
       "full_em_closure_claimed": "no",
+      "full_maxwell_closure_claimed": "no",
       "full_maxwell_system_closure_claimed": "no",
+      "full_toeformal_aggregate_failed": "no",
+      "full_toeformal_aggregate_passed": "no",
       "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+      "full_toeformal_aggregate_timed_out": "no",
       "gamma_compatibility_assumptions_indexed": "yes",
       "gauge_matter_exchange_identity_proved": "no",
       "gauge_matter_exchange_proved": "no",
       "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
       "guardrail_status": "active_under_loop_control_registry_v0",
-      "indexed_future_route_count": "2",
+      "homogeneous_context_limited_to_F_equals_dA": "yes",
+      "homogeneous_maxwell_route_beyond_f_equals_dA_claimed": "no",
+      "indexed_future_route_count": 2,
       "indexed_future_routes": [
         {
           "proof_claimed": false,
-          "route_id": "sourced_maxwell_route",
-          "route_shape": "A variation residual plus conserved J^nu -> nabla_mu F^{mu nu} = J^nu",
-          "status": "selected_next_not_closed"
+          "route_id": "stress_energy_and_exchange_obligation",
+          "route_shape": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha; nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha; nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
+          "status": "selected_next_not_proved"
         },
         {
           "proof_claimed": false,
-          "route_id": "exchange_route",
-          "route_shape": "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions",
-          "status": "indexed_not_stress_energy_or_exchange_proof"
+          "route_id": "possible_C_exchange_rule",
+          "route_shape": "C_exchange^{A psi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+          "status": "indexed_not_closed"
         }
       ],
+      "lean_validation_policy": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
       "left_acting_adjoint_notation": "psibar (i overleftarrow{D}_mu gamma^mu + m) = 0",
       "left_acting_adjoint_notation_recorded": "yes",
       "mass_term_cancellation_recorded": "yes",
       "mass_term_cancellation_route": "q [+ i m psibar psi - i m psibar psi] = 0",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
+      "mathematical_statement": "This packet combines the accepted A-variation residual delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu with the bounded current-conservation route nabla_mu J^mu = 0 and records the sourced gauge route nabla_mu F^{mu nu} = J^nu for J^nu = q psibar gamma^nu psi.",
       "matter_gauge_exchange_proved": "no",
-      "non_claim_boundary": "This is a bounded current-conservation-from-Dirac-pair packet only; it records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under the selected psi-A U(1) policy, Dirac pair, gamma-compatibility assumptions, and domain/boundary assumptions. It records no sourced Maxwell closure, no full Maxwell system closure, no stress-energy derivation, no gauge-matter exchange identity, no total stress-energy conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "matter_made_source_recorded": "yes",
+      "maxwell_closure_claimed": "no",
+      "non_claim_boundary": "This is a bounded sourced-Maxwell-route packet only; it records nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi using the accepted A-variation residual and conserved current. It records no full Maxwell closure, no homogeneous Maxwell route beyond the existing F = dA context, no stress-energy derivation, no gauge-matter exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
       "opposite_gauge_sign_adjoint_derivative_indexed": "yes",
-      "outcome_id": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
-      "packet_classification": "toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet_prepared_current_conservation_route_constructed_no_sourced_maxwell_closure_or_exchange_proof",
-      "packet_id": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_v0",
-      "packet_result": "PENDING",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "packet_classification": "toe_native_psi_A_u1_sourced_maxwell_route_packet_prepared_sourced_gauge_route_recorded_no_maxwell_closure_or_exchange_proof",
+      "packet_id": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_v0",
+      "packet_result": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
       "phase2_authorized": "no",
       "pillar_completion_inferred": "no",
+      "plain_meaning": "The gauge field equation now has a matter-made source, and that source is conserved under the bounded psi-A U(1) assumptions.",
+      "possible_C_exchange_route": "C_exchange^{A psi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
       "primary_variation_variable": "psi",
       "prior_current_candidate_policy": "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate only, not yet conserved",
       "proof_pair_status": "psi and adjoint equation routes are both recorded; conservation proof remains blocked",
@@ -73845,71 +73902,472 @@
       "psibar_variation_route_recorded": "yes",
       "qft_gr_closure_claimed": "no",
       "quantized_electromagnetism_claimed": "no",
-      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_20260624_v0.json",
+      "record_validated": "yes",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
       "result_review_completed": "no",
       "result_review_pending": "yes",
-      "result_token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
-      "review_criteria_accepted_count": "7",
-      "review_criteria_count": "7",
-      "route_step_count": "5",
+      "result_token": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "review_criteria": [
+        {
+          "assessment": "The current-conservation-from-Dirac-pair packet is consumed.",
+          "evidence": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+          "row_id": "current_conservation_packet_consumed",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The A-variation residual is preserved as the gauge-route input.",
+          "evidence": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+          "row_id": "a_variation_residual_preserved",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The psi-made current and its bounded conservation route are preserved.",
+          "evidence": [
+            "J^nu = q psibar gamma^nu psi",
+            "nabla_mu J^mu = 0"
+          ],
+          "row_id": "conserved_current_preserved",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The sourced gauge route is recorded as bounded route construction.",
+          "evidence": "nabla_mu F^{mu nu} = J^nu",
+          "row_id": "bounded_sourced_route_recorded",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The homogeneous-side context remains only the existing F = dA policy.",
+          "evidence": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+          "row_id": "f_equals_dA_context_only",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The stress-energy and exchange obligation packet is selected next.",
+          "evidence": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+          "row_id": "exchange_obligation_selected_next",
+          "status": "accepted"
+        },
+        {
+          "assessment": "Maxwell closure, exchange proof, empirical, Phase 2, and promotion claims remain blocked.",
+          "evidence": [
+            "full Maxwell closure",
+            "homogeneous Maxwell route beyond existing F = dA context",
+            "stress-energy derivation",
+            "gauge-matter exchange identity",
+            "total conservation proof",
+            "C_exchange closeout",
+            "EM-QFT closure",
+            "QFT-GR closure",
+            "quantized electromagnetism",
+            "anomaly analysis",
+            "Standard Model derivation",
+            "Phase 2 authorization",
+            "empirical validation",
+            "master-action promotion"
+          ],
+          "row_id": "closure_and_promotion_claims_blocked",
+          "status": "accepted"
+        }
+      ],
+      "review_criteria_accepted_count": 7,
+      "review_criteria_count": 7,
+      "route_step_count": 4,
       "route_steps": [
         {
-          "statement": "J^mu = q psibar gamma^mu psi",
-          "status": "accepted_input_from_A_variation_route",
-          "step_id": "current_candidate"
-        },
-        {
-          "statement": "nabla_mu J^mu = q [(D_mu psibar) gamma^mu psi + psibar gamma^mu D_mu psi]",
-          "status": "recorded_under_gamma_compatibility_and_domain_assumptions",
-          "step_id": "divergence_expansion"
-        },
-        {
-          "statement": [
-            "i (D_mu psibar) gamma^mu + m psibar = 0",
-            "i gamma^mu D_mu psi - m psi = 0"
-          ],
-          "status": "uses_recorded_psi_and_adjoint_routes",
-          "step_id": "dirac_pair_substitution"
-        },
-        {
-          "statement": "q [+ i m psibar psi - i m psibar psi] = 0",
-          "status": "recorded",
-          "step_id": "mass_cancellation"
+          "statement": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+          "status": "consumed_from_A_variation_current_route",
+          "step_id": "a_variation_residual_input"
         },
         {
           "statement": "nabla_mu J^mu = 0",
-          "status": "bounded_route_constructed",
-          "step_id": "current_conservation_result"
+          "status": "consumed_from_current_conservation_from_dirac_pair_route",
+          "step_id": "conserved_current_input"
+        },
+        {
+          "statement": "nabla_mu F^{mu nu} - J^nu = 0",
+          "status": "recorded_as_bounded_euler_residual_route",
+          "step_id": "sourced_residual_zero"
+        },
+        {
+          "statement": "nabla_mu F^{mu nu} = J^nu",
+          "status": "recorded_no_full_maxwell_closure",
+          "step_id": "bounded_sourced_gauge_route"
         }
       ],
-      "schema_id": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_20260624_v0",
+      "schema_id": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0",
       "seam_closure_claim": "no",
       "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
-      "selected_next_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
-      "selected_next_target_kind": "toe_native_psi_A_u1_sourced_maxwell_route_packet_preparation",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "selected_next_target_kind": "toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet_preparation",
+      "source_current": "J^nu = q psibar gamma^nu psi",
+      "sourced_gauge_route": "nabla_mu F^{mu nu} = J^nu",
+      "sourced_gauge_route_recorded": "yes",
+      "sourced_gauge_route_status": "bounded sourced gauge route recorded from the A-variation residual and the conserved psi-made current",
       "sourced_maxwell_closure_claimed": "no",
       "sourced_maxwell_compatibility_route_indexed": "yes",
       "sourced_maxwell_compatibility_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
       "sourced_maxwell_consistency_candidate_ready": "yes",
       "sourced_maxwell_consistency_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
       "sourced_maxwell_equation_derived": "no",
-      "sourced_maxwell_route_derived": "no",
+      "sourced_maxwell_equation_recorded": "yes",
+      "sourced_maxwell_residual_zero": "nabla_mu F^{mu nu} - J^nu = 0",
+      "sourced_maxwell_residual_zero_recorded": "yes",
+      "sourced_maxwell_route": "nabla_mu F^{mu nu} = J^nu",
+      "sourced_maxwell_route_derived": "yes",
       "sourced_maxwell_route_packet_preparation_authorized": "yes",
-      "sourced_maxwell_route_packet_prepared": "no",
-      "sourced_maxwell_route_packet_result": "PENDING",
+      "sourced_maxwell_route_packet_prepared": "yes",
+      "sourced_maxwell_route_packet_result": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
       "sourced_maxwell_route_packet_selected": "yes",
       "sourced_maxwell_route_preview": "A variation residual plus conserved J^nu -> nabla_mu F^{mu nu} = J^nu",
+      "sourced_maxwell_route_recorded": "yes",
       "standard_model_derivation_claimed": "no",
-      "status": "active",
+      "status": "paused",
+      "stress_energy_and_exchange_obligation_packet_preparation_authorized": "yes",
+      "stress_energy_and_exchange_obligation_packet_prepared": "no",
+      "stress_energy_and_exchange_obligation_packet_result": "PENDING",
+      "stress_energy_and_exchange_obligation_packet_selected": "yes",
       "stress_energy_derived": "no",
+      "stress_energy_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha; nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha; nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
       "target_conservation_law": "nabla_mu J^mu = 0",
       "target_conservation_law_recorded": "yes",
       "target_conservation_law_satisfied_under_dirac_pair": "yes",
-      "token": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "token": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
       "total_conservation_proved": "no",
       "total_stress_energy_conservation_proved": "no",
       "workstream_id": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet"
+    },
+    {
+      "A_variation_residual": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+      "A_variation_residual_consumed": "yes",
+      "C_exchange_closeout": "no",
+      "C_exchange_definition_closeout": "no",
+      "C_exchange_future_route_indexed": "yes",
+      "F_equals_dA_context_preserved": "yes",
+      "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+      "active_lane": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "adjoint_derivative_policy": "D_mu psibar = nabla_mu psibar - i q A_mu psibar",
+      "adjoint_dirac_derivation_claimed": "no",
+      "adjoint_dirac_equation_derived": "no",
+      "adjoint_dirac_route_obligation": "derive the adjoint equation for psibar under the selected adjoint convention",
+      "adjoint_dirac_route_packet_preparation_authorized": "yes",
+      "adjoint_dirac_route_packet_prepared": "yes",
+      "adjoint_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_PREPARED_ADJOINT_EQUATION_ROUTE_RECORDED_CURRENT_CONSERVATION_STILL_BLOCKED",
+      "adjoint_dirac_route_packet_selected": "yes",
+      "adjoint_equation_route": "i (D_mu psibar) gamma^mu + m psibar = 0",
+      "adjoint_equation_route_recorded": "yes",
+      "adjoint_equation_route_status": "bounded adjoint equation route recorded from psi variation; no current conservation proof",
+      "adjoint_equation_route_used": "yes",
+      "adjoint_route_indexed": "yes",
+      "adjoint_route_preview": "delta_psi S_{psi A} -> adjoint Dirac equation route",
+      "adjoint_variation_route": "delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0",
+      "anomaly_analysis_performed": "no",
+      "anomaly_cancellation_claimed": "no",
+      "assumption_count": 5,
+      "assumptions": [
+        {
+          "assumption_id": "selected_u1_policy",
+          "statement": "D_mu psi = (nabla_mu + i q A_mu) psi",
+          "status": "indexed"
+        },
+        {
+          "assumption_id": "a_variation_residual_admitted",
+          "statement": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+          "status": "consumed"
+        },
+        {
+          "assumption_id": "current_conservation_admitted",
+          "statement": "nabla_mu J^mu = 0",
+          "status": "consumed"
+        },
+        {
+          "assumption_id": "field_strength_context",
+          "statement": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+          "status": "preserved_as_existing_F_equals_dA_context"
+        },
+        {
+          "assumption_id": "field_domain_regular_boundary",
+          "statement": "psi, psibar, and A satisfy the bounded domain and boundary policy",
+          "status": "indexed"
+        }
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1SourcedMaxwellRoutePacket.lean",
+      "authorized_next_strict_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "authorized_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "blocked_claim_count": 14,
+      "blocked_claims": [
+        "full Maxwell closure",
+        "homogeneous Maxwell route beyond existing F = dA context",
+        "stress-energy derivation",
+        "gauge-matter exchange identity",
+        "total conservation proof",
+        "C_exchange closeout",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "quantized electromagnetism",
+        "anomaly analysis",
+        "Standard Model derivation",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "bounded_current_conservation_proved": "yes",
+      "bounded_current_conservation_route_constructed": "yes",
+      "bounded_route_shape": "nabla_mu F^{mu nu} = J^nu",
+      "bounded_sourced_maxwell_route_derived": "yes",
+      "bounded_sourced_maxwell_route_recorded": "yes",
+      "conserved_source_condition": "nabla_mu J^mu = 0",
+      "consumed_adjoint_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_PREPARED_ADJOINT_EQUATION_ROUTE_RECORDED_CURRENT_CONSERVATION_STILL_BLOCKED",
+      "consumed_current_conservation_from_dirac_pair_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "consumed_current_conservation_obligation_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_OBLIGATION_PACKET_PREPARED_CURRENT_CONSERVATION_REQUIREMENTS_INDEXED_NO_CONSERVATION_PROOF_OR_EM_QFT_CLOSURE",
+      "consumed_psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "consumed_sourced_maxwell_route_packet_result": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "consumed_target": "prepare_toe_native_psi_A_u1_sourced_maxwell_route_packet",
+      "covariant_derivative_pair_policy": "D_mu psi = nabla_mu psi + i q A_mu psi; D_mu psibar = nabla_mu psibar - i q A_mu psibar",
+      "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+      "current_candidate": "J^mu = q psibar gamma^mu psi",
+      "current_candidate_from_A_variation": "J^nu = q psibar gamma^nu psi",
+      "current_candidate_policy": "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate and conserved under the bounded Dirac-pair route",
+      "current_conservation_consumed": "yes",
+      "current_conservation_from_dirac_pair_packet_preparation_authorized": "yes",
+      "current_conservation_from_dirac_pair_packet_prepared": "yes",
+      "current_conservation_from_dirac_pair_packet_result": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "current_conservation_from_dirac_pair_packet_selected": "yes",
+      "current_conservation_from_dirac_pair_target_indexed": "yes",
+      "current_conservation_from_pair_preview": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
+      "current_conservation_proved": "yes",
+      "current_conservation_question": "Does the Dirac pair imply nabla_mu J^mu = 0?",
+      "current_conservation_recorded": "yes",
+      "current_conservation_result": "nabla_mu J^mu = 0",
+      "current_conservation_route_constructed": "yes",
+      "current_conservation_route_indexed": "yes",
+      "current_conservation_route_preview": "psi equation + psibar adjoint equation -> nabla_mu J^mu = 0",
+      "current_conservation_route_status": "bounded current-conservation route constructed under the selected psi-A U(1) policy, Dirac equation route, adjoint equation route, gamma-compatibility assumptions, and domain/boundary assumptions",
+      "current_conserved_source_admitted_for_bounded_route": "yes",
+      "current_consistency_status": "the source current is conserved under the bounded Dirac-pair route and is therefore consistent as the source for the recorded gauge route",
+      "current_consistent_sourced_gauge_route_recorded": "yes",
+      "current_divergence_route": "nabla_mu J^mu = q [(D_mu psibar) gamma^mu psi + psibar gamma^mu D_mu psi]",
+      "dirac_equation_derived": "no",
+      "dirac_pair_route_inputs": [
+        "i (D_mu psibar) gamma^mu + m psibar = 0",
+        "i gamma^mu D_mu psi - m psi = 0"
+      ],
+      "dirac_pair_used": "yes",
+      "dirac_route_equation": "(i gamma^mu D_mu - m) psi = 0",
+      "dirac_route_from_psibar_variation_recorded": "yes",
+      "domain_boundary_assumptions_indexed": "yes",
+      "em_qft_closure_claimed": "no",
+      "empirical_validation_claimed": "no",
+      "exchange_identity_proved": "no",
+      "exchange_route_indexed": "yes",
+      "exchange_route_preview": "T_A and T_psi exchange through F^nu{}_alpha J^alpha after stress-energy definitions",
+      "field_equation_route_preview": "psi equation + psibar equation -> current conservation",
+      "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "follow_on_current_conservation_target": "prepare_toe_native_psi_A_u1_current_conservation_from_dirac_pair_packet",
+      "full_dirac_derivation_closed": "no",
+      "full_em_closure_claimed": "no",
+      "full_maxwell_closure_claimed": "no",
+      "full_maxwell_system_closure_claimed": "no",
+      "full_toeformal_aggregate_failed": "no",
+      "full_toeformal_aggregate_passed": "no",
+      "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+      "full_toeformal_aggregate_timed_out": "no",
+      "gamma_compatibility_assumptions_indexed": "yes",
+      "gauge_matter_exchange_identity_proved": "no",
+      "gauge_matter_exchange_proved": "no",
+      "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "homogeneous_context_limited_to_F_equals_dA": "yes",
+      "homogeneous_maxwell_route_beyond_f_equals_dA_claimed": "no",
+      "indexed_future_route_count": 2,
+      "indexed_future_routes": [
+        {
+          "proof_claimed": false,
+          "route_id": "stress_energy_and_exchange_obligation",
+          "route_shape": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha; nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha; nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
+          "status": "selected_next_not_proved"
+        },
+        {
+          "proof_claimed": false,
+          "route_id": "possible_C_exchange_rule",
+          "route_shape": "C_exchange^{A psi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+          "status": "indexed_not_closed"
+        }
+      ],
+      "lean_validation_policy": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+      "left_acting_adjoint_notation": "psibar (i overleftarrow{D}_mu gamma^mu + m) = 0",
+      "left_acting_adjoint_notation_recorded": "yes",
+      "mass_term_cancellation_recorded": "yes",
+      "mass_term_cancellation_route": "q [+ i m psibar psi - i m psibar psi] = 0",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "mathematical_statement": "This packet combines the accepted A-variation residual delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu with the bounded current-conservation route nabla_mu J^mu = 0 and records the sourced gauge route nabla_mu F^{mu nu} = J^nu for J^nu = q psibar gamma^nu psi.",
+      "matter_gauge_exchange_proved": "no",
+      "matter_made_source_recorded": "yes",
+      "maxwell_closure_claimed": "no",
+      "non_claim_boundary": "This is a bounded sourced-Maxwell-route packet only; it records nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi using the accepted A-variation residual and conserved current. It records no full Maxwell closure, no homogeneous Maxwell route beyond the existing F = dA context, no stress-energy derivation, no gauge-matter exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+      "opposite_gauge_sign_adjoint_derivative_indexed": "yes",
+      "outcome_id": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "packet_classification": "toe_native_psi_A_u1_sourced_maxwell_route_packet_prepared_sourced_gauge_route_recorded_no_maxwell_closure_or_exchange_proof",
+      "packet_id": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_v0",
+      "packet_result": "PENDING",
+      "phase2_authorized": "no",
+      "pillar_completion_inferred": "no",
+      "plain_meaning": "The gauge field equation now has a matter-made source, and that source is conserved under the bounded psi-A U(1) assumptions.",
+      "possible_C_exchange_route": "C_exchange^{A psi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+      "primary_variation_variable": "psi",
+      "prior_current_candidate_policy": "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate only, not yet conserved",
+      "proof_pair_status": "psi and adjoint equation routes are both recorded; conservation proof remains blocked",
+      "psi_and_adjoint_pair_indexed": "yes",
+      "psi_equation_derived": "no",
+      "psi_equation_route": "(i gamma^mu D_mu - m) psi = 0",
+      "psi_equation_route_recorded": "yes",
+      "psi_equation_route_status": "bounded psi equation route recorded from psibar variation; no adjoint route or current conservation proof",
+      "psi_equation_route_used": "yes",
+      "psi_field_equation_derived": "no",
+      "psi_stress_energy_derived": "no",
+      "psi_variation_adjoint_route_recorded": "yes",
+      "psi_variation_dirac_route_packet_prepared": "yes",
+      "psi_variation_dirac_route_packet_result": "TOE_NATIVE_PSI_A_U1_PSI_VARIATION_DIRAC_ROUTE_PACKET_PREPARED_PSI_EQUATION_ROUTE_RECORDED_ADJOINT_AND_CONSERVATION_STILL_BLOCKED",
+      "psi_variation_result_derived": "no",
+      "psibar_variation_route": "delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0",
+      "psibar_variation_route_recorded": "yes",
+      "qft_gr_closure_claimed": "no",
+      "quantized_electromagnetism_claimed": "no",
+      "record_validated": "yes",
+      "report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+      "result_review_completed": "no",
+      "result_review_pending": "yes",
+      "result_token": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "review_criteria": [
+        {
+          "assessment": "The current-conservation-from-Dirac-pair packet is consumed.",
+          "evidence": "TOE_NATIVE_PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_PREPARED_CURRENT_CONSERVATION_ROUTE_CONSTRUCTED_NO_SOURCED_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+          "row_id": "current_conservation_packet_consumed",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The A-variation residual is preserved as the gauge-route input.",
+          "evidence": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+          "row_id": "a_variation_residual_preserved",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The psi-made current and its bounded conservation route are preserved.",
+          "evidence": [
+            "J^nu = q psibar gamma^nu psi",
+            "nabla_mu J^mu = 0"
+          ],
+          "row_id": "conserved_current_preserved",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The sourced gauge route is recorded as bounded route construction.",
+          "evidence": "nabla_mu F^{mu nu} = J^nu",
+          "row_id": "bounded_sourced_route_recorded",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The homogeneous-side context remains only the existing F = dA policy.",
+          "evidence": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+          "row_id": "f_equals_dA_context_only",
+          "status": "accepted"
+        },
+        {
+          "assessment": "The stress-energy and exchange obligation packet is selected next.",
+          "evidence": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+          "row_id": "exchange_obligation_selected_next",
+          "status": "accepted"
+        },
+        {
+          "assessment": "Maxwell closure, exchange proof, empirical, Phase 2, and promotion claims remain blocked.",
+          "evidence": [
+            "full Maxwell closure",
+            "homogeneous Maxwell route beyond existing F = dA context",
+            "stress-energy derivation",
+            "gauge-matter exchange identity",
+            "total conservation proof",
+            "C_exchange closeout",
+            "EM-QFT closure",
+            "QFT-GR closure",
+            "quantized electromagnetism",
+            "anomaly analysis",
+            "Standard Model derivation",
+            "Phase 2 authorization",
+            "empirical validation",
+            "master-action promotion"
+          ],
+          "row_id": "closure_and_promotion_claims_blocked",
+          "status": "accepted"
+        }
+      ],
+      "review_criteria_accepted_count": 7,
+      "review_criteria_count": 7,
+      "route_step_count": 4,
+      "route_steps": [
+        {
+          "statement": "delta_A S_{psi A} -> int d^4x sqrt(-g) [nabla_mu F^{mu nu} - J^nu] delta A_nu",
+          "status": "consumed_from_A_variation_current_route",
+          "step_id": "a_variation_residual_input"
+        },
+        {
+          "statement": "nabla_mu J^mu = 0",
+          "status": "consumed_from_current_conservation_from_dirac_pair_route",
+          "step_id": "conserved_current_input"
+        },
+        {
+          "statement": "nabla_mu F^{mu nu} - J^nu = 0",
+          "status": "recorded_as_bounded_euler_residual_route",
+          "step_id": "sourced_residual_zero"
+        },
+        {
+          "statement": "nabla_mu F^{mu nu} = J^nu",
+          "status": "recorded_no_full_maxwell_closure",
+          "step_id": "bounded_sourced_gauge_route"
+        }
+      ],
+      "schema_id": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0",
+      "seam_closure_claim": "no",
+      "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+      "selected_next_target": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet",
+      "selected_next_target_kind": "toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet_preparation",
+      "source_current": "J^nu = q psibar gamma^nu psi",
+      "sourced_gauge_route": "nabla_mu F^{mu nu} = J^nu",
+      "sourced_gauge_route_recorded": "yes",
+      "sourced_gauge_route_status": "bounded sourced gauge route recorded from the A-variation residual and the conserved psi-made current",
+      "sourced_maxwell_closure_claimed": "no",
+      "sourced_maxwell_compatibility_route_indexed": "yes",
+      "sourced_maxwell_compatibility_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+      "sourced_maxwell_consistency_candidate_ready": "yes",
+      "sourced_maxwell_consistency_route_preview": "nabla_mu F^{mu nu} = J^nu requires nabla_nu J^nu = 0",
+      "sourced_maxwell_equation_derived": "no",
+      "sourced_maxwell_equation_recorded": "yes",
+      "sourced_maxwell_residual_zero": "nabla_mu F^{mu nu} - J^nu = 0",
+      "sourced_maxwell_residual_zero_recorded": "yes",
+      "sourced_maxwell_route": "nabla_mu F^{mu nu} = J^nu",
+      "sourced_maxwell_route_derived": "yes",
+      "sourced_maxwell_route_packet_preparation_authorized": "yes",
+      "sourced_maxwell_route_packet_prepared": "yes",
+      "sourced_maxwell_route_packet_result": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "sourced_maxwell_route_packet_selected": "yes",
+      "sourced_maxwell_route_preview": "A variation residual plus conserved J^nu -> nabla_mu F^{mu nu} = J^nu",
+      "sourced_maxwell_route_recorded": "yes",
+      "standard_model_derivation_claimed": "no",
+      "status": "active",
+      "stress_energy_and_exchange_obligation_packet_preparation_authorized": "yes",
+      "stress_energy_and_exchange_obligation_packet_prepared": "no",
+      "stress_energy_and_exchange_obligation_packet_result": "PENDING",
+      "stress_energy_and_exchange_obligation_packet_selected": "yes",
+      "stress_energy_derived": "no",
+      "stress_energy_exchange_preview": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha; nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha; nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CurrentConservationFromDiracPairPacket.lean",
+      "target_conservation_law": "nabla_mu J^mu = 0",
+      "target_conservation_law_recorded": "yes",
+      "target_conservation_law_satisfied_under_dirac_pair": "yes",
+      "token": "TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_PREPARED_SOURCED_GAUGE_ROUTE_RECORDED_NO_MAXWELL_CLOSURE_OR_EXCHANGE_PROOF",
+      "total_conservation_proved": "no",
+      "total_stress_energy_conservation_proved": "no",
+      "workstream_id": "prepare_toe_native_psi_A_u1_stress_energy_and_exchange_obligation_packet"
     }
   ]
 }
