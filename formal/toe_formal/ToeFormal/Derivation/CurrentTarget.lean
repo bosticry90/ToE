@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyDefinitionPolicyPacket
+import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyDefinitionPolicyResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePsiAU1StressEnergyDefinitionPolicyPacket.selectedNextTarget
+  ToeNativePsiAU1StressEnergyDefinitionPolicyResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePsiAU1StressEnergyDefinitionPolicyPacket.packetId
+  ToeNativePsiAU1StressEnergyDefinitionPolicyResultReview.packetId
 
-theorem current_target_points_to_psi_a_u1_stress_energy_definition_policy_packet_result_review :
+theorem current_target_points_to_psi_a_u1_gauge_sector_exchange_route_packet :
     currentLiveTarget =
-      "review_toe_native_psi_A_u1_stress_energy_definition_policy_packet_result" := by
+      "prepare_toe_native_psi_A_u1_gauge_sector_exchange_route_packet" := by
   rfl
 
 end CurrentTarget

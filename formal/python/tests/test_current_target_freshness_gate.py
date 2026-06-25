@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_psi_A_u1_stress_energy_definition_policy_packet_result"
+    "prepare_toe_native_psi_A_u1_gauge_sector_exchange_route_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_stress_energy_definition_policy_packet"
+    "review_toe_native_psi_A_u1_stress_energy_definition_policy_packet_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_psi_A_u1_stress_energy_definition_policy_packet_result"
+    "prepare_toe_native_psi_A_u1_gauge_sector_exchange_route_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1StressEnergyDefinitionPolicyPacket.lean"
+    / "ToeNativePsiAU1StressEnergyDefinitionPolicyResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3321,6 +3321,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_PACKET_PREPARED_"
         "STRESS_ENERGY_POLICY_INDEXED_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE"
     )
+    psi_a_stress_energy_definition_policy_review_result = (
+        "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_"
+        "ACCEPTS_STRESS_ENERGY_POLICY_NO_EXCHANGE_PROOF_OR_EM_QFT_CLOSURE"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3332,16 +3336,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_PACKET_"
+        "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_"
         "20260624_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["outcome_id"] == (
-        psi_a_stress_energy_definition_policy_result
+        psi_a_stress_energy_definition_policy_review_result
     )
     assert interaction_active_workstream["result_token"] == (
-        psi_a_stress_energy_definition_policy_result
+        psi_a_stress_energy_definition_policy_review_result
     )
+    assert interaction_active_workstream[
+        "consumed_stress_energy_definition_policy_result_review_result"
+    ] == psi_a_stress_energy_definition_policy_review_result
+    assert interaction_active_workstream[
+        "stress_energy_definition_policy_result_review_result"
+    ] == psi_a_stress_energy_definition_policy_review_result
     assert interaction_active_workstream[
         "consumed_stress_energy_definition_policy_packet_result"
     ] == psi_a_stress_energy_definition_policy_result
@@ -3356,7 +3366,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == psi_a_stress_energy_definition_policy_result
     assert interaction_active_workstream[
         "stress_energy_definition_policy_packet_result_review_result"
-    ] == "PENDING"
+    ] == psi_a_stress_energy_definition_policy_review_result
     assert (
         interaction_active_workstream[
             "stress_energy_definition_policy_packet_result_review_authorized"
@@ -3367,6 +3377,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "stress_energy_definition_policy_packet_result_review_completed"
         ]
+        == "yes"
+    )
+    assert interaction_active_workstream[
+        "gauge_sector_exchange_route_packet_result"
+    ] == "PENDING"
+    assert (
+        interaction_active_workstream[
+            "gauge_sector_exchange_route_packet_preparation_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["gauge_sector_exchange_route_packet_prepared"]
         == "no"
     )
     assert (
@@ -3409,7 +3432,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_psi_A_u1_stress_energy_definition_policy_packet_result_review"
+    ] == "toe_native_psi_A_u1_gauge_sector_exchange_route_packet_preparation"
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream[
         "stress_energy_and_exchange_obligation_packet_result"
@@ -3531,6 +3554,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["gauge_sector_exchange_target"] == (
         "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
     )
+    assert interaction_active_workstream["gauge_sector_exchange_route_to_test"] == (
+        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
+    )
+    assert interaction_active_workstream["sign_check_policy"] == (
+        "The gauge-sector exchange sign must be checked against the selected "
+        "T_A convention and metric convention before any exchange closeout."
+    )
     assert interaction_active_workstream["matter_sector_exchange_target"] == (
         "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha"
     )
@@ -3545,7 +3575,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["indexed_future_route_count"] == 2
     assert interaction_active_workstream["stress_energy_exchange_obligation_count"] == 7
     assert interaction_active_workstream["stress_energy_definition_policy_count"] == 3
-    assert interaction_active_workstream["review_criteria_count"] == 7
+    assert interaction_active_workstream["review_criteria_count"] == 8
     assert interaction_active_workstream["blocked_claim_count"] == 14
     for key in [
         "psi_variation_dirac_route_packet_prepared",
@@ -3593,6 +3623,20 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "exchange_targets_preserved",
         "stress_energy_definition_policy_packet_result_review_selected",
         "stress_energy_definition_policy_packet_result_review_authorized",
+        "review_executed",
+        "result_review_prepared",
+        "result_review_accepted",
+        "stress_energy_definition_policy_accepted",
+        "T_A_policy_accepted",
+        "T_psi_policy_accepted",
+        "T_total_policy_accepted",
+        "gauge_stress_energy_policy_accepted",
+        "matter_stress_energy_policy_accepted",
+        "total_stress_energy_policy_accepted",
+        "stress_energy_definitions_selected_for_future_exchange_testing",
+        "gauge_sector_exchange_route_packet_selected",
+        "gauge_sector_exchange_route_packet_preparation_authorized",
+        "gauge_sector_exchange_sign_check_required",
         "C_exchange_future_route_indexed",
         "sourced_maxwell_route_derived",
     ]:
