@@ -293,10 +293,23 @@ def test_psi_a_u1_total_stress_energy_conservation_route_result_review_rotates_t
         assert active_row["authorized_target"] == NEXT_TARGET
         assert active_row["consumed_target"] == CONSUMED_TARGET
         assert active_row["packet_result"] == "PENDING"
+        assert active_row["C_exchange_constraint_candidate_packet_result"] == "PENDING"
+    else:
+        cexchange_packet_outcome = (
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_PACKET_PREPARED_"
+            "TOTAL_EXCHANGE_CONSERVATION_RESIDUAL_CANDIDATE_RECORDED_NO_"
+            "FUNCTIONALIZATION_OR_EM_QFT_CLOSURE"
+        )
+        assert active_row["status"] == "paused"
+        assert active_row["packet_result"] == cexchange_packet_outcome
+        assert active_row["C_exchange_constraint_candidate_packet_result"] == (
+            cexchange_packet_outcome
+        )
+        assert active_row["C_exchange_candidate_recorded"] == "yes"
+        assert active_row["candidate_is_admissibility_only"] == "yes"
     assert active_row["total_conservation_route_packet_result_review_result"] == (
         OUTCOME_ID
     )
-    assert active_row["C_exchange_constraint_candidate_packet_result"] == "PENDING"
     assert active_row["C_exchange_candidate_packet_selected_after_review"] == "yes"
     assert active_row["C_exchange_candidate_packet_authorized_here"] == "yes"
     assert active_row["C_exchange_closeout"] == "no"
