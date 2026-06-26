@@ -849,6 +849,22 @@ EXPECTED_LEGAL_TRANSITIONS = {
         "status": "rotated_to_cexchange_functional_embedding_packet",
         "to_target": "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet",
     },
+    "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet__to__review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacket.lean",
+        "from_target": "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet",
+        "kind": "toe_native_psi_A_u1_cexchange_functional_embedding_packet_result_review",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_"
+            "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+        ),
+        "report": (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_cexchange_functional_embedding_packet_result_review",
+        "to_target": "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result",
+    },
 }
 
 EXPECTED_FRESH_DELTA_KINDS = {

@@ -51,6 +51,10 @@ from formal.python.tools.toe_native_psi_a_u1_cexchange_constraint_candidate_pack
     SCHEMA_ID,
     build_toe_native_psi_a_u1_cexchange_constraint_candidate_packet_result_review,
 )
+from formal.python.tools.toe_native_psi_a_u1_cexchange_functional_embedding_packet_report import (
+    NEXT_TARGET as FUNCTIONAL_EMBEDDING_REVIEW_TARGET,
+    OUTCOME_ID as FUNCTIONAL_EMBEDDING_PACKET_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -340,18 +344,29 @@ def test_psi_a_u1_cexchange_constraint_candidate_review_rotates_to_embedding_tar
         assert active_row["authorized_next_strict_target"] == NEXT_TARGET
         assert active_row["authorized_target"] == NEXT_TARGET
         assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["review_result"] == OUTCOME_ID
-    assert active_row["packet_result"] == "PENDING"
+        assert active_row["review_result"] == OUTCOME_ID
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["C_exchange_functional_embedding_packet_result"] == "PENDING"
+        assert active_row["functional_embedding_packet_prepared"] == "no"
+    else:
+        assert active_row["status"] == "paused"
+        assert active_row["packet_result"] == FUNCTIONAL_EMBEDDING_PACKET_OUTCOME
+        assert active_row["selected_next_target"] == FUNCTIONAL_EMBEDDING_REVIEW_TARGET
+        assert active_row["C_exchange_functional_embedding_packet_result"] == (
+            FUNCTIONAL_EMBEDDING_PACKET_OUTCOME
+        )
+        assert active_row["C_exchange_functional_embedding_packet_result_review_result"] == (
+            "PENDING"
+        )
+        assert active_row["functional_embedding_packet_prepared"] == "yes"
     assert active_row["C_exchange_constraint_candidate_packet_result"] == (
         CANDIDATE_PACKET_OUTCOME
     )
     assert active_row["C_exchange_constraint_candidate_packet_result_review_result"] == (
         OUTCOME_ID
     )
-    assert active_row["C_exchange_functional_embedding_packet_result"] == "PENDING"
     assert active_row["C_exchange_functional_embedding_packet_selected"] == "yes"
     assert active_row["C_exchange_functional_embedding_packet_authorized"] == "yes"
-    assert active_row["functional_embedding_packet_prepared"] == "no"
     assert active_row["multiplier_action_route_selected"] == "no"
     assert active_row["penalty_route_selected"] == "no"
     assert active_row["direct_dynamical_law_interpretation_blocked"] == "yes"

@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePsiAU1CExchangeConstraintCandidateResultReview
+import ToeFormal.Derivation.ToeNativePsiAU1CExchangeFunctionalEmbeddingPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePsiAU1CExchangeConstraintCandidateResultReview.selectedNextTarget
+  ToeNativePsiAU1CExchangeFunctionalEmbeddingPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePsiAU1CExchangeConstraintCandidateResultReview.packetId
+  ToeNativePsiAU1CExchangeFunctionalEmbeddingPacket.packetId
 
-theorem current_target_points_to_psi_a_u1_cexchange_functional_embedding_packet :
+theorem current_target_points_to_psi_a_u1_cexchange_functional_embedding_packet_result_review :
     currentLiveTarget =
-      "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet" := by
+      "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result" := by
   rfl
 
 end CurrentTarget

@@ -1,0 +1,518 @@
+{
+  "C_exchange_admissibility_condition": "C_exchange^{Apsi,nu} = 0",
+  "C_exchange_candidate_carried_forward": true,
+  "C_exchange_candidate_scope": "admissibility-only interaction-exchange constraint candidate; not functionalized; not action-embedded; not varied",
+  "C_exchange_closeout": false,
+  "C_exchange_constraint_candidate_result_review_consumed": true,
+  "C_exchange_constraint_form": "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}",
+  "C_exchange_constraint_id": "psi_A_u1_total_exchange_conservation_residual_candidate",
+  "C_exchange_definition_closeout": false,
+  "C_exchange_functional_embedding_claimed": false,
+  "C_exchange_functional_embedding_constructed": false,
+  "C_exchange_functional_embedding_constructed_here": false,
+  "C_exchange_functional_embedding_options_recorded": true,
+  "C_exchange_functional_embedding_packet_prepared": true,
+  "C_exchange_functional_embedding_packet_result_review_authorized": true,
+  "C_exchange_functional_embedding_packet_result_review_selected": true,
+  "C_exchange_functional_embedding_selected": false,
+  "C_exchange_plain_meaning": "The psi-A interaction is admissible only if the total matter-plus-gauge energy-momentum exchange balances.",
+  "C_exchange_rule_family_closed": false,
+  "C_exchange_total_stress_energy_form": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "C_k_action_variation_authorized": false,
+  "C_k_action_variation_executed": false,
+  "acceptance_criteria": {
+    "action_routes_not_licensed": true,
+    "admissibility_only_selected": true,
+    "allowed_claims_exactly_scoped": true,
+    "blocked_claims_exactly_scoped": true,
+    "candidate_shape_carried_forward": true,
+    "consumes_expected_target": true,
+    "exchange_context_preserved": true,
+    "multiplier_route_blocked": true,
+    "next_review_target_selected": true,
+    "penalty_route_unlicensed": true,
+    "review_rows_all_accepted": true,
+    "three_routes_recorded": true
+  },
+  "accepted": true,
+  "action_embedding_claimed": false,
+  "admissibility_constraint_form": "C_exchange^{Apsi,nu} = 0",
+  "admissibility_only_interpretation_retained": true,
+  "admissibility_only_route_id": "psi_A_u1_cexchange_admissibility_only_route",
+  "admissibility_only_route_selected": true,
+  "admissibility_only_route_status": "selected_non_dynamical_interaction_admissibility_rule",
+  "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+  "allowed_claim_count": 6,
+  "allowed_claims": [
+    "functional-embedding options recorded",
+    "admissibility-only route selected",
+    "multiplier/action route recorded as blocked",
+    "penalty route recorded as unlicensed",
+    "direct dynamical-law interpretation blocked",
+    "no action variation executed"
+  ],
+  "anomaly_analysis_performed": false,
+  "artifact_id": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_20260625_v0",
+  "blocked_claim_count": 14,
+  "blocked_claims": [
+    "no C_exchange closeout",
+    "no multiplier/action route",
+    "no penalty route",
+    "no C_k action variation",
+    "no direct dynamical-law interpretation",
+    "no full Maxwell closure",
+    "no EM-QFT closure",
+    "no QFT-GR closure",
+    "no quantized electromagnetism",
+    "no anomaly analysis",
+    "no Standard Model derivation",
+    "no Phase 2 authorization",
+    "no empirical validation",
+    "no master-action promotion"
+  ],
+  "boundary_terms_controlled": false,
+  "candidate_based_on_accepted_total_conservation_route": true,
+  "candidate_review_classification": "toe_native_psi_A_u1_cexchange_constraint_candidate_result_review_accepts_total_exchange_conservation_residual_candidate_no_functionalization_or_em_qft_closure",
+  "candidate_review_outcome": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_TOTAL_EXCHANGE_CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_EM_QFT_CLOSURE",
+  "candidate_review_result": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_TOTAL_EXCHANGE_CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_EM_QFT_CLOSURE",
+  "candidate_varied": false,
+  "captured_at_utc": "2026-06-25T00:00:00Z",
+  "circularity_control_established": false,
+  "constraint_as_admissibility_rule_selected": true,
+  "consumed_target": "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet",
+  "critical_gate_fail_conditions": [
+    "treat the functional-embedding packet as a C_exchange closeout",
+    "select the multiplier/action route",
+    "select or license the penalty route",
+    "execute C_k action variation",
+    "interpret C_exchange as a direct dynamical law",
+    "claim full Maxwell closure",
+    "claim EM-QFT or QFT-GR closure",
+    "claim quantized electromagnetism",
+    "perform or claim anomaly analysis",
+    "derive the Standard Model",
+    "authorize Phase 2",
+    "claim empirical validation",
+    "promote the master action",
+    "record full ToeFormal aggregate as passed, failed, or timed out"
+  ],
+  "direct_dynamical_law_interpretation_blocked": true,
+  "direct_dynamical_law_interpretation_selected": false,
+  "direct_force_law_claimed": false,
+  "em_qft_closure_claimed": false,
+  "embedding_route_count": 3,
+  "embedding_routes": [
+    {
+      "action_term_selected": false,
+      "action_variation_executed": false,
+      "constraint_form": "C_exchange^{Apsi,nu} = 0",
+      "plain_meaning": "The psi-A interaction route is accepted only if the total matter-plus-gauge energy-momentum exchange balances.",
+      "route_id": "psi_A_u1_cexchange_admissibility_only_route",
+      "route_type": "admissibility_only_rule",
+      "selected_for_current_packet": true,
+      "status": "selected_non_dynamical_interaction_admissibility_rule"
+    },
+    {
+      "action_form": "S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu}",
+      "action_term_selected": false,
+      "action_variation_executed": false,
+      "blocking_reasons": [
+        "multiplier field type not selected",
+        "index placement not selected",
+        "units not fixed",
+        "boundary terms not controlled",
+        "metric/tetrad variation behavior not analyzed",
+        "higher-derivative risk not resolved",
+        "circularity control not established",
+        "stability analysis not completed"
+      ],
+      "route_id": "psi_A_u1_cexchange_multiplier_action_route",
+      "route_type": "multiplier_action_embedding",
+      "selected_for_current_packet": false,
+      "status": "blocked_by_multiplier_type_index_units_boundary_variation_higher_derivative_circularity_and_stability_requirements"
+    },
+    {
+      "action_form": "S_Cexchange_penalty = int d^4x sqrt(-g) C_exchange_nu C_exchange^nu",
+      "action_term_selected": false,
+      "action_variation_executed": false,
+      "blocking_reasons": [
+        "could introduce new dynamics",
+        "stability problems not analyzed",
+        "unit/sign issues not resolved"
+      ],
+      "route_id": "psi_A_u1_cexchange_quadratic_penalty_route",
+      "route_type": "quadratic_penalty_action_embedding",
+      "selected_for_current_packet": false,
+      "status": "recorded_unlicensed_dynamical_penalty"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "exchange_term_cancellation": "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0",
+  "full_maxwell_closure_claimed": false,
+  "full_toeformal_aggregate_failed": false,
+  "full_toeformal_aggregate_passed": false,
+  "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+  "full_toeformal_aggregate_timed_out": false,
+  "functional_embedding_options_recorded": true,
+  "functional_embedding_packet_prepared": true,
+  "gauge_matter_exchange_balance_context_preserved": true,
+  "gauge_sector_exchange_identity": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+  "gauge_sector_exchange_term": "- F^nu{}_alpha J^alpha",
+  "generated_outputs": {
+    "current_target_aggregate": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "json": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_20260625_v0.json",
+    "lean_marker": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacket.lean",
+    "lean_validation_policy": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+    "qftgr_aggregate": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "release_current_authority_aggregate": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  },
+  "higher_derivative_risk_resolved": false,
+  "interaction_admissibility_rule_selected": true,
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativePsiAU1CExchangeFunctionalEmbeddingPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "The packet records three functional-embedding options for C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}. The admissibility-only route C_exchange^{Apsi,nu} = 0 is selected as a non-dynamical interaction acceptance rule. The multiplier/action route S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu} is blocked, and the quadratic penalty S_Cexchange_penalty = int d^4x sqrt(-g) C_exchange_nu C_exchange^nu is recorded as unlicensed. No action embedding, variation, or direct dynamical-law interpretation is selected.",
+  "matter_sector_exchange_identity": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+  "matter_sector_exchange_term": "+ F^nu{}_alpha J^alpha",
+  "metric_tetrad_variation_behavior_analyzed": false,
+  "multiplier_action_form": "S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu}",
+  "multiplier_action_route_blocked": true,
+  "multiplier_action_route_constructed": false,
+  "multiplier_action_route_id": "psi_A_u1_cexchange_multiplier_action_route",
+  "multiplier_action_route_recorded": true,
+  "multiplier_action_route_selected": false,
+  "multiplier_blocking_reason_count": 8,
+  "multiplier_blocking_reasons": [
+    "multiplier field type not selected",
+    "index placement not selected",
+    "units not fixed",
+    "boundary terms not controlled",
+    "metric/tetrad variation behavior not analyzed",
+    "higher-derivative risk not resolved",
+    "circularity control not established",
+    "stability analysis not completed"
+  ],
+  "multiplier_field_type_selected": false,
+  "multiplier_index_placement_selected": false,
+  "multiplier_route_status": "blocked_by_multiplier_type_index_units_boundary_variation_higher_derivative_circularity_and_stability_requirements",
+  "multiplier_units_fixed": false,
+  "non_claim_boundary": "This is a bounded C_exchange functional-embedding options packet only. It records the admissibility-only route C_exchange^{Apsi,nu} = 0 and selects it as a rule for accepting or rejecting the psi-A interaction route. It also records the multiplier/action route S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu} as blocked by unresolved multiplier field type, index placement, units, boundary terms, metric/tetrad variation behavior, higher-derivative risk, circularity control, and stability analysis. It records the penalty route int d^4x sqrt(-g) C_exchange_nu C_exchange^nu as unlicensed because it could introduce new dynamics with unresolved stability and unit/sign issues. It records no C_exchange closeout, no multiplier/action route, no penalty route, no C_k action variation, no direct dynamical-law interpretation, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+  "outcome_id": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+  "packet_classification": "toe_native_psi_A_u1_cexchange_functional_embedding_packet_prepared_options_recorded_admissibility_only_route_selected_no_action_variation",
+  "packet_id": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_v0",
+  "packet_result": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION",
+  "penalty_action_form": "S_Cexchange_penalty = int d^4x sqrt(-g) C_exchange_nu C_exchange^nu",
+  "penalty_blocking_reason_count": 3,
+  "penalty_blocking_reasons": [
+    "could introduce new dynamics",
+    "stability problems not analyzed",
+    "unit/sign issues not resolved"
+  ],
+  "penalty_route_constructed": false,
+  "penalty_route_id": "psi_A_u1_cexchange_quadratic_penalty_route",
+  "penalty_route_licensed": false,
+  "penalty_route_recorded": true,
+  "penalty_route_selected": false,
+  "penalty_route_status": "recorded_unlicensed_dynamical_penalty",
+  "penalty_route_unlicensed": true,
+  "phase2_authorized": false,
+  "pillar_completion_inferred": false,
+  "plain_meaning": "The psi-A interaction is admitted only as a balanced exchange route; no new action term, force law, or varied equation is licensed by this packet.",
+  "prepared": true,
+  "qft_gr_closure_claimed": false,
+  "quantized_electromagnetism_claimed": false,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The accepted C_exchange candidate review authorized this functional-embedding packet.",
+      "evidence": "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet",
+      "row_id": "consumes_expected_functional_embedding_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The interaction exchange-conservation residual candidate is carried forward exactly.",
+      "evidence": [
+        "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}",
+        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+        "C_exchange^{Apsi,nu} = 0"
+      ],
+      "row_id": "cexchange_candidate_carried_forward",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The accepted gauge-side, matter-side, and total-conservation context is preserved.",
+      "evidence": [
+        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+        "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0",
+        "nabla_mu T_total^{mu nu} = 0"
+      ],
+      "row_id": "total_exchange_route_context_carried_forward",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Admissibility-only, multiplier/action, and penalty routes are recorded.",
+      "evidence": [
+        "psi_A_u1_cexchange_admissibility_only_route",
+        "psi_A_u1_cexchange_multiplier_action_route",
+        "psi_A_u1_cexchange_quadratic_penalty_route"
+      ],
+      "row_id": "three_embedding_routes_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Only the non-dynamical admissibility route is selected.",
+      "evidence": "C_exchange^{Apsi,nu} = 0",
+      "row_id": "admissibility_only_route_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The multiplier/action route is blocked by unresolved multiplier, index, unit, boundary, variation, higher-derivative, circularity, and stability requirements.",
+      "evidence": [
+        "S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu}",
+        [
+          "multiplier field type not selected",
+          "index placement not selected",
+          "units not fixed",
+          "boundary terms not controlled",
+          "metric/tetrad variation behavior not analyzed",
+          "higher-derivative risk not resolved",
+          "circularity control not established",
+          "stability analysis not completed"
+        ]
+      ],
+      "row_id": "multiplier_action_route_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The quadratic penalty route is recorded but unlicensed because it could add dynamics with unresolved stability and unit/sign behavior.",
+      "evidence": [
+        "S_Cexchange_penalty = int d^4x sqrt(-g) C_exchange_nu C_exchange^nu",
+        [
+          "could introduce new dynamics",
+          "stability problems not analyzed",
+          "unit/sign issues not resolved"
+        ]
+      ],
+      "row_id": "penalty_route_unlicensed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "C_exchange remains an admissibility rule, not a new force law or varied dynamical equation.",
+      "evidence": [
+        "direct_force_law_claimed=false",
+        "varied_dynamical_equation_claimed=false"
+      ],
+      "row_id": "direct_dynamical_law_interpretation_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No action embedding, C_k variation, or candidate variation is executed.",
+      "evidence": [
+        "action_embedding_claimed=false",
+        "C_k_action_variation_executed=false",
+        "candidate_varied=false"
+      ],
+      "row_id": "no_action_embedding_or_variation_executed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Maxwell, EM-QFT, QFT-GR, quantization, anomaly, Standard Model, Phase 2, empirical, and master-action claims remain blocked.",
+      "evidence": [
+        "no C_exchange closeout",
+        "no multiplier/action route",
+        "no penalty route",
+        "no C_k action variation",
+        "no direct dynamical-law interpretation",
+        "no full Maxwell closure",
+        "no EM-QFT closure",
+        "no QFT-GR closure",
+        "no quantized electromagnetism",
+        "no anomaly analysis",
+        "no Standard Model derivation",
+        "no Phase 2 authorization",
+        "no empirical validation",
+        "no master-action promotion"
+      ],
+      "row_id": "no_closure_phase2_empirical_or_promotion_claim",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 10,
+  "review_criteria_count": 10,
+  "review_row_accepted_count": 10,
+  "review_row_count": 10,
+  "review_rows": [
+    {
+      "assessment": "The accepted C_exchange candidate review authorized this functional-embedding packet.",
+      "evidence": "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet",
+      "row_id": "consumes_expected_functional_embedding_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The interaction exchange-conservation residual candidate is carried forward exactly.",
+      "evidence": [
+        "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}",
+        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+        "C_exchange^{Apsi,nu} = 0"
+      ],
+      "row_id": "cexchange_candidate_carried_forward",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The accepted gauge-side, matter-side, and total-conservation context is preserved.",
+      "evidence": [
+        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+        "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0",
+        "nabla_mu T_total^{mu nu} = 0"
+      ],
+      "row_id": "total_exchange_route_context_carried_forward",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Admissibility-only, multiplier/action, and penalty routes are recorded.",
+      "evidence": [
+        "psi_A_u1_cexchange_admissibility_only_route",
+        "psi_A_u1_cexchange_multiplier_action_route",
+        "psi_A_u1_cexchange_quadratic_penalty_route"
+      ],
+      "row_id": "three_embedding_routes_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Only the non-dynamical admissibility route is selected.",
+      "evidence": "C_exchange^{Apsi,nu} = 0",
+      "row_id": "admissibility_only_route_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The multiplier/action route is blocked by unresolved multiplier, index, unit, boundary, variation, higher-derivative, circularity, and stability requirements.",
+      "evidence": [
+        "S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu}",
+        [
+          "multiplier field type not selected",
+          "index placement not selected",
+          "units not fixed",
+          "boundary terms not controlled",
+          "metric/tetrad variation behavior not analyzed",
+          "higher-derivative risk not resolved",
+          "circularity control not established",
+          "stability analysis not completed"
+        ]
+      ],
+      "row_id": "multiplier_action_route_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The quadratic penalty route is recorded but unlicensed because it could add dynamics with unresolved stability and unit/sign behavior.",
+      "evidence": [
+        "S_Cexchange_penalty = int d^4x sqrt(-g) C_exchange_nu C_exchange^nu",
+        [
+          "could introduce new dynamics",
+          "stability problems not analyzed",
+          "unit/sign issues not resolved"
+        ]
+      ],
+      "row_id": "penalty_route_unlicensed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "C_exchange remains an admissibility rule, not a new force law or varied dynamical equation.",
+      "evidence": [
+        "direct_force_law_claimed=false",
+        "varied_dynamical_equation_claimed=false"
+      ],
+      "row_id": "direct_dynamical_law_interpretation_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No action embedding, C_k variation, or candidate variation is executed.",
+      "evidence": [
+        "action_embedding_claimed=false",
+        "C_k_action_variation_executed=false",
+        "candidate_varied=false"
+      ],
+      "row_id": "no_action_embedding_or_variation_executed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Maxwell, EM-QFT, QFT-GR, quantization, anomaly, Standard Model, Phase 2, empirical, and master-action claims remain blocked.",
+      "evidence": [
+        "no C_exchange closeout",
+        "no multiplier/action route",
+        "no penalty route",
+        "no C_k action variation",
+        "no direct dynamical-law interpretation",
+        "no full Maxwell closure",
+        "no EM-QFT closure",
+        "no QFT-GR closure",
+        "no quantized electromagnetism",
+        "no anomaly analysis",
+        "no Standard Model derivation",
+        "no Phase 2 authorization",
+        "no empirical validation",
+        "no master-action promotion"
+      ],
+      "row_id": "no_closure_phase2_empirical_or_promotion_claim",
+      "status": "accepted"
+    }
+  ],
+  "schema_id": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_20260625_v0",
+  "seam_closure_claim": false,
+  "selected_embedding_route_id": "psi_A_u1_cexchange_admissibility_only_route",
+  "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+  "selected_next_target": "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result",
+  "selected_next_target_kind": "toe_native_psi_A_u1_cexchange_functional_embedding_packet_result_review",
+  "source_current": "J^nu = q psibar gamma^nu psi",
+  "source_inputs": {
+    "cexchange_constraint_candidate_result_review_json": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_20260625_v0.json",
+    "cexchange_constraint_candidate_result_review_outcome": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_TOTAL_EXCHANGE_CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_EM_QFT_CLOSURE"
+  },
+  "sourced_gauge_route": "nabla_mu F^{mu nu} = J^nu",
+  "stability_analysis_completed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET",
+  "targeted_lean_build_status_for_packet": "PASSED",
+  "targeted_lean_builds_passed": true,
+  "total_conservation_identity": "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
+  "total_exchange_conservation_residual_candidate_consumed": true,
+  "total_stress_energy_conservation_identity": "nabla_mu T_total^{mu nu} = 0",
+  "total_stress_energy_object": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "total_stress_energy_object_preserved": true,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_allowed_values": [
+      "NOT_RUN"
+    ],
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "checkpoint_type": "toe_native_psi_A_u1_cexchange_functional_embedding_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_toeformal_aggregate_failed": false,
+    "full_toeformal_aggregate_passed": false,
+    "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+    "full_toeformal_aggregate_timed_out": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "targeted_lean_build_status_for_packet": "PASSED",
+    "targeted_lean_builds_passed": true,
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "varied_dynamical_equation_claimed": false
+}
