@@ -11,9 +11,12 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.toe_native_psi_a_u1_total_stress_energy_conservation_route_packet_report import (
+from formal.python.tools.toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review_report import (
+    ACCEPTED_REVIEW_FINDINGS,
     BLOCKED_CLAIMS,
     CONSUMED_TARGET,
+    C_EXCHANGE_CONSTRAINT_CANDIDATE_EQUATION,
+    C_EXCHANGE_CONSTRAINT_CANDIDATE_TO_PREPARE,
     DEFAULT_OUT,
     EXCHANGE_TERM_CANCELLATION,
     FULL_TOEFORMAL_AGGREGATE_STATUS,
@@ -22,8 +25,6 @@ from formal.python.tools.toe_native_psi_a_u1_total_stress_energy_conservation_ro
     LEAN_PACKET_PATH,
     LEAN_VALIDATION_POLICY_ID,
     LEAN_VALIDATION_POLICY_PATH,
-    MATTER_RESULT_REVIEW_OUTCOME,
-    MATTER_RESULT_REVIEW_PATH,
     MATTER_SECTOR_EXCHANGE_IDENTITY,
     MATTER_SECTOR_EXCHANGE_TERM,
     NEXT_TARGET,
@@ -33,13 +34,14 @@ from formal.python.tools.toe_native_psi_a_u1_total_stress_energy_conservation_ro
     PACKET_ID,
     QFTGR_AGGREGATE_PATH,
     RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    REVIEW_RESULT,
     SCHEMA_ID,
-    SOURCE_CURRENT,
     TOTAL_CONSERVATION_IDENTITY,
-    TOTAL_DIVERGENCE_SUM_IDENTITY,
+    TOTAL_PACKET_OUTCOME,
+    TOTAL_PACKET_PATH,
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     TOTAL_STRESS_ENERGY_OBJECT,
-    build_toe_native_psi_a_u1_total_stress_energy_conservation_route_packet,
+    build_toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review,
 )
 
 
@@ -49,7 +51,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "toe_native_psi_a_u1_total_stress_energy_conservation_route_packet_report.py"
+    / "toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 SURFACES_PATH = (
@@ -96,9 +98,9 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_files_exist() -> None:
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_files_exist() -> None:
     for path in [
-        MATTER_RESULT_REVIEW_PATH,
+        TOTAL_PACKET_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -110,80 +112,84 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_files_exist() ->
         assert path.exists(), path
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_builds() -> None:
-    consumed = _json(MATTER_RESULT_REVIEW_PATH)
-    packet = _json(DEFAULT_OUT)
-    assert consumed["outcome_id"] == MATTER_RESULT_REVIEW_OUTCOME
-    assert consumed["selected_next_target"] == CONSUMED_TARGET
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_builds() -> None:
+    packet = _json(TOTAL_PACKET_PATH)
+    review = _json(DEFAULT_OUT)
+    assert packet["outcome_id"] == TOTAL_PACKET_OUTCOME
+    assert packet["selected_next_target"] == CONSUMED_TARGET
 
-    assert packet["schema_id"] == SCHEMA_ID
-    assert packet["packet_id"] == PACKET_ID
-    assert packet["prepared"] is True
-    assert packet["accepted"] is True
-    assert packet["outcome_id"] == OUTCOME_ID
-    assert packet["packet_result"] == OUTCOME_ID
-    assert packet["packet_classification"] == PACKET_CLASSIFICATION
-    assert packet["consumed_target"] == CONSUMED_TARGET
-    assert packet["selected_next_target"] == NEXT_TARGET
-    assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == REVIEW_RESULT
+    assert review["packet_result"] == OUTCOME_ID
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert (
-        build_toe_native_psi_a_u1_total_stress_energy_conservation_route_packet()
-        == packet
+        build_toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review()
+        == review
     )
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_constructs_total_route() -> None:
-    packet = _json(DEFAULT_OUT)
-    assert packet["source_current"] == SOURCE_CURRENT
-    assert packet["gauge_sector_exchange_identity"] == GAUGE_SECTOR_EXCHANGE_IDENTITY
-    assert packet["gauge_sector_exchange_term"] == GAUGE_SECTOR_EXCHANGE_TERM
-    assert packet["matter_sector_exchange_identity"] == MATTER_SECTOR_EXCHANGE_IDENTITY
-    assert packet["matter_sector_exchange_term"] == MATTER_SECTOR_EXCHANGE_TERM
-    assert packet["total_divergence_sum_identity"] == TOTAL_DIVERGENCE_SUM_IDENTITY
-    assert packet["exchange_term_cancellation"] == EXCHANGE_TERM_CANCELLATION
-    assert packet["total_conservation_identity"] == TOTAL_CONSERVATION_IDENTITY
-    assert packet["total_stress_energy_object"] == TOTAL_STRESS_ENERGY_OBJECT
-    assert packet["total_stress_energy_conservation_identity"] == (
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_accepts_total_route() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["accepted_review_findings"] == ACCEPTED_REVIEW_FINDINGS
+    assert review["accepted_review_findings_count"] == 5
+    assert review["review_criteria_count"] == 8
+    assert review["review_criteria_accepted_count"] == 8
+    assert review["gauge_sector_exchange_identity"] == GAUGE_SECTOR_EXCHANGE_IDENTITY
+    assert review["gauge_sector_exchange_term"] == GAUGE_SECTOR_EXCHANGE_TERM
+    assert review["matter_sector_exchange_identity"] == MATTER_SECTOR_EXCHANGE_IDENTITY
+    assert review["matter_sector_exchange_term"] == MATTER_SECTOR_EXCHANGE_TERM
+    assert review["exchange_term_cancellation"] == EXCHANGE_TERM_CANCELLATION
+    assert review["total_stress_energy_object"] == TOTAL_STRESS_ENERGY_OBJECT
+    assert review["total_conservation_identity"] == TOTAL_CONSERVATION_IDENTITY
+    assert review["total_stress_energy_conservation_identity"] == (
         TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY
     )
-    assert packet["route_step_count"] == 7
-    assert packet["route_steps"][-1]["statement"] == (
-        TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY
+    assert review["C_exchange_constraint_candidate_to_prepare"] == (
+        C_EXCHANGE_CONSTRAINT_CANDIDATE_TO_PREPARE
+    )
+    assert review["C_exchange_constraint_candidate_equation_to_prepare"] == (
+        C_EXCHANGE_CONSTRAINT_CANDIDATE_EQUATION
     )
     for key in [
-        "total_stress_energy_conservation_route_packet_prepared",
-        "total_conservation_route_packet_prepared",
-        "total_conservation_route_constructed",
+        "total_conservation_route_result_review_accepted",
+        "total_stress_energy_conservation_route_accepted",
+        "total_conservation_route_accepted",
         "total_conservation_route_recorded",
         "total_conservation_identity_recorded",
         "total_stress_energy_conservation_identity_recorded",
-        "total_stress_energy_conservation_route_recorded",
         "total_conservation_proved",
-        "total_conservation_proved_here",
         "total_stress_energy_conservation_proved",
-        "bounded_total_conservation_route_constructed",
-        "bounded_total_stress_energy_conservation_route_constructed",
+        "bounded_total_conservation_route_accepted",
+        "matter_gauge_exchange_balance_route_accepted",
+        "gauge_sector_exchange_route_already_accepted",
+        "matter_sector_exchange_route_already_accepted",
         "exchange_terms_cancel",
-        "gauge_matter_exchange_balance_recorded",
+        "exchange_terms_cancel_accepted",
+        "total_stress_energy_object_preserved",
         "combined_matter_gauge_system_conserved",
         "matter_gauge_interaction_balance_chain_complete",
-        "gauge_sector_exchange_route_accepted",
-        "matter_sector_exchange_route_accepted",
-        "both_exchange_halves_recorded",
         "C_exchange_candidate_ready_for_later_packet",
-        "total_conservation_route_packet_result_review_selected",
-        "total_conservation_route_packet_result_review_authorized",
-    ]:
-        assert packet[key] is True, key
-
-
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_preserves_nonclaims() -> None:
-    packet = _json(DEFAULT_OUT)
-    assert packet["blocked_claims"] == BLOCKED_CLAIMS
-    assert packet["blocked_claim_count"] == 12
-    for key in [
         "C_exchange_candidate_packet_selected_after_review",
         "C_exchange_candidate_packet_authorized_here",
+        "C_exchange_constraint_candidate_packet_selected",
+        "C_exchange_constraint_candidate_packet_authorized",
+    ]:
+        assert review[key] is True, key
+
+
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_preserves_nonclaims() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["blocked_claims"] == BLOCKED_CLAIMS
+    assert review["blocked_claim_count"] == 12
+    for key in [
+        "C_exchange_constraint_candidate_packet_prepared_here",
         "C_exchange_closeout",
         "C_exchange_definition_closeout",
         "C_exchange_rule_family_closed",
@@ -202,11 +208,15 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_preserves_noncla
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert packet[key] is False, key
+        assert review[key] is False, key
     for phrase in [
-        "bounded total stress-energy conservation route packet only",
-        "accepted gauge-sector and matter-sector exchange identities",
-        "records cancellation",
+        "bounded total stress-energy conservation route result review only",
+        "accepted gauge-sector exchange route",
+        "accepted matter-sector exchange route",
+        "exchange-term cancellation",
+        "T_total = T_A + T_psi",
+        "nabla_mu T_total^{mu nu} = 0",
+        "admissibility-only candidate",
         "no C_exchange closeout",
         "no C_exchange functional embedding",
         "no C_k action variation",
@@ -221,34 +231,30 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_preserves_noncla
         "no master-action promotion",
         "full ToeFormal aggregate is recorded as NOT_RUN",
     ]:
-        assert phrase in packet["non_claim_boundary"], phrase
+        assert phrase in review["non_claim_boundary"], phrase
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_validation_policy_is_bounded() -> None:
-    packet = _json(DEFAULT_OUT)
-    policy = packet["validation_policy"]
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_validation_policy_is_bounded() -> None:
+    review = _json(DEFAULT_OUT)
+    policy = review["validation_policy"]
     assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
-    assert policy["aggregate_lean_validation_status_for_packet"] == (
+    assert policy["aggregate_lean_validation_status_for_review"] == (
         FULL_TOEFORMAL_AGGREGATE_STATUS
     )
-    assert policy["full_toeformal_aggregate_status_for_packet"] == (
+    assert policy["full_toeformal_aggregate_status_for_review"] == (
         FULL_TOEFORMAL_AGGREGATE_STATUS
     )
     assert policy["full_toeformal_aggregate_passed"] is False
     assert policy["full_toeformal_aggregate_failed"] is False
     assert policy["full_toeformal_aggregate_timed_out"] is False
-    assert packet["full_toeformal_aggregate_passed"] is False
-    assert packet["full_toeformal_aggregate_failed"] is False
-    assert packet["full_toeformal_aggregate_timed_out"] is False
+    assert review["full_toeformal_aggregate_passed"] is False
+    assert review["full_toeformal_aggregate_failed"] is False
+    assert review["full_toeformal_aggregate_timed_out"] is False
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_rotates_to_result_review() -> None:
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_rotates_to_cexchange_packet() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = str(LEAN_PACKET_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    review_outcome = (
-        "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_RESULT_REVIEW_"
-        "ACCEPTS_TOTAL_CONSERVATION_ROUTE_NO_CEXCHANGE_CLOSEOUT_OR_EM_QFT_CLOSURE"
-    )
     is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=CONSUMED_TARGET,
@@ -269,16 +275,14 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_rotates_to_resul
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
     assert consumed["packet_result"] == OUTCOME_ID
-    assert consumed["total_conservation_route_packet_result"] == OUTCOME_ID
-    assert consumed["total_stress_energy_conservation_route_packet_result"] == (
+    assert consumed["total_conservation_route_packet_result_review_result"] == (
         OUTCOME_ID
     )
-    assert consumed["total_conservation_route_constructed"] == "yes"
-    assert consumed["total_conservation_proved"] == "yes"
-    assert consumed["total_stress_energy_conservation_proved"] == "yes"
+    assert consumed["total_conservation_route_result_review_accepted"] == "yes"
+    assert consumed["C_exchange_candidate_packet_selected_after_review"] == "yes"
+    assert consumed["C_exchange_candidate_packet_authorized_here"] == "yes"
     assert consumed["C_exchange_closeout"] == "no"
     assert consumed["C_exchange_functional_embedding_claimed"] == "no"
-    assert consumed["master_action_promoted"] == "no"
 
     active_row = _workstream(registry, NEXT_TARGET)
     if is_current:
@@ -289,38 +293,17 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_rotates_to_resul
         assert active_row["authorized_target"] == NEXT_TARGET
         assert active_row["consumed_target"] == CONSUMED_TARGET
         assert active_row["packet_result"] == "PENDING"
-        assert active_row["total_conservation_route_packet_result_review_result"] == (
-            "PENDING"
-        )
-        assert active_row["total_conservation_route_packet_result_review_completed"] == (
-            "no"
-        )
-    else:
-        assert active_row["status"] == "paused"
-        assert active_row["packet_result"] == review_outcome
-        assert active_row["total_conservation_route_packet_result_review_result"] == (
-            review_outcome
-        )
-        assert active_row["total_conservation_route_packet_result_review_completed"] == (
-            "yes"
-        )
-        assert active_row["C_exchange_candidate_packet_selected_after_review"] == "yes"
-        assert active_row["C_exchange_candidate_packet_authorized_here"] == "yes"
-        assert active_row["C_exchange_constraint_candidate_packet_result"] == "PENDING"
-    assert active_row["total_conservation_route_packet_result"] == OUTCOME_ID
-    assert active_row["total_stress_energy_conservation_route_packet_result"] == (
+    assert active_row["total_conservation_route_packet_result_review_result"] == (
         OUTCOME_ID
     )
-    assert active_row["total_conservation_route_packet_result_review_authorized"] == (
-        "yes"
-    )
-    assert active_row["total_conservation_proved"] == "yes"
-    assert active_row["total_stress_energy_conservation_proved"] == "yes"
+    assert active_row["C_exchange_constraint_candidate_packet_result"] == "PENDING"
+    assert active_row["C_exchange_candidate_packet_selected_after_review"] == "yes"
+    assert active_row["C_exchange_candidate_packet_authorized_here"] == "yes"
     assert active_row["C_exchange_closeout"] == "no"
     assert active_row["C_exchange_functional_embedding_claimed"] == "no"
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_mirrors() -> None:
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -343,18 +326,20 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_mirrors() -> Non
     for token in [
         PACKET_ID,
         OUTCOME_ID,
+        REVIEW_RESULT,
         PACKET_CLASSIFICATION,
-        "ToeNativePsiAU1TotalStressEnergyConservationRoutePacket",
+        "ToeNativePsiAU1TotalStressEnergyConservationRouteResultReview",
         NEXT_TARGET,
         f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
         f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CONSUMED_TARGET}",
         GAUGE_SECTOR_EXCHANGE_IDENTITY,
         MATTER_SECTOR_EXCHANGE_IDENTITY,
-        TOTAL_DIVERGENCE_SUM_IDENTITY,
         EXCHANGE_TERM_CANCELLATION,
         TOTAL_CONSERVATION_IDENTITY,
         TOTAL_STRESS_ENERGY_OBJECT,
         TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
+        C_EXCHANGE_CONSTRAINT_CANDIDATE_TO_PREPARE,
+        C_EXCHANGE_CONSTRAINT_CANDIDATE_EQUATION,
         "no C_exchange closeout",
         "no C_exchange functional embedding",
         "no C_k action variation",
@@ -372,7 +357,7 @@ def test_psi_a_u1_total_stress_energy_conservation_route_packet_mirrors() -> Non
         assert token in joined
 
 
-def test_psi_a_u1_total_stress_energy_conservation_route_packet_not_manifest_enrolled() -> None:
+def test_psi_a_u1_total_stress_energy_conservation_route_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_toe_native_psi_a_u1_total_stress_energy_conservation_route_packet_gate.py"
+        "test_toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review_gate.py"
     )

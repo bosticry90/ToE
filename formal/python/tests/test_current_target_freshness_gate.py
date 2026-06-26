@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result"
+    "prepare_toe_native_psi_A_u1_cexchange_constraint_candidate_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet"
+    "review_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result"
+    "prepare_toe_native_psi_A_u1_cexchange_constraint_candidate_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1TotalStressEnergyConservationRoutePacket.lean"
+    / "ToeNativePsiAU1TotalStressEnergyConservationRouteResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3349,6 +3349,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_PACKET_PREPARED_"
         "TOTAL_CONSERVATION_ROUTE_CONSTRUCTED_NO_CEXCHANGE_CLOSEOUT_OR_EM_QFT_CLOSURE"
     )
+    psi_a_total_stress_energy_conservation_route_review_result = (
+        "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_RESULT_REVIEW_"
+        "ACCEPTS_TOTAL_CONSERVATION_ROUTE_NO_CEXCHANGE_CLOSEOUT_OR_EM_QFT_CLOSURE"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3360,15 +3364,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_PACKET_"
+        "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_RESULT_REVIEW_"
         "20260625_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["outcome_id"] == (
-        psi_a_total_stress_energy_conservation_route_packet_result
+        psi_a_total_stress_energy_conservation_route_review_result
     )
     assert interaction_active_workstream["result_token"] == (
-        psi_a_total_stress_energy_conservation_route_packet_result
+        psi_a_total_stress_energy_conservation_route_review_result
     )
     assert interaction_active_workstream[
         "consumed_gauge_sector_exchange_route_packet_result"
@@ -3468,7 +3472,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "total_conservation_route_packet_result_review_result"
         ]
-        == "PENDING"
+        == psi_a_total_stress_energy_conservation_route_review_result
     )
     assert (
         interaction_active_workstream[
@@ -3480,7 +3484,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "total_conservation_route_packet_result_review_completed"
         ]
-        == "no"
+        == "yes"
     )
     assert (
         interaction_active_workstream[
@@ -3522,8 +3526,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result_review"
+    ] == "toe_native_psi_A_u1_cexchange_constraint_candidate_packet_preparation"
     assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert (
+        interaction_active_workstream["C_exchange_constraint_candidate_packet_result"]
+        == "PENDING"
+    )
     assert interaction_active_workstream[
         "stress_energy_and_exchange_obligation_packet_result"
     ] == psi_a_stress_energy_exchange_obligation_result
@@ -3806,6 +3814,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "C_exchange_candidate_ready_for_later_packet",
         "total_conservation_route_packet_result_review_selected",
         "total_conservation_route_packet_result_review_authorized",
+        "total_conservation_route_result_review_accepted",
+        "total_stress_energy_conservation_route_accepted",
+        "total_conservation_route_accepted",
+        "bounded_total_conservation_route_accepted",
+        "matter_gauge_exchange_balance_route_accepted",
+        "gauge_sector_exchange_route_already_accepted",
+        "matter_sector_exchange_route_already_accepted",
+        "exchange_terms_cancel_accepted",
+        "total_stress_energy_object_preserved",
+        "C_exchange_candidate_packet_selected_after_review",
+        "C_exchange_candidate_packet_authorized_here",
+        "C_exchange_constraint_candidate_packet_selected",
+        "C_exchange_constraint_candidate_packet_authorized",
         "C_exchange_future_route_indexed",
         "sourced_maxwell_route_derived",
     ]:
@@ -3831,8 +3852,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "C_exchange_definition_closeout",
         "C_exchange_functional_embedding_claimed",
         "C_k_action_variation_executed",
-        "C_exchange_candidate_packet_selected_after_review",
-        "C_exchange_candidate_packet_authorized_here",
+        "C_exchange_constraint_candidate_packet_prepared_here",
         "em_qft_closure_claimed",
         "qft_gr_closure_claimed",
         "quantized_electromagnetism_claimed",
