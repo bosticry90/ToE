@@ -735,6 +735,54 @@ EXPECTED_LEGAL_TRANSITIONS = {
     "paused": ["authorized_reopen", "archived"],
     "authorized_reopen": ["active", "paused"],
     "blocked": ["paused", "authorized_reopen", "archived"],
+    "review_toe_native_psi_A_u1_gauge_sector_exchange_route_packet_result__to__prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1GaugeSectorExchangeRouteResultReview.lean",
+        "from_target": "review_toe_native_psi_A_u1_gauge_sector_exchange_route_packet_result",
+        "kind": "toe_native_psi_A_u1_matter_sector_exchange_route_packet_preparation",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_ACCEPTS_"
+            "GAUGE_SECTOR_EXCHANGE_ROUTE_NO_MATTER_EXCHANGE_OR_TOTAL_CONSERVATION_PROOF"
+        ),
+        "report": (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_matter_sector_exchange_route_packet",
+        "to_target": "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet",
+    },
+    "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet__to__review_toe_native_psi_A_u1_matter_sector_exchange_route_packet_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1MatterSectorExchangeRoutePacket.lean",
+        "from_target": "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet",
+        "kind": "toe_native_psi_A_u1_matter_sector_exchange_route_packet_result_review",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_PREPARED_"
+            "MATTER_SECTOR_EXCHANGE_ROUTE_CONSTRUCTED_NO_TOTAL_CONSERVATION_OR_"
+            "CEXCHANGE_CLOSURE"
+        ),
+        "report": (
+            "formal/docs/release/TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_matter_sector_exchange_route_packet_result_review",
+        "to_target": "review_toe_native_psi_A_u1_matter_sector_exchange_route_packet_result",
+    },
+    "review_toe_native_psi_A_u1_matter_sector_exchange_route_packet_result__to__prepare_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1MatterSectorExchangeRouteResultReview.lean",
+        "from_target": "review_toe_native_psi_A_u1_matter_sector_exchange_route_packet_result",
+        "kind": "toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_preparation",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_ACCEPTS_"
+            "MATTER_SECTOR_EXCHANGE_ROUTE_NO_TOTAL_CONSERVATION_OR_CEXCHANGE_CLOSURE"
+        ),
+        "report": (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_total_stress_energy_conservation_route_packet",
+        "to_target": "prepare_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet",
+    },
 }
 
 EXPECTED_FRESH_DELTA_KINDS = {

@@ -86,6 +86,7 @@ import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyDefinitionPolicyResultRev
 import ToeFormal.Derivation.ToeNativePsiAU1GaugeSectorExchangeRoutePacket
 import ToeFormal.Derivation.ToeNativePsiAU1GaugeSectorExchangeRouteResultReview
 import ToeFormal.Derivation.ToeNativePsiAU1MatterSectorExchangeRoutePacket
+import ToeFormal.Derivation.ToeNativePsiAU1MatterSectorExchangeRouteResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -107,17 +108,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePsiAU1MatterSectorExchangeRoutePacket.outcomeId
+  ToeNativePsiAU1MatterSectorExchangeRouteResultReview.outcomeId
 
 def currentPacketId : String :=
-  ToeNativePsiAU1MatterSectorExchangeRoutePacket.packetId
+  ToeNativePsiAU1MatterSectorExchangeRouteResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_a_u1_matter_sector_exchange_route_packet :
+theorem qft_gr_lane_aggregate_exposes_psi_a_u1_matter_sector_exchange_route_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_PREPARED_" ++
-          "MATTER_SECTOR_EXCHANGE_ROUTE_CONSTRUCTED_NO_TOTAL_CONSERVATION_OR_" ++
-          "CEXCHANGE_CLOSURE" := by
+        "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_ACCEPTS_" ++
+          "MATTER_SECTOR_EXCHANGE_ROUTE_NO_TOTAL_CONSERVATION_OR_CEXCHANGE_CLOSURE" := by
   native_decide
 
 end QFTGR
