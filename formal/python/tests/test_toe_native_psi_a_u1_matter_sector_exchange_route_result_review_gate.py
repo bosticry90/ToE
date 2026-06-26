@@ -247,6 +247,10 @@ def test_psi_a_u1_matter_sector_exchange_route_result_review_records_validation_
 def test_psi_a_u1_matter_sector_exchange_route_result_review_rotates_to_total_packet() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = str(LEAN_PACKET_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+    total_packet_outcome = (
+        "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_PACKET_PREPARED_"
+        "TOTAL_CONSERVATION_ROUTE_CONSTRUCTED_NO_CEXCHANGE_CLOSEOUT_OR_EM_QFT_CLOSURE"
+    )
     is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=CONSUMED_TARGET,
@@ -301,9 +305,16 @@ def test_psi_a_u1_matter_sector_exchange_route_result_review_rotates_to_total_pa
     assert next_row["matter_sector_exchange_route_packet_result_review_result"] == (
         OUTCOME_ID
     )
-    assert next_row["total_stress_energy_conservation_route_packet_result"] == "PENDING"
-    assert next_row["total_conservation_route_packet_result"] == "PENDING"
-    assert next_row["total_conservation_proved"] == "no"
+    if is_current:
+        assert next_row["total_stress_energy_conservation_route_packet_result"] == "PENDING"
+        assert next_row["total_conservation_route_packet_result"] == "PENDING"
+        assert next_row["total_conservation_proved"] == "no"
+    else:
+        assert next_row["total_stress_energy_conservation_route_packet_result"] == (
+            total_packet_outcome
+        )
+        assert next_row["total_conservation_route_packet_result"] == total_packet_outcome
+        assert next_row["total_conservation_proved"] == "yes"
     if is_current:
         assert next_row["status"] == "active"
         assert next_row["active_lane"] == NEXT_TARGET

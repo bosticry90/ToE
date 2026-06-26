@@ -783,6 +783,22 @@ EXPECTED_LEGAL_TRANSITIONS = {
         "status": "rotated_to_total_stress_energy_conservation_route_packet",
         "to_target": "prepare_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet",
     },
+    "prepare_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet__to__review_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1TotalStressEnergyConservationRoutePacket.lean",
+        "from_target": "prepare_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet",
+        "kind": "toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result_review",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_PACKET_PREPARED_"
+            "TOTAL_CONSERVATION_ROUTE_CONSTRUCTED_NO_CEXCHANGE_CLOSEOUT_OR_EM_QFT_CLOSURE"
+        ),
+        "report": (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_TOTAL_STRESS_ENERGY_CONSERVATION_ROUTE_PACKET_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_total_stress_energy_conservation_route_packet_result_review",
+        "to_target": "review_toe_native_psi_A_u1_total_stress_energy_conservation_route_packet_result",
+    },
 }
 
 EXPECTED_FRESH_DELTA_KINDS = {
