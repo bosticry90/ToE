@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch closes its A/C_k source-bridge-transport family: C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as vacuum U(1) admissibility-only source, bridge, and transport rules. The post-A-triad interaction selector selected psi_A_u1_current_and_exchange_route, the psi-A U(1) policy packet pinned the route, the derivation-obligation packet indexed the current and exchange proof obligations, the interaction action-block definition packet recorded the bounded minimal U(1) Dirac-gauge action block, the action-block result review accepted that definition, the A-variation current packet recorded the bounded candidate-current route J^nu = q psibar gamma^nu psi with residual shape nabla_mu F^{mu nu} - J^nu, the result review accepted only that bounded candidate-current route, the current-conservation obligation packet indexes nabla_mu J^mu = 0 plus gauge-symmetry, field-equation, and sourced-Maxwell consistency proof routes without proof, the psi-variation / Dirac route packet records delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0 as a bounded psi equation route, the adjoint Dirac route packet records D_mu psibar = nabla_mu psibar - i q A_mu psibar plus delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0 as a bounded adjoint equation route, the current-conservation-from-Dirac-pair packet records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under selected assumptions, the sourced Maxwell route packet records nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi as a bounded sourced gauge route, the stress-energy and exchange obligation packet indexes the gauge object T_A^{mu nu}, required matter object T_psi^{mu nu}, total object T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, exchange targets, total conservation target, and candidate C_exchange^{Apsi,nu}, the stress-energy definition policy packet selects the gauge stress-energy policy T_A^{mu nu}, the bounded symmetric Dirac matter stress-energy candidate T_psi^{mu nu}, and T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, the stress-energy definition policy result review accepts those policy definitions only, and the gauge-sector exchange route packet records nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha as a gauge-side exchange route only before result review. This supports only the bounded architecture claim that C_k is behaving like a reusable seam-admissibility layer across isolated phi and vacuum A and is beginning a controlled psi-A interaction pressure test. No matter-sector exchange proof, total stress-energy conservation proof, C_exchange closeout, full Maxwell closure, Maxwell/Yang-Mills closure, C_k action embedding, C_k variation, EM-QFT closure, QFT-GR closure, quantization, anomaly analysis, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch closes its A/C_k source-bridge-transport family: C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as vacuum U(1) admissibility-only source, bridge, and transport rules. The post-A-triad interaction selector selected psi_A_u1_current_and_exchange_route, the psi-A U(1) policy packet pinned the route, the derivation-obligation packet indexed the current and exchange proof obligations, the interaction action-block definition packet recorded the bounded minimal U(1) Dirac-gauge action block, the action-block result review accepted that definition, the A-variation current packet recorded the bounded candidate-current route J^nu = q psibar gamma^nu psi with residual shape nabla_mu F^{mu nu} - J^nu, the result review accepted only that bounded candidate-current route, the current-conservation obligation packet indexes nabla_mu J^mu = 0 plus gauge-symmetry, field-equation, and sourced-Maxwell consistency proof routes without proof, the psi-variation / Dirac route packet records delta_{psibar} S_{psi A} -> (i gamma^mu D_mu - m) psi = 0 as a bounded psi equation route, the adjoint Dirac route packet records D_mu psibar = nabla_mu psibar - i q A_mu psibar plus delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0 as a bounded adjoint equation route, the current-conservation-from-Dirac-pair packet records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under selected assumptions, the sourced Maxwell route packet records nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi as a bounded sourced gauge route, the stress-energy and exchange obligation packet indexes the gauge object T_A^{mu nu}, required matter object T_psi^{mu nu}, total object T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, exchange targets, total conservation target, and candidate C_exchange^{Apsi,nu}, the stress-energy definition policy packet selects the gauge stress-energy policy T_A^{mu nu}, the bounded symmetric Dirac matter stress-energy candidate T_psi^{mu nu}, and T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, the stress-energy definition policy result review accepts those policy definitions only, the gauge-sector exchange route packet records nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha as a gauge-side exchange route only, and the gauge-sector exchange route result review accepts only that gauge-side route while selecting the matter-sector exchange route packet next. This supports only the bounded architecture claim that C_k is behaving like a reusable seam-admissibility layer across isolated phi and vacuum A and is beginning a controlled psi-A interaction pressure test. No matter-sector exchange proof, total stress-energy conservation proof, C_exchange closeout, full Maxwell closure, Maxwell/Yang-Mills closure, C_k action embedding, C_k variation, EM-QFT closure, QFT-GR closure, quantization, anomaly analysis, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_toe_native_psi_A_u1_gauge_sector_exchange_route_packet_result"
+        "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the psi-A U(1) gauge-sector exchange route packet. -/
+/-- Previous live target consumed by the psi-A U(1) gauge-sector exchange route result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_native_psi_A_u1_gauge_sector_exchange_route_packet"
-
-/-- Current live target after the psi-A U(1) gauge-sector exchange route packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_toe_native_psi_A_u1_gauge_sector_exchange_route_packet_result"
+
+/-- Current live target after the psi-A U(1) gauge-sector exchange route result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_toe_native_psi_A_u1_gauge_sector_exchange_route_packet_result"
+    "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
