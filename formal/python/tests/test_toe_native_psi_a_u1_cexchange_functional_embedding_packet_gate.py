@@ -50,6 +50,10 @@ from formal.python.tools.toe_native_psi_a_u1_cexchange_functional_embedding_pack
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     build_toe_native_psi_a_u1_cexchange_functional_embedding_packet,
 )
+from formal.python.tools.toe_native_psi_a_u1_cexchange_functional_embedding_packet_result_review_report import (
+    NEXT_TARGET as CEXCHANGE_CLOSEOUT_TARGET,
+    OUTCOME_ID as FUNCTIONAL_EMBEDDING_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -313,17 +317,21 @@ def test_psi_a_u1_cexchange_functional_embedding_packet_rotates_to_review() -> N
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
-    assert_current_target_consistent()
-    assert_frontier_matches_registry()
-    assert_public_surfaces_match_registry()
+    if is_current:
+        assert_current_target_consistent()
+        assert_frontier_matches_registry()
+        assert_public_surfaces_match_registry()
 
     active = [row for row in registry["workstreams"] if row.get("status") == "active"]
     assert len(active) == 1
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["paused_lanes"]
+        assert CEXCHANGE_CLOSEOUT_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
@@ -332,9 +340,10 @@ def test_psi_a_u1_cexchange_functional_embedding_packet_rotates_to_review() -> N
     assert consumed["outcome_id"] == OUTCOME_ID
     assert consumed["selected_next_target"] == NEXT_TARGET
     assert consumed["C_exchange_functional_embedding_packet_result"] == OUTCOME_ID
-    assert consumed["C_exchange_functional_embedding_packet_result_review_result"] == (
-        "PENDING"
-    )
+    assert consumed["C_exchange_functional_embedding_packet_result_review_result"] in {
+        "PENDING",
+        FUNCTIONAL_EMBEDDING_REVIEW_OUTCOME,
+    }
     assert consumed["functional_embedding_options_recorded"] == "yes"
     assert consumed["admissibility_only_route_selected"] == "yes"
     assert consumed["multiplier_action_route_recorded"] == "yes"
@@ -348,20 +357,27 @@ def test_psi_a_u1_cexchange_functional_embedding_packet_rotates_to_review() -> N
     assert consumed["master_action_promoted"] == "no"
 
     active_row = _workstream(registry, NEXT_TARGET)
-    assert active_row["status"] == "active"
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["active_lane"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["authorized_target"] == NEXT_TARGET
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["outcome_id"] == OUTCOME_ID
-    assert active_row["result_token"] == OUTCOME_ID
-    assert active_row["selected_next_target"] == NEXT_TARGET
+    if is_current:
+        assert active_row["status"] == "active"
+        assert active_row["workstream_id"] == NEXT_TARGET
+        assert active_row["active_lane"] == NEXT_TARGET
+        assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert active_row["authorized_target"] == NEXT_TARGET
+        assert active_row["consumed_target"] == CONSUMED_TARGET
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["outcome_id"] == OUTCOME_ID
+        assert active_row["result_token"] == OUTCOME_ID
+    else:
+        assert active_row["status"] == "paused"
+        assert active_row["packet_result"] == FUNCTIONAL_EMBEDDING_REVIEW_OUTCOME
+        assert active_row["selected_next_target"] == CEXCHANGE_CLOSEOUT_TARGET
+        assert active_row["outcome_id"] == FUNCTIONAL_EMBEDDING_REVIEW_OUTCOME
+        assert active_row["result_token"] == FUNCTIONAL_EMBEDDING_REVIEW_OUTCOME
     assert active_row["C_exchange_functional_embedding_packet_result"] == OUTCOME_ID
-    assert active_row["C_exchange_functional_embedding_packet_result_review_result"] == (
-        "PENDING"
-    )
+    assert active_row["C_exchange_functional_embedding_packet_result_review_result"] in {
+        "PENDING",
+        FUNCTIONAL_EMBEDDING_REVIEW_OUTCOME,
+    }
     assert active_row["functional_embedding_packet_prepared"] == "yes"
     assert active_row["functional_embedding_options_recorded"] == "yes"
     assert active_row["admissibility_only_route_selected"] == "yes"

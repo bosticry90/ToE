@@ -865,6 +865,22 @@ EXPECTED_LEGAL_TRANSITIONS = {
         "status": "rotated_to_cexchange_functional_embedding_packet_result_review",
         "to_target": "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result",
     },
+    "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result__to__prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean",
+        "from_target": "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result",
+        "kind": "toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_preparation",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_"
+            "ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
+        ),
+        "report": (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_cexchange_admissibility_rule_closeout",
+        "to_target": "prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout",
+    },
 }
 
 EXPECTED_FRESH_DELTA_KINDS = {
