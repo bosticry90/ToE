@@ -311,22 +311,37 @@ def test_psi_a_u1_gauge_sector_exchange_route_result_review_rotates_to_matter_pa
     )
 
     next_row = _workstream(registry, NEXT_TARGET)
-    assert next_row["status"] == "active"
     assert next_row["workstream_id"] == NEXT_TARGET
-    assert next_row["active_lane"] == NEXT_TARGET
-    assert next_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert next_row["authorized_target"] == NEXT_TARGET
-    assert next_row["authorization_evidence"] == str(
-        LEAN_PACKET_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert next_row["consumed_target"] == CONSUMED_TARGET
-    assert next_row["gauge_sector_exchange_route_packet_result_review_result"] == (
-        OUTCOME_ID
-    )
-    assert next_row["packet_result"] == "PENDING"
-    assert next_row["matter_sector_exchange_route_packet_result"] == "PENDING"
-    assert next_row["matter_sector_exchange_route_constructed"] == "no"
-    assert next_row["total_conservation_proved"] == "no"
+    if is_current:
+        assert next_row["status"] == "active"
+        assert next_row["active_lane"] == NEXT_TARGET
+        assert next_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert next_row["authorized_target"] == NEXT_TARGET
+        assert next_row["authorization_evidence"] == str(
+            LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert next_row["consumed_target"] == CONSUMED_TARGET
+        assert next_row["gauge_sector_exchange_route_packet_result_review_result"] == (
+            OUTCOME_ID
+        )
+        assert next_row["packet_result"] == "PENDING"
+        assert next_row["matter_sector_exchange_route_packet_result"] == "PENDING"
+        assert next_row["matter_sector_exchange_route_constructed"] == "no"
+        assert next_row["total_conservation_proved"] == "no"
+    else:
+        matter_packet_outcome = (
+            "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_PREPARED_"
+            "MATTER_SECTOR_EXCHANGE_ROUTE_CONSTRUCTED_NO_TOTAL_CONSERVATION_OR_"
+            "CEXCHANGE_CLOSURE"
+        )
+        assert next_row["status"] == "paused"
+        assert next_row["packet_result"] == matter_packet_outcome
+        assert next_row["matter_sector_exchange_route_packet_result"] == (
+            matter_packet_outcome
+        )
+        assert next_row["matter_sector_exchange_route_constructed"] == "yes"
+        assert next_row["matter_sector_exchange_identity_recorded"] == "yes"
+        assert next_row["total_conservation_proved"] == "no"
 
 
 def test_psi_a_u1_gauge_sector_exchange_route_result_review_mirrors() -> None:

@@ -1,0 +1,390 @@
+{
+  "C_exchange_candidate": "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})",
+  "C_exchange_closeout": false,
+  "C_exchange_definition_closeout": false,
+  "C_exchange_equation": "C_exchange^{Apsi,nu} = 0",
+  "C_exchange_rule_family_closed": false,
+  "acceptance_criteria": {
+    "consumes_expected_gauge_sector_exchange_result_review": true,
+    "dirac_pair_and_current_inputs_preserved": true,
+    "matter_sector_exchange_identity_constructed": true,
+    "matter_stress_energy_policy_preserved": true,
+    "next_target_is_result_review": true,
+    "opposite_sign_with_gauge_sector_exchange": true,
+    "review_criteria_all_accepted": true,
+    "total_and_closure_blockers_preserved": true
+  },
+  "accepted": true,
+  "action_block_statement": "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi - 1/4 F_{mu nu}F^{mu nu} ]",
+  "adjoint_derivative_policy": "D_mu psibar = nabla_mu psibar - i q A_mu psibar",
+  "adjoint_dirac_route": "i (D_mu psibar) gamma^mu + m psibar = 0",
+  "anomaly_analysis_performed": false,
+  "anomaly_cancellation_claimed": false,
+  "artifact_id": "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_20260625_v0",
+  "blocked_claim_count": 11,
+  "blocked_claims": [
+    "total conservation proof",
+    "C_exchange closeout",
+    "full Maxwell closure",
+    "EM-QFT closure",
+    "QFT-GR closure",
+    "quantized electromagnetism",
+    "anomaly analysis",
+    "Standard Model derivation",
+    "Phase 2 authorization",
+    "empirical validation",
+    "master-action promotion"
+  ],
+  "captured_at_utc": "2026-06-25T00:00:00Z",
+  "consumed_gauge_sector_exchange_route_packet_result": "TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_PACKET_PREPARED_GAUGE_SECTOR_EXCHANGE_ROUTE_CONSTRUCTED_NO_MATTER_EXCHANGE_OR_TOTAL_CONSERVATION_PROOF",
+  "consumed_gauge_sector_exchange_route_result_review_result": "TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_ACCEPTS_GAUGE_SECTOR_EXCHANGE_ROUTE_NO_MATTER_EXCHANGE_OR_TOTAL_CONSERVATION_PROOF",
+  "consumed_target": "prepare_toe_native_psi_A_u1_matter_sector_exchange_route_packet",
+  "convention_assumption_count": 9,
+  "convention_assumptions": [
+    {
+      "assumption_id": "dirac_equation_route",
+      "statement": "(i gamma^mu D_mu - m) psi = 0",
+      "status": "consumed_bounded_route"
+    },
+    {
+      "assumption_id": "adjoint_dirac_route",
+      "statement": "i (D_mu psibar) gamma^mu + m psibar = 0",
+      "status": "consumed_bounded_route"
+    },
+    {
+      "assumption_id": "gamma_compatibility",
+      "statement": "D_mu gamma^nu = 0 under the selected spin/tetrad connection placeholder",
+      "status": "assumed_for_divergence_route"
+    },
+    {
+      "assumption_id": "spin_connection_tetrad_placeholder",
+      "statement": "spin connection / tetrad compatibility is used as a placeholder and not derived here",
+      "status": "placeholder_assumption"
+    },
+    {
+      "assumption_id": "metric_compatibility",
+      "statement": "nabla_mu g_{alpha beta} = 0 on the selected domain",
+      "status": "assumed"
+    },
+    {
+      "assumption_id": "domain_and_boundary_assumptions",
+      "statement": "psi, psibar, A, and T_psi have sufficient regularity and boundary behavior for the local divergence route",
+      "status": "assumed"
+    },
+    {
+      "assumption_id": "selected_sign_for_T_A",
+      "statement": "T_A^{mu nu} = - F^{mu}{}_{alpha} F^{nu alpha} + 1/4 g^{mu nu} F_{alpha beta}F^{alpha beta}",
+      "status": "preserved_from_gauge_policy"
+    },
+    {
+      "assumption_id": "selected_sign_for_T_psi",
+      "statement": "T_psi^{mu nu} = (i/4) [ psibar gamma^mu D^nu psi + psibar gamma^nu D^mu psi - (D^nu psibar) gamma^mu psi - (D^mu psibar) gamma^nu psi ]",
+      "status": "preserved_from_stress_energy_policy"
+    },
+    {
+      "assumption_id": "selected_sign_for_J",
+      "statement": "J^nu = q psibar gamma^nu psi",
+      "status": "preserved_from_current_route"
+    }
+  ],
+  "covariant_derivative_policy": "D_mu psi = (nabla_mu + i q A_mu) psi",
+  "critical_gate_fail_conditions": [
+    "treat matter-side exchange as total conservation",
+    "close C_exchange in this packet",
+    "claim full Maxwell closure",
+    "claim EM-QFT or QFT-GR closure",
+    "claim quantized electromagnetism",
+    "perform or claim anomaly analysis",
+    "derive the Standard Model",
+    "authorize Phase 2",
+    "claim empirical validation",
+    "promote the master action",
+    "record full ToeFormal aggregate as passed, failed, or timed out"
+  ],
+  "current_candidate": "J^mu = q psibar gamma^mu psi",
+  "current_candidate_policy": "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate and conserved under the bounded Dirac-pair route",
+  "current_conservation_result": "nabla_mu J^mu = 0",
+  "current_conservation_route_status": "bounded current-conservation route constructed under the selected psi-A U(1) policy, Dirac equation route, adjoint equation route, gamma-compatibility assumptions, and domain/boundary assumptions",
+  "current_divergence_route": "nabla_mu J^mu = q [(D_mu psibar) gamma^mu psi + psibar gamma^mu D_mu psi]",
+  "dirac_equation_route": "(i gamma^mu D_mu - m) psi = 0",
+  "dirac_pair_route_inputs": [
+    "i (D_mu psibar) gamma^mu + m psibar = 0",
+    "i gamma^mu D_mu psi - m psi = 0"
+  ],
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "field_strength_policy": "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "full_em_closure_claimed": false,
+  "full_maxwell_closure_claimed": false,
+  "full_maxwell_system_closure_claimed": false,
+  "full_toeformal_aggregate_failed": false,
+  "full_toeformal_aggregate_passed": false,
+  "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+  "full_toeformal_aggregate_timed_out": false,
+  "gauge_divergence_intermediate": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha nabla_mu F^{mu alpha}",
+  "gauge_divergence_source_substitution": "nabla_mu F^{mu alpha} = J^alpha",
+  "gauge_sector_exchange_identity": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+  "gauge_sector_exchange_route_accepted": true,
+  "gauge_sector_exchange_term": "- F^nu{}_alpha J^alpha",
+  "gauge_stress_energy_lower_index_policy": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "gauge_stress_energy_object": "T_A^{mu nu}",
+  "gauge_stress_energy_policy": "T_A^{mu nu} = - F^{mu}{}_{alpha} F^{nu alpha} + 1/4 g^{mu nu} F_{alpha beta}F^{alpha beta}",
+  "gauge_transformation_policy": "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign D_mu convention",
+  "generated_outputs": {
+    "current_target_aggregate": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "json": "formal/docs/release/TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_20260625_v0.json",
+    "lean_marker": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1MatterSectorExchangeRoutePacket.lean",
+    "qftgr_aggregate": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "release_current_authority_aggregate": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  },
+  "lean_validation_policy": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "Using the accepted symmetric Dirac matter stress-energy policy, the psi and adjoint Dirac routes, gamma/spin/tetrad and domain assumptions, and J^alpha = q psibar gamma^alpha psi, this packet records the matter-sector exchange identity nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha.",
+  "matter_divergence_current_substitution": "J^alpha = q psibar gamma^alpha psi",
+  "matter_divergence_intermediate": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha q psibar gamma^alpha psi",
+  "matter_receives_equal_and_opposite_exchange_from_gauge_field": true,
+  "matter_sector_exchange_identity": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+  "matter_sector_exchange_identity_constructed": true,
+  "matter_sector_exchange_identity_recorded": true,
+  "matter_sector_exchange_proved": true,
+  "matter_sector_exchange_proved_here": true,
+  "matter_sector_exchange_route_constructed": true,
+  "matter_sector_exchange_route_packet_prepared": true,
+  "matter_sector_exchange_route_packet_result_review_authorized": true,
+  "matter_sector_exchange_route_packet_result_review_selected": true,
+  "matter_sector_exchange_route_recorded": true,
+  "matter_sector_exchange_target": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+  "matter_sector_exchange_term": "+ F^nu{}_alpha J^alpha",
+  "matter_side_exchange_only": true,
+  "matter_stress_energy_divergence_route_recorded": true,
+  "matter_stress_energy_object": "T_psi^{mu nu}",
+  "matter_stress_energy_policy": "T_psi^{mu nu} = (i/4) [ psibar gamma^mu D^nu psi + psibar gamma^nu D^mu psi - (D^nu psibar) gamma^mu psi - (D^mu psibar) gamma^nu psi ]",
+  "matter_stress_energy_policy_status": "bounded symmetric Dirac stress-energy definition policy selected as a candidate route, not derived by metric or tetrad variation here",
+  "maxwell_closure_claimed": false,
+  "non_claim_boundary": "This is a bounded matter-sector exchange route packet only. It records nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha from the accepted matter stress-energy policy, Dirac pair, gamma/spin/tetrad compatibility placeholders, metric compatibility, domain/boundary assumptions, and selected signs for T_A, T_psi, and J. It records no total conservation proof, no C_exchange closeout, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.",
+  "opposite_sign_to_gauge_sector_exchange": true,
+  "outcome_id": "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_PREPARED_MATTER_SECTOR_EXCHANGE_ROUTE_CONSTRUCTED_NO_TOTAL_CONSERVATION_OR_CEXCHANGE_CLOSURE",
+  "packet_classification": "toe_native_psi_A_u1_matter_sector_exchange_route_packet_prepared_matter_sector_exchange_route_constructed_no_total_conservation_or_cexchange_closure",
+  "packet_id": "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_v0",
+  "packet_result": "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_PREPARED_MATTER_SECTOR_EXCHANGE_ROUTE_CONSTRUCTED_NO_TOTAL_CONSERVATION_OR_CEXCHANGE_CLOSURE",
+  "phase2_authorized": false,
+  "pillar_completion_inferred": false,
+  "plain_meaning": "Matter receives the equal and opposite energy-momentum exchange from the gauge field through +F^nu{}_alpha J^alpha.",
+  "prepared": true,
+  "qft_gr_closure_claimed": false,
+  "quantized_electromagnetism_claimed": false,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The accepted gauge-sector exchange result review is the consumed input.",
+      "evidence": "TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_ACCEPTS_GAUGE_SECTOR_EXCHANGE_ROUTE_NO_MATTER_EXCHANGE_OR_TOTAL_CONSERVATION_PROOF",
+      "row_id": "gauge_sector_exchange_result_review_consumed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The bounded symmetric Dirac matter stress-energy policy is the route input.",
+      "evidence": "T_psi^{mu nu} = (i/4) [ psibar gamma^mu D^nu psi + psibar gamma^nu D^mu psi - (D^nu psibar) gamma^mu psi - (D^mu psibar) gamma^nu psi ]",
+      "row_id": "matter_stress_energy_policy_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The psi and adjoint Dirac equation routes are consumed as bounded inputs.",
+      "evidence": [
+        "i (D_mu psibar) gamma^mu + m psibar = 0",
+        "i gamma^mu D_mu psi - m psi = 0"
+      ],
+      "row_id": "dirac_pair_inputs_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The source current J is the current used in the matter exchange term.",
+      "evidence": "J^nu = q psibar gamma^nu psi",
+      "row_id": "current_input_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Dirac, adjoint, gamma, tetrad, metric, domain, boundary, and sign assumptions are explicit.",
+      "evidence": [
+        {
+          "assumption_id": "dirac_equation_route",
+          "statement": "(i gamma^mu D_mu - m) psi = 0",
+          "status": "consumed_bounded_route"
+        },
+        {
+          "assumption_id": "adjoint_dirac_route",
+          "statement": "i (D_mu psibar) gamma^mu + m psibar = 0",
+          "status": "consumed_bounded_route"
+        },
+        {
+          "assumption_id": "gamma_compatibility",
+          "statement": "D_mu gamma^nu = 0 under the selected spin/tetrad connection placeholder",
+          "status": "assumed_for_divergence_route"
+        },
+        {
+          "assumption_id": "spin_connection_tetrad_placeholder",
+          "statement": "spin connection / tetrad compatibility is used as a placeholder and not derived here",
+          "status": "placeholder_assumption"
+        },
+        {
+          "assumption_id": "metric_compatibility",
+          "statement": "nabla_mu g_{alpha beta} = 0 on the selected domain",
+          "status": "assumed"
+        },
+        {
+          "assumption_id": "domain_and_boundary_assumptions",
+          "statement": "psi, psibar, A, and T_psi have sufficient regularity and boundary behavior for the local divergence route",
+          "status": "assumed"
+        },
+        {
+          "assumption_id": "selected_sign_for_T_A",
+          "statement": "T_A^{mu nu} = - F^{mu}{}_{alpha} F^{nu alpha} + 1/4 g^{mu nu} F_{alpha beta}F^{alpha beta}",
+          "status": "preserved_from_gauge_policy"
+        },
+        {
+          "assumption_id": "selected_sign_for_T_psi",
+          "statement": "T_psi^{mu nu} = (i/4) [ psibar gamma^mu D^nu psi + psibar gamma^nu D^mu psi - (D^nu psibar) gamma^mu psi - (D^mu psibar) gamma^nu psi ]",
+          "status": "preserved_from_stress_energy_policy"
+        },
+        {
+          "assumption_id": "selected_sign_for_J",
+          "statement": "J^nu = q psibar gamma^nu psi",
+          "status": "preserved_from_current_route"
+        }
+      ],
+      "row_id": "convention_assumptions_explicit",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The matter stress-energy divergence route reaches the matter-side exchange identity.",
+      "evidence": [
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha q psibar gamma^alpha psi",
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha"
+      ],
+      "row_id": "matter_divergence_route_constructed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The matter-side term is the opposite sign of the accepted gauge-side exchange route.",
+      "evidence": [
+        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha"
+      ],
+      "row_id": "opposite_sign_to_gauge_route_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Total conservation, C_exchange, closure, empirical, Phase 2, and promotion claims remain blocked.",
+      "evidence": [
+        "total conservation proof",
+        "C_exchange closeout",
+        "full Maxwell closure",
+        "EM-QFT closure",
+        "QFT-GR closure",
+        "quantized electromagnetism",
+        "anomaly analysis",
+        "Standard Model derivation",
+        "Phase 2 authorization",
+        "empirical validation",
+        "master-action promotion"
+      ],
+      "row_id": "total_conservation_and_closure_claims_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet rotates to result review before any total-conservation attempt.",
+      "evidence": "review_toe_native_psi_A_u1_matter_sector_exchange_route_packet_result",
+      "row_id": "next_target_is_result_review",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 9,
+  "review_criteria_count": 9,
+  "route_step_count": 7,
+  "route_steps": [
+    {
+      "statement": "T_psi^{mu nu} = (i/4) [ psibar gamma^mu D^nu psi + psibar gamma^nu D^mu psi - (D^nu psibar) gamma^mu psi - (D^mu psibar) gamma^nu psi ]",
+      "status": "consumed_from_stress_energy_definition_policy_result_review",
+      "step_id": "accepted_matter_stress_energy_input"
+    },
+    {
+      "statement": "(i gamma^mu D_mu - m) psi = 0",
+      "status": "consumed_from_psi_variation_route",
+      "step_id": "dirac_equation_route_input"
+    },
+    {
+      "statement": "i (D_mu psibar) gamma^mu + m psibar = 0",
+      "status": "consumed_from_adjoint_route",
+      "step_id": "adjoint_dirac_route_input"
+    },
+    {
+      "statement": "J^nu = q psibar gamma^nu psi",
+      "status": "consumed_from_current_route",
+      "step_id": "current_input"
+    },
+    {
+      "statement": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha q psibar gamma^alpha psi",
+      "status": "recorded_under_dirac_pair_gamma_metric_and_domain_assumptions",
+      "step_id": "matter_stress_energy_divergence_reduction"
+    },
+    {
+      "statement": "J^alpha = q psibar gamma^alpha psi",
+      "status": "recorded_from_J_candidate",
+      "step_id": "current_substitution"
+    },
+    {
+      "statement": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+      "status": "constructed_matter_side_only",
+      "step_id": "matter_sector_exchange_identity"
+    }
+  ],
+  "schema_id": "TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET_20260625_v0",
+  "seam_closure_claim": false,
+  "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+  "selected_next_target": "review_toe_native_psi_A_u1_matter_sector_exchange_route_packet_result",
+  "selected_next_target_kind": "toe_native_psi_A_u1_matter_sector_exchange_route_packet_result_review",
+  "source_current": "J^nu = q psibar gamma^nu psi",
+  "source_inputs": {
+    "gauge_result_review_consumed_target": "review_toe_native_psi_A_u1_gauge_sector_exchange_route_packet_result",
+    "gauge_sector_exchange_route_result_review_json": "formal/docs/release/TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_20260625_v0.json",
+    "gauge_sector_exchange_route_result_review_outcome": "TOE_NATIVE_PSI_A_U1_GAUGE_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_ACCEPTS_GAUGE_SECTOR_EXCHANGE_ROUTE_NO_MATTER_EXCHANGE_OR_TOTAL_CONSERVATION_PROOF"
+  },
+  "sourced_gauge_route": "nabla_mu F^{mu nu} = J^nu",
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_PACKET",
+  "total_conservation_expanded_target": "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0",
+  "total_conservation_future_combination": "nabla_mu T_A^{mu nu} + nabla_mu T_psi^{mu nu} = 0",
+  "total_conservation_packet_authorized_here": false,
+  "total_conservation_packet_selected": false,
+  "total_conservation_proved": false,
+  "total_conservation_target": "nabla_mu T_total^{mu nu} = 0",
+  "total_stress_energy_conservation_proved": false,
+  "total_stress_energy_object": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "total_stress_energy_policy": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_allowed_values": [
+      "NOT_RUN"
+    ],
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "checkpoint_type": "toe_native_psi_A_u1_matter_sector_exchange_route_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_toeformal_aggregate_failed": false,
+    "full_toeformal_aggregate_passed": false,
+    "full_toeformal_aggregate_status_for_packet": "NOT_RUN",
+    "full_toeformal_aggregate_timed_out": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  }
+}
