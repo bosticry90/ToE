@@ -198,6 +198,7 @@ TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_PACKET_OUTCOME_v0: TOE_NATIVE
 TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_TOTAL_EXCHANGE_CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_EM_QFT_CLOSURE
 TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION
 TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE
+TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE
 PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_NONCLAIM_BOUNDARY_v0: This is a bounded sourced-Maxwell-route packet only; it records nabla_mu F^{mu nu} = J^nu with J^nu = q psibar gamma^nu psi using the accepted A-variation residual and conserved current. It records no full Maxwell closure, no homogeneous Maxwell route beyond the existing F = dA context, no stress-energy derivation, no gauge-matter exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_STRESS_ENERGY_AND_EXCHANGE_OBLIGATION_PACKET_NONCLAIM_BOUNDARY_v0: This is a stress-energy and exchange obligation packet only. It indexes T_A^{mu nu}, the required T_psi^{mu nu}, T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, the exchange targets nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha and nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha, the total target nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0, and the candidate C_exchange^{Apsi,nu}. It records no stress-energy derivation, no gauge-sector exchange proof, no matter-sector exchange proof, no total conservation proof, no C_exchange closeout, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_PACKET_NONCLAIM_BOUNDARY_v0: This is a stress-energy definition policy packet only. It selects the gauge stress-energy policy, the bounded symmetric Dirac matter stress-energy candidate policy, and the total stress-energy definition T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}. It records no stress-energy derivation from metric/tetrad variation, no gauge-sector exchange proof, no matter-sector exchange proof, no total conservation proof, no C_exchange closeout, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
@@ -212,12 +213,14 @@ PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_PACKET_NONCLAIM_BOUNDARY_v0: This is a b
 PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0: This is a bounded C_exchange constraint-candidate result review only. It accepts that the C_exchange candidate was recorded, that it is based on the accepted psi-A total-conservation route, that T_total = T_A + T_psi is preserved, that C_exchange^{Apsi,nu} = 0 is recorded, and that the candidate remains admissibility-only. It selects C_exchange functional embedding packet preparation next. It records no C_exchange closeout, no C_exchange functional embedding, no multiplier/action route, no penalty route, no C_k action variation, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this review.
 PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_NONCLAIM_BOUNDARY_v0: This is a bounded C_exchange functional-embedding options packet only. It records the admissibility-only route C_exchange^{Apsi,nu} = 0 and selects it as a rule for accepting or rejecting the psi-A interaction route. It also records the multiplier/action route S_Cexchange = int d^4x sqrt(-g) lambda_nu C_exchange^{Apsi,nu} as blocked by unresolved multiplier field type, index placement, units, boundary terms, metric/tetrad variation behavior, higher-derivative risk, circularity control, and stability analysis. It records the penalty route int d^4x sqrt(-g) C_exchange_nu C_exchange^nu as unlicensed because it could introduce new dynamics with unresolved stability and unit/sign issues. It records no C_exchange closeout, no multiplier/action route, no penalty route, no C_k action variation, no direct dynamical-law interpretation, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0: This is a bounded C_exchange functional-embedding result review only. It accepts that the C_exchange candidate is preserved, that the admissibility-only route C_exchange^{Apsi,nu} = 0 is selected, that the multiplier/action route is blocked, that the penalty route is unlicensed, that direct dynamical-law interpretation is blocked, and that no C_k action variation is executed. It selects C_exchange admissibility-rule closeout preparation next. It records no C_exchange closeout, no functional action embedding, no multiplier field, no penalty functional, no total interaction theorem beyond accepted route scope, no full Maxwell closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this review.
+PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_NONCLAIM_BOUNDARY_v0: This closeout closes C_exchange^{Apsi,nu} = 0 only as an interaction exchange-balance admissibility rule. It preserves C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}, T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, and C_exchange^{Apsi,nu} = 0. It is admissibility-only, not functionalized, not action embedded, not varied, not a new force law, not Maxwell closure, not EM-QFT closure, not QFT-GR closure, and not master-action promotion. It keeps the multiplier/action route blocked, keeps the penalty route unlicensed, records no C_k action variation, no direct dynamical-law interpretation, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, and no empirical validation. The full ToeFormal aggregate is recorded as NOT_RUN for this closeout.
 PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_NONCLAIM_BOUNDARY_v0: This is a bounded current-conservation-from-Dirac-pair packet only; it records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under the selected psi-A U(1) policy, Dirac pair, gamma-compatibility assumptions, and domain/boundary assumptions. It records no sourced Maxwell closure, no full Maxwell system closure, no stress-energy derivation, no gauge-matter exchange identity, no total stress-energy conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_NONCLAIM_BOUNDARY_v0: This is an adjoint Dirac route packet only; it records D_mu psibar = nabla_mu psibar - i q A_mu psibar and delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0 as a bounded adjoint equation route. It records no current conservation proof, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
-PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result
+CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
 HISTORICAL_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet
 HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_CURRENT_LIVE_NEXT_TARGET_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
+HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result
 HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_ACTIVE_LANE_v0: ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
 HISTORICAL_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_CURRENT_LIVE_TARGET_EVIDENCE_v0: CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean
 HISTORICAL_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_CURRENT_LIVE_TARGET_REPORT_v0: CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json
@@ -400,12 +403,12 @@ HISTORICAL_QFT_GR_SEMICLASSICAL_GATE_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr
 HISTORICAL_QFT_GR_SOURCE_ADMISSIBILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source
 HISTORICAL_QFT_GR_BIANCHI_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source
 HISTORICAL_QFT_GR_ACTION_DERIVABILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source
-ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
+ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE
 CURRENT_AUXILIARY_HYGIENE_TARGET_QUEUED_v0: prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces
 LEAN_VALIDATION_TIER_POLICY_v0: formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md
 POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
@@ -455,10 +458,10 @@ HISTORICAL_PSI_A_U1_CURRENT_DERIVATION_FROM_A_VARIATION_PACKET_RESULT_REVIEW_ACT
 HISTORICAL_PSI_A_U1_ACTION_BLOCK_RESULT_REVIEW_CURRENT_LIVE_NEXT_TARGET_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet
 HISTORICAL_PSI_A_U1_ACTION_BLOCK_RESULT_REVIEW_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_interaction_action_block_definition_packet_result
 HISTORICAL_PSI_A_U1_ACTION_BLOCK_RESULT_REVIEW_ACTIVE_LANE_v0: ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_current_derivation_from_A_variation_packet
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
 - `QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_v0`
 - `QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE`
 - `qft_gr_weak_strong_conservation_comparison_scope_assumption_reduced_pending_result_review`
@@ -703,29 +706,29 @@ Current release-facing status:
 - MR-ASSUMP-003 distributional-pairing regular-domain attempt contract status: `bounded_repo_local_distributional_pairing_regular_domain_contract_pending_result_review_not_distributional_domain_proof_or_conservation_discharge`.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE`
 - `TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_OUTCOME_v0: TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE`
 
 
 
 Historical QFT-GR live-control anchors retained for focused legacy gate coverage:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean`
@@ -839,105 +842,105 @@ Current result-token chain:
 - Post-QM-STAT entropy log-domain reduction bounded selector consumes the local review only, keeps seven remaining supporting assumptions active, recommends `normalization_or_probability_mass_condition_required` for a later candidate-selection pass, and selects `prepare_qm_stat_entropy_assumption_reduction_candidate_selection` without executing it or making discharge, closure, or promotion claims.
 
 Historical live-target transition tokens retained for focused historical gates:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result`
-- `ACTIVE_LANE_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout`
+- `ACTIVE_LANE_v0: review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json`
 Current status-surface authority classes:
 - `CANONICAL_CONTROL_SOURCES: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `PUBLIC_SUMMARY_SURFACES: README.md; State_of_the_Theory.md; formal/docs/paper/PHYSICS_ROADMAP_v0.md; formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md`

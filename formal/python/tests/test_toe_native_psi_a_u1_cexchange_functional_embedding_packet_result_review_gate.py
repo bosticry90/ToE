@@ -49,6 +49,10 @@ from formal.python.tools.toe_native_psi_a_u1_cexchange_functional_embedding_pack
     SCHEMA_ID,
     build_toe_native_psi_a_u1_cexchange_functional_embedding_packet_result_review,
 )
+from formal.python.tools.toe_native_psi_a_u1_cexchange_admissibility_rule_closeout_report import (
+    NEXT_TARGET as CEXCHANGE_CLOSEOUT_REVIEW_TARGET,
+    OUTCOME_ID as CEXCHANGE_CLOSEOUT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -312,7 +316,6 @@ def test_psi_a_u1_cexchange_functional_embedding_review_rotates_to_closeout() ->
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -322,7 +325,6 @@ def test_psi_a_u1_cexchange_functional_embedding_review_rotates_to_closeout() ->
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
@@ -343,28 +345,51 @@ def test_psi_a_u1_cexchange_functional_embedding_review_rotates_to_closeout() ->
     assert consumed["C_k_action_variation_executed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active_row = _workstream(registry, NEXT_TARGET)
-    assert active_row["status"] == "active"
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["active_lane"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["authorized_target"] == NEXT_TARGET
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["outcome_id"] == OUTCOME_ID
-    assert active_row["result_token"] == OUTCOME_ID
-    assert active_row["selected_next_target"] == NEXT_TARGET
-    assert active_row["C_exchange_functional_embedding_packet_result_review_result"] == (
+    next_row = _workstream(registry, NEXT_TARGET)
+    assert next_row["workstream_id"] == NEXT_TARGET
+    assert next_row["C_exchange_functional_embedding_packet_result_review_result"] == (
         OUTCOME_ID
     )
-    assert active_row["C_exchange_admissibility_rule_closeout_result"] == "PENDING"
-    assert active_row["admissibility_rule_closeout_prepared"] == "no"
-    assert active_row["C_exchange_admissibility_rule_closeout_authorized"] == "yes"
-    assert active_row["admissibility_only_route_selected"] == "yes"
-    assert active_row["functional_action_embedding_claimed"] == "no"
-    assert active_row["multiplier_field_selected"] == "no"
-    assert active_row["penalty_functional_selected"] == "no"
-    assert active_row["C_k_action_variation_executed"] == "no"
+    assert next_row["admissibility_only_route_selected"] == "yes"
+    assert next_row["functional_action_embedding_claimed"] == "no"
+    assert next_row["multiplier_field_selected"] == "no"
+    assert next_row["penalty_functional_selected"] == "no"
+    assert next_row["C_k_action_variation_executed"] == "no"
+
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+        assert next_row["status"] == "active"
+        assert next_row["active_lane"] == NEXT_TARGET
+        assert next_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert next_row["authorized_target"] == NEXT_TARGET
+        assert next_row["consumed_target"] == CONSUMED_TARGET
+        assert next_row["packet_result"] == "PENDING"
+        assert next_row["outcome_id"] == OUTCOME_ID
+        assert next_row["result_token"] == OUTCOME_ID
+        assert next_row["selected_next_target"] == NEXT_TARGET
+        assert next_row["C_exchange_admissibility_rule_closeout_result"] == "PENDING"
+        assert next_row["admissibility_rule_closeout_prepared"] == "no"
+        assert next_row["C_exchange_admissibility_rule_closeout_authorized"] == "yes"
+    else:
+        assert NEXT_TARGET in registry["paused_lanes"]
+        assert CEXCHANGE_CLOSEOUT_REVIEW_TARGET not in registry["paused_lanes"]
+        assert next_row["status"] == "paused"
+        assert next_row["packet_result"] == "CLOSEOUT_ACCEPTED"
+        assert next_row["outcome_id"] == CEXCHANGE_CLOSEOUT_OUTCOME
+        assert next_row["result_token"] == CEXCHANGE_CLOSEOUT_OUTCOME
+        assert next_row["selected_next_target"] == CEXCHANGE_CLOSEOUT_REVIEW_TARGET
+        assert next_row["C_exchange_admissibility_rule_closeout_result"] == (
+            CEXCHANGE_CLOSEOUT_OUTCOME
+        )
+        assert next_row["admissibility_rule_closeout_prepared"] == "yes"
+        assert next_row["C_exchange_rule_family_closed"] == "no"
+
+        active_row = _workstream(registry, CEXCHANGE_CLOSEOUT_REVIEW_TARGET)
+        assert active_row["status"] == "active"
+        assert active_row["workstream_id"] == CEXCHANGE_CLOSEOUT_REVIEW_TARGET
+        assert active_row["consumed_target"] == NEXT_TARGET
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["outcome_id"] == CEXCHANGE_CLOSEOUT_OUTCOME
 
 
 def test_psi_a_u1_cexchange_functional_embedding_review_mirrors() -> None:

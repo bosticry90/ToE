@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout"
+    "review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result"
+    "prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout"
+    "review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1CExchangeFunctionalEmbeddingPacketResultReview.lean"
+    / "ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,11 +2424,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json"
+        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_"
-        "ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
+        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_"
+        "INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3384,6 +3384,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_"
         "ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
     )
+    psi_a_cexchange_admissibility_rule_closeout_result = (
+        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_"
+        "INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3395,15 +3399,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_"
-        "20260625_v0.json"
+        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["outcome_id"] == (
-        psi_a_cexchange_functional_embedding_result_review_result
+        psi_a_cexchange_admissibility_rule_closeout_result
     )
     assert interaction_active_workstream["result_token"] == (
-        psi_a_cexchange_functional_embedding_result_review_result
+        psi_a_cexchange_admissibility_rule_closeout_result
     )
     assert interaction_active_workstream[
         "consumed_gauge_sector_exchange_route_packet_result"
@@ -3557,7 +3560,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_preparation"
+    ] == "toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result_review"
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert (
         interaction_active_workstream["C_exchange_constraint_candidate_packet_result"]
@@ -3577,6 +3580,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == psi_a_cexchange_functional_embedding_result_review_result
     assert interaction_active_workstream[
         "C_exchange_admissibility_rule_closeout_result"
+    ] == psi_a_cexchange_admissibility_rule_closeout_result
+    assert interaction_active_workstream[
+        "C_exchange_admissibility_rule_closeout_result_review_result"
     ] == "PENDING"
     assert interaction_active_workstream[
         "stress_energy_and_exchange_obligation_packet_result"
@@ -3772,7 +3778,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["penalty_blocking_reason_count"] == 3
     assert interaction_active_workstream["candidate_row_count"] == 8
     assert interaction_active_workstream["allowed_claim_count"] == 6
-    assert interaction_active_workstream["blocked_claim_count"] == 11
+    assert interaction_active_workstream["blocked_claim_count"] == 14
+    assert interaction_active_workstream["closeout_criteria_count"] == 12
+    assert interaction_active_workstream["closeout_criteria_accepted_count"] == 12
+    assert interaction_active_workstream["accepted_closeout_findings_count"] == 10
     for key in [
         "psi_variation_dirac_route_packet_prepared",
         "adjoint_dirac_route_packet_prepared",
@@ -3945,6 +3954,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "functional_embedding_packet_consumed",
         "admissibility_rule_closeout_selected_after_review",
         "C_exchange_admissibility_rule_closeout_authorized",
+        "admissibility_rule_closeout_prepared",
+        "admissibility_rule_closeout_accepted",
+        "C_exchange_admissibility_rule_closed",
+        "C_exchange_definition_closeout",
+        "C_exchange_rule_closed_as_interaction_exchange_balance_rule",
+        "interaction_exchange_balance_rule_closed",
+        "candidate_recorded_as_rule_only",
+        "based_on_accepted_total_stress_energy_conservation_route",
+        "exchange_halves_context_preserved",
+        "closeout_result_review_selected_next",
         "direct_dynamical_law_interpretation_blocked",
         "C_exchange_future_route_indexed",
         "sourced_maxwell_route_derived",
@@ -3968,12 +3987,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "gauge_matter_exchange_proved",
         "matter_gauge_exchange_proved",
         "C_exchange_closeout",
-        "C_exchange_definition_closeout",
         "C_exchange_functional_embedding_claimed",
         "C_exchange_functional_embedding_selected",
         "C_exchange_functional_embedding_constructed",
         "C_exchange_functional_embedding_packet_prepared_here",
-        "admissibility_rule_closeout_prepared",
+        "closeout_result_review_prepared",
+        "C_exchange_rule_family_closed",
+        "follow_on_synthesis_prepared",
+        "interaction_exchange_rule_family_synthesized",
+        "interaction_exchange_rule_family_synthesis_packet_prepared",
         "functional_action_embedding_claimed",
         "functional_action_embedding_selected",
         "functional_action_embedding_constructed",
