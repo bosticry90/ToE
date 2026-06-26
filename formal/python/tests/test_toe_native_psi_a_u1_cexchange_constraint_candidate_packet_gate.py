@@ -48,6 +48,10 @@ from formal.python.tools.toe_native_psi_a_u1_cexchange_constraint_candidate_pack
     TOTAL_STRESS_ENERGY_OBJECT,
     build_toe_native_psi_a_u1_cexchange_constraint_candidate_packet,
 )
+from formal.python.tools.toe_native_psi_a_u1_cexchange_constraint_candidate_packet_result_review_report import (
+    NEXT_TARGET as CEXCHANGE_FUNCTIONAL_EMBEDDING_TARGET,
+    OUTCOME_ID as CANDIDATE_RESULT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -300,12 +304,21 @@ def test_psi_a_u1_cexchange_constraint_candidate_packet_rotates_to_review_target
         assert active_row["authorized_next_strict_target"] == NEXT_TARGET
         assert active_row["authorized_target"] == NEXT_TARGET
         assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["outcome_id"] == OUTCOME_ID
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["C_exchange_constraint_candidate_packet_result"] == OUTCOME_ID
-    assert active_row["C_exchange_constraint_candidate_packet_result_review_result"] == (
-        "PENDING"
-    )
+        assert active_row["outcome_id"] == OUTCOME_ID
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["C_exchange_constraint_candidate_packet_result"] == OUTCOME_ID
+        assert active_row["C_exchange_constraint_candidate_packet_result_review_result"] == (
+            "PENDING"
+        )
+    else:
+        assert active_row["status"] == "paused"
+        assert active_row["review_result"] == CANDIDATE_RESULT_REVIEW_OUTCOME
+        assert active_row["packet_result"] == CANDIDATE_RESULT_REVIEW_OUTCOME
+        assert active_row["selected_next_target"] == CEXCHANGE_FUNCTIONAL_EMBEDDING_TARGET
+        assert active_row["C_exchange_constraint_candidate_packet_result"] == OUTCOME_ID
+        assert active_row["C_exchange_constraint_candidate_packet_result_review_result"] == (
+            CANDIDATE_RESULT_REVIEW_OUTCOME
+        )
     assert active_row["C_exchange_constraint_candidate_packet_result_review_selected"] == (
         "yes"
     )

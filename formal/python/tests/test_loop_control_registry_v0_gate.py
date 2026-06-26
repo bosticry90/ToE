@@ -832,6 +832,23 @@ EXPECTED_LEGAL_TRANSITIONS = {
         "status": "rotated_to_cexchange_constraint_candidate_packet_result_review",
         "to_target": "review_toe_native_psi_A_u1_cexchange_constraint_candidate_packet_result",
     },
+    "review_toe_native_psi_A_u1_cexchange_constraint_candidate_packet_result__to__prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1CExchangeConstraintCandidateResultReview.lean",
+        "from_target": "review_toe_native_psi_A_u1_cexchange_constraint_candidate_packet_result",
+        "kind": "toe_native_psi_A_u1_cexchange_functional_embedding_packet_preparation",
+        "outcome": (
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_"
+            "ACCEPTS_TOTAL_EXCHANGE_CONSERVATION_RESIDUAL_CANDIDATE_NO_"
+            "FUNCTIONALIZATION_OR_EM_QFT_CLOSURE"
+        ),
+        "report": (
+            "formal/docs/release/"
+            "TOE_NATIVE_PSI_A_U1_CEXCHANGE_CONSTRAINT_CANDIDATE_RESULT_REVIEW_"
+            "20260625_v0.json"
+        ),
+        "status": "rotated_to_cexchange_functional_embedding_packet",
+        "to_target": "prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet",
+    },
 }
 
 EXPECTED_FRESH_DELTA_KINDS = {
