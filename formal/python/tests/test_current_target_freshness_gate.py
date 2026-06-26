@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result"
+    "review_toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout"
+    "prepare_toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_packet"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result"
+    "review_toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout.lean"
+    / "ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,11 +2424,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_"
+        "20260626_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_"
-        "INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_"
+        "PREPARED_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_ROUTES_SYNTHESIZED_"
+        "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3388,6 +3390,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSED_AS_"
         "INTERACTION_EXCHANGE_BALANCE_RULE_NO_ACTION_VARIATION_OR_EM_QFT_CLOSURE"
     )
+    psi_a_interaction_exchange_rule_family_synthesis_packet_result = (
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_"
+        "PREPARED_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_ROUTES_SYNTHESIZED_"
+        "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3399,641 +3406,43 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_20260625_v0.json"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_"
+        "20260626_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["result_review_prepared"] == "no"
     assert interaction_active_workstream["outcome_id"] == (
-        psi_a_cexchange_admissibility_rule_closeout_result
+        psi_a_interaction_exchange_rule_family_synthesis_packet_result
     )
     assert interaction_active_workstream["result_token"] == (
-        psi_a_cexchange_admissibility_rule_closeout_result
+        psi_a_interaction_exchange_rule_family_synthesis_packet_result
     )
-    assert interaction_active_workstream[
-        "consumed_gauge_sector_exchange_route_packet_result"
-    ] == psi_a_gauge_sector_exchange_route_packet_result
-    assert interaction_active_workstream[
-        "consumed_stress_energy_definition_policy_result_review_result"
-    ] == psi_a_stress_energy_definition_policy_review_result
-    assert interaction_active_workstream[
-        "stress_energy_definition_policy_result_review_result"
-    ] == psi_a_stress_energy_definition_policy_review_result
-    assert interaction_active_workstream[
-        "consumed_stress_energy_definition_policy_packet_result"
-    ] == psi_a_stress_energy_definition_policy_result
-    assert interaction_active_workstream[
-        "consumed_stress_energy_and_exchange_obligation_packet_result"
-    ] == psi_a_stress_energy_exchange_obligation_result
-    assert interaction_active_workstream[
-        "stress_energy_and_exchange_obligation_packet_result"
-    ] == psi_a_stress_energy_exchange_obligation_result
-    assert interaction_active_workstream[
-        "stress_energy_definition_policy_packet_result"
-    ] == psi_a_stress_energy_definition_policy_result
-    assert interaction_active_workstream[
-        "stress_energy_definition_policy_packet_result_review_result"
-    ] == psi_a_stress_energy_definition_policy_review_result
-    assert (
-        interaction_active_workstream[
-            "stress_energy_definition_policy_packet_result_review_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream[
-            "stress_energy_definition_policy_packet_result_review_completed"
-        ]
-        == "yes"
-    )
-    assert interaction_active_workstream[
-        "gauge_sector_exchange_route_packet_result"
-    ] == psi_a_gauge_sector_exchange_route_packet_result
-    assert (
-        interaction_active_workstream[
-            "gauge_sector_exchange_route_packet_preparation_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream["gauge_sector_exchange_route_packet_prepared"]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream[
-            "gauge_sector_exchange_route_packet_result_review_result"
-        ]
-        == psi_a_gauge_sector_exchange_route_review_result
-    )
-    assert (
-        interaction_active_workstream[
-            "gauge_sector_exchange_route_packet_result_review_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream[
-            "gauge_sector_exchange_route_packet_result_review_completed"
-        ]
-        == "yes"
-    )
-    assert interaction_active_workstream[
-        "matter_sector_exchange_route_packet_result"
-    ] == psi_a_matter_sector_exchange_route_packet_result
-    assert (
-        interaction_active_workstream[
-            "matter_sector_exchange_route_packet_result_review_result"
-        ]
-        == psi_a_matter_sector_exchange_route_review_result
-    )
-    assert (
-        interaction_active_workstream[
-            "matter_sector_exchange_route_packet_result_review_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream[
-            "matter_sector_exchange_route_packet_result_review_completed"
-        ]
-        == "yes"
-    )
-    assert interaction_active_workstream[
-        "total_conservation_route_packet_result"
-    ] == psi_a_total_stress_energy_conservation_route_packet_result
-    assert interaction_active_workstream[
-        "total_stress_energy_conservation_route_packet_result"
-    ] == psi_a_total_stress_energy_conservation_route_packet_result
-    assert (
-        interaction_active_workstream[
-            "total_conservation_route_packet_result_review_result"
-        ]
-        == psi_a_total_stress_energy_conservation_route_review_result
-    )
-    assert (
-        interaction_active_workstream[
-            "total_conservation_route_packet_result_review_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream[
-            "total_conservation_route_packet_result_review_completed"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream[
-            "stress_energy_definition_policy_packet_preparation_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        interaction_active_workstream["stress_energy_definition_policy_packet_prepared"]
-        == "yes"
-    )
-    assert interaction_active_workstream[
-        "consumed_sourced_maxwell_route_packet_result"
-    ] == psi_a_sourced_maxwell_route_result
-    assert interaction_active_workstream[
-        "sourced_maxwell_route_packet_result"
-    ] == psi_a_sourced_maxwell_route_result
-    assert interaction_active_workstream[
-        "consumed_current_conservation_from_dirac_pair_packet_result"
-    ] == psi_a_current_conservation_pair_result
-    assert interaction_active_workstream[
-        "current_conservation_from_dirac_pair_packet_result"
-    ] == psi_a_current_conservation_pair_result
-    assert interaction_active_workstream[
-        "consumed_adjoint_dirac_route_packet_result"
-    ] == psi_a_adjoint_dirac_route_result
-    assert interaction_active_workstream["adjoint_dirac_route_packet_result"] == (
-        psi_a_adjoint_dirac_route_result
-    )
-    assert interaction_active_workstream[
-        "consumed_psi_variation_dirac_route_packet_result"
-    ] == psi_a_psi_variation_dirac_route_result
-    assert interaction_active_workstream["psi_variation_dirac_route_packet_result"] == (
-        psi_a_psi_variation_dirac_route_result
-    )
-    assert interaction_active_workstream[
-        "consumed_current_conservation_obligation_packet_result"
-    ] == psi_a_current_conservation_obligation_result
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_psi_A_u1_cexchange_admissibility_rule_closeout_result_review"
-    assert interaction_active_workstream["packet_result"] == "PENDING"
-    assert (
-        interaction_active_workstream["C_exchange_constraint_candidate_packet_result"]
-        == psi_a_cexchange_constraint_candidate_packet_result
-    )
-    assert (
-        interaction_active_workstream[
-            "C_exchange_constraint_candidate_packet_result_review_result"
-        ]
-        == psi_a_cexchange_constraint_candidate_result_review_result
-    )
+    ] == "toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_packet_result_review"
     assert interaction_active_workstream[
-        "C_exchange_functional_embedding_packet_result"
-    ] == psi_a_cexchange_functional_embedding_packet_result
-    assert interaction_active_workstream[
-        "C_exchange_functional_embedding_packet_result_review_result"
-    ] == psi_a_cexchange_functional_embedding_result_review_result
-    assert interaction_active_workstream[
-        "C_exchange_admissibility_rule_closeout_result"
-    ] == psi_a_cexchange_admissibility_rule_closeout_result
-    assert interaction_active_workstream[
-        "C_exchange_admissibility_rule_closeout_result_review_result"
-    ] == "PENDING"
-    assert interaction_active_workstream[
-        "stress_energy_and_exchange_obligation_packet_result"
-    ] == psi_a_stress_energy_exchange_obligation_result
-    assert interaction_active_workstream[
-        "sourced_maxwell_route_packet_prepared"
+        "interaction_exchange_rule_family_synthesis_packet_prepared"
     ] == "yes"
     assert interaction_active_workstream[
-        "current_conservation_from_dirac_pair_packet_prepared"
+        "interaction_exchange_rule_family_synthesized"
     ] == "yes"
     assert interaction_active_workstream[
-        "adjoint_dirac_route_packet_prepared"
+        "current_source_exchange_and_total_conservation_routes_synthesized"
     ] == "yes"
-    assert interaction_active_workstream["selected_interaction_route"] == (
-        "psi_A_u1_current_and_exchange_route"
-    )
-    assert interaction_active_workstream["action_block_statement"] == (
-        "S_{psi A} = int d^4x sqrt(-g) [ psibar (i gamma^mu D_mu - m) psi "
-        "- 1/4 F_{mu nu}F^{mu nu} ]"
-    )
-    assert interaction_active_workstream["field_strength_policy"] == (
-        "F = dA; F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
-    )
-    assert interaction_active_workstream["covariant_derivative_policy"] == (
-        "D_mu psi = (nabla_mu + i q A_mu) psi"
-    )
-    assert interaction_active_workstream["gauge_transformation_policy"] == (
-        "psi -> exp(-i q chi) psi; A_mu -> A_mu + partial_mu chi for the plus-sign "
-        "D_mu convention"
-    )
-    assert interaction_active_workstream["A_variation_residual"] == (
-        "delta_A S_{psi A} -> int d^4x sqrt(-g) "
-        "[nabla_mu F^{mu nu} - J^nu] delta A_nu"
-    )
-    assert interaction_active_workstream["current_candidate_from_A_variation"] == (
-        "J^nu = q psibar gamma^nu psi"
-    )
-    assert interaction_active_workstream["source_current"] == (
-        "J^nu = q psibar gamma^nu psi"
-    )
-    assert interaction_active_workstream["current_candidate"] == (
-        "J^mu = q psibar gamma^mu psi"
-    )
-    assert interaction_active_workstream["current_candidate_policy"] == (
-        "J^mu = q psibar gamma^mu psi; accepted as an A-variation candidate and "
-        "conserved under the bounded Dirac-pair route"
-    )
-    assert interaction_active_workstream["target_conservation_law"] == (
-        "nabla_mu J^mu = 0"
-    )
-    assert interaction_active_workstream["current_conservation_result"] == (
-        "nabla_mu J^mu = 0"
-    )
-    assert interaction_active_workstream["conserved_source_condition"] == (
-        "nabla_mu J^mu = 0"
-    )
-    assert interaction_active_workstream["current_divergence_route"] == (
-        "nabla_mu J^mu = q [(D_mu psibar) gamma^mu psi + "
-        "psibar gamma^mu D_mu psi]"
-    )
-    assert interaction_active_workstream["current_conservation_route_status"] == (
-        "bounded current-conservation route constructed under the selected psi-A "
-        "U(1) policy, Dirac equation route, adjoint equation route, "
-        "gamma-compatibility assumptions, and domain/boundary assumptions"
-    )
-    assert interaction_active_workstream["sourced_maxwell_residual_zero"] == (
-        "nabla_mu F^{mu nu} - J^nu = 0"
-    )
-    assert interaction_active_workstream["sourced_gauge_route"] == (
-        "nabla_mu F^{mu nu} = J^nu"
-    )
-    assert interaction_active_workstream["sourced_maxwell_route"] == (
-        "nabla_mu F^{mu nu} = J^nu"
-    )
-    assert interaction_active_workstream["bounded_route_shape"] == (
-        "nabla_mu F^{mu nu} = J^nu"
-    )
-    assert interaction_active_workstream["sourced_gauge_route_status"] == (
-        "bounded sourced gauge route recorded from the A-variation residual and "
-        "the conserved psi-made current"
-    )
-    assert interaction_active_workstream["current_consistency_status"] == (
-        "the source current is conserved under the bounded Dirac-pair route and "
-        "is therefore consistent as the source for the recorded gauge route"
-    )
-    assert interaction_active_workstream["stress_energy_exchange_preview"] == (
-        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha; "
-        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha; "
-        "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0"
-    )
-    assert interaction_active_workstream["possible_C_exchange_route"] == (
-        "C_exchange^{A psi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})"
-    )
-    assert interaction_active_workstream["gauge_stress_energy_object"] == (
-        "T_A^{mu nu}"
-    )
-    assert interaction_active_workstream["matter_stress_energy_object"] == (
-        "T_psi^{mu nu}"
-    )
-    assert interaction_active_workstream["total_stress_energy_object"] == (
-        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
-    )
-    assert interaction_active_workstream["gauge_stress_energy_policy"] == (
-        "T_A^{mu nu} = - F^{mu}{}_{alpha} F^{nu alpha} + "
-        "1/4 g^{mu nu} F_{alpha beta}F^{alpha beta}"
-    )
-    assert interaction_active_workstream["gauge_stress_energy_lower_index_policy"] == (
-        "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + "
-        "1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}"
-    )
-    assert interaction_active_workstream["matter_stress_energy_policy"] == (
-        "T_psi^{mu nu} = (i/4) [ psibar gamma^mu D^nu psi + "
-        "psibar gamma^nu D^mu psi - (D^nu psibar) gamma^mu psi - "
-        "(D^mu psibar) gamma^nu psi ]"
-    )
-    assert interaction_active_workstream["total_stress_energy_policy"] == (
-        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
-    )
-    assert interaction_active_workstream["gauge_sector_exchange_target"] == (
-        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["gauge_sector_exchange_route_to_test"] == (
-        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["gauge_sector_exchange_identity"] == (
-        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["gauge_divergence_intermediate"] == (
-        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha nabla_mu F^{mu alpha}"
-    )
-    assert interaction_active_workstream["gauge_divergence_source_substitution"] == (
-        "nabla_mu F^{mu alpha} = J^alpha"
-    )
-    assert interaction_active_workstream["sign_check_policy"] == (
-        "The gauge-sector exchange sign must be checked against the selected "
-        "T_A convention and metric convention before any exchange closeout."
-    )
-    assert interaction_active_workstream["matter_sector_exchange_target"] == (
-        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["matter_sector_exchange_identity"] == (
-        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["matter_sector_exchange_term"] == (
-        "+ F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["matter_divergence_intermediate"] == (
-        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha q psibar gamma^alpha psi"
-    )
-    assert interaction_active_workstream[
-        "matter_divergence_current_substitution"
-    ] == "J^alpha = q psibar gamma^alpha psi"
-    assert interaction_active_workstream["total_conservation_expanded_target"] == (
-        "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0"
-    )
-    assert interaction_active_workstream["total_divergence_sum_identity"] == (
-        "nabla_mu T_A^{mu nu} + nabla_mu T_psi^{mu nu} = "
-        "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["exchange_term_cancellation"] == (
-        "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0"
-    )
-    assert interaction_active_workstream["total_conservation_identity"] == (
-        "nabla_mu(T_A^{mu nu} + T_psi^{mu nu}) = 0"
-    )
-    assert interaction_active_workstream[
-        "total_stress_energy_conservation_identity"
-    ] == "nabla_mu T_total^{mu nu} = 0"
-    assert interaction_active_workstream["C_exchange_candidate"] == (
-        "C_exchange^{Apsi,nu} := nabla_mu(T_A^{mu nu} + T_psi^{mu nu})"
-    )
-    assert interaction_active_workstream["C_exchange_constraint_id"] == (
-        "psi_A_u1_total_exchange_conservation_residual_candidate"
-    )
-    assert interaction_active_workstream["C_exchange_constraint_form"] == (
-        "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}"
-    )
-    assert interaction_active_workstream["C_exchange_total_stress_energy_form"] == (
-        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
-    )
-    assert interaction_active_workstream["C_exchange_admissibility_condition"] == (
-        "C_exchange^{Apsi,nu} = 0"
-    )
-    assert interaction_active_workstream["route_step_count"] == 7
-    assert interaction_active_workstream["assumption_count"] == 5
-    assert interaction_active_workstream["convention_assumption_count"] == 9
-    assert interaction_active_workstream["indexed_future_route_count"] == 2
-    assert interaction_active_workstream["stress_energy_exchange_obligation_count"] == 7
-    assert interaction_active_workstream["stress_energy_definition_policy_count"] == 3
-    assert interaction_active_workstream["review_criteria_count"] == 11
-    assert interaction_active_workstream["embedding_route_count"] == 3
-    assert interaction_active_workstream["multiplier_blocking_reason_count"] == 8
-    assert interaction_active_workstream["penalty_blocking_reason_count"] == 3
-    assert interaction_active_workstream["candidate_row_count"] == 8
-    assert interaction_active_workstream["allowed_claim_count"] == 6
-    assert interaction_active_workstream["blocked_claim_count"] == 14
-    assert interaction_active_workstream["closeout_criteria_count"] == 12
-    assert interaction_active_workstream["closeout_criteria_accepted_count"] == 12
-    assert interaction_active_workstream["accepted_closeout_findings_count"] == 10
-    for key in [
-        "psi_variation_dirac_route_packet_prepared",
-        "adjoint_dirac_route_packet_prepared",
-        "current_conservation_from_dirac_pair_packet_prepared",
-        "current_conservation_route_constructed",
-        "current_conservation_recorded",
-        "current_conservation_proved",
-        "bounded_current_conservation_proved",
-        "target_conservation_law_satisfied_under_dirac_pair",
-        "sourced_maxwell_route_packet_prepared",
-        "sourced_gauge_route_recorded",
-        "current_consistent_sourced_gauge_route_recorded",
-        "bounded_sourced_maxwell_route_recorded",
-        "bounded_sourced_maxwell_route_derived",
-        "sourced_maxwell_route_recorded",
-        "sourced_maxwell_equation_recorded",
-        "sourced_maxwell_residual_zero_recorded",
-        "A_variation_residual_consumed",
-        "current_conservation_consumed",
-        "current_conserved_source_admitted_for_bounded_route",
-        "matter_made_source_recorded",
-        "F_equals_dA_context_preserved",
-        "homogeneous_context_limited_to_F_equals_dA",
-        "stress_energy_and_exchange_obligation_packet_selected",
-        "stress_energy_and_exchange_obligation_packet_preparation_authorized",
-        "stress_energy_and_exchange_obligation_packet_prepared",
-        "stress_energy_and_exchange_requirements_indexed",
-        "gauge_stress_energy_object_indexed",
-        "matter_stress_energy_object_required",
-        "total_stress_energy_target_indexed",
-        "gauge_sector_exchange_target_indexed",
-        "matter_sector_exchange_target_indexed",
-        "total_conservation_target_indexed",
-        "C_exchange_candidate_family_indexed",
-        "stress_energy_definition_policy_packet_selected",
-        "stress_energy_definition_policy_packet_preparation_authorized",
-        "stress_energy_definition_policy_packet_prepared",
-        "stress_energy_policy_indexed",
-        "stress_energy_definitions_selected",
-        "gauge_stress_energy_definition_selected",
-        "matter_stress_energy_definition_selected",
-        "total_stress_energy_definition_selected",
-        "symmetric_dirac_stress_energy_policy_selected",
-        "exchange_targets_preserved",
-        "stress_energy_definition_policy_packet_result_review_selected",
-        "stress_energy_definition_policy_packet_result_review_authorized",
-        "review_executed",
-        "result_review_prepared",
-        "result_review_accepted",
-        "stress_energy_definition_policy_accepted",
-        "T_A_policy_accepted",
-        "T_psi_policy_accepted",
-        "T_total_policy_accepted",
-        "gauge_stress_energy_policy_accepted",
-        "matter_stress_energy_policy_accepted",
-        "total_stress_energy_policy_accepted",
-        "stress_energy_definitions_selected_for_future_exchange_testing",
-        "gauge_sector_exchange_route_packet_selected",
-        "gauge_sector_exchange_route_packet_preparation_authorized",
-        "gauge_sector_exchange_route_packet_result_review_selected",
-        "gauge_sector_exchange_route_packet_result_review_authorized",
-        "gauge_sector_exchange_sign_check_required",
-        "gauge_sector_exchange_route_constructed",
-        "gauge_sector_exchange_route_recorded",
-        "gauge_sector_exchange_identity_recorded",
-        "gauge_sector_exchange_identity_constructed",
-        "gauge_stress_energy_divergence_route_recorded",
-        "gauge_sector_exchange_proved",
-        "gauge_sector_exchange_proved_here",
-        "gauge_side_exchange_only",
-        "gauge_field_energy_momentum_not_separately_conserved_when_J_present",
-        "matter_sector_exchange_route_packet_prepared",
-        "matter_sector_exchange_route_constructed",
-        "matter_sector_exchange_route_recorded",
-        "matter_sector_exchange_identity_recorded",
-        "matter_sector_exchange_identity_constructed",
-        "matter_stress_energy_divergence_route_recorded",
-        "matter_sector_exchange_proved",
-        "matter_sector_exchange_proved_here",
-        "matter_side_exchange_only",
-        "matter_receives_equal_and_opposite_exchange_from_gauge_field",
-        "opposite_sign_to_gauge_sector_exchange",
-        "matter_sector_exchange_route_packet_result_review_selected",
-        "matter_sector_exchange_route_packet_result_review_authorized",
-        "total_stress_energy_conservation_route_packet_prepared",
-        "total_conservation_route_packet_prepared",
-        "total_conservation_route_constructed",
-        "total_conservation_route_recorded",
-        "total_conservation_identity_recorded",
-        "total_stress_energy_conservation_identity_recorded",
-        "total_stress_energy_conservation_route_recorded",
-        "total_conservation_proved",
-        "total_conservation_proved_here",
-        "total_stress_energy_conservation_proved",
-        "bounded_total_conservation_route_constructed",
-        "bounded_total_stress_energy_conservation_route_constructed",
-        "exchange_terms_cancel",
-        "gauge_matter_exchange_balance_recorded",
-        "combined_matter_gauge_system_conserved",
-        "matter_gauge_interaction_balance_chain_complete",
-        "both_exchange_halves_recorded",
-        "C_exchange_candidate_ready_for_later_packet",
-        "total_conservation_route_packet_result_review_selected",
-        "total_conservation_route_packet_result_review_authorized",
-        "total_conservation_route_result_review_accepted",
-        "total_stress_energy_conservation_route_accepted",
-        "total_conservation_route_accepted",
-        "bounded_total_conservation_route_accepted",
-        "matter_gauge_exchange_balance_route_accepted",
-        "gauge_sector_exchange_route_already_accepted",
-        "matter_sector_exchange_route_already_accepted",
-        "exchange_terms_cancel_accepted",
-        "total_stress_energy_object_preserved",
-        "C_exchange_candidate_packet_selected_after_review",
-        "C_exchange_candidate_packet_authorized_here",
-        "C_exchange_constraint_candidate_packet_selected",
-        "C_exchange_constraint_candidate_packet_authorized",
-        "C_exchange_constraint_candidate_packet_prepared",
-        "C_exchange_candidate_recorded",
-        "C_exchange_constraint_candidate_recorded",
-        "total_exchange_conservation_residual_candidate_recorded",
-        "candidate_based_on_accepted_total_conservation_route",
-        "candidate_is_admissibility_only",
-        "candidate_not_functionalized",
-        "candidate_not_action_embedded",
-        "candidate_not_varied",
-        "total_conservation_route_consumed",
-        "total_stress_energy_conservation_route_consumed",
-        "interaction_exchange_admissibility_candidate_recorded",
-        "C_exchange_constraint_candidate_packet_result_review_selected",
-        "C_exchange_constraint_candidate_packet_result_review_authorized",
-        "C_exchange_constraint_candidate_result_review_accepted",
-        "C_exchange_candidate_accepted",
-        "total_exchange_conservation_residual_candidate_accepted",
-        "T_total_preserved",
-        "C_exchange_admissibility_condition_recorded",
-        "admissibility_only_status_preserved",
-        "functional_embedding_packet_selected_after_review",
-        "functional_embedding_packet_authorized_here",
-        "C_exchange_functional_embedding_packet_selected",
-        "C_exchange_functional_embedding_packet_authorized",
-        "C_exchange_functional_embedding_packet_prepared",
-        "functional_embedding_packet_prepared",
-        "functional_embedding_options_recorded",
-        "C_exchange_functional_embedding_options_recorded",
-        "admissibility_only_route_selected",
-        "admissibility_only_interpretation_retained",
-        "interaction_admissibility_rule_selected",
-        "constraint_as_admissibility_rule_selected",
-        "C_exchange_candidate_carried_forward",
-        "C_exchange_constraint_candidate_result_review_consumed",
-        "total_exchange_conservation_residual_candidate_consumed",
-        "gauge_matter_exchange_balance_context_preserved",
-        "multiplier_action_route_recorded",
-        "multiplier_action_route_blocked",
-        "penalty_route_recorded",
-        "penalty_route_unlicensed",
-        "C_exchange_functional_embedding_packet_result_review_selected",
-        "C_exchange_functional_embedding_packet_result_review_authorized",
-        "functional_embedding_result_review_prepared",
-        "functional_embedding_result_review_accepted",
-        "C_exchange_functional_embedding_result_review_accepted",
-        "C_exchange_functional_embedding_packet_accepted",
-        "C_exchange_candidate_preserved",
-        "admissibility_only_route_accepted",
-        "no_C_k_action_variation_confirmed",
-        "no_EM_QFT_closure_confirmed",
-        "no_QFT_GR_closure_confirmed",
-        "no_master_action_promotion_confirmed",
-        "functional_embedding_packet_consumed",
-        "admissibility_rule_closeout_selected_after_review",
-        "C_exchange_admissibility_rule_closeout_authorized",
-        "admissibility_rule_closeout_prepared",
-        "admissibility_rule_closeout_accepted",
-        "C_exchange_admissibility_rule_closed",
-        "C_exchange_definition_closeout",
-        "C_exchange_rule_closed_as_interaction_exchange_balance_rule",
-        "interaction_exchange_balance_rule_closed",
-        "candidate_recorded_as_rule_only",
-        "based_on_accepted_total_stress_energy_conservation_route",
-        "exchange_halves_context_preserved",
-        "closeout_result_review_selected_next",
-        "direct_dynamical_law_interpretation_blocked",
-        "C_exchange_future_route_indexed",
-        "sourced_maxwell_route_derived",
-    ]:
-        assert interaction_active_workstream[key] == "yes", key
-    for key in [
-        "sourced_maxwell_closure_claimed",
-        "maxwell_closure_claimed",
-        "full_maxwell_closure_claimed",
-        "full_maxwell_system_closure_claimed",
-        "full_em_closure_claimed",
-        "homogeneous_maxwell_route_beyond_f_equals_dA_claimed",
-        "stress_energy_derived",
-        "stress_energy_metric_variation_derived",
-        "stress_energy_tetrad_variation_derived",
-        "psi_stress_energy_derived",
-        "matter_stress_energy_derived",
-        "gauge_stress_energy_derived_here",
-        "gauge_matter_exchange_identity_proved",
-        "exchange_identity_proved",
-        "gauge_matter_exchange_proved",
-        "matter_gauge_exchange_proved",
-        "C_exchange_closeout",
-        "C_exchange_functional_embedding_claimed",
-        "C_exchange_functional_embedding_selected",
-        "C_exchange_functional_embedding_constructed",
-        "C_exchange_functional_embedding_packet_prepared_here",
-        "closeout_result_review_prepared",
-        "C_exchange_rule_family_closed",
-        "follow_on_synthesis_prepared",
-        "interaction_exchange_rule_family_synthesized",
-        "interaction_exchange_rule_family_synthesis_packet_prepared",
-        "functional_action_embedding_claimed",
-        "functional_action_embedding_selected",
-        "functional_action_embedding_constructed",
-        "multiplier_field_selected",
-        "penalty_functional_selected",
-        "penalty_functional_defined",
-        "multiplier_action_route_selected",
-        "multiplier_action_route_constructed",
-        "multiplier_field_type_selected",
-        "multiplier_index_placement_selected",
-        "multiplier_units_fixed",
-        "boundary_terms_controlled",
-        "metric_tetrad_variation_behavior_analyzed",
-        "higher_derivative_risk_resolved",
-        "circularity_control_established",
-        "stability_analysis_completed",
-        "penalty_route_selected",
-        "penalty_route_constructed",
-        "penalty_route_licensed",
-        "direct_dynamical_law_interpretation_selected",
-        "direct_force_law_claimed",
-        "varied_dynamical_equation_claimed",
-        "C_k_action_variation_executed",
-        "C_k_action_variation_authorized",
-        "C_exchange_constraint_candidate_packet_prepared_here",
-        "candidate_varied",
-        "action_embedding_claimed",
-        "em_qft_closure_claimed",
-        "qft_gr_closure_claimed",
-        "quantized_electromagnetism_claimed",
-        "anomaly_analysis_performed",
-        "anomaly_cancellation_claimed",
-        "standard_model_derivation_claimed",
-        "phase2_authorized",
-        "empirical_validation_claimed",
-        "master_action_promoted",
-    ]:
-        assert interaction_active_workstream[key] == "no", key
+    assert interaction_active_workstream["C_exchange_closeout_accepted"] == "yes"
+    assert interaction_active_workstream["C_exchange_remains_admissibility_only"] == "yes"
+    assert interaction_active_workstream["C_exchange_rule_preserved"] == "yes"
+    assert interaction_active_workstream["C_exchange_rule_family_closed"] == "no"
+    assert interaction_active_workstream["functional_action_embedding_claimed"] == "no"
+    assert interaction_active_workstream["multiplier_action_route_selected"] == "no"
+    assert interaction_active_workstream["penalty_route_selected"] == "no"
+    assert interaction_active_workstream["C_k_action_variation_executed"] == "no"
+    assert interaction_active_workstream["em_qft_closure_claimed"] == "no"
+    assert interaction_active_workstream["qft_gr_closure_claimed"] == "no"
+    assert interaction_active_workstream["master_action_promoted"] == "no"
 
     consumed_a_ck_closeout = _workstream(payload, A_CK_CLOSEOUT_TARGET)
     assert consumed_a_ck_closeout["status"] == "paused"

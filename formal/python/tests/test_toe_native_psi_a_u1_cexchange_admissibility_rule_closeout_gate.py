@@ -59,6 +59,10 @@ from formal.python.tools.toe_native_psi_a_u1_cexchange_admissibility_rule_closeo
     TOTAL_STRESS_ENERGY_OBJECT,
     build_toe_native_psi_a_u1_cexchange_admissibility_rule_closeout,
 )
+from formal.python.tools.toe_native_psi_a_u1_cexchange_admissibility_rule_closeout_result_review_report import (
+    NEXT_TARGET as CLOSEOUT_REVIEW_NEXT_TARGET,
+    OUTCOME_ID as CLOSEOUT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -325,7 +329,6 @@ def test_psi_a_u1_cexchange_admissibility_rule_closeout_rotates_to_result_review
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -335,7 +338,6 @@ def test_psi_a_u1_cexchange_admissibility_rule_closeout_rotates_to_result_review
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert registry["C_exchange_admissibility_rule_closed"] == "yes"
     assert registry["interaction_exchange_balance_rule_closed"] == "yes"
@@ -358,38 +360,54 @@ def test_psi_a_u1_cexchange_admissibility_rule_closeout_rotates_to_result_review
     assert consumed["C_k_action_variation_executed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active_row = _workstream(registry, NEXT_TARGET)
-    assert active_row["status"] == "active"
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["active_lane"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["authorized_target"] == NEXT_TARGET
-    assert active_row["authorization_evidence"] == evidence
-    assert active_row["report"] == str(DEFAULT_OUT.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["outcome_id"] == OUTCOME_ID
-    assert active_row["result_token"] == OUTCOME_ID
-    assert active_row["selected_next_target"] == NEXT_TARGET
-    assert active_row["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active_row["C_exchange_admissibility_rule_closeout_result"] == OUTCOME_ID
-    assert active_row["C_exchange_admissibility_rule_closeout_result_review_result"] == (
-        "PENDING"
-    )
-    assert active_row["admissibility_rule_closeout_prepared"] == "yes"
-    assert active_row["closeout_result_review_prepared"] == "no"
-    assert active_row["C_exchange_admissibility_rule_closed"] == "yes"
-    assert active_row["interaction_exchange_balance_rule_closed"] == "yes"
-    assert active_row["C_exchange_rule_family_closed"] == "no"
-    assert active_row["C_exchange_functional_embedding_claimed"] == "no"
-    assert active_row["functional_action_embedding_claimed"] == "no"
-    assert active_row["multiplier_action_route_selected"] == "no"
-    assert active_row["penalty_route_selected"] == "no"
-    assert active_row["direct_dynamical_law_interpretation_selected"] == "no"
-    assert active_row["C_k_action_variation_executed"] == "no"
-    assert active_row["em_qft_closure_claimed"] == "no"
-    assert active_row["qft_gr_closure_claimed"] == "no"
-    assert active_row["master_action_promoted"] == "no"
+    next_row = _workstream(registry, NEXT_TARGET)
+    assert next_row["workstream_id"] == NEXT_TARGET
+    assert next_row["C_exchange_admissibility_rule_closeout_result"] == OUTCOME_ID
+    assert next_row["admissibility_rule_closeout_prepared"] == "yes"
+    assert next_row["C_exchange_admissibility_rule_closed"] == "yes"
+    assert next_row["interaction_exchange_balance_rule_closed"] == "yes"
+    assert next_row["C_exchange_rule_family_closed"] == "no"
+    assert next_row["C_exchange_functional_embedding_claimed"] == "no"
+    assert next_row["functional_action_embedding_claimed"] == "no"
+    assert next_row["multiplier_action_route_selected"] == "no"
+    assert next_row["penalty_route_selected"] == "no"
+    assert next_row["direct_dynamical_law_interpretation_selected"] == "no"
+    assert next_row["C_k_action_variation_executed"] == "no"
+    assert next_row["em_qft_closure_claimed"] == "no"
+    assert next_row["qft_gr_closure_claimed"] == "no"
+    assert next_row["master_action_promoted"] == "no"
+
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+        assert next_row["status"] == "active"
+        assert next_row["active_lane"] == NEXT_TARGET
+        assert next_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert next_row["authorized_target"] == NEXT_TARGET
+        assert next_row["authorization_evidence"] == evidence
+        assert next_row["report"] == str(DEFAULT_OUT.relative_to(REPO_ROOT)).replace(
+            "\\", "/"
+        )
+        assert next_row["consumed_target"] == CONSUMED_TARGET
+        assert next_row["packet_result"] == "PENDING"
+        assert next_row["outcome_id"] == OUTCOME_ID
+        assert next_row["result_token"] == OUTCOME_ID
+        assert next_row["selected_next_target"] == NEXT_TARGET
+        assert next_row["selected_next_target_kind"] == NEXT_TARGET_KIND
+        assert next_row["C_exchange_admissibility_rule_closeout_result_review_result"] == (
+            "PENDING"
+        )
+        assert next_row["closeout_result_review_prepared"] == "no"
+    else:
+        assert NEXT_TARGET in registry["paused_lanes"]
+        assert next_row["status"] == "paused"
+        assert next_row["packet_result"] == CLOSEOUT_REVIEW_OUTCOME
+        assert next_row["outcome_id"] == CLOSEOUT_REVIEW_OUTCOME
+        assert next_row["result_token"] == CLOSEOUT_REVIEW_OUTCOME
+        assert next_row["selected_next_target"] == CLOSEOUT_REVIEW_NEXT_TARGET
+        assert next_row["C_exchange_admissibility_rule_closeout_result_review_result"] == (
+            CLOSEOUT_REVIEW_OUTCOME
+        )
+        assert next_row["closeout_result_review_prepared"] == "yes"
 
 
 def test_psi_a_u1_cexchange_admissibility_rule_closeout_mirrors() -> None:
@@ -420,8 +438,6 @@ def test_psi_a_u1_cexchange_admissibility_rule_closeout_mirrors() -> None:
         "ToeNativePsiAU1CExchangeAdmissibilityRuleCloseout",
         CONSUMED_TARGET,
         NEXT_TARGET,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CONSUMED_TARGET}",
         C_EXCHANGE_CONSTRAINT_ID,
         C_EXCHANGE_CONSTRAINT_FORM,
         C_EXCHANGE_TOTAL_STRESS_ENERGY_FORM,
