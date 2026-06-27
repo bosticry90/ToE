@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result"
+ACTIVE_LANE = "prepare_psi_A_total_conservation_theorem_linkage_obligation_closeout"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1336,7 +1336,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "execute_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes"
+    "review_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1565,7 +1565,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result"
+LIVE_TARGET = "prepare_psi_A_total_conservation_theorem_linkage_obligation_closeout"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1581,7 +1581,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecution.lean"
+    / "PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecutionResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2421,12 +2421,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
         "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
-        "EXECUTION_20260627_v0.json"
+        "EXECUTION_RESULT_REVIEW_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
         "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
-        "EXECUTED_EXCHANGE_CANCELLATION_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_"
-        "MASTER_ACTION_PROMOTION"
+        "RESULT_REVIEW_ACCEPTS_EXCHANGE_CANCELLATION_CONSTRUCTED_NO_CK_RULE_"
+        "PROMOTION_OR_MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3479,6 +3479,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "EXECUTED_TOTAL_CONSERVATION_DERIVED_FROM_GAUGE_MATTER_EXCHANGE_"
         "CANCELLATION_NO_SEAM_CLOSURE"
     )
+    psi_A_total_conservation_execution_result_review_outcome = (
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
+        "RESULT_REVIEW_ACCEPTS_EXCHANGE_CANCELLATION_CONSTRUCTED_NO_CK_RULE_"
+        "PROMOTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    psi_A_total_conservation_execution_result_review_strict_outcome = (
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
+        "RESULT_REVIEW_ACCEPTS_TOTAL_CONSERVATION_DERIVED_FROM_GAUGE_MATTER_"
+        "EXCHANGE_CANCELLATION_NO_SEAM_CLOSURE"
+    )
     psi_A_total_conservation_strict_attempt_outcome = (
         "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
         "PREPARED_GAUGE_MATTER_EXCHANGE_CANCELLATION_ROUTE_NO_ACTION_VARIATION_OR_"
@@ -3496,18 +3506,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
         "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
-        "EXECUTION_20260627_v0.json"
+        "EXECUTION_RESULT_REVIEW_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == (
-        psi_A_total_conservation_execution_outcome
+        psi_A_total_conservation_execution_result_review_outcome
     )
-    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert (
+        interaction_active_workstream["review_result"]
+        == psi_A_total_conservation_execution_result_review_outcome
+    )
     assert interaction_active_workstream["outcome_id"] == (
-        psi_A_total_conservation_execution_outcome
+        psi_A_total_conservation_execution_result_review_outcome
     )
     assert interaction_active_workstream["result_token"] == (
-        psi_A_total_conservation_execution_outcome
+        psi_A_total_conservation_execution_result_review_outcome
     )
     assert interaction_active_workstream["execution_result"] == (
         psi_A_total_conservation_execution_outcome
@@ -3515,12 +3528,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["strict_execution_result"] == (
         psi_A_total_conservation_strict_execution_outcome
     )
-    assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert (
+        interaction_active_workstream["strict_review_result"]
+        == psi_A_total_conservation_execution_result_review_strict_outcome
+    )
+    assert interaction_active_workstream["selected_next_target"] == (
+        "review_psi_A_total_conservation_theorem_linkage_obligation_closeout_result"
+    )
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result_review"
+    ] == "psi_A_total_conservation_theorem_linkage_obligation_closeout_result_review"
     assert interaction_active_workstream["goal"] == (
-        "review the psi-A total conservation theorem-linkage attempt execution result from exchange routes"
+        "prepare the psi-A total conservation theorem-linkage obligation closeout"
     )
     assert interaction_active_workstream["selected_obligation"] == (
         "psi-A total conservation theorem-linkage gap"
@@ -3544,7 +3563,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, then "
         "nabla_mu T_total^{mu nu} = 0."
     )
-    assert interaction_active_workstream["proof_execution_authorized"] == "yes"
+    assert interaction_active_workstream["closeout_outcome"] == (
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_EXCHANGE_"
+        "CANCELLATION_LINKED_TO_GAUGE_MATTER_EXCHANGE_ROUTES_NO_CK_RULE_PROMOTION_"
+        "OR_SEAM_CLOSURE"
+    )
+    assert interaction_active_workstream["closeout_statement"] == (
+        "psi-A total conservation is theorem-linked to the accepted gauge/matter "
+        "exchange halves by cancellation."
+    )
+    assert interaction_active_workstream["proof_execution_authorized"] == "no"
     assert interaction_active_workstream["proof_attempt_executed"] == "yes"
     assert interaction_active_workstream["proof_debt_reduced"] == "yes"
     assert interaction_active_workstream["proof_debt_discharged"] == "no"
