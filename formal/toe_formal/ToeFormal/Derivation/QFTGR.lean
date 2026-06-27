@@ -109,6 +109,7 @@ import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterCKFamilyGapReviewRe
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationIndex
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationIndexResultReview
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterIndex
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterIndexResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -130,16 +131,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  CKFamilyTheoremLinkageObligationSelectionAfterIndex.outcomeId
+  CKFamilyTheoremLinkageObligationSelectionAfterIndexResultReview.outcomeId
 
 def currentPacketId : String :=
-  CKFamilyTheoremLinkageObligationSelectionAfterIndex.packetId
+  CKFamilyTheoremLinkageObligationSelectionAfterIndexResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_ck_family_theorem_linkage_obligation_selection_after_index :
+theorem qft_gr_lane_aggregate_exposes_ck_family_theorem_linkage_obligation_selection_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_INDEX_SELECTS_" ++
-          "PRIORITY_SELECTION_PACKET_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION" := by
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_INDEX_RESULT_REVIEW_" ++
+          "ACCEPTS_PRIORITY_SELECTION_PACKET_HANDOFF_NO_PROOF_EXECUTION_OR_" ++
+          "MASTER_ACTION_PROMOTION" := by
   native_decide
 
 end QFTGR

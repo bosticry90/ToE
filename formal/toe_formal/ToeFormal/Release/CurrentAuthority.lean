@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_ck_family_theorem_linkage_obligation_selection_after_index_result" := by
+      "prepare_ck_family_theorem_linkage_priority_selection_after_index" := by
   native_decide
 
 end CurrentAuthority

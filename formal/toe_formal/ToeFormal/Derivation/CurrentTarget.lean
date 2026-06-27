@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterIndex
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterIndexResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  CKFamilyTheoremLinkageObligationSelectionAfterIndex.selectedNextTarget
+  CKFamilyTheoremLinkageObligationSelectionAfterIndexResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  CKFamilyTheoremLinkageObligationSelectionAfterIndex.packetId
+  CKFamilyTheoremLinkageObligationSelectionAfterIndexResultReview.packetId
 
-theorem current_target_points_to_theorem_linkage_obligation_selection_result_review :
+theorem current_target_points_to_theorem_linkage_priority_selection_preparation :
     currentLiveTarget =
-      "review_ck_family_theorem_linkage_obligation_selection_after_index_result" := by
+      "prepare_ck_family_theorem_linkage_priority_selection_after_index" := by
   rfl
 
 end CurrentTarget
