@@ -128,6 +128,7 @@ import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageAttemptFromExchan
 import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesResultReview
 import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecution
 import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecutionResultReview
+import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageObligationCloseout
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -149,17 +150,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecutionResultReview.outcomeId
+  PsiATotalConservationTheoremLinkageObligationCloseout.outcomeId
 
 def currentPacketId : String :=
-  PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecutionResultReview.packetId
+  PsiATotalConservationTheoremLinkageObligationCloseout.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_A_total_conservation_attempt_execution_result_review :
+theorem qft_gr_lane_aggregate_exposes_psi_A_total_conservation_closeout :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_" ++
-          "RESULT_REVIEW_ACCEPTS_EXCHANGE_CANCELLATION_CONSTRUCTED_NO_CK_RULE_" ++
-          "PROMOTION_OR_MASTER_ACTION_PROMOTION" := by
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_EXCHANGE_" ++
+          "CANCELLATION_LINKED_TO_GAUGE_MATTER_EXCHANGE_ROUTES_NO_CK_RULE_PROMOTION_" ++
+          "OR_SEAM_CLOSURE" := by
   native_decide
 
 end QFTGR

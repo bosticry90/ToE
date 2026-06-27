@@ -47,6 +47,12 @@ from formal.python.tools.psi_A_total_conservation_theorem_linkage_attempt_from_e
     TOTAL_STRESS_ENERGY_DEFINITION,
     build_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_execution,
 )
+from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_closeout_report import (
+    DEFAULT_OUT as CLOSEOUT_OUT,
+    LEAN_PACKET_PATH as CLOSEOUT_LEAN_PACKET_PATH,
+    NEXT_TARGET as CLOSEOUT_REVIEW_TARGET,
+    OUTCOME_ID as CLOSEOUT_RESULT,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -256,6 +262,8 @@ def test_psi_A_total_conservation_attempt_execution_rotates_to_result_review() -
     closeout_target = (
         "prepare_psi_A_total_conservation_theorem_linkage_obligation_closeout"
     )
+    closeout_review_evidence = _rel(CLOSEOUT_LEAN_PACKET_PATH)
+    closeout_review_report = _rel(CLOSEOUT_OUT)
 
     is_current = assert_historical_target_recorded(
         payload=registry,
@@ -269,18 +277,20 @@ def test_psi_A_total_conservation_attempt_execution_rotates_to_result_review() -
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
-    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == closeout_target
-    assert registry["ACTIVE_LANE_v0"] == closeout_target
-    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == result_review_evidence
-    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == result_review_report
-    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == result_review_outcome
+    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == closeout_target
+    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == CLOSEOUT_REVIEW_TARGET
+    assert registry["ACTIVE_LANE_v0"] == CLOSEOUT_REVIEW_TARGET
+    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == closeout_review_evidence
+    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == closeout_review_report
+    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == CLOSEOUT_RESULT
     assert CONSUMED_EXECUTION_TARGET in registry["completed_targets"]
     assert CONSUMED_EXECUTION_TARGET in registry["consumed_targets"]
     assert CONSUMED_EXECUTION_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["paused_lanes"]
-    assert closeout_target not in registry["paused_lanes"]
+    assert closeout_target in registry["paused_lanes"]
+    assert CLOSEOUT_REVIEW_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert CLOSEOUT_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
     executed = _workstream(registry, CONSUMED_EXECUTION_TARGET)
     assert executed["status"] == "paused"
@@ -304,16 +314,25 @@ def test_psi_A_total_conservation_attempt_execution_rotates_to_result_review() -
     assert reviewed["review_executes_attempt"] == "no"
     assert reviewed["rule_promoted"] == "no"
 
+    closeout = _workstream(registry, closeout_target)
+    assert closeout["status"] == "paused"
+    assert closeout["authorization_evidence"] == closeout_review_evidence
+    assert closeout["report"] == closeout_review_report
+    assert closeout["closeout_result"] == CLOSEOUT_RESULT
+    assert closeout["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
+    assert closeout["local_psi_A_total_conservation_obligation_closed"] == "yes"
+    assert closeout["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == closeout_target
-    assert active["active_lane"] == closeout_target
-    assert active["authorization_evidence"] == result_review_evidence
-    assert active["authorized_next_strict_target"] == closeout_target
-    assert active["consumed_target"] == NEXT_TARGET
-    assert active["packet_result"] == result_review_outcome
-    assert active["execution_result"] == OUTCOME_ID
-    assert active["review_result"] == result_review_outcome
+    assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
+    assert active["active_lane"] == CLOSEOUT_REVIEW_TARGET
+    assert active["authorization_evidence"] == closeout_review_evidence
+    assert active["authorized_next_strict_target"] == CLOSEOUT_REVIEW_TARGET
+    assert active["consumed_target"] == closeout_target
+    assert active["packet_result"] == CLOSEOUT_RESULT
+    assert active["closeout_result"] == CLOSEOUT_RESULT
+    assert active["review_result"] == "PENDING"
     assert active["proof_attempt_executed"] == "yes"
     assert active["theorem_discharged"] == "yes"
     assert active["rule_promoted"] == "no"
