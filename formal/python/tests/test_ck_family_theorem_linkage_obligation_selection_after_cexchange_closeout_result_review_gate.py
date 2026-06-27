@@ -221,6 +221,16 @@ def test_ck_family_selection_result_review_records_lean_status() -> None:
 def test_ck_family_selection_result_review_rotates_to_obligation_packet() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    execution_evidence = (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecution.lean"
+    )
+    execution_report = (
+        "formal/docs/release/"
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
+        "EXECUTION_20260627_v0.json"
+    )
+    execution_outcome = PSI_A_ATTEMPT_SUGGESTED_EXECUTION_OUTCOME
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
@@ -289,45 +299,49 @@ def test_ck_family_selection_result_review_rotates_to_obligation_packet() -> Non
     assert attempt["rule_promoted"] == "no"
 
     attempt_review = _workstream(registry, PSI_A_ATTEMPT_REVIEW_TARGET)
-    assert attempt_review["status"] == "paused"
-    assert attempt_review["authorization_evidence"] == _rel(
-        PSI_A_ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH
-    )
-    assert attempt_review["report"] == _rel(PSI_A_ATTEMPT_RESULT_REVIEW_OUT)
-    assert attempt_review["review_result"] == PSI_A_ATTEMPT_RESULT_REVIEW_OUTCOME
-    assert attempt_review["selected_next_target"] == PSI_A_ATTEMPT_EXECUTION_TARGET
+    assert attempt_review["status"] == "active"
+    assert attempt_review["authorization_evidence"] == execution_evidence
+    assert attempt_review["report"] == execution_report
+    assert attempt_review["execution_result"] == execution_outcome
+    assert attempt_review["review_result"] == "PENDING"
+    assert attempt_review["selected_next_target"] == PSI_A_ATTEMPT_REVIEW_TARGET
     assert (
         attempt_review["selected_next_target_kind"]
-        == PSI_A_ATTEMPT_EXECUTION_TARGET_KIND
+        == PSI_A_ATTEMPT_REVIEW_TARGET_KIND
     )
-    assert attempt_review["proof_attempt_executed"] == "no"
-    assert attempt_review["theorem_discharged"] == "no"
+    assert attempt_review["proof_attempt_executed"] == "yes"
+    assert attempt_review["theorem_discharged"] == "yes"
     assert attempt_review["rule_promoted"] == "no"
+
+    executed = _workstream(registry, PSI_A_ATTEMPT_EXECUTION_TARGET)
+    assert executed["status"] == "paused"
+    assert executed["authorization_evidence"] == execution_evidence
+    assert executed["report"] == execution_report
+    assert executed["execution_result"] == execution_outcome
+    assert executed["selected_next_target"] == PSI_A_ATTEMPT_REVIEW_TARGET
+    assert executed["proof_attempt_executed"] == "yes"
+    assert executed["theorem_discharged"] == "yes"
+    assert executed["rule_promoted"] == "no"
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == PSI_A_ATTEMPT_EXECUTION_TARGET
-    assert active["active_lane"] == PSI_A_ATTEMPT_EXECUTION_TARGET
-    assert active["authorization_evidence"] == _rel(
-        PSI_A_ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH
-    )
-    assert active["authorized_next_strict_target"] == PSI_A_ATTEMPT_EXECUTION_TARGET
-    assert active["consumed_target"] == PSI_A_ATTEMPT_REVIEW_TARGET
-    assert active["packet_result"] == PSI_A_ATTEMPT_RESULT_REVIEW_OUTCOME
-    assert active["review_result"] == PSI_A_ATTEMPT_RESULT_REVIEW_OUTCOME
-    assert active["execution_result"] == "PENDING"
-    assert active["suggested_execution_outcome"] == (
-        PSI_A_ATTEMPT_SUGGESTED_EXECUTION_OUTCOME
-    )
+    assert active["workstream_id"] == PSI_A_ATTEMPT_REVIEW_TARGET
+    assert active["active_lane"] == PSI_A_ATTEMPT_REVIEW_TARGET
+    assert active["authorization_evidence"] == execution_evidence
+    assert active["authorized_next_strict_target"] == PSI_A_ATTEMPT_REVIEW_TARGET
+    assert active["consumed_target"] == PSI_A_ATTEMPT_EXECUTION_TARGET
+    assert active["packet_result"] == execution_outcome
+    assert active["review_result"] == "PENDING"
+    assert active["execution_result"] == execution_outcome
     assert active["selected_next_target_kind"] == (
-        PSI_A_ATTEMPT_EXECUTION_TARGET_KIND
+        PSI_A_ATTEMPT_REVIEW_TARGET_KIND
     )
     assert active["selected_obligation"] == SELECTED_OBLIGATION
     assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
     assert active["watch_items"] == PSI_A_ATTEMPT_WATCH_ITEMS
     assert active["proof_execution_authorized"] == "yes"
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
+    assert active["proof_attempt_executed"] == "yes"
+    assert active["theorem_discharged"] == "yes"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
