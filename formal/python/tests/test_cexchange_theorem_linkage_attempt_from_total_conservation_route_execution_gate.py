@@ -279,27 +279,34 @@ def test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review() 
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == selector_target
-    assert active["active_lane"] == selector_target
-    assert active["authorization_evidence"].endswith(
-        "CExchangeTheoremLinkageObligationCloseoutResultReview.lean"
-    )
-    assert active["authorized_next_strict_target"] == selector_target
-    assert active["consumed_target"] == closeout_review_target
-    assert active["packet_result"] == "PENDING"
-    assert active["closeout_result"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
-        "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
-    )
-    assert active["selected_next_target"] == selector_target
     assert (
-        active["selected_next_target_kind"]
-        == "ck_family_theorem_linkage_obligation_selector_after_cexchange_closeout"
+        active["workstream_id"]
+        == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
     )
-    assert active["proof_attempt_executed"] == "yes"
-    assert active["theorem_discharged"] == "yes"
-    assert active["C_exchange_zero_derived"] == "yes"
-    assert active["definition_linkage_constructed"] == "yes"
+    assert (
+        active["active_lane"]
+        == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
+    )
+    assert active["authorization_evidence"].endswith(
+        "CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseout.lean"
+    )
+    assert (
+        active["authorized_next_strict_target"]
+        == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
+    )
+    assert active["consumed_target"] == selector_target
+    assert active["packet_result"] == "PENDING"
+    assert active["review_result"] == "PENDING"
+    assert active["selection_result"] == (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
+        "SELECTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_"
+        "MASTER_ACTION_PROMOTION"
+    )
+    assert (
+        active["selected_obligation"] == "psi-A total conservation theorem-linkage gap"
+    )
+    assert active["proof_attempt_executed"] == "no"
+    assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 

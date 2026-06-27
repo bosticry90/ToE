@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+ACTIVE_LANE = "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1336,7 +1336,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_cexchange_theorem_linkage_obligation_closeout_result"
+    "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1565,7 +1565,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+LIVE_TARGET = "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1581,7 +1581,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CExchangeTheoremLinkageObligationCloseoutResultReview.lean"
+    / "CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2420,11 +2420,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_20260627_v0.json"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
-        "DEFINITIONAL_TOTAL_CONSERVATION_LINKAGE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
+        "SELECTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_"
+        "MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3423,9 +3424,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
         "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
     )
-    cexchange_theorem_linkage_obligation_closeout_result_review_outcome = (
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
-        "DEFINITIONAL_TOTAL_CONSERVATION_LINKAGE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+    ck_family_selection_after_cexchange_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
+        "SELECTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_"
+        "MASTER_ACTION_PROMOTION"
+    )
+    ck_family_selection_after_cexchange_strict_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
+        "SELECTS_SECOND_PRIORITY_TOTAL_CONSERVATION_OBLIGATION_NO_GAP_DISCHARGE_OR_"
+        "CK_RULE_PROMOTION"
     )
 
     interaction_active_workstream = active_workstream(payload)
@@ -3438,110 +3445,66 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_20260627_v0.json"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == "PENDING"
-    assert interaction_active_workstream["closeout_result"] == (
-        cexchange_theorem_linkage_obligation_closeout_outcome
-    )
-    assert interaction_active_workstream["review_result"] == (
-        cexchange_theorem_linkage_obligation_closeout_result_review_outcome
+    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["selection_result"] == (
+        ck_family_selection_after_cexchange_outcome
     )
     assert interaction_active_workstream["outcome_id"] == (
-        cexchange_theorem_linkage_obligation_closeout_result_review_outcome
+        ck_family_selection_after_cexchange_outcome
     )
     assert interaction_active_workstream["result_token"] == (
-        cexchange_theorem_linkage_obligation_closeout_result_review_outcome
+        ck_family_selection_after_cexchange_outcome
+    )
+    assert interaction_active_workstream["strict_selection_result"] == (
+        ck_family_selection_after_cexchange_strict_outcome
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "ck_family_theorem_linkage_obligation_selector_after_cexchange_closeout"
-    assert interaction_active_workstream["closeout_outcome"] == (
-        cexchange_theorem_linkage_obligation_closeout_outcome
-    )
-    assert interaction_active_workstream["closeout_statement"] == (
-        "C_exchange is theorem-linked to accepted total conservation by definition."
-    )
-    assert interaction_active_workstream["basis"] == (
-        "accepted psi-A total-conservation route"
-    )
-    assert interaction_active_workstream["rule_family"] == (
-        "interaction exchange-balance admissibility"
-    )
+    ] == "ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result_review"
     assert interaction_active_workstream["goal"] == (
-        "select next C_k theorem-linkage obligation after C_exchange closeout"
+        "review the psi-A total conservation theorem-linkage obligation selection after C_exchange closeout"
     )
-    assert interaction_active_workstream["theorem_target_id"] == (
-        "cexchange_from_total_conservation"
+    assert interaction_active_workstream["follow_on_target_after_review"] == (
+        "prepare_psi_A_total_conservation_theorem_linkage_obligation_packet"
     )
-    assert interaction_active_workstream["theorem_target_recorded"] == "yes"
-    assert interaction_active_workstream["theorem_target_indexed"] == "yes"
-    assert interaction_active_workstream["theorem_linkage_target_indexed"] == "yes"
-    assert interaction_active_workstream[
-        "C_exchange_from_total_conservation_theorem_target_indexed"
-    ] == "yes"
+    assert interaction_active_workstream["selected_obligation"] == (
+        "psi-A total conservation theorem-linkage gap"
+    )
+    assert interaction_active_workstream["selected_obligation_rank"] == "2"
+    assert interaction_active_workstream["selector_only"] == "yes"
+    assert interaction_active_workstream["previous_closed_obligation"] == (
+        "C_exchange theorem-linkage gap"
+    )
+    assert interaction_active_workstream["previous_closed_obligation_local_only"] == "yes"
+    assert interaction_active_workstream["gauge_exchange_route"] == (
+        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
+    )
+    assert interaction_active_workstream["matter_exchange_route"] == (
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha"
+    )
     assert interaction_active_workstream["total_stress_energy_definition"] == (
         "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
     )
-    assert interaction_active_workstream[
-        "total_stress_energy_conservation_identity"
-    ] == "nabla_mu T_total^{mu nu} = 0"
-    assert interaction_active_workstream["C_exchange_residual_definition"] == (
-        "C_exchange^{Apsi,nu} := nabla_mu T_total^{mu nu}"
+    assert interaction_active_workstream["total_conservation_conclusion"] == (
+        "nabla_mu T_total^{mu nu} = 0"
     )
-    assert interaction_active_workstream["C_exchange_target_conclusion"] == (
-        "C_exchange^{Apsi,nu} = 0"
+    assert interaction_active_workstream["theorem_target_statement"] == (
+        "Given nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha, "
+        "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha, and "
+        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}, then "
+        "nabla_mu T_total^{mu nu} = 0."
     )
-    assert interaction_active_workstream["attempt_type"] == (
-        "definitional theorem-linkage attempt"
-    )
-    assert interaction_active_workstream["input_route"] == (
-        "accepted psi-A total stress-energy conservation"
-    )
-    assert interaction_active_workstream["target_rule"] == (
-        "C_exchange^{Apsi,nu} = 0"
-    )
-    assert interaction_active_workstream["proof_style"] == (
-        "definition expansion plus accepted total-conservation route"
-    )
-    assert interaction_active_workstream["claim_boundary"] in {
-        "theorem-linkage only, not physics closure",
-        "definition-linkage theorem only, not physics closure",
-        "theorem-linkage closeout preparation only, not physics closure",
-        "local C_exchange theorem-linkage closeout only, not physics closure",
-        "selector only after C_exchange closeout result review; no proof execution or theorem discharge",
-    }
-    assert interaction_active_workstream["top_obligation_candidate"] == (
-        "C_exchange theorem-linkage gap"
-    )
-    assert interaction_active_workstream["top_obligation_row_id"] == (
-        "C_exchange^{Apsi}"
-    )
-    assert interaction_active_workstream["selected_proof_target"] == (
-        "cexchange_from_total_conservation"
-    )
-    assert interaction_active_workstream["selected_theorem_row"] == (
-        "C_exchange^{Apsi}"
-    )
-    assert interaction_active_workstream["proof_target_selected"] == "yes"
-    assert interaction_active_workstream["theorem_row_selected"] == "yes"
-    assert interaction_active_workstream["theorem_row_selected_for_execution"] == "yes"
     assert interaction_active_workstream["proof_execution_authorized"] == "no"
-    assert interaction_active_workstream["proof_target_execution_authorized"] == "no"
-    assert interaction_active_workstream["proof_attempt_executed"] == "yes"
-    assert interaction_active_workstream["proof_debt_reduced"] == "yes"
+    assert interaction_active_workstream["proof_attempt_executed"] == "no"
+    assert interaction_active_workstream["proof_debt_reduced"] == "no"
     assert interaction_active_workstream["proof_debt_discharged"] == "no"
-    assert interaction_active_workstream["theorem_discharged"] == "yes"
-    assert interaction_active_workstream["theorem_linkage_completed"] == "yes"
-    assert interaction_active_workstream["theorem_linkage_proof_attempt_authorized"] == "no"
-    assert interaction_active_workstream["definition_linkage_constructed"] == "yes"
-    assert interaction_active_workstream["C_exchange_zero_derived"] == "yes"
-    assert (
-        interaction_active_workstream["top_theorem_linkage_obligation_locally_reduced"]
-        == "yes"
-    )
+    assert interaction_active_workstream["theorem_discharged"] == "no"
+    assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == "no"
     assert interaction_active_workstream["rule_promoted"] == "no"
     assert str(interaction_active_workstream["gap_count"]) == "8"
     assert str(interaction_active_workstream["open_gap_count"]) == "8"

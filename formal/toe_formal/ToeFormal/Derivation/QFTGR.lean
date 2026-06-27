@@ -120,6 +120,7 @@ import ToeFormal.Derivation.CExchangeTheoremLinkageAttemptFromTotalConservationR
 import ToeFormal.Derivation.CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecutionResultReview
 import ToeFormal.Derivation.CExchangeTheoremLinkageObligationCloseout
 import ToeFormal.Derivation.CExchangeTheoremLinkageObligationCloseoutResultReview
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseout
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -141,16 +142,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  CExchangeTheoremLinkageObligationCloseoutResultReview.outcomeId
+  CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseout.outcomeId
 
 def currentPacketId : String :=
-  CExchangeTheoremLinkageObligationCloseoutResultReview.packetId
+  CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseout.packetId
 
-theorem qft_gr_lane_aggregate_exposes_cexchange_theorem_linkage_obligation_closeout_review :
+theorem qft_gr_lane_aggregate_exposes_ck_selection_after_cexchange_closeout :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_" ++
-          "DEFINITIONAL_TOTAL_CONSERVATION_LINKAGE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_" ++
+          "SELECTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_" ++
+          "MASTER_ACTION_PROMOTION" := by
   native_decide
 
 end QFTGR

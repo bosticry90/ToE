@@ -254,10 +254,10 @@ def test_cexchange_execution_result_review_rotates_to_closeout() -> None:
     assert active["status"] == "active"
     assert (
         active["workstream_id"]
-        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+        == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
     )
     assert active["consumed_target"] == (
-        "review_cexchange_theorem_linkage_obligation_closeout_result"
+        "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
     )
 
 

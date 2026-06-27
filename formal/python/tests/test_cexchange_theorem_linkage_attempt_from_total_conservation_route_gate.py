@@ -363,12 +363,15 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
     active = active_workstream(registry)
     assert (
         active["workstream_id"]
-        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+        == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
     )
     assert active["status"] == "active"
-    assert active["closeout_result"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
-        "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+    assert (
+        active["consumed_target"]
+        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+    )
+    assert active["selected_obligation"] == (
+        "psi-A total conservation theorem-linkage gap"
     )
 
 
