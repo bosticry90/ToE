@@ -384,10 +384,31 @@ def test_master_action_ck_family_status_synthesis_rotates_to_result_review() -> 
                     assert active_gap_review["selected_next_target"] == post_review_selector
                     assert active_gap_review["result_review_prepared"] == "yes"
                     selector_row = _workstream(registry, post_review_selector)
-                    assert selector_row["status"] == "active"
-                    assert selector_row["consumed_target"] == gap_review_target
-                    assert selector_row["post_review_selector_executed"] == "no"
-                    assert selector_row["theorem_linkage_obligation_index_prepared"] == "no"
+                    if selector_row["status"] == "active":
+                        assert selector_row["consumed_target"] == gap_review_target
+                        assert selector_row["post_review_selector_executed"] == "no"
+                        assert selector_row["theorem_linkage_obligation_index_prepared"] == "no"
+                    else:
+                        selector_review_target = (
+                            "review_master_action_surface_selection_after_ck_family_gap_review_result"
+                        )
+                        assert selector_row["status"] == "paused"
+                        assert selector_row["selected_next_target"] == selector_review_target
+                        assert selector_row["selected_follow_on_target_after_review"] == (
+                            "prepare_ck_family_theorem_linkage_obligation_index"
+                        )
+                        selector_review = _workstream(registry, selector_review_target)
+                        assert selector_review["status"] == "active"
+                        assert selector_review["consumed_target"] == post_review_selector
+                        assert selector_review[
+                            "selected_follow_on_target_after_review"
+                        ] == "prepare_ck_family_theorem_linkage_obligation_index"
+                        assert selector_review[
+                            "theorem_linkage_obligation_index_selected"
+                        ] == "yes"
+                        assert selector_review[
+                            "theorem_linkage_obligation_index_prepared"
+                        ] == "no"
 
 
 def test_master_action_ck_family_status_synthesis_mirrors() -> None:

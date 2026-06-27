@@ -104,6 +104,7 @@ import ToeFormal.Derivation.MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiAR
 import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterCKFamilyStatusSynthesis
 import ToeFormal.Derivation.MasterActionCKFamilyGapReviewAfterPhiAAndPsiA
 import ToeFormal.Derivation.MasterActionCKFamilyGapReviewAfterPhiAAndPsiAResultReview
+import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterCKFamilyGapReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -125,17 +126,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  MasterActionCKFamilyGapReviewAfterPhiAAndPsiAResultReview.outcomeId
+  MasterActionSurfaceSelectionAfterCKFamilyGapReview.outcomeId
 
 def currentPacketId : String :=
-  MasterActionCKFamilyGapReviewAfterPhiAAndPsiAResultReview.packetId
+  MasterActionSurfaceSelectionAfterCKFamilyGapReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_master_action_ck_family_gap_review_result_after_phi_A_and_psi_A :
+theorem qft_gr_lane_aggregate_exposes_master_action_surface_selection_after_ck_family_gap_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_" ++
-          "ACCEPTS_RULE_FAMILY_GAPS_INDEXED_" ++
-          "NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION" := by
+        "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_GAP_REVIEW_SELECTS_" ++
+          "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_INDEX_NO_ACTION_VARIATION_OR_" ++
+          "MASTER_ACTION_PROMOTION" := by
   native_decide
 
 end QFTGR

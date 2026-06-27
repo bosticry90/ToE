@@ -361,26 +361,44 @@ def test_master_action_surface_selection_after_ck_family_status_synthesis_rotate
             assert result_review["no_gap_discharged"] == "yes"
             assert result_review["no_rule_promoted"] == "yes"
             active = _workstream(registry, GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET)
-            assert active["status"] == "active"
-            assert active["workstream_id"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
-            assert active["active_lane"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
-            assert active["authorization_evidence"] == _rel(
-                GAP_REVIEW_RESULT_REVIEW_LEAN_PACKET_PATH
-            )
-            assert active["report"] == _rel(GAP_REVIEW_RESULT_REVIEW_OUT)
-            assert active["consumed_target"] == GAP_REVIEW_NEXT_TARGET
-            assert active["packet_result"] == "PENDING"
-            assert active["review_result"] == "PENDING"
-            assert active["outcome_id"] == GAP_REVIEW_RESULT_REVIEW_OUTCOME
-            assert active["selected_next_target"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
-            assert active["selected_next_target_kind"] == (
-                GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET_KIND
-            )
-            assert active["recommended_selector_choice"] == (
-                GAP_REVIEW_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE
-            )
-            assert active["post_review_selector_executed"] == "no"
-            assert active["theorem_linkage_obligation_index_prepared"] == "no"
+            if active["status"] == "active":
+                assert active["workstream_id"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+                assert active["active_lane"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+                assert active["authorization_evidence"] == _rel(
+                    GAP_REVIEW_RESULT_REVIEW_LEAN_PACKET_PATH
+                )
+                assert active["report"] == _rel(GAP_REVIEW_RESULT_REVIEW_OUT)
+                assert active["consumed_target"] == GAP_REVIEW_NEXT_TARGET
+                assert active["packet_result"] == "PENDING"
+                assert active["review_result"] == "PENDING"
+                assert active["outcome_id"] == GAP_REVIEW_RESULT_REVIEW_OUTCOME
+                assert active["selected_next_target"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+                assert active["selected_next_target_kind"] == (
+                    GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET_KIND
+                )
+                assert active["recommended_selector_choice"] == (
+                    GAP_REVIEW_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE
+                )
+                assert active["post_review_selector_executed"] == "no"
+                assert active["theorem_linkage_obligation_index_prepared"] == "no"
+            else:
+                selector_review_target = (
+                    "review_master_action_surface_selection_after_ck_family_gap_review_result"
+                )
+                assert active["status"] == "paused"
+                assert active["selected_next_target"] == selector_review_target
+                assert active["selected_follow_on_target_after_review"] == (
+                    "prepare_ck_family_theorem_linkage_obligation_index"
+                )
+                selector_review = _workstream(registry, selector_review_target)
+                assert selector_review["status"] == "active"
+                assert selector_review["consumed_target"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+                assert selector_review["selected_follow_on_target_after_review"] == (
+                    "prepare_ck_family_theorem_linkage_obligation_index"
+                )
+                assert selector_review["theorem_linkage_obligation_index_selected"] == "yes"
+                assert selector_review["theorem_linkage_obligation_index_prepared"] == "no"
+                assert selector_review["master_action_promoted"] == "no"
         return
 
     assert NEXT_TARGET not in registry["completed_targets"]

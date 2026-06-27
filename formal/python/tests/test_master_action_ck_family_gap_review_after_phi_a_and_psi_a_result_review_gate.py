@@ -51,6 +51,14 @@ from formal.python.tools.master_action_ck_family_gap_review_after_phi_a_and_psi_
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     build_master_action_ck_family_gap_review_after_phi_a_and_psi_a_result_review,
 )
+from formal.python.tools.master_action_surface_selection_after_ck_family_gap_review_report import (
+    DEFAULT_OUT as SURFACE_SELECTION_OUT,
+    LEAN_PACKET_PATH as SURFACE_SELECTION_LEAN_PACKET_PATH,
+    NEXT_TARGET as SURFACE_SELECTION_NEXT_TARGET,
+    NEXT_TARGET_KIND as SURFACE_SELECTION_NEXT_TARGET_KIND,
+    OUTCOME_ID as SURFACE_SELECTION_OUTCOME,
+    SELECTED_FOLLOW_ON_TARGET as SURFACE_SELECTION_FOLLOW_ON_TARGET,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -278,7 +286,6 @@ def test_master_action_ck_family_gap_review_result_review_rotates_to_selector() 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -287,9 +294,6 @@ def test_master_action_ck_family_gap_review_result_review_rotates_to_selector() 
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -313,6 +317,55 @@ def test_master_action_ck_family_gap_review_result_review_rotates_to_selector() 
     assert consumed["no_seam_closure_occurs"] == "yes"
     assert consumed["master_action_promoted"] == "no"
     assert consumed["theorem_linkage_obligation_index_prepared"] == "no"
+
+    if not is_current:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+
+        selector = _workstream(registry, NEXT_TARGET)
+        assert selector["status"] == "paused"
+        assert selector["authorization_evidence"] == _rel(SURFACE_SELECTION_LEAN_PACKET_PATH)
+        assert selector["report"] == _rel(SURFACE_SELECTION_OUT)
+        assert selector["selection_result"] == SURFACE_SELECTION_OUTCOME
+        assert selector["packet_result"] == SURFACE_SELECTION_OUTCOME
+        assert selector["outcome_id"] == SURFACE_SELECTION_OUTCOME
+        assert selector["selected_next_target"] == SURFACE_SELECTION_NEXT_TARGET
+        assert selector["selected_next_target_kind"] == SURFACE_SELECTION_NEXT_TARGET_KIND
+        assert selector["selected_follow_on_target_after_review"] == (
+            SURFACE_SELECTION_FOLLOW_ON_TARGET
+        )
+        assert selector["theorem_linkage_obligation_index_selected"] == "yes"
+        assert selector["theorem_linkage_obligation_index_prepared"] == "no"
+        assert selector["no_gap_discharged"] == "yes"
+        assert selector["no_rule_promoted"] == "yes"
+        assert selector["master_action_promoted"] == "no"
+
+        active_review = _workstream(registry, SURFACE_SELECTION_NEXT_TARGET)
+        assert active_review["status"] == "active"
+        assert active_review["workstream_id"] == SURFACE_SELECTION_NEXT_TARGET
+        assert active_review["active_lane"] == SURFACE_SELECTION_NEXT_TARGET
+        assert active_review["authorization_evidence"] == _rel(
+            SURFACE_SELECTION_LEAN_PACKET_PATH
+        )
+        assert active_review["report"] == _rel(SURFACE_SELECTION_OUT)
+        assert active_review["consumed_target"] == NEXT_TARGET
+        assert active_review["packet_result"] == "PENDING"
+        assert active_review["review_result"] == "PENDING"
+        assert active_review["outcome_id"] == SURFACE_SELECTION_OUTCOME
+        assert active_review["selected_next_target"] == SURFACE_SELECTION_NEXT_TARGET
+        assert active_review["selected_next_target_kind"] == SURFACE_SELECTION_NEXT_TARGET_KIND
+        assert active_review["selected_follow_on_target_after_review"] == (
+            SURFACE_SELECTION_FOLLOW_ON_TARGET
+        )
+        assert active_review["theorem_linkage_obligation_index_selected"] == "yes"
+        assert active_review["theorem_linkage_obligation_index_prepared"] == "no"
+        assert active_review["master_action_promoted"] == "no"
+        return
+
+    assert NEXT_TARGET not in registry["completed_targets"]
+    assert NEXT_TARGET not in registry["consumed_targets"]
+    assert NEXT_TARGET not in registry["paused_lanes"]
 
     active = _workstream(registry, NEXT_TARGET)
     assert active["status"] == "active"
