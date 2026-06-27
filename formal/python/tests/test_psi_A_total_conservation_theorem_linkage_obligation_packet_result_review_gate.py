@@ -44,6 +44,15 @@ from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_pac
     TOTAL_STRESS_ENERGY_DEFINITION,
     build_psi_A_total_conservation_theorem_linkage_obligation_packet_result_review,
 )
+from formal.python.tools.psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_report import (
+    DEFAULT_OUT as ATTEMPT_OUT,
+    LEAN_PACKET_PATH as ATTEMPT_LEAN_PACKET_PATH,
+    NEXT_TARGET as ATTEMPT_REVIEW_TARGET,
+    NEXT_TARGET_KIND as ATTEMPT_REVIEW_TARGET_KIND,
+    OUTCOME_ID as ATTEMPT_OUTCOME,
+    STRICT_ATTEMPT_PREPARATION_RESULT,
+    ATTEMPT_WATCH_ITEMS,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -204,20 +213,16 @@ def test_psi_A_total_conservation_packet_result_review_records_lean_status() -> 
 def test_psi_A_total_conservation_packet_result_review_rotates_to_attempt_preparation() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    attempt_evidence = _rel(ATTEMPT_LEAN_PACKET_PATH)
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == consumed_target()
-    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
-    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == evidence
-    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == _rel(DEFAULT_OUT)
-    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == OUTCOME_ID
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     packet = workstream(packet_target(), registry)
@@ -240,19 +245,33 @@ def test_psi_A_total_conservation_packet_result_review_rotates_to_attempt_prepar
     assert review_row["theorem_discharged"] == "no"
     assert review_row["rule_promoted"] == "no"
 
+    attempt = workstream(NEXT_TARGET, registry)
+    assert attempt["status"] == "paused"
+    assert attempt["authorization_evidence"] == attempt_evidence
+    assert attempt["report"] == _rel(ATTEMPT_OUT)
+    assert attempt["packet_result"] == ATTEMPT_OUTCOME
+    assert attempt["attempt_preparation_result"] == ATTEMPT_OUTCOME
+    assert attempt["strict_attempt_preparation_result"] == (
+        STRICT_ATTEMPT_PREPARATION_RESULT
+    )
+    assert attempt["selected_next_target"] == ATTEMPT_REVIEW_TARGET
+    assert attempt["selected_next_target_kind"] == ATTEMPT_REVIEW_TARGET_KIND
+    assert attempt["watch_items"] == ATTEMPT_WATCH_ITEMS
+    assert attempt["proof_attempt_executed"] == "no"
+    assert attempt["theorem_discharged"] == "no"
+    assert attempt["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == OUTCOME_ID
-    assert active["attempt_preparation_recommended_outcome"] == (
-        ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME
-    )
-    assert active["proof_attempt_watch_items"] == PROOF_ATTEMPT_WATCH_ITEMS
+    assert active["workstream_id"] == ATTEMPT_REVIEW_TARGET
+    assert active["active_lane"] == ATTEMPT_REVIEW_TARGET
+    assert active["authorization_evidence"] == attempt_evidence
+    assert active["authorized_next_strict_target"] == ATTEMPT_REVIEW_TARGET
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["packet_result"] == ATTEMPT_OUTCOME
+    assert active["review_result"] == "PENDING"
+    assert active["selected_next_target_kind"] == ATTEMPT_REVIEW_TARGET_KIND
+    assert active["watch_items"] == ATTEMPT_WATCH_ITEMS
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
