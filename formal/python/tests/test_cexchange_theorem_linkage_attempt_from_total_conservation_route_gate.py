@@ -284,7 +284,7 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -313,29 +313,46 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = _workstream(registry, NEXT_TARGET)
+    review_result = (
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_"
+        "ACCEPTS_DEFINITIONAL_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_"
+        "CK_RULE_PROMOTION"
+    )
+    execution_target = (
+        "execute_cexchange_theorem_linkage_attempt_from_total_conservation_route"
+    )
+    review = _workstream(registry, NEXT_TARGET)
+    assert review["status"] == "paused"
+    assert review["workstream_id"] == NEXT_TARGET
+    assert review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteResultReview.lean"
+    )
+    assert review["review_result"] == review_result
+    assert review["result_token"] == review_result
+    assert review["selected_next_target"] == execution_target
+    assert (
+        review["selected_next_target_kind"]
+        == "cexchange_theorem_linkage_attempt_from_total_conservation_route_execution"
+    )
+    assert review["attempt_type"] == ATTEMPT_TYPE
+    assert review["proof_style"] == PROOF_STYLE
+    assert review["theorem_target_id"] == THEOREM_TARGET_ID
+    assert review["selected_proof_target"] == THEOREM_TARGET_ID
+    assert review["proof_target_selected"] == "yes"
+    assert review["theorem_row_selected"] == "yes"
+    assert review["proof_attempt_executed"] == "no"
+    assert review["theorem_discharged"] == "no"
+    assert review["rule_promoted"] == "no"
+    assert review["master_action_promoted"] == "no"
+
+    active = _workstream(registry, execution_target)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["result_token"] == OUTCOME_ID
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active["likely_follow_on_target_after_review"] == LIKELY_FOLLOW_ON_TARGET
-    assert active["attempt_type"] == ATTEMPT_TYPE
-    assert active["proof_style"] == PROOF_STYLE
-    assert active["theorem_target_id"] == THEOREM_TARGET_ID
-    assert active["selected_proof_target"] == THEOREM_TARGET_ID
-    assert active["proof_target_selected"] == "yes"
-    assert active["theorem_row_selected"] == "yes"
+    assert active["workstream_id"] == execution_target
+    assert active["proof_execution_authorized"] == "yes"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
 
 
 def test_cexchange_theorem_linkage_attempt_packet_mirrors() -> None:

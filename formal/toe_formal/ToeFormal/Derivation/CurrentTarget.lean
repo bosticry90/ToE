@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.CExchangeTheoremLinkageAttemptFromTotalConservationRoute
+import ToeFormal.Derivation.CExchangeTheoremLinkageAttemptFromTotalConservationRouteResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  CExchangeTheoremLinkageAttemptFromTotalConservationRoute.selectedNextTarget
+  CExchangeTheoremLinkageAttemptFromTotalConservationRouteResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  CExchangeTheoremLinkageAttemptFromTotalConservationRoute.packetId
+  CExchangeTheoremLinkageAttemptFromTotalConservationRouteResultReview.packetId
 
-theorem current_target_points_to_cexchange_theorem_linkage_attempt_review :
+theorem current_target_points_to_cexchange_theorem_linkage_attempt_execution :
     currentLiveTarget =
-      "review_cexchange_theorem_linkage_attempt_from_total_conservation_route_result" := by
+      "execute_cexchange_theorem_linkage_attempt_from_total_conservation_route" := by
   rfl
 
 end CurrentTarget
