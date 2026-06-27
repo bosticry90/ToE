@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "execute_cexchange_theorem_linkage_attempt_from_total_conservation_route"
+ACTIVE_LANE = "review_cexchange_theorem_linkage_attempt_from_total_conservation_route_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1336,7 +1336,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_cexchange_theorem_linkage_attempt_from_total_conservation_route_result"
+    "execute_cexchange_theorem_linkage_attempt_from_total_conservation_route"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1565,7 +1565,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "execute_cexchange_theorem_linkage_attempt_from_total_conservation_route"
+LIVE_TARGET = "review_cexchange_theorem_linkage_attempt_from_total_conservation_route_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1581,7 +1581,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CExchangeTheoremLinkageAttemptFromTotalConservationRouteResultReview.lean"
+    / "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecution.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2420,12 +2420,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_20260627_v0.json"
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_EXECUTION_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_"
-        "ACCEPTS_DEFINITIONAL_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_"
-        "CK_RULE_PROMOTION"
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_EXECUTED_"
+        "DEFINITIONAL_LINKAGE_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3426,25 +3425,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_20260627_v0.json"
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_EXECUTION_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream["review_result"] == "PENDING"
-    assert interaction_active_workstream["execution_result"] == "PENDING"
+    assert interaction_active_workstream["execution_result"] == (
+        cexchange_theorem_linkage_attempt_execution_result
+    )
     assert interaction_active_workstream["outcome_id"] == (
-        cexchange_theorem_linkage_attempt_result_review_result
+        cexchange_theorem_linkage_attempt_execution_result
     )
     assert interaction_active_workstream["result_token"] == (
-        cexchange_theorem_linkage_attempt_result_review_result
+        cexchange_theorem_linkage_attempt_execution_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "cexchange_theorem_linkage_attempt_from_total_conservation_route_execution"
-    assert interaction_active_workstream["suggested_execution_outcome"] == (
-        cexchange_theorem_linkage_attempt_execution_result
-    )
+    ] == "cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review"
     assert interaction_active_workstream["top_obligation_packet_scope"] == (
         "C_exchange^{Apsi} theorem-linkage gap"
     )
@@ -3491,9 +3489,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["proof_style"] == (
         "definition expansion plus accepted total-conservation route"
     )
-    assert interaction_active_workstream["claim_boundary"] == (
-        "theorem-linkage only, not physics closure"
-    )
+    assert interaction_active_workstream["claim_boundary"] in {
+        "theorem-linkage only, not physics closure",
+        "definition-linkage theorem only, not physics closure",
+    }
     assert interaction_active_workstream["top_obligation_candidate"] == (
         "C_exchange theorem-linkage gap"
     )
@@ -3511,12 +3510,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["theorem_row_selected_for_execution"] == "yes"
     assert interaction_active_workstream["proof_execution_authorized"] == "yes"
     assert interaction_active_workstream["proof_target_execution_authorized"] == "yes"
-    assert interaction_active_workstream["proof_attempt_executed"] == "no"
-    assert interaction_active_workstream["proof_debt_reduced"] == "no"
+    assert interaction_active_workstream["proof_attempt_executed"] == "yes"
+    assert interaction_active_workstream["proof_debt_reduced"] == "yes"
     assert interaction_active_workstream["proof_debt_discharged"] == "no"
-    assert interaction_active_workstream["theorem_discharged"] == "no"
-    assert interaction_active_workstream["theorem_linkage_completed"] == "no"
+    assert interaction_active_workstream["theorem_discharged"] == "yes"
+    assert interaction_active_workstream["theorem_linkage_completed"] == "yes"
     assert interaction_active_workstream["theorem_linkage_proof_attempt_authorized"] == "yes"
+    assert interaction_active_workstream["definition_linkage_constructed"] == "yes"
+    assert interaction_active_workstream["C_exchange_zero_derived"] == "yes"
+    assert (
+        interaction_active_workstream["top_theorem_linkage_obligation_locally_reduced"]
+        == "yes"
+    )
     assert interaction_active_workstream["rule_promoted"] == "no"
     assert str(interaction_active_workstream["gap_count"]) == "8"
     assert str(interaction_active_workstream["open_gap_count"]) == "8"

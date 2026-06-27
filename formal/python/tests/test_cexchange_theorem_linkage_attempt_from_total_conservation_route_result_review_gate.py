@@ -271,53 +271,53 @@ def test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution() 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
-    assert CONSUMED_TARGET in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["completed_targets"]
+    assert NEXT_TARGET in registry["consumed_targets"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
 
-    consumed = _workstream(registry, CONSUMED_TARGET)
-    assert consumed["status"] == "paused"
-    assert consumed["authorization_evidence"] == evidence
-    assert consumed["report"] == _rel(DEFAULT_OUT)
-    assert consumed["review_result"] == OUTCOME_ID
-    assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert consumed["proof_execution_authorized"] == "no"
-    assert consumed["proof_attempt_executed"] == "no"
-    assert consumed["theorem_discharged"] == "no"
-    assert consumed["rule_promoted"] == "no"
-    assert consumed["master_action_promoted"] == "no"
+    executed = _workstream(registry, NEXT_TARGET)
+    assert executed["status"] == "paused"
+    assert executed["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+    assert executed["strict_execution_result"] == STRICT_SUGGESTED_EXECUTION_OUTCOME
+    assert executed["selected_next_target"] == CONSUMED_TARGET
+    assert (
+        executed["selected_next_target_kind"]
+        == "cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review"
+    )
+    assert executed["proof_execution_authorized"] == "yes"
+    assert executed["proof_attempt_executed"] == "yes"
+    assert executed["theorem_discharged"] == "yes"
+    assert executed["rule_promoted"] == "no"
+    assert executed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
+    assert active["workstream_id"] == CONSUMED_TARGET
+    assert active["active_lane"] == CONSUMED_TARGET
+    assert active["authorization_evidence"].endswith(
+        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecution.lean"
+    )
+    assert active["authorized_next_strict_target"] == CONSUMED_TARGET
     assert active["packet_result"] == "PENDING"
     assert active["review_result"] == "PENDING"
-    assert active["execution_result"] == "PENDING"
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["result_token"] == OUTCOME_ID
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active["suggested_execution_outcome"] == SUGGESTED_EXECUTION_OUTCOME
-    assert (
-        active["strict_suggested_execution_outcome"]
-        == STRICT_SUGGESTED_EXECUTION_OUTCOME
-    )
+    assert active["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+    assert active["outcome_id"] == SUGGESTED_EXECUTION_OUTCOME
+    assert active["result_token"] == SUGGESTED_EXECUTION_OUTCOME
+    assert active["selected_next_target"] == CONSUMED_TARGET
     assert active["proof_execution_authorized"] == "yes"
     assert active["proof_target_execution_authorized"] == "yes"
     assert active["theorem_linkage_proof_attempt_authorized"] == "yes"
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
+    assert active["proof_attempt_executed"] == "yes"
+    assert active["theorem_discharged"] == "yes"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
