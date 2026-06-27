@@ -63,6 +63,13 @@ from formal.python.tools.toe_native_psi_a_u1_interaction_exchange_rule_family_cl
     NEXT_TARGET_KIND as CLOSEOUT_REVIEW_TARGET_KIND,
     OUTCOME_ID as CLOSEOUT_OUTCOME,
 )
+from formal.python.tools.toe_native_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_report import (
+    DEFAULT_OUT as CLOSEOUT_REVIEW_OUT,
+    LEAN_PACKET_PATH as CLOSEOUT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as CK_FAMILY_STATUS_SYNTHESIS_TARGET,
+    NEXT_TARGET_KIND as CK_FAMILY_STATUS_SYNTHESIS_TARGET_KIND,
+    OUTCOME_ID as CLOSEOUT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -409,11 +416,37 @@ def test_psi_a_u1_interaction_exchange_synthesis_result_review_rotates_to_closeo
         assert closeout_row["C_exchange_rule_family_closed"] == "yes"
 
         active_row = _workstream(registry, CLOSEOUT_REVIEW_TARGET)
-        assert active_row["status"] == "active"
         assert active_row["workstream_id"] == CLOSEOUT_REVIEW_TARGET
-        assert active_row["outcome_id"] == CLOSEOUT_OUTCOME
-        assert active_row["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
-        assert active_row["selected_next_target_kind"] == CLOSEOUT_REVIEW_TARGET_KIND
+        if active_row["status"] == "active":
+            assert active_row["outcome_id"] == CLOSEOUT_OUTCOME
+            assert active_row["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
+            assert active_row["selected_next_target_kind"] == CLOSEOUT_REVIEW_TARGET_KIND
+        else:
+            assert CLOSEOUT_REVIEW_TARGET in registry["completed_targets"]
+            assert CLOSEOUT_REVIEW_TARGET in registry["consumed_targets"]
+            assert CLOSEOUT_REVIEW_TARGET in registry["paused_lanes"]
+            assert active_row["status"] == "paused"
+            assert active_row["authorization_evidence"] == str(
+                CLOSEOUT_REVIEW_LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+            ).replace("\\", "/")
+            assert active_row["report"] == str(CLOSEOUT_REVIEW_OUT.relative_to(REPO_ROOT)).replace(
+                "\\", "/"
+            )
+            assert active_row["packet_result"] == CLOSEOUT_REVIEW_OUTCOME
+            assert active_row["review_result"] == CLOSEOUT_REVIEW_OUTCOME
+            assert active_row["outcome_id"] == CLOSEOUT_REVIEW_OUTCOME
+            assert active_row["selected_next_target"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET
+            assert active_row["selected_next_target_kind"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET_KIND
+
+            ck_row = _workstream(registry, CK_FAMILY_STATUS_SYNTHESIS_TARGET)
+            assert ck_row["status"] == "active"
+            assert ck_row["workstream_id"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET
+            assert ck_row["consumed_target"] == CLOSEOUT_REVIEW_TARGET
+            assert ck_row["packet_result"] == "PENDING"
+            assert ck_row["review_result"] == "PENDING"
+            assert ck_row["outcome_id"] == CLOSEOUT_REVIEW_OUTCOME
+            assert ck_row["selected_next_target"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET
+            assert ck_row["selected_next_target_kind"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET_KIND
 
 
 def test_psi_a_u1_interaction_exchange_synthesis_result_review_mirrors() -> None:
@@ -446,8 +479,10 @@ def test_psi_a_u1_interaction_exchange_synthesis_result_review_mirrors() -> None
         NEXT_TARGET,
         CLOSEOUT_REVIEW_TARGET,
         CLOSEOUT_OUTCOME,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {CLOSEOUT_REVIEW_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
+        CK_FAMILY_STATUS_SYNTHESIS_TARGET,
+        CLOSEOUT_REVIEW_OUTCOME,
+        f"CURRENT_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_TARGET}",
+        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CLOSEOUT_REVIEW_TARGET}",
         "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_OUTCOME_v0",
         "PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
         CURRENT_CANDIDATE,

@@ -98,6 +98,7 @@ import ToeFormal.Derivation.ToeNativePsiAU1CExchangeAdmissibilityRuleCloseoutRes
 import ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisPacket
 import ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisResultReview
 import ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout
+import ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilyCloseoutResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -119,16 +120,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout.outcomeId
+  ToeNativePsiAU1InteractionExchangeRuleFamilyCloseoutResultReview.outcomeId
 
 def currentPacketId : String :=
-  ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout.packetId
+  ToeNativePsiAU1InteractionExchangeRuleFamilyCloseoutResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_a_u1_interaction_exchange_rule_family_closeout :
+theorem qft_gr_lane_aggregate_exposes_psi_a_u1_interaction_exchange_rule_family_closeout_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSED_AS_BOUNDED_" ++
-          "CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_" ++
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_" ++
+          "ACCEPTS_BOUNDED_CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_" ++
           "NO_EM_QFT_OR_CK_ACTION_CLOSURE" := by
   native_decide
 

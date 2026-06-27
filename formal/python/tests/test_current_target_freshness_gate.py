@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result"
+    "prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout"
+    "review_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result"
+    "prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout.lean"
+    / "ToeNativePsiAU1InteractionExchangeRuleFamilyCloseoutResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,12 +2424,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_"
         "20260626_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSED_AS_BOUNDED_"
-        "CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_"
+        "ACCEPTS_BOUNDED_CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_"
         "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
@@ -3405,6 +3405,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_"
         "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
     )
+    psi_a_interaction_exchange_rule_family_closeout_result_review_result = (
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_"
+        "ACCEPTS_BOUNDED_CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_"
+        "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3416,7 +3421,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_"
+        "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_"
         "20260626_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
@@ -3426,16 +3431,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["closeout_result"] == (
         psi_a_interaction_exchange_rule_family_closeout_result
     )
+    assert interaction_active_workstream["closeout_result_review_result"] == (
+        psi_a_interaction_exchange_rule_family_closeout_result_review_result
+    )
     assert interaction_active_workstream["outcome_id"] == (
-        psi_a_interaction_exchange_rule_family_closeout_result
+        psi_a_interaction_exchange_rule_family_closeout_result_review_result
     )
     assert interaction_active_workstream["result_token"] == (
-        psi_a_interaction_exchange_rule_family_closeout_result
+        psi_a_interaction_exchange_rule_family_closeout_result_review_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result_review"
+    ] == "master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_preparation"
     assert interaction_active_workstream[
         "interaction_exchange_rule_family_synthesis_packet_prepared"
     ] == "yes"
@@ -3451,16 +3459,27 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "interaction_exchange_rule_family_closeout_prepared"
     ] == "yes"
+    assert interaction_active_workstream["closeout_result_review_prepared"] == "yes"
+    assert interaction_active_workstream["closeout_result_review_accepted"] == "yes"
     assert interaction_active_workstream[
         "interaction_exchange_rule_family_closed"
     ] == "yes"
     assert interaction_active_workstream[
         "bounded_current_source_exchange_admissibility_family_closed"
     ] == "yes"
+    assert interaction_active_workstream[
+        "current_source_exchange_total_conservation_route_preserved"
+    ] == "yes"
     assert interaction_active_workstream["C_exchange_remains_admissibility_only"] == "yes"
     assert interaction_active_workstream["C_exchange_admissibility_rule_included"] == "yes"
     assert interaction_active_workstream["C_exchange_admissibility_rule_closed"] == "yes"
     assert interaction_active_workstream["C_exchange_rule_family_closed"] == "yes"
+    assert interaction_active_workstream[
+        "master_action_ck_family_status_synthesis_authorized"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "master_action_ck_family_status_synthesis_prepared"
+    ] == "no"
     assert interaction_active_workstream["follow_on_decision_executed"] == "no"
     assert interaction_active_workstream["master_action_surface_selected_after_closeout"] == "no"
     assert interaction_active_workstream["ck_family_status_synthesis_prepared"] == "no"
