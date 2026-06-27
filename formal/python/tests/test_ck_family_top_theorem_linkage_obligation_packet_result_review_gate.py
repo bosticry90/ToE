@@ -267,7 +267,7 @@ def test_ck_family_top_theorem_linkage_obligation_packet_result_review_rotates_t
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -296,22 +296,41 @@ def test_ck_family_top_theorem_linkage_obligation_packet_result_review_rotates_t
     assert consumed["master_action_promoted"] == "no"
 
     active = _workstream(registry, NEXT_TARGET)
-    assert active["status"] == "active"
+    assert active["status"] == "paused"
     assert active["workstream_id"] == NEXT_TARGET
     assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
+    assert active["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CExchangeTheoremLinkageAttemptFromTotalConservationRoute.lean"
+    )
     assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["result_token"] == OUTCOME_ID
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active["recommended_outcome"] == ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME
+    assert active["packet_result"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_PREPARED_"
+        "DEFINITIONAL_LINKAGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_PROMOTION"
+    )
+    assert active["strict_packet_result"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_PREPARED_"
+        "TOTAL_CONSERVATION_TO_CEXCHANGE_ZERO_LINKAGE_TARGET_NO_ACTION_VARIATION_OR_"
+        "MASTER_ACTION_PROMOTION"
+    )
+    assert active["report"] == (
+        "formal/docs/release/"
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_20260627_v0.json"
+    )
+    assert active["selected_next_target"] == (
+        "review_cexchange_theorem_linkage_attempt_from_total_conservation_route_result"
+    )
+    assert active["selected_next_target_kind"] == (
+        "cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review"
+    )
     assert active["theorem_target_id"] == THEOREM_TARGET_ID
     assert active["theorem_target_recorded"] == "yes"
     assert active["theorem_target_indexed"] == "yes"
-    assert active["selected_proof_target"] == "NONE_SELECTED"
+    assert active["attempt_type"] == "definitional theorem-linkage attempt"
+    assert active["proof_style"] == (
+        "definition expansion plus accepted total-conservation route"
+    )
+    assert active["selected_proof_target"] == THEOREM_TARGET_ID
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"

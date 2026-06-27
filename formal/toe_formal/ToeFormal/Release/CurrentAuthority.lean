@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_cexchange_theorem_linkage_attempt_from_total_conservation_route" := by
+      "review_cexchange_theorem_linkage_attempt_from_total_conservation_route_result" := by
   native_decide
 
 end CurrentAuthority
