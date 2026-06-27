@@ -511,38 +511,52 @@ def test_psi_a_u1_interaction_exchange_rule_family_closeout_rotates_to_result_re
                     CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
                 )
 
-                active_row = _workstream(
+                selector_row = _workstream(
                     registry, CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
                 )
-                assert active_row["status"] == "active"
-                assert active_row["workstream_id"] == (
-                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
-                )
-                assert active_row["active_lane"] == (
-                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
-                )
-                assert active_row["authorization_evidence"] == str(
-                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH.relative_to(
-                        REPO_ROOT
+                if selector_row["status"] == "active":
+                    assert selector_row["workstream_id"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
                     )
-                ).replace("\\", "/")
-                assert active_row["report"] == str(
-                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT.relative_to(REPO_ROOT)
-                ).replace("\\", "/")
-                assert active_row["consumed_target"] == (
-                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
-                )
-                assert active_row["packet_result"] == "PENDING"
-                assert active_row["review_result"] == "PENDING"
-                assert active_row["outcome_id"] == (
-                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME
-                )
-                assert active_row["selected_next_target"] == (
-                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
-                )
-                assert active_row["selected_next_target_kind"] == (
-                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET_KIND
-                )
+                    assert selector_row["active_lane"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                    )
+                    assert selector_row["authorization_evidence"] == str(
+                        CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH.relative_to(
+                            REPO_ROOT
+                        )
+                    ).replace("\\", "/")
+                    assert selector_row["report"] == str(
+                        CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT.relative_to(REPO_ROOT)
+                    ).replace("\\", "/")
+                    assert selector_row["consumed_target"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                    )
+                    assert selector_row["packet_result"] == "PENDING"
+                    assert selector_row["review_result"] == "PENDING"
+                    assert selector_row["outcome_id"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME
+                    )
+                    assert selector_row["selected_next_target"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                    )
+                    assert selector_row["selected_next_target_kind"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET_KIND
+                    )
+                else:
+                    gap_target = (
+                        "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
+                    )
+                    assert selector_row["status"] == "paused"
+                    assert selector_row["selected_next_target"] == gap_target
+                    assert selector_row["master_action_surface_selector_executed"] == "yes"
+                    assert selector_row["ck_family_gap_review_selected"] == "yes"
+                    gap_row = _workstream(registry, gap_target)
+                    assert gap_row["status"] == "active"
+                    assert gap_row["consumed_target"] == (
+                        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                    )
+                    assert gap_row["ck_family_gap_review_prepared"] == "no"
 
 
 def test_psi_a_u1_interaction_exchange_rule_family_closeout_mirrors() -> None:
@@ -577,10 +591,6 @@ def test_psi_a_u1_interaction_exchange_rule_family_closeout_mirrors() -> None:
         CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET,
         CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET,
         CLOSEOUT_REVIEW_OUTCOME,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET}",
-        f"CURRENT_LIVE_TARGET_REPORT_v0: {str(CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT.relative_to(REPO_ROOT)).replace(chr(92), '/')}",
-        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME}",
         "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_OUTCOME_v0",
         "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_OUTCOME_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0",

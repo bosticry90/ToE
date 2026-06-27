@@ -323,34 +323,46 @@ def test_master_action_ck_family_status_synthesis_rotates_to_result_review() -> 
         assert review_row["master_action_surface_selector_executed"] == "no"
         assert review_row["master_action_surface_selected"] == "no"
 
-        active_row = _workstream(registry, SYNTHESIS_RESULT_REVIEW_NEXT_TARGET)
-        assert active_row["status"] == "active"
-        assert active_row["workstream_id"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
-        assert active_row["active_lane"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
-        assert active_row["authorized_next_strict_target"] == (
-            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
-        )
-        assert active_row["authorized_target"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
-        assert active_row["authorization_evidence"] == _rel(
-            SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH
-        )
-        assert active_row["report"] == _rel(SYNTHESIS_RESULT_REVIEW_OUT)
-        assert active_row["consumed_target"] == NEXT_TARGET
-        assert active_row["packet_result"] == "PENDING"
-        assert active_row["review_result"] == "PENDING"
-        assert active_row["outcome_id"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
-        assert active_row["selected_next_target"] == (
-            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
-        )
-        assert active_row["selected_next_target_kind"] == (
-            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET_KIND
-        )
-        assert active_row["recommended_selector_choice"] == (
-            SYNTHESIS_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE
-        )
-        assert active_row["master_action_surface_selector_authorized"] == "yes"
-        assert active_row["master_action_surface_selector_executed"] == "no"
-        assert active_row["master_action_surface_selected"] == "no"
+        selector_row = _workstream(registry, SYNTHESIS_RESULT_REVIEW_NEXT_TARGET)
+        if selector_row["status"] == "active":
+            assert selector_row["workstream_id"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+            assert selector_row["active_lane"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+            assert selector_row["authorized_next_strict_target"] == (
+                SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+            )
+            assert selector_row["authorized_target"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+            assert selector_row["authorization_evidence"] == _rel(
+                SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH
+            )
+            assert selector_row["report"] == _rel(SYNTHESIS_RESULT_REVIEW_OUT)
+            assert selector_row["consumed_target"] == NEXT_TARGET
+            assert selector_row["packet_result"] == "PENDING"
+            assert selector_row["review_result"] == "PENDING"
+            assert selector_row["outcome_id"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
+            assert selector_row["selected_next_target"] == (
+                SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+            )
+            assert selector_row["selected_next_target_kind"] == (
+                SYNTHESIS_RESULT_REVIEW_NEXT_TARGET_KIND
+            )
+            assert selector_row["recommended_selector_choice"] == (
+                SYNTHESIS_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE
+            )
+            assert selector_row["master_action_surface_selector_authorized"] == "yes"
+            assert selector_row["master_action_surface_selector_executed"] == "no"
+            assert selector_row["master_action_surface_selected"] == "no"
+        else:
+            gap_target = "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
+            assert selector_row["status"] == "paused"
+            assert selector_row["selected_next_target"] == gap_target
+            assert selector_row["master_action_surface_selector_executed"] == "yes"
+            assert selector_row["master_action_surface_selected"] == "yes"
+            assert selector_row["ck_family_gap_review_selected"] == "yes"
+            gap_row = _workstream(registry, gap_target)
+            assert gap_row["status"] == "active"
+            assert gap_row["consumed_target"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+            assert gap_row["selected_next_target"] == gap_target
+            assert gap_row["ck_family_gap_review_prepared"] == "no"
 
 
 def test_master_action_ck_family_status_synthesis_mirrors() -> None:
@@ -381,12 +393,6 @@ def test_master_action_ck_family_status_synthesis_mirrors() -> None:
         CONSUMED_TARGET,
         NEXT_TARGET,
         SYNTHESIS_RESULT_REVIEW_NEXT_TARGET,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {SYNTHESIS_RESULT_REVIEW_NEXT_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        f"ACTIVE_LANE_v0: {SYNTHESIS_RESULT_REVIEW_NEXT_TARGET}",
-        f"CURRENT_LIVE_TARGET_EVIDENCE_v0: {_rel(SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH)}",
-        f"CURRENT_LIVE_TARGET_REPORT_v0: {_rel(SYNTHESIS_RESULT_REVIEW_OUT)}",
-        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {SYNTHESIS_RESULT_REVIEW_OUTCOME}",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME_v0",

@@ -257,7 +257,6 @@ def test_master_action_ck_family_status_synthesis_result_review_rotates_to_selec
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -266,9 +265,6 @@ def test_master_action_ck_family_status_synthesis_result_review_rotates_to_selec
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -285,6 +281,25 @@ def test_master_action_ck_family_status_synthesis_result_review_rotates_to_selec
     assert consumed["master_action_surface_selector_authorized"] == "yes"
     assert consumed["master_action_surface_selector_executed"] == "no"
     assert consumed["master_action_surface_selected"] == "no"
+
+    if not is_current:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+        selector_row = _workstream(registry, NEXT_TARGET)
+        assert selector_row["status"] == "paused"
+        assert selector_row["selected_next_target"] == (
+            "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
+        )
+        assert selector_row["master_action_surface_selector_executed"] == "yes"
+        assert selector_row["master_action_surface_selected"] == "yes"
+        assert selector_row["ck_family_gap_review_selected"] == "yes"
+        assert selector_row["ck_family_gap_review_prepared"] == "no"
+        return
+
+    assert NEXT_TARGET not in registry["completed_targets"]
+    assert NEXT_TARGET not in registry["consumed_targets"]
+    assert NEXT_TARGET not in registry["paused_lanes"]
 
     active_row = _workstream(registry, NEXT_TARGET)
     assert active_row["status"] == "active"
@@ -341,12 +356,6 @@ def test_master_action_ck_family_status_synthesis_result_review_mirrors() -> Non
         "MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiAResultReview",
         CONSUMED_TARGET,
         NEXT_TARGET,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CONSUMED_TARGET}",
-        f"ACTIVE_LANE_v0: {NEXT_TARGET}",
-        f"CURRENT_LIVE_TARGET_EVIDENCE_v0: {_rel(LEAN_PACKET_PATH)}",
-        f"CURRENT_LIVE_TARGET_REPORT_v0: {_rel(DEFAULT_OUT)}",
-        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {OUTCOME_ID}",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
         C_SOURCE_CLASSIFICATION,
