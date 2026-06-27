@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisResultReview
+import ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisResultReview.selectedNextTarget
+  ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisResultReview.packetId
+  ToeNativePsiAU1InteractionExchangeRuleFamilyCloseout.packetId
 
-theorem current_target_points_to_psi_a_u1_interaction_exchange_rule_family_closeout :
+theorem current_target_points_to_psi_a_u1_interaction_exchange_rule_family_closeout_result_review :
     currentLiveTarget =
-      "prepare_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout" := by
+      "review_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result" := by
   rfl
 
 end CurrentTarget
