@@ -241,9 +241,12 @@ def test_cexchange_closeout_result_review_rotates_to_selector() -> None:
     assert active["status"] == "active"
     assert (
         active["workstream_id"]
+        == "prepare_psi_A_total_conservation_theorem_linkage_obligation_packet"
+    )
+    assert (
+        active["consumed_target"]
         == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
     )
-    assert active["consumed_target"] == NEXT_TARGET
 
     selector = _workstream(registry, NEXT_TARGET)
     assert selector["status"] == "paused"
@@ -269,7 +272,11 @@ def test_cexchange_closeout_result_review_rotates_to_selector() -> None:
     assert selector["rule_promoted"] == "no"
 
     assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
+    assert active["review_result"] == (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
+        "RESULT_REVIEW_ACCEPTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_SELECTION_"
+        "NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
     assert active["selected_obligation"] == LIKELY_NEXT_OBLIGATION
     assert active["general_C_k_theorem_linkage_closure"] == "no"
     assert active["rule_promoted"] == "no"

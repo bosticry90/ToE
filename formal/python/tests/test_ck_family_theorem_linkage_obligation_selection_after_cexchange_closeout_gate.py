@@ -9,6 +9,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
 from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_report import (
@@ -192,15 +193,18 @@ def test_ck_family_selection_after_cexchange_rotates_to_result_review() -> None:
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == selection_consumed_target()
-    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
-    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == evidence
-    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == _rel(DEFAULT_OUT)
-    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == OUTCOME_ID
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=selection_consumed_target(),
+        live_target=NEXT_TARGET,
+        evidence=evidence,
+        lane=NEXT_TARGET,
+    )
+    assert is_current is False
     assert selection_consumed_target() in registry["completed_targets"]
     assert selection_consumed_target() in registry["consumed_targets"]
     assert selection_consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, selection_consumed_target())
@@ -216,19 +220,38 @@ def test_ck_family_selection_after_cexchange_rotates_to_result_review() -> None:
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
+    review = _workstream(registry, NEXT_TARGET)
+    assert review["status"] == "paused"
+    assert review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseoutResultReview.lean"
+    )
+    assert review["report"] == (
+        "formal/docs/release/"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_RESULT_REVIEW_20260627_v0.json"
+    )
+    assert review["review_result"] == (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
+        "RESULT_REVIEW_ACCEPTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_SELECTION_"
+        "NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    assert review["selected_next_target"] == (
+        "prepare_psi_A_total_conservation_theorem_linkage_obligation_packet"
+    )
+    assert review["selected_obligation"] == SELECTED_OBLIGATION
+    assert review["proof_attempt_executed"] == "no"
+    assert review["theorem_discharged"] == "no"
+    assert review["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == selection_consumed_target()
+    assert (
+        active["workstream_id"]
+        == "prepare_psi_A_total_conservation_theorem_linkage_obligation_packet"
+    )
+    assert active["consumed_target"] == NEXT_TARGET
     assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["selection_result"] == OUTCOME_ID
-    assert active["strict_selection_result"] == STRICT_SELECTION_RESULT
     assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["follow_on_target_after_review"] == FOLLOW_ON_TARGET_AFTER_REVIEW
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
