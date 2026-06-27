@@ -37,6 +37,11 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_ce
     TOTAL_STRESS_ENERGY_DEFINITION,
     build_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout,
 )
+from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_packet_report import (
+    CONSUMED_TARGET as PSI_A_PACKET_CONSUMED_TARGET,
+    NEXT_TARGET as PSI_A_PACKET_REVIEW_TARGET,
+    OUTCOME_ID as PSI_A_PACKET_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -245,12 +250,10 @@ def test_ck_family_selection_after_cexchange_rotates_to_result_review() -> None:
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert (
-        active["workstream_id"]
-        == "prepare_psi_A_total_conservation_theorem_linkage_obligation_packet"
-    )
-    assert active["consumed_target"] == NEXT_TARGET
-    assert active["packet_result"] == "PENDING"
+    assert active["workstream_id"] == PSI_A_PACKET_REVIEW_TARGET
+    assert active["consumed_target"] == PSI_A_PACKET_CONSUMED_TARGET
+    assert active["packet_result"] == PSI_A_PACKET_OUTCOME
+    assert active["review_result"] == "PENDING"
     assert active["selected_obligation"] == SELECTED_OBLIGATION
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"

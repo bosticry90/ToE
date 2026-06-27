@@ -9,6 +9,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
 from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result_review_report import (
@@ -35,6 +36,12 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_ce
     TOTAL_CONSERVATION_CONCLUSION,
     TOTAL_STRESS_ENERGY_DEFINITION,
     build_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result_review,
+)
+from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_packet_report import (
+    DEFAULT_OUT as PSI_A_PACKET_OUT,
+    LEAN_PACKET_PATH as PSI_A_PACKET_LEAN_PACKET_PATH,
+    NEXT_TARGET as PSI_A_PACKET_REVIEW_TARGET,
+    OUTCOME_ID as PSI_A_PACKET_OUTCOME,
 )
 
 
@@ -194,16 +201,18 @@ def test_ck_family_selection_result_review_rotates_to_obligation_packet() -> Non
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
+    assert_historical_target_recorded(
+        payload=registry,
+        previous_target=consumed_target(),
+        live_target=NEXT_TARGET,
+        evidence=evidence,
+        lane=NEXT_TARGET,
+    )
 
-    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == consumed_target()
-    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
-    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == evidence
-    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == _rel(DEFAULT_OUT)
-    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == OUTCOME_ID
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, consumed_target())
@@ -219,15 +228,25 @@ def test_ck_family_selection_result_review_rotates_to_obligation_packet() -> Non
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
+    packet = _workstream(registry, NEXT_TARGET)
+    assert packet["status"] == "paused"
+    assert packet["authorization_evidence"] == _rel(PSI_A_PACKET_LEAN_PACKET_PATH)
+    assert packet["report"] == _rel(PSI_A_PACKET_OUT)
+    assert packet["packet_result"] == PSI_A_PACKET_OUTCOME
+    assert packet["selected_next_target"] == PSI_A_PACKET_REVIEW_TARGET
+    assert packet["proof_attempt_executed"] == "no"
+    assert packet["theorem_discharged"] == "no"
+    assert packet["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == OUTCOME_ID
+    assert active["workstream_id"] == PSI_A_PACKET_REVIEW_TARGET
+    assert active["active_lane"] == PSI_A_PACKET_REVIEW_TARGET
+    assert active["authorization_evidence"] == _rel(PSI_A_PACKET_LEAN_PACKET_PATH)
+    assert active["authorized_next_strict_target"] == PSI_A_PACKET_REVIEW_TARGET
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["packet_result"] == PSI_A_PACKET_OUTCOME
+    assert active["review_result"] == "PENDING"
     assert active["selected_obligation"] == SELECTED_OBLIGATION
     assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
     assert active["proof_attempt_executed"] == "no"
