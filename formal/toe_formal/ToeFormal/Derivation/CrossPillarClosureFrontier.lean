@@ -366,7 +366,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_ck_family_theorem_linkage_obligation_index_result"
+        "select_next_ck_family_theorem_linkage_obligation_after_index"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -394,7 +394,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_ck_family_theorem_linkage_obligation_index_result"
+        "select_next_ck_family_theorem_linkage_obligation_after_index"
       status := .retained }
   ]
 
@@ -414,11 +414,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the selector-result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_ck_family_theorem_linkage_obligation_index"
-
-/-- Current live target after the theorem-linkage obligation index. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_ck_family_theorem_linkage_obligation_index_result"
+
+/-- Current live target after the theorem-linkage obligation index result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_ck_family_theorem_linkage_obligation_after_index"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_ck_family_theorem_linkage_obligation_index_result"
+    "select_next_ck_family_theorem_linkage_obligation_after_index"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

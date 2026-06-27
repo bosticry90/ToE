@@ -258,7 +258,7 @@ def test_ck_family_theorem_linkage_obligation_index_rotates_to_result_review() -
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -267,9 +267,9 @@ def test_ck_family_theorem_linkage_obligation_index_rotates_to_result_review() -
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["completed_targets"]
+    assert NEXT_TARGET in registry["consumed_targets"]
+    assert NEXT_TARGET in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -287,24 +287,23 @@ def test_ck_family_theorem_linkage_obligation_index_rotates_to_result_review() -
     assert consumed["no_rule_promoted"] == "yes"
     assert consumed["master_action_promoted"] == "no"
 
-    active = _workstream(registry, NEXT_TARGET)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["authorized_target"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active["theorem_linkage_obligation_index_prepared"] == "yes"
-    assert active["proof_obligation_row_count"] == "13"
-    assert active["obligation_rows_discharged"] == "no"
-    assert active["master_action_promoted"] == "no"
+    result_review = _workstream(registry, NEXT_TARGET)
+    assert result_review["status"] == "paused"
+    assert result_review["workstream_id"] == NEXT_TARGET
+    assert result_review["active_lane"] == NEXT_TARGET
+    assert result_review["consumed_target"] == NEXT_TARGET
+    assert result_review["selected_next_target"] == (
+        "select_next_ck_family_theorem_linkage_obligation_after_index"
+    )
+    assert result_review["selected_next_target_kind"] == (
+        "ck_family_theorem_linkage_obligation_after_index_selector"
+    )
+    assert result_review["theorem_linkage_obligation_index_reviewed"] == "yes"
+    assert result_review["proof_obligation_row_count"] == "13"
+    assert result_review["proof_debt_target_selected"] == "no"
+    assert result_review["proof_execution_authorized"] == "no"
+    assert result_review["obligation_rows_discharged"] == "no"
+    assert result_review["master_action_promoted"] == "no"
 
 
 def test_ck_family_theorem_linkage_obligation_index_mirrors() -> None:
