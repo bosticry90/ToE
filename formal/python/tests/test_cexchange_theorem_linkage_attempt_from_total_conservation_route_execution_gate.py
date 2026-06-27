@@ -261,8 +261,10 @@ def test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review() 
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     closeout_target = "prepare_cexchange_theorem_linkage_obligation_closeout"
     closeout_review_target = "review_cexchange_theorem_linkage_obligation_closeout_result"
+    selector_target = "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
     assert closeout_target in registry["next_strict_target_coverage"]
     assert closeout_review_target in registry["next_strict_target_coverage"]
+    assert selector_target in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -277,22 +279,22 @@ def test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review() 
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == closeout_review_target
-    assert active["active_lane"] == closeout_review_target
+    assert active["workstream_id"] == selector_target
+    assert active["active_lane"] == selector_target
     assert active["authorization_evidence"].endswith(
-        "CExchangeTheoremLinkageObligationCloseout.lean"
+        "CExchangeTheoremLinkageObligationCloseoutResultReview.lean"
     )
-    assert active["authorized_next_strict_target"] == closeout_review_target
-    assert active["consumed_target"] == closeout_target
+    assert active["authorized_next_strict_target"] == selector_target
+    assert active["consumed_target"] == closeout_review_target
     assert active["packet_result"] == "PENDING"
     assert active["closeout_result"] == (
         "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
         "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
     )
-    assert active["selected_next_target"] == closeout_review_target
+    assert active["selected_next_target"] == selector_target
     assert (
         active["selected_next_target_kind"]
-        == "cexchange_theorem_linkage_obligation_closeout_result_review"
+        == "ck_family_theorem_linkage_obligation_selector_after_cexchange_closeout"
     )
     assert active["proof_attempt_executed"] == "yes"
     assert active["theorem_discharged"] == "yes"

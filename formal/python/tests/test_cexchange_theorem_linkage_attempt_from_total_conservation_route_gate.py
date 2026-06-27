@@ -363,7 +363,7 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
     active = active_workstream(registry)
     assert (
         active["workstream_id"]
-        == "review_cexchange_theorem_linkage_obligation_closeout_result"
+        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
     )
     assert active["status"] == "active"
     assert active["closeout_result"] == (

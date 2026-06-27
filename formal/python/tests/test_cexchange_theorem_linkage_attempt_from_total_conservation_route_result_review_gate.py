@@ -301,20 +301,24 @@ def test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution() 
 
     active = active_workstream(registry)
     closeout_review_target = "review_cexchange_theorem_linkage_obligation_closeout_result"
+    selector_target = "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
     assert active["status"] == "active"
-    assert active["workstream_id"] == closeout_review_target
-    assert active["active_lane"] == closeout_review_target
+    assert active["workstream_id"] == selector_target
+    assert active["active_lane"] == selector_target
     assert active["authorization_evidence"].endswith(
-        "CExchangeTheoremLinkageObligationCloseout.lean"
+        "CExchangeTheoremLinkageObligationCloseoutResultReview.lean"
     )
-    assert active["authorized_next_strict_target"] == closeout_review_target
+    assert active["authorized_next_strict_target"] == selector_target
     assert active["packet_result"] == "PENDING"
     assert active["closeout_result"] == (
         "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
         "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
     )
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == closeout_review_target
+    assert active["review_result"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
+        "DEFINITIONAL_TOTAL_CONSERVATION_LINKAGE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+    )
+    assert active["selected_next_target"] == selector_target
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_target_execution_authorized"] == "no"
     assert active["theorem_linkage_proof_attempt_authorized"] == "no"

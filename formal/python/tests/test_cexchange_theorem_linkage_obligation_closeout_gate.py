@@ -9,6 +9,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
 from formal.python.tools.cexchange_theorem_linkage_obligation_closeout_report import (
@@ -209,20 +210,23 @@ def test_cexchange_closeout_records_lean_status() -> None:
 def test_cexchange_closeout_rotates_to_result_review() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=CONSUMED_TARGET,
+        live_target=NEXT_TARGET,
+        evidence=evidence,
+        lane=NEXT_TARGET,
+    )
+    assert not is_current
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == CONSUMED_TARGET
-    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
-    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == evidence
-    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == _rel(DEFAULT_OUT)
-    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == OUTCOME_ID
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
@@ -238,23 +242,25 @@ def test_cexchange_closeout_rotates_to_result_review() -> None:
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
+    review = _workstream(registry, NEXT_TARGET)
+    assert review["status"] == "paused"
+    assert review["closeout_result"] == OUTCOME_ID
+    assert (
+        review["selected_next_target"]
+        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+    )
+    assert review["local_cexchange_obligation_closed"] == "yes"
+    assert review["general_C_k_theorem_linkage_closure"] == "no"
+    assert review["rule_promoted"] == "no"
+    assert review["master_action_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["closeout_result"] == OUTCOME_ID
-    assert active["result_token"] == OUTCOME_ID
-    assert active["likely_next_selector_target_after_review"] == LIKELY_NEXT_SELECTOR_TARGET
-    assert active["likely_next_obligation_after_closeout"] == LIKELY_NEXT_OBLIGATION
-    assert active["local_cexchange_obligation_closed"] == "yes"
-    assert active["general_C_k_theorem_linkage_closure"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    assert (
+        active["workstream_id"]
+        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
+    )
+    assert active["consumed_target"] == NEXT_TARGET
 
 
 def test_cexchange_closeout_mirrors() -> None:
