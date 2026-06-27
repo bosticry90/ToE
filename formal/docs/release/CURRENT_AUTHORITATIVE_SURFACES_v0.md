@@ -226,8 +226,10 @@ PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_NONCLAIM_BOUNDARY_v0: This cl
 PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0: This result review accepts only that the bounded psi-A U(1) interaction family is closed, that the current/source/exchange/total-conservation route is preserved, and that C_exchange remains admissibility-only. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no direct dynamical-law claim, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface. The full ToeFormal aggregate is kept as NOT_RUN.
 PSI_A_U1_CURRENT_CONSERVATION_FROM_DIRAC_PAIR_PACKET_NONCLAIM_BOUNDARY_v0: This is a bounded current-conservation-from-Dirac-pair packet only; it records nabla_mu J^mu = 0 for J^mu = q psibar gamma^mu psi under the selected psi-A U(1) policy, Dirac pair, gamma-compatibility assumptions, and domain/boundary assumptions. It records no sourced Maxwell closure, no full Maxwell system closure, no stress-energy derivation, no gauge-matter exchange identity, no total stress-energy conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
 PSI_A_U1_ADJOINT_DIRAC_ROUTE_PACKET_NONCLAIM_BOUNDARY_v0: This is an adjoint Dirac route packet only; it records D_mu psibar = nabla_mu psibar - i q A_mu psibar and delta_psi S_{psi A} -> i (D_mu psibar) gamma^mu + m psibar = 0 as a bounded adjoint equation route. It records no current conservation proof, no sourced Maxwell closure, no stress-energy derivation, no exchange identity, no total conservation proof, no C_exchange closeout, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Phase 2 authorization, no empirical validation, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN for this packet.
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A
-PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result
+MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_PREPARED_SOURCE_BRIDGE_TRANSPORT_AND_EXCHANGE_RULE_FAMILIES_SYNTHESIZED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION
+MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0: This packet is a master-action C_k family status synthesis only. It classifies C_source as field/source admissibility, C_bridge as route-matching admissibility, C_transport as derivation-chain stability, and C_exchange as interaction exchange-balance admissibility. It records isolated phi and A source/bridge/transport families and the bounded psi-A current/source/exchange/total-conservation family. All summarized rules remain admissibility-only, not action embedded, not varied, not direct dynamical laws, not empirical claims, and not master-action promotion. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface, and the full ToeFormal aggregate is kept as NOT_RUN.
+CURRENT_LIVE_NEXT_TARGET_v0: review_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_result
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A
 HISTORICAL_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet
 HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_CURRENT_LIVE_NEXT_TARGET_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
 HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result
@@ -413,12 +415,12 @@ HISTORICAL_QFT_GR_SEMICLASSICAL_GATE_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr
 HISTORICAL_QFT_GR_SOURCE_ADMISSIBILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source
 HISTORICAL_QFT_GR_BIANCHI_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source
 HISTORICAL_QFT_GR_ACTION_DERIVABILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source
-ACTIVE_LANE_v0: prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A
+ACTIVE_LANE_v0: review_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_result
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionExchangeRuleFamilyCloseoutResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_20260626_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_ACCEPTS_BOUNDED_CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_NO_EM_QFT_OR_CK_ACTION_CLOSURE
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiA.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_20260626_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_PREPARED_SOURCE_BRIDGE_TRANSPORT_AND_EXCHANGE_RULE_FAMILIES_SYNTHESIZED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION
 CURRENT_AUXILIARY_HYGIENE_TARGET_QUEUED_v0: prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces
 LEAN_VALIDATION_TIER_POLICY_v0: formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md
 POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
@@ -716,18 +718,19 @@ Current release-facing status:
 - MR-ASSUMP-003 distributional-pairing regular-domain attempt contract status: `bounded_repo_local_distributional_pairing_regular_domain_contract_pending_result_review_not_distributional_domain_proof_or_conservation_discharge`.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_result`
-- `ACTIVE_LANE_v0: prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A`
+- `ACTIVE_LANE_v0: review_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_result`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionExchangeRuleFamilyCloseoutResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_20260626_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_ACCEPTS_BOUNDED_CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_NO_EM_QFT_OR_CK_ACTION_CLOSURE`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiA.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_20260626_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_PREPARED_SOURCE_BRIDGE_TRANSPORT_AND_EXCHANGE_RULE_FAMILIES_SYNTHESIZED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION`
+- `MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_PREPARED_SOURCE_BRIDGE_TRANSPORT_AND_EXCHANGE_RULE_FAMILIES_SYNTHESIZED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION`
+- `MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0: This packet is a master-action C_k family status synthesis only. It classifies C_source as field/source admissibility, C_bridge as route-matching admissibility, C_transport as derivation-chain stability, and C_exchange as interaction exchange-balance admissibility. It records isolated phi and A source/bridge/transport families and the bounded psi-A current/source/exchange/total-conservation family. All summarized rules remain admissibility-only, not action embedded, not varied, not direct dynamical laws, not empirical claims, and not master-action promotion. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface, and the full ToeFormal aggregate is kept as NOT_RUN.`
 
 
 - `TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_OUTCOME_v0: TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE`
-
 Historical QFT-GR live-control anchors retained for focused legacy gate coverage:
 - `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_packet_result`
