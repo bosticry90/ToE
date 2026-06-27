@@ -1,0 +1,306 @@
+{
+  "C_exchange_admissibility_condition": "C_exchange^{Apsi,nu} = 0",
+  "C_exchange_admissibility_rule_included": true,
+  "C_exchange_candidate_scope": "admissibility-only interaction-exchange constraint candidate; not functionalized; not action-embedded; not varied",
+  "C_exchange_constraint_form": "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}",
+  "C_exchange_constraint_id": "psi_A_u1_total_exchange_conservation_residual_candidate",
+  "C_exchange_functional_embedding_claimed": false,
+  "C_exchange_plain_meaning": "The psi-A interaction is admissible only if the total matter-plus-gauge energy-momentum exchange balances.",
+  "C_exchange_remains_admissibility_only": true,
+  "C_exchange_rule_classification": "interaction exchange-balance rule",
+  "C_exchange_rule_epistemic_status": "admissibility-only",
+  "C_exchange_total_stress_energy_form": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "C_k_action_embedding_claimed": false,
+  "C_k_action_embedding_selected": false,
+  "C_k_action_variation_authorized": false,
+  "C_k_action_variation_executed": false,
+  "EM_QFT_closure": false,
+  "QFT_GR_closure": false,
+  "acceptance_criteria": {
+    "C_exchange_rule_included_as_admissibility_only": true,
+    "consumes_expected_synthesis_packet": true,
+    "no_forbidden_claims": true,
+    "required_routes_synthesized": true,
+    "review_criteria_all_accepted": true,
+    "route_family_chain_complete": true
+  },
+  "accepted": true,
+  "accepted_review_findings": [
+    "psi-A current route synthesized",
+    "current conservation route synthesized",
+    "sourced Maxwell route synthesized",
+    "gauge-sector exchange route synthesized",
+    "matter-sector exchange route synthesized",
+    "total stress-energy conservation route synthesized",
+    "C_exchange admissibility rule included"
+  ],
+  "accepted_review_findings_count": 7,
+  "aggregate_lean_validation_status_for_review": "NOT_RUN",
+  "anomaly_analysis_performed": false,
+  "artifact_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_20260626_v0",
+  "candidate_varied": false,
+  "captured_at_utc": "2026-06-26T00:00:00Z",
+  "closeout_outcome_hint": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSED_AS_BOUNDED_CURRENT_SOURCE_AND_EXCHANGE_ADMISSIBILITY_FAMILY_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+  "consumed_target": "review_toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_packet_result",
+  "critical_gate_fail_conditions": [
+    "drop any required route from the accepted synthesis",
+    "remove C_exchange admissibility-only status",
+    "claim C_k action embedding",
+    "execute C_k action variation",
+    "select multiplier/action or penalty route",
+    "interpret C_exchange as a new force law",
+    "claim full Maxwell closure",
+    "claim EM-QFT closure",
+    "claim QFT-GR closure",
+    "claim quantized electromagnetism",
+    "perform anomaly analysis",
+    "derive the Standard Model",
+    "authorize Phase 2",
+    "claim empirical validation",
+    "promote the master action",
+    "record full ToeFormal aggregate as passed, failed, or timed out"
+  ],
+  "current_candidate": "J^mu = q psibar gamma^mu psi",
+  "current_conservation_result": "nabla_mu J^mu = 0",
+  "current_conservation_route_synthesized": true,
+  "current_source_exchange_and_total_conservation_synthesis_accepted": true,
+  "direct_dynamical_law_interpretation_selected": false,
+  "direct_force_law_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "exchange_term_cancellation": "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0",
+  "files": {
+    "current_target_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "json_report": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_20260626_v0.json",
+    "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisResultReview.lean",
+    "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+    "qftgr_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "release_current_authority_aggregate_file": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "synthesis_packet_file": "formal/docs/release/TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_20260626_v0.json",
+    "synthesis_packet_lean_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisPacket.lean"
+  },
+  "full_Maxwell_closure_claimed": false,
+  "full_maxwell_closure_claimed": false,
+  "full_toeformal_aggregate_failed": false,
+  "full_toeformal_aggregate_passed": false,
+  "full_toeformal_aggregate_status_for_review": "NOT_RUN",
+  "full_toeformal_aggregate_timed_out": false,
+  "functional_action_embedding_claimed": false,
+  "gauge_sector_exchange_identity": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+  "gauge_sector_exchange_route_synthesized": true,
+  "interaction_exchange_rule_family_closeout_authorized": true,
+  "interaction_exchange_rule_family_closeout_prepared": false,
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisResultReview",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "master_action_promoted": false,
+  "master_action_promotion": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "The result review accepts the bounded psi-A U(1) interaction exchange synthesis: J^mu = q psibar gamma^mu psi; nabla_mu J^mu = 0; nabla_mu F^{mu nu} = J^nu; nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha; nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha; nabla_mu T_total^{mu nu} = 0; C_exchange^{Apsi,nu} = 0.",
+  "matter_sector_exchange_identity": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+  "matter_sector_exchange_route_synthesized": true,
+  "multiplier_action_route_selected": false,
+  "new_force_law_claimed": false,
+  "non_claim_boundary": "This result review accepts only the psi-A current route, current conservation route, sourced Maxwell route, gauge-sector exchange route, matter-sector exchange route, total stress-energy conservation route, and C_exchange admissibility rule inclusion. It records no C_k action embedding, no C_k action variation, no multiplier/action route, no penalty route, no direct dynamical-law interpretation, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no quantized electromagnetism, no anomaly analysis, no Standard Model derivation, no Phase 2 authorization, no empirical validation, and no master-action promotion. The master action remains a working-form, noncanonical organizing surface.",
+  "outcome_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_SYNTHESIS_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+  "packet_classification": "toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_result_review_accepts_current_source_exchange_and_total_conservation_synthesis_no_em_qft_or_ck_action_closure",
+  "packet_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_v0",
+  "packet_result": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_SYNTHESIS_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+  "penalty_route_selected": false,
+  "phase2_authorized": false,
+  "pillar_completion_inferred": false,
+  "plain_meaning": "The review accepts that the packet has synthesized matter current, conserved current, sourced gauge route, equal-and-opposite exchange, total balance, and C_exchange as the admissibility rule for that balance.",
+  "prepared": true,
+  "psi_A_current_route_synthesized": true,
+  "qft_gr_closure_claimed": false,
+  "quantized_electromagnetism_claimed": false,
+  "record_validated": true,
+  "result_review_accepted": true,
+  "result_review_prepared": true,
+  "review_criteria": [
+    {
+      "assessment": "The prepared interaction exchange synthesis packet is consumed.",
+      "evidence": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_ROUTES_SYNTHESIZED_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+      "row_id": "synthesis_packet_consumed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The A-variation current candidate route is accepted as synthesized.",
+      "evidence": "J^mu = q psibar gamma^mu psi",
+      "row_id": "psi_A_current_route_synthesized",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The current-conservation route is accepted as synthesized.",
+      "evidence": "nabla_mu J^mu = 0",
+      "row_id": "current_conservation_route_synthesized",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The sourced Maxwell route is accepted as bounded synthesis context.",
+      "evidence": [
+        "J^nu = q psibar gamma^nu psi",
+        "nabla_mu F^{mu nu} = J^nu"
+      ],
+      "row_id": "sourced_maxwell_route_synthesized",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The gauge-sector exchange route is accepted as synthesized.",
+      "evidence": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+      "row_id": "gauge_sector_exchange_route_synthesized",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The matter-sector equal-and-opposite exchange route is accepted as synthesized.",
+      "evidence": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+      "row_id": "matter_sector_exchange_route_synthesized",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The total stress-energy conservation route is accepted as synthesized.",
+      "evidence": [
+        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+        "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0",
+        "nabla_mu T_total^{mu nu} = 0"
+      ],
+      "row_id": "total_stress_energy_conservation_route_synthesized",
+      "status": "accepted"
+    },
+    {
+      "assessment": "C_exchange is included only as an admissibility rule.",
+      "evidence": [
+        "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}",
+        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+        "C_exchange^{Apsi,nu} = 0"
+      ],
+      "row_id": "C_exchange_admissibility_rule_included",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No action embedding, closure, empirical, Phase 2, or promotion claim is accepted.",
+      "evidence": [
+        "C_k_action_embedding_claimed=false",
+        "C_k_action_variation_executed=false",
+        "multiplier_action_route_selected=false",
+        "penalty_route_selected=false",
+        "em_qft_closure_claimed=false",
+        "qft_gr_closure_claimed=false",
+        "master_action_promoted=false"
+      ],
+      "row_id": "no_forbidden_closure_or_action_claims",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The next target is the bounded interaction exchange rule-family closeout.",
+      "evidence": "prepare_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout",
+      "row_id": "interaction_exchange_rule_family_closeout_selected",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 10,
+  "review_criteria_count": 10,
+  "review_executed": true,
+  "review_result": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_SYNTHESIS_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+  "route_family_chain": [
+    {
+      "route_id": "A_variation_current_candidate",
+      "route_role": "current candidate",
+      "statement": "J^mu = q psibar gamma^mu psi",
+      "status": "accepted_bounded_input"
+    },
+    {
+      "route_id": "current_conservation",
+      "route_role": "current conservation",
+      "statement": "nabla_mu J^mu = 0",
+      "status": "accepted_bounded_route"
+    },
+    {
+      "route_id": "sourced_maxwell_route",
+      "route_role": "sourced gauge route",
+      "source_current": "J^nu = q psibar gamma^nu psi",
+      "statement": "nabla_mu F^{mu nu} = J^nu",
+      "status": "recorded_bounded_sourced_route_no_full_maxwell_closure"
+    },
+    {
+      "route_id": "gauge_sector_exchange",
+      "route_role": "gauge-sector exchange",
+      "statement": "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha",
+      "status": "accepted_bounded_exchange_half"
+    },
+    {
+      "route_id": "matter_sector_exchange",
+      "route_role": "matter-sector exchange",
+      "statement": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+      "status": "accepted_bounded_exchange_half"
+    },
+    {
+      "cancellation": "- F^nu{}_alpha J^alpha + F^nu{}_alpha J^alpha = 0",
+      "route_id": "total_stress_energy_conservation",
+      "route_role": "total conservation",
+      "statement": "nabla_mu T_total^{mu nu} = 0",
+      "status": "accepted_bounded_total_route",
+      "total_stress_energy_object": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
+    },
+    {
+      "constraint_form": "C_exchange^{Apsi,nu}[g,A,psi] := nabla_mu T_total^{mu nu}",
+      "route_id": "C_exchange_rule",
+      "route_role": "interaction exchange-balance admissibility rule",
+      "statement": "C_exchange^{Apsi,nu} = 0",
+      "status": "closed_as_admissibility_only_rule",
+      "total_stress_energy_form": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
+    }
+  ],
+  "route_family_chain_count": 7,
+  "rule_family_classification": "psi-A U(1) interaction current/source/exchange/total-conservation/C_exchange route family",
+  "rule_family_epistemic_status": "bounded synthesis; admissibility-only for C_exchange",
+  "rule_family_id": "psi_A_u1_current_source_exchange_total_conservation_rule_family",
+  "schema_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_20260626_v0",
+  "seam_closure_claim": false,
+  "selected_interaction_route": "psi_A_u1_current_and_exchange_route",
+  "selected_next_target": "prepare_toe_native_psi_A_u1_interaction_exchange_rule_family_closeout",
+  "selected_next_target_kind": "toe_native_psi_A_u1_interaction_exchange_rule_family_closeout_preparation",
+  "source_current": "J^nu = q psibar gamma^nu psi",
+  "sourced_gauge_route": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_route_synthesized": true,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW",
+  "synthesis_packet_accepted": true,
+  "synthesis_packet_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_v0",
+  "synthesis_packet_outcome": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_ROUTES_SYNTHESIZED_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+  "synthesis_packet_result": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_CURRENT_SOURCE_EXCHANGE_AND_TOTAL_CONSERVATION_ROUTES_SYNTHESIZED_NO_EM_QFT_OR_CK_ACTION_CLOSURE",
+  "synthesis_packet_schema_id": "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_SYNTHESIS_PACKET_20260626_v0",
+  "total_stress_energy_conservation_identity": "nabla_mu T_total^{mu nu} = 0",
+  "total_stress_energy_conservation_route_synthesized": true,
+  "total_stress_energy_object": "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}",
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_allowed_values": [
+      "NOT_RUN"
+    ],
+    "aggregate_lean_validation_status_for_review": "NOT_RUN",
+    "checkpoint_type": "toe_native_psi_A_u1_interaction_exchange_rule_family_synthesis_result_review",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_toeformal_aggregate_failed": false,
+    "full_toeformal_aggregate_passed": false,
+    "full_toeformal_aggregate_status_for_review": "NOT_RUN",
+    "full_toeformal_aggregate_timed_out": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  }
+}

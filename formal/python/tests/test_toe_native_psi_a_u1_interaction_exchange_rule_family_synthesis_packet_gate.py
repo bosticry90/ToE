@@ -54,6 +54,13 @@ from formal.python.tools.toe_native_psi_a_u1_interaction_exchange_rule_family_sy
     TOTAL_STRESS_ENERGY_OBJECT,
     build_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_packet,
 )
+from formal.python.tools.toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_result_review_report import (
+    DEFAULT_OUT as SYNTHESIS_REVIEW_OUT,
+    LEAN_PACKET_PATH as SYNTHESIS_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as CLOSEOUT_TARGET,
+    NEXT_TARGET_KIND as CLOSEOUT_TARGET_KIND,
+    OUTCOME_ID as SYNTHESIS_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -291,7 +298,6 @@ def test_psi_a_u1_interaction_exchange_synthesis_rotates_to_result_review() -> N
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -300,9 +306,6 @@ def test_psi_a_u1_interaction_exchange_synthesis_rotates_to_result_review() -> N
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -321,40 +324,69 @@ def test_psi_a_u1_interaction_exchange_synthesis_rotates_to_result_review() -> N
     assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active_row = _workstream(registry, NEXT_TARGET)
-    assert active_row["status"] == "active"
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["active_lane"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["authorized_target"] == NEXT_TARGET
-    assert active_row["authorization_evidence"] == evidence
-    assert active_row["report"] == str(DEFAULT_OUT.relative_to(REPO_ROOT)).replace(
-        "\\", "/"
-    )
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["review_result"] == "PENDING"
-    assert active_row["result_review_prepared"] == "no"
-    assert active_row["outcome_id"] == OUTCOME_ID
-    assert active_row["result_token"] == OUTCOME_ID
-    assert active_row["selected_next_target"] == NEXT_TARGET
-    assert active_row["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active_row["interaction_exchange_rule_family_synthesis_packet_prepared"] == "yes"
-    assert active_row["interaction_exchange_rule_family_synthesized"] == "yes"
-    assert active_row["current_source_exchange_and_total_conservation_routes_synthesized"] == (
+    result_review_row = _workstream(registry, NEXT_TARGET)
+    assert result_review_row["workstream_id"] == NEXT_TARGET
+    assert result_review_row["interaction_exchange_rule_family_synthesis_packet_prepared"] == (
         "yes"
     )
-    assert active_row["C_exchange_rule_family_closed"] == "no"
-    assert active_row["C_exchange_closeout_accepted"] == "yes"
-    assert active_row["C_exchange_remains_admissibility_only"] == "yes"
-    assert active_row["C_exchange_rule_preserved"] == "yes"
-    assert active_row["functional_action_embedding_claimed"] == "no"
-    assert active_row["multiplier_action_route_selected"] == "no"
-    assert active_row["penalty_route_selected"] == "no"
-    assert active_row["C_k_action_variation_executed"] == "no"
-    assert active_row["em_qft_closure_claimed"] == "no"
-    assert active_row["qft_gr_closure_claimed"] == "no"
-    assert active_row["master_action_promoted"] == "no"
+    assert result_review_row["interaction_exchange_rule_family_synthesized"] == "yes"
+    assert result_review_row[
+        "current_source_exchange_and_total_conservation_routes_synthesized"
+    ] == "yes"
+    assert result_review_row["C_exchange_rule_family_closed"] == "no"
+    assert result_review_row["C_exchange_closeout_accepted"] == "yes"
+    assert result_review_row["C_exchange_remains_admissibility_only"] == "yes"
+    assert result_review_row["C_exchange_rule_preserved"] == "yes"
+    assert result_review_row["functional_action_embedding_claimed"] == "no"
+    assert result_review_row["multiplier_action_route_selected"] == "no"
+    assert result_review_row["penalty_route_selected"] == "no"
+    assert result_review_row["C_k_action_variation_executed"] == "no"
+    assert result_review_row["em_qft_closure_claimed"] == "no"
+    assert result_review_row["qft_gr_closure_claimed"] == "no"
+    assert result_review_row["master_action_promoted"] == "no"
+
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+        assert result_review_row["status"] == "active"
+        assert result_review_row["authorization_evidence"] == evidence
+        assert result_review_row["report"] == str(DEFAULT_OUT.relative_to(REPO_ROOT)).replace(
+            "\\", "/"
+        )
+        assert result_review_row["consumed_target"] == CONSUMED_TARGET
+        assert result_review_row["packet_result"] == "PENDING"
+        assert result_review_row["review_result"] == "PENDING"
+        assert result_review_row["result_review_prepared"] == "no"
+        assert result_review_row["outcome_id"] == OUTCOME_ID
+        assert result_review_row["result_token"] == OUTCOME_ID
+        assert result_review_row["selected_next_target"] == NEXT_TARGET
+        assert result_review_row["selected_next_target_kind"] == NEXT_TARGET_KIND
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+        assert result_review_row["status"] == "paused"
+        assert result_review_row["authorization_evidence"] == str(
+            SYNTHESIS_REVIEW_LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert result_review_row["report"] == str(
+            SYNTHESIS_REVIEW_OUT.relative_to(REPO_ROOT)
+        ).replace("\\", "/")
+        assert result_review_row["consumed_target"] == CONSUMED_TARGET
+        assert result_review_row["packet_result"] == SYNTHESIS_REVIEW_OUTCOME
+        assert result_review_row["review_result"] == SYNTHESIS_REVIEW_OUTCOME
+        assert result_review_row["result_review_prepared"] == "yes"
+        assert result_review_row["outcome_id"] == SYNTHESIS_REVIEW_OUTCOME
+        assert result_review_row["result_token"] == SYNTHESIS_REVIEW_OUTCOME
+        assert result_review_row["selected_next_target"] == CLOSEOUT_TARGET
+        assert result_review_row["selected_next_target_kind"] == CLOSEOUT_TARGET_KIND
+
+        active_row = _workstream(registry, CLOSEOUT_TARGET)
+        assert active_row["status"] == "active"
+        assert active_row["workstream_id"] == CLOSEOUT_TARGET
+        assert active_row["selected_next_target"] == CLOSEOUT_TARGET
+        assert active_row["selected_next_target_kind"] == CLOSEOUT_TARGET_KIND
+        assert active_row["outcome_id"] == SYNTHESIS_REVIEW_OUTCOME
+        assert active_row["result_token"] == SYNTHESIS_REVIEW_OUTCOME
 
 
 def test_psi_a_u1_interaction_exchange_synthesis_mirrors() -> None:
@@ -385,10 +417,10 @@ def test_psi_a_u1_interaction_exchange_synthesis_mirrors() -> None:
         "ToeNativePsiAU1InteractionExchangeRuleFamilySynthesisPacket",
         CONSUMED_TARGET,
         NEXT_TARGET,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CONSUMED_TARGET}",
-        f"CURRENT_LIVE_TARGET_REPORT_v0: {str(DEFAULT_OUT.relative_to(REPO_ROOT)).replace(chr(92), '/')}",
-        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {OUTCOME_ID}",
+        CLOSEOUT_TARGET,
+        SYNTHESIS_REVIEW_OUTCOME,
+        f"CURRENT_LIVE_NEXT_TARGET_v0: {CLOSEOUT_TARGET}",
+        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
         CURRENT_CANDIDATE,
         CURRENT_CONSERVATION_RESULT,
         SOURCE_CURRENT,
