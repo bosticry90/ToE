@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterCKFamilyGapReview
+import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterCKFamilyGapReviewResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  MasterActionSurfaceSelectionAfterCKFamilyGapReview.selectedNextTarget
+  MasterActionSurfaceSelectionAfterCKFamilyGapReviewResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  MasterActionSurfaceSelectionAfterCKFamilyGapReview.packetId
+  MasterActionSurfaceSelectionAfterCKFamilyGapReviewResultReview.packetId
 
-theorem current_target_points_to_selector_result_review_after_master_action_ck_family_gap_review_selector :
+theorem current_target_points_to_theorem_linkage_obligation_index_preparation_after_selector_result_review :
     currentLiveTarget =
-      "review_master_action_surface_selection_after_ck_family_gap_review_result" := by
+      "prepare_ck_family_theorem_linkage_obligation_index" := by
   rfl
 
 end CurrentTarget

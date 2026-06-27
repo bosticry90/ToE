@@ -48,6 +48,13 @@ from formal.python.tools.master_action_surface_selection_after_ck_family_gap_rev
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     build_master_action_surface_selection_after_ck_family_gap_review,
 )
+from formal.python.tools.master_action_surface_selection_after_ck_family_gap_review_result_review_report import (
+    DEFAULT_OUT as RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as RESULT_REVIEW_NEXT_TARGET,
+    NEXT_TARGET_KIND as RESULT_REVIEW_NEXT_TARGET_KIND,
+    OUTCOME_ID as RESULT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -261,7 +268,6 @@ def test_master_action_surface_selection_after_ck_family_gap_review_rotates_to_r
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -270,9 +276,6 @@ def test_master_action_surface_selection_after_ck_family_gap_review_rotates_to_r
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -290,6 +293,47 @@ def test_master_action_surface_selection_after_ck_family_gap_review_rotates_to_r
     assert consumed["no_rule_promoted"] == "yes"
     assert consumed["no_C_k_variation_occurs"] == "yes"
     assert consumed["master_action_promoted"] == "no"
+
+    if not is_current:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+
+        review = _workstream(registry, NEXT_TARGET)
+        assert review["status"] == "paused"
+        assert review["authorization_evidence"] == _rel(RESULT_REVIEW_LEAN_PACKET_PATH)
+        assert review["report"] == _rel(RESULT_REVIEW_OUT)
+        assert review["packet_result"] == RESULT_REVIEW_OUTCOME
+        assert review["review_result"] == RESULT_REVIEW_OUTCOME
+        assert review["outcome_id"] == RESULT_REVIEW_OUTCOME
+        assert review["selected_next_target"] == RESULT_REVIEW_NEXT_TARGET
+        assert review["selected_next_target_kind"] == RESULT_REVIEW_NEXT_TARGET_KIND
+        assert review["selector_result_review_prepared"] == "yes"
+        assert review["selector_result_review_accepted"] == "yes"
+        assert review["theorem_linkage_obligation_index_selected"] == "yes"
+        assert review["theorem_linkage_obligation_index_prepared"] == "no"
+        assert review["obligation_rows_discharged"] == "no"
+        assert review["master_action_promoted"] == "no"
+
+        active_index = _workstream(registry, RESULT_REVIEW_NEXT_TARGET)
+        assert active_index["status"] == "active"
+        assert active_index["workstream_id"] == RESULT_REVIEW_NEXT_TARGET
+        assert active_index["authorization_evidence"] == _rel(
+            RESULT_REVIEW_LEAN_PACKET_PATH
+        )
+        assert active_index["report"] == _rel(RESULT_REVIEW_OUT)
+        assert active_index["consumed_target"] == NEXT_TARGET
+        assert active_index["packet_result"] == "PENDING"
+        assert active_index["review_result"] == "PENDING"
+        assert active_index["theorem_linkage_obligation_index_selected"] == "yes"
+        assert active_index["theorem_linkage_obligation_index_prepared"] == "no"
+        assert active_index["obligation_rows_discharged"] == "no"
+        assert active_index["master_action_promoted"] == "no"
+        return
+
+    assert NEXT_TARGET not in registry["completed_targets"]
+    assert NEXT_TARGET not in registry["consumed_targets"]
+    assert NEXT_TARGET not in registry["paused_lanes"]
 
     active = _workstream(registry, NEXT_TARGET)
     assert active["status"] == "active"

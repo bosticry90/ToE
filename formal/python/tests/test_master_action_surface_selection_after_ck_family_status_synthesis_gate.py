@@ -391,14 +391,43 @@ def test_master_action_surface_selection_after_ck_family_status_synthesis_rotate
                     "prepare_ck_family_theorem_linkage_obligation_index"
                 )
                 selector_review = _workstream(registry, selector_review_target)
-                assert selector_review["status"] == "active"
-                assert selector_review["consumed_target"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
-                assert selector_review["selected_follow_on_target_after_review"] == (
-                    "prepare_ck_family_theorem_linkage_obligation_index"
-                )
-                assert selector_review["theorem_linkage_obligation_index_selected"] == "yes"
-                assert selector_review["theorem_linkage_obligation_index_prepared"] == "no"
-                assert selector_review["master_action_promoted"] == "no"
+                if selector_review["status"] == "active":
+                    assert (
+                        selector_review["consumed_target"]
+                        == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+                    )
+                    assert selector_review["selected_follow_on_target_after_review"] == (
+                        "prepare_ck_family_theorem_linkage_obligation_index"
+                    )
+                    assert (
+                        selector_review["theorem_linkage_obligation_index_selected"]
+                        == "yes"
+                    )
+                    assert (
+                        selector_review["theorem_linkage_obligation_index_prepared"]
+                        == "no"
+                    )
+                    assert selector_review["master_action_promoted"] == "no"
+                else:
+                    theorem_index_target = (
+                        "prepare_ck_family_theorem_linkage_obligation_index"
+                    )
+                    assert selector_review["status"] == "paused"
+                    assert selector_review["selected_next_target"] == theorem_index_target
+                    assert selector_review["selector_result_review_accepted"] == "yes"
+                    active_index = _workstream(registry, theorem_index_target)
+                    assert active_index["status"] == "active"
+                    assert active_index["consumed_target"] == selector_review_target
+                    assert (
+                        active_index["theorem_linkage_obligation_index_selected"]
+                        == "yes"
+                    )
+                    assert (
+                        active_index["theorem_linkage_obligation_index_prepared"]
+                        == "no"
+                    )
+                    assert active_index["obligation_rows_discharged"] == "no"
+                    assert active_index["master_action_promoted"] == "no"
         return
 
     assert NEXT_TARGET not in registry["completed_targets"]
