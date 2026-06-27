@@ -53,6 +53,14 @@ from formal.python.tools.psi_A_total_conservation_theorem_linkage_attempt_from_e
     STRICT_ATTEMPT_PREPARATION_RESULT,
     ATTEMPT_WATCH_ITEMS,
 )
+from formal.python.tools.psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result_review_report import (
+    DEFAULT_OUT as ATTEMPT_RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as ATTEMPT_EXECUTION_TARGET,
+    NEXT_TARGET_KIND as ATTEMPT_EXECUTION_TARGET_KIND,
+    OUTCOME_ID as ATTEMPT_RESULT_REVIEW_OUTCOME,
+    SUGGESTED_EXECUTION_OUTCOME as ATTEMPT_SUGGESTED_EXECUTION_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -261,17 +269,37 @@ def test_psi_A_total_conservation_packet_result_review_rotates_to_attempt_prepar
     assert attempt["theorem_discharged"] == "no"
     assert attempt["rule_promoted"] == "no"
 
+    attempt_review = workstream(ATTEMPT_REVIEW_TARGET, registry)
+    assert attempt_review["status"] == "paused"
+    assert attempt_review["authorization_evidence"] == _rel(
+        ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH
+    )
+    assert attempt_review["report"] == _rel(ATTEMPT_RESULT_REVIEW_OUT)
+    assert attempt_review["review_result"] == ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert attempt_review["selected_next_target"] == ATTEMPT_EXECUTION_TARGET
+    assert attempt_review["selected_next_target_kind"] == ATTEMPT_EXECUTION_TARGET_KIND
+    assert attempt_review["proof_attempt_executed"] == "no"
+    assert attempt_review["theorem_discharged"] == "no"
+    assert attempt_review["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == ATTEMPT_REVIEW_TARGET
-    assert active["active_lane"] == ATTEMPT_REVIEW_TARGET
-    assert active["authorization_evidence"] == attempt_evidence
-    assert active["authorized_next_strict_target"] == ATTEMPT_REVIEW_TARGET
-    assert active["consumed_target"] == NEXT_TARGET
-    assert active["packet_result"] == ATTEMPT_OUTCOME
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target_kind"] == ATTEMPT_REVIEW_TARGET_KIND
+    assert active["workstream_id"] == ATTEMPT_EXECUTION_TARGET
+    assert active["active_lane"] == ATTEMPT_EXECUTION_TARGET
+    assert active["authorization_evidence"] == _rel(
+        ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH
+    )
+    assert active["authorized_next_strict_target"] == ATTEMPT_EXECUTION_TARGET
+    assert active["consumed_target"] == ATTEMPT_REVIEW_TARGET
+    assert active["packet_result"] == ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert active["review_result"] == ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert active["execution_result"] == "PENDING"
+    assert active["suggested_execution_outcome"] == (
+        ATTEMPT_SUGGESTED_EXECUTION_OUTCOME
+    )
+    assert active["selected_next_target_kind"] == ATTEMPT_EXECUTION_TARGET_KIND
     assert active["watch_items"] == ATTEMPT_WATCH_ITEMS
+    assert active["proof_execution_authorized"] == "yes"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"

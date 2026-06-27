@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result" := by
+      "execute_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes" := by
   native_decide
 
 end CurrentAuthority
