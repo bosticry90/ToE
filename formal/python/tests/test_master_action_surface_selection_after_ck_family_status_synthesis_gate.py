@@ -23,6 +23,14 @@ from formal.python.tools.master_action_ck_family_gap_review_after_phi_a_and_psi_
     NEXT_TARGET_KIND as GAP_REVIEW_NEXT_TARGET_KIND,
     OUTCOME_ID as GAP_REVIEW_OUTCOME,
 )
+from formal.python.tools.master_action_ck_family_gap_review_after_phi_a_and_psi_a_result_review_report import (
+    DEFAULT_OUT as GAP_REVIEW_RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as GAP_REVIEW_RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET,
+    NEXT_TARGET_KIND as GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET_KIND,
+    OUTCOME_ID as GAP_REVIEW_RESULT_REVIEW_OUTCOME,
+    RECOMMENDED_SELECTOR_CHOICE as GAP_REVIEW_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE,
+)
 from formal.python.tools.master_action_surface_selection_after_ck_family_status_synthesis_report import (
     ARTIFACT_ID,
     BLOCKED_CLAIMS,
@@ -311,30 +319,68 @@ def test_master_action_surface_selection_after_ck_family_status_synthesis_rotate
         assert gap_row["gr_qm_closure_claimed"] == "no"
         assert gap_row["master_action_promoted"] == "no"
 
-        active = _workstream(registry, GAP_REVIEW_NEXT_TARGET)
-        assert active["status"] == "active"
-        assert active["workstream_id"] == GAP_REVIEW_NEXT_TARGET
-        assert active["active_lane"] == GAP_REVIEW_NEXT_TARGET
-        assert active["authorized_next_strict_target"] == GAP_REVIEW_NEXT_TARGET
-        assert active["authorized_target"] == GAP_REVIEW_NEXT_TARGET
-        assert active["authorization_evidence"] == _rel(GAP_REVIEW_LEAN_PACKET_PATH)
-        assert active["report"] == _rel(GAP_REVIEW_OUT)
-        assert active["consumed_target"] == NEXT_TARGET
-        assert active["packet_result"] == "PENDING"
-        assert active["review_result"] == "PENDING"
-        assert active["outcome_id"] == GAP_REVIEW_OUTCOME
-        assert active["result_token"] == GAP_REVIEW_OUTCOME
-        assert active["selected_next_target"] == GAP_REVIEW_NEXT_TARGET
-        assert active["selected_next_target_kind"] == GAP_REVIEW_NEXT_TARGET_KIND
-        assert active["gap_review_prepared"] == "yes"
-        assert active["gap_review_executed"] == "yes"
-        assert active["result_review_prepared"] == "no"
-        assert active["result_review_accepted"] == "no"
-        assert active["C_k_action_variation_executed"] == "no"
-        assert active["em_qft_closure_claimed"] == "no"
-        assert active["qft_gr_closure_claimed"] == "no"
-        assert active["gr_qm_closure_claimed"] == "no"
-        assert active["master_action_promoted"] == "no"
+        result_review = _workstream(registry, GAP_REVIEW_NEXT_TARGET)
+        if result_review["status"] == "active":
+            assert result_review["workstream_id"] == GAP_REVIEW_NEXT_TARGET
+            assert result_review["active_lane"] == GAP_REVIEW_NEXT_TARGET
+            assert result_review["authorized_next_strict_target"] == GAP_REVIEW_NEXT_TARGET
+            assert result_review["authorized_target"] == GAP_REVIEW_NEXT_TARGET
+            assert result_review["authorization_evidence"] == _rel(GAP_REVIEW_LEAN_PACKET_PATH)
+            assert result_review["report"] == _rel(GAP_REVIEW_OUT)
+            assert result_review["consumed_target"] == NEXT_TARGET
+            assert result_review["packet_result"] == "PENDING"
+            assert result_review["review_result"] == "PENDING"
+            assert result_review["outcome_id"] == GAP_REVIEW_OUTCOME
+            assert result_review["result_token"] == GAP_REVIEW_OUTCOME
+            assert result_review["selected_next_target"] == GAP_REVIEW_NEXT_TARGET
+            assert result_review["selected_next_target_kind"] == GAP_REVIEW_NEXT_TARGET_KIND
+            assert result_review["gap_review_prepared"] == "yes"
+            assert result_review["gap_review_executed"] == "yes"
+            assert result_review["result_review_prepared"] == "no"
+            assert result_review["result_review_accepted"] == "no"
+            assert result_review["C_k_action_variation_executed"] == "no"
+            assert result_review["em_qft_closure_claimed"] == "no"
+            assert result_review["qft_gr_closure_claimed"] == "no"
+            assert result_review["gr_qm_closure_claimed"] == "no"
+            assert result_review["master_action_promoted"] == "no"
+        else:
+            assert result_review["status"] == "paused"
+            assert result_review["authorization_evidence"] == _rel(
+                GAP_REVIEW_RESULT_REVIEW_LEAN_PACKET_PATH
+            )
+            assert result_review["report"] == _rel(GAP_REVIEW_RESULT_REVIEW_OUT)
+            assert result_review["packet_result"] == GAP_REVIEW_RESULT_REVIEW_OUTCOME
+            assert result_review["review_result"] == GAP_REVIEW_RESULT_REVIEW_OUTCOME
+            assert result_review["selected_next_target"] == (
+                GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+            )
+            assert result_review["selected_next_target_kind"] == (
+                GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET_KIND
+            )
+            assert result_review["result_review_prepared"] == "yes"
+            assert result_review["no_gap_discharged"] == "yes"
+            assert result_review["no_rule_promoted"] == "yes"
+            active = _workstream(registry, GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET)
+            assert active["status"] == "active"
+            assert active["workstream_id"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+            assert active["active_lane"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+            assert active["authorization_evidence"] == _rel(
+                GAP_REVIEW_RESULT_REVIEW_LEAN_PACKET_PATH
+            )
+            assert active["report"] == _rel(GAP_REVIEW_RESULT_REVIEW_OUT)
+            assert active["consumed_target"] == GAP_REVIEW_NEXT_TARGET
+            assert active["packet_result"] == "PENDING"
+            assert active["review_result"] == "PENDING"
+            assert active["outcome_id"] == GAP_REVIEW_RESULT_REVIEW_OUTCOME
+            assert active["selected_next_target"] == GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET
+            assert active["selected_next_target_kind"] == (
+                GAP_REVIEW_RESULT_REVIEW_NEXT_TARGET_KIND
+            )
+            assert active["recommended_selector_choice"] == (
+                GAP_REVIEW_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE
+            )
+            assert active["post_review_selector_executed"] == "no"
+            assert active["theorem_linkage_obligation_index_prepared"] == "no"
         return
 
     assert NEXT_TARGET not in registry["completed_targets"]

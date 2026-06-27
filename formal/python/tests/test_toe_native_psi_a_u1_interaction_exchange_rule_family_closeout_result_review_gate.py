@@ -425,10 +425,26 @@ def test_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_rotate
                     assert gap_row["gap_review_prepared"] == "yes"
                     assert str(gap_row["gap_count"]) == "8"
                     active_gap_review = _workstream(registry, gap_review_target)
-                    assert active_gap_review["status"] == "active"
-                    assert active_gap_review["consumed_target"] == gap_target
-                    assert active_gap_review["gap_review_prepared"] == "yes"
-                    assert active_gap_review["result_review_prepared"] == "no"
+                    if active_gap_review["status"] == "active":
+                        assert active_gap_review["consumed_target"] == gap_target
+                        assert active_gap_review["gap_review_prepared"] == "yes"
+                        assert active_gap_review["result_review_prepared"] == "no"
+                    else:
+                        post_review_selector = (
+                            "select_next_master_action_surface_after_ck_family_gap_review"
+                        )
+                        assert active_gap_review["status"] == "paused"
+                        assert active_gap_review["selected_next_target"] == (
+                            post_review_selector
+                        )
+                        assert active_gap_review["result_review_prepared"] == "yes"
+                        selector_row = _workstream(registry, post_review_selector)
+                        assert selector_row["status"] == "active"
+                        assert selector_row["consumed_target"] == gap_review_target
+                        assert selector_row["post_review_selector_executed"] == "no"
+                        assert selector_row[
+                            "theorem_linkage_obligation_index_prepared"
+                        ] == "no"
 
 
 def test_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_mirrors() -> None:

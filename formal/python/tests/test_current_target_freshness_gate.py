@@ -1157,9 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = (
-    "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result"
-)
+ACTIVE_LANE = "select_next_master_action_surface_after_ck_family_gap_review"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1338,7 +1336,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
+    "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1567,9 +1565,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = (
-    "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result"
-)
+LIVE_TARGET = "select_next_master_action_surface_after_ck_family_gap_review"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1585,7 +1581,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "MasterActionCKFamilyGapReviewAfterPhiAAndPsiA.lean"
+    / "MasterActionCKFamilyGapReviewAfterPhiAAndPsiAResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2425,10 +2421,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
         "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_"
-        "20260626_v0.json"
+        "RESULT_REVIEW_20260626_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_"
+        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_"
+        "ACCEPTS_"
         "RULE_FAMILY_GAPS_INDEXED_"
         "NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
     )
@@ -3416,6 +3413,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "RULE_FAMILY_GAPS_INDEXED_"
         "NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
     )
+    master_action_ck_family_gap_review_result_review_result = (
+        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_"
+        "ACCEPTS_RULE_FAMILY_GAPS_INDEXED_"
+        "NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3428,21 +3430,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
         "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_"
-        "20260626_v0.json"
+        "RESULT_REVIEW_20260626_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream["review_result"] == "PENDING"
     assert interaction_active_workstream["outcome_id"] == (
-        master_action_ck_family_gap_review_result
+        master_action_ck_family_gap_review_result_review_result
     )
     assert interaction_active_workstream["result_token"] == (
-        master_action_ck_family_gap_review_result
+        master_action_ck_family_gap_review_result_review_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "master_action_ck_family_gap_review_after_phi_A_and_psi_A_result_review"
+    ] == "master_action_surface_selection_after_ck_family_gap_review"
     assert interaction_active_workstream["gap_review_result"] == (
         master_action_ck_family_gap_review_result
     )
@@ -3467,8 +3469,33 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "yes"
     assert interaction_active_workstream["seam_closure_gap_indexed"] == "yes"
     assert interaction_active_workstream["empirical_discriminator_gap_indexed"] == "yes"
-    assert interaction_active_workstream["result_review_prepared"] == "no"
-    assert interaction_active_workstream["result_review_accepted"] == "no"
+    assert interaction_active_workstream["result_review_prepared"] == "yes"
+    assert interaction_active_workstream["result_review_accepted"] == "yes"
+    assert interaction_active_workstream["gap_review_result_review_prepared"] == "yes"
+    assert interaction_active_workstream["gap_review_result_review_accepted"] == "yes"
+    assert interaction_active_workstream[
+        "recommended_selector_choice"
+    ] == "prepare_ck_family_theorem_linkage_obligation_index"
+    assert interaction_active_workstream["post_review_selector_authorized"] == "yes"
+    assert interaction_active_workstream["post_review_selector_executed"] == "no"
+    assert interaction_active_workstream["master_action_surface_selector_authorized"] == "yes"
+    assert interaction_active_workstream["master_action_surface_selector_executed"] == "no"
+    assert interaction_active_workstream["master_action_surface_selected"] == "no"
+    assert (
+        interaction_active_workstream[
+            "theorem_linkage_obligation_index_authorized_for_selector"
+        ]
+        == "yes"
+    )
+    assert interaction_active_workstream["theorem_linkage_obligation_index_prepared"] == "no"
+    assert interaction_active_workstream["theorem_linkage_obligation_index_selected"] == "no"
+    assert interaction_active_workstream["no_gap_discharged"] == "yes"
+    assert interaction_active_workstream["no_gap_closed"] == "yes"
+    assert interaction_active_workstream["no_rule_promoted"] == "yes"
+    assert interaction_active_workstream["no_C_k_functionalization_occurs"] == "yes"
+    assert interaction_active_workstream["no_C_k_variation_occurs"] == "yes"
+    assert interaction_active_workstream["no_seam_closure_occurs"] == "yes"
+    assert interaction_active_workstream["no_master_action_promotion_occurs"] == "yes"
     assert interaction_active_workstream["post_review_branch_selected"] == "no"
     assert interaction_active_workstream["all_summarized_rules_admissibility_only"] == "yes"
     assert interaction_active_workstream["all_summarized_rules_not_action_embedded"] == "yes"
