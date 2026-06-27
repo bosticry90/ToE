@@ -48,6 +48,14 @@ from formal.python.tools.master_action_ck_family_status_synthesis_after_phi_a_an
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     build_master_action_ck_family_status_synthesis_after_phi_a_and_psi_a,
 )
+from formal.python.tools.master_action_ck_family_status_synthesis_result_review_report import (
+    DEFAULT_OUT as SYNTHESIS_RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as SYNTHESIS_RESULT_REVIEW_NEXT_TARGET,
+    NEXT_TARGET_KIND as SYNTHESIS_RESULT_REVIEW_NEXT_TARGET_KIND,
+    OUTCOME_ID as SYNTHESIS_RESULT_REVIEW_OUTCOME,
+    RECOMMENDED_SELECTOR_CHOICE as SYNTHESIS_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -243,7 +251,6 @@ def test_master_action_ck_family_status_synthesis_rotates_to_result_review() -> 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -252,9 +259,6 @@ def test_master_action_ck_family_status_synthesis_rotates_to_result_review() -> 
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -267,31 +271,86 @@ def test_master_action_ck_family_status_synthesis_rotates_to_result_review() -> 
     assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert consumed["master_action_ck_family_status_synthesis_prepared"] == "yes"
     assert consumed["ck_family_status_synthesis_prepared"] == "yes"
-    assert consumed["ck_family_status_synthesis_result_review_prepared"] == "no"
+    if is_current:
+        assert NEXT_TARGET not in registry["completed_targets"]
+        assert NEXT_TARGET not in registry["consumed_targets"]
+        assert NEXT_TARGET not in registry["paused_lanes"]
+        assert consumed["ck_family_status_synthesis_result_review_prepared"] == "no"
+        active_row = _workstream(registry, NEXT_TARGET)
+        assert active_row["status"] == "active"
+        assert active_row["workstream_id"] == NEXT_TARGET
+        assert active_row["active_lane"] == NEXT_TARGET
+        assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert active_row["authorized_target"] == NEXT_TARGET
+        assert active_row["authorization_evidence"] == evidence
+        assert active_row["report"] == _rel(DEFAULT_OUT)
+        assert active_row["consumed_target"] == CONSUMED_TARGET
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["review_result"] == "PENDING"
+        assert active_row["result_review_prepared"] == "no"
+        assert active_row["outcome_id"] == OUTCOME_ID
+        assert active_row["result_token"] == OUTCOME_ID
+        assert active_row["selected_next_target"] == NEXT_TARGET
+        assert active_row["selected_next_target_kind"] == NEXT_TARGET_KIND
+        assert active_row["master_action_ck_family_status_synthesis_prepared"] == "yes"
+        assert active_row["ck_family_status_synthesis_prepared"] == "yes"
+        assert active_row["C_k_action_variation_executed"] == "no"
+        assert active_row["em_qft_closure_claimed"] == "no"
+        assert active_row["qft_gr_closure_claimed"] == "no"
+        assert active_row["gr_qm_closure_claimed"] == "no"
+        assert active_row["master_action_promoted"] == "no"
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+        review_row = _workstream(registry, NEXT_TARGET)
+        assert review_row["status"] == "paused"
+        assert review_row["authorization_evidence"] == _rel(
+            SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH
+        )
+        assert review_row["report"] == _rel(SYNTHESIS_RESULT_REVIEW_OUT)
+        assert review_row["packet_result"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
+        assert review_row["review_result"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
+        assert review_row["outcome_id"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
+        assert review_row["result_token"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
+        assert review_row["selected_next_target"] == (
+            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+        )
+        assert review_row["selected_next_target_kind"] == (
+            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET_KIND
+        )
+        assert review_row["master_action_surface_selector_authorized"] == "yes"
+        assert review_row["master_action_surface_selector_executed"] == "no"
+        assert review_row["master_action_surface_selected"] == "no"
 
-    active_row = _workstream(registry, NEXT_TARGET)
-    assert active_row["status"] == "active"
-    assert active_row["workstream_id"] == NEXT_TARGET
-    assert active_row["active_lane"] == NEXT_TARGET
-    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_row["authorized_target"] == NEXT_TARGET
-    assert active_row["authorization_evidence"] == evidence
-    assert active_row["report"] == _rel(DEFAULT_OUT)
-    assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["packet_result"] == "PENDING"
-    assert active_row["review_result"] == "PENDING"
-    assert active_row["result_review_prepared"] == "no"
-    assert active_row["outcome_id"] == OUTCOME_ID
-    assert active_row["result_token"] == OUTCOME_ID
-    assert active_row["selected_next_target"] == NEXT_TARGET
-    assert active_row["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active_row["master_action_ck_family_status_synthesis_prepared"] == "yes"
-    assert active_row["ck_family_status_synthesis_prepared"] == "yes"
-    assert active_row["C_k_action_variation_executed"] == "no"
-    assert active_row["em_qft_closure_claimed"] == "no"
-    assert active_row["qft_gr_closure_claimed"] == "no"
-    assert active_row["gr_qm_closure_claimed"] == "no"
-    assert active_row["master_action_promoted"] == "no"
+        active_row = _workstream(registry, SYNTHESIS_RESULT_REVIEW_NEXT_TARGET)
+        assert active_row["status"] == "active"
+        assert active_row["workstream_id"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+        assert active_row["active_lane"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+        assert active_row["authorized_next_strict_target"] == (
+            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+        )
+        assert active_row["authorized_target"] == SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+        assert active_row["authorization_evidence"] == _rel(
+            SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH
+        )
+        assert active_row["report"] == _rel(SYNTHESIS_RESULT_REVIEW_OUT)
+        assert active_row["consumed_target"] == NEXT_TARGET
+        assert active_row["packet_result"] == "PENDING"
+        assert active_row["review_result"] == "PENDING"
+        assert active_row["outcome_id"] == SYNTHESIS_RESULT_REVIEW_OUTCOME
+        assert active_row["selected_next_target"] == (
+            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET
+        )
+        assert active_row["selected_next_target_kind"] == (
+            SYNTHESIS_RESULT_REVIEW_NEXT_TARGET_KIND
+        )
+        assert active_row["recommended_selector_choice"] == (
+            SYNTHESIS_RESULT_REVIEW_RECOMMENDED_SELECTOR_CHOICE
+        )
+        assert active_row["master_action_surface_selector_authorized"] == "yes"
+        assert active_row["master_action_surface_selector_executed"] == "no"
+        assert active_row["master_action_surface_selected"] == "no"
 
 
 def test_master_action_ck_family_status_synthesis_mirrors() -> None:
@@ -321,14 +380,16 @@ def test_master_action_ck_family_status_synthesis_mirrors() -> None:
         "MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiA",
         CONSUMED_TARGET,
         NEXT_TARGET,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CONSUMED_TARGET}",
-        f"ACTIVE_LANE_v0: {NEXT_TARGET}",
-        f"CURRENT_LIVE_TARGET_EVIDENCE_v0: {_rel(LEAN_PACKET_PATH)}",
-        f"CURRENT_LIVE_TARGET_REPORT_v0: {_rel(DEFAULT_OUT)}",
-        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {OUTCOME_ID}",
+        SYNTHESIS_RESULT_REVIEW_NEXT_TARGET,
+        f"CURRENT_LIVE_NEXT_TARGET_v0: {SYNTHESIS_RESULT_REVIEW_NEXT_TARGET}",
+        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
+        f"ACTIVE_LANE_v0: {SYNTHESIS_RESULT_REVIEW_NEXT_TARGET}",
+        f"CURRENT_LIVE_TARGET_EVIDENCE_v0: {_rel(SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH)}",
+        f"CURRENT_LIVE_TARGET_REPORT_v0: {_rel(SYNTHESIS_RESULT_REVIEW_OUT)}",
+        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {SYNTHESIS_RESULT_REVIEW_OUTCOME}",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0",
+        "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME_v0",
         C_SOURCE_CLASSIFICATION,
         C_BRIDGE_CLASSIFICATION,
         C_TRANSPORT_CLASSIFICATION,

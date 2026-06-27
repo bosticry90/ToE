@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiA
+import ToeFormal.Derivation.MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiAResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiA.selectedNextTarget
+  MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiAResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiA.packetId
+  MasterActionCKFamilyStatusSynthesisAfterPhiAAndPsiAResultReview.packetId
 
-theorem current_target_points_to_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_result_review :
+theorem current_target_points_to_master_action_surface_selection_after_ck_family_status_synthesis :
     currentLiveTarget =
-      "review_master_action_ck_family_status_synthesis_after_phi_A_and_psi_A_result" := by
+      "select_next_master_action_surface_after_ck_family_status_synthesis" := by
   rfl
 
 end CurrentTarget

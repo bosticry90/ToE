@@ -73,6 +73,13 @@ from formal.python.tools.master_action_ck_family_status_synthesis_after_phi_a_an
     NEXT_TARGET_KIND as CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET_KIND,
     OUTCOME_ID as CK_FAMILY_STATUS_SYNTHESIS_OUTCOME,
 )
+from formal.python.tools.master_action_ck_family_status_synthesis_result_review_report import (
+    DEFAULT_OUT as CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET,
+    NEXT_TARGET_KIND as CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET_KIND,
+    OUTCOME_ID as CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -457,29 +464,85 @@ def test_psi_a_u1_interaction_exchange_rule_family_closeout_rotates_to_result_re
             )
             assert synthesis_row["master_action_ck_family_status_synthesis_prepared"] == "yes"
 
-            active_row = _workstream(
-                registry, CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
-            )
-            assert active_row["status"] == "active"
-            assert active_row["workstream_id"] == (
+            if (
                 CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
-            )
-            assert active_row["active_lane"] == (
-                CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
-            )
-            assert active_row["authorization_evidence"] == str(
-                CK_FAMILY_STATUS_SYNTHESIS_LEAN_PACKET_PATH.relative_to(REPO_ROOT)
-            ).replace("\\", "/")
-            assert active_row["report"] == str(
-                CK_FAMILY_STATUS_SYNTHESIS_OUT.relative_to(REPO_ROOT)
-            ).replace("\\", "/")
-            assert active_row["consumed_target"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET
-            assert active_row["packet_result"] == "PENDING"
-            assert active_row["review_result"] == "PENDING"
-            assert active_row["outcome_id"] == CK_FAMILY_STATUS_SYNTHESIS_OUTCOME
-            assert active_row["selected_next_target"] == (
-                CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
-            )
+                not in registry["completed_targets"]
+            ):
+                active_row = _workstream(
+                    registry, CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                )
+                assert active_row["status"] == "active"
+                assert active_row["workstream_id"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                )
+                assert active_row["active_lane"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                )
+                assert active_row["authorization_evidence"] == str(
+                    CK_FAMILY_STATUS_SYNTHESIS_LEAN_PACKET_PATH.relative_to(REPO_ROOT)
+                ).replace("\\", "/")
+                assert active_row["report"] == str(
+                    CK_FAMILY_STATUS_SYNTHESIS_OUT.relative_to(REPO_ROOT)
+                ).replace("\\", "/")
+                assert active_row["consumed_target"] == CK_FAMILY_STATUS_SYNTHESIS_TARGET
+                assert active_row["packet_result"] == "PENDING"
+                assert active_row["review_result"] == "PENDING"
+                assert active_row["outcome_id"] == CK_FAMILY_STATUS_SYNTHESIS_OUTCOME
+                assert active_row["selected_next_target"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                )
+            else:
+                review_row = _workstream(
+                    registry, CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                )
+                assert review_row["status"] == "paused"
+                assert review_row["authorization_evidence"] == str(
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH.relative_to(
+                        REPO_ROOT
+                    )
+                ).replace("\\", "/")
+                assert review_row["report"] == str(
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT.relative_to(REPO_ROOT)
+                ).replace("\\", "/")
+                assert review_row["packet_result"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME
+                )
+                assert review_row["selected_next_target"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                )
+
+                active_row = _workstream(
+                    registry, CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                )
+                assert active_row["status"] == "active"
+                assert active_row["workstream_id"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                )
+                assert active_row["active_lane"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                )
+                assert active_row["authorization_evidence"] == str(
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_LEAN_PACKET_PATH.relative_to(
+                        REPO_ROOT
+                    )
+                ).replace("\\", "/")
+                assert active_row["report"] == str(
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT.relative_to(REPO_ROOT)
+                ).replace("\\", "/")
+                assert active_row["consumed_target"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET
+                )
+                assert active_row["packet_result"] == "PENDING"
+                assert active_row["review_result"] == "PENDING"
+                assert active_row["outcome_id"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME
+                )
+                assert active_row["selected_next_target"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                )
+                assert active_row["selected_next_target_kind"] == (
+                    CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET_KIND
+                )
 
 
 def test_psi_a_u1_interaction_exchange_rule_family_closeout_mirrors() -> None:
@@ -512,14 +575,16 @@ def test_psi_a_u1_interaction_exchange_rule_family_closeout_mirrors() -> None:
         NEXT_TARGET,
         CK_FAMILY_STATUS_SYNTHESIS_TARGET,
         CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET,
+        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET,
         CLOSEOUT_REVIEW_OUTCOME,
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_TARGET}",
-        f"CURRENT_LIVE_TARGET_REPORT_v0: {str(CK_FAMILY_STATUS_SYNTHESIS_OUT.relative_to(REPO_ROOT)).replace(chr(92), '/')}",
-        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {CK_FAMILY_STATUS_SYNTHESIS_OUTCOME}",
+        f"CURRENT_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET}",
+        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_TARGET}",
+        f"CURRENT_LIVE_TARGET_REPORT_v0: {str(CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUT.relative_to(REPO_ROOT)).replace(chr(92), '/')}",
+        f"CURRENT_LIVE_TARGET_OUTCOME_v0: {CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME}",
         "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_OUTCOME_v0",
         "TOE_NATIVE_PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_OUTCOME_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0",
+        "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME_v0",
         "PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_NONCLAIM_BOUNDARY_v0",
         "PSI_A_U1_INTERACTION_EXCHANGE_RULE_FAMILY_CLOSEOUT_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
         "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0",
