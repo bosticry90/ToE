@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A" := by
+      "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result" := by
   native_decide
 
 end CurrentAuthority

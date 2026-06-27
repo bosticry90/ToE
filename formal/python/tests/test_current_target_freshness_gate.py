@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
+    "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "select_next_master_action_surface_after_ck_family_status_synthesis"
+    "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A"
+    "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "MasterActionSurfaceSelectionAfterCKFamilyStatusSynthesis.lean"
+    / "MasterActionCKFamilyGapReviewAfterPhiAAndPsiA.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,12 +2424,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_"
+        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_"
         "20260626_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_SELECTS_"
-        "CK_FAMILY_GAP_REVIEW_"
+        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_"
+        "RULE_FAMILY_GAPS_INDEXED_"
         "NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
@@ -3411,9 +3411,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
     )
 
-    master_action_surface_selection_after_ck_family_status_synthesis_result = (
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_SELECTS_"
-        "CK_FAMILY_GAP_REVIEW_"
+    master_action_ck_family_gap_review_result = (
+        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_"
+        "RULE_FAMILY_GAPS_INDEXED_"
         "NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
     )
 
@@ -3427,63 +3427,49 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_"
+        "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_"
         "20260626_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream["review_result"] == "PENDING"
     assert interaction_active_workstream["outcome_id"] == (
-        master_action_surface_selection_after_ck_family_status_synthesis_result
+        master_action_ck_family_gap_review_result
     )
     assert interaction_active_workstream["result_token"] == (
-        master_action_surface_selection_after_ck_family_status_synthesis_result
+        master_action_ck_family_gap_review_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "master_action_ck_family_gap_review_after_phi_A_and_psi_A_preparation"
-    assert interaction_active_workstream["selection_result"] == (
-        master_action_surface_selection_after_ck_family_status_synthesis_result
+    ] == "master_action_ck_family_gap_review_after_phi_A_and_psi_A_result_review"
+    assert interaction_active_workstream["gap_review_result"] == (
+        master_action_ck_family_gap_review_result
     )
-    assert interaction_active_workstream["selected_master_action_surface"] == (
-        "ck_family_gap_review"
-    )
+    assert interaction_active_workstream["gap_review_target"] == PREVIOUS_LIVE_TARGET
+    assert interaction_active_workstream["gap_review_prepared"] == "yes"
+    assert interaction_active_workstream["gap_review_accepted"] == "yes"
+    assert interaction_active_workstream["gap_review_executed"] == "yes"
+    assert str(interaction_active_workstream["gap_count"]) == "8"
+    assert str(interaction_active_workstream["open_gap_count"]) == "8"
+    assert str(interaction_active_workstream["closed_gap_count"]) == "0"
     assert interaction_active_workstream[
-        "master_action_ck_family_status_synthesis_prepared"
+        "admissibility_to_functionalization_gaps_indexed"
     ] == "yes"
-    assert interaction_active_workstream["ck_family_status_synthesis_prepared"] == "yes"
-    assert interaction_active_workstream["synthesis_packet_prepared"] == "yes"
-    assert interaction_active_workstream["synthesis_packet_accepted"] == "yes"
+    assert interaction_active_workstream["rule_family_gaps_indexed"] == "yes"
+    assert interaction_active_workstream["theorem_linkage_gap_indexed"] == "yes"
+    assert interaction_active_workstream["assumption_gap_indexed"] == "yes"
+    assert interaction_active_workstream["functionalization_gap_indexed"] == "yes"
+    assert interaction_active_workstream["variation_gap_indexed"] == "yes"
+    assert interaction_active_workstream["physical_meaning_gap_indexed"] == "yes"
     assert interaction_active_workstream[
-        "phi_source_bridge_transport_family_synthesized"
+        "interaction_generalization_gap_indexed"
     ] == "yes"
-    assert interaction_active_workstream[
-        "A_source_bridge_transport_family_synthesized"
-    ] == "yes"
-    assert interaction_active_workstream[
-        "psi_A_interaction_exchange_family_synthesized"
-    ] == "yes"
-    assert interaction_active_workstream[
-        "current_source_exchange_and_total_conservation_family_synthesized"
-    ] == "yes"
-    assert interaction_active_workstream["C_source_classification"] == (
-        "field/source admissibility"
-    )
-    assert interaction_active_workstream["C_bridge_classification"] == (
-        "route-matching admissibility"
-    )
-    assert interaction_active_workstream["C_transport_classification"] == (
-        "derivation-chain stability"
-    )
-    assert interaction_active_workstream["C_exchange_classification"] == (
-        "interaction exchange-balance admissibility"
-    )
-    assert interaction_active_workstream["isolated_field_rule_families_summarized"] == "yes"
-    assert interaction_active_workstream["interaction_rule_family_summarized"] == "yes"
-    assert interaction_active_workstream[
-        "admissibility_rule_architecture_summary_prepared"
-    ] == "yes"
+    assert interaction_active_workstream["seam_closure_gap_indexed"] == "yes"
+    assert interaction_active_workstream["empirical_discriminator_gap_indexed"] == "yes"
+    assert interaction_active_workstream["result_review_prepared"] == "no"
+    assert interaction_active_workstream["result_review_accepted"] == "no"
+    assert interaction_active_workstream["post_review_branch_selected"] == "no"
     assert interaction_active_workstream["all_summarized_rules_admissibility_only"] == "yes"
     assert interaction_active_workstream["all_summarized_rules_not_action_embedded"] == "yes"
     assert interaction_active_workstream["all_summarized_rules_not_varied"] == "yes"
@@ -3491,28 +3477,20 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "all_summarized_rules_not_direct_dynamical_laws"
     ] == "yes"
     assert interaction_active_workstream["all_summarized_rules_not_empirical_claims"] == "yes"
-    assert interaction_active_workstream["master_action_surface_selector_authorized"] == "yes"
-    assert interaction_active_workstream["master_action_surface_selector_executed"] == "yes"
-    assert interaction_active_workstream["master_action_surface_selected"] == "yes"
-    assert interaction_active_workstream["ck_family_gap_review_selected"] == "yes"
-    assert interaction_active_workstream[
-        "ck_family_gap_review_preparation_authorized"
-    ] == "yes"
-    assert interaction_active_workstream["ck_family_gap_review_prepared"] == "no"
-    assert interaction_active_workstream["gap_review_executed"] == "no"
-    assert interaction_active_workstream[
-        "new_field_or_interaction_expansion_selected"
-    ] == "no"
     assert interaction_active_workstream["multiplier_action_route_selected"] == "no"
     assert interaction_active_workstream["multiplier_route_selected"] == "no"
     assert interaction_active_workstream["penalty_route_selected"] == "no"
     assert interaction_active_workstream["C_k_action_embedding_claimed"] == "no"
     assert interaction_active_workstream["C_k_action_variation_executed"] == "no"
+    assert interaction_active_workstream["functionalization_authorized"] == "no"
+    assert interaction_active_workstream["theorem_linkage_completed"] == "no"
+    assert interaction_active_workstream["seam_closure_authorized"] == "no"
     assert interaction_active_workstream["full_maxwell_closure_claimed"] == "no"
     assert interaction_active_workstream["em_qft_closure_claimed"] == "no"
     assert interaction_active_workstream["qft_gr_closure_claimed"] == "no"
     assert interaction_active_workstream["gr_qm_closure_claimed"] == "no"
     assert interaction_active_workstream["standard_model_derivation_claimed"] == "no"
+    assert interaction_active_workstream["empirical_prediction_claimed"] == "no"
     assert interaction_active_workstream["empirical_validation_claimed"] == "no"
     assert interaction_active_workstream["master_action_promoted"] == "no"
 

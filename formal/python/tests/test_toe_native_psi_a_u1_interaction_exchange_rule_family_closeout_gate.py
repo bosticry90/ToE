@@ -552,11 +552,24 @@ def test_psi_a_u1_interaction_exchange_rule_family_closeout_rotates_to_result_re
                     assert selector_row["master_action_surface_selector_executed"] == "yes"
                     assert selector_row["ck_family_gap_review_selected"] == "yes"
                     gap_row = _workstream(registry, gap_target)
-                    assert gap_row["status"] == "active"
-                    assert gap_row["consumed_target"] == (
-                        CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
-                    )
-                    assert gap_row["ck_family_gap_review_prepared"] == "no"
+                    if gap_row["status"] == "active":
+                        assert gap_row["consumed_target"] == (
+                            CK_FAMILY_STATUS_SYNTHESIS_SURFACE_SELECTOR_TARGET
+                        )
+                        assert gap_row["ck_family_gap_review_prepared"] == "no"
+                    else:
+                        gap_review_target = (
+                            "review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result"
+                        )
+                        assert gap_row["status"] == "paused"
+                        assert gap_row["selected_next_target"] == gap_review_target
+                        assert gap_row["gap_review_prepared"] == "yes"
+                        assert str(gap_row["gap_count"]) == "8"
+                        active_gap_review = _workstream(registry, gap_review_target)
+                        assert active_gap_review["status"] == "active"
+                        assert active_gap_review["consumed_target"] == gap_target
+                        assert active_gap_review["gap_review_prepared"] == "yes"
+                        assert active_gap_review["result_review_prepared"] == "no"
 
 
 def test_psi_a_u1_interaction_exchange_rule_family_closeout_mirrors() -> None:

@@ -232,8 +232,10 @@ MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_OUTCOME_v0: MASTER_ACTION
 MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0: This result review accepts only that the phi source-bridge-transport family, A source-bridge-transport family, and psi-A current-source-exchange-total-conservation family were synthesized, that C_exchange is recognized as an interaction exchange-balance admissibility rule, and that all C_k families remain admissibility-only. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no direct dynamical-law claim, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface. The full ToeFormal aggregate is kept as NOT_RUN.
 MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_OUTCOME_v0: MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_SELECTS_CK_FAMILY_GAP_REVIEW_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION
 MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_NONCLAIM_BOUNDARY_v0: This selector chooses a C_k family gap review after the phi, A, and psi-A C_k status synthesis. It creates no new physics and does not expand immediately to another field or interaction. It asks what remains theorem-linked, policy-level, assumption-supplied, or route-check-only before any stronger claim. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no direct dynamical-law claim, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface. The full ToeFormal aggregate is kept as NOT_RUN.
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A
-PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_master_action_surface_after_ck_family_status_synthesis
+MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_RULE_FAMILY_GAPS_INDEXED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION
+MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0: This packet is a C_k family gap review only. It indexes the gap between C_k as an admissibility-only rulebook and C_k as an action-embedded, varied, theorem-linked, physically predictive structure. The stronger structure is not authorized. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no direct dynamical-law claim, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical prediction or validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface. The full ToeFormal aggregate is kept as NOT_RUN.
+CURRENT_LIVE_NEXT_TARGET_v0: review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A
 HISTORICAL_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_functional_embedding_packet
 HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_CURRENT_LIVE_NEXT_TARGET_v0: CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_psi_A_u1_cexchange_admissibility_rule_closeout
 HISTORICAL_PSI_A_U1_CEXCHANGE_ADMISSIBILITY_RULE_CLOSEOUT_PREVIOUS_LIVE_NEXT_TARGET_v0: PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_psi_A_u1_cexchange_functional_embedding_packet_result
@@ -419,12 +421,12 @@ HISTORICAL_QFT_GR_SEMICLASSICAL_GATE_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr
 HISTORICAL_QFT_GR_SOURCE_ADMISSIBILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source
 HISTORICAL_QFT_GR_BIANCHI_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source
 HISTORICAL_QFT_GR_ACTION_DERIVABILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source
-ACTIVE_LANE_v0: prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A
+ACTIVE_LANE_v0: review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/MasterActionSurfaceSelectionAfterCKFamilyStatusSynthesis.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_SELECTS_CK_FAMILY_GAP_REVIEW_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/MasterActionCKFamilyGapReviewAfterPhiAAndPsiA.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_20260626_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_RULE_FAMILY_GAPS_INDEXED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION
 CURRENT_AUXILIARY_HYGIENE_TARGET_QUEUED_v0: prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces
 LEAN_VALIDATION_TIER_POLICY_v0: formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md
 POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
@@ -722,16 +724,18 @@ Current release-facing status:
 - MR-ASSUMP-003 distributional-pairing regular-domain attempt contract status: `bounded_repo_local_distributional_pairing_regular_domain_contract_pending_result_review_not_distributional_domain_proof_or_conservation_discharge`.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_master_action_surface_after_ck_family_status_synthesis`
-- `ACTIVE_LANE_v0: prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_master_action_ck_family_gap_review_after_phi_A_and_psi_A`
+- `ACTIVE_LANE_v0: review_master_action_ck_family_gap_review_after_phi_A_and_psi_A_result`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/MasterActionSurfaceSelectionAfterCKFamilyStatusSynthesis.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_SELECTS_CK_FAMILY_GAP_REVIEW_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/MasterActionCKFamilyGapReviewAfterPhiAAndPsiA.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_20260626_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_RULE_FAMILY_GAPS_INDEXED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION`
 - `MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_PREPARED_SOURCE_BRIDGE_TRANSPORT_AND_EXCHANGE_RULE_FAMILIES_SYNTHESIZED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION`
 - `MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0: This packet is a master-action C_k family status synthesis only. It classifies C_source as field/source admissibility, C_bridge as route-matching admissibility, C_transport as derivation-chain stability, and C_exchange as interaction exchange-balance admissibility. It records isolated phi and A source/bridge/transport families and the bounded psi-A current/source/exchange/total-conservation family. All summarized rules remain admissibility-only, not action embedded, not varied, not direct dynamical laws, not empirical claims, and not master-action promotion. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface, and the full ToeFormal aggregate is kept as NOT_RUN.`
+- `MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_OUTCOME_v0: MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_PREPARED_RULE_FAMILY_GAPS_INDEXED_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION`
+- `MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_NONCLAIM_BOUNDARY_v0: This packet is a C_k family gap review only. It indexes the gap between C_k as an admissibility-only rulebook and C_k as an action-embedded, varied, theorem-linked, physically predictive structure. The stronger structure is not authorized. It records no C_k action embedding, no C_k action variation, no multiplier route, no penalty route, no direct dynamical-law claim, no full Maxwell closure, no EM-QFT closure, no QFT-GR closure, no GR-QM closure, no Standard Model derivation, no Phase 2 authorization, no empirical prediction or validation, no seam closure, and no master-action promotion. The master action remains a working-form, noncanonical, non-promoted organizing surface. The full ToeFormal aggregate is kept as NOT_RUN.`
 
 
 - `TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_OUTCOME_v0: TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE`
