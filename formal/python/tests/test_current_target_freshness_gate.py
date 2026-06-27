@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_ck_family_top_theorem_linkage_obligation_packet_result"
+ACTIVE_LANE = "prepare_cexchange_theorem_linkage_attempt_from_total_conservation_route"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1335,7 +1335,7 @@ A_CK_CLOSEOUT_TARGET = (
 A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
-PREVIOUS_LIVE_TARGET = "prepare_ck_family_top_theorem_linkage_obligation_packet"
+PREVIOUS_LIVE_TARGET = "review_ck_family_top_theorem_linkage_obligation_packet_result"
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
 )
@@ -1563,7 +1563,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_ck_family_top_theorem_linkage_obligation_packet_result"
+LIVE_TARGET = "prepare_cexchange_theorem_linkage_attempt_from_total_conservation_route"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1579,7 +1579,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CKFamilyTopTheoremLinkageObligationPacket.lean"
+    / "CKFamilyTopTheoremLinkageObligationPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2418,11 +2418,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_20260627_v0.json"
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_CEXCHANGE_"
-        "THEOREM_LINKAGE_OBLIGATION_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_"
+        "PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3403,9 +3404,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
     )
 
-    ck_family_top_theorem_linkage_obligation_packet_result = (
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_CEXCHANGE_"
-        "THEOREM_LINKAGE_OBLIGATION_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+    ck_family_top_theorem_linkage_obligation_packet_result_review_result = (
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_"
+        "PROMOTION"
     )
 
     interaction_active_workstream = active_workstream(payload)
@@ -3418,21 +3420,26 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_20260627_v0.json"
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream["review_result"] == "PENDING"
     assert interaction_active_workstream["outcome_id"] == (
-        ck_family_top_theorem_linkage_obligation_packet_result
+        ck_family_top_theorem_linkage_obligation_packet_result_review_result
     )
     assert interaction_active_workstream["result_token"] == (
-        ck_family_top_theorem_linkage_obligation_packet_result
+        ck_family_top_theorem_linkage_obligation_packet_result_review_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "ck_family_top_theorem_linkage_obligation_packet_result_review"
+    ] == "cexchange_theorem_linkage_attempt_from_total_conservation_route_preparation"
+    assert interaction_active_workstream["attempt_preparation_recommended_outcome"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_PREPARED_"
+        "DEFINITIONAL_LINKAGE_ROUTE_INDEXED_NO_CK_RULE_PROMOTION_OR_MASTER_ACTION_"
+        "PROMOTION"
+    )
     assert interaction_active_workstream["top_obligation_packet_scope"] == (
         "C_exchange^{Apsi} theorem-linkage gap"
     )
@@ -3449,6 +3456,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["theorem_target_id"] == (
         "cexchange_from_total_conservation"
     )
+    assert interaction_active_workstream["theorem_target_recorded"] == "yes"
     assert interaction_active_workstream["theorem_target_indexed"] == "yes"
     assert interaction_active_workstream["theorem_linkage_target_indexed"] == "yes"
     assert interaction_active_workstream[

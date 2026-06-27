@@ -11,41 +11,39 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.ck_family_top_theorem_linkage_obligation_packet_report import (
-    ACCEPTED_PACKET_FINDINGS,
+from formal.python.tools.ck_family_top_theorem_linkage_obligation_packet_result_review_report import (
+    ACCEPTED_REVIEW_FINDINGS,
+    ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME,
     BASIS,
     BLOCKED_CLAIMS,
     C_EXCHANGE_RESIDUAL_DEFINITION,
     C_EXCHANGE_TARGET_CONCLUSION,
     CONSUMED_TARGET,
     DEFAULT_OUT,
-    FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_PACKET,
+    FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_REVIEW,
     GOAL,
     LEAN_PACKET_PATH,
-    LEAN_STATUS_WORDING_FOR_PACKET,
-    LIKELY_FOLLOW_ON_TARGET,
+    LEAN_STATUS_WORDING_FOR_REVIEW,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
     PLAIN_MEANING,
-    PRIORITY_REVIEW_PATH,
     RULE_FAMILY,
     SCHEMA_ID,
-    SCOPED_LEAN_TARGETS_STATUS_FOR_PACKET,
-    SELECTED_PROOF_TARGET,
-    SELECTED_THEOREM_ROW,
-    STRICT_PACKET_RESULT,
+    SCOPED_LEAN_TARGETS_STATUS_FOR_REVIEW,
+    STRICT_REVIEW_RESULT,
     THEOREM_TARGET_ID,
     THEOREM_TARGET_STATEMENT,
     TOP_OBLIGATION,
+    TOP_OBLIGATION_LEAN_PACKET_PATH,
+    TOP_OBLIGATION_PACKET_PATH,
     TOP_OBLIGATION_PACKET_SCOPE,
     TOP_OBLIGATION_ROW_ID,
-    TOTAL_CONSERVATION_REVIEW_PATH,
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     TOTAL_STRESS_ENERGY_DEFINITION,
-    build_ck_family_top_theorem_linkage_obligation_packet,
+    build_ck_family_top_theorem_linkage_obligation_packet_result_review,
 )
 
 
@@ -55,7 +53,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "ck_family_top_theorem_linkage_obligation_packet_report.py"
+    / "ck_family_top_theorem_linkage_obligation_packet_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -112,10 +110,10 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_files_exist() -> None:
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_files_exist() -> None:
     for path in [
-        PRIORITY_REVIEW_PATH,
-        TOTAL_CONSERVATION_REVIEW_PATH,
+        TOP_OBLIGATION_PACKET_PATH,
+        TOP_OBLIGATION_LEAN_PACKET_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -126,87 +124,76 @@ def test_ck_family_top_theorem_linkage_obligation_packet_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_prepares_target() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_accepts_scope() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert packet["artifact_id"] == SCHEMA_ID
-    assert packet["schema_id"] == SCHEMA_ID
-    assert packet["packet_id"] == PACKET_ID
-    assert packet["prepared"] is True
-    assert packet["accepted"] is True
-    assert packet["outcome_id"] == OUTCOME_ID
-    assert packet["packet_result"] == OUTCOME_ID
-    assert packet["strict_packet_result"] == STRICT_PACKET_RESULT
-    assert packet["packet_classification"] == PACKET_CLASSIFICATION
-    assert packet["consumed_target"] == CONSUMED_TARGET
-    assert packet["selected_next_target"] == NEXT_TARGET
-    assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert packet["likely_follow_on_target_after_review"] == LIKELY_FOLLOW_ON_TARGET
-    assert build_ck_family_top_theorem_linkage_obligation_packet() == packet
+    assert review["artifact_id"] == SCHEMA_ID
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == OUTCOME_ID
+    assert review["packet_result"] == OUTCOME_ID
+    assert review["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert review["attempt_preparation_recommended_outcome"] == (
+        ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME
+    )
+    assert build_ck_family_top_theorem_linkage_obligation_packet_result_review() == review
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_records_theorem_target() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_records_target() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert packet["accepted_packet_findings"] == ACCEPTED_PACKET_FINDINGS
-    assert packet["top_obligation"] == TOP_OBLIGATION
-    assert packet["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
-    assert packet["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
-    assert packet["basis"] == BASIS
-    assert packet["rule_family"] == RULE_FAMILY
-    assert packet["goal"] == GOAL
-    assert packet["theorem_target_id"] == THEOREM_TARGET_ID
-    assert packet["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert packet["total_stress_energy_definition"] == TOTAL_STRESS_ENERGY_DEFINITION
+    assert review["accepted_review_findings"] == ACCEPTED_REVIEW_FINDINGS
+    assert review["top_obligation"] == TOP_OBLIGATION
+    assert review["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
+    assert review["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
+    assert review["C_exchange_top_obligation_scoped"] is True
+    assert review["theorem_target_id"] == THEOREM_TARGET_ID
+    assert review["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert review["theorem_target_recorded"] is True
+    assert review["theorem_target_indexed"] is True
+    assert review["definition_linkage_theorem_target"] is True
+    assert review["basis"] == BASIS
+    assert review["basis_is_accepted_psi_A_total_conservation_route"] is True
+    assert review["rule_family"] == RULE_FAMILY
+    assert review["goal"] == GOAL
+    assert review["total_stress_energy_definition"] == TOTAL_STRESS_ENERGY_DEFINITION
     assert (
-        packet["total_stress_energy_conservation_identity"]
+        review["total_stress_energy_conservation_identity"]
         == TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY
     )
-    assert packet["C_exchange_residual_definition"] == C_EXCHANGE_RESIDUAL_DEFINITION
-    assert packet["C_exchange_target_conclusion"] == C_EXCHANGE_TARGET_CONCLUSION
-    assert packet["plain_meaning"] == PLAIN_MEANING
-
-    rows = packet["theorem_target_rows"]
-    assert len(rows) == 1
-    assert rows[0]["row_id"] == THEOREM_TARGET_ID
-    assert rows[0]["given"] == [
-        TOTAL_STRESS_ENERGY_DEFINITION,
-        TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
-        C_EXCHANGE_RESIDUAL_DEFINITION,
-    ]
-    assert rows[0]["then"] == C_EXCHANGE_TARGET_CONCLUSION
-    assert rows[0]["proof_execution"] == "not yet"
-    assert rows[0]["theorem_discharged"] is False
-    assert rows[0]["rule_promotion"] == "not authorized"
+    assert review["C_exchange_residual_definition"] == C_EXCHANGE_RESIDUAL_DEFINITION
+    assert review["C_exchange_target_conclusion"] == C_EXCHANGE_TARGET_CONCLUSION
+    assert review["plain_meaning"] == PLAIN_MEANING
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_preserves_nonclaims() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_preserves_nonclaims() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert packet["blocked_claims"] == BLOCKED_CLAIMS
-    assert packet["blocked_claim_count"] == 16
-    assert packet["gap_count"] == 8
-    assert packet["open_gap_count"] == 8
-    assert packet["closed_gap_count"] == 0
-    assert packet["selected_theorem_row"] == SELECTED_THEOREM_ROW
-    assert packet["selected_proof_target"] == SELECTED_PROOF_TARGET
+    assert review["blocked_claims"] == BLOCKED_CLAIMS
+    assert review["blocked_claim_count"] == 16
+    assert review["gap_count"] == 8
+    assert review["open_gap_count"] == 8
+    assert review["closed_gap_count"] == 0
 
     for key in [
+        "result_review_prepared",
+        "result_review_accepted",
+        "top_obligation_packet_reviewed",
         "top_obligation_packet_prepared",
-        "C_exchange_theorem_linkage_obligation_scoped",
-        "C_exchange_from_total_conservation_theorem_target_indexed",
-        "theorem_target_indexed",
-        "theorem_linkage_target_indexed",
-        "review_result_preparation_authorized",
-        "priority_review_consumed",
-        "total_conservation_review_basis_consumed",
-        "priority_ranking_accepted",
-        "priority_rows_ranked",
+        "attempt_preparation_authorized",
+        "definition_linkage_route_indexed_for_attempt_preparation",
         "all_gaps_remain_open",
         "no_gap_discharged",
         "no_gap_closed",
     ]:
-        assert packet[key] is True, key
+        assert review[key] is True, key
 
     for key in [
         "proof_execution_authorized",
@@ -215,6 +202,7 @@ def test_ck_family_top_theorem_linkage_obligation_packet_preserves_nonclaims() -
         "proof_debt_reduced",
         "proof_debt_discharged",
         "proof_target_selected",
+        "theorem_row_selected",
         "theorem_row_selected_for_execution",
         "theorem_discharged",
         "theorem_linkage_completed",
@@ -233,10 +221,10 @@ def test_ck_family_top_theorem_linkage_obligation_packet_preserves_nonclaims() -
         "master_action_promoted",
         "master_action_promotion",
     ]:
-        assert packet[key] is False, key
+        assert review[key] is False, key
 
     for phrase in [
-        "prepares only the exact C_exchange theorem-linkage target",
+        "accepts only the scoped definitional C_exchange theorem-linkage target",
         "accepted psi-A total-conservation route",
         "does not execute any proof",
         "discharge any theorem row",
@@ -250,26 +238,26 @@ def test_ck_family_top_theorem_linkage_obligation_packet_preserves_nonclaims() -
         "promote the master action",
         "not a promoted final law",
     ]:
-        assert phrase in packet["non_claim_boundary"], phrase
+        assert phrase in review["non_claim_boundary"], phrase
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_records_lean_status() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_records_lean_status() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert packet["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_PACKET
+    assert review["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_REVIEW
     assert (
-        packet["full_toeformal_aggregate_status_for_packet"]
-        == FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_PACKET
+        review["full_toeformal_aggregate_status_for_review"]
+        == FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_REVIEW
     )
     assert (
-        packet["scoped_lean_targets_status_for_packet"]
-        == SCOPED_LEAN_TARGETS_STATUS_FOR_PACKET
+        review["scoped_lean_targets_status_for_review"]
+        == SCOPED_LEAN_TARGETS_STATUS_FOR_REVIEW
     )
-    assert packet["full_toeformal_aggregate_passed"] is False
-    assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(packet)
+    assert review["full_toeformal_aggregate_passed"] is False
+    assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(review)
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_rotates_to_review() -> None:
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_rotates_to_attempt_preparation() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
     is_current = assert_historical_target_recorded(
@@ -279,7 +267,7 @@ def test_ck_family_top_theorem_linkage_obligation_packet_rotates_to_review() -> 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert not is_current
+    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -294,15 +282,13 @@ def test_ck_family_top_theorem_linkage_obligation_packet_rotates_to_review() -> 
     assert consumed["authorization_evidence"] == evidence
     assert consumed["report"] == _rel(DEFAULT_OUT)
     assert consumed["packet_result"] == OUTCOME_ID
-    assert consumed["strict_packet_result"] == STRICT_PACKET_RESULT
+    assert consumed["review_result"] == OUTCOME_ID
+    assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
     assert consumed["selected_next_target"] == NEXT_TARGET
     assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert consumed["top_obligation_packet_prepared"] == "yes"
     assert consumed["theorem_target_id"] == THEOREM_TARGET_ID
-    assert consumed["theorem_target_indexed"] == "yes"
-    assert consumed["C_exchange_from_total_conservation_theorem_target_indexed"] == "yes"
-    assert consumed["selected_theorem_row"] == TOP_OBLIGATION_ROW_ID
-    assert consumed["selected_proof_target"] == "NONE_SELECTED"
+    assert consumed["theorem_target_recorded"] == "yes"
+    assert consumed["basis"] == BASIS
     assert consumed["proof_execution_authorized"] == "no"
     assert consumed["proof_attempt_executed"] == "no"
     assert consumed["theorem_discharged"] == "no"
@@ -310,36 +296,18 @@ def test_ck_family_top_theorem_linkage_obligation_packet_rotates_to_review() -> 
     assert consumed["master_action_promoted"] == "no"
 
     active = _workstream(registry, NEXT_TARGET)
-    assert active["status"] == "paused"
+    assert active["status"] == "active"
     assert active["workstream_id"] == NEXT_TARGET
     assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "CKFamilyTopTheoremLinkageObligationPacketResultReview.lean"
-    )
+    assert active["authorization_evidence"] == evidence
     assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["packet_result"] == (
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_"
-        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_"
-        "PROMOTION"
-    )
-    assert active["review_result"] == active["packet_result"]
-    assert active["strict_review_result"] == (
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_"
-        "SCOPED_DEFINITIONAL_TOTAL_CONSERVATION_LINKAGE_TARGET_NO_THEOREM_DISCHARGE_"
-        "OR_MASTER_ACTION_PROMOTION"
-    )
-    assert active["report"] == (
-        "formal/docs/release/"
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_20260627_v0.json"
-    )
-    assert active["selected_next_target"] == (
-        "prepare_cexchange_theorem_linkage_attempt_from_total_conservation_route"
-    )
-    assert active["selected_next_target_kind"] == (
-        "cexchange_theorem_linkage_attempt_from_total_conservation_route_preparation"
-    )
-    assert active["top_obligation_packet_prepared"] == "yes"
+    assert active["packet_result"] == "PENDING"
+    assert active["review_result"] == "PENDING"
+    assert active["outcome_id"] == OUTCOME_ID
+    assert active["result_token"] == OUTCOME_ID
+    assert active["selected_next_target"] == NEXT_TARGET
+    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert active["recommended_outcome"] == ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME
     assert active["theorem_target_id"] == THEOREM_TARGET_ID
     assert active["theorem_target_recorded"] == "yes"
     assert active["theorem_target_indexed"] == "yes"
@@ -347,10 +315,11 @@ def test_ck_family_top_theorem_linkage_obligation_packet_rotates_to_review() -> 
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
+    assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_mirrors() -> None:
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -373,13 +342,13 @@ def test_ck_family_top_theorem_linkage_obligation_packet_mirrors() -> None:
     for token in [
         PACKET_ID,
         OUTCOME_ID,
-        STRICT_PACKET_RESULT,
+        STRICT_REVIEW_RESULT,
         PACKET_CLASSIFICATION,
-        "CKFamilyTopTheoremLinkageObligationPacket",
+        "CKFamilyTopTheoremLinkageObligationPacketResultReview",
         CONSUMED_TARGET,
         NEXT_TARGET,
         NEXT_TARGET_KIND,
-        LIKELY_FOLLOW_ON_TARGET,
+        ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME,
         TOP_OBLIGATION,
         TOP_OBLIGATION_ROW_ID,
         BASIS,
@@ -392,19 +361,17 @@ def test_ck_family_top_theorem_linkage_obligation_packet_mirrors() -> None:
         TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
         C_EXCHANGE_RESIDUAL_DEFINITION,
         C_EXCHANGE_TARGET_CONCLUSION,
-        LEAN_STATUS_WORDING_FOR_PACKET,
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_OUTCOME_v0",
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_NONCLAIM_BOUNDARY_v0",
-        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_NEXT_TARGET_v0",
+        LEAN_STATUS_WORDING_FOR_REVIEW,
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_OUTCOME_v0",
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RECOMMENDED_OUTCOME_v0",
         "no proof execution",
         "no theorem discharge",
         "no GAP discharge",
         "no C_k rule promotion",
         "no action embedding",
         "no variation",
-        "no EM-QFT closure",
-        "no QFT-GR closure",
-        "no GR-QM closure",
+        "no seam closure",
         "no empirical validation",
         "no master-action promotion",
         "working-form, noncanonical",
@@ -412,7 +379,7 @@ def test_ck_family_top_theorem_linkage_obligation_packet_mirrors() -> None:
         assert token in joined, token
 
 
-def test_ck_family_top_theorem_linkage_obligation_packet_not_manifest_enrolled() -> None:
+def test_ck_family_top_theorem_linkage_obligation_packet_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_ck_family_top_theorem_linkage_obligation_packet_gate.py"
+        "test_ck_family_top_theorem_linkage_obligation_packet_result_review_gate.py"
     )
