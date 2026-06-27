@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageObligationPacket
+import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageObligationPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PsiATotalConservationTheoremLinkageObligationPacket.selectedNextTarget
+  PsiATotalConservationTheoremLinkageObligationPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PsiATotalConservationTheoremLinkageObligationPacket.packetId
+  PsiATotalConservationTheoremLinkageObligationPacketResultReview.packetId
 
-theorem current_target_points_to_psi_A_total_conservation_obligation_packet_review :
+theorem current_target_points_to_psi_A_total_conservation_attempt_preparation :
     currentLiveTarget =
-      "review_psi_A_total_conservation_theorem_linkage_obligation_packet_result" := by
+      "prepare_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes" := by
   rfl
 
 end CurrentTarget
