@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_ck_family_top_theorem_linkage_obligation_packet"
+ACTIVE_LANE = "review_ck_family_top_theorem_linkage_obligation_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1335,7 +1335,7 @@ A_CK_CLOSEOUT_TARGET = (
 A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
-PREVIOUS_LIVE_TARGET = "review_ck_family_theorem_linkage_priority_selection_after_index_result"
+PREVIOUS_LIVE_TARGET = "prepare_ck_family_top_theorem_linkage_obligation_packet"
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
 )
@@ -1563,7 +1563,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_ck_family_top_theorem_linkage_obligation_packet"
+LIVE_TARGET = "review_ck_family_top_theorem_linkage_obligation_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1579,7 +1579,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CKFamilyTheoremLinkagePrioritySelectionAfterIndexResultReview.lean"
+    / "CKFamilyTopTheoremLinkageObligationPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2418,12 +2418,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_RESULT_REVIEW_20260627_v0.json"
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_RESULT_REVIEW_"
-        "ACCEPTS_PRIORITY_RANKING_AND_TOP_CEXCHANGE_CANDIDATE_NO_PROOF_EXECUTION_"
-        "OR_MASTER_ACTION_PROMOTION"
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_CEXCHANGE_"
+        "THEOREM_LINKAGE_OBLIGATION_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3404,10 +3403,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "NO_EM_QFT_OR_CK_ACTION_CLOSURE"
     )
 
-    ck_family_theorem_linkage_priority_selection_result_review_result = (
-        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_RESULT_REVIEW_"
-        "ACCEPTS_PRIORITY_RANKING_AND_TOP_CEXCHANGE_CANDIDATE_NO_PROOF_EXECUTION_"
-        "OR_MASTER_ACTION_PROMOTION"
+    ck_family_top_theorem_linkage_obligation_packet_result = (
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_CEXCHANGE_"
+        "THEOREM_LINKAGE_OBLIGATION_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
     )
 
     interaction_active_workstream = active_workstream(payload)
@@ -3420,31 +3418,54 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_RESULT_REVIEW_20260627_v0.json"
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream["review_result"] == "PENDING"
     assert interaction_active_workstream["outcome_id"] == (
-        ck_family_theorem_linkage_priority_selection_result_review_result
+        ck_family_top_theorem_linkage_obligation_packet_result
     )
     assert interaction_active_workstream["result_token"] == (
-        ck_family_theorem_linkage_priority_selection_result_review_result
+        ck_family_top_theorem_linkage_obligation_packet_result
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "ck_family_top_theorem_linkage_obligation_packet"
+    ] == "ck_family_top_theorem_linkage_obligation_packet_result_review"
     assert interaction_active_workstream["top_obligation_packet_scope"] == (
         "C_exchange^{Apsi} theorem-linkage gap"
     )
-    assert interaction_active_workstream["top_obligation_packet_prepared"] == "no"
-    assert interaction_active_workstream["top_obligation_packet_preparation_authorized"] == "yes"
-    assert interaction_active_workstream["priority_selection_packet_reviewed"] == "yes"
-    assert interaction_active_workstream["priority_ranking_accepted"] == "yes"
-    assert interaction_active_workstream["priority_selection_packet_prepared"] == "yes"
-    assert interaction_active_workstream["priority_selection_prepared"] == "yes"
-    assert interaction_active_workstream["priority_selection_executed"] == "yes"
+    assert interaction_active_workstream["top_obligation_packet_prepared"] == "yes"
+    assert interaction_active_workstream["basis"] == (
+        "accepted psi-A total-conservation route"
+    )
+    assert interaction_active_workstream["rule_family"] == (
+        "interaction exchange-balance admissibility"
+    )
+    assert interaction_active_workstream["goal"] == (
+        "theorem-link C_exchange to total conservation"
+    )
+    assert interaction_active_workstream["theorem_target_id"] == (
+        "cexchange_from_total_conservation"
+    )
+    assert interaction_active_workstream["theorem_target_indexed"] == "yes"
+    assert interaction_active_workstream["theorem_linkage_target_indexed"] == "yes"
+    assert interaction_active_workstream[
+        "C_exchange_from_total_conservation_theorem_target_indexed"
+    ] == "yes"
+    assert interaction_active_workstream["total_stress_energy_definition"] == (
+        "T_total^{mu nu} = T_A^{mu nu} + T_psi^{mu nu}"
+    )
+    assert interaction_active_workstream[
+        "total_stress_energy_conservation_identity"
+    ] == "nabla_mu T_total^{mu nu} = 0"
+    assert interaction_active_workstream["C_exchange_residual_definition"] == (
+        "C_exchange^{Apsi,nu} := nabla_mu T_total^{mu nu}"
+    )
+    assert interaction_active_workstream["C_exchange_target_conclusion"] == (
+        "C_exchange^{Apsi,nu} = 0"
+    )
     assert interaction_active_workstream["priority_rows_ranked"] == "yes"
     assert interaction_active_workstream["ranked_row_count"] == "13"
     assert interaction_active_workstream["priority_criterion_count"] == "5"
@@ -3455,34 +3476,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "C_exchange^{Apsi}"
     )
     assert interaction_active_workstream["selected_proof_target"] == "NONE_SELECTED"
-    assert interaction_active_workstream["selected_theorem_row"] == "NONE_SELECTED"
-    assert interaction_active_workstream["theorem_linkage_obligation_index_reviewed"] == "yes"
-    assert interaction_active_workstream["obligation_index_reviewed"] == "yes"
-    assert interaction_active_workstream["proof_obligation_rows_indexed"] == "yes"
+    assert interaction_active_workstream["selected_theorem_row"] == (
+        "C_exchange^{Apsi}"
+    )
     assert interaction_active_workstream["proof_target_selected"] == "no"
-    assert interaction_active_workstream["priority_row_selected"] == "yes"
     assert interaction_active_workstream["theorem_row_selected"] == "no"
-    assert interaction_active_workstream["proof_debt_target_selected"] == "no"
     assert interaction_active_workstream["proof_execution_authorized"] == "no"
-    assert interaction_active_workstream["obligation_rows_discharged"] == "no"
     assert interaction_active_workstream["proof_attempt_executed"] == "no"
     assert interaction_active_workstream["proof_debt_reduced"] == "no"
     assert interaction_active_workstream["proof_debt_discharged"] == "no"
-    assert str(interaction_active_workstream["proof_obligation_row_count"]) == "13"
-    assert str(interaction_active_workstream["obligation_row_field_count"]) == "10"
-    assert str(interaction_active_workstream["controlled_status_label_count"]) == "7"
+    assert interaction_active_workstream["theorem_discharged"] == "no"
+    assert interaction_active_workstream["theorem_linkage_completed"] == "no"
+    assert interaction_active_workstream["theorem_linkage_proof_attempt_authorized"] == "no"
+    assert interaction_active_workstream["rule_promoted"] == "no"
     assert str(interaction_active_workstream["gap_count"]) == "8"
     assert str(interaction_active_workstream["open_gap_count"]) == "8"
     assert str(interaction_active_workstream["closed_gap_count"]) == "0"
     assert interaction_active_workstream["no_gap_discharged"] == "yes"
     assert interaction_active_workstream["no_gap_closed"] == "yes"
-    assert interaction_active_workstream["no_rule_promoted"] == "yes"
-    assert interaction_active_workstream["no_C_k_functionalization_occurs"] == "yes"
-    assert interaction_active_workstream["no_C_k_variation_occurs"] == "yes"
-    assert interaction_active_workstream["no_seam_closure_occurs"] == "yes"
-    assert interaction_active_workstream["no_master_action_promotion_occurs"] == "yes"
-    assert interaction_active_workstream["new_physics_created"] == "no"
-    assert interaction_active_workstream["new_field_or_interaction_expansion_selected"] == "no"
     assert interaction_active_workstream["C_k_action_embedding_claimed"] == "no"
     assert interaction_active_workstream["C_k_action_variation_executed"] == "no"
     assert interaction_active_workstream["multiplier_action_route_selected"] == "no"
@@ -3492,8 +3503,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["em_qft_closure_claimed"] == "no"
     assert interaction_active_workstream["qft_gr_closure_claimed"] == "no"
     assert interaction_active_workstream["gr_qm_closure_claimed"] == "no"
-    assert interaction_active_workstream["standard_model_derivation_claimed"] == "no"
-    assert interaction_active_workstream["empirical_prediction_claimed"] == "no"
     assert interaction_active_workstream["empirical_validation_claimed"] == "no"
     assert interaction_active_workstream["master_action_promoted"] == "no"
 

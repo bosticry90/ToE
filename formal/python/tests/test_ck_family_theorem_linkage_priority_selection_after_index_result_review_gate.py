@@ -267,7 +267,7 @@ def test_ck_family_theorem_linkage_priority_selection_result_review_rotates_to_t
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -296,22 +296,39 @@ def test_ck_family_theorem_linkage_priority_selection_result_review_rotates_to_t
     assert consumed["obligation_rows_discharged"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = _workstream(registry, NEXT_TARGET)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
-    assert active["top_obligation_packet_prepared"] == "no"
-    assert active["selected_proof_target"] == "NONE_SELECTED"
-    assert active["selected_theorem_row"] == "NONE_SELECTED"
-    assert active["proof_execution_authorized"] == "no"
-    assert active["proof_attempt_executed"] == "no"
-    assert active["obligation_rows_discharged"] == "no"
-    assert active["master_action_promoted"] == "no"
+    packet = _workstream(registry, NEXT_TARGET)
+    assert packet["status"] == "paused"
+    assert packet["workstream_id"] == NEXT_TARGET
+    assert packet["active_lane"] == NEXT_TARGET
+    assert packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CKFamilyTopTheoremLinkageObligationPacket.lean"
+    )
+    assert packet["authorized_next_strict_target"] == NEXT_TARGET
+    assert packet["packet_result"] == (
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_CEXCHANGE_"
+        "THEOREM_LINKAGE_OBLIGATION_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+    )
+    assert packet["strict_packet_result"] == (
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_CEXCHANGE_FROM_"
+        "TOTAL_CONSERVATION_THEOREM_TARGET_INDEXED_NO_ACTION_VARIATION_OR_MASTER_"
+        "ACTION_PROMOTION"
+    )
+    assert packet["selected_next_target"] == (
+        "review_ck_family_top_theorem_linkage_obligation_packet_result"
+    )
+    assert packet["selected_next_target_kind"] == (
+        "ck_family_top_theorem_linkage_obligation_packet_result_review"
+    )
+    assert packet["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
+    assert packet["top_obligation_packet_prepared"] == "yes"
+    assert packet["theorem_target_id"] == "cexchange_from_total_conservation"
+    assert packet["theorem_target_indexed"] == "yes"
+    assert packet["selected_proof_target"] == "NONE_SELECTED"
+    assert packet["proof_execution_authorized"] == "no"
+    assert packet["proof_attempt_executed"] == "no"
+    assert packet["theorem_discharged"] == "no"
+    assert packet["master_action_promoted"] == "no"
 
 
 def test_ck_family_theorem_linkage_priority_selection_result_review_mirrors() -> None:
