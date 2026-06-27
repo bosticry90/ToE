@@ -11,12 +11,14 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.ck_family_theorem_linkage_priority_selection_after_index_report import (
+from formal.python.tools.ck_family_theorem_linkage_priority_selection_after_index_result_review_report import (
+    ACCEPTED_REVIEW_FINDINGS,
     BLOCKED_CLAIMS,
     CONSUMED_TARGET,
     DEFAULT_OUT,
-    INDEX_PATH,
+    FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_REVIEW,
     LEAN_PACKET_PATH,
+    LEAN_STATUS_WORDING,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OBLIGATION_ROW_FIELDS,
@@ -25,20 +27,21 @@ from formal.python.tools.ck_family_theorem_linkage_priority_selection_after_inde
     PACKET_CLASSIFICATION,
     PACKET_ID,
     PRIORITY_CRITERIA,
-    PRIORITY_SELECTION_RESULT,
+    PRIORITY_SELECTION_PATH,
     QFTGR_AGGREGATE_PATH,
     RANKED_ROW_IDS,
-    RECOMMENDED_POST_REVIEW_TARGET,
-    RECOMMENDED_PRIORITY_SELECTION_RESULT,
     RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
     SCHEMA_ID,
+    SCOPED_LEAN_TARGETS_STATUS_FOR_REVIEW,
     SELECTED_PROOF_TARGET,
     SELECTED_THEOREM_ROW,
-    SELECTOR_REVIEW_PATH,
+    STRICT_REVIEW_RESULT,
     TOP_FIVE_PRIORITY_THEMES,
     TOP_OBLIGATION_CANDIDATE,
+    TOP_OBLIGATION_PACKET_PLAIN_MEANING,
+    TOP_OBLIGATION_PACKET_SCOPE,
     TOP_OBLIGATION_ROW_ID,
-    build_ck_family_theorem_linkage_priority_selection_after_index,
+    build_ck_family_theorem_linkage_priority_selection_after_index_result_review,
 )
 
 
@@ -48,7 +51,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "ck_family_theorem_linkage_priority_selection_after_index_report.py"
+    / "ck_family_theorem_linkage_priority_selection_after_index_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -94,10 +97,9 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_ck_family_theorem_linkage_priority_selection_after_index_files_exist() -> None:
+def test_ck_family_theorem_linkage_priority_selection_result_review_files_exist() -> None:
     for path in [
-        SELECTOR_REVIEW_PATH,
-        INDEX_PATH,
+        PRIORITY_SELECTION_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -108,80 +110,76 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_files_exist() 
         assert path.exists(), path
 
 
-def test_ck_family_theorem_linkage_priority_selection_after_index_ranks_rows() -> None:
-    priority = _json(DEFAULT_OUT)
+def test_ck_family_theorem_linkage_priority_selection_result_review_accepts_ranking() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert priority["artifact_id"] == SCHEMA_ID
-    assert priority["schema_id"] == SCHEMA_ID
-    assert priority["packet_id"] == PACKET_ID
-    assert priority["prepared"] is True
-    assert priority["accepted"] is True
-    assert priority["outcome_id"] == OUTCOME_ID
-    assert priority["priority_selection_result"] == PRIORITY_SELECTION_RESULT
-    assert priority["packet_result"] == OUTCOME_ID
-    assert priority["recommended_priority_selection_result"] == (
-        RECOMMENDED_PRIORITY_SELECTION_RESULT
+    assert review["artifact_id"] == SCHEMA_ID
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == OUTCOME_ID
+    assert review["packet_result"] == OUTCOME_ID
+    assert review["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert review["post_review_target"] == NEXT_TARGET
+    assert build_ck_family_theorem_linkage_priority_selection_after_index_result_review() == review
+
+
+def test_ck_family_theorem_linkage_priority_selection_result_review_records_acceptance() -> None:
+    review = _json(DEFAULT_OUT)
+
+    assert review["accepted_review_findings"] == ACCEPTED_REVIEW_FINDINGS
+    assert review["accepted_review_finding_count"] == 12
+    assert review["priority_criteria"] == PRIORITY_CRITERIA
+    assert review["priority_criterion_count"] == 5
+    assert review["proof_obligation_row_ids"] == OBLIGATION_ROW_IDS
+    assert review["proof_obligation_row_count"] == 13
+    assert review["obligation_row_fields"] == OBLIGATION_ROW_FIELDS
+    assert review["obligation_row_field_count"] == 10
+    assert review["ranked_row_ids"] == RANKED_ROW_IDS
+    assert review["ranked_row_count"] == 13
+    assert review["priority_ranking_count"] == 13
+    assert review["top_five_priority_themes"] == TOP_FIVE_PRIORITY_THEMES
+    assert review["top_obligation_candidate"] == TOP_OBLIGATION_CANDIDATE
+    assert review["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
+    assert review["top_obligation_candidate_selected"] is True
+    assert review["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
+    assert (
+        review["top_obligation_packet_plain_meaning"]
+        == TOP_OBLIGATION_PACKET_PLAIN_MEANING
     )
-    assert priority["packet_classification"] == PACKET_CLASSIFICATION
-    assert priority["consumed_target"] == CONSUMED_TARGET
-    assert priority["selected_next_target"] == NEXT_TARGET
-    assert priority["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert priority["recommended_post_review_target"] == RECOMMENDED_POST_REVIEW_TARGET
-    assert build_ck_family_theorem_linkage_priority_selection_after_index() == priority
+    assert review["top_obligation_packet_preparation_authorized"] is True
+    assert review["selected_proof_target"] == SELECTED_PROOF_TARGET
+    assert review["selected_theorem_row"] == SELECTED_THEOREM_ROW
 
 
-def test_ck_family_theorem_linkage_priority_selection_after_index_records_ranking() -> None:
-    priority = _json(DEFAULT_OUT)
+def test_ck_family_theorem_linkage_priority_selection_result_review_preserves_nonclaims() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert priority["priority_criteria"] == PRIORITY_CRITERIA
-    assert priority["priority_criterion_count"] == 5
-    assert priority["proof_obligation_row_ids"] == OBLIGATION_ROW_IDS
-    assert priority["proof_obligation_row_count"] == 13
-    assert priority["obligation_row_fields"] == OBLIGATION_ROW_FIELDS
-    assert priority["obligation_row_field_count"] == 10
-    assert priority["ranked_row_ids"] == RANKED_ROW_IDS
-    assert priority["ranked_row_count"] == 13
-    assert priority["priority_ranking_count"] == 13
-    assert priority["top_five_priority_themes"] == TOP_FIVE_PRIORITY_THEMES
-    assert priority["top_obligation_candidate"] == TOP_OBLIGATION_CANDIDATE
-    assert priority["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
-    assert priority["top_obligation_candidate_selected"] is True
-    assert priority["ranking_selects_top_obligation_candidate"] is True
-    assert priority["selected_proof_target"] == SELECTED_PROOF_TARGET
-    assert priority["selected_theorem_row"] == SELECTED_THEOREM_ROW
-
-    ranking = priority["priority_ranking"]
-    assert ranking[0]["row_id"] == "C_exchange^{Apsi}"
-    assert ranking[0]["priority_label"] == "C_exchange theorem-linkage gap"
-    assert ranking[0]["top_obligation_candidate"] is True
-    assert ranking[1]["row_id"] == "psi-A total conservation"
-    assert ranking[2]["row_id"] == "psi-A matter-sector exchange"
-    assert ranking[3]["row_id"] == "psi-A gauge-sector exchange"
-    assert ranking[4]["row_id"] == "C_source^A"
-    assert ranking[5]["row_id"] == "C_source^phi"
-    assert all(row["selected_for_proof_execution"] is False for row in ranking)
-    assert all(row["theorem_discharged"] is False for row in ranking)
-    assert all(row["gap_discharged"] is False for row in ranking)
-    assert all(row["rule_promoted"] is False for row in ranking)
-
-
-def test_ck_family_theorem_linkage_priority_selection_after_index_preserves_nonclaims() -> None:
-    priority = _json(DEFAULT_OUT)
-
-    assert priority["blocked_claims"] == BLOCKED_CLAIMS
-    assert priority["blocked_claim_count"] == 16
-    assert priority["gap_count"] == 8
-    assert priority["open_gap_count"] == 8
-    assert priority["closed_gap_count"] == 0
+    assert review["blocked_claims"] == BLOCKED_CLAIMS
+    assert review["blocked_claim_count"] == 16
+    assert review["gap_count"] == 8
+    assert review["open_gap_count"] == 8
+    assert review["closed_gap_count"] == 0
 
     for key in [
+        "result_review_prepared",
+        "result_review_accepted",
+        "priority_selection_packet_reviewed",
         "priority_selection_packet_prepared",
         "priority_selection_prepared",
         "priority_selection_executed",
         "priority_rows_ranked",
         "priority_row_selected",
+        "priority_ranking_accepted",
+        "ranking_only_review",
         "top_obligation_candidate_selected",
-        "ranking_selects_top_obligation_candidate",
+        "top_obligation_packet_preparation_authorized",
         "theorem_linkage_obligation_index_reviewed",
         "obligation_index_reviewed",
         "proof_obligation_rows_indexed",
@@ -195,7 +193,7 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_preserves_nonc
         "no_seam_closure_occurs",
         "no_master_action_promotion_occurs",
     ]:
-        assert priority[key] is True, key
+        assert review[key] is True, key
 
     for key in [
         "proof_debt_target_selected",
@@ -207,6 +205,7 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_preserves_nonc
         "proof_debt_reduced",
         "proof_debt_discharged",
         "theorem_linkage_proof_attempt_authorized",
+        "theorem_linkage_completed",
         "obligation_rows_discharged",
         "gap_1_through_gap_8_discharged",
         "C_k_action_embedding_claimed",
@@ -217,32 +216,48 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_preserves_nonc
         "em_qft_closure_claimed",
         "qft_gr_closure_claimed",
         "gr_qm_closure_claimed",
+        "empirical_prediction_claimed",
         "empirical_validation_claimed",
         "master_action_promoted",
         "master_action_promotion",
     ]:
-        assert priority[key] is False, key
+        assert review[key] is False, key
 
     for phrase in [
-        "ranks the indexed C_k theorem-linkage proof debts",
-        "selects only the top obligation candidate",
+        "accepts only that 13 obligation rows were ranked",
+        "C_exchange is the top candidate",
         "does not execute any proof",
         "discharge any theorem row",
         "discharge GAP-1 through GAP-8",
         "promote any C_k rule",
         "embed C_k in an action",
         "vary C_k",
-        "close EM-QFT",
-        "close QFT-GR",
-        "close GR-QM",
+        "claim empirical prediction or validation",
         "promote the master action",
-        "working-form, noncanonical, non-promoted organizing surface",
-        "full ToeFormal aggregate is kept as NOT_RUN",
+        "below seam closure",
+        "working-form, noncanonical organizing surface",
+        "not a promoted final law",
     ]:
-        assert phrase in priority["non_claim_boundary"], phrase
+        assert phrase in review["non_claim_boundary"], phrase
 
 
-def test_ck_family_theorem_linkage_priority_selection_after_index_rotates_to_review() -> None:
+def test_ck_family_theorem_linkage_priority_selection_result_review_records_lean_status() -> None:
+    review = _json(DEFAULT_OUT)
+
+    assert review["lean_status_wording"] == LEAN_STATUS_WORDING
+    assert (
+        review["full_toeformal_aggregate_status_for_review"]
+        == FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_REVIEW
+    )
+    assert (
+        review["scoped_lean_targets_status_for_review"]
+        == SCOPED_LEAN_TARGETS_STATUS_FOR_REVIEW
+    )
+    assert review["full_toeformal_aggregate_passed"] is False
+    assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(review)
+
+
+def test_ck_family_theorem_linkage_priority_selection_result_review_rotates_to_top_packet() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
     is_current = assert_historical_target_recorded(
@@ -252,7 +267,7 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_rotates_to_rev
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert not is_current
+    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -267,44 +282,39 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_rotates_to_rev
     assert consumed["authorization_evidence"] == evidence
     assert consumed["report"] == _rel(DEFAULT_OUT)
     assert consumed["packet_result"] == OUTCOME_ID
-    assert consumed["priority_selection_result"] == OUTCOME_ID
+    assert consumed["review_result"] == OUTCOME_ID
+    assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
     assert consumed["selected_next_target"] == NEXT_TARGET
     assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert consumed["priority_rows_ranked"] == "yes"
     assert consumed["top_obligation_candidate"] == TOP_OBLIGATION_CANDIDATE
     assert consumed["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
+    assert consumed["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
     assert consumed["selected_proof_target"] == "NONE_SELECTED"
     assert consumed["selected_theorem_row"] == "NONE_SELECTED"
     assert consumed["proof_execution_authorized"] == "no"
     assert consumed["obligation_rows_discharged"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    assert NEXT_TARGET in registry["completed_targets"]
-    assert NEXT_TARGET in registry["consumed_targets"]
-    assert NEXT_TARGET in registry["paused_lanes"]
-
-    review = _workstream(registry, NEXT_TARGET)
-    assert review["status"] == "paused"
-    assert review["workstream_id"] == NEXT_TARGET
-    assert review["active_lane"] == NEXT_TARGET
-    assert review["selected_next_target"] == (
-        "prepare_ck_family_top_theorem_linkage_obligation_packet"
-    )
-    assert review["selected_next_target_kind"] == (
-        "ck_family_top_theorem_linkage_obligation_packet"
-    )
-    assert review["priority_rows_ranked"] == "yes"
-    assert review["top_obligation_candidate"] == TOP_OBLIGATION_CANDIDATE
-    assert review["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
-    assert review["selected_proof_target"] == "NONE_SELECTED"
-    assert review["selected_theorem_row"] == "NONE_SELECTED"
-    assert review["proof_execution_authorized"] == "no"
-    assert review["proof_attempt_executed"] == "no"
-    assert review["obligation_rows_discharged"] == "no"
-    assert review["master_action_promoted"] == "no"
+    active = _workstream(registry, NEXT_TARGET)
+    assert active["status"] == "active"
+    assert active["workstream_id"] == NEXT_TARGET
+    assert active["active_lane"] == NEXT_TARGET
+    assert active["authorization_evidence"] == evidence
+    assert active["authorized_next_strict_target"] == NEXT_TARGET
+    assert active["packet_result"] == "PENDING"
+    assert active["review_result"] == "PENDING"
+    assert active["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
+    assert active["top_obligation_packet_prepared"] == "no"
+    assert active["selected_proof_target"] == "NONE_SELECTED"
+    assert active["selected_theorem_row"] == "NONE_SELECTED"
+    assert active["proof_execution_authorized"] == "no"
+    assert active["proof_attempt_executed"] == "no"
+    assert active["obligation_rows_discharged"] == "no"
+    assert active["master_action_promoted"] == "no"
 
 
-def test_ck_family_theorem_linkage_priority_selection_after_index_mirrors() -> None:
+def test_ck_family_theorem_linkage_priority_selection_result_review_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -327,41 +337,37 @@ def test_ck_family_theorem_linkage_priority_selection_after_index_mirrors() -> N
     for token in [
         PACKET_ID,
         OUTCOME_ID,
-        PRIORITY_SELECTION_RESULT,
-        RECOMMENDED_PRIORITY_SELECTION_RESULT,
+        STRICT_REVIEW_RESULT,
         PACKET_CLASSIFICATION,
-        "CKFamilyTheoremLinkagePrioritySelectionAfterIndex",
+        "CKFamilyTheoremLinkagePrioritySelectionAfterIndexResultReview",
         CONSUMED_TARGET,
         NEXT_TARGET,
         NEXT_TARGET_KIND,
-        RECOMMENDED_POST_REVIEW_TARGET,
         TOP_OBLIGATION_CANDIDATE,
         TOP_OBLIGATION_ROW_ID,
-        "psi-A total conservation",
-        "psi-A matter-sector exchange",
-        "psi-A gauge-sector exchange",
-        "C_source^A",
-        "C_source^phi",
+        TOP_OBLIGATION_PACKET_SCOPE,
+        TOP_OBLIGATION_PACKET_PLAIN_MEANING,
         SELECTED_PROOF_TARGET,
         SELECTED_THEOREM_ROW,
-        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_OUTCOME_v0",
-        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_NONCLAIM_BOUNDARY_v0",
+        LEAN_STATUS_WORDING,
+        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_RESULT_REVIEW_OUTCOME_v0",
+        "CK_FAMILY_THEOREM_LINKAGE_PRIORITY_SELECTION_AFTER_INDEX_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
+        "CK_FAMILY_TOP_THEOREM_LINKAGE_OBLIGATION_PACKET_SCOPE_v0",
         "no theorem discharge",
         "no proof execution",
         "no GAP discharge",
         "no C_k rule promotion",
         "no action embedding",
         "no variation",
-        "no EM-QFT closure",
-        "no QFT-GR closure",
-        "no GR-QM closure",
+        "no seam closure",
+        "no empirical validation",
         "no master-action promotion",
         "working-form, noncanonical",
     ]:
         assert token in joined, token
 
 
-def test_ck_family_theorem_linkage_priority_selection_after_index_not_manifest_enrolled() -> None:
+def test_ck_family_theorem_linkage_priority_selection_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_ck_family_theorem_linkage_priority_selection_after_index_gate.py"
+        "test_ck_family_theorem_linkage_priority_selection_after_index_result_review_gate.py"
     )
