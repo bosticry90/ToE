@@ -5,6 +5,7 @@ from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
+    active_workstream,
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
@@ -322,21 +323,23 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
         "execute_cexchange_theorem_linkage_attempt_from_total_conservation_route"
     )
     review = _workstream(registry, NEXT_TARGET)
-    assert review["status"] == "active"
+    assert review["status"] == "paused"
     assert review["workstream_id"] == NEXT_TARGET
     assert review["authorization_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecution.lean"
+        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecutionResultReview.lean"
     )
-    assert review["execution_result"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_EXECUTED_"
-        "DEFINITIONAL_LINKAGE_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_MASTER_ACTION_PROMOTION"
+    assert review["review_result"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_"
+        "ACCEPTS_DEFINITIONAL_LINKAGE_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_MASTER_"
+        "ACTION_PROMOTION"
     )
-    assert review["review_result"] == "PENDING"
-    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target"] == (
+        "prepare_cexchange_theorem_linkage_obligation_closeout"
+    )
     assert (
         review["selected_next_target_kind"]
-        == "cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review"
+        == "cexchange_theorem_linkage_obligation_closeout_preparation"
     )
     assert review["attempt_type"] == ATTEMPT_TYPE
     assert review["proof_style"] == PROOF_STYLE
@@ -356,6 +359,14 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
     assert executed["proof_attempt_executed"] == "yes"
     assert executed["theorem_discharged"] == "yes"
     assert executed["rule_promoted"] == "no"
+
+    active = active_workstream(registry)
+    assert (
+        active["workstream_id"]
+        == "prepare_cexchange_theorem_linkage_obligation_closeout"
+    )
+    assert active["status"] == "active"
+    assert active["closeout_result"] == "PENDING"
 
 
 def test_cexchange_theorem_linkage_attempt_packet_mirrors() -> None:

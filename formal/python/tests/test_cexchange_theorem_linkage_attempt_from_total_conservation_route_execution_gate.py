@@ -249,7 +249,7 @@ def test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review() 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -257,8 +257,10 @@ def test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review() 
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    closeout_target = "prepare_cexchange_theorem_linkage_obligation_closeout"
+    assert closeout_target in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -273,18 +275,20 @@ def test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review() 
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == CONSUMED_TARGET
+    assert active["workstream_id"] == closeout_target
+    assert active["active_lane"] == closeout_target
+    assert active["authorization_evidence"].endswith(
+        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecutionResultReview.lean"
+    )
+    assert active["authorized_next_strict_target"] == closeout_target
+    assert active["consumed_target"] == NEXT_TARGET
     assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["execution_result"] == OUTCOME_ID
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["result_token"] == OUTCOME_ID
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert active["closeout_result"] == "PENDING"
+    assert active["selected_next_target"] == closeout_target
+    assert (
+        active["selected_next_target_kind"]
+        == "cexchange_theorem_linkage_obligation_closeout_preparation"
+    )
     assert active["proof_attempt_executed"] == "yes"
     assert active["theorem_discharged"] == "yes"
     assert active["C_exchange_zero_derived"] == "yes"

@@ -12,19 +12,16 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review_report import (
+from formal.python.tools.cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review_report import (
     ACCEPTED_REVIEW_FINDINGS,
-    ATTEMPT_PACKET_PATH,
-    ATTEMPT_TYPE,
-    BASIS,
-    BLOCKED_CLAIMS,
-    CLAIM_BOUNDARY,
     C_EXCHANGE_RESIDUAL_DEFINITION,
     C_EXCHANGE_TARGET_CONCLUSION,
+    CLOSEOUT_OUTCOME,
+    CLOSEOUT_STATEMENT,
     CONSUMED_TARGET,
     DEFAULT_OUT,
+    EXECUTION_PATH,
     FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_REVIEW,
-    GOAL,
     INPUT_ROUTE,
     LEAN_PACKET_PATH,
     LEAN_STATUS_WORDING_FOR_REVIEW,
@@ -33,24 +30,16 @@ from formal.python.tools.cexchange_theorem_linkage_attempt_from_total_conservati
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
-    PLAIN_MEANING,
-    PROOF_STYLE,
     REVIEW_RESULT,
-    RULE_FAMILY,
     SCHEMA_ID,
     SCOPED_LEAN_TARGETS_STATUS_FOR_REVIEW,
     STRICT_REVIEW_RESULT,
-    STRICT_SUGGESTED_EXECUTION_OUTCOME,
-    SUGGESTED_EXECUTION_OUTCOME,
-    TARGET_RULE,
     THEOREM_TARGET_ID,
     THEOREM_TARGET_STATEMENT,
-    TOP_OBLIGATION,
-    TOP_OBLIGATION_PACKET_SCOPE,
     TOP_OBLIGATION_ROW_ID,
     TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
     TOTAL_STRESS_ENERGY_DEFINITION,
-    build_cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review,
+    build_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review,
 )
 
 
@@ -60,7 +49,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review_report.py"
+    / "cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -117,9 +106,9 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_files_exist() -> None:
+def test_cexchange_execution_result_review_files_exist() -> None:
     for path in [
-        ATTEMPT_PACKET_PATH,
+        EXECUTION_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -130,7 +119,7 @@ def test_cexchange_theorem_linkage_attempt_result_review_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_accepts_preparation() -> None:
+def test_cexchange_execution_result_review_accepts_bridge() -> None:
     review = _json(DEFAULT_OUT)
 
     assert review["artifact_id"] == SCHEMA_ID
@@ -138,6 +127,7 @@ def test_cexchange_theorem_linkage_attempt_result_review_accepts_preparation() -
     assert review["packet_id"] == PACKET_ID
     assert review["prepared"] is True
     assert review["accepted"] is True
+    assert review["reviewed"] is True
     assert review["outcome_id"] == OUTCOME_ID
     assert review["review_result"] == REVIEW_RESULT
     assert review["packet_result"] == OUTCOME_ID
@@ -146,34 +136,22 @@ def test_cexchange_theorem_linkage_attempt_result_review_accepts_preparation() -
     assert review["consumed_target"] == CONSUMED_TARGET
     assert review["selected_next_target"] == NEXT_TARGET
     assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert review["suggested_execution_outcome"] == SUGGESTED_EXECUTION_OUTCOME
+    assert review["closeout_outcome"] == CLOSEOUT_OUTCOME
+    assert review["closeout_statement"] == CLOSEOUT_STATEMENT
     assert (
-        review["strict_suggested_execution_outcome"]
-        == STRICT_SUGGESTED_EXECUTION_OUTCOME
-    )
-    assert (
-        build_cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review()
+        build_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review()
         == review
     )
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_records_theorem_shape() -> None:
+def test_cexchange_execution_result_review_records_logical_shape_and_boundary() -> None:
     review = _json(DEFAULT_OUT)
 
     assert review["accepted_review_findings"] == ACCEPTED_REVIEW_FINDINGS
-    assert review["top_obligation"] == TOP_OBLIGATION
-    assert review["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
-    assert review["top_obligation_packet_scope"] == TOP_OBLIGATION_PACKET_SCOPE
-    assert review["attempt_type"] == ATTEMPT_TYPE
     assert review["input_route"] == INPUT_ROUTE
-    assert review["target_rule"] == TARGET_RULE
-    assert review["proof_style"] == PROOF_STYLE
-    assert review["claim_boundary"] == CLAIM_BOUNDARY
-    assert review["basis"] == BASIS
-    assert review["rule_family"] == RULE_FAMILY
-    assert review["goal"] == GOAL
     assert review["theorem_target_id"] == THEOREM_TARGET_ID
     assert review["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert review["top_obligation_row_id"] == TOP_OBLIGATION_ROW_ID
     assert review["total_stress_energy_definition"] == TOTAL_STRESS_ENERGY_DEFINITION
     assert (
         review["total_stress_energy_conservation_identity"]
@@ -181,54 +159,17 @@ def test_cexchange_theorem_linkage_attempt_result_review_records_theorem_shape()
     )
     assert review["C_exchange_residual_definition"] == C_EXCHANGE_RESIDUAL_DEFINITION
     assert review["C_exchange_target_conclusion"] == C_EXCHANGE_TARGET_CONCLUSION
-    assert review["plain_meaning"] == PLAIN_MEANING
-    assert review["theorem_target_shape"]["given"] == [
-        TOTAL_STRESS_ENERGY_DEFINITION,
-        TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
-        C_EXCHANGE_RESIDUAL_DEFINITION,
-    ]
-    assert review["theorem_target_shape"]["therefore"] == C_EXCHANGE_TARGET_CONCLUSION
-
-
-def test_cexchange_theorem_linkage_attempt_result_review_preserves_nonclaims() -> None:
-    review = _json(DEFAULT_OUT)
-
-    assert review["blocked_claims"] == BLOCKED_CLAIMS
-    assert review["blocked_claim_count"] == 16
-    assert review["gap_count"] == 8
-    assert review["open_gap_count"] == 8
-    assert review["closed_gap_count"] == 0
-    assert review["proof_target_selected"] is True
-    assert review["theorem_row_selected"] is True
-    assert review["theorem_row_selected_for_execution"] is True
-    assert review["proof_execution_authorized_by_review_for_next_target"] is True
-    assert review["theorem_linkage_proof_attempt_authorized_for_next_target"] is True
+    assert review["definition_linkage_constructed"] is True
+    assert review["C_exchange_zero_derived"] is True
+    assert review["top_theorem_linkage_obligation_locally_reduced"] is True
+    assert review["review_executes_attempt"] is False
+    assert review["proof_execution_authorized"] is False
+    assert review["proof_attempt_executed"] is True
+    assert review["theorem_discharged"] is True
+    assert review["theorem_linkage_completed"] is True
+    assert review["theorem_linkage_proof_attempt_authorized"] is False
 
     for key in [
-        "attempt_packet_consumed",
-        "C_exchange_theorem_linkage_attempt_prepared",
-        "target_theorem_shape_recorded",
-        "input_route_is_accepted_psi_A_total_conservation",
-        "proof_style_is_definitional_linkage",
-        "execution_target_selected_after_review",
-        "attempt_execution_authorized_after_review_only",
-        "attempt_execution_authorized_as_next_target",
-        "all_gaps_remain_open",
-        "no_gap_discharged",
-        "no_gap_closed",
-    ]:
-        assert review[key] is True, key
-
-    for key in [
-        "proof_execution_authorized",
-        "proof_target_execution_authorized",
-        "proof_attempt_executed",
-        "proof_debt_reduced",
-        "proof_debt_discharged",
-        "theorem_discharged",
-        "theorem_linkage_completed",
-        "theorem_linkage_proof_attempt_authorized",
-        "review_executes_attempt",
         "rule_promoted",
         "C_k_action_embedding_claimed",
         "C_k_action_variation_executed",
@@ -245,7 +186,7 @@ def test_cexchange_theorem_linkage_attempt_result_review_preserves_nonclaims() -
         assert review[key] is False, key
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_records_lean_status() -> None:
+def test_cexchange_execution_result_review_records_lean_status() -> None:
     review = _json(DEFAULT_OUT)
 
     assert review["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_REVIEW
@@ -261,7 +202,7 @@ def test_cexchange_theorem_linkage_attempt_result_review_records_lean_status() -
     assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(review)
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution() -> None:
+def test_cexchange_execution_result_review_rotates_to_closeout() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
     is_current = assert_historical_target_recorded(
@@ -271,71 +212,53 @@ def test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution() 
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert not is_current
+    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
-    assert NEXT_TARGET in registry["completed_targets"]
-    assert NEXT_TARGET in registry["consumed_targets"]
-    assert NEXT_TARGET in registry["paused_lanes"]
+    assert CONSUMED_TARGET in registry["paused_lanes"]
+    assert NEXT_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
 
-    executed = _workstream(registry, NEXT_TARGET)
-    assert executed["status"] == "paused"
-    assert executed["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
-    assert executed["strict_execution_result"] == STRICT_SUGGESTED_EXECUTION_OUTCOME
-    assert executed["selected_next_target"] == CONSUMED_TARGET
-    assert (
-        executed["selected_next_target_kind"]
-        == "cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review"
-    )
-    assert executed["proof_execution_authorized"] == "yes"
-    assert executed["proof_attempt_executed"] == "yes"
-    assert executed["theorem_discharged"] == "yes"
-    assert executed["rule_promoted"] == "no"
-    assert executed["master_action_promoted"] == "no"
+    consumed = _workstream(registry, CONSUMED_TARGET)
+    assert consumed["status"] == "paused"
+    assert consumed["authorization_evidence"] == evidence
+    assert consumed["report"] == _rel(DEFAULT_OUT)
+    assert consumed["review_result"] == OUTCOME_ID
+    assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert consumed["selected_next_target"] == NEXT_TARGET
+    assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert consumed["proof_attempt_executed"] == "yes"
+    assert consumed["theorem_discharged"] == "yes"
+    assert consumed["review_executes_attempt"] == "no"
+    assert consumed["rule_promoted"] == "no"
+    assert consumed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert (
-        active["workstream_id"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
-    assert (
-        active["active_lane"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
-    assert active["authorization_evidence"].endswith(
-        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecutionResultReview.lean"
-    )
-    assert (
-        active["authorized_next_strict_target"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
+    assert active["workstream_id"] == NEXT_TARGET
+    assert active["active_lane"] == NEXT_TARGET
+    assert active["authorization_evidence"] == evidence
+    assert active["authorized_next_strict_target"] == NEXT_TARGET
+    assert active["consumed_target"] == CONSUMED_TARGET
     assert active["packet_result"] == "PENDING"
     assert active["closeout_result"] == "PENDING"
-    assert active["review_result"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_"
-        "ACCEPTS_DEFINITIONAL_LINKAGE_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_MASTER_"
-        "ACTION_PROMOTION"
-    )
-    assert active["selected_next_target"] == (
-        "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
-    assert active["proof_execution_authorized"] == "no"
-    assert active["proof_target_execution_authorized"] == "no"
-    assert active["theorem_linkage_proof_attempt_authorized"] == "no"
+    assert active["outcome_id"] == OUTCOME_ID
+    assert active["result_token"] == OUTCOME_ID
+    assert active["closeout_outcome"] == CLOSEOUT_OUTCOME
+    assert active["closeout_statement"] == CLOSEOUT_STATEMENT
     assert active["proof_attempt_executed"] == "yes"
     assert active["theorem_discharged"] == "yes"
+    assert active["C_exchange_zero_derived"] == "yes"
+    assert active["definition_linkage_constructed"] == "yes"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_mirrors() -> None:
+def test_cexchange_execution_result_review_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -360,46 +283,33 @@ def test_cexchange_theorem_linkage_attempt_result_review_mirrors() -> None:
         OUTCOME_ID,
         STRICT_REVIEW_RESULT,
         PACKET_CLASSIFICATION,
-        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteResultReview",
+        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecutionResultReview",
         CONSUMED_TARGET,
         NEXT_TARGET,
         NEXT_TARGET_KIND,
-        SUGGESTED_EXECUTION_OUTCOME,
-        STRICT_SUGGESTED_EXECUTION_OUTCOME,
-        ATTEMPT_TYPE,
-        INPUT_ROUTE,
-        TARGET_RULE,
-        PROOF_STYLE,
-        CLAIM_BOUNDARY,
-        TOP_OBLIGATION,
-        TOP_OBLIGATION_ROW_ID,
-        BASIS,
-        RULE_FAMILY,
-        GOAL,
-        THEOREM_TARGET_ID,
+        CLOSEOUT_OUTCOME,
+        CLOSEOUT_STATEMENT,
         THEOREM_TARGET_STATEMENT,
-        PLAIN_MEANING,
         TOTAL_STRESS_ENERGY_DEFINITION,
         TOTAL_STRESS_ENERGY_CONSERVATION_IDENTITY,
         C_EXCHANGE_RESIDUAL_DEFINITION,
         C_EXCHANGE_TARGET_CONCLUSION,
         LEAN_STATUS_WORDING_FOR_REVIEW,
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_OUTCOME_v0",
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
-        "no theorem execution",
-        "no theorem discharge",
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_EXECUTION_RESULT_REVIEW_OUTCOME_v0",
+        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_EXECUTION_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
+        "C_exchange theorem-linkage bridge executed",
+        "C_exchange zero derived",
         "no C_k rule promotion",
         "no action embedding",
         "no variation",
         "no seam closure",
         "no empirical validation",
         "no master-action promotion",
-        "working-form, noncanonical",
     ]:
         assert token in joined, token
 
 
-def test_cexchange_theorem_linkage_attempt_result_review_not_manifest_enrolled() -> None:
+def test_cexchange_execution_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review_gate.py"
+        "test_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review_gate.py"
     )
