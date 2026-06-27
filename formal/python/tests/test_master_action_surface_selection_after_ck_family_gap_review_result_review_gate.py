@@ -277,7 +277,7 @@ def test_master_action_surface_selection_after_gap_review_result_review_rotates_
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -286,9 +286,9 @@ def test_master_action_surface_selection_after_gap_review_result_review_rotates_
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["completed_targets"]
-    assert NEXT_TARGET not in registry["consumed_targets"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["completed_targets"]
+    assert NEXT_TARGET in registry["consumed_targets"]
+    assert NEXT_TARGET in registry["paused_lanes"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -308,24 +308,13 @@ def test_master_action_surface_selection_after_gap_review_result_review_rotates_
     assert consumed["no_rule_promoted"] == "yes"
     assert consumed["master_action_promoted"] == "no"
 
-    active = _workstream(registry, NEXT_TARGET)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["authorized_target"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["review_result"] == "PENDING"
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active["theorem_linkage_obligation_index_selected"] == "yes"
-    assert active["theorem_linkage_obligation_index_prepared"] == "no"
-    assert active["obligation_rows_discharged"] == "no"
-    assert active["master_action_promoted"] == "no"
+    follow_on = _workstream(registry, NEXT_TARGET)
+    assert follow_on["status"] == "paused"
+    assert follow_on["workstream_id"] == NEXT_TARGET
+    assert follow_on["theorem_linkage_obligation_index_selected"] == "yes"
+    assert follow_on["theorem_linkage_obligation_index_prepared"] == "yes"
+    assert follow_on["obligation_rows_discharged"] == "no"
+    assert follow_on["master_action_promoted"] == "no"
 
 
 def test_master_action_surface_selection_after_gap_review_result_review_mirrors() -> None:
