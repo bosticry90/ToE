@@ -363,10 +363,13 @@ def test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review() -> 
     active = active_workstream(registry)
     assert (
         active["workstream_id"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
+        == "review_cexchange_theorem_linkage_obligation_closeout_result"
     )
     assert active["status"] == "active"
-    assert active["closeout_result"] == "PENDING"
+    assert active["closeout_result"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
+        "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+    )
 
 
 def test_cexchange_theorem_linkage_attempt_packet_mirrors() -> None:

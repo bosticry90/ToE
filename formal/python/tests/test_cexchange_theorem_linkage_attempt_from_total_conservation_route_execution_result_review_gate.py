@@ -212,7 +212,7 @@ def test_cexchange_execution_result_review_rotates_to_closeout() -> None:
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
+    assert not is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -220,7 +220,7 @@ def test_cexchange_execution_result_review_rotates_to_closeout() -> None:
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
@@ -237,25 +237,26 @@ def test_cexchange_execution_result_review_rotates_to_closeout() -> None:
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
+    closeout = _workstream(registry, NEXT_TARGET)
+    assert closeout["status"] == "paused"
+    assert closeout["closeout_result"] == CLOSEOUT_OUTCOME
+    assert closeout["selected_next_target"] == (
+        "review_cexchange_theorem_linkage_obligation_closeout_result"
+    )
+    assert closeout["proof_attempt_executed"] == "yes"
+    assert closeout["theorem_discharged"] == "yes"
+    assert closeout["C_exchange_zero_derived"] == "yes"
+    assert closeout["definition_linkage_constructed"] == "yes"
+    assert closeout["rule_promoted"] == "no"
+    assert closeout["master_action_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["closeout_result"] == "PENDING"
-    assert active["outcome_id"] == OUTCOME_ID
-    assert active["result_token"] == OUTCOME_ID
-    assert active["closeout_outcome"] == CLOSEOUT_OUTCOME
-    assert active["closeout_statement"] == CLOSEOUT_STATEMENT
-    assert active["proof_attempt_executed"] == "yes"
-    assert active["theorem_discharged"] == "yes"
-    assert active["C_exchange_zero_derived"] == "yes"
-    assert active["definition_linkage_constructed"] == "yes"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    assert (
+        active["workstream_id"]
+        == "review_cexchange_theorem_linkage_obligation_closeout_result"
+    )
+    assert active["consumed_target"] == NEXT_TARGET
 
 
 def test_cexchange_execution_result_review_mirrors() -> None:

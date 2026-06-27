@@ -300,32 +300,21 @@ def test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution() 
     assert executed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
+    closeout_review_target = "review_cexchange_theorem_linkage_obligation_closeout_result"
     assert active["status"] == "active"
-    assert (
-        active["workstream_id"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
-    assert (
-        active["active_lane"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
+    assert active["workstream_id"] == closeout_review_target
+    assert active["active_lane"] == closeout_review_target
     assert active["authorization_evidence"].endswith(
-        "CExchangeTheoremLinkageAttemptFromTotalConservationRouteExecutionResultReview.lean"
+        "CExchangeTheoremLinkageObligationCloseout.lean"
     )
-    assert (
-        active["authorized_next_strict_target"]
-        == "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
+    assert active["authorized_next_strict_target"] == closeout_review_target
     assert active["packet_result"] == "PENDING"
-    assert active["closeout_result"] == "PENDING"
-    assert active["review_result"] == (
-        "CEXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_TOTAL_CONSERVATION_ROUTE_RESULT_REVIEW_"
-        "ACCEPTS_DEFINITIONAL_LINKAGE_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_MASTER_"
-        "ACTION_PROMOTION"
+    assert active["closeout_result"] == (
+        "CEXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DEFINITIONALLY_LINKED_TO_"
+        "TOTAL_CONSERVATION_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
     )
-    assert active["selected_next_target"] == (
-        "prepare_cexchange_theorem_linkage_obligation_closeout"
-    )
+    assert active["review_result"] == "PENDING"
+    assert active["selected_next_target"] == closeout_review_target
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_target_execution_authorized"] == "no"
     assert active["theorem_linkage_proof_attempt_authorized"] == "no"
