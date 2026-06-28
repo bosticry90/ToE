@@ -195,7 +195,7 @@ def test_post_psi_A_total_conservation_selection_result_review_rotates_to_matter
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -206,7 +206,10 @@ def test_post_psi_A_total_conservation_selection_result_review_rotates_to_matter
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     selector = _workstream(registry, "select_next_ck_family_theorem_linkage_obligation_after_psi_A_total_conservation_closeout")
@@ -230,25 +233,31 @@ def test_post_psi_A_total_conservation_selection_result_review_rotates_to_matter
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["packet_result"] == "PENDING"
-    assert active["selected_next_target"] == LIKELY_POST_PACKET_REVIEW_TARGET
-    assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["selected_obligation_rank"] == SELECTED_OBLIGATION_RANK
-    assert active["theorem_target_statement"] == NEXT_PACKET_TARGET_STATEMENT
-    assert active["watch_items"] == "; ".join(NEXT_PACKET_WATCH_ITEMS)
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    handoff = _workstream(registry, NEXT_TARGET)
+    if is_current:
+        assert handoff["status"] == "active"
+        assert handoff["active_lane"] == NEXT_TARGET
+        assert handoff["authorization_evidence"] == evidence
+        assert handoff["report"] == _rel(DEFAULT_OUT)
+        assert handoff["review_result"] == OUTCOME_ID
+        assert handoff["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert handoff["packet_result"] == "PENDING"
+    else:
+        assert handoff["status"] == "paused"
+    assert handoff["workstream_id"] == NEXT_TARGET
+    if is_current:
+        assert handoff["consumed_target"] == consumed_target()
+    else:
+        assert handoff["consumed_target"] in {consumed_target(), NEXT_TARGET}
+    assert handoff["selected_next_target"] == LIKELY_POST_PACKET_REVIEW_TARGET
+    assert handoff["selected_obligation"] == SELECTED_OBLIGATION
+    assert handoff["selected_obligation_rank"] == SELECTED_OBLIGATION_RANK
+    assert handoff["theorem_target_statement"] == NEXT_PACKET_TARGET_STATEMENT
+    assert handoff["watch_items"] == "; ".join(NEXT_PACKET_WATCH_ITEMS)
+    assert handoff["proof_attempt_executed"] == "no"
+    assert handoff["theorem_discharged"] == "no"
+    assert handoff["rule_promoted"] == "no"
+    assert handoff["master_action_promoted"] == "no"
 
 
 def test_post_psi_A_total_conservation_selection_result_review_mirrors() -> None:
