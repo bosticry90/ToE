@@ -100,6 +100,9 @@ POST_SELECTOR_REVIEW_TARGET = (
 POST_SELECTOR_PACKET_TARGET = (
     "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
 )
+POST_SELECTOR_PACKET_REVIEW_TARGET = (
+    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
+)
 POST_SELECTOR_OUTCOME = (
     "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
     "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
@@ -132,6 +135,10 @@ POST_SELECTOR_REVIEW_REPORT = (
     "formal/docs/release/"
     "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
     "EXCHANGE_CLOSEOUT_RESULT_REVIEW_20260628_v0.json"
+)
+POST_SELECTOR_PACKET_REPORT = (
+    "formal/docs/release/"
+    "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_20260628_v0.json"
 )
 
 
@@ -333,12 +340,14 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == POST_SELECTOR_PACKET_TARGET
-        assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
-        assert active["report"] == POST_SELECTOR_REVIEW_REPORT
-        assert active["review_result"] == POST_SELECTOR_REVIEW_OUTCOME
-        assert active["strict_review_result"] == POST_SELECTOR_REVIEW_STRICT_OUTCOME
-        assert active["packet_result"] == "PENDING"
+        assert active["workstream_id"] == POST_SELECTOR_PACKET_REVIEW_TARGET
+        assert active["consumed_target"] == POST_SELECTOR_PACKET_TARGET
+        assert active["report"] == POST_SELECTOR_PACKET_REPORT
+        assert active["packet_result"] == (
+            "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_"
+            "GAUGE_EXCHANGE_ROUTE_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+        )
+        assert active["review_result"] == "PENDING"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

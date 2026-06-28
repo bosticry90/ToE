@@ -104,6 +104,9 @@ POST_SELECTOR_REVIEW_TARGET = (
 POST_SELECTOR_PACKET_TARGET = (
     "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
 )
+POST_SELECTOR_PACKET_REVIEW_TARGET = (
+    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
+)
 POST_SELECTOR_OUTCOME = (
     "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
     "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
@@ -308,6 +311,7 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
             POST_CLOSEOUT_SELECTOR_TARGET,
             POST_SELECTOR_REVIEW_TARGET,
             POST_SELECTOR_PACKET_TARGET,
+            POST_SELECTOR_PACKET_REVIEW_TARGET,
         }
         assert active["consumed_target"] in {
             NEXT_TARGET,
@@ -315,6 +319,7 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
             CLOSEOUT_REVIEW_TARGET,
             POST_CLOSEOUT_SELECTOR_TARGET,
             POST_SELECTOR_REVIEW_TARGET,
+            POST_SELECTOR_PACKET_TARGET,
         }
         if active["workstream_id"] == CLOSEOUT_PREPARATION_TARGET:
             assert active["execution_result"] == OUTCOME_ID
@@ -333,9 +338,15 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
             assert active["selection_result"] == POST_SELECTOR_OUTCOME
             assert active["review_result"] == "PENDING"
         else:
-            assert active["workstream_id"] == POST_SELECTOR_PACKET_TARGET
-            assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
-            assert active["packet_result"] == "PENDING"
+            assert active["workstream_id"] in {
+                POST_SELECTOR_PACKET_TARGET,
+                POST_SELECTOR_PACKET_REVIEW_TARGET,
+            }
+            if active["workstream_id"] == POST_SELECTOR_PACKET_TARGET:
+                assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
+            else:
+                assert active["consumed_target"] == POST_SELECTOR_PACKET_TARGET
+                assert active["review_result"] == "PENDING"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

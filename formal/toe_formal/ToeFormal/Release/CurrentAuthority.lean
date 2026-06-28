@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet" := by
+      "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result" := by
   native_decide
 
 end CurrentAuthority

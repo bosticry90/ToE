@@ -43,6 +43,14 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_ps
     STRICT_REVIEW_RESULT,
     build_ck_family_theorem_linkage_obligation_selection_after_psi_A_matter_exchange_closeout_result_review,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_report import (
+    DEFAULT_OUT as GAUGE_PACKET_OUT,
+    LEAN_PACKET_PATH as GAUGE_PACKET_LEAN_PACKET_PATH,
+    LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW as GAUGE_PACKET_FOLLOW_ON_TARGET,
+    NEXT_TARGET as GAUGE_PACKET_REVIEW_TARGET,
+    OUTCOME_ID as GAUGE_PACKET_OUTCOME,
+    STRICT_PACKET_RESULT as GAUGE_PACKET_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -212,12 +220,13 @@ def test_post_psi_A_matter_exchange_selection_result_review_rotates_to_gauge_exc
         lane=NEXT_TARGET,
     )
 
-    assert is_current is True
+    assert is_current is False
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert GAUGE_PACKET_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
     selector = _workstream(
         registry,
@@ -244,21 +253,30 @@ def test_post_psi_A_matter_exchange_selection_result_review_rotates_to_gauge_exc
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
+    packet = _workstream(registry, NEXT_TARGET)
+    assert packet["status"] == "paused"
+    assert packet["authorization_evidence"] == _rel(GAUGE_PACKET_LEAN_PACKET_PATH)
+    assert packet["report"] == _rel(GAUGE_PACKET_OUT)
+    assert packet["packet_result"] == GAUGE_PACKET_OUTCOME
+    assert packet["strict_packet_result"] == GAUGE_PACKET_STRICT_OUTCOME
+    assert packet["selected_next_target"] == GAUGE_PACKET_REVIEW_TARGET
+    assert packet["selected_obligation"] == SELECTED_OBLIGATION
+    assert packet["proof_attempt_executed"] == "no"
+    assert packet["theorem_discharged"] == "no"
+    assert packet["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["packet_result"] == "PENDING"
-    assert active["consumed_target"] == consumed_target()
-    assert active["selected_next_target"] == LIKELY_POST_PACKET_REVIEW_TARGET
+    assert active["workstream_id"] == GAUGE_PACKET_REVIEW_TARGET
+    assert active["active_lane"] == GAUGE_PACKET_REVIEW_TARGET
+    assert active["authorization_evidence"] == _rel(GAUGE_PACKET_LEAN_PACKET_PATH)
+    assert active["report"] == _rel(GAUGE_PACKET_OUT)
+    assert active["packet_result"] == GAUGE_PACKET_OUTCOME
+    assert active["strict_packet_result"] == GAUGE_PACKET_STRICT_OUTCOME
+    assert active["review_result"] == "PENDING"
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["selected_next_target"] == GAUGE_PACKET_FOLLOW_ON_TARGET
     assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["selected_obligation_rank"] == str(SELECTED_OBLIGATION_RANK)
-    assert active["theorem_target_statement"] == NEXT_PACKET_TARGET_STATEMENT
-    assert active["watch_items"] == "; ".join(NEXT_PACKET_WATCH_ITEMS)
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
