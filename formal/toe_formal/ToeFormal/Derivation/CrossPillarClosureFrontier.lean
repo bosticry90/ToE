@@ -366,7 +366,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
+        "review_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -394,7 +394,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
+        "review_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result"
       status := .retained }
   ]
 
@@ -414,11 +414,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the post-psi-A total conservation selector review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_packet_result"
+  "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
 
 /-- Current live target after the post-psi-A total conservation selector review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
+  "review_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
+    "review_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
