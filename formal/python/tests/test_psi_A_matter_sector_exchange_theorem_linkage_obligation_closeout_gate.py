@@ -140,6 +140,34 @@ POST_SELECTOR_PACKET_REPORT = (
     "formal/docs/release/"
     "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_20260628_v0.json"
 )
+POST_SELECTOR_SELECTED_OBLIGATION = "psi-A gauge-sector exchange theorem-linkage gap"
+GAUGE_ATTEMPT_PREPARATION_TARGET = (
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
+)
+GAUGE_ATTEMPT_REVIEW_TARGET = (
+    "review_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result"
+)
+GAUGE_ATTEMPT_EXECUTION_TARGET = (
+    "execute_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
+)
+GAUGE_ATTEMPT_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRoute.lean"
+)
+GAUGE_ATTEMPT_REPORT = (
+    "formal/docs/release/"
+    "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_"
+    "20260628_v0.json"
+)
+GAUGE_ATTEMPT_OUTCOME = (
+    "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_"
+    "PREPARED_GAUGE_EXCHANGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_PROMOTION"
+)
+GAUGE_ATTEMPT_STRICT_OUTCOME = (
+    "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_"
+    "PREPARED_STRESS_DIVERGENCE_TO_CURRENT_EXCHANGE_ROUTE_NO_ACTION_VARIATION_OR_"
+    "MASTER_ACTION_PROMOTION"
+)
 
 
 def _read(path: Path) -> str:
@@ -340,20 +368,22 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == (
-            "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
-        )
-        assert active["consumed_target"] == POST_SELECTOR_PACKET_REVIEW_TARGET
-        assert active["report"] == (
-            "formal/docs/release/"
-            "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_"
-            "RESULT_REVIEW_20260628_v0.json"
-        )
-        assert active["packet_result"] == "PENDING"
-        assert active["review_result"] == (
-            "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
-            "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
-        )
+        assert active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET
+        assert active["active_lane"] == GAUGE_ATTEMPT_REVIEW_TARGET
+        assert active["authorization_evidence"] == GAUGE_ATTEMPT_EVIDENCE
+        assert active["authorized_next_strict_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
+        assert active["consumed_target"] == GAUGE_ATTEMPT_PREPARATION_TARGET
+        assert active["report"] == GAUGE_ATTEMPT_REPORT
+        assert active["packet_result"] == GAUGE_ATTEMPT_OUTCOME
+        assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
+        assert active["strict_attempt_preparation_result"] == GAUGE_ATTEMPT_STRICT_OUTCOME
+        assert active["review_result"] == "PENDING"
+        assert active["execution_result"] == "PENDING"
+        assert active["selected_next_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+        assert active["selected_obligation"] == POST_SELECTOR_SELECTED_OBLIGATION
+        assert active["proof_execution_authorized"] == "no"
+        assert active["proof_attempt_executed"] == "no"
+        assert active["theorem_discharged"] == "no"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

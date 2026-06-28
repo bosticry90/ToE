@@ -54,6 +54,12 @@ from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_
     WATCH_ITEMS,
     build_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result_review,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_report import (
+    DEFAULT_OUT as ATTEMPT_OUT,
+    LEAN_PACKET_PATH as ATTEMPT_LEAN_PACKET_PATH,
+    OUTCOME_ID as ATTEMPT_OUTCOME,
+    STRICT_ATTEMPT_PREPARATION_RESULT,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -236,13 +242,13 @@ def test_psi_A_gauge_sector_exchange_packet_result_review_rotates_to_attempt_pre
             evidence=evidence,
             lane=NEXT_TARGET,
         )
-        is True
+        is False
     )
 
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert LIKELY_POST_ATTEMPT_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
@@ -270,16 +276,24 @@ def test_psi_A_gauge_sector_exchange_packet_result_review_rotates_to_attempt_pre
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["attempt_preparation_result"] == "PENDING"
-    assert active["selected_next_target"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
-    assert active["selected_next_target_kind"] == LIKELY_POST_ATTEMPT_REVIEW_KIND
+    assert active["workstream_id"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
+    assert active["active_lane"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
+    assert active["authorization_evidence"] == _rel(ATTEMPT_LEAN_PACKET_PATH)
+    assert active["report"] == _rel(ATTEMPT_OUT)
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["packet_result"] == ATTEMPT_OUTCOME
+    assert active["attempt_preparation_result"] == ATTEMPT_OUTCOME
+    assert (
+        active["strict_attempt_preparation_result"]
+        == STRICT_ATTEMPT_PREPARATION_RESULT
+    )
+    assert active["review_result"] == "PENDING"
+    assert active["selected_next_target"] == (
+        "execute_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
+    )
+    assert active["selected_next_target_kind"] == (
+        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_execution"
+    )
     assert active["selected_obligation"] == OBLIGATION
     assert active["basis"] == BASIS
     assert active["proof_style"] == PROOF_STYLE

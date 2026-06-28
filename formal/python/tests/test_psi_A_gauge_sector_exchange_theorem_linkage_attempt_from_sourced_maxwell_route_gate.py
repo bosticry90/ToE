@@ -13,50 +13,43 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_public_surfaces_match_registry,
     workstream,
 )
-from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_report import (
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_report import (
     ACCEPTED_GAUGE_STRESS_ENERGY_DIVERGENCE_IDENTITY,
     ACCEPTED_PACKET_FINDINGS,
     ACCEPTED_SOURCED_MAXWELL_ROUTE,
+    ATTEMPT_PREPARATION_RESULT,
     BASIS,
-    CURRENT_DEFINITION,
+    BLOCKED_CLAIMS,
     DEFAULT_OUT,
-    DOMAIN_BOUNDARY_ASSUMPTIONS,
     FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_PACKET,
     LEAN_PACKET_PATH,
     LEAN_STATUS_WORDING_FOR_PACKET,
-    LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW,
+    LIKELY_POST_REVIEW_TARGET,
+    LIKELY_POST_REVIEW_TARGET_KIND,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OBLIGATION,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
-    PACKET_RESULT,
     PLAIN_MEANING,
+    PLANNED_PROOF_STEPS,
     PROOF_STYLE,
+    ROUTE_GIVEN,
+    ROUTE_THEN,
     SCHEMA_ID,
     SCOPED_LEAN_TARGETS_STATUS_FOR_PACKET,
-    STRICT_PACKET_RESULT,
+    STRICT_ATTEMPT_PREPARATION_RESULT,
     TARGET,
-    THEOREM_SHAPE_GIVEN,
-    THEOREM_SHAPE_THEN,
     THEOREM_TARGET_STATEMENT,
     WATCH_ITEMS,
-    build_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet,
+    build_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route,
 )
 from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result_review_report import (
     DEFAULT_OUT as REVIEW_OUT,
     LEAN_PACKET_PATH as REVIEW_LEAN_PACKET_PATH,
-    LIKELY_POST_ATTEMPT_REVIEW_KIND,
-    LIKELY_POST_ATTEMPT_REVIEW_TARGET,
     OUTCOME_ID as REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT,
-)
-from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_report import (
-    DEFAULT_OUT as ATTEMPT_OUT,
-    LEAN_PACKET_PATH as ATTEMPT_LEAN_PACKET_PATH,
-    OUTCOME_ID as ATTEMPT_OUTCOME,
-    STRICT_ATTEMPT_PREPARATION_RESULT,
 )
 
 
@@ -66,7 +59,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_report.py"
+    / "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -117,10 +110,14 @@ def _rel(path: Path) -> str:
 
 
 def consumed_target() -> str:
-    return "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
+    return "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
 
 
-def test_psi_A_gauge_sector_exchange_packet_files_exist() -> None:
+def review_target() -> str:
+    return "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
+
+
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_files_exist() -> None:
     for path in [
         DEFAULT_OUT,
         TOOL_PATH,
@@ -132,7 +129,7 @@ def test_psi_A_gauge_sector_exchange_packet_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_psi_A_gauge_sector_exchange_packet_scopes_sourced_maxwell_target() -> None:
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_indexes_route() -> None:
     packet = _json(DEFAULT_OUT)
 
     assert packet["artifact_id"] == SCHEMA_ID
@@ -141,45 +138,48 @@ def test_psi_A_gauge_sector_exchange_packet_scopes_sourced_maxwell_target() -> N
     assert packet["prepared"] is True
     assert packet["accepted"] is True
     assert packet["outcome_id"] == OUTCOME_ID
-    assert packet["packet_result"] == PACKET_RESULT
-    assert packet["strict_packet_result"] == STRICT_PACKET_RESULT
+    assert packet["packet_result"] == ATTEMPT_PREPARATION_RESULT
+    assert packet["attempt_preparation_result"] == ATTEMPT_PREPARATION_RESULT
+    assert (
+        packet["strict_attempt_preparation_result"]
+        == STRICT_ATTEMPT_PREPARATION_RESULT
+    )
     assert packet["packet_classification"] == PACKET_CLASSIFICATION
     assert packet["consumed_target"] == consumed_target()
     assert packet["selected_next_target"] == NEXT_TARGET
     assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert packet["likely_follow_on_target_after_review"] == (
-        LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
-    )
-    assert packet["obligation"] == OBLIGATION
-    assert packet["basis"] == BASIS
-    assert packet["proof_style"] == PROOF_STYLE
-    assert packet["target"] == TARGET
+    assert packet["likely_post_review_target"] == LIKELY_POST_REVIEW_TARGET
     assert packet["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert packet["current_definition"] == CURRENT_DEFINITION
-    assert packet["domain_boundary_assumptions"] == DOMAIN_BOUNDARY_ASSUMPTIONS
     assert (
         packet["accepted_gauge_stress_energy_divergence_identity"]
         == ACCEPTED_GAUGE_STRESS_ENERGY_DIVERGENCE_IDENTITY
     )
     assert packet["accepted_sourced_maxwell_route"] == ACCEPTED_SOURCED_MAXWELL_ROUTE
+    assert packet["planned_proof_steps"] == PLANNED_PROOF_STEPS
+    assert packet["watch_items"] == WATCH_ITEMS
     assert packet["accepted_packet_findings"] == ACCEPTED_PACKET_FINDINGS
-    assert build_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet() == packet
+    assert (
+        build_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route()
+        == packet
+    )
 
 
-def test_psi_A_gauge_sector_exchange_packet_preserves_boundary() -> None:
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_preserves_boundary() -> None:
     packet = _json(DEFAULT_OUT)
 
     assert packet["theorem_shape"] == {
-        "given": THEOREM_SHAPE_GIVEN,
-        "then": THEOREM_SHAPE_THEN,
+        "given": ROUTE_GIVEN,
+        "then": ROUTE_THEN,
+        "planned_proof_steps": PLANNED_PROOF_STEPS,
         "plain_meaning": PLAIN_MEANING,
         "watch_items": WATCH_ITEMS,
     }
+    assert packet["blocked_claims"] == BLOCKED_CLAIMS
+    assert packet["preparation_executes_proof"] is False
     assert packet["proof_execution_authorized"] is False
     assert packet["proof_attempt_executed"] is False
     assert packet["theorem_discharged"] is False
     assert packet["theorem_linkage_obligation_discharged"] is False
-    assert packet["proof_debt_discharged"] is False
     assert packet["gap_1_through_gap_8_discharged"] is False
     assert packet["rule_promoted"] is False
     assert packet["C_k_action_embedding_claimed"] is False
@@ -193,7 +193,7 @@ def test_psi_A_gauge_sector_exchange_packet_preserves_boundary() -> None:
     assert packet["master_action_promoted"] is False
 
 
-def test_psi_A_gauge_sector_exchange_packet_records_lean_status() -> None:
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_records_lean_status() -> None:
     packet = _json(DEFAULT_OUT)
 
     assert packet["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_PACKET
@@ -209,88 +209,76 @@ def test_psi_A_gauge_sector_exchange_packet_records_lean_status() -> None:
     assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(packet)
 
 
-def test_psi_A_gauge_sector_exchange_packet_rotates_to_result_review() -> None:
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_rotates_to_result_review() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
-    is_current = assert_historical_target_recorded(
-        payload=registry,
-        previous_target=consumed_target(),
-        live_target=NEXT_TARGET,
-        evidence=evidence,
-        lane=NEXT_TARGET,
+    assert (
+        assert_historical_target_recorded(
+            payload=registry,
+            previous_target=consumed_target(),
+            live_target=NEXT_TARGET,
+            evidence=evidence,
+            lane=NEXT_TARGET,
+        )
+        is True
     )
 
-    assert is_current is False
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET in registry["paused_lanes"]
+    assert NEXT_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW in registry["next_strict_target_coverage"]
+    assert LIKELY_POST_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
-    consumed = workstream(consumed_target(), registry)
-    assert consumed["status"] == "paused"
-    assert consumed["authorization_evidence"] == evidence
-    assert consumed["report"] == _rel(DEFAULT_OUT)
-    assert consumed["packet_result"] == OUTCOME_ID
-    assert consumed["strict_packet_result"] == STRICT_PACKET_RESULT
-    assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert consumed["obligation"] == OBLIGATION
-    assert consumed["basis"] == BASIS
-    assert consumed["proof_style"] == PROOF_STYLE
-    assert consumed["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert consumed["watch_items"] == "; ".join(WATCH_ITEMS)
-    assert consumed["proof_attempt_executed"] == "no"
-    assert consumed["theorem_discharged"] == "no"
-    assert consumed["rule_promoted"] == "no"
+    prior_review = workstream(review_target(), registry)
+    assert prior_review["status"] == "paused"
+    assert prior_review["authorization_evidence"] == _rel(REVIEW_LEAN_PACKET_PATH)
+    assert prior_review["report"] == _rel(REVIEW_OUT)
+    assert prior_review["review_result"] == REVIEW_OUTCOME
+    assert prior_review["strict_review_result"] == STRICT_REVIEW_RESULT
 
-    review = workstream(NEXT_TARGET, registry)
-    assert review["status"] == "paused"
-    assert review["authorization_evidence"] == _rel(REVIEW_LEAN_PACKET_PATH)
-    assert review["report"] == _rel(REVIEW_OUT)
-    assert review["packet_result"] == OUTCOME_ID
-    assert review["strict_packet_result"] == STRICT_PACKET_RESULT
-    assert review["review_result"] == REVIEW_OUTCOME
-    assert review["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert review["selected_next_target"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
-    assert review["selected_next_target_kind"] == (
-        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_preparation"
+    attempt = workstream(consumed_target(), registry)
+    assert attempt["status"] == "paused"
+    assert attempt["authorization_evidence"] == evidence
+    assert attempt["report"] == _rel(DEFAULT_OUT)
+    assert attempt["packet_result"] == OUTCOME_ID
+    assert attempt["attempt_preparation_result"] == OUTCOME_ID
+    assert attempt["strict_attempt_preparation_result"] == (
+        STRICT_ATTEMPT_PREPARATION_RESULT
     )
-    assert review["selected_obligation"] == OBLIGATION
-    assert review["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert review["watch_items"] == "; ".join(WATCH_ITEMS)
-    assert review["proof_attempt_executed"] == "no"
-    assert review["theorem_discharged"] == "no"
-    assert review["rule_promoted"] == "no"
-    assert review["master_action_promoted"] == "no"
+    assert attempt["selected_next_target"] == NEXT_TARGET
+    assert attempt["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert attempt["planned_proof_steps"] == PLANNED_PROOF_STEPS
+    assert attempt["watch_items"] == "; ".join(WATCH_ITEMS)
+    assert attempt["proof_attempt_executed"] == "no"
+    assert attempt["theorem_discharged"] == "no"
+    assert attempt["rule_promoted"] == "no"
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
-    assert active["active_lane"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
-    assert active["authorization_evidence"] == _rel(ATTEMPT_LEAN_PACKET_PATH)
-    assert active["report"] == _rel(ATTEMPT_OUT)
-    assert active["consumed_target"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
-    assert active["packet_result"] == ATTEMPT_OUTCOME
-    assert active["attempt_preparation_result"] == ATTEMPT_OUTCOME
-    assert (
-        active["strict_attempt_preparation_result"]
-        == STRICT_ATTEMPT_PREPARATION_RESULT
+    assert active["workstream_id"] == NEXT_TARGET
+    assert active["active_lane"] == NEXT_TARGET
+    assert active["authorization_evidence"] == evidence
+    assert active["report"] == _rel(DEFAULT_OUT)
+    assert active["consumed_target"] == consumed_target()
+    assert active["packet_result"] == OUTCOME_ID
+    assert active["attempt_preparation_result"] == OUTCOME_ID
+    assert active["strict_attempt_preparation_result"] == (
+        STRICT_ATTEMPT_PREPARATION_RESULT
     )
     assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == (
-        "execute_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
-    )
-    assert active["selected_next_target_kind"] == (
-        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_execution"
-    )
+    assert active["selected_next_target"] == LIKELY_POST_REVIEW_TARGET
+    assert active["selected_next_target_kind"] == LIKELY_POST_REVIEW_TARGET_KIND
     assert active["selected_obligation"] == OBLIGATION
+    assert active["basis"] == BASIS
+    assert active["proof_style"] == PROOF_STYLE
+    assert active["target"] == TARGET
     assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert active["planned_proof_steps"] == PLANNED_PROOF_STEPS
     assert active["watch_items"] == "; ".join(WATCH_ITEMS)
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
@@ -298,7 +286,7 @@ def test_psi_A_gauge_sector_exchange_packet_rotates_to_result_review() -> None:
     assert active["master_action_promoted"] == "no"
 
 
-def test_psi_A_gauge_sector_exchange_packet_mirrors() -> None:
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -321,25 +309,22 @@ def test_psi_A_gauge_sector_exchange_packet_mirrors() -> None:
     for token in [
         PACKET_ID,
         OUTCOME_ID,
-        STRICT_PACKET_RESULT,
+        STRICT_ATTEMPT_PREPARATION_RESULT,
         PACKET_CLASSIFICATION,
-        "PsiAGaugeSectorExchangeTheoremLinkageObligationPacket",
+        "PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRoute",
         consumed_target(),
         NEXT_TARGET,
         NEXT_TARGET_KIND,
-        LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW,
-        OBLIGATION,
-        BASIS,
-        PROOF_STYLE,
+        LIKELY_POST_REVIEW_TARGET,
         THEOREM_TARGET_STATEMENT,
+        PLANNED_PROOF_STEPS[0],
+        PLANNED_PROOF_STEPS[-1],
         WATCH_ITEMS[0],
         WATCH_ITEMS[-1],
         LEAN_STATUS_WORDING_FOR_PACKET,
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_OUTCOME_v0",
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_NONCLAIM_BOUNDARY_v0",
-        "no proof execution",
-        "no theorem discharge",
-        "no GAP-1 through GAP-8",
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_OUTCOME_v0",
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_NONCLAIM_BOUNDARY_v0",
+        "no theorem discharge during preparation",
         "no C_k rule promotion",
         "no C_k action embedding",
         "no C_k variation",
@@ -350,7 +335,7 @@ def test_psi_A_gauge_sector_exchange_packet_mirrors() -> None:
         assert token in joined, token
 
 
-def test_psi_A_gauge_sector_exchange_packet_not_manifest_enrolled() -> None:
+def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_gate.py"
+        "test_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_gate.py"
     )

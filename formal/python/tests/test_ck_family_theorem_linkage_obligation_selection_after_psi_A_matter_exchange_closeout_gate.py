@@ -59,6 +59,14 @@ from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_
     OUTCOME_ID as GAUGE_PACKET_OUTCOME,
     STRICT_PACKET_RESULT as GAUGE_PACKET_STRICT_OUTCOME,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_report import (
+    DEFAULT_OUT as GAUGE_ATTEMPT_OUT,
+    LEAN_PACKET_PATH as GAUGE_ATTEMPT_LEAN_PACKET_PATH,
+    LIKELY_POST_REVIEW_TARGET as GAUGE_ATTEMPT_EXECUTION_TARGET,
+    NEXT_TARGET as GAUGE_ATTEMPT_REVIEW_TARGET,
+    OUTCOME_ID as GAUGE_ATTEMPT_OUTCOME,
+    STRICT_ATTEMPT_PREPARATION_RESULT as GAUGE_ATTEMPT_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -101,6 +109,9 @@ STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+)
+GAUGE_ATTEMPT_PREPARATION_TARGET = (
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
 )
 
 
@@ -295,29 +306,20 @@ def test_ck_family_selection_after_psi_A_matter_exchange_rotates_to_result_revie
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == GAUGE_PACKET_FOLLOW_ON_TARGET
-    assert active["active_lane"] == GAUGE_PACKET_FOLLOW_ON_TARGET
-    assert active["authorization_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "PsiAGaugeSectorExchangeTheoremLinkageObligationPacketResultReview.lean"
-    )
-    assert active["authorized_next_strict_target"] == GAUGE_PACKET_FOLLOW_ON_TARGET
-    assert active["report"] == (
-        "formal/docs/release/"
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_"
-        "RESULT_REVIEW_20260628_v0.json"
-    )
-    assert active["consumed_target"] == GAUGE_PACKET_REVIEW_TARGET
-    assert active["packet_result"] == "PENDING"
-    assert active["strict_packet_result"] == "PENDING"
-    assert active["review_result"] == (
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
-        "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
-    )
-    assert active["selected_next_target"] == (
-        "review_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result"
-    )
+    assert active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET
+    assert active["active_lane"] == GAUGE_ATTEMPT_REVIEW_TARGET
+    assert active["authorization_evidence"] == _rel(GAUGE_ATTEMPT_LEAN_PACKET_PATH)
+    assert active["authorized_next_strict_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
+    assert active["report"] == _rel(GAUGE_ATTEMPT_OUT)
+    assert active["consumed_target"] == GAUGE_ATTEMPT_PREPARATION_TARGET
+    assert active["packet_result"] == GAUGE_ATTEMPT_OUTCOME
+    assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
+    assert active["strict_attempt_preparation_result"] == GAUGE_ATTEMPT_STRICT_OUTCOME
+    assert active["review_result"] == "PENDING"
+    assert active["execution_result"] == "PENDING"
+    assert active["selected_next_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
     assert active["selected_obligation"] == SELECTED_OBLIGATION
+    assert active["proof_execution_authorized"] == "no"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
