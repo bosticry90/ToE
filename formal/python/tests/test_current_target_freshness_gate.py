@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
+    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PsiAGaugeSectorExchangeTheoremLinkageObligationPacket.lean"
+    / "PsiAGaugeSectorExchangeTheoremLinkageObligationPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2425,11 +2425,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
         "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_"
-        "20260628_v0.json"
+        "RESULT_REVIEW_20260628_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_"
-        "GAUGE_EXCHANGE_ROUTE_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3637,6 +3637,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "GAUGE_STRESS_DIVERGENCE_TO_SOURCED_MAXWELL_TARGET_NO_ACTION_VARIATION_OR_"
         "MASTER_ACTION_PROMOTION"
     )
+    psi_A_gauge_exchange_packet_result_review_outcome = (
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+    )
+    psi_A_gauge_exchange_packet_result_review_strict_outcome = (
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_GAUGE_STRESS_DIVERGENCE_TO_SOURCED_MAXWELL_TARGET_NO_THEOREM_"
+        "DISCHARGE_OR_MASTER_ACTION_PROMOTION"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3649,21 +3658,23 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
         "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_"
-        "20260628_v0.json"
+        "RESULT_REVIEW_20260628_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["packet_result"] == (
-        psi_A_gauge_exchange_packet_outcome
+    assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert interaction_active_workstream["strict_packet_result"] == "PENDING"
+    assert interaction_active_workstream["review_result"] == (
+        psi_A_gauge_exchange_packet_result_review_outcome
     )
-    assert interaction_active_workstream["strict_packet_result"] == (
-        psi_A_gauge_exchange_packet_strict_outcome
+    assert interaction_active_workstream["strict_review_result"] == (
+        psi_A_gauge_exchange_packet_result_review_strict_outcome
     )
-    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["attempt_preparation_result"] == "PENDING"
     assert interaction_active_workstream["selected_next_target"] == (
-        "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
+        "review_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result"
     )
     assert interaction_active_workstream["selected_next_target_kind"] == (
-        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_preparation"
+        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result_review"
     )
     assert interaction_active_workstream["selected_obligation"] == (
         "psi-A gauge-sector exchange theorem-linkage gap"

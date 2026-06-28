@@ -289,6 +289,7 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
             POST_SELECTOR_REVIEW_TARGET,
             POST_SELECTOR_PACKET_TARGET,
             POST_SELECTOR_PACKET_REVIEW_TARGET,
+            "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route",
         }
         assert active["consumed_target"] in {
             NEXT_TARGET,
@@ -296,6 +297,7 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
             POST_CLOSEOUT_SELECTOR_TARGET,
             POST_SELECTOR_REVIEW_TARGET,
             POST_SELECTOR_PACKET_TARGET,
+            POST_SELECTOR_PACKET_REVIEW_TARGET,
         }
         if active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
             assert active["closeout_result"] == CLOSEOUT_OUTCOME
@@ -308,16 +310,20 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
         elif active["workstream_id"] == POST_SELECTOR_REVIEW_TARGET:
             assert active["selection_result"] == POST_SELECTOR_OUTCOME
             assert active["review_result"] == "PENDING"
+        elif active["workstream_id"] == POST_SELECTOR_PACKET_TARGET:
+            assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
+        elif active["workstream_id"] == POST_SELECTOR_PACKET_REVIEW_TARGET:
+            assert active["consumed_target"] == POST_SELECTOR_PACKET_TARGET
+            assert active["review_result"] == "PENDING"
         else:
-            assert active["workstream_id"] in {
-                POST_SELECTOR_PACKET_TARGET,
-                POST_SELECTOR_PACKET_REVIEW_TARGET,
-            }
-            if active["workstream_id"] == POST_SELECTOR_PACKET_TARGET:
-                assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
-            else:
-                assert active["consumed_target"] == POST_SELECTOR_PACKET_TARGET
-                assert active["review_result"] == "PENDING"
+            assert active["workstream_id"] == (
+                "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
+            )
+            assert active["consumed_target"] == POST_SELECTOR_PACKET_REVIEW_TARGET
+            assert active["review_result"] == (
+                "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+                "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+            )
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

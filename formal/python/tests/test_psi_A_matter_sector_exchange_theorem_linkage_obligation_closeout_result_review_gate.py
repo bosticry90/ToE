@@ -333,19 +333,28 @@ def test_psi_A_matter_exchange_closeout_result_review_rotates_to_selector() -> N
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == POST_SELECTOR_PACKET_REVIEW_TARGET
-    assert active["active_lane"] == POST_SELECTOR_PACKET_REVIEW_TARGET
-    assert active["authorization_evidence"] == POST_SELECTOR_PACKET_EVIDENCE
-    assert active["authorized_next_strict_target"] == POST_SELECTOR_PACKET_REVIEW_TARGET
-    assert active["consumed_target"] == POST_SELECTOR_PACKET_TARGET
-    assert active["report"] == POST_SELECTOR_PACKET_REPORT
-    assert active["packet_result"] == (
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_"
-        "GAUGE_EXCHANGE_ROUTE_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
-    )
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == (
+    assert active["workstream_id"] == (
         "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
+    )
+    assert active["active_lane"] == active["workstream_id"]
+    assert active["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "PsiAGaugeSectorExchangeTheoremLinkageObligationPacketResultReview.lean"
+    )
+    assert active["authorized_next_strict_target"] == active["workstream_id"]
+    assert active["consumed_target"] == POST_SELECTOR_PACKET_REVIEW_TARGET
+    assert active["report"] == (
+        "formal/docs/release/"
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_"
+        "RESULT_REVIEW_20260628_v0.json"
+    )
+    assert active["packet_result"] == "PENDING"
+    assert active["review_result"] == (
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+    )
+    assert active["selected_next_target"] == (
+        "review_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result"
     )
     assert active["selected_obligation"] == POST_SELECTOR_SELECTED_OBLIGATION
     assert active["proof_execution_authorized"] == "no"

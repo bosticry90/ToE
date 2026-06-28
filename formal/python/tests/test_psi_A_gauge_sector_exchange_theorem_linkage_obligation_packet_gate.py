@@ -44,6 +44,14 @@ from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_
     WATCH_ITEMS,
     build_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result_review_report import (
+    DEFAULT_OUT as REVIEW_OUT,
+    LEAN_PACKET_PATH as REVIEW_LEAN_PACKET_PATH,
+    LIKELY_POST_ATTEMPT_REVIEW_KIND,
+    LIKELY_POST_ATTEMPT_REVIEW_TARGET,
+    OUTCOME_ID as REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -210,12 +218,13 @@ def test_psi_A_gauge_sector_exchange_packet_rotates_to_result_review() -> None:
         lane=NEXT_TARGET,
     )
 
-    assert is_current is True
+    assert is_current is False
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW in registry["next_strict_target_coverage"]
 
     consumed = workstream(consumed_target(), registry)
     assert consumed["status"] == "paused"
@@ -234,17 +243,38 @@ def test_psi_A_gauge_sector_exchange_packet_rotates_to_result_review() -> None:
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
+    review = workstream(NEXT_TARGET, registry)
+    assert review["status"] == "paused"
+    assert review["authorization_evidence"] == _rel(REVIEW_LEAN_PACKET_PATH)
+    assert review["report"] == _rel(REVIEW_OUT)
+    assert review["packet_result"] == OUTCOME_ID
+    assert review["strict_packet_result"] == STRICT_PACKET_RESULT
+    assert review["review_result"] == REVIEW_OUTCOME
+    assert review["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert review["selected_next_target"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert review["selected_next_target_kind"] == (
+        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_preparation"
+    )
+    assert review["selected_obligation"] == OBLIGATION
+    assert review["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert review["watch_items"] == "; ".join(WATCH_ITEMS)
+    assert review["proof_attempt_executed"] == "no"
+    assert review["theorem_discharged"] == "no"
+    assert review["rule_promoted"] == "no"
+    assert review["master_action_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == OUTCOME_ID
-    assert active["strict_packet_result"] == STRICT_PACKET_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["workstream_id"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["active_lane"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["authorization_evidence"] == _rel(REVIEW_LEAN_PACKET_PATH)
+    assert active["report"] == _rel(REVIEW_OUT)
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["review_result"] == REVIEW_OUTCOME
+    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert active["attempt_preparation_result"] == "PENDING"
+    assert active["selected_next_target"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
+    assert active["selected_next_target_kind"] == LIKELY_POST_ATTEMPT_REVIEW_KIND
     assert active["selected_obligation"] == OBLIGATION
     assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
     assert active["watch_items"] == "; ".join(WATCH_ITEMS)

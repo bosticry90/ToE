@@ -340,14 +340,20 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == POST_SELECTOR_PACKET_REVIEW_TARGET
-        assert active["consumed_target"] == POST_SELECTOR_PACKET_TARGET
-        assert active["report"] == POST_SELECTOR_PACKET_REPORT
-        assert active["packet_result"] == (
-            "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_"
-            "GAUGE_EXCHANGE_ROUTE_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+        assert active["workstream_id"] == (
+            "prepare_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
         )
-        assert active["review_result"] == "PENDING"
+        assert active["consumed_target"] == POST_SELECTOR_PACKET_REVIEW_TARGET
+        assert active["report"] == (
+            "formal/docs/release/"
+            "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_"
+            "RESULT_REVIEW_20260628_v0.json"
+        )
+        assert active["packet_result"] == "PENDING"
+        assert active["review_result"] == (
+            "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+            "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+        )
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 
