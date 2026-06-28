@@ -150,6 +150,7 @@ import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSour
 import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteExecutionResultReview
 import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout
 import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview
+import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainSynthesisAfterCexchangeTotalMatterAndGaugeCloseouts
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -171,17 +172,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview.reviewResult
+  PsiAInteractionExchangeTheoremLinkageChainSynthesisAfterCexchangeTotalMatterAndGaugeCloseouts.packetResult
 
 def currentPacketId : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview.packetId
+  PsiAInteractionExchangeTheoremLinkageChainSynthesisAfterCexchangeTotalMatterAndGaugeCloseouts.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_A_gauge_exchange_obligation_closeout_result_review :
+theorem qft_gr_lane_aggregate_exposes_psi_A_interaction_exchange_chain_synthesis :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_" ++
-          "REVIEW_ACCEPTS_SOURCED_MAXWELL_LINKED_GAUGE_EXCHANGE_ROUTE_NO_CK_RULE_" ++
-          "PROMOTION_OR_SEAM_CLOSURE" := by
+        "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_SYNTHESIS_AFTER_" ++
+          "CEXCHANGE_TOTAL_MATTER_AND_GAUGE_CLOSEOUTS_PREPARED_LOCAL_DEPENDENCY_" ++
+          "CHAIN_SYNTHESIZED_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
   constructor
   · rfl
   · rfl
