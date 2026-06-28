@@ -93,6 +93,15 @@ RESULT_REVIEW_TARGET = (
 SELECTOR_TARGET = (
     "select_next_ck_family_theorem_linkage_obligation_after_psi_A_matter_exchange_closeout"
 )
+POST_SELECTOR_REVIEW_TARGET = (
+    "review_ck_family_theorem_linkage_obligation_selection_after_"
+    "psi_A_matter_exchange_closeout_result"
+)
+POST_SELECTOR_OUTCOME = (
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+    "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+)
 RESULT_REVIEW_OUTCOME = (
     "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
     "REVIEW_ACCEPTS_DIRAC_PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_"
@@ -259,6 +268,7 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
         assert NEXT_TARGET in registry["consumed_targets"]
         assert NEXT_TARGET in registry["paused_lanes"]
         assert SELECTOR_TARGET in registry["next_strict_target_coverage"]
+        assert POST_SELECTOR_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -305,10 +315,10 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == SELECTOR_TARGET
-        assert active["consumed_target"] == RESULT_REVIEW_TARGET
-        assert active["review_result"] == RESULT_REVIEW_OUTCOME
-        assert active["selector_result"] == "PENDING"
+        assert active["workstream_id"] == POST_SELECTOR_REVIEW_TARGET
+        assert active["consumed_target"] == SELECTOR_TARGET
+        assert active["selection_result"] == POST_SELECTOR_OUTCOME
+        assert active["review_result"] == "PENDING"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

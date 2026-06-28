@@ -57,6 +57,30 @@ TOOL_PATH = (
     / "psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+POST_SELECTOR_REVIEW_TARGET = (
+    "review_ck_family_theorem_linkage_obligation_selection_after_"
+    "psi_A_matter_exchange_closeout_result"
+)
+POST_SELECTOR_OUTCOME = (
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+    "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+)
+POST_SELECTOR_STRICT_OUTCOME = (
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_SELECTS_GAUGE_EXCHANGE_LINKAGE_OBLIGATION_NO_GAP_"
+    "DISCHARGE_OR_CK_RULE_PROMOTION"
+)
+POST_SELECTOR_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "CKFamilyTheoremLinkageObligationSelectionAfterPsiAMatterExchangeCloseout.lean"
+)
+POST_SELECTOR_REPORT = (
+    "formal/docs/release/"
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_20260628_v0.json"
+)
+POST_SELECTOR_SELECTED_OBLIGATION = "psi-A gauge-sector exchange theorem-linkage gap"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 CURRENT_TARGET_PATH = (
     REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "Derivation" / "CurrentTarget.lean"
@@ -235,7 +259,8 @@ def test_psi_A_matter_exchange_closeout_result_review_rotates_to_selector() -> N
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
+    assert POST_SELECTOR_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
     closeout = _workstream(
         registry,
@@ -261,19 +286,30 @@ def test_psi_A_matter_exchange_closeout_result_review_rotates_to_selector() -> N
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
+    selector = _workstream(registry, NEXT_TARGET)
+    assert selector["status"] == "paused"
+    assert selector["authorization_evidence"] == POST_SELECTOR_EVIDENCE
+    assert selector["report"] == POST_SELECTOR_REPORT
+    assert selector["selection_result"] == POST_SELECTOR_OUTCOME
+    assert selector["strict_selection_result"] == POST_SELECTOR_STRICT_OUTCOME
+    assert selector["selected_next_target"] == POST_SELECTOR_REVIEW_TARGET
+    assert selector["selected_obligation"] == POST_SELECTOR_SELECTED_OBLIGATION
+    assert selector["proof_attempt_executed"] == "no"
+    assert selector["theorem_discharged"] == "no"
+    assert selector["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["selector_result"] == "PENDING"
+    assert active["workstream_id"] == POST_SELECTOR_REVIEW_TARGET
+    assert active["active_lane"] == POST_SELECTOR_REVIEW_TARGET
+    assert active["authorization_evidence"] == POST_SELECTOR_EVIDENCE
+    assert active["authorized_next_strict_target"] == POST_SELECTOR_REVIEW_TARGET
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["selection_result"] == POST_SELECTOR_OUTCOME
+    assert active["strict_selection_result"] == POST_SELECTOR_STRICT_OUTCOME
+    assert active["review_result"] == "PENDING"
     assert active["selected_next_target"] == "PENDING"
-    assert active["likely_next_obligation"] == LIKELY_NEXT_OBLIGATION
-    assert active["next_obligation_reason"] == NEXT_OBLIGATION_REASON
+    assert active["selected_obligation"] == POST_SELECTOR_SELECTED_OBLIGATION
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
