@@ -148,6 +148,7 @@ import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSour
 import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteResultReview
 import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteExecution
 import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteExecutionResultReview
+import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -169,17 +170,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteExecutionResultReview.reviewResult
+  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout.closeoutResult
 
 def currentPacketId : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteExecutionResultReview.packetId
+  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_A_gauge_exchange_attempt_execution_result_review :
+theorem qft_gr_lane_aggregate_exposes_psi_A_gauge_exchange_obligation_closeout :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_" ++
-          "RESULT_REVIEW_ACCEPTS_GAUGE_EXCHANGE_ROUTE_CONSTRUCTED_NO_CK_RULE_PROMOTION_" ++
-          "OR_MASTER_ACTION_PROMOTION" := by
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_SOURCED_" ++
+          "MAXWELL_LINKED_GAUGE_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
   native_decide
 
 end QFTGR
