@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_closeout_result"
+    "prepare_psi_A_interaction_exchange_theorem_linkage_chain_synthesis_after_cexchange_total_matter_and_gauge_closeouts"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_closeout"
+    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_closeout_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_closeout_result"
+    "prepare_psi_A_interaction_exchange_theorem_linkage_chain_synthesis_after_cexchange_total_matter_and_gauge_closeouts"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout.lean"
+    / "PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2425,11 +2425,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
         "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_"
-        "20260628_v0.json"
+        "RESULT_REVIEW_20260628_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_SOURCED_"
-        "MAXWELL_LINKED_GAUGE_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
+        "REVIEW_ACCEPTS_SOURCED_MAXWELL_LINKED_GAUGE_EXCHANGE_ROUTE_NO_CK_RULE_"
+        "PROMOTION_OR_SEAM_CLOSURE"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3689,6 +3690,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_SOURCED_"
         "MAXWELL_LINKED_GAUGE_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
     )
+    psi_A_gauge_exchange_closeout_result_review_outcome = (
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
+        "REVIEW_ACCEPTS_SOURCED_MAXWELL_LINKED_GAUGE_EXCHANGE_ROUTE_NO_CK_RULE_"
+        "PROMOTION_OR_SEAM_CLOSURE"
+    )
+    psi_A_gauge_exchange_closeout_result_review_strict_outcome = (
+        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
+        "REVIEW_ACCEPTS_LOCAL_GAUGE_EXCHANGE_LINKAGE_NO_ACTION_VARIATION_OR_"
+        "MASTER_ACTION_PROMOTION"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3701,57 +3712,31 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
         "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_"
-        "20260628_v0.json"
+        "RESULT_REVIEW_20260628_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["packet_result"] == (
-        psi_A_gauge_exchange_closeout_outcome
+    assert interaction_active_workstream["review_result"] == (
+        psi_A_gauge_exchange_closeout_result_review_outcome
     )
-    assert interaction_active_workstream["closeout_result"] == (
-        psi_A_gauge_exchange_closeout_outcome
+    assert interaction_active_workstream["strict_review_result"] == (
+        psi_A_gauge_exchange_closeout_result_review_strict_outcome
     )
-    assert interaction_active_workstream["strict_closeout_result"] == (
-        "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_LOCAL_"
-        "GAUGE_EXCHANGE_LINKAGE_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
-    )
-    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["packet_result"] == "PENDING"
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
     assert interaction_active_workstream["selected_obligation"] == (
-        "psi-A gauge-sector exchange theorem-linkage gap"
-    )
-    assert interaction_active_workstream["gauge_exchange_target_rule"] == (
-        "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
-    )
-    assert interaction_active_workstream["theorem_target_statement"] == (
-        "Given nabla_mu T_A^{mu nu} = - F^nu{}_alpha nabla_mu F^{mu alpha} "
-        "and nabla_mu F^{mu alpha} = J^alpha, show nabla_mu T_A^{mu nu} = "
-        "- F^nu{}_alpha J^alpha."
-    )
-    assert "gauge stress-energy divergence identity" in interaction_active_workstream[
-        "watch_items"
-    ]
-    assert (
-        interaction_active_workstream["likely_next_synthesis_target_after_review"]
-        == "prepare_psi_A_interaction_exchange_theorem_linkage_chain_synthesis_after_"
-        "cexchange_total_matter_and_gauge_closeouts"
+        "psi-A interaction exchange theorem-linkage chain synthesis"
     )
     assert (
         "gauge-sector exchange depends on stress-divergence identity plus sourced "
         "Maxwell route"
         in interaction_active_workstream["local_dependency_chain"]
     )
-    assert interaction_active_workstream[
-        "gauge_sector_exchange_obligation_locally_closed"
-    ] == "yes"
-    assert interaction_active_workstream[
-        "gauge_exchange_linked_to_sourced_maxwell_route"
-    ] == "yes"
-    assert interaction_active_workstream["same_F_and_J_objects_preserved"] == "yes"
+    assert interaction_active_workstream["synthesis_target_authorized"] == "yes"
+    assert interaction_active_workstream["synthesis_packet_prepared"] == "no"
     assert interaction_active_workstream["proof_execution_authorized"] == "no"
-    assert interaction_active_workstream["proof_attempt_executed"] == "yes"
-    assert interaction_active_workstream["theorem_discharged"] == "yes"
-    assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == "yes"
+    assert interaction_active_workstream["proof_attempt_executed"] == "no"
+    assert interaction_active_workstream["theorem_discharged"] == "no"
     assert interaction_active_workstream["rule_promoted"] == "no"
     assert interaction_active_workstream["gap_1_through_gap_8_discharged"] == "no"
     assert interaction_active_workstream["C_k_action_embedding_claimed"] == "no"
@@ -3762,6 +3747,28 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["gr_qm_closure_claimed"] == "no"
     assert interaction_active_workstream["empirical_validation_claimed"] == "no"
     assert interaction_active_workstream["master_action_promoted"] == "no"
+
+    consumed_gauge_closeout_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_gauge_closeout_review["status"] == "paused"
+    assert consumed_gauge_closeout_review["review_result"] == (
+        psi_A_gauge_exchange_closeout_result_review_outcome
+    )
+    assert consumed_gauge_closeout_review["strict_review_result"] == (
+        psi_A_gauge_exchange_closeout_result_review_strict_outcome
+    )
+    assert consumed_gauge_closeout_review["closeout_result"] == (
+        psi_A_gauge_exchange_closeout_outcome
+    )
+    assert consumed_gauge_closeout_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_gauge_closeout_review["synthesis_target_authorized"] == "yes"
+    assert consumed_gauge_closeout_review["synthesis_packet_prepared"] == "no"
+    assert consumed_gauge_closeout_review[
+        "gauge_sector_exchange_obligation_locally_closed"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "gauge_exchange_linked_to_sourced_maxwell_route"
+    ] == "yes"
+    assert interaction_active_workstream["same_F_and_J_objects_preserved"] == "yes"
 
     consumed_a_ck_closeout = _workstream(payload, A_CK_CLOSEOUT_TARGET)
     assert consumed_a_ck_closeout["status"] == "paused"

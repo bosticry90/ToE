@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout
+import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,15 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout.selectedNextTarget
+  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseout.packetId
+  PsiAGaugeSectorExchangeTheoremLinkageObligationCloseoutResultReview.packetId
 
-theorem current_target_points_to_gauge_exchange_obligation_closeout_result_review :
+theorem current_target_points_to_psi_A_interaction_exchange_chain_synthesis_preparation :
     currentLiveTarget =
-      "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_closeout_result" := by
+      "prepare_psi_A_interaction_exchange_theorem_linkage_chain_synthesis_after_" ++
+        "cexchange_total_matter_and_gauge_closeouts" := by
   rfl
 
 end CurrentTarget
