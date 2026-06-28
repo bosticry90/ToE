@@ -40,6 +40,17 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_ps
     WATCH_ITEMS,
     build_ck_family_theorem_linkage_obligation_selection_after_psi_A_matter_exchange_closeout,
 )
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_psi_A_matter_exchange_closeout_result_review_report import (
+    DEFAULT_OUT as POST_REVIEW_OUT,
+    LEAN_PACKET_PATH as POST_REVIEW_LEAN_PACKET_PATH,
+    LIKELY_POST_PACKET_REVIEW_TARGET as POST_REVIEW_LIKELY_POST_PACKET_REVIEW_TARGET,
+    NEXT_PACKET_TARGET_STATEMENT as POST_REVIEW_NEXT_PACKET_TARGET_STATEMENT,
+    NEXT_PACKET_WATCH_ITEMS as POST_REVIEW_NEXT_PACKET_WATCH_ITEMS,
+    NEXT_TARGET as POST_REVIEW_NEXT_TARGET,
+    NEXT_TARGET_KIND as POST_REVIEW_NEXT_TARGET_KIND,
+    OUTCOME_ID as POST_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as POST_REVIEW_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -212,11 +223,12 @@ def test_ck_family_selection_after_psi_A_matter_exchange_records_lean_status() -
 def test_ck_family_selection_after_psi_A_matter_exchange_rotates_to_result_review() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    review_evidence = _rel(POST_REVIEW_LEAN_PACKET_PATH)
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=selection_consumed_target(),
         live_target=NEXT_TARGET,
@@ -227,9 +239,11 @@ def test_ck_family_selection_after_psi_A_matter_exchange_rotates_to_result_revie
     assert selection_consumed_target() in registry["completed_targets"]
     assert selection_consumed_target() in registry["consumed_targets"]
     assert selection_consumed_target() in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert FOLLOW_ON_TARGET_AFTER_REVIEW in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert POST_REVIEW_NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert is_current is False
 
     consumed = _workstream(registry, selection_consumed_target())
     assert consumed["status"] == "paused"
@@ -245,21 +259,36 @@ def test_ck_family_selection_after_psi_A_matter_exchange_rotates_to_result_revie
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
+    review_row = _workstream(registry, NEXT_TARGET)
+    assert review_row["status"] == "paused"
+    assert review_row["authorization_evidence"] == review_evidence
+    assert review_row["report"] == _rel(POST_REVIEW_OUT)
+    assert review_row["review_result"] == POST_REVIEW_OUTCOME
+    assert review_row["strict_review_result"] == POST_REVIEW_STRICT_OUTCOME
+    assert review_row["selected_next_target"] == POST_REVIEW_NEXT_TARGET
+    assert review_row["selected_next_target_kind"] == POST_REVIEW_NEXT_TARGET_KIND
+    assert review_row["selected_obligation"] == SELECTED_OBLIGATION
+    assert review_row["selected_obligation_rank"] == str(SELECTED_OBLIGATION_RANK)
+    assert review_row["proof_attempt_executed"] == "no"
+    assert review_row["theorem_discharged"] == "no"
+    assert review_row["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == selection_consumed_target()
-    assert active["selection_result"] == OUTCOME_ID
-    assert active["strict_selection_result"] == STRICT_SELECTION_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["follow_on_target_after_review"] == FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["workstream_id"] == POST_REVIEW_NEXT_TARGET
+    assert active["active_lane"] == POST_REVIEW_NEXT_TARGET
+    assert active["authorization_evidence"] == review_evidence
+    assert active["authorized_next_strict_target"] == POST_REVIEW_NEXT_TARGET
+    assert active["report"] == _rel(POST_REVIEW_OUT)
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["review_result"] == POST_REVIEW_OUTCOME
+    assert active["strict_review_result"] == POST_REVIEW_STRICT_OUTCOME
+    assert active["packet_result"] == "PENDING"
+    assert active["selected_next_target"] == POST_REVIEW_LIKELY_POST_PACKET_REVIEW_TARGET
     assert active["selected_obligation"] == SELECTED_OBLIGATION
     assert active["selected_obligation_rank"] == str(SELECTED_OBLIGATION_RANK)
+    assert active["theorem_target_statement"] == POST_REVIEW_NEXT_PACKET_TARGET_STATEMENT
+    assert active["watch_items"] == "; ".join(POST_REVIEW_NEXT_PACKET_WATCH_ITEMS)
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"

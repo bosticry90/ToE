@@ -96,6 +96,9 @@ POST_SELECTOR_REVIEW_TARGET = (
     "review_ck_family_theorem_linkage_obligation_selection_after_"
     "psi_A_matter_exchange_closeout_result"
 )
+POST_SELECTOR_PACKET_TARGET = (
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
+)
 POST_SELECTOR_OUTCOME = (
     "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
     "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
@@ -281,11 +284,13 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
             CLOSEOUT_REVIEW_TARGET,
             POST_CLOSEOUT_SELECTOR_TARGET,
             POST_SELECTOR_REVIEW_TARGET,
+            POST_SELECTOR_PACKET_TARGET,
         }
         assert active["consumed_target"] in {
             NEXT_TARGET,
             CLOSEOUT_REVIEW_TARGET,
             POST_CLOSEOUT_SELECTOR_TARGET,
+            POST_SELECTOR_REVIEW_TARGET,
         }
         if active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
             assert active["closeout_result"] == CLOSEOUT_OUTCOME
@@ -295,9 +300,13 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
                 "REVIEW_ACCEPTS_DIRAC_PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_"
                 "PROMOTION_OR_SEAM_CLOSURE"
             )
-        else:
+        elif active["workstream_id"] == POST_SELECTOR_REVIEW_TARGET:
             assert active["selection_result"] == POST_SELECTOR_OUTCOME
             assert active["review_result"] == "PENDING"
+        else:
+            assert active["workstream_id"] == POST_SELECTOR_PACKET_TARGET
+            assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
+            assert active["packet_result"] == "PENDING"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

@@ -97,6 +97,9 @@ POST_SELECTOR_REVIEW_TARGET = (
     "review_ck_family_theorem_linkage_obligation_selection_after_"
     "psi_A_matter_exchange_closeout_result"
 )
+POST_SELECTOR_PACKET_TARGET = (
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
+)
 POST_SELECTOR_OUTCOME = (
     "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
     "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
@@ -114,6 +117,21 @@ RESULT_REVIEW_REPORT = (
 RESULT_REVIEW_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview.lean"
+)
+POST_SELECTOR_REVIEW_OUTCOME = (
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_RESULT_REVIEW_ACCEPTS_PSI_A_GAUGE_SECTOR_EXCHANGE_"
+    "THEOREM_LINKAGE_GAP_SELECTION_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+)
+POST_SELECTOR_REVIEW_STRICT_OUTCOME = (
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_RESULT_REVIEW_ACCEPTS_GAUGE_EXCHANGE_SELECTION_ONLY_"
+    "NO_GAP_DISCHARGE_OR_CK_RULE_PROMOTION"
+)
+POST_SELECTOR_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+    "EXCHANGE_CLOSEOUT_RESULT_REVIEW_20260628_v0.json"
 )
 
 
@@ -315,10 +333,12 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == POST_SELECTOR_REVIEW_TARGET
-        assert active["consumed_target"] == SELECTOR_TARGET
-        assert active["selection_result"] == POST_SELECTOR_OUTCOME
-        assert active["review_result"] == "PENDING"
+        assert active["workstream_id"] == POST_SELECTOR_PACKET_TARGET
+        assert active["consumed_target"] == POST_SELECTOR_REVIEW_TARGET
+        assert active["report"] == POST_SELECTOR_REVIEW_REPORT
+        assert active["review_result"] == POST_SELECTOR_REVIEW_OUTCOME
+        assert active["strict_review_result"] == POST_SELECTOR_REVIEW_STRICT_OUTCOME
+        assert active["packet_result"] == "PENDING"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

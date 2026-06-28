@@ -1158,8 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_ck_family_theorem_linkage_obligation_selection_after_"
-    "psi_A_matter_exchange_closeout_result"
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1339,8 +1338,8 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "select_next_ck_family_theorem_linkage_obligation_after_"
-    "psi_A_matter_exchange_closeout"
+    "review_ck_family_theorem_linkage_obligation_selection_after_"
+    "psi_A_matter_exchange_closeout_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1570,8 +1569,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_ck_family_theorem_linkage_obligation_selection_after_"
-    "psi_A_matter_exchange_closeout_result"
+    "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1588,7 +1586,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CKFamilyTheoremLinkageObligationSelectionAfterPsiAMatterExchangeCloseout.lean"
+    / "CKFamilyTheoremLinkageObligationSelectionAfterPsiAMatterExchangeCloseoutResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2428,12 +2426,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
         "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
-        "EXCHANGE_CLOSEOUT_20260628_v0.json"
+        "EXCHANGE_CLOSEOUT_RESULT_REVIEW_20260628_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
         "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
-        "EXCHANGE_CLOSEOUT_SELECTS_PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
-        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+        "EXCHANGE_CLOSEOUT_RESULT_REVIEW_ACCEPTS_PSI_A_GAUGE_SECTOR_EXCHANGE_"
+        "THEOREM_LINKAGE_GAP_SELECTION_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3622,6 +3620,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "EXCHANGE_CLOSEOUT_SELECTS_GAUGE_EXCHANGE_LINKAGE_OBLIGATION_NO_GAP_"
         "DISCHARGE_OR_CK_RULE_PROMOTION"
     )
+    psi_A_matter_exchange_selector_review_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+        "EXCHANGE_CLOSEOUT_RESULT_REVIEW_ACCEPTS_PSI_A_GAUGE_SECTOR_EXCHANGE_"
+        "THEOREM_LINKAGE_GAP_SELECTION_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    psi_A_matter_exchange_selector_review_strict_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
+        "EXCHANGE_CLOSEOUT_RESULT_REVIEW_ACCEPTS_GAUGE_EXCHANGE_SELECTION_ONLY_"
+        "NO_GAP_DISCHARGE_OR_CK_RULE_PROMOTION"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3634,20 +3642,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
         "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_MATTER_"
-        "EXCHANGE_CLOSEOUT_20260628_v0.json"
+        "EXCHANGE_CLOSEOUT_RESULT_REVIEW_20260628_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["selection_result"] == (
-        psi_A_matter_exchange_selector_outcome
+    assert interaction_active_workstream["review_result"] == (
+        psi_A_matter_exchange_selector_review_outcome
     )
-    assert interaction_active_workstream["strict_selection_result"] == (
-        psi_A_matter_exchange_selector_strict_outcome
+    assert interaction_active_workstream["strict_review_result"] == (
+        psi_A_matter_exchange_selector_review_strict_outcome
     )
-    assert interaction_active_workstream["review_result"] == "PENDING"
-    assert interaction_active_workstream["selected_next_target"] == "PENDING"
-    assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
-    assert interaction_active_workstream["follow_on_target_after_review"] == (
-        "prepare_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet"
+    assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert interaction_active_workstream["selected_next_target"] == (
+        "review_psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result"
+    )
+    assert interaction_active_workstream["selected_next_target_kind"] == (
+        "psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_result_review"
     )
     assert interaction_active_workstream["selected_obligation"] == (
         "psi-A gauge-sector exchange theorem-linkage gap"
@@ -3656,6 +3665,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["gauge_exchange_target_rule"] == (
         "nabla_mu T_A^{mu nu} = - F^nu{}_alpha J^alpha"
     )
+    assert interaction_active_workstream["theorem_target_statement"] == (
+        "Given nabla_mu T_A^{mu nu} = - F^nu{}_alpha nabla_mu F^{mu alpha} "
+        "and nabla_mu F^{mu alpha} = J^alpha, show nabla_mu T_A^{mu nu} = "
+        "- F^nu{}_alpha J^alpha."
+    )
+    assert "gauge stress-energy divergence identity" in interaction_active_workstream[
+        "watch_items"
+    ]
     assert interaction_active_workstream["proof_execution_authorized"] == "no"
     assert interaction_active_workstream["proof_attempt_executed"] == "no"
     assert interaction_active_workstream["theorem_discharged"] == "no"
