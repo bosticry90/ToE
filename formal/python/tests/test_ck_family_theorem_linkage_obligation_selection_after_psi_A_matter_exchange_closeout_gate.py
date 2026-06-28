@@ -67,6 +67,12 @@ from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_fro
     OUTCOME_ID as GAUGE_ATTEMPT_OUTCOME,
     STRICT_ATTEMPT_PREPARATION_RESULT as GAUGE_ATTEMPT_STRICT_OUTCOME,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result_review_report import (
+    DEFAULT_OUT as GAUGE_ATTEMPT_RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as GAUGE_ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH,
+    OUTCOME_ID as GAUGE_ATTEMPT_RESULT_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as GAUGE_ATTEMPT_RESULT_REVIEW_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -306,20 +312,23 @@ def test_ck_family_selection_after_psi_A_matter_exchange_rotates_to_result_revie
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET
-    assert active["active_lane"] == GAUGE_ATTEMPT_REVIEW_TARGET
-    assert active["authorization_evidence"] == _rel(GAUGE_ATTEMPT_LEAN_PACKET_PATH)
-    assert active["authorized_next_strict_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
-    assert active["report"] == _rel(GAUGE_ATTEMPT_OUT)
-    assert active["consumed_target"] == GAUGE_ATTEMPT_PREPARATION_TARGET
-    assert active["packet_result"] == GAUGE_ATTEMPT_OUTCOME
+    assert active["workstream_id"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+    assert active["active_lane"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+    assert active["authorization_evidence"] == _rel(
+        GAUGE_ATTEMPT_RESULT_REVIEW_LEAN_PACKET_PATH
+    )
+    assert active["authorized_next_strict_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+    assert active["report"] == _rel(GAUGE_ATTEMPT_RESULT_REVIEW_OUT)
+    assert active["consumed_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
+    assert active["packet_result"] == GAUGE_ATTEMPT_RESULT_REVIEW_OUTCOME
     assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
     assert active["strict_attempt_preparation_result"] == GAUGE_ATTEMPT_STRICT_OUTCOME
-    assert active["review_result"] == "PENDING"
+    assert active["review_result"] == GAUGE_ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert active["strict_review_result"] == GAUGE_ATTEMPT_RESULT_REVIEW_STRICT_OUTCOME
     assert active["execution_result"] == "PENDING"
-    assert active["selected_next_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+    assert active["selected_next_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
     assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["proof_execution_authorized"] == "no"
+    assert active["proof_execution_authorized"] == "yes"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"

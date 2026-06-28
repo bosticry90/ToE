@@ -51,6 +51,13 @@ from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_
     OUTCOME_ID as REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result_review_report import (
+    DEFAULT_OUT as RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as EXECUTION_TARGET,
+    OUTCOME_ID as RESULT_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as STRICT_RESULT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -224,13 +231,13 @@ def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_rotates_to_res
             evidence=evidence,
             lane=NEXT_TARGET,
         )
-        is True
+        is False
     )
 
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert LIKELY_POST_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
@@ -258,23 +265,35 @@ def test_psi_A_gauge_sector_exchange_attempt_from_sourced_maxwell_rotates_to_res
     assert attempt["theorem_discharged"] == "no"
     assert attempt["rule_promoted"] == "no"
 
+    reviewed = workstream(NEXT_TARGET, registry)
+    assert reviewed["status"] == "paused"
+    assert reviewed["authorization_evidence"] == _rel(RESULT_REVIEW_LEAN_PACKET_PATH)
+    assert reviewed["report"] == _rel(RESULT_REVIEW_OUT)
+    assert reviewed["review_result"] == RESULT_REVIEW_OUTCOME
+    assert reviewed["strict_review_result"] == STRICT_RESULT_REVIEW_OUTCOME
+    assert reviewed["selected_next_target"] == EXECUTION_TARGET
+    assert reviewed["proof_attempt_executed"] == "no"
+    assert reviewed["theorem_discharged"] == "no"
+    assert reviewed["rule_promoted"] == "no"
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == OUTCOME_ID
+    assert active["workstream_id"] == EXECUTION_TARGET
+    assert active["active_lane"] == EXECUTION_TARGET
+    assert active["authorization_evidence"] == _rel(RESULT_REVIEW_LEAN_PACKET_PATH)
+    assert active["report"] == _rel(RESULT_REVIEW_OUT)
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["packet_result"] == RESULT_REVIEW_OUTCOME
     assert active["attempt_preparation_result"] == OUTCOME_ID
     assert active["strict_attempt_preparation_result"] == (
         STRICT_ATTEMPT_PREPARATION_RESULT
     )
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == LIKELY_POST_REVIEW_TARGET
-    assert active["selected_next_target_kind"] == LIKELY_POST_REVIEW_TARGET_KIND
+    assert active["review_result"] == RESULT_REVIEW_OUTCOME
+    assert active["strict_review_result"] == STRICT_RESULT_REVIEW_OUTCOME
+    assert active["execution_result"] == "PENDING"
+    assert active["selected_next_target"] == NEXT_TARGET
+    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert active["selected_obligation"] == OBLIGATION
-    assert active["basis"] == BASIS
     assert active["proof_style"] == PROOF_STYLE
     assert active["target"] == TARGET
     assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT

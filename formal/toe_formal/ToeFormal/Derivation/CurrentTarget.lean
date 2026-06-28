@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRoute
+import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRoute.selectedNextTarget
+  PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRoute.packetId
+  PsiAGaugeSectorExchangeTheoremLinkageAttemptFromSourcedMaxwellRouteResultReview.packetId
 
-theorem current_target_points_to_gauge_exchange_attempt_result_review :
+theorem current_target_points_to_gauge_exchange_attempt_execution :
     currentLiveTarget =
-      "review_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result" := by
+      "execute_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route" := by
   rfl
 
 end CurrentTarget

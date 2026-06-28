@@ -125,6 +125,11 @@ GAUGE_ATTEMPT_OUTCOME = (
     "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_"
     "PREPARED_GAUGE_EXCHANGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_PROMOTION"
 )
+GAUGE_ATTEMPT_RESULT_REVIEW_OUTCOME = (
+    "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_SOURCED_MAXWELL_ROUTE_"
+    "RESULT_REVIEW_ACCEPTS_GAUGE_EXCHANGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_"
+    "OR_CK_RULE_PROMOTION"
+)
 
 
 def _read(path: Path) -> str:
@@ -327,6 +332,7 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
             POST_SELECTOR_PACKET_REVIEW_TARGET,
             GAUGE_ATTEMPT_PREPARATION_TARGET,
             GAUGE_ATTEMPT_REVIEW_TARGET,
+            GAUGE_ATTEMPT_EXECUTION_TARGET,
         }
         assert active["consumed_target"] in {
             NEXT_TARGET,
@@ -337,6 +343,7 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
             POST_SELECTOR_PACKET_TARGET,
             POST_SELECTOR_PACKET_REVIEW_TARGET,
             GAUGE_ATTEMPT_PREPARATION_TARGET,
+            GAUGE_ATTEMPT_REVIEW_TARGET,
         }
         if active["workstream_id"] == CLOSEOUT_PREPARATION_TARGET:
             assert active["execution_result"] == OUTCOME_ID
@@ -365,12 +372,18 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
                 "PSI_A_GAUGE_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
                 "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
             )
-        else:
-            assert active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET
+        elif active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET:
             assert active["consumed_target"] == GAUGE_ATTEMPT_PREPARATION_TARGET
             assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
             assert active["review_result"] == "PENDING"
             assert active["selected_next_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+        else:
+            assert active["workstream_id"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+            assert active["consumed_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
+            assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
+            assert active["review_result"] == GAUGE_ATTEMPT_RESULT_REVIEW_OUTCOME
+            assert active["execution_result"] == "PENDING"
+            assert active["selected_next_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

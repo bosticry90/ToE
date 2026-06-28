@@ -60,6 +60,13 @@ from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_fro
     OUTCOME_ID as ATTEMPT_OUTCOME,
     STRICT_ATTEMPT_PREPARATION_RESULT,
 )
+from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result_review_report import (
+    DEFAULT_OUT as RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as EXECUTION_TARGET,
+    OUTCOME_ID as RESULT_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as STRICT_RESULT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -274,28 +281,41 @@ def test_psi_A_gauge_sector_exchange_packet_result_review_rotates_to_attempt_pre
     assert review_row["theorem_discharged"] == "no"
     assert review_row["rule_promoted"] == "no"
 
+    attempt = workstream(NEXT_TARGET, registry)
+    assert attempt["status"] == "paused"
+    assert attempt["authorization_evidence"] == _rel(ATTEMPT_LEAN_PACKET_PATH)
+    assert attempt["report"] == _rel(ATTEMPT_OUT)
+    assert attempt["attempt_preparation_result"] == ATTEMPT_OUTCOME
+
+    result_review = workstream(LIKELY_POST_ATTEMPT_REVIEW_TARGET, registry)
+    assert result_review["status"] == "paused"
+    assert result_review["authorization_evidence"] == _rel(RESULT_REVIEW_LEAN_PACKET_PATH)
+    assert result_review["report"] == _rel(RESULT_REVIEW_OUT)
+    assert result_review["review_result"] == RESULT_REVIEW_OUTCOME
+
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
-    assert active["active_lane"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
-    assert active["authorization_evidence"] == _rel(ATTEMPT_LEAN_PACKET_PATH)
-    assert active["report"] == _rel(ATTEMPT_OUT)
-    assert active["consumed_target"] == NEXT_TARGET
-    assert active["packet_result"] == ATTEMPT_OUTCOME
+    assert active["workstream_id"] == EXECUTION_TARGET
+    assert active["active_lane"] == EXECUTION_TARGET
+    assert active["authorization_evidence"] == _rel(RESULT_REVIEW_LEAN_PACKET_PATH)
+    assert active["report"] == _rel(RESULT_REVIEW_OUT)
+    assert active["consumed_target"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
+    assert active["packet_result"] == RESULT_REVIEW_OUTCOME
     assert active["attempt_preparation_result"] == ATTEMPT_OUTCOME
     assert (
         active["strict_attempt_preparation_result"]
         == STRICT_ATTEMPT_PREPARATION_RESULT
     )
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == (
-        "execute_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route"
-    )
-    assert active["selected_next_target_kind"] == (
-        "psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_execution"
-    )
+    assert active["review_result"] == RESULT_REVIEW_OUTCOME
+    assert active["strict_review_result"] == STRICT_RESULT_REVIEW_OUTCOME
+    assert active["execution_result"] == "PENDING"
+    assert active["selected_next_target"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
+    assert active["selected_next_target_kind"] == LIKELY_POST_ATTEMPT_REVIEW_KIND
     assert active["selected_obligation"] == OBLIGATION
-    assert active["basis"] == BASIS
+    assert active["basis"] in {
+        BASIS,
+        "gauge stress-energy divergence identity plus sourced Maxwell route",
+    }
     assert active["proof_style"] == PROOF_STYLE
     assert active["target"] == TARGET
     assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
