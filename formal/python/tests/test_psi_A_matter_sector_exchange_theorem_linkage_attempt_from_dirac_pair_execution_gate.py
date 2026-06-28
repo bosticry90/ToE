@@ -88,6 +88,12 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
 )
+CLOSEOUT_PREPARATION_TARGET = (
+    "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout"
+)
+CLOSEOUT_REVIEW_TARGET = (
+    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result"
+)
 
 
 def _read(path: Path) -> str:
@@ -281,11 +287,18 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == (
-            "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout"
-        )
-        assert active["consumed_target"] == NEXT_TARGET
-        assert active["execution_result"] == OUTCOME_ID
+        assert active["workstream_id"] in {
+            CLOSEOUT_PREPARATION_TARGET,
+            CLOSEOUT_REVIEW_TARGET,
+        }
+        assert active["consumed_target"] in {NEXT_TARGET, CLOSEOUT_PREPARATION_TARGET}
+        if active["workstream_id"] == CLOSEOUT_PREPARATION_TARGET:
+            assert active["execution_result"] == OUTCOME_ID
+        else:
+            assert active["closeout_result"] == (
+                "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DIRAC_"
+                "PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+            )
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

@@ -93,6 +93,12 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
 )
+CLOSEOUT_PREPARATION_TARGET = (
+    "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout"
+)
+CLOSEOUT_REVIEW_TARGET = (
+    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result"
+)
 
 
 def _read(path: Path) -> str:
@@ -321,18 +327,30 @@ def test_psi_A_matter_exchange_attempt_result_review_rotates_to_execution() -> N
         assert active["status"] == "active"
         assert active["workstream_id"] in {
             CONSUMED_TARGET,
-            "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout",
+            CLOSEOUT_PREPARATION_TARGET,
+            CLOSEOUT_REVIEW_TARGET,
         }
-        assert active["consumed_target"] in {NEXT_TARGET, CONSUMED_TARGET}
-        assert active["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+        assert active["consumed_target"] in {
+            NEXT_TARGET,
+            CONSUMED_TARGET,
+            CLOSEOUT_PREPARATION_TARGET,
+        }
         if active["workstream_id"] == CONSUMED_TARGET:
+            assert active["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
             assert active["review_result"] == "PENDING"
-        else:
+        elif active["workstream_id"] == CLOSEOUT_PREPARATION_TARGET:
+            assert active["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
             assert active["review_result"] == (
                 "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_DIRAC_PAIR_"
                 "RESULT_REVIEW_ACCEPTS_MATTER_EXCHANGE_ROUTE_CONSTRUCTED_NO_CK_RULE_"
                 "PROMOTION_OR_MASTER_ACTION_PROMOTION"
             )
+        else:
+            assert active["closeout_result"] == (
+                "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DIRAC_"
+                "PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+            )
+            assert active["review_result"] == "PENDING"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

@@ -9,6 +9,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
     workstream,
 )
@@ -84,6 +85,9 @@ STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+)
+CLOSEOUT_REVIEW_TARGET = (
+    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result"
 )
 
 
@@ -197,6 +201,13 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
 
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=CONSUMED_TARGET,
+        live_target=NEXT_TARGET,
+        evidence=evidence,
+        lane=NEXT_TARGET,
+    )
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -204,7 +215,12 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     reviewed = workstream(CONSUMED_TARGET, registry)
@@ -223,21 +239,37 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
     assert reviewed["rule_promoted"] == "no"
     assert reviewed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["execution_result"] == EXECUTION_RESULT
-    assert active["suggested_closeout_outcome"] == CLOSEOUT_OUTCOME
-    assert active["closeout_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["report"] == _rel(DEFAULT_OUT)
+        assert active["consumed_target"] == CONSUMED_TARGET
+        assert active["review_result"] == OUTCOME_ID
+        assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert active["execution_result"] == EXECUTION_RESULT
+        assert active["suggested_closeout_outcome"] == CLOSEOUT_OUTCOME
+        assert active["closeout_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        closeout = workstream(NEXT_TARGET, registry)
+        assert closeout["status"] == "paused"
+        assert closeout["closeout_result"] == CLOSEOUT_OUTCOME
+        assert closeout["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
+        assert closeout["rule_promoted"] == "no"
+        assert closeout["master_action_promoted"] == "no"
+
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
+        assert active["consumed_target"] == NEXT_TARGET
+        assert active["closeout_result"] == CLOSEOUT_OUTCOME
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
 
 
 def test_psi_A_matter_exchange_attempt_execution_result_review_mirrors() -> None:
