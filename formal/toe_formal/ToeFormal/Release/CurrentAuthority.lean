@@ -20,8 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_psi_A_interaction_exchange_theorem_linkage_chain_synthesis_after_" ++
-        "cexchange_total_matter_and_gauge_closeouts_result" := by
+      "prepare_psi_A_interaction_exchange_theorem_linkage_chain_closeout" := by
   rfl
 
 end CurrentAuthority
