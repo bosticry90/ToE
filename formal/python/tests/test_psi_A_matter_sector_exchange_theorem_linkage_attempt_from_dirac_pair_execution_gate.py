@@ -94,6 +94,9 @@ CLOSEOUT_PREPARATION_TARGET = (
 CLOSEOUT_REVIEW_TARGET = (
     "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result"
 )
+POST_CLOSEOUT_SELECTOR_TARGET = (
+    "select_next_ck_family_theorem_linkage_obligation_after_psi_A_matter_exchange_closeout"
+)
 
 
 def _read(path: Path) -> str:
@@ -290,14 +293,25 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
         assert active["workstream_id"] in {
             CLOSEOUT_PREPARATION_TARGET,
             CLOSEOUT_REVIEW_TARGET,
+            POST_CLOSEOUT_SELECTOR_TARGET,
         }
-        assert active["consumed_target"] in {NEXT_TARGET, CLOSEOUT_PREPARATION_TARGET}
+        assert active["consumed_target"] in {
+            NEXT_TARGET,
+            CLOSEOUT_PREPARATION_TARGET,
+            CLOSEOUT_REVIEW_TARGET,
+        }
         if active["workstream_id"] == CLOSEOUT_PREPARATION_TARGET:
             assert active["execution_result"] == OUTCOME_ID
-        else:
+        elif active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
             assert active["closeout_result"] == (
                 "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DIRAC_"
                 "PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+            )
+        else:
+            assert active["review_result"] == (
+                "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
+                "REVIEW_ACCEPTS_DIRAC_PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_"
+                "PROMOTION_OR_SEAM_CLOSURE"
             )
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"

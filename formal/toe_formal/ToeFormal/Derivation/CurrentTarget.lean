@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageObligationCloseout
+import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PsiAMatterSectorExchangeTheoremLinkageObligationCloseout.selectedNextTarget
+  PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PsiAMatterSectorExchangeTheoremLinkageObligationCloseout.packetId
+  PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview.packetId
 
-theorem current_target_points_to_psi_A_matter_exchange_obligation_closeout_result_review :
+theorem current_target_points_to_selector_after_psi_A_matter_exchange_closeout :
     currentLiveTarget =
-      "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result" := by
+      "select_next_ck_family_theorem_linkage_obligation_after_psi_A_matter_exchange_closeout" := by
   rfl
 
 end CurrentTarget

@@ -139,6 +139,7 @@ import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageAttemptFromDir
 import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPairExecution
 import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPairExecutionResultReview
 import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageObligationCloseout
+import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -160,16 +161,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PsiAMatterSectorExchangeTheoremLinkageObligationCloseout.outcomeId
+  PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview.outcomeId
 
 def currentPacketId : String :=
-  PsiAMatterSectorExchangeTheoremLinkageObligationCloseout.packetId
+  PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_A_matter_exchange_obligation_closeout :
+theorem qft_gr_lane_aggregate_exposes_psi_A_matter_exchange_obligation_closeout_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_DIRAC_" ++
-          "PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
+        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_" ++
+          "REVIEW_ACCEPTS_DIRAC_PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_" ++
+          "PROMOTION_OR_SEAM_CLOSURE" := by
   native_decide
 
 end QFTGR

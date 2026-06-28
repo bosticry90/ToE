@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result" := by
+      "select_next_ck_family_theorem_linkage_obligation_after_psi_A_matter_exchange_closeout" := by
   native_decide
 
 end CurrentAuthority

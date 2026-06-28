@@ -89,6 +89,9 @@ STRICT_MAP_PATH = (
 CLOSEOUT_REVIEW_TARGET = (
     "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result"
 )
+POST_CLOSEOUT_SELECTOR_TARGET = (
+    "select_next_ck_family_theorem_linkage_obligation_after_psi_A_matter_exchange_closeout"
+)
 
 
 def _read(path: Path) -> str:
@@ -265,9 +268,19 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
-        assert active["consumed_target"] == NEXT_TARGET
-        assert active["closeout_result"] == CLOSEOUT_OUTCOME
+        assert active["workstream_id"] in {
+            CLOSEOUT_REVIEW_TARGET,
+            POST_CLOSEOUT_SELECTOR_TARGET,
+        }
+        assert active["consumed_target"] in {NEXT_TARGET, CLOSEOUT_REVIEW_TARGET}
+        if active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
+            assert active["closeout_result"] == CLOSEOUT_OUTCOME
+        else:
+            assert active["review_result"] == (
+                "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
+                "REVIEW_ACCEPTS_DIRAC_PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_"
+                "PROMOTION_OR_SEAM_CLOSURE"
+            )
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 

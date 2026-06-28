@@ -87,6 +87,25 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
 )
+RESULT_REVIEW_TARGET = (
+    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result"
+)
+SELECTOR_TARGET = (
+    "select_next_ck_family_theorem_linkage_obligation_after_psi_A_matter_exchange_closeout"
+)
+RESULT_REVIEW_OUTCOME = (
+    "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_"
+    "REVIEW_ACCEPTS_DIRAC_PAIR_LINKED_MATTER_EXCHANGE_ROUTE_NO_CK_RULE_"
+    "PROMOTION_OR_SEAM_CLOSURE"
+)
+RESULT_REVIEW_REPORT = (
+    "formal/docs/release/PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_"
+    "CLOSEOUT_RESULT_REVIEW_20260628_v0.json"
+)
+RESULT_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "PsiAMatterSectorExchangeTheoremLinkageObligationCloseoutResultReview.lean"
+)
 
 
 def _read(path: Path) -> str:
@@ -222,7 +241,7 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=CONSUMED_TARGET,
         live_target=NEXT_TARGET,
@@ -233,7 +252,13 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+        assert SELECTOR_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
@@ -249,23 +274,43 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == report
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["closeout_result"] == OUTCOME_ID
-    assert active["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["matter_sector_exchange_obligation_locally_closed"] == "yes"
-    assert active["matter_exchange_linked_to_dirac_pair_route"] == "yes"
-    assert active["general_C_k_theorem_linkage_closure"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["report"] == report
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["consumed_target"] == CONSUMED_TARGET
+        assert active["closeout_result"] == OUTCOME_ID
+        assert active["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
+        assert active["review_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["matter_sector_exchange_obligation_locally_closed"] == "yes"
+        assert active["matter_exchange_linked_to_dirac_pair_route"] == "yes"
+        assert active["general_C_k_theorem_linkage_closure"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        review = _workstream(registry, RESULT_REVIEW_TARGET)
+        assert review["status"] == "paused"
+        assert review["authorization_evidence"] == RESULT_REVIEW_EVIDENCE
+        assert review["report"] == RESULT_REVIEW_REPORT
+        assert review["review_result"] == RESULT_REVIEW_OUTCOME
+        assert review["selected_next_target"] == SELECTOR_TARGET
+        assert review["matter_sector_exchange_closeout_accepted"] == "yes"
+        assert review["rule_promoted"] == "no"
+        assert review["master_action_promoted"] == "no"
+
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == SELECTOR_TARGET
+        assert active["consumed_target"] == RESULT_REVIEW_TARGET
+        assert active["review_result"] == RESULT_REVIEW_OUTCOME
+        assert active["selector_result"] == "PENDING"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
 
 
 def test_psi_A_matter_exchange_closeout_mirrors() -> None:
