@@ -205,10 +205,7 @@ def test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review() -> None
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
 
-    assert_current_target_consistent()
-    assert_frontier_matches_registry()
-    assert_public_surfaces_match_registry()
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -216,10 +213,17 @@ def test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review() -> None
         lane=NEXT_TARGET,
     )
 
+    assert_current_target_consistent()
+    assert_frontier_matches_registry()
+    assert_public_surfaces_match_registry()
+
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     prior_review = workstream(review_target(), registry)
@@ -246,30 +250,46 @@ def test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review() -> None
     assert attempt["theorem_discharged"] == "no"
     assert attempt["rule_promoted"] == "no"
 
+    result_review = workstream(NEXT_TARGET, registry)
     active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == OUTCOME_ID
-    assert active["attempt_preparation_result"] == OUTCOME_ID
-    assert active["strict_attempt_preparation_result"] == (
+    if active["workstream_id"] == NEXT_TARGET:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        reviewed = active
+        review_target_is_current = True
+    else:
+        assert result_review["status"] == "paused"
+        reviewed = result_review
+        review_target_is_current = False
+    assert reviewed["attempt_preparation_result"] == OUTCOME_ID
+    assert reviewed["strict_attempt_preparation_result"] == (
         STRICT_ATTEMPT_PREPARATION_RESULT
     )
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == LIKELY_POST_REVIEW_TARGET
-    assert active["selected_next_target_kind"] == (
+    if review_target_is_current:
+        assert reviewed["consumed_target"] == consumed_target()
+        assert reviewed["authorization_evidence"] == evidence
+        assert reviewed["report"] == _rel(DEFAULT_OUT)
+        assert reviewed["packet_result"] == OUTCOME_ID
+        assert reviewed["review_result"] == "PENDING"
+    else:
+        assert reviewed["consumed_target"] == NEXT_TARGET
+        assert reviewed["authorization_evidence"] != evidence
+        assert reviewed["report"] != _rel(DEFAULT_OUT)
+        assert reviewed["packet_result"] != OUTCOME_ID
+        assert reviewed["review_result"] != "PENDING"
+    assert reviewed["selected_next_target"] == LIKELY_POST_REVIEW_TARGET
+    assert reviewed["selected_next_target_kind"] == (
         "psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution"
     )
-    assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert active["planned_proof_steps"] == PLANNED_PROOF_STEPS
-    assert active["watch_items"] == "; ".join(WATCH_ITEMS)
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    assert reviewed["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert reviewed["planned_proof_steps"] == PLANNED_PROOF_STEPS
+    assert reviewed["watch_items"] == "; ".join(WATCH_ITEMS)
+    assert reviewed["proof_attempt_executed"] == "no"
+    assert reviewed["theorem_discharged"] == "no"
+    assert reviewed["rule_promoted"] == "no"
+    assert reviewed["master_action_promoted"] == "no"
 
 
 def test_psi_A_matter_sector_exchange_attempt_mirrors() -> None:

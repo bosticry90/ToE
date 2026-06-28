@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPair
+import ToeFormal.Derivation.PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPairResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPair.selectedNextTarget
+  PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPairResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPair.packetId
+  PsiAMatterSectorExchangeTheoremLinkageAttemptFromDiracPairResultReview.packetId
 
-theorem current_target_points_to_psi_A_matter_exchange_attempt_review :
+theorem current_target_points_to_psi_A_matter_exchange_attempt_execution :
     currentLiveTarget =
-      "review_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result" := by
+      "execute_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair" := by
   rfl
 
 end CurrentTarget
