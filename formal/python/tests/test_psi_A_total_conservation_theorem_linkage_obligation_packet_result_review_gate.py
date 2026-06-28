@@ -339,21 +339,15 @@ def test_psi_A_total_conservation_packet_result_review_rotates_to_attempt_prepar
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
-    assert active["active_lane"] == CLOSEOUT_REVIEW_TARGET
-    assert active["authorization_evidence"] == closeout_evidence
-    assert active["authorized_next_strict_target"] == CLOSEOUT_REVIEW_TARGET
-    assert active["consumed_target"] == CLOSEOUT_TARGET
-    assert active["packet_result"] == CLOSEOUT_RESULT
-    assert active["closeout_result"] == CLOSEOUT_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
-    assert active["selected_next_target_kind"] == CLOSEOUT_REVIEW_TARGET_KIND
-    assert active["watch_items"] == ATTEMPT_WATCH_ITEMS
-    assert active["closeout_statement"] == CLOSEOUT_STATEMENT
+    assert active["workstream_id"] == (
+        "select_next_ck_family_theorem_linkage_obligation_after_"
+        "psi_A_total_conservation_closeout"
+    )
+    assert active["consumed_target"] == CLOSEOUT_REVIEW_TARGET
+    assert active["selection_result"] == "PENDING"
     assert active["proof_execution_authorized"] == "no"
-    assert active["proof_attempt_executed"] == "yes"
-    assert active["theorem_discharged"] == "yes"
+    assert active["proof_attempt_executed"] == "no"
+    assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
