@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_packet_result"
+    "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_packet"
+    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_packet_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_psi_A_matter_sector_exchange_theorem_linkage_obligation_packet_result"
+    "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PsiAMatterSectorExchangeTheoremLinkageObligationPacket.lean"
+    / "PsiAMatterSectorExchangeTheoremLinkageObligationPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,11 +2424,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_20260627_v0.json"
+        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_"
-        "MATTER_EXCHANGE_ROUTE_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_MATTER_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3542,6 +3542,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_"
         "DIRAC_MATTER_EXCHANGE_TARGET_NO_THEOREM_DISCHARGE_OR_MASTER_ACTION_PROMOTION"
     )
+    psi_A_matter_sector_packet_result_review_outcome = (
+        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_MATTER_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+    )
+    psi_A_matter_sector_packet_result_review_strict_outcome = (
+        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_DIRAC_MATTER_EXCHANGE_TARGET_NO_THEOREM_DISCHARGE_OR_MASTER_ACTION_"
+        "PROMOTION"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3553,34 +3562,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_20260627_v0.json"
+        "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["packet_result"] == (
-        psi_A_matter_sector_packet_outcome
+    assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert interaction_active_workstream["review_result"] == (
+        psi_A_matter_sector_packet_result_review_outcome
     )
-    assert interaction_active_workstream["strict_packet_result"] == (
-        psi_A_matter_sector_packet_strict_outcome
+    assert interaction_active_workstream["strict_review_result"] == (
+        psi_A_matter_sector_packet_result_review_strict_outcome
     )
-    assert interaction_active_workstream["selection_result"] == (
-        post_psi_A_total_conservation_selector_outcome
-    )
-    assert interaction_active_workstream["strict_selection_result"] == (
-        post_psi_A_total_conservation_selector_strict_outcome
-    )
-    assert interaction_active_workstream["selection_review_result"] == (
-        post_psi_A_total_conservation_selector_result_review_outcome
-    )
-    assert interaction_active_workstream["strict_selection_review_result"] == (
-        post_psi_A_total_conservation_selector_result_review_strict_outcome
-    )
-    assert interaction_active_workstream["review_result"] == "PENDING"
     assert interaction_active_workstream["selected_next_target"] == (
-        "prepare_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair"
+        "review_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result"
     )
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_preparation"
+    ] == "psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result_review"
     assert interaction_active_workstream["selected_obligation"] == (
         "psi-A matter-sector exchange theorem-linkage gap"
     )

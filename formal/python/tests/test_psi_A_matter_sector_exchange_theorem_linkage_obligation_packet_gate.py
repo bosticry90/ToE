@@ -195,7 +195,7 @@ def test_psi_A_matter_sector_exchange_packet_rotates_to_result_review() -> None:
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -206,7 +206,10 @@ def test_psi_A_matter_sector_exchange_packet_rotates_to_result_review() -> None:
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = workstream(consumed_target(), registry)
@@ -226,24 +229,27 @@ def test_psi_A_matter_sector_exchange_packet_rotates_to_result_review() -> None:
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == OUTCOME_ID
-    assert active["strict_packet_result"] == STRICT_PACKET_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
-    assert active["selected_obligation"] == OBLIGATION
-    assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert active["watch_items"] == "; ".join(WATCH_ITEMS)
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    handoff = workstream(NEXT_TARGET, registry)
+    if is_current:
+        assert handoff["status"] == "active"
+        assert handoff["active_lane"] == NEXT_TARGET
+        assert handoff["authorization_evidence"] == evidence
+        assert handoff["report"] == _rel(DEFAULT_OUT)
+        assert handoff["consumed_target"] == consumed_target()
+        assert handoff["packet_result"] == OUTCOME_ID
+        assert handoff["strict_packet_result"] == STRICT_PACKET_RESULT
+        assert handoff["review_result"] == "PENDING"
+    else:
+        assert handoff["status"] == "paused"
+    assert handoff["workstream_id"] == NEXT_TARGET
+    assert handoff["selected_next_target"] == LIKELY_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert handoff["selected_obligation"] == OBLIGATION
+    assert handoff["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert handoff["watch_items"] == "; ".join(WATCH_ITEMS)
+    assert handoff["proof_attempt_executed"] == "no"
+    assert handoff["theorem_discharged"] == "no"
+    assert handoff["rule_promoted"] == "no"
+    assert handoff["master_action_promoted"] == "no"
 
 
 def test_psi_A_matter_sector_exchange_packet_mirrors() -> None:
