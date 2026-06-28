@@ -387,8 +387,20 @@ def test_psi_A_matter_exchange_closeout_rotates_to_result_review() -> None:
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == GAUGE_ATTEMPT_EXECUTION_TARGET
-        assert active["active_lane"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+        assert active["workstream_id"] in {
+            GAUGE_ATTEMPT_EXECUTION_TARGET,
+            GAUGE_ATTEMPT_REVIEW_TARGET,
+        }
+        assert active["active_lane"] == active["workstream_id"]
+        if active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET:
+            assert active["consumed_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+            assert active["execution_result"] != "PENDING"
+            assert active["review_result"] == "PENDING"
+            assert active["proof_attempt_executed"] == "yes"
+            assert active["theorem_discharged"] == "yes"
+            assert active["rule_promoted"] == "no"
+            assert active["master_action_promoted"] == "no"
+            return
         assert active["authorization_evidence"] == GAUGE_ATTEMPT_RESULT_REVIEW_EVIDENCE
         assert active["authorized_next_strict_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
         assert active["consumed_target"] == GAUGE_ATTEMPT_REVIEW_TARGET

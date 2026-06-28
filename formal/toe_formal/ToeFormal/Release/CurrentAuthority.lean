@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "execute_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route" := by
+      "review_psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_result" := by
   native_decide
 
 end CurrentAuthority

@@ -11,6 +11,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_frontier_matches_registry,
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
 )
 from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_psi_A_matter_exchange_closeout_report import (
     DEFAULT_OUT as SELECTION_OUT,
@@ -225,6 +226,7 @@ def test_post_psi_A_matter_exchange_selection_result_review_records_lean_status(
 def test_post_psi_A_matter_exchange_selection_result_review_rotates_to_gauge_exchange_packet() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    skip_if_not_current_target(registry, GAUGE_ATTEMPT_EXECUTION_TARGET)
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()

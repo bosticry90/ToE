@@ -320,6 +320,7 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
             POST_SELECTOR_PACKET_REVIEW_TARGET,
             GAUGE_ATTEMPT_PREPARATION_TARGET,
             GAUGE_ATTEMPT_REVIEW_TARGET,
+            GAUGE_ATTEMPT_EXECUTION_TARGET,
         }
         if active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
             assert active["closeout_result"] == CLOSEOUT_OUTCOME
@@ -344,10 +345,18 @@ def test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeo
                 "ACCEPTS_GAUGE_EXCHANGE_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
             )
         elif active["workstream_id"] == GAUGE_ATTEMPT_REVIEW_TARGET:
-            assert active["consumed_target"] == GAUGE_ATTEMPT_PREPARATION_TARGET
-            assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
-            assert active["review_result"] == "PENDING"
-            assert active["selected_next_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
+            assert active["consumed_target"] in {
+                GAUGE_ATTEMPT_PREPARATION_TARGET,
+                GAUGE_ATTEMPT_EXECUTION_TARGET,
+            }
+            if active["consumed_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET:
+                assert active["execution_result"] != "PENDING"
+                assert active["review_result"] == "PENDING"
+                assert active["selected_next_target"] == GAUGE_ATTEMPT_REVIEW_TARGET
+            else:
+                assert active["attempt_preparation_result"] == GAUGE_ATTEMPT_OUTCOME
+                assert active["review_result"] == "PENDING"
+                assert active["selected_next_target"] == GAUGE_ATTEMPT_EXECUTION_TARGET
         else:
             assert active["workstream_id"] == GAUGE_ATTEMPT_EXECUTION_TARGET
             assert active["consumed_target"] == GAUGE_ATTEMPT_REVIEW_TARGET

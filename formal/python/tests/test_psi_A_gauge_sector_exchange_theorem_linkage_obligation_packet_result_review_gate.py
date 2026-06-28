@@ -11,6 +11,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_frontier_matches_registry,
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
     workstream,
 )
 from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_obligation_packet_report import (
@@ -237,6 +238,7 @@ def test_psi_A_gauge_sector_exchange_packet_result_review_records_lean_status() 
 def test_psi_A_gauge_sector_exchange_packet_result_review_rotates_to_attempt_preparation() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    skip_if_not_current_target(registry, EXECUTION_TARGET)
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
