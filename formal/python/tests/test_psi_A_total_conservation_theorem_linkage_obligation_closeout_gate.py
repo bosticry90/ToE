@@ -51,6 +51,15 @@ from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_clo
     OUTCOME_ID as REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT,
 )
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_report import (
+    DEFAULT_OUT as SELECTION_OUT,
+    FOLLOW_ON_TARGET_AFTER_REVIEW as SELECTION_FOLLOW_ON_TARGET_AFTER_REVIEW,
+    LEAN_PACKET_PATH as SELECTION_LEAN_PACKET_PATH,
+    NEXT_TARGET as SELECTION_REVIEW_TARGET,
+    OUTCOME_ID as SELECTION_OUTCOME,
+    SELECTED_OBLIGATION as SELECTION_SELECTED_OBLIGATION,
+    SELECTED_OBLIGATION_RANK as SELECTION_SELECTED_OBLIGATION_RANK,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -269,17 +278,18 @@ def test_psi_A_total_conservation_closeout_rotates_to_result_review() -> None:
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == SELECTOR_TARGET
-    assert active["active_lane"] == SELECTOR_TARGET
-    assert active["authorization_evidence"] == review_evidence
-    assert active["authorized_next_strict_target"] == SELECTOR_TARGET
-    assert active["consumed_target"] == NEXT_TARGET
-    assert active["packet_result"] == REVIEW_OUTCOME
-    assert active["review_result"] == REVIEW_OUTCOME
-    assert active["selection_result"] == "PENDING"
-    assert active["selected_next_target"] == SELECTOR_TARGET
-    assert active["selected_next_target_kind"] == SELECTOR_TARGET_KIND
-    assert active["likely_next_obligation"] == LIKELY_NEXT_OBLIGATION
+    assert active["workstream_id"] == SELECTION_REVIEW_TARGET
+    assert active["active_lane"] == SELECTION_REVIEW_TARGET
+    assert active["authorization_evidence"] == _rel(SELECTION_LEAN_PACKET_PATH)
+    assert active["report"] == _rel(SELECTION_OUT)
+    assert active["authorized_next_strict_target"] == SELECTION_REVIEW_TARGET
+    assert active["consumed_target"] == SELECTOR_TARGET
+    assert active["packet_result"] == SELECTION_OUTCOME
+    assert active["selection_result"] == SELECTION_OUTCOME
+    assert active["review_result"] == "PENDING"
+    assert active["selected_next_target"] == SELECTION_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["selected_obligation"] == SELECTION_SELECTED_OBLIGATION
+    assert active["selected_obligation_rank"] == SELECTION_SELECTED_OBLIGATION_RANK
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"

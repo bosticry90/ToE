@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PsiATotalConservationTheoremLinkageObligationCloseoutResultReview
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPsiATotalConservationCloseout
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,15 +13,15 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PsiATotalConservationTheoremLinkageObligationCloseoutResultReview.selectedNextTarget
+  CKFamilyTheoremLinkageObligationSelectionAfterPsiATotalConservationCloseout.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PsiATotalConservationTheoremLinkageObligationCloseoutResultReview.packetId
+  CKFamilyTheoremLinkageObligationSelectionAfterPsiATotalConservationCloseout.packetId
 
-theorem current_target_points_to_post_psi_A_total_conservation_closeout_selector :
+theorem current_target_points_to_post_psi_A_total_conservation_closeout_selector_review :
     currentLiveTarget =
-      "select_next_ck_family_theorem_linkage_obligation_after_" ++
-        "psi_A_total_conservation_closeout" := by
+      "review_ck_family_theorem_linkage_obligation_selection_after_" ++
+        "psi_A_total_conservation_closeout_result" := by
   rfl
 
 end CurrentTarget

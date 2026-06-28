@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "select_next_ck_family_theorem_linkage_obligation_after_"
-    "psi_A_total_conservation_closeout"
+    "review_ck_family_theorem_linkage_obligation_selection_after_"
+    "psi_A_total_conservation_closeout_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1339,7 +1339,8 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_psi_A_total_conservation_theorem_linkage_obligation_closeout_result"
+    "select_next_ck_family_theorem_linkage_obligation_after_"
+    "psi_A_total_conservation_closeout"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1569,8 +1570,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "select_next_ck_family_theorem_linkage_obligation_after_"
-    "psi_A_total_conservation_closeout"
+    "review_ck_family_theorem_linkage_obligation_selection_after_"
+    "psi_A_total_conservation_closeout_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1587,7 +1588,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PsiATotalConservationTheoremLinkageObligationCloseoutResultReview.lean"
+    / "CKFamilyTheoremLinkageObligationSelectionAfterPsiATotalConservationCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2426,11 +2427,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_20260627_v0.json"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_20260627_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_"
-        "ACCEPTS_EXCHANGE_CANCELLATION_LINKAGE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3516,6 +3519,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PREPARED_GAUGE_MATTER_EXCHANGE_CANCELLATION_ROUTE_NO_ACTION_VARIATION_OR_"
         "MASTER_ACTION_PROMOTION"
     )
+    post_psi_A_total_conservation_selector_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    post_psi_A_total_conservation_selector_strict_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_SELECTS_MATTER_EXCHANGE_LINKAGE_OBLIGATION_NO_GAP_"
+        "DISCHARGE_OR_CK_RULE_PROMOTION"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3527,43 +3540,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_20260627_v0.json"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_20260627_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == (
-        psi_A_total_conservation_closeout_result_review_outcome
+        post_psi_A_total_conservation_selector_outcome
     )
-    assert interaction_active_workstream["review_result"] == (
-        psi_A_total_conservation_closeout_result_review_outcome
+    assert interaction_active_workstream["selection_result"] == (
+        post_psi_A_total_conservation_selector_outcome
     )
-    assert interaction_active_workstream["outcome_id"] == (
-        psi_A_total_conservation_closeout_result_review_outcome
+    assert interaction_active_workstream["strict_selection_result"] == (
+        post_psi_A_total_conservation_selector_strict_outcome
     )
-    assert interaction_active_workstream["result_token"] == (
-        psi_A_total_conservation_closeout_result_review_outcome
+    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["selected_next_target"] == (
+        "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_packet"
     )
-    assert interaction_active_workstream["strict_review_result"] == (
-        psi_A_total_conservation_closeout_result_review_strict_outcome
-    )
-    assert interaction_active_workstream["selection_result"] == "PENDING"
-    assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream[
         "selected_next_target_kind"
-    ] == "ck_family_theorem_linkage_obligation_selector_after_psi_A_total_conservation_closeout"
-    assert interaction_active_workstream["likely_selector_outcome"] == (
-        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
-        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
-        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
-    )
-    assert interaction_active_workstream["likely_next_obligation"] == (
-        "psi-A matter-sector exchange theorem-linkage gap"
-    )
+    ] == "psi_A_matter_sector_exchange_theorem_linkage_obligation_packet"
     assert interaction_active_workstream["selected_obligation"] == (
         "psi-A matter-sector exchange theorem-linkage gap"
     )
-    assert interaction_active_workstream["selected_obligation_rank"] == "3"
-    assert interaction_active_workstream["selector_authorized"] == "yes"
-    assert interaction_active_workstream["selector_executed"] == "no"
+    assert interaction_active_workstream["selected_obligation_rank"] == 3
     assert interaction_active_workstream["proof_execution_authorized"] == "no"
     assert interaction_active_workstream["proof_attempt_executed"] == "no"
     assert interaction_active_workstream["theorem_discharged"] == "no"
@@ -3572,6 +3572,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["gap_1_through_gap_8_discharged"] == "no"
     assert interaction_active_workstream["C_k_action_embedding_claimed"] == "no"
     assert interaction_active_workstream["C_k_action_variation_executed"] == "no"
+    assert interaction_active_workstream["full_maxwell_closure_claimed"] == "no"
     assert interaction_active_workstream["em_qft_closure_claimed"] == "no"
     assert interaction_active_workstream["qft_gr_closure_claimed"] == "no"
     assert interaction_active_workstream["gr_qm_closure_claimed"] == "no"

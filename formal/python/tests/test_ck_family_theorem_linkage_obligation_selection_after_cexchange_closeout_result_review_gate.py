@@ -299,15 +299,28 @@ def test_ck_family_selection_result_review_rotates_to_obligation_packet() -> Non
     assert attempt["rule_promoted"] == "no"
 
     attempt_review = _workstream(registry, PSI_A_ATTEMPT_REVIEW_TARGET)
-    assert attempt_review["status"] == "active"
-    assert attempt_review["authorization_evidence"] == execution_evidence
-    assert attempt_review["report"] == execution_report
+    assert attempt_review["status"] == "paused"
+    assert attempt_review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "PsiATotalConservationTheoremLinkageAttemptFromExchangeRoutesExecutionResultReview.lean"
+    )
+    assert attempt_review["report"] == (
+        "formal/docs/release/"
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
+        "EXECUTION_RESULT_REVIEW_20260627_v0.json"
+    )
     assert attempt_review["execution_result"] == execution_outcome
-    assert attempt_review["review_result"] == "PENDING"
-    assert attempt_review["selected_next_target"] == PSI_A_ATTEMPT_REVIEW_TARGET
+    assert attempt_review["review_result"] == (
+        "PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_ATTEMPT_FROM_EXCHANGE_ROUTES_"
+        "RESULT_REVIEW_ACCEPTS_EXCHANGE_CANCELLATION_CONSTRUCTED_NO_CK_RULE_"
+        "PROMOTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    assert attempt_review["selected_next_target"] == (
+        "prepare_psi_A_total_conservation_theorem_linkage_obligation_closeout"
+    )
     assert (
         attempt_review["selected_next_target_kind"]
-        == PSI_A_ATTEMPT_REVIEW_TARGET_KIND
+        == "psi_A_total_conservation_theorem_linkage_obligation_closeout_preparation"
     )
     assert attempt_review["proof_attempt_executed"] == "yes"
     assert attempt_review["theorem_discharged"] == "yes"
@@ -325,23 +338,20 @@ def test_ck_family_selection_result_review_rotates_to_obligation_packet() -> Non
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == PSI_A_ATTEMPT_REVIEW_TARGET
-    assert active["active_lane"] == PSI_A_ATTEMPT_REVIEW_TARGET
-    assert active["authorization_evidence"] == execution_evidence
-    assert active["authorized_next_strict_target"] == PSI_A_ATTEMPT_REVIEW_TARGET
-    assert active["consumed_target"] == PSI_A_ATTEMPT_EXECUTION_TARGET
-    assert active["packet_result"] == execution_outcome
+    assert active["workstream_id"] == ("review_ck_family_theorem_linkage_obligation_selection_after_"
+        "psi_A_total_conservation_closeout_result")
+    assert active["active_lane"] == ("review_ck_family_theorem_linkage_obligation_selection_after_"
+        "psi_A_total_conservation_closeout_result")
+    assert active["consumed_target"] == ("select_next_ck_family_theorem_linkage_obligation_after_"
+        "psi_A_total_conservation_closeout")
+    assert active["selection_result"] == ("CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION")
     assert active["review_result"] == "PENDING"
-    assert active["execution_result"] == execution_outcome
-    assert active["selected_next_target_kind"] == (
-        PSI_A_ATTEMPT_REVIEW_TARGET_KIND
-    )
-    assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
-    assert active["watch_items"] == PSI_A_ATTEMPT_WATCH_ITEMS
-    assert active["proof_execution_authorized"] == "yes"
-    assert active["proof_attempt_executed"] == "yes"
-    assert active["theorem_discharged"] == "yes"
+    assert active["selected_obligation"] == "psi-A matter-sector exchange theorem-linkage gap"
+    assert active["proof_execution_authorized"] == "no"
+    assert active["proof_attempt_executed"] == "no"
+    assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 

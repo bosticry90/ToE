@@ -256,14 +256,14 @@ def test_cexchange_closeout_rotates_to_result_review() -> None:
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert (
-        active["workstream_id"]
-        == "review_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result"
-    )
-    assert (
-        active["consumed_target"]
-        == "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
-    )
+    assert active["workstream_id"] == ("review_ck_family_theorem_linkage_obligation_selection_after_"
+        "psi_A_total_conservation_closeout_result")
+    assert active["consumed_target"] == ("select_next_ck_family_theorem_linkage_obligation_after_"
+        "psi_A_total_conservation_closeout")
+    assert active["selection_result"] == ("CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION")
+    assert active["review_result"] == "PENDING"
 
 
 def test_cexchange_closeout_mirrors() -> None:

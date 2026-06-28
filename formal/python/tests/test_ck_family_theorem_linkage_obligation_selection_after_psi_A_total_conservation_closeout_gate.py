@@ -9,38 +9,30 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
-    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_report import (
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_report import (
     DEFAULT_OUT,
+    DEPENDENCY_CHAIN,
     FOLLOW_ON_TARGET_AFTER_REVIEW,
     FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_SELECTION,
-    GAUGE_EXCHANGE_ROUTE,
     LEAN_PACKET_PATH,
     LEAN_STATUS_WORDING_FOR_SELECTION,
-    MATTER_EXCHANGE_ROUTE,
+    MATTER_EXCHANGE_TARGET_RULE,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
-    PLAIN_MEANING,
     PREVIOUS_CLOSED_OBLIGATION,
     SCHEMA_ID,
     SCOPED_LEAN_TARGETS_STATUS_FOR_SELECTION,
     SELECTED_OBLIGATION,
     SELECTED_OBLIGATION_RANK,
     STRICT_SELECTION_RESULT,
-    THEOREM_TARGET_STATEMENT,
-    TOTAL_CONSERVATION_CONCLUSION,
-    TOTAL_STRESS_ENERGY_DEFINITION,
-    build_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout,
-)
-from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_packet_report import (
-    CONSUMED_TARGET as PSI_A_PACKET_CONSUMED_TARGET,
-    NEXT_TARGET as PSI_A_PACKET_REVIEW_TARGET,
-    OUTCOME_ID as PSI_A_PACKET_OUTCOME,
+    THEOREM_TARGET_STATUS,
+    WATCH_ITEMS,
+    build_ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout,
 )
 
 
@@ -50,7 +42,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_report.py"
+    / "ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -107,7 +99,14 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_ck_family_selection_after_cexchange_files_exist() -> None:
+def selection_consumed_target() -> str:
+    return (
+        "select_next_ck_family_theorem_linkage_obligation_after_"
+        "psi_A_total_conservation_closeout"
+    )
+
+
+def test_ck_family_selection_after_psi_A_total_conservation_files_exist() -> None:
     for path in [
         DEFAULT_OUT,
         TOOL_PATH,
@@ -119,7 +118,7 @@ def test_ck_family_selection_after_cexchange_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_ck_family_selection_after_cexchange_selects_rank_two_obligation() -> None:
+def test_ck_family_selection_after_psi_A_total_conservation_selects_matter_exchange() -> None:
     selection = _json(DEFAULT_OUT)
 
     assert selection["artifact_id"] == SCHEMA_ID
@@ -142,24 +141,18 @@ def test_ck_family_selection_after_cexchange_selects_rank_two_obligation() -> No
     assert selection["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert selection["follow_on_target_after_review"] == FOLLOW_ON_TARGET_AFTER_REVIEW
     assert (
-        build_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout()
+        build_ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout()
         == selection
     )
 
 
-def test_ck_family_selection_after_cexchange_records_theorem_shape_only() -> None:
+def test_ck_family_selection_after_psi_A_total_conservation_records_watch_items_only() -> None:
     selection = _json(DEFAULT_OUT)
 
-    assert selection["theorem_shape"] == {
-        "given": [
-            GAUGE_EXCHANGE_ROUTE,
-            MATTER_EXCHANGE_ROUTE,
-            TOTAL_STRESS_ENERGY_DEFINITION,
-        ],
-        "plain_meaning": PLAIN_MEANING,
-        "then": TOTAL_CONSERVATION_CONCLUSION,
-    }
-    assert selection["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
+    assert selection["dependency_chain"] == DEPENDENCY_CHAIN
+    assert selection["matter_exchange_target_rule"] == MATTER_EXCHANGE_TARGET_RULE
+    assert selection["theorem_target_status"] == THEOREM_TARGET_STATUS
+    assert selection["watch_items"] == WATCH_ITEMS
     assert selection["proof_execution_authorized"] is False
     assert selection["proof_attempt_executed"] is False
     assert selection["theorem_discharged"] is False
@@ -169,12 +162,16 @@ def test_ck_family_selection_after_cexchange_records_theorem_shape_only() -> Non
     assert selection["rule_promoted"] is False
     assert selection["C_k_action_embedding_claimed"] is False
     assert selection["C_k_action_variation_executed"] is False
+    assert selection["full_maxwell_closure_claimed"] is False
+    assert selection["em_qft_closure_claimed"] is False
+    assert selection["qft_gr_closure_claimed"] is False
+    assert selection["gr_qm_closure_claimed"] is False
     assert selection["seam_closure_claim"] is False
     assert selection["empirical_validation_claimed"] is False
     assert selection["master_action_promoted"] is False
 
 
-def test_ck_family_selection_after_cexchange_records_lean_status() -> None:
+def test_ck_family_selection_after_psi_A_total_conservation_records_lean_status() -> None:
     selection = _json(DEFAULT_OUT)
 
     assert selection["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_SELECTION
@@ -190,7 +187,7 @@ def test_ck_family_selection_after_cexchange_records_lean_status() -> None:
     assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(selection)
 
 
-def test_ck_family_selection_after_cexchange_rotates_to_result_review() -> None:
+def test_ck_family_selection_after_psi_A_total_conservation_rotates_to_result_review() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
 
@@ -198,18 +195,16 @@ def test_ck_family_selection_after_cexchange_rotates_to_result_review() -> None:
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    is_current = assert_historical_target_recorded(
-        payload=registry,
-        previous_target=selection_consumed_target(),
-        live_target=NEXT_TARGET,
-        evidence=evidence,
-        lane=NEXT_TARGET,
-    )
-    assert is_current is False
+    assert registry["current_target_state"]["previous_live_next_target"] == selection_consumed_target()
+    assert registry["current_target_state"]["live_next_target"] == NEXT_TARGET
+    assert registry["current_target_state"]["active_lane"] == NEXT_TARGET
+    assert registry["current_target_state"]["live_next_target_evidence"] == evidence
+    assert registry["current_target_state"]["live_next_target_report"] == _rel(DEFAULT_OUT)
+    assert registry["current_target_state"]["live_next_target_outcome"] == OUTCOME_ID
     assert selection_consumed_target() in registry["completed_targets"]
     assert selection_consumed_target() in registry["consumed_targets"]
     assert selection_consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET in registry["paused_lanes"]
+    assert NEXT_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     consumed = _workstream(registry, selection_consumed_target())
@@ -225,51 +220,23 @@ def test_ck_family_selection_after_cexchange_rotates_to_result_review() -> None:
     assert consumed["theorem_discharged"] == "no"
     assert consumed["rule_promoted"] == "no"
 
-    review = _workstream(registry, NEXT_TARGET)
-    assert review["status"] == "paused"
-    assert review["authorization_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseoutResultReview.lean"
-    )
-    assert review["report"] == (
-        "formal/docs/release/"
-        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_RESULT_REVIEW_20260627_v0.json"
-    )
-    assert review["review_result"] == (
-        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_"
-        "RESULT_REVIEW_ACCEPTS_PSI_A_TOTAL_CONSERVATION_THEOREM_LINKAGE_GAP_SELECTION_"
-        "NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
-    )
-    assert review["selected_next_target"] == (
-        "prepare_psi_A_total_conservation_theorem_linkage_obligation_packet"
-    )
-    assert review["selected_obligation"] == SELECTED_OBLIGATION
-    assert review["proof_attempt_executed"] == "no"
-    assert review["theorem_discharged"] == "no"
-    assert review["rule_promoted"] == "no"
-
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == ("review_ck_family_theorem_linkage_obligation_selection_after_"
-        "psi_A_total_conservation_closeout_result")
-    assert active["consumed_target"] == ("select_next_ck_family_theorem_linkage_obligation_after_"
-        "psi_A_total_conservation_closeout")
-    assert active["selection_result"] == ("CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
-        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
-        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION")
+    assert active["workstream_id"] == NEXT_TARGET
+    assert active["authorization_evidence"] == evidence
+    assert active["report"] == _rel(DEFAULT_OUT)
+    assert active["consumed_target"] == selection_consumed_target()
+    assert active["selection_result"] == OUTCOME_ID
     assert active["review_result"] == "PENDING"
-    assert active["selected_obligation"] == "psi-A matter-sector exchange theorem-linkage gap"
+    assert active["selected_next_target"] == FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["selected_obligation"] == SELECTED_OBLIGATION
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
 
-def selection_consumed_target() -> str:
-    return "select_next_ck_family_theorem_linkage_obligation_after_cexchange_closeout"
-
-
-def test_ck_family_selection_after_cexchange_mirrors() -> None:
+def test_ck_family_selection_after_psi_A_total_conservation_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -294,34 +261,35 @@ def test_ck_family_selection_after_cexchange_mirrors() -> None:
         OUTCOME_ID,
         STRICT_SELECTION_RESULT,
         PACKET_CLASSIFICATION,
-        "CKFamilyTheoremLinkageObligationSelectionAfterCExchangeCloseout",
+        "CKFamilyTheoremLinkageObligationSelectionAfterPsiATotalConservationCloseout",
         selection_consumed_target(),
         NEXT_TARGET,
         NEXT_TARGET_KIND,
         FOLLOW_ON_TARGET_AFTER_REVIEW,
         SELECTED_OBLIGATION,
-        THEOREM_TARGET_STATEMENT,
-        GAUGE_EXCHANGE_ROUTE,
-        MATTER_EXCHANGE_ROUTE,
-        TOTAL_STRESS_ENERGY_DEFINITION,
-        TOTAL_CONSERVATION_CONCLUSION,
+        MATTER_EXCHANGE_TARGET_RULE,
+        WATCH_ITEMS[0],
+        WATCH_ITEMS[-1],
         LEAN_STATUS_WORDING_FOR_SELECTION,
-        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_OUTCOME_v0",
-        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_CEXCHANGE_CLOSEOUT_NONCLAIM_BOUNDARY_v0",
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_CONSERVATION_CLOSEOUT_OUTCOME_v0",
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_CONSERVATION_CLOSEOUT_NONCLAIM_BOUNDARY_v0",
         "no proof execution",
         "no theorem discharge",
         "no GAP-1 through GAP-8 global discharge",
         "no C_k rule promotion",
         "no action embedding",
         "no variation",
-        "no seam closure",
+        "no full Maxwell closure",
+        "no EM-QFT closure",
+        "no QFT-GR closure",
+        "no GR-QM closure",
         "no empirical validation",
         "no master-action promotion",
     ]:
         assert token in joined, token
 
 
-def test_ck_family_selection_after_cexchange_not_manifest_enrolled() -> None:
+def test_ck_family_selection_after_psi_A_total_conservation_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_gate.py"
+        "test_ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_gate.py"
     )

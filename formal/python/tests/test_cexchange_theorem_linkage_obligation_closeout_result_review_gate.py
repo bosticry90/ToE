@@ -244,8 +244,10 @@ def test_cexchange_closeout_result_review_rotates_to_selector() -> None:
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == PSI_A_PACKET_REVIEW_TARGET
-    assert active["consumed_target"] == PSI_A_PACKET_CONSUMED_TARGET
+    assert active["workstream_id"] == ("review_ck_family_theorem_linkage_obligation_selection_after_"
+        "psi_A_total_conservation_closeout_result")
+    assert active["consumed_target"] == ("select_next_ck_family_theorem_linkage_obligation_after_"
+        "psi_A_total_conservation_closeout")
 
     selector = _workstream(registry, NEXT_TARGET)
     assert selector["status"] == "paused"
@@ -270,10 +272,11 @@ def test_cexchange_closeout_result_review_rotates_to_selector() -> None:
     assert selector["theorem_discharged"] == "no"
     assert selector["rule_promoted"] == "no"
 
-    assert active["packet_result"] == PSI_A_PACKET_OUTCOME
+    assert active["selection_result"] == ("CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_TOTAL_"
+        "CONSERVATION_CLOSEOUT_SELECTS_PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_"
+        "GAP_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION")
     assert active["review_result"] == "PENDING"
-    assert active["selected_obligation"] == LIKELY_NEXT_OBLIGATION
-    assert active["general_C_k_theorem_linkage_closure"] == "no"
+    assert active["selected_obligation"] == "psi-A matter-sector exchange theorem-linkage gap"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 

@@ -9,7 +9,18 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
+)
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_report import (
+    DEFAULT_OUT as SELECTION_OUT,
+    FOLLOW_ON_TARGET_AFTER_REVIEW as SELECTION_FOLLOW_ON_TARGET_AFTER_REVIEW,
+    LEAN_PACKET_PATH as SELECTION_LEAN_PACKET_PATH,
+    NEXT_TARGET as SELECTION_REVIEW_TARGET,
+    OUTCOME_ID as SELECTION_OUTCOME,
+    SELECTED_OBLIGATION as SELECTION_SELECTED_OBLIGATION,
+    SELECTED_OBLIGATION_RANK as SELECTION_SELECTED_OBLIGATION_RANK,
+    STRICT_SELECTION_RESULT,
 )
 from formal.python.tools.psi_A_total_conservation_theorem_linkage_obligation_closeout_report import (
     CLOSEOUT_RESULT,
@@ -213,22 +224,33 @@ def test_psi_A_total_conservation_closeout_result_review_records_lean_status() -
 def test_psi_A_total_conservation_closeout_result_review_rotates_to_selector() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
+    selection_evidence = _rel(SELECTION_LEAN_PACKET_PATH)
 
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == consumed_target()
-    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
-    assert registry["ACTIVE_LANE_v0"] == NEXT_TARGET
-    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == evidence
-    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == _rel(DEFAULT_OUT)
-    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == OUTCOME_ID
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=consumed_target(),
+        live_target=NEXT_TARGET,
+        evidence=evidence,
+        lane=NEXT_TARGET,
+    )
+    assert is_current is False
+    assert registry["PREVIOUS_LIVE_NEXT_TARGET_v0"] == NEXT_TARGET
+    assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == SELECTION_REVIEW_TARGET
+    assert registry["ACTIVE_LANE_v0"] == SELECTION_REVIEW_TARGET
+    assert registry["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == selection_evidence
+    assert registry["CURRENT_LIVE_TARGET_REPORT_v0"] == _rel(SELECTION_OUT)
+    assert registry["CURRENT_LIVE_TARGET_OUTCOME_v0"] == SELECTION_OUTCOME
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    assert NEXT_TARGET in registry["paused_lanes"]
+    assert SELECTION_REVIEW_TARGET not in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert SELECTION_REVIEW_TARGET in registry["next_strict_target_coverage"]
 
     closeout = _workstream(
         registry,
@@ -255,19 +277,18 @@ def test_psi_A_total_conservation_closeout_result_review_rotates_to_selector() -
 
     active = active_workstream(registry)
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == OUTCOME_ID
-    assert active["review_result"] == OUTCOME_ID
-    assert active["selection_result"] == "PENDING"
-    assert active["selected_next_target"] == NEXT_TARGET
-    assert active["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert active["likely_selector_outcome"] == LIKELY_SELECTOR_OUTCOME
-    assert active["likely_next_obligation"] == LIKELY_NEXT_OBLIGATION
-    assert active["selected_obligation"] == LIKELY_NEXT_OBLIGATION
+    assert active["workstream_id"] == SELECTION_REVIEW_TARGET
+    assert active["active_lane"] == SELECTION_REVIEW_TARGET
+    assert active["authorization_evidence"] == selection_evidence
+    assert active["authorized_next_strict_target"] == SELECTION_REVIEW_TARGET
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["packet_result"] == SELECTION_OUTCOME
+    assert active["selection_result"] == SELECTION_OUTCOME
+    assert active["strict_selection_result"] == STRICT_SELECTION_RESULT
+    assert active["review_result"] == "PENDING"
+    assert active["selected_next_target"] == SELECTION_FOLLOW_ON_TARGET_AFTER_REVIEW
+    assert active["selected_obligation"] == SELECTION_SELECTED_OBLIGATION
+    assert active["selected_obligation_rank"] == SELECTION_SELECTED_OBLIGATION_RANK
     assert active["proof_execution_authorized"] == "no"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
