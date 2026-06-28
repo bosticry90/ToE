@@ -5,6 +5,7 @@ from pathlib import Path
 
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
+    skip_if_not_current_target,
 )
 from formal.python.tools.psi_A_gauge_sector_exchange_theorem_linkage_attempt_from_sourced_maxwell_route_execution_report import (
     ACCEPTED_GAUGE_STRESS_ENERGY_DIVERGENCE_IDENTITY,
@@ -169,6 +170,7 @@ def test_psi_A_gauge_exchange_attempt_execution_records_lean_status() -> None:
 
 def test_psi_A_gauge_exchange_attempt_execution_rotates_to_result_review() -> None:
     registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, RESULT_REVIEW_TARGET)
     state = registry["current_target_state"]
     evidence = EXECUTION_LEAN_REL
 
@@ -199,6 +201,9 @@ def test_psi_A_gauge_exchange_attempt_execution_rotates_to_result_review() -> No
 
 
 def test_psi_A_gauge_exchange_attempt_execution_mirrors() -> None:
+    registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, RESULT_REVIEW_TARGET)
+
     for path in [CURRENT_SURFACES_PATH, ROADMAP_PATH]:
         text = _read(path)
         assert f"CURRENT_LIVE_NEXT_TARGET_v0: {RESULT_REVIEW_TARGET}" in text
