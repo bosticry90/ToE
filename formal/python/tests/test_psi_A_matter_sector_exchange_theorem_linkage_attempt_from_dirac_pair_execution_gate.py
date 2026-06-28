@@ -227,7 +227,6 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
@@ -235,7 +234,12 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
     assert CONSUMED_EXECUTION_TARGET in registry["completed_targets"]
     assert CONSUMED_EXECUTION_TARGET in registry["consumed_targets"]
     assert CONSUMED_EXECUTION_TARGET in registry["paused_lanes"]
-    assert NEXT_TARGET not in registry["paused_lanes"]
+    if is_current:
+        assert NEXT_TARGET not in registry["paused_lanes"]
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     executed = workstream(CONSUMED_EXECUTION_TARGET, registry)
@@ -251,20 +255,39 @@ def test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review() -> N
     assert executed["rule_promoted"] == "no"
     assert executed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == _rel(DEFAULT_OUT)
-    assert active["consumed_target"] == CONSUMED_EXECUTION_TARGET
-    assert active["execution_result"] == OUTCOME_ID
-    assert active["strict_execution_result"] == STRICT_EXECUTION_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["proof_attempt_executed"] == "yes"
-    assert active["theorem_discharged"] == "yes"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["report"] == _rel(DEFAULT_OUT)
+        assert active["consumed_target"] == CONSUMED_EXECUTION_TARGET
+        assert active["execution_result"] == OUTCOME_ID
+        assert active["strict_execution_result"] == STRICT_EXECUTION_RESULT
+        assert active["review_result"] == "PENDING"
+        assert active["proof_attempt_executed"] == "yes"
+        assert active["theorem_discharged"] == "yes"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        reviewed = workstream(NEXT_TARGET, registry)
+        assert reviewed["status"] == "paused"
+        assert reviewed["execution_result"] == OUTCOME_ID
+        assert reviewed["strict_execution_result"] == STRICT_EXECUTION_RESULT
+        assert reviewed["proof_attempt_executed"] == "yes"
+        assert reviewed["theorem_discharged"] == "yes"
+        assert reviewed["rule_promoted"] == "no"
+
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == (
+            "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout"
+        )
+        assert active["consumed_target"] == NEXT_TARGET
+        assert active["execution_result"] == OUTCOME_ID
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
 
 
 def test_psi_A_matter_exchange_attempt_execution_mirrors() -> None:

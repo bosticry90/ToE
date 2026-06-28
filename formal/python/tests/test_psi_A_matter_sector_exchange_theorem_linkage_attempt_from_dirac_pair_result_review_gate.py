@@ -319,10 +319,20 @@ def test_psi_A_matter_exchange_attempt_result_review_rotates_to_execution() -> N
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == CONSUMED_TARGET
-        assert active["consumed_target"] == NEXT_TARGET
+        assert active["workstream_id"] in {
+            CONSUMED_TARGET,
+            "prepare_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout",
+        }
+        assert active["consumed_target"] in {NEXT_TARGET, CONSUMED_TARGET}
         assert active["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
-        assert active["review_result"] == "PENDING"
+        if active["workstream_id"] == CONSUMED_TARGET:
+            assert active["review_result"] == "PENDING"
+        else:
+            assert active["review_result"] == (
+                "PSI_A_MATTER_SECTOR_EXCHANGE_THEOREM_LINKAGE_ATTEMPT_FROM_DIRAC_PAIR_"
+                "RESULT_REVIEW_ACCEPTS_MATTER_EXCHANGE_ROUTE_CONSTRUCTED_NO_CK_RULE_"
+                "PROMOTION_OR_MASTER_ACTION_PROMOTION"
+            )
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
 
