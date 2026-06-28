@@ -220,7 +220,7 @@ def test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review() -> None
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
-    if is_current:
+    if is_current or active_workstream(registry)["workstream_id"] == NEXT_TARGET:
         assert NEXT_TARGET not in registry["paused_lanes"]
     else:
         assert NEXT_TARGET in registry["paused_lanes"]
@@ -252,15 +252,14 @@ def test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review() -> None
 
     result_review = workstream(NEXT_TARGET, registry)
     active = active_workstream(registry)
-    if active["workstream_id"] == NEXT_TARGET:
-        active = active_workstream(registry)
+    if is_current:
         assert active["status"] == "active"
         assert active["workstream_id"] == NEXT_TARGET
         assert active["active_lane"] == NEXT_TARGET
         reviewed = active
         review_target_is_current = True
     else:
-        assert result_review["status"] == "paused"
+        assert result_review["status"] in {"active", "paused"}
         reviewed = result_review
         review_target_is_current = False
     assert reviewed["attempt_preparation_result"] == OUTCOME_ID
@@ -274,20 +273,29 @@ def test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review() -> None
         assert reviewed["packet_result"] == OUTCOME_ID
         assert reviewed["review_result"] == "PENDING"
     else:
-        assert reviewed["consumed_target"] == NEXT_TARGET
+        assert reviewed["consumed_target"] in {NEXT_TARGET, LIKELY_POST_REVIEW_TARGET}
         assert reviewed["authorization_evidence"] != evidence
         assert reviewed["report"] != _rel(DEFAULT_OUT)
-        assert reviewed["packet_result"] != OUTCOME_ID
-        assert reviewed["review_result"] != "PENDING"
-    assert reviewed["selected_next_target"] == LIKELY_POST_REVIEW_TARGET
-    assert reviewed["selected_next_target_kind"] == (
-        "psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution"
-    )
+        if reviewed["status"] == "paused":
+            assert reviewed["packet_result"] != OUTCOME_ID
+            assert reviewed["review_result"] != "PENDING"
+            assert reviewed["selected_next_target"] == LIKELY_POST_REVIEW_TARGET
+            assert reviewed["selected_next_target_kind"] == (
+                "psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution"
+            )
+        else:
+            assert reviewed["packet_result"] != OUTCOME_ID
+            assert reviewed["review_result"] == "PENDING"
+            assert reviewed["execution_result"] != "PENDING"
     assert reviewed["theorem_target_statement"] == THEOREM_TARGET_STATEMENT
     assert reviewed["planned_proof_steps"] == PLANNED_PROOF_STEPS
     assert reviewed["watch_items"] == "; ".join(WATCH_ITEMS)
-    assert reviewed["proof_attempt_executed"] == "no"
-    assert reviewed["theorem_discharged"] == "no"
+    if is_current or reviewed["status"] == "paused":
+        assert reviewed["proof_attempt_executed"] == "no"
+        assert reviewed["theorem_discharged"] == "no"
+    else:
+        assert reviewed["proof_attempt_executed"] == "yes"
+        assert reviewed["theorem_discharged"] == "yes"
     assert reviewed["rule_promoted"] == "no"
     assert reviewed["master_action_promoted"] == "no"
 
