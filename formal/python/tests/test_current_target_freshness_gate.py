@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "select_next_ck_family_theorem_linkage_obligation_after_psi_A_exchange_chain_closeout"
+    "review_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_psi_A_interaction_exchange_theorem_linkage_chain_closeout_result"
+    "select_next_ck_family_theorem_linkage_obligation_after_psi_A_exchange_chain_closeout"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "select_next_ck_family_theorem_linkage_obligation_after_psi_A_exchange_chain_closeout"
+    "review_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PsiAInteractionExchangeTheoremLinkageChainCloseoutResultReview.lean"
+    / "CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,13 +2424,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_CLOSEOUT_RESULT_REVIEW_"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_EXCHANGE_"
+        "CHAIN_CLOSEOUT_"
         "20260628_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_CLOSEOUT_RESULT_REVIEW_"
-        "ACCEPTS_LOCAL_CEXCHANGE_TOTAL_MATTER_AND_GAUGE_DEPENDENCY_CHAIN_NO_CK_RULE_"
-        "PROMOTION_OR_SEAM_CLOSURE"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_EXCHANGE_CHAIN_"
+        "CLOSEOUT_SELECTS_C_SOURCE_A_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_"
+        "MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3747,6 +3748,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     psi_A_interaction_exchange_chain_selector_obligation = (
         "C_source^A theorem-linkage obligation"
     )
+    psi_A_exchange_chain_selector_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_EXCHANGE_CHAIN_"
+        "CLOSEOUT_SELECTS_C_SOURCE_A_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_"
+        "MASTER_ACTION_PROMOTION"
+    )
+    psi_A_exchange_chain_strict_selector_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_EXCHANGE_CHAIN_"
+        "CLOSEOUT_SELECTS_A_SOURCE_LINKAGE_OBLIGATION_NO_GAP_DISCHARGE_OR_CK_RULE_"
+        "PROMOTION"
+    )
+    psi_A_exchange_chain_selector_report = (
+        "formal/docs/release/"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_EXCHANGE_"
+        "CHAIN_CLOSEOUT_20260628_v0.json"
+    )
+    psi_A_exchange_chain_closeout_result_review_target = (
+        "review_psi_A_interaction_exchange_theorem_linkage_chain_closeout_result"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3756,35 +3775,27 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert interaction_active_workstream["report"] == (
-        "formal/docs/release/"
-        "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_CLOSEOUT_RESULT_REVIEW_"
-        "20260628_v0.json"
-    )
+    assert interaction_active_workstream["report"] == psi_A_exchange_chain_selector_report
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["review_result"] == (
-        psi_A_interaction_exchange_chain_closeout_result_review_outcome
+    assert interaction_active_workstream["selector_outcome"] == (
+        psi_A_exchange_chain_selector_outcome
     )
-    assert interaction_active_workstream["strict_review_result"] == (
-        psi_A_interaction_exchange_chain_closeout_result_review_strict_outcome
+    assert interaction_active_workstream["strict_selector_outcome"] == (
+        psi_A_exchange_chain_strict_selector_outcome
     )
+    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["strict_review_result"] == "PENDING"
     assert (
         interaction_active_workstream["selected_obligation"]
         == psi_A_interaction_exchange_chain_selector_obligation
     )
-    assert interaction_active_workstream["selector_outcome"] == "PENDING"
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
-    assert interaction_active_workstream["C_exchange_linkage_included"] == "yes"
-    assert interaction_active_workstream["total_conservation_linkage_included"] == "yes"
-    assert interaction_active_workstream["matter_sector_exchange_linkage_included"] == "yes"
-    assert interaction_active_workstream["gauge_sector_exchange_linkage_included"] == "yes"
     assert (
-        interaction_active_workstream[
-            "local_psi_A_interaction_exchange_support_chain_closed"
-        ]
+        interaction_active_workstream["psi_A_exchange_chain_closeout_review_accepted"]
         == "yes"
     )
+    assert interaction_active_workstream["selector_only"] == "yes"
     assert interaction_active_workstream["proof_execution_authorized"] == "no"
     assert interaction_active_workstream["proof_attempt_executed"] == "no"
     assert interaction_active_workstream["theorem_discharged"] == "no"
@@ -3800,7 +3811,27 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["empirical_validation_claimed"] == "no"
     assert interaction_active_workstream["master_action_promoted"] == "no"
 
-    consumed_closeout_result_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_selector = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_selector["status"] == "paused"
+    assert consumed_selector["report"] == psi_A_exchange_chain_selector_report
+    assert consumed_selector["selector_outcome"] == psi_A_exchange_chain_selector_outcome
+    assert consumed_selector["strict_selector_outcome"] == (
+        psi_A_exchange_chain_strict_selector_outcome
+    )
+    assert consumed_selector["selected_next_target"] == LIVE_TARGET
+    assert consumed_selector["selected_obligation"] == (
+        psi_A_interaction_exchange_chain_selector_obligation
+    )
+    assert consumed_selector["selector_only"] == "yes"
+    assert consumed_selector["proof_execution_authorized"] == "no"
+    assert consumed_selector["theorem_discharged"] == "no"
+    assert consumed_selector["gap_discharged"] == "no"
+    assert consumed_selector["rule_promoted"] == "no"
+    assert consumed_selector["master_action_promoted"] == "no"
+
+    consumed_closeout_result_review = _workstream(
+        payload, psi_A_exchange_chain_closeout_result_review_target
+    )
     assert consumed_closeout_result_review["status"] == "paused"
     assert consumed_closeout_result_review["report"] == (
         "formal/docs/release/"
@@ -3813,7 +3844,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_closeout_result_review["strict_review_result"] == (
         psi_A_interaction_exchange_chain_closeout_result_review_strict_outcome
     )
-    assert consumed_closeout_result_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_closeout_result_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_closeout_result_review["C_exchange_linkage_included"] == "yes"
     assert consumed_closeout_result_review["total_conservation_linkage_included"] == "yes"
     assert consumed_closeout_result_review["matter_sector_exchange_linkage_included"] == "yes"
@@ -3838,7 +3869,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_closeout["strict_closeout_result"] == (
         psi_A_interaction_exchange_chain_closeout_strict_outcome
     )
-    assert consumed_closeout["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        consumed_closeout["selected_next_target"]
+        == psi_A_exchange_chain_closeout_result_review_target
+    )
     assert consumed_closeout["C_exchange_linkage_locally_closed"] == "yes"
     assert consumed_closeout["total_conservation_linkage_locally_closed"] == "yes"
     assert consumed_closeout["matter_sector_exchange_linkage_locally_closed"] == "yes"

@@ -10,6 +10,8 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
+set_option linter.style.longLine false
+
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
 def currentTarget : String :=
@@ -20,7 +22,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "select_next_ck_family_theorem_linkage_obligation_after_psi_A_exchange_chain_closeout" := by
+      "review_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result" := by
   rfl
 
 end CurrentAuthority
