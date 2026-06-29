@@ -292,16 +292,34 @@ def test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet
 
         active = active_workstream(registry)
         assert active["status"] == "active"
-        assert active["workstream_id"] == A_SOURCE_PACKET_REVIEW_TARGET
-        assert active["active_lane"] == A_SOURCE_PACKET_REVIEW_TARGET
-        assert active["authorization_evidence"] == _rel(A_SOURCE_PACKET_LEAN_PACKET_PATH)
-        assert active["authorized_next_strict_target"] == A_SOURCE_PACKET_REVIEW_TARGET
-        assert active["report"] == _rel(A_SOURCE_PACKET_OUT)
-        assert active["consumed_target"] == NEXT_TARGET
-        assert active["packet_result"] == A_SOURCE_PACKET_OUTCOME
-        assert active["strict_packet_result"] == A_SOURCE_PACKET_STRICT_OUTCOME
-        assert active["review_result"] == "PENDING"
-        assert active["selected_next_target"] == "PENDING"
+        if active["workstream_id"] == A_SOURCE_PACKET_REVIEW_TARGET:
+            assert active["active_lane"] == A_SOURCE_PACKET_REVIEW_TARGET
+            assert active["authorization_evidence"] == _rel(
+                A_SOURCE_PACKET_LEAN_PACKET_PATH
+            )
+            assert active["authorized_next_strict_target"] == A_SOURCE_PACKET_REVIEW_TARGET
+            assert active["report"] == _rel(A_SOURCE_PACKET_OUT)
+            assert active["consumed_target"] == NEXT_TARGET
+            assert active["packet_result"] == A_SOURCE_PACKET_OUTCOME
+            assert active["strict_packet_result"] == A_SOURCE_PACKET_STRICT_OUTCOME
+            assert active["review_result"] == "PENDING"
+            assert active["selected_next_target"] == "PENDING"
+        else:
+            review = _workstream(registry, A_SOURCE_PACKET_REVIEW_TARGET)
+            assert review["status"] == "paused"
+            assert review["prepared_packet_result"] == A_SOURCE_PACKET_OUTCOME
+            assert review["selected_next_target"] == (
+                "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
+            )
+            assert active["workstream_id"] == (
+                "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
+            )
+            assert active["consumed_target"] == A_SOURCE_PACKET_REVIEW_TARGET
+            assert active["review_result"] == (
+                "A_SOURCE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_"
+                "C_SOURCE_A_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION"
+            )
+            assert active["attempt_preparation_result"] == "PENDING"
         assert active["proof_execution_authorized"] == "no"
         assert active["C_source_A_discharged"] == "no"
 

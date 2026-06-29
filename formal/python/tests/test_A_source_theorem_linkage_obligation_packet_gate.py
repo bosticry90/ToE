@@ -215,7 +215,7 @@ def test_A_source_theorem_linkage_obligation_packet_rotates_to_review() -> None:
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -243,27 +243,34 @@ def test_A_source_theorem_linkage_obligation_packet_rotates_to_review() -> None:
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["packet_result"] == OUTCOME_ID
-    assert active["strict_packet_result"] == STRICT_PACKET_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["selected_obligation"] == "C_source^A theorem-linkage obligation"
-    assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
-    assert active["psi_A_sourced_route_substituted"] == "no"
-    assert active["proof_execution_authorized"] == "no"
-    assert active["C_source_A_discharged"] == "no"
-    assert active["sourced_maxwell_closure_claimed"] == "no"
-    assert active["full_maxwell_closure_claimed"] == "no"
-    assert active["qft_gr_closure_claimed"] == "no"
-    assert active["master_action_promoted"] == "no"
+    review_row = _workstream(registry, NEXT_TARGET)
+    if is_current:
+        assert review_row["status"] == "active"
+        assert review_row["workstream_id"] == NEXT_TARGET
+        assert review_row["active_lane"] == NEXT_TARGET
+        assert review_row["authorization_evidence"] == evidence
+        assert review_row["authorized_next_strict_target"] == NEXT_TARGET
+        assert review_row["report"] == report
+        assert review_row["consumed_target"] == consumed_target()
+        assert review_row["packet_result"] == OUTCOME_ID
+        assert review_row["strict_packet_result"] == STRICT_PACKET_RESULT
+        assert review_row["review_result"] == "PENDING"
+        assert review_row["selected_next_target"] == "PENDING"
+    else:
+        assert review_row["status"] == "paused"
+        assert review_row["prepared_packet_result"] == OUTCOME_ID
+        assert review_row["selected_next_target"] == (
+            "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
+        )
+    assert review_row["selected_obligation"] == "C_source^A theorem-linkage obligation"
+    assert review_row["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
+    assert review_row["psi_A_sourced_route_substituted"] == "no"
+    assert review_row["proof_execution_authorized"] == "no"
+    assert review_row["C_source_A_discharged"] == "no"
+    assert review_row["sourced_maxwell_closure_claimed"] == "no"
+    assert review_row["full_maxwell_closure_claimed"] == "no"
+    assert review_row["qft_gr_closure_claimed"] == "no"
+    assert review_row["master_action_promoted"] == "no"
 
 
 def test_A_source_theorem_linkage_obligation_packet_mirrors() -> None:
