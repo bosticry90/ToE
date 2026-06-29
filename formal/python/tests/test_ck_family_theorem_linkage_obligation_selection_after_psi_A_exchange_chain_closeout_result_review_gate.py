@@ -323,6 +323,22 @@ def test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet
             )
             assert active["attempt_preparation_result"] == "PENDING"
         else:
+            attempt_review_target = (
+                "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
+            )
+            execution_target = (
+                "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
+            )
+            attempt_result = (
+                "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_PREPARED_"
+                "C_SOURCE_A_LINKAGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_"
+                "PROMOTION"
+            )
+            attempt_review_result = (
+                "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+                "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
+                "RULE_PROMOTION"
+            )
             review = _workstream(registry, A_SOURCE_PACKET_REVIEW_TARGET)
             assert review["status"] == "paused"
             assert review["prepared_packet_result"] == A_SOURCE_PACKET_OUTCOME
@@ -334,21 +350,23 @@ def test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet
                 "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route",
             )
             assert attempt["status"] == "paused"
-            assert attempt["attempt_preparation_result"] == (
-                "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_PREPARED_"
-                "C_SOURCE_A_LINKAGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_"
-                "PROMOTION"
-            )
-            assert attempt["selected_next_target"] == (
-                "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
-            )
-            assert active["workstream_id"] == (
-                "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
-            )
-            assert active["consumed_target"] == (
-                "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
-            )
-            assert active["review_result"] == "PENDING"
+            assert attempt["attempt_preparation_result"] == attempt_result
+            assert attempt["selected_next_target"] == attempt_review_target
+            if active["workstream_id"] == attempt_review_target:
+                assert active["consumed_target"] == (
+                    "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
+                )
+                assert active["review_result"] == "PENDING"
+            else:
+                attempt_review = _workstream(registry, attempt_review_target)
+                assert attempt_review["status"] == "paused"
+                assert attempt_review["attempt_preparation_result"] == attempt_result
+                assert attempt_review["review_result"] == attempt_review_result
+                assert attempt_review["selected_next_target"] == execution_target
+                assert active["workstream_id"] == execution_target
+                assert active["consumed_target"] == attempt_review_target
+                assert active["review_result"] == attempt_review_result
+                assert active["execution_result"] == "PENDING"
         assert active["proof_execution_authorized"] == "no"
         assert active["C_source_A_discharged"] == "no"
 

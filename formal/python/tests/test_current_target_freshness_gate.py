@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
+    "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
+    "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
+    "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ASourceTheoremLinkageAttemptFromStandaloneARoute.lean"
+    / "ASourceTheoremLinkageAttemptFromStandaloneARouteResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,13 +2424,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_"
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
         "20260628_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_PREPARED_"
-        "C_SOURCE_A_LINKAGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_"
-        "PROMOTION"
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+        "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
+        "RULE_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3817,6 +3817,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     A_source_packet_review_target = (
         "review_A_source_theorem_linkage_obligation_packet_result"
     )
+    A_source_attempt_target = (
+        "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
+    )
     A_source_attempt_report = (
         "formal/docs/release/"
         "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_"
@@ -3832,6 +3835,31 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "STANDALONE_A_STRESS_CONSERVATION_ROUTE_NO_SOURCED_MAXWELL_"
         "SUBSTITUTION_OR_MASTER_ACTION_PROMOTION"
     )
+    A_source_attempt_result_review_report = (
+        "formal/docs/release/"
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+        "20260628_v0.json"
+    )
+    A_source_attempt_result_review_outcome = (
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+        "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
+        "RULE_PROMOTION"
+    )
+    A_source_attempt_result_review_strict_outcome = (
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+        "ACCEPTS_STANDALONE_A_STRESS_CONSERVATION_ROUTE_PREPARED_NO_SOURCED_"
+        "MAXWELL_SUBSTITUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    A_source_suggested_execution_outcome = (
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_EXECUTED_"
+        "C_SOURCE_A_LINKAGE_CONSTRUCTED_NO_CK_RULE_PROMOTION_OR_MASTER_ACTION_"
+        "PROMOTION"
+    )
+    A_source_strict_suggested_execution_outcome = (
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_EXECUTED_"
+        "C_SOURCE_A_ZERO_FROM_STANDALONE_STRESS_CONSERVATION_NO_SOURCED_MAXWELL_"
+        "SUBSTITUTION_OR_SEAM_CLOSURE"
+    )
     A_source_attempt_residual_definition = (
         "C_source^{A,nu} := nabla_mu T_A^{mu nu}"
     )
@@ -3845,8 +3873,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert interaction_active_workstream["report"] == A_source_attempt_report
+    assert interaction_active_workstream["report"] == A_source_attempt_result_review_report
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert interaction_active_workstream["packet_result"] == (
+        A_source_attempt_result_review_outcome
+    )
     assert (
         interaction_active_workstream["attempt_preparation_result"]
         == A_source_attempt_outcome
@@ -3855,8 +3886,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream["strict_attempt_preparation_result"]
         == A_source_attempt_strict_outcome
     )
-    assert interaction_active_workstream["review_result"] == "PENDING"
-    assert interaction_active_workstream["strict_review_result"] == "PENDING"
+    assert (
+        interaction_active_workstream["review_result"]
+        == A_source_attempt_result_review_outcome
+    )
+    assert (
+        interaction_active_workstream["strict_review_result"]
+        == A_source_attempt_result_review_strict_outcome
+    )
+    assert interaction_active_workstream["execution_result"] == "PENDING"
+    assert interaction_active_workstream["strict_execution_result"] == "PENDING"
+    assert interaction_active_workstream["suggested_execution_outcome"] == (
+        A_source_suggested_execution_outcome
+    )
+    assert interaction_active_workstream["strict_suggested_execution_outcome"] == (
+        A_source_strict_suggested_execution_outcome
+    )
     assert (
         interaction_active_workstream["selected_obligation"]
         == psi_A_interaction_exchange_chain_selector_obligation
@@ -3922,7 +3967,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_A_source_review["strict_review_result"] == (
         A_source_packet_strict_review_outcome
     )
-    assert consumed_A_source_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_A_source_review["selected_next_target"] == A_source_attempt_target
     assert consumed_A_source_review["source_admissibility_condition"] == (
         A_source_packet_source_condition
     )
@@ -3933,7 +3978,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_A_source_review["rule_promoted"] == "no"
     assert consumed_A_source_review["master_action_promoted"] == "no"
 
-    consumed_A_source_attempt = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_A_source_attempt = _workstream(payload, A_source_attempt_target)
     assert consumed_A_source_attempt["status"] == "paused"
     assert consumed_A_source_attempt["report"] == A_source_attempt_report
     assert consumed_A_source_attempt["attempt_preparation_result"] == (
@@ -3942,7 +3987,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_A_source_attempt["strict_attempt_preparation_result"] == (
         A_source_attempt_strict_outcome
     )
-    assert consumed_A_source_attempt["selected_next_target"] == LIVE_TARGET
+    assert consumed_A_source_attempt["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_A_source_attempt["C_source_A_residual_definition"] == (
         A_source_attempt_residual_definition
     )
@@ -3958,6 +4003,41 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_A_source_attempt["theorem_discharged"] == "no"
     assert consumed_A_source_attempt["rule_promoted"] == "no"
     assert consumed_A_source_attempt["master_action_promoted"] == "no"
+
+    consumed_A_source_attempt_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_A_source_attempt_review["status"] == "paused"
+    assert (
+        consumed_A_source_attempt_review["report"]
+        == A_source_attempt_result_review_report
+    )
+    assert consumed_A_source_attempt_review["attempt_preparation_result"] == (
+        A_source_attempt_outcome
+    )
+    assert consumed_A_source_attempt_review["strict_attempt_preparation_result"] == (
+        A_source_attempt_strict_outcome
+    )
+    assert consumed_A_source_attempt_review["review_result"] == (
+        A_source_attempt_result_review_outcome
+    )
+    assert consumed_A_source_attempt_review["strict_review_result"] == (
+        A_source_attempt_result_review_strict_outcome
+    )
+    assert consumed_A_source_attempt_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_A_source_attempt_review["C_source_A_residual_definition"] == (
+        A_source_attempt_residual_definition
+    )
+    assert consumed_A_source_attempt_review["source_admissibility_condition"] == (
+        A_source_packet_source_condition
+    )
+    assert consumed_A_source_attempt_review["target_conclusion"] == (
+        A_source_attempt_target_conclusion
+    )
+    assert consumed_A_source_attempt_review["J_current_imported"] == "no"
+    assert consumed_A_source_attempt_review["psi_A_sourced_route_substituted"] == "no"
+    assert consumed_A_source_attempt_review["C_source_A_discharged"] == "no"
+    assert consumed_A_source_attempt_review["theorem_discharged"] == "no"
+    assert consumed_A_source_attempt_review["rule_promoted"] == "no"
+    assert consumed_A_source_attempt_review["master_action_promoted"] == "no"
 
     consumed_selector_review = _workstream(payload, psi_A_exchange_chain_selector_review_target)
     assert consumed_selector_review["status"] == "paused"

@@ -13,33 +13,36 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_public_surfaces_match_registry,
 )
 from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_report import (
-    BOUNDARY_ITEMS,
+    DEFAULT_OUT as ATTEMPT_OUT,
+    LEAN_PACKET_PATH as ATTEMPT_LEAN_PACKET_PATH,
+    OUTCOME_ID as ATTEMPT_OUTCOME,
+    STRICT_ATTEMPT_PREPARATION_RESULT,
+)
+from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_result_review_report import (
+    ACCEPTED_REVIEW_FINDINGS,
+    BLOCKED_CLAIMS,
     C_SOURCE_A_RESIDUAL_DEFINITION,
     DEFAULT_OUT,
+    EXECUTION_ROUTE_TO_AUTHORIZE,
     LEAN_PACKET_PATH,
-    LEAN_STATUS_WORDING_FOR_PACKET,
+    LEAN_STATUS_WORDING_FOR_REVIEW,
     LINKAGE_ROUTE,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
-    PREPARED_LINKAGE_TARGET,
     PSI_A_SOURCED_MAXWELL_ROUTE,
     PSI_A_SOURCED_ROUTE_CONTAMINATION_GUARD,
     SCHEMA_ID,
     SOURCE_ADMISSIBILITY_CONDITION,
     STANDALONE_A_ROUTE,
-    STRICT_ATTEMPT_PREPARATION_RESULT,
+    STRICT_REVIEW_RESULT,
+    STRICT_SUGGESTED_EXECUTION_OUTCOME,
+    SUGGESTED_EXECUTION_OUTCOME,
     TARGET_CONCLUSION,
     WATCH_ITEMS,
-    build_A_source_theorem_linkage_attempt_from_standalone_A_route,
-)
-from formal.python.tools.A_source_theorem_linkage_obligation_packet_result_review_report import (
-    DEFAULT_OUT as REVIEW_OUT,
-    LEAN_PACKET_PATH as REVIEW_LEAN_PACKET_PATH,
-    OUTCOME_ID as REVIEW_OUTCOME,
-    STRICT_REVIEW_RESULT,
+    build_A_source_theorem_linkage_attempt_from_standalone_A_route_result_review,
 )
 
 
@@ -49,7 +52,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "A_source_theorem_linkage_attempt_from_standalone_A_route_report.py"
+    / "A_source_theorem_linkage_attempt_from_standalone_A_route_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -107,10 +110,14 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
 
 
 def consumed_target() -> str:
+    return "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
+
+
+def preparation_target() -> str:
     return "prepare_A_source_theorem_linkage_attempt_from_standalone_A_route"
 
 
-def test_A_source_standalone_attempt_files_exist() -> None:
+def test_A_source_standalone_attempt_result_review_files_exist() -> None:
     for path in [
         DEFAULT_OUT,
         TOOL_PATH,
@@ -122,73 +129,79 @@ def test_A_source_standalone_attempt_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_A_source_standalone_attempt_prepares_indexed_route() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_A_source_standalone_attempt_result_review_accepts_preparation() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert packet["artifact_id"] == SCHEMA_ID
-    assert packet["schema_id"] == SCHEMA_ID
-    assert packet["packet_id"] == PACKET_ID
-    assert packet["prepared"] is True
-    assert packet["accepted"] is True
-    assert packet["attempt_prepared"] is True
-    assert packet["outcome_id"] == OUTCOME_ID
-    assert packet["attempt_preparation_result"] == OUTCOME_ID
-    assert packet["packet_result"] == OUTCOME_ID
-    assert packet["strict_attempt_preparation_result"] == (
+    assert review["artifact_id"] == SCHEMA_ID
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["reviewed"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == OUTCOME_ID
+    assert review["packet_result"] == OUTCOME_ID
+    assert review["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == consumed_target()
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert review["suggested_execution_outcome"] == SUGGESTED_EXECUTION_OUTCOME
+    assert review["strict_suggested_execution_outcome"] == (
+        STRICT_SUGGESTED_EXECUTION_OUTCOME
+    )
+    assert review["attempt_preparation_result"] == ATTEMPT_OUTCOME
+    assert review["attempt_strict_preparation_result"] == (
         STRICT_ATTEMPT_PREPARATION_RESULT
     )
-    assert packet["packet_classification"] == PACKET_CLASSIFICATION
-    assert packet["consumed_target"] == consumed_target()
-    assert packet["selected_next_target"] == NEXT_TARGET
-    assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert packet["watch_items"] == WATCH_ITEMS
-    assert packet["boundary_items"] == BOUNDARY_ITEMS
+    assert review["accepted_review_findings"] == ACCEPTED_REVIEW_FINDINGS
+    assert review["blocked_claims"] == BLOCKED_CLAIMS
     assert (
-        build_A_source_theorem_linkage_attempt_from_standalone_A_route()
-        == packet
+        build_A_source_theorem_linkage_attempt_from_standalone_A_route_result_review()
+        == review
     )
 
 
-def test_A_source_standalone_attempt_preserves_stress_conservation_route() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_A_source_standalone_attempt_result_review_preserves_route() -> None:
+    review = _json(DEFAULT_OUT)
 
-    assert packet["standalone_A_sector_route"] == STANDALONE_A_ROUTE
-    assert packet["standalone_A_sector_route_preserved"] is True
-    assert packet["standalone_A_stress_conservation_route"] == (
+    assert review["standalone_A_sector_route"] == STANDALONE_A_ROUTE
+    assert review["standalone_A_sector_route_preserved"] is True
+    assert review["standalone_A_stress_conservation_route"] == (
         SOURCE_ADMISSIBILITY_CONDITION
     )
-    assert packet["source_admissibility_condition"] == (
-        "nabla_mu T_A^{mu nu} = 0"
-    )
-    assert packet["C_source_A_residual_definition"] == (
+    assert review["source_admissibility_condition"] == "nabla_mu T_A^{mu nu} = 0"
+    assert review["C_source_A_residual_definition"] == (
         C_SOURCE_A_RESIDUAL_DEFINITION
     )
-    assert packet["target_conclusion"] == TARGET_CONCLUSION
-    assert packet["prepared_linkage_target"] == PREPARED_LINKAGE_TARGET
-    assert packet["linkage_route"] == LINKAGE_ROUTE
-    assert packet["route_kind"] == "standalone_A_stress_conservation"
-    assert packet["source_free_standalone_boundary_preserved"] is True
+    assert review["target_conclusion"] == TARGET_CONCLUSION
+    assert review["execution_route_to_authorize"] == EXECUTION_ROUTE_TO_AUTHORIZE
+    assert review["linkage_route"] == LINKAGE_ROUTE
+    assert review["watch_items"] == WATCH_ITEMS
+    assert review["route_kind"] == "standalone_A_stress_conservation"
+    assert review["source_free_standalone_boundary_preserved"] is True
 
 
-def test_A_source_standalone_attempt_blocks_J_and_psi_A_sourced_route() -> None:
-    packet = _json(DEFAULT_OUT)
-    route_text = " ".join(packet["linkage_route"])
+def test_A_source_standalone_attempt_result_review_blocks_J_and_psi_A_route() -> None:
+    review = _json(DEFAULT_OUT)
+    route_text = " ".join(review["execution_route_to_authorize"])
 
-    assert packet["J_current_imported"] is False
-    assert packet["psi_A_sourced_maxwell_route"] == PSI_A_SOURCED_MAXWELL_ROUTE
-    assert packet["psi_A_sourced_route_substituted"] is False
-    assert packet["sourced_Maxwell_route_substituted"] is False
-    assert packet["do_not_silently_substitute_psi_A_sourced_Maxwell_route"] is True
-    assert packet["route_contamination_guard"] == PSI_A_SOURCED_ROUTE_CONTAMINATION_GUARD
+    assert review["J_current_imported"] is False
+    assert review["psi_A_sourced_maxwell_route"] == PSI_A_SOURCED_MAXWELL_ROUTE
+    assert review["psi_A_sourced_route_substituted"] is False
+    assert review["sourced_Maxwell_route_substituted"] is False
+    assert review["do_not_silently_substitute_psi_A_sourced_Maxwell_route"] is True
+    assert review["route_contamination_guard"] == PSI_A_SOURCED_ROUTE_CONTAMINATION_GUARD
     assert "J^alpha" not in route_text
     assert "J current" not in route_text
     assert "nabla_mu F^{mu alpha} = J^alpha" not in route_text
 
 
-def test_A_source_standalone_attempt_preserves_boundaries() -> None:
-    packet = _json(DEFAULT_OUT)
+def test_A_source_standalone_attempt_result_review_preserves_boundaries() -> None:
+    review = _json(DEFAULT_OUT)
 
     for flag in [
+        "review_executes_theorem",
         "proof_execution_authorized",
         "proof_attempt_executed",
         "theorem_execution_authorized",
@@ -219,19 +232,19 @@ def test_A_source_standalone_attempt_preserves_boundaries() -> None:
         "seam_closure_claim",
         "master_action_promoted",
     ]:
-        assert packet[flag] is False, flag
+        assert review[flag] is False, flag
 
-    assert packet["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_PACKET
+    assert review["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_REVIEW
     assert (
-        packet["full_toeformal_aggregate_status_for_packet"]
+        review["full_toeformal_aggregate_status_for_review"]
         == "NOT_COMPLETED_PARALLEL_FILE_LOCK_COLLISION"
     )
-    assert packet["scoped_lean_targets_status_for_packet"] == "PASSED_SERIAL_RERUN"
-    assert packet["full_toeformal_aggregate_passed"] is False
-    assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(packet)
+    assert review["scoped_lean_targets_status_for_review"] == "PASSED_SERIAL_RERUN"
+    assert review["full_toeformal_aggregate_passed"] is False
+    assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(review)
 
 
-def test_A_source_standalone_attempt_rotates_to_result_review() -> None:
+def test_A_source_standalone_attempt_result_review_rotates_to_execution() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
     report = _rel(DEFAULT_OUT)
@@ -240,7 +253,7 @@ def test_A_source_standalone_attempt_rotates_to_result_review() -> None:
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    is_current = assert_historical_target_recorded(
+    assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -253,24 +266,23 @@ def test_A_source_standalone_attempt_rotates_to_result_review() -> None:
     assert consumed_target() in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
-    prior_review = _workstream(
-        registry, "review_A_source_theorem_linkage_obligation_packet_result"
+    attempt = _workstream(registry, preparation_target())
+    assert attempt["status"] == "paused"
+    assert attempt["authorization_evidence"] == _rel(ATTEMPT_LEAN_PACKET_PATH)
+    assert attempt["report"] == _rel(ATTEMPT_OUT)
+    assert attempt["attempt_preparation_result"] == ATTEMPT_OUTCOME
+    assert attempt["strict_attempt_preparation_result"] == (
+        STRICT_ATTEMPT_PREPARATION_RESULT
     )
-    assert prior_review["status"] == "paused"
-    assert prior_review["authorization_evidence"] == _rel(REVIEW_LEAN_PACKET_PATH)
-    assert prior_review["report"] == _rel(REVIEW_OUT)
-    assert prior_review["review_result"] == REVIEW_OUTCOME
-    assert prior_review["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert prior_review["selected_next_target"] == consumed_target()
+    assert attempt["selected_next_target"] == consumed_target()
 
     consumed = _workstream(registry, consumed_target())
     assert consumed["status"] == "paused"
     assert consumed["authorization_evidence"] == evidence
     assert consumed["report"] == report
-    assert consumed["attempt_preparation_result"] == OUTCOME_ID
-    assert consumed["strict_attempt_preparation_result"] == (
-        STRICT_ATTEMPT_PREPARATION_RESULT
-    )
+    assert consumed["attempt_preparation_result"] == ATTEMPT_OUTCOME
+    assert consumed["review_result"] == OUTCOME_ID
+    assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
     assert consumed["selected_next_target"] == NEXT_TARGET
     assert consumed["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
     assert consumed["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
@@ -283,48 +295,29 @@ def test_A_source_standalone_attempt_rotates_to_result_review() -> None:
     assert consumed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
-    if is_current:
-        assert active["status"] == "active"
-        assert active["workstream_id"] == NEXT_TARGET
-        assert active["active_lane"] == NEXT_TARGET
-        assert active["authorization_evidence"] == evidence
-        assert active["authorized_next_strict_target"] == NEXT_TARGET
-        assert active["report"] == report
-        assert active["consumed_target"] == consumed_target()
-        assert active["attempt_preparation_result"] == OUTCOME_ID
-        assert active["review_result"] == "PENDING"
-        assert active["selected_next_target"] == "PENDING"
-        assert active["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
-        assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
-        assert active["target_conclusion"] == TARGET_CONCLUSION
-        assert active["J_current_imported"] == "no"
-        assert active["psi_A_sourced_route_substituted"] == "no"
-        assert active["C_source_A_discharged"] == "no"
-        assert active["sourced_maxwell_closure_claimed"] == "no"
-        assert active["full_maxwell_closure_claimed"] == "no"
-        assert active["qft_gr_closure_claimed"] == "no"
-        assert active["master_action_promoted"] == "no"
-    else:
-        review = _workstream(registry, NEXT_TARGET)
-        assert review["status"] == "paused"
-        assert review["attempt_preparation_result"] == OUTCOME_ID
-        assert review["review_result"] == (
-            "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
-            "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
-            "RULE_PROMOTION"
-        )
-        assert review["selected_next_target"] == (
-            "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
-        )
-        assert review["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
-        assert review["J_current_imported"] == "no"
-        assert review["psi_A_sourced_route_substituted"] == "no"
-        assert active["workstream_id"] == (
-            "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
-        )
+    assert active["status"] == "active"
+    assert active["workstream_id"] == NEXT_TARGET
+    assert active["active_lane"] == NEXT_TARGET
+    assert active["authorization_evidence"] == evidence
+    assert active["authorized_next_strict_target"] == NEXT_TARGET
+    assert active["report"] == report
+    assert active["consumed_target"] == consumed_target()
+    assert active["review_result"] == OUTCOME_ID
+    assert active["execution_result"] == "PENDING"
+    assert active["selected_next_target"] == "PENDING"
+    assert active["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
+    assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
+    assert active["target_conclusion"] == TARGET_CONCLUSION
+    assert active["J_current_imported"] == "no"
+    assert active["psi_A_sourced_route_substituted"] == "no"
+    assert active["C_source_A_discharged"] == "no"
+    assert active["sourced_maxwell_closure_claimed"] == "no"
+    assert active["full_maxwell_closure_claimed"] == "no"
+    assert active["qft_gr_closure_claimed"] == "no"
+    assert active["master_action_promoted"] == "no"
 
 
-def test_A_source_standalone_attempt_mirrors() -> None:
+def test_A_source_standalone_attempt_result_review_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -347,34 +340,35 @@ def test_A_source_standalone_attempt_mirrors() -> None:
     for token in [
         PACKET_ID,
         OUTCOME_ID,
-        STRICT_ATTEMPT_PREPARATION_RESULT,
+        STRICT_REVIEW_RESULT,
         PACKET_CLASSIFICATION,
-        "ASourceTheoremLinkageAttemptFromStandaloneARoute",
+        "ASourceTheoremLinkageAttemptFromStandaloneARouteResultReview",
         consumed_target(),
         NEXT_TARGET,
         NEXT_TARGET_KIND,
+        SUGGESTED_EXECUTION_OUTCOME,
+        STRICT_SUGGESTED_EXECUTION_OUTCOME,
         C_SOURCE_A_RESIDUAL_DEFINITION,
         SOURCE_ADMISSIBILITY_CONDITION,
         TARGET_CONCLUSION,
         PSI_A_SOURCED_MAXWELL_ROUTE,
         PSI_A_SOURCED_ROUTE_CONTAMINATION_GUARD,
-        LEAN_STATUS_WORDING_FOR_PACKET,
-        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_OUTCOME_v0",
-        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_NONCLAIM_BOUNDARY_v0",
+        LEAN_STATUS_WORDING_FOR_REVIEW,
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_OUTCOME_v0",
+        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
         "no J current imported",
         "no psi-A sourced Maxwell substitution",
-        "no theorem discharge during preparation",
-        "no C_source^A closure yet",
+        "no theorem discharge during review",
+        "no C_source^A closure during review",
         "no A-sector closure",
         "no sourced Maxwell closure",
         "no full Maxwell closure",
-        "no empirical validation",
         "no master-action promotion",
     ]:
         assert token in joined, token
 
 
-def test_A_source_standalone_attempt_not_manifest_enrolled() -> None:
+def test_A_source_standalone_attempt_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_A_source_theorem_linkage_attempt_from_standalone_A_route_gate.py"
+        "test_A_source_theorem_linkage_attempt_from_standalone_A_route_result_review_gate.py"
     )

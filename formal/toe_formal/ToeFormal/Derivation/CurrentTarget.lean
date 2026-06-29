@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARoute
+import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -15,14 +15,14 @@ set_option linter.style.longLine false
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ASourceTheoremLinkageAttemptFromStandaloneARoute.selectedNextTarget
+  ASourceTheoremLinkageAttemptFromStandaloneARouteResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ASourceTheoremLinkageAttemptFromStandaloneARoute.packetId
+  ASourceTheoremLinkageAttemptFromStandaloneARouteResultReview.packetId
 
-theorem current_target_points_to_A_source_standalone_attempt_result_review :
+theorem current_target_points_to_A_source_standalone_attempt_execution :
     currentLiveTarget =
-      "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result" := by
+      "execute_A_source_theorem_linkage_attempt_from_standalone_A_route" := by
   rfl
 
 end CurrentTarget
