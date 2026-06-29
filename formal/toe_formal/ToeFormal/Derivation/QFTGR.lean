@@ -155,6 +155,7 @@ import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainSynthesisR
 import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainCloseout
 import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainCloseoutResultReview
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseout
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseoutResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -178,17 +179,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseout.selectionResult
+  CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseoutResultReview.reviewResult
 
 def currentPacketId : String :=
-  CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseout.packetId
+  CKFamilyTheoremLinkageObligationSelectionAfterPsiAExchangeChainCloseoutResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_A_exchange_chain_closeout_selector :
+theorem qft_gr_lane_aggregate_exposes_psi_A_exchange_chain_closeout_selector_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PSI_A_EXCHANGE_CHAIN_" ++
-          "CLOSEOUT_SELECTS_C_SOURCE_A_THEOREM_LINKAGE_GAP_NO_PROOF_EXECUTION_OR_" ++
-          "MASTER_ACTION_PROMOTION" := by
+          "CLOSEOUT_RESULT_REVIEW_ACCEPTS_C_SOURCE_A_THEOREM_LINKAGE_GAP_SELECTION_" ++
+          "NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION" := by
   constructor
   · rfl
   · rfl

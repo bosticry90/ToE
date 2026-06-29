@@ -35,6 +35,14 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_ps
     STRICT_SELECTION_RESULT,
     build_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout,
 )
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result_review_report import (
+    DEFAULT_OUT as RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as RESULT_REVIEW_NEXT_TARGET,
+    NEXT_TARGET_KIND as RESULT_REVIEW_NEXT_TARGET_KIND,
+    OUTCOME_ID as RESULT_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as RESULT_REVIEW_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -197,7 +205,7 @@ def test_ck_family_selection_after_psi_A_exchange_chain_rotates_to_review() -> N
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=CONSUMED_TARGET,
         live_target=NEXT_TARGET,
@@ -228,24 +236,59 @@ def test_ck_family_selection_after_psi_A_exchange_chain_rotates_to_review() -> N
     assert selector["rule_promoted"] == "no"
     assert selector["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["selector_outcome"] == OUTCOME_ID
-    assert active["strict_selector_outcome"] == STRICT_SELECTION_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["follow_on_target_after_review"] == FOLLOW_ON_TARGET_AFTER_REVIEW
-    assert active["proof_execution_authorized"] == "no"
-    assert active["gap_discharged"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == CONSUMED_TARGET
+        assert active["selector_outcome"] == OUTCOME_ID
+        assert active["strict_selector_outcome"] == STRICT_SELECTION_RESULT
+        assert active["review_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["selected_obligation"] == SELECTED_OBLIGATION
+        assert active["follow_on_target_after_review"] == FOLLOW_ON_TARGET_AFTER_REVIEW
+        assert active["proof_execution_authorized"] == "no"
+        assert active["gap_discharged"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        review_evidence = _rel(RESULT_REVIEW_LEAN_PACKET_PATH)
+        review_report = _rel(RESULT_REVIEW_OUT)
+        review_row = _workstream(registry, NEXT_TARGET)
+        assert review_row["status"] == "paused"
+        assert review_row["authorization_evidence"] == review_evidence
+        assert review_row["report"] == review_report
+        assert review_row["review_result"] == RESULT_REVIEW_OUTCOME
+        assert review_row["strict_review_result"] == RESULT_REVIEW_STRICT_OUTCOME
+        assert review_row["selected_next_target"] == RESULT_REVIEW_NEXT_TARGET
+        assert review_row["selected_next_target_kind"] == RESULT_REVIEW_NEXT_TARGET_KIND
+        assert review_row["selected_obligation"] == SELECTED_OBLIGATION
+        assert review_row["proof_execution_authorized"] == "no"
+        assert review_row["gap_discharged"] == "no"
+        assert review_row["rule_promoted"] == "no"
+        assert review_row["master_action_promoted"] == "no"
+
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == RESULT_REVIEW_NEXT_TARGET
+        assert active["active_lane"] == RESULT_REVIEW_NEXT_TARGET
+        assert active["authorization_evidence"] == review_evidence
+        assert active["report"] == review_report
+        assert active["authorized_next_strict_target"] == RESULT_REVIEW_NEXT_TARGET
+        assert active["consumed_target"] == NEXT_TARGET
+        assert active["review_result"] == RESULT_REVIEW_OUTCOME
+        assert active["strict_review_result"] == RESULT_REVIEW_STRICT_OUTCOME
+        assert active["packet_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["selected_obligation"] == SELECTED_OBLIGATION
+        assert active["proof_execution_authorized"] == "no"
+        assert active["gap_discharged"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
 
 
 def test_ck_family_selection_after_psi_A_exchange_chain_mirrors() -> None:
