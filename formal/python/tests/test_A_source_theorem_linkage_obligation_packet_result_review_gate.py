@@ -230,7 +230,7 @@ def test_A_source_packet_result_review_rotates_to_standalone_attempt_preparation
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -268,23 +268,35 @@ def test_A_source_packet_result_review_rotates_to_standalone_attempt_preparation
     assert review["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["attempt_preparation_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
-    assert active["psi_A_sourced_route_substituted"] == "no"
-    assert active["C_source_A_discharged"] == "no"
-    assert active["sourced_maxwell_closure_claimed"] == "no"
-    assert active["full_maxwell_closure_claimed"] == "no"
-    assert active["qft_gr_closure_claimed"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["review_result"] == OUTCOME_ID
+        assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert active["attempt_preparation_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
+        assert active["psi_A_sourced_route_substituted"] == "no"
+        assert active["C_source_A_discharged"] == "no"
+        assert active["sourced_maxwell_closure_claimed"] == "no"
+        assert active["full_maxwell_closure_claimed"] == "no"
+        assert active["qft_gr_closure_claimed"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        attempt = _workstream(registry, NEXT_TARGET)
+        assert attempt["status"] == "paused"
+        assert attempt["attempt_preparation_result"] == (
+            ATTEMPT_PREPARATION_RECOMMENDED_OUTCOME
+        )
+        assert attempt["selected_next_target"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
+        assert attempt["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
+        assert attempt["psi_A_sourced_route_substituted"] == "no"
+        assert attempt["C_source_A_discharged"] == "no"
+        assert active["workstream_id"] == LIKELY_POST_ATTEMPT_REVIEW_TARGET
 
 
 def test_A_source_packet_result_review_mirrors() -> None:
