@@ -42,6 +42,15 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_ps
     STRICT_REVIEW_RESULT,
     build_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result_review,
 )
+from formal.python.tools.A_source_theorem_linkage_obligation_packet_report import (
+    DEFAULT_OUT as A_SOURCE_PACKET_OUT,
+    LEAN_PACKET_PATH as A_SOURCE_PACKET_LEAN_PACKET_PATH,
+    NEXT_TARGET as A_SOURCE_PACKET_REVIEW_TARGET,
+    NEXT_TARGET_KIND as A_SOURCE_PACKET_REVIEW_TARGET_KIND,
+    OUTCOME_ID as A_SOURCE_PACKET_OUTCOME,
+    SOURCE_ADMISSIBILITY_CONDITION as A_SOURCE_PACKET_SOURCE_ADMISSIBILITY_CONDITION,
+    STRICT_PACKET_RESULT as A_SOURCE_PACKET_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -201,7 +210,7 @@ def test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -241,25 +250,60 @@ def test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["packet_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["selected_obligation"] == SELECTED_OBLIGATION
-    assert active["next_packet_scope"] == NEXT_PACKET_SCOPE_INSTRUCTION
-    assert active["proof_execution_authorized"] == "no"
-    assert active["C_source_A_discharged"] == "no"
-    assert active["theorem_discharged"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["review_result"] == OUTCOME_ID
+        assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert active["packet_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["selected_obligation"] == SELECTED_OBLIGATION
+        assert active["next_packet_scope"] == NEXT_PACKET_SCOPE_INSTRUCTION
+        assert active["proof_execution_authorized"] == "no"
+        assert active["C_source_A_discharged"] == "no"
+        assert active["theorem_discharged"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        packet = _workstream(registry, NEXT_TARGET)
+        assert packet["status"] == "paused"
+        assert packet["authorization_evidence"] == _rel(A_SOURCE_PACKET_LEAN_PACKET_PATH)
+        assert packet["report"] == _rel(A_SOURCE_PACKET_OUT)
+        assert packet["packet_result"] == A_SOURCE_PACKET_OUTCOME
+        assert packet["strict_packet_result"] == A_SOURCE_PACKET_STRICT_OUTCOME
+        assert packet["selected_next_target"] == A_SOURCE_PACKET_REVIEW_TARGET
+        assert packet["selected_next_target_kind"] == A_SOURCE_PACKET_REVIEW_TARGET_KIND
+        assert (
+            packet["source_admissibility_condition"]
+            == A_SOURCE_PACKET_SOURCE_ADMISSIBILITY_CONDITION
+        )
+        assert packet["psi_A_sourced_route_substituted"] == "no"
+        assert packet["proof_execution_authorized"] == "no"
+        assert packet["C_source_A_discharged"] == "no"
+        assert packet["theorem_discharged"] == "no"
+        assert packet["rule_promoted"] == "no"
+        assert packet["master_action_promoted"] == "no"
+
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == A_SOURCE_PACKET_REVIEW_TARGET
+        assert active["active_lane"] == A_SOURCE_PACKET_REVIEW_TARGET
+        assert active["authorization_evidence"] == _rel(A_SOURCE_PACKET_LEAN_PACKET_PATH)
+        assert active["authorized_next_strict_target"] == A_SOURCE_PACKET_REVIEW_TARGET
+        assert active["report"] == _rel(A_SOURCE_PACKET_OUT)
+        assert active["consumed_target"] == NEXT_TARGET
+        assert active["packet_result"] == A_SOURCE_PACKET_OUTCOME
+        assert active["strict_packet_result"] == A_SOURCE_PACKET_STRICT_OUTCOME
+        assert active["review_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["proof_execution_authorized"] == "no"
+        assert active["C_source_A_discharged"] == "no"
 
 
 def test_psi_A_exchange_chain_selection_result_review_mirrors() -> None:
