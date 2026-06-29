@@ -270,7 +270,6 @@ def test_psi_A_interaction_exchange_chain_closeout_rotates_to_result_review() ->
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current is True
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
@@ -303,22 +302,45 @@ def test_psi_A_interaction_exchange_chain_closeout_rotates_to_result_review() ->
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == report
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["closeout_result"] == OUTCOME_ID
-    assert active["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["local_psi_A_interaction_exchange_support_chain_closed"] == "yes"
-    assert active["new_proof_execution_in_closeout"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["report"] == report
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["consumed_target"] == CONSUMED_TARGET
+        assert active["closeout_result"] == OUTCOME_ID
+        assert active["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
+        assert active["review_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["local_psi_A_interaction_exchange_support_chain_closed"] == "yes"
+        assert active["new_proof_execution_in_closeout"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
+        consumed_result_review = _workstreams(
+            NEXT_TARGET,
+            registry,
+            status="paused",
+        )[-1]
+        assert consumed_result_review["consumed_target"] == CONSUMED_TARGET
+        assert consumed_result_review["selected_next_target"] == (
+            "select_next_ck_family_theorem_linkage_obligation_after_"
+            "psi_A_exchange_chain_closeout"
+        )
+        assert consumed_result_review["review_result"] == (
+            "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_CLOSEOUT_RESULT_"
+            "REVIEW_ACCEPTS_LOCAL_CEXCHANGE_TOTAL_MATTER_AND_GAUGE_DEPENDENCY_"
+            "CHAIN_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+        )
+        assert consumed_result_review["new_proof_execution_in_review"] == "no"
+        assert consumed_result_review["rule_promoted"] == "no"
+        assert consumed_result_review["master_action_promoted"] == "no"
 
 
 def test_psi_A_interaction_exchange_chain_closeout_mirrors() -> None:

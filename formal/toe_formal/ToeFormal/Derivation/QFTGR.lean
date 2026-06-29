@@ -153,6 +153,7 @@ import ToeFormal.Derivation.PsiAGaugeSectorExchangeTheoremLinkageObligationClose
 import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainSynthesisAfterCexchangeTotalMatterAndGaugeCloseouts
 import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainSynthesisResultReview
 import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainCloseout
+import ToeFormal.Derivation.PsiAInteractionExchangeTheoremLinkageChainCloseoutResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -174,16 +175,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PsiAInteractionExchangeTheoremLinkageChainCloseout.closeoutResult
+  PsiAInteractionExchangeTheoremLinkageChainCloseoutResultReview.reviewResult
 
 def currentPacketId : String :=
-  PsiAInteractionExchangeTheoremLinkageChainCloseout.packetId
+  PsiAInteractionExchangeTheoremLinkageChainCloseoutResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_psi_A_interaction_exchange_chain_closeout :
+theorem qft_gr_lane_aggregate_exposes_psi_A_interaction_exchange_chain_closeout_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_CLOSED_AS_LOCAL_CEXCHANGE_" ++
-          "TOTAL_MATTER_AND_GAUGE_DEPENDENCY_CHAIN_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
+        "PSI_A_INTERACTION_EXCHANGE_THEOREM_LINKAGE_CHAIN_CLOSEOUT_RESULT_REVIEW_" ++
+          "ACCEPTS_LOCAL_CEXCHANGE_TOTAL_MATTER_AND_GAUGE_DEPENDENCY_CHAIN_NO_CK_RULE_" ++
+          "PROMOTION_OR_SEAM_CLOSURE" := by
   constructor
   · rfl
   · rfl
