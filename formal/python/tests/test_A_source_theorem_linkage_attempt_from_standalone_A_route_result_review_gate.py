@@ -44,6 +44,14 @@ from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_rout
     WATCH_ITEMS,
     build_A_source_theorem_linkage_attempt_from_standalone_A_route_result_review,
 )
+from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_report import (
+    CLOSEOUT_OUTCOME,
+    DEFAULT_OUT as EXECUTION_REVIEW_OUT,
+    LEAN_PACKET_PATH as EXECUTION_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as CLOSEOUT_TARGET,
+    OUTCOME_ID as EXECUTION_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as EXECUTION_REVIEW_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -253,7 +261,7 @@ def test_A_source_standalone_attempt_result_review_rotates_to_execution() -> Non
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -263,7 +271,8 @@ def test_A_source_standalone_attempt_result_review_rotates_to_execution() -> Non
 
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
-    assert consumed_target() in registry["paused_lanes"]
+    if consumed_target() not in registry["paused_lanes"]:
+        assert active_workstream(registry)["workstream_id"] == consumed_target()
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
     attempt = _workstream(registry, preparation_target())
@@ -277,44 +286,109 @@ def test_A_source_standalone_attempt_result_review_rotates_to_execution() -> Non
     assert attempt["selected_next_target"] == consumed_target()
 
     consumed = _workstream(registry, consumed_target())
-    assert consumed["status"] == "paused"
-    assert consumed["authorization_evidence"] == evidence
-    assert consumed["report"] == report
-    assert consumed["attempt_preparation_result"] == ATTEMPT_OUTCOME
-    assert consumed["review_result"] == OUTCOME_ID
-    assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
-    assert consumed["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
-    assert consumed["target_conclusion"] == TARGET_CONCLUSION
-    assert consumed["J_current_imported"] == "no"
-    assert consumed["psi_A_sourced_route_substituted"] == "no"
-    assert consumed["theorem_discharged"] == "no"
-    assert consumed["C_source_A_discharged"] == "no"
-    assert consumed["rule_promoted"] == "no"
-    assert consumed["master_action_promoted"] == "no"
+    if consumed["status"] == "active":
+        assert consumed["prior_result_review_outcome"] == OUTCOME_ID
+        assert consumed["prior_strict_result_review_outcome"] == STRICT_REVIEW_RESULT
+        assert consumed["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+        assert consumed["strict_execution_result"] == STRICT_SUGGESTED_EXECUTION_OUTCOME
+        assert consumed["review_result"] == "PENDING"
+        assert consumed["selected_next_target"] == "PENDING"
+        assert consumed["C_source_A_zero_derived"] == "yes"
+        assert consumed["J_current_imported"] == "no"
+        assert consumed["psi_A_sourced_route_substituted"] == "no"
+        assert consumed["rule_promoted"] == "no"
+        assert consumed["master_action_promoted"] == "no"
+    else:
+        assert consumed["status"] == "paused"
+        assert consumed["attempt_preparation_result"] == ATTEMPT_OUTCOME
+        if consumed["review_result"] == OUTCOME_ID:
+            assert consumed["authorization_evidence"] == evidence
+            assert consumed["report"] == report
+            assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
+            assert consumed["selected_next_target"] == NEXT_TARGET
+            assert consumed["theorem_discharged"] == "no"
+            assert consumed["C_source_A_discharged"] == "no"
+        else:
+            assert consumed["authorization_evidence"] == _rel(
+                EXECUTION_REVIEW_LEAN_PACKET_PATH
+            )
+            assert consumed["report"] == _rel(EXECUTION_REVIEW_OUT)
+            assert consumed["review_result"] == EXECUTION_REVIEW_OUTCOME
+            assert consumed["strict_review_result"] == EXECUTION_REVIEW_STRICT_OUTCOME
+            assert consumed["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+            assert consumed["strict_execution_result"] == (
+                STRICT_SUGGESTED_EXECUTION_OUTCOME
+            )
+            assert consumed["selected_next_target"] == CLOSEOUT_TARGET
+            assert consumed["theorem_discharged"] == "yes"
+            assert consumed["C_source_A_discharged"] == "yes"
+            assert consumed["C_source_A_zero_derived"] == "yes"
+        assert consumed["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
+        assert consumed["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
+        assert consumed["target_conclusion"] == TARGET_CONCLUSION
+        assert consumed["J_current_imported"] == "no"
+        assert consumed["psi_A_sourced_route_substituted"] == "no"
+        assert consumed["rule_promoted"] == "no"
+        assert consumed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["execution_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
-    assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
-    assert active["target_conclusion"] == TARGET_CONCLUSION
-    assert active["J_current_imported"] == "no"
-    assert active["psi_A_sourced_route_substituted"] == "no"
-    assert active["C_source_A_discharged"] == "no"
-    assert active["sourced_maxwell_closure_claimed"] == "no"
-    assert active["full_maxwell_closure_claimed"] == "no"
-    assert active["qft_gr_closure_claimed"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["review_result"] == OUTCOME_ID
+        assert active["execution_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
+        assert active["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
+        assert active["target_conclusion"] == TARGET_CONCLUSION
+        assert active["J_current_imported"] == "no"
+        assert active["psi_A_sourced_route_substituted"] == "no"
+        assert active["C_source_A_discharged"] == "no"
+        assert active["sourced_maxwell_closure_claimed"] == "no"
+        assert active["full_maxwell_closure_claimed"] == "no"
+        assert active["qft_gr_closure_claimed"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        executed = _workstream(
+            registry,
+            "execute_A_source_theorem_linkage_attempt_from_standalone_A_route",
+        )
+        assert executed["status"] == "paused"
+        assert executed["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+        assert executed["strict_execution_result"] == STRICT_SUGGESTED_EXECUTION_OUTCOME
+        assert executed["selected_next_target"] == consumed_target()
+        assert executed["proof_attempt_executed"] == "yes"
+        assert executed["theorem_discharged"] == "yes"
+        assert executed["C_source_A_zero_derived"] == "yes"
+        assert executed["J_current_imported"] == "no"
+        assert executed["psi_A_sourced_route_substituted"] == "no"
+        assert executed["rule_promoted"] == "no"
+        assert executed["master_action_promoted"] == "no"
+
+        if active["workstream_id"] == consumed_target():
+            assert active["consumed_target"] == (
+                "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
+            )
+            assert active["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+            assert active["review_result"] == "PENDING"
+            assert active["selected_next_target"] == "PENDING"
+        else:
+            reviewed = _workstream(registry, consumed_target())
+            assert reviewed["status"] == "paused"
+            assert reviewed["review_result"] == EXECUTION_REVIEW_OUTCOME
+            assert reviewed["strict_review_result"] == EXECUTION_REVIEW_STRICT_OUTCOME
+            assert reviewed["selected_next_target"] == CLOSEOUT_TARGET
+
+            assert active["status"] == "active"
+            assert active["workstream_id"] == CLOSEOUT_TARGET
+            assert active["consumed_target"] == consumed_target()
+            assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
+            assert active["closeout_result"] == "PENDING"
 
 
 def test_A_source_standalone_attempt_result_review_mirrors() -> None:

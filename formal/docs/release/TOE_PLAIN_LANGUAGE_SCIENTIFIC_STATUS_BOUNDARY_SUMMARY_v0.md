@@ -96,6 +96,8 @@ semiclassical-looking stress-energy source maps
 
 Using these ingredients is not a weakness by itself. A unification project has to recover known physics. But recovering or reorganizing known physics is not the same as discovering new physics.
 
+The scalar/free-KG-style lane is the strongest bounded worked example, but it does not imply full scalar QFT, interacting QFT, quantization, or Standard Model recovery.
+
 ## What May Be Novel
 
 The project's strongest possible novelty is methodological and architectural:
@@ -111,7 +113,13 @@ false-closure prevention
 
 This means the repo is trying to stop a common mistake: treating a local equation match, a zero residual, or a useful analogy as if it were already a complete physical unification.
 
+The project is anti-overclaiming rather than self-validating.
+
 The project has learned that unification is not mainly "write one big equation." It is "prove the bridges are legal."
+
+Nature may not be unified by one big equation alone.
+
+A real unification also needs rules proving that the different "languages" of physics can safely talk to each other.
 
 It also preserves the anti-overclaim rule that "residual zero" does not automatically mean "the physics bridge is valid."
 

@@ -41,6 +41,15 @@ from formal.python.tools.A_source_theorem_linkage_obligation_packet_result_revie
     OUTCOME_ID as REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT,
 )
+from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_result_review_report import (
+    SUGGESTED_EXECUTION_OUTCOME,
+    STRICT_SUGGESTED_EXECUTION_OUTCOME,
+)
+from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_report import (
+    CLOSEOUT_OUTCOME,
+    NEXT_TARGET as CLOSEOUT_TARGET,
+    OUTCOME_ID as EXECUTION_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -306,22 +315,41 @@ def test_A_source_standalone_attempt_rotates_to_result_review() -> None:
         assert active["master_action_promoted"] == "no"
     else:
         review = _workstream(registry, NEXT_TARGET)
-        assert review["status"] == "paused"
-        assert review["attempt_preparation_result"] == OUTCOME_ID
-        assert review["review_result"] == (
-            "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
-            "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
-            "RULE_PROMOTION"
-        )
-        assert review["selected_next_target"] == (
-            "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
-        )
-        assert review["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
-        assert review["J_current_imported"] == "no"
-        assert review["psi_A_sourced_route_substituted"] == "no"
-        assert active["workstream_id"] == (
-            "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
-        )
+        if review["status"] == "active":
+            assert review["execution_result"] == SUGGESTED_EXECUTION_OUTCOME
+            assert review["strict_execution_result"] == STRICT_SUGGESTED_EXECUTION_OUTCOME
+            assert review["selected_next_target"] == "PENDING"
+            assert review["C_source_A_zero_derived"] == "yes"
+            assert review["J_current_imported"] == "no"
+            assert review["psi_A_sourced_route_substituted"] == "no"
+            assert active["workstream_id"] == NEXT_TARGET
+        else:
+            assert review["status"] == "paused"
+            assert review["attempt_preparation_result"] == OUTCOME_ID
+            if review["review_result"] == EXECUTION_REVIEW_OUTCOME:
+                assert review["prior_result_review_outcome"] == (
+                    "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+                    "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
+                    "RULE_PROMOTION"
+                )
+                assert review["selected_next_target"] == CLOSEOUT_TARGET
+                assert active["workstream_id"] == CLOSEOUT_TARGET
+                assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
+            else:
+                assert review["review_result"] == (
+                    "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_RESULT_REVIEW_"
+                    "ACCEPTS_C_SOURCE_A_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_DISCHARGE_OR_CK_"
+                    "RULE_PROMOTION"
+                )
+                assert review["selected_next_target"] == (
+                    "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
+                )
+                assert active["workstream_id"] == (
+                    "execute_A_source_theorem_linkage_attempt_from_standalone_A_route"
+                )
+            assert review["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
+            assert review["J_current_imported"] == "no"
+            assert review["psi_A_sourced_route_substituted"] == "no"
 
 
 def test_A_source_standalone_attempt_mirrors() -> None:
