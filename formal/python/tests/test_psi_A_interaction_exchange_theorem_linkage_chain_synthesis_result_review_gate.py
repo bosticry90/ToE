@@ -273,7 +273,6 @@ def test_psi_A_interaction_exchange_chain_synthesis_result_review_rotates_to_clo
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current is True
     assert CONSUMED_TARGET in registry["completed_targets"]
     assert CONSUMED_TARGET in registry["consumed_targets"]
     assert CONSUMED_TARGET in registry["paused_lanes"]
@@ -303,22 +302,27 @@ def test_psi_A_interaction_exchange_chain_synthesis_result_review_rotates_to_clo
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["report"] == report
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["consumed_target"] == CONSUMED_TARGET
-    assert active["review_result"] == OUTCOME_ID
-    assert active["closeout_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["closeout_preparation_authorized"] == "yes"
-    assert active["closeout_prepared"] == "no"
-    assert active["proof_execution_authorized"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["report"] == report
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["consumed_target"] == CONSUMED_TARGET
+        assert active["review_result"] == OUTCOME_ID
+        assert active["closeout_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["closeout_preparation_authorized"] == "yes"
+        assert active["closeout_prepared"] == "no"
+        assert active["proof_execution_authorized"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
 
 
 def test_psi_A_interaction_exchange_chain_synthesis_result_review_mirrors() -> None:
