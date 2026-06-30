@@ -12,24 +12,30 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
 )
-from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_execution_report import (
-    DEFAULT_OUT as EXECUTION_OUT,
-    LEAN_PACKET_PATH as EXECUTION_LEAN_PACKET_PATH,
-    OUTCOME_ID as EXECUTION_OUTCOME,
-    STRICT_EXECUTION_RESULT,
+from formal.python.tools.A_source_theorem_linkage_obligation_closeout_report import (
+    DEFAULT_OUT as CLOSEOUT_PATH,
+    LEAN_PACKET_PATH as CLOSEOUT_LEAN_PACKET_PATH,
+    OUTCOME_ID as CLOSEOUT_RESULT,
+    STRICT_CLOSEOUT_RESULT,
 )
-from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_report import (
+from formal.python.tools.A_source_theorem_linkage_obligation_closeout_result_review_report import (
     ACCEPTED_REVIEW_FINDINGS,
     C_SOURCE_A_RESIDUAL_DEFINITION,
-    CLOSEOUT_OUTCOME,
-    CLOSEOUT_STATEMENT,
+    CLAIM_BOUNDARY,
+    CLOSEOUT_CLAIMS,
+    CONSUMED_TARGET,
     DEFAULT_OUT,
     FULL_TOEFORMAL_AGGREGATE_STATUS_FOR_REVIEW,
     LEAN_PACKET_PATH,
     LEAN_STATUS_WORDING_FOR_REVIEW,
+    LIKELY_NEXT_OBLIGATION,
+    LIKELY_NEXT_OBLIGATION_ROW_ID,
+    LIKELY_SELECTOR_OUTCOME,
     LINKAGE_ROUTE,
+    NEXT_OBLIGATION_REASON,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
+    NONCLAIMS,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
@@ -38,19 +44,10 @@ from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_rout
     SCHEMA_ID,
     SCOPED_LEAN_TARGETS_STATUS_FOR_REVIEW,
     SOURCE_ADMISSIBILITY_CONDITION,
+    STRICT_LIKELY_SELECTOR_OUTCOME,
     STRICT_REVIEW_RESULT,
     TARGET_CONCLUSION,
-    build_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review,
-)
-from formal.python.tools.A_source_theorem_linkage_obligation_closeout_report import (
-    NEXT_TARGET as CLOSEOUT_REVIEW_TARGET,
-    OUTCOME_ID as CLOSEOUT_RESULT,
-    STRICT_CLOSEOUT_RESULT,
-)
-from formal.python.tools.A_source_theorem_linkage_obligation_closeout_result_review_report import (
-    NEXT_TARGET as A_SOURCE_SELECTOR_TARGET,
-    OUTCOME_ID as CLOSEOUT_REVIEW_RESULT,
-    STRICT_REVIEW_RESULT as STRICT_CLOSEOUT_REVIEW_RESULT,
+    build_A_source_theorem_linkage_obligation_closeout_result_review,
 )
 
 
@@ -60,7 +57,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_report.py"
+    / "A_source_theorem_linkage_obligation_closeout_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
@@ -117,17 +114,13 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def consumed_target() -> str:
-    return "review_A_source_theorem_linkage_attempt_from_standalone_A_route_result"
-
-
-def test_A_source_execution_result_review_files_exist() -> None:
+def test_A_source_closeout_result_review_files_exist() -> None:
     for path in [
-        EXECUTION_OUT,
+        CLOSEOUT_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
-        EXECUTION_LEAN_PACKET_PATH,
+        CLOSEOUT_LEAN_PACKET_PATH,
         QFTGR_PATH,
         CURRENT_TARGET_PATH,
         CURRENT_AUTHORITY_PATH,
@@ -135,7 +128,7 @@ def test_A_source_execution_result_review_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_A_source_execution_result_review_accepts_constructed_linkage() -> None:
+def test_A_source_closeout_result_review_accepts_local_closeout() -> None:
     review = _json(DEFAULT_OUT)
 
     assert review["artifact_id"] == SCHEMA_ID
@@ -149,57 +142,69 @@ def test_A_source_execution_result_review_accepts_constructed_linkage() -> None:
     assert review["packet_result"] == OUTCOME_ID
     assert review["strict_review_result"] == STRICT_REVIEW_RESULT
     assert review["packet_classification"] == PACKET_CLASSIFICATION
-    assert review["consumed_target"] == consumed_target()
+    assert review["consumed_target"] == CONSUMED_TARGET
     assert review["selected_next_target"] == NEXT_TARGET
     assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert review["closeout_outcome"] == CLOSEOUT_OUTCOME
-    assert review["closeout_statement"] == CLOSEOUT_STATEMENT
+    assert review["likely_next_obligation"] == LIKELY_NEXT_OBLIGATION
+    assert review["likely_next_obligation_row_id"] == LIKELY_NEXT_OBLIGATION_ROW_ID
+    assert review["likely_selector_outcome"] == LIKELY_SELECTOR_OUTCOME
+    assert review["strict_likely_selector_outcome"] == STRICT_LIKELY_SELECTOR_OUTCOME
+    assert review["next_obligation_reason"] == NEXT_OBLIGATION_REASON
     assert (
-        build_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review()
+        build_A_source_theorem_linkage_obligation_closeout_result_review()
         == review
     )
 
 
-def test_A_source_execution_result_review_records_route_and_boundary() -> None:
+def test_A_source_closeout_result_review_preserves_route_and_boundary() -> None:
     review = _json(DEFAULT_OUT)
 
     assert review["accepted_review_findings"] == ACCEPTED_REVIEW_FINDINGS
+    assert review["closeout_outcome"] == CLOSEOUT_RESULT
+    assert review["closeout_strict_outcome"] == STRICT_CLOSEOUT_RESULT
+    assert review["closeout_claims"] == CLOSEOUT_CLAIMS
+    assert review["nonclaims"] == NONCLAIMS
+    assert review["claim_boundary"] == CLAIM_BOUNDARY
     assert review["C_source_A_residual_definition"] == C_SOURCE_A_RESIDUAL_DEFINITION
     assert review["source_admissibility_condition"] == SOURCE_ADMISSIBILITY_CONDITION
     assert review["target_conclusion"] == TARGET_CONCLUSION
     assert review["execution_route"] == LINKAGE_ROUTE
     assert review["linkage_route"] == LINKAGE_ROUTE
     assert review["plain_meaning"] == PLAIN_MEANING
-    assert review["definition_linkage_constructed"] is True
-    assert review["C_source_A_zero_derived"] is True
-    assert review["review_executes_attempt"] is False
+    assert review["A_source_theorem_linkage_obligation_closeout_accepted"] is True
+    assert review["C_source_A_definition_preserved"] is True
+    assert review["standalone_A_stress_conservation_route_preserved"] is True
+    assert review["C_source_A_zero_locally_linked"] is True
+    assert review["selector_authorized"] is True
+    assert review["selector_executed"] is False
+    assert review["next_theorem_linkage_obligation_selected"] is False
+    assert review["review_executes_new_proof"] is False
     assert review["proof_execution_authorized"] is False
-    assert review["proof_attempt_executed"] is True
-    assert review["theorem_discharged"] is True
-    assert review["theorem_linkage_completed"] is True
-    assert review["closeout_preparation_authorized"] is True
 
     for key in [
         "J_current_imported",
         "psi_A_sourced_route_substituted",
-        "sourced_Maxwell_route_substituted",
-        "A_sector_closure_claimed",
         "sourced_maxwell_closure_claimed",
         "full_maxwell_closure_claimed",
-        "em_qft_closure_claimed",
-        "qft_gr_closure_claimed",
-        "gr_qm_closure_claimed",
+        "A_sector_closure_claimed",
+        "phi_sector_closure_claimed",
+        "general_C_k_closure",
+        "general_C_k_theorem_linkage_closure",
         "rule_promoted",
         "C_k_action_embedding_claimed",
         "C_k_action_variation_executed",
+        "action_embedding_claimed",
+        "action_variation_executed",
         "empirical_validation_claimed",
         "seam_closure_claim",
         "master_action_promoted",
+        "external_benchmark_intake_executed",
+        "external_benchmark_validation_claimed",
     ]:
         assert review[key] is False, key
 
 
-def test_A_source_execution_result_review_records_lean_status() -> None:
+def test_A_source_closeout_result_review_records_lean_status() -> None:
     review = _json(DEFAULT_OUT)
 
     assert review["lean_status_wording"] == LEAN_STATUS_WORDING_FOR_REVIEW
@@ -215,105 +220,82 @@ def test_A_source_execution_result_review_records_lean_status() -> None:
     assert "full ToeFormal aggregate = PASSED_SERIAL_RERUN" not in json.dumps(review)
 
 
-def test_A_source_execution_result_review_rotates_to_closeout_preparation() -> None:
+def test_A_source_closeout_result_review_rotates_to_selector() -> None:
     registry = _json(REGISTRY_PATH)
     evidence = _rel(LEAN_PACKET_PATH)
     report = _rel(DEFAULT_OUT)
 
-    is_current = assert_historical_target_recorded(
-        payload=registry,
-        previous_target=consumed_target(),
-        live_target=NEXT_TARGET,
-        evidence=evidence,
-        lane=NEXT_TARGET,
-    )
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_public_surfaces_match_registry()
 
-    assert consumed_target() in registry["completed_targets"]
-    assert consumed_target() in registry["consumed_targets"]
-    assert consumed_target() in registry["paused_lanes"]
+    is_current = assert_historical_target_recorded(
+        payload=registry,
+        previous_target=CONSUMED_TARGET,
+        live_target=NEXT_TARGET,
+        evidence=evidence,
+        lane=NEXT_TARGET,
+    )
+    assert CONSUMED_TARGET in registry["completed_targets"]
+    assert CONSUMED_TARGET in registry["consumed_targets"]
+    assert CONSUMED_TARGET in registry["paused_lanes"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
-    consumed = _workstream(registry, consumed_target())
+    consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
     assert consumed["authorization_evidence"] == evidence
     assert consumed["report"] == report
-    assert consumed["execution_result"] == EXECUTION_OUTCOME
-    assert consumed["strict_execution_result"] == STRICT_EXECUTION_RESULT
     assert consumed["review_result"] == OUTCOME_ID
     assert consumed["strict_review_result"] == STRICT_REVIEW_RESULT
+    assert consumed["closeout_result"] == CLOSEOUT_RESULT
+    assert consumed["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
     assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["C_source_A_zero_derived"] == "yes"
+    assert consumed["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert consumed["selector_authorized"] == "yes"
+    assert consumed["selector_executed"] == "no"
+    assert consumed["next_theorem_linkage_obligation_selected"] == "no"
+    assert consumed["C_source_A_zero_locally_linked"] == "yes"
     assert consumed["J_current_imported"] == "no"
     assert consumed["psi_A_sourced_route_substituted"] == "no"
+    assert consumed["A_sector_closure_claimed"] == "no"
+    assert consumed["phi_sector_closure_claimed"] == "no"
+    assert consumed["seam_closure_claim"] == "no"
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
     if is_current:
+        active = active_workstream(registry)
         assert active["status"] == "active"
         assert active["workstream_id"] == NEXT_TARGET
         assert active["active_lane"] == NEXT_TARGET
         assert active["authorization_evidence"] == evidence
         assert active["authorized_next_strict_target"] == NEXT_TARGET
         assert active["report"] == report
-        assert active["consumed_target"] == consumed_target()
+        assert active["consumed_target"] == CONSUMED_TARGET
         assert active["review_result"] == OUTCOME_ID
         assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-        assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
-        assert active["closeout_result"] == "PENDING"
+        assert active["selection_result"] == "PENDING"
         assert active["selected_next_target"] == "PENDING"
-        assert active["C_source_A_zero_derived"] == "yes"
+        assert active["likely_next_obligation"] == LIKELY_NEXT_OBLIGATION
+        assert active["selected_obligation"] == "PENDING"
+        assert active["selector_authorized"] == "yes"
+        assert active["selector_executed"] == "no"
+        assert active["proof_attempt_executed"] == "no"
+        assert active["theorem_discharged"] == "no"
         assert active["J_current_imported"] == "no"
         assert active["psi_A_sourced_route_substituted"] == "no"
-        assert active["sourced_maxwell_closure_claimed"] == "no"
-        assert active["full_maxwell_closure_claimed"] == "no"
         assert active["A_sector_closure_claimed"] == "no"
+        assert active["phi_sector_closure_claimed"] == "no"
         assert active["seam_closure_claim"] == "no"
         assert active["rule_promoted"] == "no"
         assert active["master_action_promoted"] == "no"
     else:
-        closeout = _workstream(registry, NEXT_TARGET)
-        assert closeout["status"] == "paused"
-        assert closeout["closeout_result"] == CLOSEOUT_RESULT
-        assert closeout["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
-        assert closeout["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
-        assert closeout["A_source_theorem_linkage_obligation_locally_closed"] == "yes"
-        assert closeout["J_current_imported"] == "no"
-        assert closeout["psi_A_sourced_route_substituted"] == "no"
-        assert closeout["sourced_maxwell_closure_claimed"] == "no"
-        assert closeout["full_maxwell_closure_claimed"] == "no"
-        assert closeout["A_sector_closure_claimed"] == "no"
-        assert closeout["seam_closure_claim"] == "no"
-        assert closeout["rule_promoted"] == "no"
-        assert closeout["master_action_promoted"] == "no"
-
-        if active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
-            assert active["status"] == "active"
-            assert active["consumed_target"] == NEXT_TARGET
-            assert active["closeout_result"] == CLOSEOUT_RESULT
-            assert active["review_result"] == "PENDING"
-        else:
-            closeout_review = _workstream(registry, CLOSEOUT_REVIEW_TARGET)
-            assert closeout_review["status"] == "paused"
-            assert closeout_review["review_result"] == CLOSEOUT_REVIEW_RESULT
-            assert closeout_review["strict_review_result"] == (
-                STRICT_CLOSEOUT_REVIEW_RESULT
-            )
-            assert closeout_review["selected_next_target"] == A_SOURCE_SELECTOR_TARGET
-
-            assert active["status"] == "active"
-            assert active["workstream_id"] == A_SOURCE_SELECTOR_TARGET
-            assert active["consumed_target"] == CLOSEOUT_REVIEW_TARGET
-            assert active["review_result"] == CLOSEOUT_REVIEW_RESULT
-            assert active["selection_result"] == "PENDING"
-            assert active["rule_promoted"] == "no"
-            assert active["master_action_promoted"] == "no"
+        assert NEXT_TARGET in registry["completed_targets"]
+        assert NEXT_TARGET in registry["consumed_targets"]
+        assert NEXT_TARGET in registry["paused_lanes"]
 
 
-def test_A_source_execution_result_review_mirrors() -> None:
+def test_A_source_closeout_result_review_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -333,30 +315,34 @@ def test_A_source_execution_result_review_mirrors() -> None:
             STRICT_MAP_PATH,
         ]
     )
+    route_tokens = LINKAGE_ROUTE if isinstance(LINKAGE_ROUTE, list) else [LINKAGE_ROUTE]
     for token in [
         PACKET_ID,
         OUTCOME_ID,
         STRICT_REVIEW_RESULT,
         PACKET_CLASSIFICATION,
-        "ASourceTheoremLinkageAttemptFromStandaloneARouteExecutionResultReview",
-        consumed_target(),
+        "ASourceTheoremLinkageObligationCloseoutResultReview",
+        CONSUMED_TARGET,
         NEXT_TARGET,
         NEXT_TARGET_KIND,
-        CLOSEOUT_OUTCOME,
-        CLOSEOUT_STATEMENT,
+        LIKELY_NEXT_OBLIGATION,
+        LIKELY_SELECTOR_OUTCOME,
+        STRICT_LIKELY_SELECTOR_OUTCOME,
         C_SOURCE_A_RESIDUAL_DEFINITION,
         SOURCE_ADMISSIBILITY_CONDITION,
         TARGET_CONCLUSION,
-        PLAIN_MEANING,
+        *route_tokens,
         LEAN_STATUS_WORDING_FOR_REVIEW,
-        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_EXECUTION_RESULT_REVIEW_OUTCOME_v0",
-        "A_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_A_ROUTE_EXECUTION_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
-        "standalone A-source theorem-linkage route constructed",
+        "A_SOURCE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_OUTCOME_v0",
+        "A_SOURCE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_NONCLAIM_BOUNDARY_v0",
+        "A-source theorem-linkage obligation closeout accepted",
         "C_source^{A,nu} = 0 locally linked",
         "no J current imported",
         "no psi-A sourced Maxwell substitution",
-        "no A-sector closure",
+        "no sourced Maxwell closure",
         "no full Maxwell closure",
+        "no A-sector closure",
+        "no seam closure",
         "no C_k promotion",
         "no empirical validation",
         "no master-action promotion",
@@ -364,7 +350,7 @@ def test_A_source_execution_result_review_mirrors() -> None:
         assert token in joined, token
 
 
-def test_A_source_execution_result_review_not_manifest_enrolled() -> None:
+def test_A_source_closeout_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_gate.py"
+        "test_A_source_theorem_linkage_obligation_closeout_result_review_gate.py"
     )

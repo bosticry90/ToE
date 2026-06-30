@@ -203,6 +203,7 @@ import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteResu
 import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteExecution
 import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteExecutionResultReview
 import ToeFormal.Derivation.ASourceTheoremLinkageObligationCloseout
+import ToeFormal.Derivation.ASourceTheoremLinkageObligationCloseoutResultReview
 
 namespace ToeFormal
 namespace Derivation
@@ -372,7 +373,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_A_source_theorem_linkage_obligation_closeout_result"
+        "select_next_ck_family_theorem_linkage_obligation_after_A_source_closeout"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -400,7 +401,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_A_source_theorem_linkage_obligation_closeout_result"
+        "select_next_ck_family_theorem_linkage_obligation_after_A_source_closeout"
       status := .retained }
   ]
 
@@ -418,13 +419,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the standalone A-source closeout. -/
+/-- Previous live target consumed by the A-source closeout result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_A_source_theorem_linkage_obligation_closeout"
-
-/-- Current live target after standalone A-source closeout. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_A_source_theorem_linkage_obligation_closeout_result"
+
+/-- Current live target after standalone A-source closeout result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_ck_family_theorem_linkage_obligation_after_A_source_closeout"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -437,7 +438,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_A_source_theorem_linkage_obligation_closeout_result"
+    "select_next_ck_family_theorem_linkage_obligation_after_A_source_closeout"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

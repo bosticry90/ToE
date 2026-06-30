@@ -57,6 +57,11 @@ from formal.python.tools.A_source_theorem_linkage_obligation_closeout_report imp
     OUTCOME_ID as CLOSEOUT_RESULT,
     STRICT_CLOSEOUT_RESULT,
 )
+from formal.python.tools.A_source_theorem_linkage_obligation_closeout_result_review_report import (
+    NEXT_TARGET as A_SOURCE_SELECTOR_TARGET,
+    OUTCOME_ID as CLOSEOUT_REVIEW_RESULT,
+    STRICT_REVIEW_RESULT as STRICT_CLOSEOUT_REVIEW_RESULT,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -401,11 +406,29 @@ def test_A_source_standalone_attempt_result_review_rotates_to_execution() -> Non
                 assert closeout["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
                 assert closeout["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
 
-                assert active["status"] == "active"
-                assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
-                assert active["consumed_target"] == CLOSEOUT_TARGET
-                assert active["closeout_result"] == CLOSEOUT_RESULT
-                assert active["review_result"] == "PENDING"
+                if active["workstream_id"] == CLOSEOUT_REVIEW_TARGET:
+                    assert active["status"] == "active"
+                    assert active["consumed_target"] == CLOSEOUT_TARGET
+                    assert active["closeout_result"] == CLOSEOUT_RESULT
+                    assert active["review_result"] == "PENDING"
+                else:
+                    closeout_review = _workstream(registry, CLOSEOUT_REVIEW_TARGET)
+                    assert closeout_review["status"] == "paused"
+                    assert closeout_review["review_result"] == CLOSEOUT_REVIEW_RESULT
+                    assert closeout_review["strict_review_result"] == (
+                        STRICT_CLOSEOUT_REVIEW_RESULT
+                    )
+                    assert closeout_review["selected_next_target"] == (
+                        A_SOURCE_SELECTOR_TARGET
+                    )
+
+                    assert active["status"] == "active"
+                    assert active["workstream_id"] == A_SOURCE_SELECTOR_TARGET
+                    assert active["consumed_target"] == CLOSEOUT_REVIEW_TARGET
+                    assert active["review_result"] == CLOSEOUT_REVIEW_RESULT
+                    assert active["selection_result"] == "PENDING"
+                    assert active["rule_promoted"] == "no"
+                    assert active["master_action_promoted"] == "no"
 
 
 def test_A_source_standalone_attempt_result_review_mirrors() -> None:

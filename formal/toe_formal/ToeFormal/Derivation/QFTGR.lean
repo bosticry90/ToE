@@ -163,6 +163,7 @@ import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteResu
 import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteExecution
 import ToeFormal.Derivation.ASourceTheoremLinkageAttemptFromStandaloneARouteExecutionResultReview
 import ToeFormal.Derivation.ASourceTheoremLinkageObligationCloseout
+import ToeFormal.Derivation.ASourceTheoremLinkageObligationCloseoutResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -186,16 +187,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ASourceTheoremLinkageObligationCloseout.closeoutResult
+  ASourceTheoremLinkageObligationCloseoutResultReview.reviewResult
 
 def currentPacketId : String :=
-  ASourceTheoremLinkageObligationCloseout.packetId
+  ASourceTheoremLinkageObligationCloseoutResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_A_source_theorem_linkage_obligation_closeout :
+theorem qft_gr_lane_aggregate_exposes_A_source_theorem_linkage_obligation_closeout_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "A_SOURCE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_STANDALONE_STRESS_" ++
-          "CONSERVATION_LINKED_C_SOURCE_A_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
+        "A_SOURCE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_" ++
+          "STANDALONE_STRESS_CONSERVATION_LINKED_C_SOURCE_A_ROUTE_NO_CK_RULE_PROMOTION_" ++
+          "OR_SEAM_CLOSURE" := by
   constructor
   · rfl
   · rfl
