@@ -66,6 +66,11 @@ from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_A_
     SELECTED_OBLIGATION as A_SOURCE_SELECTOR_SELECTED_OBLIGATION,
     STRICT_SELECTION_RESULT as STRICT_A_SOURCE_SELECTOR_OUTCOME,
 )
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_A_source_closeout_result_review_report import (
+    NEXT_TARGET as PHI_SOURCE_PACKET_TARGET,
+    OUTCOME_ID as A_SOURCE_SELECTOR_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as STRICT_A_SOURCE_SELECTOR_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -149,15 +154,44 @@ def _assert_A_source_selector_or_review_active(registry: dict, active: dict) -> 
     assert selector["rule_promoted"] == "no"
     assert selector["master_action_promoted"] == "no"
 
+    if active["workstream_id"] == A_SOURCE_SELECTOR_REVIEW_TARGET:
+        assert active["status"] == "active"
+        assert active["consumed_target"] == A_SOURCE_SELECTOR_TARGET
+        assert active["selector_outcome"] == A_SOURCE_SELECTOR_OUTCOME
+        assert active["strict_selector_outcome"] == STRICT_A_SOURCE_SELECTOR_OUTCOME
+        assert active["review_result"] == "PENDING"
+        assert active["selected_obligation"] == A_SOURCE_SELECTOR_SELECTED_OBLIGATION
+        assert active["proof_execution_authorized"] == "no"
+        assert active["gap_discharged"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+        return
+
+    selector_review = _workstream(registry, A_SOURCE_SELECTOR_REVIEW_TARGET)
+    assert selector_review["status"] == "paused"
+    assert selector_review["review_result"] == A_SOURCE_SELECTOR_REVIEW_OUTCOME
+    assert selector_review["strict_review_result"] == (
+        STRICT_A_SOURCE_SELECTOR_REVIEW_OUTCOME
+    )
+    assert selector_review["selected_next_target"] == PHI_SOURCE_PACKET_TARGET
+    assert selector_review["C_source_phi_discharged"] == "no"
+    assert selector_review["proof_attempt_executed"] == "no"
+    assert selector_review["rule_promoted"] == "no"
+    assert selector_review["master_action_promoted"] == "no"
+
     assert active["status"] == "active"
-    assert active["workstream_id"] == A_SOURCE_SELECTOR_REVIEW_TARGET
-    assert active["consumed_target"] == A_SOURCE_SELECTOR_TARGET
-    assert active["selector_outcome"] == A_SOURCE_SELECTOR_OUTCOME
-    assert active["strict_selector_outcome"] == STRICT_A_SOURCE_SELECTOR_OUTCOME
-    assert active["review_result"] == "PENDING"
+    assert active["workstream_id"] == PHI_SOURCE_PACKET_TARGET
+    assert active["consumed_target"] == A_SOURCE_SELECTOR_REVIEW_TARGET
+    assert active["review_result"] == A_SOURCE_SELECTOR_REVIEW_OUTCOME
+    assert active["strict_review_result"] == STRICT_A_SOURCE_SELECTOR_REVIEW_OUTCOME
+    assert active["packet_result"] == "PENDING"
     assert active["selected_obligation"] == A_SOURCE_SELECTOR_SELECTED_OBLIGATION
     assert active["proof_execution_authorized"] == "no"
-    assert active["gap_discharged"] == "no"
+    assert active["C_source_phi_discharged"] == "no"
+    assert active["phi_sector_closure_claimed"] == "no"
+    assert active["A_source_route_imported"] == "no"
+    assert active["psi_A_sourced_Maxwell_imported"] == "no"
+    assert active["QFT_GR_source_route_imported"] == "no"
     assert active["rule_promoted"] == "no"
     assert active["master_action_promoted"] == "no"
 
