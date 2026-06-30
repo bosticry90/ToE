@@ -45,6 +45,13 @@ from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_
     TARGET_CONCLUSION,
     build_phi_source_theorem_linkage_attempt_from_standalone_phi_route_result_review,
 )
+from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_route_execution_report import (
+    DEFAULT_OUT as EXECUTION_OUT,
+    LEAN_PACKET_PATH as EXECUTION_LEAN_PACKET_PATH,
+    NEXT_TARGET as PHI_EXECUTION_REVIEW_TARGET,
+    OUTCOME_ID as PHI_EXECUTION_OUTCOME,
+    STRICT_EXECUTION_RESULT as STRICT_PHI_EXECUTION_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -249,8 +256,6 @@ def test_phi_source_standalone_attempt_result_review_rotates_to_execution() -> N
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current is True
-
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
     assert consumed_target() in registry["paused_lanes"]
@@ -292,27 +297,60 @@ def test_phi_source_standalone_attempt_result_review_rotates_to_execution() -> N
     assert consumed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
+    if is_current:
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["review_result"] == OUTCOME_ID
+        assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert active["execution_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["C_source_phi_residual_definition"] == (
+            C_SOURCE_PHI_RESIDUAL_DEFINITION
+        )
+        assert active["residual_identity_form"] == RESIDUAL_IDENTITY_FORM
+        assert active["on_shell_condition"] == ON_SHELL_CONDITION
+        assert active["proof_attempt_executed"] == "no"
+        assert active["theorem_discharged"] == "no"
+        assert active["C_source_phi_discharged"] == "no"
+        assert active["phi_sector_closure_claimed"] == "no"
+        assert active["full_scalar_qft_closure_claimed"] == "no"
+        assert active["qft_gr_closure_claimed"] == "no"
+        assert active["old_omnibus_tests_not_active_acceptance_authority"] == "yes"
+        assert active["master_action_promoted"] == "no"
+        return
+
+    execution = _workstream(registry, NEXT_TARGET)
+    assert execution["status"] == "paused"
+    assert execution["authorization_evidence"] == _rel(EXECUTION_LEAN_PACKET_PATH)
+    assert execution["report"] == _rel(EXECUTION_OUT)
+    assert execution["execution_result"] == PHI_EXECUTION_OUTCOME
+    assert execution["strict_execution_result"] == STRICT_PHI_EXECUTION_OUTCOME
+    assert execution["selected_next_target"] == PHI_EXECUTION_REVIEW_TARGET
+    assert execution["C_source_phi_zero_derived"] == "yes"
+    assert execution["C_source_phi_discharged"] == "yes"
+    assert execution["phi_sector_closure_claimed"] == "no"
+    assert execution["full_scalar_qft_closure_claimed"] == "no"
+    assert execution["qft_gr_closure_claimed"] == "no"
+    assert execution["rule_promoted"] == "no"
+    assert execution["master_action_promoted"] == "no"
+
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["execution_result"] == "PENDING"
+    assert active["workstream_id"] == PHI_EXECUTION_REVIEW_TARGET
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["execution_result"] == PHI_EXECUTION_OUTCOME
+    assert active["strict_execution_result"] == STRICT_PHI_EXECUTION_OUTCOME
+    assert active["review_result"] == "PENDING"
     assert active["selected_next_target"] == "PENDING"
-    assert active["C_source_phi_residual_definition"] == C_SOURCE_PHI_RESIDUAL_DEFINITION
-    assert active["residual_identity_form"] == RESIDUAL_IDENTITY_FORM
-    assert active["on_shell_condition"] == ON_SHELL_CONDITION
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
-    assert active["C_source_phi_discharged"] == "no"
+    assert active["C_source_phi_zero_derived"] == "yes"
+    assert active["C_source_phi_discharged"] == "yes"
     assert active["phi_sector_closure_claimed"] == "no"
     assert active["full_scalar_qft_closure_claimed"] == "no"
     assert active["qft_gr_closure_claimed"] == "no"
-    assert active["old_omnibus_tests_not_active_acceptance_authority"] == "yes"
     assert active["master_action_promoted"] == "no"
 
 

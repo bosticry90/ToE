@@ -56,6 +56,13 @@ from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_
     OUTCOME_ID as PHI_ATTEMPT_REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT as STRICT_PHI_ATTEMPT_REVIEW_OUTCOME,
 )
+from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_route_execution_report import (
+    DEFAULT_OUT as PHI_ATTEMPT_EXECUTION_OUT,
+    LEAN_PACKET_PATH as PHI_ATTEMPT_EXECUTION_LEAN_PACKET_PATH,
+    NEXT_TARGET as PHI_ATTEMPT_EXECUTION_REVIEW_TARGET,
+    OUTCOME_ID as PHI_ATTEMPT_EXECUTION_OUTCOME,
+    STRICT_EXECUTION_RESULT as STRICT_PHI_ATTEMPT_EXECUTION_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -387,16 +394,43 @@ def test_phi_source_packet_result_review_rotates_to_attempt_preparation() -> Non
     assert attempt_review["rule_promoted"] == "no"
     assert attempt_review["master_action_promoted"] == "no"
 
+    if active["workstream_id"] == PHI_ATTEMPT_EXECUTION_TARGET:
+        assert active["status"] == "active"
+        assert active["consumed_target"] == PHI_ATTEMPT_REVIEW_TARGET
+        assert active["review_result"] == PHI_ATTEMPT_REVIEW_OUTCOME
+        assert active["strict_review_result"] == STRICT_PHI_ATTEMPT_REVIEW_OUTCOME
+        assert active["execution_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["proof_attempt_executed"] == "no"
+        assert active["theorem_discharged"] == "no"
+        assert active["C_source_phi_discharged"] == "no"
+        assert active["phi_sector_closure_claimed"] == "no"
+        assert active["master_action_promoted"] == "no"
+        return
+
+    execution = _workstream(registry, PHI_ATTEMPT_EXECUTION_TARGET)
+    assert execution["status"] == "paused"
+    assert execution["authorization_evidence"] == (
+        _rel(PHI_ATTEMPT_EXECUTION_LEAN_PACKET_PATH)
+    )
+    assert execution["report"] == _rel(PHI_ATTEMPT_EXECUTION_OUT)
+    assert execution["execution_result"] == PHI_ATTEMPT_EXECUTION_OUTCOME
+    assert execution["strict_execution_result"] == STRICT_PHI_ATTEMPT_EXECUTION_OUTCOME
+    assert execution["selected_next_target"] == PHI_ATTEMPT_EXECUTION_REVIEW_TARGET
+    assert execution["C_source_phi_zero_derived"] == "yes"
+    assert execution["C_source_phi_discharged"] == "yes"
+    assert execution["phi_sector_closure_claimed"] == "no"
+    assert execution["master_action_promoted"] == "no"
+
     assert active["status"] == "active"
-    assert active["workstream_id"] == PHI_ATTEMPT_EXECUTION_TARGET
-    assert active["consumed_target"] == PHI_ATTEMPT_REVIEW_TARGET
-    assert active["review_result"] == PHI_ATTEMPT_REVIEW_OUTCOME
-    assert active["strict_review_result"] == STRICT_PHI_ATTEMPT_REVIEW_OUTCOME
-    assert active["execution_result"] == "PENDING"
+    assert active["workstream_id"] == PHI_ATTEMPT_EXECUTION_REVIEW_TARGET
+    assert active["consumed_target"] == PHI_ATTEMPT_EXECUTION_TARGET
+    assert active["execution_result"] == PHI_ATTEMPT_EXECUTION_OUTCOME
+    assert active["strict_execution_result"] == STRICT_PHI_ATTEMPT_EXECUTION_OUTCOME
+    assert active["review_result"] == "PENDING"
     assert active["selected_next_target"] == "PENDING"
-    assert active["proof_attempt_executed"] == "no"
-    assert active["theorem_discharged"] == "no"
-    assert active["C_source_phi_discharged"] == "no"
+    assert active["C_source_phi_zero_derived"] == "yes"
+    assert active["C_source_phi_discharged"] == "yes"
     assert active["phi_sector_closure_claimed"] == "no"
     assert active["master_action_promoted"] == "no"
 
