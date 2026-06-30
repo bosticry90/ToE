@@ -46,6 +46,11 @@ from formal.python.tools.phi_source_theorem_linkage_obligation_packet_result_rev
     SUGGESTED_PREPARATION_OUTCOME,
     build_phi_source_theorem_linkage_obligation_packet_result_review,
 )
+from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_route_report import (
+    NEXT_TARGET as PHI_ATTEMPT_REVIEW_TARGET,
+    OUTCOME_ID as PHI_ATTEMPT_OUTCOME,
+    STRICT_ATTEMPT_PREPARATION_RESULT as STRICT_PHI_ATTEMPT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -265,7 +270,6 @@ def test_phi_source_packet_result_review_rotates_to_attempt_preparation() -> Non
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current is True
 
     assert consumed_target() in registry["completed_targets"]
     assert consumed_target() in registry["consumed_targets"]
@@ -306,30 +310,61 @@ def test_phi_source_packet_result_review_rotates_to_attempt_preparation() -> Non
     assert review["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
+    if is_current:
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["review_result"] == OUTCOME_ID
+        assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert active["attempt_preparation_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["C_source_phi_residual_definition"] == (
+            C_SOURCE_PHI_RESIDUAL_DEFINITION
+        )
+        assert active["source_admissibility_condition"] == (
+            C_SOURCE_PHI_SOURCE_ADMISSIBILITY_CONDITION
+        )
+        assert active["residual_identity_form"] == RESIDUAL_IDENTITY_FORM
+        assert active["A_source_route_imported"] == "no"
+        assert active["psi_A_sourced_Maxwell_imported"] == "no"
+        assert active["QFT_GR_source_route_imported"] == "no"
+        assert active["proof_attempt_executed"] == "no"
+        assert active["C_source_phi_discharged"] == "no"
+        assert active["phi_sector_closure_claimed"] == "no"
+        assert active["full_scalar_qft_closure_claimed"] == "no"
+        assert active["qft_gr_closure_claimed"] == "no"
+        assert active["master_action_promoted"] == "no"
+        return
+
+    attempt = _workstream(registry, NEXT_TARGET)
+    assert attempt["status"] == "paused"
+    assert attempt["attempt_preparation_result"] == PHI_ATTEMPT_OUTCOME
+    assert attempt["strict_attempt_preparation_result"] == STRICT_PHI_ATTEMPT_OUTCOME
+    assert attempt["selected_next_target"] == PHI_ATTEMPT_REVIEW_TARGET
+    assert attempt["proof_attempt_executed"] == "no"
+    assert attempt["theorem_discharged"] == "no"
+    assert attempt["C_source_phi_discharged"] == "no"
+    assert attempt["A_source_route_imported"] == "no"
+    assert attempt["psi_A_sourced_Maxwell_imported"] == "no"
+    assert attempt["QFT_GR_source_route_imported"] == "no"
+    assert attempt["rule_promoted"] == "no"
+    assert attempt["master_action_promoted"] == "no"
+
     assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["attempt_preparation_result"] == "PENDING"
+    assert active["workstream_id"] == PHI_ATTEMPT_REVIEW_TARGET
+    assert active["consumed_target"] == NEXT_TARGET
+    assert active["attempt_preparation_result"] == PHI_ATTEMPT_OUTCOME
+    assert active["strict_attempt_preparation_result"] == STRICT_PHI_ATTEMPT_OUTCOME
+    assert active["review_result"] == "PENDING"
     assert active["selected_next_target"] == "PENDING"
-    assert active["C_source_phi_residual_definition"] == C_SOURCE_PHI_RESIDUAL_DEFINITION
-    assert active["source_admissibility_condition"] == (
-        C_SOURCE_PHI_SOURCE_ADMISSIBILITY_CONDITION
-    )
-    assert active["residual_identity_form"] == RESIDUAL_IDENTITY_FORM
-    assert active["A_source_route_imported"] == "no"
-    assert active["psi_A_sourced_Maxwell_imported"] == "no"
-    assert active["QFT_GR_source_route_imported"] == "no"
     assert active["proof_attempt_executed"] == "no"
+    assert active["theorem_discharged"] == "no"
     assert active["C_source_phi_discharged"] == "no"
     assert active["phi_sector_closure_claimed"] == "no"
-    assert active["full_scalar_qft_closure_claimed"] == "no"
-    assert active["qft_gr_closure_claimed"] == "no"
     assert active["master_action_promoted"] == "no"
 
 
