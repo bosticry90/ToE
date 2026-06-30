@@ -42,6 +42,11 @@ from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_rout
     TARGET_CONCLUSION,
     build_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review,
 )
+from formal.python.tools.A_source_theorem_linkage_obligation_closeout_report import (
+    NEXT_TARGET as CLOSEOUT_REVIEW_TARGET,
+    OUTCOME_ID as CLOSEOUT_RESULT,
+    STRICT_CLOSEOUT_RESULT,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -210,7 +215,7 @@ def test_A_source_execution_result_review_rotates_to_closeout_preparation() -> N
     evidence = _rel(LEAN_PACKET_PATH)
     report = _rel(DEFAULT_OUT)
 
-    assert_historical_target_recorded(
+    is_current = assert_historical_target_recorded(
         payload=registry,
         previous_target=consumed_target(),
         live_target=NEXT_TARGET,
@@ -242,27 +247,49 @@ def test_A_source_execution_result_review_rotates_to_closeout_preparation() -> N
     assert consumed["master_action_promoted"] == "no"
 
     active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["review_result"] == OUTCOME_ID
-    assert active["strict_review_result"] == STRICT_REVIEW_RESULT
-    assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
-    assert active["closeout_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["C_source_A_zero_derived"] == "yes"
-    assert active["J_current_imported"] == "no"
-    assert active["psi_A_sourced_route_substituted"] == "no"
-    assert active["sourced_maxwell_closure_claimed"] == "no"
-    assert active["full_maxwell_closure_claimed"] == "no"
-    assert active["A_sector_closure_claimed"] == "no"
-    assert active["seam_closure_claim"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
+    if is_current:
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["review_result"] == OUTCOME_ID
+        assert active["strict_review_result"] == STRICT_REVIEW_RESULT
+        assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
+        assert active["closeout_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["C_source_A_zero_derived"] == "yes"
+        assert active["J_current_imported"] == "no"
+        assert active["psi_A_sourced_route_substituted"] == "no"
+        assert active["sourced_maxwell_closure_claimed"] == "no"
+        assert active["full_maxwell_closure_claimed"] == "no"
+        assert active["A_sector_closure_claimed"] == "no"
+        assert active["seam_closure_claim"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+    else:
+        closeout = _workstream(registry, NEXT_TARGET)
+        assert closeout["status"] == "paused"
+        assert closeout["closeout_result"] == CLOSEOUT_RESULT
+        assert closeout["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
+        assert closeout["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
+        assert closeout["A_source_theorem_linkage_obligation_locally_closed"] == "yes"
+        assert closeout["J_current_imported"] == "no"
+        assert closeout["psi_A_sourced_route_substituted"] == "no"
+        assert closeout["sourced_maxwell_closure_claimed"] == "no"
+        assert closeout["full_maxwell_closure_claimed"] == "no"
+        assert closeout["A_sector_closure_claimed"] == "no"
+        assert closeout["seam_closure_claim"] == "no"
+        assert closeout["rule_promoted"] == "no"
+        assert closeout["master_action_promoted"] == "no"
+
+        assert active["status"] == "active"
+        assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
+        assert active["consumed_target"] == NEXT_TARGET
+        assert active["closeout_result"] == CLOSEOUT_RESULT
+        assert active["review_result"] == "PENDING"
 
 
 def test_A_source_execution_result_review_mirrors() -> None:

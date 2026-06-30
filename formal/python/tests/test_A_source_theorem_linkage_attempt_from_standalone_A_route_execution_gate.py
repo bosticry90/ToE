@@ -49,6 +49,11 @@ from formal.python.tools.A_source_theorem_linkage_attempt_from_standalone_A_rout
     OUTCOME_ID as EXECUTION_REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT as EXECUTION_REVIEW_STRICT_OUTCOME,
 )
+from formal.python.tools.A_source_theorem_linkage_obligation_closeout_report import (
+    NEXT_TARGET as CLOSEOUT_REVIEW_TARGET,
+    OUTCOME_ID as CLOSEOUT_RESULT,
+    STRICT_CLOSEOUT_RESULT,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -315,11 +320,29 @@ def test_A_source_standalone_attempt_execution_rotates_to_result_review() -> Non
         assert review["rule_promoted"] == "no"
         assert review["master_action_promoted"] == "no"
 
-        assert active["status"] == "active"
-        assert active["workstream_id"] == CLOSEOUT_TARGET
-        assert active["consumed_target"] == NEXT_TARGET
-        assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
-        assert active["closeout_result"] == "PENDING"
+        if active["workstream_id"] == CLOSEOUT_TARGET:
+            assert active["status"] == "active"
+            assert active["consumed_target"] == NEXT_TARGET
+            assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
+            assert active["closeout_result"] == "PENDING"
+        else:
+            closeout = _workstream(registry, CLOSEOUT_TARGET)
+            assert closeout["status"] == "paused"
+            assert closeout["closeout_result"] == CLOSEOUT_RESULT
+            assert closeout["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
+            assert closeout["selected_next_target"] == CLOSEOUT_REVIEW_TARGET
+            assert closeout["A_source_theorem_linkage_obligation_locally_closed"] == "yes"
+            assert closeout["J_current_imported"] == "no"
+            assert closeout["psi_A_sourced_route_substituted"] == "no"
+            assert closeout["rule_promoted"] == "no"
+            assert closeout["master_action_promoted"] == "no"
+
+            assert active["status"] == "active"
+            assert active["workstream_id"] == CLOSEOUT_REVIEW_TARGET
+            assert active["consumed_target"] == CLOSEOUT_TARGET
+            assert active["closeout_result"] == CLOSEOUT_RESULT
+            assert active["strict_closeout_result"] == STRICT_CLOSEOUT_RESULT
+            assert active["review_result"] == "PENDING"
 
 
 def test_A_source_standalone_attempt_execution_mirrors() -> None:

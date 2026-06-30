@@ -22,7 +22,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_A_source_theorem_linkage_obligation_closeout" := by
+      "review_A_source_theorem_linkage_obligation_closeout_result" := by
   rfl
 
 end CurrentAuthority
