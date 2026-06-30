@@ -169,6 +169,7 @@ import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterASourc
 import ToeFormal.Derivation.PhiSourceTheoremLinkageObligationPacket
 import ToeFormal.Derivation.PhiSourceTheoremLinkageObligationPacketResultReview
 import ToeFormal.Derivation.PhiSourceTheoremLinkageAttemptFromStandalonePhiRoute
+import ToeFormal.Derivation.PhiSourceTheoremLinkageAttemptFromStandalonePhiRouteResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -192,17 +193,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiSourceTheoremLinkageAttemptFromStandalonePhiRoute.attemptPreparationResult
+  PhiSourceTheoremLinkageAttemptFromStandalonePhiRouteResultReview.reviewResult
 
 def currentPacketId : String :=
-  PhiSourceTheoremLinkageAttemptFromStandalonePhiRoute.packetId
+  PhiSourceTheoremLinkageAttemptFromStandalonePhiRouteResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_source_theorem_linkage_attempt_preparation :
+theorem qft_gr_lane_aggregate_exposes_phi_source_theorem_linkage_attempt_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PHI_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_ROUTE_PREPARED_" ++
-          "C_SOURCE_PHI_LINKAGE_ROUTE_INDEXED_NO_THEOREM_DISCHARGE_OR_CK_RULE_" ++
-          "PROMOTION" := by
+        "PHI_SOURCE_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_ROUTE_RESULT_" ++
+          "REVIEW_ACCEPTS_C_SOURCE_PHI_LINKAGE_ROUTE_PREPARATION_NO_THEOREM_" ++
+          "DISCHARGE_OR_CK_RULE_PROMOTION" := by
   constructor
   · rfl
   · rfl

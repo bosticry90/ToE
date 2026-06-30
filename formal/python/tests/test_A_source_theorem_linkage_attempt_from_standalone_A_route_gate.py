@@ -86,6 +86,11 @@ from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_
     OUTCOME_ID as PHI_SOURCE_ATTEMPT_OUTCOME,
     STRICT_ATTEMPT_PREPARATION_RESULT as STRICT_PHI_SOURCE_ATTEMPT_OUTCOME,
 )
+from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_route_result_review_report import (
+    NEXT_TARGET as PHI_SOURCE_ATTEMPT_EXECUTION_TARGET,
+    OUTCOME_ID as PHI_SOURCE_ATTEMPT_REVIEW_OUTCOME,
+    STRICT_REVIEW_RESULT as STRICT_PHI_SOURCE_ATTEMPT_REVIEW_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -287,14 +292,46 @@ def _assert_A_source_selector_or_review_active(registry: dict, active: dict) -> 
     assert phi_attempt["rule_promoted"] == "no"
     assert phi_attempt["master_action_promoted"] == "no"
 
-    assert active["status"] == "active"
-    assert active["workstream_id"] == PHI_SOURCE_ATTEMPT_REVIEW_TARGET
-    assert active["consumed_target"] == PHI_SOURCE_ATTEMPT_TARGET
-    assert active["attempt_preparation_result"] == PHI_SOURCE_ATTEMPT_OUTCOME
-    assert active["strict_attempt_preparation_result"] == (
-        STRICT_PHI_SOURCE_ATTEMPT_OUTCOME
+    if active["workstream_id"] == PHI_SOURCE_ATTEMPT_REVIEW_TARGET:
+        assert active["status"] == "active"
+        assert active["consumed_target"] == PHI_SOURCE_ATTEMPT_TARGET
+        assert active["attempt_preparation_result"] == PHI_SOURCE_ATTEMPT_OUTCOME
+        assert active["strict_attempt_preparation_result"] == (
+            STRICT_PHI_SOURCE_ATTEMPT_OUTCOME
+        )
+        assert active["review_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["proof_attempt_executed"] == "no"
+        assert active["theorem_discharged"] == "no"
+        assert active["C_source_phi_discharged"] == "no"
+        assert active["phi_sector_closure_claimed"] == "no"
+        assert active["master_action_promoted"] == "no"
+        return
+
+    phi_attempt_review = _workstream(registry, PHI_SOURCE_ATTEMPT_REVIEW_TARGET)
+    assert phi_attempt_review["status"] == "paused"
+    assert phi_attempt_review["review_result"] == PHI_SOURCE_ATTEMPT_REVIEW_OUTCOME
+    assert phi_attempt_review["strict_review_result"] == (
+        STRICT_PHI_SOURCE_ATTEMPT_REVIEW_OUTCOME
     )
-    assert active["review_result"] == "PENDING"
+    assert phi_attempt_review["selected_next_target"] == (
+        PHI_SOURCE_ATTEMPT_EXECUTION_TARGET
+    )
+    assert phi_attempt_review["proof_attempt_executed"] == "no"
+    assert phi_attempt_review["theorem_discharged"] == "no"
+    assert phi_attempt_review["C_source_phi_discharged"] == "no"
+    assert phi_attempt_review["A_source_route_imported"] == "no"
+    assert phi_attempt_review["psi_A_sourced_Maxwell_imported"] == "no"
+    assert phi_attempt_review["QFT_GR_source_route_imported"] == "no"
+    assert phi_attempt_review["rule_promoted"] == "no"
+    assert phi_attempt_review["master_action_promoted"] == "no"
+
+    assert active["status"] == "active"
+    assert active["workstream_id"] == PHI_SOURCE_ATTEMPT_EXECUTION_TARGET
+    assert active["consumed_target"] == PHI_SOURCE_ATTEMPT_REVIEW_TARGET
+    assert active["review_result"] == PHI_SOURCE_ATTEMPT_REVIEW_OUTCOME
+    assert active["strict_review_result"] == STRICT_PHI_SOURCE_ATTEMPT_REVIEW_OUTCOME
+    assert active["execution_result"] == "PENDING"
     assert active["selected_next_target"] == "PENDING"
     assert active["proof_attempt_executed"] == "no"
     assert active["theorem_discharged"] == "no"
