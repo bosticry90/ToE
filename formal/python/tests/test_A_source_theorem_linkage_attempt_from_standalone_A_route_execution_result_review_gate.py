@@ -52,6 +52,12 @@ from formal.python.tools.A_source_theorem_linkage_obligation_closeout_result_rev
     OUTCOME_ID as CLOSEOUT_REVIEW_RESULT,
     STRICT_REVIEW_RESULT as STRICT_CLOSEOUT_REVIEW_RESULT,
 )
+from formal.python.tools.ck_family_theorem_linkage_obligation_selection_after_A_source_closeout_report import (
+    NEXT_TARGET as A_SOURCE_SELECTOR_REVIEW_TARGET,
+    OUTCOME_ID as A_SOURCE_SELECTOR_OUTCOME,
+    SELECTED_OBLIGATION as A_SOURCE_SELECTOR_SELECTED_OBLIGATION,
+    STRICT_SELECTION_RESULT as STRICT_A_SOURCE_SELECTOR_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -115,6 +121,37 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
         if row["workstream_id"] == workstream_id:
             return row
     raise AssertionError(f"Missing workstream: {workstream_id}")
+
+
+def _assert_A_source_selector_or_review_active(registry: dict, active: dict) -> None:
+    if active["workstream_id"] == A_SOURCE_SELECTOR_TARGET:
+        assert active["status"] == "active"
+        assert active["consumed_target"] == CLOSEOUT_REVIEW_TARGET
+        assert active["review_result"] == CLOSEOUT_REVIEW_RESULT
+        assert active["selection_result"] == "PENDING"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+        return
+
+    selector = _workstream(registry, A_SOURCE_SELECTOR_TARGET)
+    assert selector["status"] == "paused"
+    assert selector["selected_next_target"] == A_SOURCE_SELECTOR_REVIEW_TARGET
+    assert selector["selection_result"] == A_SOURCE_SELECTOR_OUTCOME
+    assert selector["strict_selection_result"] == STRICT_A_SOURCE_SELECTOR_OUTCOME
+    assert selector["rule_promoted"] == "no"
+    assert selector["master_action_promoted"] == "no"
+
+    assert active["status"] == "active"
+    assert active["workstream_id"] == A_SOURCE_SELECTOR_REVIEW_TARGET
+    assert active["consumed_target"] == A_SOURCE_SELECTOR_TARGET
+    assert active["selector_outcome"] == A_SOURCE_SELECTOR_OUTCOME
+    assert active["strict_selector_outcome"] == STRICT_A_SOURCE_SELECTOR_OUTCOME
+    assert active["review_result"] == "PENDING"
+    assert active["selected_obligation"] == A_SOURCE_SELECTOR_SELECTED_OBLIGATION
+    assert active["proof_execution_authorized"] == "no"
+    assert active["gap_discharged"] == "no"
+    assert active["rule_promoted"] == "no"
+    assert active["master_action_promoted"] == "no"
 
 
 def consumed_target() -> str:
@@ -304,13 +341,7 @@ def test_A_source_execution_result_review_rotates_to_closeout_preparation() -> N
             )
             assert closeout_review["selected_next_target"] == A_SOURCE_SELECTOR_TARGET
 
-            assert active["status"] == "active"
-            assert active["workstream_id"] == A_SOURCE_SELECTOR_TARGET
-            assert active["consumed_target"] == CLOSEOUT_REVIEW_TARGET
-            assert active["review_result"] == CLOSEOUT_REVIEW_RESULT
-            assert active["selection_result"] == "PENDING"
-            assert active["rule_promoted"] == "no"
-            assert active["master_action_promoted"] == "no"
+            _assert_A_source_selector_or_review_active(registry, active)
 
 
 def test_A_source_execution_result_review_mirrors() -> None:
