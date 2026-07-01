@@ -177,6 +177,7 @@ import ToeFormal.Derivation.PhiSourceTheoremLinkageObligationCloseoutResultRevie
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiSourceCloseout
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiSourceCloseoutResultReview
 import ToeFormal.Derivation.PhiBridgeTheoremLinkageObligationPacket
+import ToeFormal.Derivation.PhiBridgeTheoremLinkageObligationPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -200,16 +201,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiBridgeTheoremLinkageObligationPacket.packetResult
+  PhiBridgeTheoremLinkageObligationPacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  PhiBridgeTheoremLinkageObligationPacket.packetId
+  PhiBridgeTheoremLinkageObligationPacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_bridge_packet :
+theorem qft_gr_lane_aggregate_exposes_phi_bridge_packet_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_PACKET_PREPARED_C_BRIDGE_PHI_" ++
-          "ROUTE_SCOPED_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION" := by
+        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_" ++
+          "C_BRIDGE_PHI_ROUTE_SCOPE_NO_PROOF_EXECUTION_OR_CK_RULE_PROMOTION" := by
   constructor
   · rfl
   · rfl
