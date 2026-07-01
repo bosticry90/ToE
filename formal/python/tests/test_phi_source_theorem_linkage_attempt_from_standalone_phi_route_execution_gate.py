@@ -46,6 +46,15 @@ from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_
     OUTCOME_ID as RESULT_REVIEW_OUTCOME,
     STRICT_REVIEW_RESULT,
 )
+from formal.python.tools.phi_source_theorem_linkage_attempt_from_standalone_phi_route_execution_result_review_report import (
+    CLOSEOUT_OUTCOME,
+    DEFAULT_OUT as EXECUTION_RESULT_REVIEW_OUT,
+    LEAN_PACKET_PATH as EXECUTION_RESULT_REVIEW_LEAN_PACKET_PATH,
+    NEXT_TARGET as CLOSEOUT_TARGET,
+    OUTCOME_ID as EXECUTION_RESULT_REVIEW_OUTCOME,
+    STRICT_CLOSEOUT_OUTCOME,
+    STRICT_REVIEW_RESULT as EXECUTION_RESULT_REVIEW_STRICT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -267,7 +276,6 @@ def test_phi_source_standalone_attempt_execution_rotates_to_result_review() -> N
         evidence=evidence,
         lane=NEXT_TARGET,
     )
-    assert is_current is True
 
     assert prior_review_target() in registry["completed_targets"]
     assert prior_review_target() in registry["consumed_targets"]
@@ -293,36 +301,72 @@ def test_phi_source_standalone_attempt_execution_rotates_to_result_review() -> N
     assert consumed["rule_promoted"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
-    active = active_workstream(registry)
-    assert active["status"] == "active"
-    assert active["workstream_id"] == NEXT_TARGET
-    assert active["active_lane"] == NEXT_TARGET
-    assert active["authorization_evidence"] == evidence
-    assert active["authorized_next_strict_target"] == NEXT_TARGET
-    assert active["report"] == report
-    assert active["consumed_target"] == consumed_target()
-    assert active["consumed_target_kind"] == (
-        "phi_source_theorem_linkage_attempt_from_standalone_phi_route_execution"
-    )
-    assert active["execution_result"] == OUTCOME_ID
-    assert active["strict_execution_result"] == STRICT_EXECUTION_RESULT
-    assert active["review_result"] == "PENDING"
-    assert active["selected_next_target"] == "PENDING"
-    assert active["C_source_phi_zero_derived"] == "yes"
-    assert active["C_source_phi_linkage_constructed"] == "yes"
-    assert active["C_source_phi_discharged"] == "yes"
-    assert active["phi_sector_closure_claimed"] == "no"
-    assert active["full_scalar_qft_closure_claimed"] == "no"
-    assert active["qft_gr_closure_claimed"] == "no"
-    assert active["em_qft_closure_claimed"] == "no"
-    assert active["general_C_k_closure"] == "no"
-    assert active["seam_closure_claim"] == "no"
-    assert active["rule_promoted"] == "no"
-    assert active["master_action_promoted"] == "no"
-    assert active["result_review_outcome_suggested"] == SUGGESTED_REVIEW_OUTCOME
-    assert active["strict_result_review_outcome_suggested"] == (
-        STRICT_SUGGESTED_REVIEW_OUTCOME
-    )
+    if is_current:
+        active = active_workstream(registry)
+        assert active["status"] == "active"
+        assert active["workstream_id"] == NEXT_TARGET
+        assert active["active_lane"] == NEXT_TARGET
+        assert active["authorization_evidence"] == evidence
+        assert active["authorized_next_strict_target"] == NEXT_TARGET
+        assert active["report"] == report
+        assert active["consumed_target"] == consumed_target()
+        assert active["consumed_target_kind"] == (
+            "phi_source_theorem_linkage_attempt_from_standalone_phi_route_execution"
+        )
+        assert active["execution_result"] == OUTCOME_ID
+        assert active["strict_execution_result"] == STRICT_EXECUTION_RESULT
+        assert active["review_result"] == "PENDING"
+        assert active["selected_next_target"] == "PENDING"
+        assert active["C_source_phi_zero_derived"] == "yes"
+        assert active["C_source_phi_linkage_constructed"] == "yes"
+        assert active["C_source_phi_discharged"] == "yes"
+        assert active["phi_sector_closure_claimed"] == "no"
+        assert active["full_scalar_qft_closure_claimed"] == "no"
+        assert active["qft_gr_closure_claimed"] == "no"
+        assert active["em_qft_closure_claimed"] == "no"
+        assert active["general_C_k_closure"] == "no"
+        assert active["seam_closure_claim"] == "no"
+        assert active["rule_promoted"] == "no"
+        assert active["master_action_promoted"] == "no"
+        assert active["result_review_outcome_suggested"] == SUGGESTED_REVIEW_OUTCOME
+        assert active["strict_result_review_outcome_suggested"] == (
+            STRICT_SUGGESTED_REVIEW_OUTCOME
+        )
+    else:
+        review = _workstream(registry, NEXT_TARGET)
+        assert review["status"] == "paused"
+        assert review["authorization_evidence"] == _rel(
+            EXECUTION_RESULT_REVIEW_LEAN_PACKET_PATH
+        )
+        assert review["report"] == _rel(EXECUTION_RESULT_REVIEW_OUT)
+        assert review["review_result"] == EXECUTION_RESULT_REVIEW_OUTCOME
+        assert review["strict_review_result"] == EXECUTION_RESULT_REVIEW_STRICT_OUTCOME
+        assert review["selected_next_target"] == CLOSEOUT_TARGET
+        assert review["C_source_phi_zero_derived"] == "yes"
+        assert review["phi_sector_closure_claimed"] == "no"
+        assert review["full_scalar_qft_closure_claimed"] == "no"
+        assert review["qft_gr_closure_claimed"] == "no"
+        assert review["em_qft_closure_claimed"] == "no"
+        assert review["general_C_k_closure"] == "no"
+        assert review["seam_closure_claim"] == "no"
+        assert review["rule_promoted"] == "no"
+        assert review["master_action_promoted"] == "no"
+
+        active = active_workstream(registry)
+        if active["workstream_id"] == CLOSEOUT_TARGET:
+            assert active["status"] == "active"
+            assert active["consumed_target"] == NEXT_TARGET
+            assert active["review_result"] == EXECUTION_RESULT_REVIEW_OUTCOME
+            assert active["strict_review_result"] == (
+                EXECUTION_RESULT_REVIEW_STRICT_OUTCOME
+            )
+            assert active["closeout_outcome_suggested"] == CLOSEOUT_OUTCOME
+            assert active["strict_closeout_outcome_suggested"] == (
+                STRICT_CLOSEOUT_OUTCOME
+            )
+            assert active["closeout_result"] == "PENDING"
+            assert active["rule_promoted"] == "no"
+            assert active["master_action_promoted"] == "no"
 
 
 def test_phi_source_standalone_attempt_execution_mirrors() -> None:
