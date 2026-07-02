@@ -53,7 +53,7 @@
     "ToeFormal.Derivation.CurrentTarget",
     "ToeFormal.Release.CurrentAuthority"
   ],
-  "later_ccft_artifacts_fully_populated": true,
+  "later_ccft_artifacts_fully_populated": false,
   "lean_status_wording": "full ToeFormal aggregate = NOT_COMPLETED_PARALLEL_FILE_LOCK_COLLISION; scoped Lean targets = PASSED_SERIAL_RERUN",
   "lean_status_wording_lines": [
     "full ToeFormal aggregate = NOT_COMPLETED_PARALLEL_FILE_LOCK_COLLISION",

@@ -99,6 +99,42 @@ CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_BOUNDARY = (
     "component, validate CCFT, authorize empirical discriminator claims, close "
     "any pillar or seam, or promote the master action."
 )
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_OUTCOME = (
+    "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_"
+    "LAGRANGIAN_HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_"
+    "OR_MASTER_ACTION_PROMOTION"
+)
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_STRICT_OUTCOME = (
+    "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_PRE_"
+    "DERIVATION_PLAN_NO_CK_VARIATION_OR_CCFT_VALIDATION"
+)
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_ACCEPTANCE_ITEMS = [
+    "CCFT full variational/action program packet accepted",
+    "CCFT full Lagrangian candidate targets indexed",
+    "CCFT full Hamiltonian candidate targets indexed",
+    "phi-sector variational route targets indexed",
+    "chi-sector variational route targets indexed",
+    "R/K rotor-curvature variational route targets indexed",
+    "CCFT stress-energy/source candidate targets indexed",
+    "CCFT C_source derivation targets indexed",
+    "CCFT C_bridge derivation targets indexed",
+    "CCFT C_transport component-derivation targets indexed",
+    "CCFT C_exchange phi-chi exchange-balance targets indexed",
+    "required blockers before action embedding preserved",
+    "required blockers before C_k variation preserved",
+    "required blockers before empirical discriminator claims preserved",
+    "no proof execution",
+    "no new theorem discharge",
+    "no CCFT validation",
+    "no action embedding",
+    "no C_k variation",
+    "no empirical validation",
+    "no seam closure",
+    "no master-action promotion",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_TARGET = (
+    "prepare_ccft_empirical_discriminator_candidate_map_packet"
+)
 
 NONCLAIMS = [
     "no proof execution",
@@ -536,6 +572,37 @@ STAGES: dict[str, StageSpec] = {
         ),
         stage_role="ccft_full_variational_action_program_packet",
     ),
+    "variational_review": StageSpec(
+        key="variational_review",
+        schema_id=(
+            "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_"
+            "20260702_v0"
+        ),
+        packet_id="CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_v0",
+        status="ACTIVE_CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW",
+        outcome_id=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_OUTCOME,
+        strict_outcome_id=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_STRICT_OUTCOME,
+        consumed_target=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_TARGET,
+        consumed_target_kind=(
+            "ccft_full_variational_action_program_packet_result_review"
+        ),
+        selected_next_target=CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_TARGET,
+        selected_next_target_kind="ccft_empirical_discriminator_candidate_map_packet",
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTFullVariationalActionProgramPacketResultReview"
+        ),
+        json_filename=(
+            "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_"
+            "20260702_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "ccft_full_variational_action_program_review_accepts_pre_derivation_"
+            "plan_only"
+        ),
+        stage_role="ccft_full_variational_action_program_packet_result_review",
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -549,6 +616,7 @@ ORDERED_STAGE_KEYS = [
     "ck_index_packet",
     "ck_index_review",
     "variational_packet",
+    "variational_review",
 ]
 
 
@@ -641,6 +709,24 @@ def build_stage_payload(
     captured_at_utc: str = DEFAULT_CAPTURED_AT_UTC,
 ) -> dict[str, Any]:
     spec = STAGES[stage_key]
+    ccft_crosswalk_prepared = stage_key in {
+        "crosswalk_packet",
+        "ck_index_packet",
+        "ck_index_review",
+        "variational_packet",
+        "variational_review",
+    }
+    ccft_ck_index_prepared = stage_key in {
+        "ck_index_packet",
+        "ck_index_review",
+        "variational_packet",
+        "variational_review",
+    }
+    ccft_full_variational_program_prepared = stage_key in {
+        "variational_packet",
+        "variational_review",
+    }
+    ccft_empirical_discriminator_map_prepared = False
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
         "schema_id": spec.schema_id,
@@ -678,39 +764,37 @@ def build_stage_payload(
         "phi_triad_role": "local theorem-linkage family only",
         "ccft_required_follow_on_artifacts": CCFT_REQUIRED_FOLLOW_ON_ARTIFACTS,
         "next_required_object": (
-            "CCFT full variational/action program packet result review"
-            if stage_key == "variational_packet"
+            "CCFT empirical discriminator candidate map packet"
+            if stage_key == "variational_review"
             else (
-                "CCFT full variational/action program packet"
-                if stage_key == "ck_index_review"
-                else "CCFT-to-ToE object crosswalk"
+                "CCFT full variational/action program packet result review"
+                if stage_key == "variational_packet"
+                else (
+                    "CCFT full variational/action program packet"
+                    if stage_key == "ck_index_review"
+                    else "CCFT-to-ToE object crosswalk"
+                )
             )
         ),
         "roadmap_rebase_lists_follow_on_artifacts_only": (
             stage_key in {"roadmap_packet", "roadmap_review"}
         ),
         "later_ccft_artifacts_fully_populated": (
-            stage_key
-            in {
-                "crosswalk_packet",
-                "ck_index_packet",
-                "ck_index_review",
-                "variational_packet",
-            }
+            ccft_crosswalk_prepared
+            and ccft_ck_index_prepared
+            and ccft_full_variational_program_prepared
+            and ccft_empirical_discriminator_map_prepared
         ),
-        "CCFT_TO_TOE_OBJECT_CROSSWALK_v0_prepared": stage_key in {
-            "crosswalk_packet",
-            "ck_index_packet",
-            "ck_index_review",
-            "variational_packet",
-        },
+        "CCFT_TO_TOE_OBJECT_CROSSWALK_v0_prepared": ccft_crosswalk_prepared,
         "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_v0_prepared": (
-            stage_key in {"ck_index_packet", "ck_index_review", "variational_packet"}
+            ccft_ck_index_prepared
         ),
         "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0_prepared": (
-            stage_key == "variational_packet"
+            ccft_full_variational_program_prepared
         ),
-        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared": False,
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared": (
+            ccft_empirical_discriminator_map_prepared
+        ),
         "files": {
             "json_report": _ptr(release_path(spec)),
             "lean_packet_file": _ptr(lean_path(spec)),
@@ -747,7 +831,7 @@ def build_stage_payload(
                 ),
             }
         )
-    if stage_key == "variational_packet":
+    if stage_key in {"variational_packet", "variational_review"}:
         payload.update(
             {
                 "ccft_full_variational_action_program_targets": (
@@ -775,6 +859,23 @@ def build_stage_payload(
                 "C_k_action_embedding_authorized": False,
                 "C_k_variation_authorized": False,
                 "empirical_discriminator_claims_authorized": False,
+            }
+        )
+    if stage_key == "variational_review":
+        payload.update(
+            {
+                "ccft_full_variational_action_program_review_acceptance_items": (
+                    CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "ccft_full_variational_action_program_review_acceptance_item_count": (
+                    len(CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_ACCEPTANCE_ITEMS)
+                ),
+                "prepared_packet_result": (
+                    CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_STRICT_OUTCOME
+                ),
             }
         )
     payload.update(_result_fields(spec))

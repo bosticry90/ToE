@@ -37,19 +37,20 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 )
 
 
-FINAL_LIVE_TARGET = "review_ccft_full_variational_action_program_packet_result"
-FINAL_PREVIOUS_TARGET = "prepare_ccft_full_variational_action_program_packet"
+FINAL_LIVE_TARGET = "prepare_ccft_empirical_discriminator_candidate_map_packet"
+FINAL_PREVIOUS_TARGET = "review_ccft_full_variational_action_program_packet_result"
+VARIATIONAL_PACKET_TARGET = "prepare_ccft_full_variational_action_program_packet"
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "CCFTFullVariationalActionProgramPacket.lean"
+    "CCFTFullVariationalActionProgramPacketResultReview.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
-    "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_20260702_v0.json"
+    "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_20260702_v0.json"
 )
-FINAL_OUTCOME = STAGES["variational_packet"].outcome_id
-FINAL_STRICT_OUTCOME = STAGES["variational_packet"].strict_outcome_id
-FINAL_KIND = "ccft_full_variational_action_program_packet_result_review"
+FINAL_OUTCOME = STAGES["variational_review"].outcome_id
+FINAL_STRICT_OUTCOME = STAGES["variational_review"].strict_outcome_id
+FINAL_KIND = "ccft_empirical_discriminator_candidate_map_packet"
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
     "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
@@ -111,6 +112,10 @@ WRAPPER_BY_STAGE = {
     "variational_packet": (
         "formal/python/tools/ccft_full_variational_action_program_packet_report.py"
     ),
+    "variational_review": (
+        "formal/python/tools/"
+        "ccft_full_variational_action_program_packet_result_review_report.py"
+    ),
 }
 
 WRAPPER_BUILD_FUNCTION_BY_STAGE = {
@@ -168,6 +173,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
     "variational_packet": (
         "formal.python.tools.ccft_full_variational_action_program_packet_report",
         "build_ccft_full_variational_action_program_packet",
+    ),
+    "variational_review": (
+        "formal.python.tools."
+        "ccft_full_variational_action_program_packet_result_review_report",
+        "build_ccft_full_variational_action_program_packet_result_review",
     ),
 }
 
@@ -267,6 +277,11 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             LOCAL_PHI_THEOREM_LINKAGE_TRIAD_LABEL
         )
         assert report["local_phi_theorem_linkage_triad"] == LOCAL_PHI_TRIAD_EQUATIONS
+        assert (
+            report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
+            is False
+        )
+        assert report["later_ccft_artifacts_fully_populated"] is False
         for flag in JSON_FALSE_FLAGS:
             assert report[flag] is False, flag
 
@@ -278,9 +293,10 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
         "review_ccft_ck_admissibility_obligation_index_packet_result"
     )
     assert STAGES["ck_index_review"].selected_next_target == (
-        FINAL_PREVIOUS_TARGET
+        VARIATIONAL_PACKET_TARGET
     )
-    assert STAGES["variational_packet"].selected_next_target == FINAL_LIVE_TARGET
+    assert STAGES["variational_packet"].selected_next_target == FINAL_PREVIOUS_TARGET
+    assert STAGES["variational_review"].selected_next_target == FINAL_LIVE_TARGET
 
 
 def test_local_phi_triad_and_ccft_roadmap_staging_boundaries() -> None:
@@ -398,6 +414,8 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         assert row["local_phi_theorem_linkage_triad"] == (
             LOCAL_PHI_TRIAD_REGISTRY_TEXT
         )
+        assert row["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"] == "no"
+        assert row["later_ccft_artifacts_fully_populated"] == "no"
         if spec.result_kind == "selection":
             assert row["selection_result"] == spec.outcome_id
             assert row["strict_selection_result"] == spec.strict_outcome_id
@@ -414,7 +432,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert ck_review["strict_review_result"] == (
         STAGES["ck_index_review"].strict_outcome_id
     )
-    assert ck_review["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert ck_review["selected_next_target"] == VARIATIONAL_PACKET_TARGET
     assert ck_review["selected_next_target_kind"] == (
         "ccft_full_variational_action_program_packet"
     )
@@ -424,17 +442,42 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     )
     _assert_registry_nonclaims(ck_review)
 
-    prepared_packet = workstream(FINAL_PREVIOUS_TARGET, payload)
+    prepared_packet = workstream(VARIATIONAL_PACKET_TARGET, payload)
     assert prepared_packet["status"] == "paused"
-    assert prepared_packet["packet_result"] == FINAL_OUTCOME
-    assert prepared_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
-    assert prepared_packet["selected_next_target"] == FINAL_LIVE_TARGET
-    assert prepared_packet["selected_next_target_kind"] == FINAL_KIND
+    assert prepared_packet["packet_result"] == STAGES["variational_packet"].outcome_id
+    assert prepared_packet["strict_packet_result"] == (
+        STAGES["variational_packet"].strict_outcome_id
+    )
+    assert prepared_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert prepared_packet["selected_next_target_kind"] == (
+        "ccft_full_variational_action_program_packet_result_review"
+    )
     assert prepared_packet["ccft_full_variational_action_program_target_count"] == 13
     assert prepared_packet["C_k_action_embedding_authorized"] == "no"
     assert prepared_packet["C_k_variation_authorized"] == "no"
     assert prepared_packet["empirical_discriminator_claims_authorized"] == "no"
     _assert_registry_nonclaims(prepared_packet)
+
+    review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert review["status"] == "paused"
+    assert review["review_result"] == FINAL_OUTCOME
+    assert review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert review["prepared_packet_result"] == STAGES["variational_packet"].outcome_id
+    assert review["prepared_packet_strict_result"] == (
+        STAGES["variational_packet"].strict_outcome_id
+    )
+    assert review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert review["selected_next_target_kind"] == FINAL_KIND
+    assert review[
+        "ccft_full_variational_action_program_review_acceptance_item_count"
+    ] == 22
+    assert "CCFT full Lagrangian candidate targets indexed" in review[
+        "ccft_full_variational_action_program_review_acceptance_items"
+    ]
+    assert review["C_k_action_embedding_authorized"] == "no"
+    assert review["C_k_variation_authorized"] == "no"
+    assert review["empirical_discriminator_claims_authorized"] == "no"
+    _assert_registry_nonclaims(review)
 
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
@@ -443,14 +486,14 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
-    assert active["packet_result"] == FINAL_OUTCOME
-    assert active["strict_packet_result"] == FINAL_STRICT_OUTCOME
-    assert active["review_result"] == "PENDING"
-    assert active["strict_review_result"] == "PENDING"
+    assert active["packet_result"] == "PENDING"
+    assert active["strict_packet_result"] == "PENDING"
+    assert active["review_result"] == FINAL_OUTCOME
+    assert active["strict_review_result"] == FINAL_STRICT_OUTCOME
     assert active["selected_next_target"] == "PENDING"
     assert active["selected_next_target_kind"] == "PENDING"
-    assert active["packet_review_target"] == FINAL_LIVE_TARGET
-    assert active["packet_review_target_kind"] == FINAL_KIND
+    assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
+    assert active["suggested_next_packet_kind"] == FINAL_KIND
     assert active["ccft_full_variational_action_program_target_count"] == 13
     assert active["C_k_action_embedding_authorized"] == "no"
     assert active["C_k_variation_authorized"] == "no"

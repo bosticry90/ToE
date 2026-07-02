@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacket
+import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -15,14 +15,14 @@ set_option linter.style.longLine false
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  CCFTFullVariationalActionProgramPacket.selectedNextTarget
+  CCFTFullVariationalActionProgramPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  CCFTFullVariationalActionProgramPacket.packetId
+  CCFTFullVariationalActionProgramPacketResultReview.packetId
 
-theorem current_target_points_to_ccft_full_variational_action_program_packet_review :
+theorem current_target_points_to_ccft_empirical_discriminator_candidate_map_packet :
     currentLiveTarget =
-      "review_ccft_full_variational_action_program_packet_result" := by
+      "prepare_ccft_empirical_discriminator_candidate_map_packet" := by
   rfl
 
 end CurrentTarget

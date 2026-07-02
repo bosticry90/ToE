@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_ccft_full_variational_action_program_packet_result"
+    "prepare_ccft_empirical_discriminator_candidate_map_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,10 +1338,13 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_ccft_full_variational_action_program_packet"
+    "review_ccft_full_variational_action_program_packet_result"
 )
 CCFT_INDEX_REVIEW_TARGET = (
     "review_ccft_ck_admissibility_obligation_index_packet_result"
+)
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_TARGET = (
+    "prepare_ccft_full_variational_action_program_packet"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1571,7 +1574,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_ccft_full_variational_action_program_packet_result"
+    "prepare_ccft_empirical_discriminator_candidate_map_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1588,7 +1591,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CCFTFullVariationalActionProgramPacket.lean"
+    / "CCFTFullVariationalActionProgramPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2427,19 +2430,20 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_20260702_v0.json"
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_"
+        "20260702_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
-        "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
-        "MASTER_ACTION_PROMOTION"
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "LAGRANGIAN_HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_"
+        "EMBEDDING_OR_MASTER_ACTION_PROMOTION"
     )
     assert payload["CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0"] == (
-        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_AS_REQUIRED_PRE_"
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_PRE_"
         "DERIVATION_PLAN_NO_CK_VARIATION_OR_CCFT_VALIDATION"
     )
     assert payload["CURRENT_LIVE_TARGET_KIND_v0"] == (
-        "ccft_full_variational_action_program_packet_result_review"
+        "ccft_empirical_discriminator_candidate_map_packet"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -4631,6 +4635,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_AS_REQUIRED_PRE_"
         "DERIVATION_PLAN_NO_CK_VARIATION_OR_CCFT_VALIDATION"
     )
+    ccft_full_program_review_outcome = (
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "LAGRANGIAN_HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_"
+        "EMBEDDING_OR_MASTER_ACTION_PROMOTION"
+    )
+    ccft_full_program_review_strict_outcome = (
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_PRE_"
+        "DERIVATION_PLAN_NO_CK_VARIATION_OR_CCFT_VALIDATION"
+    )
     ccft_index_review_workstream = _workstream(payload, CCFT_INDEX_REVIEW_TARGET)
     assert ccft_index_review_workstream["status"] == "paused"
     assert ccft_index_review_workstream["authorization_evidence"] == (
@@ -4654,7 +4667,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_index_review_workstream["strict_review_result"] == (
         ccft_index_review_strict_outcome
     )
-    assert ccft_index_review_workstream["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert ccft_index_review_workstream["selected_next_target"] == (
+        CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_TARGET
+    )
     assert ccft_index_review_workstream["selected_next_target_kind"] == (
         "ccft_full_variational_action_program_packet"
     )
@@ -4670,21 +4685,26 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_index_review_workstream["seam_closure_claim"] == "no"
     assert ccft_index_review_workstream["master_action_promoted"] == "no"
 
-    ccft_full_program_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    ccft_full_program_packet = _workstream(
+        payload, CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_TARGET
+    )
     assert ccft_full_program_packet["status"] == "paused"
-    assert ccft_full_program_packet["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
+    assert ccft_full_program_packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CCFTFullVariationalActionProgramPacket.lean"
+    )
     assert ccft_full_program_packet["report"] == (
         "formal/docs/release/"
         "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_20260702_v0.json"
     )
-    assert ccft_full_program_packet["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert ccft_full_program_packet["consumed_target"] == (
+        CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_TARGET
+    )
     assert ccft_full_program_packet["packet_result"] == ccft_full_program_outcome
     assert ccft_full_program_packet["strict_packet_result"] == (
         ccft_full_program_strict_outcome
     )
-    assert ccft_full_program_packet["selected_next_target"] == LIVE_TARGET
+    assert ccft_full_program_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert ccft_full_program_packet["selected_next_target_kind"] == (
         "ccft_full_variational_action_program_packet_result_review"
     )
@@ -4711,6 +4731,51 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_full_program_packet["seam_closure_claim"] == "no"
     assert ccft_full_program_packet["master_action_promoted"] == "no"
 
+    ccft_full_program_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert ccft_full_program_review["status"] == "paused"
+    assert ccft_full_program_review["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert ccft_full_program_review["report"] == (
+        "formal/docs/release/"
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_20260702_v0.json"
+    )
+    assert ccft_full_program_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert ccft_full_program_review["prepared_packet_result"] == (
+        ccft_full_program_outcome
+    )
+    assert ccft_full_program_review["prepared_packet_strict_result"] == (
+        ccft_full_program_strict_outcome
+    )
+    assert ccft_full_program_review["review_result"] == (
+        ccft_full_program_review_outcome
+    )
+    assert ccft_full_program_review["strict_review_result"] == (
+        ccft_full_program_review_strict_outcome
+    )
+    assert ccft_full_program_review["selected_next_target"] == LIVE_TARGET
+    assert ccft_full_program_review["selected_next_target_kind"] == (
+        "ccft_empirical_discriminator_candidate_map_packet"
+    )
+    assert ccft_full_program_review[
+        "ccft_full_variational_action_program_review_acceptance_item_count"
+    ] == 22
+    assert "required blockers before C_k variation preserved" in (
+        ccft_full_program_review[
+            "ccft_full_variational_action_program_review_acceptance_items"
+        ]
+    )
+    assert ccft_full_program_review["C_k_action_embedding_authorized"] == "no"
+    assert ccft_full_program_review["C_k_variation_authorized"] == "no"
+    assert ccft_full_program_review["empirical_discriminator_claims_authorized"] == (
+        "no"
+    )
+    assert ccft_full_program_review["proof_attempt_executed"] == "no"
+    assert ccft_full_program_review["theorem_discharged"] == "no"
+    assert ccft_full_program_review["CCFT_validated"] == "no"
+    assert ccft_full_program_review["seam_closure_claim"] == "no"
+    assert ccft_full_program_review["master_action_promoted"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -4721,20 +4786,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_20260702_v0.json"
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_20260702_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["packet_result"] == ccft_full_program_outcome
-    assert interaction_active_workstream["strict_packet_result"] == (
-        ccft_full_program_strict_outcome
+    assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert interaction_active_workstream["strict_packet_result"] == "PENDING"
+    assert interaction_active_workstream["review_result"] == (
+        ccft_full_program_review_outcome
     )
-    assert interaction_active_workstream["review_result"] == "PENDING"
-    assert interaction_active_workstream["strict_review_result"] == "PENDING"
+    assert interaction_active_workstream["strict_review_result"] == (
+        ccft_full_program_review_strict_outcome
+    )
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
-    assert interaction_active_workstream["packet_review_target"] == LIVE_TARGET
-    assert interaction_active_workstream["packet_review_target_kind"] == (
-        "ccft_full_variational_action_program_packet_result_review"
+    assert interaction_active_workstream["suggested_next_packet_target"] == LIVE_TARGET
+    assert interaction_active_workstream["suggested_next_packet_kind"] == (
+        "ccft_empirical_discriminator_candidate_map_packet"
     )
     assert interaction_active_workstream[
         "ccft_full_variational_action_program_target_count"
