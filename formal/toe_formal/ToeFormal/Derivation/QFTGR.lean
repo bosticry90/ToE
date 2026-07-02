@@ -203,6 +203,7 @@ import ToeFormal.Derivation.CoherenceAdmissibilityBridgeRoadmapRebaseResultRevie
 import ToeFormal.Derivation.CCFTToTOEObjectCrosswalkPacket
 import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacket
 import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacketResultReview
+import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -226,15 +227,15 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  CCFTCKAdmissibilityObligationIndexPacketResultReview.reviewResult
+  CCFTFullVariationalActionProgramPacket.packetResult
 
 def currentPacketId : String :=
-  CCFTCKAdmissibilityObligationIndexPacketResultReview.packetId
+  CCFTFullVariationalActionProgramPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_ccft_ck_obligation_index_review :
+theorem qft_gr_lane_aggregate_exposes_ccft_full_variational_action_program_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_ACCEPTS_CCFT_SOURCE_BRIDGE_TRANSPORT_EXCHANGE_OBLIGATION_INDEX_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION" := by
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_MASTER_ACTION_PROMOTION" := by
   constructor
   · rfl
   · rfl

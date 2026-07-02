@@ -74,6 +74,31 @@ CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_STRICT_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_AS_REQUIRED_PRE_"
     "DERIVATION_PLAN_NO_CK_VARIATION_OR_CCFT_VALIDATION"
 )
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_TARGET = (
+    "review_ccft_full_variational_action_program_packet_result"
+)
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_DEFINITION_TARGETS = [
+    "CCFT full Lagrangian candidate targets",
+    "CCFT full Hamiltonian candidate targets",
+    "phi-sector variational route targets",
+    "chi-sector variational route targets",
+    "R/K rotor-curvature variational route targets",
+    "CCFT stress-energy/source candidate targets",
+    "CCFT C_source derivation targets",
+    "CCFT C_bridge derivation targets",
+    "CCFT C_transport component-derivation targets",
+    "CCFT C_exchange phi-chi exchange-balance targets",
+    "required blockers before action embedding",
+    "required blockers before C_k variation",
+    "required blockers before empirical discriminator claims",
+]
+CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_BOUNDARY = (
+    "This packet defines a required pre-derivation planning program for CCFT "
+    "Lagrangian, Hamiltonian, source, transport, and exchange target surfaces "
+    "only. It does not embed C_k into an action, vary C_k, derive any C_k "
+    "component, validate CCFT, authorize empirical discriminator claims, close "
+    "any pillar or seam, or promote the master action."
+)
 
 NONCLAIMS = [
     "no proof execution",
@@ -490,6 +515,27 @@ STAGES: dict[str, StageSpec] = {
         ),
         stage_role="ccft_ck_admissibility_obligation_index_packet_result_review",
     ),
+    "variational_packet": StageSpec(
+        key="variational_packet",
+        schema_id="CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_20260702_v0",
+        packet_id="CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_v0",
+        status="ACTIVE_CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET",
+        outcome_id=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_OUTCOME,
+        strict_outcome_id=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_STRICT_OUTCOME,
+        consumed_target=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_TARGET,
+        consumed_target_kind="ccft_full_variational_action_program_packet",
+        selected_next_target=CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_TARGET,
+        selected_next_target_kind=(
+            "ccft_full_variational_action_program_packet_result_review"
+        ),
+        lean_module="ToeFormal.Derivation.CCFTFullVariationalActionProgramPacket",
+        json_filename="CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_20260702_v0.json",
+        result_kind="packet",
+        packet_classification=(
+            "ccft_full_variational_action_program_pre_derivation_plan_only"
+        ),
+        stage_role="ccft_full_variational_action_program_packet",
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -502,6 +548,7 @@ ORDERED_STAGE_KEYS = [
     "crosswalk_packet",
     "ck_index_packet",
     "ck_index_review",
+    "variational_packet",
 ]
 
 
@@ -631,25 +678,38 @@ def build_stage_payload(
         "phi_triad_role": "local theorem-linkage family only",
         "ccft_required_follow_on_artifacts": CCFT_REQUIRED_FOLLOW_ON_ARTIFACTS,
         "next_required_object": (
-            "CCFT full variational/action program packet"
-            if stage_key == "ck_index_review"
-            else "CCFT-to-ToE object crosswalk"
+            "CCFT full variational/action program packet result review"
+            if stage_key == "variational_packet"
+            else (
+                "CCFT full variational/action program packet"
+                if stage_key == "ck_index_review"
+                else "CCFT-to-ToE object crosswalk"
+            )
         ),
         "roadmap_rebase_lists_follow_on_artifacts_only": (
             stage_key in {"roadmap_packet", "roadmap_review"}
         ),
         "later_ccft_artifacts_fully_populated": (
-            stage_key in {"crosswalk_packet", "ck_index_packet", "ck_index_review"}
+            stage_key
+            in {
+                "crosswalk_packet",
+                "ck_index_packet",
+                "ck_index_review",
+                "variational_packet",
+            }
         ),
         "CCFT_TO_TOE_OBJECT_CROSSWALK_v0_prepared": stage_key in {
             "crosswalk_packet",
             "ck_index_packet",
             "ck_index_review",
+            "variational_packet",
         },
         "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_v0_prepared": (
-            stage_key in {"ck_index_packet", "ck_index_review"}
+            stage_key in {"ck_index_packet", "ck_index_review", "variational_packet"}
         ),
-        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0_prepared": False,
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0_prepared": (
+            stage_key == "variational_packet"
+        ),
         "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared": False,
         "files": {
             "json_report": _ptr(release_path(spec)),
@@ -685,6 +745,36 @@ def build_stage_payload(
                     "C_k component, action embedding, or transport-zero "
                     "proof can be attempted."
                 ),
+            }
+        )
+    if stage_key == "variational_packet":
+        payload.update(
+            {
+                "ccft_full_variational_action_program_targets": (
+                    CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_DEFINITION_TARGETS
+                ),
+                "ccft_full_variational_action_program_target_count": len(
+                    CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_DEFINITION_TARGETS
+                ),
+                "ccft_full_variational_action_program_boundary": (
+                    CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_BOUNDARY
+                ),
+                "ccft_lagrangian_candidate_targets_defined": True,
+                "ccft_hamiltonian_candidate_targets_defined": True,
+                "phi_sector_variational_route_targets_defined": True,
+                "chi_sector_variational_route_targets_defined": True,
+                "rotor_curvature_variational_route_targets_defined": True,
+                "ccft_stress_energy_source_candidate_targets_defined": True,
+                "ccft_C_source_derivation_targets_defined": True,
+                "ccft_C_bridge_derivation_targets_defined": True,
+                "ccft_C_transport_component_derivation_targets_defined": True,
+                "ccft_C_exchange_phi_chi_exchange_balance_targets_defined": True,
+                "required_blockers_before_action_embedding_defined": True,
+                "required_blockers_before_C_k_variation_defined": True,
+                "required_blockers_before_empirical_discriminator_claims_defined": True,
+                "C_k_action_embedding_authorized": False,
+                "C_k_variation_authorized": False,
+                "empirical_discriminator_claims_authorized": False,
             }
         )
     payload.update(_result_fields(spec))
