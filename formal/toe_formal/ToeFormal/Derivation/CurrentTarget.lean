@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationPacketResultReview
+import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRoute
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -15,14 +15,14 @@ set_option linter.style.longLine false
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PhiTransportTheoremLinkageObligationPacketResultReview.selectedNextTarget
+  PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRoute.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PhiTransportTheoremLinkageObligationPacketResultReview.packetId
+  PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRoute.packetId
 
-theorem current_target_points_to_phi_transport_attempt_preparation :
+theorem current_target_points_to_phi_transport_attempt_result_review :
     currentLiveTarget =
-      "prepare_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route" := by
+      "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_result" := by
   rfl
 
 end CurrentTarget

@@ -384,7 +384,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
+        "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -412,7 +412,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
+        "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_result"
       status := .retained }
   ]
 
@@ -432,11 +432,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the phi transport packet-result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_phi_transport_theorem_linkage_obligation_packet_result"
-
-/-- Current live target after the phi transport packet-result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
+
+/-- Current live target after the phi transport attempt preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -449,7 +449,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
+    "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
