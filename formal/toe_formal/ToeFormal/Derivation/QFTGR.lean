@@ -191,6 +191,7 @@ import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationPacketResultRevi
 import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRoute
 import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteResultReview
 import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecution
+import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecutionResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -214,17 +215,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecution.executionResult
+  PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecutionResultReview.reviewResult
 
 def currentPacketId : String :=
-  PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecution.packetId
+  PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecutionResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_transport_attempt_execution :
+theorem qft_gr_lane_aggregate_exposes_phi_transport_attempt_execution_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_" ++
-          "EXECUTED_COMPONENTWISE_TRANSPORT_ZERO_LINKAGE_CONSTRUCTED_NO_CK_RULE_" ++
-          "PROMOTION_OR_MASTER_ACTION_PROMOTION" := by
+          "EXECUTION_RESULT_REVIEW_ACCEPTS_C_TRANSPORT_PHI_ZERO_FROM_COMPONENTWISE_" ++
+          "TRANSPORT_MATCH_NO_CK_RULE_PROMOTION_OR_MASTER_ACTION_PROMOTION" := by
   constructor
   · rfl
   · rfl
