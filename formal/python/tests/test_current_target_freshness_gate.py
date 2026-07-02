@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "execute_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
+    "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_execution_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_result"
+    "execute_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "execute_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
+    "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_execution_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteResultReview.lean"
+    / "PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecution.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2425,12 +2425,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
         "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
-        "RESULT_REVIEW_20260701_v0.json"
+        "EXECUTION_20260701_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
         "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
-        "RESULT_REVIEW_ACCEPTS_COMPONENTWISE_TRANSPORT_ZERO_ROUTE_PREPARATION_NO_"
-        "THEOREM_DISCHARGE_OR_CK_RULE_PROMOTION"
+        "EXECUTED_COMPONENTWISE_TRANSPORT_ZERO_LINKAGE_CONSTRUCTED_NO_CK_RULE_"
+        "PROMOTION_OR_MASTER_ACTION_PROMOTION"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -4031,6 +4031,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
         "RESULT_REVIEW_20260701_v0.json"
     )
+    phi_transport_attempt_result_review_evidence = (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteResultReview.lean"
+    )
     phi_transport_execution_target = (
         "execute_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route"
     )
@@ -4046,6 +4050,32 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     phi_transport_strict_suggested_execution_outcome = (
         "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
         "EXECUTED_C_TRANSPORT_PHI_ZERO_FROM_ACTION_TO_REGIME_TRANSPORT_MATCH_NO_"
+        "PHI_SECTOR_OR_SEAM_CLOSURE"
+    )
+    phi_transport_execution_report = (
+        "formal/docs/release/"
+        "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
+        "EXECUTION_20260701_v0.json"
+    )
+    phi_transport_execution_evidence = (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecution.lean"
+    )
+    phi_transport_execution_result_review_target = (
+        "review_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_execution_result"
+    )
+    phi_transport_execution_result_review_target_kind = (
+        "phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route_"
+        "execution_result_review"
+    )
+    phi_transport_suggested_execution_review_outcome = (
+        "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
+        "EXECUTION_RESULT_REVIEW_ACCEPTS_C_TRANSPORT_PHI_ZERO_FROM_COMPONENTWISE_"
+        "TRANSPORT_MATCH_NO_CK_RULE_PROMOTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    phi_transport_strict_suggested_execution_review_outcome = (
+        "PHI_TRANSPORT_THEOREM_LINKAGE_ATTEMPT_FROM_STANDALONE_PHI_TRANSPORT_ROUTE_"
+        "EXECUTION_RESULT_REVIEW_ACCEPTS_LOCAL_PHI_TRANSPORT_THEOREM_LINKAGE_ONLY_NO_"
         "PHI_SECTOR_OR_SEAM_CLOSURE"
     )
     phi_transport_tuple_zero = "C_transport^phi = (0, 0, 0, 0, 0)"
@@ -4194,9 +4224,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         payload, phi_transport_attempt_result_review_target
     )
     assert consumed_phi_transport_attempt_review["status"] == "paused"
-    assert consumed_phi_transport_attempt_review["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
+    assert consumed_phi_transport_attempt_review["authorization_evidence"] == (
+        phi_transport_attempt_result_review_evidence
+    )
     assert consumed_phi_transport_attempt_review["report"] == (
         phi_transport_attempt_result_review_report
     )
@@ -4235,6 +4265,56 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_phi_transport_attempt_review["rule_promoted"] == "no"
     assert consumed_phi_transport_attempt_review["master_action_promoted"] == "no"
 
+    consumed_phi_transport_execution = _workstream(
+        payload, phi_transport_execution_target
+    )
+    assert consumed_phi_transport_execution["status"] == "paused"
+    assert consumed_phi_transport_execution["authorization_evidence"] == (
+        phi_transport_execution_evidence
+    )
+    assert consumed_phi_transport_execution["report"] == (
+        phi_transport_execution_report
+    )
+    assert consumed_phi_transport_execution["consumed_target"] == (
+        phi_transport_execution_target
+    )
+    assert consumed_phi_transport_execution["review_result"] == (
+        phi_transport_suggested_attempt_review_outcome
+    )
+    assert consumed_phi_transport_execution["strict_review_result"] == (
+        phi_transport_strict_suggested_attempt_review_outcome
+    )
+    assert consumed_phi_transport_execution["execution_result"] == (
+        phi_transport_suggested_execution_outcome
+    )
+    assert consumed_phi_transport_execution["strict_execution_result"] == (
+        phi_transport_strict_suggested_execution_outcome
+    )
+    assert consumed_phi_transport_execution["selected_next_target"] == (
+        phi_transport_execution_result_review_target
+    )
+    assert consumed_phi_transport_execution["selected_next_target_kind"] == (
+        phi_transport_execution_result_review_target_kind
+    )
+    assert consumed_phi_transport_execution["suggested_review_outcome"] == (
+        phi_transport_suggested_execution_review_outcome
+    )
+    assert consumed_phi_transport_execution["strict_suggested_review_outcome"] == (
+        phi_transport_strict_suggested_execution_review_outcome
+    )
+    assert consumed_phi_transport_execution["executed_componentwise_route"] == (
+        phi_transport_likely_attempt_shape
+    )
+    assert consumed_phi_transport_execution["C_transport_phi_zero_derived"] == "yes"
+    assert consumed_phi_transport_execution["C_transport_phi_discharged"] == "yes"
+    assert consumed_phi_transport_execution["theorem_discharged"] == "yes"
+    assert consumed_phi_transport_execution["theorem_linkage_obligation_discharged"] == (
+        "yes"
+    )
+    assert consumed_phi_transport_execution["proof_attempt_executed"] == "yes"
+    assert consumed_phi_transport_execution["rule_promoted"] == "no"
+    assert consumed_phi_transport_execution["master_action_promoted"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -4243,37 +4323,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert interaction_active_workstream["report"] == (
-        phi_transport_attempt_result_review_report
-    )
+    assert interaction_active_workstream["report"] == phi_transport_execution_report
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["packet_result"] == (
-        phi_transport_suggested_attempt_review_outcome
-    )
-    assert interaction_active_workstream["strict_packet_result"] == (
-        phi_transport_strict_suggested_attempt_review_outcome
-    )
-    assert interaction_active_workstream["attempt_preparation_result"] == (
-        phi_transport_attempt_result
-    )
-    assert interaction_active_workstream["strict_attempt_preparation_result"] == (
-        phi_transport_strict_attempt_result
-    )
-    assert interaction_active_workstream["review_result"] == (
-        phi_transport_suggested_attempt_review_outcome
-    )
-    assert interaction_active_workstream["strict_review_result"] == (
-        phi_transport_strict_suggested_attempt_review_outcome
-    )
-    assert interaction_active_workstream["execution_result"] == "PENDING"
-    assert interaction_active_workstream["selected_next_target"] == "PENDING"
-    assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
-    assert interaction_active_workstream["suggested_execution_outcome"] == (
         phi_transport_suggested_execution_outcome
     )
-    assert interaction_active_workstream[
-        "strict_suggested_execution_outcome"
-    ] == phi_transport_strict_suggested_execution_outcome
+    assert interaction_active_workstream["strict_packet_result"] == (
+        phi_transport_strict_suggested_execution_outcome
+    )
+    assert interaction_active_workstream["review_result"] == "PENDING"
+    assert interaction_active_workstream["strict_review_result"] == "PENDING"
+    assert interaction_active_workstream["execution_result"] == (
+        phi_transport_suggested_execution_outcome
+    )
+    assert interaction_active_workstream["strict_execution_result"] == (
+        phi_transport_strict_suggested_execution_outcome
+    )
+    assert interaction_active_workstream["selected_next_target"] == "PENDING"
+    assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
+    assert interaction_active_workstream["suggested_review_outcome"] == (
+        phi_transport_suggested_execution_review_outcome
+    )
+    assert interaction_active_workstream["strict_suggested_review_outcome"] == (
+        phi_transport_strict_suggested_execution_review_outcome
+    )
     assert interaction_active_workstream["selected_obligation"] == (
         phi_transport_selected_obligation
     )
@@ -4287,22 +4360,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["transport_admissibility_constraint_form"] == (
         phi_transport_constraint_equation
     )
-    assert interaction_active_workstream["standalone_phi_transport_route_recovered"] == (
-        "yes"
-    )
-    assert interaction_active_workstream["exact_prior_transport_statement_frozen"] == (
-        "yes"
-    )
-    assert interaction_active_workstream["likely_componentwise_attempt_route"] == (
+    assert interaction_active_workstream["executed_componentwise_route"] == (
         phi_transport_likely_attempt_shape
     )
-    assert interaction_active_workstream["new_transport_formula_invented"] == "no"
-    assert interaction_active_workstream["proof_attempt_executed"] == "no"
-    assert interaction_active_workstream["theorem_discharged"] == "no"
-    assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == (
-        "no"
+    assert interaction_active_workstream["componentwise_zero_route"] == (
+        phi_transport_likely_attempt_shape
     )
-    assert interaction_active_workstream["C_transport_phi_discharged"] == "no"
+    assert interaction_active_workstream["C_transport_phi_zero_derived"] == "yes"
+    assert interaction_active_workstream["C_transport_phi_discharged"] == "yes"
+    assert interaction_active_workstream["proof_attempt_executed"] == "yes"
+    assert interaction_active_workstream["theorem_discharged"] == "yes"
+    assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == (
+        "yes"
+    )
     assert interaction_active_workstream["gap_discharged"] == "no"
     assert interaction_active_workstream["rule_promoted"] == "no"
     assert interaction_active_workstream["phi_sector_closure_claimed"] == "no"
