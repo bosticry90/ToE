@@ -22,7 +22,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_phi_transport_theorem_linkage_obligation_packet_result" := by
+      "prepare_phi_transport_theorem_linkage_attempt_from_standalone_phi_transport_route" := by
   rfl
 
 end CurrentAuthority
