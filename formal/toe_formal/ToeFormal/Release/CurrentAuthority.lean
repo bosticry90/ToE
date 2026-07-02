@@ -22,7 +22,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout" := by
+      "prepare_ccft_full_variational_action_program_packet" := by
   rfl
 
 end CurrentAuthority

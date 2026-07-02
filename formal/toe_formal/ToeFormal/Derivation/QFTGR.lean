@@ -194,6 +194,15 @@ import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTr
 import ToeFormal.Derivation.PhiTransportTheoremLinkageAttemptFromStandalonePhiTransportRouteExecutionResultReview
 import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationCloseout
 import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationCloseoutResultReview
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiTransportCloseout
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiTransportCloseoutResultReview
+import ToeFormal.Derivation.PhiCKSourceBridgeTransportTheoremLinkageFamilySynthesisPacket
+import ToeFormal.Derivation.PhiCKSourceBridgeTransportTheoremLinkageFamilySynthesisResultReview
+import ToeFormal.Derivation.CoherenceAdmissibilityBridgeRoadmapRebase
+import ToeFormal.Derivation.CoherenceAdmissibilityBridgeRoadmapRebaseResultReview
+import ToeFormal.Derivation.CCFTToTOEObjectCrosswalkPacket
+import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacket
+import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -217,17 +226,15 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiTransportTheoremLinkageObligationCloseoutResultReview.reviewResult
+  CCFTCKAdmissibilityObligationIndexPacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  PhiTransportTheoremLinkageObligationCloseoutResultReview.packetId
+  CCFTCKAdmissibilityObligationIndexPacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_transport_obligation_closeout_result_review :
+theorem qft_gr_lane_aggregate_exposes_ccft_ck_obligation_index_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PHI_TRANSPORT_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_" ++
-          "STANDALONE_ACTION_TO_REGIME_TRANSPORT_MATCH_LINKED_C_TRANSPORT_PHI_ROUTE_" ++
-          "NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE" := by
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_ACCEPTS_CCFT_SOURCE_BRIDGE_TRANSPORT_EXCHANGE_OBLIGATION_INDEX_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION" := by
   constructor
   · rfl
   · rfl

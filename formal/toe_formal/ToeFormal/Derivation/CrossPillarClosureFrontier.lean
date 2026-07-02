@@ -216,6 +216,15 @@ import ToeFormal.Derivation.PhiBridgeTheoremLinkageObligationCloseoutResultRevie
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiBridgeCloseout
 import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiBridgeCloseoutResultReview
 import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationCloseoutResultReview
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiTransportCloseout
+import ToeFormal.Derivation.CKFamilyTheoremLinkageObligationSelectionAfterPhiTransportCloseoutResultReview
+import ToeFormal.Derivation.PhiCKSourceBridgeTransportTheoremLinkageFamilySynthesisPacket
+import ToeFormal.Derivation.PhiCKSourceBridgeTransportTheoremLinkageFamilySynthesisResultReview
+import ToeFormal.Derivation.CoherenceAdmissibilityBridgeRoadmapRebase
+import ToeFormal.Derivation.CoherenceAdmissibilityBridgeRoadmapRebaseResultReview
+import ToeFormal.Derivation.CCFTToTOEObjectCrosswalkPacket
+import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacket
+import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacketResultReview
 
 namespace ToeFormal
 namespace Derivation
@@ -385,7 +394,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout"
+        "prepare_ccft_full_variational_action_program_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -413,7 +422,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout"
+        "prepare_ccft_full_variational_action_program_packet"
       status := .retained }
   ]
 
@@ -431,13 +440,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the phi transport closeout result review. -/
+/-- Previous live target consumed by the CCFT C_k obligation index result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_phi_transport_theorem_linkage_obligation_closeout_result"
+  "review_ccft_ck_admissibility_obligation_index_packet_result"
 
-/-- Current live target after the phi transport closeout result review. -/
+/-- Current live target after the CCFT C_k obligation index result review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout"
+  "prepare_ccft_full_variational_action_program_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -450,7 +459,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout"
+    "prepare_ccft_full_variational_action_program_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

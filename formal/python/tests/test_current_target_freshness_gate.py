@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout"
+    "prepare_ccft_full_variational_action_program_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_phi_transport_theorem_linkage_obligation_closeout_result"
+    "review_ccft_ck_admissibility_obligation_index_packet_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1568,7 +1568,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "select_next_ck_family_theorem_linkage_obligation_after_phi_transport_closeout"
+    "prepare_ccft_full_variational_action_program_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1585,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiTransportTheoremLinkageObligationCloseoutResultReview.lean"
+    / "CCFTCKAdmissibilityObligationIndexPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2424,13 +2424,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "PHI_TRANSPORT_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_"
-        "20260701_v0.json"
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_"
+        "20260702_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PHI_TRANSPORT_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
-        "STANDALONE_ACTION_TO_REGIME_TRANSPORT_MATCH_LINKED_C_TRANSPORT_PHI_ROUTE_"
-        "NO_CK_RULE_PROMOTION_OR_SEAM_CLOSURE"
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "CCFT_SOURCE_BRIDGE_TRANSPORT_EXCHANGE_OBLIGATION_INDEX_NO_PROOF_"
+        "EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    assert payload["CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0"] == (
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "CCFT_ADMISSIBILITY_ROWS_AS_PLANNING_INDEX_NO_CCFT_VALIDATION_OR_"
+        "SEAM_CLOSURE"
+    )
+    assert payload["CURRENT_LIVE_TARGET_KIND_v0"] == (
+        "ccft_full_variational_action_program_packet"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -4543,6 +4551,123 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_phi_transport_closeout_review["rule_promoted"] == "no"
     assert consumed_phi_transport_closeout_review["master_action_promoted"] == "no"
 
+    post_phi_selector_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PHI_TRANSPORT_"
+        "CLOSEOUT_SELECTS_PHI_CK_SOURCE_BRIDGE_TRANSPORT_THEOREM_LINKAGE_"
+        "FAMILY_SYNTHESIS_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    post_phi_selector_strict_outcome = (
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PHI_TRANSPORT_"
+        "CLOSEOUT_SELECTS_LOCAL_PHI_THEOREM_LINKAGE_TRIAD_SYNTHESIS_NO_GAP_"
+        "DISCHARGE_OR_CK_RULE_PROMOTION"
+    )
+    post_phi_selector_workstream = _workstream(
+        payload, phi_transport_after_closeout_selector_target
+    )
+    assert post_phi_selector_workstream["status"] == "paused"
+    assert post_phi_selector_workstream["consumed_target"] == (
+        phi_transport_after_closeout_selector_target
+    )
+    assert post_phi_selector_workstream["consumed_target_kind"] == (
+        phi_transport_after_closeout_selector_target_kind
+    )
+    assert post_phi_selector_workstream["report"] == (
+        "formal/docs/release/"
+        "CK_FAMILY_THEOREM_LINKAGE_OBLIGATION_SELECTION_AFTER_PHI_TRANSPORT_"
+        "CLOSEOUT_20260702_v0.json"
+    )
+    assert post_phi_selector_workstream["selection_result"] == (
+        post_phi_selector_outcome
+    )
+    assert post_phi_selector_workstream["strict_selection_result"] == (
+        post_phi_selector_strict_outcome
+    )
+    assert post_phi_selector_workstream["selected_next_target"] == (
+        "review_ck_family_theorem_linkage_obligation_selection_after_phi_"
+        "transport_closeout_result"
+    )
+    assert post_phi_selector_workstream["selected_next_target_kind"] == (
+        "ck_family_theorem_linkage_obligation_selection_after_phi_transport_"
+        "closeout_result_review"
+    )
+    assert post_phi_selector_workstream["local_phi_triad_label"] == (
+        "local phi source/bridge/transport theorem-linkage triad"
+    )
+    assert post_phi_selector_workstream["local_phi_theorem_linkage_triad"] == (
+        "C_source^phi = 0; C_bridge^phi = 0; C_transport^phi = 0"
+    )
+    assert post_phi_selector_workstream["new_triad_called_rule_family_closeout"] == "no"
+    assert post_phi_selector_workstream["proof_attempt_executed"] == "no"
+    assert post_phi_selector_workstream["theorem_discharged"] == "no"
+    assert post_phi_selector_workstream["gap_discharged"] == "no"
+    assert post_phi_selector_workstream["C_k_rule_promoted"] == "no"
+    assert post_phi_selector_workstream["master_action_promoted"] == "no"
+
+    ccft_index_outcome = (
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_PREPARED_SOURCE_BRIDGE_"
+        "TRANSPORT_EXCHANGE_ROWS_NO_PROOF_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    ccft_index_strict_outcome = (
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_PREPARED_CCFT_SPECIFIC_"
+        "CK_OBLIGATIONS_ONLY_NO_CCFT_VALIDATION_OR_CK_RULE_PROMOTION"
+    )
+    ccft_index_review_outcome = (
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "CCFT_SOURCE_BRIDGE_TRANSPORT_EXCHANGE_OBLIGATION_INDEX_NO_PROOF_"
+        "EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    ccft_index_review_strict_outcome = (
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "CCFT_ADMISSIBILITY_ROWS_AS_PLANNING_INDEX_NO_CCFT_VALIDATION_OR_"
+        "SEAM_CLOSURE"
+    )
+    ccft_full_program_suggested_outcome = (
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
+        "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
+        "MASTER_ACTION_PROMOTION"
+    )
+    ccft_full_program_suggested_strict_outcome = (
+        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_AS_REQUIRED_PRE_"
+        "DERIVATION_PLAN_NO_CK_VARIATION_OR_CCFT_VALIDATION"
+    )
+    ccft_index_review_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert ccft_index_review_workstream["status"] == "paused"
+    assert ccft_index_review_workstream["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert ccft_index_review_workstream["report"] == (
+        "formal/docs/release/"
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_"
+        "20260702_v0.json"
+    )
+    assert ccft_index_review_workstream["prepared_packet_result"] == (
+        ccft_index_outcome
+    )
+    assert ccft_index_review_workstream["prepared_packet_strict_result"] == (
+        ccft_index_strict_outcome
+    )
+    assert ccft_index_review_workstream["review_result"] == (
+        ccft_index_review_outcome
+    )
+    assert ccft_index_review_workstream["strict_review_result"] == (
+        ccft_index_review_strict_outcome
+    )
+    assert ccft_index_review_workstream["selected_next_target"] == LIVE_TARGET
+    assert ccft_index_review_workstream["selected_next_target_kind"] == (
+        "ccft_full_variational_action_program_packet"
+    )
+    assert ccft_index_review_workstream["suggested_next_packet_outcome"] == (
+        ccft_full_program_suggested_outcome
+    )
+    assert ccft_index_review_workstream[
+        "strict_suggested_next_packet_outcome"
+    ] == ccft_full_program_suggested_strict_outcome
+    assert ccft_index_review_workstream["proof_attempt_executed"] == "no"
+    assert ccft_index_review_workstream["theorem_discharged"] == "no"
+    assert ccft_index_review_workstream["CCFT_validated"] == "no"
+    assert ccft_index_review_workstream["seam_closure_claim"] == "no"
+    assert ccft_index_review_workstream["master_action_promoted"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -4552,55 +4677,43 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
-        phi_transport_closeout_result_review_report
+        "formal/docs/release/"
+        "CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_PACKET_RESULT_REVIEW_"
+        "20260702_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["review_result"] == (
-        phi_transport_closeout_review_outcome
-    )
+    assert interaction_active_workstream["packet_result"] == "PENDING"
+    assert interaction_active_workstream["strict_packet_result"] == "PENDING"
+    assert interaction_active_workstream["review_result"] == ccft_index_review_outcome
     assert interaction_active_workstream["strict_review_result"] == (
-        phi_transport_strict_closeout_review_outcome
+        ccft_index_review_strict_outcome
     )
-    assert interaction_active_workstream["closeout_result"] == (
-        phi_transport_closeout_outcome
-    )
-    assert interaction_active_workstream["strict_closeout_result"] == (
-        phi_transport_strict_closeout_outcome
-    )
-    assert interaction_active_workstream["selection_result"] == "PENDING"
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
-    assert interaction_active_workstream["selector_question"] == (
-        phi_transport_after_closeout_selector_question
-    )
-    assert interaction_active_workstream["likely_selector_follow_on_target"] == (
-        phi_transport_disciplined_next_step
-    )
-    assert interaction_active_workstream["selector_authorized"] == "yes"
-    assert interaction_active_workstream["selector_executed"] == "no"
-    assert interaction_active_workstream[
-        "next_theorem_linkage_obligation_selected"
-    ] == "no"
-    assert interaction_active_workstream["selected_obligation"] == (
-        phi_transport_selected_obligation
-    )
-    assert interaction_active_workstream["selected_obligation_row_id"] == "C_transport^phi"
-    assert interaction_active_workstream["transport_constraint_form"] == (
-        phi_transport_constraint_form
-    )
-    assert interaction_active_workstream["transport_constraint_equation"] == (
-        phi_transport_constraint_equation
-    )
-    assert interaction_active_workstream["componentwise_zero_route"] == (
-        phi_transport_likely_attempt_shape
+    assert interaction_active_workstream["suggested_next_packet_outcome"] == (
+        ccft_full_program_suggested_outcome
     )
     assert interaction_active_workstream[
-        "phi_transport_theorem_linkage_obligation_locally_closed"
-    ] == "yes"
-    assert interaction_active_workstream[
-        "five_component_C_transport_phi_tuple_preserved"
-    ] == "yes"
-    assert interaction_active_workstream["C_transport_phi_zero_derived"] == "yes"
+        "strict_suggested_next_packet_outcome"
+    ] == ccft_full_program_suggested_strict_outcome
+    assert interaction_active_workstream["local_phi_triad_label"] == (
+        "local phi source/bridge/transport theorem-linkage triad"
+    )
+    assert interaction_active_workstream["local_phi_theorem_linkage_triad"] == (
+        "C_source^phi = 0; C_bridge^phi = 0; C_transport^phi = 0"
+    )
+    assert interaction_active_workstream["ccft_role"] == (
+        "candidate mesoscopic coherence bridge layer"
+    )
+    assert interaction_active_workstream["master_action_role"] == (
+        "non-promoted candidate organizing surface"
+    )
+    assert interaction_active_workstream["C_k_role"] == (
+        "admissibility-only bridge-checking family"
+    )
+    assert interaction_active_workstream["phi_triad_role"] == (
+        "local theorem-linkage family only"
+    )
     assert interaction_active_workstream["proof_attempt_executed"] == "no"
     assert interaction_active_workstream["theorem_discharged"] == "no"
     assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == (
@@ -4614,14 +4727,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["qft_gr_closure_claimed"] == "no"
     assert interaction_active_workstream["general_C_k_closure"] == "no"
     assert interaction_active_workstream["C_k_rule_promoted"] == "no"
-    assert interaction_active_workstream["C_source_phi_route_reused"] == "no"
-    assert interaction_active_workstream["C_bridge_phi_route_reused"] == "no"
-    assert interaction_active_workstream["A_sector_route_imported"] == "no"
-    assert interaction_active_workstream["psi_A_route_imported"] == "no"
-    assert interaction_active_workstream["QFT_GR_route_imported"] == "no"
     assert interaction_active_workstream["action_embedding_claimed"] == "no"
     assert interaction_active_workstream["action_variation_executed"] == "no"
     assert interaction_active_workstream["empirical_validation_claimed"] == "no"
+    assert interaction_active_workstream["CCFT_validated"] == "no"
+    assert interaction_active_workstream["CCFT_fundamental_physics_claimed"] == "no"
+    assert interaction_active_workstream[
+        "CCFT_derivation_from_master_action_claimed"
+    ] == "no"
     assert interaction_active_workstream["master_action_promoted"] == "no"
     assert interaction_active_workstream["seam_closure_claim"] == "no"
 
