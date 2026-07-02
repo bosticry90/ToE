@@ -1157,7 +1157,9 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_phi_bridge_theorem_linkage_obligation_closeout_result"
+ACTIVE_LANE = (
+    "select_next_ck_family_theorem_linkage_obligation_after_phi_bridge_closeout"
+)
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1336,7 +1338,7 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_phi_bridge_theorem_linkage_obligation_closeout"
+    "review_phi_bridge_theorem_linkage_obligation_closeout_result"
 )
 A_CK_SYNTHESIS_REVIEW_TARGET = (
     "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
@@ -1565,7 +1567,9 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_phi_bridge_theorem_linkage_obligation_closeout_result"
+LIVE_TARGET = (
+    "select_next_ck_family_theorem_linkage_obligation_after_phi_bridge_closeout"
+)
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1581,7 +1585,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiBridgeTheoremLinkageObligationCloseout.lean"
+    / "PhiBridgeTheoremLinkageObligationCloseoutResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2420,12 +2424,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_20260630_v0.json"
+        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_20260630_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_STANDALONE_COMPONENTWISE_"
-        "ROUTE_MATCH_LINKED_C_BRIDGE_PHI_ROUTE_NO_CK_RULE_PROMOTION_OR_SEAM_"
-        "CLOSURE"
+        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
+        "STANDALONE_COMPONENTWISE_ROUTE_MATCH_LINKED_C_BRIDGE_PHI_ROUTE_NO_CK_"
+        "RULE_PROMOTION_OR_SEAM_CLOSURE"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -3863,9 +3867,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "C_source^{A,nu} := nabla_mu T_A^{mu nu}"
     )
     A_source_attempt_target_conclusion = "C_source^{A,nu} = 0"
-    phi_bridge_closeout_report = (
+    phi_bridge_closeout_result_review_report = (
         "formal/docs/release/"
-        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_20260630_v0.json"
+        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_20260630_v0.json"
     )
     phi_bridge_closeout_outcome = (
         "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_STANDALONE_COMPONENTWISE_"
@@ -3876,9 +3880,26 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSED_AS_LOCAL_C_BRIDGE_PHI_ZERO_"
         "ROUTE_NO_ACTION_VARIATION_OR_MASTER_ACTION_PROMOTION"
     )
+    phi_bridge_closeout_review_outcome = (
+        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
+        "STANDALONE_COMPONENTWISE_ROUTE_MATCH_LINKED_C_BRIDGE_PHI_ROUTE_NO_CK_"
+        "RULE_PROMOTION_OR_SEAM_CLOSURE"
+    )
+    phi_bridge_strict_closeout_review_outcome = (
+        "PHI_BRIDGE_THEOREM_LINKAGE_OBLIGATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_"
+        "LOCAL_C_BRIDGE_PHI_ZERO_ROUTE_NO_ACTION_VARIATION_OR_MASTER_ACTION_"
+        "PROMOTION"
+    )
     phi_bridge_local_closeout_route = (
         "E_phi^master = E_phi^witness; T_phi^master = T_phi^witness; "
         "C_source^phi = nabla_mu T_phi^{mu nu}; therefore: C_bridge^phi = 0"
+    )
+    phi_bridge_selector_question = (
+        "Which remaining C_k theorem-linkage obligation should be attempted next "
+        "after C_bridge^phi closeout?"
+    )
+    phi_bridge_likely_next_obligation = (
+        "C_transport^phi theorem-linkage obligation"
     )
 
     interaction_active_workstream = active_workstream(payload)
@@ -3889,16 +3910,29 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert interaction_active_workstream["report"] == phi_bridge_closeout_report
+    assert interaction_active_workstream["report"] == (
+        phi_bridge_closeout_result_review_report
+    )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["closeout_result"] == phi_bridge_closeout_outcome
     assert interaction_active_workstream["strict_closeout_result"] == (
         phi_bridge_strict_closeout_outcome
     )
-    assert interaction_active_workstream["review_result"] == "PENDING"
-    assert interaction_active_workstream["strict_review_result"] == "PENDING"
+    assert interaction_active_workstream["review_result"] == (
+        phi_bridge_closeout_review_outcome
+    )
+    assert interaction_active_workstream["strict_review_result"] == (
+        phi_bridge_strict_closeout_review_outcome
+    )
+    assert interaction_active_workstream["selection_result"] == "PENDING"
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
+    assert interaction_active_workstream["selector_question"] == (
+        phi_bridge_selector_question
+    )
+    assert interaction_active_workstream["likely_next_obligation"] == (
+        phi_bridge_likely_next_obligation
+    )
     assert interaction_active_workstream["local_closeout_route"] == (
         phi_bridge_local_closeout_route
     )
@@ -3915,14 +3949,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         ]
         == "yes"
     )
-    assert interaction_active_workstream["C_bridge_phi_zero_constructed"] == "yes"
-    assert interaction_active_workstream["proof_attempt_executed"] == "yes"
-    assert interaction_active_workstream["theorem_discharged"] == "yes"
-    assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == (
-        "yes"
+    assert interaction_active_workstream["C_bridge_phi_zero_locally_linked"] == "yes"
+    assert interaction_active_workstream["selector_authorized"] == "yes"
+    assert interaction_active_workstream["selector_executed"] == "no"
+    assert (
+        interaction_active_workstream["next_theorem_linkage_obligation_selected"]
+        == "no"
     )
-    assert interaction_active_workstream["C_bridge_phi_zero_derived"] == "yes"
-    assert interaction_active_workstream["C_bridge_phi_discharged"] == "yes"
+    assert interaction_active_workstream["proof_attempt_executed"] == "no"
+    assert interaction_active_workstream["theorem_discharged"] == "no"
+    assert interaction_active_workstream["theorem_linkage_obligation_discharged"] == (
+        "no"
+    )
     assert interaction_active_workstream["rule_promoted"] == "no"
     assert interaction_active_workstream["phi_sector_closure_claimed"] == "no"
     assert interaction_active_workstream["full_scalar_qft_closure_claimed"] == "no"
