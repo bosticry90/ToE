@@ -22,7 +22,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet" := by
+      "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet" := by
   rfl
 
 end CurrentAuthority

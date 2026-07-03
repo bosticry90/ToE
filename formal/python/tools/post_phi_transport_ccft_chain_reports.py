@@ -188,18 +188,62 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_comparison_"
     "semantics_packet"
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_comparison_"
+    "semantics_packet_result"
+)
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_KIND = (
     "selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet"
 )
-SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME = (
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TOLERANCE_REVIEW_SUGGESTED_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
     "PACKET_PREPARED_NON_EXECUTED_BASELINE_COMPARISON_LOGIC_NO_EMPIRICAL_"
     "VALIDATION_OR_CCFT_VALIDATION"
 )
-SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_STRICT_OUTCOME = (
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TOLERANCE_REVIEW_SUGGESTED_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
     "PACKET_PREPARED_AS_PLANNING_SEMANTICS_ONLY_NO_PROTOCOL_EXECUTION_OR_"
     "MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
+    "PACKET_PREPARED_DEFINES_NON_EXECUTED_BASELINE_COMPARISON_SEMANTICS_"
+    "NO_BASELINE_SEPARATION_CLAIM_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
+    "PACKET_PREPARED_COMPARISON_LOGIC_ONLY_NO_EMPIRICAL_PROTOCOL_NO_"
+    "STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_NON_EXECUTED_BASELINE_COMPARISON_SEMANTICS_"
+    "ONLY_NO_BASELINE_SEPARATION_CLAIM_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_COMPARISON_LOGIC_ONLY_NO_EMPIRICAL_PROTOCOL_"
+    "NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_observable_definition_"
+    "semantics_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_KIND = (
+    "selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+    "PACKET_PREPARED_DEFINES_COHERENCE_LIFETIME_RESIDUAL_SEMANTICS_NO_"
+    "EMPIRICAL_PROTOCOL_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+    "PACKET_PREPARED_AS_PRE_PROTOCOL_OBSERVABLE_DEFINITION_ONLY_NO_OBSERVED_"
+    "RESIDUAL_OR_MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -272,6 +316,86 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_ACCEPTANCE_ITEMS
     "no new theorem discharge",
     "no CCFT validation",
     "no empirical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_FIELDS = [
+    "baseline_semantics_id",
+    "candidate_binding",
+    "observable_binding",
+    "baseline_binding",
+    "residual_definition_status",
+    "comparison_direction",
+    "null_default",
+    "tolerance_binding",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_ROWS = [
+    {
+        "baseline_semantics_id": "BSEM-CCFT-MESO-COH-LIFETIME-v0",
+        "candidate_binding": "controlled_mesoscopic_coherence_platform_candidate",
+        "observable_binding": "coherence_lifetime_residual_candidate",
+        "baseline_binding": "standard_open_system_decoherence_baseline_comparison",
+        "residual_definition_status": "placeholder_future_refinement_needed",
+        "comparison_direction": (
+            "placeholder comparison direction; future packet must choose "
+            "longer lifetime, shorter lifetime, absolute deviation magnitude, "
+            "normalized deviation, or signed residual before any execution"
+        ),
+        "null_default": (
+            "null_separation_from_baseline_with_registered_tolerances"
+        ),
+        "tolerance_binding": "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0",
+        "execution_status": "not_executed",
+        "claim_boundary": (
+            "no empirical validation, no CCFT validation, no baseline-separation claim"
+        ),
+    }
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_BOUNDARY = (
+    "This packet defines only non-executed baseline-comparison semantics for "
+    "a future coherence-lifetime residual comparison against the standard "
+    "open-system decoherence baseline. It does not claim the baseline is "
+    "complete, experimentally fitted, or sufficient; does not observe a "
+    "residual; does not treat registered tolerances as significance criteria; "
+    "does not claim CCFT predicts measurable separation; does not authorize "
+    "an empirical protocol; does not validate CCFT; does not close any pillar "
+    "or seam; and does not promote the master action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_ACCEPTANCE_ITEMS = [
+    "baseline-comparison semantics packet accepted",
+    "controlled mesoscopic coherence platform candidate preserved",
+    "coherence lifetime residual observable binding preserved",
+    "standard open-system decoherence baseline binding preserved",
+    "null default preserved",
+    "tolerance traceability binding consumed as traceability-only prior",
+    "baseline-comparison semantics accepted as non-executed comparison logic only",
+    "residual definition status accepted as placeholder only",
+    "comparison direction accepted as placeholder only",
+    "baseline not accepted as complete",
+    "baseline adequacy not accepted",
+    "baseline empirical fit quality not accepted",
+    "statistical decision-rule validity not accepted",
+    "observed separation not accepted",
+    "CCFT-predicted separation not accepted",
+    "experimental protocol readiness not accepted",
+    "observable-definition semantics packet selected as next planning target",
+    "no proof execution",
+    "no new theorem discharge",
+    "no empirical validation",
+    "no CCFT validation",
+    "no baseline-separation claim",
+    "no empirical protocol",
+    "no statistical validation",
     "no pillar closure",
     "no seam closure",
     "no QFT-GR closure",
@@ -1334,6 +1458,105 @@ STAGES: dict[str, StageSpec] = {
             "selected_ccft_empirical_discriminator_tolerance_registry_packet_result_review"
         ),
     ),
+    "baseline_semantics_packet": StageSpec(
+        key="baseline_semantics_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_20260702_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_20260702_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_comparison_"
+            "semantics_logic_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet"
+        ),
+    ),
+    "baseline_semantics_review": StageSpec(
+        key="baseline_semantics_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_RESULT_REVIEW_20260702_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
+            "SEMANTICS_PACKET_RESULT_REVIEW_20260702_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_comparison_"
+            "semantics_review_accepts_logic_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_comparison_"
+            "semantics_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -1356,6 +1579,8 @@ ORDERED_STAGE_KEYS = [
     "selected_candidate_review",
     "tolerance_registry_packet",
     "tolerance_registry_review",
+    "baseline_semantics_packet",
+    "baseline_semantics_review",
 ]
 
 
@@ -1462,6 +1687,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -1476,6 +1703,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -1488,6 +1717,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -1498,6 +1729,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -1542,33 +1775,41 @@ def build_stage_payload(
                 "CCFT empirical discriminator candidate priority selection packet"
                 if stage_key == "empirical_review"
                 else (
-                    "selected CCFT empirical discriminator baseline-comparison semantics packet"
-                    if stage_key == "tolerance_registry_review"
+                    "selected CCFT empirical discriminator observable-definition semantics packet"
+                    if stage_key == "baseline_semantics_review"
                     else (
-                        "selected CCFT empirical discriminator tolerance registry packet result review"
-                        if stage_key == "tolerance_registry_packet"
+                        "selected CCFT empirical discriminator baseline-comparison semantics packet result review"
+                        if stage_key == "baseline_semantics_packet"
                         else (
-                            "selected CCFT empirical discriminator tolerance registry packet"
-                            if stage_key == "selected_candidate_review"
+                            "selected CCFT empirical discriminator baseline-comparison semantics packet"
+                            if stage_key == "tolerance_registry_review"
                             else (
-                                "selected CCFT empirical discriminator candidate packet result review"
-                                if stage_key == "selected_candidate_packet"
+                                "selected CCFT empirical discriminator tolerance registry packet result review"
+                                if stage_key == "tolerance_registry_packet"
                                 else (
-                                    "selected CCFT empirical discriminator candidate packet"
-                                    if stage_key == "priority_review"
+                                    "selected CCFT empirical discriminator tolerance registry packet"
+                                    if stage_key == "selected_candidate_review"
                                     else (
-                                        "CCFT empirical discriminator candidate priority selection packet result review"
-                                        if stage_key == "priority_packet"
+                                        "selected CCFT empirical discriminator candidate packet result review"
+                                        if stage_key == "selected_candidate_packet"
                                         else (
-                                            "CCFT empirical discriminator candidate map packet result review"
-                                            if stage_key == "empirical_packet"
+                                            "selected CCFT empirical discriminator candidate packet"
+                                            if stage_key == "priority_review"
                                             else (
-                                                "CCFT full variational/action program packet result review"
-                                                if stage_key == "variational_packet"
+                                                "CCFT empirical discriminator candidate priority selection packet result review"
+                                                if stage_key == "priority_packet"
                                                 else (
-                                                    "CCFT full variational/action program packet"
-                                                    if stage_key == "ck_index_review"
-                                                    else "CCFT-to-ToE object crosswalk"
+                                                    "CCFT empirical discriminator candidate map packet result review"
+                                                    if stage_key == "empirical_packet"
+                                                    else (
+                                                        "CCFT full variational/action program packet result review"
+                                                        if stage_key == "variational_packet"
+                                                        else (
+                                                            "CCFT full variational/action program packet"
+                                                            if stage_key == "ck_index_review"
+                                                            else "CCFT-to-ToE object crosswalk"
+                                                        )
+                                                    )
                                                 )
                                             )
                                         )
@@ -1646,6 +1887,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }:
         payload.update(
             {
@@ -1685,6 +1928,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }:
         payload.update(
             {
@@ -1719,6 +1964,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }:
         payload.update(
             {
@@ -1831,6 +2078,8 @@ def build_stage_payload(
         "selected_candidate_review",
         "tolerance_registry_packet",
         "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
     }:
         payload.update(
             {
@@ -1911,7 +2160,12 @@ def build_stage_payload(
                 ),
             }
         )
-    if stage_key in {"tolerance_registry_packet", "tolerance_registry_review"}:
+    if stage_key in {
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
+    }:
         payload.update(
             {
                 "selected_candidate_result_review_consumed": True,
@@ -2034,10 +2288,145 @@ def build_stage_payload(
                     SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_KIND
                 ),
                 "suggested_next_packet_outcome": (
-                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TOLERANCE_REVIEW_SUGGESTED_OUTCOME
                 ),
                 "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TOLERANCE_REVIEW_SUGGESTED_STRICT_OUTCOME
+                ),
+            }
+        )
+    if stage_key in {"baseline_semantics_packet", "baseline_semantics_review"}:
+        payload.update(
+            {
+                "tolerance_registry_result_review_consumed": True,
+                "tolerance_registry_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_OUTCOME
+                ),
+                "tolerance_registry_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_STRICT_OUTCOME
+                ),
+                "selected_ccft_empirical_discriminator_baseline_comparison_semantics_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_FIELDS
+                ),
+                "selected_ccft_empirical_discriminator_baseline_comparison_semantics_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_FIELDS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_baseline_comparison_semantics_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_ROWS
+                ),
+                "selected_ccft_empirical_discriminator_baseline_comparison_semantics_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_ROWS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_baseline_semantics_ids": [
+                    row["baseline_semantics_id"]
+                    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_ROWS
+                ],
+                "selected_ccft_empirical_discriminator_baseline_candidate_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_ID
+                ),
+                "selected_ccft_empirical_discriminator_baseline_observable_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_OBSERVABLE
+                ),
+                "selected_ccft_empirical_discriminator_baseline_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_BASELINE
+                ),
+                "selected_ccft_empirical_discriminator_baseline_null_default": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_FALSIFIER
+                ),
+                "selected_ccft_empirical_discriminator_baseline_tolerance_binding": (
+                    "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0"
+                ),
+                "selected_ccft_empirical_discriminator_residual_definition_status": (
+                    "placeholder_future_refinement_needed"
+                ),
+                "selected_ccft_empirical_discriminator_comparison_direction_status": (
+                    "placeholder_direction_not_selected"
+                ),
+                "selected_ccft_empirical_discriminator_baseline_semantics_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_BOUNDARY
+                ),
+                "baseline_comparison_semantics_packet_prepared": True,
+                "baseline_comparison_semantics_rows_registered": True,
+                "baseline_semantics_logic_only": True,
+                "baseline_complete_claimed": False,
+                "baseline_experimentally_fitted": False,
+                "residual_observed": False,
+                "tolerance_determines_significance": False,
+                "ccft_measurable_separation_predicted": False,
+                "candidate_ready_for_execution": False,
+                "baseline_separation_claimed": False,
+                "empirical_protocol_authorized": False,
+                "empirical_protocol_defined": False,
+                "statistical_validation_claimed": False,
+                "statistical_decision_rule_defined": False,
+                "effect_size_threshold_defined": False,
+                "execution_readiness_claimed": False,
+                "next_disciplined_move_reason": (
+                    "The baseline-comparison semantics result review accepts "
+                    "only non-executed comparison logic. The next disciplined "
+                    "step is observable-definition semantics for the "
+                    "coherence_lifetime_residual_candidate, not empirical "
+                    "protocol design, statistical validation, execution, "
+                    "baseline separation, or CCFT validation."
+                    if stage_key == "baseline_semantics_review"
+                    else (
+                        "The baseline-comparison semantics packet defines only "
+                        "how a future packet would compare a candidate "
+                        "coherence-lifetime residual against a standard "
+                        "open-system decoherence baseline. The next disciplined "
+                        "step is result review, not empirical protocol design, "
+                        "statistical validation, execution, baseline separation, "
+                        "or CCFT validation."
+                    )
+                ),
+            }
+        )
+    if stage_key == "baseline_semantics_review":
+        payload.update(
+            {
+                "selected_ccft_empirical_discriminator_baseline_comparison_semantics_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "selected_ccft_empirical_discriminator_baseline_comparison_semantics_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
                     SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_STRICT_OUTCOME
+                ),
+                "baseline_comparison_semantics_packet_accepted_as_logic_only": True,
+                "baseline_semantics_rows_accepted_as_non_executed_only": True,
+                "residual_definition_status_accepted_as_placeholder_only": True,
+                "comparison_direction_accepted_as_placeholder_only": True,
+                "baseline_not_accepted_as_complete": True,
+                "baseline_adequacy_accepted": False,
+                "baseline_empirical_fit_quality_accepted": False,
+                "statistical_decision_rule_validity_accepted": False,
+                "observed_separation_accepted": False,
+                "ccft_predicted_separation_accepted": False,
+                "experimental_protocol_readiness_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_STRICT_OUTCOME
                 ),
             }
         )
