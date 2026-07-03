@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_ccft_empirical_discriminator_candidate_priority_selection_packet"
+    "prepare_selected_ccft_empirical_discriminator_tolerance_registry_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,10 +1338,22 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_ccft_empirical_discriminator_candidate_map_packet_result"
+    "review_selected_ccft_empirical_discriminator_candidate_packet_result"
+)
+SELECTED_CANDIDATE_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_candidate_packet"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET = (
+    "review_ccft_empirical_discriminator_candidate_priority_selection_packet_result"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_TARGET = (
+    "prepare_ccft_empirical_discriminator_candidate_priority_selection_packet"
 )
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_TARGET = (
     "prepare_ccft_empirical_discriminator_candidate_map_packet"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_TARGET = (
+    "review_ccft_empirical_discriminator_candidate_map_packet_result"
 )
 CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_REVIEW_TARGET = (
     "review_ccft_full_variational_action_program_packet_result"
@@ -1580,7 +1592,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_ccft_empirical_discriminator_candidate_priority_selection_packet"
+    "prepare_selected_ccft_empirical_discriminator_tolerance_registry_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1597,7 +1609,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CCFTEmpiricalDiscriminatorCandidateMapPacketResultReview.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2436,20 +2448,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
         "20260702_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
-        "ACCEPTS_MEASURABLE_SYSTEM_AND_FALSIFIER_CANDIDATE_MAP_NO_EMPIRICAL_VALIDATION_"
-        "OR_SEAM_CLOSURE"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_AS_FUTURE_"
+        "PACKET_ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
     )
     assert payload["CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0"] == (
-        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
-        "ACCEPTS_PLANNING_MAP_NO_CCFT_VALIDATION_OR_MASTER_ACTION_PROMOTION"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_BOUNDED_CANDIDATE_SPECIFICATION_NO_EXECUTION_OR_MASTER_ACTION_"
+        "PROMOTION"
     )
     assert payload["CURRENT_LIVE_TARGET_KIND_v0"] == (
-        "ccft_empirical_discriminator_candidate_priority_selection_packet"
+        "selected_ccft_empirical_discriminator_tolerance_registry_packet"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -4668,6 +4681,45 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
         "ACCEPTS_PLANNING_MAP_NO_CCFT_VALIDATION_OR_MASTER_ACTION_PROMOTION"
     )
+    ccft_priority_packet_outcome = (
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+        "PREPARED_RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_"
+        "VALIDATION_OR_CCFT_VALIDATION"
+    )
+    ccft_priority_packet_strict_outcome = (
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+        "PREPARED_SELECTS_TOP_DISCRIMINATOR_CANDIDATE_FOR_PACKET_ONLY_NO_"
+        "EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    ccft_priority_review_outcome = (
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+        "RESULT_REVIEW_ACCEPTS_TOP_DISCRIMINATOR_PRIORITY_FOR_FUTURE_PACKET_"
+        "ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
+    )
+    ccft_priority_review_strict_outcome = (
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+        "RESULT_REVIEW_ACCEPTS_PRIORITY_SELECTION_AS_PLANNING_ONLY_NO_EXECUTION_"
+        "OR_MASTER_ACTION_PROMOTION"
+    )
+    selected_candidate_packet_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_PREPARED_"
+        "CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_NO_EMPIRICAL_"
+        "VALIDATION_OR_CCFT_VALIDATION"
+    )
+    selected_candidate_packet_strict_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_PREPARED_AS_"
+        "BOUNDED_CANDIDATE_SPECIFICATION_NO_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    )
+    selected_candidate_review_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_AS_FUTURE_"
+        "PACKET_ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
+    )
+    selected_candidate_review_strict_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_BOUNDED_CANDIDATE_SPECIFICATION_NO_EXECUTION_OR_MASTER_ACTION_"
+        "PROMOTION"
+    )
     ccft_index_review_workstream = _workstream(payload, CCFT_INDEX_REVIEW_TARGET)
     assert ccft_index_review_workstream["status"] == "paused"
     assert ccft_index_review_workstream["authorization_evidence"] == (
@@ -4828,7 +4880,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_empirical_packet["strict_packet_result"] == (
         ccft_empirical_packet_strict_outcome
     )
-    assert ccft_empirical_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert ccft_empirical_packet["selected_next_target"] == (
+        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_TARGET
+    )
     assert ccft_empirical_packet["selected_next_target_kind"] == (
         "ccft_empirical_discriminator_candidate_map_packet_result_review"
     )
@@ -4855,17 +4909,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_empirical_packet["seam_closure_claim"] == "no"
     assert ccft_empirical_packet["master_action_promoted"] == "no"
 
-    ccft_empirical_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    ccft_empirical_review = _workstream(
+        payload, CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_TARGET
+    )
     assert ccft_empirical_review["status"] == "paused"
-    assert ccft_empirical_review["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
+    assert ccft_empirical_review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CCFTEmpiricalDiscriminatorCandidateMapPacketResultReview.lean"
+    )
     assert ccft_empirical_review["report"] == (
         "formal/docs/release/"
         "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
         "20260702_v0.json"
     )
-    assert ccft_empirical_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert ccft_empirical_review["consumed_target"] == (
+        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_TARGET
+    )
     assert ccft_empirical_review["prepared_packet_result"] == (
         ccft_empirical_packet_outcome
     )
@@ -4876,7 +4935,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_empirical_review["strict_review_result"] == (
         ccft_empirical_review_strict_outcome
     )
-    assert ccft_empirical_review["selected_next_target"] == LIVE_TARGET
+    assert ccft_empirical_review["selected_next_target"] == (
+        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_TARGET
+    )
     assert ccft_empirical_review["selected_next_target_kind"] == (
         "ccft_empirical_discriminator_candidate_priority_selection_packet"
     )
@@ -4900,6 +4961,249 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert ccft_empirical_review["seam_closure_claim"] == "no"
     assert ccft_empirical_review["master_action_promoted"] == "no"
 
+    ccft_priority_packet = _workstream(
+        payload, CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_TARGET
+    )
+    assert ccft_priority_packet["status"] == "paused"
+    assert ccft_priority_packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacket.lean"
+    )
+    assert ccft_priority_packet["report"] == (
+        "formal/docs/release/"
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+        "20260702_v0.json"
+    )
+    assert ccft_priority_packet["consumed_target"] == (
+        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_TARGET
+    )
+    assert ccft_priority_packet["packet_result"] == ccft_priority_packet_outcome
+    assert ccft_priority_packet["strict_packet_result"] == (
+        ccft_priority_packet_strict_outcome
+    )
+    assert ccft_priority_packet["selected_next_target"] == (
+        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET
+    )
+    assert ccft_priority_packet["selected_next_target_kind"] == (
+        "ccft_empirical_discriminator_candidate_priority_selection_packet_result_review"
+    )
+    assert ccft_priority_packet[
+        "ccft_empirical_discriminator_candidate_priority_selection_action_count"
+    ] == 10
+    assert ccft_priority_packet[
+        "ccft_empirical_discriminator_candidate_priority_selection_criteria_count"
+    ] == 7
+    assert (
+        "rank_1_controlled_mesoscopic_coherence_platform_candidate"
+        in ccft_priority_packet["candidate_measurable_system_ranking"]
+    )
+    assert "risk of overclaim" in ccft_priority_packet[
+        "ccft_empirical_discriminator_candidate_priority_selection_criteria"
+    ]
+    assert ccft_priority_packet["selected_top_candidate_for_future_packet_only"] == (
+        "controlled_mesoscopic_coherence_platform_candidate"
+    )
+    assert ccft_priority_packet["future_packet_preparation_only"] == "yes"
+    assert ccft_priority_packet["empirical_test_executed"] == "no"
+    assert ccft_priority_packet["empirical_claim_authorized"] == "no"
+    assert ccft_priority_packet["pillar_closure_authorized"] == "no"
+    assert ccft_priority_packet["proof_attempt_executed"] == "no"
+    assert ccft_priority_packet["theorem_discharged"] == "no"
+    assert ccft_priority_packet["CCFT_validated"] == "no"
+    assert ccft_priority_packet["empirical_validation_claimed"] == "no"
+    assert ccft_priority_packet["seam_closure_claim"] == "no"
+    assert ccft_priority_packet["master_action_promoted"] == "no"
+
+    ccft_priority_review = _workstream(
+        payload, CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET
+    )
+    assert ccft_priority_review["status"] == "paused"
+    assert ccft_priority_review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacketResultReview.lean"
+    )
+    assert ccft_priority_review["report"] == (
+        "formal/docs/release/"
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+        "RESULT_REVIEW_20260702_v0.json"
+    )
+    assert ccft_priority_review["consumed_target"] == (
+        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET
+    )
+    assert ccft_priority_review["prepared_packet_result"] == (
+        ccft_priority_packet_outcome
+    )
+    assert ccft_priority_review["prepared_packet_strict_result"] == (
+        ccft_priority_packet_strict_outcome
+    )
+    assert ccft_priority_review["review_result"] == ccft_priority_review_outcome
+    assert ccft_priority_review["strict_review_result"] == (
+        ccft_priority_review_strict_outcome
+    )
+    assert ccft_priority_review["selected_next_target"] == (
+        SELECTED_CANDIDATE_PACKET_TARGET
+    )
+    assert ccft_priority_review["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_candidate_packet"
+    )
+    assert ccft_priority_review[
+        "ccft_empirical_discriminator_candidate_priority_selection_review_acceptance_item_count"
+    ] == 25
+    assert "selected top discriminator remains packet-level priority candidate only" in (
+        ccft_priority_review[
+            "ccft_empirical_discriminator_candidate_priority_selection_review_acceptance_items"
+        ]
+    )
+    assert ccft_priority_review[
+        "selected_top_discriminator_priority_accepted_for_future_packet_only"
+    ] == "yes"
+    assert ccft_priority_review["selected_candidate_packet_preparation_target"] == (
+        SELECTED_CANDIDATE_PACKET_TARGET
+    )
+    assert ccft_priority_review["empirical_execution_authorized"] == "no"
+    assert ccft_priority_review["empirical_test_executed"] == "no"
+    assert ccft_priority_review["empirical_claim_authorized"] == "no"
+    assert ccft_priority_review["pillar_closure_authorized"] == "no"
+    assert ccft_priority_review["proof_attempt_executed"] == "no"
+    assert ccft_priority_review["theorem_discharged"] == "no"
+    assert ccft_priority_review["CCFT_validated"] == "no"
+    assert ccft_priority_review["empirical_validation_claimed"] == "no"
+    assert ccft_priority_review["seam_closure_claim"] == "no"
+    assert ccft_priority_review["master_action_promoted"] == "no"
+
+    selected_candidate_packet = _workstream(payload, SELECTED_CANDIDATE_PACKET_TARGET)
+    assert selected_candidate_packet["status"] == "paused"
+    assert selected_candidate_packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "SelectedCCFTEmpiricalDiscriminatorCandidatePacket.lean"
+    )
+    assert selected_candidate_packet["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_20260702_v0.json"
+    )
+    assert selected_candidate_packet["consumed_target"] == (
+        SELECTED_CANDIDATE_PACKET_TARGET
+    )
+    assert selected_candidate_packet["packet_result"] == selected_candidate_packet_outcome
+    assert selected_candidate_packet["strict_packet_result"] == (
+        selected_candidate_packet_strict_outcome
+    )
+    assert selected_candidate_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert selected_candidate_packet["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_candidate_packet_result_review"
+    )
+    assert (
+        selected_candidate_packet[
+            "selected_ccft_empirical_discriminator_candidate_packet_action_count"
+        ]
+        == 11
+    )
+    assert selected_candidate_packet[
+        "selected_ccft_empirical_discriminator_candidate_id"
+    ] == "controlled_mesoscopic_coherence_platform_candidate"
+    assert selected_candidate_packet[
+        "selected_ccft_empirical_discriminator_candidate_observable"
+    ] == "coherence_lifetime_residual_candidate"
+    assert selected_candidate_packet[
+        "selected_ccft_empirical_discriminator_candidate_baseline"
+    ] == "standard_open_system_decoherence_baseline_comparison"
+    assert selected_candidate_packet[
+        "selected_ccft_empirical_discriminator_candidate_falsifier"
+    ] == "null_separation_from_baseline_with_registered_tolerances"
+    assert selected_candidate_packet["priority_selection_result_review_consumed"] == (
+        "yes"
+    )
+    assert selected_candidate_packet[
+        "selected_candidate_instantiated_for_future_packet_only"
+    ] == "yes"
+    assert selected_candidate_packet["selected_observable_bound_as_planning_row"] == (
+        "yes"
+    )
+    assert selected_candidate_packet["selected_baseline_bound_as_planning_row"] == (
+        "yes"
+    )
+    assert selected_candidate_packet["selected_falsifier_bound_as_planning_row"] == (
+        "yes"
+    )
+    assert selected_candidate_packet["empirical_execution_authorized"] == "no"
+    assert selected_candidate_packet["empirical_protocol_executed"] == "no"
+    assert selected_candidate_packet["selected_candidate_validation_claimed"] == "no"
+    assert selected_candidate_packet["empirical_test_executed"] == "no"
+    assert selected_candidate_packet["empirical_claim_authorized"] == "no"
+    assert selected_candidate_packet["pillar_closure_authorized"] == "no"
+    assert selected_candidate_packet["proof_attempt_executed"] == "no"
+    assert selected_candidate_packet["theorem_discharged"] == "no"
+    assert selected_candidate_packet["CCFT_validated"] == "no"
+    assert selected_candidate_packet["empirical_validation_claimed"] == "no"
+    assert selected_candidate_packet["seam_closure_claim"] == "no"
+    assert selected_candidate_packet["master_action_promoted"] == "no"
+
+    selected_candidate_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert selected_candidate_review["status"] == "paused"
+    assert selected_candidate_review["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert selected_candidate_review["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+        "20260702_v0.json"
+    )
+    assert selected_candidate_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert selected_candidate_review["prepared_packet_result"] == (
+        selected_candidate_packet_outcome
+    )
+    assert selected_candidate_review["prepared_packet_strict_result"] == (
+        selected_candidate_packet_strict_outcome
+    )
+    assert selected_candidate_review["review_result"] == (
+        selected_candidate_review_outcome
+    )
+    assert selected_candidate_review["strict_review_result"] == (
+        selected_candidate_review_strict_outcome
+    )
+    assert selected_candidate_review["selected_next_target"] == LIVE_TARGET
+    assert selected_candidate_review["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_tolerance_registry_packet"
+    )
+    assert (
+        selected_candidate_review[
+            "selected_ccft_empirical_discriminator_candidate_review_acceptance_item_count"
+        ]
+        == 29
+    )
+    assert "registered_tolerances treated as non-executed traceability placeholder only" in (
+        selected_candidate_review[
+            "selected_ccft_empirical_discriminator_candidate_review_acceptance_items"
+        ]
+    )
+    assert "registered_tolerances not treated as empirically calibrated" in (
+        selected_candidate_review[
+            "selected_ccft_empirical_discriminator_candidate_review_acceptance_items"
+        ]
+    )
+    assert selected_candidate_review[
+        "selected_candidate_packet_accepted_as_future_packet_only"
+    ] == "yes"
+    assert selected_candidate_review[
+        "registered_tolerances_traceability_placeholder_only"
+    ] == "yes"
+    assert selected_candidate_review["registered_tolerances_empirically_calibrated"] == (
+        "no"
+    )
+    assert selected_candidate_review["registered_tolerances_execution_authorized"] == (
+        "no"
+    )
+    assert selected_candidate_review[
+        "registered_tolerances_empirical_claim_authorized"
+    ] == "no"
+    assert selected_candidate_review["empirical_protocol_design_authorized"] == "no"
+    assert selected_candidate_review["empirical_execution_authorized"] == "no"
+    assert selected_candidate_review["empirical_protocol_executed"] == "no"
+    assert selected_candidate_review["empirical_test_executed"] == "no"
+    assert selected_candidate_review["CCFT_validated"] == "no"
+    assert selected_candidate_review["master_action_promoted"] == "no"
+    assert selected_candidate_review["seam_closure_claim"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -4910,27 +5214,93 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
         "20260702_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["packet_result"] == "PENDING"
-    assert interaction_active_workstream["strict_packet_result"] == "PENDING"
+    assert interaction_active_workstream["packet_result"] == (
+        selected_candidate_review_outcome
+    )
+    assert interaction_active_workstream["strict_packet_result"] == (
+        selected_candidate_review_strict_outcome
+    )
     assert interaction_active_workstream["review_result"] == (
-        ccft_empirical_review_outcome
+        selected_candidate_review_outcome
     )
     assert interaction_active_workstream["strict_review_result"] == (
-        ccft_empirical_review_strict_outcome
+        selected_candidate_review_strict_outcome
     )
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
     assert interaction_active_workstream["suggested_next_packet_target"] == LIVE_TARGET
     assert interaction_active_workstream["suggested_next_packet_kind"] == (
-        "ccft_empirical_discriminator_candidate_priority_selection_packet"
+        "selected_ccft_empirical_discriminator_tolerance_registry_packet"
     )
     assert interaction_active_workstream[
-        "ccft_empirical_discriminator_candidate_map_target_count"
-    ] == 11
+        "ccft_empirical_discriminator_candidate_priority_selection_action_count"
+    ] == 10
+    assert interaction_active_workstream[
+        "ccft_empirical_discriminator_candidate_priority_selection_criteria_count"
+    ] == 7
+    assert interaction_active_workstream[
+        "selected_top_candidate_for_future_packet_only"
+    ] == "controlled_mesoscopic_coherence_platform_candidate"
+    assert (
+        interaction_active_workstream[
+            "selected_ccft_empirical_discriminator_candidate_packet_action_count"
+        ]
+        == 11
+    )
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_candidate_id"
+    ] == "controlled_mesoscopic_coherence_platform_candidate"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_candidate_observable"
+    ] == "coherence_lifetime_residual_candidate"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_candidate_baseline"
+    ] == "standard_open_system_decoherence_baseline_comparison"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_candidate_falsifier"
+    ] == "null_separation_from_baseline_with_registered_tolerances"
+    assert interaction_active_workstream["priority_selection_result_review_consumed"] == (
+        "yes"
+    )
+    assert interaction_active_workstream[
+        "selected_candidate_instantiated_for_future_packet_only"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "selected_observable_bound_as_planning_row"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "selected_baseline_bound_as_planning_row"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "selected_falsifier_bound_as_planning_row"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "selected_candidate_packet_accepted_as_future_packet_only"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "registered_tolerances_traceability_placeholder_only"
+    ] == "yes"
+    assert interaction_active_workstream[
+        "registered_tolerances_empirically_calibrated"
+    ] == "no"
+    assert interaction_active_workstream[
+        "registered_tolerances_execution_authorized"
+    ] == "no"
+    assert interaction_active_workstream[
+        "registered_tolerances_empirical_claim_authorized"
+    ] == "no"
+    assert interaction_active_workstream["empirical_protocol_design_authorized"] == "no"
+    assert interaction_active_workstream["empirical_execution_authorized"] == "no"
+    assert interaction_active_workstream["empirical_protocol_executed"] == "no"
+    assert interaction_active_workstream["selected_candidate_validation_claimed"] == (
+        "no"
+    )
+    assert interaction_active_workstream["future_packet_preparation_only"] == "yes"
+    assert interaction_active_workstream["empirical_test_executed"] == "no"
     assert interaction_active_workstream["C_k_action_embedding_authorized"] == "no"
     assert interaction_active_workstream["C_k_variation_authorized"] == "no"
     assert interaction_active_workstream[

@@ -149,6 +149,211 @@ CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_STRICT_OUTCOME = (
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_TARGET = (
     "prepare_ccft_empirical_discriminator_candidate_priority_selection_packet"
 )
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET = (
+    "review_ccft_empirical_discriminator_candidate_priority_selection_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_candidate_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_candidate_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_tolerance_registry_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_PREPARED_"
+    "PLACEHOLDER_TOLERANCE_TRACEABILITY_PLAN_NO_EMPIRICAL_CALIBRATION_OR_"
+    "VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_PREPARED_"
+    "AS_PRE_PROTOCOL_TRACEABILITY_MAP_NO_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
+    "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
+    "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
+    "CCFT_VALIDATION"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_STRICT_OUTCOME = (
+    "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
+    "SELECTS_TOP_DISCRIMINATOR_CANDIDATE_FOR_PACKET_ONLY_NO_EXECUTION_OR_"
+    "MASTER_ACTION_PROMOTION"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_ACTIONS = [
+    "consume the accepted empirical discriminator candidate map",
+    "rank candidate measurable systems",
+    "rank candidate observables",
+    "rank candidate falsifier rows",
+    "rank candidate baseline-model comparisons",
+    "select one top candidate for future packet preparation only",
+    "record selection criteria",
+    "record rejected or deferred candidates",
+    "preserve that no empirical test is executed",
+    "preserve that no CCFT validation is claimed",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_CRITERIA = [
+    "measurability",
+    "falsifiability",
+    "baseline-model comparability",
+    "clarity of CCFT observable mapping",
+    "near-term feasibility",
+    "risk of overclaim",
+    "relevance to CCFT as candidate mesoscopic bridge layer",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_MEASURABLE_SYSTEM_RANKING = [
+    "rank_1_controlled_mesoscopic_coherence_platform_candidate",
+    "rank_2_condensed_matter_collective_coherence_platform_candidate",
+    "rank_3_astronomical_coherence_proxy_candidate",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_OBSERVABLE_RANKING = [
+    "rank_1_coherence_lifetime_residual_candidate",
+    "rank_2_phase_correlation_transport_residual_candidate",
+    "rank_3_noise_spectrum_coherence_residual_candidate",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_FALSIFIER_RANKING = [
+    "rank_1_null_separation_from_baseline_with_registered_tolerances",
+    "rank_2_sign_incompatible_residual_against_candidate_mapping",
+    "rank_3_protocol_dependence_without_reproducible_system_control",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_BASELINE_RANKING = [
+    "rank_1_standard_open_system_decoherence_baseline_comparison",
+    "rank_2_numerical_surrogate_model_comparison",
+    "rank_3_environmental_noise_systematics_comparison",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTED_TOP_CANDIDATE = (
+    "controlled_mesoscopic_coherence_platform_candidate"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_DEFERRED_CANDIDATES = [
+    "condensed_matter_collective_coherence_platform_candidate",
+    "astronomical_coherence_proxy_candidate",
+]
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_BOUNDARY = (
+    "This packet ranks empirical-discriminator candidate rows and selects one "
+    "top candidate for future packet preparation only. It does not execute an "
+    "empirical test, validate CCFT, validate any empirical claim, close any "
+    "pillar or seam, promote C_k, embed or vary C_k in an action, or promote "
+    "the master action."
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_OUTCOME = (
+    "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_RESULT_"
+    "REVIEW_ACCEPTS_TOP_DISCRIMINATOR_PRIORITY_FOR_FUTURE_PACKET_ONLY_NO_"
+    "EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_STRICT_OUTCOME = (
+    "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_RESULT_"
+    "REVIEW_ACCEPTS_PRIORITY_SELECTION_AS_PLANNING_ONLY_NO_EXECUTION_OR_"
+    "MASTER_ACTION_PROMOTION"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_ACCEPTANCE_ITEMS = [
+    "CCFT empirical discriminator candidate priority selection accepted",
+    "accepted empirical discriminator candidate map consumed",
+    "candidate measurable systems ranked",
+    "candidate observables ranked",
+    "candidate falsifier rows ranked",
+    "candidate baseline-model comparisons ranked",
+    "selected top candidate retained for future packet preparation only",
+    "selection criteria preserved",
+    "rejected or deferred candidates preserved",
+    "selected top discriminator remains packet-level priority candidate only",
+    "no empirical test executed",
+    "no proof execution",
+    "no new theorem discharge",
+    "no CCFT validation",
+    "no empirical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_PREPARED_"
+    "CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_NO_EMPIRICAL_"
+    "VALIDATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_PREPARED_AS_"
+    "BOUNDED_CANDIDATE_SPECIFICATION_NO_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_ACTIONS = [
+    "consume the accepted priority-selection result review",
+    "instantiate controlled_mesoscopic_coherence_platform_candidate",
+    "bind coherence_lifetime_residual_candidate as selected observable row",
+    "bind standard_open_system_decoherence_baseline_comparison as selected baseline row",
+    "bind null_separation_from_baseline_with_registered_tolerances as selected falsifier row",
+    "record candidate control-variable placeholders",
+    "record numerical-vs-physical comparison placeholders",
+    "record blockers before empirical protocol design",
+    "record blockers before empirical execution",
+    "preserve that no empirical validation is claimed",
+    "preserve that no CCFT validation is claimed",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_BOUNDARY = (
+    "This packet instantiates the selected CCFT empirical discriminator "
+    "candidate as a bounded future-packet candidate only. It does not execute "
+    "an empirical protocol, authorize empirical execution, validate CCFT, "
+    "validate any empirical claim, close any pillar or seam, promote C_k, "
+    "embed or vary C_k in an action, or promote the master action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_ID = (
+    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTED_TOP_CANDIDATE
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_OBSERVABLE = (
+    "coherence_lifetime_residual_candidate"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_BASELINE = (
+    "standard_open_system_decoherence_baseline_comparison"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_FALSIFIER = (
+    "null_separation_from_baseline_with_registered_tolerances"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+    "ACCEPTS_CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_AS_FUTURE_"
+    "PACKET_ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_"
+    "ACCEPTS_BOUNDED_CANDIDATE_SPECIFICATION_NO_EXECUTION_OR_MASTER_ACTION_"
+    "PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_ACCEPTANCE_ITEMS = [
+    "selected CCFT empirical discriminator candidate packet accepted",
+    "accepted priority-selection result review consumed",
+    "controlled mesoscopic coherence platform candidate accepted as future packet only",
+    "coherence lifetime residual candidate accepted as selected observable row",
+    "standard open-system decoherence baseline comparison accepted as selected baseline row",
+    "null separation from baseline with registered tolerances accepted as selected falsifier row",
+    "registered_tolerances treated as non-executed traceability placeholder only",
+    "registered_tolerances not treated as empirically calibrated",
+    "candidate control-variable placeholders preserved",
+    "numerical-vs-physical comparison placeholders preserved",
+    "blockers before empirical protocol design preserved",
+    "blockers before empirical execution preserved",
+    "no empirical protocol design authorized",
+    "no empirical execution authorization",
+    "no empirical test executed",
+    "no proof execution",
+    "no new theorem discharge",
+    "no CCFT validation",
+    "no empirical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_ACCEPTS_"
     "MEASURABLE_SYSTEM_AND_FALSIFIER_CANDIDATE_MAP_NO_EMPIRICAL_VALIDATION_"
@@ -744,6 +949,182 @@ STAGES: dict[str, StageSpec] = {
         ),
         stage_role="ccft_empirical_discriminator_candidate_map_packet_result_review",
     ),
+    "priority_packet": StageSpec(
+        key="priority_packet",
+        schema_id=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+            "20260702_v0"
+        ),
+        packet_id=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET"
+        ),
+        outcome_id=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_TARGET
+        ),
+        consumed_target_kind=(
+            "ccft_empirical_discriminator_candidate_priority_selection_packet"
+        ),
+        selected_next_target=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            "ccft_empirical_discriminator_candidate_priority_selection_packet_result_review"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacket"
+        ),
+        json_filename=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+            "20260702_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "ccft_empirical_discriminator_candidate_priority_selection_packet_only"
+        ),
+        stage_role="ccft_empirical_discriminator_candidate_priority_selection_packet",
+    ),
+    "priority_review": StageSpec(
+        key="priority_review",
+        schema_id=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+            "RESULT_REVIEW_20260702_v0"
+        ),
+        packet_id=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+            "RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_"
+            "PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            "ccft_empirical_discriminator_candidate_priority_selection_packet_result_review"
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_TARGET
+        ),
+        selected_next_target_kind=(
+            "selected_ccft_empirical_discriminator_candidate_packet"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacketResultReview"
+        ),
+        json_filename=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_"
+            "RESULT_REVIEW_20260702_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "ccft_empirical_discriminator_candidate_priority_selection_review_"
+            "accepts_planning_priority_only"
+        ),
+        stage_role=(
+            "ccft_empirical_discriminator_candidate_priority_selection_packet_"
+            "result_review"
+        ),
+    ),
+    "selected_candidate_packet": StageSpec(
+        key="selected_candidate_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_"
+            "20260702_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_v0"
+        ),
+        status="ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET",
+        outcome_id=SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_OUTCOME,
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_TARGET,
+        consumed_target_kind="selected_ccft_empirical_discriminator_candidate_packet",
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            "selected_ccft_empirical_discriminator_candidate_packet_result_review"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_"
+            "20260702_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_candidate_bounded_packet_only"
+        ),
+        stage_role="selected_ccft_empirical_discriminator_candidate_packet",
+    ),
+    "selected_candidate_review": StageSpec(
+        key="selected_candidate_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_"
+            "REVIEW_20260702_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_"
+            "REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_"
+            "RESULT_REVIEW"
+        ),
+        outcome_id=SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_OUTCOME,
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            "selected_ccft_empirical_discriminator_candidate_packet_result_review"
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_TARGET
+        ),
+        selected_next_target_kind=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_packet"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_"
+            "REVIEW_20260702_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_candidate_review_accepts_"
+            "bounded_packet_instantiation_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_candidate_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -760,6 +1141,10 @@ ORDERED_STAGE_KEYS = [
     "variational_review",
     "empirical_packet",
     "empirical_review",
+    "priority_packet",
+    "priority_review",
+    "selected_candidate_packet",
+    "selected_candidate_review",
 ]
 
 
@@ -860,6 +1245,10 @@ def build_stage_payload(
         "variational_review",
         "empirical_packet",
         "empirical_review",
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -868,16 +1257,28 @@ def build_stage_payload(
         "variational_review",
         "empirical_packet",
         "empirical_review",
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
         "variational_review",
         "empirical_packet",
         "empirical_review",
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
         "empirical_review",
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -922,15 +1323,31 @@ def build_stage_payload(
                 "CCFT empirical discriminator candidate priority selection packet"
                 if stage_key == "empirical_review"
                 else (
-                    "CCFT empirical discriminator candidate map packet result review"
-                    if stage_key == "empirical_packet"
+                    "selected CCFT empirical discriminator tolerance registry packet"
+                    if stage_key == "selected_candidate_review"
                     else (
-                        "CCFT full variational/action program packet result review"
-                        if stage_key == "variational_packet"
+                        "selected CCFT empirical discriminator candidate packet result review"
+                        if stage_key == "selected_candidate_packet"
                         else (
-                            "CCFT full variational/action program packet"
-                            if stage_key == "ck_index_review"
-                            else "CCFT-to-ToE object crosswalk"
+                            "selected CCFT empirical discriminator candidate packet"
+                            if stage_key == "priority_review"
+                            else (
+                                "CCFT empirical discriminator candidate priority selection packet result review"
+                                if stage_key == "priority_packet"
+                                else (
+                                    "CCFT empirical discriminator candidate map packet result review"
+                                    if stage_key == "empirical_packet"
+                                    else (
+                                        "CCFT full variational/action program packet result review"
+                                        if stage_key == "variational_packet"
+                                        else (
+                                            "CCFT full variational/action program packet"
+                                            if stage_key == "ck_index_review"
+                                            else "CCFT-to-ToE object crosswalk"
+                                        )
+                                    )
+                                )
+                            )
                         )
                     )
                 )
@@ -996,6 +1413,10 @@ def build_stage_payload(
         "variational_review",
         "empirical_packet",
         "empirical_review",
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
     }:
         payload.update(
             {
@@ -1026,7 +1447,14 @@ def build_stage_payload(
                 "empirical_discriminator_claims_authorized": False,
             }
         )
-    if stage_key in {"empirical_packet", "empirical_review"}:
+    if stage_key in {
+        "empirical_packet",
+        "empirical_review",
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
+    }:
         payload.update(
             {
                 "ccft_empirical_discriminator_candidate_map_targets": (
@@ -1053,6 +1481,63 @@ def build_stage_payload(
                 "pillar_closure_authorized": False,
             }
         )
+    if stage_key in {
+        "priority_packet",
+        "priority_review",
+        "selected_candidate_packet",
+        "selected_candidate_review",
+    }:
+        payload.update(
+            {
+                "ccft_empirical_discriminator_candidate_priority_selection_actions": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_ACTIONS
+                ),
+                "ccft_empirical_discriminator_candidate_priority_selection_action_count": (
+                    len(
+                        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_ACTIONS
+                    )
+                ),
+                "ccft_empirical_discriminator_candidate_priority_selection_criteria": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_CRITERIA
+                ),
+                "ccft_empirical_discriminator_candidate_priority_selection_criteria_count": (
+                    len(
+                        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_CRITERIA
+                    )
+                ),
+                "candidate_measurable_system_ranking": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_MEASURABLE_SYSTEM_RANKING
+                ),
+                "candidate_observable_ranking": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_OBSERVABLE_RANKING
+                ),
+                "candidate_falsifier_row_ranking": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_FALSIFIER_RANKING
+                ),
+                "candidate_baseline_model_comparison_ranking": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_BASELINE_RANKING
+                ),
+                "selected_top_candidate_for_future_packet_only": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTED_TOP_CANDIDATE
+                ),
+                "deferred_or_rejected_candidates": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_DEFERRED_CANDIDATES
+                ),
+                "ccft_empirical_discriminator_candidate_priority_selection_boundary": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_BOUNDARY
+                ),
+                "accepted_empirical_discriminator_candidate_map_consumed": True,
+                "candidate_measurable_systems_ranked": True,
+                "candidate_observables_ranked": True,
+                "candidate_falsifier_rows_ranked": True,
+                "candidate_baseline_model_comparisons_ranked": True,
+                "top_candidate_selected_for_future_packet_only": True,
+                "selection_criteria_recorded": True,
+                "rejected_or_deferred_candidates_recorded": True,
+                "empirical_test_executed": False,
+                "future_packet_preparation_only": True,
+            }
+        )
     if stage_key == "empirical_review":
         payload.update(
             {
@@ -1075,6 +1560,112 @@ def build_stage_payload(
                     "The next disciplined step is to select or rank candidate "
                     "discriminator rows, not execute an empirical claim or "
                     "validation attempt."
+                ),
+            }
+        )
+    if stage_key == "priority_review":
+        payload.update(
+            {
+                "ccft_empirical_discriminator_candidate_priority_selection_review_acceptance_items": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "ccft_empirical_discriminator_candidate_priority_selection_review_acceptance_item_count": (
+                    len(
+                        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_STRICT_OUTCOME
+                ),
+                "selected_top_discriminator_priority_accepted_for_future_packet_only": True,
+                "selected_candidate_packet_preparation_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_TARGET
+                ),
+                "empirical_execution_authorized": False,
+                "next_disciplined_move_reason": (
+                    "The priority selection is only a planning review. The next "
+                    "disciplined step is a narrowly bounded packet for the "
+                    "selected top discriminator candidate itself, not execution "
+                    "of an empirical test or validation attempt."
+                ),
+            }
+        )
+    if stage_key in {"selected_candidate_packet", "selected_candidate_review"}:
+        payload.update(
+            {
+                "selected_ccft_empirical_discriminator_candidate_packet_actions": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_ACTIONS
+                ),
+                "selected_ccft_empirical_discriminator_candidate_packet_action_count": (
+                    len(SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_ACTIONS)
+                ),
+                "selected_ccft_empirical_discriminator_candidate_packet_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_BOUNDARY
+                ),
+                "selected_ccft_empirical_discriminator_candidate_id": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_ID
+                ),
+                "selected_ccft_empirical_discriminator_candidate_observable": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_OBSERVABLE
+                ),
+                "selected_ccft_empirical_discriminator_candidate_baseline": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_BASELINE
+                ),
+                "selected_ccft_empirical_discriminator_candidate_falsifier": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_FALSIFIER
+                ),
+                "priority_selection_result_review_consumed": True,
+                "selected_candidate_instantiated_for_future_packet_only": True,
+                "selected_observable_bound_as_planning_row": True,
+                "selected_baseline_bound_as_planning_row": True,
+                "selected_falsifier_bound_as_planning_row": True,
+                "candidate_control_variable_placeholders_recorded": True,
+                "candidate_numerical_vs_physical_placeholders_recorded": True,
+                "blockers_before_empirical_protocol_design_recorded": True,
+                "blockers_before_empirical_execution_recorded": True,
+                "empirical_execution_authorized": False,
+                "empirical_protocol_executed": False,
+                "selected_candidate_validation_claimed": False,
+            }
+        )
+    if stage_key == "selected_candidate_review":
+        payload.update(
+            {
+                "selected_ccft_empirical_discriminator_candidate_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "selected_ccft_empirical_discriminator_candidate_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_STRICT_OUTCOME
+                ),
+                "selected_candidate_packet_accepted_as_future_packet_only": True,
+                "registered_tolerances_traceability_placeholder_only": True,
+                "registered_tolerances_empirically_calibrated": False,
+                "registered_tolerances_execution_authorized": False,
+                "registered_tolerances_empirical_claim_authorized": False,
+                "empirical_protocol_design_authorized": False,
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The selected-candidate packet result review accepts only "
+                    "bounded candidate instantiation. Because the falsifier row "
+                    "uses registered_tolerances, the next disciplined step is a "
+                    "tolerance traceability registry packet before any empirical "
+                    "protocol design, execution, calibration, or validation claim."
                 ),
             }
         )

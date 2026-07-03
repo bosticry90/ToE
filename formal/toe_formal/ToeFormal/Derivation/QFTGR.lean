@@ -207,6 +207,10 @@ import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacket
 import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacketResultReview
 import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidateMapPacket
 import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidateMapPacketResultReview
+import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacket
+import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -230,15 +234,15 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  CCFTEmpiricalDiscriminatorCandidateMapPacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  CCFTEmpiricalDiscriminatorCandidateMapPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_ccft_empirical_discriminator_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_empirical_discriminator_candidate_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_ACCEPTS_MEASURABLE_SYSTEM_AND_FALSIFIER_CANDIDATE_MAP_NO_EMPIRICAL_VALIDATION_OR_SEAM_CLOSURE" := by
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_ACCEPTS_CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_AS_FUTURE_PACKET_ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION" := by
   constructor
   · rfl
   · rfl
