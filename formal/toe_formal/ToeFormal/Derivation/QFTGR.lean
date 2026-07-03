@@ -205,6 +205,7 @@ import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacket
 import ToeFormal.Derivation.CCFTCKAdmissibilityObligationIndexPacketResultReview
 import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacket
 import ToeFormal.Derivation.CCFTFullVariationalActionProgramPacketResultReview
+import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidateMapPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -228,15 +229,15 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  CCFTFullVariationalActionProgramPacketResultReview.reviewResult
+  CCFTEmpiricalDiscriminatorCandidateMapPacket.packetResult
 
 def currentPacketId : String :=
-  CCFTFullVariationalActionProgramPacketResultReview.packetId
+  CCFTEmpiricalDiscriminatorCandidateMapPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_ccft_full_variational_action_program_review :
+theorem qft_gr_lane_aggregate_exposes_ccft_empirical_discriminator_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_RESULT_REVIEW_ACCEPTS_LAGRANGIAN_HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_MASTER_ACTION_PROMOTION" := by
+        "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_PREPARED_MEASURABLE_SYSTEM_AND_FALSIFIER_CANDIDATES_NO_EMPIRICAL_VALIDATION_OR_SEAM_CLOSURE" := by
   constructor
   · rfl
   · rfl
