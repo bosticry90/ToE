@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_registry_packet"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,10 +1338,16 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_registry_packet_result"
+)
+MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result"
 )
 MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
+)
+BASELINE_COMPONENT_REGISTRY_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_registry_packet"
 )
 RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_residual_formula_selection_packet_result"
@@ -1622,7 +1628,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_registry_packet"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1639,7 +1645,37 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTEmpiricalDiscriminatorMeasurementFeedbackBaselinePressurePacketResultReview.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentRegistryPacketResultReview.lean"
+)
+LIVE_TARGET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_RESULT_REVIEW_20260703_v0.json"
+)
+LIVE_TARGET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_FUTURE_TAU_BASELINE_COMPONENT_"
+    "TRACEABILITY_ONLY_NO_BASELINE_COMPLETENESS_OR_CCFT_VALIDATION"
+)
+BASELINE_COMPONENT_REGISTRY_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_PREPARED_REGISTERS_FUTURE_TAU_BASELINE_COMPONENTS_NO_BASELINE_"
+    "COMPLETENESS_OR_CCFT_VALIDATION"
+)
+LIVE_TARGET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_BASELINE_COMPONENT_REGISTRY_ONLY_NO_TAU_"
+    "BASELINE_COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_"
+    "NO_MASTER_ACTION_PROMOTION"
+)
+BASELINE_COMPONENT_REGISTRY_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_PREPARED_BASELINE_COMPONENT_TRACEABILITY_ONLY_NO_MEASUREMENT_"
+    "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+LIVE_TARGET_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_interaction_"
+    "risk_packet"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2476,24 +2512,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert payload["CURRENT_LIVE_TARGET_EVIDENCE_v0"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
-        "formal/docs/release/"
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
-        "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_20260703_v0.json"
+    assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == LIVE_TARGET_REPORT
+    assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == LIVE_TARGET_OUTCOME
+    assert (
+        payload["CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0"]
+        == LIVE_TARGET_STRICT_OUTCOME
     )
-    assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
-        "PRESSURE_PACKET_RESULT_REVIEW_ACCEPTS_ARXIV_2503_13615_AS_"
-        "LITERATURE_BASELINE_PRESSURE_ONLY_NO_TOE_OR_CCFT_EVIDENCE"
-    )
-    assert payload["CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0"] == (
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
-        "PRESSURE_PACKET_RESULT_REVIEW_ACCEPTS_BASELINE_HARDENING_ONLY_NO_"
-        "EMPIRICAL_VALIDATION_NO_PROTOCOL_READINESS_NO_MASTER_ACTION_PROMOTION"
-    )
-    assert payload["CURRENT_LIVE_TARGET_KIND_v0"] == (
-        "selected_ccft_empirical_discriminator_baseline_component_registry_packet"
-    )
+    assert payload["CURRENT_LIVE_TARGET_KIND_v0"] == LIVE_TARGET_KIND
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
         item["workstream_id"] for item in payload["workstreams"] if item["status"] == "paused"
@@ -4854,6 +4879,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PRESSURE_PACKET_RESULT_REVIEW_ACCEPTS_BASELINE_HARDENING_ONLY_NO_"
         "EMPIRICAL_VALIDATION_NO_PROTOCOL_READINESS_NO_MASTER_ACTION_PROMOTION"
     )
+    baseline_component_registry_packet_outcome = (
+        BASELINE_COMPONENT_REGISTRY_PACKET_OUTCOME
+    )
+    baseline_component_registry_packet_strict_outcome = (
+        BASELINE_COMPONENT_REGISTRY_PACKET_STRICT_OUTCOME
+    )
     ccft_index_review_workstream = _workstream(payload, CCFT_INDEX_REVIEW_TARGET)
     assert ccft_index_review_workstream["status"] == "paused"
     assert ccft_index_review_workstream["authorization_evidence"] == (
@@ -5967,7 +5998,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert measurement_packet["strict_packet_result"] == (
         measurement_feedback_baseline_pressure_packet_strict_outcome
     )
-    assert measurement_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        measurement_packet["selected_next_target"]
+        == MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+    )
     assert measurement_packet["selected_next_target_kind"] == (
         "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result_review"
     )
@@ -6015,17 +6049,23 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    measurement_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    measurement_review = _workstream(
+        payload, MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+    )
     assert measurement_review["status"] == "paused"
-    assert measurement_review["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
+    assert measurement_review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "SelectedCCFTEmpiricalDiscriminatorMeasurementFeedbackBaselinePressurePacketResultReview.lean"
+    )
     assert measurement_review["report"] == (
         "formal/docs/release/"
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
         "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_20260703_v0.json"
     )
-    assert measurement_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        measurement_review["consumed_target"]
+        == MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+    )
     assert measurement_review["prepared_packet_result"] == (
         measurement_feedback_baseline_pressure_packet_outcome
     )
@@ -6038,7 +6078,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert measurement_review["strict_review_result"] == (
         measurement_feedback_baseline_pressure_review_strict_outcome
     )
-    assert measurement_review["selected_next_target"] == LIVE_TARGET
+    assert (
+        measurement_review["selected_next_target"]
+        == BASELINE_COMPONENT_REGISTRY_PACKET_TARGET
+    )
     assert measurement_review["selected_next_target_kind"] == (
         "selected_ccft_empirical_discriminator_baseline_component_registry_packet"
     )
@@ -6079,6 +6122,105 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
+    baseline_packet = _workstream(payload, BASELINE_COMPONENT_REGISTRY_PACKET_TARGET)
+    assert baseline_packet["status"] == "paused"
+    assert baseline_packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "SelectedCCFTEmpiricalDiscriminatorBaselineComponentRegistryPacket.lean"
+    )
+    assert baseline_packet["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+        "PACKET_20260703_v0.json"
+    )
+    assert baseline_packet["consumed_target"] == BASELINE_COMPONENT_REGISTRY_PACKET_TARGET
+    assert baseline_packet["packet_result"] == (
+        baseline_component_registry_packet_outcome
+    )
+    assert baseline_packet["strict_packet_result"] == (
+        baseline_component_registry_packet_strict_outcome
+    )
+    assert baseline_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert baseline_packet["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_baseline_component_registry_packet_result_review"
+    )
+    assert (
+        baseline_packet["measurement_feedback_baseline_pressure_result_review_consumed"]
+        == "yes"
+    )
+    assert baseline_packet["baseline_component_registry_packet_prepared"] == "yes"
+    assert baseline_packet["baseline_component_registry_traceability_only"] == "yes"
+    assert baseline_packet["tau_baseline_component_registry_prepared"] == "yes"
+    assert baseline_packet["tau_baseline_future_comparison_baseline_only"] == "yes"
+    assert baseline_packet["tau_baseline_value_computed"] == "no"
+    assert baseline_packet["tau_baseline_completed_model_claimed"] == "no"
+    assert baseline_packet["baseline_component_completeness_claimed"] == "no"
+    assert baseline_packet["baseline_component_registry_row_count"] == 8
+    assert baseline_packet["registered_tau_baseline_component_count"] == 8
+    assert (
+        "feedback Hamiltonian control"
+        in baseline_packet["registered_tau_baseline_components"]
+    )
+    assert (
+        "thermodynamic and energy accounting"
+        in baseline_packet["registered_tau_baseline_components"]
+    )
+    assert (
+        baseline_packet["residual_formula_changed_by_baseline_component_registry"]
+        == "no"
+    )
+
+    baseline_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert baseline_review["status"] == "paused"
+    assert baseline_review["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert baseline_review["report"] == LIVE_TARGET_REPORT
+    assert baseline_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert baseline_review["prepared_packet_result"] == (
+        baseline_component_registry_packet_outcome
+    )
+    assert baseline_review["prepared_packet_strict_result"] == (
+        baseline_component_registry_packet_strict_outcome
+    )
+    assert baseline_review["review_result"] == LIVE_TARGET_OUTCOME
+    assert baseline_review["strict_review_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert baseline_review["selected_next_target"] == LIVE_TARGET
+    assert baseline_review["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert (
+        baseline_review["baseline_component_registry_packet_result_review_consumed"]
+        == "yes"
+    )
+    assert baseline_review["baseline_component_registry_packet_accepted"] == "yes"
+    assert (
+        baseline_review["baseline_component_registry_packet_accepted_as_traceability_only"]
+        == "yes"
+    )
+    assert (
+        baseline_review[
+            "future_tau_baseline_component_traceability_only_accepted"
+        ]
+        == "yes"
+    )
+    assert baseline_review["tau_baseline_value_computation_accepted"] == "no"
+    assert baseline_review["tau_baseline_completed_model_accepted"] == "no"
+    assert baseline_review["baseline_component_completeness_accepted"] == "no"
+    assert baseline_review["baseline_component_independence_claimed"] == "no"
+    assert baseline_review["baseline_component_interaction_risks_preserved"] == "yes"
+    assert baseline_review["baseline_component_interaction_risk_packet_selected"] == (
+        "yes"
+    )
+    assert (
+        baseline_review[
+            "measurement_back_action_detector_efficiency_feedback_delay_control_coupling_risk_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        baseline_review["residual_formula_changed_by_baseline_component_registry_review"]
+        == "no"
+    )
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -6087,23 +6229,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert interaction_active_workstream["report"] == (
-        "formal/docs/release/"
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
-        "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_20260703_v0.json"
-    )
+    assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["review_result"] == (
-        measurement_feedback_baseline_pressure_review_outcome
-    )
-    assert interaction_active_workstream["strict_review_result"] == (
-        measurement_feedback_baseline_pressure_review_strict_outcome
+    assert interaction_active_workstream["review_result"] == LIVE_TARGET_OUTCOME
+    assert (
+        interaction_active_workstream["strict_review_result"]
+        == LIVE_TARGET_STRICT_OUTCOME
     )
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
     assert interaction_active_workstream["suggested_next_packet_target"] == LIVE_TARGET
     assert interaction_active_workstream["suggested_next_packet_kind"] == (
-        "selected_ccft_empirical_discriminator_baseline_component_registry_packet"
+        LIVE_TARGET_KIND
     )
     assert (
         interaction_active_workstream[
@@ -6130,6 +6267,90 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "external_source_treated_as_master_action_support"
         ]
         == "no"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_registry_packet_prepared"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_registry_traceability_only"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["tau_baseline_component_registry_prepared"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["tau_baseline_future_comparison_baseline_only"]
+        == "yes"
+    )
+    assert interaction_active_workstream["tau_baseline_value_computed"] == "no"
+    assert (
+        interaction_active_workstream["tau_baseline_completed_model_claimed"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_completeness_claimed"]
+        == "no"
+    )
+    assert interaction_active_workstream["baseline_component_registry_row_count"] == 8
+    assert (
+        interaction_active_workstream["registered_tau_baseline_component_count"]
+        == 8
+    )
+    assert (
+        "feedback Hamiltonian control"
+        in interaction_active_workstream["registered_tau_baseline_components"]
+    )
+    assert (
+        "thermodynamic and energy accounting"
+        in interaction_active_workstream["registered_tau_baseline_components"]
+    )
+    assert (
+        interaction_active_workstream[
+            "residual_formula_changed_by_baseline_component_registry"
+        ]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_registry_packet_accepted"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "baseline_component_registry_packet_accepted_as_traceability_only"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "future_tau_baseline_component_traceability_only_accepted"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["tau_baseline_value_computation_accepted"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["tau_baseline_completed_model_accepted"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_completeness_accepted"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_independence_claimed"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_interaction_risks_preserved"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["baseline_component_interaction_risk_packet_selected"]
+        == "yes"
     )
     assert interaction_active_workstream[
         "ccft_empirical_discriminator_candidate_priority_selection_action_count"

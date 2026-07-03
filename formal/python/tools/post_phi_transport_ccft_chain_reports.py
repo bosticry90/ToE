@@ -17,6 +17,9 @@ STAGE_CAPTURED_AT_UTC = {
     "residual_formula_selection_packet": "2026-07-03T00:00:00Z",
     "residual_formula_selection_review": "2026-07-03T00:00:00Z",
     "measurement_feedback_baseline_pressure_packet": "2026-07-03T00:00:00Z",
+    "measurement_feedback_baseline_pressure_review": "2026-07-03T00:00:00Z",
+    "baseline_component_registry_packet": "2026-07-03T00:00:00Z",
+    "baseline_component_registry_review": "2026-07-03T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -365,13 +368,56 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_KIND = (
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
-    "PACKET_PREPARED_LISTS_FUTURE_TAU_BASELINE_COMPONENTS_FOR_COMPARISON_"
-    "ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
+    "PACKET_PREPARED_REGISTERS_FUTURE_TAU_BASELINE_COMPONENTS_NO_BASELINE_"
+    "COMPLETENESS_OR_CCFT_VALIDATION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
-    "PACKET_PREPARED_COMPONENT_REGISTRY_ONLY_NO_PROTOCOL_READINESS_NO_"
-    "MASTER_ACTION_PROMOTION"
+    "PACKET_PREPARED_BASELINE_COMPONENT_TRACEABILITY_ONLY_NO_MEASUREMENT_"
+    "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_STRICT_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_registry_"
+    "packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_registry_packet_"
+    "result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_FUTURE_TAU_BASELINE_COMPONENT_"
+    "TRACEABILITY_ONLY_NO_BASELINE_COMPLETENESS_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_BASELINE_COMPONENT_REGISTRY_ONLY_NO_TAU_"
+    "BASELINE_COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_"
+    "NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_"
+    "interaction_risk_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_interaction_"
+    "risk_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_PREPARED_MAPS_COMPONENT_COUPLING_RISKS_NO_BASELINE_MODEL_"
+    "OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_PREPARED_INTERACTION_RISK_TRACEABILITY_ONLY_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -1025,6 +1071,203 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REV
     "evidence, empirical validation, observed residual evidence, baseline "
     "separation, protocol readiness, statistical validation, C_k promotion, "
     "action embedding, or master-action support."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_FIELDS = [
+    "component_id",
+    "future_tau_baseline_component",
+    "tau_baseline_role",
+    "registry_reason",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ROWS = [
+    {
+        "component_id": "ordinary_open_system_decoherence",
+        "future_tau_baseline_component": "ordinary open-system decoherence",
+        "tau_baseline_role": (
+            "baseline coherence-lifetime loss from standard open-system "
+            "environmental coupling"
+        ),
+        "registry_reason": (
+            "future r_tau comparisons must not compare against an underbuilt "
+            "ordinary-decoherence baseline"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": (
+            "component registration only; no baseline completeness or CCFT validation"
+        ),
+    },
+    {
+        "component_id": "continuous_or_repeated_measurement",
+        "future_tau_baseline_component": "continuous or repeated quantum measurement",
+        "tau_baseline_role": (
+            "monitored-trajectory context that can alter apparent coherence and "
+            "time-arrow behavior"
+        ),
+        "registry_reason": (
+            "arXiv:2503.13615 is recorded as pressure that monitoring belongs "
+            "in the future baseline burden"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": (
+            "component registration only; no protocol readiness or statistical validation"
+        ),
+    },
+    {
+        "component_id": "measurement_back_action",
+        "future_tau_baseline_component": "measurement back-action",
+        "tau_baseline_role": (
+            "standard measurement-induced state disturbance affecting coherence "
+            "lifetime interpretation"
+        ),
+        "registry_reason": (
+            "future residual claims must distinguish any CCFT candidate signal "
+            "from known measurement back-action"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": "component registration only; no observed residual",
+    },
+    {
+        "component_id": "feedback_hamiltonian_control",
+        "future_tau_baseline_component": "feedback Hamiltonian control",
+        "tau_baseline_role": (
+            "active feedback and Hamiltonian engineering that can reshape "
+            "monitored trajectories"
+        ),
+        "registry_reason": (
+            "future tau_baseline must account for standard feedback-control "
+            "effects before CCFT residual interpretation"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": "component registration only; no CCFT evidence",
+    },
+    {
+        "component_id": "detector_efficiency",
+        "future_tau_baseline_component": "detector efficiency",
+        "tau_baseline_role": (
+            "measurement-channel efficiency limitation that can change apparent "
+            "monitoring and feedback behavior"
+        ),
+        "registry_reason": (
+            "future comparisons must track detector efficiency rather than "
+            "folding it into unexplained residual language"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": "component registration only; no calibrated evidence",
+    },
+    {
+        "component_id": "feedback_delay",
+        "future_tau_baseline_component": "feedback delay",
+        "tau_baseline_role": (
+            "latency between monitoring and feedback action that can affect "
+            "candidate coherence-lifetime comparisons"
+        ),
+        "registry_reason": (
+            "future tau_baseline must account for delay effects before any "
+            "scale-free residual can be meaningful"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": "component registration only; no protocol execution",
+    },
+    {
+        "component_id": "control_field_effects",
+        "future_tau_baseline_component": "control-field effects",
+        "tau_baseline_role": (
+            "ordinary control-drive and field-engineering effects that can alter "
+            "coherence behavior"
+        ),
+        "registry_reason": (
+            "future CCFT comparisons must separate candidate residual language "
+            "from standard control-field dynamics"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": "component registration only; no baseline separation",
+    },
+    {
+        "component_id": "thermodynamic_energy_accounting",
+        "future_tau_baseline_component": "thermodynamic and energy accounting",
+        "tau_baseline_role": (
+            "monitoring-induced energy, work, entropy, and thermodynamic bookkeeping"
+        ),
+        "registry_reason": (
+            "future tau_baseline must not ignore energy and entropy accounting "
+            "from measurement-feedback physics"
+        ),
+        "execution_status": "not_computed_not_measured_traceability_only",
+        "claim_boundary": "component registration only; no master-action promotion",
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_COMPONENTS = [
+    row["future_tau_baseline_component"]
+    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ROWS
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ITEMS = [
+    "baseline-component registry packet prepared",
+    "measurement-feedback baseline-pressure result review consumed",
+    "tau_baseline recorded as future comparison baseline only",
+    "ordinary open-system decoherence registered",
+    "continuous or repeated quantum measurement registered",
+    "measurement back-action registered",
+    "feedback Hamiltonian control registered",
+    "detector efficiency registered",
+    "feedback delay registered",
+    "control-field effects registered",
+    "thermodynamic and energy accounting registered",
+    "r_tau formula preserved unchanged",
+    "no tau_baseline value computed",
+    "no completed baseline model claimed",
+    "no baseline completeness claimed",
+    "no measurement protocol readiness",
+    "no statistical validation",
+    "no observed residual",
+    "no baseline separation",
+    "no empirical validation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_BOUNDARY = (
+    "This packet registers future tau_baseline components for traceability "
+    "only. tau_baseline remains a future comparison baseline, not a measured "
+    "value, completed model, completeness proof, protocol output, statistical "
+    "result, observed residual, baseline-separation result, evidence for CCFT, "
+    "evidence against CCFT, empirical validation, or master-action support."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_ACCEPTANCE_ITEMS = [
+    "baseline-component registry packet accepted",
+    "eight future tau_baseline components accepted as traceability rows only",
+    "ordinary open-system decoherence registration accepted",
+    "continuous or repeated quantum measurement registration accepted",
+    "measurement back-action registration accepted",
+    "feedback Hamiltonian control registration accepted",
+    "detector efficiency registration accepted",
+    "feedback delay registration accepted",
+    "control-field effects registration accepted",
+    "thermodynamic and energy accounting registration accepted",
+    "tau_baseline remains a future comparison baseline only",
+    "registered component list is not accepted as complete",
+    "tau_baseline computation not accepted",
+    "completed baseline model not accepted",
+    "component independence not claimed",
+    "component interaction risk packet selected as next target",
+    "normalized residual formula preserved unchanged",
+    "no measurement protocol readiness accepted",
+    "no statistical validation accepted",
+    "no observed residual accepted",
+    "no baseline separation accepted",
+    "no CCFT validation accepted",
+    "no master-action promotion accepted",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_BOUNDARY = (
+    "This result review accepts the baseline-component registry packet only "
+    "as future tau_baseline component traceability. It accepts the eight "
+    "registered components as future baseline burdens, not as a complete "
+    "baseline model, tau_baseline computation, measurement protocol, "
+    "statistical validation, observed residual, baseline separation, evidence "
+    "for or against CCFT, empirical validation, or master-action support. "
+    "Because measurement, back-action, detector efficiency, feedback delay, "
+    "Hamiltonian control, control fields, and energy accounting can interact, "
+    "the next disciplined target is a baseline-component interaction/risk "
+    "packet."
 )
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
@@ -2476,6 +2719,105 @@ STAGES: dict[str, StageSpec] = {
             "baseline_pressure_packet_result_review"
         ),
     ),
+    "baseline_component_registry_packet": StageSpec(
+        key="baseline_component_registry_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+            "PACKET_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+            "PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "REGISTRY_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentRegistryPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+            "PACKET_20260703_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_"
+            "traceability_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_registry_packet"
+        ),
+    ),
+    "baseline_component_registry_review": StageSpec(
+        key="baseline_component_registry_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+            "PACKET_RESULT_REVIEW_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+            "PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "REGISTRY_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentRegistryPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+            "PACKET_RESULT_REVIEW_20260703_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_"
+            "registry_review_accepts_traceability_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_registry_"
+            "packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -2506,6 +2848,8 @@ ORDERED_STAGE_KEYS = [
     "residual_formula_selection_review",
     "measurement_feedback_baseline_pressure_packet",
     "measurement_feedback_baseline_pressure_review",
+    "baseline_component_registry_packet",
+    "baseline_component_registry_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -2552,6 +2896,12 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "measurement_feedback_baseline_pressure_review": (
         "selected CCFT empirical discriminator baseline-component registry packet"
+    ),
+    "baseline_component_registry_packet": (
+        "selected CCFT empirical discriminator baseline-component registry packet result review"
+    ),
+    "baseline_component_registry_review": (
+        "selected CCFT empirical discriminator baseline-component interaction/risk packet"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -2679,6 +3029,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -2701,6 +3053,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -2721,6 +3075,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -2739,6 +3095,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -2854,6 +3212,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -2901,6 +3261,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -2943,6 +3305,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -3063,6 +3427,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -3154,6 +3520,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -3293,6 +3661,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -3444,6 +3814,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -3551,6 +3923,8 @@ def build_stage_payload(
         "residual_formula_selection_review",
         "measurement_feedback_baseline_pressure_packet",
         "measurement_feedback_baseline_pressure_review",
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
     }:
         payload.update(
             {
@@ -3938,6 +4312,213 @@ def build_stage_payload(
                     "measurement protocol design, statistical validation, "
                     "empirical validation, CCFT validation, or master-action "
                     "promotion."
+                ),
+            }
+        )
+    if stage_key in {
+        "baseline_component_registry_packet",
+        "baseline_component_registry_review",
+    }:
+        payload.update(
+            {
+                "measurement_feedback_baseline_pressure_result_review_consumed": True,
+                "measurement_feedback_baseline_pressure_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_OUTCOME
+                ),
+                "measurement_feedback_baseline_pressure_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_STRICT_OUTCOME
+                ),
+                "baseline_component_registry_packet_prepared": True,
+                "baseline_component_registry_traceability_only": True,
+                "tau_baseline_component_registry_prepared": True,
+                "tau_baseline_future_comparison_baseline_only": True,
+                "tau_baseline_measured_value_claimed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_completed_model_claimed": False,
+                "baseline_component_completeness_claimed": False,
+                "baseline_model_completed": False,
+                "baseline_separation_claimed": False,
+                "baseline_component_registry_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_FIELDS
+                ),
+                "baseline_component_registry_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_FIELDS
+                    )
+                ),
+                "baseline_component_registry_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ROWS
+                ),
+                "baseline_component_registry_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ROWS
+                    )
+                ),
+                "registered_tau_baseline_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_COMPONENTS
+                ),
+                "registered_tau_baseline_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_COMPONENTS
+                    )
+                ),
+                "future_tau_baseline_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_COMPONENTS
+                ),
+                "future_tau_baseline_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_COMPONENTS
+                    )
+                ),
+                "baseline_component_registry_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ITEMS
+                ),
+                "baseline_component_registry_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_ITEMS
+                    )
+                ),
+                "baseline_component_registry_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_BOUNDARY
+                ),
+                "measurement_feedback_baseline_pressure_review_accepted": True,
+                "measurement_feedback_baseline_pressure_accepted_as_baseline_hardening_only": True,
+                "measurement_feedback_baseline_pressure_packet_accepted_as_baseline_hardening_only": True,
+                "arxiv_2503_13615_accepted_as_literature_baseline_pressure_only": True,
+                "external_source_treated_as_baseline_pressure_only": True,
+                "external_source_treated_as_toe_evidence": False,
+                "external_source_treated_as_ccft_evidence": False,
+                "external_source_treated_as_empirical_validation": False,
+                "external_source_treated_as_observed_residual_evidence": False,
+                "external_source_treated_as_baseline_separation": False,
+                "external_source_treated_as_protocol_readiness": False,
+                "external_source_treated_as_statistical_validation": False,
+                "external_source_treated_as_master_action_support": False,
+                "future_tau_baseline_must_include_measurement_feedback_effects": True,
+                "future_residual_claims_must_beat_measurement_feedback_baseline": True,
+                "residual_formula_changed_by_baseline_pressure_review": False,
+                "measurement_feedback_baseline_pressure_source": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE
+                ),
+                "measurement_feedback_baseline_pressure_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                ),
+                "measurement_feedback_baseline_pressure_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                    )
+                ),
+                "ordinary_open_system_decoherence_registered": True,
+                "continuous_or_repeated_quantum_measurement_registered": True,
+                "measurement_back_action_registered": True,
+                "feedback_hamiltonian_control_registered": True,
+                "detector_efficiency_registered": True,
+                "feedback_delay_registered": True,
+                "control_field_effects_registered": True,
+                "thermodynamic_energy_accounting_registered": True,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_registry": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "master_action_support_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The baseline-component registry packet lists future "
+                    "tau_baseline components for traceability only. The next "
+                    "disciplined step is result review of the component "
+                    "registry, not tau_baseline computation, measurement "
+                    "protocol design, statistical validation, baseline "
+                    "separation, CCFT validation, or master-action promotion."
+                ),
+            }
+        )
+    if stage_key == "baseline_component_registry_review":
+        payload.update(
+            {
+                "baseline_component_registry_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_STRICT_OUTCOME
+                ),
+                "baseline_component_registry_packet_accepted": True,
+                "baseline_component_registry_packet_accepted_as_traceability_only": True,
+                "future_tau_baseline_component_traceability_only_accepted": True,
+                "eight_future_tau_baseline_components_accepted_as_traceability_rows_only": True,
+                "tau_baseline_future_comparison_baseline_only_accepted": True,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_component_completeness_accepted": False,
+                "baseline_component_independence_claimed": False,
+                "baseline_component_interaction_risks_preserved": True,
+                "baseline_component_interaction_risk_packet_selected": True,
+                "residual_formula_changed_by_baseline_component_registry_review": False,
+                "measurement_back_action_detector_efficiency_feedback_delay_control_coupling_risk_recorded": True,
+                "baseline_component_registry_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_component_registry_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "baseline_component_registry_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_BOUNDARY
+                ),
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "master_action_support_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The baseline-component registry result review accepts "
+                    "only future tau_baseline component traceability. Because "
+                    "the registered components may interact, the next "
+                    "disciplined step is a baseline-component interaction/risk "
+                    "packet, not tau_baseline computation, baseline-completeness "
+                    "claiming, measurement protocol design, statistical "
+                    "validation, CCFT validation, or master-action promotion."
                 ),
             }
         )
