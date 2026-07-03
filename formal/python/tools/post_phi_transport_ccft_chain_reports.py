@@ -146,6 +146,18 @@ CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_STRICT_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_PREPARED_AS_PLANNING_"
     "MAP_NO_CCFT_VALIDATION_OR_MASTER_ACTION_PROMOTION"
 )
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_TARGET = (
+    "prepare_ccft_empirical_discriminator_candidate_priority_selection_packet"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_OUTCOME = (
+    "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_ACCEPTS_"
+    "MEASURABLE_SYSTEM_AND_FALSIFIER_CANDIDATE_MAP_NO_EMPIRICAL_VALIDATION_"
+    "OR_SEAM_CLOSURE"
+)
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_STRICT_OUTCOME = (
+    "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_ACCEPTS_"
+    "PLANNING_MAP_NO_CCFT_VALIDATION_OR_MASTER_ACTION_PROMOTION"
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_TARGETS = [
     "candidate measurable systems",
     "candidate observables",
@@ -165,6 +177,34 @@ CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_BOUNDARY = (
     "validate any empirical claim, close any pillar or seam, promote C_k, "
     "embed or vary C_k in an action, or promote the master action."
 )
+CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_ACCEPTANCE_ITEMS = [
+    "CCFT empirical discriminator candidate map accepted",
+    "candidate measurable systems indexed",
+    "candidate observables indexed",
+    "candidate control variables indexed",
+    "candidate baseline models indexed",
+    "candidate failure modes indexed",
+    "candidate falsifiers indexed",
+    "candidate numerical-vs-physical comparison routes indexed",
+    "candidate empirical-discriminator questions indexed",
+    "required blockers before empirical claim preserved",
+    "required blockers before CCFT validation preserved",
+    "required blockers before pillar or seam relevance preserved",
+    "no proof execution",
+    "no new theorem discharge",
+    "no CCFT validation",
+    "no empirical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
 
 NONCLAIMS = [
     "no proof execution",
@@ -663,6 +703,47 @@ STAGES: dict[str, StageSpec] = {
         ),
         stage_role="ccft_empirical_discriminator_candidate_map_packet",
     ),
+    "empirical_review": StageSpec(
+        key="empirical_review",
+        schema_id=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
+            "20260702_v0"
+        ),
+        packet_id=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_OUTCOME,
+        strict_outcome_id=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_TARGET,
+        consumed_target_kind=(
+            "ccft_empirical_discriminator_candidate_map_packet_result_review"
+        ),
+        selected_next_target=(
+            CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_TARGET
+        ),
+        selected_next_target_kind=(
+            "ccft_empirical_discriminator_candidate_priority_selection_packet"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTEmpiricalDiscriminatorCandidateMapPacketResultReview"
+        ),
+        json_filename=(
+            "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_RESULT_REVIEW_"
+            "20260702_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "ccft_empirical_discriminator_candidate_map_review_accepts_"
+            "planning_map_only"
+        ),
+        stage_role="ccft_empirical_discriminator_candidate_map_packet_result_review",
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -678,6 +759,7 @@ ORDERED_STAGE_KEYS = [
     "variational_packet",
     "variational_review",
     "empirical_packet",
+    "empirical_review",
 ]
 
 
@@ -777,6 +859,7 @@ def build_stage_payload(
         "variational_packet",
         "variational_review",
         "empirical_packet",
+        "empirical_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -784,14 +867,17 @@ def build_stage_payload(
         "variational_packet",
         "variational_review",
         "empirical_packet",
+        "empirical_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
         "variational_review",
         "empirical_packet",
+        "empirical_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
+        "empirical_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -833,15 +919,19 @@ def build_stage_payload(
             "CCFT empirical discriminator candidate map packet"
             if stage_key == "variational_review"
             else (
-                "CCFT empirical discriminator candidate map packet result review"
-                if stage_key == "empirical_packet"
+                "CCFT empirical discriminator candidate priority selection packet"
+                if stage_key == "empirical_review"
                 else (
-                    "CCFT full variational/action program packet result review"
-                    if stage_key == "variational_packet"
+                    "CCFT empirical discriminator candidate map packet result review"
+                    if stage_key == "empirical_packet"
                     else (
-                        "CCFT full variational/action program packet"
-                        if stage_key == "ck_index_review"
-                        else "CCFT-to-ToE object crosswalk"
+                        "CCFT full variational/action program packet result review"
+                        if stage_key == "variational_packet"
+                        else (
+                            "CCFT full variational/action program packet"
+                            if stage_key == "ck_index_review"
+                            else "CCFT-to-ToE object crosswalk"
+                        )
                     )
                 )
             )
@@ -901,7 +991,12 @@ def build_stage_payload(
                 ),
             }
         )
-    if stage_key in {"variational_packet", "variational_review", "empirical_packet"}:
+    if stage_key in {
+        "variational_packet",
+        "variational_review",
+        "empirical_packet",
+        "empirical_review",
+    }:
         payload.update(
             {
                 "ccft_full_variational_action_program_targets": (
@@ -931,7 +1026,7 @@ def build_stage_payload(
                 "empirical_discriminator_claims_authorized": False,
             }
         )
-    if stage_key == "empirical_packet":
+    if stage_key in {"empirical_packet", "empirical_review"}:
         payload.update(
             {
                 "ccft_empirical_discriminator_candidate_map_targets": (
@@ -956,6 +1051,31 @@ def build_stage_payload(
                 "required_blockers_before_pillar_or_seam_relevance_indexed": True,
                 "empirical_claim_authorized": False,
                 "pillar_closure_authorized": False,
+            }
+        )
+    if stage_key == "empirical_review":
+        payload.update(
+            {
+                "ccft_empirical_discriminator_candidate_map_review_acceptance_items": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "ccft_empirical_discriminator_candidate_map_review_acceptance_item_count": (
+                    len(
+                        CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_PACKET_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The empirical discriminator map is only a planning map. "
+                    "The next disciplined step is to select or rank candidate "
+                    "discriminator rows, not execute an empirical claim or "
+                    "validation attempt."
+                ),
             }
         )
     if stage_key == "variational_review":
