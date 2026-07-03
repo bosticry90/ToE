@@ -38,10 +38,40 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_registry_packet"
 )
 FINAL_PREVIOUS_TARGET = (
+    "review_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result"
+)
+MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
+)
+MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorMeasurementFeedbackBaselinePressurePacket.lean"
+)
+MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+    "BASELINE_PRESSURE_PACKET_20260703_v0.json"
+)
+MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_KIND = (
+    "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result_review"
+)
+RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_residual_formula_selection_packet_result"
+)
+RESIDUAL_FORMULA_SELECTION_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.lean"
+)
+RESIDUAL_FORMULA_SELECTION_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+    "PACKET_RESULT_REVIEW_20260703_v0.json"
+)
+RESIDUAL_FORMULA_SELECTION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
 )
 RESIDUAL_FORMULA_SELECTION_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_residual_formula_selection_packet"
@@ -82,19 +112,19 @@ VARIATIONAL_PACKET_TARGET = "prepare_ccft_full_variational_action_program_packet
 VARIATIONAL_REVIEW_TARGET = "review_ccft_full_variational_action_program_packet_result"
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.lean"
+    "SelectedCCFTEmpiricalDiscriminatorMeasurementFeedbackBaselinePressurePacketResultReview.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
-    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
-    "PACKET_RESULT_REVIEW_20260703_v0.json"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+    "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_20260703_v0.json"
 )
-FINAL_OUTCOME = STAGES["residual_formula_selection_review"].outcome_id
+FINAL_OUTCOME = STAGES["measurement_feedback_baseline_pressure_review"].outcome_id
 FINAL_STRICT_OUTCOME = STAGES[
-    "residual_formula_selection_review"
+    "measurement_feedback_baseline_pressure_review"
 ].strict_outcome_id
 FINAL_KIND = (
-    "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
+    "selected_ccft_empirical_discriminator_baseline_component_registry_packet"
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -215,6 +245,14 @@ WRAPPER_BY_STAGE = {
     "residual_formula_selection_review": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_residual_formula_selection_packet_result_review_report.py"
+    ),
+    "measurement_feedback_baseline_pressure_packet": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_report.py"
+    ),
+    "measurement_feedback_baseline_pressure_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result_review_report.py"
     ),
 }
 
@@ -347,6 +385,16 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_residual_formula_selection_packet_result_review_report",
         "build_selected_ccft_empirical_discriminator_residual_formula_selection_packet_result_review",
     ),
+    "measurement_feedback_baseline_pressure_packet": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_report",
+        "build_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet",
+    ),
+    "measurement_feedback_baseline_pressure_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result_review",
+    ),
 }
 
 PAPER_DOCS = (
@@ -368,6 +416,8 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_RESULT_REVIEW_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_RESULT_REVIEW_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -473,6 +523,8 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "observable_definition_semantics_review",
             "residual_formula_selection_packet",
             "residual_formula_selection_review",
+            "measurement_feedback_baseline_pressure_packet",
+            "measurement_feedback_baseline_pressure_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -535,10 +587,18 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
     )
     assert (
         STAGES["residual_formula_selection_packet"].selected_next_target
-        == FINAL_PREVIOUS_TARGET
+        == RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
     )
     assert (
         STAGES["residual_formula_selection_review"].selected_next_target
+        == MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_TARGET
+    )
+    assert (
+        STAGES["measurement_feedback_baseline_pressure_packet"].selected_next_target
+        == FINAL_PREVIOUS_TARGET
+    )
+    assert (
+        STAGES["measurement_feedback_baseline_pressure_review"].selected_next_target
         == FINAL_LIVE_TARGET
     )
 
@@ -725,6 +785,8 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "observable_definition_semantics_review",
                 "residual_formula_selection_packet",
                 "residual_formula_selection_review",
+                "measurement_feedback_baseline_pressure_packet",
+                "measurement_feedback_baseline_pressure_review",
             }
             else "no"
         )
@@ -1500,7 +1562,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         residual_packet["strict_packet_result"]
         == STAGES["residual_formula_selection_packet"].strict_outcome_id
     )
-    assert residual_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        residual_packet["selected_next_target"]
+        == RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
+    )
     assert residual_packet["selected_next_target_kind"] == (
         "selected_ccft_empirical_discriminator_residual_formula_selection_packet_result_review"
     )
@@ -1577,18 +1642,29 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert residual_packet["statistical_validation_claimed"] == "no"
     assert (
         residual_packet["selected_next_planning_packet_target"]
-        == FINAL_PREVIOUS_TARGET
+        == RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
     )
     _assert_registry_nonclaims(residual_packet)
 
-    residual_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    residual_review = workstream(RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET, payload)
     assert residual_review["status"] == "paused"
-    assert residual_review["authorization_evidence"] == FINAL_EVIDENCE
-    assert residual_review["report"] == FINAL_REPORT
-    assert residual_review["review_result"] == FINAL_OUTCOME
-    assert residual_review["strict_review_result"] == FINAL_STRICT_OUTCOME
-    assert residual_review["selected_next_target"] == FINAL_LIVE_TARGET
-    assert residual_review["selected_next_target_kind"] == FINAL_KIND
+    assert residual_review["authorization_evidence"] == (
+        RESIDUAL_FORMULA_SELECTION_REVIEW_EVIDENCE
+    )
+    assert residual_review["report"] == RESIDUAL_FORMULA_SELECTION_REVIEW_REPORT
+    assert residual_review["review_result"] == (
+        STAGES["residual_formula_selection_review"].outcome_id
+    )
+    assert residual_review["strict_review_result"] == (
+        STAGES["residual_formula_selection_review"].strict_outcome_id
+    )
+    assert (
+        residual_review["selected_next_target"]
+        == MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_TARGET
+    )
+    assert residual_review["selected_next_target_kind"] == (
+        RESIDUAL_FORMULA_SELECTION_REVIEW_KIND
+    )
     assert residual_review["prepared_packet_result"] == (
         STAGES["residual_formula_selection_packet"].outcome_id
     )
@@ -1641,6 +1717,147 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     )
     _assert_registry_nonclaims(residual_review)
 
+    measurement_packet = workstream(
+        MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_TARGET, payload
+    )
+    assert measurement_packet["status"] == "paused"
+    assert measurement_packet["authorization_evidence"] == (
+        MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_EVIDENCE
+    )
+    assert measurement_packet["report"] == (
+        MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_REPORT
+    )
+    assert measurement_packet["packet_result"] == (
+        STAGES["measurement_feedback_baseline_pressure_packet"].outcome_id
+    )
+    assert measurement_packet["strict_packet_result"] == (
+        STAGES["measurement_feedback_baseline_pressure_packet"].strict_outcome_id
+    )
+    assert measurement_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert measurement_packet["selected_next_target_kind"] == (
+        MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_KIND
+    )
+    assert (
+        measurement_packet["residual_formula_selection_result_review_consumed"]
+        == "yes"
+    )
+    assert measurement_packet["residual_formula_selection_review_result"] == (
+        STAGES["residual_formula_selection_review"].outcome_id
+    )
+    assert (
+        measurement_packet["residual_formula_selection_review_strict_result"]
+        == STAGES["residual_formula_selection_review"].strict_outcome_id
+    )
+    assert measurement_packet["measurement_feedback_baseline_pressure_only"] == "yes"
+    assert (
+        measurement_packet["measurement_feedback_baseline_pressure_row_count"]
+        == 8
+    )
+    assert (
+        measurement_packet["measurement_feedback_baseline_pressure_component_count"]
+        == 8
+    )
+    assert (
+        measurement_packet["measurement_feedback_baseline_pressure_source"][
+            "arxiv_id"
+        ]
+        == "2503.13615"
+    )
+    assert (
+        "feedback Hamiltonian control"
+        in measurement_packet["measurement_feedback_baseline_pressure_components"]
+    )
+    assert (
+        "quantum thermodynamic accounting"
+        in measurement_packet["future_tau_baseline_components"]
+    )
+    assert (
+        measurement_packet["external_source_treated_as_baseline_pressure_only"]
+        == "yes"
+    )
+    assert measurement_packet["external_source_treated_as_toe_evidence"] == "no"
+    assert measurement_packet["external_source_treated_as_ccft_evidence"] == "no"
+    assert (
+        measurement_packet["external_source_treated_as_empirical_validation"]
+        == "no"
+    )
+    assert (
+        measurement_packet["external_source_treated_as_master_action_support"]
+        == "no"
+    )
+    assert (
+        measurement_packet[
+            "future_tau_baseline_must_include_measurement_feedback_effects"
+        ]
+        == "yes"
+    )
+    assert (
+        measurement_packet[
+            "future_residual_claims_must_beat_measurement_feedback_baseline"
+        ]
+        == "yes"
+    )
+    assert (
+        measurement_packet["residual_formula_changed_by_baseline_pressure_packet"]
+        == "no"
+    )
+    _assert_registry_nonclaims(measurement_packet)
+
+    measurement_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert measurement_review["status"] == "paused"
+    assert measurement_review["authorization_evidence"] == FINAL_EVIDENCE
+    assert measurement_review["report"] == FINAL_REPORT
+    assert measurement_review["review_result"] == FINAL_OUTCOME
+    assert measurement_review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert measurement_review["prepared_packet_result"] == (
+        STAGES["measurement_feedback_baseline_pressure_packet"].outcome_id
+    )
+    assert measurement_review["prepared_packet_strict_result"] == (
+        STAGES["measurement_feedback_baseline_pressure_packet"].strict_outcome_id
+    )
+    assert measurement_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert measurement_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        measurement_review[
+            "measurement_feedback_baseline_pressure_packet_accepted_as_baseline_hardening_only"
+        ]
+        == "yes"
+    )
+    assert (
+        measurement_review[
+            "arxiv_2503_13615_accepted_as_literature_baseline_pressure_only"
+        ]
+        == "yes"
+    )
+    assert measurement_review["external_source_treated_as_toe_evidence"] == "no"
+    assert measurement_review["external_source_treated_as_ccft_evidence"] == "no"
+    assert (
+        measurement_review["external_source_treated_as_observed_residual_evidence"]
+        == "no"
+    )
+    assert measurement_review["external_source_treated_as_baseline_separation"] == (
+        "no"
+    )
+    assert measurement_review["external_source_treated_as_protocol_readiness"] == (
+        "no"
+    )
+    assert (
+        measurement_review["external_source_treated_as_statistical_validation"]
+        == "no"
+    )
+    assert (
+        measurement_review["external_source_treated_as_master_action_support"]
+        == "no"
+    )
+    assert measurement_review["future_baseline_component_registry_selected"] == (
+        "yes"
+    )
+    assert (
+        measurement_review["residual_formula_changed_by_baseline_pressure_review"]
+        == "no"
+    )
+    _assert_registry_nonclaims(measurement_review)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
@@ -1654,6 +1871,23 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["selected_next_target_kind"] == "PENDING"
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
     assert active["suggested_next_packet_kind"] == FINAL_KIND
+    assert active[
+        "measurement_feedback_baseline_pressure_packet_accepted_as_baseline_hardening_only"
+    ] == "yes"
+    assert active["external_source_treated_as_toe_evidence"] == "no"
+    assert active["external_source_treated_as_ccft_evidence"] == "no"
+    assert active["external_source_treated_as_empirical_validation"] == "no"
+    assert active["external_source_treated_as_protocol_readiness"] == "no"
+    assert active["external_source_treated_as_statistical_validation"] == "no"
+    assert active["external_source_treated_as_master_action_support"] == "no"
+    assert (
+        active["future_tau_baseline_must_include_measurement_feedback_effects"]
+        == "yes"
+    )
+    assert (
+        active["residual_formula_changed_by_baseline_pressure_review"]
+        == "no"
+    )
     assert active["selected_primary_residual_formula"] == (
         "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
     )

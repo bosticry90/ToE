@@ -16,6 +16,7 @@ STAGE_CAPTURED_AT_UTC = {
     "observable_definition_semantics_review": "2026-07-03T00:00:00Z",
     "residual_formula_selection_packet": "2026-07-03T00:00:00Z",
     "residual_formula_selection_review": "2026-07-03T00:00:00Z",
+    "measurement_feedback_baseline_pressure_packet": "2026-07-03T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -331,6 +332,46 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUG
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
     "PRESSURE_PACKET_PREPARED_REFERENCE_BASELINE_NOTE_ONLY_NO_PROTOCOL_"
     "EXECUTION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUGGESTED_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_STRICT_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUGGESTED_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_measurement_feedback_"
+    "baseline_pressure_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_measurement_feedback_baseline_"
+    "pressure_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
+    "PRESSURE_PACKET_RESULT_REVIEW_ACCEPTS_ARXIV_2503_13615_AS_LITERATURE_"
+    "BASELINE_PRESSURE_ONLY_NO_TOE_OR_CCFT_EVIDENCE"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
+    "PRESSURE_PACKET_RESULT_REVIEW_ACCEPTS_BASELINE_HARDENING_ONLY_NO_"
+    "EMPIRICAL_VALIDATION_NO_PROTOCOL_READINESS_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_registry_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_registry_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_PREPARED_LISTS_FUTURE_TAU_BASELINE_COMPONENTS_FOR_COMPARISON_"
+    "ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
+    "PACKET_PREPARED_COMPONENT_REGISTRY_ONLY_NO_PROTOCOL_READINESS_NO_"
+    "MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -786,6 +827,205 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COM
     "monitoring-induced energy flow",
     "quantum thermodynamic accounting",
 ]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_FIELDS = [
+    "pressure_id",
+    "standard_physics_effect",
+    "future_baseline_implication",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_ROWS = [
+    {
+        "pressure_id": "measurement_feedback_monitored_quantum_trajectories",
+        "standard_physics_effect": (
+            "monitored quantum trajectories can carry a measurement-induced "
+            "arrow-of-time structure"
+        ),
+        "future_baseline_implication": (
+            "future tau_baseline cannot treat measurement as passive bookkeeping"
+        ),
+        "claim_boundary": "baseline pressure only; no CCFT evidence",
+    },
+    {
+        "pressure_id": "explicit_hamiltonian_control",
+        "standard_physics_effect": (
+            "explicit Hamiltonian control can reproduce or counteract monitored "
+            "trajectory behavior"
+        ),
+        "future_baseline_implication": (
+            "future tau_baseline may need Hamiltonian-control terms before any "
+            "residual interpretation"
+        ),
+        "claim_boundary": "baseline pressure only; no master-action support",
+    },
+    {
+        "pressure_id": "feedback_reversed_arrow_trajectories",
+        "standard_physics_effect": (
+            "feedback can generate trajectories consistent with a reversed "
+            "measurement arrow of time"
+        ),
+        "future_baseline_implication": (
+            "apparent time-arrow anomalies are not sufficient CCFT discriminators"
+        ),
+        "claim_boundary": "baseline pressure only; no ToE truth claim",
+    },
+    {
+        "pressure_id": "open_system_backward_dynamics_simulation",
+        "standard_physics_effect": (
+            "standard control tools can simulate backward-in-time open-system "
+            "dynamics"
+        ),
+        "future_baseline_implication": (
+            "future residual claims must beat open-system control baselines"
+        ),
+        "claim_boundary": "baseline pressure only; no baseline separation",
+    },
+    {
+        "pressure_id": "continuous_measurement_engine",
+        "standard_physics_effect": (
+            "continuous measurement can power a feedback-driven measurement engine"
+        ),
+        "future_baseline_implication": (
+            "future baselines may need monitoring-induced energy-flow accounting"
+        ),
+        "claim_boundary": "baseline pressure only; no empirical validation",
+    },
+    {
+        "pressure_id": "monitoring_induced_energy_flow",
+        "standard_physics_effect": (
+            "monitoring can pump energy into the controlled quantum system"
+        ),
+        "future_baseline_implication": (
+            "future baselines should include quantum thermodynamic energy "
+            "accounting before any residual is interpreted"
+        ),
+        "claim_boundary": "baseline pressure only; no CCFT prediction",
+    },
+    {
+        "pressure_id": "finite_efficiency_measurement_regime",
+        "standard_physics_effect": (
+            "finite-efficiency measurement regimes remain part of the external "
+            "standard-physics pressure source"
+        ),
+        "future_baseline_implication": (
+            "future baselines should not assume ideal detector efficiency"
+        ),
+        "claim_boundary": "baseline pressure only; no statistical validation",
+    },
+    {
+        "pressure_id": "feedback_delay_regime",
+        "standard_physics_effect": (
+            "feedback delay can be modeled inside experimentally realizable "
+            "measurement-feedback conditions"
+        ),
+        "future_baseline_implication": (
+            "future baselines should account for finite control-loop delay"
+        ),
+        "claim_boundary": "baseline pressure only; no protocol execution",
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_BOUNDARY = (
+    "This packet records arXiv:2503.13615, Reshaping the Quantum Arrow of "
+    "Time, as literature baseline pressure only. It records that standard "
+    "quantum measurement, feedback, Hamiltonian control, detector efficiency "
+    "limits, feedback delay, monitoring-induced energy flow, and quantum "
+    "thermodynamic accounting can strengthen a future tau_baseline before "
+    "any normalized coherence-lifetime residual can be meaningful. It does "
+    "not treat the source as ToE evidence, CCFT evidence, empirical "
+    "validation, baseline separation, measurement-protocol readiness, "
+    "statistical validation, C_k promotion, action embedding, or "
+    "master-action support."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_ITEMS = [
+    "measurement-feedback baseline-pressure packet prepared",
+    "residual-formula selection result review consumed",
+    "normalized coherence-lifetime residual formula retained",
+    "residual formula unchanged by literature baseline pressure",
+    "arXiv:2503.13615 recorded as external literature source",
+    "source recorded as baseline pressure only",
+    "monitored quantum trajectories recorded as standard-physics pressure",
+    "explicit Hamiltonian control recorded as standard-physics pressure",
+    "feedback-produced reversed-arrow trajectories recorded as standard-physics pressure",
+    "backward open-system dynamics simulation recorded as standard-physics pressure",
+    "continuous measurement engine recorded as standard-physics pressure",
+    "finite-efficiency measurement regime recorded as standard-physics pressure",
+    "feedback delay regime recorded as standard-physics pressure",
+    "monitoring-induced energy flow recorded as standard-physics pressure",
+    "future tau_baseline strengthened beyond ordinary decoherence",
+    "future residual claims must compare against measurement-feedback baselines",
+    "no observed empirical residual",
+    "no CCFT-predicted residual",
+    "no measured coherence anomaly",
+    "no statistical effect size",
+    "no baseline separation",
+    "no measurement protocol readiness",
+    "no empirical confirmation",
+    "no proof execution",
+    "no new theorem discharge",
+    "no empirical validation",
+    "no CCFT validation",
+    "no empirical protocol",
+    "no statistical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_ACCEPTANCE_ITEMS = [
+    "measurement-feedback baseline-pressure packet accepted",
+    "arXiv:2503.13615 accepted as literature baseline pressure only",
+    "Reshaping the Quantum Arrow of Time source accepted as baseline-hardening note only",
+    "standard measurement-feedback quantum control accepted as future baseline burden",
+    "source not accepted as ToE evidence",
+    "source not accepted as CCFT evidence",
+    "source not accepted as empirical validation",
+    "source not accepted as observed residual evidence",
+    "source not accepted as baseline separation",
+    "source not accepted as protocol readiness",
+    "source not accepted as statistical validation",
+    "source not accepted as master-action support",
+    "future tau_baseline burden strengthened",
+    "future residual formula left unchanged",
+    "future baseline-component registry selected as next target",
+    "no proof execution",
+    "no new theorem discharge",
+    "no observed empirical residual",
+    "no CCFT-predicted residual",
+    "no measured coherence anomaly",
+    "no statistical effect size",
+    "no baseline separation",
+    "no measurement protocol readiness",
+    "no empirical confirmation",
+    "no empirical validation",
+    "no CCFT validation",
+    "no empirical protocol",
+    "no statistical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_BOUNDARY = (
+    "This result review accepts the measurement-feedback baseline-pressure "
+    "packet only as a baseline-hardening literature note. It accepts "
+    "arXiv:2503.13615, Reshaping the Quantum Arrow of Time, only as evidence "
+    "that standard quantum measurement-feedback physics can strengthen a "
+    "future tau_baseline. It does not treat the source as ToE evidence, CCFT "
+    "evidence, empirical validation, observed residual evidence, baseline "
+    "separation, protocol readiness, statistical validation, C_k promotion, "
+    "action embedding, or master-action support."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -2136,6 +2376,106 @@ STAGES: dict[str, StageSpec] = {
             "packet_result_review"
         ),
     ),
+    "measurement_feedback_baseline_pressure_packet": StageSpec(
+        key="measurement_feedback_baseline_pressure_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorMeasurementFeedbackBaselinePressurePacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_20260703_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_measurement_feedback_"
+            "baseline_pressure_literature_note_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_measurement_feedback_"
+            "baseline_pressure_packet"
+        ),
+    ),
+    "measurement_feedback_baseline_pressure_review": StageSpec(
+        key="measurement_feedback_baseline_pressure_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorMeasurementFeedbackBaselinePressurePacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_"
+            "BASELINE_PRESSURE_PACKET_RESULT_REVIEW_20260703_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_measurement_feedback_"
+            "baseline_pressure_review_accepts_baseline_hardening_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_measurement_feedback_"
+            "baseline_pressure_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -2164,6 +2504,8 @@ ORDERED_STAGE_KEYS = [
     "observable_definition_semantics_review",
     "residual_formula_selection_packet",
     "residual_formula_selection_review",
+    "measurement_feedback_baseline_pressure_packet",
+    "measurement_feedback_baseline_pressure_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -2204,6 +2546,12 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "residual_formula_selection_review": (
         "selected CCFT empirical discriminator measurement-feedback baseline-pressure packet"
+    ),
+    "measurement_feedback_baseline_pressure_packet": (
+        "selected CCFT empirical discriminator measurement-feedback baseline-pressure packet result review"
+    ),
+    "measurement_feedback_baseline_pressure_review": (
+        "selected CCFT empirical discriminator baseline-component registry packet"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -2329,6 +2677,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -2349,6 +2699,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -2367,6 +2719,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -2383,6 +2737,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -2496,6 +2852,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -2541,6 +2899,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -2581,6 +2941,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -2699,6 +3061,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -2788,6 +3152,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -2925,6 +3291,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -3074,6 +3442,8 @@ def build_stage_payload(
         "observable_definition_semantics_review",
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -3179,6 +3549,8 @@ def build_stage_payload(
     if stage_key in {
         "residual_formula_selection_packet",
         "residual_formula_selection_review",
+        "measurement_feedback_baseline_pressure_packet",
+        "measurement_feedback_baseline_pressure_review",
     }:
         payload.update(
             {
@@ -3353,6 +3725,219 @@ def build_stage_payload(
                     "and thermodynamic accounting can strengthen the standard "
                     "baseline before any protocol, statistics, empirical "
                     "residual, baseline separation, or CCFT validation claim."
+                ),
+            }
+        )
+    if stage_key == "measurement_feedback_baseline_pressure_packet":
+        payload.update(
+            {
+                "residual_formula_selection_result_review_consumed": True,
+                "residual_formula_selection_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_OUTCOME
+                ),
+                "residual_formula_selection_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_STRICT_OUTCOME
+                ),
+                "residual_formula_selection_packet_accepted": True,
+                "normalized_lifetime_residual_formula_accepted": True,
+                "formula_accepted_for_future_comparison_use_only": True,
+                "selected_primary_residual_formula_unchanged": True,
+                "measurement_feedback_baseline_pressure_packet_prepared": True,
+                "measurement_feedback_baseline_pressure_only": True,
+                "measurement_feedback_baseline_pressure_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_FIELDS
+                ),
+                "measurement_feedback_baseline_pressure_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_FIELDS
+                    )
+                ),
+                "measurement_feedback_baseline_pressure_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_ROWS
+                ),
+                "measurement_feedback_baseline_pressure_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_ROWS
+                    )
+                ),
+                "measurement_feedback_baseline_pressure_source": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE
+                ),
+                "measurement_feedback_baseline_pressure_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                ),
+                "measurement_feedback_baseline_pressure_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                    )
+                ),
+                "measurement_feedback_baseline_pressure_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_ITEMS
+                ),
+                "measurement_feedback_baseline_pressure_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_ITEMS
+                    )
+                ),
+                "measurement_feedback_baseline_pressure_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_BOUNDARY
+                ),
+                "external_literature_source_recorded": True,
+                "external_literature_source_id": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE[
+                        "source_id"
+                    ]
+                ),
+                "external_literature_arxiv_id": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE[
+                        "arxiv_id"
+                    ]
+                ),
+                "external_literature_source_url": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE[
+                        "source_url"
+                    ]
+                ),
+                "external_source_treated_as_baseline_pressure_only": True,
+                "external_source_treated_as_toe_evidence": False,
+                "external_source_treated_as_toe_truth_claim": False,
+                "external_source_treated_as_ccft_evidence": False,
+                "external_source_treated_as_ccft_validation": False,
+                "external_source_treated_as_empirical_validation": False,
+                "external_source_treated_as_master_action_support": False,
+                "baseline_strengthened_by_measurement_feedback": True,
+                "tau_baseline_strengthened_beyond_ordinary_decoherence": True,
+                "future_tau_baseline_must_include_measurement_feedback_effects": True,
+                "future_residual_claims_must_beat_measurement_feedback_baseline": True,
+                "future_tau_baseline_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                ),
+                "future_tau_baseline_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                    )
+                ),
+                "residual_formula_changed_by_baseline_pressure_packet": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The measurement-feedback baseline-pressure packet records "
+                    "arXiv:2503.13615 as literature baseline pressure only. "
+                    "The next disciplined step is result review of this "
+                    "reference-baseline note, not measurement protocol design, "
+                    "statistical validation, observed residual interpretation, "
+                    "baseline separation, CCFT validation, or master-action "
+                    "promotion."
+                ),
+            }
+        )
+    if stage_key == "measurement_feedback_baseline_pressure_review":
+        payload.update(
+            {
+                "measurement_feedback_baseline_pressure_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_STRICT_OUTCOME
+                ),
+                "measurement_feedback_baseline_pressure_packet_accepted": True,
+                "measurement_feedback_baseline_pressure_packet_accepted_as_baseline_hardening_only": True,
+                "arxiv_2503_13615_accepted_as_literature_baseline_pressure_only": True,
+                "source_accepted_as_baseline_hardening_note_only": True,
+                "standard_measurement_feedback_quantum_control_accepted_as_future_baseline_burden": True,
+                "future_tau_baseline_burden_strengthened": True,
+                "future_tau_baseline_must_include_measurement_feedback_effects": True,
+                "future_residual_claims_must_beat_measurement_feedback_baseline": True,
+                "future_baseline_component_registry_selected": True,
+                "selected_primary_residual_formula_unchanged": True,
+                "residual_formula_changed_by_baseline_pressure_review": False,
+                "measurement_feedback_baseline_pressure_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "measurement_feedback_baseline_pressure_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "measurement_feedback_baseline_pressure_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_BOUNDARY
+                ),
+                "measurement_feedback_baseline_pressure_source": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE
+                ),
+                "measurement_feedback_baseline_pressure_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                ),
+                "measurement_feedback_baseline_pressure_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                    )
+                ),
+                "future_tau_baseline_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                ),
+                "future_tau_baseline_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                    )
+                ),
+                "external_source_treated_as_baseline_pressure_only": True,
+                "external_source_treated_as_toe_evidence": False,
+                "external_source_treated_as_toe_truth_claim": False,
+                "external_source_treated_as_ccft_evidence": False,
+                "external_source_treated_as_ccft_validation": False,
+                "external_source_treated_as_empirical_validation": False,
+                "external_source_treated_as_observed_residual_evidence": False,
+                "external_source_treated_as_baseline_separation": False,
+                "external_source_treated_as_protocol_readiness": False,
+                "external_source_treated_as_statistical_validation": False,
+                "external_source_treated_as_master_action_support": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_SUGGESTED_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The measurement-feedback baseline-pressure result review "
+                    "accepts only baseline hardening from arXiv:2503.13615. "
+                    "The next disciplined step is a baseline-component registry "
+                    "packet listing what future tau_baseline must include before "
+                    "any CCFT residual comparison can be meaningful, not "
+                    "measurement protocol design, statistical validation, "
+                    "empirical validation, CCFT validation, or master-action "
+                    "promotion."
                 ),
             }
         )
