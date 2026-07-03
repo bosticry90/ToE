@@ -211,7 +211,7 @@ import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelection
 import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview
-import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -227,23 +227,21 @@ namespace ToeFormal
 namespace Derivation
 namespace QFTGR
 
-set_option linter.style.longLine false
-
 def aggregateTargetId : String := "ToeFormal.Derivation.QFTGR"
 
 def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_empirical_discriminator_baseline_comparison_semantics_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_empirical_discriminator_residual_formula_selection_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_RESULT_REVIEW_ACCEPTS_NON_EXECUTED_BASELINE_COMPARISON_SEMANTICS_ONLY_NO_BASELINE_SEPARATION_CLAIM_OR_CCFT_VALIDATION" := by
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_RESULT_REVIEW_ACCEPTS_NORMALIZED_COHERENCE_LIFETIME_RESIDUAL_FORMULA_FOR_FUTURE_COMPARISON_ONLY_NO_EMPIRICAL_RESIDUAL_OR_CCFT_VALIDATION" := by
   constructor
   · rfl
   · rfl

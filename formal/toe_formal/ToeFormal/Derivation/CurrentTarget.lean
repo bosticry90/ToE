@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -10,19 +10,17 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-set_option linter.style.longLine false
-
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview.selectedNextTarget
+  SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.packetId
 
-theorem current_target_points_to_selected_ccft_empirical_discriminator_observable_definition_semantics_packet :
+theorem current_target_points_to_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet :
     currentLiveTarget =
-      "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet" := by
+      "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet" := by
   rfl
 
 end CurrentTarget

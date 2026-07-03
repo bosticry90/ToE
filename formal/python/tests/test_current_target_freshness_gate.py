@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+    "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,6 +1338,18 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_selected_ccft_empirical_discriminator_residual_formula_selection_packet_result"
+)
+RESIDUAL_FORMULA_SELECTION_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_residual_formula_selection_packet"
+)
+OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_observable_definition_semantics_packet_result"
+)
+OBSERVABLE_DEFINITION_SEMANTICS_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+)
+BASELINE_SEMANTICS_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet_result"
 )
 BASELINE_SEMANTICS_PACKET_TARGET = (
@@ -1604,7 +1616,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+    "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1621,7 +1633,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2460,21 +2472,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert payload["CURRENT_LIVE_TARGET_REPORT_v0"] == (
         "formal/docs/release/"
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
-        "SEMANTICS_PACKET_RESULT_REVIEW_20260702_v0.json"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_20260703_v0.json"
     )
     assert payload["CURRENT_LIVE_TARGET_OUTCOME_v0"] == (
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
-        "PACKET_RESULT_REVIEW_ACCEPTS_NON_EXECUTED_BASELINE_COMPARISON_"
-        "SEMANTICS_ONLY_NO_BASELINE_SEPARATION_CLAIM_OR_CCFT_VALIDATION"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_ACCEPTS_NORMALIZED_COHERENCE_LIFETIME_"
+        "RESIDUAL_FORMULA_FOR_FUTURE_COMPARISON_ONLY_NO_EMPIRICAL_RESIDUAL_"
+        "OR_CCFT_VALIDATION"
     )
     assert payload["CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0"] == (
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
-        "PACKET_RESULT_REVIEW_ACCEPTS_COMPARISON_LOGIC_ONLY_NO_EMPIRICAL_"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_ACCEPTS_FORMULA_SELECTION_ONLY_NO_MEASUREMENT_"
         "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
     )
     assert payload["CURRENT_LIVE_TARGET_KIND_v0"] == (
-        "selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -4772,6 +4785,50 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PACKET_RESULT_REVIEW_ACCEPTS_COMPARISON_LOGIC_ONLY_NO_EMPIRICAL_"
         "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
     )
+    observable_definition_semantics_packet_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+        "PACKET_PREPARED_DEFINES_COHERENCE_LIFETIME_RESIDUAL_CANDIDATE_AS_"
+        "NON_EXECUTED_OBSERVABLE_SEMANTICS_NO_EMPIRICAL_RESIDUAL_OR_CCFT_"
+        "VALIDATION"
+    )
+    observable_definition_semantics_packet_strict_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+        "PACKET_PREPARED_OBSERVABLE_MEANING_ONLY_NO_MEASUREMENT_PROTOCOL_NO_"
+        "STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+    )
+    observable_definition_semantics_review_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+        "PACKET_RESULT_REVIEW_ACCEPTS_COHERENCE_LIFETIME_RESIDUAL_CANDIDATE_"
+        "AS_NON_EXECUTED_OBSERVABLE_SEMANTICS_ONLY_NO_EMPIRICAL_RESIDUAL_OR_"
+        "CCFT_VALIDATION"
+    )
+    observable_definition_semantics_review_strict_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+        "PACKET_RESULT_REVIEW_ACCEPTS_OBSERVABLE_MEANING_ONLY_NO_MEASUREMENT_"
+        "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+    )
+    residual_formula_selection_packet_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_PREPARED_SELECTS_NORMALIZED_COHERENCE_LIFETIME_RESIDUAL_"
+        "FORMULA_FOR_FUTURE_COMPARISON_ONLY_NO_EMPIRICAL_RESIDUAL_OR_CCFT_"
+        "VALIDATION"
+    )
+    residual_formula_selection_packet_strict_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_PREPARED_FORMULA_SELECTION_ONLY_NO_MEASUREMENT_PROTOCOL_NO_"
+        "STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+    )
+    residual_formula_selection_review_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_ACCEPTS_NORMALIZED_COHERENCE_LIFETIME_"
+        "RESIDUAL_FORMULA_FOR_FUTURE_COMPARISON_ONLY_NO_EMPIRICAL_RESIDUAL_"
+        "OR_CCFT_VALIDATION"
+    )
+    residual_formula_selection_review_strict_outcome = (
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_ACCEPTS_FORMULA_SELECTION_ONLY_NO_MEASUREMENT_"
+        "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+    )
     ccft_index_review_workstream = _workstream(payload, CCFT_INDEX_REVIEW_TARGET)
     assert ccft_index_review_workstream["status"] == "paused"
     assert ccft_index_review_workstream["authorization_evidence"] == (
@@ -5458,7 +5515,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert baseline_packet["strict_packet_result"] == (
         baseline_semantics_packet_strict_outcome
     )
-    assert baseline_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert baseline_packet["selected_next_target"] == BASELINE_SEMANTICS_REVIEW_TARGET
     assert baseline_packet["selected_next_target_kind"] == (
         "selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet_result_review"
     )
@@ -5509,17 +5566,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert baseline_packet["effect_size_threshold_defined"] == "no"
     assert baseline_packet["execution_readiness_claimed"] == "no"
 
-    baseline_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    baseline_review = _workstream(payload, BASELINE_SEMANTICS_REVIEW_TARGET)
     assert baseline_review["status"] == "paused"
     assert baseline_review["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+        (
+            REPO_ROOT
+            / "formal"
+            / "toe_formal"
+            / "ToeFormal"
+            / "Derivation"
+            / "SelectedCCFTEmpiricalDiscriminatorBaselineComparisonSemanticsPacketResultReview.lean"
+        ).relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert baseline_review["report"] == (
         "formal/docs/release/"
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
         "SEMANTICS_PACKET_RESULT_REVIEW_20260702_v0.json"
     )
-    assert baseline_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert baseline_review["consumed_target"] == BASELINE_SEMANTICS_REVIEW_TARGET
     assert baseline_review["prepared_packet_result"] == baseline_semantics_packet_outcome
     assert baseline_review["prepared_packet_strict_result"] == (
         baseline_semantics_packet_strict_outcome
@@ -5528,7 +5592,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert baseline_review["strict_review_result"] == (
         baseline_semantics_review_strict_outcome
     )
-    assert baseline_review["selected_next_target"] == LIVE_TARGET
+    assert (
+        baseline_review["selected_next_target"]
+        == OBSERVABLE_DEFINITION_SEMANTICS_PACKET_TARGET
+    )
     assert baseline_review["selected_next_target_kind"] == (
         "selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
     )
@@ -5567,9 +5634,285 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert baseline_review["observed_separation_accepted"] == "no"
     assert baseline_review["ccft_predicted_separation_accepted"] == "no"
     assert baseline_review["experimental_protocol_readiness_accepted"] == "no"
-    assert baseline_review["selected_next_planning_packet_target"] == LIVE_TARGET
+    assert (
+        baseline_review["selected_next_planning_packet_target"]
+        == OBSERVABLE_DEFINITION_SEMANTICS_PACKET_TARGET
+    )
     assert baseline_review["master_action_promoted"] == "no"
     assert baseline_review["seam_closure_claim"] == "no"
+
+    observable_packet = _workstream(
+        payload, OBSERVABLE_DEFINITION_SEMANTICS_PACKET_TARGET
+    )
+    assert observable_packet["status"] == "paused"
+    assert observable_packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "SelectedCCFTEmpiricalDiscriminatorObservableDefinitionSemanticsPacket.lean"
+    )
+    assert observable_packet["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+        "SEMANTICS_PACKET_20260703_v0.json"
+    )
+    assert (
+        observable_packet["consumed_target"]
+        == OBSERVABLE_DEFINITION_SEMANTICS_PACKET_TARGET
+    )
+    assert (
+        observable_packet["packet_result"]
+        == observable_definition_semantics_packet_outcome
+    )
+    assert observable_packet["strict_packet_result"] == (
+        observable_definition_semantics_packet_strict_outcome
+    )
+    assert (
+        observable_packet["selected_next_target"]
+        == OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET
+    )
+    assert observable_packet["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_observable_definition_semantics_packet_result_review"
+    )
+    assert (
+        observable_packet[
+            "selected_ccft_empirical_discriminator_observable_definition_semantics_field_count"
+        ]
+        == 9
+    )
+    assert (
+        observable_packet[
+            "selected_ccft_empirical_discriminator_observable_definition_semantics_row_count"
+        ]
+        == 1
+    )
+    assert "coherence_lifetime_residual_candidate" in observable_packet[
+        "selected_ccft_empirical_discriminator_observable_ids"
+    ]
+    assert observable_packet[
+        "selected_ccft_empirical_discriminator_observable_candidate_platform_binding"
+    ] == "controlled_mesoscopic_coherence_platform_candidate"
+    assert observable_packet[
+        "selected_ccft_empirical_discriminator_observable_baseline_binding"
+    ] == "standard_open_system_decoherence_baseline_comparison"
+    assert observable_packet[
+        "selected_ccft_empirical_discriminator_observable_tolerance_binding"
+    ] == "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0"
+    assert observable_packet[
+        "selected_ccft_empirical_discriminator_observable_null_default"
+    ] == "null_separation_from_baseline_with_registered_tolerances"
+    assert observable_packet[
+        "selected_ccft_empirical_discriminator_observable_execution_status"
+    ] == "not_executed"
+    assert observable_packet["observable_definition_semantics_packet_prepared"] == "yes"
+    assert observable_packet["observable_definition_semantics_rows_registered"] == "yes"
+    assert observable_packet["observable_semantics_meaning_only"] == "yes"
+    assert observable_packet["observable_defined_as_future_comparison_object"] == "yes"
+    assert observable_packet["comparison_direction_resolved"] == "no"
+    assert observable_packet["observed_empirical_residual_claimed"] == "no"
+    assert observable_packet["ccft_predicted_residual_claimed"] == "no"
+    assert observable_packet["statistically_significant_deviation_claimed"] == "no"
+    assert observable_packet["measurement_protocol_defined"] == "no"
+    assert observable_packet["validated_discriminator_claimed"] == "no"
+    assert observable_packet["coherence_lifetime_baseline_separation_claimed"] == "no"
+
+    observable_review = _workstream(payload, OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET)
+    assert observable_review["status"] == "paused"
+    assert observable_review["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "SelectedCCFTEmpiricalDiscriminatorObservableDefinitionSemanticsPacketResultReview.lean"
+    )
+    assert observable_review["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+        "SEMANTICS_PACKET_RESULT_REVIEW_20260703_v0.json"
+    )
+    assert observable_review["consumed_target"] == (
+        OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET
+    )
+    assert observable_review["prepared_packet_result"] == (
+        observable_definition_semantics_packet_outcome
+    )
+    assert observable_review["prepared_packet_strict_result"] == (
+        observable_definition_semantics_packet_strict_outcome
+    )
+    assert observable_review["review_result"] == (
+        observable_definition_semantics_review_outcome
+    )
+    assert observable_review["strict_review_result"] == (
+        observable_definition_semantics_review_strict_outcome
+    )
+    assert (
+        observable_review["selected_next_target"]
+        == RESIDUAL_FORMULA_SELECTION_PACKET_TARGET
+    )
+    assert observable_review["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_residual_formula_selection_packet"
+    )
+    assert (
+        observable_review[
+            "selected_ccft_empirical_discriminator_observable_definition_semantics_review_acceptance_item_count"
+        ]
+        == 35
+    )
+    assert "residual formula remains unselected" in observable_review[
+        "selected_ccft_empirical_discriminator_observable_definition_semantics_review_acceptance_items"
+    ]
+    assert "measurement protocol readiness not accepted" in observable_review[
+        "selected_ccft_empirical_discriminator_observable_definition_semantics_review_acceptance_items"
+    ]
+    assert (
+        observable_review[
+            "observable_definition_semantics_packet_accepted_as_meaning_only"
+        ]
+        == "yes"
+    )
+    assert (
+        observable_review[
+            "coherence_lifetime_residual_candidate_accepted_as_future_comparison_object_only"
+        ]
+        == "yes"
+    )
+    assert observable_review["residual_formula_selected"] == "no"
+    assert observable_review["residual_formula_selection_required_before_protocol"] == (
+        "yes"
+    )
+    assert observable_review["observed_residual_accepted"] == "no"
+    assert observable_review["ccft_predicted_residual_accepted"] == "no"
+    assert observable_review["statistical_effect_size_accepted"] == "no"
+    assert observable_review["measured_coherence_anomaly_accepted"] == "no"
+    assert observable_review["baseline_separation_accepted"] == "no"
+    assert observable_review["measurement_protocol_readiness_accepted"] == "no"
+    assert observable_review["empirical_confirmation_accepted"] == "no"
+
+    residual_packet = _workstream(payload, RESIDUAL_FORMULA_SELECTION_PACKET_TARGET)
+    assert residual_packet["status"] == "paused"
+    assert residual_packet["authorization_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacket.lean"
+    )
+    assert residual_packet["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_20260703_v0.json"
+    )
+    assert residual_packet["consumed_target"] == RESIDUAL_FORMULA_SELECTION_PACKET_TARGET
+    assert residual_packet["packet_result"] == residual_formula_selection_packet_outcome
+    assert residual_packet["strict_packet_result"] == (
+        residual_formula_selection_packet_strict_outcome
+    )
+    assert residual_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert residual_packet["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_residual_formula_selection_packet_result_review"
+    )
+    assert (
+        residual_packet[
+            "observable_definition_semantics_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert residual_packet["observable_definition_semantics_review_result"] == (
+        observable_definition_semantics_review_outcome
+    )
+    assert residual_packet["observable_definition_semantics_review_strict_result"] == (
+        observable_definition_semantics_review_strict_outcome
+    )
+    assert (
+        residual_packet[
+            "selected_ccft_empirical_discriminator_residual_formula_selection_field_count"
+        ]
+        == 7
+    )
+    assert (
+        residual_packet[
+            "selected_ccft_empirical_discriminator_residual_formula_selection_row_count"
+        ]
+        == 5
+    )
+    assert "normalized_lifetime_residual" in residual_packet[
+        "selected_ccft_empirical_discriminator_residual_formula_ids"
+    ]
+    assert residual_packet["selected_primary_residual_formula_id"] == (
+        "normalized_lifetime_residual"
+    )
+    assert residual_packet["selected_primary_residual_formula"] == (
+        "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+    )
+    assert residual_packet["normalized_lifetime_residual_selected_primary"] == "yes"
+    assert residual_packet["absolute_lifetime_difference_selected_primary"] == "no"
+    assert residual_packet["lifetime_ratio_selected_primary"] == "no"
+    assert residual_packet["decay_rate_difference_selected_primary"] == "no"
+    assert residual_packet["decay_rate_difference_retained_for_later_comparison"] == (
+        "yes"
+    )
+    assert residual_packet["log_lifetime_ratio_selected_primary"] == "no"
+    assert residual_packet["residual_formula_selection_packet_prepared"] == "yes"
+    assert residual_packet["residual_formula_candidate_forms_compared"] == "yes"
+    assert residual_packet["residual_formula_selected"] == "yes"
+    assert residual_packet["residual_formula_selection_only"] == "yes"
+    assert residual_packet["formula_selected_for_future_comparison_use_only"] == "yes"
+    assert residual_packet["residual_formula_execution_status"] == "not_executed"
+    assert (
+        residual_packet[
+            "selected_ccft_empirical_discriminator_residual_formula_selection_item_count"
+        ]
+        == 36
+    )
+    assert "normalized lifetime residual selected as primary future comparison formula" in (
+        residual_packet[
+            "selected_ccft_empirical_discriminator_residual_formula_selection_items"
+        ]
+    )
+    assert residual_packet["observed_residual_accepted"] == "no"
+    assert residual_packet["ccft_predicted_residual_accepted"] == "no"
+    assert residual_packet["statistical_effect_size_accepted"] == "no"
+    assert residual_packet["measured_coherence_anomaly_accepted"] == "no"
+    assert residual_packet["baseline_separation_accepted"] == "no"
+    assert residual_packet["measurement_protocol_readiness_accepted"] == "no"
+    assert residual_packet["empirical_confirmation_accepted"] == "no"
+
+    residual_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert residual_review["status"] == "paused"
+    assert residual_review["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert residual_review["report"] == (
+        "formal/docs/release/"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_20260703_v0.json"
+    )
+    assert residual_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert residual_review["prepared_packet_result"] == (
+        residual_formula_selection_packet_outcome
+    )
+    assert residual_review["prepared_packet_strict_result"] == (
+        residual_formula_selection_packet_strict_outcome
+    )
+    assert residual_review["review_result"] == residual_formula_selection_review_outcome
+    assert residual_review["strict_review_result"] == (
+        residual_formula_selection_review_strict_outcome
+    )
+    assert residual_review["selected_next_target"] == LIVE_TARGET
+    assert residual_review["selected_next_target_kind"] == (
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
+    )
+    assert residual_review["residual_formula_selection_packet_accepted"] == "yes"
+    assert (
+        residual_review["tau_baseline_positive_nonzero_precondition_recorded"]
+        == "yes"
+    )
+    assert residual_review["tau_candidate_observed_value_accepted"] == "no"
+    assert residual_review["tau_candidate_ccft_derived_prediction_accepted"] == "no"
+    assert residual_review["r_tau_dimensionless"] == "yes"
+    assert residual_review["r_tau_sign_semantics_count_as_current_evidence"] == "no"
+    assert (
+        residual_review["external_source_treated_as_baseline_pressure_only"]
+        == "yes"
+    )
+    assert residual_review["external_source_treated_as_ccft_validation"] == "no"
+    assert residual_review["external_source_treated_as_toe_truth_claim"] == "no"
+    assert (
+        residual_review["measurement_feedback_baseline_pressure_source"]["arxiv_id"]
+        == "2503.13615"
+    )
 
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -5581,27 +5924,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == (
         "formal/docs/release/"
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_"
-        "SEMANTICS_PACKET_RESULT_REVIEW_20260702_v0.json"
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+        "PACKET_RESULT_REVIEW_20260703_v0.json"
     )
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["prepared_packet_result"] == (
-        baseline_semantics_packet_outcome
-    )
-    assert interaction_active_workstream["prepared_packet_strict_result"] == (
-        baseline_semantics_packet_strict_outcome
-    )
     assert interaction_active_workstream["review_result"] == (
-        baseline_semantics_review_outcome
+        residual_formula_selection_review_outcome
     )
     assert interaction_active_workstream["strict_review_result"] == (
-        baseline_semantics_review_strict_outcome
+        residual_formula_selection_review_strict_outcome
     )
     assert interaction_active_workstream["selected_next_target"] == "PENDING"
     assert interaction_active_workstream["selected_next_target_kind"] == "PENDING"
     assert interaction_active_workstream["suggested_next_packet_target"] == LIVE_TARGET
     assert interaction_active_workstream["suggested_next_packet_kind"] == (
-        "selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+        "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
     )
     assert interaction_active_workstream[
         "ccft_empirical_discriminator_candidate_priority_selection_action_count"
@@ -5721,6 +6058,114 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream[
         "experimental_protocol_readiness_accepted"
     ] == "no"
+    assert interaction_active_workstream[
+        "baseline_comparison_semantics_result_review_consumed"
+    ] == "yes"
+    assert interaction_active_workstream["baseline_comparison_semantics_review_result"] == (
+        baseline_semantics_review_outcome
+    )
+    assert interaction_active_workstream[
+        "baseline_comparison_semantics_review_strict_result"
+    ] == baseline_semantics_review_strict_outcome
+    assert (
+        interaction_active_workstream[
+            "selected_ccft_empirical_discriminator_observable_definition_semantics_field_count"
+        ]
+        == 9
+    )
+    assert (
+        interaction_active_workstream[
+            "selected_ccft_empirical_discriminator_observable_definition_semantics_row_count"
+        ]
+        == 1
+    )
+    assert "coherence_lifetime_residual_candidate" in (
+        interaction_active_workstream[
+            "selected_ccft_empirical_discriminator_observable_ids"
+        ]
+    )
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_observable_candidate_platform_binding"
+    ] == "controlled_mesoscopic_coherence_platform_candidate"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_observable_baseline_binding"
+    ] == "standard_open_system_decoherence_baseline_comparison"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_observable_tolerance_binding"
+    ] == "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_observable_null_default"
+    ] == "null_separation_from_baseline_with_registered_tolerances"
+    assert interaction_active_workstream[
+        "selected_ccft_empirical_discriminator_observable_execution_status"
+    ] == "not_executed"
+    assert (
+        interaction_active_workstream["observable_definition_semantics_packet_prepared"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["observable_definition_semantics_rows_registered"]
+        == "yes"
+    )
+    assert interaction_active_workstream["observable_semantics_meaning_only"] == "yes"
+    assert (
+        interaction_active_workstream["observable_defined_as_future_comparison_object"]
+        == "yes"
+    )
+    assert interaction_active_workstream["comparison_direction_resolved"] == "no"
+    assert interaction_active_workstream["observed_empirical_residual_claimed"] == "no"
+    assert interaction_active_workstream["ccft_predicted_residual_claimed"] == "no"
+    assert (
+        interaction_active_workstream["statistically_significant_deviation_claimed"]
+        == "no"
+    )
+    assert interaction_active_workstream["measurement_protocol_defined"] == "no"
+    assert interaction_active_workstream["validated_discriminator_claimed"] == "no"
+    assert (
+        interaction_active_workstream["coherence_lifetime_baseline_separation_claimed"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream[
+            "observable_definition_semantics_packet_accepted_as_meaning_only"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "observable_definition_semantics_rows_accepted_as_non_executed_only"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "coherence_lifetime_residual_candidate_accepted_as_future_comparison_object_only"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "registered_tolerance_binding_retained_as_traceability_only"
+        ]
+        == "yes"
+    )
+    assert interaction_active_workstream["residual_formula_selected"] == "yes"
+    assert (
+        interaction_active_workstream[
+            "residual_formula_selection_required_before_protocol"
+        ]
+        == "yes"
+    )
+    assert interaction_active_workstream["observed_residual_accepted"] == "no"
+    assert interaction_active_workstream["ccft_predicted_residual_accepted"] == "no"
+    assert interaction_active_workstream["statistical_effect_size_accepted"] == "no"
+    assert interaction_active_workstream["measured_coherence_anomaly_accepted"] == "no"
+    assert interaction_active_workstream["baseline_separation_accepted"] == "no"
+    assert (
+        interaction_active_workstream["measurement_protocol_readiness_accepted"]
+        == "no"
+    )
+    assert interaction_active_workstream["empirical_confirmation_accepted"] == "no"
     assert interaction_active_workstream["selected_candidate_validation_claimed"] == (
         "no"
     )

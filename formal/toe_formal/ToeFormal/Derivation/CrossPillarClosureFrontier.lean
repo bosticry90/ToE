@@ -234,6 +234,10 @@ import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelection
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorToleranceRegistryPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorObservableDefinitionSemanticsPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorObservableDefinitionSemanticsPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview
 
 namespace ToeFormal
 namespace Derivation
@@ -403,7 +407,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+        "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -431,7 +435,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+        "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
       status := .retained }
   ]
 
@@ -449,13 +453,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the selected CCFT baseline semantics packet. -/
+/-- Previous live target consumed by the selected CCFT residual-formula review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet_result"
+  "review_selected_ccft_empirical_discriminator_residual_formula_selection_packet_result"
 
-/-- Current live target after the selected CCFT baseline semantics packet. -/
+/-- Current live target after the selected CCFT residual-formula review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+  "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -468,7 +472,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
+    "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

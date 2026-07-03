@@ -10,8 +10,6 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-set_option linter.style.longLine false
-
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
 def currentTarget : String :=
@@ -22,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_selected_ccft_empirical_discriminator_observable_definition_semantics_packet" := by
+      "prepare_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet" := by
   rfl
 
 end CurrentAuthority

@@ -11,6 +11,12 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 DEFAULT_CAPTURED_AT_UTC = "2026-07-02T00:00:00Z"
+STAGE_CAPTURED_AT_UTC = {
+    "observable_definition_semantics_packet": "2026-07-03T00:00:00Z",
+    "observable_definition_semantics_review": "2026-07-03T00:00:00Z",
+    "residual_formula_selection_packet": "2026-07-03T00:00:00Z",
+    "residual_formula_selection_review": "2026-07-03T00:00:00Z",
+}
 
 LEAN_STATUS_WORDING = (
     "full ToeFormal aggregate = NOT_COMPLETED_PARALLEL_FILE_LOCK_COLLISION; "
@@ -232,18 +238,99 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_observable_definition_"
     "semantics_packet"
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_observable_definition_"
+    "semantics_packet_result"
+)
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_KIND = (
     "selected_ccft_empirical_discriminator_observable_definition_semantics_packet"
 )
-SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_OUTCOME = (
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_observable_definition_semantics_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
-    "PACKET_PREPARED_DEFINES_COHERENCE_LIFETIME_RESIDUAL_SEMANTICS_NO_"
-    "EMPIRICAL_PROTOCOL_OR_CCFT_VALIDATION"
+    "PACKET_PREPARED_DEFINES_COHERENCE_LIFETIME_RESIDUAL_CANDIDATE_AS_"
+    "NON_EXECUTED_OBSERVABLE_SEMANTICS_NO_EMPIRICAL_RESIDUAL_OR_CCFT_"
+    "VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+    "PACKET_PREPARED_OBSERVABLE_MEANING_ONLY_NO_MEASUREMENT_PROTOCOL_NO_"
+    "STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_COHERENCE_LIFETIME_RESIDUAL_CANDIDATE_AS_"
+    "NON_EXECUTED_OBSERVABLE_SEMANTICS_ONLY_NO_EMPIRICAL_RESIDUAL_OR_CCFT_"
+    "VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_OBSERVABLE_MEANING_ONLY_NO_MEASUREMENT_"
+    "PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_OUTCOME
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_SUGGESTED_STRICT_OUTCOME = (
-    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_"
-    "PACKET_PREPARED_AS_PRE_PROTOCOL_OBSERVABLE_DEFINITION_ONLY_NO_OBSERVED_"
-    "RESIDUAL_OR_MASTER_ACTION_PROMOTION"
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_residual_formula_selection_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_KIND = (
+    "selected_ccft_empirical_discriminator_residual_formula_selection_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_"
+    "PREPARED_SELECTS_NORMALIZED_COHERENCE_LIFETIME_RESIDUAL_FORMULA_FOR_"
+    "FUTURE_COMPARISON_ONLY_NO_EMPIRICAL_RESIDUAL_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_"
+    "PREPARED_FORMULA_SELECTION_ONLY_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_"
+    "VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_SUGGESTED_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_STRICT_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_SUGGESTED_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_residual_formula_selection_"
+    "packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_residual_formula_selection_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_"
+    "RESULT_REVIEW_ACCEPTS_NORMALIZED_COHERENCE_LIFETIME_RESIDUAL_FORMULA_"
+    "FOR_FUTURE_COMPARISON_ONLY_NO_EMPIRICAL_RESIDUAL_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_"
+    "RESULT_REVIEW_ACCEPTS_FORMULA_SELECTION_ONLY_NO_MEASUREMENT_PROTOCOL_NO_"
+    "STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_measurement_feedback_"
+    "baseline_pressure_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_KIND = (
+    "selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
+    "PRESSURE_PACKET_PREPARED_RECORDS_QUANTUM_MEASUREMENT_FEEDBACK_AS_"
+    "LITERATURE_BASELINE_PRESSURE_ONLY_NO_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_"
+    "PRESSURE_PACKET_PREPARED_REFERENCE_BASELINE_NOTE_ONLY_NO_PROTOCOL_"
+    "EXECUTION_NO_MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -406,6 +493,298 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_ACCEP
     "no action embedding",
     "no C_k variation",
     "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_FIELDS = [
+    "observable_id",
+    "candidate_platform_binding",
+    "baseline_binding",
+    "residual_semantics",
+    "comparison_direction_status",
+    "tolerance_binding",
+    "null_default",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_ROWS = [
+    {
+        "observable_id": "coherence_lifetime_residual_candidate",
+        "candidate_platform_binding": (
+            "controlled_mesoscopic_coherence_platform_candidate"
+        ),
+        "baseline_binding": "standard_open_system_decoherence_baseline_comparison",
+        "residual_semantics": (
+            "future comparison object only; candidate residual meaning is "
+            "reserved for a later coherence-lifetime quantity compared with "
+            "the registered baseline, not an observed empirical residual, "
+            "not a CCFT-predicted residual, and not a statistically "
+            "validated deviation"
+        ),
+        "comparison_direction_status": (
+            "undefined and refinement-pending; longer lifetime, shorter "
+            "lifetime, absolute deviation magnitude, normalized deviation, "
+            "and signed residual remain unselected"
+        ),
+        "tolerance_binding": "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0",
+        "null_default": (
+            "null_separation_from_baseline_with_registered_tolerances"
+        ),
+        "execution_status": "not_executed",
+        "claim_boundary": (
+            "no empirical residual, no CCFT validation, no measurement "
+            "protocol, no statistical validation, no baseline-separation claim"
+        ),
+    }
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_BOUNDARY = (
+    "This packet defines only the meaning of "
+    "coherence_lifetime_residual_candidate as a future comparison object for "
+    "the selected controlled mesoscopic coherence platform against the "
+    "standard open-system decoherence baseline. It does not assert an "
+    "observed empirical residual, a CCFT-predicted residual, a statistically "
+    "significant deviation, an executable measurement protocol, a validated "
+    "discriminator, or separation from the baseline; it does not validate "
+    "CCFT, close any pillar or seam, embed or vary C_k in an action, or "
+    "promote the master action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_ACCEPTANCE_ITEMS = [
+    "observable-definition semantics packet accepted",
+    "coherence_lifetime_residual_candidate accepted as a future comparison object only",
+    "controlled mesoscopic coherence platform candidate preserved",
+    "standard open-system decoherence baseline binding preserved",
+    "registered tolerance binding preserved as traceability only",
+    "null default preserved as null separation with registered tolerances",
+    "observable semantics accepted as meaning-only",
+    "observable-definition row accepted as non-executed only",
+    "comparison direction remains refinement-pending",
+    "residual formula remains unselected",
+    "observed empirical residual not accepted",
+    "CCFT-predicted residual not accepted",
+    "statistical effect size not accepted",
+    "measured coherence anomaly not accepted",
+    "baseline separation not accepted",
+    "measurement protocol readiness not accepted",
+    "empirical confirmation not accepted",
+    "residual-formula selection packet selected as next planning target",
+    "no proof execution",
+    "no new theorem discharge",
+    "no empirical validation",
+    "no CCFT validation",
+    "no baseline-separation claim",
+    "no empirical protocol",
+    "no statistical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_FIELDS = [
+    "formula_id",
+    "formula_type",
+    "formula",
+    "plain_meaning",
+    "selection_status",
+    "main_risk",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ROWS = [
+    {
+        "formula_id": "absolute_lifetime_difference",
+        "formula_type": "lifetime_difference",
+        "formula": "Delta_tau = tau_candidate - tau_baseline",
+        "plain_meaning": "simple lifetime difference",
+        "selection_status": "deferred_candidate",
+        "main_risk": "depends heavily on units and scale",
+        "claim_boundary": (
+            "future comparison formula candidate only; no empirical residual "
+            "or CCFT validation"
+        ),
+    },
+    {
+        "formula_id": "lifetime_ratio",
+        "formula_type": "lifetime_ratio",
+        "formula": "R_tau = tau_candidate / tau_baseline",
+        "plain_meaning": "lifetime ratio",
+        "selection_status": "deferred_candidate",
+        "main_risk": "can hide absolute size",
+        "claim_boundary": (
+            "future comparison formula candidate only; no empirical residual "
+            "or CCFT validation"
+        ),
+    },
+    {
+        "formula_id": "normalized_lifetime_residual",
+        "formula_type": "normalized_lifetime_residual",
+        "formula": "r_tau = (tau_candidate - tau_baseline) / tau_baseline",
+        "plain_meaning": (
+            "candidate coherence lifetime relative to baseline as a fraction "
+            "of the baseline"
+        ),
+        "selection_status": "selected_primary_future_comparison_formula",
+        "main_risk": (
+            "baseline denominator convention must remain explicit before any "
+            "protocol or statistical use"
+        ),
+        "claim_boundary": (
+            "selected formula shape only; no observed residual, no predicted "
+            "CCFT residual, no statistical effect size, and no baseline "
+            "separation claim"
+        ),
+    },
+    {
+        "formula_id": "decay_rate_difference",
+        "formula_type": "decay_rate_difference",
+        "formula": "Delta_gamma = gamma_candidate - gamma_baseline",
+        "plain_meaning": "decay-rate difference",
+        "selection_status": "retained_later_comparison_candidate",
+        "main_risk": (
+            "may be more natural for decoherence models but changes the "
+            "interpretive object from lifetime to rate"
+        ),
+        "claim_boundary": (
+            "retained for later comparison only; no empirical residual or "
+            "CCFT validation"
+        ),
+    },
+    {
+        "formula_id": "log_lifetime_ratio",
+        "formula_type": "symmetric_ratio",
+        "formula": "log_R_tau = log(tau_candidate / tau_baseline)",
+        "plain_meaning": "symmetric ratio form",
+        "selection_status": "deferred_candidate",
+        "main_risk": "more abstract and less plain",
+        "claim_boundary": (
+            "future comparison formula candidate only; no empirical residual "
+            "or CCFT validation"
+        ),
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_BOUNDARY = (
+    "This packet selects only the normalized coherence-lifetime residual "
+    "formula shape r_tau = (tau_candidate - tau_baseline) / tau_baseline for "
+    "future comparison use. It does not claim that the residual exists, has "
+    "been observed, is predicted by CCFT, separates from the baseline, has a "
+    "statistical effect size, is ready for measurement-protocol design, "
+    "validates CCFT, closes any pillar or seam, embeds or varies C_k in an "
+    "action, or promotes the master action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ITEMS = [
+    "residual formula selection packet prepared",
+    "observable-definition semantics result review consumed",
+    "coherence_lifetime_residual_candidate preserved",
+    "controlled mesoscopic coherence platform candidate preserved",
+    "standard open-system decoherence baseline binding preserved",
+    "registered tolerance binding preserved as traceability only",
+    "absolute lifetime difference compared and deferred",
+    "lifetime ratio compared and deferred",
+    "normalized lifetime residual selected as primary future comparison formula",
+    "decay-rate difference retained as later comparison candidate",
+    "log lifetime ratio compared and deferred",
+    "residual formula selected as formula shape only",
+    "formula selected for future comparison use only",
+    "no observed empirical residual",
+    "no CCFT-predicted residual",
+    "no measured coherence anomaly",
+    "no statistical effect size",
+    "no baseline separation",
+    "no measurement protocol readiness",
+    "no empirical confirmation",
+    "no proof execution",
+    "no new theorem discharge",
+    "no empirical validation",
+    "no CCFT validation",
+    "no empirical protocol",
+    "no statistical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_ACCEPTANCE_ITEMS = [
+    "residual formula selection packet accepted",
+    "normalized coherence-lifetime residual formula accepted as future comparison formula only",
+    "r_tau formula retained as scale-free lifetime comparison shape",
+    "tau_baseline positive nonzero precondition recorded",
+    "tau_candidate not accepted as observed value",
+    "tau_candidate not accepted as CCFT-derived prediction",
+    "r_tau accepted as dimensionless because lifetime units cancel",
+    "r_tau equals zero means no lifetime separation from baseline if later measured or derived",
+    "r_tau greater than zero would mean longer candidate lifetime than baseline if later measured or derived",
+    "r_tau less than zero would mean shorter candidate lifetime than baseline if later measured or derived",
+    "sign semantics not accepted as current empirical evidence",
+    "external measurement-feedback Hamiltonian-control source recorded as future baseline pressure only",
+    "measurement-feedback baseline-pressure packet selected as next planning target",
+    "no proof execution",
+    "no new theorem discharge",
+    "no observed empirical residual",
+    "no CCFT-predicted residual",
+    "no measured coherence anomaly",
+    "no statistical effect size",
+    "no baseline separation",
+    "no measurement protocol readiness",
+    "no empirical confirmation",
+    "no empirical validation",
+    "no CCFT validation",
+    "no empirical protocol",
+    "no statistical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_BOUNDARY = (
+    "This result review accepts only the normalized coherence-lifetime "
+    "residual formula r_tau = (tau_candidate - tau_baseline) / tau_baseline "
+    "as a future comparison formula. It records that tau_baseline must be "
+    "positive and nonzero, that tau_candidate is neither observed nor "
+    "CCFT-derived here, that r_tau is dimensionless, and that sign semantics "
+    "are interpretive only if later measured or derived. It also records "
+    "measurement-feedback Hamiltonian-control literature as future baseline "
+    "pressure only. It does not claim an observed residual, a CCFT prediction, "
+    "baseline separation, measurement-protocol readiness, statistical "
+    "validation, empirical confirmation, CCFT validation, C_k promotion, "
+    "action embedding, or master-action promotion."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE = {
+    "source_id": "arxiv_2503_13615_reshaping_quantum_arrow_of_time",
+    "title": "Reshaping the Quantum Arrow of Time",
+    "arxiv_id": "2503.13615",
+    "source_url": "https://arxiv.org/abs/2503.13615",
+    "authors": [
+        "Luis Pedro Garcia-Pintos",
+        "Yi-Kai Liu",
+        "Alexey V. Gorshkov",
+    ],
+    "submitted": "2025-03-17",
+    "last_revised": "2025-12-22",
+    "source_status": "external_literature_baseline_pressure_only",
+}
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS = [
+    "standard open-system decoherence",
+    "continuous or repeated quantum measurement",
+    "measurement back-action",
+    "feedback Hamiltonian control",
+    "detector efficiency limits",
+    "feedback delay",
+    "monitoring-induced energy flow",
+    "quantum thermodynamic accounting",
 ]
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
@@ -1557,6 +1936,206 @@ STAGES: dict[str, StageSpec] = {
             "semantics_packet_result_review"
         ),
     ),
+    "observable_definition_semantics_packet": StageSpec(
+        key="observable_definition_semantics_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+            "SEMANTICS_PACKET_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+            "SEMANTICS_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_"
+            "DEFINITION_SEMANTICS_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorObservableDefinitionSemanticsPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+            "SEMANTICS_PACKET_20260703_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_observable_definition_"
+            "semantics_meaning_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_observable_definition_"
+            "semantics_packet"
+        ),
+    ),
+    "observable_definition_semantics_review": StageSpec(
+        key="observable_definition_semantics_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+            "SEMANTICS_PACKET_RESULT_REVIEW_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+            "SEMANTICS_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_"
+            "DEFINITION_SEMANTICS_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorObservableDefinitionSemanticsPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_"
+            "SEMANTICS_PACKET_RESULT_REVIEW_20260703_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_observable_definition_"
+            "semantics_review_accepts_meaning_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_observable_definition_"
+            "semantics_packet_result_review"
+        ),
+    ),
+    "residual_formula_selection_packet": StageSpec(
+        key="residual_formula_selection_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+            "PACKET_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+            "PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_"
+            "SELECTION_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+            "PACKET_20260703_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_residual_formula_selection_"
+            "normalized_lifetime_residual_future_comparison_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_residual_formula_selection_"
+            "packet"
+        ),
+    ),
+    "residual_formula_selection_review": StageSpec(
+        key="residual_formula_selection_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+            "PACKET_RESULT_REVIEW_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+            "PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_"
+            "SELECTION_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorResidualFormulaSelectionPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_"
+            "PACKET_RESULT_REVIEW_20260703_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_residual_formula_selection_"
+            "review_accepts_normalized_lifetime_residual_future_comparison_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_residual_formula_selection_"
+            "packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -1581,7 +2160,59 @@ ORDERED_STAGE_KEYS = [
     "tolerance_registry_review",
     "baseline_semantics_packet",
     "baseline_semantics_review",
+    "observable_definition_semantics_packet",
+    "observable_definition_semantics_review",
+    "residual_formula_selection_packet",
+    "residual_formula_selection_review",
 ]
+
+NEXT_REQUIRED_OBJECT_BY_STAGE = {
+    "variational_review": "CCFT empirical discriminator candidate map packet",
+    "empirical_review": (
+        "CCFT empirical discriminator candidate priority selection packet"
+    ),
+    "priority_packet": (
+        "CCFT empirical discriminator candidate priority selection packet result review"
+    ),
+    "priority_review": "selected CCFT empirical discriminator candidate packet",
+    "selected_candidate_packet": (
+        "selected CCFT empirical discriminator candidate packet result review"
+    ),
+    "selected_candidate_review": (
+        "selected CCFT empirical discriminator tolerance registry packet"
+    ),
+    "tolerance_registry_packet": (
+        "selected CCFT empirical discriminator tolerance registry packet result review"
+    ),
+    "tolerance_registry_review": (
+        "selected CCFT empirical discriminator baseline-comparison semantics packet"
+    ),
+    "baseline_semantics_packet": (
+        "selected CCFT empirical discriminator baseline-comparison semantics packet result review"
+    ),
+    "baseline_semantics_review": (
+        "selected CCFT empirical discriminator observable-definition semantics packet"
+    ),
+    "observable_definition_semantics_packet": (
+        "selected CCFT empirical discriminator observable-definition semantics packet result review"
+    ),
+    "observable_definition_semantics_review": (
+        "selected CCFT empirical discriminator residual-formula selection packet"
+    ),
+    "residual_formula_selection_packet": (
+        "selected CCFT empirical discriminator residual-formula selection packet result review"
+    ),
+    "residual_formula_selection_review": (
+        "selected CCFT empirical discriminator measurement-feedback baseline-pressure packet"
+    ),
+    "empirical_packet": (
+        "CCFT empirical discriminator candidate map packet result review"
+    ),
+    "variational_packet": (
+        "CCFT full variational/action program packet result review"
+    ),
+    "ck_index_review": "CCFT full variational/action program packet",
+}
 
 
 def release_path(spec: StageSpec) -> Path:
@@ -1670,9 +2301,14 @@ def _boolean_nonclaim_flags() -> dict[str, bool]:
 def build_stage_payload(
     stage_key: str,
     *,
-    captured_at_utc: str = DEFAULT_CAPTURED_AT_UTC,
+    captured_at_utc: str | None = None,
 ) -> dict[str, Any]:
     spec = STAGES[stage_key]
+    captured_at_utc = (
+        captured_at_utc
+        if captured_at_utc is not None
+        else STAGE_CAPTURED_AT_UTC.get(stage_key, DEFAULT_CAPTURED_AT_UTC)
+    )
     ccft_crosswalk_prepared = stage_key in {
         "crosswalk_packet",
         "ck_index_packet",
@@ -1689,6 +2325,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -1705,6 +2345,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -1719,6 +2363,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -1731,6 +2379,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -1768,58 +2420,9 @@ def build_stage_payload(
         "C_k_role": "admissibility-only bridge-checking family",
         "phi_triad_role": "local theorem-linkage family only",
         "ccft_required_follow_on_artifacts": CCFT_REQUIRED_FOLLOW_ON_ARTIFACTS,
-        "next_required_object": (
-            "CCFT empirical discriminator candidate map packet"
-            if stage_key == "variational_review"
-            else (
-                "CCFT empirical discriminator candidate priority selection packet"
-                if stage_key == "empirical_review"
-                else (
-                    "selected CCFT empirical discriminator observable-definition semantics packet"
-                    if stage_key == "baseline_semantics_review"
-                    else (
-                        "selected CCFT empirical discriminator baseline-comparison semantics packet result review"
-                        if stage_key == "baseline_semantics_packet"
-                        else (
-                            "selected CCFT empirical discriminator baseline-comparison semantics packet"
-                            if stage_key == "tolerance_registry_review"
-                            else (
-                                "selected CCFT empirical discriminator tolerance registry packet result review"
-                                if stage_key == "tolerance_registry_packet"
-                                else (
-                                    "selected CCFT empirical discriminator tolerance registry packet"
-                                    if stage_key == "selected_candidate_review"
-                                    else (
-                                        "selected CCFT empirical discriminator candidate packet result review"
-                                        if stage_key == "selected_candidate_packet"
-                                        else (
-                                            "selected CCFT empirical discriminator candidate packet"
-                                            if stage_key == "priority_review"
-                                            else (
-                                                "CCFT empirical discriminator candidate priority selection packet result review"
-                                                if stage_key == "priority_packet"
-                                                else (
-                                                    "CCFT empirical discriminator candidate map packet result review"
-                                                    if stage_key == "empirical_packet"
-                                                    else (
-                                                        "CCFT full variational/action program packet result review"
-                                                        if stage_key == "variational_packet"
-                                                        else (
-                                                            "CCFT full variational/action program packet"
-                                                            if stage_key == "ck_index_review"
-                                                            else "CCFT-to-ToE object crosswalk"
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            )
+        "next_required_object": NEXT_REQUIRED_OBJECT_BY_STAGE.get(
+            stage_key,
+            "CCFT-to-ToE object crosswalk",
         ),
         "roadmap_rebase_lists_follow_on_artifacts_only": (
             stage_key in {"roadmap_packet", "roadmap_review"}
@@ -1889,6 +2492,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }:
         payload.update(
             {
@@ -1930,6 +2537,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }:
         payload.update(
             {
@@ -1966,6 +2577,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }:
         payload.update(
             {
@@ -2080,6 +2695,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }:
         payload.update(
             {
@@ -2165,6 +2784,10 @@ def build_stage_payload(
         "tolerance_registry_review",
         "baseline_semantics_packet",
         "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
     }:
         payload.update(
             {
@@ -2295,7 +2918,14 @@ def build_stage_payload(
                 ),
             }
         )
-    if stage_key in {"baseline_semantics_packet", "baseline_semantics_review"}:
+    if stage_key in {
+        "baseline_semantics_packet",
+        "baseline_semantics_review",
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
+    }:
         payload.update(
             {
                 "tolerance_registry_result_review_consumed": True,
@@ -2374,13 +3004,22 @@ def build_stage_payload(
                     "baseline separation, or CCFT validation."
                     if stage_key == "baseline_semantics_review"
                     else (
-                        "The baseline-comparison semantics packet defines only "
-                        "how a future packet would compare a candidate "
-                        "coherence-lifetime residual against a standard "
-                        "open-system decoherence baseline. The next disciplined "
-                        "step is result review, not empirical protocol design, "
-                        "statistical validation, execution, baseline separation, "
-                        "or CCFT validation."
+                        "The observable-definition semantics packet defines "
+                        "only the meaning of coherence_lifetime_residual_"
+                        "candidate as a future comparison object. The next "
+                        "disciplined step is result review, not empirical "
+                        "protocol design, statistical validation, execution, "
+                        "baseline separation, or CCFT validation."
+                        if stage_key == "observable_definition_semantics_packet"
+                        else (
+                            "The baseline-comparison semantics packet defines "
+                            "only how a future packet would compare a "
+                            "candidate coherence-lifetime residual against a "
+                            "standard open-system decoherence baseline. The "
+                            "next disciplined step is result review, not "
+                            "empirical protocol design, statistical validation, "
+                            "execution, baseline separation, or CCFT validation."
+                        )
                     )
                 ),
             }
@@ -2430,6 +3069,348 @@ def build_stage_payload(
                 ),
             }
         )
+    if stage_key in {
+        "observable_definition_semantics_packet",
+        "observable_definition_semantics_review",
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
+    }:
+        observable_next_target = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
+            if stage_key == "observable_definition_semantics_review"
+            else (
+                SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
+                if stage_key == "residual_formula_selection_packet"
+                else SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_TARGET
+            )
+        )
+        observable_next_kind = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_KIND
+            if stage_key == "observable_definition_semantics_review"
+            else (
+                SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_KIND
+                if stage_key == "residual_formula_selection_packet"
+                else SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_KIND
+            )
+        )
+        payload.update(
+            {
+                "baseline_comparison_semantics_result_review_consumed": True,
+                "baseline_comparison_semantics_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_OUTCOME
+                ),
+                "baseline_comparison_semantics_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_REVIEW_STRICT_OUTCOME
+                ),
+                "baseline_comparison_semantics_packet_accepted_as_logic_only": True,
+                "baseline_semantics_rows_accepted_as_non_executed_only": True,
+                "residual_definition_status_accepted_as_placeholder_only": True,
+                "comparison_direction_accepted_as_placeholder_only": True,
+                "baseline_not_accepted_as_complete": True,
+                "baseline_adequacy_accepted": False,
+                "baseline_empirical_fit_quality_accepted": False,
+                "statistical_decision_rule_validity_accepted": False,
+                "observed_separation_accepted": False,
+                "ccft_predicted_separation_accepted": False,
+                "experimental_protocol_readiness_accepted": False,
+                "selected_ccft_empirical_discriminator_observable_definition_semantics_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_FIELDS
+                ),
+                "selected_ccft_empirical_discriminator_observable_definition_semantics_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_FIELDS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_observable_definition_semantics_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_ROWS
+                ),
+                "selected_ccft_empirical_discriminator_observable_definition_semantics_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_ROWS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_observable_ids": [
+                    row["observable_id"]
+                    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_ROWS
+                ],
+                "selected_ccft_empirical_discriminator_observable_id": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_OBSERVABLE
+                ),
+                "selected_ccft_empirical_discriminator_observable_candidate_platform_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_ID
+                ),
+                "selected_ccft_empirical_discriminator_observable_baseline_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_BASELINE
+                ),
+                "selected_ccft_empirical_discriminator_observable_tolerance_binding": (
+                    "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0"
+                ),
+                "selected_ccft_empirical_discriminator_observable_null_default": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_FALSIFIER
+                ),
+                "selected_ccft_empirical_discriminator_observable_execution_status": (
+                    "not_executed"
+                ),
+                "selected_ccft_empirical_discriminator_observable_definition_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_BOUNDARY
+                ),
+                "observable_definition_semantics_packet_prepared": True,
+                "observable_definition_semantics_rows_registered": True,
+                "observable_semantics_meaning_only": True,
+                "observable_defined_as_future_comparison_object": True,
+                "comparison_direction_resolved": False,
+                "observed_empirical_residual_claimed": False,
+                "ccft_predicted_residual_claimed": False,
+                "statistically_significant_deviation_claimed": False,
+                "measurement_protocol_defined": False,
+                "validated_discriminator_claimed": False,
+                "coherence_lifetime_baseline_separation_claimed": False,
+                "selected_next_planning_packet_target": (
+                    observable_next_target
+                ),
+                "suggested_next_packet_target": (
+                    observable_next_target
+                ),
+                "suggested_next_packet_kind": (
+                    observable_next_kind
+                ),
+            }
+        )
+    if stage_key in {
+        "residual_formula_selection_packet",
+        "residual_formula_selection_review",
+    }:
+        payload.update(
+            {
+                "observable_definition_semantics_result_review_consumed": True,
+                "observable_definition_semantics_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_OUTCOME
+                ),
+                "observable_definition_semantics_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_STRICT_OUTCOME
+                ),
+                "observable_definition_semantics_packet_accepted_as_meaning_only": True,
+                "observable_definition_semantics_rows_accepted_as_non_executed_only": True,
+                "coherence_lifetime_residual_candidate_accepted_as_future_comparison_object_only": True,
+                "registered_tolerance_binding_retained_as_traceability_only": True,
+                "selected_ccft_empirical_discriminator_residual_formula_selection_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_FIELDS
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_selection_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_FIELDS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_selection_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ROWS
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_selection_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ROWS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_ids": [
+                    row["formula_id"]
+                    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ROWS
+                ],
+                "selected_primary_residual_formula_id": (
+                    "normalized_lifetime_residual"
+                ),
+                "selected_primary_residual_formula_type": (
+                    "normalized_lifetime_residual"
+                ),
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "selected_primary_residual_formula_plain_meaning": (
+                    "How much longer or shorter the candidate coherence "
+                    "lifetime is compared with the baseline, as a fraction "
+                    "of the baseline."
+                ),
+                "absolute_lifetime_difference_selected_primary": False,
+                "lifetime_ratio_selected_primary": False,
+                "normalized_lifetime_residual_selected_primary": True,
+                "decay_rate_difference_selected_primary": False,
+                "decay_rate_difference_retained_for_later_comparison": True,
+                "log_lifetime_ratio_selected_primary": False,
+                "residual_formula_selection_packet_prepared": True,
+                "residual_formula_candidate_forms_compared": True,
+                "residual_formula_selected": True,
+                "residual_formula_selection_required_before_protocol": True,
+                "residual_formula_selection_only": True,
+                "formula_selected_for_future_comparison_use_only": True,
+                "residual_formula_execution_status": "not_executed",
+                "measurement_protocol_readiness_accepted": False,
+                "measurement_protocol_defined": False,
+                "statistical_validation_claimed": False,
+                "statistical_decision_rule_defined": False,
+                "effect_size_threshold_defined": False,
+                "observed_residual_accepted": False,
+                "observed_empirical_residual_claimed": False,
+                "ccft_predicted_residual_accepted": False,
+                "ccft_predicted_residual_claimed": False,
+                "statistical_effect_size_accepted": False,
+                "measured_coherence_anomaly_accepted": False,
+                "baseline_separation_accepted": False,
+                "baseline_separation_claimed": False,
+                "empirical_confirmation_accepted": False,
+                "selected_ccft_empirical_discriminator_residual_formula_selection_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ITEMS
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_selection_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_ITEMS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_selection_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_KIND
+                ),
+                "next_disciplined_move_reason": (
+                    "The residual-formula packet selects only the normalized "
+                    "coherence-lifetime residual formula for future comparison "
+                    "use. The next disciplined step is result review, not "
+                    "measurement protocol design, statistical validation, "
+                    "observed residual interpretation, baseline separation, "
+                    "or CCFT validation."
+                ),
+            }
+        )
+    if stage_key == "residual_formula_selection_review":
+        payload.update(
+            {
+                "selected_ccft_empirical_discriminator_residual_formula_selection_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "selected_ccft_empirical_discriminator_residual_formula_selection_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_PACKET_STRICT_OUTCOME
+                ),
+                "residual_formula_selection_packet_accepted": True,
+                "normalized_lifetime_residual_formula_accepted": True,
+                "formula_accepted_for_future_comparison_use_only": True,
+                "tau_baseline_positive_nonzero_precondition_recorded": True,
+                "tau_candidate_observed_value_accepted": False,
+                "tau_candidate_ccft_derived_prediction_accepted": False,
+                "r_tau_dimensionless": True,
+                "r_tau_zero_means_no_lifetime_separation_if_later_measured_or_derived": True,
+                "r_tau_positive_means_longer_candidate_lifetime_if_later_measured_or_derived": True,
+                "r_tau_negative_means_shorter_candidate_lifetime_if_later_measured_or_derived": True,
+                "r_tau_sign_semantics_count_as_current_evidence": False,
+                "measurement_feedback_baseline_pressure_source": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SOURCE
+                ),
+                "measurement_feedback_baseline_pressure_components": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                ),
+                "measurement_feedback_baseline_pressure_component_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_COMPONENTS
+                    )
+                ),
+                "external_source_treated_as_baseline_pressure_only": True,
+                "external_source_treated_as_ccft_validation": False,
+                "external_source_treated_as_toe_truth_claim": False,
+                "selected_ccft_empirical_discriminator_residual_formula_selection_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_REVIEW_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_SUGGESTED_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The residual-formula selection result review accepts "
+                    "only the normalized coherence-lifetime residual formula "
+                    "as future comparison logic. The next disciplined step is "
+                    "a measurement-feedback baseline-pressure packet, because "
+                    "known quantum measurement, feedback, Hamiltonian control, "
+                    "and thermodynamic accounting can strengthen the standard "
+                    "baseline before any protocol, statistics, empirical "
+                    "residual, baseline separation, or CCFT validation claim."
+                ),
+            }
+        )
+    if stage_key == "observable_definition_semantics_review":
+        payload.update(
+            {
+                "selected_ccft_empirical_discriminator_observable_definition_semantics_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "selected_ccft_empirical_discriminator_observable_definition_semantics_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_OBSERVABLE_DEFINITION_SEMANTICS_PACKET_STRICT_OUTCOME
+                ),
+                "observable_definition_semantics_packet_accepted_as_meaning_only": True,
+                "observable_definition_semantics_rows_accepted_as_non_executed_only": True,
+                "coherence_lifetime_residual_candidate_accepted_as_future_comparison_object_only": True,
+                "registered_tolerance_binding_retained_as_traceability_only": True,
+                "residual_formula_selected": False,
+                "residual_formula_selection_required_before_protocol": True,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "measured_coherence_anomaly_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_SUGGESTED_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The observable-definition semantics result review accepts "
+                    "only the meaning of coherence_lifetime_residual_candidate "
+                    "as a future comparison object. The next disciplined step "
+                    "is residual-formula selection, not measurement protocol "
+                    "design, statistical validation, observed residual "
+                    "interpretation, baseline separation, or CCFT validation."
+                ),
+            }
+        )
     if stage_key == "variational_review":
         payload.update(
             {
@@ -2465,7 +3446,7 @@ def stage_main(stage_key: str, argv: list[str] | None = None) -> int:
     spec = STAGES[stage_key]
     parser = argparse.ArgumentParser(description=f"Write {spec.packet_id}.")
     parser.add_argument("--out", type=Path, default=release_path(spec))
-    parser.add_argument("--captured-at-utc", default=DEFAULT_CAPTURED_AT_UTC)
+    parser.add_argument("--captured-at-utc", default=None)
     args = parser.parse_args(argv)
     out = args.out if args.out.is_absolute() else REPO_ROOT / args.out
     payload = build_stage_payload(stage_key, captured_at_utc=args.captured_at_utc)
