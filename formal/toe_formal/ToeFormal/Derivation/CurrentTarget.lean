@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview.selectedNextTarget
+  SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.packetId
 
-theorem current_target_points_to_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet :
+theorem current_target_points_to_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet :
     currentLiveTarget =
-      "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet" := by
+      "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet" := by
   rfl
 
 end CurrentTarget

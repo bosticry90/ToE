@@ -22,6 +22,8 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_registry_review": "2026-07-03T00:00:00Z",
     "baseline_component_interaction_risk_packet": "2026-07-03T00:00:00Z",
     "baseline_component_interaction_risk_review": "2026-07-03T00:00:00Z",
+    "baseline_construction_obligation_packet": "2026-07-03T00:00:00Z",
+    "baseline_construction_obligation_review": "2026-07-03T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -458,12 +460,56 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_KIND = (
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
     "PACKET_PREPARED_LISTS_TAU_BASELINE_CONSTRUCTION_REQUIREMENTS_ONLY_"
-    "NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION"
+    "NO_BASELINE_MODEL_OR_CCFT_VALIDATION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
-    "PACKET_PREPARED_OBLIGATION_TRACEABILITY_ONLY_NO_MEASUREMENT_PROTOCOL_"
-    "NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+    "PACKET_PREPARED_OBLIGATION_INDEX_ONLY_NO_TAU_BASELINE_COMPUTATION_NO_"
+    "MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_STRICT_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_construction_"
+    "obligation_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_construction_obligation_"
+    "packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_CONSTRUCTION_REQUIREMENTS_"
+    "INDEX_ONLY_NO_BASELINE_MODEL_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
+    "PACKET_RESULT_REVIEW_ACCEPTS_OBLIGATION_INDEX_ONLY_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_"
+    "MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "scaffold_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "scaffold_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_PREPARED_DEFINES_TAU_BASELINE_COMPONENT_EQUATION_"
+    "SLOTS_ONLY_NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_PREPARED_EQUATION_SCAFFOLD_ONLY_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_"
+    "MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -1522,6 +1568,170 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW
     "residual, baseline separation, CCFT validation, empirical validation, or "
     "master-action support. The next disciplined target is a "
     "baseline-construction obligation packet."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_FIELDS = [
+    "obligation_id",
+    "construction_requirement",
+    "plain_meaning",
+    "required_before_tau_baseline_computation",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ROWS = [
+    {
+        "obligation_id": "TBASE-OBL-COMPONENT-EQUATIONS-v0",
+        "construction_requirement": "component_equations",
+        "plain_meaning": (
+            "future work must specify equations or simulation rules for each "
+            "registered tau_baseline component before baseline computation"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_computed",
+        "claim_boundary": "no tau_baseline computation; no CCFT validation",
+    },
+    {
+        "obligation_id": "TBASE-OBL-COUPLING-ASSUMPTIONS-v0",
+        "construction_requirement": "coupling_assumptions",
+        "plain_meaning": (
+            "future work must state which component interactions are coupled, "
+            "ignored, bounded, or deferred before any baseline model is built"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_modeled",
+        "claim_boundary": "no interaction model; no independence claim",
+    },
+    {
+        "obligation_id": "TBASE-OBL-DEPENDENCE-RULES-v0",
+        "construction_requirement": "independence_dependence_rules",
+        "plain_meaning": (
+            "future work must justify dependence or independence rules rather "
+            "than adding baseline components as separable terms by default"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_proved",
+        "claim_boundary": "no component independence proof",
+    },
+    {
+        "obligation_id": "TBASE-OBL-UNITS-DIMENSIONS-v0",
+        "construction_requirement": "units_and_dimensions",
+        "plain_meaning": (
+            "future work must define lifetime units, dimensionless residual "
+            "normalization, and compatible parameter dimensions"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_normalized",
+        "claim_boundary": "no measured residual; no effect-size claim",
+    },
+    {
+        "obligation_id": "TBASE-OBL-PARAMETER-SOURCES-v0",
+        "construction_requirement": "parameter_sources",
+        "plain_meaning": (
+            "future work must identify whether parameters come from "
+            "literature, calibration, simulation, device data, or fitted "
+            "models before a baseline value is allowed"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_sourced",
+        "claim_boundary": "no calibration; no empirical validation",
+    },
+    {
+        "obligation_id": "TBASE-OBL-UNCERTAINTY-HANDLING-v0",
+        "construction_requirement": "uncertainty_handling",
+        "plain_meaning": (
+            "future work must define uncertainty propagation, noise handling, "
+            "and sensitivity checks before residual comparison"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_statistically_validated",
+        "claim_boundary": "no statistical validation; no baseline separation",
+    },
+    {
+        "obligation_id": "TBASE-OBL-BOUNDARY-CONDITIONS-v0",
+        "construction_requirement": "boundary_and_initial_conditions",
+        "plain_meaning": (
+            "future work must define device state, environment, controls, "
+            "initial conditions, and domain limits for baseline construction"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_protocol_ready",
+        "claim_boundary": "no measurement protocol readiness",
+    },
+    {
+        "obligation_id": "TBASE-OBL-REVIEW-GATES-v0",
+        "construction_requirement": "review_and_failure_gates",
+        "plain_meaning": (
+            "future work must define review gates and failure conditions "
+            "before tau_baseline construction can support any residual claim"
+        ),
+        "required_before_tau_baseline_computation": True,
+        "execution_status": "obligation_only_not_executed",
+        "claim_boundary": "no baseline model; no master-action promotion",
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_IDS = [
+    row["obligation_id"]
+    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ROWS
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ITEMS = [
+    "baseline-construction obligation packet prepared",
+    "baseline-component interaction-risk result review consumed",
+    "component equations obligation recorded",
+    "coupling assumptions obligation recorded",
+    "independence/dependence rules obligation recorded",
+    "units and dimensions obligation recorded",
+    "parameter sources obligation recorded",
+    "uncertainty handling obligation recorded",
+    "boundary and initial conditions obligation recorded",
+    "review and failure gates obligation recorded",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no observed residual",
+    "no baseline separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_BOUNDARY = (
+    "This packet lists obligations that must be satisfied before future "
+    "tau_baseline construction or computation is allowed. It does not specify "
+    "component equations, solve coupling terms, justify independence, source "
+    "parameters, propagate uncertainty, set executable boundary conditions, "
+    "compute tau_baseline, complete a baseline model, define a measurement "
+    "protocol, perform statistical validation, claim an observed residual, "
+    "claim baseline separation, validate CCFT, or support master-action "
+    "promotion."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_ACCEPTANCE_ITEMS = [
+    "baseline-construction obligation packet accepted",
+    "prepared obligation index consumed",
+    "component equations obligation accepted as a future requirement only",
+    "coupling assumptions obligation accepted as a future requirement only",
+    "independence/dependence rules obligation accepted as a future requirement only",
+    "units and dimensions obligation accepted as a future requirement only",
+    "parameter sources obligation accepted as a future requirement only",
+    "uncertainty handling obligation accepted as a future requirement only",
+    "boundary and initial conditions obligation accepted as a future requirement only",
+    "review and failure gates obligation accepted as a future requirement only",
+    "no tau_baseline computation accepted",
+    "no completed baseline model accepted",
+    "no measurement protocol accepted",
+    "no statistical validation accepted",
+    "no observed residual accepted",
+    "no baseline separation accepted",
+    "no CCFT validation accepted",
+    "no master-action promotion accepted",
+    "baseline component equation scaffold packet selected as next planning target",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_BOUNDARY = (
+    "This review accepts the baseline-construction obligation packet as an "
+    "index of future tau_baseline construction requirements only. It accepts "
+    "no component equations, no coupling solution, no independence proof, no "
+    "parameter sourcing, no uncertainty propagation, no executable boundary "
+    "conditions, no tau_baseline computation, no completed baseline model, no "
+    "measurement protocol, no statistical validation, no observed residual, "
+    "no baseline separation, no CCFT validation, and no master-action "
+    "promotion."
 )
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
@@ -3172,6 +3382,106 @@ STAGES: dict[str, StageSpec] = {
             "interaction_risk_packet_result_review"
         ),
     ),
+    "baseline_construction_obligation_packet": StageSpec(
+        key="baseline_construction_obligation_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
+            "OBLIGATION_PACKET_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
+            "OBLIGATION_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_"
+            "CONSTRUCTION_OBLIGATION_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
+            "OBLIGATION_PACKET_20260703_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_construction_"
+            "obligation_index_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_construction_"
+            "obligation_packet"
+        ),
+    ),
+    "baseline_construction_obligation_review": StageSpec(
+        key="baseline_construction_obligation_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
+            "OBLIGATION_PACKET_RESULT_REVIEW_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
+            "OBLIGATION_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_"
+            "CONSTRUCTION_OBLIGATION_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
+            "OBLIGATION_PACKET_RESULT_REVIEW_20260703_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_construction_"
+            "obligation_review_accepts_index_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_construction_"
+            "obligation_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -3206,6 +3516,8 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_registry_review",
     "baseline_component_interaction_risk_packet",
     "baseline_component_interaction_risk_review",
+    "baseline_construction_obligation_packet",
+    "baseline_construction_obligation_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -3264,6 +3576,12 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "baseline_component_interaction_risk_review": (
         "selected CCFT empirical discriminator baseline-construction obligation packet"
+    ),
+    "baseline_construction_obligation_packet": (
+        "selected CCFT empirical discriminator baseline-construction obligation packet result review"
+    ),
+    "baseline_construction_obligation_review": (
+        "selected CCFT empirical discriminator baseline component equation scaffold packet"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -3395,6 +3713,8 @@ def build_stage_payload(
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
         "baseline_component_interaction_risk_review",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
         "baseline_component_interaction_risk_review",
         "baseline_component_interaction_risk_review",
     }
@@ -3423,6 +3743,8 @@ def build_stage_payload(
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
         "baseline_component_interaction_risk_review",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
         "baseline_component_interaction_risk_review",
         "baseline_component_interaction_risk_review",
     }
@@ -3449,6 +3771,8 @@ def build_stage_payload(
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
         "baseline_component_interaction_risk_review",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
         "baseline_component_interaction_risk_review",
         "baseline_component_interaction_risk_review",
     }
@@ -3473,6 +3797,8 @@ def build_stage_payload(
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
         "baseline_component_interaction_risk_review",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
         "baseline_component_interaction_risk_review",
         "baseline_component_interaction_risk_review",
     }
@@ -3594,6 +3920,8 @@ def build_stage_payload(
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
         "baseline_component_interaction_risk_review",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -3644,6 +3972,10 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
+        "baseline_construction_obligation_review",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -3689,6 +4021,10 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
+        "baseline_construction_obligation_review",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -3812,6 +4148,10 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
+        "baseline_construction_obligation_review",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -3906,6 +4246,8 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -4048,6 +4390,8 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -4202,6 +4546,8 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -4312,6 +4658,8 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -4706,6 +5054,8 @@ def build_stage_payload(
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
         "baseline_component_interaction_risk_packet",
+        "baseline_construction_obligation_packet",
+        "baseline_construction_obligation_review",
     }:
         payload.update(
             {
@@ -5076,6 +5426,223 @@ def build_stage_payload(
                     "define a measurement protocol, validate statistics, "
                     "claim baseline separation, validate CCFT, or promote the "
                     "master action."
+                ),
+            }
+        )
+    if stage_key == "baseline_construction_obligation_packet":
+        prior_review_payload = build_stage_payload(
+            "baseline_component_interaction_risk_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        payload.update(
+            {
+                "baseline_component_interaction_risk_result_review_consumed": True,
+                "baseline_component_interaction_risk_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_OUTCOME
+                ),
+                "baseline_component_interaction_risk_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_STRICT_OUTCOME
+                ),
+                "baseline_construction_obligation_packet_prepared": True,
+                "baseline_construction_obligation_index_only": True,
+                "tau_baseline_construction_requirements_listed": True,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_completed_model_claimed": False,
+                "baseline_model_completed": False,
+                "baseline_component_independence_claimed": False,
+                "component_equations_specified": False,
+                "component_equations_obligation_recorded": True,
+                "coupling_assumptions_specified": False,
+                "coupling_assumptions_obligation_recorded": True,
+                "independence_dependence_rules_specified": False,
+                "independence_dependence_rules_obligation_recorded": True,
+                "units_dimensions_specified": False,
+                "units_dimensions_obligation_recorded": True,
+                "parameter_sources_specified": False,
+                "parameter_sources_obligation_recorded": True,
+                "uncertainty_handling_specified": False,
+                "uncertainty_handling_obligation_recorded": True,
+                "boundary_initial_conditions_specified": False,
+                "boundary_initial_conditions_obligation_recorded": True,
+                "review_failure_gates_specified": False,
+                "review_failure_gates_obligation_recorded": True,
+                "baseline_construction_obligation_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_FIELDS
+                ),
+                "baseline_construction_obligation_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_FIELDS
+                    )
+                ),
+                "baseline_construction_obligation_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ROWS
+                ),
+                "baseline_construction_obligation_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ROWS
+                    )
+                ),
+                "baseline_construction_obligation_ids": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_IDS
+                ),
+                "baseline_construction_obligation_id_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_IDS
+                    )
+                ),
+                "baseline_construction_obligation_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ITEMS
+                ),
+                "baseline_construction_obligation_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_ITEMS
+                    )
+                ),
+                "baseline_construction_obligation_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_BOUNDARY
+                ),
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_construction_obligation_packet": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "measured_coherence_anomaly_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "master_action_support_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The baseline-construction obligation packet lists "
+                    "requirements that must be satisfied before tau_baseline "
+                    "construction is allowed. The next disciplined step is "
+                    "result review of the obligation index, not tau_baseline "
+                    "computation, baseline-model completion, measurement "
+                    "protocol design, statistical validation, baseline "
+                    "separation, CCFT validation, or master-action promotion."
+                ),
+            }
+        )
+    if stage_key == "baseline_construction_obligation_review":
+        prior_packet_payload = build_stage_payload(
+            "baseline_construction_obligation_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_packet_payload.items():
+            payload.setdefault(key, value)
+        payload.update(
+            {
+                "baseline_construction_obligation_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_STRICT_OUTCOME
+                ),
+                "baseline_construction_obligation_packet_accepted": True,
+                "baseline_construction_obligation_packet_accepted_as_index_only": True,
+                "tau_baseline_construction_requirements_index_accepted": True,
+                "component_equations_obligation_accepted": True,
+                "coupling_assumptions_obligation_accepted": True,
+                "independence_dependence_rules_obligation_accepted": True,
+                "units_dimensions_obligation_accepted": True,
+                "parameter_sources_obligation_accepted": True,
+                "uncertainty_handling_obligation_accepted": True,
+                "boundary_initial_conditions_obligation_accepted": True,
+                "review_failure_gates_obligation_accepted": True,
+                "baseline_component_equation_scaffold_packet_selected": True,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "baseline_model_accepted": False,
+                "baseline_model_completed": False,
+                "component_equations_accepted_as_specified": False,
+                "component_equations_specified": False,
+                "coupling_assumptions_accepted_as_specified": False,
+                "coupling_assumptions_specified": False,
+                "independence_dependence_rules_accepted_as_specified": False,
+                "independence_dependence_rules_specified": False,
+                "parameter_sources_accepted_as_specified": False,
+                "parameter_sources_specified": False,
+                "uncertainty_handling_accepted_as_specified": False,
+                "uncertainty_handling_specified": False,
+                "boundary_initial_conditions_accepted_as_specified": False,
+                "boundary_initial_conditions_specified": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_accepted": False,
+                "statistical_validation_claimed": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "measured_coherence_anomaly_accepted": False,
+                "baseline_separation_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "master_action_support_accepted": False,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_construction_obligation_review": False,
+                "baseline_construction_obligation_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_construction_obligation_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "baseline_construction_obligation_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGESTED_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The baseline-construction obligation result review "
+                    "accepts only an index of requirements that must be "
+                    "satisfied before tau_baseline construction is allowed. "
+                    "The next disciplined step is a baseline-component "
+                    "equation scaffold packet that defines equation slots and "
+                    "admissible equation forms only, not tau_baseline "
+                    "computation, baseline-model completion, measurement "
+                    "protocol design, statistical validation, baseline "
+                    "separation, CCFT validation, or master-action promotion."
                 ),
             }
         )
