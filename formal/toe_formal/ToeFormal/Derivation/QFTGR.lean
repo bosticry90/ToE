@@ -211,6 +211,7 @@ import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelection
 import ToeFormal.Derivation.CCFTEmpiricalDiscriminatorCandidatePrioritySelectionPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorToleranceRegistryPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -234,15 +235,15 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorToleranceRegistryPacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorCandidatePacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorToleranceRegistryPacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_empirical_discriminator_candidate_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_empirical_discriminator_tolerance_registry_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_RESULT_REVIEW_ACCEPTS_CONTROLLED_MESOSCOPIC_COHERENCE_PLATFORM_CANDIDATE_AS_FUTURE_PACKET_ONLY_NO_EMPIRICAL_VALIDATION_OR_CCFT_VALIDATION" := by
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_RESULT_REVIEW_ACCEPTS_NON_EXECUTED_TOLERANCE_TRACEABILITY_ROWS_ONLY_NO_EMPIRICAL_CALIBRATION_OR_CCFT_VALIDATION" := by
   constructor
   · rfl
   · rfl

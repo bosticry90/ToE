@@ -161,15 +161,128 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PACKET_REVIEW_TARGET = (
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_tolerance_registry_packet"
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_tolerance_registry_packet_result"
+)
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_PREPARED_"
-    "PLACEHOLDER_TOLERANCE_TRACEABILITY_PLAN_NO_EMPIRICAL_CALIBRATION_OR_"
-    "VALIDATION"
+    "REGISTERS_NON_EXECUTED_TOLERANCE_TRACEABILITY_ROWS_NO_EMPIRICAL_"
+    "CALIBRATION_OR_CCFT_VALIDATION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_PREPARED_"
-    "AS_PRE_PROTOCOL_TRACEABILITY_MAP_NO_EXECUTION_OR_MASTER_ACTION_PROMOTION"
+    "AS_TRACEABILITY_AND_COMPARISON_LOGIC_REGISTRY_NO_EXECUTION_OR_MASTER_"
+    "ACTION_PROMOTION"
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_RESULT_"
+    "REVIEW_ACCEPTS_NON_EXECUTED_TOLERANCE_TRACEABILITY_ROWS_ONLY_NO_"
+    "EMPIRICAL_CALIBRATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_RESULT_"
+    "REVIEW_ACCEPTS_TRACEABILITY_ONLY_NO_STATISTICAL_VALIDATION_NO_EXECUTION_"
+    "SUFFICIENCY_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_comparison_"
+    "semantics_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_comparison_semantics_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
+    "PACKET_PREPARED_NON_EXECUTED_BASELINE_COMPARISON_LOGIC_NO_EMPIRICAL_"
+    "VALIDATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_"
+    "PACKET_PREPARED_AS_PLANNING_SEMANTICS_ONLY_NO_PROTOCOL_EXECUTION_OR_"
+    "MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
+    "tolerance_id",
+    "observable_binding",
+    "baseline_binding",
+    "comparison_semantics",
+    "null_condition",
+    "source_status",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_ROWS = [
+    {
+        "tolerance_id": "TOL-CCFT-MESO-COH-LIFETIME-RESIDUAL-v0",
+        "observable_binding": "coherence_lifetime_residual_candidate",
+        "baseline_binding": "standard_open_system_decoherence_baseline_comparison",
+        "comparison_semantics": (
+            "placeholder comparison-logic row; future protocol must choose "
+            "absolute residual, normalized residual, confidence interval "
+            "separation, or effect-size threshold before any execution"
+        ),
+        "null_condition": (
+            "null_separation_from_baseline_with_registered_tolerances"
+        ),
+        "source_status": "placeholder_future_empirical_calibration_needed",
+        "execution_status": "not_executed",
+        "claim_boundary": (
+            "no empirical validation, no CCFT validation, no protocol execution"
+        ),
+    }
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_COMPARISON_SEMANTICS = [
+    "absolute_residual_placeholder",
+    "normalized_residual_placeholder",
+    "confidence_interval_separation_placeholder",
+    "effect_size_threshold_placeholder",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_BOUNDARY = (
+    "This packet registers tolerance traceability and comparison-logic rows "
+    "for the selected CCFT empirical discriminator candidate only. It does "
+    "not calibrate tolerances from data, validate CCFT, validate any empirical "
+    "claim, authorize protocol design or execution, show separation from "
+    "baseline physics, bind to a measurement campaign, close any pillar or "
+    "seam, promote C_k, embed or vary C_k in an action, or promote the master "
+    "action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_ACCEPTANCE_ITEMS = [
+    "selected CCFT empirical discriminator tolerance registry packet accepted",
+    "selected-candidate packet result review consumed",
+    "controlled mesoscopic coherence platform candidate preserved",
+    "coherence lifetime residual observable binding preserved",
+    "standard open-system decoherence baseline binding preserved",
+    "null separation falsifier condition preserved",
+    "tolerance traceability fields accepted",
+    "non-executed tolerance traceability row accepted",
+    "comparison semantics accepted as placeholders only",
+    "registered_tolerances treated as traceability infrastructure only",
+    "registered_tolerances not treated as empirically calibrated",
+    "registered_tolerances not treated as statistically validated",
+    "registered_tolerances not treated as sufficient for execution",
+    "registered_tolerances not treated as baseline-separation evidence",
+    "registered_tolerances not bound to a measurement campaign",
+    "tolerance row not accepted as a test protocol",
+    "tolerance row not accepted as an effect-size threshold",
+    "tolerance row not accepted as a statistical decision rule",
+    "tolerance row not accepted as experimental design",
+    "future empirical calibration remains required",
+    "baseline-comparison semantics packet selected as next planning target",
+    "no proof execution",
+    "no new theorem discharge",
+    "no CCFT validation",
+    "no empirical validation",
+    "no pillar closure",
+    "no seam closure",
+    "no QFT-GR closure",
+    "no EM-QFT closure",
+    "no scalar/QFT closure",
+    "no general C_k closure",
+    "no C_k promotion",
+    "no action embedding",
+    "no C_k variation",
+    "no master-action promotion",
+]
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -1125,6 +1238,102 @@ STAGES: dict[str, StageSpec] = {
             "selected_ccft_empirical_discriminator_candidate_packet_result_review"
         ),
     ),
+    "tolerance_registry_packet": StageSpec(
+        key="tolerance_registry_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_"
+            "20260702_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_"
+            "PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_TARGET
+        ),
+        consumed_target_kind=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_packet"
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_packet_result_review"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorToleranceRegistryPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_"
+            "20260702_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_traceability_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_packet"
+        ),
+    ),
+    "tolerance_registry_review": StageSpec(
+        key="tolerance_registry_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_"
+            "RESULT_REVIEW_20260702_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_"
+            "RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_"
+            "PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_packet_result_review"
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorToleranceRegistryPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_"
+            "RESULT_REVIEW_20260702_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_review_"
+            "accepts_traceability_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_tolerance_registry_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -1145,6 +1354,8 @@ ORDERED_STAGE_KEYS = [
     "priority_review",
     "selected_candidate_packet",
     "selected_candidate_review",
+    "tolerance_registry_packet",
+    "tolerance_registry_review",
 ]
 
 
@@ -1249,6 +1460,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -1261,6 +1474,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -1271,6 +1486,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -1279,6 +1496,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -1323,27 +1542,35 @@ def build_stage_payload(
                 "CCFT empirical discriminator candidate priority selection packet"
                 if stage_key == "empirical_review"
                 else (
-                    "selected CCFT empirical discriminator tolerance registry packet"
-                    if stage_key == "selected_candidate_review"
+                    "selected CCFT empirical discriminator baseline-comparison semantics packet"
+                    if stage_key == "tolerance_registry_review"
                     else (
-                        "selected CCFT empirical discriminator candidate packet result review"
-                        if stage_key == "selected_candidate_packet"
+                        "selected CCFT empirical discriminator tolerance registry packet result review"
+                        if stage_key == "tolerance_registry_packet"
                         else (
-                            "selected CCFT empirical discriminator candidate packet"
-                            if stage_key == "priority_review"
+                            "selected CCFT empirical discriminator tolerance registry packet"
+                            if stage_key == "selected_candidate_review"
                             else (
-                                "CCFT empirical discriminator candidate priority selection packet result review"
-                                if stage_key == "priority_packet"
+                                "selected CCFT empirical discriminator candidate packet result review"
+                                if stage_key == "selected_candidate_packet"
                                 else (
-                                    "CCFT empirical discriminator candidate map packet result review"
-                                    if stage_key == "empirical_packet"
+                                    "selected CCFT empirical discriminator candidate packet"
+                                    if stage_key == "priority_review"
                                     else (
-                                        "CCFT full variational/action program packet result review"
-                                        if stage_key == "variational_packet"
+                                        "CCFT empirical discriminator candidate priority selection packet result review"
+                                        if stage_key == "priority_packet"
                                         else (
-                                            "CCFT full variational/action program packet"
-                                            if stage_key == "ck_index_review"
-                                            else "CCFT-to-ToE object crosswalk"
+                                            "CCFT empirical discriminator candidate map packet result review"
+                                            if stage_key == "empirical_packet"
+                                            else (
+                                                "CCFT full variational/action program packet result review"
+                                                if stage_key == "variational_packet"
+                                                else (
+                                                    "CCFT full variational/action program packet"
+                                                    if stage_key == "ck_index_review"
+                                                    else "CCFT-to-ToE object crosswalk"
+                                                )
+                                            )
                                         )
                                     )
                                 )
@@ -1417,6 +1644,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }:
         payload.update(
             {
@@ -1454,6 +1683,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }:
         payload.update(
             {
@@ -1486,6 +1717,8 @@ def build_stage_payload(
         "priority_review",
         "selected_candidate_packet",
         "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
     }:
         payload.update(
             {
@@ -1593,7 +1826,12 @@ def build_stage_payload(
                 ),
             }
         )
-    if stage_key in {"selected_candidate_packet", "selected_candidate_review"}:
+    if stage_key in {
+        "selected_candidate_packet",
+        "selected_candidate_review",
+        "tolerance_registry_packet",
+        "tolerance_registry_review",
+    }:
         payload.update(
             {
                 "selected_ccft_empirical_discriminator_candidate_packet_actions": (
@@ -1655,10 +1893,14 @@ def build_stage_payload(
                 "registered_tolerances_empirical_claim_authorized": False,
                 "empirical_protocol_design_authorized": False,
                 "suggested_next_packet_outcome": (
-                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_OUTCOME
+                    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_"
+                    "PACKET_PREPARED_PLACEHOLDER_TOLERANCE_TRACEABILITY_PLAN_"
+                    "NO_EMPIRICAL_CALIBRATION_OR_VALIDATION"
                 ),
                 "strict_suggested_next_packet_outcome": (
-                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_STRICT_OUTCOME
+                    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_"
+                    "PACKET_PREPARED_AS_PRE_PROTOCOL_TRACEABILITY_MAP_NO_"
+                    "EXECUTION_OR_MASTER_ACTION_PROMOTION"
                 ),
                 "next_disciplined_move_reason": (
                     "The selected-candidate packet result review accepts only "
@@ -1666,6 +1908,136 @@ def build_stage_payload(
                     "uses registered_tolerances, the next disciplined step is a "
                     "tolerance traceability registry packet before any empirical "
                     "protocol design, execution, calibration, or validation claim."
+                ),
+            }
+        )
+    if stage_key in {"tolerance_registry_packet", "tolerance_registry_review"}:
+        payload.update(
+            {
+                "selected_candidate_result_review_consumed": True,
+                "selected_candidate_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_OUTCOME
+                ),
+                "selected_candidate_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_REVIEW_STRICT_OUTCOME
+                ),
+                "selected_candidate_packet_accepted_as_future_packet_only": True,
+                "selected_ccft_empirical_discriminator_tolerance_registry_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_registry_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_registry_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_ROWS
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_registry_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_ROWS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_ids": [
+                    row["tolerance_id"]
+                    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_ROWS
+                ],
+                "selected_ccft_empirical_discriminator_tolerance_observable_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_OBSERVABLE
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_baseline_binding": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_BASELINE
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_null_condition": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_FALSIFIER
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_source_status": (
+                    "placeholder_future_empirical_calibration_needed"
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_execution_status": (
+                    "not_executed"
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_comparison_semantics": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_COMPARISON_SEMANTICS
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_comparison_semantics_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_COMPARISON_SEMANTICS
+                    )
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_registry_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_BOUNDARY
+                ),
+                "registered_tolerances_traceability_placeholder_only": True,
+                "registered_tolerances_empirically_calibrated": False,
+                "registered_tolerances_statistically_validated": False,
+                "registered_tolerances_execution_authorized": False,
+                "registered_tolerances_empirical_claim_authorized": False,
+                "registered_tolerances_sufficient_for_execution": False,
+                "registered_tolerances_distinguish_ccft_from_baseline_claimed": False,
+                "registered_tolerances_bound_to_measurement_campaign": False,
+                "empirical_methods_section_claimed": False,
+                "empirical_protocol_design_authorized": False,
+                "empirical_execution_authorized": False,
+                "empirical_test_executed": False,
+                "future_empirical_calibration_needed": True,
+                "next_disciplined_move_reason": (
+                    "The tolerance registry packet records traceability and "
+                    "comparison logic only. The next disciplined step is a "
+                    "result review of that registry, not protocol design, "
+                    "empirical execution, calibration, CCFT validation, or "
+                    "baseline-separation claim."
+                    if stage_key == "tolerance_registry_packet"
+                    else (
+                        "The tolerance registry result review accepts only "
+                        "non-executed traceability rows. The next disciplined "
+                        "step is baseline-comparison semantics planning, not "
+                        "protocol design, empirical execution, calibration, "
+                        "CCFT validation, or baseline-separation claim."
+                    )
+                ),
+            }
+        )
+    if stage_key == "tolerance_registry_review":
+        payload.update(
+            {
+                "selected_ccft_empirical_discriminator_tolerance_registry_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "selected_ccft_empirical_discriminator_tolerance_registry_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_PACKET_STRICT_OUTCOME
+                ),
+                "tolerance_registry_packet_accepted_as_traceability_only": True,
+                "tolerance_registry_rows_accepted_as_non_executed_only": True,
+                "comparison_semantics_accepted_as_placeholders_only": True,
+                "null_condition_retained_as_default": True,
+                "future_empirical_calibration_required_before_claim": True,
+                "tolerance_row_accepted_as_test_protocol": False,
+                "tolerance_row_accepted_as_effect_size_threshold": False,
+                "tolerance_row_accepted_as_statistical_decision_rule": False,
+                "tolerance_row_accepted_as_experimental_design": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPARISON_SEMANTICS_PACKET_STRICT_OUTCOME
                 ),
             }
         )
