@@ -38,10 +38,13 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
+    "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_registry_packet_result"
+    "review_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet_result"
+)
+BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
 )
 MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_measurement_feedback_baseline_pressure_packet_result"
@@ -98,9 +101,37 @@ BASELINE_COMPONENT_REGISTRY_REVIEW_REPORT = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
     "PACKET_RESULT_REVIEW_20260703_v0.json"
 )
+BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_registry_packet_result"
+)
 BASELINE_COMPONENT_INTERACTION_RISK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_interaction_"
     "risk_packet"
+)
+BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_interaction_"
+    "risk_packet_result_review"
+)
+BASELINE_CONSTRUCTION_OBLIGATION_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
+)
+BASELINE_COMPONENT_INTERACTION_RISK_PACKET_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacket.lean"
+)
+BASELINE_COMPONENT_INTERACTION_RISK_PACKET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_20260703_v0.json"
+)
+BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview.lean"
+)
+BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_RESULT_REVIEW_20260703_v0.json"
 )
 RESIDUAL_FORMULA_SELECTION_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_residual_formula_selection_packet_result"
@@ -156,16 +187,18 @@ VARIATIONAL_PACKET_TARGET = "prepare_ccft_full_variational_action_program_packet
 VARIATIONAL_REVIEW_TARGET = "review_ccft_full_variational_action_program_packet_result"
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentRegistryPacketResultReview.lean"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
-    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_"
-    "PACKET_RESULT_REVIEW_20260703_v0.json"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_RESULT_REVIEW_20260703_v0.json"
 )
-FINAL_OUTCOME = STAGES["baseline_component_registry_review"].outcome_id
-FINAL_STRICT_OUTCOME = STAGES["baseline_component_registry_review"].strict_outcome_id
-FINAL_KIND = BASELINE_COMPONENT_INTERACTION_RISK_KIND
+FINAL_OUTCOME = STAGES["baseline_component_interaction_risk_review"].outcome_id
+FINAL_STRICT_OUTCOME = (
+    STAGES["baseline_component_interaction_risk_review"].strict_outcome_id
+)
+FINAL_KIND = BASELINE_CONSTRUCTION_OBLIGATION_KIND
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
     "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
@@ -301,6 +334,14 @@ WRAPPER_BY_STAGE = {
     "baseline_component_registry_review": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_registry_packet_result_review_report.py"
+    ),
+    "baseline_component_interaction_risk_packet": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet_report.py"
+    ),
+    "baseline_component_interaction_risk_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet_result_review_report.py"
     ),
 }
 
@@ -453,6 +494,16 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_component_registry_packet_result_review_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_registry_packet_result_review",
     ),
+    "baseline_component_interaction_risk_packet": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet",
+    ),
+    "baseline_component_interaction_risk_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet_result_review",
+    ),
 }
 
 PAPER_DOCS = (
@@ -478,6 +529,8 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_MEASUREMENT_FEEDBACK_BASELINE_PRESSURE_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_PACKET_RESULT_REVIEW_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_RESULT_REVIEW_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -587,6 +640,8 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "measurement_feedback_baseline_pressure_review",
             "baseline_component_registry_packet",
             "baseline_component_registry_review",
+            "baseline_component_interaction_risk_packet",
+            "baseline_component_interaction_risk_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -665,10 +720,18 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
     )
     assert (
         STAGES["baseline_component_registry_packet"].selected_next_target
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET
     )
     assert (
         STAGES["baseline_component_registry_review"].selected_next_target
+        == BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET
+    )
+    assert (
+        STAGES["baseline_component_interaction_risk_packet"].selected_next_target
+        == FINAL_PREVIOUS_TARGET
+    )
+    assert (
+        STAGES["baseline_component_interaction_risk_review"].selected_next_target
         == FINAL_LIVE_TARGET
     )
 
@@ -858,8 +921,9 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "measurement_feedback_baseline_pressure_packet",
                 "measurement_feedback_baseline_pressure_review",
                 "baseline_component_registry_packet",
-            "baseline_component_registry_review",
                 "baseline_component_registry_review",
+                "baseline_component_interaction_risk_packet",
+                "baseline_component_interaction_risk_review",
             }
             else "no"
         )
@@ -1964,7 +2028,9 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert baseline_packet["strict_packet_result"] == (
         STAGES["baseline_component_registry_packet"].strict_outcome_id
     )
-    assert baseline_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert baseline_packet["selected_next_target"] == (
+        BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET
+    )
     assert baseline_packet["selected_next_target_kind"] == (
         BASELINE_COMPONENT_REGISTRY_REVIEW_KIND
     )
@@ -1998,22 +2064,30 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     )
     _assert_registry_nonclaims(baseline_packet)
 
-    baseline_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    baseline_review = workstream(BASELINE_COMPONENT_REGISTRY_REVIEW_TARGET, payload)
     assert baseline_review["status"] == "paused"
     assert baseline_review["authorization_evidence"] == (
         BASELINE_COMPONENT_REGISTRY_REVIEW_EVIDENCE
     )
     assert baseline_review["report"] == BASELINE_COMPONENT_REGISTRY_REVIEW_REPORT
-    assert baseline_review["review_result"] == FINAL_OUTCOME
-    assert baseline_review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert baseline_review["review_result"] == (
+        STAGES["baseline_component_registry_review"].outcome_id
+    )
+    assert baseline_review["strict_review_result"] == (
+        STAGES["baseline_component_registry_review"].strict_outcome_id
+    )
     assert baseline_review["prepared_packet_result"] == (
         STAGES["baseline_component_registry_packet"].outcome_id
     )
     assert baseline_review["prepared_packet_strict_result"] == (
         STAGES["baseline_component_registry_packet"].strict_outcome_id
     )
-    assert baseline_review["selected_next_target"] == FINAL_LIVE_TARGET
-    assert baseline_review["selected_next_target_kind"] == FINAL_KIND
+    assert baseline_review["selected_next_target"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET
+    )
+    assert baseline_review["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_KIND
+    )
     assert (
         baseline_review["baseline_component_registry_packet_result_review_consumed"]
         == "yes"
@@ -2050,6 +2124,123 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     )
     _assert_registry_nonclaims(baseline_review)
 
+    interaction_packet = workstream(
+        BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET, payload
+    )
+    assert interaction_packet["status"] == "paused"
+    assert interaction_packet["active_lane"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET
+    )
+    assert interaction_packet["authorization_evidence"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_PACKET_EVIDENCE
+    )
+    assert interaction_packet["report"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_PACKET_REPORT
+    )
+    assert interaction_packet["packet_result"] == (
+        STAGES["baseline_component_interaction_risk_packet"].outcome_id
+    )
+    assert interaction_packet["strict_packet_result"] == (
+        STAGES["baseline_component_interaction_risk_packet"].strict_outcome_id
+    )
+    assert interaction_packet["consumed_target"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET
+    )
+    assert interaction_packet["consumed_target_kind"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_KIND
+    )
+    assert interaction_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert interaction_packet["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND
+    )
+    assert (
+        interaction_packet["baseline_component_registry_result_review_consumed"]
+        == "yes"
+    )
+    assert interaction_packet["baseline_component_interaction_risk_traceability_only"] == (
+        "yes"
+    )
+    assert interaction_packet["tau_baseline_component_interaction_risks_mapped"] == (
+        "yes"
+    )
+    assert (
+        interaction_packet["interaction_risks_recorded_as_baseline_warnings_only"]
+        == "yes"
+    )
+    assert interaction_packet["baseline_component_interaction_risk_id_count"] == 8
+    assert "measurement_back_action_coupling" in (
+        interaction_packet["baseline_component_interaction_risk_ids"]
+    )
+    assert "delay_energy_accounting_coupling" in (
+        interaction_packet["baseline_component_interaction_risk_ids"]
+    )
+    assert interaction_packet["component_independence_claimed"] == "no"
+    assert interaction_packet["baseline_component_independence_claimed"] == "no"
+    assert interaction_packet["interaction_model_completed"] == "no"
+    assert interaction_packet["interaction_coupling_terms_computed"] == "no"
+    assert interaction_packet["baseline_model_completed"] == "no"
+    assert (
+        interaction_packet["residual_formula_changed_by_interaction_risk_packet"]
+        == "no"
+    )
+    _assert_registry_nonclaims(interaction_packet)
+
+    interaction_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert interaction_review["status"] == "paused"
+    assert interaction_review["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert interaction_review["authorization_evidence"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_EVIDENCE
+    )
+    assert interaction_review["report"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_REPORT
+    )
+    assert interaction_review["review_result"] == FINAL_OUTCOME
+    assert interaction_review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert interaction_review["prepared_packet_result"] == (
+        STAGES["baseline_component_interaction_risk_packet"].outcome_id
+    )
+    assert interaction_review["prepared_packet_strict_result"] == (
+        STAGES["baseline_component_interaction_risk_packet"].strict_outcome_id
+    )
+    assert interaction_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert interaction_review["consumed_target_kind"] == (
+        BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND
+    )
+    assert interaction_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert interaction_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        interaction_review[
+            "baseline_component_interaction_risk_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_review[
+            "interaction_risk_map_accepted_as_traceability_only"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_review[
+            "tau_baseline_component_interaction_risk_traceability_only_accepted"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_review[
+            "eight_interaction_risk_rows_accepted_as_baseline_warnings_only"
+        ]
+        == "yes"
+    )
+    assert interaction_review["component_independence_claim_accepted"] == "no"
+    assert interaction_review["baseline_completeness_claim_accepted"] == "no"
+    assert interaction_review["interaction_model_accepted"] == "no"
+    assert interaction_review["tau_baseline_value_computation_accepted"] == "no"
+    assert interaction_review["baseline_construction_obligation_packet_selected"] == (
+        "yes"
+    )
+    _assert_registry_nonclaims(interaction_review)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
@@ -2059,6 +2250,12 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["report"] == FINAL_REPORT
     assert active["review_result"] == FINAL_OUTCOME
     assert active["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert active["prepared_packet_result"] == (
+        STAGES["baseline_component_interaction_risk_packet"].outcome_id
+    )
+    assert active["prepared_packet_strict_result"] == (
+        STAGES["baseline_component_interaction_risk_packet"].strict_outcome_id
+    )
     assert active["selected_next_target"] == "PENDING"
     assert active["selected_next_target_kind"] == "PENDING"
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
@@ -2101,21 +2298,37 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         active["residual_formula_changed_by_baseline_component_registry"]
         == "no"
     )
-    assert active["baseline_component_registry_packet_accepted"] == "yes"
+    assert active["baseline_component_registry_result_review_consumed"] == "yes"
+    assert active["baseline_component_interaction_risk_traceability_only"] == "yes"
+    assert active["tau_baseline_component_interaction_risks_mapped"] == "yes"
     assert (
-        active["baseline_component_registry_packet_accepted_as_traceability_only"]
+        active["interaction_risks_recorded_as_baseline_warnings_only"]
         == "yes"
     )
-    assert (
-        active["future_tau_baseline_component_traceability_only_accepted"]
-        == "yes"
+    assert active["baseline_component_interaction_risk_id_count"] == 8
+    assert active["measurement_back_action_coupling_risk_recorded"] == "yes"
+    assert active["detector_efficiency_feedback_control_coupling_risk_recorded"] == (
+        "yes"
     )
-    assert active["tau_baseline_value_computation_accepted"] == "no"
-    assert active["tau_baseline_completed_model_accepted"] == "no"
-    assert active["baseline_component_completeness_accepted"] == "no"
+    assert active["feedback_delay_hamiltonian_control_coupling_risk_recorded"] == (
+        "yes"
+    )
+    assert active["control_field_decoherence_coupling_risk_recorded"] == "yes"
+    assert active["measurement_feedback_energy_accounting_coupling_risk_recorded"] == (
+        "yes"
+    )
+    assert active["detector_efficiency_measurement_record_coupling_risk_recorded"] == (
+        "yes"
+    )
+    assert active["feedback_control_field_coupling_risk_recorded"] == "yes"
+    assert active["delay_energy_accounting_coupling_risk_recorded"] == "yes"
+    assert active["component_independence_claimed"] == "no"
     assert active["baseline_component_independence_claimed"] == "no"
-    assert active["baseline_component_interaction_risks_preserved"] == "yes"
-    assert active["baseline_component_interaction_risk_packet_selected"] == "yes"
+    assert active["interaction_model_completed"] == "no"
+    assert active["interaction_coupling_terms_computed"] == "no"
+    assert active["baseline_model_completed"] == "no"
+    assert active["baseline_component_completeness_claimed"] == "no"
+    assert active["residual_formula_changed_by_interaction_risk_packet"] == "no"
     assert active["selected_primary_residual_formula"] == (
         "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
     )

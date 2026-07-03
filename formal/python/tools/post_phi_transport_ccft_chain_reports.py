@@ -20,6 +20,8 @@ STAGE_CAPTURED_AT_UTC = {
     "measurement_feedback_baseline_pressure_review": "2026-07-03T00:00:00Z",
     "baseline_component_registry_packet": "2026-07-03T00:00:00Z",
     "baseline_component_registry_review": "2026-07-03T00:00:00Z",
+    "baseline_component_interaction_risk_packet": "2026-07-03T00:00:00Z",
+    "baseline_component_interaction_risk_review": "2026-07-03T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -411,13 +413,57 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_KIND =
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
-    "RISK_PACKET_PREPARED_MAPS_COMPONENT_COUPLING_RISKS_NO_BASELINE_MODEL_"
-    "OR_CCFT_VALIDATION"
+    "RISK_PACKET_PREPARED_MAPS_TAU_BASELINE_COMPONENT_INTERACTION_RISKS_"
+    "ONLY_NO_COMPONENT_INDEPENDENCE_OR_BASELINE_COMPLETENESS_CLAIM"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
     "RISK_PACKET_PREPARED_INTERACTION_RISK_TRACEABILITY_ONLY_NO_TAU_BASELINE_"
-    "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_MASTER_ACTION_PROMOTION"
+    "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_"
+    "MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_STRICT_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_SUGGESTED_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_"
+    "interaction_risk_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_interaction_"
+    "risk_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_TRACEABILITY_ONLY_NO_COMPONENT_INDEPENDENCE_OR_BASELINE_"
+    "COMPLETENESS_CLAIM"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+    "RISK_PACKET_RESULT_REVIEW_ACCEPTS_INTERACTION_RISK_MAP_ONLY_NO_TAU_"
+    "BASELINE_COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_"
+    "VALIDATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_construction_"
+    "obligation_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
+    "PACKET_PREPARED_LISTS_TAU_BASELINE_CONSTRUCTION_REQUIREMENTS_ONLY_"
+    "NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
+    "PACKET_PREPARED_OBLIGATION_TRACEABILITY_ONLY_NO_MEASUREMENT_PROTOCOL_"
+    "NO_STATISTICAL_VALIDATION_NO_MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -1268,6 +1314,214 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_BOUNDAR
     "Hamiltonian control, control fields, and energy accounting can interact, "
     "the next disciplined target is a baseline-component interaction/risk "
     "packet."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_FIELDS = [
+    "risk_id",
+    "linked_tau_baseline_components",
+    "interaction_risk",
+    "future_baseline_implication",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ROWS = [
+    {
+        "risk_id": "measurement_back_action_coupling",
+        "linked_tau_baseline_components": [
+            "continuous or repeated quantum measurement",
+            "measurement back-action",
+        ],
+        "interaction_risk": (
+            "measurement can itself create state disturbance that changes "
+            "coherence-lifetime interpretation"
+        ),
+        "future_baseline_implication": (
+            "future tau_baseline work must not treat measurement and "
+            "back-action as independent bookkeeping terms"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no computed coupling term",
+    },
+    {
+        "risk_id": "detector_efficiency_feedback_control_coupling",
+        "linked_tau_baseline_components": [
+            "detector efficiency",
+            "feedback Hamiltonian control",
+        ],
+        "interaction_risk": (
+            "detector efficiency changes the record available to feedback "
+            "control"
+        ),
+        "future_baseline_implication": (
+            "future baseline design must track detector efficiency before "
+            "interpreting feedback-control effects"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no protocol readiness",
+    },
+    {
+        "risk_id": "feedback_delay_hamiltonian_control_coupling",
+        "linked_tau_baseline_components": [
+            "feedback delay",
+            "feedback Hamiltonian control",
+        ],
+        "interaction_risk": (
+            "feedback latency can change the effective Hamiltonian-control "
+            "response experienced by the system"
+        ),
+        "future_baseline_implication": (
+            "future tau_baseline work must track timing delays before treating "
+            "feedback Hamiltonian effects as settled"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no statistical validation",
+    },
+    {
+        "risk_id": "control_field_decoherence_coupling",
+        "linked_tau_baseline_components": [
+            "control-field effects",
+            "ordinary open-system decoherence",
+        ],
+        "interaction_risk": (
+            "ordinary control fields can alter decoherence behavior and "
+            "therefore change the baseline lifetime"
+        ),
+        "future_baseline_implication": (
+            "future comparisons must not label control-field-modified "
+            "decoherence as a CCFT residual"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no baseline separation",
+    },
+    {
+        "risk_id": "measurement_feedback_energy_accounting_coupling",
+        "linked_tau_baseline_components": [
+            "continuous or repeated quantum measurement",
+            "feedback Hamiltonian control",
+            "thermodynamic and energy accounting",
+        ],
+        "interaction_risk": (
+            "measurement and feedback can carry energetic and entropic costs "
+            "that affect baseline interpretation"
+        ),
+        "future_baseline_implication": (
+            "future tau_baseline accounting must preserve energy and entropy "
+            "costs before any residual claim"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no empirical validation",
+    },
+    {
+        "risk_id": "detector_efficiency_measurement_record_coupling",
+        "linked_tau_baseline_components": [
+            "detector efficiency",
+            "continuous or repeated quantum measurement",
+        ],
+        "interaction_risk": (
+            "detector efficiency changes the measurement record and therefore "
+            "the apparent monitored trajectory"
+        ),
+        "future_baseline_implication": (
+            "future baseline work must not interpret detector-limited records "
+            "as a separate unexplained residual"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no observed residual",
+    },
+    {
+        "risk_id": "feedback_control_field_coupling",
+        "linked_tau_baseline_components": [
+            "feedback Hamiltonian control",
+            "control-field effects",
+        ],
+        "interaction_risk": (
+            "feedback control may be implemented through control fields whose "
+            "ordinary dynamics alter coherence behavior"
+        ),
+        "future_baseline_implication": (
+            "future tau_baseline work must distinguish feedback policy effects "
+            "from ordinary control-field dynamics"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no CCFT validation",
+    },
+    {
+        "risk_id": "delay_energy_accounting_coupling",
+        "linked_tau_baseline_components": [
+            "feedback delay",
+            "thermodynamic and energy accounting",
+        ],
+        "interaction_risk": (
+            "feedback timing can change the work, entropy, or energy accounting "
+            "associated with control"
+        ),
+        "future_baseline_implication": (
+            "future baseline accounting must track timing-dependent energy "
+            "costs before residual interpretation"
+        ),
+        "execution_status": "risk_traceability_only_not_modeled",
+        "claim_boundary": "interaction warning only; no master-action promotion",
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_IDS = [
+    row["risk_id"]
+    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ROWS
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ITEMS = [
+    "baseline-component interaction-risk packet prepared",
+    "baseline-component registry result review consumed",
+    "interaction risks recorded as baseline-risk warnings only",
+    "measurement and back-action coupling risk recorded",
+    "detector efficiency and feedback-control coupling risk recorded",
+    "feedback delay and Hamiltonian-control coupling risk recorded",
+    "control-field and decoherence coupling risk recorded",
+    "measurement-feedback and energy-accounting coupling risk recorded",
+    "detector efficiency and measurement-record coupling risk recorded",
+    "feedback-control and control-field coupling risk recorded",
+    "delay and energy-accounting coupling risk recorded",
+    "no component independence claim",
+    "no interaction model completed",
+    "no tau_baseline value computed",
+    "no baseline completeness claimed",
+    "no measurement protocol readiness",
+    "no statistical validation",
+    "no observed residual",
+    "no baseline separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_BOUNDARY = (
+    "This packet maps tau_baseline component interaction risks as baseline-risk "
+    "warnings only. It does not claim component independence, compute "
+    "tau_baseline, complete a baseline model, define a measurement protocol, "
+    "perform statistical validation, claim an observed residual, claim baseline "
+    "separation, validate CCFT, or support master-action promotion."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_ACCEPTANCE_ITEMS = [
+    "baseline-component interaction-risk packet result review completed",
+    "tau_baseline component interaction risks accepted as traceability only",
+    "eight interaction-risk rows accepted as baseline-risk warnings only",
+    "no component independence claim accepted",
+    "no baseline completeness claim accepted",
+    "no interaction model accepted",
+    "no interaction coupling terms computed",
+    "no tau_baseline computation accepted",
+    "no measurement protocol readiness accepted",
+    "no statistical validation accepted",
+    "no observed residual accepted",
+    "no baseline separation accepted",
+    "no CCFT validation accepted",
+    "no master-action promotion accepted",
+    "baseline-construction obligation packet selected as next target",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_BOUNDARY = (
+    "This result review accepts the baseline-component interaction-risk packet "
+    "only as tau_baseline component interaction-risk traceability. It accepts "
+    "the risk map as baseline-risk warnings, not as component-independence "
+    "proof, baseline completeness, tau_baseline computation, completed "
+    "baseline model, measurement protocol, statistical validation, observed "
+    "residual, baseline separation, CCFT validation, empirical validation, or "
+    "master-action support. The next disciplined target is a "
+    "baseline-construction obligation packet."
 )
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
@@ -2818,6 +3072,106 @@ STAGES: dict[str, StageSpec] = {
             "packet_result_review"
         ),
     ),
+    "baseline_component_interaction_risk_packet": StageSpec(
+        key="baseline_component_interaction_risk_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+            "RISK_PACKET_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+            "RISK_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "INTERACTION_RISK_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "INTERACTION_RISK_PACKET_20260703_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_"
+            "interaction_risk_traceability_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_"
+            "interaction_risk_packet"
+        ),
+    ),
+    "baseline_component_interaction_risk_review": StageSpec(
+        key="baseline_component_interaction_risk_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+            "RISK_PACKET_RESULT_REVIEW_20260703_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_"
+            "RISK_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "INTERACTION_RISK_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "INTERACTION_RISK_PACKET_RESULT_REVIEW_20260703_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_"
+            "interaction_risk_review_accepts_traceability_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_"
+            "interaction_risk_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -2850,6 +3204,8 @@ ORDERED_STAGE_KEYS = [
     "measurement_feedback_baseline_pressure_review",
     "baseline_component_registry_packet",
     "baseline_component_registry_review",
+    "baseline_component_interaction_risk_packet",
+    "baseline_component_interaction_risk_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -2902,6 +3258,12 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "baseline_component_registry_review": (
         "selected CCFT empirical discriminator baseline-component interaction/risk packet"
+    ),
+    "baseline_component_interaction_risk_packet": (
+        "selected CCFT empirical discriminator baseline-component interaction/risk packet result review"
+    ),
+    "baseline_component_interaction_risk_review": (
+        "selected CCFT empirical discriminator baseline-construction obligation packet"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -3031,6 +3393,10 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -3055,6 +3421,10 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -3077,6 +3447,10 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -3097,6 +3471,10 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
+        "baseline_component_interaction_risk_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -3214,6 +3592,8 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
+        "baseline_component_interaction_risk_review",
     }:
         payload.update(
             {
@@ -3263,6 +3643,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -3307,6 +3688,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -3429,6 +3811,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -3522,6 +3905,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -3663,6 +4047,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -3816,6 +4201,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -3925,6 +4311,7 @@ def build_stage_payload(
         "measurement_feedback_baseline_pressure_review",
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -4318,6 +4705,7 @@ def build_stage_payload(
     if stage_key in {
         "baseline_component_registry_packet",
         "baseline_component_registry_review",
+        "baseline_component_interaction_risk_packet",
     }:
         payload.update(
             {
@@ -4449,6 +4837,245 @@ def build_stage_payload(
                     "registry, not tau_baseline computation, measurement "
                     "protocol design, statistical validation, baseline "
                     "separation, CCFT validation, or master-action promotion."
+                ),
+            }
+        )
+    if stage_key == "baseline_component_interaction_risk_packet":
+        payload.update(
+            {
+                "baseline_component_registry_result_review_consumed": True,
+                "baseline_component_registry_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_OUTCOME
+                ),
+                "baseline_component_registry_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_REGISTRY_REVIEW_STRICT_OUTCOME
+                ),
+                "baseline_component_interaction_risk_packet_prepared": True,
+                "baseline_component_interaction_risk_traceability_only": True,
+                "tau_baseline_component_interaction_risks_mapped": True,
+                "interaction_risks_recorded_as_baseline_warnings_only": True,
+                "component_independence_claimed": False,
+                "baseline_component_independence_claimed": False,
+                "interaction_model_completed": False,
+                "interaction_coupling_terms_computed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_completed_model_claimed": False,
+                "baseline_component_completeness_claimed": False,
+                "baseline_model_completed": False,
+                "baseline_separation_claimed": False,
+                "baseline_component_interaction_risk_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_FIELDS
+                ),
+                "baseline_component_interaction_risk_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_FIELDS
+                    )
+                ),
+                "baseline_component_interaction_risk_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ROWS
+                ),
+                "baseline_component_interaction_risk_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ROWS
+                    )
+                ),
+                "baseline_component_interaction_risk_ids": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_IDS
+                ),
+                "baseline_component_interaction_risk_id_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_IDS
+                    )
+                ),
+                "baseline_component_interaction_risk_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ITEMS
+                ),
+                "baseline_component_interaction_risk_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ITEMS
+                    )
+                ),
+                "baseline_component_interaction_risk_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_BOUNDARY
+                ),
+                "measurement_back_action_coupling_risk_recorded": True,
+                "detector_efficiency_feedback_control_coupling_risk_recorded": True,
+                "feedback_delay_hamiltonian_control_coupling_risk_recorded": True,
+                "control_field_decoherence_coupling_risk_recorded": True,
+                "measurement_feedback_energy_accounting_coupling_risk_recorded": True,
+                "detector_efficiency_measurement_record_coupling_risk_recorded": True,
+                "feedback_control_field_coupling_risk_recorded": True,
+                "delay_energy_accounting_coupling_risk_recorded": True,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_interaction_risk_packet": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "master_action_support_accepted": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The baseline-component interaction/risk packet maps "
+                    "coupling risks among future tau_baseline components only. "
+                    "The next disciplined step is result review of those "
+                    "risk warnings, not tau_baseline computation, model "
+                    "completion, measurement protocol design, statistical "
+                    "validation, baseline separation, CCFT validation, or "
+                    "master-action promotion."
+                ),
+            }
+        )
+    if stage_key == "baseline_component_interaction_risk_review":
+        prior_packet_payload = build_stage_payload(
+            "baseline_component_interaction_risk_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_packet_payload.items():
+            payload.setdefault(key, value)
+        payload.update(
+            {
+                "baseline_component_interaction_risk_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_STRICT_OUTCOME
+                ),
+                "baseline_component_interaction_risk_packet_accepted": True,
+                "interaction_risk_map_accepted_as_traceability_only": True,
+                "tau_baseline_component_interaction_risk_traceability_only_accepted": True,
+                "eight_interaction_risk_rows_accepted_as_baseline_warnings_only": True,
+                "baseline_component_interaction_risk_packet_prepared": True,
+                "baseline_component_interaction_risk_traceability_only": True,
+                "tau_baseline_component_interaction_risks_mapped": True,
+                "interaction_risks_recorded_as_baseline_warnings_only": True,
+                "component_independence_claim_accepted": False,
+                "component_independence_claimed": False,
+                "baseline_component_independence_claimed": False,
+                "baseline_completeness_claim_accepted": False,
+                "baseline_component_completeness_accepted": False,
+                "baseline_component_completeness_claimed": False,
+                "interaction_model_accepted": False,
+                "interaction_model_completed": False,
+                "interaction_coupling_terms_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "baseline_model_completed": False,
+                "baseline_component_interaction_risk_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_FIELDS
+                ),
+                "baseline_component_interaction_risk_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_FIELDS
+                    )
+                ),
+                "baseline_component_interaction_risk_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ROWS
+                ),
+                "baseline_component_interaction_risk_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ROWS
+                    )
+                ),
+                "baseline_component_interaction_risk_ids": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_IDS
+                ),
+                "baseline_component_interaction_risk_id_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_IDS
+                    )
+                ),
+                "baseline_component_interaction_risk_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ITEMS
+                ),
+                "baseline_component_interaction_risk_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_ITEMS
+                    )
+                ),
+                "baseline_component_interaction_risk_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_BOUNDARY
+                ),
+                "measurement_back_action_coupling_risk_recorded": True,
+                "detector_efficiency_feedback_control_coupling_risk_recorded": True,
+                "feedback_delay_hamiltonian_control_coupling_risk_recorded": True,
+                "control_field_decoherence_coupling_risk_recorded": True,
+                "measurement_feedback_energy_accounting_coupling_risk_recorded": True,
+                "detector_efficiency_measurement_record_coupling_risk_recorded": True,
+                "feedback_control_field_coupling_risk_recorded": True,
+                "delay_energy_accounting_coupling_risk_recorded": True,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_interaction_risk_packet": False,
+                "residual_formula_changed_by_interaction_risk_review": False,
+                "baseline_component_interaction_risk_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_component_interaction_risk_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "baseline_component_interaction_risk_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_REVIEW_BOUNDARY
+                ),
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "statistical_effect_size_accepted": False,
+                "measured_coherence_anomaly_accepted": False,
+                "baseline_separation_accepted": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_accepted": False,
+                "empirical_confirmation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "master_action_support_accepted": False,
+                "baseline_construction_obligation_packet_selected": True,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_OUTCOME
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_SUGGESTED_STRICT_OUTCOME
+                ),
+                "next_disciplined_move_reason": (
+                    "The interaction-risk result review accepts only "
+                    "baseline-risk traceability. The next disciplined step is "
+                    "to list the obligations required before tau_baseline "
+                    "construction is allowed, not to compute tau_baseline, "
+                    "define a measurement protocol, validate statistics, "
+                    "claim baseline separation, validate CCFT, or promote the "
+                    "master action."
                 ),
             }
         )
