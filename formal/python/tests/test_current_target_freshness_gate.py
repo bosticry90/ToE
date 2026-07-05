@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1341,7 +1341,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet"
@@ -1682,7 +1682,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1777,12 +1777,13 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionPrioritySelectionPacketResultReview.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacket.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_20260705_v0.json"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "CLARIFICATION_PACKET_20260705_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1838,9 +1839,9 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_OUTCOME = (
 )
 LIVE_TARGET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_"
-    "ACCEPTS_FIRST_FUTURE_GAP_RESOLUTION_TARGET_ONLY_NO_REMEDIATION_EXECUTION_"
-    "OR_EQUATION_ADOPTION"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "CLARIFICATION_PACKET_PREPARED_CLARIFIES_OPEN_SYSTEM_DECOHERENCE_GAP_"
+    "ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -1905,8 +1906,8 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_STRICT_OUTCOME = (
 )
 LIVE_TARGET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_"
-    "ACCEPTS_PRIORITY_SELECTION_ONLY_NO_SOURCE_VALIDATION_NO_TAU_BASELINE_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "CLARIFICATION_PACKET_PREPARED_CLARIFICATION_ONLY_NO_TAU_BASELINE_"
     "COMPUTATION_NO_COMPLETED_BASELINE_MODEL_NO_MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
@@ -1955,7 +1956,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_KIND = (
 )
 LIVE_TARGET_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
-    "source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+    "source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -1968,6 +1969,10 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_priority_selection_packet_result_review"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7782,7 +7787,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
@@ -7853,11 +7858,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         interaction_active_workstream["accepted_first_gap_resolution_target"]
-        == LIVE_TARGET
+        == PREVIOUS_LIVE_TARGET
     )
     assert (
         interaction_active_workstream["accepted_first_gap_resolution_target_kind"]
-        == LIVE_TARGET_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
     )
     assert (
         interaction_active_workstream[
@@ -8039,10 +8044,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream["selected_first_gap_resolution_path"]
         == "clarification_needed_then_standard_theory_import_work"
     )
-    assert interaction_active_workstream["selected_first_gap_resolution_target"] == LIVE_TARGET
+    assert (
+        interaction_active_workstream["selected_first_gap_resolution_target"]
+        == PREVIOUS_LIVE_TARGET
+    )
     assert (
         interaction_active_workstream["selected_first_gap_resolution_target_kind"]
-        == LIVE_TARGET_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
     )
     assert interaction_active_workstream["selected_first_gap_resolution_target_count"] == 1
     assert interaction_active_workstream["deferred_gap_resolution_candidate_count"] == 7
@@ -8054,7 +8062,155 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         interaction_active_workstream["open_system_decoherence_clarification_executed"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_clarification_packet_prepared"]
+        == "yes"
+    )
+    assert interaction_active_workstream["open_system_decoherence_clarification_only"] == (
+        "yes"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_gap_clarification_only"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_source_path_clarified_only"
+        ]
+        == "yes"
+    )
+    assert interaction_active_workstream["open_system_decoherence_gap_resolved"] == "no"
+    assert (
+        interaction_active_workstream["open_system_decoherence_source_path_resolved"]
         == "no"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_source_validated"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_source_accepted"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_equation_import_ready"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_equation_imported"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_equation_adopted"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["open_system_decoherence_component_solved"]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream["standard_open_system_theory_import_work_needed"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["standard_open_system_theory_import_work_executed"]
+        == "no"
+    )
+    assert interaction_active_workstream["clarification_before_source_validation"] == (
+        "yes"
+    )
+    assert interaction_active_workstream["clarification_before_equation_import"] == (
+        "yes"
+    )
+    assert (
+        interaction_active_workstream["clarification_before_tau_baseline_construction"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "baseline_component_equation_source_applicability_open_system_decoherence_clarification_field_count"
+        ]
+        == 9
+    )
+    assert (
+        interaction_active_workstream[
+            "baseline_component_equation_source_applicability_open_system_decoherence_clarification_row_count"
+        ]
+        == 8
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_clarification_unresolved_row_count"
+        ]
+        == 8
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_clarification_resolved_row_count"
+        ]
+        == 0
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_clarification_blocks_equation_import_count"
+        ]
+        == 8
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_clarification_blocks_tau_baseline_count"
+        ]
+        == 8
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_physical_regime_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_system_bath_boundary_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_observable_mapping_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_variables_and_units_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_domain_limits_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_measurement_feedback_coupling_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_source_provenance_question_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_uncertainty_boundary_question_recorded"
+        ]
+        == "yes"
     )
     assert interaction_active_workstream["standard_theory_import_work_executed"] == "no"
     assert (

@@ -246,6 +246,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentI
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacket
 
 namespace ToeFormal
 namespace Derivation
@@ -415,7 +416,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -443,7 +444,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
       status := .retained }
   ]
 
@@ -461,13 +462,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the selected CCFT source-applicability priority-selection result review. -/
+/-- Previous live target consumed by the selected CCFT open-system decoherence clarification packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result"
-
-/-- Current live target after the selected CCFT baseline-component equation source-applicability priority-selection result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+
+/-- Current live target after the selected CCFT open-system decoherence clarification packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -480,7 +481,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -598,7 +599,7 @@ theorem cross_pillar_frontier_current_live_target_v0 :
       currentLiveNextStrictTargetV0 := by
   rfl
 
-/-- The previous live target remains recorded only as the consumed review. -/
+/-- The previous live target remains recorded only as the consumed packet. -/
 theorem cross_pillar_frontier_previous_live_target_v0 :
     (crossPillarClosureFrontierStatusReadoutV0
       |>.previous_live_next_target) =

@@ -233,6 +233,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentE
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionStrategyPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionPrioritySelectionPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionPrioritySelectionPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -255,21 +256,22 @@ def scalarSandboxTargetId : String :=
 
 def currentScopedResult : String :=
   "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-  SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_\
-  REVIEW_ACCEPTS_FIRST_FUTURE_GAP_RESOLUTION_TARGET_ONLY_NO_\
-  REMEDIATION_EXECUTION_OR_EQUATION_ADOPTION"
+  SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_\
+  CLARIFICATION_PACKET_PREPARED_CLARIFIES_OPEN_SYSTEM_DECOHERENCE_GAP_\
+  ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
 
 def currentPacketId : String :=
   "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-  SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_v0"
+  SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_\
+  CLARIFICATION_PACKET_v0"
 
 theorem qft_gr_lane_aggregate_exposes_current_scoped_result :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_\
-        REVIEW_ACCEPTS_FIRST_FUTURE_GAP_RESOLUTION_TARGET_ONLY_NO_\
-        REMEDIATION_EXECUTION_OR_EQUATION_ADOPTION" := by
+        SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_\
+        CLARIFICATION_PACKET_PREPARED_CLARIFIES_OPEN_SYSTEM_DECOHERENCE_GAP_\
+        ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
   constructor
   · rfl
   · rfl
