@@ -34,6 +34,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_candidate_registry_review": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_review_packet": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_review": "2026-07-05T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_classification_packet": "2026-07-05T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -708,6 +709,26 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_classification_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_PREPARED_CLASSIFIES_"
+    "UNCLEAR_AND_BLOCKED_SOURCE_APPLICABILITY_GAPS_ONLY_NO_SOURCE_"
+    "REMEDIATION_OR_EQUATION_ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_PREPARED_GAP_"
+    "CLASSIFICATION_ONLY_NO_SOURCE_VALIDATION_NO_TAU_BASELINE_COMPUTATION_"
+    "NO_COMPLETED_BASELINE_MODEL_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_classification_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_classification_packet_result_review"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -3155,6 +3176,280 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "equations, perform empirical fits, complete a baseline model, or "
     "promote the master action."
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_FIELDS = [
+    "slot_id",
+    "component_name",
+    "source_class",
+    "prior_applicability_status",
+    "gap_classification",
+    "gap_reason",
+    "missing_evidence_class",
+    "required_resolution_evidence",
+    "gap_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ROWS = [
+    {
+        "slot_id": "TBASE-EQ-SLOT-OPEN-SYSTEM-DECOHERENCE-v0",
+        "component_name": "open-system decoherence",
+        "source_class": "standard_open_system_theory_import_required",
+        "prior_applicability_status": "applicability_candidate_unclear",
+        "gap_classification": (
+            "unclear_missing_physical_regime_state_space_environment_"
+            "coupling_and_observable_binding"
+        ),
+        "gap_reason": (
+            "the candidate master-equation family cannot be judged applicable "
+            "until the selected platform regime, Hilbert/state space, "
+            "environment coupling, variables, units, and observable binding "
+            "are supplied"
+        ),
+        "missing_evidence_class": (
+            "standard_theory_regime_and_observable_binding_evidence_missing"
+        ),
+        "required_resolution_evidence": (
+            "platform-regime statement, state-space declaration, environment "
+            "coupling assumptions, variable/unit map, and observable binding"
+        ),
+        "gap_boundary": (
+            "gap classification only; no decoherence equation imported, no "
+            "source validated, and no tau_baseline component solved"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-MEASUREMENT-CONTRIBUTION-v0",
+        "component_name": "measurement contribution",
+        "source_class": "standard_open_system_theory_import_required",
+        "prior_applicability_status": "applicability_candidate_unclear",
+        "gap_classification": (
+            "unclear_missing_measurement_channel_record_strength_units_and_"
+            "observable_binding"
+        ),
+        "gap_reason": (
+            "continuous-measurement sources cannot be judged applicable until "
+            "the measurement channel, readout model, coupling strength, "
+            "variables, units, and observable binding are fixed"
+        ),
+        "missing_evidence_class": (
+            "standard_measurement_model_and_readout_binding_evidence_missing"
+        ),
+        "required_resolution_evidence": (
+            "measurement-channel declaration, readout model, measurement "
+            "strength map, variable/unit map, and observable binding"
+        ),
+        "gap_boundary": (
+            "gap classification only; no measurement equation imported, no "
+            "source validated, and no protocol readiness claimed"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-BACK-ACTION-CONTRIBUTION-v0",
+        "component_name": "back-action contribution",
+        "source_class": "standard_open_system_theory_import_required",
+        "prior_applicability_status": "applicability_candidate_unclear",
+        "gap_classification": (
+            "unclear_missing_measurement_strength_detector_efficiency_"
+            "feedback_policy_state_update_and_coupling_assumptions"
+        ),
+        "gap_reason": (
+            "back-action source applicability depends on measurement "
+            "strength, detector efficiency, feedback policy, state update "
+            "rule, and coupling assumptions that are not yet supplied"
+        ),
+        "missing_evidence_class": (
+            "standard_back_action_and_feedback_coupling_evidence_missing"
+        ),
+        "required_resolution_evidence": (
+            "measurement-strength declaration, detector-efficiency "
+            "assumptions, feedback policy, state-update rule, and coupling "
+            "assumption map"
+        ),
+        "gap_boundary": (
+            "gap classification only; no back-action equation imported, no "
+            "source validated, and no component-independence claim made"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-FEEDBACK-HAMILTONIAN-CONTROL-v0",
+        "component_name": "feedback Hamiltonian control",
+        "source_class": "literature_supplied",
+        "prior_applicability_status": "applicability_candidate_blocked",
+        "gap_classification": (
+            "blocked_missing_specific_feedback_control_citation_provenance_"
+            "system_type_parameters_uncertainty_and_slot_mapping"
+        ),
+        "gap_reason": (
+            "the slot is blocked because no concrete feedback-control "
+            "citation, equation provenance, system type, parameter "
+            "definitions, uncertainty limits, or slot mapping have been "
+            "supplied"
+        ),
+        "missing_evidence_class": (
+            "literature_citation_provenance_and_slot_mapping_evidence_missing"
+        ),
+        "required_resolution_evidence": (
+            "specific feedback-control source, equation provenance, system "
+            "type match, parameter definitions, uncertainty limits, and slot "
+            "mapping"
+        ),
+        "gap_boundary": (
+            "gap classification only; no feedback Hamiltonian equation "
+            "adopted, no literature source validated, and no CCFT support "
+            "claimed"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-DETECTOR-EFFICIENCY-CORRECTION-v0",
+        "component_name": "detector efficiency correction",
+        "source_class": "empirical_fit_needed",
+        "prior_applicability_status": "applicability_candidate_blocked",
+        "gap_classification": (
+            "blocked_missing_detector_data_calibration_model_"
+            "identifiability_uncertainty_overfitting_guard_and_failure_"
+            "criteria"
+        ),
+        "gap_reason": (
+            "the slot is blocked because detector data, a calibration model, "
+            "identifiable parameters, uncertainty handling, overfitting "
+            "guard, and failure criteria have not been supplied"
+        ),
+        "missing_evidence_class": (
+            "empirical_calibration_data_model_and_identifiability_evidence_"
+            "missing"
+        ),
+        "required_resolution_evidence": (
+            "detector calibration data source, candidate fit model, "
+            "identifiability check, uncertainty model, overfitting guard, "
+            "and failure criteria"
+        ),
+        "gap_boundary": (
+            "gap classification only; no detector data selected, no fit "
+            "model declared, and no efficiency correction accepted"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-FEEDBACK-DELAY-CORRECTION-v0",
+        "component_name": "feedback delay correction",
+        "source_class": "empirical_fit_needed",
+        "prior_applicability_status": "applicability_candidate_blocked",
+        "gap_classification": (
+            "blocked_missing_latency_data_delay_model_identifiability_"
+            "uncertainty_overfitting_guard_and_failure_criteria"
+        ),
+        "gap_reason": (
+            "the slot is blocked because platform latency data, a delay "
+            "model, identifiable parameters, uncertainty handling, "
+            "overfitting guard, and failure criteria have not been supplied"
+        ),
+        "missing_evidence_class": (
+            "empirical_latency_data_model_and_identifiability_evidence_missing"
+        ),
+        "required_resolution_evidence": (
+            "latency data source, delay model, identifiability check, "
+            "uncertainty model, overfitting guard, and failure criteria"
+        ),
+        "gap_boundary": (
+            "gap classification only; no latency fit executed, no delay "
+            "equation selected, and no tau_baseline value computed"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-CONTROL-FIELD-EFFECT-v0",
+        "component_name": "control-field effect",
+        "source_class": "literature_supplied",
+        "prior_applicability_status": "applicability_candidate_blocked",
+        "gap_classification": (
+            "blocked_missing_control_field_platform_response_source_"
+            "parameters_uncertainty_and_slot_mapping"
+        ),
+        "gap_reason": (
+            "the slot is blocked because no concrete control-field platform "
+            "response source, parameter definitions, uncertainty limits, or "
+            "slot mapping have been supplied"
+        ),
+        "missing_evidence_class": (
+            "literature_platform_response_and_slot_mapping_evidence_missing"
+        ),
+        "required_resolution_evidence": (
+            "control-field response source, platform match, parameter "
+            "definitions, uncertainty limits, and slot mapping"
+        ),
+        "gap_boundary": (
+            "gap classification only; no control-field equation adopted, no "
+            "platform response fit executed, and no baseline separation "
+            "claimed"
+        ),
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-THERMODYNAMIC-ENERGY-ACCOUNTING-v0",
+        "component_name": "thermodynamic / energy accounting",
+        "source_class": "literature_supplied",
+        "prior_applicability_status": "applicability_candidate_blocked",
+        "gap_classification": (
+            "blocked_missing_thermodynamic_accounting_citation_bookkeeping_"
+            "parameters_uncertainty_and_slot_mapping"
+        ),
+        "gap_reason": (
+            "the slot is blocked because no concrete thermodynamic "
+            "accounting citation, bookkeeping convention, parameter "
+            "definitions, uncertainty limits, or slot mapping have been "
+            "supplied"
+        ),
+        "missing_evidence_class": (
+            "literature_thermodynamic_accounting_and_bookkeeping_evidence_"
+            "missing"
+        ),
+        "required_resolution_evidence": (
+            "thermodynamic accounting source, bookkeeping convention, "
+            "parameter definitions, uncertainty limits, and slot mapping"
+        ),
+        "gap_boundary": (
+            "gap classification only; no thermodynamic equation adopted, no "
+            "energy closure accepted, and no master-action support claimed"
+        ),
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATIONS = [
+    row["gap_classification"]
+    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ROWS
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_MISSING_EVIDENCE_CLASSES = sorted(
+    {
+        row["missing_evidence_class"]
+        for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ROWS
+    }
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ITEMS = [
+    "source-applicability gap-classification packet prepared",
+    "source-applicability review result with zero supported rows consumed",
+    "eight unclear or blocked applicability rows classified by gap type only",
+    "three unclear rows classified as missing standard-theory binding evidence",
+    "three blocked literature rows classified as missing citation provenance or slot-mapping evidence",
+    "two blocked empirical-fit rows classified as missing data model and identifiability evidence",
+    "zero supported rows promoted",
+    "zero source gaps remediated",
+    "zero source candidates replaced",
+    "zero equations imported or adopted",
+    "no source validation",
+    "no empirical fit",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_BOUNDARY = (
+    "This packet classifies why the accepted source-applicability rows are "
+    "unclear or blocked. It preserves the three unclear rows and five "
+    "blocked rows as unresolved prevalidation gaps. It does not remediate "
+    "any gap, replace any source candidate, validate any source, import any "
+    "standard open-system equation, adopt any literature equation, perform "
+    "or declare any empirical fit, select any data source, select or solve "
+    "any component equation, compute tau_baseline, complete a baseline "
+    "model, define a measurement protocol, perform statistical validation, "
+    "claim residual separation, validate CCFT, or promote the master action."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -5404,6 +5699,56 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_review_packet_result_review"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_classification_packet": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_classification_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_20260705_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_20260705_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_classification_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_classification_packet"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -5450,6 +5795,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_candidate_registry_review",
     "baseline_component_equation_source_applicability_review_packet",
     "baseline_component_equation_source_applicability_review",
+    "baseline_component_equation_source_applicability_gap_classification_packet",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -5544,6 +5890,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "baseline_component_equation_source_applicability_review": (
         "selected CCFT empirical discriminator baseline component equation source applicability gap classification packet"
+    ),
+    "baseline_component_equation_source_applicability_gap_classification_packet": (
+        "selected CCFT empirical discriminator baseline component equation source applicability gap classification packet result review"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -5687,6 +6036,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -5725,6 +6075,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -5761,6 +6112,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -5795,6 +6147,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -5926,6 +6279,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }:
         payload.update(
             {
@@ -5988,6 +6342,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -6047,6 +6402,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -6184,6 +6540,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -6292,6 +6649,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }:
         payload.update(
             {
@@ -6446,6 +6804,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }:
         payload.update(
             {
@@ -6612,6 +6971,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -6734,6 +7094,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }:
         payload.update(
             {
@@ -7140,6 +7501,7 @@ def build_stage_payload(
         "baseline_component_equation_source_candidate_registry_review",
         "baseline_component_equation_source_applicability_review_packet",
         "baseline_component_equation_source_applicability_review",
+        "baseline_component_equation_source_applicability_gap_classification_packet",
     }:
         payload.update(
             {
@@ -9457,6 +9819,255 @@ def build_stage_payload(
                     "baseline modeling, measurement protocol design, "
                     "statistical validation, residual separation, CCFT "
                     "validation, or master-action promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_classification_packet"
+    ):
+        prior_review_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        gap_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ROWS
+        )
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_review_packet_result_review_consumed": True,
+                "source_applicability_review_result_consumed": True,
+                "source_applicability_gap_classification_packet_prepared": True,
+                "source_applicability_gap_classification_only": True,
+                "source_applicability_gaps_classified_only": True,
+                "unclear_and_blocked_source_applicability_gaps_classified_only": True,
+                "source_applicability_gap_classification_rows_prepared": True,
+                "source_applicability_gap_classification_resolves_gap": False,
+                "source_applicability_gap_remediation_performed": False,
+                "source_candidate_replacement_performed": False,
+                "source_candidate_replacement_selected": False,
+                "source_applicability_gap_classification_before_remediation": True,
+                "source_applicability_gap_classification_before_source_validation": True,
+                "source_applicability_gap_classification_before_equation_import": True,
+                "source_applicability_gap_classification_before_literature_adoption": True,
+                "source_applicability_gap_classification_before_empirical_fit": True,
+                "baseline_component_equation_source_applicability_gap_classification_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_gap_classification_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_FIELDS
+                    )
+                ),
+                "baseline_component_equation_source_applicability_gap_classification_rows": (
+                    gap_rows
+                ),
+                "baseline_component_equation_source_applicability_gap_classification_row_count": (
+                    len(gap_rows)
+                ),
+                "source_applicability_gap_classifications": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATIONS
+                ),
+                "source_applicability_gap_classification_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATIONS
+                    )
+                ),
+                "source_applicability_gap_missing_evidence_classes": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_MISSING_EVIDENCE_CLASSES
+                ),
+                "source_applicability_gap_missing_evidence_class_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_MISSING_EVIDENCE_CLASSES
+                    )
+                ),
+                "gap_classified_applicability_candidate_unclear_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["prior_applicability_status"]
+                        == "applicability_candidate_unclear"
+                    )
+                ),
+                "gap_classified_applicability_candidate_blocked_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["prior_applicability_status"]
+                        == "applicability_candidate_blocked"
+                    )
+                ),
+                "gap_classified_applicability_candidate_supported_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["prior_applicability_status"]
+                        == "applicability_candidate_supported"
+                    )
+                ),
+                "gap_classified_applicability_candidate_rejected_for_slot_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["prior_applicability_status"]
+                        == "applicability_candidate_rejected_for_slot"
+                    )
+                ),
+                "standard_theory_gap_classification_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["source_class"]
+                        == "standard_open_system_theory_import_required"
+                    )
+                ),
+                "literature_gap_classification_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["source_class"] == "literature_supplied"
+                    )
+                ),
+                "empirical_fit_gap_classification_count": (
+                    sum(
+                        1
+                        for row in gap_rows
+                        if row["source_class"] == "empirical_fit_needed"
+                    )
+                ),
+                "source_applicability_gap_resolution_evidence_required_count": (
+                    len(gap_rows)
+                ),
+                "source_applicability_gap_boundary_count": len(gap_rows),
+                "source_applicability_supported_rows_promoted": 0,
+                "source_applicability_gaps_remediated_count": 0,
+                "source_candidates_replaced_count": 0,
+                "candidate_source_applicability_checked": True,
+                "candidate_source_applicability_review_executed": True,
+                "candidate_source_applicability_review_as_prevalidation_filter_only": True,
+                "candidate_source_applicability_final_acceptance_claimed": False,
+                "source_candidate_applicability_determined": False,
+                "source_applicability_review_completed": False,
+                "source_applicability_acceptance_claimed": False,
+                "candidate_source_applicability_accepted": False,
+                "candidate_source_applicability_validated": False,
+                "applicability_warning_resolved": False,
+                "candidate_source_domain_match_accepted": False,
+                "candidate_source_slot_fit_accepted": False,
+                "candidate_source_accepted_as_applicable": False,
+                "candidate_source_rejected_as_inapplicable": False,
+                "candidate_source_accepted": False,
+                "candidate_source_validated": False,
+                "candidate_source_adopted": False,
+                "candidate_equation_adopted": False,
+                "source_validated": False,
+                "source_validation_executed": False,
+                "source_validation_performed": False,
+                "source_validation_accepted": False,
+                "standard_open_system_source_validated": False,
+                "literature_source_validated": False,
+                "empirical_fit_source_validated": False,
+                "standard_open_system_equations_imported": False,
+                "standard_open_system_equation_adopted": False,
+                "literature_equations_adopted": False,
+                "literature_equation_validated": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "empirical_fit_validated": False,
+                "fit_model_declared": False,
+                "data_source_selected": False,
+                "parameter_identifiability_checked": False,
+                "uncertainty_model_accepted": False,
+                "overfitting_guard_executed": False,
+                "failure_criteria_applied": False,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "component_equations_correctness_claimed": False,
+                "component_equation_correctness_claimed": False,
+                "component_equation_correctness_accepted": False,
+                "component_equations_physical_adequacy_claimed": False,
+                "component_equations_physical_adequacy_accepted": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "equation_sources_accepted_as_physically_adequate": False,
+                "source_classification_adequacy_claimed": False,
+                "source_classification_completeness_claimed": False,
+                "equation_slot_adequacy_claimed": False,
+                "equation_slot_adequacy_accepted": False,
+                "component_equation_independence_claimed": False,
+                "component_equation_independence_accepted": False,
+                "component_independence_claimed": False,
+                "baseline_component_independence_claimed": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "full_toeformal_build_attempt_assessment": (
+                    "Full ToeFormal build attempted; timed out at 8382/8416 "
+                    "jobs with no semantic failure observed before timeout."
+                ),
+                "scoped_lean_validation_assessment": (
+                    "scoped Lean passed; full aggregate not completed"
+                ),
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_classification_packet": False,
+                "baseline_component_equation_source_applicability_gap_classification_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_gap_classification_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_ITEMS
+                    )
+                ),
+                "baseline_component_equation_source_applicability_gap_classification_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The source-applicability gap-classification packet "
+                    "classifies why the three unclear and five blocked rows "
+                    "remain unusable. The next disciplined step is result "
+                    "review of that classification only, not source "
+                    "remediation, source replacement, source validation, "
+                    "equation import, literature adoption, empirical fitting, "
+                    "tau_baseline computation, completed baseline modeling, "
+                    "measurement protocol design, statistical validation, "
+                    "residual separation, CCFT validation, or master-action "
+                    "promotion."
                 ),
             }
         )
