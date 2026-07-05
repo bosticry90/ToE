@@ -236,6 +236,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentE
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceSourceRequirementRefinementPacket
 import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSourceRequirementRefinementReview
+import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSourceCandidateRescreeningPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -259,21 +260,23 @@ def scalarSandboxTargetId : String :=
 def currentScopedResult : String :=
   "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
   SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_\
-  SOURCE_REQUIREMENT_REFINEMENT_PACKET_RESULT_REVIEW_ACCEPTS_REQUIREMENT_\
-  REFINEMENT_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
+  SOURCE_CANDIDATE_RESCREENING_PACKET_PREPARED_RESCREENS_CANDIDATE_\
+  SOURCES_AGAINST_REFINED_REQUIREMENTS_ONLY_NO_SOURCE_VALIDATION_OR_\
+  EQUATION_ADOPTION"
 
 def currentPacketId : String :=
   "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
   SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_\
-  SOURCE_REQUIREMENT_REFINEMENT_PACKET_RESULT_REVIEW_v0"
+  SOURCE_CANDIDATE_RESCREENING_PACKET_v0"
 
 theorem qft_gr_lane_aggregate_exposes_current_scoped_result :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
         SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_\
-        SOURCE_REQUIREMENT_REFINEMENT_PACKET_RESULT_REVIEW_ACCEPTS_REQUIREMENT_\
-        REFINEMENT_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
+        SOURCE_CANDIDATE_RESCREENING_PACKET_PREPARED_RESCREENS_CANDIDATE_\
+        SOURCES_AGAINST_REFINED_REQUIREMENTS_ONLY_NO_SOURCE_VALIDATION_OR_\
+        EQUATION_ADOPTION" := by
   constructor
   · rfl
   · rfl
