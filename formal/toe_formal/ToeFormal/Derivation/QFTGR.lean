@@ -224,6 +224,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentE
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -245,17 +246,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket.packetResult
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_candidate_registry_packet :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_candidate_registry_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SOURCE_CANDIDATE_REGISTRY_PACKET_PREPARED_LISTS_CANDIDATE_SOURCES_\
-        ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
+        SOURCE_CANDIDATE_REGISTRY_PACKET_RESULT_REVIEW_ACCEPTS_CANDIDATE_\
+        SOURCES_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
   constructor
   · rfl
   · rfl
