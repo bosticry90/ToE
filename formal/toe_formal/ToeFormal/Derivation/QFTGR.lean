@@ -220,6 +220,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructi
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -241,17 +242,18 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket.packetResult
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacketResultReview.reviewResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacketResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_classification_packet :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_classification_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SOURCE_CLASSIFICATION_PACKET_PREPARED_CLASSIFIES_EQUATION_SLOT_\
-        SOURCE_STATUS_ONLY_NO_EQUATION_DERIVATION_OR_TAU_BASELINE_COMPUTATION" := by
+        SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW_ACCEPTS_EQUATION_SLOT_\
+        SOURCE_STATUS_CLASSIFICATION_ONLY_NO_EQUATION_DERIVATION_OR_TAU_\
+        BASELINE_COMPUTATION" := by
   constructor
   · rfl
   · rfl

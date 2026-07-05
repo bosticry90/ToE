@@ -27,6 +27,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_scaffold_packet": "2026-07-05T00:00:00Z",
     "baseline_component_equation_scaffold_review": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_classification_packet": "2026-07-05T00:00:00Z",
+    "baseline_component_equation_source_classification_review": "2026-07-05T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -565,6 +566,26 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIF
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_classification_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW_ACCEPTS_EQUATION_SLOT_"
+    "SOURCE_STATUS_CLASSIFICATION_ONLY_NO_EQUATION_DERIVATION_OR_TAU_"
+    "BASELINE_COMPUTATION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW_ACCEPTS_SOURCE_"
+    "CLASSIFICATION_ONLY_NO_EQUATION_IMPORT_NO_EMPIRICAL_FIT_NO_COMPLETED_"
+    "BASELINE_MODEL_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_validation_criteria_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_validation_criteria_packet"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -2180,6 +2201,38 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIF
     "define a measurement protocol, does not perform statistical validation, "
     "does not claim residual separation, does not validate CCFT, and does not "
     "promote the master action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_ACCEPTANCE_ITEMS = [
+    "baseline-component equation source-classification packet result review consumed",
+    "equation-slot source-status classification accepted as classification only",
+    "three standard open-system theory import-required slots accepted as labels only",
+    "three literature-supplied slots accepted as labels only",
+    "two empirical-fit-needed slots accepted as labels only",
+    "source-validation criteria packet selected as next target",
+    "no equation derivation",
+    "no equation import",
+    "no literature equation adoption",
+    "no empirical fit",
+    "no source validation",
+    "no equation selection",
+    "no component-equation correctness claim",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_BOUNDARY = (
+    "This result review accepts the baseline-component equation "
+    "source-classification packet as source-status mapping only. It accepts "
+    "no equation derivation, no equation import, no literature equation "
+    "adoption, no empirical fit, no source validation, no equation selection, "
+    "no component-equation correctness claim, no tau_baseline computation, no "
+    "completed baseline model, no measurement protocol, no statistical "
+    "validation, no residual separation, no CCFT validation, and no "
+    "master-action promotion."
 )
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
@@ -4080,6 +4133,56 @@ STAGES: dict[str, StageSpec] = {
             "source_classification_packet"
         ),
     ),
+    "baseline_component_equation_source_classification_review": StageSpec(
+        key="baseline_component_equation_source_classification_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW_20260705_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_CLASSIFICATION_PACKET_RESULT_REVIEW_20260705_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_classification_review_accepts_status_mapping_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_classification_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -4119,6 +4222,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_scaffold_packet",
     "baseline_component_equation_scaffold_review",
     "baseline_component_equation_source_classification_packet",
+    "baseline_component_equation_source_classification_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -4192,6 +4296,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "baseline_component_equation_source_classification_packet": (
         "selected CCFT empirical discriminator baseline component equation source-classification packet result review"
+    ),
+    "baseline_component_equation_source_classification_review": (
+        "selected CCFT empirical discriminator baseline component equation source-validation criteria packet"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -4328,6 +4435,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -4359,6 +4467,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -4388,6 +4497,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -4415,6 +4525,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -4539,6 +4650,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }:
         payload.update(
             {
@@ -4594,6 +4706,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -4646,6 +4759,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -4776,6 +4890,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -4877,6 +4992,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }:
         payload.update(
             {
@@ -5024,6 +5140,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }:
         payload.update(
             {
@@ -5183,6 +5300,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -5298,6 +5416,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }:
         payload.update(
             {
@@ -5697,6 +5816,7 @@ def build_stage_payload(
         "baseline_component_equation_scaffold_packet",
         "baseline_component_equation_scaffold_review",
         "baseline_component_equation_source_classification_packet",
+        "baseline_component_equation_source_classification_review",
     }:
         payload.update(
             {
@@ -6721,6 +6841,133 @@ def build_stage_payload(
                     "measurement protocol design, statistical validation, "
                     "residual separation, CCFT validation, or master-action "
                     "promotion."
+                ),
+            }
+        )
+    if stage_key == "baseline_component_equation_source_classification_review":
+        prior_packet_payload = build_stage_payload(
+            "baseline_component_equation_source_classification_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_packet_payload.items():
+            payload.setdefault(key, value)
+        payload.update(
+            {
+                "baseline_component_equation_source_classification_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_PACKET_STRICT_OUTCOME
+                ),
+                "baseline_component_equation_source_classification_packet_accepted": True,
+                "equation_slot_source_status_classification_accepted_only": True,
+                "source_classification_rows_accepted_as_labels_only": True,
+                "standard_open_system_import_required_slots_accepted_as_labels_only": True,
+                "literature_supplied_slots_accepted_as_labels_only": True,
+                "empirical_fit_needed_slots_accepted_as_labels_only": True,
+                "source_validation_criteria_packet_selected": True,
+                "source_validation_criteria_required_before_equation_import": True,
+                "source_validation_criteria_required_before_literature_adoption": True,
+                "source_validation_criteria_required_before_empirical_fit": True,
+                "accepted_source_classification_row_count": 8,
+                "accepted_standard_open_system_import_required_slot_count": 3,
+                "accepted_literature_supplied_required_slot_count": 3,
+                "accepted_empirical_fit_needed_slot_count": 2,
+                "accepted_placeholder_carried_slot_count": 8,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "standard_open_system_equations_imported": False,
+                "literature_equations_adopted": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "equation_sources_accepted_as_physically_adequate": False,
+                "source_classification_adequacy_claimed": False,
+                "source_classification_completeness_claimed": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "component_equations_correctness_claimed": False,
+                "component_equation_correctness_claimed": False,
+                "component_equation_correctness_accepted": False,
+                "component_equations_physical_adequacy_claimed": False,
+                "component_equations_physical_adequacy_accepted": False,
+                "equation_slot_adequacy_claimed": False,
+                "equation_slot_adequacy_accepted": False,
+                "component_equation_independence_claimed": False,
+                "component_equation_independence_accepted": False,
+                "component_independence_claimed": False,
+                "baseline_component_independence_claimed": False,
+                "baseline_component_equation_slot_completeness_claimed": False,
+                "baseline_component_equation_slot_completeness_accepted": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "full_toeformal_build_attempt_assessment": (
+                    "Full ToeFormal build attempted; timed out at 8382/8416 "
+                    "jobs with no semantic failure observed before timeout."
+                ),
+                "scoped_lean_validation_assessment": (
+                    "scoped Lean passed; full aggregate not completed"
+                ),
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_classification_review": False,
+                "baseline_component_equation_source_classification_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_component_equation_source_classification_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "baseline_component_equation_source_classification_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_PACKET_PREPARATION",
+                "strict_suggested_next_packet_outcome": "PENDING_PACKET_PREPARATION",
+                "next_disciplined_move_reason": (
+                    "The baseline-component equation source-classification "
+                    "result review accepts only source-status labels for the "
+                    "future equation slots. The next disciplined step is a "
+                    "source-validation criteria packet defining what would "
+                    "count as an acceptable standard-theory import, "
+                    "literature-supplied equation, or empirical-fit "
+                    "requirement before any equation derivation, equation "
+                    "import, literature adoption, empirical fitting, "
+                    "tau_baseline computation, completed baseline model, "
+                    "measurement protocol, statistical validation, residual "
+                    "separation, CCFT validation, or master-action promotion."
                 ),
             }
         )
