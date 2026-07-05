@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet_result"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
@@ -89,9 +89,15 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_TARGET 
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_TARGET = (
-    FINAL_PREVIOUS_TARGET
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_TARGET = (
+    FINAL_PREVIOUS_TARGET
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET = (
     FINAL_LIVE_TARGET
 )
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
@@ -455,23 +461,61 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_
         "baseline_component_equation_source_applicability_gap_resolution_strategy_packet"
     ].strict_outcome_id
 )
-FINAL_EVIDENCE = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionStrategyPacketResultReview.lean"
 )
-FINAL_REPORT = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_RESULT_REVIEW_20260705_v0.json"
 )
-FINAL_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_OUTCOME = (
     STAGES[
         "baseline_component_equation_source_applicability_gap_resolution_strategy_review"
     ].outcome_id
 )
-FINAL_STRICT_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_STRICT_OUTCOME = (
     STAGES[
         "baseline_component_equation_source_applicability_gap_resolution_strategy_review"
+    ].strict_outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionPrioritySelectionPacket.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet"
+    ].strict_outcome_id
+)
+FINAL_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionPrioritySelectionPacketResultReview.lean"
+)
+FINAL_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+FINAL_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review"
+    ].outcome_id
+)
+FINAL_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review"
     ].strict_outcome_id
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
@@ -513,8 +557,16 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTI
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_priority_selection_packet"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_priority_selection_packet_result_review"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+)
 FINAL_KIND = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_KIND
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -723,6 +775,14 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_strategy_review": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet_result_review_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result_review_report.py"
     ),
 }
 
@@ -965,6 +1025,16 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet_result_review_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet_result_review",
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result_review",
+    ),
 }
 
 PAPER_DOCS = (
@@ -1008,6 +1078,8 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_RESULT_REVIEW_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -1110,9 +1182,6 @@ def _assert_gap_resolution_strategy_review_acceptance(row: dict[str, Any]) -> No
     )
     assert row["gap_resolution_priority_selection_required_before_equation_import"] == "yes"
     assert row["gap_resolution_priority_selection_required_before_empirical_fit"] == "yes"
-    assert row["gap_resolution_priority_selection_executed"] == "no"
-    assert row["gap_resolution_priority_selected"] == "no"
-    assert row["first_gap_resolution_candidate_selected"] == "no"
     assert row["source_remediation_execution_authorized"] == "no"
     assert row["source_replacement_execution_authorized"] == "no"
     assert row["source_validation_execution_authorized"] == "no"
@@ -1124,6 +1193,118 @@ def _assert_gap_resolution_strategy_review_acceptance(row: dict[str, Any]) -> No
     assert row["tau_baseline_value_computed"] == "no"
     assert row["baseline_model_completed"] == "no"
     assert row["master_action_promoted"] == "no"
+
+
+def _assert_gap_resolution_priority_selection_packet(row: dict[str, Any]) -> None:
+    assert row["gap_resolution_priority_selection_packet_prepared"] == "yes"
+    assert row["gap_resolution_priority_selection_only"] == "yes"
+    assert row["gap_resolution_priority_selection_planning_only"] == "yes"
+    assert row["gap_resolution_priority_selection_criteria_recorded"] == "yes"
+    assert row["gap_resolution_priority_selection_rows_ranked"] == "yes"
+    assert row["gap_resolution_priority_selection_executed"] == "yes"
+    assert row["gap_resolution_priority_selected"] == "yes"
+    assert row["first_gap_resolution_candidate_selected"] == "yes"
+    assert row["first_future_gap_resolution_target_selected_only"] == "yes"
+    assert row["selected_first_gap_resolution_slot_id"] == (
+        "TBASE-EQ-SLOT-OPEN-SYSTEM-DECOHERENCE-v0"
+    )
+    assert row["selected_first_gap_resolution_component_name"] == (
+        "open-system decoherence"
+    )
+    assert row["selected_first_gap_resolution_path"] == (
+        "clarification_needed_then_standard_theory_import_work"
+    )
+    assert row["selected_first_gap_resolution_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET
+    )
+    assert row["selected_first_gap_resolution_target_kind"] == FINAL_KIND
+    assert row["selected_first_gap_resolution_target_count"] == 1
+    assert row["deferred_gap_resolution_candidate_count"] == 7
+    assert row["selected_first_gap_resolution_priority_rank"] == 1
+    assert row["selected_first_gap_resolution_priority_score"] == 6
+    assert row["open_system_decoherence_clarification_packet_selected"] == "yes"
+    assert row["open_system_decoherence_clarification_executed"] == "no"
+    assert row["standard_theory_import_work_executed"] == "no"
+    assert (
+        row[
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_criteria_count"
+        ]
+        == 6
+    )
+    assert (
+        row[
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_field_count"
+        ]
+        == 9
+    )
+    assert (
+        row[
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_row_count"
+        ]
+        == 8
+    )
+    assert row["gap_resolution_priority_selection_selected_row_count"] == 1
+    assert row["gap_resolution_priority_selection_deferred_row_count"] == 7
+    assert row["source_remediation_execution_authorized"] == "no"
+    assert row["source_replacement_execution_authorized"] == "no"
+    assert row["source_validation_execution_authorized"] == "no"
+    assert row["source_resolution_strategy_executed"] == "no"
+    assert row["source_applicability_gap_remediation_performed"] == "no"
+    assert row["source_candidate_replacement_performed"] == "no"
+    assert row["source_candidates_replaced_count"] == 0
+    assert row["source_applicability_gaps_remediated_count"] == 0
+    assert row["source_validated"] == "no"
+    assert row["source_validation_executed"] == "no"
+    assert row["standard_open_system_equations_imported"] == "no"
+    assert row["literature_equations_adopted"] == "no"
+    assert row["empirical_fit_executed"] == "no"
+    assert row["tau_baseline_value_computed"] == "no"
+    assert row["baseline_model_completed"] == "no"
+    assert row["master_action_promoted"] == "no"
+
+
+def _assert_gap_resolution_priority_selection_review_acceptance(
+    row: dict[str, Any],
+) -> None:
+    assert (
+        row[
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert row["gap_resolution_priority_selection_packet_accepted"] == "yes"
+    assert row["gap_resolution_priority_selection_accepted_only"] == "yes"
+    assert row["gap_resolution_priority_selection_planning_only_accepted"] == "yes"
+    assert row["gap_resolution_priority_selection_criteria_accepted"] == "yes"
+    assert (
+        row[
+            "gap_resolution_priority_selection_rows_accepted_as_ranked_candidates_only"
+        ]
+        == "yes"
+    )
+    assert row["first_future_gap_resolution_target_accepted_only"] == "yes"
+    assert (
+        row["selected_open_system_decoherence_clarification_target_accepted"]
+        == "yes"
+    )
+    assert row["accepted_gap_resolution_priority_selection_criteria_count"] == 6
+    assert row["accepted_gap_resolution_priority_selection_row_count"] == 8
+    assert row["accepted_gap_resolution_priority_selection_selected_row_count"] == 1
+    assert row["accepted_gap_resolution_priority_selection_deferred_row_count"] == 7
+    assert row["accepted_first_gap_resolution_slot_id"] == (
+        "TBASE-EQ-SLOT-OPEN-SYSTEM-DECOHERENCE-v0"
+    )
+    assert row["accepted_first_gap_resolution_component_name"] == (
+        "open-system decoherence"
+    )
+    assert row["accepted_first_gap_resolution_path"] == (
+        "clarification_needed_then_standard_theory_import_work"
+    )
+    assert row["accepted_first_gap_resolution_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET
+    )
+    assert row["accepted_first_gap_resolution_target_kind"] == FINAL_KIND
+    _assert_gap_resolution_priority_selection_packet(row)
 
 
 @pytest.mark.parametrize("stage_key", ORDERED_STAGE_KEYS)
@@ -1196,6 +1377,8 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_classification_review",
             "baseline_component_equation_source_applicability_gap_resolution_strategy_packet",
             "baseline_component_equation_source_applicability_gap_resolution_strategy_review",
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -1375,6 +1558,18 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_strategy_review"
         ].selected_next_target
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet"
+        ].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review"
+        ].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET
     )
 
 
@@ -1583,6 +1778,8 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                     "baseline_component_equation_source_applicability_gap_classification_review",
                     "baseline_component_equation_source_applicability_gap_resolution_strategy_packet",
                     "baseline_component_equation_source_applicability_gap_resolution_strategy_review",
+                    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
+                    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
                 }
                 else "no"
             )
@@ -4195,21 +4392,106 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert strategy_packet["master_action_promoted"] == "no"
     _assert_registry_nonclaims(strategy_packet)
 
-    strategy_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    strategy_review = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_TARGET,
+        payload,
+    )
     assert strategy_review["status"] == "paused"
-    assert strategy_review["authorization_evidence"] == FINAL_EVIDENCE
-    assert strategy_review["report"] == FINAL_REPORT
-    assert strategy_review["packet_result"] == FINAL_OUTCOME
-    assert strategy_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
-    assert strategy_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        strategy_review["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_EVIDENCE
+    )
+    assert (
+        strategy_review["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_REPORT
+    )
+    assert (
+        strategy_review["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_OUTCOME
+    )
+    assert (
+        strategy_review["strict_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_STRICT_OUTCOME
+    )
+    assert (
+        strategy_review["consumed_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_TARGET
+    )
     assert (
         strategy_review["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_KIND
     )
-    assert strategy_review["selected_next_target"] == FINAL_LIVE_TARGET
-    assert strategy_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        strategy_review["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_TARGET
+    )
+    assert (
+        strategy_review["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_KIND
+    )
     _assert_gap_resolution_strategy_review_acceptance(strategy_review)
+    assert strategy_review["gap_resolution_priority_selection_executed"] == "no"
+    assert strategy_review["gap_resolution_priority_selected"] == "no"
+    assert strategy_review["first_gap_resolution_candidate_selected"] == "no"
     _assert_registry_nonclaims(strategy_review)
+
+    priority_packet = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_TARGET,
+        payload,
+    )
+    assert priority_packet["status"] == "paused"
+    assert (
+        priority_packet["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_EVIDENCE
+    )
+    assert (
+        priority_packet["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_REPORT
+    )
+    assert (
+        priority_packet["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_OUTCOME
+    )
+    assert (
+        priority_packet["strict_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_STRICT_OUTCOME
+    )
+    assert (
+        priority_packet["consumed_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_TARGET
+    )
+    assert (
+        priority_packet["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_KIND
+    )
+    assert (
+        priority_packet["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_TARGET
+    )
+    assert (
+        priority_packet["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND
+    )
+    _assert_gap_resolution_strategy_review_acceptance(priority_packet)
+    _assert_gap_resolution_priority_selection_packet(priority_packet)
+    _assert_registry_nonclaims(priority_packet)
+
+    priority_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert priority_review["status"] == "paused"
+    assert priority_review["authorization_evidence"] == FINAL_EVIDENCE
+    assert priority_review["report"] == FINAL_REPORT
+    assert priority_review["packet_result"] == FINAL_OUTCOME
+    assert priority_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert priority_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        priority_review["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND
+    )
+    assert priority_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert priority_review["selected_next_target_kind"] == FINAL_KIND
+    _assert_gap_resolution_strategy_review_acceptance(priority_review)
+    _assert_gap_resolution_priority_selection_review_acceptance(priority_review)
+    _assert_registry_nonclaims(priority_review)
 
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
@@ -4220,7 +4502,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     )
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_REVIEW_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -4231,6 +4513,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
     assert active["suggested_next_packet_kind"] == FINAL_KIND
     _assert_gap_resolution_strategy_review_acceptance(active)
+    _assert_gap_resolution_priority_selection_review_acceptance(active)
     assert (
         active[
             "baseline_component_equation_source_applicability_gap_classification_packet_result_review_consumed"
