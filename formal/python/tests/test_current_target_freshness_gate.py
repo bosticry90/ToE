@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_candidate_registry_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_candidate_registry_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1341,13 +1341,19 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_candidate_registry_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet_result"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET = (
     PREVIOUS_LIVE_TARGET
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_TARGET = (
+    ACTIVE_LANE
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet_result"
@@ -1661,7 +1667,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_candidate_registry_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_candidate_registry_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1711,7 +1717,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_REPORT = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_VALIDATION_CRITERIA_PACKET_20260705_v0.json"
 )
-LIVE_TARGET_EVIDENCE_PATH = (
+BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_EVIDENCE_PATH = (
     REPO_ROOT
     / "formal"
     / "toe_formal"
@@ -1719,10 +1725,23 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "Derivation"
     / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacketResultReview.lean"
 )
-LIVE_TARGET_REPORT = (
+BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_VALIDATION_CRITERIA_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+LIVE_TARGET_EVIDENCE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket.lean"
+)
+LIVE_TARGET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_CANDIDATE_REGISTRY_PACKET_20260705_v0.json"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -1748,10 +1767,15 @@ BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_OUTCOME = (
     "SOURCE_VALIDATION_CRITERIA_PACKET_PREPARED_DEFINES_SOURCE_ACCEPTANCE_"
     "CRITERIA_ONLY_NO_EQUATION_ADOPTION_OR_TAU_BASELINE_COMPUTATION"
 )
-LIVE_TARGET_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_VALIDATION_CRITERIA_PACKET_RESULT_REVIEW_ACCEPTS_SOURCE_ACCEPTANCE_"
     "CRITERIA_ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_COMPUTATION"
+)
+LIVE_TARGET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_CANDIDATE_REGISTRY_PACKET_PREPARED_LISTS_CANDIDATE_SOURCES_"
+    "ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
@@ -1791,11 +1815,17 @@ BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_STRICT_OUTCOME = (
     "NO_SOURCE_VALIDATION_NO_EQUATION_IMPORT_NO_EMPIRICAL_FIT_NO_MASTER_ACTION_"
     "PROMOTION"
 )
-LIVE_TARGET_STRICT_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_VALIDATION_CRITERIA_PACKET_RESULT_REVIEW_ACCEPTS_VALIDATION_"
     "CRITERIA_ONLY_NO_EQUATION_IMPORT_NO_EMPIRICAL_FIT_NO_COMPLETED_BASELINE_"
     "MODEL_NO_MASTER_ACTION_PROMOTION"
+)
+LIVE_TARGET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_CANDIDATE_REGISTRY_PACKET_PREPARED_SOURCE_CANDIDATE_REGISTRY_"
+    "ONLY_NO_EQUATION_IMPORT_NO_EMPIRICAL_FIT_NO_TAU_BASELINE_COMPUTATION_NO_"
+    "MASTER_ACTION_PROMOTION"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
@@ -1827,9 +1857,13 @@ BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_validation_criteria_packet_result_review"
 )
-LIVE_TARGET_KIND = (
+BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_candidate_registry_packet"
+)
+LIVE_TARGET_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_candidate_registry_packet_result_review"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7221,13 +7255,25 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_TARGET
     )
     assert criteria_review["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_EVIDENCE_PATH.relative_to(
+            REPO_ROOT
+        )
     ).replace("\\", "/")
-    assert criteria_review["report"] == LIVE_TARGET_REPORT
-    assert criteria_review["packet_result"] == LIVE_TARGET_OUTCOME
-    assert criteria_review["strict_packet_result"] == LIVE_TARGET_STRICT_OUTCOME
-    assert criteria_review["review_result"] == LIVE_TARGET_OUTCOME
-    assert criteria_review["strict_review_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert criteria_review["report"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_REPORT
+    )
+    assert criteria_review["packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_OUTCOME
+    )
+    assert criteria_review["strict_packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_STRICT_OUTCOME
+    )
+    assert criteria_review["review_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_OUTCOME
+    )
+    assert criteria_review["strict_review_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_STRICT_OUTCOME
+    )
     assert criteria_review["prepared_packet_result"] == (
         BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_OUTCOME
     )
@@ -7240,8 +7286,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert criteria_review["consumed_target_kind"] == (
         BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_KIND
     )
-    assert criteria_review["selected_next_target"] == LIVE_TARGET
-    assert criteria_review["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert criteria_review["selected_next_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET
+    )
+    assert criteria_review["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_KIND
+    )
     assert (
         criteria_review[
             "baseline_component_equation_source_validation_criteria_packet_result_review_consumed"
@@ -7257,7 +7307,32 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert criteria_review["accepted_source_validation_criteria_row_count"] == 3
     assert criteria_review["accepted_source_validation_criteria_source_class_count"] == 3
     assert criteria_review["accepted_source_validation_criteria_total_criterion_count"] == 18
+    assert (
+        criteria_review[
+            "accepted_standard_open_system_theory_import_acceptance_criteria_count"
+        ]
+        == 6
+    )
+    assert (
+        criteria_review[
+            "accepted_literature_supplied_equation_acceptance_criteria_count"
+        ]
+        == 6
+    )
+    assert criteria_review["accepted_empirical_fit_needed_slot_acceptance_criteria_count"] == 6
+    assert criteria_review["accepted_standard_open_system_import_required_slot_count"] == 3
+    assert criteria_review["accepted_literature_supplied_required_slot_count"] == 3
+    assert criteria_review["accepted_empirical_fit_needed_slot_count"] == 2
     assert criteria_review["source_candidate_registry_packet_selected"] == "yes"
+    assert criteria_review["source_candidate_registry_required_before_source_validation"] == "yes"
+    assert criteria_review["source_candidate_registry_required_before_equation_import"] == "yes"
+    assert (
+        criteria_review[
+            "source_candidate_registry_required_before_literature_adoption"
+        ]
+        == "yes"
+    )
+    assert criteria_review["source_candidate_registry_required_before_empirical_fit"] == "yes"
     assert criteria_review["source_validated"] == "no"
     assert criteria_review["source_validation_executed"] == "no"
     assert criteria_review["standard_open_system_equations_imported"] == "no"
@@ -7273,6 +7348,93 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert criteria_review["ccft_validation_accepted"] == "no"
     assert criteria_review["master_action_promoted"] == "no"
 
+    candidate_packet = _workstream(
+        payload,
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET,
+    )
+    assert candidate_packet["status"] == "paused"
+    assert candidate_packet["active_lane"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET
+    )
+    assert candidate_packet["authorized_next_strict_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET
+    )
+    assert candidate_packet["authorized_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET
+    )
+    assert candidate_packet["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert candidate_packet["report"] == LIVE_TARGET_REPORT
+    assert candidate_packet["packet_result"] == LIVE_TARGET_OUTCOME
+    assert candidate_packet["strict_packet_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert candidate_packet["consumed_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_PACKET_TARGET
+    )
+    assert candidate_packet["consumed_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_KIND
+    )
+    assert candidate_packet["selected_next_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_TARGET
+    )
+    assert candidate_packet["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert candidate_packet["source_candidate_registry_packet_prepared"] == "yes"
+    assert candidate_packet["source_candidate_registry_only"] == "yes"
+    assert candidate_packet["source_candidates_listed_only"] == "yes"
+    assert candidate_packet["source_candidates_for_future_review_only"] == "yes"
+    assert candidate_packet["source_candidates_registered_as_unvalidated_only"] == "yes"
+    assert candidate_packet["candidate_sources_recorded_as_possible_sources_only"] == (
+        "yes"
+    )
+    assert (
+        candidate_packet[
+            "baseline_component_equation_source_candidate_registry_field_count"
+        ]
+        == 9
+    )
+    assert (
+        candidate_packet[
+            "baseline_component_equation_source_candidate_registry_row_count"
+        ]
+        == 8
+    )
+    assert candidate_packet["source_candidate_registry_slot_id_count"] == 8
+    assert candidate_packet["source_candidate_registry_candidate_source_count"] == 8
+    assert candidate_packet["source_candidate_registry_source_class_count"] == 3
+    assert candidate_packet["standard_open_system_theory_candidate_source_count"] == 3
+    assert candidate_packet["literature_supplied_candidate_source_count"] == 3
+    assert candidate_packet["empirical_fit_needed_candidate_source_count"] == 2
+    assert candidate_packet["source_candidate_registry_missing_validation_item_count"] == 48
+    assert (
+        "candidate_standard_open_system_master_equation_family"
+        in candidate_packet["source_candidate_registry_candidate_source_ids"]
+    )
+    assert (
+        "candidate_measurement_feedback_thermodynamic_accounting_family"
+        in candidate_packet["source_candidate_registry_candidate_source_ids"]
+    )
+    assert candidate_packet["candidate_source_accepted"] == "no"
+    assert candidate_packet["candidate_source_validated"] == "no"
+    assert candidate_packet["candidate_source_adopted"] == "no"
+    assert candidate_packet["candidate_equation_adopted"] == "no"
+    assert candidate_packet["source_validated"] == "no"
+    assert candidate_packet["source_validation_executed"] == "no"
+    assert candidate_packet["standard_open_system_equations_imported"] == "no"
+    assert candidate_packet["standard_open_system_equation_adopted"] == "no"
+    assert candidate_packet["literature_equations_adopted"] == "no"
+    assert candidate_packet["empirical_fit_executed"] == "no"
+    assert candidate_packet["fit_model_declared"] == "no"
+    assert candidate_packet["data_source_selected"] == "no"
+    assert candidate_packet["component_equations_selected"] == "no"
+    assert candidate_packet["equation_source_validated"] == "no"
+    assert candidate_packet["tau_baseline_value_computed"] == "no"
+    assert candidate_packet["baseline_model_completed"] == "no"
+    assert candidate_packet["measurement_protocol_defined"] == "no"
+    assert candidate_packet["statistical_validation_claimed"] == "no"
+    assert candidate_packet["residual_separation_claimed"] == "no"
+    assert candidate_packet["ccft_validation_accepted"] == "no"
+    assert candidate_packet["master_action_promoted"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -7284,7 +7446,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_REVIEW_KIND
+        BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
@@ -7297,6 +7459,29 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["suggested_next_packet_kind"] == (
         LIVE_TARGET_KIND
     )
+    assert (
+        interaction_active_workstream["source_candidate_registry_packet_prepared"]
+        == "yes"
+    )
+    assert interaction_active_workstream["source_candidate_registry_only"] == "yes"
+    assert interaction_active_workstream["source_candidates_listed_only"] == "yes"
+    assert (
+        interaction_active_workstream["source_candidates_for_future_review_only"]
+        == "yes"
+    )
+    assert interaction_active_workstream["source_candidate_registry_source_class_count"] == 3
+    assert (
+        interaction_active_workstream[
+            "standard_open_system_theory_candidate_source_count"
+        ]
+        == 3
+    )
+    assert interaction_active_workstream["literature_supplied_candidate_source_count"] == 3
+    assert interaction_active_workstream["empirical_fit_needed_candidate_source_count"] == 2
+    assert interaction_active_workstream["candidate_source_accepted"] == "no"
+    assert interaction_active_workstream["candidate_source_validated"] == "no"
+    assert interaction_active_workstream["candidate_source_adopted"] == "no"
+    assert interaction_active_workstream["candidate_equation_adopted"] == "no"
     assert (
         interaction_active_workstream[
             "baseline_component_equation_source_validation_criteria_packet_result_review_consumed"

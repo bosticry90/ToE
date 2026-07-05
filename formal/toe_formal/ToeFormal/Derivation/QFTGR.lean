@@ -223,6 +223,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentE
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -244,18 +245,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket.packetResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_validation_criteria_result_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_candidate_registry_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SOURCE_VALIDATION_CRITERIA_PACKET_RESULT_REVIEW_ACCEPTS_SOURCE_\
-        ACCEPTANCE_CRITERIA_ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_\
-        COMPUTATION" := by
+        SOURCE_CANDIDATE_REGISTRY_PACKET_PREPARED_LISTS_CANDIDATE_SOURCES_\
+        ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
   constructor
   · rfl
   · rfl
