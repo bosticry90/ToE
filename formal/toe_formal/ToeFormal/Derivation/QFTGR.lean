@@ -225,6 +225,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentE
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceValidationCriteriaPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -246,17 +247,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.packetResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceCandidateRegistryPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_candidate_registry_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_applicability_review_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SOURCE_CANDIDATE_REGISTRY_PACKET_RESULT_REVIEW_ACCEPTS_CANDIDATE_\
-        SOURCES_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
+        SOURCE_APPLICABILITY_REVIEW_PACKET_PREPARED_REVIEWS_CANDIDATE_\
+        SOURCE_APPLICABILITY_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION" := by
   constructor
   · rfl
   · rfl
