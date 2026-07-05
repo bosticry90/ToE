@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
@@ -98,9 +98,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTI
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET = (
-    FINAL_PREVIOUS_TARGET
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_TARGET = (
+    FINAL_PREVIOUS_TARGET
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET = (
     FINAL_LIVE_TARGET
 )
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
@@ -521,24 +524,44 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTI
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review"
     ].strict_outcome_id
 )
-FINAL_EVIDENCE = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacket.lean"
 )
-FINAL_REPORT = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
     "CLARIFICATION_PACKET_20260705_v0.json"
 )
-FINAL_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_OUTCOME = (
     STAGES[
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
     ].outcome_id
 )
-FINAL_STRICT_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_STRICT_OUTCOME = (
     STAGES[
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
+    ].strict_outcome_id
+)
+FINAL_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacketResultReview.lean"
+)
+FINAL_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "CLARIFICATION_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+FINAL_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review"
+    ].outcome_id
+)
+FINAL_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review"
     ].strict_outcome_id
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
@@ -592,8 +615,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFI
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet"
+)
 FINAL_KIND = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_KIND
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_KIND
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -814,6 +841,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review_report.py"
     ),
 }
 
@@ -1071,6 +1102,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review",
+    ),
 }
 
 PAPER_DOCS = (
@@ -1117,6 +1153,7 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_RESULT_REVIEW_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -1427,6 +1464,123 @@ def _assert_open_system_decoherence_clarification_packet(row: dict[str, Any]) ->
     assert row["master_action_promoted"] == "no"
 
 
+def _assert_open_system_decoherence_clarification_review(row: dict[str, Any]) -> None:
+    assert (
+        row[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert row["open_system_decoherence_clarification_packet_accepted"] == "yes"
+    assert row["open_system_decoherence_clarification_accepted_only"] == "yes"
+    assert row["open_system_decoherence_gap_clarification_accepted_only"] == "yes"
+    assert (
+        row[
+            "open_system_decoherence_source_path_clarification_accepted_only"
+        ]
+        == "yes"
+    )
+    assert (
+        row[
+            "open_system_decoherence_clarification_rows_accepted_as_unresolved_only"
+        ]
+        == "yes"
+    )
+    assert row["open_system_decoherence_clarification_resolved_rows_accepted"] == "no"
+    assert row["open_system_decoherence_gap_still_unresolved"] == "yes"
+    assert row["open_system_decoherence_source_path_still_unresolved"] == "yes"
+    assert row["open_system_decoherence_equation_import_still_blocked"] == "yes"
+    assert row["open_system_decoherence_tau_baseline_still_blocked"] == "yes"
+    assert (
+        row["open_system_decoherence_requirement_refinement_packet_selected"]
+        == "yes"
+    )
+    assert (
+        row[
+            "open_system_decoherence_source_requirement_refinement_required_before_validation"
+        ]
+        == "yes"
+    )
+    assert row["accepted_open_system_decoherence_clarification_field_count"] == 9
+    assert row["accepted_open_system_decoherence_clarification_row_count"] == 8
+    assert (
+        row[
+            "accepted_open_system_decoherence_clarification_unresolved_row_count"
+        ]
+        == 8
+    )
+    assert row["accepted_open_system_decoherence_clarification_resolved_row_count"] == 0
+    assert (
+        row[
+            "accepted_open_system_decoherence_clarification_blocks_equation_import_count"
+        ]
+        == 8
+    )
+    assert (
+        row[
+            "accepted_open_system_decoherence_clarification_blocks_tau_baseline_count"
+        ]
+        == 8
+    )
+    assert (
+        row["accepted_open_system_decoherence_physical_regime_question_unresolved"]
+        == "yes"
+    )
+    assert (
+        row[
+            "accepted_open_system_decoherence_system_bath_boundary_question_unresolved"
+        ]
+        == "yes"
+    )
+    assert (
+        row["accepted_open_system_decoherence_observable_mapping_question_unresolved"]
+        == "yes"
+    )
+    assert (
+        row["accepted_open_system_decoherence_variables_and_units_question_unresolved"]
+        == "yes"
+    )
+    assert (
+        row["accepted_open_system_decoherence_domain_limits_question_unresolved"]
+        == "yes"
+    )
+    assert (
+        row[
+            "accepted_open_system_decoherence_measurement_feedback_coupling_question_unresolved"
+        ]
+        == "yes"
+    )
+    assert (
+        row["accepted_open_system_decoherence_source_provenance_question_unresolved"]
+        == "yes"
+    )
+    assert (
+        row["accepted_open_system_decoherence_uncertainty_boundary_question_unresolved"]
+        == "yes"
+    )
+    assert (
+        row[
+            "baseline_component_equation_source_applicability_open_system_decoherence_clarification_review_acceptance_item_count"
+        ]
+        == 27
+    )
+    assert row["source_remediation_execution_authorized"] == "no"
+    assert row["source_replacement_execution_authorized"] == "no"
+    assert row["source_validation_execution_authorized"] == "no"
+    assert row["source_validated"] == "no"
+    assert row["source_validation_executed"] == "no"
+    assert row["standard_open_system_equations_imported"] == "no"
+    assert row["standard_open_system_equation_adopted"] == "no"
+    assert row["empirical_fit_executed"] == "no"
+    assert row["tau_baseline_value_computed"] == "no"
+    assert row["baseline_model_completed"] == "no"
+    assert row["measurement_protocol_defined"] == "no"
+    assert row["statistical_validation_claimed"] == "no"
+    assert row["residual_separation_claimed"] == "no"
+    assert row["ccft_validation_accepted"] == "no"
+    assert row["master_action_promoted"] == "no"
+
+
 @pytest.mark.parametrize("stage_key", ORDERED_STAGE_KEYS)
 def test_post_phi_transport_ccft_json_reports_match_builders(stage_key: str) -> None:
     spec = STAGES[stage_key]
@@ -1500,6 +1654,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
             "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -1697,6 +1852,12 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
         ].selected_next_target
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review"
+        ].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET
     )
 
 
@@ -1897,20 +2058,21 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_classification_review",
                 "baseline_component_equation_source_validation_criteria_packet",
                 "baseline_component_equation_source_validation_criteria_review",
-                    "baseline_component_equation_source_candidate_registry_packet",
-                    "baseline_component_equation_source_candidate_registry_review",
-                    "baseline_component_equation_source_applicability_review_packet",
-                    "baseline_component_equation_source_applicability_review",
-                    "baseline_component_equation_source_applicability_gap_classification_packet",
-                    "baseline_component_equation_source_applicability_gap_classification_review",
-                    "baseline_component_equation_source_applicability_gap_resolution_strategy_packet",
-                    "baseline_component_equation_source_applicability_gap_resolution_strategy_review",
-                    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
-                    "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
-            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
-                }
-                else "no"
-            )
+                "baseline_component_equation_source_candidate_registry_packet",
+                "baseline_component_equation_source_candidate_registry_review",
+                "baseline_component_equation_source_applicability_review_packet",
+                "baseline_component_equation_source_applicability_review",
+                "baseline_component_equation_source_applicability_gap_classification_packet",
+                "baseline_component_equation_source_applicability_gap_classification_review",
+                "baseline_component_equation_source_applicability_gap_resolution_strategy_packet",
+                "baseline_component_equation_source_applicability_gap_resolution_strategy_review",
+                "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
+                "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
+            }
+            else "no"
+        )
         assert row["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"] == (
             empirical_map_prepared
         )
@@ -4633,7 +4795,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         priority_review["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_PRIORITY_SELECTION_REVIEW_KIND
     )
-    assert priority_review["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        priority_review["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET
+    )
     assert (
         priority_review["selected_next_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
@@ -4642,34 +4807,72 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     _assert_gap_resolution_priority_selection_review_acceptance(priority_review)
     _assert_registry_nonclaims(priority_review)
 
-    clarification_packet = workstream(FINAL_PREVIOUS_TARGET, payload)
+    clarification_packet = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET,
+        payload,
+    )
     assert clarification_packet["status"] == "paused"
-    assert clarification_packet["authorization_evidence"] == FINAL_EVIDENCE
-    assert clarification_packet["report"] == FINAL_REPORT
-    assert clarification_packet["packet_result"] == FINAL_OUTCOME
-    assert clarification_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
-    assert clarification_packet["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        clarification_packet["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_EVIDENCE
+    )
+    assert (
+        clarification_packet["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_REPORT
+    )
+    assert (
+        clarification_packet["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_OUTCOME
+    )
+    assert (
+        clarification_packet["strict_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_STRICT_OUTCOME
+    )
+    assert (
+        clarification_packet["consumed_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_TARGET
+    )
     assert (
         clarification_packet["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
     )
-    assert clarification_packet["selected_next_target"] == FINAL_LIVE_TARGET
-    assert clarification_packet["selected_next_target_kind"] == FINAL_KIND
+    assert clarification_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        clarification_packet["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_KIND
+    )
     _assert_gap_resolution_strategy_review_acceptance(clarification_packet)
     _assert_gap_resolution_priority_selection_review_acceptance(clarification_packet)
     _assert_open_system_decoherence_clarification_packet(clarification_packet)
     _assert_registry_nonclaims(clarification_packet)
 
+    clarification_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert clarification_review["status"] == "paused"
+    assert clarification_review["authorization_evidence"] == FINAL_EVIDENCE
+    assert clarification_review["report"] == FINAL_REPORT
+    assert clarification_review["packet_result"] == FINAL_OUTCOME
+    assert clarification_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert clarification_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        clarification_review["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_KIND
+    )
+    assert clarification_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert clarification_review["selected_next_target_kind"] == FINAL_KIND
+    _assert_gap_resolution_strategy_review_acceptance(clarification_review)
+    _assert_gap_resolution_priority_selection_review_acceptance(clarification_review)
+    _assert_open_system_decoherence_clarification_packet(clarification_review)
+    _assert_open_system_decoherence_clarification_review(clarification_review)
+    _assert_registry_nonclaims(clarification_review)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
     assert active["authorized_next_strict_target"] == FINAL_LIVE_TARGET
-    assert active["consumed_target"] == (
-        FINAL_PREVIOUS_TARGET
-    )
+    assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -4682,6 +4885,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     _assert_gap_resolution_strategy_review_acceptance(active)
     _assert_gap_resolution_priority_selection_review_acceptance(active)
     _assert_open_system_decoherence_clarification_packet(active)
+    _assert_open_system_decoherence_clarification_review(active)
     assert (
         active[
             "baseline_component_equation_source_applicability_gap_classification_packet_result_review_consumed"

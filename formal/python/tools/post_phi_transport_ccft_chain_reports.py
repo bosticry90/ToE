@@ -41,6 +41,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet": "2026-07-05T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review": "2026-07-05T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -858,6 +859,29 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_"
     "clarification_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "CLARIFICATION_PACKET_RESULT_REVIEW_ACCEPTS_CLARIFICATION_ONLY_NO_SOURCE_"
+    "VALIDATION_OR_EQUATION_ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "CLARIFICATION_PACKET_RESULT_REVIEW_ACCEPTS_OPEN_SYSTEM_DECOHERENCE_GAP_"
+    "CLARIFICATION_ONLY_NO_TAU_BASELINE_COMPUTATION_NO_COMPLETED_BASELINE_"
+    "MODEL_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_source_"
+    "requirement_refinement_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_source_"
+    "requirement_refinement_packet"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -4347,6 +4371,46 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "statistical validation, claim residual separation, validate CCFT, or "
     "promote the master action."
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_ACCEPTANCE_ITEMS = [
+    "open-system decoherence clarification packet result review accepted",
+    "prepared clarification packet consumed",
+    "clarification accepted as clarification-only",
+    "selected open-system decoherence slot retained as unresolved",
+    "eight clarification rows accepted as unresolved clarification rows",
+    "zero clarification rows accepted as resolved",
+    "physical regime question accepted as still unresolved",
+    "system-bath boundary question accepted as still unresolved",
+    "observable mapping question accepted as still unresolved",
+    "variables and units question accepted as still unresolved",
+    "domain assumptions and limits question accepted as still unresolved",
+    "measurement-feedback coupling question accepted as still unresolved",
+    "source provenance question accepted as still unresolved",
+    "uncertainty and boundary-condition question accepted as still unresolved",
+    "requirement-refinement packet selected as next planning target",
+    "no source validation",
+    "no source replacement",
+    "no remediation execution",
+    "no equation import or adoption",
+    "no empirical fit",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_BOUNDARY = (
+    "This result review accepts the open-system decoherence clarification "
+    "packet only as a list of unresolved source-applicability questions and "
+    "future evidence requirements. It does not resolve the gap, validate a "
+    "source, replace a source, import or adopt an equation, perform empirical "
+    "fitting, compute tau_baseline, complete a baseline model, define a "
+    "measurement protocol, perform statistical validation, claim residual "
+    "separation, validate CCFT, or promote the master action. Because the "
+    "clarification rows remain unresolved, the next target is source "
+    "requirement refinement, not equation import."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -6950,6 +7014,60 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_clarification_packet"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "CLARIFICATION_PACKET_RESULT_REVIEW_20260705_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "CLARIFICATION_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_CLARIFICATION_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "CLARIFICATION_PACKET_RESULT_REVIEW_20260705_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_clarification_review_accepts_clarification_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -7003,6 +7121,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
     "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -7118,6 +7237,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet": (
         "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence clarification packet result review"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence source requirement refinement packet"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -7268,6 +7390,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -7313,6 +7436,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -7356,6 +7480,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -7397,6 +7522,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -7535,6 +7661,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }:
         payload.update(
             {
@@ -7604,6 +7731,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -7670,6 +7798,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -7814,6 +7943,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -7929,6 +8059,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }:
         payload.update(
             {
@@ -8090,6 +8221,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }:
         payload.update(
             {
@@ -8263,6 +8395,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -8392,6 +8525,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }:
         payload.update(
             {
@@ -8805,6 +8939,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_priority_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review",
     }:
         payload.update(
             {
@@ -12640,6 +12775,173 @@ def build_stage_payload(
                     "computation, completed baseline modeling, measurement "
                     "protocol design, statistical validation, residual "
                     "separation, CCFT validation, or master-action promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review"
+    ):
+        prior_packet_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_packet_payload.items():
+            payload.setdefault(key, value)
+        clarification_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_ROWS
+        )
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_PACKET_STRICT_OUTCOME
+                ),
+                "open_system_decoherence_clarification_packet_accepted": True,
+                "open_system_decoherence_clarification_accepted_only": True,
+                "open_system_decoherence_gap_clarification_accepted_only": True,
+                "open_system_decoherence_source_path_clarification_accepted_only": True,
+                "open_system_decoherence_clarification_rows_accepted_as_unresolved_only": True,
+                "open_system_decoherence_clarification_resolved_rows_accepted": False,
+                "open_system_decoherence_gap_still_unresolved": True,
+                "open_system_decoherence_source_path_still_unresolved": True,
+                "open_system_decoherence_equation_import_still_blocked": True,
+                "open_system_decoherence_tau_baseline_still_blocked": True,
+                "open_system_decoherence_requirement_refinement_packet_selected": True,
+                "open_system_decoherence_source_requirement_refinement_required_before_validation": True,
+                "accepted_open_system_decoherence_clarification_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_FIELDS
+                    )
+                ),
+                "accepted_open_system_decoherence_clarification_row_count": (
+                    len(clarification_rows)
+                ),
+                "accepted_open_system_decoherence_clarification_unresolved_row_count": (
+                    len(clarification_rows)
+                ),
+                "accepted_open_system_decoherence_clarification_resolved_row_count": 0,
+                "accepted_open_system_decoherence_clarification_blocks_equation_import_count": (
+                    sum(1 for row in clarification_rows if row["blocks_equation_import"])
+                ),
+                "accepted_open_system_decoherence_clarification_blocks_tau_baseline_count": (
+                    sum(1 for row in clarification_rows if row["blocks_tau_baseline"])
+                ),
+                "accepted_open_system_decoherence_physical_regime_question_unresolved": True,
+                "accepted_open_system_decoherence_system_bath_boundary_question_unresolved": True,
+                "accepted_open_system_decoherence_observable_mapping_question_unresolved": True,
+                "accepted_open_system_decoherence_variables_and_units_question_unresolved": True,
+                "accepted_open_system_decoherence_domain_limits_question_unresolved": True,
+                "accepted_open_system_decoherence_measurement_feedback_coupling_question_unresolved": True,
+                "accepted_open_system_decoherence_source_provenance_question_unresolved": True,
+                "accepted_open_system_decoherence_uncertainty_boundary_question_unresolved": True,
+                "source_remediation_execution_authorized": False,
+                "source_replacement_execution_authorized": False,
+                "source_validation_execution_authorized": False,
+                "source_resolution_strategy_executed": False,
+                "source_applicability_gap_remediation_performed": False,
+                "source_candidate_replacement_performed": False,
+                "source_candidates_replaced_count": 0,
+                "source_applicability_gaps_remediated_count": 0,
+                "source_validated": False,
+                "source_validation_executed": False,
+                "source_validation_performed": False,
+                "source_validation_accepted": False,
+                "standard_open_system_equations_imported": False,
+                "standard_open_system_equation_adopted": False,
+                "literature_equations_adopted": False,
+                "literature_equation_validated": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "empirical_fit_validated": False,
+                "fit_model_declared": False,
+                "data_source_selected": False,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "open_system_decoherence_gap_resolved": False,
+                "open_system_decoherence_source_path_resolved": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_source_accepted": False,
+                "open_system_decoherence_equation_import_ready": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_component_solved": False,
+                "standard_open_system_theory_import_work_executed": False,
+                "standard_theory_import_work_executed": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "full_toeformal_build_attempt_assessment": (
+                    "Full ToeFormal build attempted; timed out at 8382/8416 "
+                    "jobs with no semantic failure observed before timeout."
+                ),
+                "scoped_lean_validation_assessment": (
+                    "scoped Lean passed; full aggregate not completed"
+                ),
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_clarification_review": False,
+                "baseline_component_equation_source_applicability_open_system_decoherence_clarification_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_clarification_review_acceptance_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_ACCEPTANCE_ITEMS
+                    )
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_clarification_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_CLARIFICATION_REVIEW_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_PACKET_PREPARATION",
+                "strict_suggested_next_packet_outcome": "PENDING_PACKET_PREPARATION",
+                "next_disciplined_move_reason": (
+                    "The open-system decoherence clarification packet result "
+                    "review accepts only unresolved clarification rows. "
+                    "Because no source was validated, no equation was "
+                    "imported, and the open-system source path remains "
+                    "blocked for tau_baseline construction, the next "
+                    "disciplined step is source requirement refinement, not "
+                    "remediation execution, source replacement, equation "
+                    "adoption, empirical fitting, tau_baseline computation, "
+                    "completed baseline modeling, measurement protocol "
+                    "design, statistical validation, residual separation, "
+                    "CCFT validation, or master-action promotion."
                 ),
             }
         )
