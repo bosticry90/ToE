@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,6 +1338,9 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
+)
+BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_TARGET = (
@@ -1640,7 +1643,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1657,14 +1660,28 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket.lean"
 )
 LIVE_TARGET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_20260705_v0.json"
+)
+BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.lean"
+)
+BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
     "OBLIGATION_PACKET_RESULT_REVIEW_20260703_v0.json"
 )
 LIVE_TARGET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_PREPARED_DEFINES_TAU_BASELINE_COMPONENT_EQUATION_"
+    "SLOTS_ONLY_NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION"
+)
+BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
     "PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_CONSTRUCTION_REQUIREMENTS_"
     "INDEX_ONLY_NO_BASELINE_MODEL_OR_CCFT_VALIDATION"
@@ -1685,6 +1702,12 @@ BASELINE_COMPONENT_INTERACTION_RISK_PACKET_OUTCOME = (
     "ONLY_NO_COMPONENT_INDEPENDENCE_OR_BASELINE_COMPLETENESS_CLAIM"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_PREPARED_EQUATION_SCAFFOLD_ONLY_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_"
+    "MASTER_ACTION_PROMOTION"
+)
+BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
     "PACKET_RESULT_REVIEW_ACCEPTS_OBLIGATION_INDEX_ONLY_NO_TAU_BASELINE_"
     "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_"
@@ -1707,6 +1730,10 @@ BASELINE_COMPONENT_INTERACTION_RISK_PACKET_STRICT_OUTCOME = (
     "NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "scaffold_packet_result_review"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "scaffold_packet"
 )
@@ -6490,7 +6517,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert construction_packet["consumed_target_kind"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_PACKET_KIND
     )
-    assert construction_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        construction_packet["selected_next_target"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    )
     assert construction_packet["selected_next_target_kind"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
     )
@@ -6535,29 +6565,46 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert construction_packet["uncertainty_handling_specified"] == "no"
     assert construction_packet["boundary_initial_conditions_specified"] == "no"
 
-    construction_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    construction_review = _workstream(payload, BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET)
     assert construction_review["status"] == "paused"
-    assert construction_review["active_lane"] == PREVIOUS_LIVE_TARGET
-    assert construction_review["authorized_next_strict_target"] == PREVIOUS_LIVE_TARGET
-    assert construction_review["authorized_target"] == PREVIOUS_LIVE_TARGET
+    assert construction_review["active_lane"] == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    assert (
+        construction_review["authorized_next_strict_target"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    )
+    assert (
+        construction_review["authorized_target"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    )
     assert construction_review[
         "authorization_evidence"
-    ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert construction_review["report"] == LIVE_TARGET_REPORT
-    assert construction_review["review_result"] == LIVE_TARGET_OUTCOME
-    assert construction_review["strict_review_result"] == LIVE_TARGET_STRICT_OUTCOME
+    ] == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_EVIDENCE
+    assert construction_review["report"] == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_REPORT
+    assert (
+        construction_review["review_result"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME
+    )
+    assert (
+        construction_review["strict_review_result"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_STRICT_OUTCOME
+    )
     assert construction_review["prepared_packet_result"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_PACKET_OUTCOME
     )
     assert construction_review["prepared_packet_strict_result"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_PACKET_STRICT_OUTCOME
     )
-    assert construction_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        construction_review["consumed_target"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    )
     assert construction_review["consumed_target_kind"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
     )
-    assert construction_review["selected_next_target"] == LIVE_TARGET
-    assert construction_review["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert construction_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert construction_review["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+    )
     assert construction_review[
         "baseline_construction_obligation_packet_result_review_consumed"
     ] == "yes"
@@ -6591,6 +6638,77 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert construction_review["ccft_validation_accepted"] == "no"
     assert construction_review["master_action_support_accepted"] == "no"
 
+    scaffold_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert scaffold_packet["status"] == "paused"
+    assert scaffold_packet["active_lane"] == PREVIOUS_LIVE_TARGET
+    assert scaffold_packet["authorized_next_strict_target"] == PREVIOUS_LIVE_TARGET
+    assert scaffold_packet["authorized_target"] == PREVIOUS_LIVE_TARGET
+    assert scaffold_packet[
+        "authorization_evidence"
+    ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+    assert scaffold_packet["report"] == LIVE_TARGET_REPORT
+    assert scaffold_packet["packet_result"] == LIVE_TARGET_OUTCOME
+    assert scaffold_packet["strict_packet_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert scaffold_packet["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert scaffold_packet["consumed_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+    )
+    assert scaffold_packet["selected_next_target"] == LIVE_TARGET
+    assert scaffold_packet["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert scaffold_packet["baseline_component_equation_scaffold_packet_prepared"] == (
+        "yes"
+    )
+    assert scaffold_packet["baseline_component_equation_scaffold_only"] == "yes"
+    assert scaffold_packet["tau_baseline_component_equation_slots_defined"] == "yes"
+    assert scaffold_packet["component_equation_slots_defined_only"] == "yes"
+    assert scaffold_packet["baseline_component_equation_scaffold_row_count"] == 8
+    assert scaffold_packet["baseline_component_equation_scaffold_field_count"] == 7
+    assert scaffold_packet["baseline_component_equation_scaffold_item_count"] == 20
+    for slot_id in (
+        "TBASE-EQ-SLOT-OPEN-SYSTEM-DECOHERENCE-v0",
+        "TBASE-EQ-SLOT-MEASUREMENT-CONTRIBUTION-v0",
+        "TBASE-EQ-SLOT-BACK-ACTION-CONTRIBUTION-v0",
+        "TBASE-EQ-SLOT-FEEDBACK-HAMILTONIAN-CONTROL-v0",
+        "TBASE-EQ-SLOT-DETECTOR-EFFICIENCY-CORRECTION-v0",
+        "TBASE-EQ-SLOT-FEEDBACK-DELAY-CORRECTION-v0",
+        "TBASE-EQ-SLOT-CONTROL-FIELD-EFFECT-v0",
+        "TBASE-EQ-SLOT-THERMODYNAMIC-ENERGY-ACCOUNTING-v0",
+    ):
+        assert slot_id in scaffold_packet["baseline_component_equation_scaffold_slot_ids"]
+    for role in (
+        "open-system decoherence equation slot",
+        "measurement contribution equation slot",
+        "back-action contribution equation slot",
+        "feedback Hamiltonian control equation slot",
+        "detector efficiency correction slot",
+        "feedback delay correction slot",
+        "control-field effect slot",
+        "thermodynamic / energy accounting slot",
+    ):
+        assert role in scaffold_packet["baseline_component_equation_scaffold_slot_roles"]
+    assert scaffold_packet["open_system_decoherence_equation_slot_defined"] == "yes"
+    assert scaffold_packet["measurement_contribution_equation_slot_defined"] == "yes"
+    assert scaffold_packet["back_action_contribution_equation_slot_defined"] == "yes"
+    assert scaffold_packet["feedback_hamiltonian_control_equation_slot_defined"] == (
+        "yes"
+    )
+    assert scaffold_packet["detector_efficiency_correction_slot_defined"] == "yes"
+    assert scaffold_packet["feedback_delay_correction_slot_defined"] == "yes"
+    assert scaffold_packet["control_field_effect_slot_defined"] == "yes"
+    assert scaffold_packet["thermodynamic_energy_accounting_slot_defined"] == "yes"
+    assert scaffold_packet["component_equations_specified"] == "no"
+    assert scaffold_packet["component_equations_selected"] == "no"
+    assert scaffold_packet["component_equations_correctness_claimed"] == "no"
+    assert scaffold_packet["component_equations_physical_adequacy_claimed"] == "no"
+    assert scaffold_packet["component_equation_independence_claimed"] == "no"
+    assert scaffold_packet["tau_baseline_value_computed"] == "no"
+    assert scaffold_packet["baseline_model_completed"] == "no"
+    assert scaffold_packet["measurement_protocol_defined"] == "no"
+    assert scaffold_packet["statistical_validation_claimed"] == "no"
+    assert scaffold_packet["residual_separation_claimed"] == "no"
+    assert scaffold_packet["ccft_validation_accepted"] == "no"
+    assert scaffold_packet["master_action_promoted"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -6601,9 +6719,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert interaction_active_workstream["review_result"] == LIVE_TARGET_OUTCOME
+    assert interaction_active_workstream["consumed_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+    )
+    assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
-        interaction_active_workstream["strict_review_result"]
+        interaction_active_workstream["strict_packet_result"]
         == LIVE_TARGET_STRICT_OUTCOME
     )
     assert interaction_active_workstream["selected_next_target"] == "PENDING"

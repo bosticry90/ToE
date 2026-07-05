@@ -217,6 +217,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentI
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -238,15 +239,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket.packetResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_scaffold :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_CONSTRUCTION_REQUIREMENTS_INDEX_ONLY_NO_BASELINE_MODEL_OR_CCFT_VALIDATION" := by
+        "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
+        SCAFFOLD_PACKET_PREPARED_DEFINES_TAU_BASELINE_COMPONENT_EQUATION_\
+        SLOTS_ONLY_NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION" := by
   constructor
   · rfl
   · rfl

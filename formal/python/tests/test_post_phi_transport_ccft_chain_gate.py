@@ -38,16 +38,19 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
 )
 FINAL_PREVIOUS_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
 )
-BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET = FINAL_PREVIOUS_TARGET
-BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET = FINAL_LIVE_TARGET
+BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET = FINAL_PREVIOUS_TARGET
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET = FINAL_LIVE_TARGET
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
 )
@@ -131,6 +134,10 @@ BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "scaffold_packet"
 )
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "scaffold_packet_result_review"
+)
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentInteractionRiskPacket.lean"
@@ -203,18 +210,18 @@ VARIATIONAL_PACKET_TARGET = "prepare_ccft_full_variational_action_program_packet
 VARIATIONAL_REVIEW_TARGET = "review_ccft_full_variational_action_program_packet_result"
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview.lean"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
-    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_"
-    "OBLIGATION_PACKET_RESULT_REVIEW_20260703_v0.json"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_20260705_v0.json"
 )
-FINAL_OUTCOME = STAGES["baseline_construction_obligation_review"].outcome_id
+FINAL_OUTCOME = STAGES["baseline_component_equation_scaffold_packet"].outcome_id
 FINAL_STRICT_OUTCOME = (
-    STAGES["baseline_construction_obligation_review"].strict_outcome_id
+    STAGES["baseline_component_equation_scaffold_packet"].strict_outcome_id
 )
-FINAL_KIND = BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+FINAL_KIND = BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
     "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
@@ -366,6 +373,10 @@ WRAPPER_BY_STAGE = {
     "baseline_construction_obligation_review": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result_review_report.py"
+    ),
+    "baseline_component_equation_scaffold_packet": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_report.py"
     ),
 }
 
@@ -538,6 +549,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result_review_report",
         "build_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result_review",
     ),
+    "baseline_component_equation_scaffold_packet": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet",
+    ),
 }
 
 PAPER_DOCS = (
@@ -567,6 +583,7 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_INTERACTION_RISK_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_RESULT_REVIEW_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -680,6 +697,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_interaction_risk_review",
             "baseline_construction_obligation_packet",
             "baseline_construction_obligation_review",
+            "baseline_component_equation_scaffold_packet",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -779,6 +797,10 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
     assert (
         STAGES["baseline_construction_obligation_review"].selected_next_target
         == BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+    )
+    assert (
+        STAGES["baseline_component_equation_scaffold_packet"].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
     )
 
 
@@ -973,6 +995,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_interaction_risk_review",
                 "baseline_construction_obligation_packet",
                 "baseline_construction_obligation_review",
+                "baseline_component_equation_scaffold_packet",
             }
             else "no"
         )
@@ -2331,7 +2354,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert construction_packet["consumed_target_kind"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_KIND
     )
-    assert construction_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        construction_packet["selected_next_target"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    )
     assert construction_packet["selected_next_target_kind"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
     )
@@ -2377,25 +2403,41 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert construction_packet["boundary_initial_conditions_specified"] == "no"
     _assert_registry_nonclaims(construction_packet)
 
-    construction_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    construction_review = workstream(BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET, payload)
     assert construction_review["status"] == "paused"
-    assert construction_review["active_lane"] == FINAL_PREVIOUS_TARGET
-    assert construction_review["authorization_evidence"] == FINAL_EVIDENCE
-    assert construction_review["report"] == FINAL_REPORT
-    assert construction_review["review_result"] == FINAL_OUTCOME
-    assert construction_review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert construction_review["active_lane"] == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    assert construction_review["authorization_evidence"] == _rel(
+        lean_path(STAGES["baseline_construction_obligation_review"])
+    )
+    assert construction_review["report"] == _rel(
+        release_path(STAGES["baseline_construction_obligation_review"])
+    )
+    assert construction_review["review_result"] == (
+        STAGES["baseline_construction_obligation_review"].outcome_id
+    )
+    assert construction_review["strict_review_result"] == (
+        STAGES["baseline_construction_obligation_review"].strict_outcome_id
+    )
     assert construction_review["prepared_packet_result"] == (
         STAGES["baseline_construction_obligation_packet"].outcome_id
     )
     assert construction_review["prepared_packet_strict_result"] == (
         STAGES["baseline_construction_obligation_packet"].strict_outcome_id
     )
-    assert construction_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        construction_review["consumed_target"]
+        == BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET
+    )
     assert construction_review["consumed_target_kind"] == (
         BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_KIND
     )
-    assert construction_review["selected_next_target"] == FINAL_LIVE_TARGET
-    assert construction_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        construction_review["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+    )
+    assert construction_review["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+    )
     assert construction_review[
         "baseline_construction_obligation_packet_result_review_consumed"
     ] == "yes"
@@ -2430,15 +2472,84 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert construction_review["master_action_support_accepted"] == "no"
     _assert_registry_nonclaims(construction_review)
 
+    scaffold_packet = workstream(BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET, payload)
+    assert scaffold_packet["status"] == "paused"
+    assert scaffold_packet["active_lane"] == BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+    assert scaffold_packet["authorization_evidence"] == FINAL_EVIDENCE
+    assert scaffold_packet["report"] == FINAL_REPORT
+    assert scaffold_packet["packet_result"] == FINAL_OUTCOME
+    assert scaffold_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert scaffold_packet["consumed_target"] == BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+    assert scaffold_packet["consumed_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+    )
+    assert scaffold_packet["selected_next_target"] == FINAL_LIVE_TARGET
+    assert scaffold_packet["selected_next_target_kind"] == FINAL_KIND
+    assert scaffold_packet["baseline_component_equation_scaffold_packet_prepared"] == (
+        "yes"
+    )
+    assert scaffold_packet["baseline_component_equation_scaffold_only"] == "yes"
+    assert scaffold_packet["tau_baseline_component_equation_slots_defined"] == "yes"
+    assert scaffold_packet["component_equation_slots_defined_only"] == "yes"
+    assert scaffold_packet["baseline_component_equation_scaffold_row_count"] == 8
+    assert scaffold_packet["baseline_component_equation_scaffold_field_count"] == 7
+    assert scaffold_packet["baseline_component_equation_scaffold_item_count"] == 20
+    for slot_id in (
+        "TBASE-EQ-SLOT-OPEN-SYSTEM-DECOHERENCE-v0",
+        "TBASE-EQ-SLOT-MEASUREMENT-CONTRIBUTION-v0",
+        "TBASE-EQ-SLOT-BACK-ACTION-CONTRIBUTION-v0",
+        "TBASE-EQ-SLOT-FEEDBACK-HAMILTONIAN-CONTROL-v0",
+        "TBASE-EQ-SLOT-DETECTOR-EFFICIENCY-CORRECTION-v0",
+        "TBASE-EQ-SLOT-FEEDBACK-DELAY-CORRECTION-v0",
+        "TBASE-EQ-SLOT-CONTROL-FIELD-EFFECT-v0",
+        "TBASE-EQ-SLOT-THERMODYNAMIC-ENERGY-ACCOUNTING-v0",
+    ):
+        assert slot_id in scaffold_packet["baseline_component_equation_scaffold_slot_ids"]
+    for role in (
+        "open-system decoherence equation slot",
+        "measurement contribution equation slot",
+        "back-action contribution equation slot",
+        "feedback Hamiltonian control equation slot",
+        "detector efficiency correction slot",
+        "feedback delay correction slot",
+        "control-field effect slot",
+        "thermodynamic / energy accounting slot",
+    ):
+        assert role in scaffold_packet["baseline_component_equation_scaffold_slot_roles"]
+    assert scaffold_packet["open_system_decoherence_equation_slot_defined"] == "yes"
+    assert scaffold_packet["measurement_contribution_equation_slot_defined"] == "yes"
+    assert scaffold_packet["back_action_contribution_equation_slot_defined"] == "yes"
+    assert scaffold_packet["feedback_hamiltonian_control_equation_slot_defined"] == (
+        "yes"
+    )
+    assert scaffold_packet["detector_efficiency_correction_slot_defined"] == "yes"
+    assert scaffold_packet["feedback_delay_correction_slot_defined"] == "yes"
+    assert scaffold_packet["control_field_effect_slot_defined"] == "yes"
+    assert scaffold_packet["thermodynamic_energy_accounting_slot_defined"] == "yes"
+    assert scaffold_packet["component_equations_specified"] == "no"
+    assert scaffold_packet["component_equations_selected"] == "no"
+    assert scaffold_packet["component_equations_correctness_claimed"] == "no"
+    assert scaffold_packet["component_equations_physical_adequacy_claimed"] == "no"
+    assert scaffold_packet["component_equation_independence_claimed"] == "no"
+    assert scaffold_packet["tau_baseline_value_computed"] == "no"
+    assert scaffold_packet["baseline_model_completed"] == "no"
+    assert scaffold_packet["measurement_protocol_defined"] == "no"
+    assert scaffold_packet["statistical_validation_claimed"] == "no"
+    assert scaffold_packet["residual_separation_claimed"] == "no"
+    assert scaffold_packet["ccft_validation_accepted"] == "no"
+    assert scaffold_packet["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(scaffold_packet)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
     assert active["authorized_next_strict_target"] == FINAL_LIVE_TARGET
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert active["consumed_target_kind"] == BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
-    assert active["review_result"] == FINAL_OUTCOME
-    assert active["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert active["packet_result"] == FINAL_OUTCOME
+    assert active["strict_packet_result"] == FINAL_STRICT_OUTCOME
     assert active["selected_next_target"] == "PENDING"
     assert active["selected_next_target_kind"] == "PENDING"
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET

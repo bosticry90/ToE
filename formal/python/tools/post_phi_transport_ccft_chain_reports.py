@@ -24,6 +24,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_interaction_risk_review": "2026-07-03T00:00:00Z",
     "baseline_construction_obligation_packet": "2026-07-03T00:00:00Z",
     "baseline_construction_obligation_review": "2026-07-03T00:00:00Z",
+    "baseline_component_equation_scaffold_packet": "2026-07-05T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -510,6 +511,20 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGE
     "SCAFFOLD_PACKET_PREPARED_EQUATION_SCAFFOLD_ONLY_NO_TAU_BASELINE_"
     "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_"
     "MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGESTED_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_STRICT_OUTCOME = (
+    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SUGGESTED_STRICT_OUTCOME
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "scaffold_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "scaffold_packet_result_review"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_TOLERANCE_REGISTRY_FIELDS = [
     "tolerance_id",
@@ -1732,6 +1747,176 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_BO
     "measurement protocol, no statistical validation, no observed residual, "
     "no baseline separation, no CCFT validation, and no master-action "
     "promotion."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_FIELDS = [
+    "slot_id",
+    "baseline_component",
+    "equation_slot_role",
+    "future_required_equation_form",
+    "interaction_or_correction_notes",
+    "execution_status",
+    "claim_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ROWS = [
+    {
+        "slot_id": "TBASE-EQ-SLOT-OPEN-SYSTEM-DECOHERENCE-v0",
+        "baseline_component": "ordinary open-system decoherence",
+        "equation_slot_role": "open-system decoherence equation slot",
+        "future_required_equation_form": (
+            "placeholder for a future open-system decoherence law or simulator "
+            "rule; no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later state environmental coupling, state space, and how "
+            "control fields or measurement channels alter the slot"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no tau_baseline computation; no baseline adequacy claim",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-MEASUREMENT-CONTRIBUTION-v0",
+        "baseline_component": "continuous or repeated quantum measurement",
+        "equation_slot_role": "measurement contribution equation slot",
+        "future_required_equation_form": (
+            "placeholder for a future measurement-contribution term or monitored "
+            "trajectory rule; no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later separate observation channel assumptions from "
+            "back-action and detector-efficiency corrections"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no measurement protocol; no statistical validation",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-BACK-ACTION-CONTRIBUTION-v0",
+        "baseline_component": "measurement back-action",
+        "equation_slot_role": "back-action contribution equation slot",
+        "future_required_equation_form": (
+            "placeholder for a future measurement-induced disturbance term or "
+            "state-update rule; no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later define whether back-action is coupled to measurement "
+            "strength, detector efficiency, and feedback policy"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no residual separation; no component independence claim",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-FEEDBACK-HAMILTONIAN-CONTROL-v0",
+        "baseline_component": "feedback Hamiltonian control",
+        "equation_slot_role": "feedback Hamiltonian control equation slot",
+        "future_required_equation_form": (
+            "placeholder for a future feedback Hamiltonian or control-law term; "
+            "no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later account for timing, control policy, detector record, and "
+            "ordinary control-field dynamics"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no feedback model completed; no CCFT validation",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-DETECTOR-EFFICIENCY-CORRECTION-v0",
+        "baseline_component": "detector efficiency",
+        "equation_slot_role": "detector efficiency correction slot",
+        "future_required_equation_form": (
+            "placeholder for a future detector-efficiency correction or "
+            "observation-channel factor; no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later define how efficiency changes the measurement record, "
+            "feedback drive, and inferred coherence lifetime"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no calibrated detector model; no measurement protocol",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-FEEDBACK-DELAY-CORRECTION-v0",
+        "baseline_component": "feedback delay",
+        "equation_slot_role": "feedback delay correction slot",
+        "future_required_equation_form": (
+            "placeholder for a future latency, memory, or delayed-control "
+            "correction; no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later state delay distribution, control timing, and energy "
+            "accounting implications"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no delay model solved; no tau_baseline value computed",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-CONTROL-FIELD-EFFECT-v0",
+        "baseline_component": "control-field effects",
+        "equation_slot_role": "control-field effect slot",
+        "future_required_equation_form": (
+            "placeholder for a future ordinary control-drive or field-engineering "
+            "term; no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later distinguish ordinary control-field dynamics from "
+            "feedback-specific Hamiltonian control"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no control-field model completed; no baseline separation",
+    },
+    {
+        "slot_id": "TBASE-EQ-SLOT-THERMODYNAMIC-ENERGY-ACCOUNTING-v0",
+        "baseline_component": "thermodynamic and energy accounting",
+        "equation_slot_role": "thermodynamic / energy accounting slot",
+        "future_required_equation_form": (
+            "placeholder for future work, heat, entropy, and energy bookkeeping; "
+            "no equation selected"
+        ),
+        "interaction_or_correction_notes": (
+            "must later account for monitoring cost, feedback work, delay cost, "
+            "and thermodynamic consistency"
+        ),
+        "execution_status": "equation_slot_only_not_specified",
+        "claim_boundary": "no thermodynamic closure; no master-action promotion",
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SLOT_IDS = [
+    row["slot_id"]
+    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ROWS
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SLOT_ROLES = [
+    row["equation_slot_role"]
+    for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ROWS
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ITEMS = [
+    "baseline-component equation scaffold packet prepared",
+    "baseline-construction obligation result review consumed",
+    "open-system decoherence equation slot defined",
+    "measurement contribution equation slot defined",
+    "back-action contribution equation slot defined",
+    "feedback Hamiltonian control equation slot defined",
+    "detector efficiency correction slot defined",
+    "feedback delay correction slot defined",
+    "control-field effect slot defined",
+    "thermodynamic / energy accounting slot defined",
+    "no component equation selected",
+    "no equation correctness claim",
+    "no component independence claim",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_BOUNDARY = (
+    "This packet defines future tau_baseline component equation slots only. "
+    "It does not choose, validate, or solve component equations; does not "
+    "claim the slots are independent, physically adequate, or complete; does "
+    "not compute tau_baseline; does not complete a baseline model; does not "
+    "define a measurement protocol; does not perform statistical validation; "
+    "does not claim residual separation; does not validate CCFT; and does not "
+    "promote the master action."
 )
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
@@ -3482,6 +3667,56 @@ STAGES: dict[str, StageSpec] = {
             "obligation_packet_result_review"
         ),
     ),
+    "baseline_component_equation_scaffold_packet": StageSpec(
+        key="baseline_component_equation_scaffold_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SCAFFOLD_PACKET_20260705_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SCAFFOLD_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SCAFFOLD_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SCAFFOLD_PACKET_20260705_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "scaffold_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "scaffold_packet"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -3518,6 +3753,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_interaction_risk_review",
     "baseline_construction_obligation_packet",
     "baseline_construction_obligation_review",
+    "baseline_component_equation_scaffold_packet",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -3582,6 +3818,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     ),
     "baseline_construction_obligation_review": (
         "selected CCFT empirical discriminator baseline component equation scaffold packet"
+    ),
+    "baseline_component_equation_scaffold_packet": (
+        "selected CCFT empirical discriminator baseline component equation scaffold packet result review"
     ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
@@ -3715,8 +3954,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_review",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
-        "baseline_component_interaction_risk_review",
-        "baseline_component_interaction_risk_review",
+        "baseline_component_equation_scaffold_packet",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -3745,8 +3983,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_review",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
-        "baseline_component_interaction_risk_review",
-        "baseline_component_interaction_risk_review",
+        "baseline_component_equation_scaffold_packet",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -3773,8 +4010,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_review",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
-        "baseline_component_interaction_risk_review",
-        "baseline_component_interaction_risk_review",
+        "baseline_component_equation_scaffold_packet",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -3799,8 +4035,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_review",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
-        "baseline_component_interaction_risk_review",
-        "baseline_component_interaction_risk_review",
+        "baseline_component_equation_scaffold_packet",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -3922,6 +4157,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_review",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
     }:
         payload.update(
             {
@@ -3974,6 +4210,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -4023,6 +4260,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -4150,6 +4388,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
         "baseline_construction_obligation_review",
         "baseline_construction_obligation_review",
     }:
@@ -4248,6 +4487,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
     }:
         payload.update(
             {
@@ -4392,6 +4632,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
     }:
         payload.update(
             {
@@ -4548,6 +4789,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
     }:
         observable_next_target = (
             SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_RESIDUAL_FORMULA_SELECTION_TARGET
@@ -4660,6 +4902,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
     }:
         payload.update(
             {
@@ -5056,6 +5299,7 @@ def build_stage_payload(
         "baseline_component_interaction_risk_packet",
         "baseline_construction_obligation_packet",
         "baseline_construction_obligation_review",
+        "baseline_component_equation_scaffold_packet",
     }:
         payload.update(
             {
@@ -5643,6 +5887,140 @@ def build_stage_payload(
                     "computation, baseline-model completion, measurement "
                     "protocol design, statistical validation, baseline "
                     "separation, CCFT validation, or master-action promotion."
+                ),
+            }
+        )
+    if stage_key == "baseline_component_equation_scaffold_packet":
+        prior_review_payload = build_stage_payload(
+            "baseline_construction_obligation_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        payload.update(
+            {
+                "baseline_construction_obligation_result_review_consumed": True,
+                "baseline_construction_obligation_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME
+                ),
+                "baseline_construction_obligation_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_STRICT_OUTCOME
+                ),
+                "baseline_component_equation_scaffold_packet_prepared": True,
+                "baseline_component_equation_scaffold_only": True,
+                "tau_baseline_component_equation_slots_defined": True,
+                "component_equation_slots_defined_only": True,
+                "component_equation_slot_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ROWS
+                    )
+                ),
+                "baseline_component_equation_scaffold_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_FIELDS
+                ),
+                "baseline_component_equation_scaffold_field_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_FIELDS
+                    )
+                ),
+                "baseline_component_equation_scaffold_rows": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ROWS
+                ),
+                "baseline_component_equation_scaffold_row_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ROWS
+                    )
+                ),
+                "baseline_component_equation_scaffold_slot_ids": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SLOT_IDS
+                ),
+                "baseline_component_equation_scaffold_slot_id_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SLOT_IDS
+                    )
+                ),
+                "baseline_component_equation_scaffold_slot_roles": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SLOT_ROLES
+                ),
+                "baseline_component_equation_scaffold_slot_role_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_SLOT_ROLES
+                    )
+                ),
+                "baseline_component_equation_scaffold_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ITEMS
+                ),
+                "baseline_component_equation_scaffold_item_count": (
+                    len(
+                        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_ITEMS
+                    )
+                ),
+                "baseline_component_equation_scaffold_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_BOUNDARY
+                ),
+                "open_system_decoherence_equation_slot_defined": True,
+                "measurement_contribution_equation_slot_defined": True,
+                "back_action_contribution_equation_slot_defined": True,
+                "feedback_hamiltonian_control_equation_slot_defined": True,
+                "detector_efficiency_correction_slot_defined": True,
+                "feedback_delay_correction_slot_defined": True,
+                "control_field_effect_slot_defined": True,
+                "thermodynamic_energy_accounting_slot_defined": True,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "component_equations_correctness_claimed": False,
+                "component_equations_physical_adequacy_claimed": False,
+                "component_equation_independence_claimed": False,
+                "component_independence_claimed": False,
+                "baseline_component_independence_claimed": False,
+                "interaction_model_completed": False,
+                "interaction_coupling_terms_computed": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_scaffold_packet": False,
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The baseline-component equation scaffold packet defines "
+                    "only future equation slots for the eight registered "
+                    "tau_baseline components. The next disciplined step is "
+                    "result review of the scaffold, not tau_baseline "
+                    "computation, baseline-model completion, equation "
+                    "correctness claiming, component-independence claiming, "
+                    "measurement protocol design, statistical validation, "
+                    "residual separation, CCFT validation, or master-action "
+                    "promotion."
                 ),
             }
         )
