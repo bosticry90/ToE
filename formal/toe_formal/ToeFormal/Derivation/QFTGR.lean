@@ -230,6 +230,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentE
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionStrategyPacket
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionStrategyPacketResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -251,17 +252,21 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionStrategyPacket.packetResult
+  "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
+  SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_RESULT_REVIEW_\
+  ACCEPTS_FUTURE_GAP_RESOLUTION_PATHS_ONLY_NO_REMEDIATION_EXECUTION_OR_\
+  EQUATION_ADOPTION"
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionStrategyPacket.packetId
+  "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
+  SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_RESULT_REVIEW_v0"
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_applicability_gap_resolution_strategy_packet :
+theorem qft_gr_lane_aggregate_exposes_current_scoped_result :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_PREPARED_SELECTS_\
-        FUTURE_GAP_RESOLUTION_PATHS_ONLY_NO_REMEDIATION_EXECUTION_OR_\
+        SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_PACKET_RESULT_REVIEW_\
+        ACCEPTS_FUTURE_GAP_RESOLUTION_PATHS_ONLY_NO_REMEDIATION_EXECUTION_OR_\
         EQUATION_ADOPTION" := by
   constructor
   · rfl
