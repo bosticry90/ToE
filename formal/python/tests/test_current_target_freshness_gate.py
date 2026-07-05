@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1338,10 +1338,13 @@ A_CK_CLOSEOUT_SELECTED_TARGET = (
     "select_next_master_action_interaction_after_A_ck_triad"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet_result"
@@ -1646,7 +1649,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1663,12 +1666,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SCAFFOLD_PACKET_RESULT_REVIEW_20260705_v0.json"
+    "SOURCE_CLASSIFICATION_PACKET_20260705_v0.json"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -1681,8 +1684,8 @@ BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_REPORT = (
 )
 LIVE_TARGET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SCAFFOLD_PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_EQUATION_SLOTS_"
-    "ONLY_NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION"
+    "SOURCE_CLASSIFICATION_PACKET_PREPARED_CLASSIFIES_EQUATION_SLOT_"
+    "SOURCE_STATUS_ONLY_NO_EQUATION_DERIVATION_OR_TAU_BASELINE_COMPUTATION"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_"
@@ -1706,7 +1709,7 @@ BASELINE_COMPONENT_INTERACTION_RISK_PACKET_OUTCOME = (
 )
 LIVE_TARGET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SCAFFOLD_PACKET_RESULT_REVIEW_ACCEPTS_EQUATION_SCAFFOLD_ONLY_NO_"
+    "SOURCE_CLASSIFICATION_PACKET_PREPARED_SOURCE_CLASSIFICATION_ONLY_NO_"
     "COMPLETED_BASELINE_MODEL_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_"
     "VALIDATION_NO_MASTER_ACTION_PROMOTION"
 )
@@ -1733,6 +1736,10 @@ BASELINE_COMPONENT_INTERACTION_RISK_PACKET_STRICT_OUTCOME = (
     "NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_classification_packet_result_review"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_classification_packet"
 )
@@ -1763,6 +1770,26 @@ BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_STRICT_OUTCOME = (
     "SCAFFOLD_PACKET_PREPARED_EQUATION_SCAFFOLD_ONLY_NO_TAU_BASELINE_"
     "COMPUTATION_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_VALIDATION_NO_"
     "MASTER_ACTION_PROMOTION"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview.lean"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_EQUATION_SLOTS_"
+    "ONLY_NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION"
+)
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SCAFFOLD_PACKET_RESULT_REVIEW_ACCEPTS_EQUATION_SCAFFOLD_ONLY_NO_"
+    "COMPLETED_BASELINE_MODEL_NO_MEASUREMENT_PROTOCOL_NO_STATISTICAL_"
+    "VALIDATION_NO_MASTER_ACTION_PROMOTION"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_KIND = (
     "selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
@@ -6702,7 +6729,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert scaffold_packet["consumed_target_kind"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_KIND
     )
-    assert scaffold_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        scaffold_packet["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+    )
     assert scaffold_packet["selected_next_target_kind"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
     )
@@ -6760,31 +6790,50 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert scaffold_packet["ccft_validation_accepted"] == "no"
     assert scaffold_packet["master_action_promoted"] == "no"
 
-    scaffold_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    scaffold_review = _workstream(payload, BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET)
     assert scaffold_review["status"] == "paused"
-    assert scaffold_review["active_lane"] == PREVIOUS_LIVE_TARGET
-    assert scaffold_review["authorized_next_strict_target"] == PREVIOUS_LIVE_TARGET
-    assert scaffold_review["authorized_target"] == PREVIOUS_LIVE_TARGET
-    assert scaffold_review[
-        "authorization_evidence"
-    ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert scaffold_review["report"] == LIVE_TARGET_REPORT
-    assert scaffold_review["packet_result"] == LIVE_TARGET_OUTCOME
-    assert scaffold_review["strict_packet_result"] == LIVE_TARGET_STRICT_OUTCOME
-    assert scaffold_review["review_result"] == LIVE_TARGET_OUTCOME
-    assert scaffold_review["strict_review_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert scaffold_review["active_lane"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+    )
+    assert scaffold_review["authorized_next_strict_target"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+    )
+    assert scaffold_review["authorized_target"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+    )
+    assert (
+        scaffold_review["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_EVIDENCE
+    )
+    assert scaffold_review["report"] == BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_REPORT
+    assert scaffold_review["packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_OUTCOME
+    )
+    assert scaffold_review["strict_packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_STRICT_OUTCOME
+    )
+    assert scaffold_review["review_result"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_OUTCOME
+    )
+    assert scaffold_review["strict_review_result"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_STRICT_OUTCOME
+    )
     assert scaffold_review["prepared_packet_result"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_OUTCOME
     )
     assert scaffold_review["prepared_packet_strict_result"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_STRICT_OUTCOME
     )
-    assert scaffold_review["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert scaffold_review["consumed_target"] == (
+        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
+    )
     assert scaffold_review["consumed_target_kind"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
     )
-    assert scaffold_review["selected_next_target"] == LIVE_TARGET
-    assert scaffold_review["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert scaffold_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert scaffold_review["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
+    )
     assert (
         scaffold_review[
             "baseline_component_equation_scaffold_packet_accepted_as_equation_slots_only"
@@ -6805,6 +6854,63 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
 
+    source_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert source_packet["status"] == "paused"
+    assert source_packet["active_lane"] == PREVIOUS_LIVE_TARGET
+    assert source_packet["authorized_next_strict_target"] == PREVIOUS_LIVE_TARGET
+    assert source_packet["authorized_target"] == PREVIOUS_LIVE_TARGET
+    assert source_packet[
+        "authorization_evidence"
+    ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+    assert source_packet["report"] == LIVE_TARGET_REPORT
+    assert source_packet["packet_result"] == LIVE_TARGET_OUTCOME
+    assert source_packet["strict_packet_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert source_packet["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert source_packet["consumed_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
+    )
+    assert source_packet["selected_next_target"] == LIVE_TARGET
+    assert source_packet["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert (
+        source_packet[
+            "baseline_component_equation_source_classification_packet_prepared"
+        ]
+        == "yes"
+    )
+    assert source_packet["baseline_component_equation_source_classification_only"] == (
+        "yes"
+    )
+    assert source_packet["equation_slot_source_status_classified_only"] == "yes"
+    assert (
+        source_packet["baseline_component_equation_source_classification_row_count"]
+        == 8
+    )
+    assert (
+        source_packet["baseline_component_equation_source_classification_field_count"]
+        == 8
+    )
+    assert (
+        source_packet[
+            "baseline_component_equation_source_classification_allowed_class_count"
+        ]
+        == 6
+    )
+    assert source_packet["standard_open_system_theory_import_required_slot_count"] == 3
+    assert source_packet["literature_supplied_required_slot_count"] == 3
+    assert source_packet["empirical_fit_needed_slot_count"] == 2
+    assert source_packet["placeholder_carried_slot_count"] == 8
+    assert source_packet["component_equations_derived"] == "no"
+    assert source_packet["component_equations_imported"] == "no"
+    assert source_packet["literature_equations_adopted"] == "no"
+    assert source_packet["empirical_fit_executed"] == "no"
+    assert source_packet["equation_source_validated"] == "no"
+    assert source_packet["tau_baseline_value_computed"] == "no"
+    assert source_packet["baseline_model_completed"] == "no"
+    assert source_packet["measurement_protocol_defined"] == "no"
+    assert source_packet["statistical_validation_claimed"] == "no"
+    assert source_packet["ccft_validation_accepted"] == "no"
+    assert source_packet["master_action_promoted"] == "no"
+
     interaction_active_workstream = active_workstream(payload)
     assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
     assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
@@ -6816,7 +6922,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
@@ -6829,6 +6935,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["suggested_next_packet_kind"] == (
         LIVE_TARGET_KIND
     )
+    assert (
+        interaction_active_workstream[
+            "baseline_component_equation_source_classification_packet_prepared"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["equation_slot_source_status_classified_only"]
+        == "yes"
+    )
+    assert interaction_active_workstream["component_equations_derived"] == "no"
+    assert interaction_active_workstream["component_equations_imported"] == "no"
+    assert interaction_active_workstream["literature_equations_adopted"] == "no"
+    assert interaction_active_workstream["empirical_fit_executed"] == "no"
+    assert interaction_active_workstream["equation_source_validated"] == "no"
     assert (
         interaction_active_workstream[
             "measurement_feedback_baseline_pressure_packet_accepted_as_baseline_hardening_only"

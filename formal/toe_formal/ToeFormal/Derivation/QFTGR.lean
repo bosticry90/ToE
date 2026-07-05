@@ -219,6 +219,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructi
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructionObligationPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview
+import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -240,17 +241,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview.reviewResult
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket.packetResult
 
 def currentPacketId : String :=
-  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview.packetId
+  SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_scaffold_result_review :
+theorem qft_gr_lane_aggregate_exposes_selected_ccft_baseline_equation_source_classification_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
         "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_\
-        SCAFFOLD_PACKET_RESULT_REVIEW_ACCEPTS_TAU_BASELINE_EQUATION_SLOTS_\
-        ONLY_NO_TAU_BASELINE_COMPUTATION_OR_CCFT_VALIDATION" := by
+        SOURCE_CLASSIFICATION_PACKET_PREPARED_CLASSIFIES_EQUATION_SLOT_\
+        SOURCE_STATUS_ONLY_NO_EQUATION_DERIVATION_OR_TAU_BASELINE_COMPUTATION" := by
   constructor
   · rfl
   · rfl

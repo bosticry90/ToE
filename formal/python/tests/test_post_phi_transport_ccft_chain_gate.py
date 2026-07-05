@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet_result"
 )
 FINAL_PREVIOUS_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
@@ -52,8 +52,11 @@ BASELINE_CONSTRUCTION_OBLIGATION_REVIEW_TARGET = (
 BASELINE_COMPONENT_EQUATION_SCAFFOLD_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet"
 )
-BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET = FINAL_PREVIOUS_TARGET
-BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = FINAL_LIVE_TARGET
+BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = FINAL_PREVIOUS_TARGET
+BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_TARGET = FINAL_LIVE_TARGET
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
 )
@@ -145,6 +148,10 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_classification_packet"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_classification_packet_result_review"
+)
 BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket.lean"
@@ -232,18 +239,18 @@ VARIATIONAL_PACKET_TARGET = "prepare_ccft_full_variational_action_program_packet
 VARIATIONAL_REVIEW_TARGET = "review_ccft_full_variational_action_program_packet_result"
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacketResultReview.lean"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceClassificationPacket.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SCAFFOLD_PACKET_RESULT_REVIEW_20260705_v0.json"
+    "SOURCE_CLASSIFICATION_PACKET_20260705_v0.json"
 )
-FINAL_OUTCOME = STAGES["baseline_component_equation_scaffold_review"].outcome_id
+FINAL_OUTCOME = STAGES["baseline_component_equation_source_classification_packet"].outcome_id
 FINAL_STRICT_OUTCOME = (
-    STAGES["baseline_component_equation_scaffold_review"].strict_outcome_id
+    STAGES["baseline_component_equation_source_classification_packet"].strict_outcome_id
 )
-FINAL_KIND = BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
+FINAL_KIND = BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_KIND
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
     "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
@@ -403,6 +410,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_scaffold_review": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result_review_report.py"
+    ),
+    "baseline_component_equation_source_classification_packet": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet_report.py"
     ),
 }
 
@@ -585,6 +596,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result_review_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_scaffold_packet_result_review",
     ),
+    "baseline_component_equation_source_classification_packet": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet",
+    ),
 }
 
 PAPER_DOCS = (
@@ -616,6 +632,7 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_CONSTRUCTION_OBLIGATION_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_RESULT_REVIEW_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_PACKET_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -731,6 +748,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_construction_obligation_review",
             "baseline_component_equation_scaffold_packet",
             "baseline_component_equation_scaffold_review",
+            "baseline_component_equation_source_classification_packet",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -838,6 +856,12 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
     assert (
         STAGES["baseline_component_equation_scaffold_review"].selected_next_target
         == BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_classification_packet"
+        ].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_TARGET
     )
 
 
@@ -1034,6 +1058,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_construction_obligation_review",
                 "baseline_component_equation_scaffold_packet",
                 "baseline_component_equation_scaffold_review",
+                "baseline_component_equation_source_classification_packet",
             }
             else "no"
         )
@@ -2596,12 +2621,24 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert scaffold_review["active_lane"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_TARGET
     )
-    assert scaffold_review["authorization_evidence"] == FINAL_EVIDENCE
-    assert scaffold_review["report"] == FINAL_REPORT
-    assert scaffold_review["packet_result"] == FINAL_OUTCOME
-    assert scaffold_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
-    assert scaffold_review["review_result"] == FINAL_OUTCOME
-    assert scaffold_review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert scaffold_review["authorization_evidence"] == _rel(
+        lean_path(STAGES["baseline_component_equation_scaffold_review"])
+    )
+    assert scaffold_review["report"] == _rel(
+        release_path(STAGES["baseline_component_equation_scaffold_review"])
+    )
+    assert scaffold_review["packet_result"] == (
+        STAGES["baseline_component_equation_scaffold_review"].outcome_id
+    )
+    assert scaffold_review["strict_packet_result"] == (
+        STAGES["baseline_component_equation_scaffold_review"].strict_outcome_id
+    )
+    assert scaffold_review["review_result"] == (
+        STAGES["baseline_component_equation_scaffold_review"].outcome_id
+    )
+    assert scaffold_review["strict_review_result"] == (
+        STAGES["baseline_component_equation_scaffold_review"].strict_outcome_id
+    )
     assert scaffold_review["prepared_packet_result"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_OUTCOME
     )
@@ -2614,8 +2651,12 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert scaffold_review["consumed_target_kind"] == (
         BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
     )
-    assert scaffold_review["selected_next_target"] == FINAL_LIVE_TARGET
-    assert scaffold_review["selected_next_target_kind"] == FINAL_KIND
+    assert scaffold_review["selected_next_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET
+    )
+    assert scaffold_review["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
+    )
     assert (
         scaffold_review[
             "baseline_component_equation_scaffold_packet_result_review_consumed"
@@ -2653,6 +2694,101 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert scaffold_review["next_source_classification_packet_required"] == "yes"
     _assert_registry_nonclaims(scaffold_review)
 
+    source_packet = workstream(BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET, payload)
+    assert source_packet["status"] == "paused"
+    assert source_packet["active_lane"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET
+    )
+    assert source_packet["authorization_evidence"] == FINAL_EVIDENCE
+    assert source_packet["report"] == FINAL_REPORT
+    assert source_packet["packet_result"] == FINAL_OUTCOME
+    assert source_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert source_packet["consumed_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET
+    )
+    assert source_packet["consumed_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
+    )
+    assert source_packet["selected_next_target"] == FINAL_LIVE_TARGET
+    assert source_packet["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        source_packet[
+            "baseline_component_equation_scaffold_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert (
+        source_packet[
+            "baseline_component_equation_source_classification_packet_prepared"
+        ]
+        == "yes"
+    )
+    assert (
+        source_packet["baseline_component_equation_source_classification_only"]
+        == "yes"
+    )
+    assert source_packet["equation_slot_source_status_classified_only"] == "yes"
+    assert (
+        source_packet[
+            "equation_source_classification_before_equation_selection"
+        ]
+        == "yes"
+    )
+    assert source_packet[
+        "baseline_component_equation_source_classification_row_count"
+    ] == 8
+    assert source_packet[
+        "baseline_component_equation_source_classification_field_count"
+    ] == 8
+    assert source_packet[
+        "baseline_component_equation_source_classification_allowed_class_count"
+    ] == 6
+    assert source_packet["standard_open_system_theory_import_required_slot_count"] == 3
+    assert source_packet["literature_supplied_required_slot_count"] == 3
+    assert source_packet["empirical_fit_needed_slot_count"] == 2
+    assert source_packet["placeholder_carried_slot_count"] == 8
+    assert source_packet["derived_from_existing_toe_ccft_math_slot_count"] == 0
+    assert source_packet["blocked_primary_source_class_slot_count"] == 0
+    assert source_packet["open_system_decoherence_primary_source_class"] == (
+        "imported_from_standard_open_system_theory"
+    )
+    assert source_packet["measurement_contribution_primary_source_class"] == (
+        "imported_from_standard_open_system_theory"
+    )
+    assert source_packet["back_action_contribution_primary_source_class"] == (
+        "imported_from_standard_open_system_theory"
+    )
+    assert source_packet["feedback_hamiltonian_control_primary_source_class"] == (
+        "literature_supplied"
+    )
+    assert source_packet["detector_efficiency_correction_primary_source_class"] == (
+        "empirical_fit_needed"
+    )
+    assert source_packet["feedback_delay_correction_primary_source_class"] == (
+        "empirical_fit_needed"
+    )
+    assert source_packet["control_field_effect_primary_source_class"] == (
+        "literature_supplied"
+    )
+    assert source_packet["thermodynamic_energy_accounting_primary_source_class"] == (
+        "literature_supplied"
+    )
+    assert source_packet["component_equations_derived"] == "no"
+    assert source_packet["component_equations_imported"] == "no"
+    assert source_packet["standard_open_system_equations_imported"] == "no"
+    assert source_packet["literature_equations_adopted"] == "no"
+    assert source_packet["empirical_fit_executed"] == "no"
+    assert source_packet["equation_source_validated"] == "no"
+    assert source_packet["component_equations_selected"] == "no"
+    assert source_packet["tau_baseline_value_computed"] == "no"
+    assert source_packet["baseline_model_completed"] == "no"
+    assert source_packet["measurement_protocol_defined"] == "no"
+    assert source_packet["statistical_validation_claimed"] == "no"
+    assert source_packet["residual_separation_claimed"] == "no"
+    assert source_packet["ccft_validation_accepted"] == "no"
+    assert source_packet["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(source_packet)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
@@ -2660,7 +2796,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SCAFFOLD_REVIEW_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -2670,6 +2806,18 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["selected_next_target_kind"] == "PENDING"
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
     assert active["suggested_next_packet_kind"] == FINAL_KIND
+    assert (
+        active[
+            "baseline_component_equation_source_classification_packet_prepared"
+        ]
+        == "yes"
+    )
+    assert active["equation_slot_source_status_classified_only"] == "yes"
+    assert active["component_equations_derived"] == "no"
+    assert active["component_equations_imported"] == "no"
+    assert active["literature_equations_adopted"] == "no"
+    assert active["empirical_fit_executed"] == "no"
+    assert active["equation_source_validated"] == "no"
     assert active[
         "measurement_feedback_baseline_pressure_packet_accepted_as_baseline_hardening_only"
     ] == "yes"
