@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_strategy_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_result"
 )
 BASELINE_CONSTRUCTION_OBLIGATION_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_construction_obligation_packet"
@@ -80,9 +80,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_review_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_TARGET = (
-    FINAL_PREVIOUS_TARGET
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET = (
+    FINAL_PREVIOUS_TARGET
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_TARGET = (
     FINAL_LIVE_TARGET
 )
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
@@ -389,23 +392,42 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_STRICT_OUTCOME = (
         "baseline_component_equation_source_candidate_registry_review"
     ].strict_outcome_id
 )
-FINAL_EVIDENCE = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket.lean"
 )
-FINAL_REPORT = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_20260705_v0.json"
 )
-FINAL_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_OUTCOME = (
     STAGES[
         "baseline_component_equation_source_applicability_gap_classification_packet"
     ].outcome_id
 )
-FINAL_STRICT_OUTCOME = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_STRICT_OUTCOME = (
     STAGES[
         "baseline_component_equation_source_applicability_gap_classification_packet"
+    ].strict_outcome_id
+)
+FINAL_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview.lean"
+)
+FINAL_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+FINAL_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_classification_review"
+    ].outcome_id
+)
+FINAL_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_classification_review"
     ].strict_outcome_id
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
@@ -435,7 +457,11 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND 
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_classification_packet_result_review"
 )
-FINAL_KIND = BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_strategy_packet"
+)
+FINAL_KIND = BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_KIND
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
     "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"
@@ -631,6 +657,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_classification_packet": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_classification_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_result_review_report.py"
     ),
 }
 
@@ -858,6 +888,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet",
     ),
+    "baseline_component_equation_source_applicability_gap_classification_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet_result_review",
+    ),
 }
 
 PAPER_DOCS = (
@@ -898,6 +933,7 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_RESULT_REVIEW_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -1022,6 +1058,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_review_packet",
             "baseline_component_equation_source_applicability_review",
             "baseline_component_equation_source_applicability_gap_classification_packet",
+            "baseline_component_equation_source_applicability_gap_classification_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -1183,6 +1220,12 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_classification_packet"
         ].selected_next_target
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_classification_review"
+        ].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_TARGET
     )
 
 
@@ -1388,6 +1431,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                     "baseline_component_equation_source_applicability_review_packet",
                     "baseline_component_equation_source_applicability_review",
                     "baseline_component_equation_source_applicability_gap_classification_packet",
+                    "baseline_component_equation_source_applicability_gap_classification_review",
                 }
                 else "no"
             )
@@ -3787,10 +3831,18 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         payload,
     )
     assert gap_packet["status"] == "paused"
-    assert gap_packet["authorization_evidence"] == FINAL_EVIDENCE
-    assert gap_packet["report"] == FINAL_REPORT
-    assert gap_packet["packet_result"] == FINAL_OUTCOME
-    assert gap_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert gap_packet["authorization_evidence"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_EVIDENCE
+    )
+    assert gap_packet["report"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_REPORT
+    )
+    assert gap_packet["packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_OUTCOME
+    )
+    assert gap_packet["strict_packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_PACKET_STRICT_OUTCOME
+    )
     assert gap_packet["consumed_target"] == (
         BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_TARGET
     )
@@ -3798,8 +3850,12 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         gap_packet["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_KIND
     )
-    assert gap_packet["selected_next_target"] == FINAL_LIVE_TARGET
-    assert gap_packet["selected_next_target_kind"] == FINAL_KIND
+    assert gap_packet["selected_next_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
+    )
+    assert gap_packet["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND
+    )
     assert gap_packet["source_applicability_gap_classification_packet_prepared"] == "yes"
     assert gap_packet["source_applicability_gap_classification_only"] == "yes"
     assert gap_packet["source_applicability_gaps_classified_only"] == "yes"
@@ -3840,16 +3896,63 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert gap_packet["master_action_promoted"] == "no"
     _assert_registry_nonclaims(gap_packet)
 
+    gap_review = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET,
+        payload,
+    )
+    assert gap_review["status"] == "paused"
+    assert gap_review["authorization_evidence"] == FINAL_EVIDENCE
+    assert gap_review["report"] == FINAL_REPORT
+    assert gap_review["packet_result"] == FINAL_OUTCOME
+    assert gap_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert gap_review["consumed_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
+    )
+    assert (
+        gap_review["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND
+    )
+    assert gap_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert gap_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        gap_review[
+            "baseline_component_equation_source_applicability_gap_classification_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert gap_review["source_applicability_gap_classification_packet_accepted"] == "yes"
+    assert gap_review["source_applicability_gap_classification_accepted_only"] == "yes"
+    assert gap_review["unclear_and_blocked_gap_classifications_accepted_only"] == "yes"
+    assert gap_review["accepted_gap_classified_applicability_candidate_unclear_count"] == 3
+    assert gap_review["accepted_gap_classified_applicability_candidate_blocked_count"] == 5
+    assert gap_review["accepted_gap_classified_applicability_candidate_supported_count"] == 0
+    assert gap_review["source_applicability_gaps_remediated_count"] == 0
+    assert gap_review["source_candidates_replaced_count"] == 0
+    assert gap_review["gap_resolution_strategy_packet_selected"] == "yes"
+    assert gap_review["gap_resolution_strategy_required_before_source_validation"] == "yes"
+    assert gap_review["source_resolution_strategy_executed"] == "no"
+    assert gap_review["source_applicability_gap_remediation_performed"] == "no"
+    assert gap_review["source_candidate_replacement_performed"] == "no"
+    assert gap_review["source_validated"] == "no"
+    assert gap_review["source_validation_executed"] == "no"
+    assert gap_review["standard_open_system_equations_imported"] == "no"
+    assert gap_review["literature_equations_adopted"] == "no"
+    assert gap_review["empirical_fit_executed"] == "no"
+    assert gap_review["tau_baseline_value_computed"] == "no"
+    assert gap_review["baseline_model_completed"] == "no"
+    assert gap_review["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(gap_review)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
     assert active["authorized_next_strict_target"] == FINAL_LIVE_TARGET
     assert active["consumed_target"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_TARGET
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_TARGET
     )
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_REVIEW_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -3859,6 +3962,23 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["selected_next_target_kind"] == "PENDING"
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
     assert active["suggested_next_packet_kind"] == FINAL_KIND
+    assert (
+        active[
+            "baseline_component_equation_source_applicability_gap_classification_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert active["source_applicability_gap_classification_packet_accepted"] == "yes"
+    assert active["source_applicability_gap_classification_accepted_only"] == "yes"
+    assert active["unclear_and_blocked_gap_classifications_accepted_only"] == "yes"
+    assert active["accepted_gap_classified_applicability_candidate_unclear_count"] == 3
+    assert active["accepted_gap_classified_applicability_candidate_blocked_count"] == 5
+    assert active["accepted_gap_classified_applicability_candidate_supported_count"] == 0
+    assert active["source_applicability_gaps_remediated_count"] == 0
+    assert active["source_candidates_replaced_count"] == 0
+    assert active["gap_resolution_strategy_packet_selected"] == "yes"
+    assert active["gap_resolution_strategy_required_before_source_validation"] == "yes"
+    assert active["source_resolution_strategy_executed"] == "no"
     assert active["source_applicability_gap_classification_packet_prepared"] == "yes"
     assert active["source_applicability_gap_classification_only"] == "yes"
     assert active["source_applicability_gaps_classified_only"] == "yes"
