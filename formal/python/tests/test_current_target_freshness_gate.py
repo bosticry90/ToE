@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_review_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1341,7 +1341,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_review_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_review_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet"
@@ -1356,9 +1356,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_candidate_registry_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_TARGET = (
-    PREVIOUS_LIVE_TARGET
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_review_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_TARGET = (
+    PREVIOUS_LIVE_TARGET
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_CLASSIFICATION_TARGET = (
     ACTIVE_LANE
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_REVIEW_TARGET = (
@@ -1673,7 +1676,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_review_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_classification_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1768,9 +1771,22 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview.lean"
 )
 LIVE_TARGET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_REVIEW_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_REVIEW_PACKET_20260705_v0.json"
@@ -1815,6 +1831,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_OUTCOME = (
     "SOURCES_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_REVIEW_PACKET_RESULT_REVIEW_ACCEPTS_"
+    "APPLICABILITY_MAP_WITH_ZERO_SUPPORTED_ROWS_NO_SOURCE_VALIDATION_OR_"
+    "EQUATION_ADOPTION"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_REVIEW_PACKET_PREPARED_REVIEWS_CANDIDATE_"
     "SOURCE_APPLICABILITY_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
@@ -1877,6 +1899,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_STRICT_OUTCOME = (
 )
 LIVE_TARGET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_REVIEW_PACKET_RESULT_REVIEW_ACCEPTS_UNCLEAR_AND_"
+    "BLOCKED_APPLICABILITY_ROWS_ONLY_NO_TAU_BASELINE_COMPUTATION_NO_"
+    "COMPLETED_BASELINE_MODEL_NO_MASTER_ACTION_PROMOTION"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_REVIEW_PACKET_PREPARED_APPLICABILITY_REVIEW_ONLY_"
     "NO_EQUATION_IMPORT_NO_EMPIRICAL_FIT_NO_TAU_BASELINE_COMPUTATION_NO_"
     "MASTER_ACTION_PROMOTION"
@@ -1921,11 +1949,15 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_KIND = (
 )
 LIVE_TARGET_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
-    "source_applicability_review_packet_result_review"
+    "source_applicability_gap_classification_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_review_packet"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_review_packet_result_review"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7636,19 +7668,31 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_TARGET
     )
     assert applicability_packet["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH.relative_to(
+            REPO_ROOT
+        )
     ).replace("\\", "/")
-    assert applicability_packet["report"] == LIVE_TARGET_REPORT
-    assert applicability_packet["packet_result"] == LIVE_TARGET_OUTCOME
-    assert applicability_packet["strict_packet_result"] == LIVE_TARGET_STRICT_OUTCOME
+    assert applicability_packet["report"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_REPORT
+    )
+    assert applicability_packet["packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME
+    )
+    assert applicability_packet["strict_packet_result"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME
+    )
     assert applicability_packet["consumed_target"] == (
         BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_TARGET
     )
     assert applicability_packet["consumed_target_kind"] == (
         BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_KIND
     )
-    assert applicability_packet["selected_next_target"] == LIVE_TARGET
-    assert applicability_packet["selected_next_target_kind"] == LIVE_TARGET_KIND
+    assert applicability_packet["selected_next_target"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_TARGET
+    )
+    assert applicability_packet["selected_next_target_kind"] == (
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_REVIEW_KIND
+    )
     assert applicability_packet["source_applicability_review_packet_prepared"] == "yes"
     assert applicability_packet["source_applicability_review_only"] == "yes"
     assert applicability_packet["candidate_source_applicability_map_prepared"] == "yes"
@@ -7712,7 +7756,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_KIND
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_REVIEW_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
