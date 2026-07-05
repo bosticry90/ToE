@@ -248,6 +248,7 @@ import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineConstructi
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationScaffoldPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceClarificationPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapResolutionOpenSystemDecoherenceSourceRequirementRefinementPacket
+import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSourceRequirementRefinementReview
 
 namespace ToeFormal
 namespace Derivation
@@ -417,7 +418,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet_result"
+        "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_candidate_rescreening_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -445,7 +446,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet_result"
+        "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_candidate_rescreening_packet"
       status := .retained }
   ]
 
@@ -463,13 +464,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the selected CCFT open-system decoherence requirement-refinement packet. -/
+/-- Previous live target consumed by the selected CCFT open-system decoherence requirement-refinement review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet"
-
-/-- Current live target after the selected CCFT open-system decoherence requirement-refinement packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet_result"
+
+/-- Current live target after the selected CCFT open-system decoherence requirement-refinement review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_candidate_rescreening_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -482,7 +483,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_candidate_rescreening_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
