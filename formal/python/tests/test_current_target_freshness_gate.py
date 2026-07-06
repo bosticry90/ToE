@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1341,7 +1341,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_triage_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet"
@@ -1682,7 +1682,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1777,13 +1777,13 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTOpenSystemDecoherenceReplacementSourceCandidateTriageReview.lean"
+    / "SelectedCCFTOpenSystemDecoherenceReplacementSourceCandidateRequirementCrosswalkPacket.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
-    "REPLACEMENT_SOURCE_CANDIDATE_TRIAGE_PACKET_RESULT_REVIEW_"
+    "REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_PACKET_"
     "20260705_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
@@ -1841,8 +1841,8 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_OUTCOME = (
 LIVE_TARGET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
-    "REPLACEMENT_SOURCE_CANDIDATE_TRIAGE_PACKET_RESULT_REVIEW_ACCEPTS_"
-    "REPLACEMENT_SOURCE_CANDIDATE_ROLE_CLASSIFICATION_ONLY_NO_SOURCE_"
+    "REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_PACKET_PREPARED_"
+    "MAPS_CANDIDATE_SOURCES_TO_REFINED_REQUIREMENTS_ONLY_NO_SOURCE_"
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
@@ -1909,8 +1909,8 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_STRICT_OUTCOME = (
 LIVE_TARGET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
-    "REPLACEMENT_SOURCE_CANDIDATE_TRIAGE_PACKET_RESULT_REVIEW_ACCEPTS_"
-    "TRIAGE_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_"
+    "REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_PACKET_PREPARED_"
+    "CROSSWALK_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_"
     "MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
@@ -1959,7 +1959,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_KIND = (
 )
 LIVE_TARGET_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
-    "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet"
+    "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet_result_review"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7803,7 +7803,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
         "selected_ccft_empirical_discriminator_baseline_component_equation_"
-        "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_triage_packet_result_review"
+        "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet"
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
@@ -8090,12 +8090,56 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
     assert (
+        interaction_active_workstream["source_candidate_requirement_crosswalk_packet_prepared"]
+        == "yes"
+    )
+    assert (
         interaction_active_workstream["source_candidate_requirement_crosswalk_executed"]
-        == "no"
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "source_candidate_requirement_crosswalk_executed_as_mapping_only"
+        ]
+        == "yes"
     )
     assert (
         interaction_active_workstream["candidate_to_requirement_crosswalk_performed"]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream[
+            "candidate_to_requirement_crosswalk_performed_as_mapping_only"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["candidate_to_requirement_crosswalk_validated"]
         == "no"
+    )
+    assert (
+        interaction_active_workstream[
+            "baseline_component_equation_source_applicability_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_row_count"
+        ]
+        == 48
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_replacement_source_candidate_requirement_crosswalk_candidate_count"
+        ]
+        == 6
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_replacement_source_candidate_requirement_crosswalk_requirement_count"
+        ]
+        == 8
+    )
+    assert (
+        interaction_active_workstream[
+            "open_system_decoherence_replacement_source_candidate_requirement_crosswalk_satisfied_requirement_count"
+        ]
+        == 0
     )
     assert interaction_active_workstream["candidate_source_accepted"] == "no"
     assert interaction_active_workstream["candidate_source_validated"] == "no"
