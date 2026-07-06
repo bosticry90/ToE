@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_packet" := by
+      "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet" := by
   rfl
 
 end CurrentAuthority
