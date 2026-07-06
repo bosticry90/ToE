@@ -256,6 +256,7 @@ import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSourceReplacementSt
 import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSourceReplacementStrategyPrioritySelectionPacket
 import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSourceReplacementStrategyPrioritySelectionReview
 import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceReplacementSourceSearchScopePacket
+import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceReplacementSourceSearchScopeReview
 
 namespace ToeFormal
 namespace Derivation
@@ -425,7 +426,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
+        "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -453,7 +454,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
+        "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
       status := .retained }
   ]
 
@@ -473,11 +474,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the selected CCFT open-system decoherence replacement source-search scope packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet"
+  "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
 
 /-- Current live target after the selected CCFT open-system decoherence replacement source-search scope packet. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
+  "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -490,7 +491,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

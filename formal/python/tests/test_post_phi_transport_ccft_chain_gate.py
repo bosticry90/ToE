@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet"
@@ -132,6 +132,9 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACE
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_CANDIDATE_DISCOVERY_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
 )
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
@@ -751,17 +754,37 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACE
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet"
     ].strict_outcome_id
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTOpenSystemDecoherenceReplacementSourceSearchScopeReview.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review"
+    ].strict_outcome_id
+)
 FINAL_EVIDENCE = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_EVIDENCE
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_EVIDENCE
 )
 FINAL_REPORT = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_REPORT
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_REPORT
 )
 FINAL_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_OUTCOME
 )
 FINAL_STRICT_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_STRICT_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_STRICT_OUTCOME
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -850,9 +873,13 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACE
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet"
 )
-FINAL_KIND = (
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result_review"
+)
+FINAL_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_candidate_discovery_packet"
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -1113,6 +1140,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result_review_report.py"
     ),
 }
 
@@ -1420,6 +1451,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet",
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result_review",
+    ),
 }
 
 PAPER_DOCS = (
@@ -1476,6 +1512,7 @@ PAPER_DOCS = (
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_SOURCE_REPLACEMENT_STRATEGY_PRIORITY_SELECTION_PACKET_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_SOURCE_REPLACEMENT_STRATEGY_PRIORITY_SELECTION_PACKET_RESULT_REVIEW_v0.md",
     "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_v0.md",
+    "formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_RESULT_REVIEW_v0.md",
 )
 
 JSON_FALSE_FLAGS = (
@@ -2263,6 +2300,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_packet",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_review",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -2513,11 +2551,17 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
         STAGES[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_review"
         ].selected_next_target
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
     )
     assert (
         STAGES[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet"
+        ].selected_next_target
+        == FINAL_PREVIOUS_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review"
         ].selected_next_target
         == FINAL_LIVE_TARGET
     )
@@ -2741,6 +2785,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_packet",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_review",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_review",
             }
             else "no"
         )
@@ -6247,7 +6292,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         priority_selection_packet[
             "selected_open_system_decoherence_replacement_strategy_target"
         ]
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
     )
     assert (
         priority_selection_packet[
@@ -6339,7 +6384,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         priority_selection_review["prepared_packet_strict_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SOURCE_REPLACEMENT_STRATEGY_PRIORITY_SELECTION_PACKET_STRICT_OUTCOME
     )
-    assert priority_selection_review["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        priority_selection_review["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
+    )
     assert (
         priority_selection_review["selected_next_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_KIND
@@ -6404,7 +6452,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     )
     assert (
         priority_selection_review["accepted_open_system_decoherence_replacement_strategy_target"]
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
     )
     assert (
         priority_selection_review[
@@ -6435,24 +6483,42 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert priority_selection_review["master_action_promoted"] == "no"
     _assert_registry_nonclaims(priority_selection_review)
 
-    source_search_scope_packet = workstream(FINAL_PREVIOUS_TARGET, payload)
+    source_search_scope_packet = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET,
+        payload,
+    )
     assert source_search_scope_packet["status"] == "paused"
-    assert source_search_scope_packet["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert (
+        source_search_scope_packet["active_lane"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
+    )
     assert (
         source_search_scope_packet["authorized_next_strict_target"]
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
     )
-    assert source_search_scope_packet["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        source_search_scope_packet["consumed_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
+    )
     assert (
         source_search_scope_packet["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_KIND
     )
-    assert source_search_scope_packet["authorization_evidence"] == FINAL_EVIDENCE
-    assert source_search_scope_packet["report"] == FINAL_REPORT
-    assert source_search_scope_packet["packet_result"] == FINAL_OUTCOME
+    assert (
+        source_search_scope_packet["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_EVIDENCE
+    )
+    assert (
+        source_search_scope_packet["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_REPORT
+    )
+    assert (
+        source_search_scope_packet["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_OUTCOME
+    )
     assert (
         source_search_scope_packet["strict_packet_result"]
-        == FINAL_STRICT_OUTCOME
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_STRICT_OUTCOME
     )
     assert (
         source_search_scope_packet["prepared_review_result"]
@@ -6462,8 +6528,11 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         source_search_scope_packet["prepared_review_strict_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SOURCE_REPLACEMENT_STRATEGY_PRIORITY_SELECTION_REVIEW_STRICT_OUTCOME
     )
-    assert source_search_scope_packet["selected_next_target"] == FINAL_LIVE_TARGET
-    assert source_search_scope_packet["selected_next_target_kind"] == FINAL_KIND
+    assert source_search_scope_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        source_search_scope_packet["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_KIND
+    )
     assert (
         source_search_scope_packet[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_replacement_strategy_priority_selection_packet_result_review_consumed"
@@ -6573,6 +6642,95 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert source_search_scope_packet["master_action_promoted"] == "no"
     _assert_registry_nonclaims(source_search_scope_packet)
 
+    source_search_scope_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert source_search_scope_review["status"] == "paused"
+    assert source_search_scope_review["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert (
+        source_search_scope_review["authorized_next_strict_target"]
+        == FINAL_PREVIOUS_TARGET
+    )
+    assert source_search_scope_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        source_search_scope_review["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_KIND
+    )
+    assert source_search_scope_review["authorization_evidence"] == FINAL_EVIDENCE
+    assert source_search_scope_review["report"] == FINAL_REPORT
+    assert source_search_scope_review["packet_result"] == FINAL_OUTCOME
+    assert source_search_scope_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert source_search_scope_review["review_result"] == FINAL_OUTCOME
+    assert source_search_scope_review["strict_review_result"] == FINAL_STRICT_OUTCOME
+    assert (
+        source_search_scope_review["prepared_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_OUTCOME
+    )
+    assert (
+        source_search_scope_review["prepared_packet_strict_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_PACKET_STRICT_OUTCOME
+    )
+    assert source_search_scope_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert source_search_scope_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        source_search_scope_review[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert (
+        source_search_scope_review[
+            "open_system_decoherence_replacement_source_search_scope_packet_accepted"
+        ]
+        == "yes"
+    )
+    assert (
+        source_search_scope_review[
+            "open_system_decoherence_replacement_source_search_scope_accepted_only"
+        ]
+        == "yes"
+    )
+    assert (
+        source_search_scope_review[
+            "open_system_decoherence_replacement_source_search_scope_rows_accepted_only"
+        ]
+        == "yes"
+    )
+    assert (
+        source_search_scope_review[
+            "accepted_open_system_decoherence_replacement_source_search_scope_row_count"
+        ]
+        == 8
+    )
+    assert (
+        source_search_scope_review[
+            "accepted_open_system_decoherence_replacement_source_search_scope_not_executed_row_count"
+        ]
+        == 8
+    )
+    assert (
+        source_search_scope_review["source_search_candidate_discovery_packet_selected"]
+        == "yes"
+    )
+    assert (
+        source_search_scope_review["source_search_candidate_discovery_only_next"]
+        == "yes"
+    )
+    assert source_search_scope_review["source_search_executed"] == "no"
+    assert source_search_scope_review["replacement_source_search_executed"] == "no"
+    assert source_search_scope_review["source_candidates_discovered"] == "no"
+    assert source_search_scope_review["source_candidates_listed"] == "no"
+    assert source_search_scope_review["source_candidates_listed_count"] == 0
+    assert source_search_scope_review["source_validated"] == "no"
+    assert source_search_scope_review["standard_open_system_equations_imported"] == "no"
+    assert (
+        source_search_scope_review["open_system_decoherence_lindblad_form_imported"]
+        == "no"
+    )
+    assert source_search_scope_review["tau_baseline_value_computed"] == "no"
+    assert source_search_scope_review["baseline_model_completed"] == "no"
+    assert source_search_scope_review["ccft_validated"] == "no"
+    assert source_search_scope_review["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(source_search_scope_review)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
@@ -6580,7 +6738,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_REVIEW_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -6653,12 +6811,31 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["source_search_scope_required_before_equation_import"] == "yes"
     assert (
         active["accepted_open_system_decoherence_replacement_strategy_target"]
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_TARGET
     )
     assert (
         active["accepted_open_system_decoherence_replacement_strategy_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_SCOPE_KIND
     )
+    assert (
+        active[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_search_scope_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert (
+        active["open_system_decoherence_replacement_source_search_scope_packet_accepted"]
+        == "yes"
+    )
+    assert active["open_system_decoherence_replacement_source_search_scope_accepted_only"] == "yes"
+    assert (
+        active[
+            "open_system_decoherence_replacement_source_search_scope_rows_accepted_only"
+        ]
+        == "yes"
+    )
+    assert active["source_search_candidate_discovery_packet_selected"] == "yes"
+    assert active["source_search_candidate_discovery_only_next"] == "yes"
     assert (
         active[
             "open_system_decoherence_replacement_source_search_scope_packet_prepared"
