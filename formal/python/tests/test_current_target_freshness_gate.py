@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1341,7 +1341,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_VALIDATION_CRITERIA_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_validation_criteria_packet"
@@ -1682,7 +1682,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1777,13 +1777,14 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTOpenSystemDecoherenceTargetedLiteratureReviewExpansionCandidateDiscoveryPacket.lean"
+    / "SelectedCCFTOpenSystemDecoherenceTargetedLiteratureReviewExpansionCandidateDiscoveryReview.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
-    "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_20260705_v0.json"
+    "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_"
+    "RESULT_REVIEW_20260705_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1840,9 +1841,9 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_OUTCOME = (
 LIVE_TARGET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_TARGETED_"
-    "LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_PREPARED_LISTS_"
-    "TARGETED_LITERATURE_CANDIDATES_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_"
-    "ADOPTION"
+    "LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_RESULT_REVIEW_"
+    "ACCEPTS_TARGETED_LITERATURE_CANDIDATES_ONLY_NO_SOURCE_VALIDATION_OR_"
+    "EQUATION_ADOPTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -1907,8 +1908,8 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_STRICT_OUTCOME = (
 )
 LIVE_TARGET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SOURCE_LITERATURE_EXPANSION_CANDIDATE_DISCOVERY_PACKET_PREPARED_"
-    "CANDIDATE_DISCOVERY_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_"
+    "SOURCE_LITERATURE_EXPANSION_CANDIDATE_DISCOVERY_PACKET_RESULT_REVIEW_"
+    "ACCEPTS_CANDIDATE_DISCOVERY_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_"
     "COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
@@ -1957,7 +1958,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CANDIDATE_REGISTRY_REVIEW_KIND = (
 )
 LIVE_TARGET_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
-    "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review"
+    "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_STRATEGY_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7801,7 +7802,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
         "selected_ccft_empirical_discriminator_baseline_component_equation_"
-        "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
+        "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review"
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
@@ -8045,56 +8046,48 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == 36
     )
     assert interaction_active_workstream["source_candidate_triage_packet_selected"] == "yes"
-    assert interaction_active_workstream["source_candidate_triage_packet_prepared"] == "yes"
-    assert interaction_active_workstream["source_candidate_triage_executed"] == "yes"
+    assert (
+        interaction_active_workstream[
+            "targeted_literature_candidate_triage_packet_selected"
+        ]
+        == "yes"
+    )
+    assert (
+        interaction_active_workstream["targeted_literature_candidate_triage_only_next"]
+        == "yes"
+    )
+    assert interaction_active_workstream["source_candidate_triage_packet_prepared"] == "no"
+    assert interaction_active_workstream["source_candidate_triage_executed"] == "no"
     assert (
         interaction_active_workstream[
             "source_candidate_triage_executed_as_role_classification_only"
         ]
-        == "yes"
+        == "no"
     )
-    assert interaction_active_workstream["source_candidate_roles_classified"] == "yes"
-    assert interaction_active_workstream["source_candidate_roles_classified_only"] == "yes"
+    assert interaction_active_workstream["source_candidate_roles_classified"] == "no"
+    assert interaction_active_workstream["source_candidate_roles_classified_only"] == "no"
     assert (
         interaction_active_workstream["source_candidate_likely_regimes_classified"]
-        == "yes"
+        == "no"
     )
     assert (
         interaction_active_workstream["source_candidate_likely_usefulness_classified"]
-        == "yes"
+        == "no"
     )
     assert (
         interaction_active_workstream["source_candidate_triage_risks_classified"]
-        == "yes"
+        == "no"
     )
     assert (
         interaction_active_workstream["source_candidate_next_review_needs_recorded"]
-        == "yes"
+        == "no"
     )
-    assert interaction_active_workstream["source_candidate_triage_review_selected"] == "yes"
-    assert (
-        interaction_active_workstream[
-            "baseline_component_equation_source_applicability_open_system_decoherence_replacement_source_candidate_triage_row_count"
-        ]
-        == 6
-    )
-    assert (
-        interaction_active_workstream[
-            "open_system_decoherence_replacement_source_candidate_triage_role_count"
-        ]
-        == 6
-    )
-    assert (
-        interaction_active_workstream[
-            "source_candidates_remain_unvalidated_after_triage"
-        ]
-        == "yes"
-    )
-    assert interaction_active_workstream["source_candidate_triage_packet_accepted"] == "yes"
-    assert interaction_active_workstream["source_candidate_triage_accepted_only"] == "yes"
+    assert interaction_active_workstream["source_candidate_triage_review_selected"] == "no"
+    assert interaction_active_workstream["source_candidate_triage_packet_accepted"] == "no"
+    assert interaction_active_workstream["source_candidate_triage_accepted_only"] == "no"
     assert (
         interaction_active_workstream["source_candidate_role_classification_accepted_only"]
-        == "yes"
+        == "no"
     )
     assert (
         interaction_active_workstream["source_candidate_requirement_crosswalk_packet_selected"]

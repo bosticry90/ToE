@@ -38,10 +38,16 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
 )
 FINAL_PREVIOUS_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result"
+)
+TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
+)
+TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result"
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet"
@@ -1080,17 +1086,38 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETE
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
     ].strict_outcome_id
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTOpenSystemDecoherenceTargetedLiteratureReviewExpansionCandidateDiscoveryReview.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_"
+    "RESULT_REVIEW_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review"
+    ].strict_outcome_id
+)
 FINAL_EVIDENCE = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_EVIDENCE
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_EVIDENCE
 )
 FINAL_REPORT = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_REPORT
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_REPORT
 )
 FINAL_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_OUTCOME
 )
 FINAL_STRICT_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_STRICT_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_STRICT_OUTCOME
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -1239,8 +1266,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETE
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
+)
 FINAL_KIND = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_KIND
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -1557,6 +1588,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review_report.py"
     ),
 }
 
@@ -1933,6 +1968,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "formal.python.tools."
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review",
     ),
 }
 
@@ -2799,6 +2839,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -3133,11 +3174,17 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
         STAGES[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review"
         ].selected_next_target
-        == FINAL_PREVIOUS_TARGET
+        == TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET
     )
     assert (
         STAGES[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
+        ].selected_next_target
+        == TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review"
         ].selected_next_target
         == FINAL_LIVE_TARGET
     )
@@ -3375,6 +3422,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
                 }
             else "no"
         )
@@ -8694,7 +8742,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         scope_review["prepared_packet_strict_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_PACKET_STRICT_OUTCOME
     )
-    assert scope_review["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        scope_review["selected_next_target"]
+        == TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET
+    )
     assert (
         scope_review["selected_next_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_KIND
@@ -8756,19 +8807,43 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert scope_review["master_action_promoted"] == "no"
     _assert_registry_nonclaims(scope_review)
 
-    candidate_packet = workstream(FINAL_PREVIOUS_TARGET, payload)
+    candidate_packet = workstream(
+        TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET,
+        payload,
+    )
     assert candidate_packet["status"] == "paused"
-    assert candidate_packet["active_lane"] == FINAL_PREVIOUS_TARGET
-    assert candidate_packet["authorized_next_strict_target"] == FINAL_PREVIOUS_TARGET
-    assert candidate_packet["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        candidate_packet["active_lane"]
+        == TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET
+    )
+    assert (
+        candidate_packet["authorized_next_strict_target"]
+        == TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET
+    )
+    assert (
+        candidate_packet["consumed_target"]
+        == TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET
+    )
     assert (
         candidate_packet["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_KIND
     )
-    assert candidate_packet["authorization_evidence"] == FINAL_EVIDENCE
-    assert candidate_packet["report"] == FINAL_REPORT
-    assert candidate_packet["packet_result"] == FINAL_OUTCOME
-    assert candidate_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert (
+        candidate_packet["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_EVIDENCE
+    )
+    assert (
+        candidate_packet["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_REPORT
+    )
+    assert (
+        candidate_packet["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_OUTCOME
+    )
+    assert (
+        candidate_packet["strict_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_STRICT_OUTCOME
+    )
     assert (
         candidate_packet["prepared_review_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_REVIEW_OUTCOME
@@ -8777,8 +8852,11 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         candidate_packet["prepared_review_strict_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_REVIEW_STRICT_OUTCOME
     )
-    assert candidate_packet["selected_next_target"] == FINAL_LIVE_TARGET
-    assert candidate_packet["selected_next_target_kind"] == FINAL_KIND
+    assert candidate_packet["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        candidate_packet["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND
+    )
     assert (
         candidate_packet[
             "targeted_literature_review_expansion_candidate_discovery_packet_prepared"
@@ -8868,6 +8946,115 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert candidate_packet["master_action_promoted"] == "no"
     _assert_registry_nonclaims(candidate_packet)
 
+    candidate_review = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert candidate_review["status"] == "paused"
+    assert candidate_review["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert candidate_review["authorized_next_strict_target"] == FINAL_PREVIOUS_TARGET
+    assert candidate_review["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        candidate_review["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND
+    )
+    assert candidate_review["authorization_evidence"] == FINAL_EVIDENCE
+    assert candidate_review["report"] == FINAL_REPORT
+    assert candidate_review["packet_result"] == FINAL_OUTCOME
+    assert candidate_review["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert (
+        candidate_review["prepared_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_OUTCOME
+    )
+    assert (
+        candidate_review["prepared_packet_strict_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_STRICT_OUTCOME
+    )
+    assert candidate_review["selected_next_target"] == FINAL_LIVE_TARGET
+    assert candidate_review["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        candidate_review[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review_consumed"
+        ]
+        == "yes"
+    )
+    assert (
+        candidate_review[
+            "targeted_literature_review_expansion_candidate_discovery_packet_accepted"
+        ]
+        == "yes"
+    )
+    assert (
+        candidate_review[
+            "targeted_literature_review_expansion_candidate_discovery_packet_accepted_as_candidate_rows_only"
+        ]
+        == "yes"
+    )
+    assert (
+        candidate_review[
+            "targeted_literature_candidate_rows_accepted_as_unvalidated_only"
+        ]
+        == "yes"
+    )
+    assert (
+        candidate_review[
+            "targeted_literature_candidates_retained_for_future_triage_only"
+        ]
+        == "yes"
+    )
+    assert candidate_review["accepted_targeted_literature_candidate_source_count"] == 8
+    assert candidate_review["accepted_targeted_literature_candidate_source_type_count"] == 3
+    assert (
+        candidate_review["accepted_targeted_literature_candidate_blocker_class_count"]
+        == 8
+    )
+    assert (
+        candidate_review[
+            "accepted_targeted_literature_candidate_missing_validation_item_count"
+        ]
+        == 48
+    )
+    assert (
+        candidate_review[
+            "accepted_targeted_literature_candidate_not_adopted_boundary_count"
+        ]
+        == 8
+    )
+    assert (
+        candidate_review[
+            "accepted_targeted_literature_candidate_not_imported_boundary_count"
+        ]
+        == 8
+    )
+    assert (
+        candidate_review[
+            "accepted_targeted_literature_candidate_not_validated_boundary_count"
+        ]
+        == 8
+    )
+    assert candidate_review["targeted_literature_candidate_triage_packet_selected"] == "yes"
+    assert candidate_review["targeted_literature_candidate_triage_only_next"] == "yes"
+    assert (
+        candidate_review[
+            "targeted_literature_candidate_triage_required_before_source_validation"
+        ]
+        == "yes"
+    )
+    assert candidate_review["source_candidate_triage_packet_prepared"] == "no"
+    assert candidate_review["source_candidate_triage_executed"] == "no"
+    assert candidate_review["source_candidate_roles_classified"] == "no"
+    assert candidate_review["candidate_source_accepted"] == "no"
+    assert candidate_review["candidate_source_validated"] == "no"
+    assert candidate_review["candidate_source_adopted"] == "no"
+    assert candidate_review["candidate_equation_imported"] == "no"
+    assert candidate_review["candidate_equation_adopted"] == "no"
+    assert candidate_review["source_validated"] == "no"
+    assert candidate_review["open_system_decoherence_source_validated"] == "no"
+    assert candidate_review["open_system_decoherence_equation_imported"] == "no"
+    assert candidate_review["open_system_decoherence_lindblad_form_imported"] == "no"
+    assert candidate_review["tau_baseline_value_computed"] == "no"
+    assert candidate_review["baseline_model_completed"] == "no"
+    assert candidate_review["ccft_validated"] == "no"
+    assert candidate_review["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(candidate_review)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
@@ -8875,7 +9062,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -8885,18 +9072,21 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["selected_next_target_kind"] == "PENDING"
     assert active["suggested_next_packet_target"] == FINAL_LIVE_TARGET
     assert active["suggested_next_packet_kind"] == FINAL_KIND
-    assert active["source_candidate_triage_packet_prepared"] == "yes"
-    assert active["source_candidate_triage_executed"] == "yes"
+    assert active["targeted_literature_candidate_triage_packet_selected"] == "yes"
+    assert active["targeted_literature_candidate_triage_only_next"] == "yes"
+    assert active["source_candidate_triage_packet_selected"] == "yes"
+    assert active["source_candidate_triage_packet_prepared"] == "no"
+    assert active["source_candidate_triage_executed"] == "no"
     assert (
         active["source_candidate_triage_executed_as_role_classification_only"]
-        == "yes"
+        == "no"
     )
-    assert active["source_candidate_roles_classified"] == "yes"
-    assert active["source_candidate_roles_classified_only"] == "yes"
-    assert active["source_candidate_triage_review_selected"] == "yes"
-    assert active["source_candidate_triage_packet_accepted"] == "yes"
-    assert active["source_candidate_triage_accepted_only"] == "yes"
-    assert active["source_candidate_role_classification_accepted_only"] == "yes"
+    assert active["source_candidate_roles_classified"] == "no"
+    assert active["source_candidate_roles_classified_only"] == "no"
+    assert active["source_candidate_triage_review_selected"] == "no"
+    assert active["source_candidate_triage_packet_accepted"] == "no"
+    assert active["source_candidate_triage_accepted_only"] == "no"
+    assert active["source_candidate_role_classification_accepted_only"] == "no"
     assert active["source_candidate_requirement_crosswalk_packet_selected"] == "yes"
     assert active["source_candidate_requirement_crosswalk_packet_prepared"] == "yes"
     assert active["source_candidate_requirement_crosswalk_executed"] == "yes"
