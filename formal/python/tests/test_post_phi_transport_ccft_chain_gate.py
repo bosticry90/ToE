@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet_result"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet_result"
 )
 FINAL_PREVIOUS_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REQUIREMENT_REFINEMENT_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_source_requirement_refinement_packet"
@@ -156,6 +156,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACE
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet_result"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet_result"
 )
 BASELINE_COMPONENT_INTERACTION_RISK_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_interaction_risk_packet"
@@ -940,17 +946,59 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACE
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet"
     ].strict_outcome_id
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTOpenSystemDecoherenceReplacementSourceCandidateRequirementCrosswalkBlockerSynthesisReview.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_"
+    "SYNTHESIS_PACKET_RESULT_REVIEW_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review"
+    ].strict_outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTOpenSystemDecoherenceReplacementSourceCandidateRequirementCrosswalkBlockerResponseRouteSelectionPacket.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_"
+    "RESPONSE_ROUTE_SELECTION_PACKET_20260705_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet"
+    ].strict_outcome_id
+)
 FINAL_EVIDENCE = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_EVIDENCE
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_EVIDENCE
 )
 FINAL_REPORT = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_REPORT
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_REPORT
 )
 FINAL_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_OUTCOME
 )
 FINAL_STRICT_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_STRICT_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_STRICT_OUTCOME
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -1075,8 +1123,16 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACE
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet_result_review"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet_result_review"
+)
 FINAL_KIND = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_KIND
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_REVIEW_KIND
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -1369,6 +1425,14 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet": (
         "formal/python/tools/"
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet": (
+        "formal/python/tools/"
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet_report.py"
     ),
 }
 
@@ -1715,6 +1779,16 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "formal.python.tools."
         "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet_report",
         "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet",
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review",
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet": (
+        "formal.python.tools."
+        "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet_report",
+        "build_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
     ),
 }
 
@@ -2575,6 +2649,8 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_review",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -2873,11 +2949,23 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
         STAGES[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_review"
         ].selected_next_target
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_TARGET
     )
     assert (
         STAGES[
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet"
+        ].selected_next_target
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review"
+        ].selected_next_target
+        == FINAL_PREVIOUS_TARGET
+    )
+    assert (
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet"
         ].selected_next_target
         == FINAL_LIVE_TARGET
     )
@@ -3109,6 +3197,8 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_packet",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_review",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet",
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_review",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
             }
             else "no"
         )
@@ -7825,7 +7915,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         crosswalk_review["prepared_packet_strict_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_PACKET_STRICT_OUTCOME
     )
-    assert crosswalk_review["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        crosswalk_review["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_TARGET
+    )
     assert (
         crosswalk_review["selected_next_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_KIND
@@ -7893,22 +7986,43 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert crosswalk_review["master_action_promoted"] == "no"
     _assert_registry_nonclaims(crosswalk_review)
 
-    blocker_synthesis_packet = workstream(FINAL_PREVIOUS_TARGET, payload)
+    blocker_synthesis_packet = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_TARGET,
+        payload,
+    )
     assert blocker_synthesis_packet["status"] == "paused"
-    assert blocker_synthesis_packet["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert (
+        blocker_synthesis_packet["active_lane"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_TARGET
+    )
     assert (
         blocker_synthesis_packet["authorized_next_strict_target"]
-        == FINAL_PREVIOUS_TARGET
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_TARGET
     )
-    assert blocker_synthesis_packet["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        blocker_synthesis_packet["consumed_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_TARGET
+    )
     assert (
         blocker_synthesis_packet["consumed_target_kind"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_KIND
     )
-    assert blocker_synthesis_packet["authorization_evidence"] == FINAL_EVIDENCE
-    assert blocker_synthesis_packet["report"] == FINAL_REPORT
-    assert blocker_synthesis_packet["packet_result"] == FINAL_OUTCOME
-    assert blocker_synthesis_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert (
+        blocker_synthesis_packet["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_EVIDENCE
+    )
+    assert (
+        blocker_synthesis_packet["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_REPORT
+    )
+    assert (
+        blocker_synthesis_packet["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_OUTCOME
+    )
+    assert (
+        blocker_synthesis_packet["strict_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_STRICT_OUTCOME
+    )
     assert (
         blocker_synthesis_packet["prepared_review_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_REVIEW_OUTCOME
@@ -7917,8 +8031,14 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         blocker_synthesis_packet["prepared_review_strict_result"]
         == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_REVIEW_STRICT_OUTCOME
     )
-    assert blocker_synthesis_packet["selected_next_target"] == FINAL_LIVE_TARGET
-    assert blocker_synthesis_packet["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        blocker_synthesis_packet["selected_next_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET
+    )
+    assert (
+        blocker_synthesis_packet["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_KIND
+    )
     assert (
         blocker_synthesis_packet[
             "open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_packet_prepared"
@@ -7999,6 +8119,149 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert blocker_synthesis_packet["master_action_promoted"] == "no"
     _assert_registry_nonclaims(blocker_synthesis_packet)
 
+    blocker_synthesis_review = workstream(
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET,
+        payload,
+    )
+    assert blocker_synthesis_review["status"] == "paused"
+    assert (
+        blocker_synthesis_review["active_lane"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET
+    )
+    assert (
+        blocker_synthesis_review["authorized_next_strict_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET
+    )
+    assert (
+        blocker_synthesis_review["consumed_target"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_TARGET
+    )
+    assert (
+        blocker_synthesis_review["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_KIND
+    )
+    assert (
+        blocker_synthesis_review["authorization_evidence"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_EVIDENCE
+    )
+    assert (
+        blocker_synthesis_review["report"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_REPORT
+    )
+    assert (
+        blocker_synthesis_review["packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_OUTCOME
+    )
+    assert (
+        blocker_synthesis_review["strict_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_STRICT_OUTCOME
+    )
+    assert (
+        blocker_synthesis_review["prepared_packet_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_OUTCOME
+    )
+    assert (
+        blocker_synthesis_review["prepared_packet_strict_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_PACKET_STRICT_OUTCOME
+    )
+    assert blocker_synthesis_review["selected_next_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        blocker_synthesis_review["selected_next_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_KIND
+    )
+    assert (
+        blocker_synthesis_review[
+            "open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_synthesis_accepted_as_blocker_synthesis_only"
+        ]
+        in (True, "yes")
+    )
+    assert blocker_synthesis_review["blocker_response_route_option_count"] == 5
+    assert blocker_synthesis_review["blocker_response_route_selection_packet_selected"] in (
+        True,
+        "yes",
+    )
+    assert blocker_synthesis_review["source_validated"] == "no"
+    assert blocker_synthesis_review["open_system_decoherence_lindblad_form_imported"] == "no"
+    assert blocker_synthesis_review["tau_baseline_value_computed"] == "no"
+    assert blocker_synthesis_review["ccft_validated"] == "no"
+    assert blocker_synthesis_review["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(blocker_synthesis_review)
+
+    route_selection_packet = workstream(FINAL_PREVIOUS_TARGET, payload)
+    assert route_selection_packet["status"] == "paused"
+    assert route_selection_packet["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert (
+        route_selection_packet["authorized_next_strict_target"]
+        == FINAL_PREVIOUS_TARGET
+    )
+    assert route_selection_packet["consumed_target"] == FINAL_PREVIOUS_TARGET
+    assert (
+        route_selection_packet["consumed_target_kind"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_KIND
+    )
+    assert route_selection_packet["authorization_evidence"] == FINAL_EVIDENCE
+    assert route_selection_packet["report"] == FINAL_REPORT
+    assert route_selection_packet["packet_result"] == FINAL_OUTCOME
+    assert route_selection_packet["strict_packet_result"] == FINAL_STRICT_OUTCOME
+    assert (
+        route_selection_packet["prepared_review_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_OUTCOME
+    )
+    assert (
+        route_selection_packet["prepared_review_strict_result"]
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_REVIEW_STRICT_OUTCOME
+    )
+    assert route_selection_packet["selected_next_target"] == FINAL_LIVE_TARGET
+    assert route_selection_packet["selected_next_target_kind"] == FINAL_KIND
+    assert (
+        route_selection_packet[
+            "open_system_decoherence_blocker_response_route_selection_packet_prepared"
+        ]
+        == "yes"
+    )
+    assert route_selection_packet["open_system_decoherence_blocker_response_route_selection_only"] == "yes"
+    assert route_selection_packet["selected_blocker_response_route"] == "targeted_literature_review_expansion"
+    assert route_selection_packet["selected_blocker_response_route_id"] == "OSD-BLOCKER-RESP-TARGETED-LITERATURE-REVIEW-v0"
+    assert route_selection_packet["blocker_response_route_selection_only"] == "yes"
+    assert route_selection_packet["blocker_response_route_selection_executed_as_selection_only"] == "yes"
+    assert route_selection_packet["blocker_response_route_selection_option_count"] == 7
+    assert route_selection_packet["blocker_response_route_selection_selected_route_count"] == 1
+    assert route_selection_packet["blocker_response_route_selection_deferred_route_count"] == 6
+    assert (
+        route_selection_packet["selected_future_response_route_target"]
+        == "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_targeted_literature_review_expansion_packet"
+    )
+    assert (
+        route_selection_packet["selected_future_response_route_target_kind"]
+        == "selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_targeted_literature_review_expansion_packet"
+    )
+    assert route_selection_packet["targeted_literature_review_expansion_selected"] == "yes"
+    assert route_selection_packet["targeted_literature_review_expansion_selected_only"] == "yes"
+    assert route_selection_packet["targeted_literature_review_expansion_executed"] == "no"
+    assert route_selection_packet["targeted_literature_review_executed"] == "no"
+    route_selection_rows = route_selection_packet[
+        "baseline_component_equation_source_applicability_open_system_decoherence_blocker_response_route_selection_rows"
+    ]
+    assert {row["route_label"] for row in route_selection_rows} == {
+        "source_search_execution",
+        "requirement_relaxation",
+        "slot_splitting",
+        "blocked_hold_closeout",
+        "targeted_literature_review_expansion",
+        "candidate_source_family_replacement",
+        "baseline_component_decomposition",
+    }
+    assert {row["execution_status"] for row in route_selection_rows} == {
+        "not_executed"
+    }
+    assert route_selection_packet["blocker_remediation_executed"] == "no"
+    assert route_selection_packet["source_validated"] == "no"
+    assert route_selection_packet["open_system_decoherence_lindblad_form_imported"] == "no"
+    assert route_selection_packet["tau_baseline_value_computed"] == "no"
+    assert route_selection_packet["ccft_validated"] == "no"
+    assert route_selection_packet["master_action_promoted"] == "no"
+    _assert_registry_nonclaims(route_selection_packet)
+
     active = workstream(FINAL_LIVE_TARGET, payload)
     assert active["status"] == "active"
     assert active["active_lane"] == FINAL_LIVE_TARGET
@@ -8006,7 +8269,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_SYNTHESIS_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_RESPONSE_ROUTE_SELECTION_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -8232,7 +8495,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["source_candidates_discovered"] == "yes"
     assert active["source_candidates_listed"] == "yes"
     assert active["source_candidates_listed_count"] == 6
-    assert active["source_search_execution_authorized"] == "yes"
+    assert active["source_search_execution_authorized"] == "no"
     assert active["source_search_executed"] == "yes"
     assert active["replacement_source_search_executed"] == "yes"
     assert active["source_candidates_listed_only"] == "yes"
