@@ -64,6 +64,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_review": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review": "2026-07-05T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet": "2026-07-05T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -1423,6 +1424,29 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_targeted_"
     "literature_review_expansion_candidate_discovery_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "targeted_literature_review_expansion_candidate_discovery_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_targeted_"
+    "literature_review_expansion_candidate_discovery_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_TARGETED_"
+    "LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_PREPARED_LISTS_"
+    "TARGETED_LITERATURE_CANDIDATES_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_"
+    "ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_LITERATURE_EXPANSION_CANDIDATE_DISCOVERY_PACKET_PREPARED_"
+    "CANDIDATE_DISCOVERY_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_TARGETED_LITERATURE_REVIEW_EXPANSION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_"
@@ -7404,6 +7428,384 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "statistical validation, claim residual separation, validate CCFT, or "
     "promote the master action."
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_FIELDS = [
+    "candidate_source_id",
+    "source_title",
+    "source_locator",
+    "source_type",
+    "targeted_blocker_class",
+    "reason_for_consideration",
+    "claimed_scope_of_source",
+    "known_applicability_warning",
+    "missing_validation_items",
+    "not_adopted_boundary",
+    "not_imported_boundary",
+    "not_validated_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ROWS = [
+    {
+        "candidate_source_id": "OSD-TLR-CAND-BREUER-PETRUCCIONE-OPEN-SYSTEMS-v0",
+        "source_title": "Breuer and Petruccione, The Theory of Open Quantum Systems",
+        "source_locator": (
+            "Oxford University Press book record, ISBN 9780199213900, "
+            "https://global.oup.com/academic/product/the-theory-of-open-"
+            "quantum-systems-9780199213900"
+        ),
+        "source_type": "textbook_or_monograph",
+        "targeted_blocker_class": "regime_mismatch",
+        "reason_for_consideration": (
+            "broad open-system synthesis that may help separate Markovian, "
+            "weak-coupling, projection-operator, and non-Markovian regime "
+            "assumptions before a later applicability review"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for open quantum system dynamics, not a "
+            "validated tau_baseline source"
+        ),
+        "known_applicability_warning": (
+            "textbook coverage is broad and must not be used as a generic "
+            "equation import; later work must identify exact equation, "
+            "assumption, and platform-regime matches"
+        ),
+        "missing_validation_items": [
+            "specific chapter and equation location",
+            "regime assumptions and limits",
+            "platform match",
+            "parameter and unit map",
+            "observable binding",
+            "primary-source provenance",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no source adopted or replacing prior "
+            "candidates"
+        ),
+        "not_imported_boundary": (
+            "no textbook equation, Lindblad form, or master-equation form "
+            "imported"
+        ),
+        "not_validated_boundary": (
+            "not validated for the selected CCFT empirical-discriminator "
+            "tau_baseline role"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-DE-VEGA-ALONSO-NONMARKOV-v0",
+        "source_title": "de Vega and Alonso, Dynamics of non-Markovian open quantum systems",
+        "source_locator": "https://doi.org/10.1103/RevModPhys.89.015001",
+        "source_type": "scholarly_review_article",
+        "targeted_blocker_class": "missing_parameter_mapping",
+        "reason_for_consideration": (
+            "review article may expose correlation functions, spectral "
+            "densities, memory kernels, and non-Markovian method parameters "
+            "that could support a later parameter-map packet"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for non-Markovian open-system dynamics and "
+            "method families only"
+        ),
+        "known_applicability_warning": (
+            "review breadth does not establish that any parameter set maps to "
+            "the selected mesoscopic coherence-lifetime observable"
+        ),
+        "missing_validation_items": [
+            "specific candidate model selection",
+            "parameter-source provenance",
+            "unit inventory",
+            "uncertainty fields",
+            "regime and bath assumptions",
+            "observable-to-timescale binding",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no non-Markovian source family "
+            "adopted"
+        ),
+        "not_imported_boundary": (
+            "no non-Markovian equation, memory kernel, or master equation "
+            "imported"
+        ),
+        "not_validated_boundary": (
+            "not validated as a parameter source for tau_baseline"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-SCHLOSSHAUER-QUANTUM-DECOHERENCE-v0",
+        "source_title": "Schlosshauer, Quantum decoherence",
+        "source_locator": "https://doi.org/10.1016/j.physrep.2019.10.001",
+        "source_type": "scholarly_review_article",
+        "targeted_blocker_class": "missing_observable_binding",
+        "reason_for_consideration": (
+            "decoherence review may help identify how coherence observables, "
+            "decoherence timescales, environmental monitoring, and "
+            "experimental signatures are discussed in the literature"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for decoherence concepts, model families, and "
+            "experimental observation context only"
+        ),
+        "known_applicability_warning": (
+            "overview material cannot by itself bind the selected observable "
+            "to a tau_baseline computation or validate a residual formula"
+        ),
+        "missing_validation_items": [
+            "specific observable definition",
+            "coherence-lifetime extraction rule",
+            "model equation provenance",
+            "platform-specific measurement semantics",
+            "parameter and unit map",
+            "residual-interface review",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no decoherence observable source "
+            "adopted"
+        ),
+        "not_imported_boundary": (
+            "no decoherence model equation or timescale formula imported"
+        ),
+        "not_validated_boundary": (
+            "not validated as an observable-binding authority"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-ARNDT-HORNBERGER-SUPERPOSITIONS-v0",
+        "source_title": "Arndt and Hornberger, Testing the limits of quantum mechanical superpositions",
+        "source_locator": "https://doi.org/10.1038/nphys2863",
+        "source_type": "scholarly_review_article",
+        "targeted_blocker_class": "missing_mesoscopic_platform_fit",
+        "reason_for_consideration": (
+            "candidate review of mesoscopic and macroscopic superposition "
+            "tests may help scope platform assumptions, environmental "
+            "couplings, and experimental decoherence limits"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for superposition-test platforms and "
+            "decoherence-limit context only"
+        ),
+        "known_applicability_warning": (
+            "platform survey does not establish that its examples match the "
+            "selected controlled mesoscopic coherence platform or supply a "
+            "baseline equation"
+        ),
+        "missing_validation_items": [
+            "selected platform match",
+            "system-size and environmental-regime match",
+            "measurement observable match",
+            "parameter provenance",
+            "equation-source traceability",
+            "applicability review",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no mesoscopic-platform source adopted"
+        ),
+        "not_imported_boundary": (
+            "no platform decoherence equation or empirical limit imported"
+        ),
+        "not_validated_boundary": (
+            "not validated as matching the future tau_baseline platform"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-WISEMAN-MILBURN-MEASUREMENT-CONTROL-v0",
+        "source_title": "Wiseman and Milburn, Quantum Measurement and Control",
+        "source_locator": "https://doi.org/10.1017/CBO9780511813948",
+        "source_type": "textbook_or_monograph",
+        "targeted_blocker_class": "missing_measurement_feedback_handling",
+        "reason_for_consideration": (
+            "measurement and feedback control monograph may help distinguish "
+            "decoherence, continuous measurement, quantum trajectories, and "
+            "feedback-modified dynamics before any later source adoption"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for measurement and feedback-control theory "
+            "only"
+        ),
+        "known_applicability_warning": (
+            "measurement-control formalisms may belong to a separate baseline "
+            "component and cannot be folded into open-system decoherence "
+            "without a future slot-boundary review"
+        ),
+        "missing_validation_items": [
+            "measurement-feedback slot separation",
+            "observable and readout model",
+            "feedback law assumptions",
+            "rate and unit mapping",
+            "platform measurement regime",
+            "no-double-counting review",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no measurement-feedback source "
+            "adopted"
+        ),
+        "not_imported_boundary": (
+            "no stochastic master equation, trajectory equation, or feedback "
+            "equation imported"
+        ),
+        "not_validated_boundary": (
+            "not validated for measurement-feedback handling in tau_baseline"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-ESPOSITO-HARBOLA-MUKAMEL-QTHERMO-v0",
+        "source_title": (
+            "Esposito, Harbola, and Mukamel, Nonequilibrium fluctuations, "
+            "fluctuation theorems, and counting statistics in quantum systems"
+        ),
+        "source_locator": "https://doi.org/10.1103/RevModPhys.81.1665",
+        "source_type": "scholarly_review_article",
+        "targeted_blocker_class": "missing_thermodynamic_accounting",
+        "reason_for_consideration": (
+            "quantum nonequilibrium and counting-statistics review may help "
+            "scope heat, work, particle, and energy-accounting requirements "
+            "for future open-system baseline constraints"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for quantum thermodynamic accounting and "
+            "fluctuation-statistics context only"
+        ),
+        "known_applicability_warning": (
+            "thermodynamic counting-statistics machinery may be too broad or "
+            "may target transport setups rather than the selected coherence "
+            "lifetime baseline"
+        ),
+        "missing_validation_items": [
+            "thermodynamic variables required by the baseline slot",
+            "heat/work/entropy accounting semantics",
+            "system-bath boundary definition",
+            "parameter and unit map",
+            "measurement interface",
+            "platform applicability review",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no thermodynamic accounting source "
+            "adopted"
+        ),
+        "not_imported_boundary": (
+            "no fluctuation theorem, counting-statistics expression, or "
+            "master equation imported"
+        ),
+        "not_validated_boundary": (
+            "not validated as thermodynamic accounting for tau_baseline"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-JACOBS-STECK-CONTINUOUS-MEASUREMENT-v0",
+        "source_title": "Jacobs and Steck, A straightforward introduction to continuous quantum measurement",
+        "source_locator": "https://doi.org/10.1080/00107510601101934",
+        "source_type": "well_cited_methods_or_platform_paper",
+        "targeted_blocker_class": "missing_residual_formula_connection",
+        "reason_for_consideration": (
+            "continuous-measurement methods paper may help scope future links "
+            "between measured records, inferred coherence behavior, and any "
+            "residual-interface variables without validating a baseline"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for continuous-measurement formalism and "
+            "readout semantics only"
+        ),
+        "known_applicability_warning": (
+            "measurement-readout methods do not supply an open-system "
+            "decoherence tau_baseline or validate the normalized residual "
+            "formula"
+        ),
+        "missing_validation_items": [
+            "residual-interface variable map",
+            "readout-to-observable binding",
+            "noise and uncertainty model",
+            "measurement-backaction separation",
+            "baseline-component boundary review",
+            "statistical validation plan",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no residual connection source adopted"
+        ),
+        "not_imported_boundary": (
+            "no continuous-measurement equation, stochastic equation, or "
+            "residual formula imported"
+        ),
+        "not_validated_boundary": (
+            "not validated as a residual-formula connection"
+        ),
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-RIVAS-HUELGA-PLENIO-NONMARKOV-v0",
+        "source_title": (
+            "Rivas, Huelga, and Plenio, Quantum non-Markovianity: "
+            "characterization, quantification and detection"
+        ),
+        "source_locator": "https://doi.org/10.1088/0034-4885/77/9/094001",
+        "source_type": "scholarly_review_article",
+        "targeted_blocker_class": "domain_assumption_mismatch",
+        "reason_for_consideration": (
+            "non-Markovianity review may help classify divisibility, memory, "
+            "domain, and detection assumptions before any later domain "
+            "restriction or source applicability review"
+        ),
+        "claimed_scope_of_source": (
+            "candidate locator for non-Markovianity definitions, witnesses, "
+            "and domain distinctions only"
+        ),
+        "known_applicability_warning": (
+            "non-Markovianity diagnostics do not by themselves validate an "
+            "open-system decoherence source or define a tau_baseline model"
+        ),
+        "missing_validation_items": [
+            "domain assumptions selected",
+            "Markovianity or non-Markovianity test relevance",
+            "observable and platform mapping",
+            "parameter provenance",
+            "equation-source traceability",
+            "future applicability review",
+        ],
+        "not_adopted_boundary": (
+            "candidate source row only; no domain-assumption source adopted"
+        ),
+        "not_imported_boundary": (
+            "no non-Markovianity witness, equation, or diagnostic imported"
+        ),
+        "not_validated_boundary": (
+            "not validated as resolving domain or assumption mismatch"
+        ),
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ITEMS = [
+    "targeted literature-review expansion candidate-discovery packet prepared",
+    "literature-review expansion scope result review consumed",
+    "eight targeted literature candidates listed as candidates only",
+    "one candidate row linked to each accepted blocker class",
+    "source locators recorded",
+    "source types recorded",
+    "reasons for consideration recorded",
+    "claimed source scope recorded as candidate locator scope only",
+    "known applicability warnings retained",
+    "missing validation items retained",
+    "not-adopted boundaries retained",
+    "not-imported boundaries retained",
+    "not-validated boundaries retained",
+    "zero sources validated",
+    "zero sources accepted or adopted",
+    "zero sources replaced",
+    "zero equations imported or adopted",
+    "no Lindblad or master-equation form imported",
+    "no empirical fit",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_BOUNDARY = (
+    "This packet executes candidate discovery only for the targeted "
+    "literature-review expansion. It lists possible literature candidates "
+    "for the eight accepted open-system decoherence blocker classes and "
+    "records source locators, reasons for consideration, warnings, missing "
+    "validation items, and explicit not-adopted, not-imported, and "
+    "not-validated boundaries. It does not validate a source, rank a source "
+    "as accepted, replace the old source family, import a Lindblad equation, "
+    "import a master equation, adopt any equation, fit data, compute "
+    "tau_baseline, define a completed baseline model, claim residual "
+    "separation, validate CCFT, or promote the master action."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -11281,6 +11683,63 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet_result_review"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_"
+            "20260705_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_"
+            "DISCOVERY_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTOpenSystemDecoherenceTargetedLiteratureReviewExpansionCandidateDiscoveryPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_"
+            "20260705_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -11357,6 +11816,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -11542,6 +12002,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review": (
         "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence targeted literature-review expansion candidate-discovery packet"
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence targeted literature-review expansion candidate-discovery packet result review"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -11714,6 +12177,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -11782,6 +12246,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -11848,6 +12313,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -11912,6 +12378,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_replacement_source_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -21860,6 +22327,223 @@ def build_stage_payload(
                     "candidate-discovery packet that may execute source "
                     "discovery only while preserving not-validated and "
                     "not-adopted status for every source and equation."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
+    ):
+        prior_review_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        candidate_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ROWS
+        )
+        blocker_classes = sorted({row["targeted_blocker_class"] for row in candidate_rows})
+        source_types = sorted({row["source_type"] for row in candidate_rows})
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet_result_review_consumed": True,
+                "prepared_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_REVIEW_OUTCOME
+                ),
+                "prepared_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_REVIEW_STRICT_OUTCOME
+                ),
+                "targeted_literature_review_expansion_scope_review_consumed": True,
+                "targeted_literature_review_expansion_candidate_discovery_packet_prepared": True,
+                "targeted_literature_review_expansion_candidate_discovery_only": True,
+                "targeted_literature_review_expansion_candidate_discovery_executed": True,
+                "targeted_literature_review_expansion_candidate_discovery_packet_listed_candidates_only": True,
+                "targeted_literature_candidates_for_future_review_only": True,
+                "targeted_literature_candidates_recorded_as_unvalidated_only": True,
+                "targeted_literature_candidates_not_adopted": True,
+                "candidate_discovery_status": "executed_candidate_listing_only",
+                "literature_review_execution_scope": "candidate_discovery_only",
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_field_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_rows": candidate_rows,
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_row_count": len(
+                    candidate_rows
+                ),
+                "targeted_literature_candidate_source_ids": [
+                    row["candidate_source_id"] for row in candidate_rows
+                ],
+                "targeted_literature_candidate_source_count": len(candidate_rows),
+                "targeted_literature_candidate_source_types": source_types,
+                "targeted_literature_candidate_source_type_count": len(source_types),
+                "targeted_literature_candidate_source_locator_count": sum(
+                    1 for row in candidate_rows if row["source_locator"]
+                ),
+                "targeted_literature_candidate_blocker_class_count": len(blocker_classes),
+                "targeted_literature_candidate_blocker_classes": blocker_classes,
+                "targeted_literature_candidate_missing_validation_item_count": sum(
+                    len(row["missing_validation_items"]) for row in candidate_rows
+                ),
+                "targeted_literature_candidate_not_adopted_boundary_count": sum(
+                    1 for row in candidate_rows if row["not_adopted_boundary"]
+                ),
+                "targeted_literature_candidate_not_imported_boundary_count": sum(
+                    1 for row in candidate_rows if row["not_imported_boundary"]
+                ),
+                "targeted_literature_candidate_not_validated_boundary_count": sum(
+                    1 for row in candidate_rows if row["not_validated_boundary"]
+                ),
+                "targeted_literature_candidate_reason_count": sum(
+                    1 for row in candidate_rows if row["reason_for_consideration"]
+                ),
+                "targeted_literature_candidate_warning_count": sum(
+                    1 for row in candidate_rows if row["known_applicability_warning"]
+                ),
+                "targeted_literature_candidate_scope_claims_recorded_as_candidate_locator_scope_only": True,
+                "targeted_literature_candidate_discovery_touches_all_blocker_classes": (
+                    len(blocker_classes) == 8
+                ),
+                "source_search_candidate_discovery_executed": True,
+                "source_discovery_executed": True,
+                "source_search_executed": True,
+                "source_search_execution_performed": True,
+                "source_search_execution_authorized": True,
+                "targeted_literature_source_discovery_executed": True,
+                "source_candidates_discovered": True,
+                "source_candidates_listed": True,
+                "source_candidates_listed_only": True,
+                "source_candidates_for_future_review_only": True,
+                "source_candidates_listed_count": len(candidate_rows),
+                "candidate_discovery_executed": True,
+                "candidate_source_rows_listed_only": True,
+                "source_candidate_descriptions_recorded": True,
+                "source_candidate_reasons_recorded": True,
+                "source_candidate_applicability_warnings_recorded": True,
+                "source_candidate_missing_validation_items_recorded": True,
+                "source_candidate_not_adopted_boundaries_recorded": True,
+                "source_candidate_not_imported_boundaries_recorded": True,
+                "source_candidate_not_validated_boundaries_recorded": True,
+                "literature_review_executed": False,
+                "targeted_literature_review_expansion_executed": False,
+                "targeted_literature_review_executed": False,
+                "full_literature_review_executed": False,
+                "literature_review_validation_executed": False,
+                "blocker_remediation_executed": False,
+                "blockers_remediated": False,
+                "source_candidate_replacement_performed": False,
+                "source_candidates_replaced_count": 0,
+                "source_replacement_execution_authorized": False,
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_validation_executed": False,
+                "source_validation_performed": False,
+                "source_validation_accepted": False,
+                "candidate_source_accepted": False,
+                "candidate_source_validated": False,
+                "candidate_source_adopted": False,
+                "candidate_source_applicability_validated": False,
+                "candidate_source_applicability_accepted": False,
+                "candidate_source_accepted_as_applicable": False,
+                "candidate_equation_imported": False,
+                "candidate_equation_adopted": False,
+                "standard_open_system_source_validated": False,
+                "literature_source_validated": False,
+                "standard_open_system_equations_imported": False,
+                "standard_open_system_equation_adopted": False,
+                "literature_equations_adopted": False,
+                "literature_equation_validated": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "empirical_fit_validated": False,
+                "fit_model_declared": False,
+                "data_source_selected": False,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "component_equations_correctness_claimed": False,
+                "component_equation_correctness_claimed": False,
+                "component_equation_correctness_accepted": False,
+                "component_equations_physical_adequacy_claimed": False,
+                "component_equations_physical_adequacy_accepted": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "equation_sources_accepted_as_physically_adequate": False,
+                "equation_slot_adequacy_claimed": False,
+                "equation_slot_adequacy_accepted": False,
+                "component_equation_independence_claimed": False,
+                "component_equation_independence_accepted": False,
+                "component_independence_claimed": False,
+                "baseline_component_independence_claimed": False,
+                "open_system_decoherence_gap_resolved": False,
+                "open_system_decoherence_source_path_resolved": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_source_accepted": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_component_solved": False,
+                "open_system_decoherence_lindblad_form_imported": False,
+                "open_system_decoherence_master_equation_form_imported": False,
+                "standard_open_system_theory_import_work_executed": False,
+                "standard_theory_import_work_executed": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet": False,
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_item_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The targeted literature-review expansion candidate-"
+                    "discovery packet lists possible source candidates for "
+                    "future review only. The next disciplined step is result "
+                    "review of those candidate rows, not source validation, "
+                    "source adoption or replacement, equation adoption, "
+                    "Lindblad import, tau_baseline computation, CCFT "
+                    "validation, or master-action promotion."
                 ),
             }
         )
