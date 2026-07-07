@@ -66,6 +66,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet": "2026-07-05T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review": "2026-07-05T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet": "2026-07-05T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -1471,6 +1472,29 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_targeted_"
     "literature_review_expansion_candidate_triage_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "targeted_literature_review_expansion_candidate_triage_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_targeted_"
+    "literature_review_expansion_candidate_triage_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_TARGETED_"
+    "LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_PREPARED_TRIAGES_"
+    "TARGETED_LITERATURE_CANDIDATES_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_"
+    "ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_LITERATURE_EXPANSION_CANDIDATE_TRIAGE_PACKET_PREPARED_TRIAGE_"
+    "ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_MASTER_ACTION_"
+    "PROMOTION"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_REQUIREMENT_CROSSWALK_BLOCKER_TARGETED_LITERATURE_REVIEW_EXPANSION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_"
@@ -7830,6 +7854,223 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "tau_baseline, define a completed baseline model, claim residual "
     "separation, validate CCFT, or promote the master action."
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_FIELDS = [
+    "candidate_source_id",
+    "targeted_blocker_class",
+    "likely_source_role",
+    "likely_relevance",
+    "main_applicability_warning",
+    "missing_validation_items",
+    "triage_status",
+    "not_validated_boundary",
+    "not_adopted_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_ROWS = [
+    {
+        "candidate_source_id": "OSD-TLR-CAND-BREUER-PETRUCCIONE-OPEN-SYSTEMS-v0",
+        "targeted_blocker_class": "regime_mismatch",
+        "likely_source_role": "open_system_framework_reference",
+        "likely_relevance": "medium_relevance_unvalidated",
+        "main_applicability_warning": (
+            "broad textbook framework must be narrowed to exact assumptions, "
+            "equations, and platform regime before any baseline use"
+        ),
+        "missing_validation_items": [
+            "specific chapter and equation location",
+            "regime assumptions and limits",
+            "platform match",
+            "parameter and unit map",
+            "observable binding",
+            "primary-source provenance",
+        ],
+        "triage_status": "requires_domain_match_review",
+        "not_validated_boundary": "not validated for the selected tau_baseline role",
+        "not_adopted_boundary": "not adopted as a baseline source or source replacement",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-DE-VEGA-ALONSO-NONMARKOV-v0",
+        "targeted_blocker_class": "missing_parameter_mapping",
+        "likely_source_role": "non_markovian_parameter_mapping_candidate",
+        "likely_relevance": "high_relevance_unvalidated",
+        "main_applicability_warning": (
+            "method and parameter families still need exact observable, "
+            "units, uncertainty, and platform binding"
+        ),
+        "missing_validation_items": [
+            "specific candidate model selection",
+            "parameter-source provenance",
+            "unit inventory",
+            "uncertainty fields",
+            "regime and bath assumptions",
+            "observable-to-timescale binding",
+        ],
+        "triage_status": "requires_parameter_mapping_review",
+        "not_validated_boundary": "not validated as a parameter source",
+        "not_adopted_boundary": "not adopted as a non-Markovian baseline source",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-SCHLOSSHAUER-QUANTUM-DECOHERENCE-v0",
+        "targeted_blocker_class": "missing_observable_binding",
+        "likely_source_role": "decoherence_observable_context_reference",
+        "likely_relevance": "medium_relevance_unvalidated",
+        "main_applicability_warning": (
+            "review context cannot by itself bind the selected observable to "
+            "a computable tau_baseline or validate the residual interface"
+        ),
+        "missing_validation_items": [
+            "specific observable definition",
+            "coherence-lifetime extraction rule",
+            "model equation provenance",
+            "platform-specific measurement semantics",
+            "parameter and unit map",
+            "residual-interface review",
+        ],
+        "triage_status": "background_only_candidate",
+        "not_validated_boundary": "not validated as an observable-binding authority",
+        "not_adopted_boundary": "not adopted as a decoherence observable source",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-ARNDT-HORNBERGER-SUPERPOSITIONS-v0",
+        "targeted_blocker_class": "missing_mesoscopic_platform_fit",
+        "likely_source_role": "mesoscopic_platform_context_candidate",
+        "likely_relevance": "high_relevance_unvalidated",
+        "main_applicability_warning": (
+            "platform survey may not match the selected controlled "
+            "mesoscopic coherence platform or supply a baseline equation"
+        ),
+        "missing_validation_items": [
+            "selected platform match",
+            "system-size and environmental-regime match",
+            "measurement observable match",
+            "parameter provenance",
+            "equation-source traceability",
+            "applicability review",
+        ],
+        "triage_status": "narrow_regime_candidate",
+        "not_validated_boundary": "not validated as platform-matched",
+        "not_adopted_boundary": "not adopted as a mesoscopic-platform source",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-WISEMAN-MILBURN-MEASUREMENT-CONTROL-v0",
+        "targeted_blocker_class": "missing_measurement_feedback_handling",
+        "likely_source_role": "measurement_feedback_formalism_candidate",
+        "likely_relevance": "high_relevance_unvalidated",
+        "main_applicability_warning": (
+            "measurement-feedback dynamics may belong to a distinct baseline "
+            "component and require slot-boundary review before use"
+        ),
+        "missing_validation_items": [
+            "measurement-feedback slot separation",
+            "observable and readout model",
+            "feedback law assumptions",
+            "rate and unit mapping",
+            "platform measurement regime",
+            "no-double-counting review",
+        ],
+        "triage_status": "requires_measurement_feedback_review",
+        "not_validated_boundary": "not validated for measurement-feedback handling",
+        "not_adopted_boundary": "not adopted as a measurement-feedback source",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-ESPOSITO-HARBOLA-MUKAMEL-QTHERMO-v0",
+        "targeted_blocker_class": "missing_thermodynamic_accounting",
+        "likely_source_role": "thermodynamic_accounting_context_candidate",
+        "likely_relevance": "medium_relevance_unvalidated",
+        "main_applicability_warning": (
+            "nonequilibrium thermodynamic machinery may target transport "
+            "setups rather than coherence-lifetime baseline accounting"
+        ),
+        "missing_validation_items": [
+            "thermodynamic variables required by the baseline slot",
+            "heat/work/entropy accounting semantics",
+            "system-bath boundary definition",
+            "parameter and unit map",
+            "measurement interface",
+            "platform applicability review",
+        ],
+        "triage_status": "requires_thermodynamic_accounting_review",
+        "not_validated_boundary": "not validated as thermodynamic accounting",
+        "not_adopted_boundary": "not adopted as a thermodynamic accounting source",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-JACOBS-STECK-CONTINUOUS-MEASUREMENT-v0",
+        "targeted_blocker_class": "missing_residual_formula_connection",
+        "likely_source_role": "continuous_measurement_residual_interface_candidate",
+        "likely_relevance": "medium_relevance_unvalidated",
+        "main_applicability_warning": (
+            "readout methods do not supply an open-system tau_baseline and "
+            "do not validate the normalized residual formula"
+        ),
+        "missing_validation_items": [
+            "residual-interface variable map",
+            "readout-to-observable binding",
+            "noise and uncertainty model",
+            "measurement-backaction separation",
+            "baseline-component boundary review",
+            "statistical validation plan",
+        ],
+        "triage_status": "requires_parameter_mapping_review",
+        "not_validated_boundary": "not validated as a residual-formula connection",
+        "not_adopted_boundary": "not adopted as a residual-interface source",
+    },
+    {
+        "candidate_source_id": "OSD-TLR-CAND-RIVAS-HUELGA-PLENIO-NONMARKOV-v0",
+        "targeted_blocker_class": "domain_assumption_mismatch",
+        "likely_source_role": "non_markovian_domain_assumption_candidate",
+        "likely_relevance": "medium_relevance_unvalidated",
+        "main_applicability_warning": (
+            "non-Markovianity diagnostics do not by themselves resolve "
+            "source-domain assumptions or define a tau_baseline model"
+        ),
+        "missing_validation_items": [
+            "domain assumptions selected",
+            "Markovianity or non-Markovianity test relevance",
+            "observable and platform mapping",
+            "parameter provenance",
+            "equation-source traceability",
+            "future applicability review",
+        ],
+        "triage_status": "requires_domain_match_review",
+        "not_validated_boundary": "not validated as resolving domain mismatch",
+        "not_adopted_boundary": "not adopted as a domain-assumption source",
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_ITEMS = [
+    "targeted literature-review expansion candidate-triage packet prepared",
+    "candidate-discovery result review consumed",
+    "eight discovered targeted literature candidates triaged",
+    "one triage row linked to each accepted blocker class",
+    "likely source roles recorded",
+    "likely relevance labels recorded as unvalidated triage labels only",
+    "main applicability warnings retained",
+    "missing validation items retained",
+    "triage statuses recorded",
+    "not-validated boundaries retained",
+    "not-adopted boundaries retained",
+    "zero sources validated",
+    "zero sources selected as final",
+    "zero sources adopted or replaced",
+    "zero equations imported or adopted",
+    "no Lindblad or master-equation form imported",
+    "no empirical fit",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_BOUNDARY = (
+    "This packet triages the eight targeted literature-review expansion "
+    "candidate rows by likely source role, likely relevance, applicability "
+    "warning, missing validation items, and triage status. The triage labels "
+    "are source-judgment preparation only. The packet does not validate a "
+    "source, select a final source, replace an existing source, import a "
+    "Lindblad equation, import a master equation, adopt any equation, fit "
+    "data, compute tau_baseline, define a completed baseline model, claim "
+    "residual separation, validate CCFT, or promote the master action."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -11822,6 +12063,63 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_"
+            "20260705_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_"
+            "TRIAGE_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTOpenSystemDecoherenceTargetedLiteratureReviewExpansionCandidateTriagePacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_PACKET_"
+            "20260705_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -11900,6 +12198,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -12091,6 +12390,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review": (
         "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence targeted literature-review expansion candidate triage packet"
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence targeted literature-review expansion candidate triage packet result review"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -12265,6 +12567,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -12335,6 +12638,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -12403,6 +12707,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -12469,6 +12774,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -22855,6 +23161,224 @@ def build_stage_payload(
                     "validation, no equation adoption, no tau_baseline "
                     "computation, no CCFT validation, and no master-action "
                     "promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet"
+    ):
+        prior_review_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        candidate_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ROWS
+        )
+        triage_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_ROWS
+        )
+        blocker_classes = sorted({row["targeted_blocker_class"] for row in triage_rows})
+        triage_statuses = sorted({row["triage_status"] for row in triage_rows})
+        likely_roles = sorted({row["likely_source_role"] for row in triage_rows})
+        likely_relevance = sorted({row["likely_relevance"] for row in triage_rows})
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet_result_review_consumed": True,
+                "prepared_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_OUTCOME
+                ),
+                "prepared_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_REVIEW_STRICT_OUTCOME
+                ),
+                "targeted_literature_review_expansion_candidate_discovery_packet_accepted": True,
+                "targeted_literature_candidate_triage_packet_selected": True,
+                "targeted_literature_candidate_triage_packet_prepared": True,
+                "targeted_literature_candidate_triage_only": True,
+                "targeted_literature_candidate_triage_executed": True,
+                "targeted_literature_candidate_triage_executed_as_classification_only": True,
+                "targeted_literature_candidate_triage_rows_recorded": True,
+                "targeted_literature_candidate_triage_rows_recorded_as_unvalidated_only": True,
+                "targeted_literature_candidate_triage_statuses_recorded": True,
+                "targeted_literature_candidate_triage_candidates_not_validated": True,
+                "targeted_literature_candidate_triage_candidates_not_adopted": True,
+                "targeted_literature_candidate_triage_review_selected": True,
+                "source_candidate_triage_packet_selected": True,
+                "source_candidate_triage_packet_prepared": True,
+                "source_candidate_triage_executed": True,
+                "source_candidate_triage_executed_as_role_classification_only": True,
+                "source_candidate_roles_classified": True,
+                "source_candidate_roles_classified_only": True,
+                "source_candidate_likely_regimes_classified": False,
+                "source_candidate_likely_usefulness_classified": True,
+                "source_candidate_triage_risks_classified": True,
+                "source_candidate_next_review_needs_recorded": True,
+                "source_candidate_triage_review_selected": True,
+                "source_candidate_triage_packet_accepted": False,
+                "source_candidate_triage_accepted_only": False,
+                "source_candidate_role_classification_accepted_only": False,
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_field_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_rows": triage_rows,
+                "baseline_component_equation_source_applicability_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_row_count": len(
+                    triage_rows
+                ),
+                "targeted_literature_candidate_triage_rows": triage_rows,
+                "targeted_literature_candidate_triage_row_count": len(triage_rows),
+                "targeted_literature_candidate_triage_candidate_source_ids": [
+                    row["candidate_source_id"] for row in triage_rows
+                ],
+                "targeted_literature_candidate_triage_source_count": len(triage_rows),
+                "targeted_literature_candidate_triage_blocker_classes": blocker_classes,
+                "targeted_literature_candidate_triage_blocker_class_count": len(
+                    blocker_classes
+                ),
+                "targeted_literature_candidate_triage_statuses": triage_statuses,
+                "targeted_literature_candidate_triage_status_count": len(
+                    triage_statuses
+                ),
+                "targeted_literature_candidate_triage_likely_source_roles": likely_roles,
+                "targeted_literature_candidate_triage_likely_source_role_count": len(
+                    likely_roles
+                ),
+                "targeted_literature_candidate_triage_likely_relevance_levels": (
+                    likely_relevance
+                ),
+                "targeted_literature_candidate_triage_likely_relevance_level_count": len(
+                    likely_relevance
+                ),
+                "targeted_literature_candidate_triage_missing_validation_item_count": sum(
+                    len(row["missing_validation_items"]) for row in triage_rows
+                ),
+                "targeted_literature_candidate_triage_not_validated_boundary_count": sum(
+                    1 for row in triage_rows if row["not_validated_boundary"]
+                ),
+                "targeted_literature_candidate_triage_not_adopted_boundary_count": sum(
+                    1 for row in triage_rows if row["not_adopted_boundary"]
+                ),
+                "targeted_literature_candidate_discovery_rows_retained_count": len(
+                    candidate_rows
+                ),
+                "source_search_candidate_discovery_executed": True,
+                "source_discovery_executed": True,
+                "source_search_executed": True,
+                "source_search_execution_performed": True,
+                "source_search_execution_authorized": True,
+                "targeted_literature_source_discovery_executed": True,
+                "source_candidates_discovered": True,
+                "source_candidates_listed": True,
+                "source_candidates_listed_only": True,
+                "source_candidates_for_future_review_only": True,
+                "source_candidates_listed_count": len(candidate_rows),
+                "candidate_discovery_executed": True,
+                "candidate_source_rows_listed_only": True,
+                "candidate_source_accepted": False,
+                "candidate_source_validated": False,
+                "candidate_source_adopted": False,
+                "candidate_source_applicability_validated": False,
+                "candidate_source_applicability_accepted": False,
+                "candidate_source_accepted_as_applicable": False,
+                "candidate_equation_imported": False,
+                "candidate_equation_adopted": False,
+                "blocker_remediation_executed": False,
+                "blockers_remediated": False,
+                "source_candidate_replacement_performed": False,
+                "source_candidates_replaced_count": 0,
+                "source_replacement_execution_authorized": False,
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_validation_executed": False,
+                "source_validation_performed": False,
+                "source_validation_accepted": False,
+                "standard_open_system_source_validated": False,
+                "literature_source_validated": False,
+                "standard_open_system_equations_imported": False,
+                "standard_open_system_equation_adopted": False,
+                "literature_equations_adopted": False,
+                "literature_equation_validated": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "empirical_fit_validated": False,
+                "fit_model_declared": False,
+                "data_source_selected": False,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "equation_sources_accepted_as_physically_adequate": False,
+                "open_system_decoherence_gap_resolved": False,
+                "open_system_decoherence_source_path_resolved": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_source_accepted": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_component_solved": False,
+                "open_system_decoherence_lindblad_form_imported": False,
+                "open_system_decoherence_master_equation_form_imported": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_triage_packet": False,
+                "targeted_literature_candidate_triage_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_ITEMS
+                ),
+                "targeted_literature_candidate_triage_item_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_ITEMS
+                ),
+                "targeted_literature_candidate_triage_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_BOUNDARY
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The targeted literature-review expansion candidate-"
+                    "triage packet classifies the eight discovered candidates "
+                    "by likely role, likely relevance, applicability warning, "
+                    "missing validation needs, and triage status only. The "
+                    "next disciplined step is result review of this triage "
+                    "packet, not source validation, source adoption or "
+                    "replacement, equation import, Lindblad import, "
+                    "tau_baseline computation, CCFT validation, or "
+                    "master-action promotion."
                 ),
             }
         )
