@@ -75,6 +75,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_packet": "2026-07-08T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review": "2026-07-08T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet": "2026-07-08T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review": "2026-07-08T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -1695,6 +1696,28 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "SOURCE_PLATFORM_NARROWING_SCOPE_PACKET_PREPARED_SCOPE_ONLY_NO_SOURCE_"
     "VALIDATION_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_MASTER_"
     "ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_PLATFORM_"
+    "NARROWING_SCOPE_PACKET_RESULT_REVIEW_ACCEPTS_PLATFORM_NARROWING_SCOPE_"
+    "ONLY_NO_PLATFORM_SELECTION_EXECUTION_OR_EQUATION_ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_PLATFORM_NARROWING_SCOPE_PACKET_RESULT_REVIEW_ACCEPTS_SCOPE_ONLY_"
+    "NO_SOURCE_VALIDATION_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_"
+    "MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "platform_narrowing_candidate_selection_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_platform_"
+    "narrowing_candidate_selection_packet"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -9282,6 +9305,48 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "model, define a measurement protocol, perform statistical validation, "
     "claim residual separation, validate CCFT, or promote the master action."
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_ACCEPTANCE_ITEMS = [
+    "platform-narrowing scope packet result review consumed",
+    "platform-narrowing scope accepted as scope only",
+    "allowed platform classes accepted as recorded scope only",
+    "excluded platform classes accepted as recorded scope only",
+    "required physical-regime descriptors accepted as recorded scope only",
+    "measurement/control assumptions accepted as recorded scope only",
+    "environment/noise assumptions accepted as recorded scope only",
+    "observable-binding requirements accepted as recorded scope only",
+    "blocker coverage accepted as recorded scope only",
+    "candidate-selection packet selected as next target",
+    "no platform narrowing execution",
+    "no final platform selection",
+    "no blocker remediation",
+    "no requirement relaxation",
+    "no source validation or source adoption",
+    "no source replacement",
+    "no equation import or adoption",
+    "no Lindblad or master-equation form imported",
+    "no empirical fit",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_BOUNDARY = (
+    "This result review accepts the platform-narrowing scope packet as scope "
+    "only. It accepts recorded allowed and excluded platform classes, "
+    "physical-regime descriptors, measurement/control assumptions, "
+    "environment/noise assumptions, observable-binding requirements, and "
+    "blocker coverage only as future platform-narrowing constraints. It does "
+    "not execute platform narrowing, select a final empirical platform, "
+    "remediate blockers, relax requirements, split slots, validate or adopt "
+    "a source, replace a source, import or adopt any equation, import a "
+    "Lindblad or master-equation form, perform empirical fitting, compute "
+    "tau_baseline, complete a baseline model, define a measurement protocol, "
+    "perform statistical validation, claim residual separation, validate "
+    "CCFT, or promote the master action."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -13790,6 +13855,59 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "PLATFORM_NARROWING_SCOPE_PACKET_RESULT_REVIEW_20260708_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "PLATFORM_NARROWING_SCOPE_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_PLATFORM_NARROWING_SCOPE_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTOpenSystemDecoherencePlatformNarrowingScopePacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_"
+            "SCOPE_PACKET_RESULT_REVIEW_20260708_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review_accepts_scope_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -13877,6 +13995,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -14095,6 +14214,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet": (
         "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence platform-narrowing scope packet result review"
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence platform-narrowing candidate-selection packet"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -14277,6 +14399,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -14355,6 +14478,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -14431,6 +14555,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -14505,6 +14630,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -27171,6 +27297,216 @@ def build_stage_payload(
                     "narrowing execution, source validation, equation import, "
                     "calculation scaffolding, tau_baseline computation, CCFT "
                     "validation, or master-action promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review"
+    ):
+        prior_packet_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_packet_payload.items():
+            payload.setdefault(key, value)
+        scope_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_ROWS
+        )
+        addressed_blocker_classes = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_ADDRESSED_BLOCKER_CLASSES
+        )
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet_result_review_consumed": True,
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet_accepted": True,
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_accepted_only": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_PACKET_STRICT_OUTCOME
+                ),
+                "platform_narrowing_scope_packet_result_review_consumed": True,
+                "platform_narrowing_scope_packet_accepted": True,
+                "platform_narrowing_scope_accepted_only": True,
+                "platform_narrowing_scope_result_review_accepted": True,
+                "platform_narrowing_scope_accepted_as_constraints_only": True,
+                "platform_narrowing_scope_packet_prepared": True,
+                "platform_narrowing_scope_only": True,
+                "platform_narrowing_scope_defined": True,
+                "allowed_platform_classes_accepted_as_scope_only": True,
+                "excluded_platform_classes_accepted_as_scope_only": True,
+                "physical_regime_descriptors_accepted_as_scope_only": True,
+                "measurement_control_assumptions_accepted_as_scope_only": True,
+                "environment_noise_assumptions_accepted_as_scope_only": True,
+                "observable_binding_requirements_accepted_as_scope_only": True,
+                "addressed_blocker_classes_accepted_as_scope_only": True,
+                "accepted_allowed_platform_class_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_ALLOWED_PLATFORM_CLASSES
+                ),
+                "accepted_excluded_platform_class_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_EXCLUDED_PLATFORM_CLASSES
+                ),
+                "accepted_physical_regime_descriptor_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_REQUIRED_REGIME_DESCRIPTORS
+                ),
+                "accepted_measurement_control_assumption_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_MEASUREMENT_CONTROL_ASSUMPTIONS
+                ),
+                "accepted_environment_noise_assumption_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_ENVIRONMENT_NOISE_ASSUMPTIONS
+                ),
+                "accepted_observable_binding_requirement_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_OBSERVABLE_BINDING_REQUIREMENTS
+                ),
+                "accepted_addressed_blocker_class_count": len(
+                    addressed_blocker_classes
+                ),
+                "accepted_platform_narrowing_scope_row_count": len(scope_rows),
+                "baseline_component_equation_source_applicability_open_system_decoherence_platform_narrowing_scope_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_platform_narrowing_scope_review_acceptance_item_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_platform_narrowing_scope_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_BOUNDARY
+                ),
+                "platform_narrowing_candidate_selection_packet_selected": True,
+                "platform_narrowing_candidate_selection_packet_selected_only": True,
+                "platform_narrowing_candidate_selection_packet_prepared": False,
+                "platform_narrowing_candidate_selection_executed": False,
+                "platform_candidate_selected": False,
+                "selected_platform_candidate_count": 0,
+                "selected_platform_class_count": 0,
+                "selected_platform_classes": [],
+                "platform_selection_executed": False,
+                "platform_selection_accepted": False,
+                "platform_narrowing_performed": False,
+                "platform_narrowing_executed": False,
+                "platform_narrowed": False,
+                "baseline_platform_narrowed": False,
+                "platform_narrowing_accepted_as_empirical_design": False,
+                "deeper_targeted_literature_expansion_performed": False,
+                "targeted_literature_review_expansion_executed": False,
+                "requirement_refinement_performed": False,
+                "requirements_refined": False,
+                "requirement_relaxation_performed": False,
+                "requirements_relaxed": False,
+                "slot_splitting_performed": False,
+                "baseline_slot_splitting_performed": False,
+                "source_family_replacement_performed": False,
+                "blocked_hold_closeout_performed": False,
+                "blocker_remediation_executed": False,
+                "blockers_remediated": False,
+                "source_candidate_replacement_performed": False,
+                "source_candidates_replaced_count": 0,
+                "source_replacement_execution_authorized": False,
+                "source_replaced": False,
+                "source_adopted": False,
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_validation_executed": False,
+                "source_validation_performed": False,
+                "source_validation_accepted": False,
+                "candidate_source_accepted": False,
+                "candidate_source_validated": False,
+                "candidate_source_adopted": False,
+                "candidate_source_replaced": False,
+                "candidate_source_applicability_validated": False,
+                "candidate_source_applicability_accepted": False,
+                "candidate_source_accepted_as_applicable": False,
+                "candidate_equation_imported": False,
+                "candidate_equation_adopted": False,
+                "standard_open_system_source_validated": False,
+                "standard_open_system_equations_imported": False,
+                "standard_open_system_equation_adopted": False,
+                "literature_source_validated": False,
+                "literature_equations_adopted": False,
+                "literature_equation_validated": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "empirical_fit_validated": False,
+                "fit_model_declared": False,
+                "data_source_selected": False,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "equation_sources_accepted_as_physically_adequate": False,
+                "open_system_decoherence_gap_resolved": False,
+                "open_system_decoherence_source_path_resolved": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_source_accepted": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_component_solved": False,
+                "open_system_decoherence_lindblad_form_imported": False,
+                "open_system_decoherence_master_equation_form_imported": False,
+                "standard_open_system_theory_import_work_executed": False,
+                "standard_theory_import_work_executed": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "calculation_scaffold_started": False,
+                "calculation_schema_only": False,
+                "calculation_matrix_executed": False,
+                "reproducible_calculation_executed": False,
+                "triage_scoring_executed": False,
+                "candidate_scoring_executed": False,
+                "calculation_result_claim_label": "not_applicable_scope_result_review_only",
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review": False,
+                "selected_next_candidate_selection_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_TARGET
+                ),
+                "selected_next_candidate_selection_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_KIND
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_CANDIDATE_SELECTION_PACKET",
+                "strict_suggested_next_packet_outcome": "PENDING_CANDIDATE_SELECTION_PACKET",
+                "next_disciplined_move_reason": (
+                    "The platform-narrowing scope packet is accepted as "
+                    "scope only. The next disciplined step is a "
+                    "platform-narrowing candidate-selection packet that "
+                    "selects a narrowed future platform candidate only. It "
+                    "must not execute platform narrowing, validate sources, "
+                    "import equations, compute tau_baseline, define a "
+                    "measurement protocol, validate CCFT, or promote the "
+                    "master action."
                 ),
             }
         )
