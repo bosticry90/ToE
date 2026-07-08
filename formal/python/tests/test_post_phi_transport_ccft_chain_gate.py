@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet_result"
 )
 FINAL_PREVIOUS_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet"
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
@@ -81,6 +81,9 @@ OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_TARGET = (
 )
 OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet"
+)
+OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet_result"
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet"
@@ -1343,17 +1346,36 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFOR
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review"
     ].strict_outcome_id
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Derivation/"
+    "SelectedCCFTOpenSystemDecoherencePlatformNarrowingCandidateSelectionPacket.lean"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_REPORT = (
+    "formal/docs/release/"
+    "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_"
+    "CANDIDATE_SELECTION_PACKET_20260708_v0.json"
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet"
+    ].strict_outcome_id
+)
 FINAL_EVIDENCE = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_EVIDENCE
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_EVIDENCE
 )
 FINAL_REPORT = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_REPORT
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_REPORT
 )
 FINAL_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_OUTCOME
 )
 FINAL_STRICT_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_STRICT_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_PACKET_STRICT_OUTCOME
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -1546,8 +1568,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFOR
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet_result_review"
+)
 FINAL_KIND = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_KIND
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_REVIEW_KIND
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -1908,6 +1934,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review": (
         "formal/python/tools/"
         "selected_ccft_open_system_decoherence_platform_narrowing_scope_packet_result_review_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet": (
+        "formal/python/tools/"
+        "selected_ccft_open_system_decoherence_platform_narrowing_candidate_selection_packet_report.py"
     ),
 }
 
@@ -2339,6 +2369,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "formal.python.tools."
         "selected_ccft_open_system_decoherence_platform_narrowing_scope_packet_result_review_report",
         "build_selected_ccft_open_system_decoherence_platform_narrowing_scope_packet_result_review",
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet": (
+        "formal.python.tools."
+        "selected_ccft_open_system_decoherence_platform_narrowing_candidate_selection_packet_report",
+        "build_selected_ccft_open_system_decoherence_platform_narrowing_candidate_selection_packet",
     ),
 }
 
@@ -3216,6 +3251,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -3851,6 +3887,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_requirement_crosswalk_blocker_response_route_selection_review",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_packet",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_scope_review",
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_packet",
             }
             else "no"
         )
@@ -9908,7 +9945,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_SCOPE_REVIEW_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_PLATFORM_NARROWING_CANDIDATE_SELECTION_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -10003,11 +10040,35 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         active["platform_narrowing_candidate_selection_packet_selected_only"]
         == "yes"
     )
-    assert active["platform_narrowing_candidate_selection_packet_prepared"] == "no"
-    assert active["platform_narrowing_candidate_selection_executed"] == "no"
-    assert active["platform_candidate_selected"] == "no"
-    assert active["selected_platform_candidate_count"] == 0
-    assert active["selected_platform_class_count"] == 0
+    assert active["platform_narrowing_candidate_selection_packet_prepared"] == "yes"
+    assert active["platform_narrowing_candidate_selection_only"] == "yes"
+    assert active["platform_narrowing_candidate_selection_executed"] == "yes"
+    assert (
+        active[
+            "platform_narrowing_candidate_selection_executed_as_candidate_only"
+        ]
+        == "yes"
+    )
+    assert active["platform_candidate_selected"] == "yes"
+    assert active["platform_candidate_selected_only"] == "yes"
+    assert active["selected_platform_candidate_count"] == 1
+    assert active["selected_narrowed_platform_candidate_count"] == 1
+    assert active["selected_platform_class_count"] == 1
+    assert active["selected_platform_candidate_id"] == (
+        "superconducting_circuit_qed_transmon_resonator_coherence_lifetime_candidate"
+    )
+    assert active["selected_platform_candidate_plain_name"] == (
+        "superconducting circuit-QED transmon/resonator coherence-lifetime platform"
+    )
+    assert active["included_platform_class"] == (
+        "controlled_mesoscopic_superconducting_circuit_qed_coherence_lifetime_platform"
+    )
+    assert active["candidate_excluded_platform_class_count"] == 7
+    assert active["candidate_regime_assumption_count"] == 8
+    assert active["candidate_measurement_control_assumption_count"] == 6
+    assert active["candidate_environment_noise_assumption_count"] == 5
+    assert active["candidate_blocker_class_reduction_count"] == 8
+    assert active["candidate_remaining_blocker_count"] == 10
     assert active["platform_selection_executed"] == "no"
     assert active["platform_selection_accepted"] == "no"
     assert active["platform_narrowing_accepted_as_empirical_design"] == "no"
