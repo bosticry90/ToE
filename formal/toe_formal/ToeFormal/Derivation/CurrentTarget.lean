@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformSpecificLiteratureApplicabilityCrosswalkPacketResultReview
+import ToeFormal.Derivation.CCFTSCQEDLiteratureApplicabilityMatrixCalculationSprintGuardrailPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformSpecificLiteratureApplicabilityCrosswalkPacketResultReview.selectedNextTarget
+  CCFTSCQEDLiteratureApplicabilityMatrixCalculationSprintGuardrailPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformSpecificLiteratureApplicabilityCrosswalkPacketResultReview.reviewId
+  CCFTSCQEDLiteratureApplicabilityMatrixCalculationSprintGuardrailPacket.packetId
 
-theorem current_target_points_to_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet :
+theorem current_target_points_to_ccft_scqed_literature_applicability_matrix_calculation_execution :
     currentLiveTarget =
-      "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet" := by
+      "execute_calc_ccft_scqed_literature_applicability_matrix_v0" := by
   rfl
 
 end CurrentTarget

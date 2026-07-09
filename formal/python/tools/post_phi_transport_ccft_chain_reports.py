@@ -90,6 +90,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_review": "2026-07-09T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet": "2026-07-09T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review": "2026-07-09T00:00:00Z",
+    "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet": "2026-07-09T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -2752,6 +2753,113 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "E-REPRO evidence, validate or adopt any source, import equations, compute "
     "tau_baseline, define a protocol, claim residual separation, validate "
     "CCFT, or promote the master action."
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTCOME = (
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+    "GUARDRAIL_PACKET_PREPARED_AUTHORIZES_SAFE_CROSSWALK_MATRIX_COUNTS_"
+    "ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_COMPUTATION"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_STRICT_OUTCOME = (
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+    "GUARDRAIL_PACKET_PREPARED_CALCULATION_GUARDRAIL_ONLY_NO_EQUATION_"
+    "ADOPTION_NO_LINDBLAD_IMPORT_NO_CCFT_VALIDATION_NO_MASTER_ACTION_"
+    "PROMOTION"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_ALLOWED_OPERATIONS = [
+    "read_accepted_crosswalk_json",
+    "count_row_statuses",
+    "count_missing_variables",
+    "count_missing_units",
+    "count_missing_assumptions",
+    "count_per_source_applicability",
+    "count_per_requirement_blockers",
+    "write_calculation_output_json",
+    "write_manifest_json",
+    "write_reproducibility_metadata",
+]
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_FORBIDDEN_OPERATIONS = [
+    "source_validation",
+    "source_adoption_or_replacement",
+    "equation_import_or_adoption",
+    "lindblad_or_master_equation_import",
+    "tau_baseline_computation",
+    "tau_candidate_computation",
+    "r_tau_empirical_calculation",
+    "empirical_fit",
+    "measurement_protocol_definition",
+    "statistical_validation",
+    "residual_separation_claim",
+    "ccft_validation_or_master_action_promotion",
+]
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT = (
+    "formal/docs/release/SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_"
+    "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_"
+    "APPLICABILITY_CROSSWALK_PACKET_20260709_v0.json"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT_REVIEW = (
+    "formal/docs/release/SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_"
+    "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_"
+    "APPLICABILITY_CROSSWALK_PACKET_RESULT_REVIEW_20260709_v0.json"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_SCRIPT = (
+    "formal/python/toe/calculations/"
+    "calc_ccft_scqed_literature_applicability_matrix.py"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_TEST = (
+    "formal/python/tests/calculations/"
+    "test_calc_ccft_scqed_literature_applicability_matrix.py"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTPUT = (
+    "formal/output/CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0.json"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_MANIFEST = (
+    "formal/output/CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-"
+    "MANIFEST-v0.json"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_REPRODUCIBILITY_FIELDS = [
+    "calculation_id",
+    "input_path",
+    "input_sha256",
+    "script_path",
+    "script_sha256",
+    "execution_command",
+    "python_version",
+    "captured_at_utc",
+    "output_path",
+    "output_sha256",
+]
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_TARGET = (
+    "execute_calc_ccft_scqed_literature_applicability_matrix_v0"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_KIND = (
+    "ccft_scqed_literature_applicability_matrix_calculation_execution"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_ITEMS = [
+    "accepted 48-row crosswalk authorized as the sole calculation input",
+    "local deterministic matrix and count operations authorized only",
+    "calculation output JSON and manifest paths fixed",
+    "reproducibility metadata requirements fixed",
+    "network access and literature retrieval forbidden",
+    "calculation execution selected but not executed",
+    "E-REPRO evidence not yet claimed",
+    "source validation and adoption forbidden",
+    "equation and Lindblad/master-equation import forbidden",
+    "tau_baseline and tau_candidate computation forbidden",
+    "empirical r_tau calculation and residual separation forbidden",
+    "CCFT validation and master-action promotion forbidden",
+]
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_BOUNDARY = (
+    "This guardrail authorizes one local deterministic calculation sprint over "
+    "the accepted 48-row superconducting circuit-QED literature applicability "
+    "crosswalk. The execution may count statuses, missing variables, missing "
+    "units, missing assumptions, per-source applicability, and per-requirement "
+    "blockers, then write a result JSON, manifest, and reproducibility metadata. "
+    "This packet does not execute that calculation or claim E-REPRO evidence. "
+    "It does not retrieve literature, validate or adopt a source, import or adopt "
+    "equations, import a Lindblad/master-equation form, compute tau_baseline or "
+    "tau_candidate, calculate empirical r_tau, define a measurement protocol, "
+    "perform statistical validation, claim residual separation, validate CCFT, "
+    "or promote the master action."
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_RESULT_REVIEW_ACCEPTANCE_ITEMS = [
     "platform-specific literature-review packet result review accepted",
@@ -16899,6 +17007,59 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result_review"
         ),
     ),
+    "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet": StageSpec(
+        key=(
+            "ccft_scqed_literature_applicability_matrix_calculation_sprint_"
+            "guardrail_packet"
+        ),
+        schema_id=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+            "GUARDRAIL_PACKET_20260709_v0"
+        ),
+        packet_id=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+            "GUARDRAIL_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
+            "SPRINT_GUARDRAIL_PACKET"
+        ),
+        outcome_id=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTCOME
+        ),
+        strict_outcome_id=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_FUTURE_CALCULATION_GUARDRAIL_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_FUTURE_CALCULATION_GUARDRAIL_KIND
+        ),
+        selected_next_target=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_TARGET
+        ),
+        selected_next_target_kind=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTSCQEDLiteratureApplicabilityMatrixCalculationSprintGuardrailPacket"
+        ),
+        json_filename=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+            "GUARDRAIL_PACKET_20260709_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "ccft_scqed_literature_applicability_matrix_calculation_sprint_"
+            "guardrail_only"
+        ),
+        stage_role=(
+            "ccft_scqed_literature_applicability_matrix_calculation_sprint_"
+            "guardrail_packet"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -17001,6 +17162,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
+    "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -17264,6 +17426,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review": (
         "CCFT SCQED literature applicability matrix calculation sprint guardrail packet"
     ),
+    "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet": (
+        "CCFT SCQED literature applicability matrix safe calculation execution"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -17461,6 +17626,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
+        "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -17554,6 +17720,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
+        "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -17645,6 +17812,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
+        "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -17734,6 +17902,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
+        "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -33452,6 +33621,174 @@ def build_stage_payload(
                     "validation, equation adoption, tau_baseline "
                     "computation, residual separation, CCFT validation, or "
                     "master-action promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
+    ):
+        prior_review_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
+            captured_at_utc=captured_at_utc,
+        )
+        accepted_status_counts = prior_review_payload[
+            "accepted_platform_specific_literature_applicability_crosswalk_status_counts"
+        ]
+        accepted_summary_counts = prior_review_payload[
+            "accepted_platform_specific_literature_applicability_crosswalk_summary_counts"
+        ]
+        assert prior_review_payload[
+            "accepted_platform_specific_literature_applicability_crosswalk_row_count"
+        ] == 48
+        assert prior_review_payload[
+            "accepted_platform_specific_literature_applicability_crosswalk_literature_locator_count"
+        ] == 4
+        assert prior_review_payload[
+            "accepted_platform_specific_literature_applicability_crosswalk_requirement_count"
+        ] == 12
+        assert sum(accepted_status_counts.values()) == 48
+        payload.update(
+            {
+                "calculation_sprint_guardrail_packet_prepared": True,
+                "calculation_sprint_guardrail_packet_prepared_only": True,
+                "calculation_sprint_guardrail_executed": False,
+                "crosswalk_result_review_consumed": True,
+                "crosswalk_result_review_accepted_as_calculation_input_only": True,
+                "consumed_crosswalk_review_result": (
+                    prior_review_payload["packet_result"]
+                ),
+                "consumed_crosswalk_review_strict_result": (
+                    prior_review_payload["strict_packet_result"]
+                ),
+                "calculation_id": (
+                    "CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0"
+                ),
+                "calculation_scope": "safe_crosswalk_matrix_counts_only",
+                "calculation_input_role": "accepted_applicability_crosswalk",
+                "calculation_input_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT
+                ),
+                "calculation_input_review_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT_REVIEW
+                ),
+                "calculation_input_row_count": 48,
+                "calculation_input_literature_locator_count": 4,
+                "calculation_input_source_candidate_count": 2,
+                "calculation_input_platform_requirement_count": 12,
+                "calculation_input_status_counts": accepted_status_counts,
+                "calculation_input_summary_counts": accepted_summary_counts,
+                "calculation_input_classifications_immutable": True,
+                "allowed_operations": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_ALLOWED_OPERATIONS
+                ),
+                "allowed_operation_count": len(
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_ALLOWED_OPERATIONS
+                ),
+                "forbidden_operations": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_FORBIDDEN_OPERATIONS
+                ),
+                "forbidden_operation_count": len(
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_FORBIDDEN_OPERATIONS
+                ),
+                "network_access_allowed": False,
+                "literature_retrieval_allowed": False,
+                "external_source_mutation_allowed": False,
+                "calculation_script_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_SCRIPT
+                ),
+                "calculation_test_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_TEST
+                ),
+                "calculation_output_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTPUT
+                ),
+                "calculation_manifest_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_MANIFEST
+                ),
+                "required_reproducibility_fields": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_REPRODUCIBILITY_FIELDS
+                ),
+                "required_reproducibility_field_count": len(
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_REPRODUCIBILITY_FIELDS
+                ),
+                "calculation_execution_authorized": True,
+                "calculation_execution_authorized_only_for_allowlist": True,
+                "calculation_execution_target_selected": True,
+                "calculation_execution_target": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_TARGET
+                ),
+                "calculation_execution_target_kind": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_KIND
+                ),
+                "safe_matrix_counts_calculation_executed": False,
+                "calculation_output_generated": False,
+                "calculation_manifest_generated": False,
+                "reproducibility_metadata_generated": False,
+                "e_repro_eligibility_requires_successful_reproducible_execution": True,
+                "e_repro_evidence_claimed": False,
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_adopted": False,
+                "source_replaced": False,
+                "equation_import_authorized": False,
+                "equation_imported": False,
+                "equation_adopted": False,
+                "lindblad_import_authorized": False,
+                "lindblad_imported": False,
+                "master_equation_imported": False,
+                "tau_baseline_computation_authorized": False,
+                "tau_baseline_value_computed": False,
+                "tau_candidate_computation_authorized": False,
+                "tau_candidate_value_computed": False,
+                "r_tau_empirical_calculation_authorized": False,
+                "r_tau_empirical_value_computed": False,
+                "empirical_fit_executed": False,
+                "measurement_protocol_defined": False,
+                "statistical_validation_claimed": False,
+                "residual_separation_claimed": False,
+                "ccft_validated": False,
+                "master_action_promoted": False,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "selected_primary_residual_formula_unchanged": True,
+                "residual_formula_changed_by_calculation_sprint_guardrail": False,
+                "calculation_sprint_guardrail_items": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_ITEMS
+                ),
+                "calculation_sprint_guardrail_item_count": len(
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_ITEMS
+                ),
+                "calculation_sprint_guardrail_boundary": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_BOUNDARY
+                ),
+                "selected_next_calculation_execution_target": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    "PENDING_CALC_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_"
+                    "v0_EXECUTION"
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    "PENDING_CALC_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_"
+                    "v0_SAFE_COUNTS_EXECUTION_ONLY"
+                ),
+                "next_disciplined_move_reason": (
+                    "The thin guardrail now authorizes one deterministic local "
+                    "matrix/counts execution over the accepted 48-row crosswalk. "
+                    "The execution remains limited to the allowlist and must "
+                    "produce output, manifest, and reproducibility metadata "
+                    "without source validation, equation adoption, tau_baseline "
+                    "or tau_candidate computation, empirical r_tau calculation, "
+                    "residual separation, CCFT validation, or master-action "
+                    "promotion."
                 ),
             }
         )

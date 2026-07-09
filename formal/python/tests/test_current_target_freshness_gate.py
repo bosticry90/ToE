@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
+    "execute_calc_ccft_scqed_literature_applicability_matrix_v0"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1343,8 +1343,11 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet"
 )
-PREVIOUS_LIVE_TARGET = (
+SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
+)
+PREVIOUS_LIVE_TARGET = (
+    "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1691,7 +1694,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
+    "execute_calc_ccft_scqed_literature_applicability_matrix_v0"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1786,13 +1789,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformSpecificLiteratureApplicabilityCrosswalkPacketResultReview.lean"
+    / "CCFTSCQEDLiteratureApplicabilityMatrixCalculationSprintGuardrailPacket.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
-    "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_"
-    "QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_"
-    "RESULT_REVIEW_20260709_v0.json"
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+    "GUARDRAIL_PACKET_20260709_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1915,12 +1917,18 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "PREPARED_48_ROW_CALCULATION_READY_APPLICABILITY_CROSSWALK_ONLY_NO_SOURCE_"
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
-LIVE_TARGET_OUTCOME = (
+SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
-    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_"
-    "CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_"
-    "RESULT_REVIEW_ACCEPTS_48_ROW_APPLICABILITY_CROSSWALK_AS_CALCULATION_INPUT_ONLY_NO_SOURCE_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_"
+    "APPLICABILITY_CROSSWALK_PACKET_RESULT_REVIEW_ACCEPTS_48_ROW_"
+    "APPLICABILITY_CROSSWALK_AS_CALCULATION_INPUT_ONLY_NO_SOURCE_"
     "VALIDATION_OR_EQUATION_ADOPTION"
+)
+LIVE_TARGET_OUTCOME = (
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+    "GUARDRAIL_PACKET_PREPARED_AUTHORIZES_SAFE_CROSSWALK_MATRIX_COUNTS_"
+    "ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_COMPUTATION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2043,11 +2051,16 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "APPLICABILITY_CROSSWALK_PACKET_PREPARED_CROSSWALK_INPUT_ONLY_NO_E_REPRO_"
     "NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
-LIVE_TARGET_STRICT_OUTCOME = (
+SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_SUPERCONDUCTING_CIRCUIT_QED_LITERATURE_APPLICABILITY_CROSSWALK_"
     "PACKET_RESULT_REVIEW_ACCEPTS_CROSSWALK_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_"
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
+)
+LIVE_TARGET_STRICT_OUTCOME = (
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_"
+    "GUARDRAIL_PACKET_PREPARED_CALCULATION_GUARDRAIL_ONLY_NO_EQUATION_"
+    "ADOPTION_NO_LINDBLAD_IMPORT_NO_CCFT_VALIDATION_NO_MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2117,8 +2130,11 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERA
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet_result_review"
 )
-LIVE_TARGET_KIND = (
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_KIND = (
     "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
+)
+LIVE_TARGET_KIND = (
+    "ccft_scqed_literature_applicability_matrix_calculation_execution"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7981,17 +7997,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_KIND
+        CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
         interaction_active_workstream["strict_packet_result"]
         == LIVE_TARGET_STRICT_OUTCOME
     )
-    assert interaction_active_workstream["review_result"] == LIVE_TARGET_OUTCOME
+    assert interaction_active_workstream["review_result"] == (
+        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_OUTCOME
+    )
     assert (
         interaction_active_workstream["strict_review_result"]
-        == LIVE_TARGET_STRICT_OUTCOME
+        == SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_STRICT_OUTCOME
     )
     assert interaction_active_workstream["prepared_packet_result"] == (
         SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_OUTCOME
@@ -9458,7 +9476,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "selected_next_platform_specific_literature_applicability_crosswalk_review_target"
         ]
-        == PREVIOUS_LIVE_TARGET
+        == SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_TARGET
     )
     assert (
         interaction_active_workstream[
@@ -9588,7 +9606,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["calculation_sprint_guardrail_packet_selected"] == "yes"
     assert (
         interaction_active_workstream["calculation_sprint_guardrail_packet_prepared"]
-        == "no"
+        == "yes"
+    )
+    assert interaction_active_workstream["calculation_execution_authorized"] == "yes"
+    assert (
+        interaction_active_workstream[
+            "calculation_execution_authorized_only_for_allowlist"
+        ]
+        == "yes"
     )
     assert interaction_active_workstream["safe_matrix_counts_calculation_executed"] == "no"
     assert (
