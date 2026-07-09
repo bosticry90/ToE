@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1341,7 +1341,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_CLASSIFICATION_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_classification_packet"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet_result"
@@ -1685,7 +1685,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1780,12 +1780,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformRelevantCandidateFollowonRouteSelectionPacketResultReview.lean"
+    / "SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformRelevantCandidatePlatformSpecificLiteratureReviewPacket.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
     "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_"
-    "QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260709_v0.json"
+    "QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_PACKET_20260709_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1880,12 +1880,19 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION
     "PREPARED_SELECTS_FUTURE_FOLLOWON_ROUTE_ONLY_NO_SOURCE_VALIDATION_OR_"
     "EQUATION_ADOPTION"
 )
-LIVE_TARGET_OUTCOME = (
+SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_"
     "CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_"
     "RESULT_REVIEW_ACCEPTS_PLATFORM_SPECIFIC_LITERATURE_REVIEW_ROUTE_ONLY_NO_"
     "SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
+)
+LIVE_TARGET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_"
+    "CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_"
+    "REVIEW_PACKET_PREPARED_REVIEWS_PLATFORM_SPECIFIC_LITERATURE_FOR_RELEVANT_"
+    "UNVALIDATED_ROWS_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -1984,11 +1991,17 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION
     "SELECTION_PACKET_PREPARED_ROUTE_SELECTION_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_"
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
-LIVE_TARGET_STRICT_OUTCOME = (
+SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
     "SOURCE_SUPERCONDUCTING_CIRCUIT_QED_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_"
     "SELECTION_PACKET_RESULT_REVIEW_ACCEPTS_ROUTE_SELECTION_ONLY_NO_LINDBLAD_"
     "IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
+)
+LIVE_TARGET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_REVIEW_"
+    "PACKET_PREPARED_LITERATURE_REVIEW_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2050,9 +2063,13 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet_result_review"
 )
-LIVE_TARGET_KIND = (
+SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
+)
+LIVE_TARGET_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet_result_review"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7907,17 +7924,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_KIND
+        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
         interaction_active_workstream["strict_packet_result"]
         == LIVE_TARGET_STRICT_OUTCOME
     )
-    assert interaction_active_workstream["review_result"] == LIVE_TARGET_OUTCOME
+    assert interaction_active_workstream["review_result"] == (
+        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_OUTCOME
+    )
     assert (
         interaction_active_workstream["strict_review_result"]
-        == LIVE_TARGET_STRICT_OUTCOME
+        == SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME
     )
     assert interaction_active_workstream["prepared_packet_result"] == (
         SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_OUTCOME
@@ -7926,10 +7945,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_STRICT_OUTCOME
     )
     assert interaction_active_workstream["prepared_review_result"] == (
-        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_REVIEW_OUTCOME
+        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_OUTCOME
     )
     assert interaction_active_workstream["prepared_review_strict_result"] == (
-        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_REVIEW_STRICT_OUTCOME
+        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME
     )
     assert interaction_active_workstream["selected_next_target"] == LIVE_TARGET
     assert interaction_active_workstream["selected_next_target_kind"] == LIVE_TARGET_KIND
@@ -9079,7 +9098,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "selected_next_platform_relevant_candidate_followon_route_selection_review_target"
         ]
-        == PREVIOUS_LIVE_TARGET
+        == "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet_result"
     )
     assert (
         interaction_active_workstream[
@@ -9181,15 +9200,79 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "platform_specific_literature_review_packet_prepared"
         ]
-        == "no"
+        == "yes"
     )
     assert (
         interaction_active_workstream[
             "platform_specific_literature_review_executed"
         ]
-        == "no"
+        == "yes"
     )
-    assert interaction_active_workstream["literature_review_executed"] == "no"
+    assert (
+        interaction_active_workstream[
+            "platform_specific_literature_review_executed_as_locator_review_only"
+        ]
+        == "yes"
+    )
+    assert interaction_active_workstream["literature_review_executed"] == "yes"
+    assert (
+        interaction_active_workstream[
+            "literature_review_executed_as_platform_specific_locator_review_only"
+        ]
+        == "yes"
+    )
+    assert interaction_active_workstream["platform_specific_literature_review_row_count"] == 4
+    assert (
+        interaction_active_workstream[
+            "platform_specific_literature_review_relevant_unvalidated_row_count"
+        ]
+        == 4
+    )
+    assert interaction_active_workstream["platform_specific_literature_review_candidate_count"] == 2
+    assert interaction_active_workstream["platform_specific_literature_review_requirement_count"] == 2
+    assert interaction_active_workstream["platform_specific_literature_review_locator_count"] == 4
+    assert (
+        interaction_active_workstream[
+            "platform_specific_literature_review_supporting_locator_count"
+        ]
+        == 4
+    )
+    assert (
+        interaction_active_workstream[
+            "platform_specific_literature_review_not_validated_row_count"
+        ]
+        == 4
+    )
+    assert (
+        interaction_active_workstream[
+            "platform_specific_literature_review_not_adopted_row_count"
+        ]
+        == 4
+    )
+    assert (
+        interaction_active_workstream[
+            "platform_specific_literature_review_tau_baseline_not_computed_row_count"
+        ]
+        == 4
+    )
+    assert interaction_active_workstream[
+        "platform_specific_literature_review_source_validation_statuses"
+    ] == ["not_validated"]
+    assert interaction_active_workstream[
+        "platform_specific_literature_review_equation_adoption_statuses"
+    ] == ["not_adopted"]
+    assert interaction_active_workstream[
+        "platform_specific_literature_review_tau_baseline_statuses"
+    ] == ["not_computed"]
+    assert interaction_active_workstream[
+        "platform_specific_literature_review_source_validated_count"
+    ] == 0
+    assert interaction_active_workstream[
+        "platform_specific_literature_review_equation_import_count"
+    ] == 0
+    assert interaction_active_workstream[
+        "platform_specific_literature_review_tau_baseline_computation_count"
+    ] == 0
     assert (
         interaction_active_workstream["measurement_control_review_executed"]
         == "no"
@@ -9198,11 +9281,23 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         interaction_active_workstream[
             "selected_next_platform_relevant_candidate_platform_specific_literature_review_target"
         ]
-        == LIVE_TARGET
+        == PREVIOUS_LIVE_TARGET
     )
     assert (
         interaction_active_workstream[
             "selected_next_platform_relevant_candidate_platform_specific_literature_review_kind"
+        ]
+        == SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND
+    )
+    assert (
+        interaction_active_workstream[
+            "selected_next_platform_specific_literature_review_result_review_target"
+        ]
+        == LIVE_TARGET
+    )
+    assert (
+        interaction_active_workstream[
+            "selected_next_platform_specific_literature_review_result_review_kind"
         ]
         == LIVE_TARGET_KIND
     )
@@ -9227,6 +9322,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         interaction_active_workstream[
             "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review"
+        ]
+        == "no"
+    )
+    assert (
+        interaction_active_workstream[
+            "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
         ]
         == "no"
     )
