@@ -1,0 +1,557 @@
+{
+  "applicability_matrix": {
+    "SCQED-PLATFORM-LIT-REVIEW-C05-R03-v0": {
+      "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-BLOCKER-REDUCTION-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-DRIVE-READOUT-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-ENVIRONMENT-NOISE-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0": "not_applicable_for_requirement",
+      "SCQED-REQ-MEASUREMENT-CONTROL-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-REMAINING-BLOCKERS-v0": "unclear_requires_review",
+      "SCQED-REQ-RESONATOR-COUPLING-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-T1-T2-DEPHASING-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-TEMPERATURE-DISSIPATION-v0": "unclear_requires_review",
+      "SCQED-REQ-TRANSMON-REGIME-v0": "partially_relevant_unvalidated"
+    },
+    "SCQED-PLATFORM-LIT-REVIEW-C05-R04-v0": {
+      "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-BLOCKER-REDUCTION-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-DRIVE-READOUT-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-ENVIRONMENT-NOISE-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0": "not_applicable_for_requirement",
+      "SCQED-REQ-MEASUREMENT-CONTROL-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-REMAINING-BLOCKERS-v0": "unclear_requires_review",
+      "SCQED-REQ-RESONATOR-COUPLING-v0": "unclear_requires_review",
+      "SCQED-REQ-T1-T2-DEPHASING-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-TEMPERATURE-DISSIPATION-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-TRANSMON-REGIME-v0": "partially_relevant_unvalidated"
+    },
+    "SCQED-PLATFORM-LIT-REVIEW-C09-R03-v0": {
+      "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-BLOCKER-REDUCTION-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-DRIVE-READOUT-v0": "blocked_missing_requirement_binding",
+      "SCQED-REQ-ENVIRONMENT-NOISE-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0": "not_applicable_for_requirement",
+      "SCQED-REQ-MEASUREMENT-CONTROL-v0": "unclear_requires_review",
+      "SCQED-REQ-REMAINING-BLOCKERS-v0": "unclear_requires_review",
+      "SCQED-REQ-RESONATOR-COUPLING-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-T1-T2-DEPHASING-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-TEMPERATURE-DISSIPATION-v0": "blocked_missing_requirement_binding",
+      "SCQED-REQ-TRANSMON-REGIME-v0": "platform_relevant_unvalidated"
+    },
+    "SCQED-PLATFORM-LIT-REVIEW-C09-R04-v0": {
+      "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-BLOCKER-REDUCTION-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-DRIVE-READOUT-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-ENVIRONMENT-NOISE-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0": "not_applicable_for_requirement",
+      "SCQED-REQ-MEASUREMENT-CONTROL-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-REMAINING-BLOCKERS-v0": "unclear_requires_review",
+      "SCQED-REQ-RESONATOR-COUPLING-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-T1-T2-DEPHASING-v0": "platform_relevant_unvalidated",
+      "SCQED-REQ-TEMPERATURE-DISSIPATION-v0": "partially_relevant_unvalidated",
+      "SCQED-REQ-TRANSMON-REGIME-v0": "partially_relevant_unvalidated"
+    }
+  },
+  "boundary": {
+    "calculation_executed": true,
+    "ccft_validated": false,
+    "empirical_fit_executed": false,
+    "equation_adopted": false,
+    "equation_imported": false,
+    "lindblad_or_master_equation_imported": false,
+    "master_action_promoted": false,
+    "measurement_protocol_defined": false,
+    "r_tau_empirical_value_computed": false,
+    "residual_separation_claimed": false,
+    "source_adopted": false,
+    "source_replaced": false,
+    "source_validated": false,
+    "statistical_validation_performed": false,
+    "tau_baseline_computed": false,
+    "tau_candidate_computed": false
+  },
+  "calculation_id": "CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0",
+  "calculation_status": "executed_pending_result_review",
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "claim": {
+    "claim_scope": "reproducible deterministic applicability matrix and counts only",
+    "claim_status": "generated_pending_result_review",
+    "context_type": "active_release",
+    "e_repro_applies_to": [
+      "status distribution",
+      "missing-variable counts",
+      "missing-unit counts",
+      "missing-assumption counts",
+      "per-source applicability counts",
+      "per-requirement blocker counts"
+    ],
+    "e_repro_does_not_apply_to": [
+      "source validation or adoption",
+      "equation import or adoption",
+      "Lindblad or master-equation import",
+      "tau_baseline or tau_candidate computation",
+      "empirical r_tau calculation",
+      "residual separation",
+      "CCFT validation",
+      "master-action promotion"
+    ],
+    "evidence_pointers": [
+      "formal/output/CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0.json",
+      "formal/output/CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-MANIFEST-v0.json",
+      "formal/python/toe/calculations/calc_ccft_scqed_literature_applicability_matrix.py",
+      "formal/python/tests/calculations/test_calc_ccft_scqed_literature_applicability_matrix.py"
+    ],
+    "next_work_status": "review_calc_ccft_scqed_literature_applicability_matrix_v0_result",
+    "nonclaim_ids": [
+      "NC-NO-MASTER-ACTION-PROMOTION",
+      "NC-NO-PILLAR-COMPLETION",
+      "NC-NO-SEAM-CLOSURE",
+      "NC-NO-PHASE2",
+      "NC-NO-EMPIRICAL-ADEQUACY",
+      "NC-NO-CANONICAL-TOE",
+      "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"
+    ],
+    "primary_label": "E-REPRO",
+    "supporting_labels": []
+  },
+  "classification_semantics": {
+    "blocked_statuses": [
+      "blocked_missing_requirement_binding"
+    ],
+    "input_classifications_modified": false,
+    "not_applicable_for_requirement": "applicability classification only, not source rejection",
+    "scores_or_acceptance_thresholds_computed": false,
+    "unresolved_review_statuses": [
+      "unclear_requires_review"
+    ]
+  },
+  "implementation": {
+    "execution_command": "python -m formal.python.toe.calculations.calc_ccft_scqed_literature_applicability_matrix",
+    "python_version": "3.10.11",
+    "script_path": "formal/python/toe/calculations/calc_ccft_scqed_literature_applicability_matrix.py",
+    "script_sha256": "c5641407c07e3d271f158881b88fecbb2d0ba8d771a6921d4a2f999587f3e059",
+    "test_path": "formal/python/tests/calculations/test_calc_ccft_scqed_literature_applicability_matrix.py"
+  },
+  "input": {
+    "accepted_as": "calculation_input_only",
+    "path": "formal/docs/release/SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_20260709_v0.json",
+    "review_path": "formal/docs/release/SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_RESULT_REVIEW_20260709_v0.json",
+    "sha256": "4c26a1195e528748c79f0dbd0b9ef0653c26c4b92f765d8d95cac1ed512c58fc",
+    "source_schema_id": "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_20260709_v0"
+  },
+  "matrix_dimensions": {
+    "complete_cartesian_matrix": true,
+    "expected_cartesian_rows": 48,
+    "literature_review_rows": 4,
+    "literature_source_locators": 4,
+    "platform_requirements": 12,
+    "source_candidates": 2,
+    "total_rows": 48,
+    "unique_crosswalk_row_ids": 48
+  },
+  "missing_field_counts": {
+    "missing_assumptions": {
+      "occurrence_counts": {
+        "T1_T2_dephasing_mapping_not_adopted": 4,
+        "applicability_classification_only_not_source_rejection": 4,
+        "blocker_reduction_not_remediation": 4,
+        "coherence_lifetime_observable_binding_not_adopted": 4,
+        "drive_readout_condition_not_adopted": 4,
+        "excluded_limits_not_mapped": 4,
+        "measurement_control_boundary_not_adopted": 4,
+        "noise_channel_scope_not_adopted": 4,
+        "qubit_resonator_coupling_regime_not_adopted": 4,
+        "remaining_blockers_retained": 4,
+        "source_family_allowance_not_source_validation": 4,
+        "thermal_dissipative_domain_not_adopted": 4,
+        "transmon_regime_not_adopted": 4
+      },
+      "rows_with_missing": 48,
+      "rows_without_missing": 0,
+      "total_occurrences": 52,
+      "unique_item_count": 13
+    },
+    "missing_units": {
+      "occurrence_counts": {
+        "drive_frequency_units": 4,
+        "feedback_delay_units": 4,
+        "frequency_units_for_anharmonicity": 4,
+        "frequency_units_for_coupling": 4,
+        "frequency_units_for_detuning": 4,
+        "inverse_time_units_for_dephasing_rate": 4,
+        "inverse_time_units_for_dissipation": 4,
+        "inverse_time_units_for_loss_channels": 4,
+        "measurement_rate_units": 4,
+        "noise_spectral_density_units": 4,
+        "operating_frequency_units": 4,
+        "readout_rate_units": 4,
+        "temperature_units": 4,
+        "time_units_for_T1": 4,
+        "time_units_for_T2": 4,
+        "time_units_for_lifetime": 4
+      },
+      "rows_with_missing": 32,
+      "rows_without_missing": 16,
+      "total_occurrences": 64,
+      "unique_item_count": 16
+    },
+    "missing_variables": {
+      "occurrence_counts": {
+        "T1": 4,
+        "T2": 4,
+        "anharmonicity": 4,
+        "bath_coupling_parameters": 4,
+        "blocker_class_mapping": 4,
+        "charge_noise_sensitivity": 4,
+        "coherence_lifetime_extraction_rule": 4,
+        "coherence_lifetime_observable_symbol": 4,
+        "coupling_strength": 4,
+        "detector_efficiency": 4,
+        "detuning": 4,
+        "drive_amplitude": 4,
+        "feedback_control_variables": 4,
+        "loss_rate": 4,
+        "measurement_back_action_parameter": 4,
+        "noise_channel_parameters": 4,
+        "pure_dephasing_rate": 4,
+        "qubit_operating_domain": 4,
+        "readout_condition_variables": 4,
+        "resonator_mode_variables": 4,
+        "retained_blocker_identifiers": 4,
+        "temperature": 4,
+        "thermal_population": 4
+      },
+      "rows_with_missing": 40,
+      "rows_without_missing": 8,
+      "total_occurrences": 92,
+      "unique_item_count": 23
+    }
+  },
+  "per_literature_locator_counts": {
+    "SCQED-PLATFORM-LIT-REVIEW-C05-R03-v0": {
+      "literature_source_locator": "https://link.aps.org/doi/10.1103/RevModPhys.93.025005",
+      "platform_requirement_count": 12,
+      "row_count": 12,
+      "source_candidate_id": "OSD-REPL-CAND-SCHLOSSHAUER-RMP-v0",
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 1,
+        "partially_relevant_unvalidated": 6,
+        "platform_relevant_unvalidated": 3,
+        "unclear_requires_review": 2
+      }
+    },
+    "SCQED-PLATFORM-LIT-REVIEW-C05-R04-v0": {
+      "literature_source_locator": "https://pubs.aip.org/aip/apr/article/6/2/021318/570326/A-quantum-engineer-s-guide-to-superconducting",
+      "platform_requirement_count": 12,
+      "row_count": 12,
+      "source_candidate_id": "OSD-REPL-CAND-SCHLOSSHAUER-RMP-v0",
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 1,
+        "partially_relevant_unvalidated": 6,
+        "platform_relevant_unvalidated": 3,
+        "unclear_requires_review": 2
+      }
+    },
+    "SCQED-PLATFORM-LIT-REVIEW-C09-R03-v0": {
+      "literature_source_locator": "https://link.aps.org/doi/10.1103/PhysRevA.76.042319",
+      "platform_requirement_count": 12,
+      "row_count": 12,
+      "source_candidate_id": "OSD-TLR-CAND-SCHLOSSHAUER-QUANTUM-DECOHERENCE-v0",
+      "status_counts": {
+        "blocked_missing_requirement_binding": 2,
+        "not_applicable_for_requirement": 1,
+        "partially_relevant_unvalidated": 4,
+        "platform_relevant_unvalidated": 3,
+        "unclear_requires_review": 2
+      }
+    },
+    "SCQED-PLATFORM-LIT-REVIEW-C09-R04-v0": {
+      "literature_source_locator": "https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-031119-050605",
+      "platform_requirement_count": 12,
+      "row_count": 12,
+      "source_candidate_id": "OSD-TLR-CAND-SCHLOSSHAUER-QUANTUM-DECOHERENCE-v0",
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 1,
+        "partially_relevant_unvalidated": 7,
+        "platform_relevant_unvalidated": 3,
+        "unclear_requires_review": 1
+      }
+    }
+  },
+  "per_requirement_blocker_counts": {
+    "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 0,
+      "rows_with_missing_variables": 0,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 0,
+        "platform_relevant_unvalidated": 4,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-BLOCKER-REDUCTION-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 0,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 4,
+        "platform_relevant_unvalidated": 0,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 2,
+        "platform_relevant_unvalidated": 2,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-DRIVE-READOUT-v0": {
+      "blocked_missing_requirement_binding_count": 1,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 1,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 2,
+        "platform_relevant_unvalidated": 1,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-ENVIRONMENT-NOISE-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 3,
+        "platform_relevant_unvalidated": 1,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 4,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 0,
+      "rows_with_missing_variables": 0,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 4,
+        "partially_relevant_unvalidated": 0,
+        "platform_relevant_unvalidated": 0,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-MEASUREMENT-CONTROL-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 3,
+        "platform_relevant_unvalidated": 0,
+        "unclear_requires_review": 1
+      },
+      "unclear_requires_review_count": 1
+    },
+    "SCQED-REQ-REMAINING-BLOCKERS-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 0,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 0,
+        "platform_relevant_unvalidated": 0,
+        "unclear_requires_review": 4
+      },
+      "unclear_requires_review_count": 4
+    },
+    "SCQED-REQ-RESONATOR-COUPLING-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 2,
+        "platform_relevant_unvalidated": 1,
+        "unclear_requires_review": 1
+      },
+      "unclear_requires_review_count": 1
+    },
+    "SCQED-REQ-T1-T2-DEPHASING-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 2,
+        "platform_relevant_unvalidated": 2,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    },
+    "SCQED-REQ-TEMPERATURE-DISSIPATION-v0": {
+      "blocked_missing_requirement_binding_count": 1,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 1,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 2,
+        "platform_relevant_unvalidated": 0,
+        "unclear_requires_review": 1
+      },
+      "unclear_requires_review_count": 1
+    },
+    "SCQED-REQ-TRANSMON-REGIME-v0": {
+      "blocked_missing_requirement_binding_count": 0,
+      "literature_locator_count": 4,
+      "not_applicable_classification_count": 0,
+      "row_count": 4,
+      "rows_with_missing_assumptions": 4,
+      "rows_with_missing_units": 4,
+      "rows_with_missing_variables": 4,
+      "source_candidate_count": 2,
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 0,
+        "partially_relevant_unvalidated": 3,
+        "platform_relevant_unvalidated": 1,
+        "unclear_requires_review": 0
+      },
+      "unclear_requires_review_count": 0
+    }
+  },
+  "per_source_applicability_counts": {
+    "OSD-REPL-CAND-SCHLOSSHAUER-RMP-v0": {
+      "blocked_requirement_binding_row_count": 0,
+      "literature_review_row_count": 2,
+      "literature_source_locator_count": 2,
+      "platform_requirement_count": 12,
+      "relevance_row_count": 18,
+      "row_count": 24,
+      "source_candidate_family": "decoherence_review_and_source_locator",
+      "source_candidate_origin": "original_replacement_source_candidates",
+      "status_counts": {
+        "blocked_missing_requirement_binding": 0,
+        "not_applicable_for_requirement": 2,
+        "partially_relevant_unvalidated": 12,
+        "platform_relevant_unvalidated": 6,
+        "unclear_requires_review": 4
+      },
+      "unclear_requires_review_row_count": 4
+    },
+    "OSD-TLR-CAND-SCHLOSSHAUER-QUANTUM-DECOHERENCE-v0": {
+      "blocked_requirement_binding_row_count": 2,
+      "literature_review_row_count": 2,
+      "literature_source_locator_count": 2,
+      "platform_requirement_count": 12,
+      "relevance_row_count": 17,
+      "row_count": 24,
+      "source_candidate_family": "scholarly_review_article",
+      "source_candidate_origin": "targeted_literature_expansion_candidates",
+      "status_counts": {
+        "blocked_missing_requirement_binding": 2,
+        "not_applicable_for_requirement": 2,
+        "partially_relevant_unvalidated": 11,
+        "platform_relevant_unvalidated": 6,
+        "unclear_requires_review": 3
+      },
+      "unclear_requires_review_row_count": 3
+    }
+  },
+  "result_review": {
+    "status": "pending",
+    "target": "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
+  },
+  "schema_id": "CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0-RESULT",
+  "status_distribution": {
+    "blocked_missing_requirement_binding": 2,
+    "not_applicable_for_requirement": 4,
+    "partially_relevant_unvalidated": 23,
+    "platform_relevant_unvalidated": 12,
+    "unclear_requires_review": 7
+  }
+}

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -91,6 +92,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet": "2026-07-09T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review": "2026-07-09T00:00:00Z",
     "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet": "2026-07-09T00:00:00Z",
+    "ccft_scqed_literature_applicability_matrix_calculation_execution": "2026-07-09T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -2860,6 +2862,52 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_BOUNDARY
     "tau_candidate, calculate empirical r_tau, define a measurement protocol, "
     "perform statistical validation, claim residual separation, validate CCFT, "
     "or promote the master action."
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_OUTCOME = (
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_v0_EXECUTED_"
+    "REPRODUCIBLE_48_ROW_COUNTS_ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_"
+    "COMPUTATION"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_STRICT_OUTCOME = (
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_v0_EXECUTED_"
+    "E_REPRO_MATRIX_COUNTS_ONLY_NO_EQUATION_ADOPTION_NO_CCFT_VALIDATION_"
+    "NO_MASTER_ACTION_PROMOTION"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_TARGET = (
+    "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_KIND = (
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_ITEMS = [
+    "accepted 48-row crosswalk consumed as the sole calculation input",
+    "complete four-by-twelve applicability matrix verified",
+    "status distribution computed reproducibly",
+    "missing-variable occurrence counts computed reproducibly",
+    "missing-unit occurrence counts computed reproducibly",
+    "missing-assumption occurrence counts computed reproducibly",
+    "per-source applicability counts computed reproducibly",
+    "per-requirement blocker counts computed reproducibly",
+    "input, script, and output SHA-256 values recorded",
+    "E-REPRO scoped to matrix and counts only",
+    "source validation and adoption not performed",
+    "equation and Lindblad/master-equation import not performed",
+    "tau_baseline, tau_candidate, and empirical r_tau not computed",
+    "residual separation and CCFT validation not claimed",
+    "master action not promoted",
+]
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_BOUNDARY = (
+    "This execution computes a deterministic applicability matrix and aggregate "
+    "counts from the accepted 48-row superconducting circuit-QED literature "
+    "crosswalk, writes a result JSON and reproducibility manifest, and records "
+    "input, script, and output SHA-256 values. E-REPRO applies only to those "
+    "reproducible matrix/counts artifacts and remains pending result review. "
+    "The execution does not retrieve literature, score or validate sources, "
+    "adopt or replace a source, import or adopt equations, import a Lindblad or "
+    "master-equation form, compute tau_baseline or tau_candidate, calculate an "
+    "empirical r_tau value, fit data, define a measurement protocol, perform "
+    "statistical validation, claim residual separation, validate CCFT, close a "
+    "pillar or seam, or promote the master action."
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_RESULT_REVIEW_ACCEPTANCE_ITEMS = [
     "platform-specific literature-review packet result review accepted",
@@ -17060,6 +17108,57 @@ STAGES: dict[str, StageSpec] = {
             "guardrail_packet"
         ),
     ),
+    "ccft_scqed_literature_applicability_matrix_calculation_execution": StageSpec(
+        key=(
+            "ccft_scqed_literature_applicability_matrix_calculation_execution"
+        ),
+        schema_id=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
+            "EXECUTION_20260709_v0"
+        ),
+        packet_id=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
+            "EXECUTION_v0"
+        ),
+        status=(
+            "ACTIVE_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
+            "EXECUTION"
+        ),
+        outcome_id=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_OUTCOME
+        ),
+        strict_outcome_id=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_TARGET
+        ),
+        consumed_target_kind=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_EXECUTION_KIND
+        ),
+        selected_next_target=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTSCQEDLiteratureApplicabilityMatrixCalculationExecution"
+        ),
+        json_filename=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
+            "EXECUTION_20260709_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "ccft_scqed_literature_applicability_matrix_calculation_execution_"
+            "e_repro_counts_only"
+        ),
+        stage_role=(
+            "ccft_scqed_literature_applicability_matrix_calculation_execution"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -17163,6 +17262,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
     "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
+    "ccft_scqed_literature_applicability_matrix_calculation_execution",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -17429,6 +17529,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet": (
         "CCFT SCQED literature applicability matrix safe calculation execution"
     ),
+    "ccft_scqed_literature_applicability_matrix_calculation_execution": (
+        "CCFT SCQED literature applicability matrix calculation result review"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -17627,6 +17730,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
+        "ccft_scqed_literature_applicability_matrix_calculation_execution",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -17721,6 +17825,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
+        "ccft_scqed_literature_applicability_matrix_calculation_execution",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -17813,6 +17918,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
+        "ccft_scqed_literature_applicability_matrix_calculation_execution",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -17903,6 +18009,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
+        "ccft_scqed_literature_applicability_matrix_calculation_execution",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -33787,6 +33894,218 @@ def build_stage_payload(
                     "produce output, manifest, and reproducibility metadata "
                     "without source validation, equation adoption, tau_baseline "
                     "or tau_candidate computation, empirical r_tau calculation, "
+                    "residual separation, CCFT validation, or master-action "
+                    "promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "ccft_scqed_literature_applicability_matrix_calculation_execution"
+    ):
+        guardrail_payload = build_stage_payload(
+            "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        input_path = (
+            REPO_ROOT
+            / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT
+        )
+        script_path = (
+            REPO_ROOT
+            / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_SCRIPT
+        )
+        output_path = (
+            REPO_ROOT
+            / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTPUT
+        )
+        manifest_path = (
+            REPO_ROOT
+            / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_MANIFEST
+        )
+        calculation_result = json.loads(output_path.read_text(encoding="utf-8"))
+        calculation_manifest = json.loads(
+            manifest_path.read_text(encoding="utf-8")
+        )
+        input_sha256 = hashlib.sha256(input_path.read_bytes()).hexdigest()
+        script_sha256 = hashlib.sha256(script_path.read_bytes()).hexdigest()
+        output_sha256 = hashlib.sha256(output_path.read_bytes()).hexdigest()
+        assert calculation_manifest["input_sha256"] == input_sha256
+        assert calculation_manifest["script_sha256"] == script_sha256
+        assert calculation_manifest["output_sha256"] == output_sha256
+        assert calculation_result["input"]["sha256"] == input_sha256
+        assert calculation_result["implementation"]["script_sha256"] == script_sha256
+        assert calculation_result["matrix_dimensions"]["total_rows"] == 48
+        assert calculation_result["matrix_dimensions"][
+            "complete_cartesian_matrix"
+        ] is True
+        assert sum(calculation_result["status_distribution"].values()) == 48
+        assert calculation_result["claim"]["primary_label"] == "E-REPRO"
+        assert calculation_result["claim"]["claim_status"] == (
+            "generated_pending_result_review"
+        )
+        assert calculation_result["boundary"]["tau_baseline_computed"] is False
+        assert calculation_result["boundary"]["ccft_validated"] is False
+        missing_counts = calculation_result["missing_field_counts"]
+        per_requirement = calculation_result["per_requirement_blocker_counts"]
+        payload.update(
+            {
+                "calculation_sprint_guardrail_packet_consumed": True,
+                "calculation_sprint_guardrail_enforced": True,
+                "calculation_sprint_guardrail_result": guardrail_payload[
+                    "packet_result"
+                ],
+                "calculation_sprint_guardrail_strict_result": guardrail_payload[
+                    "strict_packet_result"
+                ],
+                "calculation_execution_authorized": True,
+                "calculation_execution_authorized_only_for_allowlist": True,
+                "calculation_execution_completed": True,
+                "calculation_scaffold_started": True,
+                "calculation_executed": True,
+                "calculation_matrix_executed": True,
+                "reproducible_calculation_executed": True,
+                "safe_matrix_counts_calculation_executed": True,
+                "calculation_id": calculation_result["calculation_id"],
+                "calculation_status": calculation_result["calculation_status"],
+                "calculation_input_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT
+                ),
+                "calculation_input_sha256": input_sha256,
+                "calculation_script_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_SCRIPT
+                ),
+                "calculation_script_sha256": script_sha256,
+                "calculation_test_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_TEST
+                ),
+                "calculation_output_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTPUT
+                ),
+                "calculation_output_sha256": output_sha256,
+                "calculation_manifest_path": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_MANIFEST
+                ),
+                "calculation_output_generated": True,
+                "calculation_manifest_generated": True,
+                "reproducibility_metadata_generated": True,
+                "reproducibility_hashes_verified": True,
+                "calculation_execution_command": calculation_manifest[
+                    "execution_command"
+                ],
+                "calculation_python_version": calculation_manifest[
+                    "python_version"
+                ],
+                "calculation_captured_at_utc": calculation_manifest[
+                    "captured_at_utc"
+                ],
+                "calculation_matrix_dimensions": calculation_result[
+                    "matrix_dimensions"
+                ],
+                "calculation_status_distribution": calculation_result[
+                    "status_distribution"
+                ],
+                "calculation_missing_variable_counts": missing_counts[
+                    "missing_variables"
+                ],
+                "calculation_missing_unit_counts": missing_counts[
+                    "missing_units"
+                ],
+                "calculation_missing_assumption_counts": missing_counts[
+                    "missing_assumptions"
+                ],
+                "calculation_per_source_applicability_counts": calculation_result[
+                    "per_source_applicability_counts"
+                ],
+                "calculation_per_literature_locator_counts": calculation_result[
+                    "per_literature_locator_counts"
+                ],
+                "calculation_per_requirement_blocker_counts": per_requirement,
+                "calculation_blocked_missing_requirement_binding_count": sum(
+                    row["blocked_missing_requirement_binding_count"]
+                    for row in per_requirement.values()
+                ),
+                "calculation_unclear_requires_review_count": sum(
+                    row["unclear_requires_review_count"]
+                    for row in per_requirement.values()
+                ),
+                "calculation_not_applicable_classification_count": sum(
+                    row["not_applicable_classification_count"]
+                    for row in per_requirement.values()
+                ),
+                "calculation_input_classifications_modified": False,
+                "calculation_scores_or_acceptance_thresholds_computed": False,
+                "e_repro_evidence_generated": True,
+                "e_repro_evidence_claimed": True,
+                "e_repro_claim_label": "E-REPRO",
+                "e_repro_claim_status": "generated_pending_result_review",
+                "e_repro_claim_scope": (
+                    "reproducible deterministic applicability matrix and counts only"
+                ),
+                "calculation_result_review_pending": True,
+                "calculation_result_review_completed": False,
+                "calculation_result_review_target": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_TARGET
+                ),
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_adopted": False,
+                "source_replaced": False,
+                "equation_import_authorized": False,
+                "equation_imported": False,
+                "equation_adopted": False,
+                "lindblad_import_authorized": False,
+                "lindblad_imported": False,
+                "master_equation_imported": False,
+                "tau_baseline_computation_authorized": False,
+                "tau_baseline_value_computed": False,
+                "tau_candidate_computation_authorized": False,
+                "tau_candidate_value_computed": False,
+                "r_tau_empirical_calculation_authorized": False,
+                "r_tau_empirical_value_computed": False,
+                "empirical_fit_executed": False,
+                "measurement_protocol_defined": False,
+                "statistical_validation_claimed": False,
+                "residual_separation_claimed": False,
+                "ccft_validated": False,
+                "master_action_promoted": False,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "selected_primary_residual_formula_unchanged": True,
+                "residual_formula_changed_by_matrix_calculation_execution": False,
+                "calculation_execution_items": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_ITEMS
+                ),
+                "calculation_execution_item_count": len(
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_ITEMS
+                ),
+                "calculation_execution_boundary": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_BOUNDARY
+                ),
+                "selected_next_calculation_result_review_target": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": (
+                    "PENDING_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_"
+                    "CALCULATION_RESULT_REVIEW"
+                ),
+                "strict_suggested_next_packet_outcome": (
+                    "PENDING_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_"
+                    "CALCULATION_RESULT_REVIEW_E_REPRO_COUNTS_ONLY"
+                ),
+                "next_disciplined_move_reason": (
+                    "The deterministic 48-row applicability matrix/counts "
+                    "calculation and its reproducibility manifest now exist. "
+                    "The next move is a separate result review of the scoped "
+                    "E-REPRO evidence, not source validation, equation adoption, "
+                    "tau_baseline computation, empirical r_tau calculation, "
                     "residual separation, CCFT validation, or master-action "
                     "promotion."
                 ),

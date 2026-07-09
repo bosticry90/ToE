@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "execute_calc_ccft_scqed_literature_applicability_matrix_v0" := by
+      "review_calc_ccft_scqed_literature_applicability_matrix_v0_result" := by
   native_decide
 
 end CurrentAuthority
