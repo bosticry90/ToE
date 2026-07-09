@@ -80,6 +80,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_review": "2026-07-08T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet": "2026-07-08T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review": "2026-07-08T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet": "2026-07-09T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -1814,6 +1815,32 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_"
     "superconducting_circuit_qed_platform_source_candidate_rescreening_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_"
+    "PACKET_PREPARED_RESCREENS_RETAINED_SOURCE_CANDIDATES_AGAINST_"
+    "PLATFORM_SPECIFIC_REQUIREMENTS_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_"
+    "ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_SUPERCONDUCTING_CIRCUIT_QED_SOURCE_CANDIDATE_RESCREENING_"
+    "PACKET_PREPARED_RESCREENING_ONLY_NO_LINDBLAD_IMPORT_NO_TAU_BASELINE_"
+    "COMPUTATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_source_candidate_rescreening_"
+    "packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_source_candidate_rescreening_"
+    "packet_result_review"
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_REVIEW_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -10031,6 +10058,342 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "statistical validation, claim residual separation, validate CCFT, or "
     "promote the master action."
 )
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_FIELDS = [
+    "rescreening_row_id",
+    "candidate_source_id",
+    "candidate_source_family",
+    "candidate_origin",
+    "platform_requirement_id",
+    "platform_requirement_description",
+    "rescreening_status",
+    "reason_for_status",
+    "remaining_blocker_class",
+    "missing_validation_items",
+    "not_validated_boundary",
+    "not_adopted_boundary",
+    "not_imported_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_CANDIDATE_POOL_SCOPE = (
+    "both_retained_candidate_sets"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_STATUSES = [
+    "still_blocked",
+    "still_unclear",
+    "platform_relevant_unvalidated",
+    "requires_platform_specific_literature",
+    "requires_parameter_mapping_review",
+    "requires_measurement_control_review",
+    "requires_noise_model_review",
+]
+
+
+def _scqed_platform_source_candidate_rescreening_candidate_pool() -> list[dict[str, object]]:
+    replacement_discovery_by_id = {
+        str(row["candidate_source_id"]): row
+        for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_SEARCH_CANDIDATE_DISCOVERY_ROWS
+    }
+    targeted_discovery_by_id = {
+        str(row["candidate_source_id"]): row
+        for row in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_ROWS
+    }
+    pool: list[dict[str, object]] = []
+    for triage_row in (
+        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_REPLACEMENT_SOURCE_CANDIDATE_TRIAGE_ROWS
+    ):
+        candidate_source_id = str(triage_row["candidate_source_id"])
+        discovery_row = replacement_discovery_by_id[candidate_source_id]
+        pool.append(
+            {
+                "candidate_source_id": candidate_source_id,
+                "candidate_source_family": discovery_row["source_type"],
+                "candidate_origin": "original_replacement_source_candidates",
+                "candidate_source_title_or_family": discovery_row[
+                    "source_title_or_family"
+                ],
+                "candidate_role": triage_row["triage_role"],
+                "missing_validation_items": [
+                    *discovery_row["missing_validation_items"],
+                    triage_row["next_review_need"],
+                ],
+                "not_validated_boundary": triage_row[
+                    "not_validated_boundary"
+                ],
+                "not_adopted_boundary": discovery_row[
+                    "not_adopted_boundary"
+                ],
+                "not_imported_boundary": (
+                    "no equation, Lindblad form, master-equation form, or "
+                    "platform-specific transmon-resonator model imported from "
+                    f"{candidate_source_id}"
+                ),
+            }
+        )
+    for triage_row in (
+        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_TRIAGE_ROWS
+    ):
+        candidate_source_id = str(triage_row["candidate_source_id"])
+        discovery_row = targeted_discovery_by_id[candidate_source_id]
+        pool.append(
+            {
+                "candidate_source_id": candidate_source_id,
+                "candidate_source_family": discovery_row["source_type"],
+                "candidate_origin": "targeted_literature_expansion_candidates",
+                "candidate_source_title_or_family": discovery_row[
+                    "source_title"
+                ],
+                "candidate_role": triage_row["likely_source_role"],
+                "missing_validation_items": triage_row[
+                    "missing_validation_items"
+                ],
+                "not_validated_boundary": triage_row[
+                    "not_validated_boundary"
+                ],
+                "not_adopted_boundary": triage_row["not_adopted_boundary"],
+                "not_imported_boundary": discovery_row[
+                    "not_imported_boundary"
+                ],
+            }
+        )
+    return pool
+
+
+def _scqed_platform_source_candidate_rescreening_status(
+    candidate_source_id: str, platform_requirement_id: str
+) -> str:
+    observable_context_candidates = {
+        "OSD-REPL-CAND-SCHLOSSHAUER-RMP-v0",
+        "OSD-TLR-CAND-SCHLOSSHAUER-QUANTUM-DECOHERENCE-v0",
+        "OSD-TLR-CAND-JACOBS-STECK-CONTINUOUS-MEASUREMENT-v0",
+    }
+    measurement_control_candidates = {
+        "OSD-TLR-CAND-WISEMAN-MILBURN-MEASUREMENT-CONTROL-v0",
+        "OSD-TLR-CAND-JACOBS-STECK-CONTINUOUS-MEASUREMENT-v0",
+    }
+    noise_model_candidates = {
+        "OSD-REPL-CAND-GKSL-SEMI-GROUP-v0",
+        "OSD-REPL-CAND-CALDEIRA-LEGGETT-QBM-v0",
+        "OSD-REPL-CAND-WEISS-QDS-v0",
+        "OSD-TLR-CAND-DE-VEGA-ALONSO-NONMARKOV-v0",
+        "OSD-TLR-CAND-RIVAS-HUELGA-PLENIO-NONMARKOV-v0",
+        "OSD-TLR-CAND-ESPOSITO-HARBOLA-MUKAMEL-QTHERMO-v0",
+    }
+    if platform_requirement_id in {
+        "SCQED-REQ-TRANSMON-REGIME-v0",
+        "SCQED-REQ-RESONATOR-COUPLING-v0",
+        "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0",
+        "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0",
+    }:
+        return "requires_platform_specific_literature"
+    if platform_requirement_id in {
+        "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0",
+        "SCQED-REQ-T1-T2-DEPHASING-v0",
+    }:
+        if candidate_source_id in observable_context_candidates:
+            return "platform_relevant_unvalidated"
+        return "requires_parameter_mapping_review"
+    if platform_requirement_id in {
+        "SCQED-REQ-MEASUREMENT-CONTROL-v0",
+        "SCQED-REQ-DRIVE-READOUT-v0",
+    }:
+        if candidate_source_id in measurement_control_candidates:
+            return "requires_measurement_control_review"
+        return "still_blocked"
+    if platform_requirement_id in {
+        "SCQED-REQ-ENVIRONMENT-NOISE-v0",
+        "SCQED-REQ-TEMPERATURE-DISSIPATION-v0",
+    }:
+        if candidate_source_id in noise_model_candidates:
+            return "requires_noise_model_review"
+        return "still_unclear"
+    if platform_requirement_id == "SCQED-REQ-BLOCKER-REDUCTION-v0":
+        return "still_unclear"
+    return "still_blocked"
+
+
+def _scqed_platform_source_candidate_rescreening_blocker_class(
+    platform_requirement_id: str,
+) -> str:
+    return {
+        "SCQED-REQ-TRANSMON-REGIME-v0": "regime_mismatch",
+        "SCQED-REQ-RESONATOR-COUPLING-v0": "missing_mesoscopic_platform_fit",
+        "SCQED-REQ-COHERENCE-LIFETIME-OBSERVABLE-v0": "missing_observable_binding",
+        "SCQED-REQ-T1-T2-DEPHASING-v0": "missing_observable_binding",
+        "SCQED-REQ-MEASUREMENT-CONTROL-v0": "missing_measurement_feedback_handling",
+        "SCQED-REQ-ENVIRONMENT-NOISE-v0": "missing_parameter_mapping",
+        "SCQED-REQ-DRIVE-READOUT-v0": "missing_measurement_feedback_handling",
+        "SCQED-REQ-TEMPERATURE-DISSIPATION-v0": "domain_assumption_mismatch",
+        "SCQED-REQ-ALLOWED-SOURCE-FAMILIES-v0": "source_provenance_gap",
+        "SCQED-REQ-EXCLUDED-SOURCE-FAMILIES-v0": "source_provenance_gap",
+        "SCQED-REQ-BLOCKER-REDUCTION-v0": "platform_specific_blockers_retained",
+        "SCQED-REQ-REMAINING-BLOCKERS-v0": "remaining_blockers_retained",
+    }[platform_requirement_id]
+
+
+def _scqed_platform_source_candidate_rescreening_reason(
+    candidate_source_id: str,
+    candidate_origin: str,
+    platform_requirement_id: str,
+    status: str,
+) -> str:
+    status_reasons = {
+        "still_blocked": (
+            "the retained candidate does not yet map to the selected "
+            "superconducting circuit-QED requirement"
+        ),
+        "still_unclear": (
+            "the retained candidate may be contextually relevant, but the "
+            "platform mapping remains unresolved"
+        ),
+        "platform_relevant_unvalidated": (
+            "the retained candidate is relevant to a nearby observable or "
+            "measurement context, but has not been validated for the selected "
+            "transmon-resonator coherence-lifetime baseline"
+        ),
+        "requires_platform_specific_literature": (
+            "the requirement demands explicit superconducting circuit-QED "
+            "transmon/resonator literature before source validation"
+        ),
+        "requires_parameter_mapping_review": (
+            "the candidate still needs a platform parameter, unit, and "
+            "observable map before any applicability claim"
+        ),
+        "requires_measurement_control_review": (
+            "the candidate must be separated from measurement, readout, "
+            "feedback, and control baseline components before any use"
+        ),
+        "requires_noise_model_review": (
+            "the candidate needs a superconducting-circuit noise, bath, "
+            "temperature, or dissipation model review before validation"
+        ),
+    }
+    return (
+        f"{candidate_source_id} from {candidate_origin} has status {status} "
+        f"against {platform_requirement_id}: {status_reasons[status]}. "
+        "This row is a re-screening label only and does not validate, adopt, "
+        "replace, or import the source."
+    )
+
+
+def _scqed_platform_source_candidate_rescreening_rows() -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    candidate_pool = _scqed_platform_source_candidate_rescreening_candidate_pool()
+    requirement_rows = (
+        SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_REQUIREMENT_REFINEMENT_ROWS
+    )
+    for candidate_index, candidate in enumerate(candidate_pool, start=1):
+        candidate_source_id = str(candidate["candidate_source_id"])
+        candidate_origin = str(candidate["candidate_origin"])
+        for requirement_index, requirement in enumerate(
+            requirement_rows, start=1
+        ):
+            platform_requirement_id = str(requirement["platform_requirement_id"])
+            status = _scqed_platform_source_candidate_rescreening_status(
+                candidate_source_id, platform_requirement_id
+            )
+            rows.append(
+                {
+                    "rescreening_row_id": (
+                        f"SCQED-OSD-RESCREEN-C{candidate_index:02d}-"
+                        f"R{requirement_index:02d}-v0"
+                    ),
+                    "candidate_source_id": candidate_source_id,
+                    "candidate_source_family": candidate[
+                        "candidate_source_family"
+                    ],
+                    "candidate_origin": candidate_origin,
+                    "candidate_source_title_or_family": candidate[
+                        "candidate_source_title_or_family"
+                    ],
+                    "candidate_role": candidate["candidate_role"],
+                    "platform_requirement_id": platform_requirement_id,
+                    "platform_requirement_description": requirement[
+                        "platform_specific_requirement"
+                    ],
+                    "rescreening_status": status,
+                    "reason_for_status": (
+                        _scqed_platform_source_candidate_rescreening_reason(
+                            candidate_source_id,
+                            candidate_origin,
+                            platform_requirement_id,
+                            status,
+                        )
+                    ),
+                    "remaining_blocker_class": (
+                        _scqed_platform_source_candidate_rescreening_blocker_class(
+                            platform_requirement_id
+                        )
+                    ),
+                    "missing_validation_items": [
+                        *candidate["missing_validation_items"],
+                        requirement["required_future_artifact"],
+                        requirement["source_acceptance_gate"],
+                    ],
+                    "not_validated_boundary": (
+                        f"{candidate['not_validated_boundary']}; "
+                        f"{requirement['boundary']}; no source validation "
+                        "performed in this packet"
+                    ),
+                    "not_adopted_boundary": (
+                        f"{candidate['not_adopted_boundary']}; no source "
+                        "adoption or replacement performed in this packet"
+                    ),
+                    "not_imported_boundary": (
+                        f"{candidate['not_imported_boundary']}; no equation, "
+                        "Lindblad form, master-equation form, or "
+                        "tau_baseline input imported"
+                    ),
+                }
+            )
+    return rows
+
+
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_CANDIDATE_POOL = (
+    _scqed_platform_source_candidate_rescreening_candidate_pool()
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_ROWS = (
+    _scqed_platform_source_candidate_rescreening_rows()
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_ITEMS = [
+    "superconducting circuit-QED platform source-candidate re-screening packet prepared",
+    "platform requirement-refinement result review consumed",
+    "candidate pool scope explicitly recorded as both retained candidate sets",
+    "six original replacement source candidates included",
+    "eight targeted literature expansion candidates included",
+    "fourteen retained source candidates re-screened",
+    "twelve platform-specific source requirements retained",
+    "one hundred sixty-eight candidate-to-platform-requirement rows recorded",
+    "status labels recorded as re-screening labels only",
+    "missing validation items retained",
+    "not-validated boundaries retained",
+    "not-adopted boundaries retained",
+    "not-imported boundaries retained",
+    "zero source candidates validated",
+    "zero sources adopted or replaced",
+    "zero equations imported or adopted",
+    "no Lindblad or master-equation form imported",
+    "no empirical fit executed",
+    "no tau_baseline computation",
+    "no completed baseline model",
+    "no measurement protocol",
+    "no statistical validation",
+    "no residual separation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_BOUNDARY = (
+    "This packet re-screens retained open-system decoherence source "
+    "candidates against the superconducting circuit-QED transmon/resonator "
+    "coherence-lifetime platform requirements only. The candidate pool is "
+    "explicitly both retained sets: the six original replacement source "
+    "candidates and the eight targeted literature expansion candidates. It "
+    "records status labels, reasons, remaining blocker classes, missing "
+    "validation items, and not-validated/not-adopted/not-imported boundaries. "
+    "It does not validate a source, adopt a source, replace a source, import "
+    "or adopt equations, import a Lindblad or master-equation form, fit data, "
+    "compute tau_baseline, complete a baseline model, define a measurement "
+    "protocol, perform statistical validation, claim residual separation, "
+    "validate CCFT, or promote the master action."
+)
 CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_OUTCOME = (
     "CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_PRIORITY_SELECTION_PACKET_PREPARED_"
     "RANKS_MEASURABLE_SYSTEM_AND_FALSIFIER_ROWS_NO_EMPIRICAL_VALIDATION_OR_"
@@ -14811,6 +15174,62 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet_result_review"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_"
+            "RESCREENING_PACKET_20260709_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_"
+            "RESCREENING_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_"
+            "CANDIDATE_RESCREENING_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformSourceCandidateRescreeningPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_"
+            "QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_PACKET_20260709_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -14903,6 +15322,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -15136,6 +15556,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review": (
         "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence superconducting circuit-QED platform source candidate re-screening packet"
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence superconducting circuit-QED platform source candidate re-screening packet result review"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -15323,6 +15746,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -15406,6 +15830,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -15487,6 +15912,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -15566,6 +15992,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_platform_narrowing_candidate_selection_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -29273,6 +29700,258 @@ def build_stage_payload(
                     "validation, source adoption, equation import, Lindblad "
                     "or master-equation import, tau_baseline computation, "
                     "measurement protocol design, CCFT validation, or "
+                    "master-action promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet"
+    ):
+        prior_review_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        rescreening_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_ROWS
+        )
+        candidate_pool = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_CANDIDATE_POOL
+        )
+        platform_requirement_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_REQUIREMENT_REFINEMENT_ROWS
+        )
+        status_counts = {
+            status: sum(
+                1 for row in rescreening_rows if row["rescreening_status"] == status
+            )
+            for status in SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_STATUSES
+        }
+        original_candidate_count = sum(
+            1
+            for candidate in candidate_pool
+            if candidate["candidate_origin"] == "original_replacement_source_candidates"
+        )
+        targeted_candidate_count = sum(
+            1
+            for candidate in candidate_pool
+            if candidate["candidate_origin"] == "targeted_literature_expansion_candidates"
+        )
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet_result_review_consumed": True,
+                "prepared_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_REQUIREMENT_REFINEMENT_REVIEW_OUTCOME
+                ),
+                "prepared_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_REQUIREMENT_REFINEMENT_REVIEW_STRICT_OUTCOME
+                ),
+                "platform_requirement_refinement_packet_result_review_consumed": True,
+                "platform_requirement_refinement_packet_accepted": True,
+                "platform_requirement_refinement_accepted_only": True,
+                "platform_requirement_refinement_accepted_as_requirements_only": True,
+                "superconducting_circuit_qed_platform_requirement_refinement_packet_result_review_consumed": True,
+                "superconducting_circuit_qed_platform_requirement_refinement_packet_accepted": True,
+                "superconducting_circuit_qed_platform_requirement_refinement_accepted_only": True,
+                "superconducting_circuit_qed_platform_requirement_refinement_accepted_as_requirements_only": True,
+                "platform_specific_source_candidate_rescreening_packet_selected": True,
+                "platform_specific_source_candidate_rescreening_packet_selected_only": True,
+                "platform_specific_source_candidate_rescreening_packet_prepared": True,
+                "platform_specific_source_candidate_rescreening_performed": True,
+                "platform_specific_source_candidates_rescreened": True,
+                "platform_specific_source_candidate_rescreening_only": True,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_packet_selected": True,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_packet_selected_only": True,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_packet_prepared": True,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_only": True,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_performed": True,
+                "superconducting_circuit_qed_platform_source_candidates_rescreened": True,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_required_before_source_validation": True,
+                "superconducting_circuit_qed_platform_source_candidate_discovery_performed": False,
+                "source_candidate_rescreening_packet_selected": True,
+                "source_candidate_rescreening_packet_prepared": True,
+                "source_candidate_rescreening_executed": True,
+                "source_candidate_rescreening_executed_as_screening_only": True,
+                "source_candidate_pool_scope_explicit": True,
+                "source_candidate_pool_scope": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_CANDIDATE_POOL_SCOPE
+                ),
+                "source_candidate_pool_includes_original_replacement_candidates": True,
+                "source_candidate_pool_includes_targeted_literature_expansion_candidates": True,
+                "source_candidate_pool_original_replacement_candidate_count": original_candidate_count,
+                "source_candidate_pool_targeted_literature_expansion_candidate_count": targeted_candidate_count,
+                "source_candidate_pool_total_candidate_count": len(candidate_pool),
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_candidate_count": len(
+                    candidate_pool
+                ),
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_platform_requirement_count": len(
+                    platform_requirement_rows
+                ),
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_requirement_check_count": len(
+                    rescreening_rows
+                ),
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_row_count": len(
+                    rescreening_rows
+                ),
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_status_count": len(
+                    status_counts
+                ),
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_still_blocked_count": status_counts[
+                    "still_blocked"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_still_unclear_count": status_counts[
+                    "still_unclear"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_platform_relevant_unvalidated_count": status_counts[
+                    "platform_relevant_unvalidated"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_requires_platform_specific_literature_count": status_counts[
+                    "requires_platform_specific_literature"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_requires_parameter_mapping_review_count": status_counts[
+                    "requires_parameter_mapping_review"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_requires_measurement_control_review_count": status_counts[
+                    "requires_measurement_control_review"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_requires_noise_model_review_count": status_counts[
+                    "requires_noise_model_review"
+                ],
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_supported_count": 0,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_validated_source_count": 0,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_adopted_source_count": 0,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_replaced_source_count": 0,
+                "superconducting_circuit_qed_platform_source_candidate_rescreening_equation_import_count": 0,
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_field_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_FIELDS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_candidate_pool": candidate_pool,
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_candidate_pool_count": len(
+                    candidate_pool
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_rows": rescreening_rows,
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_row_count": len(
+                    rescreening_rows
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_item_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_ITEMS
+                ),
+                "baseline_component_equation_source_applicability_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_BOUNDARY
+                ),
+                "platform_requirement_refinement_satisfied_requirements": False,
+                "platform_requirement_refinement_validation_ready": False,
+                "platform_execution_performed": False,
+                "platform_selection_executed": False,
+                "platform_selection_accepted": False,
+                "platform_narrowing_accepted_as_empirical_design": False,
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_validation_executed": False,
+                "source_validation_performed": False,
+                "source_validation_accepted": False,
+                "source_adopted": False,
+                "source_replaced": False,
+                "candidate_source_accepted": False,
+                "candidate_source_validated": False,
+                "candidate_source_adopted": False,
+                "candidate_source_replaced": False,
+                "candidate_source_applicability_validated": False,
+                "candidate_source_applicability_accepted": False,
+                "candidate_source_accepted_as_applicable": False,
+                "candidate_equation_imported": False,
+                "candidate_equation_adopted": False,
+                "equation_source_validated": False,
+                "equation_source_validation_accepted": False,
+                "equation_sources_accepted_as_physically_adequate": False,
+                "open_system_decoherence_gap_resolved": False,
+                "open_system_decoherence_source_path_resolved": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_source_accepted": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_component_solved": False,
+                "open_system_decoherence_lindblad_form_imported": False,
+                "open_system_decoherence_master_equation_form_imported": False,
+                "standard_open_system_theory_import_work_executed": False,
+                "standard_theory_import_work_executed": False,
+                "component_equations_derived": False,
+                "component_equations_imported": False,
+                "component_equations_specified": False,
+                "component_equations_selected": False,
+                "empirical_fit_performed": False,
+                "empirical_fit_executed": False,
+                "empirical_fit_validated": False,
+                "fit_model_declared": False,
+                "data_source_selected": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "tau_baseline_value_computation_accepted": False,
+                "tau_baseline_completed_model_claimed": False,
+                "tau_baseline_completed_model_accepted": False,
+                "baseline_model_completed": False,
+                "baseline_model_accepted": False,
+                "measurement_protocol_defined": False,
+                "measurement_protocol_readiness_accepted": False,
+                "statistical_validation_claimed": False,
+                "statistical_validation_accepted": False,
+                "observed_residual_accepted": False,
+                "ccft_predicted_residual_accepted": False,
+                "residual_separation_claimed": False,
+                "baseline_separation_claimed": False,
+                "baseline_separation_accepted": False,
+                "empirical_validation_accepted": False,
+                "ccft_validation_accepted": False,
+                "ccft_validated": False,
+                "master_action_support_accepted": False,
+                "master_action_promoted": False,
+                "calculation_scaffold_started": False,
+                "calculation_schema_only": False,
+                "calculation_matrix_executed": False,
+                "reproducible_calculation_executed": False,
+                "triage_scoring_executed": False,
+                "candidate_scoring_executed": False,
+                "calculation_result_claim_label": "not_applicable_platform_source_candidate_rescreening_packet_only",
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet": False,
+                "selected_next_platform_source_candidate_rescreening_review_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_TARGET
+                ),
+                "selected_next_platform_source_candidate_rescreening_review_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_KIND
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_PLATFORM_SOURCE_CANDIDATE_RESCREENING_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_PLATFORM_SOURCE_CANDIDATE_RESCREENING_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The superconducting circuit-QED platform source-"
+                    "candidate re-screening packet compares both retained "
+                    "candidate sets against the platform-specific "
+                    "requirements only. The next disciplined step is result "
+                    "review of this re-screening packet, not source "
+                    "validation, source adoption, source replacement, "
+                    "equation import, Lindblad or master-equation import, "
+                    "tau_baseline computation, measurement protocol design, "
+                    "statistical validation, CCFT validation, or "
                     "master-action promotion."
                 ),
             }
