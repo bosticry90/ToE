@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result"
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet"
+    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result"
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
@@ -96,6 +96,9 @@ OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RE
 )
 OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_TARGET = (
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result"
+)
+OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet"
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_SCOPE_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_scope_packet"
@@ -1458,17 +1461,41 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet"
     ].strict_outcome_id
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_EVIDENCE = (
+    str(lean_path(
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review"
+        ]
+    ).relative_to(REPO_ROOT)).replace("\\", "/")
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_REPORT = (
+    str(release_path(
+        STAGES[
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review"
+        ]
+    ).relative_to(REPO_ROOT)).replace("\\", "/")
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review"
+    ].outcome_id
+)
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_STRICT_OUTCOME = (
+    STAGES[
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review"
+    ].strict_outcome_id
+)
 FINAL_EVIDENCE = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_EVIDENCE
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_EVIDENCE
 )
 FINAL_REPORT = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REPORT
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_REPORT
 )
 FINAL_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_OUTCOME
 )
 FINAL_STRICT_OUTCOME = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_STRICT_OUTCOME
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_STRICT_OUTCOME
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
@@ -1681,8 +1708,12 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result_review"
 )
+BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet"
+)
 FINAL_KIND = (
-    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_KIND
+    BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_KIND
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -2063,6 +2094,10 @@ WRAPPER_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet": (
         "formal/python/tools/"
         "selected_ccft_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_report.py"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review": (
+        "formal/python/tools/"
+        "selected_ccft_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result_review_report.py"
     ),
 }
 
@@ -2519,6 +2554,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "formal.python.tools."
         "selected_ccft_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_report",
         "build_selected_ccft_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review": (
+        "formal.python.tools."
+        "selected_ccft_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result_review_report",
+        "build_selected_ccft_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet_result_review",
     ),
 }
 
@@ -3401,6 +3441,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -4041,6 +4082,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_packet",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_requirement_refinement_review",
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_packet",
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
             }
             else "no"
         )
@@ -10098,7 +10140,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
-        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_KIND
+        == BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_REVIEW_KIND
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
@@ -10107,10 +10149,10 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["review_result"] == FINAL_OUTCOME
     assert active["strict_review_result"] == FINAL_STRICT_OUTCOME
     assert active["prepared_packet_result"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_REQUIREMENT_REFINEMENT_PACKET_OUTCOME
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_OUTCOME
     )
     assert active["prepared_packet_strict_result"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_REQUIREMENT_REFINEMENT_PACKET_STRICT_OUTCOME
+        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SOURCE_CANDIDATE_RESCREENING_STRICT_OUTCOME
     )
     assert active["selected_next_target"] == FINAL_LIVE_TARGET
     assert active["selected_next_target_kind"] == FINAL_KIND
@@ -10613,6 +10655,31 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
         ]
         == 168
     )
+    assert (
+        active[
+            "accepted_superconducting_circuit_qed_platform_source_candidate_rescreening_row_count"
+        ]
+        == 168
+    )
+    assert active["source_candidate_rescreening_status_distribution_preserved"] == "yes"
+    assert active["source_candidate_rescreening_platform_relevance_not_validation"] == "yes"
+    assert active["source_candidate_rescreening_status_distribution"] == {
+        "platform_relevant_unvalidated": 6,
+        "requires_measurement_control_review": 4,
+        "requires_noise_model_review": 12,
+        "requires_parameter_mapping_review": 22,
+        "requires_platform_specific_literature": 56,
+        "still_blocked": 38,
+        "still_unclear": 30,
+    }
+    assert active["source_candidate_rescreening_supported_row_count"] == 0
+    assert active["source_candidate_rescreening_rejected_row_count"] == 0
+    assert active["platform_relevant_unvalidated_row_count"] == 6
+    assert active["platform_relevant_unvalidated_candidate_count"] == 3
+    assert active["platform_relevant_unvalidated_requirement_count"] == 2
+    assert active["platform_relevant_candidate_triage_packet_selected"] == "yes"
+    assert active["platform_relevant_candidate_triage_packet_prepared"] == "no"
+    assert active["platform_relevant_candidate_triage_executed"] == "no"
     assert active["platform_requirement_refinement_satisfied_requirements"] == "no"
     assert active["platform_requirement_refinement_validation_ready"] == "no"
     assert active["platform_selection_executed"] == "no"
