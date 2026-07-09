@@ -435,7 +435,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
+        "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -463,7 +463,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
+        "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
       status := .retained }
   ]
 
@@ -484,18 +484,18 @@ def crossPillarClosureFrontierSurfaceId : String :=
 /--
 Previous live target consumed by the selected CCFT open-system decoherence
 superconducting circuit-QED platform-specific literature applicability
-crosswalk packet.
+crosswalk packet result review.
 -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet"
+  "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 
 /--
 Current live target after the selected CCFT open-system decoherence
 superconducting circuit-QED platform-specific literature applicability
-crosswalk packet.
+crosswalk packet result review.
 -/
 def currentLiveNextStrictTargetV0 : String :=
-  "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
+  "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -508,7 +508,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
+    "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
