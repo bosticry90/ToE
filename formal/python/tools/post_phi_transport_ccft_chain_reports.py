@@ -84,6 +84,8 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review": "2026-07-09T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet": "2026-07-09T00:00:00Z",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review": "2026-07-09T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet": "2026-07-09T00:00:00Z",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review": "2026-07-09T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -1922,6 +1924,206 @@ SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICA
     "platform_specific_literature_review",
     "measurement_control_review",
 ]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_"
+    "ROUTE_SELECTION_PACKET_PREPARED_SELECTS_FUTURE_FOLLOWON_ROUTE_ONLY_"
+    "NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_SUPERCONDUCTING_CIRCUIT_QED_RELEVANT_CANDIDATE_FOLLOWON_"
+    "ROUTE_SELECTION_PACKET_PREPARED_ROUTE_SELECTION_ONLY_NO_LINDBLAD_"
+    "IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_TARGET = (
+    "review_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_relevant_candidate_followon_"
+    "route_selection_packet_result"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_relevant_candidate_followon_"
+    "route_selection_packet_result_review"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+    "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_"
+    "ROUTE_SELECTION_PACKET_RESULT_REVIEW_ACCEPTS_PLATFORM_SPECIFIC_"
+    "LITERATURE_REVIEW_ROUTE_ONLY_NO_SOURCE_VALIDATION_OR_EQUATION_ADOPTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME = (
+    "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+    "SOURCE_SUPERCONDUCTING_CIRCUIT_QED_RELEVANT_CANDIDATE_FOLLOWON_"
+    "ROUTE_SELECTION_PACKET_RESULT_REVIEW_ACCEPTS_ROUTE_SELECTION_ONLY_NO_"
+    "LINDBLAD_IMPORT_NO_TAU_BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_relevant_candidate_platform_"
+    "specific_literature_review_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_relevant_candidate_platform_"
+    "specific_literature_review_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_MEASUREMENT_CONTROL_REVIEW_TARGET = (
+    "prepare_selected_ccft_empirical_discriminator_baseline_component_"
+    "equation_source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_relevant_candidate_measurement_"
+    "control_review_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_MEASUREMENT_CONTROL_REVIEW_KIND = (
+    "selected_ccft_empirical_discriminator_baseline_component_equation_"
+    "source_applicability_gap_resolution_open_system_decoherence_"
+    "superconducting_circuit_qed_platform_relevant_candidate_measurement_"
+    "control_review_packet"
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_FIELDS = [
+    "route_selection_id",
+    "input_triage_distribution",
+    "candidate_route",
+    "selected_route",
+    "selection_reason",
+    "affected_row_count",
+    "unselected_route_status",
+    "future_target",
+    "not_executed_boundary",
+    "not_validated_boundary",
+    "not_adopted_boundary",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_ROWS = [
+    {
+        "route_selection_id": "SCQED-RELEVANT-CAND-FOLLOWON-ROUTE-PLATFORM-LITERATURE-v0",
+        "input_triage_distribution": {
+            "requires_platform_specific_literature_review": 4,
+            "requires_measurement_control_review": 2,
+        },
+        "candidate_route": "platform_specific_literature_review",
+        "selected_route": True,
+        "selection_status": "selected_future_route",
+        "selection_reason": (
+            "platform_specific_literature_review selected because 4 of 6 "
+            "platform-relevant-unvalidated rows require platform-specific "
+            "literature review, making it the dominant follow-on need"
+        ),
+        "affected_row_count": 4,
+        "unselected_route_status": "not_applicable_selected_route",
+        "future_target": (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET
+        ),
+        "future_target_kind": (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND
+        ),
+        "not_executed_boundary": (
+            "route selection only; no platform-specific literature review "
+            "is executed in this packet"
+        ),
+        "not_validated_boundary": (
+            "no source is validated by selecting this future route"
+        ),
+        "not_adopted_boundary": (
+            "no source, equation, Lindblad form, master-equation form, or "
+            "tau_baseline input is adopted"
+        ),
+    },
+    {
+        "route_selection_id": "SCQED-RELEVANT-CAND-FOLLOWON-ROUTE-MEASUREMENT-CONTROL-v0",
+        "input_triage_distribution": {
+            "requires_platform_specific_literature_review": 4,
+            "requires_measurement_control_review": 2,
+        },
+        "candidate_route": "measurement_control_review",
+        "selected_route": False,
+        "selection_status": "retained_unresolved_followon_route",
+        "selection_reason": (
+            "measurement_control_review retained as an unresolved follow-on "
+            "route because 2 of 6 rows still require measurement/control "
+            "review after the dominant platform-specific literature route"
+        ),
+        "affected_row_count": 2,
+        "unselected_route_status": "retained_as_unresolved_followon_route",
+        "future_target": (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_MEASUREMENT_CONTROL_REVIEW_TARGET
+        ),
+        "future_target_kind": (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_MEASUREMENT_CONTROL_REVIEW_KIND
+        ),
+        "not_executed_boundary": (
+            "retained route only; no measurement/control review is executed "
+            "in this packet"
+        ),
+        "not_validated_boundary": (
+            "no measurement/control route source is validated"
+        ),
+        "not_adopted_boundary": (
+            "no source, equation, protocol, or baseline model is adopted"
+        ),
+    },
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_ITEMS = [
+    "follow-on route-selection packet prepared",
+    "relevant-candidate triage result review consumed",
+    "six platform-relevant-unvalidated rows used as route-selection input",
+    "two candidate follow-on routes recorded",
+    "platform-specific literature review selected as future route only",
+    "measurement/control review retained as unresolved follow-on route",
+    "zero literature-review executions",
+    "zero measurement/control-review executions",
+    "zero sources validated",
+    "zero equations imported or adopted",
+    "no Lindblad or master-equation form imported",
+    "no tau_baseline computation",
+    "no measurement protocol",
+    "no statistical validation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_BOUNDARY = (
+    "This packet selects platform_specific_literature_review as a future "
+    "follow-on route only because four of the six platform-relevant-"
+    "unvalidated rows require platform-specific literature review. It retains "
+    "measurement_control_review as an unresolved follow-on route. It does not "
+    "execute literature review, execute measurement/control review, validate "
+    "a source, adopt or replace a source, import or adopt equations, import "
+    "Lindblad or master-equation forms, fit data, compute tau_baseline, "
+    "complete a baseline model, define a measurement protocol, perform "
+    "statistical validation, claim residual separation, validate CCFT, or "
+    "promote the master action."
+)
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_ACCEPTANCE_ITEMS = [
+    "follow-on route-selection packet result review accepted",
+    "prepared route-selection packet consumed",
+    "platform-specific literature review route accepted as future route only",
+    "measurement/control review retained as unresolved follow-on route",
+    "platform-specific literature-review packet selected next",
+    "zero source validations accepted",
+    "zero equations imported or adopted",
+    "no Lindblad or master-equation form imported",
+    "no tau_baseline computation",
+    "no protocol definition",
+    "no statistical validation",
+    "no CCFT validation",
+    "no master-action promotion",
+]
+SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_BOUNDARY = (
+    "This review accepts the follow-on route-selection packet as route "
+    "selection only. It accepts platform_specific_literature_review as the "
+    "future route and selects a platform-specific literature-review packet "
+    "next. It does not execute literature review, execute measurement/control "
+    "review, validate a source, adopt or replace a source, import or adopt "
+    "equations, import Lindblad or master-equation forms, fit data, compute "
+    "tau_baseline, complete a baseline model, define a measurement protocol, "
+    "perform statistical validation, claim residual separation, validate "
+    "CCFT, or promote the master action."
+)
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_FIELDS = [
     "triage_row_id",
     "source_candidate_id",
@@ -15529,6 +15731,120 @@ STAGES: dict[str, StageSpec] = {
             "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet_result_review"
         ),
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_"
+            "ROUTE_SELECTION_PACKET_20260709_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_"
+            "ROUTE_SELECTION_PACKET_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_"
+            "CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformRelevantCandidateFollowonRouteSelectionPacket"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_"
+            "QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_"
+            "20260709_v0.json"
+        ),
+        result_kind="packet",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet"
+        ),
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review": StageSpec(
+        key="baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review",
+        schema_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_"
+            "ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260709_v0"
+        ),
+        packet_id=(
+            "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
+            "SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_DECOHERENCE_"
+            "SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_"
+            "ROUTE_SELECTION_PACKET_RESULT_REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_"
+            "EQUATION_SOURCE_APPLICABILITY_GAP_RESOLUTION_OPEN_SYSTEM_"
+            "DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_"
+            "CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_RESULT_REVIEW"
+        ),
+        outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_KIND
+        ),
+        selected_next_target=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET
+        ),
+        selected_next_target_kind=(
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "SelectedCCFTOpenSystemDecoherenceSuperconductingCircuitQEDPlatformRelevantCandidateFollowonRouteSelectionPacketResultReview"
+        ),
+        json_filename=(
+            "SELECTED_CCFT_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_"
+            "QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_"
+            "RESULT_REVIEW_20260709_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_result_review_only"
+        ),
+        stage_role=(
+            "selected_ccft_empirical_discriminator_baseline_component_equation_"
+            "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -15625,6 +15941,8 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet",
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -15870,6 +16188,12 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review": (
         "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence superconducting circuit-QED platform-relevant candidate follow-on route-selection packet"
     ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence superconducting circuit-QED platform-relevant candidate follow-on route-selection packet result review"
+    ),
+    "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review": (
+        "selected CCFT empirical discriminator baseline component equation source applicability open-system decoherence superconducting circuit-QED platform-relevant candidate platform-specific literature-review packet"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -16061,6 +16385,8 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -16148,6 +16474,8 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -16233,6 +16561,8 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -16316,6 +16646,8 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_source_candidate_rescreening_review",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_packet",
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+        "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -31049,6 +31381,301 @@ def build_stage_payload(
                     "measurement/control review; this result review does "
                     "not choose a route, validate sources, adopt equations, "
                     "import Lindblad or master-equation forms, compute "
+                    "tau_baseline, define a protocol, validate CCFT, or "
+                    "promote the master action."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet"
+    ):
+        prior_review_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_triage_review",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prior_review_payload.items():
+            payload.setdefault(key, value)
+        route_rows = (
+            SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_ROWS
+        )
+        selected_rows = [row for row in route_rows if row["selected_route"]]
+        selected_row = selected_rows[0]
+        unselected_rows = [row for row in route_rows if not row["selected_route"]]
+        triage_status_counts = prior_review_payload[
+            "accepted_platform_relevant_candidate_triage_status_counts"
+        ]
+        payload.update(
+            {
+                "prepared_review_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_REVIEW_OUTCOME
+                ),
+                "prepared_review_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_TRIAGE_REVIEW_STRICT_OUTCOME
+                ),
+                "platform_relevant_candidate_followon_route_selection_packet_prepared": True,
+                "platform_relevant_candidate_followon_route_selection_only": True,
+                "platform_relevant_candidate_followon_route_selection_executed": True,
+                "platform_relevant_candidate_followon_route_selection_executed_as_selection_only": True,
+                "platform_relevant_candidate_followon_route_selected": True,
+                "platform_relevant_candidate_followon_route_selected_only": True,
+                "platform_relevant_candidate_followon_route_selection_review_selected": True,
+                "route_selection_executed": True,
+                "route_selection_executed_as_selection_only": True,
+                "platform_relevant_candidate_followon_route_selection_fields": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_FIELDS
+                ),
+                "platform_relevant_candidate_followon_route_selection_field_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_FIELDS
+                ),
+                "platform_relevant_candidate_followon_route_selection_rows": route_rows,
+                "platform_relevant_candidate_followon_route_selection_row_count": len(
+                    route_rows
+                ),
+                "platform_relevant_candidate_followon_route_options": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_OPTIONS
+                ),
+                "platform_relevant_candidate_followon_route_option_count": len(
+                    route_rows
+                ),
+                "platform_relevant_candidate_followon_route_selection_selected_route_count": len(
+                    selected_rows
+                ),
+                "platform_relevant_candidate_followon_route_selection_unselected_route_count": len(
+                    unselected_rows
+                ),
+                "platform_relevant_candidate_followon_route_input_triage_row_count": prior_review_payload[
+                    "accepted_platform_relevant_candidate_triage_row_count"
+                ],
+                "platform_relevant_candidate_followon_route_input_triage_status_counts": triage_status_counts,
+                "selected_platform_relevant_candidate_followon_route": selected_row[
+                    "candidate_route"
+                ],
+                "selected_platform_relevant_candidate_followon_route_id": selected_row[
+                    "route_selection_id"
+                ],
+                "selected_platform_relevant_candidate_followon_route_reason": selected_row[
+                    "selection_reason"
+                ],
+                "selected_platform_relevant_candidate_followon_route_affected_row_count": selected_row[
+                    "affected_row_count"
+                ],
+                "selected_platform_relevant_candidate_followon_route_future_target": selected_row[
+                    "future_target"
+                ],
+                "selected_platform_relevant_candidate_followon_route_future_target_kind": selected_row[
+                    "future_target_kind"
+                ],
+                "platform_specific_literature_review_route_selected": True,
+                "platform_specific_literature_review_route_selected_only": True,
+                "platform_specific_literature_review_route_selected_as_future_route": True,
+                "platform_specific_literature_review_route_affected_row_count": triage_status_counts[
+                    "requires_platform_specific_literature_review"
+                ],
+                "platform_specific_literature_review_packet_selected": True,
+                "platform_specific_literature_review_packet_prepared": False,
+                "platform_specific_literature_review_executed": False,
+                "platform_specific_literature_review_performed": False,
+                "measurement_control_review_route_selected": False,
+                "measurement_control_review_route_retained_unresolved": True,
+                "measurement_control_review_route_affected_row_count": triage_status_counts[
+                    "requires_measurement_control_review"
+                ],
+                "measurement_control_review_packet_selected": False,
+                "measurement_control_review_executed": False,
+                "measurement_control_review_performed": False,
+                "literature_review_executed": False,
+                "literature_review_performed": False,
+                "source_discovery_executed": True,
+                "source_validated": False,
+                "source_adopted": False,
+                "source_replaced": False,
+                "candidate_equation_imported": False,
+                "candidate_equation_adopted": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_lindblad_form_imported": False,
+                "open_system_decoherence_master_equation_form_imported": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "baseline_model_completed": False,
+                "measurement_protocol_defined": False,
+                "statistical_validation_claimed": False,
+                "residual_separation_claimed": False,
+                "ccft_validated": False,
+                "master_action_promoted": False,
+                "calculation_result_claim_label": "not_applicable_followon_route_selection_packet_only",
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet": False,
+                "platform_relevant_candidate_followon_route_selection_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_ITEMS
+                ),
+                "platform_relevant_candidate_followon_route_selection_item_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_ITEMS
+                ),
+                "platform_relevant_candidate_followon_route_selection_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_BOUNDARY
+                ),
+                "selected_next_platform_relevant_candidate_followon_route_selection_review_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_TARGET
+                ),
+                "selected_next_platform_relevant_candidate_followon_route_selection_review_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_KIND
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_RESULT_REVIEW",
+                "strict_suggested_next_packet_outcome": "PENDING_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_RESULT_REVIEW",
+                "next_disciplined_move_reason": (
+                    "The follow-on route-selection packet selects "
+                    "platform_specific_literature_review as a future route "
+                    "only because it covers four of the six platform-relevant-"
+                    "unvalidated rows. The next disciplined step is result "
+                    "review of this route-selection packet, not literature "
+                    "review execution, measurement/control review, source "
+                    "validation, equation import, tau_baseline computation, "
+                    "CCFT validation, or master-action promotion."
+                ),
+            }
+        )
+    if (
+        stage_key
+        == "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review"
+    ):
+        prepared_packet_payload = build_stage_payload(
+            "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet",
+            captured_at_utc=captured_at_utc,
+        )
+        for key, value in prepared_packet_payload.items():
+            payload.setdefault(key, value)
+        route_rows = prepared_packet_payload[
+            "platform_relevant_candidate_followon_route_selection_rows"
+        ]
+        selected_rows = [row for row in route_rows if row["selected_route"]]
+        selected_row = selected_rows[0]
+        unselected_rows = [row for row in route_rows if not row["selected_route"]]
+        payload.update(
+            {
+                "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_packet_result_review_consumed": True,
+                "prepared_packet_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_OUTCOME
+                ),
+                "prepared_packet_strict_result": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_PACKET_STRICT_OUTCOME
+                ),
+                "platform_relevant_candidate_followon_route_selection_packet_result_review_consumed": True,
+                "platform_relevant_candidate_followon_route_selection_packet_accepted": True,
+                "platform_relevant_candidate_followon_route_selection_accepted_only": True,
+                "platform_relevant_candidate_followon_route_selection_accepted_as_route_selection_only": True,
+                "accepted_platform_relevant_candidate_followon_route_selection_row_count": len(
+                    route_rows
+                ),
+                "accepted_platform_relevant_candidate_followon_route_selection_selected_route_count": len(
+                    selected_rows
+                ),
+                "accepted_platform_relevant_candidate_followon_route_selection_unselected_route_count": len(
+                    unselected_rows
+                ),
+                "accepted_platform_relevant_candidate_followon_route": selected_row[
+                    "candidate_route"
+                ],
+                "accepted_platform_relevant_candidate_followon_route_id": selected_row[
+                    "route_selection_id"
+                ],
+                "accepted_platform_relevant_candidate_followon_route_reason": selected_row[
+                    "selection_reason"
+                ],
+                "accepted_platform_relevant_candidate_followon_route_affected_row_count": selected_row[
+                    "affected_row_count"
+                ],
+                "accepted_platform_relevant_candidate_followon_route_future_target": selected_row[
+                    "future_target"
+                ],
+                "accepted_platform_relevant_candidate_followon_route_future_target_kind": selected_row[
+                    "future_target_kind"
+                ],
+                "platform_specific_literature_review_route_accepted": True,
+                "platform_specific_literature_review_route_accepted_only": True,
+                "platform_specific_literature_review_route_accepted_as_future_route": True,
+                "measurement_control_review_route_retained_unresolved_after_review": True,
+                "platform_specific_literature_review_packet_selected": True,
+                "platform_specific_literature_review_packet_selected_only": True,
+                "platform_specific_literature_review_packet_prepared": False,
+                "platform_specific_literature_review_executed": False,
+                "platform_specific_literature_review_performed": False,
+                "measurement_control_review_packet_selected": False,
+                "measurement_control_review_executed": False,
+                "measurement_control_review_performed": False,
+                "literature_review_executed": False,
+                "literature_review_performed": False,
+                "source_discovery_executed": True,
+                "source_validated": False,
+                "source_adopted": False,
+                "source_replaced": False,
+                "candidate_equation_imported": False,
+                "candidate_equation_adopted": False,
+                "open_system_decoherence_source_validated": False,
+                "open_system_decoherence_equation_imported": False,
+                "open_system_decoherence_equation_adopted": False,
+                "open_system_decoherence_lindblad_form_imported": False,
+                "open_system_decoherence_master_equation_form_imported": False,
+                "tau_baseline_construction_allowed": False,
+                "tau_baseline_value_computed": False,
+                "baseline_model_completed": False,
+                "measurement_protocol_defined": False,
+                "statistical_validation_claimed": False,
+                "residual_separation_claimed": False,
+                "ccft_validated": False,
+                "master_action_promoted": False,
+                "calculation_result_claim_label": "not_applicable_followon_route_selection_review_only",
+                "selected_primary_residual_formula_unchanged": True,
+                "selected_primary_residual_formula": (
+                    "r_tau = (tau_candidate - tau_baseline) / tau_baseline"
+                ),
+                "residual_formula_changed_by_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_followon_route_selection_review": False,
+                "platform_relevant_candidate_followon_route_selection_review_acceptance_items": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "platform_relevant_candidate_followon_route_selection_review_acceptance_item_count": len(
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_ACCEPTANCE_ITEMS
+                ),
+                "platform_relevant_candidate_followon_route_selection_review_boundary": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_FOLLOWON_ROUTE_SELECTION_REVIEW_BOUNDARY
+                ),
+                "selected_next_platform_relevant_candidate_platform_specific_literature_review_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET
+                ),
+                "selected_next_platform_relevant_candidate_platform_specific_literature_review_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND
+                ),
+                "selected_next_planning_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET
+                ),
+                "suggested_next_packet_target": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET
+                ),
+                "suggested_next_packet_kind": (
+                    SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_KIND
+                ),
+                "suggested_next_packet_outcome": "PENDING_PLATFORM_SPECIFIC_LITERATURE_REVIEW_PACKET",
+                "strict_suggested_next_packet_outcome": "PENDING_PLATFORM_SPECIFIC_LITERATURE_REVIEW_PACKET",
+                "next_disciplined_move_reason": (
+                    "The follow-on route-selection result review accepts "
+                    "platform_specific_literature_review as the future route "
+                    "only and rotates to a platform-specific literature-"
+                    "review packet. It still does not execute that review, "
+                    "validate a source, import an equation, compute "
                     "tau_baseline, define a protocol, validate CCFT, or "
                     "promote the master action."
                 ),
