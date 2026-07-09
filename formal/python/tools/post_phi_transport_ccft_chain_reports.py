@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -93,6 +94,7 @@ STAGE_CAPTURED_AT_UTC = {
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review": "2026-07-09T00:00:00Z",
     "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet": "2026-07-09T00:00:00Z",
     "ccft_scqed_literature_applicability_matrix_calculation_execution": "2026-07-09T00:00:00Z",
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review": "2026-07-09T00:00:00Z",
 }
 
 LEAN_STATUS_WORDING = (
@@ -2908,6 +2910,66 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_BOUNDARY = (
     "empirical r_tau value, fit data, define a measurement protocol, perform "
     "statistical validation, claim residual separation, validate CCFT, close a "
     "pillar or seam, or promote the master action."
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_OUTCOME = (
+    "CALC_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_RESULT_REVIEW_ACCEPTS_"
+    "REPRODUCIBLE_MATRIX_COUNTS_ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_"
+    "COMPUTATION"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTCOME = (
+    "CALC_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_RESULT_REVIEW_ACCEPTS_"
+    "SCOPED_E_REPRO_FOR_COUNTS_ONLY_NO_EQUATION_ADOPTION_NO_CCFT_VALIDATION_"
+    "NO_MASTER_ACTION_PROMOTION"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_REPAIR_TARGET = (
+    "repair_calc_ccft_scqed_literature_applicability_matrix_reproducibility_"
+    "mismatch"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_SUCCESS_TARGET = (
+    "prepare_science_first_pillar_seam_dependency_rebase_packet"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EXPECTED_HASHES = {
+    "input": "4c26a1195e528748c79f0dbd0b9ef0653c26c4b92f765d8d95cac1ed512c58fc",
+    "script": "c5641407c07e3d271f158881b88fecbb2d0ba8d771a6921d4a2f999587f3e059",
+    "output": "0d738e72ef7caf187cd819595b9d6dcdf9bb0770d2be20fb01eb09d30427b685",
+    "manifest": "d00736c2e6d25ef1ad523cd841ae5a106f3e152012832f86233f5d8bb970f7d5",
+    "execution_report": "8183b36a6f9d67a78dd0226db786b2e13a9eaa66232eaef33f07d2fb5dbda32f",
+}
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EXECUTION_REPORT = (
+    "formal/docs/release/CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_"
+    "CALCULATION_EXECUTION_20260709_v0.json"
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISMATCH_CODES = [
+    "input_hash_mismatch",
+    "script_hash_mismatch",
+    "canonicalization_mismatch",
+    "output_hash_mismatch",
+    "manifest_hash_mismatch",
+    "schema_mismatch",
+    "count_mismatch",
+]
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STATUS_COUNTS = {
+    "platform_relevant_unvalidated": 12,
+    "partially_relevant_unvalidated": 23,
+    "unclear_requires_review": 7,
+    "blocked_missing_requirement_binding": 2,
+    "not_applicable_for_requirement": 4,
+}
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISSING_COUNTS = {
+    "missing_variables": 92,
+    "missing_units": 64,
+    "missing_assumptions": 52,
+}
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_BOUNDARY = (
+    "This review independently rebuilds the accepted 48-row matrix/count result, "
+    "verifies the immutable input, script, output, manifest, and execution-report "
+    "hashes, and accepts environment-scoped E-REPRO evidence for those counts only. "
+    "The calculation execution artifact remains generated_pending_result_review; "
+    "the separate review artifact records accepted_scoped_matrix_counts_only. The "
+    "review does not validate or adopt a source, import or adopt an equation, import "
+    "a Lindblad/master-equation form, compute tau_baseline, tau_candidate, or r_tau, "
+    "claim residual separation, validate CCFT, close a pillar or seam, or promote "
+    "the master action."
 )
 SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_RESULT_REVIEW_ACCEPTANCE_ITEMS = [
     "platform-specific literature-review packet result review accepted",
@@ -11979,6 +12041,280 @@ TRIAD_BOUNDARY = (
 )
 
 
+def _sha256_path(path: Path) -> str | None:
+    if not path.is_file():
+        return None
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _reject_nonfinite_json_constant(value: str) -> None:
+    raise ValueError(f"non-finite JSON number is forbidden: {value}")
+
+
+def _load_finite_json(path: Path) -> Any:
+    payload = json.loads(
+        path.read_text(encoding="utf-8"),
+        parse_constant=_reject_nonfinite_json_constant,
+    )
+
+    def check(value: Any) -> None:
+        if isinstance(value, float) and not math.isfinite(value):
+            raise ValueError("non-finite JSON number is forbidden")
+        if isinstance(value, dict):
+            for nested in value.values():
+                check(nested)
+        elif isinstance(value, list):
+            for nested in value:
+                check(nested)
+
+    check(payload)
+    return payload
+
+
+def _canonical_ccft_matrix_v0_bytes(payload: Any) -> bytes:
+    serialized = json.dumps(
+        payload,
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=True,
+        allow_nan=False,
+        separators=(",", ": "),
+    )
+    return (serialized.replace("\n", "\r\n") + "\r\n").encode("utf-8")
+
+
+def verify_ccft_scqed_literature_applicability_matrix_v0(
+    *,
+    input_path: Path | None = None,
+    script_path: Path | None = None,
+    output_path: Path | None = None,
+    manifest_path: Path | None = None,
+    execution_report_path: Path | None = None,
+) -> dict[str, Any]:
+    """Review immutable v0 artifacts without mutating or aborting on mismatch."""
+    from formal.python.toe.calculations.calc_ccft_scqed_literature_applicability_matrix import (
+        build_result,
+    )
+
+    paths = {
+        "input": input_path
+        or REPO_ROOT
+        / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_INPUT,
+        "script": script_path
+        or REPO_ROOT
+        / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_SCRIPT,
+        "output": output_path
+        or REPO_ROOT
+        / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_OUTPUT,
+        "manifest": manifest_path
+        or REPO_ROOT
+        / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_MANIFEST,
+        "execution_report": execution_report_path
+        or REPO_ROOT
+        / CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EXECUTION_REPORT,
+    }
+    observed_hashes = {
+        name: _sha256_path(path) for name, path in paths.items()
+    }
+    mismatch_codes: list[str] = []
+    mismatch_details: list[dict[str, Any]] = []
+
+    def mismatch(code: str, artifact: str, detail: str) -> None:
+        if code not in mismatch_codes:
+            mismatch_codes.append(code)
+        mismatch_details.append(
+            {"code": code, "artifact": artifact, "detail": detail}
+        )
+
+    for artifact, code in (
+        ("input", "input_hash_mismatch"),
+        ("script", "script_hash_mismatch"),
+        ("output", "output_hash_mismatch"),
+        ("manifest", "manifest_hash_mismatch"),
+        ("execution_report", "schema_mismatch"),
+    ):
+        if (
+            observed_hashes[artifact]
+            != CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EXPECTED_HASHES[
+                artifact
+            ]
+        ):
+            mismatch(
+                code,
+                artifact,
+                "complete SHA-256 does not match the immutable execution artifact",
+            )
+
+    parsed: dict[str, Any] = {}
+    for artifact in ("input", "output", "manifest", "execution_report"):
+        try:
+            parsed[artifact] = _load_finite_json(paths[artifact])
+        except (OSError, UnicodeError, ValueError, TypeError) as exc:
+            mismatch("schema_mismatch", artifact, str(exc))
+
+    output_payload = parsed.get("output")
+    manifest_payload = parsed.get("manifest")
+    execution_payload = parsed.get("execution_report")
+    canonical_bytes_match = False
+    rebuilt_payload_match = False
+
+    if isinstance(output_payload, dict):
+        try:
+            canonical_bytes_match = (
+                _canonical_ccft_matrix_v0_bytes(output_payload)
+                == paths["output"].read_bytes()
+            )
+        except (OSError, TypeError, ValueError) as exc:
+            mismatch("canonicalization_mismatch", "output", str(exc))
+        if not canonical_bytes_match:
+            mismatch(
+                "canonicalization_mismatch",
+                "output",
+                "bytes do not match the frozen CRLF v0 canonical serializer",
+            )
+
+        try:
+            rebuilt = build_result(
+                paths["input"],
+                captured_at_utc=output_payload.get(
+                    "captured_at_utc", "2026-07-09T00:00:00Z"
+                ),
+            )
+            rebuilt_payload_match = rebuilt == output_payload
+            if not rebuilt_payload_match:
+                mismatch(
+                    "canonicalization_mismatch",
+                    "output",
+                    "independent in-memory rebuild differs from stored result",
+                )
+        except (OSError, KeyError, TypeError, ValueError) as exc:
+            mismatch("schema_mismatch", "input_or_output", str(exc))
+
+        try:
+            dimensions = output_payload["matrix_dimensions"]
+            status_counts = output_payload["status_distribution"]
+            missing_counts = output_payload["missing_field_counts"]
+            schema_ok = (
+                output_payload["schema_id"]
+                == "CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0-RESULT"
+                and output_payload["claim"]["primary_label"] == "E-REPRO"
+                and output_payload["claim"]["claim_status"]
+                == "generated_pending_result_review"
+                and output_payload["boundary"]["source_validated"] is False
+                and output_payload["boundary"]["equation_adopted"] is False
+                and output_payload["boundary"]["tau_baseline_computed"] is False
+                and output_payload["boundary"]["ccft_validated"] is False
+            )
+            if not schema_ok:
+                mismatch("schema_mismatch", "output", "claim or boundary schema differs")
+            count_ok = (
+                dimensions["total_rows"] == 48
+                and dimensions["literature_source_locators"] == 4
+                and dimensions["platform_requirements"] == 12
+                and dimensions["expected_cartesian_rows"] == 48
+                and dimensions["complete_cartesian_matrix"] is True
+                and status_counts
+                == CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STATUS_COUNTS
+                and {
+                    key: missing_counts[key]["total_occurrences"]
+                    for key in CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISSING_COUNTS
+                }
+                == CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISSING_COUNTS
+            )
+            if not count_ok:
+                mismatch("count_mismatch", "output", "dimensions or aggregate counts differ")
+        except (KeyError, TypeError) as exc:
+            mismatch("schema_mismatch", "output", str(exc))
+
+    if isinstance(manifest_payload, dict):
+        manifest_schema_ok = (
+            manifest_payload.get("schema_id")
+            == "CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0-MANIFEST"
+            and manifest_payload.get("input_sha256") == observed_hashes["input"]
+            and manifest_payload.get("script_sha256") == observed_hashes["script"]
+            and manifest_payload.get("output_sha256") == observed_hashes["output"]
+            and manifest_payload.get("result_review_status") == "pending"
+        )
+        if not manifest_schema_ok:
+            mismatch("schema_mismatch", "manifest", "manifest linkage differs")
+
+    if isinstance(execution_payload, dict):
+        if (
+            execution_payload.get("calculation_output_sha256")
+            != observed_hashes["output"]
+            or execution_payload.get("calculation_input_sha256")
+            != observed_hashes["input"]
+            or execution_payload.get("calculation_script_sha256")
+            != observed_hashes["script"]
+            or execution_payload.get("e_repro_claim_status")
+            != "generated_pending_result_review"
+        ):
+            mismatch(
+                "schema_mismatch",
+                "execution_report",
+                "execution report linkage or pending-review status differs",
+            )
+
+    mismatch_codes = [
+        code
+        for code in CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISMATCH_CODES
+        if code in mismatch_codes
+    ]
+    accepted = not mismatch_codes
+    return {
+        "accepted": accepted,
+        "primary_claim_label": "E-REPRO" if accepted else "B-BLOCKED",
+        "claim_status": (
+            "accepted_scoped_matrix_counts_only"
+            if accepted
+            else "blocked_reproducibility_mismatch"
+        ),
+        "mismatch_codes": mismatch_codes,
+        "mismatch_details": mismatch_details,
+        "expected_hashes": dict(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EXPECTED_HASHES
+        ),
+        "observed_hashes": observed_hashes,
+        "all_complete_sha256_verified": accepted,
+        "canonical_bytes_match": canonical_bytes_match,
+        "independent_in_memory_rebuild_match": rebuilt_payload_match,
+        "matrix_dimensions": {
+            "total_rows": 48,
+            "literature_source_locators": 4,
+            "platform_requirements": 12,
+            "expected_cartesian_rows": 48,
+        },
+        "status_counts": dict(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STATUS_COUNTS
+        ),
+        "missing_field_occurrences": dict(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISSING_COUNTS
+        ),
+        "serialization_contract": {
+            "encoding": "UTF-8 without BOM",
+            "newline": "CRLF",
+            "indent": 2,
+            "object_keys": "sorted",
+            "separators": [",", ": "],
+            "ensure_ascii": True,
+            "finite_json_numbers_only": True,
+            "nan_and_infinity_forbidden": True,
+            "array_order": "preserved",
+            "float_representation": "deterministic CPython 3.10.11",
+            "trailing_newline": "one CRLF",
+            "scope": "recorded Windows and CPython 3.10.11 environment",
+        },
+        "execution_artifact_claim_status_unchanged": (
+            "generated_pending_result_review"
+        ),
+        "selected_next_target": (
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_SUCCESS_TARGET
+            if accepted
+            else CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_REPAIR_TARGET
+        ),
+    }
+
+
 @dataclass(frozen=True)
 class StageSpec:
     key: str
@@ -17159,6 +17495,57 @@ STAGES: dict[str, StageSpec] = {
             "ccft_scqed_literature_applicability_matrix_calculation_execution"
         ),
     ),
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review": StageSpec(
+        key=(
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+        ),
+        schema_id=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_"
+            "REVIEW_20260709_v0"
+        ),
+        packet_id=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_"
+            "REVIEW_v0"
+        ),
+        status=(
+            "ACTIVE_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
+            "RESULT_REVIEW"
+        ),
+        outcome_id=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_OUTCOME
+        ),
+        strict_outcome_id=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTCOME
+        ),
+        consumed_target=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_TARGET
+        ),
+        consumed_target_kind=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REVIEW_KIND
+        ),
+        selected_next_target=(
+            CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_SUCCESS_TARGET
+        ),
+        selected_next_target_kind=(
+            "science_first_pillar_seam_dependency_rebase_packet"
+        ),
+        lean_module=(
+            "ToeFormal.Derivation."
+            "CCFTSCQEDLiteratureApplicabilityMatrixCalculationResultReview"
+        ),
+        json_filename=(
+            "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_"
+            "REVIEW_20260709_v0.json"
+        ),
+        result_kind="review",
+        packet_classification=(
+            "ccft_scqed_literature_applicability_matrix_calculation_result_"
+            "review_scoped_e_repro_counts_only"
+        ),
+        stage_role=(
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+        ),
+    ),
 }
 
 ORDERED_STAGE_KEYS = [
@@ -17263,6 +17650,7 @@ ORDERED_STAGE_KEYS = [
     "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
     "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
     "ccft_scqed_literature_applicability_matrix_calculation_execution",
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review",
 ]
 
 NEXT_REQUIRED_OBJECT_BY_STAGE = {
@@ -17532,6 +17920,9 @@ NEXT_REQUIRED_OBJECT_BY_STAGE = {
     "ccft_scqed_literature_applicability_matrix_calculation_execution": (
         "CCFT SCQED literature applicability matrix calculation result review"
     ),
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review": (
+        "science-first pillar/seam dependency rebase packet"
+    ),
     "empirical_packet": (
         "CCFT empirical discriminator candidate map packet result review"
     ),
@@ -17731,6 +18122,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
         "ccft_scqed_literature_applicability_matrix_calculation_execution",
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review",
     }
     ccft_ck_index_prepared = stage_key in {
         "ck_index_packet",
@@ -17826,6 +18218,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
         "ccft_scqed_literature_applicability_matrix_calculation_execution",
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review",
     }
     ccft_full_variational_program_prepared = stage_key in {
         "variational_packet",
@@ -17919,6 +18312,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
         "ccft_scqed_literature_applicability_matrix_calculation_execution",
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review",
     }
     ccft_empirical_discriminator_map_prepared = stage_key in {
         "empirical_packet",
@@ -18010,6 +18404,7 @@ def build_stage_payload(
         "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
         "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
         "ccft_scqed_literature_applicability_matrix_calculation_execution",
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review",
     }
     payload: dict[str, Any] = {
         "artifact_id": spec.schema_id,
@@ -34111,6 +34506,149 @@ def build_stage_payload(
                 ),
             }
         )
+    if (
+        stage_key
+        == "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+    ):
+        verification = verify_ccft_scqed_literature_applicability_matrix_v0()
+        review_accepted = verification["accepted"]
+        selected_target = verification["selected_next_target"]
+        selected_target_kind = (
+            "science_first_pillar_seam_dependency_rebase_packet"
+            if review_accepted
+            else "ccft_scqed_literature_applicability_matrix_reproducibility_repair"
+        )
+        payload.update(
+            {
+                "calculation_execution_artifact_consumed": True,
+                "calculation_execution_artifact_mutated": False,
+                "calculation_output_rewritten": False,
+                "calculation_manifest_rewritten": False,
+                "calculation_execution_report_rewritten": False,
+                "calculation_execution_claim_status_preserved": (
+                    "generated_pending_result_review"
+                ),
+                "calculation_result_review_completed": True,
+                "calculation_result_review_pending": False,
+                "calculation_result_review_accepted": review_accepted,
+                "calculation_result_review_status": verification["claim_status"],
+                "lean_status_wording": (
+                    "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+                ),
+                "lean_status_wording_lines": [
+                    "scoped Lean passed",
+                    "full ToeFormal aggregate not run / not upgraded",
+                ],
+                "full_toeformal_aggregate_status": "NOT_RUN_NOT_UPGRADED",
+                "scoped_lean_targets_status": "PASSED",
+                "calculation_result_review_primary_claim_label": verification[
+                    "primary_claim_label"
+                ],
+                "calculation_result_review_verification": verification,
+                "calculation_result_review_mismatch_codes": verification[
+                    "mismatch_codes"
+                ],
+                "calculation_result_review_mismatch_code_allowlist": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_MISMATCH_CODES
+                ),
+                "calculation_result_review_expected_hashes": verification[
+                    "expected_hashes"
+                ],
+                "calculation_result_review_observed_hashes": verification[
+                    "observed_hashes"
+                ],
+                "calculation_result_review_all_complete_sha256_verified": verification[
+                    "all_complete_sha256_verified"
+                ],
+                "calculation_result_review_known_output_sha256_preserved": (
+                    verification["observed_hashes"]["output"]
+                    == "0d738e72ef7caf187cd819595b9d6dcdf9bb0770d2be20fb01eb09d30427b685"
+                ),
+                "calculation_result_review_canonical_bytes_match": verification[
+                    "canonical_bytes_match"
+                ],
+                "calculation_result_review_independent_in_memory_rebuild_match": verification[
+                    "independent_in_memory_rebuild_match"
+                ],
+                "calculation_result_review_matrix_dimensions": verification[
+                    "matrix_dimensions"
+                ],
+                "calculation_result_review_status_counts": verification[
+                    "status_counts"
+                ],
+                "calculation_result_review_missing_field_occurrences": verification[
+                    "missing_field_occurrences"
+                ],
+                "calculation_result_review_serialization_contract": verification[
+                    "serialization_contract"
+                ],
+                "calculation_result_review_environment_scope": (
+                    "Windows CRLF and CPython 3.10.11 byte contract"
+                ),
+                "nan_and_infinity_rejected": True,
+                "e_repro_evidence_generated": True,
+                "e_repro_evidence_claimed": review_accepted,
+                "e_repro_claim_label": (
+                    "E-REPRO" if review_accepted else "B-BLOCKED"
+                ),
+                "e_repro_claim_status": verification["claim_status"],
+                "e_repro_claim_scope": (
+                    "environment-scoped reproducible deterministic applicability "
+                    "matrix and counts only"
+                ),
+                "e_repro_scope_excludes_source_validation": True,
+                "e_repro_scope_excludes_equation_adoption": True,
+                "e_repro_scope_excludes_tau_baseline": True,
+                "e_repro_scope_excludes_ccft_validation": True,
+                "failed_artifacts_preserved": not review_accepted,
+                "repair_target_selected_on_mismatch": not review_accepted,
+                "ccft_empirical_lane_status": (
+                    "paused_upstream_prerequisites"
+                    if review_accepted
+                    else "blocked_reproducibility_mismatch"
+                ),
+                "ccft_empirical_lane_paused_upstream_prerequisites": (
+                    review_accepted
+                ),
+                "source_validation_execution_authorized": False,
+                "source_validated": False,
+                "source_adopted": False,
+                "source_replaced": False,
+                "equation_import_authorized": False,
+                "equation_imported": False,
+                "equation_adopted": False,
+                "lindblad_import_authorized": False,
+                "lindblad_imported": False,
+                "master_equation_imported": False,
+                "tau_baseline_computation_authorized": False,
+                "tau_baseline_value_computed": False,
+                "tau_candidate_computation_authorized": False,
+                "tau_candidate_value_computed": False,
+                "r_tau_empirical_calculation_authorized": False,
+                "r_tau_empirical_value_computed": False,
+                "statistical_validation_claimed": False,
+                "residual_separation_claimed": False,
+                "ccft_validated": False,
+                "master_action_promoted": False,
+                "equation_compendium_row_added": False,
+                "calculation_result_review_boundary": (
+                    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_BOUNDARY
+                ),
+                "selected_next_target": selected_target,
+                "selected_next_target_kind": selected_target_kind,
+                "suggested_next_packet_target": selected_target,
+                "suggested_next_packet_kind": selected_target_kind,
+                "next_disciplined_move_reason": (
+                    "The matrix/count result is reproducible under the frozen v0 "
+                    "environment contract, so CCFT pauses on upstream prerequisites "
+                    "and the program moves to the compact science-first pillar/seam "
+                    "dependency rebase."
+                    if review_accepted
+                    else "The result review localized a reproducibility mismatch, "
+                    "preserved all artifacts, and selected the targeted repair path."
+                ),
+            }
+        )
     if stage_key == "baseline_component_registry_review":
         payload.update(
             {
@@ -34255,6 +34793,44 @@ def build_stage_payload(
         )
     payload.update(_result_fields(spec))
     payload.update(_boolean_nonclaim_flags())
+    if (
+        stage_key
+        == "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+    ):
+        verification = payload["calculation_result_review_verification"]
+        if verification["accepted"]:
+            outcome = (
+                CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_OUTCOME
+            )
+            strict_outcome = (
+                CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTCOME
+            )
+        else:
+            outcome = (
+                "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_"
+                "REVIEW_BLOCKED_REPRODUCIBILITY_MISMATCH"
+            )
+            strict_outcome = (
+                "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_"
+                "REVIEW_RECORDS_B_BLOCKED_AND_SELECTS_TARGETED_REPAIR"
+            )
+        payload.update(
+            {
+                "accepted": verification["accepted"],
+                "status": (
+                    "ACCEPTED_SCOPED_E_REPRO_MATRIX_COUNTS_ONLY"
+                    if verification["accepted"]
+                    else "BLOCKED_REPRODUCIBILITY_MISMATCH"
+                ),
+                "outcome_id": outcome,
+                "packet_result": outcome,
+                "review_result": outcome,
+                "result_token": outcome,
+                "strict_packet_result": strict_outcome,
+                "strict_review_result": strict_outcome,
+                "strict_result_token": strict_outcome,
+            }
+        )
     return payload
 
 

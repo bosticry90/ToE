@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
+    "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1347,7 +1347,7 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "execute_calc_ccft_scqed_literature_applicability_matrix_v0"
+    "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1694,7 +1694,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
+    "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1789,12 +1789,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CCFTSCQEDLiteratureApplicabilityMatrixCalculationExecution.lean"
+    / "CCFTSCQEDLiteratureApplicabilityMatrixCalculationResultReview.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
-    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_"
-    "EXECUTION_20260709_v0.json"
+    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_"
+    "REVIEW_20260709_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1926,8 +1926,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_v0_EXECUTED_"
-    "REPRODUCIBLE_48_ROW_COUNTS_ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_"
+    "CALC_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_RESULT_REVIEW_ACCEPTS_"
+    "REPRODUCIBLE_MATRIX_COUNTS_ONLY_NO_SOURCE_VALIDATION_OR_TAU_BASELINE_"
     "COMPUTATION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
@@ -2058,9 +2058,9 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_v0_EXECUTED_"
-    "E_REPRO_MATRIX_COUNTS_ONLY_NO_EQUATION_ADOPTION_NO_CCFT_VALIDATION_"
-    "NO_MASTER_ACTION_PROMOTION"
+    "CALC_CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_RESULT_REVIEW_ACCEPTS_"
+    "SCOPED_E_REPRO_FOR_COUNTS_ONLY_NO_EQUATION_ADOPTION_NO_CCFT_"
+    "VALIDATION_NO_MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2136,8 +2136,11 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_SPRINT_GUARDRAIL_KIND = (
 CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_KIND = (
     "ccft_scqed_literature_applicability_matrix_calculation_execution"
 )
-LIVE_TARGET_KIND = (
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_KIND = (
     "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+)
+LIVE_TARGET_KIND = (
+    "science_first_pillar_seam_dependency_rebase_packet"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -7989,30 +7992,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert applicability_packet["ccft_validation_accepted"] == "no"
     assert applicability_packet["master_action_promoted"] == "no"
 
-    interaction_active_workstream = active_workstream(payload)
-    assert interaction_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert interaction_active_workstream["active_lane"] == ACTIVE_LANE
-    assert interaction_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert interaction_active_workstream["authorized_target"] == LIVE_TARGET
+    interaction_active_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert interaction_active_workstream["status"] == "paused"
+    assert interaction_active_workstream["workstream_id"] == PREVIOUS_LIVE_TARGET
+    assert interaction_active_workstream["active_lane"] == PREVIOUS_LIVE_TARGET
+    assert interaction_active_workstream["authorized_next_strict_target"] == (
+        PREVIOUS_LIVE_TARGET
+    )
+    assert interaction_active_workstream["authorized_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert interaction_active_workstream["report"] == LIVE_TARGET_REPORT
     assert interaction_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert interaction_active_workstream["consumed_target_kind"] == (
-        CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_KIND
+        CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_KIND
     )
     assert interaction_active_workstream["packet_result"] == LIVE_TARGET_OUTCOME
     assert (
         interaction_active_workstream["strict_packet_result"]
         == LIVE_TARGET_STRICT_OUTCOME
     )
-    assert interaction_active_workstream["review_result"] == (
-        SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_OUTCOME
-    )
-    assert (
-        interaction_active_workstream["strict_review_result"]
-        == SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_STRICT_OUTCOME
+    assert interaction_active_workstream["review_result"] == LIVE_TARGET_OUTCOME
+    assert interaction_active_workstream["strict_review_result"] == (
+        LIVE_TARGET_STRICT_OUTCOME
     )
     assert interaction_active_workstream["prepared_packet_result"] == (
         SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_OUTCOME
@@ -9625,10 +9628,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["e_repro_evidence_generated"] == "yes"
     assert interaction_active_workstream["e_repro_claim_label"] == "E-REPRO"
     assert interaction_active_workstream["e_repro_claim_status"] == (
-        "generated_pending_result_review"
+        "accepted_scoped_matrix_counts_only"
     )
-    assert interaction_active_workstream["calculation_result_review_pending"] == "yes"
-    assert interaction_active_workstream["calculation_result_review_completed"] == "no"
+    assert interaction_active_workstream["calculation_result_review_pending"] == "no"
+    assert interaction_active_workstream["calculation_result_review_completed"] == "yes"
+    assert interaction_active_workstream["calculation_result_review_accepted"] == "yes"
+    assert interaction_active_workstream["ccft_empirical_lane_status"] == (
+        "paused_upstream_prerequisites"
+    )
     assert (
         interaction_active_workstream["future_calculation_output"]
         == "CALC-CCFT-SCQED-LITERATURE-APPLICABILITY-MATRIX-v0.json"
@@ -20071,9 +20078,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert previous_assumption_map_workstream["assumption_class_count"] == 8
     assert previous_assumption_map_workstream["map_attempts_theorem_discharge"] == "no"
 
+    compact_active_workstream = active_workstream(payload)
+    assert compact_active_workstream["workstream_id"] == LIVE_TARGET
+    assert compact_active_workstream["status"] == "active"
+    assert compact_active_workstream["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
     active_targets = {
         state["live_next_target"],
-        interaction_active_workstream[
+        compact_active_workstream[
             "authorized_next_strict_target"
         ],
     }

@@ -38,10 +38,10 @@ from formal.python.tools.post_phi_transport_ccft_chain_reports import (
 
 
 FINAL_LIVE_TARGET = (
-    "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
+    "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 FINAL_PREVIOUS_TARGET = (
-    "execute_calc_ccft_scqed_literature_applicability_matrix_v0"
+    "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
@@ -1741,10 +1741,42 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_STRICT_OUTCOME 
         "ccft_scqed_literature_applicability_matrix_calculation_execution"
     ].strict_outcome_id
 )
-FINAL_EVIDENCE = CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_EVIDENCE
-FINAL_REPORT = CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_REPORT
-FINAL_OUTCOME = CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_OUTCOME
-FINAL_STRICT_OUTCOME = CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_EXECUTION_STRICT_OUTCOME
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EVIDENCE = (
+    str(lean_path(
+        STAGES[
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+        ]
+    ).relative_to(REPO_ROOT)).replace("\\", "/")
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_REPORT = (
+    str(release_path(
+        STAGES[
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+        ]
+    ).relative_to(REPO_ROOT)).replace("\\", "/")
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_OUTCOME = (
+    STAGES[
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+    ].outcome_id
+)
+CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTCOME = (
+    STAGES[
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+    ].strict_outcome_id
+)
+FINAL_EVIDENCE = (
+    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_EVIDENCE
+)
+FINAL_REPORT = (
+    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_REPORT
+)
+FINAL_OUTCOME = (
+    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_OUTCOME
+)
+FINAL_STRICT_OUTCOME = (
+    CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTCOME
+)
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
@@ -1989,7 +2021,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result_review"
 )
 FINAL_KIND = (
-    "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+    "science_first_pillar_seam_dependency_rebase_packet"
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
@@ -2414,6 +2446,10 @@ WRAPPER_BY_STAGE = {
     "ccft_scqed_literature_applicability_matrix_calculation_execution": (
         "formal/python/tools/"
         "ccft_scqed_literature_applicability_matrix_calculation_execution_report.py"
+    ),
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review": (
+        "formal/python/tools/"
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review_report.py"
     ),
 }
 
@@ -2925,6 +2961,11 @@ WRAPPER_BUILD_FUNCTION_BY_STAGE = {
         "formal.python.tools."
         "ccft_scqed_literature_applicability_matrix_calculation_execution_report",
         "build_ccft_scqed_literature_applicability_matrix_calculation_execution",
+    ),
+    "ccft_scqed_literature_applicability_matrix_calculation_result_review": (
+        "formal.python.tools."
+        "ccft_scqed_literature_applicability_matrix_calculation_result_review_report",
+        "build_ccft_scqed_literature_applicability_matrix_calculation_result_review",
     ),
 }
 
@@ -3716,13 +3757,24 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             assert previous_spec.selected_next_target_kind == spec.consumed_target_kind
         previous_spec = spec
 
-        assert report["lean_status_wording"] == LEAN_STATUS_WORDING
-        assert report["lean_status_wording_lines"] == LEAN_STATUS_WORDING_LINES
-        assert (
-            report["full_toeformal_aggregate_status"]
-            == FULL_TOEFORMAL_AGGREGATE_STATUS
-        )
-        assert report["scoped_lean_targets_status"] == SCOPED_LEAN_TARGETS_STATUS
+        if stage_key == (
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review"
+        ):
+            assert report["lean_status_wording"] == (
+                "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+            )
+            assert report["full_toeformal_aggregate_status"] == (
+                "NOT_RUN_NOT_UPGRADED"
+            )
+            assert report["scoped_lean_targets_status"] == "PASSED"
+        else:
+            assert report["lean_status_wording"] == LEAN_STATUS_WORDING
+            assert report["lean_status_wording_lines"] == LEAN_STATUS_WORDING_LINES
+            assert (
+                report["full_toeformal_aggregate_status"]
+                == FULL_TOEFORMAL_AGGREGATE_STATUS
+            )
+            assert report["scoped_lean_targets_status"] == SCOPED_LEAN_TARGETS_STATUS
         assert report["local_phi_triad_label"] == (
             LOCAL_PHI_THEOREM_LINKAGE_TRIAD_LABEL
         )
@@ -3818,6 +3870,7 @@ def test_post_phi_transport_ccft_chain_order_and_report_boundaries() -> None:
             "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
             "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
             "ccft_scqed_literature_applicability_matrix_calculation_execution",
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review",
         }
         assert (
             report["CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0_prepared"]
@@ -4577,6 +4630,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
                 "baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_review",
                 "ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet",
                 "ccft_scqed_literature_applicability_matrix_calculation_execution",
+                "ccft_scqed_literature_applicability_matrix_calculation_result_review",
             }
             else "no"
         )
@@ -10627,7 +10681,7 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert triage_review["master_action_promoted"] == "no"
     _assert_registry_nonclaims(triage_review)
 
-    active = workstream(FINAL_LIVE_TARGET, payload)
+    active = workstream(FINAL_PREVIOUS_TARGET, payload)
     assert active["calculation_sprint_guardrail_packet_prepared"] == "yes"
     assert active["calculation_sprint_guardrail_packet_prepared_only"] == "yes"
     assert active["calculation_sprint_guardrail_executed"] == "no"
@@ -10646,35 +10700,38 @@ def test_post_phi_transport_ccft_registry_rotation_and_stage_rows() -> None:
     assert active["e_repro_evidence_generated"] == "yes"
     assert active["e_repro_evidence_claimed"] == "yes"
     assert active["e_repro_claim_label"] == "E-REPRO"
-    assert active["e_repro_claim_status"] == "generated_pending_result_review"
-    assert active["calculation_result_review_pending"] == "yes"
-    assert active["calculation_result_review_completed"] == "no"
+    assert active["e_repro_claim_status"] == "accepted_scoped_matrix_counts_only"
+    assert active["calculation_result_review_pending"] == "no"
+    assert active["calculation_result_review_completed"] == "yes"
+    assert active["calculation_result_review_accepted"] == "yes"
+    assert active["calculation_result_review_primary_claim_label"] == "E-REPRO"
+    assert active["calculation_result_review_mismatch_codes"] == []
+    assert active["calculation_result_review_all_complete_sha256_verified"] == "yes"
+    assert active["calculation_result_review_canonical_bytes_match"] == "yes"
+    assert active["calculation_result_review_independent_in_memory_rebuild_match"] == "yes"
+    assert active["ccft_empirical_lane_status"] == "paused_upstream_prerequisites"
     assert active["source_validation_execution_authorized"] == "no"
     assert active["equation_import_authorized"] == "no"
     assert active["tau_baseline_computation_authorized"] == "no"
     assert active["tau_candidate_computation_authorized"] == "no"
     assert active["r_tau_empirical_calculation_authorized"] == "no"
     assert active["residual_formula_changed_by_calculation_sprint_guardrail"] == "no"
-    assert active["status"] == "active"
-    assert active["active_lane"] == FINAL_LIVE_TARGET
-    assert active["authorized_next_strict_target"] == FINAL_LIVE_TARGET
+    assert active["status"] == "paused"
+    assert active["active_lane"] == FINAL_PREVIOUS_TARGET
+    assert active["authorized_next_strict_target"] == FINAL_PREVIOUS_TARGET
     assert active["consumed_target"] == FINAL_PREVIOUS_TARGET
     assert (
         active["consumed_target_kind"]
         == STAGES[
-            "ccft_scqed_literature_applicability_matrix_calculation_execution"
+            "ccft_scqed_literature_applicability_matrix_calculation_result_review"
         ].consumed_target_kind
     )
     assert active["authorization_evidence"] == FINAL_EVIDENCE
     assert active["report"] == FINAL_REPORT
     assert active["packet_result"] == FINAL_OUTCOME
     assert active["strict_packet_result"] == FINAL_STRICT_OUTCOME
-    assert active["review_result"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_OUTCOME
-    )
-    assert active["strict_review_result"] == (
-        BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_REVIEW_STRICT_OUTCOME
-    )
+    assert active["review_result"] == FINAL_OUTCOME
+    assert active["strict_review_result"] == FINAL_STRICT_OUTCOME
     assert active["prepared_packet_result"] == (
         BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_PACKET_OUTCOME
     )
