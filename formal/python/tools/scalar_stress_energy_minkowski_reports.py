@@ -36,6 +36,16 @@ GUARDRAIL_STRICT_OUTCOME = (
     "PREPARED_LEVEL_3_PRETEST_ONLY_NO_GRAVITY_DYNAMICS_NO_SOURCE_"
     "ADMISSIBILITY_NO_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION"
 )
+EXECUTION_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTED_"
+    "PASSES_LEVEL_3_ON_SHELL_OFF_SHELL_AND_CONVERGENCE_THRESHOLDS_PENDING_"
+    "RESULT_REVIEW"
+)
+EXECUTION_STRICT_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTED_"
+    "SCOPED_E_REPRO_PENDING_REVIEW_NO_GRAVITY_DYNAMICS_NO_SOURCE_"
+    "ADMISSIBILITY_NO_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION"
+)
 
 GUARDRAIL_REPORT_PATH = (
     REPO_ROOT
@@ -51,6 +61,26 @@ READINESS_PATH = (
     / "docs"
     / "release"
     / "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json"
+)
+CALCULATION_OUTPUT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json"
+)
+CALCULATION_MANIFEST_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-MANIFEST-v0.json"
+)
+EXECUTION_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
+    "EXECUTION_20260709_v0.json"
 )
 
 EQUATION_IDS = (
@@ -297,6 +327,84 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     canonical_json_bytes(payload)
 
 
+def build_execution_report() -> dict[str, Any]:
+    result = json.loads(CALCULATION_OUTPUT_PATH.read_text(encoding="utf-8"))
+    manifest = json.loads(CALCULATION_MANIFEST_PATH.read_text(encoding="utf-8"))
+    if result.get("all_thresholds_passed") is not True:
+        raise ValueError("calculation thresholds did not pass")
+    if not all(result.get("threshold_checks", {}).values()):
+        raise ValueError("one or more threshold checks are false")
+    if manifest.get("output_sha256") != sha256_path(CALCULATION_OUTPUT_PATH):
+        raise ValueError("manifest output hash differs")
+    evidence = result["threshold_evidence"]
+    return {
+        "schema_id": (
+            "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
+            "EXECUTION_20260709_v0"
+        ),
+        "calculation_id": result["calculation_id"],
+        "status": "executed_pending_result_review",
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "consumed_target": EXECUTION_TARGET,
+        "consumed_target_kind": (
+            "scalar_stress_energy_divergence_identity_minkowski_calculation_"
+            "execution"
+        ),
+        "selected_next_target": REVIEW_TARGET,
+        "selected_next_target_kind": (
+            "scalar_stress_energy_divergence_identity_minkowski_calculation_"
+            "result_review"
+        ),
+        "packet_result": EXECUTION_OUTCOME,
+        "strict_packet_result": EXECUTION_STRICT_OUTCOME,
+        "calculation_output_path": (
+            "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-"
+            "MINKOWSKI-v0.json"
+        ),
+        "calculation_output_sha256": sha256_path(CALCULATION_OUTPUT_PATH),
+        "calculation_manifest_path": (
+            "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-"
+            "MINKOWSKI-MANIFEST-v0.json"
+        ),
+        "calculation_manifest_sha256": sha256_path(CALCULATION_MANIFEST_PATH),
+        "guardrail_sha256": manifest["guardrail_sha256"],
+        "script_sha256": manifest["script_sha256"],
+        "canonical_json_contract": manifest["canonical_json_contract"],
+        "control_counts": {
+            "on_shell_time_resolution_rows": len(
+                result["on_shell"]["time_slice_results"]
+            ),
+            "off_shell_time_resolution_rows": len(
+                result["off_shell"]["time_slice_results"]
+            ),
+            "time_slice_count": len(result["parameters"]["time_slices"]),
+            "resolution_count": len(result["parameters"]["resolutions_N"]),
+            "divergence_component_count": 2,
+        },
+        "threshold_evidence": evidence,
+        "threshold_checks": result["threshold_checks"],
+        "all_thresholds_passed": True,
+        "claim": {
+            "primary_label": "E-REPRO",
+            "claim_status": "generated_pending_result_review",
+            "claim_ceiling_level": 3,
+            "claim_scope": (
+                "flat-Minkowski scalar stress-energy divergence identity toy "
+                "calculation only"
+            ),
+        },
+        "proposed_equation_ids_pending_review": result[
+            "proposed_equation_ids_pending_review"
+        ],
+        "equation_compendium_edited": False,
+        "boundary": result["boundary"],
+        "ccft_lane_status": "paused_upstream_prerequisites",
+        "lean_status_wording": (
+            "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+        ),
+    }
+
+
 def write_report(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(report_json_bytes(payload))
@@ -314,6 +422,24 @@ def guardrail_main(argv: list[str] | None = None) -> int:
             {
                 "outcome": GUARDRAIL_OUTCOME,
                 "selected_next_target": EXECUTION_TARGET,
+            }
+        )
+    )
+    return 0
+
+
+def execution_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Record the scalar pretest execution.")
+    parser.add_argument("--out", type=Path, default=EXECUTION_REPORT_PATH)
+    args = parser.parse_args(argv)
+    payload = build_execution_report()
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "outcome": EXECUTION_OUTCOME,
+                "output_sha256": payload["calculation_output_sha256"],
+                "selected_next_target": REVIEW_TARGET,
             }
         )
     )

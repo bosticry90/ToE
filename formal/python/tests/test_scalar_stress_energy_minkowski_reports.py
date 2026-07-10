@@ -8,13 +8,17 @@ from formal.python.tests.strict_physics_state_helpers import (
     active_workstream,
     current_target_state,
     loop_registry,
+    workstream,
 )
 from formal.python.tools.scalar_stress_energy_minkowski_reports import (
+    EXECUTION_OUTCOME,
+    EXECUTION_STRICT_OUTCOME,
     EXECUTION_TARGET,
     GUARDRAIL_OUTCOME,
     GUARDRAIL_STRICT_OUTCOME,
     THRESHOLD_REPAIR_TARGET,
     build_guardrail_payload,
+    build_execution_report,
     canonical_json_bytes,
     validate_guardrail_payload,
 )
@@ -82,14 +86,43 @@ def test_guardrail_does_not_execute_or_activate_equations() -> None:
     assert payload["ccft_lane_status"] == "paused_upstream_prerequisites"
 
 
-def test_live_registry_rotates_to_bounded_execution() -> None:
+def test_guardrail_is_preserved_and_live_registry_rotates_to_result_review() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
-    assert state["live_next_target"] == EXECUTION_TARGET
-    assert state["previous_live_next_target"] == (
-        "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
+    guardrail = workstream(
+        "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet",
+        registry,
     )
-    assert active["workstream_id"] == EXECUTION_TARGET
-    assert active["authorized_next_strict_target"] == EXECUTION_TARGET
+    assert guardrail["status"] == "paused"
+    assert guardrail["selected_next_target"] == EXECUTION_TARGET
+    assert state["live_next_target"] == (
+        "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
+    )
+    assert state["previous_live_next_target"] == (
+        "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0"
+    )
+    assert active["workstream_id"] == state["live_next_target"]
+    assert active["authorized_next_strict_target"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
+
+
+def test_execution_report_records_passed_scoped_result_pending_review() -> None:
+    payload = build_execution_report()
+    assert payload["packet_result"] == EXECUTION_OUTCOME
+    assert payload["strict_packet_result"] == EXECUTION_STRICT_OUTCOME
+    assert payload["selected_next_target"] == (
+        "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
+    )
+    assert payload["control_counts"] == {
+        "on_shell_time_resolution_rows": 12,
+        "off_shell_time_resolution_rows": 12,
+        "time_slice_count": 3,
+        "resolution_count": 4,
+        "divergence_component_count": 2,
+    }
+    assert payload["all_thresholds_passed"] is True
+    assert all(payload["threshold_checks"].values())
+    assert payload["claim"]["primary_label"] == "E-REPRO"
+    assert payload["claim"]["claim_status"] == "generated_pending_result_review"
+    assert payload["equation_compendium_edited"] is False

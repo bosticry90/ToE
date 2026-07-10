@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ScalarQFTGRSourceContractFlatLimitPretestGuardrailPacket
+import ToeFormal.Derivation.ScalarStressEnergyDivergenceIdentityMinkowskiCalculationExecution
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ScalarQFTGRSourceContractFlatLimitPretestGuardrailPacket.selectedNextTarget
+  ScalarStressEnergyDivergenceIdentityMinkowskiCalculationExecution.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ScalarQFTGRSourceContractFlatLimitPretestGuardrailPacket.packetId
+  ScalarStressEnergyDivergenceIdentityMinkowskiCalculationExecution.executionId
 
-theorem current_target_points_to_minkowski_execution :
+theorem current_target_points_to_minkowski_result_review :
     currentLiveTarget =
-      "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0" := by
+      "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result" := by
   rfl
 
 end CurrentTarget

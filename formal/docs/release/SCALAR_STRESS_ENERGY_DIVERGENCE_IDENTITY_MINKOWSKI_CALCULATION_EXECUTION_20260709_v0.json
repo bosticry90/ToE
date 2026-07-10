@@ -1,0 +1,78 @@
+{
+  "all_thresholds_passed": true,
+  "boundary": {
+    "bianchi_compatibility_claimed": false,
+    "calculation_executed": true,
+    "ccft_resumed": false,
+    "ccft_validated": false,
+    "curved_spacetime_dynamics_executed": false,
+    "einstein_equation_solved": false,
+    "gravity_dynamics_executed": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "source_admissibility_claimed": false
+  },
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0",
+  "calculation_manifest_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-MANIFEST-v0.json",
+  "calculation_manifest_sha256": "7e2eee401b84c4a8c8dd20c8d54eb6bbba9f16b4e832d53bff6bd7612cd53605",
+  "calculation_output_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json",
+  "calculation_output_sha256": "c93f2324c735bf2a06ba9a83c3fc022be87b7d00fb5bf2010b8010c2715f480e",
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "array_order": "preserved",
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "flat-Minkowski scalar stress-energy divergence identity toy calculation only",
+    "claim_status": "generated_pending_result_review",
+    "primary_label": "E-REPRO"
+  },
+  "consumed_target": "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0",
+  "consumed_target_kind": "scalar_stress_energy_divergence_identity_minkowski_calculation_execution",
+  "control_counts": {
+    "divergence_component_count": 2,
+    "off_shell_time_resolution_rows": 12,
+    "on_shell_time_resolution_rows": 12,
+    "resolution_count": 4,
+    "time_slice_count": 3
+  },
+  "equation_compendium_edited": false,
+  "guardrail_sha256": "a1f29ff370431de8ca1d4e977e00d659a70353ae142472121ea9f44128f07da5",
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "packet_result": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTED_PASSES_LEVEL_3_ON_SHELL_OFF_SHELL_AND_CONVERGENCE_THRESHOLDS_PENDING_RESULT_REVIEW",
+  "proposed_equation_ids_pending_review": [
+    "EQ-QFT-SCALAR-STRESS-ENERGY-v0",
+    "EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0"
+  ],
+  "schema_id": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTION_20260709_v0",
+  "script_sha256": "0eaa19affa8a74084444247c9a04b6997b632490b5411bf436fc3461028547eb",
+  "selected_next_target": "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result",
+  "selected_next_target_kind": "scalar_stress_energy_divergence_identity_minkowski_calculation_result_review",
+  "status": "executed_pending_result_review",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTED_SCOPED_E_REPRO_PENDING_REVIEW_NO_GRAVITY_DYNAMICS_NO_SOURCE_ADMISSIBILITY_NO_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION",
+  "threshold_checks": {
+    "exact_coefficient_error_at_most_1e_12": true,
+    "finest_combined_off_shell_relative_error_at_most_2_percent": true,
+    "finest_off_shell_divergence_over_100_times_on_shell": true,
+    "two_finest_convergence_order_at_least_1_8": true
+  },
+  "threshold_evidence": {
+    "exact_coefficient_absolute_error": 1.5543122344752192e-15,
+    "finest_combined_off_shell_relative_error": 0.0035695975114978873,
+    "finest_off_to_on_divergence_norm_ratio": 310.0255859884857,
+    "minimum_observed_two_finest_convergence_order": 1.997914114431356
+  }
+}
