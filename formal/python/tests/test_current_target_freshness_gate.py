@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
-    "curvature_background_v0_result"
+    "prepare_scalar_stress_energy_covariant_divergence_identity_higher_"
+    "dimensional_curved_background_guardrail_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1348,8 +1348,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "execute_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
-    "curvature_background_v0"
+    "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+    "curvature_background_v0_result"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1696,8 +1696,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
-    "curvature_background_v0_result"
+    "prepare_scalar_stress_energy_covariant_divergence_identity_higher_"
+    "dimensional_curved_background_guardrail_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1792,12 +1792,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ScalarStressEnergyCovariantDivergenceIdentityNonzeroCurvatureBackgroundCalculationExecution.lean"
+    / "ScalarStressEnergyCovariantDivergenceIdentityNonzeroCurvatureBackgroundCalculationResultReview.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
     "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_"
-    "BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json"
+    "BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1929,9 +1929,10 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_"
-    "BACKGROUND_CALCULATION_EXECUTED_PASSES_LEVEL_3_FIXED_1PLUS1_DE_SITTER_"
-    "CURVATURE_CONNECTION_AND_MATTER_IDENTITY_CONTROLS_PENDING_RESULT_REVIEW"
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+    "CURVATURE_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_1PLUS1_"
+    "DE_SITTER_MATTER_IDENTITY_ONLY_NO_EINSTEIN_SOURCE_OR_SEAM_"
+    "ADMISSIBILITY_CLAIM"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2061,11 +2062,10 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_"
-    "BACKGROUND_CALCULATION_EXECUTED_SCOPED_E_REPRO_PENDING_REVIEW_FIXED_"
-    "1PLUS1_DE_SITTER_MATTER_IDENTITY_ONLY_TWO_DIMENSIONAL_EINSTEIN_GRAVITY_"
-    "DEGENERATE_NO_EINSTEIN_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_"
-    "OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION"
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+    "CURVATURE_BACKGROUND_RESULT_REVIEW_ACCEPTS_LEVEL3_SCOPED_E_REPRO_ONLY_"
+    "NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_CLOSURE_NO_MASTER_ACTION_"
+    "PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2176,8 +2176,8 @@ SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
     "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 LIVE_TARGET_KIND = (
-    "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_"
-    "background_calculation_result_review"
+    "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_"
+    "curved_background_guardrail_packet"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"

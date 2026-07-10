@@ -7,6 +7,12 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.toe.calculations.calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background import (
+    RESOLUTIONS,
+    TIME_SLICES,
+    build_result as rebuild_calculation_result,
+    canonical_json_bytes as calculation_canonical_json_bytes,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -36,6 +42,14 @@ THRESHOLD_REPAIR_TARGET = (
     "repair_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
     "curvature_background_v0_threshold_failure"
 )
+REPRODUCIBILITY_REPAIR_TARGET = (
+    "repair_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+    "curvature_background_v0_reproducibility_mismatch"
+)
+HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET = (
+    "prepare_scalar_stress_energy_covariant_divergence_identity_higher_"
+    "dimensional_curved_background_guardrail_packet"
+)
 
 GUARDRAIL_OUTCOME = (
     "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_"
@@ -59,6 +73,18 @@ EXECUTION_STRICT_OUTCOME = (
     "1PLUS1_DE_SITTER_MATTER_IDENTITY_ONLY_TWO_DIMENSIONAL_EINSTEIN_GRAVITY_"
     "DEGENERATE_NO_EINSTEIN_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_"
     "OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION"
+)
+REVIEW_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+    "CURVATURE_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_1PLUS1_"
+    "DE_SITTER_MATTER_IDENTITY_ONLY_NO_EINSTEIN_SOURCE_OR_SEAM_"
+    "ADMISSIBILITY_CLAIM"
+)
+REVIEW_STRICT_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+    "CURVATURE_BACKGROUND_RESULT_REVIEW_ACCEPTS_LEVEL3_SCOPED_E_REPRO_ONLY_"
+    "NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_CLOSURE_NO_MASTER_ACTION_"
+    "PROMOTION"
 )
 
 PACKET_SCHEMA_ID = (
@@ -129,6 +155,14 @@ EXECUTION_REPORT_PATH = (
     / "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
     "CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json"
 )
+REVIEW_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+    "CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json"
+)
 
 BACKGROUND_GEOMETRY_CLASSIFICATION = (
     "fixed_nonzero_curvature_1plus1_de_sitter_patch"
@@ -139,6 +173,21 @@ GUARDRAIL_GEOMETRY_CLASSIFICATION = (
 EXPECTED_GUARDRAIL_SHA256 = (
     "3670bfaa98876b32e95f5ff7406546a41aa691f937fe738fee6e3ab36a399191"
 )
+EXPECTED_EXECUTION_HASHES = {
+    "guardrail_sha256": EXPECTED_GUARDRAIL_SHA256,
+    "script_sha256": (
+        "253632cc6773d242a76db26befde13dc2578a2950c097a8c628b8e061ffdbd03"
+    ),
+    "output_sha256": (
+        "4d0d04421c8b0d310f0caa73c4da3755f2afa91a4043bab9f96011c9b03ecf4f"
+    ),
+    "manifest_sha256": (
+        "46e752fd0a8571fd06dd0f1f9a7046f12a43413761ea39a3cb904b959a4a6827"
+    ),
+    "execution_report_sha256": (
+        "21068eaff2b509401afb635e4f7bce4eb409edb8a5cff6dfe4bea7dfe7a3d2c8"
+    ),
+}
 
 
 def canonical_json_bytes(payload: Any) -> bytes:
@@ -806,6 +855,937 @@ def build_execution_report(
     }
 
 
+def _json_fragment_sha256(payload: Any) -> str:
+    return sha256_bytes(calculation_canonical_json_bytes(payload))
+
+
+def _recompute_threshold_checks(
+    evidence: dict[str, Any], thresholds: dict[str, Any]
+) -> dict[str, bool]:
+    return {
+        "two_finest_convergence_order_at_least_1_8": (
+            evidence["minimum_observed_two_finest_convergence_order"]
+            >= thresholds["minimum_convergence_order_two_finest_pairs"]
+        ),
+        "finest_combined_off_shell_relative_error_at_most_2_percent": (
+            evidence["finest_combined_off_shell_relative_error"]
+            <= thresholds["maximum_finest_combined_off_shell_relative_error"]
+        ),
+        "exact_coefficient_error_at_most_1e_12": (
+            evidence["exact_coefficient_absolute_error"]
+            <= thresholds["maximum_exact_coefficient_absolute_error"]
+        ),
+        "finest_off_shell_divergence_over_100_times_on_shell": (
+            evidence["finest_off_to_on_divergence_norm_ratio"]
+            >= thresholds["minimum_finest_off_to_on_divergence_norm_ratio"]
+        ),
+        "metric_compatibility_error_at_most_1e_12": (
+            evidence["metric_compatibility_max_absolute_error"]
+            <= thresholds["maximum_metric_compatibility_absolute_error"]
+        ),
+        "flat_limit_discrepancy_at_most_1e_12": (
+            evidence["flat_limit_max_absolute_discrepancy"]
+            <= thresholds["maximum_flat_limit_absolute_discrepancy"]
+        ),
+        "curvature_route_discrepancy_at_most_1e_12": (
+            evidence["curvature_route_max_absolute_discrepancy"]
+            <= thresholds["maximum_curvature_route_absolute_discrepancy"]
+        ),
+        "absolute_scalar_curvature_at_least_0_05": (
+            evidence["minimum_absolute_measured_scalar_curvature"]
+            >= thresholds["minimum_absolute_scalar_curvature"]
+        ),
+        "naive_partial_divergence_error_ratio_at_least_100": (
+            evidence["finest_on_shell_naive_to_correct_error_ratio"]
+            >= thresholds[
+                "minimum_naive_partial_divergence_identity_error_ratio"
+            ]
+        ),
+        "curvature_omission_discrepancy_at_least_0_04": (
+            evidence["curvature_omission_minimum_absolute_discrepancy"]
+            >= thresholds["minimum_curvature_omission_absolute_discrepancy"]
+        ),
+        "inconsistent_frozen_connection_error_ratio_at_least_50": (
+            evidence[
+                "finest_minimum_on_off_frozen_connection_to_correct_error_ratio"
+            ]
+            >= thresholds[
+                "minimum_inconsistent_frozen_connection_identity_error_ratio"
+            ]
+        ),
+    }
+
+
+def verify_calculation_result(
+    *,
+    guardrail_path: Path = GUARDRAIL_REPORT_PATH,
+    script_path: Path = CALCULATION_SCRIPT_PATH,
+    output_path: Path = CALCULATION_OUTPUT_PATH,
+    manifest_path: Path = CALCULATION_MANIFEST_PATH,
+    execution_report_path: Path = EXECUTION_REPORT_PATH,
+) -> dict[str, Any]:
+    """Independently review the immutable nonzero-curvature execution."""
+
+    mismatch_codes: list[str] = []
+    actual_hashes = {
+        "guardrail_sha256": sha256_path(guardrail_path),
+        "script_sha256": sha256_path(script_path),
+        "output_sha256": sha256_path(output_path),
+        "manifest_sha256": sha256_path(manifest_path),
+        "execution_report_sha256": sha256_path(execution_report_path),
+    }
+    hash_code_by_key = {
+        "guardrail_sha256": "guardrail_hash_mismatch",
+        "script_sha256": "script_hash_mismatch",
+        "output_sha256": "output_hash_mismatch",
+        "manifest_sha256": "manifest_hash_mismatch",
+        "execution_report_sha256": "execution_report_hash_mismatch",
+    }
+    for key, expected in EXPECTED_EXECUTION_HASHES.items():
+        if actual_hashes[key] != expected:
+            mismatch_codes.append(hash_code_by_key[key])
+
+    artifacts: dict[str, dict[str, Any] | None] = {
+        "guardrail": None,
+        "result": None,
+        "manifest": None,
+        "execution_report": None,
+    }
+    artifact_paths = {
+        "guardrail": guardrail_path,
+        "result": output_path,
+        "manifest": manifest_path,
+        "execution_report": execution_report_path,
+    }
+    for name, path in artifact_paths.items():
+        try:
+            artifacts[name] = _load_strict_json(path)
+        except (UnicodeDecodeError, json.JSONDecodeError, ValueError):
+            mismatch_codes.append("schema_mismatch")
+
+    guardrail = artifacts["guardrail"]
+    result = artifacts["result"]
+    manifest = artifacts["manifest"]
+    execution_report = artifacts["execution_report"]
+
+    canonical_byte_checks = {
+        "guardrail_report_bytes": False,
+        "calculation_output_bytes": False,
+        "calculation_manifest_bytes": False,
+        "execution_report_bytes": False,
+    }
+    try:
+        canonical_byte_checks["guardrail_report_bytes"] = (
+            guardrail is not None
+            and guardrail_path.read_bytes() == report_json_bytes(guardrail)
+        )
+        canonical_byte_checks["calculation_output_bytes"] = (
+            result is not None
+            and output_path.read_bytes()
+            == calculation_canonical_json_bytes(result)
+        )
+        canonical_byte_checks["calculation_manifest_bytes"] = (
+            manifest is not None
+            and manifest_path.read_bytes()
+            == calculation_canonical_json_bytes(manifest)
+        )
+        canonical_byte_checks["execution_report_bytes"] = (
+            execution_report is not None
+            and execution_report_path.read_bytes()
+            == report_json_bytes(execution_report)
+        )
+    except (TypeError, ValueError):
+        pass
+    canonical_bytes_match = all(canonical_byte_checks.values())
+    if not canonical_bytes_match:
+        mismatch_codes.append("canonicalization_mismatch")
+
+    fresh_result: dict[str, Any] | None = None
+    independent_regeneration_match = False
+    independent_regenerated_output_sha256: str | None = None
+    try:
+        fresh_result = rebuild_calculation_result()
+        fresh_result_bytes = calculation_canonical_json_bytes(fresh_result)
+        independent_regenerated_output_sha256 = sha256_bytes(fresh_result_bytes)
+        independent_regeneration_match = (
+            fresh_result_bytes == output_path.read_bytes()
+        )
+    except (KeyError, TypeError, ValueError):
+        independent_regeneration_match = False
+    if not independent_regeneration_match:
+        mismatch_codes.append("regeneration_mismatch")
+
+    schema_match = False
+    if all(artifact is not None for artifact in artifacts.values()):
+        assert guardrail is not None
+        assert result is not None
+        assert manifest is not None
+        assert execution_report is not None
+        required_result_fields = {
+            "schema_id",
+            "calculation_id",
+            "calculation_status",
+            "background_geometry",
+            "background_geometry_classification",
+            "parameters",
+            "curvature_verification",
+            "on_shell",
+            "off_shell",
+            "negative_controls",
+            "patch_domain_safety",
+            "thresholds",
+            "threshold_evidence",
+            "threshold_checks",
+            "all_thresholds_passed",
+            "claim",
+            "boundary",
+        }
+        required_manifest_fields = {
+            "schema_id",
+            "calculation_id",
+            "guardrail_sha256",
+            "script_sha256",
+            "output_sha256",
+            "canonical_json_contract",
+            "background_geometry_classification",
+            "result_review_target",
+            "gravity_evolved",
+            "einstein_tensor_source_tested",
+            "two_dimensional_einstein_gravity_degenerate",
+            "covariant_matter_identity_tested",
+        }
+        required_execution_fields = {
+            "schema_id",
+            "calculation_id",
+            "status",
+            "calculation_output_sha256",
+            "calculation_manifest_sha256",
+            "guardrail_sha256",
+            "calculation_script_sha256",
+            "curvature_verification",
+            "negative_controls",
+            "patch_domain_safety",
+            "threshold_checks",
+            "boundary",
+        }
+        schema_match = (
+            guardrail.get("schema_id") == PACKET_SCHEMA_ID
+            and guardrail.get("calculation_id") == CALCULATION_ID
+            and guardrail.get("selected_next_target") == EXECUTION_TARGET
+            and required_result_fields.issubset(result)
+            and result.get("schema_id") == f"{CALCULATION_ID}-RESULT"
+            and result.get("calculation_id") == CALCULATION_ID
+            and result.get("calculation_status")
+            == "executed_pending_result_review"
+            and required_manifest_fields.issubset(manifest)
+            and manifest.get("schema_id") == f"{CALCULATION_ID}-MANIFEST"
+            and manifest.get("calculation_id") == CALCULATION_ID
+            and manifest.get("result_review_target") == REVIEW_TARGET
+            and required_execution_fields.issubset(execution_report)
+            and execution_report.get("schema_id")
+            == (
+                "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_"
+                "NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTION_"
+                "20260709_v0"
+            )
+            and execution_report.get("calculation_id") == CALCULATION_ID
+            and execution_report.get("status")
+            == "executed_pending_result_review"
+            and execution_report.get("selected_next_target") == REVIEW_TARGET
+        )
+    if not schema_match:
+        mismatch_codes.append("schema_mismatch")
+
+    manifest_hash_links_match = False
+    execution_report_hash_links_match = False
+    if manifest is not None:
+        manifest_hash_links_match = (
+            manifest.get("guardrail_sha256")
+            == actual_hashes["guardrail_sha256"]
+            and manifest.get("script_sha256") == actual_hashes["script_sha256"]
+            and manifest.get("output_sha256") == actual_hashes["output_sha256"]
+        )
+    if not manifest_hash_links_match:
+        mismatch_codes.append("manifest_hash_mismatch")
+    if execution_report is not None:
+        execution_report_hash_links_match = (
+            execution_report.get("guardrail_sha256")
+            == actual_hashes["guardrail_sha256"]
+            and execution_report.get("calculation_script_sha256")
+            == actual_hashes["script_sha256"]
+            and execution_report.get("calculation_output_sha256")
+            == actual_hashes["output_sha256"]
+            and execution_report.get("calculation_manifest_sha256")
+            == actual_hashes["manifest_sha256"]
+        )
+    if not execution_report_hash_links_match:
+        mismatch_codes.append("execution_report_link_mismatch")
+
+    expected_control_counts = {
+        "time_slice_count": len(TIME_SLICES),
+        "resolution_count": len(RESOLUTIONS),
+        "on_shell_time_resolution_rows": len(TIME_SLICES) * len(RESOLUTIONS),
+        "off_shell_time_resolution_rows": len(TIME_SLICES) * len(RESOLUTIONS),
+        "on_shell_resolution_aggregates": len(RESOLUTIONS),
+        "off_shell_resolution_aggregates": len(RESOLUTIONS),
+        "curvature_analytic_rows": len(TIME_SLICES),
+        "curvature_component_rows": len(TIME_SLICES),
+        "curvature_omission_rows": len(TIME_SLICES),
+        "curvature_verification_route_count": 2,
+        "negative_control_count": 3,
+        "frozen_threshold_count": 11,
+        "divergence_component_count": 2,
+    }
+    observed_control_counts: dict[str, int] = {}
+    count_match = False
+    time_resolution_rows_exact_bytes_match = False
+    resolution_aggregates_exact_bytes_match = False
+    per_resolution_section_hashes: dict[str, dict[str, str]] = {}
+    if result is not None and fresh_result is not None:
+        try:
+            curvature = result["curvature_verification"]
+            observed_control_counts = {
+                "time_slice_count": len(result["parameters"]["time_slices_eta"]),
+                "resolution_count": len(result["parameters"]["resolutions_N"]),
+                "on_shell_time_resolution_rows": len(
+                    result["on_shell"]["time_slice_results"]
+                ),
+                "off_shell_time_resolution_rows": len(
+                    result["off_shell"]["time_slice_results"]
+                ),
+                "on_shell_resolution_aggregates": len(
+                    result["on_shell"]["resolution_aggregates"]
+                ),
+                "off_shell_resolution_aggregates": len(
+                    result["off_shell"]["resolution_aggregates"]
+                ),
+                "curvature_analytic_rows": len(
+                    curvature["analytic_conformal_route"]["rows"]
+                ),
+                "curvature_component_rows": len(
+                    curvature["independent_component_route"]["rows"]
+                ),
+                "curvature_omission_rows": len(
+                    curvature["curvature_derivative_omission_negative_control"][
+                        "rows"
+                    ]
+                ),
+                "curvature_verification_route_count": 2,
+                "negative_control_count": len(result["negative_controls"]),
+                "frozen_threshold_count": result["frozen_threshold_count"],
+                "divergence_component_count": 2,
+            }
+            expected_row_pairs = [
+                (resolution, eta)
+                for resolution in RESOLUTIONS
+                for eta in TIME_SLICES
+            ]
+            count_match = (
+                observed_control_counts == expected_control_counts
+                and result["parameters"]["time_slices_eta"] == list(TIME_SLICES)
+                and result["parameters"]["resolutions_N"] == list(RESOLUTIONS)
+                and all(
+                    [
+                        (row["resolution_N"], row["time_eta"])
+                        for row in result[control]["time_slice_results"]
+                    ]
+                    == expected_row_pairs
+                    for control in ("on_shell", "off_shell")
+                )
+                and all(
+                    [
+                        row["resolution_N"]
+                        for row in result[control]["resolution_aggregates"]
+                    ]
+                    == list(RESOLUTIONS)
+                    for control in ("on_shell", "off_shell")
+                )
+            )
+            for control in ("on_shell", "off_shell"):
+                for section in ("time_slice_results", "resolution_aggregates"):
+                    observed_hash = _json_fragment_sha256(
+                        result[control][section]
+                    )
+                    regenerated_hash = _json_fragment_sha256(
+                        fresh_result[control][section]
+                    )
+                    per_resolution_section_hashes[f"{control}_{section}"] = {
+                        "observed_sha256": observed_hash,
+                        "independently_regenerated_sha256": regenerated_hash,
+                    }
+            time_resolution_rows_exact_bytes_match = all(
+                hashes["observed_sha256"]
+                == hashes["independently_regenerated_sha256"]
+                for name, hashes in per_resolution_section_hashes.items()
+                if name.endswith("time_slice_results")
+            )
+            resolution_aggregates_exact_bytes_match = all(
+                hashes["observed_sha256"]
+                == hashes["independently_regenerated_sha256"]
+                for name, hashes in per_resolution_section_hashes.items()
+                if name.endswith("resolution_aggregates")
+            )
+        except (KeyError, TypeError):
+            count_match = False
+    if not count_match:
+        mismatch_codes.append("count_mismatch")
+    if not (
+        time_resolution_rows_exact_bytes_match
+        and resolution_aggregates_exact_bytes_match
+    ):
+        mismatch_codes.append("row_aggregate_mismatch")
+
+    threshold_match = False
+    threshold_evidence: dict[str, Any] = {}
+    threshold_checks: dict[str, Any] = {}
+    if (
+        guardrail is not None
+        and result is not None
+        and fresh_result is not None
+        and execution_report is not None
+    ):
+        try:
+            thresholds = guardrail["success_criteria"]
+            threshold_evidence = result["threshold_evidence"]
+            threshold_checks = result["threshold_checks"]
+            recomputed_checks = _recompute_threshold_checks(
+                threshold_evidence, thresholds
+            )
+            threshold_match = (
+                result["thresholds"] == thresholds
+                and result["frozen_threshold_count"] == 11
+                and len(threshold_checks) == 11
+                and threshold_checks == recomputed_checks
+                and all(threshold_checks.values())
+                and result["all_thresholds_passed"] is True
+                and threshold_evidence == fresh_result["threshold_evidence"]
+                and threshold_checks == fresh_result["threshold_checks"]
+                and execution_report["threshold_evidence"] == threshold_evidence
+                and execution_report["threshold_checks"] == threshold_checks
+                and execution_report["all_thresholds_passed"] is True
+                and execution_report["control_counts"]["frozen_threshold_count"]
+                == 11
+            )
+        except (KeyError, TypeError):
+            threshold_match = False
+    if not threshold_match:
+        mismatch_codes.append("threshold_mismatch")
+
+    curvature_routes_match = False
+    curvature_evidence: dict[str, Any] = {}
+    if (
+        result is not None
+        and fresh_result is not None
+        and execution_report is not None
+    ):
+        try:
+            curvature_evidence = result["curvature_verification"]
+            analytic_rows = curvature_evidence["analytic_conformal_route"]["rows"]
+            component_rows = curvature_evidence["independent_component_route"][
+                "rows"
+            ]
+            curvature_routes_match = (
+                [row["time_eta"] for row in analytic_rows] == list(TIME_SLICES)
+                and [row["time_eta"] for row in component_rows]
+                == list(TIME_SLICES)
+                and all(
+                    abs(row["scalar_curvature"] - 0.08) <= 1e-12
+                    for row in analytic_rows + component_rows
+                )
+                and all(
+                    row["nonzero_connection_component_count"] == 4
+                    and row["ricci_relation_max_absolute_error"] <= 1e-12
+                    for row in component_rows
+                )
+                and curvature_evidence[
+                    "maximum_route_agreement_absolute_error"
+                ]
+                <= 1e-12
+                and curvature_evidence[
+                    "minimum_absolute_measured_scalar_curvature"
+                ]
+                >= 0.05
+                and curvature_evidence["ricci_relation_max_absolute_error"]
+                <= 1e-12
+                and curvature_evidence["scalar_curvature_expected"] == 0.08
+                and curvature_evidence["scalar_curvature_measured"] == 0.08
+                and curvature_evidence == fresh_result["curvature_verification"]
+                and execution_report["curvature_verification"]
+                == curvature_evidence
+            )
+        except (KeyError, TypeError):
+            curvature_routes_match = False
+    if not curvature_routes_match:
+        mismatch_codes.append("curvature_route_mismatch")
+
+    negative_controls_match = False
+    negative_control_evidence: dict[str, Any] = {}
+    if (
+        result is not None
+        and fresh_result is not None
+        and execution_report is not None
+    ):
+        try:
+            negative_control_evidence = result["negative_controls"]
+            expected_negative_control_names = {
+                "naive_partial_divergence",
+                "inconsistent_frozen_connection",
+                "curvature_derivative_omission",
+            }
+            negative_controls_match = (
+                set(negative_control_evidence) == expected_negative_control_names
+                and all(
+                    negative_control_evidence[name]["failure_detected"] is True
+                    for name in expected_negative_control_names
+                )
+                and negative_control_evidence["naive_partial_divergence"][
+                    "finest_on_shell_error_ratio"
+                ]
+                >= 100.0
+                and negative_control_evidence[
+                    "inconsistent_frozen_connection"
+                ]["minimum_finest_on_off_error_ratio"]
+                >= 50.0
+                and negative_control_evidence["curvature_derivative_omission"][
+                    "minimum_absolute_discrepancy_from_correct_route"
+                ]
+                >= 0.04
+                and negative_control_evidence["curvature_derivative_omission"]
+                == result["curvature_verification"][
+                    "curvature_derivative_omission_negative_control"
+                ]
+                and negative_control_evidence
+                == fresh_result["negative_controls"]
+                and execution_report["negative_controls"]
+                == negative_control_evidence
+            )
+        except (KeyError, TypeError):
+            negative_controls_match = False
+    if not negative_controls_match:
+        mismatch_codes.append("negative_control_mismatch")
+
+    patch_safety_match = False
+    patch_safety_evidence: dict[str, Any] = {}
+    if (
+        guardrail is not None
+        and result is not None
+        and fresh_result is not None
+        and execution_report is not None
+    ):
+        try:
+            patch_safety_evidence = result["patch_domain_safety"]
+            patch_safety_match = (
+                patch_safety_evidence == fresh_result["patch_domain_safety"]
+                and execution_report["patch_domain_safety"]
+                == patch_safety_evidence
+                and result["parameters"]["eta_domain"] == [0.0, 1.0]
+                and guardrail["inputs"]["coordinate_domain"]["eta"]
+                == "eta in [0,1]"
+                and patch_safety_evidence["eta_domain"] == [0.0, 1.0]
+                and patch_safety_evidence["coordinate_patch_singularity_eta"]
+                == 5.0
+                and patch_safety_evidence[
+                    "minimum_one_minus_H_eta_over_domain"
+                ]
+                == 0.8
+                and patch_safety_evidence["maximum_scale_factor_over_domain"]
+                == 1.25
+                and patch_safety_evidence[
+                    "minimum_coordinate_distance_to_patch_singularity_over_domain"
+                ]
+                == 4.0
+                and patch_safety_evidence["strictly_inside_coordinate_patch"]
+                is True
+                and patch_safety_evidence[
+                    "coordinate_patch_boundary_is_physical_curvature_singularity"
+                ]
+                is False
+                and patch_safety_evidence[
+                    "sampled_minimum_one_minus_H_eta"
+                ]
+                >= 0.8
+                and patch_safety_evidence["sampled_maximum_scale_factor"] <= 1.25
+                and patch_safety_evidence[
+                    "sampled_minimum_coordinate_distance_to_patch_singularity"
+                ]
+                >= 4.0
+            )
+        except (KeyError, TypeError):
+            patch_safety_match = False
+    if not patch_safety_match:
+        mismatch_codes.append("patch_safety_mismatch")
+
+    geometry_match = False
+    if (
+        guardrail is not None
+        and result is not None
+        and fresh_result is not None
+        and manifest is not None
+        and execution_report is not None
+    ):
+        try:
+            background = result["background_geometry"]
+            geometry_match = (
+                result["background_geometry_classification"]
+                == BACKGROUND_GEOMETRY_CLASSIFICATION
+                and background == fresh_result["background_geometry"]
+                and background["background_geometry_classification"]
+                == BACKGROUND_GEOMETRY_CLASSIFICATION
+                and background["guardrail_geometry_classification"]
+                == GUARDRAIL_GEOMETRY_CLASSIFICATION
+                and background["metric_signature"] == "(-,+)"
+                and background["scalar_curvature_expected"] == 0.08
+                and background["scalar_curvature_measured"] == 0.08
+                and background["genuinely_nonzero_curvature_test_executed"]
+                is True
+                and background["curvature_test_claimed"] is True
+                and background["covariant_connection_test_claimed"] is True
+                and guardrail["background_geometry"]["classification"]
+                == GUARDRAIL_GEOMETRY_CLASSIFICATION
+                and guardrail["background_geometry"]["scalar_curvature"] == 0.08
+                and manifest["background_geometry_classification"]
+                == BACKGROUND_GEOMETRY_CLASSIFICATION
+                and manifest["scalar_curvature_expected"] == 0.08
+                and manifest["scalar_curvature_measured"] == 0.08
+                and execution_report["background_geometry_classification"]
+                == BACKGROUND_GEOMETRY_CLASSIFICATION
+                and execution_report["guardrail_geometry_classification"]
+                == GUARDRAIL_GEOMETRY_CLASSIFICATION
+                and execution_report["scalar_curvature_expected"] == 0.08
+                and execution_report["scalar_curvature_measured"] == 0.08
+                and result["on_shell"]["forced_or_manufactured"] is False
+                and result["on_shell"]["exact_residual"] == "E_phi = 0"
+                and result["off_shell"]["forced_or_manufactured"] is False
+            )
+        except (KeyError, TypeError):
+            geometry_match = False
+    if not geometry_match:
+        mismatch_codes.append("geometry_classification_mismatch")
+
+    on_shell_absolute_error_policy_match = False
+    if guardrail is not None and result is not None and fresh_result is not None:
+        try:
+            on_shell_absolute_error_policy_match = (
+                result["on_shell"]["relative_error_against_zero_formed"]
+                is False
+                and fresh_result["on_shell"][
+                    "relative_error_against_zero_formed"
+                ]
+                is False
+                and guardrail["numerical_method"]["on_shell_error_policy"]
+                == (
+                    "report absolute covariant-divergence norms; no relative "
+                    "error against a zero reference"
+                )
+            )
+        except (KeyError, TypeError):
+            on_shell_absolute_error_policy_match = False
+    if not on_shell_absolute_error_policy_match:
+        mismatch_codes.append("on_shell_error_policy_mismatch")
+
+    solution_controls_match = False
+    if guardrail is not None and result is not None and fresh_result is not None:
+        try:
+            solution_controls_match = (
+                guardrail["solution_controls"]["on_shell_positive_control"]
+                == {
+                    "omega": 2.0,
+                    "classification": "exact_source_free_solution",
+                    "forced_or_manufactured": False,
+                    "exact_residual": "E_phi = 0",
+                }
+                and guardrail["solution_controls"]["off_shell_control"]
+                == {
+                    "omega": 2.2,
+                    "classification": "deliberately_off_shell_unforced_field",
+                    "forced_or_manufactured": False,
+                    "exact_residual": (
+                        "E_phi = 0.84 * a(eta)^(-2) * phi"
+                    ),
+                }
+                and result["on_shell"]["control_role"]
+                == "exact source-free covariant-conservation control"
+                and result["on_shell"]["forced_or_manufactured"] is False
+                and result["on_shell"]["exact_residual"] == "E_phi = 0"
+                and result["off_shell"]["control_role"]
+                == "deliberately off-shell unforced residual control"
+                and result["off_shell"]["forced_or_manufactured"] is False
+                and result["off_shell"]["exact_reference"]
+                == "E_phi = 0.84 * a(eta)^(-2) * phi"
+                and result["parameters"][
+                    "exact_off_shell_coefficient_before_a_inverse_squared"
+                ]
+                == 0.84
+                and result["on_shell"] == fresh_result["on_shell"]
+                and result["off_shell"] == fresh_result["off_shell"]
+            )
+        except (KeyError, TypeError):
+            solution_controls_match = False
+    if not solution_controls_match:
+        mismatch_codes.append("solution_control_mismatch")
+
+    boundary_nonclaims_match = False
+    boundary_evidence: dict[str, Any] = {}
+    if (
+        result is not None
+        and fresh_result is not None
+        and manifest is not None
+        and execution_report is not None
+    ):
+        try:
+            boundary_evidence = result["boundary"]
+            required_true_boundary = {
+                "calculation_executed",
+                "two_dimensional_einstein_gravity_degenerate",
+                "einstein_tensor_identically_zero_in_two_dimensions",
+                "covariant_matter_identity_tested",
+                "genuine_nonzero_curvature_test_executed",
+                "curvature_test_claimed",
+            }
+            required_false_boundary = {
+                "gravity_evolved",
+                "background_metric_evolved",
+                "einstein_equation_solved",
+                "einstein_tensor_source_tested",
+                "ordinary_einstein_scalar_dynamics_claimed",
+                "source_admissibility_claimed",
+                "bianchi_compatibility_claimed",
+                "qft_gr_seam_admissibility_claimed",
+                "qft_gr_seam_closure_claimed",
+                "quantum_stress_energy_source_claimed",
+                "multi_background_robustness_claimed",
+                "higher_dimensional_robustness_claimed",
+                "pillar_completion_claimed",
+                "ccft_resumed",
+                "ccft_validated",
+                "master_action_promoted",
+            }
+            boundary_nonclaims_match = (
+                boundary_evidence == fresh_result["boundary"]
+                and execution_report["boundary"] == boundary_evidence
+                and all(
+                    boundary_evidence[name] is True
+                    for name in required_true_boundary
+                )
+                and all(
+                    boundary_evidence[name] is False
+                    for name in required_false_boundary
+                )
+                and result["gravity_evolved"] is False
+                and result["einstein_tensor_source_tested"] is False
+                and result["two_dimensional_einstein_gravity_degenerate"]
+                is True
+                and result["covariant_matter_identity_tested"] is True
+                and manifest["gravity_evolved"] is False
+                and manifest["einstein_tensor_source_tested"] is False
+                and manifest["two_dimensional_einstein_gravity_degenerate"]
+                is True
+                and manifest["covariant_matter_identity_tested"] is True
+                and execution_report["gravity_evolved"] is False
+                and execution_report["einstein_tensor_source_tested"] is False
+                and execution_report[
+                    "two_dimensional_einstein_gravity_degenerate"
+                ]
+                is True
+                and execution_report["covariant_matter_identity_tested"] is True
+                and result["claim"]["primary_label"] == "E-REPRO"
+                and result["claim"]["claim_ceiling_level"] == 3
+                and result["claim"]["claim_status"]
+                == "generated_pending_result_review"
+                and result["claim"]["next_work_status"] == REVIEW_TARGET
+                and result["result_review"]["target"] == REVIEW_TARGET
+                and result["equation_compendium_edited"] is False
+                and result["existing_equation_id_reused"] == EQUATION_ID
+            )
+        except (KeyError, TypeError):
+            boundary_nonclaims_match = False
+    if not boundary_nonclaims_match:
+        mismatch_codes.append("boundary_nonclaim_mismatch")
+
+    mismatch_codes = list(dict.fromkeys(mismatch_codes))
+    accepted = not mismatch_codes
+    return {
+        "accepted": accepted,
+        "primary_claim_label": "E-REPRO" if accepted else "B-BLOCKED",
+        "claim_status": (
+            "accepted_level_3_scoped_e_repro_fixed_1plus1_de_sitter_"
+            "matter_identity_only"
+            if accepted
+            else "blocked_reproducibility_mismatch"
+        ),
+        "mismatch_codes": mismatch_codes,
+        "expected_hashes": EXPECTED_EXECUTION_HASHES,
+        "actual_hashes": actual_hashes,
+        "all_five_execution_artifact_hashes_match": (
+            actual_hashes == EXPECTED_EXECUTION_HASHES
+        ),
+        "manifest_hash_links_match": manifest_hash_links_match,
+        "execution_report_hash_links_match": execution_report_hash_links_match,
+        "canonical_byte_checks": canonical_byte_checks,
+        "canonical_bytes_match": canonical_bytes_match,
+        "independent_in_memory_regeneration_match": (
+            independent_regeneration_match
+        ),
+        "independent_regenerated_output_sha256": (
+            independent_regenerated_output_sha256
+        ),
+        "schema_match": schema_match,
+        "expected_control_counts": expected_control_counts,
+        "observed_control_counts": observed_control_counts,
+        "all_row_and_aggregate_counts_match": count_match,
+        "time_resolution_rows_exact_bytes_match": (
+            time_resolution_rows_exact_bytes_match
+        ),
+        "resolution_aggregates_exact_bytes_match": (
+            resolution_aggregates_exact_bytes_match
+        ),
+        "per_resolution_results_match": (
+            count_match
+            and time_resolution_rows_exact_bytes_match
+            and resolution_aggregates_exact_bytes_match
+        ),
+        "per_resolution_section_hashes": per_resolution_section_hashes,
+        "all_eleven_thresholds_match": threshold_match,
+        "threshold_evidence": threshold_evidence,
+        "threshold_checks": threshold_checks,
+        "both_curvature_routes_match": curvature_routes_match,
+        "curvature_verification": curvature_evidence,
+        "all_three_negative_controls_match": negative_controls_match,
+        "negative_controls": negative_control_evidence,
+        "patch_domain_safety_match": patch_safety_match,
+        "patch_domain_safety": patch_safety_evidence,
+        "background_geometry_classification_match": geometry_match,
+        "on_shell_absolute_error_policy_match": (
+            on_shell_absolute_error_policy_match
+        ),
+        "on_shell_and_off_shell_controls_match": solution_controls_match,
+        "two_dimensional_einstein_degeneracy_and_nonclaims_match": (
+            boundary_nonclaims_match
+        ),
+        "boundary": boundary_evidence,
+        "selected_next_target": (
+            HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET
+            if accepted
+            else REPRODUCIBILITY_REPAIR_TARGET
+        ),
+    }
+
+
+def build_review_report(**verification_paths: Path) -> dict[str, Any]:
+    verification = verify_calculation_result(**verification_paths)
+    accepted = verification["accepted"]
+    return {
+        "schema_id": (
+            "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+            "CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0"
+        ),
+        "review_id": (
+            "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+            "CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_v0"
+        ),
+        "status": (
+            "accepted_scoped_e_repro"
+            if accepted
+            else "blocked_reproducibility_mismatch"
+        ),
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "consumed_target": REVIEW_TARGET,
+        "consumed_target_kind": REVIEW_TARGET_KIND,
+        "selected_next_target": verification["selected_next_target"],
+        "selected_next_target_kind": (
+            "scalar_stress_energy_covariant_divergence_identity_higher_"
+            "dimensional_curved_background_guardrail_packet"
+            if accepted
+            else "nonzero_curvature_background_v0_reproducibility_repair"
+        ),
+        "packet_result": REVIEW_OUTCOME if accepted else "B-BLOCKED",
+        "strict_packet_result": REVIEW_STRICT_OUTCOME if accepted else "B-BLOCKED",
+        "review_result": REVIEW_OUTCOME if accepted else "B-BLOCKED",
+        "strict_review_result": (
+            REVIEW_STRICT_OUTCOME if accepted else "B-BLOCKED"
+        ),
+        "verification": verification,
+        "background_geometry": {
+            "background_geometry_classification": (
+                BACKGROUND_GEOMETRY_CLASSIFICATION
+            ),
+            "guardrail_geometry_classification": (
+                GUARDRAIL_GEOMETRY_CLASSIFICATION
+            ),
+            "dimension": 2,
+            "scalar_curvature_expected": 0.08,
+            "scalar_curvature_measured": 0.08,
+            "fixed_background_only": True,
+            "genuine_nonzero_curvature_validated": accepted,
+            "covariant_matter_identity_tested": accepted,
+        },
+        "claim": {
+            "primary_label": verification["primary_claim_label"],
+            "claim_status": verification["claim_status"],
+            "claim_ceiling_level": 3,
+            "claim_scope": (
+                "scoped E-REPRO for the scalar covariant stress-energy "
+                "divergence identity on one fixed genuinely curved 1+1 "
+                "de Sitter background"
+            ),
+        },
+        "execution_artifacts_modified_by_review": False,
+        "on_shell_error_presentation_note": {
+            "policy": "absolute covariant-divergence norms against a zero reference",
+            "relative_error_against_zero_formed": False,
+            "serialized_relative_error_fields": (
+                "floor-normalized diagnostics only; do not interpret or cite as "
+                "on-shell relative errors"
+            ),
+            "threshold_dependency": False,
+            "review_effect": "nonblocking",
+        },
+        "existing_equation_id_reused": EQUATION_ID,
+        "equation_surface_status": (
+            "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO"
+        ),
+        "equation_surface_upgraded_by_review": False,
+        "equation_compendium_edited_by_review": False,
+        "gravity_evolved": False,
+        "einstein_tensor_source_tested": False,
+        "two_dimensional_einstein_gravity_degenerate": True,
+        "covariant_matter_identity_tested": accepted,
+        "ccft_lane_status": "paused_upstream_prerequisites",
+        "remaining_blockers": [
+            "no structurally distinct higher-dimensional curved-background witness",
+            "no multi-background robustness synthesis",
+            "no dynamical gravity or Einstein-scalar evolution",
+            "no GR source admissibility",
+            "no Bianchi compatibility",
+            "no QFT-GR seam admissibility or closure",
+            "no quantum or renormalized stress-energy source",
+            "no master-action promotion",
+        ],
+        "boundary": {
+            "single_fixed_1plus1_de_sitter_matter_identity_accepted": accepted,
+            "genuine_nonzero_curvature_validated": accepted,
+            "two_dimensional_einstein_gravity_degenerate": True,
+            "einstein_tensor_identically_zero_in_two_dimensions": True,
+            "gravity_dynamics_validated": False,
+            "einstein_source_tested": False,
+            "general_curved_spacetime_identity_claimed": False,
+            "higher_dimensional_robustness_claimed": False,
+            "multi_background_robustness_claimed": False,
+            "source_admissibility_claimed": False,
+            "bianchi_compatibility_claimed": False,
+            "qft_gr_seam_admissibility_claimed": False,
+            "qft_gr_seam_closure_claimed": False,
+            "pillar_completion_claimed": False,
+            "ccft_resumed": False,
+            "ccft_validated": False,
+            "master_action_promoted": False,
+        },
+        "lean_status_wording": (
+            "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+        ),
+    }
+
+
 def write_report(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(report_json_bytes(payload))
@@ -864,3 +1844,26 @@ def execution_report_main(argv: list[str] | None = None) -> int:
         )
     )
     return 0
+
+
+def review_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Review the fixed 1+1 de Sitter scalar matter-identity calculation."
+        )
+    )
+    parser.add_argument("--out", type=Path, default=REVIEW_REPORT_PATH)
+    args = parser.parse_args(argv)
+    payload = build_review_report()
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "accepted": payload["verification"]["accepted"],
+                "outcome": payload["packet_result"],
+                "selected_next_target": payload["selected_next_target"],
+            },
+            sort_keys=True,
+        )
+    )
+    return 0 if payload["verification"]["accepted"] else 1

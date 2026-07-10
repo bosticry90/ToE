@@ -25,6 +25,7 @@ from formal.python.tools.scalar_nonzero_curvature_background_reports import (
     GUARDRAIL_REPORT_PATH,
     GUARDRAIL_STRICT_OUTCOME,
     GUARDRAIL_TARGET,
+    HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET,
     PACKET_ID,
     PACKET_SCHEMA_ID,
     REVIEW_TARGET,
@@ -324,7 +325,7 @@ def test_execution_release_artifact_matches_deterministic_builder_bytes() -> Non
     assert EXECUTION_REPORT_PATH.read_bytes() == report_json_bytes(payload)
 
 
-def test_execution_is_preserved_and_separate_result_review_is_live() -> None:
+def test_execution_and_review_are_preserved_after_review_rotation() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
@@ -332,7 +333,10 @@ def test_execution_is_preserved_and_separate_result_review_is_live() -> None:
     review = workstream(REVIEW_TARGET, registry)
     assert execution["status"] == "paused"
     assert execution["selected_next_target"] == REVIEW_TARGET
-    assert review["status"] == "active"
+    assert review["status"] == "paused"
+    assert review["selected_next_target"] == (
+        HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET
+    )
     assert review["report_sha256"] == (
         "21068eaff2b509401afb635e4f7bce4eb409edb8a5cff6dfe4bea7dfe7a3d2c8"
     )
@@ -347,6 +351,8 @@ def test_execution_is_preserved_and_separate_result_review_is_live() -> None:
     assert all(review["threshold_checks"].values())
     assert review["two_dimensional_einstein_gravity_degenerate"] == "yes"
     assert review["einstein_tensor_source_tested"] == "no"
-    assert state["previous_live_next_target"] == EXECUTION_TARGET
-    assert state["live_next_target"] == REVIEW_TARGET
-    assert active["workstream_id"] == REVIEW_TARGET
+    assert state["previous_live_next_target"] == REVIEW_TARGET
+    assert state["live_next_target"] == (
+        HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET
+    )
+    assert active["workstream_id"] == state["live_next_target"]
