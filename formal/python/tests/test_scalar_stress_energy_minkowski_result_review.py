@@ -88,12 +88,12 @@ def test_review_is_preserved_after_curved_guardrail_rotation() -> None:
     assert review["status"] == "paused"
     assert review["selected_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_"
-        "guardrail_packet"
-    )
-    assert state["live_next_target"] == (
         "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
         "conformal_background_v0"
+    )
+    assert state["live_next_target"] == (
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0_result"
     )
     assert active["workstream_id"] == state["live_next_target"]
 

@@ -8,14 +8,18 @@ from formal.python.tests.strict_physics_state_helpers import (
     active_workstream,
     current_target_state,
     loop_registry,
+    workstream,
 )
 from formal.python.tools.scalar_curved_background_retest_reports import (
+    EXECUTION_OUTCOME,
+    EXECUTION_STRICT_OUTCOME,
     EXECUTION_TARGET,
     GUARDRAIL_OUTCOME,
     GUARDRAIL_STRICT_OUTCOME,
     PROPOSED_EQUATION_ID,
     THRESHOLD_REPAIR_TARGET,
     build_guardrail_payload,
+    build_execution_report,
     build_qm_representation_pressure,
     canonical_json_bytes,
     validate_guardrail_payload,
@@ -112,15 +116,50 @@ def test_guardrail_does_not_execute_or_promote_equations() -> None:
     assert payload["ccft_lane_status"] == "paused_upstream_prerequisites"
 
 
-def test_live_registry_rotates_to_curved_background_execution() -> None:
+def test_guardrail_and_execution_are_preserved_pending_result_review() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
-    assert state["previous_live_next_target"] == (
+    guardrail = workstream(
         "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_"
-        "guardrail_packet"
+        "guardrail_packet",
+        registry,
     )
-    assert state["live_next_target"] == EXECUTION_TARGET
-    assert active["workstream_id"] == EXECUTION_TARGET
+    execution = workstream(EXECUTION_TARGET, registry)
+    assert guardrail["status"] == "paused"
+    assert guardrail["selected_next_target"] == EXECUTION_TARGET
+    assert execution["status"] == "paused"
+    assert execution["selected_next_target"] == (
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0_result"
+    )
+    assert state["previous_live_next_target"] == (
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0"
+    )
+    assert state["live_next_target"] == (
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0_result"
+    )
+    assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
-    assert active["qm_representation_pressure_selected"] == "no"
+    assert active["curvature_test_claimed"] == "no"
+
+
+def test_execution_report_preserves_locally_flat_interpretation() -> None:
+    payload = build_execution_report()
+    assert payload["packet_result"] == EXECUTION_OUTCOME
+    assert payload["strict_packet_result"] == EXECUTION_STRICT_OUTCOME
+    assert payload["selected_next_target"] == (
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0_result"
+    )
+    assert payload["background_geometry_classification"] == (
+        "locally_flat_nontrivial_conformal_connection"
+    )
+    assert payload["scalar_curvature"] == 0.0
+    assert payload["curvature_test_claimed"] is False
+    assert payload["covariant_connection_test_claimed"] is True
+    assert payload["all_thresholds_passed"] is True
+    assert payload["claim"]["claim_status"] == "generated_pending_result_review"
+    assert payload["equation_compendium_edited"] is False

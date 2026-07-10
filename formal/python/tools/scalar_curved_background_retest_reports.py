@@ -40,6 +40,17 @@ GUARDRAIL_STRICT_OUTCOME = (
     "EVOLUTION_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_OR_SEAM_ADMISSIBILITY_"
     "NO_MASTER_ACTION_PROMOTION"
 )
+EXECUTION_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_"
+    "CALCULATION_EXECUTED_PASSES_LEVEL_3_CONNECTION_COVARIANCE_CONTROLS_"
+    "PENDING_RESULT_REVIEW"
+)
+EXECUTION_STRICT_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_"
+    "CALCULATION_EXECUTED_SCOPED_E_REPRO_PENDING_REVIEW_LOCALLY_FLAT_"
+    "BACKGROUND_ONLY_NO_CURVATURE_TEST_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_"
+    "OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION"
+)
 
 GUARDRAIL_REPORT_PATH = (
     REPO_ROOT
@@ -70,6 +81,28 @@ MINKOWSKI_REVIEW_PATH = (
     / "release"
     / "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
     "RESULT_REVIEW_20260709_v0.json"
+)
+CALCULATION_OUTPUT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-"
+    "CONFORMAL-BACKGROUND-v0.json"
+)
+CALCULATION_MANIFEST_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-"
+    "CONFORMAL-BACKGROUND-MANIFEST-v0.json"
+)
+EXECUTION_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_"
+    "BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json"
 )
 
 PROPOSED_EQUATION_ID = (
@@ -471,6 +504,103 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     canonical_json_bytes(payload)
 
 
+def build_execution_report() -> dict[str, Any]:
+    result = json.loads(CALCULATION_OUTPUT_PATH.read_text(encoding="utf-8"))
+    manifest = json.loads(CALCULATION_MANIFEST_PATH.read_text(encoding="utf-8"))
+    if result.get("all_thresholds_passed") is not True:
+        raise ValueError("calculation thresholds did not pass")
+    if not all(result.get("threshold_checks", {}).values()):
+        raise ValueError("one or more threshold checks are false")
+    output_sha256 = sha256_path(CALCULATION_OUTPUT_PATH)
+    if manifest.get("output_sha256") != output_sha256:
+        raise ValueError("manifest output hash differs")
+    geometry = result["background_geometry"]
+    if geometry.get("background_geometry_classification") != (
+        "locally_flat_nontrivial_conformal_connection"
+    ):
+        raise ValueError("background geometry classification differs")
+    if geometry.get("scalar_curvature") != 0.0:
+        raise ValueError("execution background is not scalar-flat")
+    return {
+        "schema_id": (
+            "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_"
+            "BACKGROUND_CALCULATION_EXECUTION_20260709_v0"
+        ),
+        "calculation_id": result["calculation_id"],
+        "status": "executed_pending_result_review",
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "consumed_target": EXECUTION_TARGET,
+        "consumed_target_kind": (
+            "scalar_stress_energy_covariant_divergence_identity_conformal_"
+            "background_calculation_execution"
+        ),
+        "selected_next_target": REVIEW_TARGET,
+        "selected_next_target_kind": (
+            "scalar_stress_energy_covariant_divergence_identity_conformal_"
+            "background_calculation_result_review"
+        ),
+        "packet_result": EXECUTION_OUTCOME,
+        "strict_packet_result": EXECUTION_STRICT_OUTCOME,
+        "calculation_output_path": (
+            "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-"
+            "IDENTITY-CONFORMAL-BACKGROUND-v0.json"
+        ),
+        "calculation_output_sha256": output_sha256,
+        "calculation_manifest_path": (
+            "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-"
+            "IDENTITY-CONFORMAL-BACKGROUND-MANIFEST-v0.json"
+        ),
+        "calculation_manifest_sha256": sha256_path(CALCULATION_MANIFEST_PATH),
+        "guardrail_sha256": manifest["guardrail_sha256"],
+        "script_sha256": manifest["script_sha256"],
+        "canonical_json_contract": manifest["canonical_json_contract"],
+        "background_geometry_classification": geometry[
+            "background_geometry_classification"
+        ],
+        "scalar_curvature": geometry["scalar_curvature"],
+        "curvature_test_claimed": False,
+        "covariant_connection_test_claimed": True,
+        "control_counts": {
+            "on_shell_time_resolution_rows": len(
+                result["on_shell"]["time_slice_results"]
+            ),
+            "off_shell_time_resolution_rows": len(
+                result["off_shell"]["time_slice_results"]
+            ),
+            "time_slice_count": len(result["parameters"]["time_slices_eta"]),
+            "resolution_count": len(result["parameters"]["resolutions_N"]),
+            "divergence_component_count": 2,
+        },
+        "threshold_evidence": result["threshold_evidence"],
+        "threshold_checks": result["threshold_checks"],
+        "all_thresholds_passed": True,
+        "naive_partial_divergence_negative_control": result[
+            "naive_partial_divergence_negative_control"
+        ],
+        "claim": {
+            "primary_label": "E-REPRO",
+            "claim_status": "generated_pending_result_review",
+            "claim_ceiling_level": 3,
+            "claim_scope": (
+                "locally-flat conformal-coordinate scalar connection-covariance "
+                "calculation only"
+            ),
+        },
+        "proposed_equation_id_pending_review": result[
+            "proposed_equation_id_pending_review"
+        ],
+        "equation_compendium_edited": False,
+        "recommended_post_review_target": result[
+            "recommended_post_review_target"
+        ],
+        "boundary": result["boundary"],
+        "ccft_lane_status": "paused_upstream_prerequisites",
+        "lean_status_wording": (
+            "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+        ),
+    }
+
+
 def write_report(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(report_json_bytes(payload))
@@ -495,6 +625,29 @@ def guardrail_main(argv: list[str] | None = None) -> int:
                 "outcome": GUARDRAIL_OUTCOME,
                 "qm_representation_pressure": "deferred_no_claim_upgrade",
                 "selected_next_target": EXECUTION_TARGET,
+            }
+        )
+    )
+    return 0
+
+
+def execution_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Record the conformal-background scalar execution."
+    )
+    parser.add_argument("--out", type=Path, default=EXECUTION_REPORT_PATH)
+    args = parser.parse_args(argv)
+    payload = build_execution_report()
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "outcome": EXECUTION_OUTCOME,
+                "background_geometry_classification": payload[
+                    "background_geometry_classification"
+                ],
+                "output_sha256": payload["calculation_output_sha256"],
+                "selected_next_target": REVIEW_TARGET,
             }
         )
     )
