@@ -108,16 +108,16 @@ def test_review_and_nonzero_curvature_guardrail_are_preserved_after_rotation() -
     assert review["status"] == "paused"
     assert review["selected_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
-        "dimensional_curved_background_v0"
-    )
-    assert state["live_next_target"] == (
         "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
         "dimensional_curved_background_v0_result"
     )
+    assert state["live_next_target"] == (
+        "prepare_scalar_stress_energy_covariant_divergence_identity_multi_"
+        "background_robustness_guardrail_packet"
+    )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
-    assert active["calculation_executed"] == "yes"
+    assert active["multi_background_robustness_claimed"] == "no"
 
 
 def test_successful_review_activates_only_covariant_identity_surface() -> None:

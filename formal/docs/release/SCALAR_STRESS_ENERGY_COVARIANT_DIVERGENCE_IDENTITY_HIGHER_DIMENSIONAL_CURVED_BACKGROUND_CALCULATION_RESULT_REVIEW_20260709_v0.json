@@ -1,0 +1,145 @@
+{
+  "boundary": {
+    "Einstein_source_tested": false,
+    "background_fixed": true,
+    "bianchi_compatibility_claimed": false,
+    "ccft_resumed": false,
+    "einstein_tensor_can_be_nonzero": true,
+    "full_ToeFormal_aggregate_run_or_upgraded": false,
+    "gravity_evolved": false,
+    "level_4_or_level_5_claimed": false,
+    "master_action_promoted": false,
+    "multi_background_robustness_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "spacetime_dimension": 3,
+    "two_dimensional_Einstein_degeneracy_not_applicable": true
+  },
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0",
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "claim": {
+    "additional_scoped_evidence_pointer_authorized": true,
+    "claim_ceiling_level": 3,
+    "claim_scope": "one fixed-background fixed-coordinate 2+1 scalar matter identity calculation only",
+    "claim_status": "accepted_level_3_scoped_e_repro_fixed_2plus1_warped_background_matter_identity_only",
+    "equation_surface_status_unchanged": true,
+    "primary_label": "E-REPRO",
+    "review_accepted": true
+  },
+  "consumed_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_calculation_result_review",
+  "determinism": {
+    "fixed_capture_time": "2026-07-09T00:00:00Z",
+    "fresh_subprocess_count": 2,
+    "report_encoding": "UTF-8 without BOM; sorted indented JSON; exactly one LF",
+    "temporary_paths_serialized": false,
+    "wall_clock_time_serialized": false
+  },
+  "five_artifact_chain": {
+    "all_hashes_match": true,
+    "calculation_manifest_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-MANIFEST-v0.json",
+    "calculation_output_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0.json",
+    "calculation_script_path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background.py",
+    "execution_report_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+    "expected_hashes": {
+      "execution_report_sha256": "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2",
+      "guardrail_sha256": "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96",
+      "manifest_sha256": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3",
+      "output_sha256": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce",
+      "script_sha256": "5d43b770a47ec86ccf8a0e09a68d4c1aebf454daea9c471434d288700f57de53"
+    },
+    "guardrail_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v1.json"
+  },
+  "packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_2PLUS1_WARPED_BACKGROUND_LEVEL3_SCOPED_E_REPRO_ONLY",
+  "review_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_RESULT_REVIEW_v0",
+  "review_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_2PLUS1_WARPED_BACKGROUND_LEVEL3_SCOPED_E_REPRO_ONLY",
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0",
+  "selected_next_target": "prepare_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_guardrail_packet",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_guardrail_packet",
+  "status": "accepted_level_3_scoped_e_repro",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_FIXED_BACKGROUND_FIXED_COORDINATE_LEVEL3_MATTER_IDENTITY_E_REPRO_NO_GRAVITY_EVOLUTION_NO_EINSTEIN_SOURCE_NO_BIANCHI_NO_QFT_GR_SEAM_NO_LEVEL4_OR_5_PROMOTION",
+  "strict_review_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_FIXED_BACKGROUND_FIXED_COORDINATE_LEVEL3_MATTER_IDENTITY_E_REPRO_NO_GRAVITY_EVOLUTION_NO_EINSTEIN_SOURCE_NO_BIANCHI_NO_QFT_GR_SEAM_NO_LEVEL4_OR_5_PROMOTION",
+  "verification": {
+    "accepted": true,
+    "actual_hashes": {
+      "execution_report_sha256": "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2",
+      "guardrail_sha256": "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96",
+      "manifest_sha256": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3",
+      "output_sha256": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce",
+      "script_sha256": "5d43b770a47ec86ccf8a0e09a68d4c1aebf454daea9c471434d288700f57de53"
+    },
+    "all_canonical_bytes_match": true,
+    "all_five_artifact_hashes_match": true,
+    "all_five_independently_recomputed_negative_controls_pass": true,
+    "all_sixteen_independently_recomputed_thresholds_pass": true,
+    "analytic_residual_metadata_match": true,
+    "canonical_byte_checks": {
+      "execution_report": true,
+      "guardrail": true,
+      "manifest": true,
+      "result": true
+    },
+    "claim_boundary_and_2plus1_language_match": true,
+    "claim_status": "accepted_level_3_scoped_e_repro_fixed_2plus1_warped_background_matter_identity_only",
+    "execution_lifecycle_match": true,
+    "execution_report_hash_and_identity_links_match": true,
+    "execution_self_adjudication_trusted": false,
+    "expected_hashes": {
+      "execution_report_sha256": "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2",
+      "guardrail_sha256": "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96",
+      "manifest_sha256": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3",
+      "output_sha256": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce",
+      "script_sha256": "5d43b770a47ec86ccf8a0e09a68d4c1aebf454daea9c471434d288700f57de53"
+    },
+    "fresh_subprocess_reproduction": {
+      "both_runs_byte_identical": true,
+      "distinct_temporary_directories": true,
+      "fixed_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PYTHONHASHSEED": "0",
+        "PYTHONUTF8": "1",
+        "TZ": "UTC"
+      },
+      "fresh_runs_match_repository_artifacts": true,
+      "run_count": 2,
+      "run_one_sha256": {
+        "execution_report": "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2",
+        "manifest": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3",
+        "result": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce"
+      },
+      "run_two_sha256": {
+        "execution_report": "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2",
+        "manifest": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3",
+        "result": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce"
+      }
+    },
+    "independent_recomputation_implementation": "review-local metric/index loops, analytic derivatives, stress divergence, RMS, controls, and gates",
+    "independent_section_hashes": {
+      "convergence_diagnostics": "52ef224c14ef38a0f301a75cf846d7976f625803c9ca41a73633ee7a45a2eacd",
+      "flat_limit_control": "a001389ae554b9c32a317c620ddff68923f6501e92fcba55104530132b2be356",
+      "geometry_safety_verification": "5b857c72d67d8859f43c3f7228f0115343d39c634719deca0f43233eabb18ca3",
+      "geometry_verification": "4e5e89cc0af28984e7f095d9915e3c2e18f19a931d24e7eeeafd54b64118df30",
+      "negative_controls": "38334730bc2c82e7cff1c1781448494b9128fc2bfe0dd44dda2a147a2912ef00",
+      "profile_resolution_aggregates": "120ac6a61f81323ef65ab52ed6c372807076d29cdd29caf135e191124c98d2ed",
+      "profile_time_resolution_rows": "67e0fd3fbdc8663dcc0894ec0a5d7c5f361e3705661cd2e7613ed7ef20a26bf1",
+      "threshold_checks": "bc750e6ef74d386f82e14adb9cf62f9bd3e3fe0cf2179fd407c6524f35a45a3b",
+      "threshold_evidence": "0522381cda1dc0b49a8389248d7492c0fd22e3aa246427fd1d8e436c859f19aa"
+    },
+    "independent_section_matches": {
+      "convergence": true,
+      "curvature_and_zero_exclusions": true,
+      "flat_limit": true,
+      "geometry_safety": true,
+      "negative_controls": true,
+      "profile_time_rows": true,
+      "space_time_aggregates": true,
+      "thresholds": true
+    },
+    "manifest_hash_and_identity_links_match": true,
+    "mismatch_codes": [],
+    "primary_claim_label": "E-REPRO",
+    "schema_and_required_fields_match": true,
+    "selected_next_target": "prepare_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_guardrail_packet"
+  }
+}

@@ -48,6 +48,19 @@ Notes:
 - `ROUTE_ACTIVE_NONCLAIM` means active route-level work exists, but theorem-promotion status is not implied by this ledger.
 - `PLACEHOLDER_SURFACE_PINNED_NONCLAIM` means typed equation/structure placeholders are pinned for route discipline only.
 
+### Additional scoped evidence
+
+The canonical-source cell and existing scoped status of
+`EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0` remain unchanged. Its accepted
+fixed-background Level 3 evidence additionally includes:
+
+- `formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json`
+- `formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json`
+
+These pointers add scoped evidence only; they do not create a new equation surface or
+promote gravity evolution, Einstein-source, Bianchi, QFT-GR seam, Level 4/5, CCFT, or
+master-action claims.
+
 ## 2) Centralized math work map
 
 | work_id | scope | canonical source | checkpoint | gate |
