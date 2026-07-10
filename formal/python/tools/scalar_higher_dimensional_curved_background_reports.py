@@ -29,6 +29,14 @@ EXECUTION_TARGET_KIND = (
     "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_"
     "curved_background_calculation_execution"
 )
+REVIEW_TARGET = (
+    "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
+    "dimensional_curved_background_v0_result"
+)
+REVIEW_TARGET_KIND = (
+    "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_"
+    "curved_background_calculation_result_review"
+)
 DIAGNOSTIC_FAILURE_TARGET = (
     "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
     "dimensional_curved_background_v0_threshold_failure"
@@ -44,6 +52,27 @@ GUARDRAIL_STRICT_OUTCOME = (
     "CURVED_BACKGROUND_GUARDRAIL_PACKET_PREPARED_LEVEL_3_FIXED_BACKGROUND_"
     "SCOPED_E_REPRO_SPRINT_ONLY_NO_GRAVITY_EVOLUTION_NO_EINSTEIN_SOURCE_"
     "NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_OR_PROMOTION"
+)
+EXECUTION_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_"
+    "DIMENSIONAL_CURVED_BACKGROUND_EXECUTED_FIXED_2PLUS1_WARPED_GEOMETRY_"
+    "MATTER_IDENTITY_TESTED_NO_EINSTEIN_SOURCE_OR_SEAM_ADMISSIBILITY_CLAIM"
+)
+EXECUTION_STRICT_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_"
+    "DIMENSIONAL_CURVED_BACKGROUND_EXECUTED_LEVEL3_CANDIDATE_E_REPRO_"
+    "PENDING_REVIEW_NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_CLOSURE_NO_"
+    "MASTER_ACTION_PROMOTION"
+)
+EXECUTION_BLOCKED_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_"
+    "DIMENSIONAL_CURVED_BACKGROUND_EXECUTED_BLOCKED_THRESHOLD_FAILURE_"
+    "ARTIFACTS_PRESERVED"
+)
+EXECUTION_BLOCKED_STRICT_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_"
+    "DIMENSIONAL_CURVED_BACKGROUND_BLOCKED_NO_E_REPRO_ACCEPTANCE_NO_"
+    "THRESHOLD_RELAXATION_DIAGNOSTIC_TARGET_SELECTED"
 )
 
 PACKET_SCHEMA_ID = (
@@ -114,6 +143,42 @@ GUARDRAIL_REPORT_PATH = (
 )
 EXPECTED_GUARDRAIL_SHA256 = (
     "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96"
+)
+CALCULATION_SCRIPT_RELATIVE_PATH = (
+    "formal/python/toe/calculations/"
+    "calc_scalar_stress_energy_covariant_divergence_identity_higher_"
+    "dimensional_curved_background.py"
+)
+CALCULATION_OUTPUT_RELATIVE_PATH = (
+    "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-"
+    "HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0.json"
+)
+CALCULATION_MANIFEST_RELATIVE_PATH = (
+    "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-"
+    "HIGHER-DIMENSIONAL-CURVED-BACKGROUND-MANIFEST-v0.json"
+)
+EXECUTION_REPORT_RELATIVE_PATH = (
+    "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_"
+    "HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json"
+)
+CALCULATION_SCRIPT_PATH = REPO_ROOT / CALCULATION_SCRIPT_RELATIVE_PATH
+CALCULATION_OUTPUT_PATH = REPO_ROOT / CALCULATION_OUTPUT_RELATIVE_PATH
+CALCULATION_MANIFEST_PATH = REPO_ROOT / CALCULATION_MANIFEST_RELATIVE_PATH
+EXECUTION_REPORT_PATH = REPO_ROOT / EXECUTION_REPORT_RELATIVE_PATH
+EXECUTION_REPORT_SCHEMA_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
+    "CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0"
+)
+EXECUTION_REPORT_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
+    "CURVED_BACKGROUND_CALCULATION_EXECUTION_v0"
+)
+CALCULATION_RESULT_SCHEMA_ID = f"{CALCULATION_ID}-RESULT"
+CALCULATION_MANIFEST_SCHEMA_ID = f"{CALCULATION_ID}-MANIFEST"
+CALCULATION_EXECUTION_COMMAND = (
+    "python -m formal.python.toe.calculations."
+    "calc_scalar_stress_energy_covariant_divergence_identity_higher_"
+    "dimensional_curved_background"
 )
 
 SPATIAL_RESOLUTIONS = [32, 64, 128, 256]
@@ -1440,3 +1505,810 @@ def guardrail_main(argv: list[str] | None = None) -> int:
         )
     )
     return 0
+
+
+def _reject_nonfinite_json(token: str) -> None:
+    raise ValueError(f"non-finite JSON token: {token}")
+
+
+def _reject_duplicate_object_pairs(
+    pairs: list[tuple[str, Any]],
+) -> dict[str, Any]:
+    payload: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in payload:
+            raise ValueError(f"duplicate JSON object key: {key}")
+        payload[key] = value
+    return payload
+
+
+def _load_strict_json_object(path: Path) -> dict[str, Any]:
+    raw = path.read_bytes()
+    if raw.startswith(b"\xef\xbb\xbf"):
+        raise ValueError(f"UTF-8 BOM is forbidden: {path}")
+    try:
+        text = raw.decode("utf-8")
+    except UnicodeDecodeError as error:
+        raise ValueError(f"artifact is not valid UTF-8: {path}") from error
+    try:
+        payload = json.loads(
+            text,
+            parse_constant=_reject_nonfinite_json,
+            object_pairs_hook=_reject_duplicate_object_pairs,
+        )
+    except json.JSONDecodeError as error:
+        raise ValueError(f"artifact is not valid strict JSON: {path}") from error
+    if not isinstance(payload, dict):
+        raise ValueError(f"expected a JSON object at {path}")
+    canonical_json_bytes(payload)
+    return payload
+
+
+def _require_exact_keys(
+    payload: dict[str, Any], expected: set[str], label: str
+) -> None:
+    actual = set(payload)
+    if actual != expected:
+        missing = sorted(expected - actual)
+        extra = sorted(actual - expected)
+        raise ValueError(
+            f"{label} fields differ; missing={missing}, extra={extra}"
+        )
+
+
+def _expected_execution_thresholds() -> dict[str, float | bool]:
+    return {"all_thresholds_required": True, **FROZEN_SUCCESS_CRITERIA}
+
+
+def _recompute_execution_threshold_checks(
+    result: dict[str, Any],
+) -> dict[str, bool]:
+    evidence = result["threshold_evidence"]
+    thresholds = result["thresholds"]
+    controls = result["negative_controls"]["finest_resolution_adjudication"]
+    return {
+        "minimum_two_finest_x_mode_convergence_order": (
+            evidence["minimum_two_finest_x_mode_convergence_order"]
+            >= thresholds["minimum_two_finest_x_mode_convergence_order"]
+        ),
+        "minimum_two_finest_y_mode_convergence_order": (
+            evidence["minimum_two_finest_y_mode_convergence_order"]
+            >= thresholds["minimum_two_finest_y_mode_convergence_order"]
+        ),
+        "maximum_finest_x_mode_combined_relative_identity_error": (
+            evidence["finest_x_mode_combined_relative_identity_error"]
+            <= thresholds[
+                "maximum_finest_x_mode_combined_relative_identity_error"
+            ]
+        ),
+        "maximum_finest_y_mode_combined_relative_identity_error": (
+            evidence["finest_y_mode_combined_relative_identity_error"]
+            <= thresholds[
+                "maximum_finest_y_mode_combined_relative_identity_error"
+            ]
+        ),
+        "maximum_finest_on_shell_combined_absolute_divergence_error": (
+            evidence["finest_on_shell_combined_absolute_divergence_error"]
+            <= thresholds[
+                "maximum_finest_on_shell_combined_absolute_divergence_error"
+            ]
+        ),
+        "maximum_analytic_profile_residual_reference_error": (
+            evidence["maximum_analytic_profile_residual_reference_error"]
+            <= thresholds[
+                "maximum_analytic_profile_residual_reference_error"
+            ]
+        ),
+        "maximum_metric_compatibility_absolute_error": (
+            evidence["maximum_metric_compatibility_absolute_error"]
+            <= thresholds["maximum_metric_compatibility_absolute_error"]
+        ),
+        "maximum_curvature_route_absolute_discrepancy": (
+            evidence["maximum_curvature_route_absolute_discrepancy"]
+            <= thresholds["maximum_curvature_route_absolute_discrepancy"]
+        ),
+        "minimum_curvature_peak_absolute_value": (
+            evidence["peak_absolute_scalar_curvature"]
+            >= thresholds["minimum_curvature_peak_absolute_value"]
+        ),
+        "minimum_curvature_peak_to_peak_variation": (
+            evidence["curvature_peak_to_peak_variation"]
+            >= thresholds["minimum_curvature_peak_to_peak_variation"]
+        ),
+        "maximum_flat_limit_absolute_discrepancy": (
+            evidence["maximum_flat_limit_absolute_discrepancy"]
+            <= thresholds["maximum_flat_limit_absolute_discrepancy"]
+        ),
+        "minimum_naive_partial_divergence_error_ratio": controls[
+            "naive_partial_divergence"
+        ]["pass"],
+        "minimum_omitted_tensor_index_term_error_ratio": controls[
+            "omitted_tensor_index_connection_term"
+        ]["pass"],
+        "minimum_omitted_volume_trace_term_error_ratio": controls[
+            "omitted_volume_trace_connection_term"
+        ]["pass"],
+        "minimum_flat_geometry_substitution_normalized_discrepancy": controls[
+            "curved_case_flat_geometry_substitution"
+        ]["pass"],
+        "minimum_incorrect_y_inverse_metric_normalized_discrepancy": controls[
+            "incorrect_y_inverse_metric_factor"
+        ]["pass"],
+    }
+
+
+def _validate_identity_metric(metric: dict[str, Any], *, label: str) -> None:
+    _require_exact_keys(
+        metric,
+        {
+            "value_rms",
+            "reference_rms",
+            "absolute_error_rms",
+            "relative_error",
+            "relative_error_applicable",
+            "convergence_status",
+        },
+        label,
+    )
+    if metric["reference_rms"] == 0.0:
+        if (
+            metric["relative_error"] is not None
+            or metric["relative_error_applicable"] is not False
+            or metric["convergence_status"]
+            != "not_applicable_exact_zero"
+        ):
+            raise ValueError(f"{label} forms a relative error against zero")
+    elif (
+        metric["relative_error_applicable"] is not True
+        or metric["relative_error"] is None
+        or metric["convergence_status"] != "reported_separately"
+    ):
+        raise ValueError(f"{label} loses the nonzero-reference error policy")
+
+
+def _validate_identity_metrics(metrics: dict[str, Any], *, label: str) -> None:
+    _require_exact_keys(metrics, {"components", "combined"}, label)
+    components = metrics["components"]
+    if set(components) != {"nu_t", "nu_x", "nu_y"}:
+        raise ValueError(f"{label} does not contain all three components")
+    for component, metric in components.items():
+        _validate_identity_metric(metric, label=f"{label}.{component}")
+    _validate_identity_metric(metrics["combined"], label=f"{label}.combined")
+
+
+def _validate_result_rows(result: dict[str, Any]) -> None:
+    rows = result["profile_time_resolution_rows"]
+    aggregates = result["profile_resolution_aggregates"]
+    if result["profile_time_resolution_row_count"] != 36 or len(rows) != 36:
+        raise ValueError("execution must contain exactly 36 profile/time rows")
+    if (
+        result["profile_resolution_aggregate_count"] != 12
+        or len(aggregates) != 12
+    ):
+        raise ValueError("execution must contain exactly 12 profile aggregates")
+    expected_rows = {
+        (profile, resolution, time)
+        for profile in (
+            "on_shell_temporal_mode",
+            "off_shell_x_mode",
+            "off_shell_y_mode",
+        )
+        for resolution in SPATIAL_RESOLUTIONS
+        for time in TIME_SLICES
+    }
+    observed_rows: set[tuple[str, int, float]] = set()
+    for row in rows:
+        key = (row["profile_id"], row["resolution_N"], row["time_t"])
+        observed_rows.add(key)
+        if row["grid_shape"] != [row["resolution_N"], row["resolution_N"]]:
+            raise ValueError("profile/time row grid is not N x N")
+        if row["norm_name"] != COORDINATE_GRID_NORM_NAME:
+            raise ValueError("profile/time row norm differs")
+        _validate_identity_metrics(
+            row["identity_metrics"], label=f"profile/time row {key}"
+        )
+    if observed_rows != expected_rows:
+        raise ValueError("profile/time row axes or ordering members differ")
+    expected_aggregates = {
+        (profile, resolution)
+        for profile in (
+            "on_shell_temporal_mode",
+            "off_shell_x_mode",
+            "off_shell_y_mode",
+        )
+        for resolution in SPATIAL_RESOLUTIONS
+    }
+    observed_aggregates: set[tuple[str, int]] = set()
+    for aggregate in aggregates:
+        key = (aggregate["profile_id"], aggregate["resolution_N"])
+        observed_aggregates.add(key)
+        if (
+            aggregate["grid_shape"]
+            != [aggregate["resolution_N"], aggregate["resolution_N"]]
+            or aggregate["time_slice_count"] != 3
+            or aggregate["time_slices"] != TIME_SLICES
+            or aggregate["norm_name"] != COORDINATE_GRID_NORM_NAME
+        ):
+            raise ValueError("profile aggregate axes or norm differ")
+        _validate_identity_metrics(
+            aggregate["identity_metrics"], label=f"profile aggregate {key}"
+        )
+    if observed_aggregates != expected_aggregates:
+        raise ValueError("profile aggregate members differ")
+
+
+def _validate_curvature_zero_reporting(result: dict[str, Any]) -> None:
+    geometry = result["geometry_verification"]
+    diagnostics = geometry["resolution_diagnostics"]
+    if [row["resolution_N"] for row in diagnostics] != SPATIAL_RESOLUTIONS:
+        raise ValueError("curvature diagnostics resolutions differ")
+    for row in diagnostics:
+        resolution = row["resolution_N"]
+        excluded = [resolution // 4, 3 * resolution // 4]
+        if (
+            row["relative_error_cutoff_epsilon_R"] != EPSILON_R
+            or row["excluded_x_index_count"] != 2
+            or row["excluded_x_indices"] != excluded
+            or row["excluded_spatial_gridpoint_count"] != 2 * resolution
+            or row["crossing_locations"]
+            != [1.5707963267948966, 4.71238898038469]
+            or len(row["x_index_error_rows"]) != resolution
+        ):
+            raise ValueError("curvature-zero exclusion metadata differs")
+        by_index = {entry["x_index"]: entry for entry in row["x_index_error_rows"]}
+        for index in excluded:
+            entry = by_index[index]
+            if (
+                entry["relative_error"] is not None
+                or entry["status"] != "excluded_near_zero"
+            ):
+                raise ValueError("curvature crossing forms a relative error")
+        for index in set(range(resolution)) - set(excluded):
+            entry = by_index[index]
+            if (
+                entry["relative_error"] is None
+                or entry["status"] != "reported"
+            ):
+                raise ValueError("away-from-zero curvature error was excluded")
+    if geometry["curvature_zero_reporting_is_non_gating"] is not True:
+        raise ValueError("curvature-zero reporting cutoff became a gate")
+
+
+def _validate_negative_controls(result: dict[str, Any]) -> None:
+    negative = result["negative_controls"]
+    records = negative["records"]
+    if negative["record_count"] != 20 or len(records) != 20:
+        raise ValueError("execution must contain 20 negative-control records")
+    expected_operations = {
+        "naive_partial_divergence": (
+            "omit both Gamma^mu_mu_lambda T^lambda_nu and "
+            "Gamma^nu_mu_lambda T^mu_lambda"
+        ),
+        "omitted_tensor_index_connection_term": (
+            "omit only Gamma^nu_mu_lambda T^mu_lambda"
+        ),
+        "omitted_volume_trace_connection_term": (
+            "omit only Gamma^mu_mu_lambda T^lambda_nu"
+        ),
+        "curved_case_flat_geometry_substitution": (
+            "set epsilon=0 in metric,inverse metric,connection,stress,and "
+            "divergence while retaining the epsilon=0.2 curved RHS"
+        ),
+        "incorrect_y_inverse_metric_factor": (
+            "replace g^yy=f^-2 by g^yy=1 in the defective y residual and "
+            "raised y-gradient while retaining the correct curved references"
+        ),
+    }
+    expected_members = {
+        (control_id, resolution)
+        for control_id in NEGATIVE_CONTROL_IDS
+        for resolution in SPATIAL_RESOLUTIONS
+    }
+    observed_members: set[tuple[str, int]] = set()
+    record_by_member: dict[tuple[str, int], dict[str, Any]] = {}
+    for record in records:
+        key = (record["control_id"], record["resolution_N"])
+        observed_members.add(key)
+        record_by_member[key] = record
+        if record["exact_defective_operation"] != expected_operations[key[0]]:
+            raise ValueError("negative-control defective operation differs")
+        expected_pass = record["comparison_value"] >= record["threshold"]
+        if record["comparison"] != ">=" or record["pass"] is not expected_pass:
+            raise ValueError("negative-control record adjudication differs")
+    if observed_members != expected_members or len(record_by_member) != 20:
+        raise ValueError("negative-control ids or resolutions differ")
+    adjudication = negative["finest_resolution_adjudication"]
+    if set(adjudication) != NEGATIVE_CONTROL_IDS | {
+        "all_five_negative_controls_passed"
+    }:
+        raise ValueError("finest negative-control adjudication fields differ")
+    for control_id in NEGATIVE_CONTROL_IDS:
+        source = record_by_member[(control_id, 256)]
+        summary = adjudication[control_id]
+        if summary != {
+            "resolution_N": 256,
+            "comparison_value": source["comparison_value"],
+            "threshold": source["threshold"],
+            "pass": source["pass"],
+        }:
+            raise ValueError("finest negative-control adjudication differs")
+    combined = all(adjudication[name]["pass"] for name in NEGATIVE_CONTROL_IDS)
+    if adjudication["all_five_negative_controls_passed"] is not combined:
+        raise ValueError("combined control status masks an individual control")
+
+
+def _validate_convergence_diagnostics(result: dict[str, Any]) -> None:
+    diagnostics = result["convergence_diagnostics"]
+    if set(diagnostics) != {
+        "on_shell_temporal_mode",
+        "off_shell_x_mode",
+        "off_shell_y_mode",
+    }:
+        raise ValueError("convergence profile set differs")
+    for profile_id, profile in diagnostics.items():
+        if set(profile) != {"nu_t", "nu_x", "nu_y", "combined"}:
+            raise ValueError("convergence component set differs")
+        for component, metric in profile.items():
+            if len(metric["errors"]) != 4:
+                raise ValueError("convergence error schedule differs")
+            if metric["convergence_status"] == "not_applicable_exact_zero":
+                if (
+                    metric["orders"] != []
+                    or metric["minimum_two_finest_order"] is not None
+                    or metric["p_64_128"] is not None
+                    or metric["p_128_256"] is not None
+                    or metric["p_min"] is not None
+                ):
+                    raise ValueError("exact-zero convergence was fabricated")
+                continue
+            if metric["convergence_status"] != "reported":
+                raise ValueError("convergence status differs")
+            orders = metric["orders"]
+            if len(orders) != 3:
+                raise ValueError("convergence refinement-pair count differs")
+            p_64_128 = orders[1]["order"]
+            p_128_256 = orders[2]["order"]
+            p_min = min(p_64_128, p_128_256)
+            if (
+                metric["p_64_128"] != p_64_128
+                or metric["p_128_256"] != p_128_256
+                or metric["p_min"] != p_min
+                or metric["minimum_two_finest_order"] != p_min
+            ):
+                raise ValueError("two-finest-pair convergence metadata differs")
+    evidence = result["threshold_evidence"]
+    if (
+        diagnostics["off_shell_x_mode"]["combined"]["p_min"]
+        != evidence["minimum_two_finest_x_mode_convergence_order"]
+        or diagnostics["off_shell_y_mode"]["combined"]["p_min"]
+        != evidence["minimum_two_finest_y_mode_convergence_order"]
+    ):
+        raise ValueError("convergence evidence does not bind explicit p_min")
+
+
+def validate_calculation_result(
+    result: dict[str, Any], guardrail: dict[str, Any]
+) -> None:
+    _require_exact_keys(
+        result,
+        {
+            "schema_id",
+            "calculation_id",
+            "calculation_status",
+            "captured_at_utc",
+            "guardrail",
+            "question",
+            "background_geometry_classification",
+            "spacetime_dimension",
+            "background_geometry",
+            "mathematical_convention",
+            "analytic_profile_references",
+            "parameters",
+            "method",
+            "geometry_safety_verification",
+            "geometry_verification",
+            "profile_time_resolution_row_count",
+            "profile_time_resolution_rows",
+            "profile_resolution_aggregate_count",
+            "profile_resolution_aggregates",
+            "convergence_diagnostics",
+            "flat_limit_control",
+            "negative_controls",
+            "thresholds",
+            "threshold_evidence",
+            "threshold_checks",
+            "threshold_decisions",
+            "frozen_threshold_count",
+            "all_thresholds_passed",
+            "selected_next_target",
+            "claim",
+            "existing_equation_id_reused",
+            "equation_compendium_edited",
+            "boundary",
+            "result_review",
+        },
+        "calculation result",
+    )
+    if (
+        result["schema_id"] != CALCULATION_RESULT_SCHEMA_ID
+        or result["calculation_id"] != CALCULATION_ID
+        or result["captured_at_utc"] != CAPTURED_AT_UTC
+        or result["guardrail"]
+        != {
+            "path": str(GUARDRAIL_REPORT_PATH.relative_to(REPO_ROOT)).replace(
+                "\\", "/"
+            ),
+            "sha256": EXPECTED_GUARDRAIL_SHA256,
+            "schema_id": PACKET_SCHEMA_ID,
+            "revised_at_utc": REVISED_AT_UTC,
+        }
+    ):
+        raise ValueError("calculation result identity or guardrail link differs")
+    if result["thresholds"] != _expected_execution_thresholds():
+        raise ValueError("calculation thresholds differ from guardrail v1")
+    if result["thresholds"] != guardrail["success_criteria"]:
+        raise ValueError("calculation thresholds do not match loaded guardrail")
+    _validate_result_rows(result)
+    _validate_curvature_zero_reporting(result)
+    _validate_negative_controls(result)
+    _validate_convergence_diagnostics(result)
+
+    flat = result["flat_limit_control"]
+    if (
+        flat["maximum_flat_limit_absolute_discrepancy"] > 1e-11
+        or flat["operator_metadata"]
+        != {
+            "coordinate_order": ["t", "x", "y"],
+            "operator_coefficients": [-1, 1, 1],
+            "connection": 0,
+            "curvature": 0,
+            "symbolic_metadata_exact": True,
+        }
+        or len(flat["rows"]) != 36
+    ):
+        raise ValueError("flat-limit control differs from the frozen contract")
+
+    checks = result["threshold_checks"]
+    recomputed_checks = _recompute_execution_threshold_checks(result)
+    if (
+        set(checks) != THRESHOLD_IDS
+        or len(checks) != 16
+        or result["frozen_threshold_count"] != 16
+        or checks != recomputed_checks
+    ):
+        raise ValueError("the exact sixteen threshold decisions differ")
+    decisions = result["threshold_decisions"]
+    if len(decisions) != 16:
+        raise ValueError("the exact sixteen threshold decision rows differ")
+    for frozen, observed in zip(FROZEN_THRESHOLD_DECISIONS, decisions):
+        if any(observed.get(key) != value for key, value in frozen.items()):
+            raise ValueError("threshold decision metadata differs")
+        if observed.get("pass") is not checks[frozen["threshold_id"]]:
+            raise ValueError("threshold decision pass flag differs")
+
+    passed = all(checks.values())
+    expected_target = REVIEW_TARGET if passed else DIAGNOSTIC_FAILURE_TARGET
+    expected_status = (
+        "executed_pending_result_review" if passed else "executed_blocked"
+    )
+    expected_label = "E-REPRO" if passed else "B-BLOCKED"
+    expected_claim_status = (
+        "generated_pending_result_review"
+        if passed
+        else "blocked_threshold_failure"
+    )
+    expected_result_review = (
+        {"status": "pending", "target": REVIEW_TARGET}
+        if passed
+        else {"status": "not_created_threshold_failure", "target": None}
+    )
+    if (
+        result["all_thresholds_passed"] is not passed
+        or result["calculation_status"] != expected_status
+        or result["selected_next_target"] != expected_target
+        or result["claim"]["primary_label"] != expected_label
+        or result["claim"]["claim_status"] != expected_claim_status
+        or result["claim"]["claim_ceiling_level"] != 3
+        or result["claim"]["next_work_status"] != expected_target
+        or result["result_review"] != expected_result_review
+    ):
+        raise ValueError("execution lifecycle does not match threshold outcome")
+
+    boundary = result["boundary"]
+    required_true = {
+        "calculation_executed",
+        "two_dimensional_Einstein_degeneracy_not_applicable",
+        "einstein_tensor_can_be_nonzero",
+        "background_fixed",
+    }
+    required_false = {
+        "gravity_evolved",
+        "background_metric_evolved",
+        "einstein_equation_solved",
+        "Einstein_source_tested",
+        "source_admissibility_claimed",
+        "bianchi_compatibility_claimed",
+        "qft_gr_seam_admissibility_claimed",
+        "qft_gr_seam_closure_claimed",
+        "quantum_or_renormalized_stress_energy_claimed",
+        "multi_background_robustness_claimed",
+        "level_4_or_level_5_claimed",
+        "ccft_resumed",
+        "master_action_promoted",
+    }
+    if (
+        boundary.get("spacetime_dimension") != 3
+        or not all(boundary.get(key) is True for key in required_true)
+        or not all(boundary.get(key) is False for key in required_false)
+        or "two_dimensional_einstein_gravity_degenerate"
+        in json.dumps(result)
+        or result["spacetime_dimension"] != 3
+        or result["background_geometry_classification"]
+        != BACKGROUND_GEOMETRY_CLASSIFICATION
+        or result["existing_equation_id_reused"] != EQUATION_ID
+        or result["equation_compendium_edited"] is not False
+    ):
+        raise ValueError("execution boundary or nonclaim metadata differs")
+    canonical_json_bytes(result)
+
+
+def validate_calculation_manifest(
+    manifest: dict[str, Any],
+    *,
+    result: dict[str, Any],
+    output_sha256: str,
+    script_sha256: str,
+) -> None:
+    _require_exact_keys(
+        manifest,
+        {
+            "schema_id",
+            "calculation_id",
+            "captured_at_utc",
+            "guardrail_path",
+            "guardrail_schema_id",
+            "guardrail_sha256",
+            "script_path",
+            "script_sha256",
+            "test_path",
+            "execution_command",
+            "environment",
+            "output_path",
+            "output_sha256",
+            "execution_report_path",
+            "canonical_json_contract",
+            "temporary_output_paths_serialized",
+            "wall_clock_timestamp_serialized",
+            "background_geometry_classification",
+            "spacetime_dimension",
+            "claim_label",
+            "claim_scope",
+            "claim_ceiling_level",
+            "all_thresholds_passed",
+            "result_review_status",
+            "result_review_target",
+            "selected_next_target",
+            "boundary",
+        },
+        "calculation manifest",
+    )
+    expected_contract = {
+        "encoding": "UTF-8 without BOM",
+        "newline": "LF",
+        "object_keys": "sorted",
+        "separators": [",", ":"],
+        "ensure_ascii": True,
+        "allow_nan": False,
+        "array_order": "preserved",
+        "trailing_newline": "exactly one LF",
+    }
+    if (
+        manifest["schema_id"] != CALCULATION_MANIFEST_SCHEMA_ID
+        or manifest["calculation_id"] != CALCULATION_ID
+        or manifest["captured_at_utc"] != CAPTURED_AT_UTC
+        or manifest["guardrail_path"]
+        != str(GUARDRAIL_REPORT_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+        or manifest["guardrail_schema_id"] != PACKET_SCHEMA_ID
+        or manifest["guardrail_sha256"] != EXPECTED_GUARDRAIL_SHA256
+        or manifest["script_path"] != CALCULATION_SCRIPT_RELATIVE_PATH
+        or manifest["script_sha256"] != script_sha256
+        or manifest["execution_command"] != CALCULATION_EXECUTION_COMMAND
+        or manifest["output_path"] != CALCULATION_OUTPUT_RELATIVE_PATH
+        or manifest["output_sha256"] != output_sha256
+        or manifest["execution_report_path"] != EXECUTION_REPORT_RELATIVE_PATH
+        or manifest["canonical_json_contract"] != expected_contract
+        or manifest["temporary_output_paths_serialized"] is not False
+        or manifest["wall_clock_timestamp_serialized"] is not False
+        or manifest["background_geometry_classification"]
+        != BACKGROUND_GEOMETRY_CLASSIFICATION
+        or manifest["spacetime_dimension"] != 3
+        or manifest["claim_label"] != result["claim"]["primary_label"]
+        or manifest["claim_scope"] != result["claim"]["claim_scope"]
+        or manifest["claim_ceiling_level"] != 3
+        or manifest["all_thresholds_passed"]
+        is not result["all_thresholds_passed"]
+        or manifest["result_review_status"]
+        != result["result_review"]["status"]
+        or manifest["result_review_target"]
+        != result["result_review"]["target"]
+        or manifest["selected_next_target"] != result["selected_next_target"]
+        or manifest["boundary"] != result["boundary"]
+    ):
+        raise ValueError("calculation manifest binding or lifecycle differs")
+    environment = manifest["environment"]
+    if set(environment) != {
+        "python_version",
+        "numpy_version",
+        "operating_system_family",
+        "machine_architecture",
+        "endianness",
+        "blas_lapack",
+    } or environment["endianness"] not in {"little", "big"}:
+        raise ValueError("stable environment metadata fields differ")
+    if set(environment["blas_lapack"]) != {"blas", "lapack"}:
+        raise ValueError("BLAS/LAPACK metadata fields differ")
+    for dependency in environment["blas_lapack"].values():
+        if set(dependency) != {"name", "version"} or not all(
+            isinstance(value, str) for value in dependency.values()
+        ):
+            raise ValueError("BLAS/LAPACK metadata is not sanitized")
+    canonical_json_bytes(manifest)
+
+
+def build_execution_report(
+    *,
+    output_path: Path = CALCULATION_OUTPUT_PATH,
+    manifest_path: Path = CALCULATION_MANIFEST_PATH,
+    guardrail_path: Path = GUARDRAIL_REPORT_PATH,
+    script_path: Path = CALCULATION_SCRIPT_PATH,
+) -> dict[str, Any]:
+    guardrail = _load_strict_json_object(guardrail_path)
+    result = _load_strict_json_object(output_path)
+    manifest = _load_strict_json_object(manifest_path)
+    if guardrail_path.read_bytes() != report_json_bytes(guardrail):
+        raise ValueError("guardrail is not canonical sorted report JSON")
+    if output_path.read_bytes() != canonical_json_bytes(result):
+        raise ValueError("calculation output is not canonical compact JSON")
+    if manifest_path.read_bytes() != canonical_json_bytes(manifest):
+        raise ValueError("calculation manifest is not canonical compact JSON")
+    if sha256_path(guardrail_path) != EXPECTED_GUARDRAIL_SHA256:
+        raise ValueError("accepted guardrail bytes changed")
+    validate_guardrail_payload(guardrail)
+    output_sha256 = sha256_path(output_path)
+    manifest_sha256 = sha256_path(manifest_path)
+    script_sha256 = sha256_path(script_path)
+    validate_calculation_result(result, guardrail)
+    validate_calculation_manifest(
+        manifest,
+        result=result,
+        output_sha256=output_sha256,
+        script_sha256=script_sha256,
+    )
+
+    passed = result["all_thresholds_passed"]
+    selected_target = REVIEW_TARGET if passed else DIAGNOSTIC_FAILURE_TARGET
+    return {
+        "schema_id": EXECUTION_REPORT_SCHEMA_ID,
+        "report_id": EXECUTION_REPORT_ID,
+        "calculation_id": CALCULATION_ID,
+        "status": (
+            "executed_candidate_e_repro_pending_independent_review"
+            if passed
+            else "executed_blocked_threshold_failure"
+        ),
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "guardrail_revised_at_utc": REVISED_AT_UTC,
+        "consumed_target": EXECUTION_TARGET,
+        "consumed_target_kind": EXECUTION_TARGET_KIND,
+        "selected_next_target": selected_target,
+        "selected_next_target_kind": (
+            REVIEW_TARGET_KIND if passed else "scientific_threshold_failure_diagnosis"
+        ),
+        "packet_result": (
+            EXECUTION_OUTCOME if passed else EXECUTION_BLOCKED_OUTCOME
+        ),
+        "strict_packet_result": (
+            EXECUTION_STRICT_OUTCOME
+            if passed
+            else EXECUTION_BLOCKED_STRICT_OUTCOME
+        ),
+        "guardrail_path": manifest["guardrail_path"],
+        "guardrail_sha256": EXPECTED_GUARDRAIL_SHA256,
+        "calculation_script_path": manifest["script_path"],
+        "calculation_script_sha256": script_sha256,
+        "calculation_output_path": manifest["output_path"],
+        "calculation_output_sha256": output_sha256,
+        "calculation_manifest_path": CALCULATION_MANIFEST_RELATIVE_PATH,
+        "calculation_manifest_sha256": manifest_sha256,
+        "execution_report_path": EXECUTION_REPORT_RELATIVE_PATH,
+        "five_artifact_chain_prepared_for_independent_review": passed,
+        "canonical_json_contract": manifest["canonical_json_contract"],
+        "execution_command": manifest["execution_command"],
+        "environment": manifest["environment"],
+        "background_geometry_classification": (
+            BACKGROUND_GEOMETRY_CLASSIFICATION
+        ),
+        "spacetime_dimension": 3,
+        "control_counts": {
+            "profile_count": 3,
+            "time_slice_count": 3,
+            "resolution_count": 4,
+            "divergence_component_count": 3,
+            "profile_time_resolution_row_count": 36,
+            "profile_resolution_aggregate_count": 12,
+            "curvature_route_count": 2,
+            "flat_limit_row_count": 36,
+            "negative_control_type_count": 5,
+            "negative_control_record_count": 20,
+            "frozen_threshold_decision_count": 16,
+        },
+        "geometry_safety_verification": result[
+            "geometry_safety_verification"
+        ],
+        "geometry_verification": result["geometry_verification"],
+        "convergence_diagnostics": result["convergence_diagnostics"],
+        "flat_limit_control": result["flat_limit_control"],
+        "negative_controls": result["negative_controls"],
+        "thresholds": result["thresholds"],
+        "threshold_evidence": result["threshold_evidence"],
+        "threshold_checks": result["threshold_checks"],
+        "threshold_decisions": result["threshold_decisions"],
+        "all_thresholds_passed": passed,
+        "claim": {
+            "primary_label": "E-REPRO" if passed else "B-BLOCKED",
+            "claim_status": (
+                "candidate_pending_independent_result_review"
+                if passed
+                else "blocked_threshold_failure"
+            ),
+            "claim_ceiling_level": 3,
+            "claim_scope": result["claim"]["claim_scope"],
+            "review_accepted": False,
+            "equation_surface_upgraded": False,
+        },
+        "existing_equation_id_reused": EQUATION_ID,
+        "equation_compendium_edited": False,
+        "boundary": result["boundary"],
+        "full_ToeFormal_aggregate_run_or_upgraded": False,
+        "ccft_lane_status": "paused_upstream_prerequisites",
+        "lean_status_wording": (
+            "scoped Lean pending execution certificate; full ToeFormal "
+            "aggregate not run / not upgraded"
+        ),
+    }
+
+
+def execution_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Report the fixed 2+1 warped-background scalar identity execution."
+        )
+    )
+    parser.add_argument("--output", type=Path, default=CALCULATION_OUTPUT_PATH)
+    parser.add_argument(
+        "--manifest", type=Path, default=CALCULATION_MANIFEST_PATH
+    )
+    parser.add_argument("--guardrail", type=Path, default=GUARDRAIL_REPORT_PATH)
+    parser.add_argument("--script", type=Path, default=CALCULATION_SCRIPT_PATH)
+    parser.add_argument("--out", type=Path, default=EXECUTION_REPORT_PATH)
+    args = parser.parse_args(argv)
+    payload = build_execution_report(
+        output_path=args.output,
+        manifest_path=args.manifest,
+        guardrail_path=args.guardrail,
+        script_path=args.script,
+    )
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "all_thresholds_passed": payload["all_thresholds_passed"],
+                "claim_label": payload["claim"]["primary_label"],
+                "outcome": payload["packet_result"],
+                "selected_next_target": payload["selected_next_target"],
+                "execution_report": EXECUTION_REPORT_RELATIVE_PATH,
+            },
+            sort_keys=True,
+        )
+    )
+    return 0 if payload["all_thresholds_passed"] else 1

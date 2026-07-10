@@ -435,7 +435,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0"
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -481,13 +481,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the higher-dimensional guardrail packet. -/
+/-- Previous live target consumed by the higher-dimensional calculation execution. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_guardrail_packet"
-
-/-- Current live target after the higher-dimensional guardrail packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0"
+
+/-- Current live target after the higher-dimensional calculation execution. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -500,7 +500,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0"
+    "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

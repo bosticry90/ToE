@@ -1,0 +1,4490 @@
+{
+  "all_thresholds_passed": true,
+  "background_geometry_classification": "fixed_nonzero_spatially_varying_curvature_2plus1_warped_periodic_background",
+  "boundary": {
+    "Einstein_source_tested": false,
+    "background_fixed": true,
+    "background_metric_evolved": false,
+    "bianchi_compatibility_claimed": false,
+    "calculation_executed": true,
+    "ccft_resumed": false,
+    "einstein_equation_solved": false,
+    "einstein_tensor_can_be_nonzero": true,
+    "gravity_evolved": false,
+    "level_4_or_level_5_claimed": false,
+    "master_action_promoted": false,
+    "multi_background_robustness_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "quantum_or_renormalized_stress_energy_claimed": false,
+    "source_admissibility_claimed": false,
+    "spacetime_dimension": 3,
+    "two_dimensional_Einstein_degeneracy_not_applicable": true
+  },
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0",
+  "calculation_manifest_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-MANIFEST-v0.json",
+  "calculation_manifest_sha256": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3",
+  "calculation_output_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0.json",
+  "calculation_output_sha256": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce",
+  "calculation_script_path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background.py",
+  "calculation_script_sha256": "5d43b770a47ec86ccf8a0e09a68d4c1aebf454daea9c471434d288700f57de53",
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "array_order": "preserved",
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "one fixed-background fixed-coordinate 2+1 scalar matter identity calculation only",
+    "claim_status": "candidate_pending_independent_result_review",
+    "equation_surface_upgraded": false,
+    "primary_label": "E-REPRO",
+    "review_accepted": false
+  },
+  "consumed_target": "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_calculation_execution",
+  "control_counts": {
+    "curvature_route_count": 2,
+    "divergence_component_count": 3,
+    "flat_limit_row_count": 36,
+    "frozen_threshold_decision_count": 16,
+    "negative_control_record_count": 20,
+    "negative_control_type_count": 5,
+    "profile_count": 3,
+    "profile_resolution_aggregate_count": 12,
+    "profile_time_resolution_row_count": 36,
+    "resolution_count": 4,
+    "time_slice_count": 3
+  },
+  "convergence_diagnostics": {
+    "off_shell_x_mode": {
+      "combined": {
+        "convergence_status": "reported",
+        "errors": [
+          0.01139083950024144,
+          0.002914411543860683,
+          0.0007328295513500645,
+          0.00018347246536921304
+        ],
+        "minimum_two_finest_order": 1.9916550282637009,
+        "orders": [
+          {
+            "coarse_N": 32,
+            "fine_N": 64,
+            "order": 1.966597557231212,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 64,
+            "fine_N": 128,
+            "order": 1.9916550282637009,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 128,
+            "fine_N": 256,
+            "order": 1.9979141144314052,
+            "status": "reported"
+          }
+        ],
+        "p_128_256": 1.9979141144314052,
+        "p_64_128": 1.9916550282637009,
+        "p_min": 1.9916550282637009
+      },
+      "nu_t": {
+        "convergence_status": "reported",
+        "errors": [
+          0.005272635839869997,
+          0.0013490340863783598,
+          0.00033921497681379577,
+          8.4926444316461e-05
+        ],
+        "minimum_two_finest_order": 1.9916550282637553,
+        "orders": [
+          {
+            "coarse_N": 32,
+            "fine_N": 64,
+            "order": 1.9665975572312069,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 64,
+            "fine_N": 128,
+            "order": 1.9916550282637553,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 128,
+            "fine_N": 256,
+            "order": 1.9979141144313863,
+            "status": "reported"
+          }
+        ],
+        "p_128_256": 1.9979141144313863,
+        "p_64_128": 1.9916550282637553,
+        "p_min": 1.9916550282637553
+      },
+      "nu_x": {
+        "convergence_status": "reported",
+        "errors": [
+          0.010097055799607083,
+          0.0025833895720114904,
+          0.0006495939892249256,
+          0.00016263346704912894
+        ],
+        "minimum_two_finest_order": 1.9916550282636862,
+        "orders": [
+          {
+            "coarse_N": 32,
+            "fine_N": 64,
+            "order": 1.9665975572312138,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 64,
+            "fine_N": 128,
+            "order": 1.9916550282636862,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 128,
+            "fine_N": 256,
+            "order": 1.9979141144314103,
+            "status": "reported"
+          }
+        ],
+        "p_128_256": 1.9979141144314103,
+        "p_64_128": 1.9916550282636862,
+        "p_min": 1.9916550282636862
+      },
+      "nu_y": {
+        "convergence_status": "not_applicable_exact_zero",
+        "errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "minimum_two_finest_order": null,
+        "orders": [],
+        "p_128_256": null,
+        "p_64_128": null,
+        "p_min": null
+      }
+    },
+    "off_shell_y_mode": {
+      "combined": {
+        "convergence_status": "reported",
+        "errors": [
+          0.014269377534890427,
+          0.0036508980269791577,
+          0.0009180190285831486,
+          0.0002298368058886317
+        ],
+        "minimum_two_finest_order": 1.9916554104408082,
+        "orders": [
+          {
+            "coarse_N": 32,
+            "fine_N": 64,
+            "order": 1.966599123687229,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 64,
+            "fine_N": 128,
+            "order": 1.9916554104408082,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 128,
+            "fine_N": 256,
+            "order": 1.997914209396105,
+            "status": "reported"
+          }
+        ],
+        "p_128_256": 1.997914209396105,
+        "p_64_128": 1.9916554104408082,
+        "p_min": 1.9916554104408082
+      },
+      "nu_t": {
+        "convergence_status": "reported",
+        "errors": [
+          0.005297492809032344,
+          0.0013553938843432589,
+          0.00034081414968940225,
+          8.53268159847413e-05
+        ],
+        "minimum_two_finest_order": 1.9916550282637515,
+        "orders": [
+          {
+            "coarse_N": 32,
+            "fine_N": 64,
+            "order": 1.9665975572312075,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 64,
+            "fine_N": 128,
+            "order": 1.9916550282637515,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 128,
+            "fine_N": 256,
+            "order": 1.997914114431386,
+            "status": "reported"
+          }
+        ],
+        "p_128_256": 1.997914114431386,
+        "p_64_128": 1.9916550282637515,
+        "p_min": 1.9916550282637515
+      },
+      "nu_x": {
+        "convergence_status": "not_applicable_exact_zero",
+        "errors": [
+          0.000111869506837942,
+          2.8112272882524467e-05,
+          7.037185129806753e-06,
+          1.7598670475956137e-06
+        ],
+        "minimum_two_finest_order": null,
+        "orders": [],
+        "p_128_256": null,
+        "p_64_128": null,
+        "p_min": null
+      },
+      "nu_y": {
+        "convergence_status": "reported",
+        "errors": [
+          0.013249120362685442,
+          0.003389863348543504,
+          0.0008523820330331266,
+          0.0002134038300569356
+        ],
+        "minimum_two_finest_order": 1.99165502826369,
+        "orders": [
+          {
+            "coarse_N": 32,
+            "fine_N": 64,
+            "order": 1.9665975572312135,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 64,
+            "fine_N": 128,
+            "order": 1.99165502826369,
+            "status": "reported"
+          },
+          {
+            "coarse_N": 128,
+            "fine_N": 256,
+            "order": 1.9979141144314072,
+            "status": "reported"
+          }
+        ],
+        "p_128_256": 1.9979141144314072,
+        "p_64_128": 1.99165502826369,
+        "p_min": 1.99165502826369
+      }
+    },
+    "on_shell_temporal_mode": {
+      "combined": {
+        "convergence_status": "not_applicable_exact_zero",
+        "errors": [
+          1.4840893895548057e-19,
+          1.7468056622945847e-19,
+          1.82672953838962e-19,
+          1.809414347125402e-19
+        ],
+        "minimum_two_finest_order": null,
+        "orders": [],
+        "p_128_256": null,
+        "p_64_128": null,
+        "p_min": null
+      },
+      "nu_t": {
+        "convergence_status": "not_applicable_exact_zero",
+        "errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "minimum_two_finest_order": null,
+        "orders": [],
+        "p_128_256": null,
+        "p_64_128": null,
+        "p_min": null
+      },
+      "nu_x": {
+        "convergence_status": "not_applicable_exact_zero",
+        "errors": [
+          1.4840893895548057e-19,
+          1.7468056622945847e-19,
+          1.82672953838962e-19,
+          1.809414347125402e-19
+        ],
+        "minimum_two_finest_order": null,
+        "orders": [],
+        "p_128_256": null,
+        "p_64_128": null,
+        "p_min": null
+      },
+      "nu_y": {
+        "convergence_status": "not_applicable_exact_zero",
+        "errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "minimum_two_finest_order": null,
+        "orders": [],
+        "p_128_256": null,
+        "p_64_128": null,
+        "p_min": null
+      }
+    }
+  },
+  "environment": {
+    "blas_lapack": {
+      "blas": {
+        "name": "scipy-openblas",
+        "version": "0.3.29"
+      },
+      "lapack": {
+        "name": "scipy-openblas",
+        "version": "0.3.29"
+      }
+    },
+    "endianness": "little",
+    "machine_architecture": "AMD64",
+    "numpy_version": "2.2.6",
+    "operating_system_family": "Windows",
+    "python_version": "3.10.11"
+  },
+  "equation_compendium_edited": false,
+  "execution_command": "python -m formal.python.toe.calculations.calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background",
+  "execution_report_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+  "existing_equation_id_reused": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0",
+  "five_artifact_chain_prepared_for_independent_review": true,
+  "flat_limit_control": {
+    "maximum_flat_limit_absolute_discrepancy": 0.0,
+    "method": "generic metric route at epsilon=0 compared with separately coded Cartesian 2+1 stress-divergence route",
+    "operator_metadata": {
+      "connection": 0,
+      "coordinate_order": [
+        "t",
+        "x",
+        "y"
+      ],
+      "curvature": 0,
+      "operator_coefficients": [
+        -1,
+        1,
+        1
+      ],
+      "symbolic_metadata_exact": true
+    },
+    "rows": [
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 32,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 64,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 128,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "on_shell_temporal_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_x_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.0
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.37
+      },
+      {
+        "divergence_max_absolute_discrepancy": 0.0,
+        "maximum_absolute_discrepancy": 0.0,
+        "profile_id": "off_shell_y_mode",
+        "resolution_N": 256,
+        "rhs_max_absolute_discrepancy": 0.0,
+        "time_t": 0.91
+      }
+    ]
+  },
+  "full_ToeFormal_aggregate_run_or_upgraded": false,
+  "geometry_safety_verification": {
+    "all_frozen_grids_nonsingular": true,
+    "maximum_inverse_y_metric_factor": 1.5624999999999998,
+    "maximum_warp_factor": 1.2,
+    "minimum_absolute_determinant": 0.6400000000000001,
+    "minimum_warp_factor": 0.8,
+    "rows": [
+      {
+        "maximum_inverse_y_metric_factor": 1.5624999999999998,
+        "maximum_warp_factor": 1.2,
+        "minimum_absolute_determinant": 0.6400000000000001,
+        "minimum_warp_factor": 0.8,
+        "nonsingular": true,
+        "resolution_N": 32
+      },
+      {
+        "maximum_inverse_y_metric_factor": 1.5624999999999998,
+        "maximum_warp_factor": 1.2,
+        "minimum_absolute_determinant": 0.6400000000000001,
+        "minimum_warp_factor": 0.8,
+        "nonsingular": true,
+        "resolution_N": 64
+      },
+      {
+        "maximum_inverse_y_metric_factor": 1.5624999999999998,
+        "maximum_warp_factor": 1.2,
+        "minimum_absolute_determinant": 0.6400000000000001,
+        "minimum_warp_factor": 0.8,
+        "nonsingular": true,
+        "resolution_N": 128
+      },
+      {
+        "maximum_inverse_y_metric_factor": 1.5624999999999998,
+        "maximum_warp_factor": 1.2,
+        "minimum_absolute_determinant": 0.6400000000000001,
+        "minimum_warp_factor": 0.8,
+        "nonsingular": true,
+        "resolution_N": 256
+      }
+    ]
+  },
+  "geometry_verification": {
+    "analytic_route": {
+      "formula": "R(x) = -2*f''(x)/f(x)",
+      "substituted_formula": "R(x) = 0.4*cos(x)/(1+0.2*cos(x))"
+    },
+    "curvature_zero_reporting_is_non_gating": true,
+    "generic_route": {
+      "analytic_curvature_helper_called": false,
+      "method": "metric,dg,ddg -> Christoffel,dChristoffel -> Riemann -> Ricci -> scalar index loops"
+    },
+    "maximum_connection_formula_absolute_error": 2.7755575615628914e-17,
+    "maximum_curvature_route_absolute_discrepancy": 1.1102230246251565e-16,
+    "maximum_metric_compatibility_absolute_error": 5.551115123125783e-17,
+    "maximum_ricci_formula_absolute_error": 5.551115123125783e-17,
+    "nonzero_christoffel_component_formulas": {
+      "Gamma^x_yy": "-f*f'",
+      "Gamma^y_xy": "f'/f",
+      "Gamma^y_yx": "f'/f"
+    },
+    "peak_absolute_scalar_curvature": 0.5,
+    "peak_to_peak_scalar_curvature": 0.8333333333333334,
+    "resolution_diagnostics": [
+      {
+        "connection_formula_max_absolute_error": 2.7755575615628914e-17,
+        "crossing_locations": [
+          1.5707963267948966,
+          4.71238898038469
+        ],
+        "excluded_crossing_absolute_errors": [
+          3.262639632681848e-18,
+          4.089868909768906e-18
+        ],
+        "excluded_crossing_relative_errors": [
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 8
+          },
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 24
+          }
+        ],
+        "excluded_spatial_gridpoint_count": 64,
+        "excluded_x_index_count": 2,
+        "excluded_x_indices": [
+          8,
+          24
+        ],
+        "grid_shape": [
+          32,
+          32
+        ],
+        "maximum_absolute_error": 1.1102230246251565e-16,
+        "maximum_relative_error_away_from_zero": 3.9039964729769456e-16,
+        "metric_compatibility_max_absolute_error": 5.551115123125783e-17,
+        "relative_error_cutoff_epsilon_R": 1e-12,
+        "resolution_N": 32,
+        "ricci_formula_max_absolute_error": 5.551115123125783e-17,
+        "x_index_error_rows": [
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 0
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 1
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 2
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 3
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1200856647555038e-16,
+            "status": "reported",
+            "x_index": 4
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 5
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.9039964729769456e-16,
+            "status": "reported",
+            "x_index": 6
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 7
+          },
+          {
+            "absolute_error": 3.262639632681848e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 8
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 9
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.3488849606643683e-16,
+            "status": "reported",
+            "x_index": 10
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 11
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 3.37011963439686e-16,
+            "status": "reported",
+            "x_index": 12
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 13
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 14
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 15
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 16
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 17
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2245651718928352e-16,
+            "status": "reported",
+            "x_index": 18
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3915115918834571e-16,
+            "status": "reported",
+            "x_index": 19
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 20
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 21
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6744424803321812e-16,
+            "status": "reported",
+            "x_index": 22
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.708990898617244e-16,
+            "status": "reported",
+            "x_index": 23
+          },
+          {
+            "absolute_error": 4.089868909768906e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 24
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 25
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.951998236488472e-16,
+            "status": "reported",
+            "x_index": 26
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 27
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 28
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 29
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7796766842054145e-16,
+            "status": "reported",
+            "x_index": 30
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6925227305901713e-16,
+            "status": "reported",
+            "x_index": 31
+          }
+        ]
+      },
+      {
+        "connection_formula_max_absolute_error": 2.7755575615628914e-17,
+        "crossing_locations": [
+          1.5707963267948966,
+          4.71238898038469
+        ],
+        "excluded_crossing_absolute_errors": [
+          3.262639632681848e-18,
+          4.089868909768906e-18
+        ],
+        "excluded_crossing_relative_errors": [
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 16
+          },
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 48
+          }
+        ],
+        "excluded_spatial_gridpoint_count": 128,
+        "excluded_x_index_count": 2,
+        "excluded_x_indices": [
+          16,
+          48
+        ],
+        "grid_shape": [
+          64,
+          64
+        ],
+        "maximum_absolute_error": 1.1102230246251565e-16,
+        "maximum_relative_error_away_from_zero": 3.9039964729769456e-16,
+        "metric_compatibility_max_absolute_error": 5.551115123125783e-17,
+        "relative_error_cutoff_epsilon_R": 1e-12,
+        "resolution_N": 64,
+        "ricci_formula_max_absolute_error": 5.551115123125783e-17,
+        "x_index_error_rows": [
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 0
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.672049405010855e-16,
+            "status": "reported",
+            "x_index": 1
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 2
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7277807377582804e-16,
+            "status": "reported",
+            "x_index": 3
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 4
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 5
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 6
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.072846847944704e-16,
+            "status": "reported",
+            "x_index": 7
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1200856647555038e-16,
+            "status": "reported",
+            "x_index": 8
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 9
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 10
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6107638639439133e-16,
+            "status": "reported",
+            "x_index": 11
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.9039964729769456e-16,
+            "status": "reported",
+            "x_index": 12
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 13
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 14
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.8045109221768836e-16,
+            "status": "reported",
+            "x_index": 15
+          },
+          {
+            "absolute_error": 3.262639632681848e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 16
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 17
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 18
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 19
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.3488849606643683e-16,
+            "status": "reported",
+            "x_index": 20
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.3332081077876247e-16,
+            "status": "reported",
+            "x_index": 21
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 22
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 23
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 3.37011963439686e-16,
+            "status": "reported",
+            "x_index": 24
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.5177353356321258e-16,
+            "status": "reported",
+            "x_index": 25
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 26
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2960300466612278e-16,
+            "status": "reported",
+            "x_index": 27
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 28
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 2.345338450891404e-16,
+            "status": "reported",
+            "x_index": 29
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 30
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.116937892698277e-16,
+            "status": "reported",
+            "x_index": 31
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 32
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.116937892698277e-16,
+            "status": "reported",
+            "x_index": 33
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 34
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1726692254457017e-16,
+            "status": "reported",
+            "x_index": 35
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2245651718928352e-16,
+            "status": "reported",
+            "x_index": 36
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 37
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3915115918834571e-16,
+            "status": "reported",
+            "x_index": 38
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 39
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 40
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 41
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 42
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 43
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6744424803321812e-16,
+            "status": "reported",
+            "x_index": 44
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 2.2515976558755887e-16,
+            "status": "reported",
+            "x_index": 45
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.708990898617244e-16,
+            "status": "reported",
+            "x_index": 46
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.7351219831378174e-16,
+            "status": "reported",
+            "x_index": 47
+          },
+          {
+            "absolute_error": 4.089868909768906e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 48
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 3.6090218443537927e-16,
+            "status": "reported",
+            "x_index": 49
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 50
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 51
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.951998236488472e-16,
+            "status": "reported",
+            "x_index": 52
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.610763863943914e-16,
+            "status": "reported",
+            "x_index": 53
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 54
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 55
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 56
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 57
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 58
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8511415589738064e-16,
+            "status": "reported",
+            "x_index": 59
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7796766842054145e-16,
+            "status": "reported",
+            "x_index": 60
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 61
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6925227305901713e-16,
+            "status": "reported",
+            "x_index": 62
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.672049405010855e-16,
+            "status": "reported",
+            "x_index": 63
+          }
+        ]
+      },
+      {
+        "connection_formula_max_absolute_error": 2.7755575615628914e-17,
+        "crossing_locations": [
+          1.5707963267948966,
+          4.71238898038469
+        ],
+        "excluded_crossing_absolute_errors": [
+          3.262639632681848e-18,
+          4.089868909768906e-18
+        ],
+        "excluded_crossing_relative_errors": [
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 32
+          },
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 96
+          }
+        ],
+        "excluded_spatial_gridpoint_count": 256,
+        "excluded_x_index_count": 2,
+        "excluded_x_indices": [
+          32,
+          96
+        ],
+        "grid_shape": [
+          128,
+          128
+        ],
+        "maximum_absolute_error": 1.1102230246251565e-16,
+        "maximum_relative_error_away_from_zero": 3.9039964729769456e-16,
+        "metric_compatibility_max_absolute_error": 5.551115123125783e-17,
+        "relative_error_cutoff_epsilon_R": 1e-12,
+        "resolution_N": 128,
+        "ricci_formula_max_absolute_error": 5.551115123125783e-17,
+        "x_index_error_rows": [
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 0
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 1
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.672049405010855e-16,
+            "status": "reported",
+            "x_index": 2
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 3
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 4
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 5
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7277807377582804e-16,
+            "status": "reported",
+            "x_index": 6
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 7
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 8
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 9
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 10
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8955253150602476e-16,
+            "status": "reported",
+            "x_index": 11
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 12
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 13
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.072846847944704e-16,
+            "status": "reported",
+            "x_index": 14
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 15
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1200856647555038e-16,
+            "status": "reported",
+            "x_index": 16
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1720295164972782e-16,
+            "status": "reported",
+            "x_index": 17
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 18
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.303609505642243e-16,
+            "status": "reported",
+            "x_index": 19
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 20
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.4884874414449755e-16,
+            "status": "reported",
+            "x_index": 21
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6107638639439133e-16,
+            "status": "reported",
+            "x_index": 22
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 23
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.9039964729769456e-16,
+            "status": "reported",
+            "x_index": 24
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 25
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 26
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.4972613495932505e-16,
+            "status": "reported",
+            "x_index": 27
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 28
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.2169461336103134e-16,
+            "status": "reported",
+            "x_index": 29
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.8045109221768836e-16,
+            "status": "reported",
+            "x_index": 30
+          },
+          {
+            "absolute_error": 3.469446951953614e-18,
+            "relative_error": 1.7850318659910823e-16,
+            "status": "reported",
+            "x_index": 31
+          },
+          {
+            "absolute_error": 3.262639632681848e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 32
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 33
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 34
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 2.295114389142484e-16,
+            "status": "reported",
+            "x_index": 35
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 36
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 37
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 38
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 39
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.3488849606643683e-16,
+            "status": "reported",
+            "x_index": 40
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 41
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.3332081077876247e-16,
+            "status": "reported",
+            "x_index": 42
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2109316852886866e-16,
+            "status": "reported",
+            "x_index": 43
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 44
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.0521074989719086e-16,
+            "status": "reported",
+            "x_index": 45
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 46
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 47
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 3.37011963439686e-16,
+            "status": "reported",
+            "x_index": 48
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 49
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.5177353356321258e-16,
+            "status": "reported",
+            "x_index": 50
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.450240269639427e-16,
+            "status": "reported",
+            "x_index": 51
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 52
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3404138027476694e-16,
+            "status": "reported",
+            "x_index": 53
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2960300466612278e-16,
+            "status": "reported",
+            "x_index": 54
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2576159448120087e-16,
+            "status": "reported",
+            "x_index": 55
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 56
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 57
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 2.345338450891404e-16,
+            "status": "reported",
+            "x_index": 58
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1530979224867025e-16,
+            "status": "reported",
+            "x_index": 59
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 60
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.125407988737791e-16,
+            "status": "reported",
+            "x_index": 61
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.116937892698277e-16,
+            "status": "reported",
+            "x_index": 62
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1118966809364645e-16,
+            "status": "reported",
+            "x_index": 63
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 64
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1118966809364645e-16,
+            "status": "reported",
+            "x_index": 65
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.116937892698277e-16,
+            "status": "reported",
+            "x_index": 66
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.125407988737791e-16,
+            "status": "reported",
+            "x_index": 67
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 68
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 69
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1726692254457017e-16,
+            "status": "reported",
+            "x_index": 70
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1963835230549117e-16,
+            "status": "reported",
+            "x_index": 71
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2245651718928352e-16,
+            "status": "reported",
+            "x_index": 72
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 73
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 74
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 2.680827605495338e-16,
+            "status": "reported",
+            "x_index": 75
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3915115918834571e-16,
+            "status": "reported",
+            "x_index": 76
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.4502402696394264e-16,
+            "status": "reported",
+            "x_index": 77
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 78
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.5954136385748654e-16,
+            "status": "reported",
+            "x_index": 79
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 80
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 81
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 82
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.0521074989719094e-16,
+            "status": "reported",
+            "x_index": 83
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 84
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2109316852886861e-16,
+            "status": "reported",
+            "x_index": 85
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 86
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.484146046938478e-16,
+            "status": "reported",
+            "x_index": 87
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6744424803321812e-16,
+            "status": "reported",
+            "x_index": 88
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 89
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 2.2515976558755887e-16,
+            "status": "reported",
+            "x_index": 90
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.358483471515105e-16,
+            "status": "reported",
+            "x_index": 91
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.708990898617244e-16,
+            "status": "reported",
+            "x_index": 92
+          },
+          {
+            "absolute_error": 2.0816681711721685e-17,
+            "relative_error": 3.4426715837137096e-16,
+            "status": "reported",
+            "x_index": 93
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.7351219831378174e-16,
+            "status": "reported",
+            "x_index": 94
+          },
+          {
+            "absolute_error": 3.469446951953614e-18,
+            "relative_error": 1.75033739647155e-16,
+            "status": "reported",
+            "x_index": 95
+          },
+          {
+            "absolute_error": 4.089868909768906e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 96
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 3.5700637319821987e-16,
+            "status": "reported",
+            "x_index": 97
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 3.6090218443537927e-16,
+            "status": "reported",
+            "x_index": 98
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.216946133610312e-16,
+            "status": "reported",
+            "x_index": 99
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 100
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.4972613495932515e-16,
+            "status": "reported",
+            "x_index": 101
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 102
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 103
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.951998236488472e-16,
+            "status": "reported",
+            "x_index": 104
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.7617018030947684e-16,
+            "status": "reported",
+            "x_index": 105
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.610763863943914e-16,
+            "status": "reported",
+            "x_index": 106
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 107
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 108
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.3036095056422444e-16,
+            "status": "reported",
+            "x_index": 109
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 110
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1720295164972782e-16,
+            "status": "reported",
+            "x_index": 111
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 112
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 113
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 114
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 115
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 116
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8955253150602476e-16,
+            "status": "reported",
+            "x_index": 117
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8511415589738064e-16,
+            "status": "reported",
+            "x_index": 118
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8127274571245872e-16,
+            "status": "reported",
+            "x_index": 119
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7796766842054145e-16,
+            "status": "reported",
+            "x_index": 120
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 121
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 122
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.708209434799281e-16,
+            "status": "reported",
+            "x_index": 123
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6925227305901713e-16,
+            "status": "reported",
+            "x_index": 124
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6805195010503696e-16,
+            "status": "reported",
+            "x_index": 125
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.672049405010855e-16,
+            "status": "reported",
+            "x_index": 126
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 127
+          }
+        ]
+      },
+      {
+        "connection_formula_max_absolute_error": 2.7755575615628914e-17,
+        "crossing_locations": [
+          1.5707963267948966,
+          4.71238898038469
+        ],
+        "excluded_crossing_absolute_errors": [
+          3.262639632681848e-18,
+          4.089868909768906e-18
+        ],
+        "excluded_crossing_relative_errors": [
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 64
+          },
+          {
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 192
+          }
+        ],
+        "excluded_spatial_gridpoint_count": 512,
+        "excluded_x_index_count": 2,
+        "excluded_x_indices": [
+          64,
+          192
+        ],
+        "grid_shape": [
+          256,
+          256
+        ],
+        "maximum_absolute_error": 1.1102230246251565e-16,
+        "maximum_relative_error_away_from_zero": 2.110174344347392e-15,
+        "metric_compatibility_max_absolute_error": 5.551115123125783e-17,
+        "relative_error_cutoff_epsilon_R": 1e-12,
+        "resolution_N": 256,
+        "ricci_formula_max_absolute_error": 5.551115123125783e-17,
+        "x_index_error_rows": [
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 0
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 1
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 2
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 3
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.672049405010855e-16,
+            "status": "reported",
+            "x_index": 4
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 5
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 6
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6860712050774529e-16,
+            "status": "reported",
+            "x_index": 7
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 8
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 9
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 10
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7174947938995234e-16,
+            "status": "reported",
+            "x_index": 11
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7277807377582804e-16,
+            "status": "reported",
+            "x_index": 12
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7391014049802088e-16,
+            "status": "reported",
+            "x_index": 13
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 14
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7650043007910508e-16,
+            "status": "reported",
+            "x_index": 15
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 16
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7955649133802563e-16,
+            "status": "reported",
+            "x_index": 17
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 18
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 19
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 20
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8725442974894536e-16,
+            "status": "reported",
+            "x_index": 21
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8955253150602476e-16,
+            "status": "reported",
+            "x_index": 22
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.9201821684284207e-16,
+            "status": "reported",
+            "x_index": 23
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 24
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 25
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 26
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.0379224327193944e-16,
+            "status": "reported",
+            "x_index": 27
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.072846847944704e-16,
+            "status": "reported",
+            "x_index": 28
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 29
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 30
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.193723336874654e-16,
+            "status": "reported",
+            "x_index": 31
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1200856647555038e-16,
+            "status": "reported",
+            "x_index": 32
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.145084752542378e-16,
+            "status": "reported",
+            "x_index": 33
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1720295164972782e-16,
+            "status": "reported",
+            "x_index": 34
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2011144370398087e-16,
+            "status": "reported",
+            "x_index": 35
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 36
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 37
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.303609505642243e-16,
+            "status": "reported",
+            "x_index": 38
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.3438482482688141e-16,
+            "status": "reported",
+            "x_index": 39
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 40
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 41
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.4884874414449755e-16,
+            "status": "reported",
+            "x_index": 42
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 43
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6107638639439133e-16,
+            "status": "reported",
+            "x_index": 44
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6820872758279113e-16,
+            "status": "reported",
+            "x_index": 45
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 46
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 47
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.9039964729769456e-16,
+            "status": "reported",
+            "x_index": 48
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 49
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 50
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 51
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 52
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.3702067119872373e-16,
+            "status": "reported",
+            "x_index": 53
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.4972613495932505e-16,
+            "status": "reported",
+            "x_index": 54
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 55
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 56
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 57
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.2169461336103134e-16,
+            "status": "reported",
+            "x_index": 58
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 2.903657230025369e-16,
+            "status": "reported",
+            "x_index": 59
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.8045109221768836e-16,
+            "status": "reported",
+            "x_index": 60
+          },
+          {
+            "absolute_error": 3.469446951953614e-18,
+            "relative_error": 1.1963955367500002e-16,
+            "status": "reported",
+            "x_index": 61
+          },
+          {
+            "absolute_error": 3.469446951953614e-18,
+            "relative_error": 1.7850318659910823e-16,
+            "status": "reported",
+            "x_index": 62
+          },
+          {
+            "absolute_error": 1.734723475976807e-18,
+            "relative_error": 1.7758258550492698e-16,
+            "status": "reported",
+            "x_index": 63
+          },
+          {
+            "absolute_error": 3.262639632681848e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 64
+          },
+          {
+            "absolute_error": 1.9081958235744878e-17,
+            "relative_error": 1.934326482318462e-15,
+            "status": "reported",
+            "x_index": 65
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 66
+          },
+          {
+            "absolute_error": 3.469446951953614e-18,
+            "relative_error": 1.161701067230466e-16,
+            "status": "reported",
+            "x_index": 67
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 68
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 69
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 2.295114389142484e-16,
+            "status": "reported",
+            "x_index": 70
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 71
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 72
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 3.0282027829802757e-16,
+            "status": "reported",
+            "x_index": 73
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 74
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 75
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 76
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 77
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 78
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.7892547979803497e-16,
+            "status": "reported",
+            "x_index": 79
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.3488849606643683e-16,
+            "status": "reported",
+            "x_index": 80
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.5735090147192143e-16,
+            "status": "reported",
+            "x_index": 81
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 82
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.809063039343244e-16,
+            "status": "reported",
+            "x_index": 83
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.3332081077876247e-16,
+            "status": "reported",
+            "x_index": 84
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.53799277426818e-16,
+            "status": "reported",
+            "x_index": 85
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2109316852886866e-16,
+            "status": "reported",
+            "x_index": 86
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1582174067553794e-16,
+            "status": "reported",
+            "x_index": 87
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 88
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 89
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.0521074989719086e-16,
+            "status": "reported",
+            "x_index": 90
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 91
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 92
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8471173617670405e-16,
+            "status": "reported",
+            "x_index": 93
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 94
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 95
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 3.37011963439686e-16,
+            "status": "reported",
+            "x_index": 96
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6386118245620767e-16,
+            "status": "reported",
+            "x_index": 97
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 98
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.5551998794707978e-16,
+            "status": "reported",
+            "x_index": 99
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.5177353356321258e-16,
+            "status": "reported",
+            "x_index": 100
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 101
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.450240269639427e-16,
+            "status": "reported",
+            "x_index": 102
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 103
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 104
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 105
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3404138027476694e-16,
+            "status": "reported",
+            "x_index": 106
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 107
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2960300466612278e-16,
+            "status": "reported",
+            "x_index": 108
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 109
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2576159448120087e-16,
+            "status": "reported",
+            "x_index": 110
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 111
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 112
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 113
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 114
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1839898926676305e-16,
+            "status": "reported",
+            "x_index": 115
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 2.345338450891404e-16,
+            "status": "reported",
+            "x_index": 116
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 117
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1530979224867025e-16,
+            "status": "reported",
+            "x_index": 118
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 119
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 120
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 121
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.125407988737791e-16,
+            "status": "reported",
+            "x_index": 122
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 123
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.116937892698277e-16,
+            "status": "reported",
+            "x_index": 124
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.113993487584809e-16,
+            "status": "reported",
+            "x_index": 125
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1118966809364645e-16,
+            "status": "reported",
+            "x_index": 126
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 127
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 128
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 129
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1118966809364645e-16,
+            "status": "reported",
+            "x_index": 130
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.113993487584809e-16,
+            "status": "reported",
+            "x_index": 131
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.116937892698277e-16,
+            "status": "reported",
+            "x_index": 132
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 133
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.125407988737791e-16,
+            "status": "reported",
+            "x_index": 134
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1309596927648746e-16,
+            "status": "reported",
+            "x_index": 135
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 136
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1447828224492991e-16,
+            "status": "reported",
+            "x_index": 137
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 138
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.162383281586945e-16,
+            "status": "reported",
+            "x_index": 139
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1726692254457017e-16,
+            "status": "reported",
+            "x_index": 140
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 141
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.1963835230549117e-16,
+            "status": "reported",
+            "x_index": 142
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 143
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2245651718928352e-16,
+            "status": "reported",
+            "x_index": 144
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 145
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 146
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.2761175809036242e-16,
+            "status": "reported",
+            "x_index": 147
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 148
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.317432785176875e-16,
+            "status": "reported",
+            "x_index": 149
+          },
+          {
+            "absolute_error": 1.1102230246251565e-16,
+            "relative_error": 2.680827605495338e-16,
+            "status": "reported",
+            "x_index": 150
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3650706561158422e-16,
+            "status": "reported",
+            "x_index": 151
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.3915115918834571e-16,
+            "status": "reported",
+            "x_index": 152
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 153
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.4502402696394264e-16,
+            "status": "reported",
+            "x_index": 154
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.482810920406816e-16,
+            "status": "reported",
+            "x_index": 155
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 156
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 157
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.5954136385748654e-16,
+            "status": "reported",
+            "x_index": 158
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 159
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 160
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7350579927721773e-16,
+            "status": "reported",
+            "x_index": 161
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 162
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8471173617670386e-16,
+            "status": "reported",
+            "x_index": 163
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 164
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.9781456773018399e-16,
+            "status": "reported",
+            "x_index": 165
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.0521074989719094e-16,
+            "status": "reported",
+            "x_index": 166
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 167
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 168
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 169
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2109316852886861e-16,
+            "status": "reported",
+            "x_index": 170
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.537992774268178e-16,
+            "status": "reported",
+            "x_index": 171
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 172
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.404531519671621e-16,
+            "status": "reported",
+            "x_index": 173
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.484146046938478e-16,
+            "status": "reported",
+            "x_index": 174
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 3.1470180294384237e-16,
+            "status": "reported",
+            "x_index": 175
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6744424803321812e-16,
+            "status": "reported",
+            "x_index": 176
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.7892547979803507e-16,
+            "status": "reported",
+            "x_index": 177
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 178
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 179
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 2.2515976558755887e-16,
+            "status": "reported",
+            "x_index": 180
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.2314288339090922e-16,
+            "status": "reported",
+            "x_index": 181
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.358483471515105e-16,
+            "status": "reported",
+            "x_index": 182
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 183
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.708990898617244e-16,
+            "status": "reported",
+            "x_index": 184
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.9599796980950064e-16,
+            "status": "reported",
+            "x_index": 185
+          },
+          {
+            "absolute_error": 2.0816681711721685e-17,
+            "relative_error": 3.4426715837137096e-16,
+            "status": "reported",
+            "x_index": 186
+          },
+          {
+            "absolute_error": 2.0816681711721685e-17,
+            "relative_error": 4.147319027920848e-16,
+            "status": "reported",
+            "x_index": 187
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.7351219831378174e-16,
+            "status": "reported",
+            "x_index": 188
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 2.323402134460931e-16,
+            "status": "reported",
+            "x_index": 189
+          },
+          {
+            "absolute_error": 3.469446951953614e-18,
+            "relative_error": 1.75033739647155e-16,
+            "status": "reported",
+            "x_index": 190
+          },
+          {
+            "absolute_error": 2.0816681711721685e-17,
+            "relative_error": 2.110174344347392e-15,
+            "status": "reported",
+            "x_index": 191
+          },
+          {
+            "absolute_error": 4.089868909768906e-18,
+            "relative_error": null,
+            "status": "excluded_near_zero",
+            "x_index": 192
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 193
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 3.5700637319821987e-16,
+            "status": "reported",
+            "x_index": 194
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 195
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 3.6090218443537927e-16,
+            "status": "reported",
+            "x_index": 196
+          },
+          {
+            "absolute_error": 2.0816681711721685e-17,
+            "relative_error": 4.3554858450380783e-16,
+            "status": "reported",
+            "x_index": 197
+          },
+          {
+            "absolute_error": 6.938893903907228e-18,
+            "relative_error": 1.216946133610312e-16,
+            "status": "reported",
+            "x_index": 198
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 2.0987575761731557e-16,
+            "status": "reported",
+            "x_index": 199
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 200
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 201
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.4972613495932515e-16,
+            "status": "reported",
+            "x_index": 202
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.3702067119872383e-16,
+            "status": "reported",
+            "x_index": 203
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 204
+          },
+          {
+            "absolute_error": 1.3877787807814457e-17,
+            "relative_error": 1.1754293950572381e-16,
+            "status": "reported",
+            "x_index": 205
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 206
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 4.133621108273283e-16,
+            "status": "reported",
+            "x_index": 207
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.951998236488472e-16,
+            "status": "reported",
+            "x_index": 208
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 209
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.7617018030947684e-16,
+            "status": "reported",
+            "x_index": 210
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.6820872758279113e-16,
+            "status": "reported",
+            "x_index": 211
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.610763863943914e-16,
+            "status": "reported",
+            "x_index": 212
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.5465521432903791e-16,
+            "status": "reported",
+            "x_index": 213
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 214
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 215
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 216
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 217
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.3036095056422444e-16,
+            "status": "reported",
+            "x_index": 218
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2666285948072094e-16,
+            "status": "reported",
+            "x_index": 219
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 220
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.2011144370398087e-16,
+            "status": "reported",
+            "x_index": 221
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1720295164972782e-16,
+            "status": "reported",
+            "x_index": 222
+          },
+          {
+            "absolute_error": 2.7755575615628914e-17,
+            "relative_error": 1.1450847525423783e-16,
+            "status": "reported",
+            "x_index": 223
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 224
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 2.193723336874655e-16,
+            "status": "reported",
+            "x_index": 225
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 226
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 227
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 228
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 229
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 230
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 231
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 232
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.9201821684284207e-16,
+            "status": "reported",
+            "x_index": 233
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8955253150602476e-16,
+            "status": "reported",
+            "x_index": 234
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8725442974894536e-16,
+            "status": "reported",
+            "x_index": 235
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8511415589738064e-16,
+            "status": "reported",
+            "x_index": 236
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 237
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.8127274571245872e-16,
+            "status": "reported",
+            "x_index": 238
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 239
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7796766842054145e-16,
+            "status": "reported",
+            "x_index": 240
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7650043007910508e-16,
+            "status": "reported",
+            "x_index": 241
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 242
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7391014049802088e-16,
+            "status": "reported",
+            "x_index": 243
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 244
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.7174947938995234e-16,
+            "status": "reported",
+            "x_index": 245
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.708209434799281e-16,
+            "status": "reported",
+            "x_index": 246
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6998943347618777e-16,
+            "status": "reported",
+            "x_index": 247
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6925227305901713e-16,
+            "status": "reported",
+            "x_index": 248
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.686071205077453e-16,
+            "status": "reported",
+            "x_index": 249
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.6805195010503696e-16,
+            "status": "reported",
+            "x_index": 250
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 251
+          },
+          {
+            "absolute_error": 5.551115123125783e-17,
+            "relative_error": 1.672049405010855e-16,
+            "status": "reported",
+            "x_index": 252
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 253
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 254
+          },
+          {
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "status": "reported",
+            "x_index": 255
+          }
+        ]
+      }
+    ],
+    "scalar_curvature_maximum": 0.33333333333333337,
+    "scalar_curvature_minimum": -0.5,
+    "structurally_allowed_nonzero_christoffel_component_count": 3
+  },
+  "guardrail_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v1.json",
+  "guardrail_revised_at_utc": "2026-07-10T00:00:00Z",
+  "guardrail_sha256": "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96",
+  "lean_status_wording": "scoped Lean pending execution certificate; full ToeFormal aggregate not run / not upgraded",
+  "negative_controls": {
+    "finest_resolution_adjudication": {
+      "all_five_negative_controls_passed": true,
+      "curved_case_flat_geometry_substitution": {
+        "comparison_value": 0.20474047561384387,
+        "pass": true,
+        "resolution_N": 256,
+        "threshold": 0.02
+      },
+      "incorrect_y_inverse_metric_factor": {
+        "comparison_value": 0.5589936806181929,
+        "pass": true,
+        "resolution_N": 256,
+        "threshold": 0.02
+      },
+      "naive_partial_divergence": {
+        "comparison_value": 47.801337946115424,
+        "pass": true,
+        "resolution_N": 256,
+        "threshold": 10.0
+      },
+      "omitted_tensor_index_connection_term": {
+        "comparison_value": 210143613602.23843,
+        "pass": true,
+        "resolution_N": 256,
+        "threshold": 10.0
+      },
+      "omitted_volume_trace_connection_term": {
+        "comparison_value": 210143613602.23843,
+        "pass": true,
+        "resolution_N": 256,
+        "threshold": 10.0
+      }
+    },
+    "record_count": 20,
+    "records": [
+      {
+        "adjudication": "minimum profile-specific error ratio",
+        "comparison": ">=",
+        "comparison_value": 1.2581705796238782,
+        "control_id": "naive_partial_divergence",
+        "exact_defective_operation": "omit both Gamma^mu_mu_lambda T^lambda_nu and Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "connection terms are required off shell",
+        "pass": false,
+        "profile_evidence": [
+          {
+            "comparison_value": 1.3302058117720323,
+            "correct_error": 0.01139083950024144,
+            "defective_error": 0.015152160904183596,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 1.2581705796238782,
+            "correct_error": 0.014269377534890427,
+            "defective_error": 0.017953311003945035,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 32,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23837,
+        "control_id": "omitted_tensor_index_connection_term",
+        "exact_defective_operation": "omit only Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23837,
+            "correct_error": 1.4840893895548057e-19,
+            "defective_error": 0.002101436136022384,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 32,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23837,
+        "control_id": "omitted_volume_trace_connection_term",
+        "exact_defective_operation": "omit only Gamma^mu_mu_lambda T^lambda_nu",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23837,
+            "correct_error": 1.4840893895548057e-19,
+            "defective_error": 0.002101436136022384,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 32,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "minimum profile-specific normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.31064699823345,
+        "control_id": "curved_case_flat_geometry_substitution",
+        "exact_defective_operation": "set epsilon=0 in metric,inverse metric,connection,stress,and divergence while retaining the epsilon=0.2 curved RHS",
+        "expected_mechanism": "flat geometry cannot reproduce the curved analytic reference",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.31064699823345,
+            "defective_error": 0.015152160904183596,
+            "normalization_norm": 0.048776138157938374,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 0.6037219569083722,
+            "defective_error": 0.05572030575053477,
+            "normalization_norm": 0.09229464841046278,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 32,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "y-profile normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.5589936806181929,
+        "control_id": "incorrect_y_inverse_metric_factor",
+        "exact_defective_operation": "replace g^yy=f^-2 by g^yy=1 in the defective y residual and raised y-gradient while retaining the correct curved references",
+        "expected_mechanism": "the warped y inverse metric is required by both residual and gradient",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.5589936806181929,
+            "correct_error": 0.014269377534890427,
+            "defective_error": 0.05159212521632663,
+            "defective_identity_error_against_correct_divergence": 0.04369472248418463,
+            "normalization_norm": 0.09229464841046278,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 32,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "minimum profile-specific error ratio",
+        "comparison": ">=",
+        "comparison_value": 3.1649425574722048,
+        "control_id": "naive_partial_divergence",
+        "exact_defective_operation": "omit both Gamma^mu_mu_lambda T^lambda_nu and Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "connection terms are required off shell",
+        "pass": false,
+        "profile_evidence": [
+          {
+            "comparison_value": 3.56952447815278,
+            "correct_error": 0.002914411543860683,
+            "defective_error": 0.010403063345221742,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 3.1649425574722048,
+            "correct_error": 0.0036508980269791577,
+            "defective_error": 0.011554882538577642,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 64,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23837,
+        "control_id": "omitted_tensor_index_connection_term",
+        "exact_defective_operation": "omit only Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23837,
+            "correct_error": 1.7468056622945847e-19,
+            "defective_error": 0.002101436136022384,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 64,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23837,
+        "control_id": "omitted_volume_trace_connection_term",
+        "exact_defective_operation": "omit only Gamma^mu_mu_lambda T^lambda_nu",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23837,
+            "correct_error": 1.7468056622945847e-19,
+            "defective_error": 0.002101436136022384,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 64,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "minimum profile-specific normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.2132818164393491,
+        "control_id": "curved_case_flat_geometry_substitution",
+        "exact_defective_operation": "set epsilon=0 in metric,inverse metric,connection,stress,and divergence while retaining the epsilon=0.2 curved RHS",
+        "expected_mechanism": "flat geometry cannot reproduce the curved analytic reference",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.2132818164393491,
+            "defective_error": 0.010403063345221742,
+            "normalization_norm": 0.04877613815793837,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 0.568360312526587,
+            "defective_error": 0.05245661521510209,
+            "normalization_norm": 0.09229464841046277,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 64,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "y-profile normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.5589936806181929,
+        "control_id": "incorrect_y_inverse_metric_factor",
+        "exact_defective_operation": "replace g^yy=f^-2 by g^yy=1 in the defective y residual and raised y-gradient while retaining the correct curved references",
+        "expected_mechanism": "the warped y inverse metric is required by both residual and gradient",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.5589936806181929,
+            "correct_error": 0.0036508980269791577,
+            "defective_error": 0.051592125216326626,
+            "defective_identity_error_against_correct_divergence": 0.04929953492697239,
+            "normalization_norm": 0.09229464841046277,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 64,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "minimum profile-specific error ratio",
+        "comparison": ">=",
+        "comparison_value": 12.002128826197001,
+        "control_id": "naive_partial_divergence",
+        "exact_defective_operation": "omit both Gamma^mu_mu_lambda T^lambda_nu and Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "connection terms are required off shell",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 13.662067444989402,
+            "correct_error": 0.0007328295513500645,
+            "defective_error": 0.010011966756225905,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 12.002128826197001,
+            "correct_error": 0.0009180190285831486,
+            "defective_error": 0.011018182645955176,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 128,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23837,
+        "control_id": "omitted_tensor_index_connection_term",
+        "exact_defective_operation": "omit only Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23837,
+            "correct_error": 1.82672953838962e-19,
+            "defective_error": 0.002101436136022384,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 128,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23837,
+        "control_id": "omitted_volume_trace_connection_term",
+        "exact_defective_operation": "omit only Gamma^mu_mu_lambda T^lambda_nu",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23837,
+            "correct_error": 1.82672953838962e-19,
+            "defective_error": 0.002101436136022384,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 128,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "minimum profile-specific normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.2052636214004254,
+        "control_id": "curved_case_flat_geometry_substitution",
+        "exact_defective_operation": "set epsilon=0 in metric,inverse metric,connection,stress,and divergence while retaining the epsilon=0.2 curved RHS",
+        "expected_mechanism": "flat geometry cannot reproduce the curved analytic reference",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.2052636214004254,
+            "defective_error": 0.010011966756225905,
+            "normalization_norm": 0.048776138157938374,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 0.5612052908566706,
+            "defective_error": 0.05179624500570792,
+            "normalization_norm": 0.09229464841046278,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 128,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "y-profile normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.5589936806181928,
+        "control_id": "incorrect_y_inverse_metric_factor",
+        "exact_defective_operation": "replace g^yy=f^-2 by g^yy=1 in the defective y residual and raised y-gradient while retaining the correct curved references",
+        "expected_mechanism": "the warped y inverse metric is required by both residual and gradient",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.5589936806181928,
+            "correct_error": 0.0009180190285831486,
+            "defective_error": 0.051592125216326626,
+            "defective_identity_error_against_correct_divergence": 0.05100075771734431,
+            "normalization_norm": 0.09229464841046278,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 128,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "minimum profile-specific error ratio",
+        "comparison": ">=",
+        "comparison_value": 47.801337946115424,
+        "control_id": "naive_partial_divergence",
+        "exact_defective_operation": "omit both Gamma^mu_mu_lambda T^lambda_nu and Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "connection terms are required off shell",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 54.43023673861092,
+            "correct_error": 0.00018347246536921304,
+            "defective_error": 0.00998644972506286,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 47.801337946115424,
+            "correct_error": 0.0002298368058886317,
+            "defective_error": 0.010986506830738216,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 256,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23843,
+        "control_id": "omitted_tensor_index_connection_term",
+        "exact_defective_operation": "omit only Gamma^nu_mu_lambda T^mu_lambda",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23843,
+            "correct_error": 1.809414347125402e-19,
+            "defective_error": 0.0021014361360223843,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 256,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "temporal profile error ratio",
+        "comparison": ">=",
+        "comparison_value": 210143613602.23843,
+        "control_id": "omitted_volume_trace_connection_term",
+        "exact_defective_operation": "omit only Gamma^mu_mu_lambda T^lambda_nu",
+        "expected_mechanism": "the two connection contributions cancel for the temporal mode",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 210143613602.23843,
+            "correct_error": 1.809414347125402e-19,
+            "defective_error": 0.0021014361360223843,
+            "profile_id": "on_shell_temporal_mode"
+          }
+        ],
+        "resolution_N": 256,
+        "threshold": 10.0
+      },
+      {
+        "adjudication": "minimum profile-specific normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.20474047561384387,
+        "control_id": "curved_case_flat_geometry_substitution",
+        "exact_defective_operation": "set epsilon=0 in metric,inverse metric,connection,stress,and divergence while retaining the epsilon=0.2 curved RHS",
+        "expected_mechanism": "flat geometry cannot reproduce the curved analytic reference",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.20474047561384387,
+            "defective_error": 0.00998644972506286,
+            "normalization_norm": 0.04877613815793837,
+            "profile_id": "off_shell_x_mode"
+          },
+          {
+            "comparison_value": 0.55953818980356,
+            "defective_error": 0.05164238050014634,
+            "normalization_norm": 0.09229464841046275,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 256,
+        "threshold": 0.02
+      },
+      {
+        "adjudication": "y-profile normalized discrepancy",
+        "comparison": ">=",
+        "comparison_value": 0.5589936806181929,
+        "control_id": "incorrect_y_inverse_metric_factor",
+        "exact_defective_operation": "replace g^yy=f^-2 by g^yy=1 in the defective y residual and raised y-gradient while retaining the correct curved references",
+        "expected_mechanism": "the warped y inverse metric is required by both residual and gradient",
+        "pass": true,
+        "profile_evidence": [
+          {
+            "comparison_value": 0.5589936806181929,
+            "correct_error": 0.0002298368058886317,
+            "defective_error": 0.05159212521632662,
+            "defective_identity_error_against_correct_divergence": 0.05144317005311563,
+            "normalization_norm": 0.09229464841046275,
+            "profile_id": "off_shell_y_mode"
+          }
+        ],
+        "resolution_N": 256,
+        "threshold": 0.02
+      }
+    ]
+  },
+  "packet_result": "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_EXECUTED_FIXED_2PLUS1_WARPED_GEOMETRY_MATTER_IDENTITY_TESTED_NO_EINSTEIN_SOURCE_OR_SEAM_ADMISSIBILITY_CLAIM",
+  "report_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_v0",
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0",
+  "selected_next_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_calculation_result_review",
+  "spacetime_dimension": 3,
+  "status": "executed_candidate_e_repro_pending_independent_review",
+  "strict_packet_result": "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_EXECUTED_LEVEL3_CANDIDATE_E_REPRO_PENDING_REVIEW_NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_CLOSURE_NO_MASTER_ACTION_PROMOTION",
+  "threshold_checks": {
+    "maximum_analytic_profile_residual_reference_error": true,
+    "maximum_curvature_route_absolute_discrepancy": true,
+    "maximum_finest_on_shell_combined_absolute_divergence_error": true,
+    "maximum_finest_x_mode_combined_relative_identity_error": true,
+    "maximum_finest_y_mode_combined_relative_identity_error": true,
+    "maximum_flat_limit_absolute_discrepancy": true,
+    "maximum_metric_compatibility_absolute_error": true,
+    "minimum_curvature_peak_absolute_value": true,
+    "minimum_curvature_peak_to_peak_variation": true,
+    "minimum_flat_geometry_substitution_normalized_discrepancy": true,
+    "minimum_incorrect_y_inverse_metric_normalized_discrepancy": true,
+    "minimum_naive_partial_divergence_error_ratio": true,
+    "minimum_omitted_tensor_index_term_error_ratio": true,
+    "minimum_omitted_volume_trace_term_error_ratio": true,
+    "minimum_two_finest_x_mode_convergence_order": true,
+    "minimum_two_finest_y_mode_convergence_order": true
+  },
+  "threshold_decisions": [
+    {
+      "comparison": ">=",
+      "decision_number": 1,
+      "evidence": "off_shell_x_mode p_min",
+      "observed_value": 1.9916550282637009,
+      "pass": true,
+      "threshold": 1.8,
+      "threshold_id": "minimum_two_finest_x_mode_convergence_order"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 2,
+      "evidence": "off_shell_y_mode p_min",
+      "observed_value": 1.9916554104408082,
+      "pass": true,
+      "threshold": 1.8,
+      "threshold_id": "minimum_two_finest_y_mode_convergence_order"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 3,
+      "evidence": "N=256 off_shell_x_mode combined relative identity error",
+      "observed_value": 0.0037615209464743715,
+      "pass": true,
+      "threshold": 0.02,
+      "threshold_id": "maximum_finest_x_mode_combined_relative_identity_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 4,
+      "evidence": "N=256 off_shell_y_mode combined relative identity error",
+      "observed_value": 0.002490250625003484,
+      "pass": true,
+      "threshold": 0.02,
+      "threshold_id": "maximum_finest_y_mode_combined_relative_identity_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 5,
+      "evidence": "N=256 temporal-mode combined absolute divergence error",
+      "observed_value": 1.809414347125402e-19,
+      "pass": true,
+      "threshold": 1e-11,
+      "threshold_id": "maximum_finest_on_shell_combined_absolute_divergence_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 6,
+      "evidence": "maximum explicit-profile residual versus independently assembled analytic derivative reference",
+      "observed_value": 2.220446049250313e-16,
+      "pass": true,
+      "threshold": 1e-12,
+      "threshold_id": "maximum_analytic_profile_residual_reference_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 7,
+      "evidence": "maximum absolute component of nabla_lambda g_mu_nu",
+      "observed_value": 5.551115123125783e-17,
+      "pass": true,
+      "threshold": 1e-12,
+      "threshold_id": "maximum_metric_compatibility_absolute_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 8,
+      "evidence": "maximum abs(R_generic-R_analytic) over all frozen grids",
+      "observed_value": 1.1102230246251565e-16,
+      "pass": true,
+      "threshold": 1e-12,
+      "threshold_id": "maximum_curvature_route_absolute_discrepancy"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 9,
+      "evidence": "maximum abs(R_analytic) over the frozen background",
+      "observed_value": 0.5,
+      "pass": true,
+      "threshold": 0.49,
+      "threshold_id": "minimum_curvature_peak_absolute_value"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 10,
+      "evidence": "max(R_analytic)-min(R_analytic)",
+      "observed_value": 0.8333333333333334,
+      "pass": true,
+      "threshold": 0.8,
+      "threshold_id": "minimum_curvature_peak_to_peak_variation"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 11,
+      "evidence": "generic epsilon=0 route versus independent Cartesian route",
+      "observed_value": 0.0,
+      "pass": true,
+      "threshold": 1e-11,
+      "threshold_id": "maximum_flat_limit_absolute_discrepancy"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 12,
+      "evidence": "minimum of N=256 x-mode and y-mode control ratios",
+      "observed_value": 47.801337946115424,
+      "pass": true,
+      "threshold": 10.0,
+      "threshold_id": "minimum_naive_partial_divergence_error_ratio"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 13,
+      "evidence": "N=256 temporal-mode omitted tensor-index ratio",
+      "observed_value": 210143613602.23843,
+      "pass": true,
+      "threshold": 10.0,
+      "threshold_id": "minimum_omitted_tensor_index_term_error_ratio"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 14,
+      "evidence": "N=256 temporal-mode omitted volume-trace ratio",
+      "observed_value": 210143613602.23843,
+      "pass": true,
+      "threshold": 10.0,
+      "threshold_id": "minimum_omitted_volume_trace_term_error_ratio"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 15,
+      "evidence": "minimum of N=256 x-mode and y-mode discrepancies",
+      "observed_value": 0.20474047561384387,
+      "pass": true,
+      "threshold": 0.02,
+      "threshold_id": "minimum_flat_geometry_substitution_normalized_discrepancy"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 16,
+      "evidence": "N=256 y-mode wrong-inverse-metric discrepancy",
+      "observed_value": 0.5589936806181929,
+      "pass": true,
+      "threshold": 0.02,
+      "threshold_id": "minimum_incorrect_y_inverse_metric_normalized_discrepancy"
+    }
+  ],
+  "threshold_evidence": {
+    "curvature_peak_to_peak_variation": 0.8333333333333334,
+    "finest_on_shell_combined_absolute_divergence_error": 1.809414347125402e-19,
+    "finest_x_mode_combined_relative_identity_error": 0.0037615209464743715,
+    "finest_y_mode_combined_relative_identity_error": 0.002490250625003484,
+    "flat_geometry_substitution_minimum_profile_normalized_discrepancy": 0.20474047561384387,
+    "incorrect_y_inverse_metric_normalized_discrepancy": 0.5589936806181929,
+    "maximum_analytic_profile_residual_reference_error": 2.220446049250313e-16,
+    "maximum_curvature_route_absolute_discrepancy": 1.1102230246251565e-16,
+    "maximum_flat_limit_absolute_discrepancy": 0.0,
+    "maximum_metric_compatibility_absolute_error": 5.551115123125783e-17,
+    "minimum_two_finest_x_mode_convergence_order": 1.9916550282637009,
+    "minimum_two_finest_y_mode_convergence_order": 1.9916554104408082,
+    "naive_partial_divergence_minimum_profile_ratio": 47.801337946115424,
+    "omitted_tensor_index_term_error_ratio": 210143613602.23843,
+    "omitted_volume_trace_term_error_ratio": 210143613602.23843,
+    "peak_absolute_scalar_curvature": 0.5
+  },
+  "thresholds": {
+    "all_thresholds_required": true,
+    "maximum_analytic_profile_residual_reference_error": 1e-12,
+    "maximum_curvature_route_absolute_discrepancy": 1e-12,
+    "maximum_finest_on_shell_combined_absolute_divergence_error": 1e-11,
+    "maximum_finest_x_mode_combined_relative_identity_error": 0.02,
+    "maximum_finest_y_mode_combined_relative_identity_error": 0.02,
+    "maximum_flat_limit_absolute_discrepancy": 1e-11,
+    "maximum_metric_compatibility_absolute_error": 1e-12,
+    "minimum_curvature_peak_absolute_value": 0.49,
+    "minimum_curvature_peak_to_peak_variation": 0.8,
+    "minimum_flat_geometry_substitution_normalized_discrepancy": 0.02,
+    "minimum_incorrect_y_inverse_metric_normalized_discrepancy": 0.02,
+    "minimum_naive_partial_divergence_error_ratio": 10.0,
+    "minimum_omitted_tensor_index_term_error_ratio": 10.0,
+    "minimum_omitted_volume_trace_term_error_ratio": 10.0,
+    "minimum_two_finest_x_mode_convergence_order": 1.8,
+    "minimum_two_finest_y_mode_convergence_order": 1.8
+  }
+}

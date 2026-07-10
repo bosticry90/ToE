@@ -9,12 +9,19 @@ import pytest
 
 from formal.python.tools.scalar_higher_dimensional_curved_background_reports import (
     BACKGROUND_GEOMETRY_CLASSIFICATION,
+    CALCULATION_MANIFEST_RELATIVE_PATH,
+    CALCULATION_OUTPUT_RELATIVE_PATH,
+    CALCULATION_SCRIPT_PATH,
     COORDINATE_GRID_NORM_NAME,
     DIAGNOSTIC_FAILURE_TARGET,
     EPSILON_CONTROL,
     EPSILON_NORM,
     EPSILON_R,
     EQUATION_ID,
+    EXECUTION_OUTCOME,
+    EXECUTION_REPORT_RELATIVE_PATH,
+    EXECUTION_REPORT_SCHEMA_ID,
+    EXECUTION_STRICT_OUTCOME,
     EXECUTION_TARGET,
     EXECUTION_TARGET_KIND,
     EXPECTED_GUARDRAIL_SHA256,
@@ -28,18 +35,27 @@ from formal.python.tools.scalar_higher_dimensional_curved_background_reports imp
     NEGATIVE_CONTROL_IDS,
     PACKET_ID,
     PACKET_SCHEMA_ID,
+    REVIEW_TARGET,
     SPATIAL_RESOLUTIONS,
     SUPERSEDED_GUARDRAIL_REPORT_PATH,
     SUPERSEDED_PACKET_ID,
     SUPERSEDED_PACKET_SCHEMA_ID,
     THRESHOLD_IDS,
     TIME_SLICES,
+    build_execution_report,
     build_guardrail_payload,
     canonical_json_bytes,
+    execution_report_main,
     guardrail_main,
     report_json_bytes,
     sha256_path,
+    validate_calculation_manifest,
+    validate_calculation_result,
     validate_guardrail_payload,
+)
+from formal.python.toe.calculations import (
+    calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background
+    as calculation,
 )
 
 
@@ -642,3 +658,217 @@ def test_every_frozen_science_contract_is_exact(mutation: object) -> None:
     mutation(payload)  # type: ignore[operator]
     with pytest.raises(ValueError, match="exact frozen contract"):
         validate_guardrail_payload(payload)
+
+
+@pytest.fixture(scope="module")
+def calculation_result_and_guardrail() -> tuple[dict, dict]:
+    return calculation.build_result(), build_guardrail_payload()
+
+
+@pytest.fixture()
+def execution_artifacts(tmp_path: Path) -> dict[str, object]:
+    output_path = tmp_path / "result.json"
+    manifest_path = tmp_path / "manifest.json"
+    result, manifest = calculation.write_artifacts(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    return {
+        "output_path": output_path,
+        "manifest_path": manifest_path,
+        "result": result,
+        "manifest": manifest,
+    }
+
+
+def test_execution_report_binds_candidate_e_repro_without_accepting_it(
+    execution_artifacts: dict[str, object],
+) -> None:
+    output_path = execution_artifacts["output_path"]
+    manifest_path = execution_artifacts["manifest_path"]
+    assert isinstance(output_path, Path)
+    assert isinstance(manifest_path, Path)
+    report = build_execution_report(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    assert report == build_execution_report(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    assert report["schema_id"] == EXECUTION_REPORT_SCHEMA_ID
+    assert report["status"] == (
+        "executed_candidate_e_repro_pending_independent_review"
+    )
+    assert report["packet_result"] == EXECUTION_OUTCOME
+    assert report["strict_packet_result"] == EXECUTION_STRICT_OUTCOME
+    assert report["selected_next_target"] == REVIEW_TARGET
+    assert report["all_thresholds_passed"] is True
+    assert len(report["threshold_checks"]) == 16
+    assert all(report["threshold_checks"].values())
+    assert report["control_counts"] == {
+        "profile_count": 3,
+        "time_slice_count": 3,
+        "resolution_count": 4,
+        "divergence_component_count": 3,
+        "profile_time_resolution_row_count": 36,
+        "profile_resolution_aggregate_count": 12,
+        "curvature_route_count": 2,
+        "flat_limit_row_count": 36,
+        "negative_control_type_count": 5,
+        "negative_control_record_count": 20,
+        "frozen_threshold_decision_count": 16,
+    }
+    assert report["five_artifact_chain_prepared_for_independent_review"] is True
+    assert report["calculation_output_path"] == CALCULATION_OUTPUT_RELATIVE_PATH
+    assert report["calculation_manifest_path"] == (
+        CALCULATION_MANIFEST_RELATIVE_PATH
+    )
+    assert report["execution_report_path"] == EXECUTION_REPORT_RELATIVE_PATH
+    assert report["claim"]["primary_label"] == "E-REPRO"
+    assert report["claim"]["review_accepted"] is False
+    assert report["claim"]["claim_ceiling_level"] == 3
+    assert report["boundary"]["spacetime_dimension"] == 3
+    assert report["boundary"][
+        "two_dimensional_Einstein_degeneracy_not_applicable"
+    ] is True
+    assert report["boundary"]["Einstein_source_tested"] is False
+
+
+def test_execution_report_cli_writes_deterministic_report_bytes(
+    execution_artifacts: dict[str, object],
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    output_path = execution_artifacts["output_path"]
+    manifest_path = execution_artifacts["manifest_path"]
+    assert isinstance(output_path, Path)
+    assert isinstance(manifest_path, Path)
+    report_path = tmp_path / "execution-report.json"
+    assert execution_report_main(
+        [
+            "--output",
+            str(output_path),
+            "--manifest",
+            str(manifest_path),
+            "--out",
+            str(report_path),
+        ]
+    ) == 0
+    expected = build_execution_report(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    assert report_path.read_bytes() == report_json_bytes(expected)
+    assert b"\r" not in report_path.read_bytes()
+    summary = json.loads(capsys.readouterr().out)
+    assert summary["claim_label"] == "E-REPRO"
+    assert summary["selected_next_target"] == REVIEW_TARGET
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda p: p.__setitem__("selected_next_target", "review_wrong"),
+        lambda p: p["result_review"].__setitem__("target", None),
+        lambda p: p["threshold_checks"].__setitem__(
+            "minimum_two_finest_x_mode_convergence_order", False
+        ),
+        lambda p: p["convergence_diagnostics"]["off_shell_x_mode"][
+            "combined"
+        ].__setitem__("p_min", 0.0),
+        lambda p: p["geometry_verification"]["resolution_diagnostics"][0][
+            "x_index_error_rows"
+        ][8].__setitem__("status", "reported"),
+        lambda p: p["negative_controls"][
+            "finest_resolution_adjudication"
+        ].__setitem__("all_five_negative_controls_passed", False),
+        lambda p: p["boundary"].__setitem__(
+            "two_dimensional_einstein_gravity_degenerate", True
+        ),
+        lambda p: p.__setitem__("profile_time_resolution_row_count", 35),
+    ],
+)
+def test_execution_result_tampering_is_rejected(
+    calculation_result_and_guardrail: tuple[dict, dict], mutation: object
+) -> None:
+    result, guardrail = calculation_result_and_guardrail
+    tampered = copy.deepcopy(result)
+    mutation(tampered)  # type: ignore[operator]
+    with pytest.raises(ValueError):
+        validate_calculation_result(tampered, guardrail)
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda p: p.__setitem__("output_path", "temporary/result.json"),
+        lambda p: p.__setitem__("selected_next_target", "review_wrong"),
+        lambda p: p.__setitem__("result_review_target", None),
+        lambda p: p["environment"].__setitem__("temporary_path", "C:/tmp"),
+        lambda p: p["boundary"].__setitem__("Einstein_source_tested", True),
+    ],
+)
+def test_execution_manifest_tampering_is_rejected(
+    execution_artifacts: dict[str, object], mutation: object
+) -> None:
+    result = execution_artifacts["result"]
+    manifest = execution_artifacts["manifest"]
+    output_path = execution_artifacts["output_path"]
+    assert isinstance(result, dict)
+    assert isinstance(manifest, dict)
+    assert isinstance(output_path, Path)
+    tampered = copy.deepcopy(manifest)
+    mutation(tampered)  # type: ignore[operator]
+    with pytest.raises(ValueError):
+        validate_calculation_manifest(
+            tampered,
+            result=result,
+            output_sha256=sha256_path(output_path),
+            script_sha256=sha256_path(CALCULATION_SCRIPT_PATH),
+        )
+
+
+def test_execution_builder_rejects_noncanonical_duplicate_and_nonfinite_json(
+    execution_artifacts: dict[str, object],
+) -> None:
+    output_path = execution_artifacts["output_path"]
+    manifest_path = execution_artifacts["manifest_path"]
+    result = execution_artifacts["result"]
+    assert isinstance(output_path, Path)
+    assert isinstance(manifest_path, Path)
+    assert isinstance(result, dict)
+    original = output_path.read_bytes()
+    bad_payloads = [
+        json.dumps(result, indent=2, sort_keys=True).encode("utf-8") + b"\n",
+        b'{"schema_id":"a","schema_id":"b"}\n',
+        b'{"schema_id":NaN}\n',
+        b"\xef\xbb\xbf{}\n",
+    ]
+    for bad in bad_payloads:
+        output_path.write_bytes(bad)
+        with pytest.raises(ValueError):
+            build_execution_report(
+                output_path=output_path,
+                manifest_path=manifest_path,
+            )
+    output_path.write_bytes(original)
+
+
+def test_execution_report_cli_returns_nonzero_for_threshold_failure(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    blocked = {
+        "all_thresholds_passed": False,
+        "claim": {"primary_label": "B-BLOCKED"},
+        "packet_result": "blocked_threshold_failure",
+        "selected_next_target": DIAGNOSTIC_FAILURE_TARGET,
+    }
+    monkeypatch.setattr(
+        "formal.python.tools.scalar_higher_dimensional_curved_background_reports."
+        "build_execution_report",
+        lambda **_: blocked,
+    )
+    report_path = tmp_path / "blocked-report.json"
+    assert execution_report_main(["--out", str(report_path)]) == 1
+    assert json.loads(report_path.read_text(encoding="utf-8")) == blocked

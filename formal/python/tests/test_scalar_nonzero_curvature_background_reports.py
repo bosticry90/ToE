@@ -361,14 +361,15 @@ def test_execution_and_review_are_preserved_after_review_rotation() -> None:
         "higher_dimensional_curved_background_v0"
     )
     assert state["previous_live_next_target"] == (
-        HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET
-    )
-    assert state["live_next_target"] == (
         "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
         "higher_dimensional_curved_background_v0"
     )
+    assert state["live_next_target"] == (
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "higher_dimensional_curved_background_v0_result"
+    )
     assert active["workstream_id"] == state["live_next_target"]
-    assert active["calculation_executed"] == "no"
+    assert active["calculation_executed"] == "yes"
     assert active["report_sha256"] == (
-        "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96"
+        "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2"
     )
