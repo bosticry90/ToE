@@ -44,13 +44,19 @@ from formal.python.tools.science_first_pillar_seam_rebase_reports import (
     REVIEW_STRICT_OUTCOME as SCIENCE_FIRST_REBASE_REVIEW_STRICT_OUTCOME,
     REVIEW_TARGET as SCIENCE_FIRST_REBASE_REVIEW_TARGET,
 )
+from formal.python.tools.scalar_stress_energy_minkowski_reports import (
+    EXECUTION_TARGET as SCALAR_MINKOWSKI_EXECUTION_TARGET,
+    GUARDRAIL_OUTCOME as SCALAR_FLAT_GUARDRAIL_OUTCOME,
+    GUARDRAIL_STRICT_OUTCOME as SCALAR_FLAT_GUARDRAIL_STRICT_OUTCOME,
+    GUARDRAIL_TARGET as SCALAR_FLAT_GUARDRAIL_TARGET,
+)
 
 
 FINAL_LIVE_TARGET = (
-    FIRST_SPRINT_GUARDRAIL_TARGET
+    SCALAR_MINKOWSKI_EXECUTION_TARGET
 )
 FINAL_PREVIOUS_TARGET = (
-    SCIENCE_FIRST_REBASE_REVIEW_TARGET
+    SCALAR_FLAT_GUARDRAIL_TARGET
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
@@ -1776,15 +1782,15 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTC
 )
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "ScienceFirstPillarSeamDependencyRebasePacketResultReview.lean"
+    "ScalarQFTGRSourceContractFlatLimitPretestGuardrailPacket.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
-    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_"
+    "SCALAR_QFT_GR_SOURCE_CONTRACT_FLAT_LIMIT_PRETEST_GUARDRAIL_PACKET_"
     "20260709_v0.json"
 )
-FINAL_OUTCOME = SCIENCE_FIRST_REBASE_REVIEW_OUTCOME
-FINAL_STRICT_OUTCOME = SCIENCE_FIRST_REBASE_REVIEW_STRICT_OUTCOME
+FINAL_OUTCOME = SCALAR_FLAT_GUARDRAIL_OUTCOME
+FINAL_STRICT_OUTCOME = SCALAR_FLAT_GUARDRAIL_STRICT_OUTCOME
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
@@ -2029,7 +2035,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result_review"
 )
 FINAL_KIND = (
-    "scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
+    "scalar_stress_energy_divergence_identity_minkowski_calculation_execution"
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"

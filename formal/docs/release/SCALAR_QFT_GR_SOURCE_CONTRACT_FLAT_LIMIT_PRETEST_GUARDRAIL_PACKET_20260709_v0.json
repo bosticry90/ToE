@@ -1,0 +1,138 @@
+{
+  "allowed_operations": [
+    "evaluate the analytic plane-wave field and temporal derivatives",
+    "apply second-order centered periodic spatial differences",
+    "evaluate both nu=0 and nu=1 divergence components",
+    "compute component and combined RMS norms",
+    "estimate convergence orders over the two finest refinement pairs",
+    "compare the off-shell residual coefficient with the exact value 1.05",
+    "write deterministic result, manifest, and execution-report artifacts"
+  ],
+  "assumptions": [
+    "fixed 1+1-dimensional Minkowski spacetime",
+    "real scalar field",
+    "periodic spatial boundary",
+    "analytic plane-wave temporal derivatives",
+    "smooth field evaluated at fixed time slices",
+    "no Einstein-equation solve and no curved-spacetime dynamics"
+  ],
+  "calculation_executed": false,
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "array_order": "preserved",
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim_ceiling": {
+    "claim_ladder_level": 3,
+    "classification": "toy-model demonstration",
+    "execution_e_repro_status": "pending_result_review",
+    "not_gravity_dynamics": true,
+    "not_seam_admissibility": true,
+    "not_source_admissibility": true
+  },
+  "consumed_target": "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet",
+  "consumed_target_kind": "scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet",
+  "e_repro_claimed": false,
+  "equation_compendium_row_added": false,
+  "equation_surfaces": {
+    "action": "S[phi] = integral dtdx [-1/2 partial_mu phi partial^mu phi - 1/2 m^2 phi^2]",
+    "divergence_identity": "partial_mu T^{mu nu} = E_phi partial^nu phi",
+    "equation_compendium_edited": false,
+    "field_residual": "E_phi = box phi - m^2 phi",
+    "metric_signature": "eta_mu_nu = diag(-1,+1)",
+    "proposed_equation_ids_pending_review": [
+      "EQ-QFT-SCALAR-STRESS-ENERGY-v0",
+      "EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0"
+    ],
+    "stress_energy": "T^{mu nu} = partial^mu phi partial^nu phi - eta^{mu nu} [1/2 partial_alpha phi partial^alpha phi + 1/2 m^2 phi^2]"
+  },
+  "failure_criteria": {
+    "any_threshold_failure": true,
+    "failed_artifacts_preserved": true,
+    "primary_claim_label": "B-BLOCKED",
+    "selected_repair_target": "repair_calc_scalar_stress_energy_divergence_identity_minkowski_v0_threshold_failure",
+    "threshold_changes_require_new_versioned_guardrail": true
+  },
+  "forbidden_claims": [
+    "gravity dynamics",
+    "GR source admissibility",
+    "Bianchi compatibility",
+    "QFT-GR seam admissibility or closure",
+    "pillar completion",
+    "CCFT validation or resumption",
+    "master-action canonicalization, promotion, or closure"
+  ],
+  "inputs": {
+    "amplitude_A": 0.2,
+    "field": "phi(t,x) = A cos(k x - omega t)",
+    "mass_m": 1.0,
+    "off_shell_exact_coefficient": 1.05,
+    "off_shell_exact_residual": "E_phi = 1.05 * phi",
+    "omega_off_definition": "1.1 * sqrt(5)",
+    "omega_on_definition": "sqrt(k^2 + m^2) = sqrt(5)",
+    "spatial_domain": "x in [0, 2*pi), periodic",
+    "spatial_resolutions_N": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "time_slices": [
+      0.0,
+      0.37,
+      0.91
+    ],
+    "wave_number_k": 2.0
+  },
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "numerical_method": {
+    "combined_rms_norm": "sqrt(mean(v_0^2 + v_1^2))",
+    "component_rms_norm": "sqrt(mean(v_nu^2))",
+    "off_shell_identity_relative_error": "norm(divergence - E_phi * partial^nu phi) / max(norm(E_phi * partial^nu phi), 1e-14)",
+    "on_shell_error_policy": "report absolute divergence norms; no relative error against zero",
+    "spatial_derivatives": "second-order centered periodic finite differences",
+    "temporal_derivatives": "analytic"
+  },
+  "outputs": {
+    "execution_report": "formal/docs/release/SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTION_20260709_v0.json",
+    "manifest": "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-MANIFEST-v0.json",
+    "result": "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json"
+  },
+  "packet_id": "SCALAR_QFT_GR_SOURCE_CONTRACT_FLAT_LIMIT_PRETEST_GUARDRAIL_PACKET_v0",
+  "packet_result": "SCALAR_QFT_GR_SOURCE_CONTRACT_FLAT_LIMIT_PRETEST_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_MINKOWSKI_STRESS_ENERGY_DIVERGENCE_IDENTITY_CALCULATION_ONLY",
+  "question": "Does a second-order periodic spatial discretization reproduce the flat 1+1-dimensional scalar stress-energy divergence identity for on-shell and deliberately off-shell plane waves?",
+  "readiness_authority": {
+    "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+    "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+    "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+    "status": "accepted_current_science_sprint_readiness_authority"
+  },
+  "reproduction_command": "python -m formal.python.toe.calculations.calc_scalar_stress_energy_divergence_identity_minkowski",
+  "schema_id": "SCALAR_QFT_GR_SOURCE_CONTRACT_FLAT_LIMIT_PRETEST_GUARDRAIL_PACKET_20260709_v0",
+  "selected_next_target": "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0",
+  "selected_next_target_kind": "scalar_stress_energy_divergence_identity_minkowski_calculation_execution",
+  "status": "prepared_authorizes_execution_only",
+  "strict_packet_result": "SCALAR_QFT_GR_SOURCE_CONTRACT_FLAT_LIMIT_PRETEST_GUARDRAIL_PACKET_PREPARED_LEVEL_3_PRETEST_ONLY_NO_GRAVITY_DYNAMICS_NO_SOURCE_ADMISSIBILITY_NO_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION",
+  "success_criteria": {
+    "all_thresholds_required": true,
+    "maximum_exact_coefficient_absolute_error": 1e-12,
+    "maximum_finest_combined_off_shell_relative_error": 0.02,
+    "minimum_convergence_order_two_finest_pairs": 1.8,
+    "minimum_finest_off_to_on_divergence_norm_ratio": 100.0
+  },
+  "units": {
+    "convention": "dimensionless numerical test units with c = hbar = 1",
+    "coordinate_and_parameter_consistency": "k, m, omega, x, and t use one internally consistent natural-unit normalization",
+    "physical_parameter_inference_allowed": false
+  }
+}
