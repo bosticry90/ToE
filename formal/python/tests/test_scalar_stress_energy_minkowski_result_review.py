@@ -88,17 +88,17 @@ def test_review_is_preserved_after_curved_guardrail_rotation() -> None:
     assert review["status"] == "paused"
     assert review["selected_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
-        "conformal_background_v0"
-    )
-    assert state["live_next_target"] == (
         "review_calc_scalar_stress_energy_covariant_divergence_identity_"
         "conformal_background_v0_result"
+    )
+    assert state["live_next_target"] == (
+        "prepare_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+        "curvature_background_guardrail_packet"
     )
     assert active["workstream_id"] == state["live_next_target"]
 
 
-def test_successful_review_activates_only_the_two_scoped_equation_surfaces() -> None:
+def test_successful_review_preserves_the_two_minkowski_equation_surfaces() -> None:
     compendium = (
         REPO_ROOT
         / "formal"
@@ -111,7 +111,7 @@ def test_successful_review_activates_only_the_two_scoped_equation_surfaces() -> 
         "EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0",
     ):
         assert equation_id in compendium
-    assert compendium.count("ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO") == 2
+    assert compendium.count("ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO") == 3
 
 
 def test_tampered_output_hash_returns_structured_blocker(tmp_path: Path) -> None:

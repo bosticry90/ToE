@@ -1,0 +1,104 @@
+{
+  "background_geometry": {
+    "background_geometry_classification": "locally_flat_nontrivial_conformal_connection",
+    "covariant_connection_test_claimed": true,
+    "curvature_test_claimed": false,
+    "scalar_curvature": 0.0
+  },
+  "boundary": {
+    "bianchi_compatibility_claimed": false,
+    "ccft_resumed": false,
+    "ccft_validated": false,
+    "genuine_nonzero_curvature_validated": false,
+    "gravity_dynamics_validated": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "source_admissibility_claimed": false
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "locally-flat conformal-coordinate scalar covariant-connection identity calculation only",
+    "claim_status": "accepted_scoped_level_3_locally_flat_connection_test_only",
+    "primary_label": "E-REPRO"
+  },
+  "consumed_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_conformal_background_v0_result",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_conformal_background_calculation_result_review",
+  "equation_compendium_rows_activated": [
+    "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0"
+  ],
+  "equation_compendium_status": "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO",
+  "execution_artifacts_modified_by_review": false,
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "packet_result": "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_LOCALLY_FLAT_NONTRIVIAL_CONNECTION_TEST_ONLY_NO_CURVATURE_OR_SOURCE_ADMISSIBILITY_CLAIM",
+  "remaining_blockers": [
+    "no genuine nonzero-curvature fixed-background witness",
+    "no dynamical gravity or Einstein-scalar evolution",
+    "no GR source admissibility",
+    "no Bianchi compatibility",
+    "no QFT-GR seam admissibility or closure",
+    "no master-action promotion"
+  ],
+  "review_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_RESULT_REVIEW_v0",
+  "review_result": "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_LOCALLY_FLAT_NONTRIVIAL_CONNECTION_TEST_ONLY_NO_CURVATURE_OR_SOURCE_ADMISSIBILITY_CLAIM",
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0",
+  "selected_next_target": "prepare_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_guardrail_packet",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_guardrail_packet",
+  "status": "accepted_scoped_e_repro",
+  "strict_packet_result": "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_RESULT_REVIEW_ACCEPTS_SCOPED_E_REPRO_FOR_COVARIANT_CONNECTION_IDENTITY_ONLY_NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION",
+  "strict_review_result": "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_RESULT_REVIEW_ACCEPTS_SCOPED_E_REPRO_FOR_COVARIANT_CONNECTION_IDENTITY_ONLY_NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION",
+  "verification": {
+    "accepted": true,
+    "actual_hashes": {
+      "execution_report_sha256": "38746a5089013c5d0044962318409c072b81defd0b54e680f7aedfcbcee5e4b9",
+      "guardrail_sha256": "0e16434fca7015b8f2f1c5096050dc05d75904ec34f6cba38c63e33227679f63",
+      "manifest_sha256": "06e609823aea3237d32136f450005458d27f6b985f07f910fd3d37be321c6b79",
+      "output_sha256": "1141870b5a83289a7fc36b32a5375f2a48c96070e15b87c05f17ecfa88e62922",
+      "script_sha256": "5ecc11be6538a9f266a671bff92e2e143d592c7426e89033a2185374420ae399"
+    },
+    "all_six_thresholds_match": true,
+    "background_geometry_classification_match": true,
+    "canonical_bytes_match": true,
+    "claim_status": "accepted_scoped_level_3_locally_flat_connection_test_only",
+    "control_counts": {
+      "divergence_component_count": 2,
+      "off_shell_resolution_aggregates": 4,
+      "off_shell_time_resolution_rows": 12,
+      "on_shell_resolution_aggregates": 4,
+      "on_shell_time_resolution_rows": 12,
+      "resolution_count": 4,
+      "time_slice_count": 3
+    },
+    "expected_hashes": {
+      "execution_report_sha256": "38746a5089013c5d0044962318409c072b81defd0b54e680f7aedfcbcee5e4b9",
+      "guardrail_sha256": "0e16434fca7015b8f2f1c5096050dc05d75904ec34f6cba38c63e33227679f63",
+      "manifest_sha256": "06e609823aea3237d32136f450005458d27f6b985f07f910fd3d37be321c6b79",
+      "output_sha256": "1141870b5a83289a7fc36b32a5375f2a48c96070e15b87c05f17ecfa88e62922",
+      "script_sha256": "5ecc11be6538a9f266a671bff92e2e143d592c7426e89033a2185374420ae399"
+    },
+    "independent_in_memory_regeneration_match": true,
+    "mismatch_codes": [],
+    "naive_partial_divergence_negative_control": {
+      "description": "replace nabla_mu T^{mu nu} by partial_mu T^{mu nu} and retain the same right-hand side",
+      "diagnostic_only_not_guardrail_threshold": true,
+      "expected": "generally fails when connection terms are omitted",
+      "failure_detected": true,
+      "finest_on_shell_naive_to_covariant_error_ratio": 862.689855409258
+    },
+    "naive_partial_divergence_negative_control_match": true,
+    "per_resolution_results_match": true,
+    "primary_claim_label": "E-REPRO",
+    "selected_next_target": "prepare_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_guardrail_packet",
+    "threshold_evidence": {
+      "exact_coefficient_absolute_error": 7.771561172376096e-16,
+      "finest_combined_off_shell_relative_error": 0.004010933857743127,
+      "finest_off_to_on_divergence_norm_ratio": 275.9754880347044,
+      "flat_limit_max_absolute_discrepancy": 0.0,
+      "metric_compatibility_max_absolute_error": 0.0,
+      "minimum_observed_two_finest_convergence_order": 1.9979141144313803
+    }
+  }
+}

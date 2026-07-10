@@ -16,6 +16,7 @@ from formal.python.tools.scalar_curved_background_retest_reports import (
     EXECUTION_TARGET,
     GUARDRAIL_OUTCOME,
     GUARDRAIL_STRICT_OUTCOME,
+    NONZERO_CURVATURE_GUARDRAIL_TARGET,
     PROPOSED_EQUATION_ID,
     THRESHOLD_REPAIR_TARGET,
     build_guardrail_payload,
@@ -116,7 +117,7 @@ def test_guardrail_does_not_execute_or_promote_equations() -> None:
     assert payload["ccft_lane_status"] == "paused_upstream_prerequisites"
 
 
-def test_guardrail_and_execution_are_preserved_pending_result_review() -> None:
+def test_guardrail_execution_and_review_are_preserved_after_review() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
@@ -126,6 +127,11 @@ def test_guardrail_and_execution_are_preserved_pending_result_review() -> None:
         registry,
     )
     execution = workstream(EXECUTION_TARGET, registry)
+    review = workstream(
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0_result",
+        registry,
+    )
     assert guardrail["status"] == "paused"
     assert guardrail["selected_next_target"] == EXECUTION_TARGET
     assert execution["status"] == "paused"
@@ -133,14 +139,13 @@ def test_guardrail_and_execution_are_preserved_pending_result_review() -> None:
         "review_calc_scalar_stress_energy_covariant_divergence_identity_"
         "conformal_background_v0_result"
     )
+    assert review["status"] == "paused"
+    assert review["selected_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
-        "conformal_background_v0"
-    )
-    assert state["live_next_target"] == (
         "review_calc_scalar_stress_energy_covariant_divergence_identity_"
         "conformal_background_v0_result"
     )
+    assert state["live_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
     assert active["curvature_test_claimed"] == "no"

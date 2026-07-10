@@ -34,6 +34,7 @@ Non-claim boundary:
 | `EQ-QFT-SCALAR-KG-CLASS-v0` | `physics` | `(Box + m^2) phi = 0` | `ROUTE_ACTIVE_NONCLAIM` | `formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md` |
 | `EQ-QFT-SCALAR-STRESS-ENERGY-v0` | `math+physics` | `T^{mu nu} = partial^mu phi partial^nu phi - eta^{mu nu} [1/2 partial_alpha phi partial^alpha phi + 1/2 m^2 phi^2]` | `ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO` | `formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json` |
 | `EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0` | `math+physics` | `partial_mu T^{mu nu} = (Box phi - m^2 phi) partial^nu phi` | `ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO` | `formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json` |
+| `EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0` | `math+physics` | `nabla_mu T^{mu nu} = (Box_g phi - V'(phi)) nabla^nu phi` | `ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO` | `formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-CONFORMAL-BACKGROUND-v0.json` |
 | `EQ-QM-SCHRODINGER-FORM-v0` | `physics` | `i * d_t psi = H psi` | `CLAIM_SURFACE_TARGET_PINNED` | `formal/docs/paper/TOE_CLAIM_SURFACE_v0.md` |
 | `EQ-INFO-OPERATIONAL-POSITION-CONSTRAINT-v0` | `physics+information` | `Position := timing-window + correlation-consistency constraint satisfiability` | `STATEMENT_LOCK_PINNED` | `formal/docs/paper/DERIVATION_TARGET_INFORMATION_CONSTRAINT_OPERATIONAL_POSITION_INTEGRATION_v0.md` |
 | `EQ-SR-COVARIANCE-STRUCTURE-v0` | `physics` | `Lorentz/Poincare invariance + transformation laws` | `STRUCTURE_SURFACE_PINNED` | `formal/docs/paper/TOE_CLAIM_SURFACE_v0.md` |
@@ -73,6 +74,7 @@ Notes:
 | `WORK-PHYS-COSMO-BG-v0` | COSMO background expansion/source-coupling scaffold route | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `formal/output/cosmo_m3_completion_promotion_cycle01_v0.json` | `formal/python/tests/test_cosmo_background_kickoff_gate.py` |
 | `WORK-PHYS-QFT-SCALAR-ROUTE-v0` | QFT scalar derivation route | `formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md` | `formal/output/toe_qft_scalar_field_equations_v0.json` | `formal/python/tests/test_toe_qft_scalar_field_equation_gate.py` |
 | `WORK-PHYS-QFT-SCALAR-STRESS-DIVERGENCE-MINKOWSKI-v0` | Level 3 flat-limit scalar stress-energy divergence pretest | `formal/docs/release/SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_20260709_v0.json` | `formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json` | `formal/python/tests/test_scalar_stress_energy_minkowski_result_review.py` |
+| `WORK-PHYS-QFT-SCALAR-STRESS-DIVERGENCE-CONFORMAL-CONNECTION-v0` | Level 3 locally-flat nontrivial-connection scalar covariant-divergence test | `formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json` | `formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-CONFORMAL-BACKGROUND-v0.json` | `formal/python/tests/test_scalar_stress_energy_conformal_background_result_review.py` |
 
 ## 4) Pillar equation family index
 

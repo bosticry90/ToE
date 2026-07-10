@@ -102,12 +102,12 @@ def test_guardrail_and_execution_are_preserved_after_result_review() -> None:
         "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
     )
     assert state["live_next_target"] == (
-        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
-        "conformal_background_v0_result"
+        "prepare_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+        "curvature_background_guardrail_packet"
     )
     assert state["previous_live_next_target"] == (
-        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
-        "conformal_background_v0"
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0_result"
     )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["authorized_next_strict_target"] == state["live_next_target"]
