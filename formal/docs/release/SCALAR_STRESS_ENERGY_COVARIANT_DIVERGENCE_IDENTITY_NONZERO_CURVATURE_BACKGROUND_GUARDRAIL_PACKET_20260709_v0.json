@@ -1,0 +1,271 @@
+{
+  "accepted_predecessor": {
+    "accepted_claim_ceiling": "Level 3 toy-model demonstration",
+    "accepted_scope": "locally flat nontrivial conformal connection identity test",
+    "artifact_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_RESULT_REVIEW_v0",
+    "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json",
+    "sha256": "752c4f92521e55ca125024ea0b5956838ac32230dcee5356f6e2a5ed2176c0df"
+  },
+  "allowed_operations": [
+    "evaluate the prescribed metric, inverse metric, and connection",
+    "evaluate analytic scalar and temporal derivatives",
+    "apply second-order centered periodic spatial differences",
+    "compute both nu=eta and nu=x covariant divergence components",
+    "reconstruct curvature independently from metric components",
+    "check metric compatibility nabla_lambda g_mu_nu = 0",
+    "check H=0 flat-limit recovery against the Minkowski implementation",
+    "run the three frozen negative controls",
+    "compute component, combined, and space-time RMS norms",
+    "estimate convergence orders over the two finest refinement pairs",
+    "write deterministic result, manifest, and execution report artifacts"
+  ],
+  "assumptions": [
+    "fixed prescribed 1+1-dimensional de Sitter conformal patch",
+    "real massless minimally coupled scalar with V(phi)=0",
+    "exact source-free plane-wave on-shell solution; no manufactured forcing",
+    "periodic spatial boundary",
+    "analytic metric, connection, field, and temporal derivatives",
+    "second-order numerical spatial derivatives",
+    "no metric evolution and no Einstein-equation solve"
+  ],
+  "background_geometry": {
+    "analytic_scalar_curvature": "R = 2*H^2 = 0.08",
+    "classification": "fixed_1_plus_1_de_sitter_conformal_patch",
+    "fixed_background_only": true,
+    "genuinely_nonzero_curvature_required": true,
+    "gravity_evolved": false,
+    "inverse_metric": "g^mu_nu = a(eta)^(-2) * diag(-1,+1)",
+    "metric": "g_mu_nu = a(eta)^2 * diag(-1,+1)",
+    "metric_signature": "(-,+)",
+    "scalar_curvature": 0.08,
+    "volume_density": "sqrt(-g) = a(eta)^2"
+  },
+  "calculation_executed": false,
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-v0",
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "array_order": "preserved",
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim_ceiling": {
+    "claim_ladder_level": 3,
+    "classification": "single_fixed_nonzero_curvature_background_test",
+    "execution_e_repro_status": "pending_result_review",
+    "not_bianchi_compatibility": true,
+    "not_general_curved_spacetime_theorem": true,
+    "not_gravity_dynamics": true,
+    "not_seam_admissibility": true,
+    "not_source_admissibility": true
+  },
+  "connection_and_curvature_conventions": {
+    "christoffel_definition": "Gamma^rho_{mu nu} = 1/2 g^{rho sigma} (partial_mu g_{sigma nu} + partial_nu g_{sigma mu} - partial_sigma g_{mu nu})",
+    "nonzero_christoffels": {
+      "Gamma^eta_{eta eta}": "q(eta)",
+      "Gamma^eta_{x x}": "q(eta)",
+      "Gamma^x_{eta x}": "q(eta)",
+      "Gamma^x_{x eta}": "q(eta)"
+    },
+    "ricci_contraction": "R_{sigma nu} = R^rho_{sigma rho nu}",
+    "riemann_sign": "R^rho_{sigma mu nu} = partial_mu Gamma^rho_{nu sigma} - partial_nu Gamma^rho_{mu sigma} + Gamma^rho_{mu lambda} Gamma^lambda_{nu sigma} - Gamma^rho_{nu lambda} Gamma^lambda_{mu sigma}",
+    "scalar_contraction": "R = g^{sigma nu} R_{sigma nu}"
+  },
+  "consumed_target": "prepare_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_guardrail_packet",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_guardrail_packet",
+  "curvature_verification": {
+    "analytic_conformal_route": {
+      "expected_value": 0.08,
+      "formula": "R_analytic = 2*a(eta)^(-2)*partial_eta q(eta) = 2*H^2"
+    },
+    "independent_component_route": {
+      "evaluation_points": "all frozen time slices",
+      "expected_ricci_relation": "R_mu_nu = H^2 * g_mu_nu",
+      "expected_value": 0.08,
+      "formula_shortcut_prohibited": "do not use the analytic conformal scalar-curvature formula",
+      "route": [
+        "metric",
+        "inverse_metric",
+        "metric_derivatives",
+        "Christoffel_symbols",
+        "Riemann_tensor",
+        "Ricci_tensor",
+        "scalar_contraction"
+      ]
+    },
+    "maximum_route_agreement_absolute_error": 1e-12,
+    "minimum_absolute_scalar_curvature": 0.05
+  },
+  "e_repro_claimed": false,
+  "equation_compendium_row_added": false,
+  "equation_surfaces": {
+    "covariant_dalembertian": "Box_g phi = 1/sqrt(-g) partial_mu [sqrt(-g) g^{mu nu} partial_nu phi] = a(eta)^(-2)(-partial_eta^2 + partial_x^2) phi",
+    "covariant_divergence": "nabla_mu T^{mu nu} = partial_mu T^{mu nu} + Gamma^mu_{mu lambda} T^{lambda nu} + Gamma^nu_{mu lambda} T^{mu lambda}",
+    "equation_compendium_edited": false,
+    "equation_surface_upgraded": false,
+    "existing_equation_id_reused": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0",
+    "existing_equation_status": "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO",
+    "field_residual": "E_phi = Box_g phi - V'(phi) = Box_g phi",
+    "identity": "nabla_mu T^{mu nu} = E_phi nabla^nu phi",
+    "scalar_action": "S[phi,g] = integral d^2x sqrt(-g) [-1/2 g^{mu nu} partial_mu phi partial_nu phi - V(phi)] with V(phi)=0",
+    "stress_energy": "T^{mu nu} = nabla^mu phi nabla^nu phi - g^{mu nu} [1/2 nabla_alpha phi nabla^alpha phi + V(phi)]"
+  },
+  "failure_criteria": {
+    "any_threshold_failure": true,
+    "failed_artifacts_preserved": true,
+    "primary_claim_label": "B-BLOCKED",
+    "selected_repair_target": "repair_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0_threshold_failure",
+    "threshold_changes_require_new_versioned_guardrail": true
+  },
+  "forbidden_claims": [
+    "general curved-spacetime theorem",
+    "dynamical gravity or Einstein-equation solution",
+    "GR source admissibility",
+    "Bianchi compatibility discharge",
+    "QFT-GR seam admissibility or closure",
+    "quantum or renormalized stress-energy source",
+    "pillar completion",
+    "CCFT validation or resumption",
+    "master-action canonicalization, promotion, or closure"
+  ],
+  "inputs": {
+    "amplitude_A": 0.2,
+    "conformal_hubble_parameter_H": 0.2,
+    "coordinate_domain": {
+      "eta": "eta in [0,1]",
+      "x": "x in [0,2*pi), periodic"
+    },
+    "coordinates": [
+      "eta",
+      "x"
+    ],
+    "dimension": 2,
+    "field": "phi(eta,x) = A cos(k*x - omega*eta)",
+    "logarithmic_scale_derivative": "q(eta) = a'(eta)/a(eta) = H/(1-H*eta)",
+    "mass_m": 0.0,
+    "off_shell_exact_coefficient": 0.84,
+    "off_shell_exact_residual": "E_phi = 0.84 * a(eta)^(-2) * phi",
+    "omega_off": 2.2,
+    "omega_on": 2.0,
+    "scale_factor": "a(eta) = (1 - H*eta)^(-1)",
+    "spatial_resolutions_N": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "time_slices_eta": [
+      0.0,
+      0.37,
+      0.91
+    ],
+    "wave_number_k": 2.0
+  },
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "negative_controls": {
+    "curvature_derivative_omission": {
+      "expected_bad_scalar_curvature": 0.0,
+      "minimum_absolute_discrepancy_from_reference": 0.04,
+      "operation": "omit derivative-of-Gamma terms in the curvature reconstruction"
+    },
+    "inconsistent_frozen_connection": {
+      "minimum_error_ratio": 50.0,
+      "operation": "replace q(eta) by the constant H in the divergence identity",
+      "ratio_definition": "space-time combined RMS inconsistent-connection identity error divided by the correct covariant identity error"
+    },
+    "naive_partial_divergence": {
+      "minimum_error_ratio": 100.0,
+      "operation": "omit all connection terms from nabla_mu T^{mu nu}",
+      "ratio_definition": "space-time combined RMS naive identity error divided by the correct covariant identity error"
+    }
+  },
+  "numerical_method": {
+    "combined_rms_norm_at_each_time": "sqrt(mean_x(v_eta^2 + v_x^2))",
+    "component_rms_norm_at_each_time": "sqrt(mean_x(v_nu^2))",
+    "convergence_order": "log2(error_N/error_2N) over two finest pairs",
+    "flat_limit_comparison": "set H=0 and compare with the accepted Cartesian Minkowski implementation",
+    "metric_and_connection_derivatives": "analytic",
+    "off_shell_identity_relative_error": "norm(nabla_mu T^{mu nu} - E_phi nabla^nu phi) / max(norm(E_phi nabla^nu phi),1e-14)",
+    "on_shell_error_policy": "report absolute covariant-divergence norms; no relative error against a zero reference",
+    "space_time_combined_rms_norm": "sqrt(mean_{eta,x}(v_eta^2 + v_x^2)) over frozen time slices",
+    "spatial_derivatives": "second-order centered periodic finite differences",
+    "temporal_derivatives": "analytic"
+  },
+  "outputs": {
+    "execution_report": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+    "manifest": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-MANIFEST-v0.json",
+    "result": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-v0.json"
+  },
+  "packet_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_GUARDRAIL_PACKET_v0",
+  "packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_FIXED_DE_SITTER_PATCH_COVARIANT_DIVERGENCE_IDENTITY_CALCULATION_ONLY",
+  "question": "Does the scalar covariant stress-energy divergence identity hold numerically for exact source-free on-shell and deliberately off-shell controls on one fixed genuinely curved de Sitter conformal patch?",
+  "readiness_authority": {
+    "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+    "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+    "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+    "status": "accepted_current_science_sprint_readiness_authority"
+  },
+  "reproduction_command": "python -m formal.python.toe.calculations.calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background",
+  "required_controls": {
+    "analytic_curvature_route": true,
+    "complete_hash_manifest": true,
+    "curvature_derivative_omission_negative_control": true,
+    "curvature_route_agreement": true,
+    "deterministic_reexecution": true,
+    "flat_limit_recovery": true,
+    "grid_refinement": true,
+    "inconsistent_frozen_connection_negative_control": true,
+    "independent_component_curvature_route": true,
+    "metric_compatibility": true,
+    "naive_partial_divergence_negative_control": true,
+    "nonzero_curvature_floor": true,
+    "off_shell_control": true,
+    "on_shell_positive_control": true
+  },
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_GUARDRAIL_PACKET_20260709_v0",
+  "selected_next_target": "execute_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_calculation_execution",
+  "solution_controls": {
+    "off_shell_control": {
+      "classification": "deliberately_off_shell_unforced_field",
+      "exact_residual": "E_phi = 0.84 * a(eta)^(-2) * phi",
+      "forced_or_manufactured": false,
+      "omega": 2.2
+    },
+    "on_shell_positive_control": {
+      "classification": "exact_source_free_solution",
+      "exact_residual": "E_phi = 0",
+      "forced_or_manufactured": false,
+      "omega": 2.0
+    }
+  },
+  "status": "prepared_authorizes_execution_only",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_GUARDRAIL_PACKET_PREPARED_LEVEL_3_SINGLE_NONZERO_CURVATURE_BACKGROUND_TEST_ONLY_NO_GRAVITY_EVOLUTION_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION",
+  "success_criteria": {
+    "all_thresholds_required": true,
+    "maximum_curvature_route_absolute_discrepancy": 1e-12,
+    "maximum_exact_coefficient_absolute_error": 1e-12,
+    "maximum_finest_combined_off_shell_relative_error": 0.02,
+    "maximum_flat_limit_absolute_discrepancy": 1e-12,
+    "maximum_metric_compatibility_absolute_error": 1e-12,
+    "minimum_absolute_scalar_curvature": 0.05,
+    "minimum_convergence_order_two_finest_pairs": 1.8,
+    "minimum_curvature_omission_absolute_discrepancy": 0.04,
+    "minimum_finest_off_to_on_divergence_norm_ratio": 100.0,
+    "minimum_inconsistent_frozen_connection_identity_error_ratio": 50.0,
+    "minimum_naive_partial_divergence_identity_error_ratio": 100.0
+  },
+  "units": {
+    "convention": "dimensionless numerical test units with c = hbar = 1",
+    "coordinate_parameter_consistency": "eta, x, H, k, and omega use one natural-unit normalization",
+    "physical_parameter_inference_allowed": false
+  }
+}

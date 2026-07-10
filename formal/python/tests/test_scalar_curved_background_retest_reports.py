@@ -117,7 +117,7 @@ def test_guardrail_does_not_execute_or_promote_equations() -> None:
     assert payload["ccft_lane_status"] == "paused_upstream_prerequisites"
 
 
-def test_guardrail_execution_and_review_are_preserved_after_review() -> None:
+def test_prior_guardrail_execution_and_review_are_preserved_after_rotation() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
@@ -142,10 +142,13 @@ def test_guardrail_execution_and_review_are_preserved_after_review() -> None:
     assert review["status"] == "paused"
     assert review["selected_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
-        "conformal_background_v0_result"
+        "prepare_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+        "curvature_background_guardrail_packet"
     )
-    assert state["live_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
+    assert state["live_next_target"] == (
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "nonzero_curvature_background_v0"
+    )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
     assert active["curvature_test_claimed"] == "no"
