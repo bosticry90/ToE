@@ -56,13 +56,19 @@ from formal.python.tools.scalar_stress_energy_minkowski_reports import (
     REVIEW_OUTCOME as SCALAR_MINKOWSKI_REVIEW_OUTCOME,
     REVIEW_STRICT_OUTCOME as SCALAR_MINKOWSKI_REVIEW_STRICT_OUTCOME,
 )
+from formal.python.tools.scalar_curved_background_retest_reports import (
+    EXECUTION_TARGET as SCALAR_CURVED_EXECUTION_TARGET,
+    GUARDRAIL_OUTCOME as SCALAR_CURVED_GUARDRAIL_OUTCOME,
+    GUARDRAIL_STRICT_OUTCOME as SCALAR_CURVED_GUARDRAIL_STRICT_OUTCOME,
+    GUARDRAIL_TARGET as SCALAR_CURVED_GUARDRAIL_TARGET,
+)
 
 
 FINAL_LIVE_TARGET = (
-    CURVED_RETEST_GUARDRAIL_TARGET
+    SCALAR_CURVED_EXECUTION_TARGET
 )
 FINAL_PREVIOUS_TARGET = (
-    SCALAR_MINKOWSKI_REVIEW_TARGET
+    SCALAR_CURVED_GUARDRAIL_TARGET
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
@@ -1788,15 +1794,15 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTC
 )
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "ScalarStressEnergyDivergenceIdentityMinkowskiCalculationResultReview.lean"
+    "BoundedCurvedSpaceScalarQFTGRSourceContractRetestGuardrailPacket.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
-    "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
-    "RESULT_REVIEW_20260709_v0.json"
+    "BOUNDED_CURVED_SPACE_SCALAR_QFT_GR_SOURCE_CONTRACT_RETEST_"
+    "GUARDRAIL_PACKET_20260709_v0.json"
 )
-FINAL_OUTCOME = SCALAR_MINKOWSKI_REVIEW_OUTCOME
-FINAL_STRICT_OUTCOME = SCALAR_MINKOWSKI_REVIEW_STRICT_OUTCOME
+FINAL_OUTCOME = SCALAR_CURVED_GUARDRAIL_OUTCOME
+FINAL_STRICT_OUTCOME = SCALAR_CURVED_GUARDRAIL_STRICT_OUTCOME
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
@@ -2041,7 +2047,8 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result_review"
 )
 FINAL_KIND = (
-    "bounded_curved_space_scalar_qft_gr_source_contract_retest_guardrail_packet"
+    "scalar_stress_energy_covariant_divergence_identity_conformal_background_"
+    "calculation_execution"
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"

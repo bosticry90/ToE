@@ -14,6 +14,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     active_workstream,
     current_target_state,
     loop_registry,
+    workstream,
 )
 from formal.python.tools.scalar_stress_energy_minkowski_reports import (
     CALCULATION_MANIFEST_PATH,
@@ -76,19 +77,25 @@ def test_review_accepts_only_level_three_scoped_e_repro() -> None:
     assert report["boundary"]["qft_gr_seam_admissibility_claimed"] is False
 
 
-def test_review_rotates_live_authority_to_bounded_curved_retest() -> None:
+def test_review_is_preserved_after_curved_guardrail_rotation() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
+    review = workstream(
+        "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result",
+        registry,
+    )
+    assert review["status"] == "paused"
+    assert review["selected_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
+        "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_"
+        "guardrail_packet"
     )
-    assert state["live_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
-    assert active["workstream_id"] == CURVED_RETEST_GUARDRAIL_TARGET
-    assert active["claim_status"] == (
-        "accepted_scoped_level_3_minkowski_pretest_only"
+    assert state["live_next_target"] == (
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "conformal_background_v0"
     )
-    assert len(active["equation_compendium_rows_activated"]) == 2
+    assert active["workstream_id"] == state["live_next_target"]
 
 
 def test_successful_review_activates_only_the_two_scoped_equation_surfaces() -> None:
