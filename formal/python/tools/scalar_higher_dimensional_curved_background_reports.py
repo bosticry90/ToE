@@ -11,6 +11,7 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 CAPTURED_AT_UTC = "2026-07-09T00:00:00Z"
+REVISED_AT_UTC = "2026-07-10T00:00:00Z"
 
 GUARDRAIL_TARGET = (
     "prepare_scalar_stress_energy_covariant_divergence_identity_higher_"
@@ -28,8 +29,8 @@ EXECUTION_TARGET_KIND = (
     "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_"
     "curved_background_calculation_execution"
 )
-THRESHOLD_REPAIR_TARGET = (
-    "repair_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
+DIAGNOSTIC_FAILURE_TARGET = (
+    "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
     "dimensional_curved_background_v0_threshold_failure"
 )
 
@@ -47,9 +48,17 @@ GUARDRAIL_STRICT_OUTCOME = (
 
 PACKET_SCHEMA_ID = (
     "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
-    "CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v0"
+    "CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v1"
 )
 PACKET_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
+    "CURVED_BACKGROUND_GUARDRAIL_PACKET_v1"
+)
+SUPERSEDED_PACKET_SCHEMA_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
+    "CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v0"
+)
+SUPERSEDED_PACKET_ID = (
     "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
     "CURVED_BACKGROUND_GUARDRAIL_PACKET_v0"
 )
@@ -84,7 +93,7 @@ READINESS_PATH = (
 EXPECTED_READINESS_SHA256 = (
     "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
 )
-GUARDRAIL_REPORT_PATH = (
+SUPERSEDED_GUARDRAIL_REPORT_PATH = (
     REPO_ROOT
     / "formal"
     / "docs"
@@ -92,12 +101,27 @@ GUARDRAIL_REPORT_PATH = (
     / "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_"
     "DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v0.json"
 )
-EXPECTED_GUARDRAIL_SHA256 = (
+EXPECTED_SUPERSEDED_GUARDRAIL_SHA256 = (
     "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8"
+)
+GUARDRAIL_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_"
+    "DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v1.json"
+)
+EXPECTED_GUARDRAIL_SHA256 = (
+    "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96"
 )
 
 SPATIAL_RESOLUTIONS = [32, 64, 128, 256]
 TIME_SLICES = [0.0, 0.37, 0.91]
+EPSILON_R = 1e-12
+EPSILON_NORM = 1e-14
+EPSILON_CONTROL = 1e-14
+COORDINATE_GRID_NORM_NAME = "coordinate_grid_euclidean_component_rms"
 NEGATIVE_CONTROL_IDS = {
     "naive_partial_divergence",
     "omitted_tensor_index_connection_term",
@@ -111,7 +135,7 @@ THRESHOLD_IDS = {
     "maximum_finest_y_mode_combined_relative_identity_error",
     "maximum_finest_x_mode_combined_relative_identity_error",
     "maximum_finest_on_shell_combined_absolute_divergence_error",
-    "maximum_exact_residual_absolute_error",
+    "maximum_analytic_profile_residual_reference_error",
     "maximum_metric_compatibility_absolute_error",
     "maximum_curvature_route_absolute_discrepancy",
     "minimum_curvature_peak_absolute_value",
@@ -129,7 +153,7 @@ FROZEN_SUCCESS_CRITERIA = {
     "maximum_finest_y_mode_combined_relative_identity_error": 0.02,
     "maximum_finest_x_mode_combined_relative_identity_error": 0.02,
     "maximum_finest_on_shell_combined_absolute_divergence_error": 1e-11,
-    "maximum_exact_residual_absolute_error": 1e-12,
+    "maximum_analytic_profile_residual_reference_error": 1e-12,
     "maximum_metric_compatibility_absolute_error": 1e-12,
     "maximum_curvature_route_absolute_discrepancy": 1e-12,
     "minimum_curvature_peak_absolute_value": 0.49,
@@ -141,6 +165,131 @@ FROZEN_SUCCESS_CRITERIA = {
     "minimum_flat_geometry_substitution_normalized_discrepancy": 0.02,
     "minimum_incorrect_y_inverse_metric_normalized_discrepancy": 0.02,
 }
+FROZEN_THRESHOLD_DECISIONS = [
+    {
+        "decision_number": 1,
+        "threshold_id": "minimum_two_finest_x_mode_convergence_order",
+        "comparison": ">=",
+        "threshold": 1.8,
+        "evidence": "off_shell_x_mode p_min",
+    },
+    {
+        "decision_number": 2,
+        "threshold_id": "minimum_two_finest_y_mode_convergence_order",
+        "comparison": ">=",
+        "threshold": 1.8,
+        "evidence": "off_shell_y_mode p_min",
+    },
+    {
+        "decision_number": 3,
+        "threshold_id": "maximum_finest_x_mode_combined_relative_identity_error",
+        "comparison": "<=",
+        "threshold": 0.02,
+        "evidence": "N=256 off_shell_x_mode combined relative identity error",
+    },
+    {
+        "decision_number": 4,
+        "threshold_id": "maximum_finest_y_mode_combined_relative_identity_error",
+        "comparison": "<=",
+        "threshold": 0.02,
+        "evidence": "N=256 off_shell_y_mode combined relative identity error",
+    },
+    {
+        "decision_number": 5,
+        "threshold_id": (
+            "maximum_finest_on_shell_combined_absolute_divergence_error"
+        ),
+        "comparison": "<=",
+        "threshold": 1e-11,
+        "evidence": "N=256 temporal-mode combined absolute divergence error",
+    },
+    {
+        "decision_number": 6,
+        "threshold_id": (
+            "maximum_analytic_profile_residual_reference_error"
+        ),
+        "comparison": "<=",
+        "threshold": 1e-12,
+        "evidence": (
+            "maximum explicit-profile residual versus independently assembled "
+            "analytic derivative reference"
+        ),
+    },
+    {
+        "decision_number": 7,
+        "threshold_id": "maximum_metric_compatibility_absolute_error",
+        "comparison": "<=",
+        "threshold": 1e-12,
+        "evidence": "maximum absolute component of nabla_lambda g_mu_nu",
+    },
+    {
+        "decision_number": 8,
+        "threshold_id": "maximum_curvature_route_absolute_discrepancy",
+        "comparison": "<=",
+        "threshold": 1e-12,
+        "evidence": "maximum abs(R_generic-R_analytic) over all frozen grids",
+    },
+    {
+        "decision_number": 9,
+        "threshold_id": "minimum_curvature_peak_absolute_value",
+        "comparison": ">=",
+        "threshold": 0.49,
+        "evidence": "maximum abs(R_analytic) over the frozen background",
+    },
+    {
+        "decision_number": 10,
+        "threshold_id": "minimum_curvature_peak_to_peak_variation",
+        "comparison": ">=",
+        "threshold": 0.8,
+        "evidence": "max(R_analytic)-min(R_analytic)",
+    },
+    {
+        "decision_number": 11,
+        "threshold_id": "maximum_flat_limit_absolute_discrepancy",
+        "comparison": "<=",
+        "threshold": 1e-11,
+        "evidence": "generic epsilon=0 route versus independent Cartesian route",
+    },
+    {
+        "decision_number": 12,
+        "threshold_id": "minimum_naive_partial_divergence_error_ratio",
+        "comparison": ">=",
+        "threshold": 10.0,
+        "evidence": "minimum of N=256 x-mode and y-mode control ratios",
+    },
+    {
+        "decision_number": 13,
+        "threshold_id": "minimum_omitted_tensor_index_term_error_ratio",
+        "comparison": ">=",
+        "threshold": 10.0,
+        "evidence": "N=256 temporal-mode omitted tensor-index ratio",
+    },
+    {
+        "decision_number": 14,
+        "threshold_id": "minimum_omitted_volume_trace_term_error_ratio",
+        "comparison": ">=",
+        "threshold": 10.0,
+        "evidence": "N=256 temporal-mode omitted volume-trace ratio",
+    },
+    {
+        "decision_number": 15,
+        "threshold_id": (
+            "minimum_flat_geometry_substitution_normalized_discrepancy"
+        ),
+        "comparison": ">=",
+        "threshold": 0.02,
+        "evidence": "minimum of N=256 x-mode and y-mode discrepancies",
+    },
+    {
+        "decision_number": 16,
+        "threshold_id": (
+            "minimum_incorrect_y_inverse_metric_normalized_discrepancy"
+        ),
+        "comparison": ">=",
+        "threshold": 0.02,
+        "evidence": "N=256 y-mode wrong-inverse-metric discrepancy",
+    },
+]
 
 
 def canonical_json_bytes(payload: Any) -> bytes:
@@ -191,12 +340,37 @@ def _verified_readiness_hash() -> str:
     return actual
 
 
+def _verified_superseded_guardrail_hash() -> str:
+    actual = sha256_path(SUPERSEDED_GUARDRAIL_REPORT_PATH)
+    if actual != EXPECTED_SUPERSEDED_GUARDRAIL_SHA256:
+        raise ValueError("superseded v0 guardrail bytes differ")
+    return actual
+
+
 def build_guardrail_payload() -> dict[str, Any]:
     return {
         "schema_id": PACKET_SCHEMA_ID,
         "packet_id": PACKET_ID,
         "status": "prepared_authorizes_execution_only",
         "captured_at_utc": CAPTURED_AT_UTC,
+        "revised_at_utc": REVISED_AT_UTC,
+        "supersession": {
+            "supersedes_schema_id": SUPERSEDED_PACKET_SCHEMA_ID,
+            "supersedes_packet_id": SUPERSEDED_PACKET_ID,
+            "supersedes_path": (
+                "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_"
+                "DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_"
+                "GUARDRAIL_PACKET_20260709_v0.json"
+            ),
+            "supersedes_sha256": _verified_superseded_guardrail_hash(),
+            "original_captured_at_utc": CAPTURED_AT_UTC,
+            "revision_reason": (
+                "freeze non-gating curvature-zero relative-error reporting, "
+                "complete analytic residual and norm contracts, exact negative "
+                "control defects, and the sixteen threshold decisions"
+            ),
+            "superseded_artifact_preserved_byte_for_byte": True,
+        },
         "consumed_target": GUARDRAIL_TARGET,
         "consumed_target_kind": GUARDRAIL_TARGET_KIND,
         "selected_next_target": EXECUTION_TARGET,
@@ -244,6 +418,8 @@ def build_guardrail_payload() -> dict[str, Any]:
             },
             "time_slices": list(TIME_SLICES),
             "spatial_resolutions_Nx_equals_Ny": list(SPATIAL_RESOLUTIONS),
+            "resolution_symbol_N_means": "N x N spatial grid",
+            "periodic_endpoint_duplicated": False,
             "warp_amplitude_epsilon": 0.2,
             "warp_factor": "f(x) = 1 + epsilon*cos(x)",
             "warp_factor_derivatives": {
@@ -252,6 +428,8 @@ def build_guardrail_payload() -> dict[str, Any]:
             },
             "warp_factor_minimum": 0.8,
             "warp_factor_maximum": 1.2,
+            "maximum_inverse_y_metric_factor": 1.5625,
+            "minimum_absolute_metric_determinant": 0.64,
             "amplitude_A": 0.2,
             "mass_m": 1.0,
         },
@@ -273,6 +451,7 @@ def build_guardrail_payload() -> dict[str, Any]:
             "scalar_curvature_peak_to_peak": 0.8333333333333333,
             "curvature_spatially_varying": True,
             "curvature_zero_crossings_allowed": True,
+            "curvature_zero_crossings_exact": ["pi/2", "3*pi/2"],
             "gravity_evolved": False,
         },
         "connection_and_curvature_conventions": {
@@ -336,6 +515,29 @@ def build_guardrail_payload() -> dict[str, Any]:
             "minimum_peak_absolute_scalar_curvature": 0.49,
             "minimum_peak_to_peak_scalar_curvature": 0.8,
             "metric_compatibility_required": True,
+            "curvature_zero_exclusion_policy": {
+                "epsilon_R": EPSILON_R,
+                "absolute_error_formula": "abs(R_generic-R_analytic)",
+                "absolute_error_reported_at_every_x_index": True,
+                "relative_error_formula_away_from_zero": (
+                    "abs(R_generic-R_analytic)/abs(R_analytic)"
+                ),
+                "exclusion_condition": "abs(R_analytic) <= epsilon_R",
+                "excluded_relative_error_value": None,
+                "excluded_status": "excluded_near_zero",
+                "non_gating_reporting_rule": True,
+                "not_an_additional_success_threshold": True,
+                "exact_crossing_locations": ["pi/2", "3*pi/2"],
+                "per_resolution_exclusions": [
+                    {
+                        "resolution_N": resolution,
+                        "excluded_x_index_count": 2,
+                        "excluded_x_indices": [resolution // 4, 3 * resolution // 4],
+                        "excluded_spatial_gridpoint_count": 2 * resolution,
+                    }
+                    for resolution in SPATIAL_RESOLUTIONS
+                ],
+            },
         },
         "equation_surfaces": {
             "scalar_action": (
@@ -343,6 +545,7 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "partial_mu phi partial_nu phi - 1/2 m^2 phi^2]"
             ),
             "potential": "V(phi) = 1/2 m^2 phi^2",
+            "potential_derivative": "V'(phi) = m^2 phi",
             "stress_energy": (
                 "T^{mu nu} = nabla^mu phi nabla^nu phi - g^{mu nu} "
                 "[1/2 nabla_alpha phi nabla^alpha phi + 1/2 m^2 phi^2]"
@@ -358,7 +561,20 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "Gamma^mu_{mu lambda} T^{lambda nu} + "
                 "Gamma^nu_{mu lambda} T^{mu lambda}"
             ),
+            "volume_trace_connection_term": (
+                "Gamma^mu_{mu lambda} T^{lambda nu}"
+            ),
+            "tensor_index_connection_term": (
+                "Gamma^nu_{mu lambda} T^{mu lambda}"
+            ),
             "identity": "nabla_mu T^{mu nu} = E_phi nabla^nu phi",
+            "analytic_profile_residual_reference_assembly": (
+                "-phi_tt + phi_xx + [f'(x)/f(x)]*phi_x + "
+                "f(x)^(-2)*phi_yy - m^2*phi"
+            ),
+            "analytic_profile_residual_reference_metric": (
+                "maximum_analytic_profile_residual_reference_error"
+            ),
             "divergence_components_required": [0, 1, 2],
             "divergence_component_labels": ["nu=t", "nu=x", "nu=y"],
             "existing_equation_id_reused": EQUATION_ID,
@@ -388,6 +604,9 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "forced_or_manufactured": False,
                 "exact_residual": (
                     "E_phi = [omega_y^2-m^2-ell^2/f(x)^2]*phi_y"
+                ),
+                "substituted_exact_residual": (
+                    "E_phi = [1.25-4/f(x)^2]*phi_y"
                 ),
                 "purpose": (
                     "exercise the second spatial derivative direction and the "
@@ -435,9 +654,30 @@ def build_guardrail_payload() -> dict[str, Any]:
             "space_time_combined_rms_norm": (
                 "sqrt(mean_{t,x,y}(sum_{nu=0}^2 (identity_error^nu)^2))"
             ),
+            "norm_contract": {
+                "name": COORDINATE_GRID_NORM_NAME,
+                "coordinate_grid_uniform_unweighted": True,
+                "coordinate_invariant_tensor_norm": False,
+                "curved_volume_weighted": False,
+                "epsilon_norm": EPSILON_NORM,
+                "epsilon_control": EPSILON_CONTROL,
+                "component_rms": "sqrt(mean(error_nu^2))",
+                "combined_rms": "sqrt(mean(error_t^2+error_x^2+error_y^2))",
+                "off_shell_component_relative_error": (
+                    "RMS(divergence_nu-RHS_nu)/"
+                    "max(RMS(RHS_nu),epsilon_norm)"
+                ),
+                "control_error_ratio": (
+                    "defective_error/max(correct_error,epsilon_control)"
+                ),
+                "normalized_defect_discrepancy": (
+                    "RMS(defective-correct_curved_RHS)/"
+                    "max(RMS(correct_curved_RHS),epsilon_control)"
+                ),
+            },
             "off_shell_relative_error": (
                 "norm(nabla_mu T^{mu nu}-E_phi*nabla^nu phi) / "
-                "max(norm(E_phi*nabla^nu phi),1e-14)"
+                "max(norm(E_phi*nabla^nu phi),epsilon_norm)"
             ),
             "on_shell_error_policy": (
                 "report absolute componentwise and combined divergence norms; "
@@ -445,6 +685,19 @@ def build_guardrail_payload() -> dict[str, Any]:
             ),
             "convergence_order": "log2(error_N/error_2N)",
             "convergence_profiles": ["off_shell_y_mode", "off_shell_x_mode"],
+            "convergence_gate": {
+                "error_N": (
+                    "combined space-time coordinate-grid identity-error RMS"
+                ),
+                "p_64_128": "log2(error_64/error_128)",
+                "p_128_256": "log2(error_128/error_256)",
+                "p_min": "min(p_64_128,p_128_256)",
+                "adjudication": (
+                    "p_min >= 1.8 separately for off_shell_x_mode and "
+                    "off_shell_y_mode"
+                ),
+                "component_orders_diagnostic_only": True,
+            },
             "determinism": (
                 "two fresh-process regenerations must match canonical result, "
                 "manifest, and execution-report bytes"
@@ -456,6 +709,14 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "expected_metric": "diag(-1,1,1)",
                 "expected_connection": "all Christoffel symbols vanish",
                 "expected_scalar_curvature": 0.0,
+                "operator_coefficients_exact": [-1, 1, 1],
+                "operator_coefficient_order": [
+                    "partial_t^2",
+                    "partial_x^2",
+                    "partial_y^2",
+                ],
+                "maximum_numeric_discrepancy": 1e-11,
+                "independent_floating_route_byte_equality_required": False,
                 "comparison": (
                     "correct 2+1 implementation must reproduce the analytic "
                     "Cartesian Minkowski identity for all three profiles"
@@ -469,7 +730,11 @@ def build_guardrail_payload() -> dict[str, Any]:
         },
         "negative_controls": {
             "naive_partial_divergence": {
-                "operation": "omit both connection terms from nabla_mu T^{mu nu}",
+                "operation": (
+                    "omit both Gamma^mu_{mu lambda} T^{lambda nu} and "
+                    "Gamma^nu_{mu lambda} T^{mu lambda} from nabla_mu "
+                    "T^{mu nu}; retain the correct stress tensor and curved RHS"
+                ),
                 "evaluation": (
                     "evaluate the y-mode and x-mode spatial off-shell profiles "
                     "separately; the adjudicated value is the minimum of the "
@@ -478,7 +743,8 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "ratio_definition": (
                     "space-time combined RMS defective identity error divided "
                     "by max(space-time combined RMS correct covariant identity "
-                    "error,1e-14), evaluated separately for each required profile"
+                    "error,epsilon_control), evaluated separately for each "
+                    "required profile"
                 ),
                 "minimum_error_ratio_to_correct_covariant_result": 10.0,
             },
@@ -491,7 +757,7 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "ratio_definition": (
                     "space-time combined RMS defective on-shell divergence "
                     "divided by max(correct on-shell combined absolute "
-                    "divergence error,1e-14)"
+                    "divergence error,epsilon_control)"
                 ),
                 "minimum_error_ratio_to_correct_covariant_result": 10.0,
             },
@@ -504,14 +770,15 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "ratio_definition": (
                     "space-time combined RMS defective on-shell divergence "
                     "divided by max(correct on-shell combined absolute "
-                    "divergence error,1e-14)"
+                    "divergence error,epsilon_control)"
                 ),
                 "minimum_error_ratio_to_correct_covariant_result": 10.0,
             },
             "curved_case_flat_geometry_substitution": {
                 "operation": (
-                    "set epsilon=0 in metric, inverse metric, and connection while "
-                    "retaining the epsilon=0.2 curved analytic identity reference"
+                    "set epsilon=0 in the defective metric, inverse metric, "
+                    "connection, stress tensor, and divergence while retaining "
+                    "the epsilon=0.2 correct curved analytic RHS reference"
                 ),
                 "evaluation": (
                     "evaluate the y-mode and x-mode separately; the adjudicated "
@@ -520,23 +787,24 @@ def build_guardrail_payload() -> dict[str, Any]:
                 "normalized_discrepancy_definition": (
                     "space-time combined RMS(flat-substituted divergence minus "
                     "correct curved analytic RHS) divided by max(space-time "
-                    "combined RMS correct curved analytic RHS,1e-14)"
+                    "combined RMS correct curved analytic RHS,epsilon_control)"
                 ),
                 "minimum_normalized_discrepancy": 0.02,
             },
             "incorrect_y_inverse_metric_factor": {
                 "operation": (
-                    "in the deliberately defective y-mode calculation only, "
-                    "replace f(x)^(-2) partial_y^2 phi by partial_y^2 phi"
+                    "in the defective y-mode scalar/RHS route replace "
+                    "g^yy=f(x)^(-2) by g^yy=1 everywhere it enters the y "
+                    "residual and raised y-gradient"
                 ),
                 "comparison_reference": (
-                    "the correct epsilon=0.2 curved analytic residual and RHS "
-                    "remain unchanged"
+                    "retain the correct epsilon=0.2 curved divergence and correct "
+                    "curved analytic RHS as references"
                 ),
                 "normalized_discrepancy_definition": (
                     "space-time combined RMS(defective y-mode identity result "
                     "minus correct curved analytic RHS) divided by max(space-time "
-                    "combined RMS correct curved analytic RHS,1e-14)"
+                    "combined RMS correct curved analytic RHS,epsilon_control)"
                 ),
                 "minimum_normalized_discrepancy": 0.02,
             },
@@ -562,11 +830,19 @@ def build_guardrail_payload() -> dict[str, Any]:
             **FROZEN_SUCCESS_CRITERIA,
             "all_thresholds_required": True,
         },
+        "threshold_decisions": [
+            dict(decision) for decision in FROZEN_THRESHOLD_DECISIONS
+        ],
         "success_criteria_definitions": {
-            "maximum_exact_residual_absolute_error": (
-                "maximum discrepancy between an independently evaluated "
-                "closed-form analytic residual and the frozen residual formula; "
-                "this is not a finite-difference Box_g residual"
+            "maximum_analytic_profile_residual_reference_error": (
+                "maximum discrepancy between each frozen explicit residual "
+                "formula and -phi_tt+phi_xx+(f'/f)phi_x+f^(-2)phi_yy-m^2*phi "
+                "assembled independently from analytic derivatives; this is not "
+                "a finite-difference Box_g residual"
+            ),
+            "two_finest_convergence_decision": (
+                "p_min=min(log2(error_64/error_128),"
+                "log2(error_128/error_256)); one decision per off-shell mode"
             ),
             "negative_control_threshold_policy": (
                 "each of the five negative controls has its own frozen threshold "
@@ -581,9 +857,18 @@ def build_guardrail_payload() -> dict[str, Any]:
         "failure_criteria": {
             "any_threshold_failure": True,
             "primary_claim_label": "B-BLOCKED",
-            "selected_repair_target": THRESHOLD_REPAIR_TARGET,
+            "selected_diagnostic_target": DIAGNOSTIC_FAILURE_TARGET,
             "failed_artifacts_preserved": True,
             "threshold_changes_require_new_versioned_guardrail": True,
+            "threshold_relaxation_in_this_version_forbidden": True,
+            "diagnostic_priorities": [
+                "analytic_reference_error",
+                "implementation_defect",
+                "stencil_or_axis_defect",
+                "periodic_boundary_handling_defect",
+                "model_or_profile_problem",
+                "inadequate_resolution",
+            ],
             "control_aggregation_cannot_hide_individual_failure": True,
         },
         "allowed_operations": [
@@ -659,7 +944,10 @@ def build_guardrail_payload() -> dict[str, Any]:
         "boundary": {
             "fixed_background_matter_identity_only": True,
             "spacetime_dimension": 3,
+            "two_dimensional_Einstein_degeneracy_not_applicable": True,
             "einstein_tensor_can_be_nonzero": True,
+            "background_fixed": True,
+            "Einstein_source_tested": False,
             "einstein_tensor_source_tested": False,
             "gravity_evolved": False,
             "general_covariant_conservation_claimed": False,
@@ -700,6 +988,7 @@ def build_guardrail_payload() -> dict[str, Any]:
 
 def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     required_interface = {
+        "supersession",
         "question",
         "inputs",
         "background_geometry",
@@ -711,6 +1000,8 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         "flat_limit_control",
         "negative_controls",
         "success_criteria",
+        "threshold_decisions",
+        "success_criteria_definitions",
         "failure_criteria",
         "outputs",
         "claim_ceiling",
@@ -728,12 +1019,26 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     if (
         payload.get("schema_id") != PACKET_SCHEMA_ID
         or payload.get("packet_id") != PACKET_ID
+        or payload.get("captured_at_utc") != CAPTURED_AT_UTC
+        or payload.get("revised_at_utc") != REVISED_AT_UTC
         or payload.get("consumed_target") != GUARDRAIL_TARGET
         or payload.get("selected_next_target") != EXECUTION_TARGET
         or payload.get("packet_result") != GUARDRAIL_OUTCOME
         or payload.get("strict_packet_result") != GUARDRAIL_STRICT_OUTCOME
     ):
         raise ValueError("guardrail lifecycle or outcome differs from frozen values")
+    supersession = payload.get("supersession", {})
+    if (
+        supersession.get("supersedes_schema_id") != SUPERSEDED_PACKET_SCHEMA_ID
+        or supersession.get("supersedes_packet_id") != SUPERSEDED_PACKET_ID
+        or supersession.get("supersedes_sha256")
+        != EXPECTED_SUPERSEDED_GUARDRAIL_SHA256
+        or supersession.get("superseded_artifact_preserved_byte_for_byte")
+        is not True
+        or _verified_superseded_guardrail_hash()
+        != EXPECTED_SUPERSEDED_GUARDRAIL_SHA256
+    ):
+        raise ValueError("guardrail v0 supersession or byte preservation differs")
     if payload.get("accepted_predecessor", {}).get("sha256") != (
         EXPECTED_PREDECESSOR_REVIEW_SHA256
     ):
@@ -754,6 +1059,10 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         or inputs.get("spatial_resolutions_Nx_equals_Ny")
         != SPATIAL_RESOLUTIONS
         or inputs.get("time_slices") != TIME_SLICES
+        or inputs.get("resolution_symbol_N_means") != "N x N spatial grid"
+        or inputs.get("periodic_endpoint_duplicated") is not False
+        or inputs.get("maximum_inverse_y_metric_factor") != 1.5625
+        or inputs.get("minimum_absolute_metric_determinant") != 0.64
     ):
         raise ValueError("2+1 warped-background inputs differ")
     if (
@@ -774,6 +1083,8 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         or geometry.get("scalar_curvature_maximum")
         != 0.3333333333333333
         or geometry.get("curvature_spatially_varying") is not True
+        or geometry.get("curvature_zero_crossings_exact")
+        != ["pi/2", "3*pi/2"]
         or geometry.get("gravity_evolved") is not False
     ):
         raise ValueError("geometry contract differs")
@@ -812,10 +1123,44 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         or curvature.get("minimum_peak_to_peak_scalar_curvature") != 0.8
     ):
         raise ValueError("independent curvature-route contract differs")
+    zero_policy = curvature.get("curvature_zero_exclusion_policy", {})
+    if (
+        zero_policy.get("epsilon_R") != EPSILON_R
+        or zero_policy.get("absolute_error_reported_at_every_x_index") is not True
+        or zero_policy.get("excluded_relative_error_value") is not None
+        or zero_policy.get("excluded_status") != "excluded_near_zero"
+        or zero_policy.get("non_gating_reporting_rule") is not True
+        or zero_policy.get("not_an_additional_success_threshold") is not True
+        or zero_policy.get("exact_crossing_locations")
+        != ["pi/2", "3*pi/2"]
+        or zero_policy.get("per_resolution_exclusions")
+        != [
+            {
+                "resolution_N": resolution,
+                "excluded_x_index_count": 2,
+                "excluded_x_indices": [resolution // 4, 3 * resolution // 4],
+                "excluded_spatial_gridpoint_count": 2 * resolution,
+            }
+            for resolution in SPATIAL_RESOLUTIONS
+        ]
+    ):
+        raise ValueError("curvature-zero exclusion reporting contract differs")
 
     equations = payload["equation_surfaces"]
     if (
         equations.get("divergence_components_required") != [0, 1, 2]
+        or equations.get("potential_derivative") != "V'(phi) = m^2 phi"
+        or equations.get("volume_trace_connection_term")
+        != "Gamma^mu_{mu lambda} T^{lambda nu}"
+        or equations.get("tensor_index_connection_term")
+        != "Gamma^nu_{mu lambda} T^{mu lambda}"
+        or equations.get("analytic_profile_residual_reference_assembly")
+        != (
+            "-phi_tt + phi_xx + [f'(x)/f(x)]*phi_x + "
+            "f(x)^(-2)*phi_yy - m^2*phi"
+        )
+        or equations.get("analytic_profile_residual_reference_metric")
+        != "maximum_analytic_profile_residual_reference_error"
         or equations.get("existing_equation_id_reused") != EQUATION_ID
         or equations.get("existing_equation_status")
         != "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO"
@@ -840,6 +1185,8 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         != {"A": 0.2, "omega_y": 1.5, "ell": 2}
         or profiles["off_shell_y_mode"].get("exact_residual")
         != "E_phi = [omega_y^2-m^2-ell^2/f(x)^2]*phi_y"
+        or profiles["off_shell_y_mode"].get("substituted_exact_residual")
+        != "E_phi = [1.25-4/f(x)^2]*phi_y"
         or profiles["off_shell_x_mode"].get("parameters")
         != {"A": 0.2, "omega_x": 1.7, "k": 2}
         or profiles["off_shell_x_mode"].get("exact_residual")
@@ -866,6 +1213,33 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         or "sum_{nu=0}^2" not in method.get(
             "combined_rms_norm_at_each_time", ""
         )
+        or method.get("norm_contract")
+        != {
+            "name": COORDINATE_GRID_NORM_NAME,
+            "coordinate_grid_uniform_unweighted": True,
+            "coordinate_invariant_tensor_norm": False,
+            "curved_volume_weighted": False,
+            "epsilon_norm": EPSILON_NORM,
+            "epsilon_control": EPSILON_CONTROL,
+            "component_rms": "sqrt(mean(error_nu^2))",
+            "combined_rms": "sqrt(mean(error_t^2+error_x^2+error_y^2))",
+            "off_shell_component_relative_error": (
+                "RMS(divergence_nu-RHS_nu)/max(RMS(RHS_nu),epsilon_norm)"
+            ),
+            "control_error_ratio": (
+                "defective_error/max(correct_error,epsilon_control)"
+            ),
+            "normalized_defect_discrepancy": (
+                "RMS(defective-correct_curved_RHS)/"
+                "max(RMS(correct_curved_RHS),epsilon_control)"
+            ),
+        }
+        or method.get("convergence_gate", {}).get("p_min")
+        != "min(p_64_128,p_128_256)"
+        or method.get("convergence_gate", {}).get(
+            "component_orders_diagnostic_only"
+        )
+        is not True
     ):
         raise ValueError("numerical refinement or norm contract differs")
     flat = payload["flat_limit_control"]
@@ -873,6 +1247,14 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         flat.get("positive_control", {}).get("substitution")
         != "epsilon -> 0, hence f -> 1"
         or flat.get("positive_control", {}).get("expected_scalar_curvature") != 0.0
+        or flat.get("positive_control", {}).get("operator_coefficients_exact")
+        != [-1, 1, 1]
+        or flat.get("positive_control", {}).get("maximum_numeric_discrepancy")
+        != 1e-11
+        or flat.get("positive_control", {}).get(
+            "independent_floating_route_byte_equality_required"
+        )
+        is not False
         or "changes both geometry and analytic reference"
         not in flat.get("distinct_from_negative_control", "")
     ):
@@ -880,6 +1262,19 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     criteria = payload["success_criteria"]
     if criteria != {**FROZEN_SUCCESS_CRITERIA, "all_thresholds_required": True}:
         raise ValueError("success-threshold set or value differs")
+    decisions = payload["threshold_decisions"]
+    if (
+        decisions != FROZEN_THRESHOLD_DECISIONS
+        or [item.get("decision_number") for item in decisions]
+        != list(range(1, 17))
+        or {item.get("threshold_id") for item in decisions} != THRESHOLD_IDS
+        or any(
+            item.get("threshold")
+            != FROZEN_SUCCESS_CRITERIA[item["threshold_id"]]
+            for item in decisions
+        )
+    ):
+        raise ValueError("exact sixteen threshold decisions differ")
     negative = payload["negative_controls"]
     if (
         negative["naive_partial_divergence"].get(
@@ -917,12 +1312,12 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     if (
         "minimum of the two profile-specific ratios"
         not in negative["naive_partial_divergence"].get("evaluation", "")
-        or "max(space-time combined RMS correct covariant identity error,1e-14)"
+        or "max(space-time combined RMS correct covariant identity error,epsilon_control)"
         not in negative["naive_partial_divergence"].get(
             "ratio_definition", ""
         )
         or any(
-            "max(correct on-shell combined absolute divergence error,1e-14)"
+            "max(correct on-shell combined absolute divergence error,epsilon_control)"
             not in negative[control].get("ratio_definition", "")
             for control in (
                 "omitted_tensor_index_connection_term",
@@ -933,11 +1328,11 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         not in negative["curved_case_flat_geometry_substitution"].get(
             "evaluation", ""
         )
-        or "correct curved analytic RHS,1e-14"
+        or "correct curved analytic RHS,epsilon_control"
         not in negative["curved_case_flat_geometry_substitution"].get(
             "normalized_discrepancy_definition", ""
         )
-        or "correct curved analytic RHS,1e-14"
+        or "correct curved analytic RHS,epsilon_control"
         not in negative["incorrect_y_inverse_metric_factor"].get(
             "normalized_discrepancy_definition", ""
         )
@@ -947,6 +1342,16 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
         value is True for value in payload["required_controls"].values()
     ):
         raise ValueError("every required control must be frozen true")
+    failure = payload["failure_criteria"]
+    if (
+        failure.get("selected_diagnostic_target") != DIAGNOSTIC_FAILURE_TARGET
+        or "selected_repair_target" in failure
+        or failure.get("threshold_changes_require_new_versioned_guardrail")
+        is not True
+        or failure.get("threshold_relaxation_in_this_version_forbidden")
+        is not True
+    ):
+        raise ValueError("diagnostic failure lifecycle differs")
     if (
         not payload["assumptions"]
         or not payload["allowed_operations"]
@@ -983,7 +1388,13 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
             raise ValueError(f"claim ceiling lost required nonclaim: {key}")
     boundary = payload["boundary"]
     if (
-        boundary.get("einstein_tensor_source_tested") is not False
+        boundary.get("spacetime_dimension") != 3
+        or boundary.get("two_dimensional_Einstein_degeneracy_not_applicable")
+        is not True
+        or boundary.get("einstein_tensor_can_be_nonzero") is not True
+        or boundary.get("background_fixed") is not True
+        or boundary.get("Einstein_source_tested") is not False
+        or boundary.get("einstein_tensor_source_tested") is not False
         or boundary.get("gravity_evolved") is not False
         or boundary.get("bianchi_compatibility_claimed") is not False
         or boundary.get("qft_gr_seam_admissibility_claimed") is not False

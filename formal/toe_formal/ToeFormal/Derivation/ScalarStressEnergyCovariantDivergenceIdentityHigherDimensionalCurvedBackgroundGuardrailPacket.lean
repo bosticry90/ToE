@@ -5,7 +5,7 @@ namespace Derivation
 namespace ScalarStressEnergyCovariantDivergenceIdentityHigherDimensionalCurvedBackgroundGuardrailPacket
 
 def packetId : String :=
-  "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v0"
+  "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v1"
 
 def packetResult : String :=
   "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_FIXED_2PLUS1_SPATIALLY_VARYING_WARPED_GEOMETRY_MATTER_IDENTITY_CALCULATION_ONLY"
@@ -19,6 +19,16 @@ def consumedTarget : String :=
 def selectedNextTarget : String :=
   "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0"
 
+def capturedAtUtc : String := "2026-07-09T00:00:00Z"
+
+def revisedAtUtc : String := "2026-07-10T00:00:00Z"
+
+def supersededPacketId : String :=
+  "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v0"
+
+def supersededGuardrailSha256 : String :=
+  "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8"
+
 def predecessorReviewSha256 : String :=
   "538ba6db4e42cdcbaf5f109e3e4beb4c79b0e740db134d04d7293ef1a05d5702"
 
@@ -26,7 +36,7 @@ def readinessAuthoritySha256 : String :=
   "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
 
 def guardrailSha256 : String :=
-  "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8"
+  "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96"
 
 def equationId : String :=
   "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0"
@@ -48,12 +58,26 @@ def negativeControlCount : Nat := 5
 def frozenThresholdCount : Nat := 16
 def warpAmplitudeTimesTen : Nat := 2
 def minimumWarpFactorTimesTen : Nat := 8
+def excludedXIndexCountPerResolution : Nat := 2
+
+def curvatureRelativeExclusionEpsilon : String := "1e-12"
+def normDenominatorFloor : String := "1e-14"
+def controlDenominatorFloor : String := "1e-14"
+def coordinateGridNormName : String :=
+  "coordinate_grid_euclidean_component_rms"
+def diagnosticFailureTarget : String :=
+  "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_threshold_failure"
 
 def fixedBackgroundOnly : Bool := true
 def curvatureSpatiallyVarying : Bool := true
 def einsteinTensorCanBeNonzero : Bool := true
 def allResolutionResultsRequired : Bool := true
 def positiveFlatLimitRecoveryRequired : Bool := true
+def supersededGuardrailPreservedByteForByte : Bool := true
+def curvatureAbsoluteErrorReportedEverywhere : Bool := true
+def curvatureRelativeErrorExclusionNonGating : Bool := true
+def thresholdRelaxationForbiddenWithoutNewGuardrail : Bool := true
+def twoDimensionalEinsteinDegeneracyNotApplicable : Bool := true
 def calculationExecuted : Bool := false
 def eReproClaimed : Bool := false
 def newEquationIdentityCreated : Bool := false
@@ -84,10 +108,22 @@ theorem guardrail_freezes_authority_hashes :
       readinessAuthoritySha256 =
         "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1" ∧
       guardrailSha256 =
-        "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8" := by
+        "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96" := by
   constructor
   · rfl
   constructor <;> rfl
+
+theorem guardrail_versions_the_reporting_correction_immutably :
+    packetId =
+        "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v1" ∧
+      capturedAtUtc = "2026-07-09T00:00:00Z" ∧
+      revisedAtUtc = "2026-07-10T00:00:00Z" ∧
+      supersededPacketId =
+        "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v0" ∧
+      supersededGuardrailSha256 =
+        "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8" ∧
+      supersededGuardrailPreservedByteForByte = true := by
+  decide
 
 theorem guardrail_preserves_existing_equation_surface :
     equationId = "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0" ∧
@@ -105,7 +141,21 @@ theorem guardrail_freezes_higher_dimensional_control_surface :
       minimumWarpFactorTimesTen = 8 ∧ fixedBackgroundOnly = true ∧
       curvatureSpatiallyVarying = true ∧ einsteinTensorCanBeNonzero = true ∧
       allResolutionResultsRequired = true ∧
-      positiveFlatLimitRecoveryRequired = true := by
+      positiveFlatLimitRecoveryRequired = true ∧
+      excludedXIndexCountPerResolution = 2 ∧
+      coordinateGridNormName = "coordinate_grid_euclidean_component_rms" ∧
+      curvatureAbsoluteErrorReportedEverywhere = true ∧
+      curvatureRelativeErrorExclusionNonGating = true ∧
+      thresholdRelaxationForbiddenWithoutNewGuardrail = true ∧
+      twoDimensionalEinsteinDegeneracyNotApplicable = true := by
+  decide
+
+theorem guardrail_freezes_reporting_floors_and_failure_target :
+    curvatureRelativeExclusionEpsilon = "1e-12" ∧
+      normDenominatorFloor = "1e-14" ∧
+      controlDenominatorFloor = "1e-14" ∧
+      diagnosticFailureTarget =
+        "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_threshold_failure" := by
   decide
 
 theorem guardrail_preserves_nonexecution_and_nonclaim_boundary :

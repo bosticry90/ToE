@@ -1,0 +1,645 @@
+{
+  "accepted_predecessor": {
+    "accepted_claim_ceiling": "Level 3 scoped E-REPRO",
+    "accepted_scope": "one fixed genuinely curved 1+1 de Sitter matter identity only",
+    "artifact_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_v0",
+    "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json",
+    "sha256": "538ba6db4e42cdcbaf5f109e3e4beb4c79b0e740db134d04d7293ef1a05d5702"
+  },
+  "allowed_operations": [
+    "evaluate the fixed metric, inverse metric, determinant, and connection",
+    "reconstruct curvature through both frozen independent routes",
+    "evaluate analytic temporal and metric derivatives",
+    "apply second-order centered periodic x and y differences",
+    "compute nu=0, nu=1, and nu=2 covariant divergence components",
+    "run the three frozen field profiles",
+    "run the positive flat limit and five frozen negative controls",
+    "compute componentwise, combined, and space-time RMS norms",
+    "write deterministic canonical result, manifest, and report artifacts"
+  ],
+  "assumptions": [
+    "fixed prescribed 2+1-dimensional warped periodic background",
+    "real massive minimally coupled scalar",
+    "f(x)=1+0.2*cos(x) remains positive throughout the domain",
+    "periodic x and y boundaries",
+    "analytic metric, connection, curvature reference, and time derivatives",
+    "second-order numerical spatial derivatives",
+    "no metric evolution and no Einstein-equation solve",
+    "2+1 Einstein gravity has no local propagating gravitational-wave modes"
+  ],
+  "background_geometry": {
+    "classification": "fixed_nonzero_spatially_varying_curvature_2plus1_warped_periodic_background",
+    "curvature_spatially_varying": true,
+    "curvature_zero_crossings_allowed": true,
+    "curvature_zero_crossings_exact": [
+      "pi/2",
+      "3*pi/2"
+    ],
+    "determinant": "det(g_mu_nu) = -f(x)^2",
+    "fixed_background_only": true,
+    "gravity_evolved": false,
+    "inverse_metric": "g^mu_nu = diag(-1, 1, f(x)^(-2))",
+    "metric": "g_mu_nu = diag(-1, 1, f(x)^2)",
+    "metric_signature": "(-,+,+)",
+    "nonsingularity_witness": "min_x f(x) = 1-epsilon = 0.8 > 0",
+    "scalar_curvature": "R(x) = -2*f''(x)/f(x) = 2*epsilon*cos(x)/(1+epsilon*cos(x))",
+    "scalar_curvature_maximum": 0.3333333333333333,
+    "scalar_curvature_minimum": -0.5,
+    "scalar_curvature_peak_to_peak": 0.8333333333333333,
+    "volume_density": "sqrt(-g) = f(x), because f(x) >= 0.8"
+  },
+  "boundary": {
+    "Einstein_source_tested": false,
+    "background_fixed": true,
+    "bianchi_compatibility_claimed": false,
+    "ccft_resumed": false,
+    "einstein_tensor_can_be_nonzero": true,
+    "einstein_tensor_source_tested": false,
+    "fixed_background_matter_identity_only": true,
+    "general_covariant_conservation_claimed": false,
+    "gravity_evolved": false,
+    "level_4_claimed": false,
+    "level_5_claimed": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "source_admissibility_claimed": false,
+    "spacetime_dimension": 3,
+    "two_dimensional_Einstein_degeneracy_not_applicable": true
+  },
+  "calculation_executed": false,
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0",
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "array_order": "preserved",
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim_ceiling": {
+    "claim_ladder_level": 3,
+    "classification": "toy-model demonstration",
+    "e_repro_status": "pending_execution_and_independent_result_review",
+    "not_bianchi_compatibility": true,
+    "not_einstein_source_compatibility": true,
+    "not_general_curved_spacetime_theorem": true,
+    "not_gravity_dynamics": true,
+    "not_level_4_or_level_5_promotion": true,
+    "not_master_action_promotion": true,
+    "not_qft_gr_seam_admissibility_or_closure": true,
+    "not_source_admissibility": true,
+    "scope": "one fixed 2+1 warped-background scalar matter identity only"
+  },
+  "connection_and_curvature_conventions": {
+    "all_time_index_christoffels_zero": true,
+    "christoffel_definition": "Gamma^rho_{mu nu} = 1/2 g^{rho sigma} (partial_mu g_{sigma nu} + partial_nu g_{sigma mu} - partial_sigma g_{mu nu})",
+    "einstein_tensor_not_identically_zero": true,
+    "einstein_tensor_source_tested": false,
+    "expected_einstein_components": {
+      "G_t t": "R(x)/2 = -f''(x)/f(x)",
+      "G_x x": "0",
+      "G_y y": "0"
+    },
+    "expected_ricci_components": {
+      "R_t t": "0",
+      "R_x x": "-f''(x)/f(x)",
+      "R_y y": "-f(x)*f''(x)"
+    },
+    "nonzero_christoffels": {
+      "Gamma^x_{y y}": "-f(x)*f'(x)",
+      "Gamma^y_{x y}": "f'(x)/f(x)",
+      "Gamma^y_{y x}": "f'(x)/f(x)"
+    },
+    "ricci_contraction": "R_{sigma nu} = R^rho_{sigma rho nu}",
+    "riemann_sign": "R^rho_{sigma mu nu} = partial_mu Gamma^rho_{nu sigma} - partial_nu Gamma^rho_{mu sigma} + Gamma^rho_{mu lambda} Gamma^lambda_{nu sigma} - Gamma^rho_{nu lambda} Gamma^lambda_{mu sigma}",
+    "scalar_contraction": "R = g^{sigma nu} R_{sigma nu}"
+  },
+  "consumed_target": "prepare_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_guardrail_packet",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_guardrail_packet",
+  "curvature_verification": {
+    "analytic_warped_product_route": {
+      "expected_range": [
+        -0.5,
+        0.3333333333333333
+      ],
+      "formula": "R_analytic(x) = -2*f''(x)/f(x)",
+      "substituted_formula": "R_analytic(x) = 0.4*cos(x)/(1+0.2*cos(x))"
+    },
+    "curvature_zero_exclusion_policy": {
+      "absolute_error_formula": "abs(R_generic-R_analytic)",
+      "absolute_error_reported_at_every_x_index": true,
+      "epsilon_R": 1e-12,
+      "exact_crossing_locations": [
+        "pi/2",
+        "3*pi/2"
+      ],
+      "excluded_relative_error_value": null,
+      "excluded_status": "excluded_near_zero",
+      "exclusion_condition": "abs(R_analytic) <= epsilon_R",
+      "non_gating_reporting_rule": true,
+      "not_an_additional_success_threshold": true,
+      "per_resolution_exclusions": [
+        {
+          "excluded_spatial_gridpoint_count": 64,
+          "excluded_x_index_count": 2,
+          "excluded_x_indices": [
+            8,
+            24
+          ],
+          "resolution_N": 32
+        },
+        {
+          "excluded_spatial_gridpoint_count": 128,
+          "excluded_x_index_count": 2,
+          "excluded_x_indices": [
+            16,
+            48
+          ],
+          "resolution_N": 64
+        },
+        {
+          "excluded_spatial_gridpoint_count": 256,
+          "excluded_x_index_count": 2,
+          "excluded_x_indices": [
+            32,
+            96
+          ],
+          "resolution_N": 128
+        },
+        {
+          "excluded_spatial_gridpoint_count": 512,
+          "excluded_x_index_count": 2,
+          "excluded_x_indices": [
+            64,
+            192
+          ],
+          "resolution_N": 256
+        }
+      ],
+      "relative_error_formula_away_from_zero": "abs(R_generic-R_analytic)/abs(R_analytic)"
+    },
+    "independent_generic_tensor_route": {
+      "comparison_scope": "all frozen x grid points at every resolution",
+      "implementation_independence": "generic index-loop symbolic reconstruction; do not call or substitute the analytic warped-product curvature formula",
+      "route": [
+        "metric",
+        "inverse_metric",
+        "metric_derivatives",
+        "Christoffel_symbols",
+        "Riemann_tensor",
+        "Ricci_tensor",
+        "scalar_contraction"
+      ]
+    },
+    "maximum_route_agreement_absolute_error": 1e-12,
+    "metric_compatibility_required": true,
+    "minimum_peak_absolute_scalar_curvature": 0.49,
+    "minimum_peak_to_peak_scalar_curvature": 0.8
+  },
+  "e_repro_claimed_by_guardrail": false,
+  "equation_compendium_row_added": false,
+  "equation_surfaces": {
+    "analytic_profile_residual_reference_assembly": "-phi_tt + phi_xx + [f'(x)/f(x)]*phi_x + f(x)^(-2)*phi_yy - m^2*phi",
+    "analytic_profile_residual_reference_metric": "maximum_analytic_profile_residual_reference_error",
+    "covariant_dalembertian": "Box_g phi = -partial_t^2 phi + partial_x^2 phi + [f'(x)/f(x)] partial_x phi + f(x)^(-2) partial_y^2 phi",
+    "covariant_divergence": "nabla_mu T^{mu nu} = partial_mu T^{mu nu} + Gamma^mu_{mu lambda} T^{lambda nu} + Gamma^nu_{mu lambda} T^{mu lambda}",
+    "divergence_component_labels": [
+      "nu=t",
+      "nu=x",
+      "nu=y"
+    ],
+    "divergence_components_required": [
+      0,
+      1,
+      2
+    ],
+    "equation_compendium_edited": false,
+    "equation_surface_upgraded": false,
+    "existing_equation_id_reused": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0",
+    "existing_equation_status": "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO",
+    "field_residual": "E_phi = Box_g phi - m^2 phi",
+    "identity": "nabla_mu T^{mu nu} = E_phi nabla^nu phi",
+    "new_equation_identity_created": false,
+    "potential": "V(phi) = 1/2 m^2 phi^2",
+    "potential_derivative": "V'(phi) = m^2 phi",
+    "scalar_action": "S[phi,g] = integral d^3x sqrt(-g) [-1/2 g^{mu nu} partial_mu phi partial_nu phi - 1/2 m^2 phi^2]",
+    "stress_energy": "T^{mu nu} = nabla^mu phi nabla^nu phi - g^{mu nu} [1/2 nabla_alpha phi nabla^alpha phi + 1/2 m^2 phi^2]",
+    "tensor_index_connection_term": "Gamma^nu_{mu lambda} T^{mu lambda}",
+    "volume_trace_connection_term": "Gamma^mu_{mu lambda} T^{lambda nu}"
+  },
+  "failure_criteria": {
+    "any_threshold_failure": true,
+    "control_aggregation_cannot_hide_individual_failure": true,
+    "diagnostic_priorities": [
+      "analytic_reference_error",
+      "implementation_defect",
+      "stencil_or_axis_defect",
+      "periodic_boundary_handling_defect",
+      "model_or_profile_problem",
+      "inadequate_resolution"
+    ],
+    "failed_artifacts_preserved": true,
+    "primary_claim_label": "B-BLOCKED",
+    "selected_diagnostic_target": "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_threshold_failure",
+    "threshold_changes_require_new_versioned_guardrail": true,
+    "threshold_relaxation_in_this_version_forbidden": true
+  },
+  "flat_limit_control": {
+    "distinct_from_negative_control": "the positive control changes both geometry and analytic reference; the negative control substitutes flat geometry into the epsilon=0.2 curved case while retaining its curved reference",
+    "positive_control": {
+      "comparison": "correct 2+1 implementation must reproduce the analytic Cartesian Minkowski identity for all three profiles",
+      "expected_connection": "all Christoffel symbols vanish",
+      "expected_metric": "diag(-1,1,1)",
+      "expected_scalar_curvature": 0.0,
+      "independent_floating_route_byte_equality_required": false,
+      "maximum_numeric_discrepancy": 1e-11,
+      "operator_coefficient_order": [
+        "partial_t^2",
+        "partial_x^2",
+        "partial_y^2"
+      ],
+      "operator_coefficients_exact": [
+        -1,
+        1,
+        1
+      ],
+      "substitution": "epsilon -> 0, hence f -> 1"
+    }
+  },
+  "forbidden_claims": [
+    "general curved-spacetime theorem",
+    "gravity evolution or Einstein-equation solution",
+    "Einstein-source compatibility or source admissibility",
+    "Bianchi compatibility",
+    "QFT-GR seam admissibility or closure",
+    "local propagating gravitational-wave validation in 2+1 dimensions",
+    "quantum or renormalized stress-energy source",
+    "pillar completion or Level 4 promotion",
+    "CCFT validation or resumption",
+    "master-action canonicalization, promotion, or closure"
+  ],
+  "inputs": {
+    "amplitude_A": 0.2,
+    "coordinate_domain": {
+      "t": "frozen evaluation slices in [0,1]",
+      "x": "x in [0,2*pi), periodic",
+      "y": "y in [0,2*pi), periodic"
+    },
+    "coordinate_indices": {
+      "t": 0,
+      "x": 1,
+      "y": 2
+    },
+    "coordinates": [
+      "t",
+      "x",
+      "y"
+    ],
+    "dimension_label": "2+1",
+    "mass_m": 1.0,
+    "maximum_inverse_y_metric_factor": 1.5625,
+    "minimum_absolute_metric_determinant": 0.64,
+    "periodic_endpoint_duplicated": false,
+    "resolution_symbol_N_means": "N x N spatial grid",
+    "spacetime_dimension": 3,
+    "spatial_resolutions_Nx_equals_Ny": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "time_slices": [
+      0.0,
+      0.37,
+      0.91
+    ],
+    "warp_amplitude_epsilon": 0.2,
+    "warp_factor": "f(x) = 1 + epsilon*cos(x)",
+    "warp_factor_derivatives": {
+      "f_double_prime": "f''(x) = -epsilon*cos(x)",
+      "f_prime": "f'(x) = -epsilon*sin(x)"
+    },
+    "warp_factor_maximum": 1.2,
+    "warp_factor_minimum": 0.8
+  },
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "negative_controls": {
+    "curved_case_flat_geometry_substitution": {
+      "evaluation": "evaluate the y-mode and x-mode separately; the adjudicated value is the minimum profile-specific normalized discrepancy",
+      "minimum_normalized_discrepancy": 0.02,
+      "normalized_discrepancy_definition": "space-time combined RMS(flat-substituted divergence minus correct curved analytic RHS) divided by max(space-time combined RMS correct curved analytic RHS,epsilon_control)",
+      "operation": "set epsilon=0 in the defective metric, inverse metric, connection, stress tensor, and divergence while retaining the epsilon=0.2 correct curved analytic RHS reference"
+    },
+    "incorrect_y_inverse_metric_factor": {
+      "comparison_reference": "retain the correct epsilon=0.2 curved divergence and correct curved analytic RHS as references",
+      "minimum_normalized_discrepancy": 0.02,
+      "normalized_discrepancy_definition": "space-time combined RMS(defective y-mode identity result minus correct curved analytic RHS) divided by max(space-time combined RMS correct curved analytic RHS,epsilon_control)",
+      "operation": "in the defective y-mode scalar/RHS route replace g^yy=f(x)^(-2) by g^yy=1 everywhere it enters the y residual and raised y-gradient"
+    },
+    "naive_partial_divergence": {
+      "evaluation": "evaluate the y-mode and x-mode spatial off-shell profiles separately; the adjudicated value is the minimum of the two profile-specific ratios so neither profile can be masked",
+      "minimum_error_ratio_to_correct_covariant_result": 10.0,
+      "operation": "omit both Gamma^mu_{mu lambda} T^{lambda nu} and Gamma^nu_{mu lambda} T^{mu lambda} from nabla_mu T^{mu nu}; retain the correct stress tensor and curved RHS",
+      "ratio_definition": "space-time combined RMS defective identity error divided by max(space-time combined RMS correct covariant identity error,epsilon_control), evaluated separately for each required profile"
+    },
+    "omitted_tensor_index_connection_term": {
+      "evaluation": "on-shell temporal mode, where the two connection terms must cancel componentwise in the correct calculation",
+      "minimum_error_ratio_to_correct_covariant_result": 10.0,
+      "operation": "omit Gamma^nu_{mu lambda} T^{mu lambda} only",
+      "ratio_definition": "space-time combined RMS defective on-shell divergence divided by max(correct on-shell combined absolute divergence error,epsilon_control)"
+    },
+    "omitted_volume_trace_connection_term": {
+      "evaluation": "on-shell temporal mode, where the two connection terms must cancel componentwise in the correct calculation",
+      "minimum_error_ratio_to_correct_covariant_result": 10.0,
+      "operation": "omit Gamma^mu_{mu lambda} T^{lambda nu} only",
+      "ratio_definition": "space-time combined RMS defective on-shell divergence divided by max(correct on-shell combined absolute divergence error,epsilon_control)"
+    }
+  },
+  "numerical_method": {
+    "combined_rms_norm_at_each_time": "sqrt(mean_{x,y}(sum_{nu=0}^2 (identity_error^nu)^2))",
+    "component_rms_norm_at_each_time": "sqrt(mean_{x,y}((identity_error^nu)^2)) for each nu",
+    "convergence_gate": {
+      "adjudication": "p_min >= 1.8 separately for off_shell_x_mode and off_shell_y_mode",
+      "component_orders_diagnostic_only": true,
+      "error_N": "combined space-time coordinate-grid identity-error RMS",
+      "p_128_256": "log2(error_128/error_256)",
+      "p_64_128": "log2(error_64/error_128)",
+      "p_min": "min(p_64_128,p_128_256)"
+    },
+    "convergence_order": "log2(error_N/error_2N)",
+    "convergence_profiles": [
+      "off_shell_y_mode",
+      "off_shell_x_mode"
+    ],
+    "determinism": "two fresh-process regenerations must match canonical result, manifest, and execution-report bytes",
+    "metric_connection_and_temporal_field_derivatives": "analytic",
+    "norm_contract": {
+      "combined_rms": "sqrt(mean(error_t^2+error_x^2+error_y^2))",
+      "component_rms": "sqrt(mean(error_nu^2))",
+      "control_error_ratio": "defective_error/max(correct_error,epsilon_control)",
+      "coordinate_grid_uniform_unweighted": true,
+      "coordinate_invariant_tensor_norm": false,
+      "curved_volume_weighted": false,
+      "epsilon_control": 1e-14,
+      "epsilon_norm": 1e-14,
+      "name": "coordinate_grid_euclidean_component_rms",
+      "normalized_defect_discrepancy": "RMS(defective-correct_curved_RHS)/max(RMS(correct_curved_RHS),epsilon_control)",
+      "off_shell_component_relative_error": "RMS(divergence_nu-RHS_nu)/max(RMS(RHS_nu),epsilon_norm)"
+    },
+    "off_shell_relative_error": "norm(nabla_mu T^{mu nu}-E_phi*nabla^nu phi) / max(norm(E_phi*nabla^nu phi),epsilon_norm)",
+    "on_shell_error_policy": "report absolute componentwise and combined divergence norms; do not report a relative error against the zero reference",
+    "periodic_boundary_handling": "index wrapping independently in x and y; endpoints not duplicated",
+    "refinement_schedule": {
+      "Nx_equals_Ny": [
+        32,
+        64,
+        128,
+        256
+      ],
+      "delta_x_equals_delta_y": "2*pi/N",
+      "refinement_ratio": 2
+    },
+    "space_time_combined_rms_norm": "sqrt(mean_{t,x,y}(sum_{nu=0}^2 (identity_error^nu)^2))",
+    "space_time_component_rms_norm": "sqrt(mean_{t,x,y}((identity_error^nu)^2))",
+    "spatial_discretization": "second-order centered finite differences on a periodic x-y grid",
+    "temporal_derivatives": "analytic"
+  },
+  "outputs": {
+    "execution_report": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+    "manifest": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-MANIFEST-v0.json",
+    "result": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0.json"
+  },
+  "packet_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v1",
+  "packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_FIXED_2PLUS1_SPATIALLY_VARYING_WARPED_GEOMETRY_MATTER_IDENTITY_CALCULATION_ONLY",
+  "question": "Does the scalar covariant stress-energy divergence identity hold numerically for three independent divergence components and multiple field profiles on one fixed 2+1-dimensional periodic warped background with spatially varying curvature?",
+  "readiness_authority": {
+    "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+    "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+    "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+    "status": "accepted_current_science_sprint_readiness_authority"
+  },
+  "reproduction_command": "python -m formal.python.toe.calculations.calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background",
+  "required_controls": {
+    "all_five_negative_controls": true,
+    "all_three_divergence_components": true,
+    "analytic_warped_product_curvature_route": true,
+    "complete_hash_manifest": true,
+    "componentwise_and_combined_norms": true,
+    "curvature_route_agreement": true,
+    "deterministic_reexecution": true,
+    "flat_limit_recovery": true,
+    "grid_refinement": true,
+    "independent_generic_tensor_curvature_route": true,
+    "metric_compatibility": true,
+    "off_shell_x_mode": true,
+    "off_shell_y_mode": true,
+    "on_shell_temporal_mode": true,
+    "spatially_varying_nonzero_curvature": true
+  },
+  "revised_at_utc": "2026-07-10T00:00:00Z",
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v1",
+  "selected_next_target": "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_calculation_execution",
+  "solution_controls": {
+    "off_shell_x_mode": {
+      "classification": "deliberately_off_shell_unforced_field",
+      "exact_residual": "E_phi = (omega_x^2-m^2-k^2)*phi_x - A*k*[f'(x)/f(x)]*cos(omega_x*t)*sin(k*x)",
+      "field": "phi_x(t,x) = A*cos(omega_x*t)*cos(k*x)",
+      "forced_or_manufactured": false,
+      "parameters": {
+        "A": 0.2,
+        "k": 2,
+        "omega_x": 1.7
+      },
+      "purpose": "exercise x derivatives and the f'(x)/f(x) scalar connection term independently of the y derivative route"
+    },
+    "off_shell_y_mode": {
+      "classification": "deliberately_off_shell_unforced_field",
+      "exact_residual": "E_phi = [omega_y^2-m^2-ell^2/f(x)^2]*phi_y",
+      "field": "phi_y(t,y) = A*cos(omega_y*t)*cos(ell*y)",
+      "forced_or_manufactured": false,
+      "parameters": {
+        "A": 0.2,
+        "ell": 2,
+        "omega_y": 1.5
+      },
+      "purpose": "exercise the second spatial derivative direction and the spatially varying inverse metric",
+      "substituted_exact_residual": "E_phi = [1.25-4/f(x)^2]*phi_y"
+    },
+    "on_shell_temporal_mode": {
+      "classification": "exact_source_free_on_shell_solution",
+      "exact_residual": "E_phi = 0",
+      "field": "phi_on(t) = A*cos(m*t)",
+      "forced_or_manufactured": false,
+      "parameters": {
+        "A": 0.2,
+        "m": 1.0
+      },
+      "role": "on-shell positive control; spatial stress components still enter connection terms in the covariant divergence"
+    }
+  },
+  "status": "prepared_authorizes_execution_only",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_PREPARED_LEVEL_3_FIXED_BACKGROUND_SCOPED_E_REPRO_SPRINT_ONLY_NO_GRAVITY_EVOLUTION_NO_EINSTEIN_SOURCE_NO_BIANCHI_COMPATIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_OR_PROMOTION",
+  "success_criteria": {
+    "all_thresholds_required": true,
+    "maximum_analytic_profile_residual_reference_error": 1e-12,
+    "maximum_curvature_route_absolute_discrepancy": 1e-12,
+    "maximum_finest_on_shell_combined_absolute_divergence_error": 1e-11,
+    "maximum_finest_x_mode_combined_relative_identity_error": 0.02,
+    "maximum_finest_y_mode_combined_relative_identity_error": 0.02,
+    "maximum_flat_limit_absolute_discrepancy": 1e-11,
+    "maximum_metric_compatibility_absolute_error": 1e-12,
+    "minimum_curvature_peak_absolute_value": 0.49,
+    "minimum_curvature_peak_to_peak_variation": 0.8,
+    "minimum_flat_geometry_substitution_normalized_discrepancy": 0.02,
+    "minimum_incorrect_y_inverse_metric_normalized_discrepancy": 0.02,
+    "minimum_naive_partial_divergence_error_ratio": 10.0,
+    "minimum_omitted_tensor_index_term_error_ratio": 10.0,
+    "minimum_omitted_volume_trace_term_error_ratio": 10.0,
+    "minimum_two_finest_x_mode_convergence_order": 1.8,
+    "minimum_two_finest_y_mode_convergence_order": 1.8
+  },
+  "success_criteria_definitions": {
+    "maximum_analytic_profile_residual_reference_error": "maximum discrepancy between each frozen explicit residual formula and -phi_tt+phi_xx+(f'/f)phi_x+f^(-2)phi_yy-m^2*phi assembled independently from analytic derivatives; this is not a finite-difference Box_g residual",
+    "negative_control_resolution_adjudication": "report every frozen resolution; adjudicate each negative-control threshold on the finest frozen grid N=256",
+    "negative_control_threshold_policy": "each of the five negative controls has its own frozen threshold and must pass individually; multi-profile controls use the minimum profile-specific result and no aggregate can mask a failure",
+    "two_finest_convergence_decision": "p_min=min(log2(error_64/error_128),log2(error_128/error_256)); one decision per off-shell mode"
+  },
+  "supersession": {
+    "original_captured_at_utc": "2026-07-09T00:00:00Z",
+    "revision_reason": "freeze non-gating curvature-zero relative-error reporting, complete analytic residual and norm contracts, exact negative control defects, and the sixteen threshold decisions",
+    "superseded_artifact_preserved_byte_for_byte": true,
+    "supersedes_packet_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_v0",
+    "supersedes_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v0.json",
+    "supersedes_schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v0",
+    "supersedes_sha256": "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8"
+  },
+  "threshold_decisions": [
+    {
+      "comparison": ">=",
+      "decision_number": 1,
+      "evidence": "off_shell_x_mode p_min",
+      "threshold": 1.8,
+      "threshold_id": "minimum_two_finest_x_mode_convergence_order"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 2,
+      "evidence": "off_shell_y_mode p_min",
+      "threshold": 1.8,
+      "threshold_id": "minimum_two_finest_y_mode_convergence_order"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 3,
+      "evidence": "N=256 off_shell_x_mode combined relative identity error",
+      "threshold": 0.02,
+      "threshold_id": "maximum_finest_x_mode_combined_relative_identity_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 4,
+      "evidence": "N=256 off_shell_y_mode combined relative identity error",
+      "threshold": 0.02,
+      "threshold_id": "maximum_finest_y_mode_combined_relative_identity_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 5,
+      "evidence": "N=256 temporal-mode combined absolute divergence error",
+      "threshold": 1e-11,
+      "threshold_id": "maximum_finest_on_shell_combined_absolute_divergence_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 6,
+      "evidence": "maximum explicit-profile residual versus independently assembled analytic derivative reference",
+      "threshold": 1e-12,
+      "threshold_id": "maximum_analytic_profile_residual_reference_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 7,
+      "evidence": "maximum absolute component of nabla_lambda g_mu_nu",
+      "threshold": 1e-12,
+      "threshold_id": "maximum_metric_compatibility_absolute_error"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 8,
+      "evidence": "maximum abs(R_generic-R_analytic) over all frozen grids",
+      "threshold": 1e-12,
+      "threshold_id": "maximum_curvature_route_absolute_discrepancy"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 9,
+      "evidence": "maximum abs(R_analytic) over the frozen background",
+      "threshold": 0.49,
+      "threshold_id": "minimum_curvature_peak_absolute_value"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 10,
+      "evidence": "max(R_analytic)-min(R_analytic)",
+      "threshold": 0.8,
+      "threshold_id": "minimum_curvature_peak_to_peak_variation"
+    },
+    {
+      "comparison": "<=",
+      "decision_number": 11,
+      "evidence": "generic epsilon=0 route versus independent Cartesian route",
+      "threshold": 1e-11,
+      "threshold_id": "maximum_flat_limit_absolute_discrepancy"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 12,
+      "evidence": "minimum of N=256 x-mode and y-mode control ratios",
+      "threshold": 10.0,
+      "threshold_id": "minimum_naive_partial_divergence_error_ratio"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 13,
+      "evidence": "N=256 temporal-mode omitted tensor-index ratio",
+      "threshold": 10.0,
+      "threshold_id": "minimum_omitted_tensor_index_term_error_ratio"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 14,
+      "evidence": "N=256 temporal-mode omitted volume-trace ratio",
+      "threshold": 10.0,
+      "threshold_id": "minimum_omitted_volume_trace_term_error_ratio"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 15,
+      "evidence": "minimum of N=256 x-mode and y-mode discrepancies",
+      "threshold": 0.02,
+      "threshold_id": "minimum_flat_geometry_substitution_normalized_discrepancy"
+    },
+    {
+      "comparison": ">=",
+      "decision_number": 16,
+      "evidence": "N=256 y-mode wrong-inverse-metric discrepancy",
+      "threshold": 0.02,
+      "threshold_id": "minimum_incorrect_y_inverse_metric_normalized_discrepancy"
+    }
+  ],
+  "units": {
+    "convention": "dimensionless numerical test units with c = hbar = 1",
+    "coordinate_parameter_consistency": "t, x, y, m, omega, k, and ell use one natural-unit normalization",
+    "physical_parameter_inference_allowed": false
+  }
+}

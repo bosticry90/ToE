@@ -9,10 +9,16 @@ import pytest
 
 from formal.python.tools.scalar_higher_dimensional_curved_background_reports import (
     BACKGROUND_GEOMETRY_CLASSIFICATION,
+    COORDINATE_GRID_NORM_NAME,
+    DIAGNOSTIC_FAILURE_TARGET,
+    EPSILON_CONTROL,
+    EPSILON_NORM,
+    EPSILON_R,
     EQUATION_ID,
     EXECUTION_TARGET,
     EXECUTION_TARGET_KIND,
     EXPECTED_GUARDRAIL_SHA256,
+    EXPECTED_SUPERSEDED_GUARDRAIL_SHA256,
     EXPECTED_PREDECESSOR_REVIEW_SHA256,
     EXPECTED_READINESS_SHA256,
     GUARDRAIL_OUTCOME,
@@ -23,6 +29,9 @@ from formal.python.tools.scalar_higher_dimensional_curved_background_reports imp
     PACKET_ID,
     PACKET_SCHEMA_ID,
     SPATIAL_RESOLUTIONS,
+    SUPERSEDED_GUARDRAIL_REPORT_PATH,
+    SUPERSEDED_PACKET_ID,
+    SUPERSEDED_PACKET_SCHEMA_ID,
     THRESHOLD_IDS,
     TIME_SLICES,
     build_guardrail_payload,
@@ -39,6 +48,8 @@ def test_guardrail_freezes_lifecycle_and_accepted_predecessor() -> None:
     validate_guardrail_payload(payload)
     assert payload["schema_id"] == PACKET_SCHEMA_ID
     assert payload["packet_id"] == PACKET_ID
+    assert payload["schema_id"] != SUPERSEDED_PACKET_SCHEMA_ID
+    assert payload["packet_id"] != SUPERSEDED_PACKET_ID
     assert payload["consumed_target"] == GUARDRAIL_TARGET
     assert payload["selected_next_target"] == EXECUTION_TARGET
     assert payload["selected_next_target_kind"] == EXECUTION_TARGET_KIND
@@ -48,6 +59,24 @@ def test_guardrail_freezes_lifecycle_and_accepted_predecessor() -> None:
         EXPECTED_PREDECESSOR_REVIEW_SHA256
     )
     assert payload["readiness_authority"]["sha256"] == EXPECTED_READINESS_SHA256
+    assert payload["revised_at_utc"] == "2026-07-10T00:00:00Z"
+    assert payload["supersession"] == {
+        "supersedes_schema_id": SUPERSEDED_PACKET_SCHEMA_ID,
+        "supersedes_packet_id": SUPERSEDED_PACKET_ID,
+        "supersedes_path": (
+            "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_"
+            "IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_"
+            "20260709_v0.json"
+        ),
+        "supersedes_sha256": EXPECTED_SUPERSEDED_GUARDRAIL_SHA256,
+        "original_captured_at_utc": "2026-07-09T00:00:00Z",
+        "revision_reason": (
+            "freeze non-gating curvature-zero relative-error reporting, "
+            "complete analytic residual and norm contracts, exact negative "
+            "control defects, and the sixteen threshold decisions"
+        ),
+        "superseded_artifact_preserved_byte_for_byte": True,
+    }
 
 
 def test_metric_inverse_determinant_volume_and_domain_are_frozen() -> None:
@@ -66,6 +95,10 @@ def test_metric_inverse_determinant_volume_and_domain_are_frozen() -> None:
     assert inputs["warp_amplitude_epsilon"] == 0.2
     assert inputs["warp_factor_minimum"] == 0.8
     assert inputs["warp_factor_maximum"] == 1.2
+    assert inputs["resolution_symbol_N_means"] == "N x N spatial grid"
+    assert inputs["periodic_endpoint_duplicated"] is False
+    assert inputs["maximum_inverse_y_metric_factor"] == 1.5625
+    assert inputs["minimum_absolute_metric_determinant"] == 0.64
     assert geometry["classification"] == BACKGROUND_GEOMETRY_CLASSIFICATION
     assert geometry["metric"] == "g_mu_nu = diag(-1, 1, f(x)^2)"
     assert geometry["inverse_metric"] == (
@@ -149,11 +182,29 @@ def test_curvature_crosses_zero_but_has_frozen_range_and_variation() -> None:
     assert curvature["minimum_peak_absolute_scalar_curvature"] == 0.49
     assert curvature["minimum_peak_to_peak_scalar_curvature"] == 0.8
     assert "minimum pointwise" not in json.dumps(curvature)
+    policy = curvature["curvature_zero_exclusion_policy"]
+    assert policy["epsilon_R"] == EPSILON_R
+    assert policy["absolute_error_reported_at_every_x_index"] is True
+    assert policy["excluded_relative_error_value"] is None
+    assert policy["excluded_status"] == "excluded_near_zero"
+    assert policy["non_gating_reporting_rule"] is True
+    assert policy["not_an_additional_success_threshold"] is True
+    assert policy["exact_crossing_locations"] == ["pi/2", "3*pi/2"]
+    assert policy["per_resolution_exclusions"] == [
+        {
+            "resolution_N": n,
+            "excluded_x_index_count": 2,
+            "excluded_x_indices": [n // 4, 3 * n // 4],
+            "excluded_spatial_gridpoint_count": 2 * n,
+        }
+        for n in SPATIAL_RESOLUTIONS
+    ]
 
 
 def test_action_dalembertian_identity_and_three_components_are_frozen() -> None:
     equations = build_guardrail_payload()["equation_surfaces"]
     assert equations["potential"] == "V(phi) = 1/2 m^2 phi^2"
+    assert equations["potential_derivative"] == "V'(phi) = m^2 phi"
     assert equations["field_residual"] == "E_phi = Box_g phi - m^2 phi"
     assert equations["covariant_dalembertian"] == (
         "Box_g phi = -partial_t^2 phi + partial_x^2 phi + "
@@ -161,6 +212,16 @@ def test_action_dalembertian_identity_and_three_components_are_frozen() -> None:
     )
     assert equations["identity"] == (
         "nabla_mu T^{mu nu} = E_phi nabla^nu phi"
+    )
+    assert equations["volume_trace_connection_term"] == (
+        "Gamma^mu_{mu lambda} T^{lambda nu}"
+    )
+    assert equations["tensor_index_connection_term"] == (
+        "Gamma^nu_{mu lambda} T^{mu lambda}"
+    )
+    assert equations["analytic_profile_residual_reference_assembly"] == (
+        "-phi_tt + phi_xx + [f'(x)/f(x)]*phi_x + "
+        "f(x)^(-2)*phi_yy - m^2*phi"
     )
     assert equations["divergence_components_required"] == [0, 1, 2]
     assert equations["divergence_component_labels"] == [
@@ -186,6 +247,9 @@ def test_on_shell_and_two_distinct_off_shell_profiles_are_frozen() -> None:
     }
     assert controls["off_shell_y_mode"]["exact_residual"] == (
         "E_phi = [omega_y^2-m^2-ell^2/f(x)^2]*phi_y"
+    )
+    assert controls["off_shell_y_mode"]["substituted_exact_residual"] == (
+        "E_phi = [1.25-4/f(x)^2]*phi_y"
     )
     assert controls["off_shell_x_mode"]["parameters"] == {
         "A": 0.2,
@@ -216,6 +280,27 @@ def test_periodic_refinement_norms_and_determinism_are_frozen() -> None:
     ]
     assert "for each nu" in method["component_rms_norm_at_each_time"]
     assert "sum_{nu=0}^2" in method["combined_rms_norm_at_each_time"]
+    norm = method["norm_contract"]
+    assert norm["name"] == COORDINATE_GRID_NORM_NAME
+    assert norm["coordinate_grid_uniform_unweighted"] is True
+    assert norm["coordinate_invariant_tensor_norm"] is False
+    assert norm["curved_volume_weighted"] is False
+    assert norm["epsilon_norm"] == EPSILON_NORM
+    assert norm["epsilon_control"] == EPSILON_CONTROL
+    assert norm["component_rms"] == "sqrt(mean(error_nu^2))"
+    assert norm["combined_rms"] == (
+        "sqrt(mean(error_t^2+error_x^2+error_y^2))"
+    )
+    assert method["convergence_gate"]["p_64_128"] == (
+        "log2(error_64/error_128)"
+    )
+    assert method["convergence_gate"]["p_128_256"] == (
+        "log2(error_128/error_256)"
+    )
+    assert method["convergence_gate"]["p_min"] == (
+        "min(p_64_128,p_128_256)"
+    )
+    assert method["convergence_gate"]["component_orders_diagnostic_only"] is True
     assert "two fresh-process" in method["determinism"]
 
 
@@ -226,40 +311,53 @@ def test_positive_flat_limit_is_distinct_from_five_negative_controls() -> None:
     assert flat["positive_control"]["substitution"] == "epsilon -> 0, hence f -> 1"
     assert flat["positive_control"]["expected_metric"] == "diag(-1,1,1)"
     assert flat["positive_control"]["expected_scalar_curvature"] == 0.0
+    assert flat["positive_control"]["operator_coefficients_exact"] == [-1, 1, 1]
+    assert flat["positive_control"]["maximum_numeric_discrepancy"] == 1e-11
+    assert flat["positive_control"][
+        "independent_floating_route_byte_equality_required"
+    ] is False
     assert "changes both geometry and analytic reference" in flat[
         "distinct_from_negative_control"
     ]
     assert set(negative) == NEGATIVE_CONTROL_IDS
     assert len(negative) == 5
-    assert "retaining the epsilon=0.2 curved analytic identity reference" in (
+    assert "defective metric, inverse metric, connection, stress tensor" in (
         negative["curved_case_flat_geometry_substitution"]["operation"]
     )
-    assert "f(x)^(-2)" in negative["incorrect_y_inverse_metric_factor"][
+    assert "g^yy=f(x)^(-2) by g^yy=1" in negative[
+        "incorrect_y_inverse_metric_factor"
+    ][
         "operation"
     ]
-    assert "correct epsilon=0.2 curved analytic residual" in negative[
+    assert "correct epsilon=0.2 curved divergence" in negative[
         "incorrect_y_inverse_metric_factor"
     ]["comparison_reference"]
     assert "minimum of the two profile-specific ratios" in negative[
         "naive_partial_divergence"
     ]["evaluation"]
-    assert "max(space-time combined RMS correct covariant identity error,1e-14)" in (
+    assert (
+        "max(space-time combined RMS correct covariant identity "
+        "error,epsilon_control)"
+    ) in (
         negative["naive_partial_divergence"]["ratio_definition"]
     )
     for control in (
         "omitted_tensor_index_connection_term",
         "omitted_volume_trace_connection_term",
     ):
-        assert "max(correct on-shell combined absolute divergence error,1e-14)" in (
+        assert (
+            "max(correct on-shell combined absolute divergence "
+            "error,epsilon_control)"
+        ) in (
             negative[control]["ratio_definition"]
         )
     assert "minimum profile-specific normalized discrepancy" in negative[
         "curved_case_flat_geometry_substitution"
     ]["evaluation"]
-    assert "1e-14" in negative["curved_case_flat_geometry_substitution"][
+    assert "epsilon_control" in negative["curved_case_flat_geometry_substitution"][
         "normalized_discrepancy_definition"
     ]
-    assert "1e-14" in negative["incorrect_y_inverse_metric_factor"][
+    assert "epsilon_control" in negative["incorrect_y_inverse_metric_factor"][
         "normalized_discrepancy_definition"
     ]
 
@@ -274,12 +372,33 @@ def test_sixteen_frozen_thresholds_cannot_be_aggregated_away() -> None:
     assert criteria["minimum_two_finest_x_mode_convergence_order"] == 1.8
     assert criteria["maximum_curvature_route_absolute_discrepancy"] == 1e-12
     assert criteria["minimum_naive_partial_divergence_error_ratio"] == 10.0
+    decisions = payload["threshold_decisions"]
+    assert [decision["decision_number"] for decision in decisions] == list(
+        range(1, 17)
+    )
+    assert {decision["threshold_id"] for decision in decisions} == THRESHOLD_IDS
+    assert decisions[0]["threshold_id"] == (
+        "minimum_two_finest_x_mode_convergence_order"
+    )
+    assert decisions[1]["threshold_id"] == (
+        "minimum_two_finest_y_mode_convergence_order"
+    )
+    assert decisions[5]["threshold_id"] == (
+        "maximum_analytic_profile_residual_reference_error"
+    )
     assert payload["failure_criteria"][
         "control_aggregation_cannot_hide_individual_failure"
     ] is True
     assert "not a finite-difference Box_g residual" in payload[
         "success_criteria_definitions"
-    ]["maximum_exact_residual_absolute_error"]
+    ]["maximum_analytic_profile_residual_reference_error"]
+    assert payload["failure_criteria"]["selected_diagnostic_target"] == (
+        DIAGNOSTIC_FAILURE_TARGET
+    )
+    assert "selected_repair_target" not in payload["failure_criteria"]
+    assert payload["failure_criteria"][
+        "threshold_relaxation_in_this_version_forbidden"
+    ] is True
     assert payload["success_criteria_definitions"][
         "negative_control_resolution_adjudication"
     ] == (
@@ -307,6 +426,12 @@ def test_level_three_equation_reuse_and_nonclaims_are_frozen() -> None:
         if key.startswith("not_")
     )
     assert boundary["einstein_tensor_can_be_nonzero"] is True
+    assert boundary["spacetime_dimension"] == 3
+    assert boundary[
+        "two_dimensional_Einstein_degeneracy_not_applicable"
+    ] is True
+    assert boundary["background_fixed"] is True
+    assert boundary["Einstein_source_tested"] is False
     assert boundary["einstein_tensor_source_tested"] is False
     assert boundary["gravity_evolved"] is False
     assert boundary["bianchi_compatibility_claimed"] is False
@@ -317,6 +442,9 @@ def test_level_three_equation_reuse_and_nonclaims_are_frozen() -> None:
 
 def test_release_artifact_matches_deterministic_builder_bytes() -> None:
     payload = build_guardrail_payload()
+    assert sha256_path(SUPERSEDED_GUARDRAIL_REPORT_PATH) == (
+        EXPECTED_SUPERSEDED_GUARDRAIL_SHA256
+    )
     assert GUARDRAIL_REPORT_PATH.read_bytes() == report_json_bytes(payload)
     assert sha256_path(GUARDRAIL_REPORT_PATH) == EXPECTED_GUARDRAIL_SHA256
 
@@ -358,6 +486,10 @@ def test_canonical_contract_rejects_nonfinite_numbers() -> None:
             "readiness-authority",
         ),
         (
+            lambda p: p["supersession"].__setitem__("supersedes_sha256", "0" * 64),
+            "supersession",
+        ),
+        (
             lambda p: p["inputs"].__setitem__("warp_amplitude_epsilon", 0.3),
             "inputs",
         ),
@@ -372,6 +504,14 @@ def test_canonical_contract_rejects_nonfinite_numbers() -> None:
                 "nonzero_christoffels"
             ].__setitem__("Gamma^x_{y y}", "+f(x)*f'(x)"),
             "Christoffel",
+        ),
+        (
+            lambda p: p["curvature_verification"][
+                "curvature_zero_exclusion_policy"
+            ]["per_resolution_exclusions"][0].__setitem__(
+                "excluded_spatial_gridpoint_count", 2
+            ),
+            "curvature-zero exclusion",
         ),
         (
             lambda p: p["equation_surfaces"].__setitem__(
@@ -414,6 +554,16 @@ def test_canonical_contract_rejects_nonfinite_numbers() -> None:
                 "minimum_naive_partial_divergence_error_ratio", 0.0
             ),
             "threshold set or value",
+        ),
+        (
+            lambda p: p["threshold_decisions"].pop(),
+            "sixteen threshold decisions",
+        ),
+        (
+            lambda p: p["failure_criteria"].__setitem__(
+                "selected_diagnostic_target", "relax_thresholds"
+            ),
+            "diagnostic failure lifecycle",
         ),
         (
             lambda p: p["required_controls"].__setitem__(

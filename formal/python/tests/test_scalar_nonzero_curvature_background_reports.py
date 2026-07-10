@@ -370,5 +370,5 @@ def test_execution_and_review_are_preserved_after_review_rotation() -> None:
     assert active["workstream_id"] == state["live_next_target"]
     assert active["calculation_executed"] == "no"
     assert active["report_sha256"] == (
-        "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8"
+        "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96"
     )
