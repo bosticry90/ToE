@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result" := by
+      "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_guardrail_packet" := by
   native_decide
 
 end CurrentAuthority

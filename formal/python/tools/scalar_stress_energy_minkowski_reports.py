@@ -7,6 +7,13 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.toe.calculations.calc_scalar_stress_energy_divergence_identity_minkowski import (
+    CALCULATION_ID,
+    RESOLUTIONS,
+    TIME_SLICES,
+    build_result as rebuild_calculation_result,
+    canonical_json_bytes as calculation_canonical_json_bytes,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -46,6 +53,23 @@ EXECUTION_STRICT_OUTCOME = (
     "SCOPED_E_REPRO_PENDING_REVIEW_NO_GRAVITY_DYNAMICS_NO_SOURCE_"
     "ADMISSIBILITY_NO_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION"
 )
+REVIEW_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_"
+    "REVIEW_ACCEPTS_LEVEL_3_REPRODUCIBLE_DIVERGENCE_IDENTITY_PRETEST_ONLY"
+)
+REVIEW_STRICT_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_"
+    "REVIEW_ACCEPTS_SCOPED_E_REPRO_NO_GRAVITY_DYNAMICS_NO_SOURCE_"
+    "ADMISSIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION"
+)
+CURVED_RETEST_GUARDRAIL_TARGET = (
+    "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_"
+    "guardrail_packet"
+)
+REPRODUCIBILITY_REPAIR_TARGET = (
+    "repair_calc_scalar_stress_energy_divergence_identity_minkowski_"
+    "reproducibility_mismatch"
+)
 
 GUARDRAIL_REPORT_PATH = (
     REPO_ROOT
@@ -82,6 +106,40 @@ EXECUTION_REPORT_PATH = (
     / "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
     "EXECUTION_20260709_v0.json"
 )
+CALCULATION_SCRIPT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "toe"
+    / "calculations"
+    / "calc_scalar_stress_energy_divergence_identity_minkowski.py"
+)
+REVIEW_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
+    "RESULT_REVIEW_20260709_v0.json"
+)
+
+EXPECTED_EXECUTION_HASHES = {
+    "guardrail_sha256": (
+        "a1f29ff370431de8ca1d4e977e00d659a70353ae142472121ea9f44128f07da5"
+    ),
+    "script_sha256": (
+        "0eaa19affa8a74084444247c9a04b6997b632490b5411bf436fc3461028547eb"
+    ),
+    "output_sha256": (
+        "c93f2324c735bf2a06ba9a83c3fc022be87b7d00fb5bf2010b8010c2715f480e"
+    ),
+    "manifest_sha256": (
+        "7e2eee401b84c4a8c8dd20c8d54eb6bbba9f16b4e832d53bff6bd7612cd53605"
+    ),
+    "execution_report_sha256": (
+        "f1a6b0de45a830b9146cc06b3dbf086ab9bf95f53ae55a5bb80e969df9d53f3f"
+    ),
+}
 
 EQUATION_IDS = (
     "EQ-QFT-SCALAR-STRESS-ENERGY-v0",
@@ -405,6 +463,256 @@ def build_execution_report() -> dict[str, Any]:
     }
 
 
+def _reject_nonfinite_json(token: str) -> None:
+    raise ValueError(f"non-finite JSON token: {token}")
+
+
+def _load_strict_json(path: Path) -> dict[str, Any]:
+    payload = json.loads(
+        path.read_text(encoding="utf-8"),
+        parse_constant=_reject_nonfinite_json,
+    )
+    if not isinstance(payload, dict):
+        raise ValueError("top-level JSON value must be an object")
+    return payload
+
+
+def verify_calculation_result(
+    *,
+    guardrail_path: Path = GUARDRAIL_REPORT_PATH,
+    script_path: Path = CALCULATION_SCRIPT_PATH,
+    output_path: Path = CALCULATION_OUTPUT_PATH,
+    manifest_path: Path = CALCULATION_MANIFEST_PATH,
+    execution_report_path: Path = EXECUTION_REPORT_PATH,
+) -> dict[str, Any]:
+    mismatch_codes: list[str] = []
+    actual_hashes = {
+        "guardrail_sha256": sha256_path(guardrail_path),
+        "script_sha256": sha256_path(script_path),
+        "output_sha256": sha256_path(output_path),
+        "manifest_sha256": sha256_path(manifest_path),
+        "execution_report_sha256": sha256_path(execution_report_path),
+    }
+    hash_code_by_key = {
+        "guardrail_sha256": "guardrail_hash_mismatch",
+        "script_sha256": "script_hash_mismatch",
+        "output_sha256": "output_hash_mismatch",
+        "manifest_sha256": "manifest_hash_mismatch",
+        "execution_report_sha256": "execution_report_hash_mismatch",
+    }
+    for key, expected in EXPECTED_EXECUTION_HASHES.items():
+        if actual_hashes[key] != expected:
+            mismatch_codes.append(hash_code_by_key[key])
+
+    result: dict[str, Any] | None = None
+    manifest: dict[str, Any] | None = None
+    execution_report: dict[str, Any] | None = None
+    try:
+        result = _load_strict_json(output_path)
+        manifest = _load_strict_json(manifest_path)
+        execution_report = _load_strict_json(execution_report_path)
+    except (UnicodeDecodeError, json.JSONDecodeError, ValueError):
+        mismatch_codes.append("schema_mismatch")
+
+    canonical_bytes_match = False
+    independent_regeneration_match = False
+    if result is not None and manifest is not None:
+        try:
+            canonical_bytes_match = (
+                output_path.read_bytes() == calculation_canonical_json_bytes(result)
+                and manifest_path.read_bytes()
+                == calculation_canonical_json_bytes(manifest)
+            )
+        except (TypeError, ValueError):
+            canonical_bytes_match = False
+        if not canonical_bytes_match:
+            mismatch_codes.append("canonicalization_mismatch")
+
+        required_result_fields = {
+            "schema_id",
+            "calculation_id",
+            "parameters",
+            "on_shell",
+            "off_shell",
+            "threshold_evidence",
+            "threshold_checks",
+            "all_thresholds_passed",
+            "claim",
+            "boundary",
+        }
+        required_manifest_fields = {
+            "schema_id",
+            "calculation_id",
+            "guardrail_sha256",
+            "script_sha256",
+            "output_sha256",
+            "canonical_json_contract",
+            "result_review_target",
+        }
+        if (
+            not required_result_fields.issubset(result)
+            or not required_manifest_fields.issubset(manifest)
+            or result.get("calculation_id") != CALCULATION_ID
+            or manifest.get("calculation_id") != CALCULATION_ID
+        ):
+            mismatch_codes.append("schema_mismatch")
+
+        try:
+            count_match = (
+                result["parameters"]["time_slices"] == list(TIME_SLICES)
+                and result["parameters"]["resolutions_N"] == list(RESOLUTIONS)
+                and len(result["on_shell"]["time_slice_results"]) == 12
+                and len(result["off_shell"]["time_slice_results"]) == 12
+                and len(result["on_shell"]["resolution_aggregates"]) == 4
+                and len(result["off_shell"]["resolution_aggregates"]) == 4
+            )
+        except (KeyError, TypeError):
+            count_match = False
+        if not count_match:
+            mismatch_codes.append("count_mismatch")
+
+        expected_check_keys = {
+            "two_finest_convergence_order_at_least_1_8",
+            "finest_combined_off_shell_relative_error_at_most_2_percent",
+            "exact_coefficient_error_at_most_1e_12",
+            "finest_off_shell_divergence_over_100_times_on_shell",
+        }
+        checks = result.get("threshold_checks", {})
+        threshold_match = (
+            result.get("all_thresholds_passed") is True
+            and set(checks) == expected_check_keys
+            and all(checks.values())
+            and result.get("claim", {}).get("primary_label") == "E-REPRO"
+            and result.get("claim", {}).get("claim_ceiling_level") == 3
+        )
+        if not threshold_match:
+            mismatch_codes.append("threshold_mismatch")
+
+        if (
+            manifest.get("guardrail_sha256") != actual_hashes["guardrail_sha256"]
+            or manifest.get("script_sha256") != actual_hashes["script_sha256"]
+            or manifest.get("output_sha256") != actual_hashes["output_sha256"]
+        ):
+            mismatch_codes.append("manifest_hash_mismatch")
+
+        fresh_result = rebuild_calculation_result()
+        independent_regeneration_match = (
+            calculation_canonical_json_bytes(fresh_result) == output_path.read_bytes()
+        )
+        if not independent_regeneration_match:
+            mismatch_codes.append("regeneration_mismatch")
+
+    if execution_report is not None:
+        if (
+            execution_report.get("calculation_output_sha256")
+            != actual_hashes["output_sha256"]
+            or execution_report.get("calculation_manifest_sha256")
+            != actual_hashes["manifest_sha256"]
+            or execution_report.get("all_thresholds_passed") is not True
+        ):
+            mismatch_codes.append("schema_mismatch")
+
+    mismatch_codes = list(dict.fromkeys(mismatch_codes))
+    accepted = not mismatch_codes
+    threshold_evidence = result.get("threshold_evidence", {}) if result else {}
+    return {
+        "accepted": accepted,
+        "primary_claim_label": "E-REPRO" if accepted else "B-BLOCKED",
+        "claim_status": (
+            "accepted_scoped_level_3_minkowski_pretest_only"
+            if accepted
+            else "blocked_reproducibility_mismatch"
+        ),
+        "mismatch_codes": mismatch_codes,
+        "expected_hashes": EXPECTED_EXECUTION_HASHES,
+        "actual_hashes": actual_hashes,
+        "canonical_bytes_match": canonical_bytes_match,
+        "independent_in_memory_regeneration_match": (
+            independent_regeneration_match
+        ),
+        "threshold_evidence": threshold_evidence,
+        "selected_next_target": (
+            CURVED_RETEST_GUARDRAIL_TARGET
+            if accepted
+            else REPRODUCIBILITY_REPAIR_TARGET
+        ),
+    }
+
+
+def build_review_report(**verification_paths: Path) -> dict[str, Any]:
+    verification = verify_calculation_result(**verification_paths)
+    accepted = verification["accepted"]
+    return {
+        "schema_id": (
+            "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
+            "RESULT_REVIEW_20260709_v0"
+        ),
+        "review_id": (
+            "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
+            "RESULT_REVIEW_v0"
+        ),
+        "status": (
+            "accepted_scoped_e_repro" if accepted else "blocked_reproducibility_mismatch"
+        ),
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "consumed_target": REVIEW_TARGET,
+        "consumed_target_kind": (
+            "scalar_stress_energy_divergence_identity_minkowski_calculation_"
+            "result_review"
+        ),
+        "selected_next_target": verification["selected_next_target"],
+        "selected_next_target_kind": (
+            "bounded_curved_space_scalar_qft_gr_source_contract_retest_"
+            "guardrail_packet"
+            if accepted
+            else "scalar_minkowski_calculation_reproducibility_repair"
+        ),
+        "packet_result": REVIEW_OUTCOME if accepted else "B-BLOCKED",
+        "strict_packet_result": REVIEW_STRICT_OUTCOME if accepted else "B-BLOCKED",
+        "review_result": REVIEW_OUTCOME if accepted else "B-BLOCKED",
+        "strict_review_result": REVIEW_STRICT_OUTCOME if accepted else "B-BLOCKED",
+        "verification": verification,
+        "claim": {
+            "primary_label": verification["primary_claim_label"],
+            "claim_status": verification["claim_status"],
+            "claim_ceiling_level": 3,
+            "claim_scope": (
+                "flat-Minkowski scalar stress-energy divergence identity toy "
+                "calculation only"
+            ),
+        },
+        "execution_artifacts_modified_by_review": False,
+        "equation_compendium_rows_activated": list(EQUATION_IDS) if accepted else [],
+        "equation_compendium_status": (
+            "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO"
+            if accepted
+            else "not_activated"
+        ),
+        "ccft_lane_status": "paused_upstream_prerequisites",
+        "remaining_blockers": [
+            "no curved-spacetime source-contract witness",
+            "no GR source admissibility",
+            "no Bianchi compatibility",
+            "no QFT-GR seam admissibility or closure",
+            "no master-action promotion",
+        ],
+        "boundary": {
+            "gravity_dynamics_validated": False,
+            "source_admissibility_claimed": False,
+            "bianchi_compatibility_claimed": False,
+            "qft_gr_seam_admissibility_claimed": False,
+            "qft_gr_seam_closure_claimed": False,
+            "pillar_completion_claimed": False,
+            "ccft_resumed": False,
+            "ccft_validated": False,
+            "master_action_promoted": False,
+        },
+        "lean_status_wording": (
+            "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+        ),
+    }
+
+
 def write_report(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(report_json_bytes(payload))
@@ -444,3 +752,21 @@ def execution_report_main(argv: list[str] | None = None) -> int:
         )
     )
     return 0
+
+
+def review_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Review the scalar pretest result.")
+    parser.add_argument("--out", type=Path, default=REVIEW_REPORT_PATH)
+    args = parser.parse_args(argv)
+    payload = build_review_report()
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "accepted": payload["verification"]["accepted"],
+                "outcome": payload["packet_result"],
+                "selected_next_target": payload["selected_next_target"],
+            }
+        )
+    )
+    return 0 if payload["verification"]["accepted"] else 1

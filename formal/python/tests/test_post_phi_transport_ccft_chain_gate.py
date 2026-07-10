@@ -45,6 +45,7 @@ from formal.python.tools.science_first_pillar_seam_rebase_reports import (
     REVIEW_TARGET as SCIENCE_FIRST_REBASE_REVIEW_TARGET,
 )
 from formal.python.tools.scalar_stress_energy_minkowski_reports import (
+    CURVED_RETEST_GUARDRAIL_TARGET,
     EXECUTION_OUTCOME as SCALAR_MINKOWSKI_EXECUTION_OUTCOME,
     EXECUTION_STRICT_OUTCOME as SCALAR_MINKOWSKI_EXECUTION_STRICT_OUTCOME,
     EXECUTION_TARGET as SCALAR_MINKOWSKI_EXECUTION_TARGET,
@@ -52,14 +53,16 @@ from formal.python.tools.scalar_stress_energy_minkowski_reports import (
     GUARDRAIL_STRICT_OUTCOME as SCALAR_FLAT_GUARDRAIL_STRICT_OUTCOME,
     GUARDRAIL_TARGET as SCALAR_FLAT_GUARDRAIL_TARGET,
     REVIEW_TARGET as SCALAR_MINKOWSKI_REVIEW_TARGET,
+    REVIEW_OUTCOME as SCALAR_MINKOWSKI_REVIEW_OUTCOME,
+    REVIEW_STRICT_OUTCOME as SCALAR_MINKOWSKI_REVIEW_STRICT_OUTCOME,
 )
 
 
 FINAL_LIVE_TARGET = (
-    SCALAR_MINKOWSKI_REVIEW_TARGET
+    CURVED_RETEST_GUARDRAIL_TARGET
 )
 FINAL_PREVIOUS_TARGET = (
-    SCALAR_MINKOWSKI_EXECUTION_TARGET
+    SCALAR_MINKOWSKI_REVIEW_TARGET
 )
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
@@ -1785,15 +1788,15 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTC
 )
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "ScalarStressEnergyDivergenceIdentityMinkowskiCalculationExecution.lean"
+    "ScalarStressEnergyDivergenceIdentityMinkowskiCalculationResultReview.lean"
 )
 FINAL_REPORT = (
     "formal/docs/release/"
     "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_"
-    "EXECUTION_20260709_v0.json"
+    "RESULT_REVIEW_20260709_v0.json"
 )
-FINAL_OUTCOME = SCALAR_MINKOWSKI_EXECUTION_OUTCOME
-FINAL_STRICT_OUTCOME = SCALAR_MINKOWSKI_EXECUTION_STRICT_OUTCOME
+FINAL_OUTCOME = SCALAR_MINKOWSKI_REVIEW_OUTCOME
+FINAL_STRICT_OUTCOME = SCALAR_MINKOWSKI_REVIEW_STRICT_OUTCOME
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
@@ -2038,7 +2041,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result_review"
 )
 FINAL_KIND = (
-    "scalar_stress_energy_divergence_identity_minkowski_calculation_result_review"
+    "bounded_curved_space_scalar_qft_gr_source_contract_retest_guardrail_packet"
 )
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"

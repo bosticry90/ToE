@@ -1,0 +1,75 @@
+{
+  "boundary": {
+    "bianchi_compatibility_claimed": false,
+    "ccft_resumed": false,
+    "ccft_validated": false,
+    "gravity_dynamics_validated": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "source_admissibility_claimed": false
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "flat-Minkowski scalar stress-energy divergence identity toy calculation only",
+    "claim_status": "accepted_scoped_level_3_minkowski_pretest_only",
+    "primary_label": "E-REPRO"
+  },
+  "consumed_target": "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result",
+  "consumed_target_kind": "scalar_stress_energy_divergence_identity_minkowski_calculation_result_review",
+  "equation_compendium_rows_activated": [
+    "EQ-QFT-SCALAR-STRESS-ENERGY-v0",
+    "EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0"
+  ],
+  "equation_compendium_status": "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO",
+  "execution_artifacts_modified_by_review": false,
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "packet_result": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_ACCEPTS_LEVEL_3_REPRODUCIBLE_DIVERGENCE_IDENTITY_PRETEST_ONLY",
+  "remaining_blockers": [
+    "no curved-spacetime source-contract witness",
+    "no GR source admissibility",
+    "no Bianchi compatibility",
+    "no QFT-GR seam admissibility or closure",
+    "no master-action promotion"
+  ],
+  "review_id": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_v0",
+  "review_result": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_ACCEPTS_LEVEL_3_REPRODUCIBLE_DIVERGENCE_IDENTITY_PRETEST_ONLY",
+  "schema_id": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_20260709_v0",
+  "selected_next_target": "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_guardrail_packet",
+  "selected_next_target_kind": "bounded_curved_space_scalar_qft_gr_source_contract_retest_guardrail_packet",
+  "status": "accepted_scoped_e_repro",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_ACCEPTS_SCOPED_E_REPRO_NO_GRAVITY_DYNAMICS_NO_SOURCE_ADMISSIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION",
+  "strict_review_result": "SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_ACCEPTS_SCOPED_E_REPRO_NO_GRAVITY_DYNAMICS_NO_SOURCE_ADMISSIBILITY_NO_QFT_GR_SEAM_ADMISSIBILITY_OR_MASTER_ACTION_PROMOTION",
+  "verification": {
+    "accepted": true,
+    "actual_hashes": {
+      "execution_report_sha256": "f1a6b0de45a830b9146cc06b3dbf086ab9bf95f53ae55a5bb80e969df9d53f3f",
+      "guardrail_sha256": "a1f29ff370431de8ca1d4e977e00d659a70353ae142472121ea9f44128f07da5",
+      "manifest_sha256": "7e2eee401b84c4a8c8dd20c8d54eb6bbba9f16b4e832d53bff6bd7612cd53605",
+      "output_sha256": "c93f2324c735bf2a06ba9a83c3fc022be87b7d00fb5bf2010b8010c2715f480e",
+      "script_sha256": "0eaa19affa8a74084444247c9a04b6997b632490b5411bf436fc3461028547eb"
+    },
+    "canonical_bytes_match": true,
+    "claim_status": "accepted_scoped_level_3_minkowski_pretest_only",
+    "expected_hashes": {
+      "execution_report_sha256": "f1a6b0de45a830b9146cc06b3dbf086ab9bf95f53ae55a5bb80e969df9d53f3f",
+      "guardrail_sha256": "a1f29ff370431de8ca1d4e977e00d659a70353ae142472121ea9f44128f07da5",
+      "manifest_sha256": "7e2eee401b84c4a8c8dd20c8d54eb6bbba9f16b4e832d53bff6bd7612cd53605",
+      "output_sha256": "c93f2324c735bf2a06ba9a83c3fc022be87b7d00fb5bf2010b8010c2715f480e",
+      "script_sha256": "0eaa19affa8a74084444247c9a04b6997b632490b5411bf436fc3461028547eb"
+    },
+    "independent_in_memory_regeneration_match": true,
+    "mismatch_codes": [],
+    "primary_claim_label": "E-REPRO",
+    "selected_next_target": "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_guardrail_packet",
+    "threshold_evidence": {
+      "exact_coefficient_absolute_error": 1.5543122344752192e-15,
+      "finest_combined_off_shell_relative_error": 0.0035695975114978873,
+      "finest_off_to_on_divergence_norm_ratio": 310.0255859884857,
+      "minimum_observed_two_finest_convergence_order": 1.997914114431356
+    }
+  }
+}

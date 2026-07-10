@@ -86,7 +86,7 @@ def test_guardrail_does_not_execute_or_activate_equations() -> None:
     assert payload["ccft_lane_status"] == "paused_upstream_prerequisites"
 
 
-def test_guardrail_is_preserved_and_live_registry_rotates_to_result_review() -> None:
+def test_guardrail_and_execution_are_preserved_after_result_review() -> None:
     registry = loop_registry()
     state = current_target_state(registry)
     active = active_workstream(registry)
@@ -94,13 +94,19 @@ def test_guardrail_is_preserved_and_live_registry_rotates_to_result_review() -> 
         "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet",
         registry,
     )
+    execution = workstream(EXECUTION_TARGET, registry)
     assert guardrail["status"] == "paused"
     assert guardrail["selected_next_target"] == EXECUTION_TARGET
-    assert state["live_next_target"] == (
+    assert execution["status"] == "paused"
+    assert execution["selected_next_target"] == (
         "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
     )
+    assert state["live_next_target"] == (
+        "prepare_bounded_curved_space_scalar_qft_gr_source_contract_retest_"
+        "guardrail_packet"
+    )
     assert state["previous_live_next_target"] == (
-        "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0"
+        "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
     )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["authorized_next_strict_target"] == state["live_next_target"]
