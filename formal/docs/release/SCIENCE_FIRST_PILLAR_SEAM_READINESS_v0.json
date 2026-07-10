@@ -1,0 +1,1747 @@
+{
+  "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+  "authority_roles": {
+    "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md": "evidence inventory and input surface",
+    "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json": "legacy operational/governance authority",
+    "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json": "current science-sprint readiness authority"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "ccft_resume_gates": [
+    {
+      "gate_id": "open_system_qm_object",
+      "status": "missing"
+    },
+    {
+      "gate_id": "qm_stat_decoherence_bridge",
+      "status": "missing"
+    },
+    {
+      "gate_id": "scqed_em_qm_mapping",
+      "status": "missing"
+    },
+    {
+      "gate_id": "validated_variable_map",
+      "status": "missing"
+    },
+    {
+      "gate_id": "validated_unit_map",
+      "status": "missing"
+    },
+    {
+      "gate_id": "validated_assumption_map",
+      "status": "missing"
+    },
+    {
+      "gate_id": "source_validation_criteria",
+      "status": "partial"
+    },
+    {
+      "gate_id": "adopted_baseline_equation_family",
+      "status": "missing"
+    }
+  ],
+  "claim_boundary": {
+    "ccft_resumed": false,
+    "ccft_validated": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "seam_admissibility_claimed": false,
+    "seam_closure_claimed": false
+  },
+  "dependency_driven_program": [
+    "flat scalar pretest then bounded curved-space QFT-GR source-contract retest",
+    "QM, STAT, EM, and SR maturation where prerequisites do not overlap",
+    "QM-STAT and EM-QFT stress tests alongside independent QFT-GR repairs",
+    "COSMO construction from GR, SR, and STAT inputs then SR-COSMO test",
+    "GR-QM after QM-STAT and QFT-GR source semantics mature",
+    "earned integration and later CCFT resumption"
+  ],
+  "effort_guidance": {
+    "acceptance_gate": false,
+    "empirical_forcing_function_percent_ceiling_while_paused": "10-15",
+    "governance_and_integration_percent": 15,
+    "pillar_and_seam_science_percent": 60
+  },
+  "exploratory_seam_entry_contract": {
+    "both_pillars_five_entry_criteria_must_be_met": true,
+    "required_seam_fields": [
+      "object_map",
+      "unit_map",
+      "residual",
+      "success_condition",
+      "failure_condition"
+    ]
+  },
+  "exploratory_seam_entry_eligible_ids": [],
+  "first_science_sprint": {
+    "claim_ceiling": "Level 3 toy-model demonstration",
+    "execution_target": "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0",
+    "not_a_qft_gr_seam_admissibility_claim": true,
+    "scope": "Minkowski scalar stress-energy divergence identity flat-limit pretest",
+    "selection_status": "candidate_pending_review",
+    "target": "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
+  },
+  "level_5_seam_admissible_ids": [],
+  "master_action_policy": {
+    "canonicalization_allowed": false,
+    "closure_claim_allowed": false,
+    "exploratory_sandboxing_allowed_labels": [
+      "H-HYP",
+      "S-SUPPLIED"
+    ],
+    "promotion_allowed": false
+  },
+  "not_applicable_policy": {
+    "prohibited_for_mandatory_entry_gating_criteria": true,
+    "required_fields": [
+      "justification",
+      "reviewed_by",
+      "evidence_pointer"
+    ]
+  },
+  "pillar_entry_gating_criteria": [
+    {
+      "criterion_id": "physical_objects",
+      "description": "Clearly defined physical objects"
+    },
+    {
+      "criterion_id": "governing_equation_or_action",
+      "description": "Governing equation or action"
+    },
+    {
+      "criterion_id": "assumptions_and_domain",
+      "description": "Explicit assumptions and domain"
+    },
+    {
+      "criterion_id": "units_and_dimensions",
+      "description": "Units and dimensions"
+    },
+    {
+      "criterion_id": "neighboring_interface_variables",
+      "description": "Neighboring interface variables"
+    }
+  ],
+  "pillar_maturity_criteria": [
+    {
+      "criterion_id": "symmetry_or_conservation_witness",
+      "description": "Symmetry or conservation witness"
+    },
+    {
+      "criterion_id": "known_limit_recovery",
+      "description": "Known-limit recovery"
+    },
+    {
+      "criterion_id": "formal_witness",
+      "description": "Analytic or Lean-backed witness"
+    },
+    {
+      "criterion_id": "reproducible_calculation",
+      "description": "Reproducible numerical calculation"
+    },
+    {
+      "criterion_id": "negative_control",
+      "description": "Known failure case or negative control"
+    }
+  ],
+  "pillar_readiness_rows": [
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-physical_objects-v0",
+      "status": "met"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-governing_equation_or_action-v0",
+      "status": "met"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-neighboring_interface_variables-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-known_limit_recovery-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-reproducible_calculation-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QFT",
+      "pillar_plain_name": "Scalar/QFT reference pillar",
+      "pillar_scope": "bounded real-scalar reference route",
+      "row_id": "PILLAR-QFT-negative_control-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-physical_objects-v0",
+      "status": "met"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-governing_equation_or_action-v0",
+      "status": "met"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-units_and_dimensions-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-neighboring_interface_variables-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-known_limit_recovery-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-reproducible_calculation-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-GR",
+      "pillar_plain_name": "General relativity pillar",
+      "pillar_scope": "classical metric and source-response route",
+      "row_id": "PILLAR-GR-negative_control-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-physical_objects-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-governing_equation_or_action-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-units_and_dimensions-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-neighboring_interface_variables-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-known_limit_recovery-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-reproducible_calculation-v0",
+      "status": "not_assessed"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-QM",
+      "pillar_plain_name": "Quantum mechanics pillar",
+      "pillar_scope": "state, observable, measurement, and open-system objects",
+      "row_id": "PILLAR-QM-negative_control-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-physical_objects-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-governing_equation_or_action-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-neighboring_interface_variables-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-known_limit_recovery-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-reproducible_calculation-v0",
+      "status": "not_assessed"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-STAT",
+      "pillar_plain_name": "Statistical mechanics pillar",
+      "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+      "row_id": "PILLAR-STAT-negative_control-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-physical_objects-v0",
+      "status": "met"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-governing_equation_or_action-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-units_and_dimensions-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-neighboring_interface_variables-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-known_limit_recovery-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-reproducible_calculation-v0",
+      "status": "not_assessed"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-EM",
+      "pillar_plain_name": "Electromagnetism pillar",
+      "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+      "row_id": "PILLAR-EM-negative_control-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-physical_objects-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-governing_equation_or_action-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-neighboring_interface_variables-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-known_limit_recovery-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-reproducible_calculation-v0",
+      "status": "not_assessed"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-SR",
+      "pillar_plain_name": "Special relativity pillar",
+      "pillar_scope": "Lorentz covariance and causal compatibility layer",
+      "row_id": "PILLAR-SR-negative_control-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Clearly defined physical objects",
+      "criterion_id": "physical_objects",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-physical_objects-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Governing equation or action",
+      "criterion_id": "governing_equation_or_action",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-governing_equation_or_action-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Explicit assumptions and domain",
+      "criterion_id": "assumptions_and_domain",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-assumptions_and_domain-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Units and dimensions",
+      "criterion_id": "units_and_dimensions",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "entry_gating",
+      "criterion_description": "Neighboring interface variables",
+      "criterion_id": "neighboring_interface_variables",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": true,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-neighboring_interface_variables-v0",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Symmetry or conservation witness",
+      "criterion_id": "symmetry_or_conservation_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-symmetry_or_conservation_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known-limit recovery",
+      "criterion_id": "known_limit_recovery",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-known_limit_recovery-v0",
+      "status": "blocked"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Analytic or Lean-backed witness",
+      "criterion_id": "formal_witness",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-formal_witness-v0",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Reproducible numerical calculation",
+      "criterion_id": "reproducible_calculation",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-reproducible_calculation-v0",
+      "status": "not_assessed"
+    },
+    {
+      "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+      "criterion_class": "maturity",
+      "criterion_description": "Known failure case or negative control",
+      "criterion_id": "negative_control",
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "mandatory_for_exploratory_seam_entry": false,
+      "pillar_id": "PILLAR-COSMO",
+      "pillar_plain_name": "Cosmology pillar",
+      "pillar_scope": "GR/SR/STAT-dependent background route",
+      "row_id": "PILLAR-COSMO-negative_control-v0",
+      "status": "missing"
+    }
+  ],
+  "required_sprint_interface": [
+    "question",
+    "inputs",
+    "equation_surfaces",
+    "assumptions",
+    "units",
+    "allowed_operations",
+    "forbidden_claims",
+    "success_criteria",
+    "failure_criteria",
+    "outputs",
+    "claim_ceiling",
+    "reproduction_command"
+  ],
+  "schema_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+  "seam_level_5_admissibility_criteria": [
+    {
+      "criterion_id": "object_map",
+      "description": "Object map"
+    },
+    {
+      "criterion_id": "unit_map",
+      "description": "Unit map"
+    },
+    {
+      "criterion_id": "source_balance",
+      "description": "Source balance"
+    },
+    {
+      "criterion_id": "conservation_compatibility",
+      "description": "Conservation compatibility"
+    },
+    {
+      "criterion_id": "shared_limit",
+      "description": "Shared limiting regime"
+    },
+    {
+      "criterion_id": "residual",
+      "description": "Defined seam residual"
+    },
+    {
+      "criterion_id": "positive_witness",
+      "description": "Positive witness"
+    },
+    {
+      "criterion_id": "negative_obstruction",
+      "description": "Negative example or obstruction"
+    }
+  ],
+  "seam_readiness_rows": [
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Object map",
+      "criterion_id": "object_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-object_map-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Unit map",
+      "criterion_id": "unit_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-unit_map-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Source balance",
+      "criterion_id": "source_balance",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-source_balance-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Conservation compatibility",
+      "criterion_id": "conservation_compatibility",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-conservation_compatibility-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "blocked"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Shared limiting regime",
+      "criterion_id": "shared_limit",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-shared_limit-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Defined seam residual",
+      "criterion_id": "residual",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-residual-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Positive witness",
+      "criterion_id": "positive_witness",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-positive_witness-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Negative example or obstruction",
+      "criterion_id": "negative_obstruction",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QFT-GR-negative_obstruction-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "seam_plain_name": "Scalar/QFT-GR",
+      "status": "met"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Object map",
+      "criterion_id": "object_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-object_map-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Unit map",
+      "criterion_id": "unit_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-unit_map-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Source balance",
+      "criterion_id": "source_balance",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-source_balance-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Conservation compatibility",
+      "criterion_id": "conservation_compatibility",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-conservation_compatibility-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Shared limiting regime",
+      "criterion_id": "shared_limit",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-shared_limit-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Defined seam residual",
+      "criterion_id": "residual",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-residual-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Positive witness",
+      "criterion_id": "positive_witness",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-positive_witness-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Negative example or obstruction",
+      "criterion_id": "negative_obstruction",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-QM-STAT-negative_obstruction-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "seam_plain_name": "QM-STAT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Object map",
+      "criterion_id": "object_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-object_map-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Unit map",
+      "criterion_id": "unit_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-unit_map-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Source balance",
+      "criterion_id": "source_balance",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-source_balance-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Conservation compatibility",
+      "criterion_id": "conservation_compatibility",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-conservation_compatibility-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Shared limiting regime",
+      "criterion_id": "shared_limit",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-shared_limit-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Defined seam residual",
+      "criterion_id": "residual",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-residual-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Positive witness",
+      "criterion_id": "positive_witness",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-positive_witness-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Negative example or obstruction",
+      "criterion_id": "negative_obstruction",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-EM-QFT-negative_obstruction-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "seam_plain_name": "EM-QFT",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Object map",
+      "criterion_id": "object_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-object_map-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Unit map",
+      "criterion_id": "unit_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-unit_map-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Source balance",
+      "criterion_id": "source_balance",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-source_balance-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Conservation compatibility",
+      "criterion_id": "conservation_compatibility",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-conservation_compatibility-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Shared limiting regime",
+      "criterion_id": "shared_limit",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-shared_limit-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Defined seam residual",
+      "criterion_id": "residual",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-residual-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Positive witness",
+      "criterion_id": "positive_witness",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-positive_witness-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Negative example or obstruction",
+      "criterion_id": "negative_obstruction",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-SR-COSMO-negative_obstruction-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "seam_plain_name": "SR-COSMO",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Object map",
+      "criterion_id": "object_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-object_map-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "partial"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Unit map",
+      "criterion_id": "unit_map",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-unit_map-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Source balance",
+      "criterion_id": "source_balance",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-source_balance-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "blocked"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Conservation compatibility",
+      "criterion_id": "conservation_compatibility",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-conservation_compatibility-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "blocked"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Shared limiting regime",
+      "criterion_id": "shared_limit",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-shared_limit-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Defined seam residual",
+      "criterion_id": "residual",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-residual-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Positive witness",
+      "criterion_id": "positive_witness",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-positive_witness-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "missing"
+    },
+    {
+      "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+      "criterion_description": "Negative example or obstruction",
+      "criterion_id": "negative_obstruction",
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "required_for_level_5_admissibility": true,
+      "row_id": "SEAM-GR-QM-negative_obstruction-v0",
+      "seam_id": "SEAM-GR-QM",
+      "seam_plain_name": "GR-QM",
+      "status": "partial"
+    }
+  ],
+  "status": "prepared_pending_result_review",
+  "status_vocabulary": [
+    "met",
+    "partial",
+    "missing",
+    "blocked",
+    "not_assessed",
+    "not_applicable"
+  ],
+  "summary_counts": {
+    "exploratory_seam_entry_eligible_count": 0,
+    "level_5_seam_admissible_count": 0,
+    "pillar_count": 7,
+    "pillar_criterion_count": 10,
+    "pillar_entry_row_count": 35,
+    "pillar_maturity_row_count": 35,
+    "pillar_row_count": 70,
+    "pillar_status_counts": {
+      "blocked": 1,
+      "met": 5,
+      "missing": 15,
+      "not_applicable": 0,
+      "not_assessed": 5,
+      "partial": 44
+    },
+    "seam_count": 5,
+    "seam_criterion_count": 8,
+    "seam_row_count": 40,
+    "seam_status_counts": {
+      "blocked": 3,
+      "met": 1,
+      "missing": 10,
+      "not_applicable": 0,
+      "not_assessed": 0,
+      "partial": 26
+    }
+  }
+}

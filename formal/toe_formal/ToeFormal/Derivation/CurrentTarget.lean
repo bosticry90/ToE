@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.CCFTSCQEDLiteratureApplicabilityMatrixCalculationResultReview
+import ToeFormal.Derivation.ScienceFirstPillarSeamDependencyRebasePacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  CCFTSCQEDLiteratureApplicabilityMatrixCalculationResultReview.selectedNextTarget
+  ScienceFirstPillarSeamDependencyRebasePacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  CCFTSCQEDLiteratureApplicabilityMatrixCalculationResultReview.reviewId
+  ScienceFirstPillarSeamDependencyRebasePacket.packetId
 
-theorem current_target_points_to_science_first_pillar_seam_dependency_rebase :
+theorem current_target_points_to_science_first_rebase_result_review :
     currentLiveTarget =
-      "prepare_science_first_pillar_seam_dependency_rebase_packet" := by
+      "review_science_first_pillar_seam_dependency_rebase_packet_result" := by
   rfl
 
 end CurrentTarget
