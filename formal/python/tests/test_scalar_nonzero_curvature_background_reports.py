@@ -4,20 +4,37 @@ import math
 
 import pytest
 
+from formal.python.tests.strict_physics_state_helpers import (
+    active_workstream,
+    current_target_state,
+    loop_registry,
+    workstream,
+)
 from formal.python.tools.scalar_nonzero_curvature_background_reports import (
+    CALCULATION_MANIFEST_PATH,
+    CALCULATION_OUTPUT_PATH,
+    CALCULATION_SCRIPT_PATH,
     EQUATION_ID,
+    EXECUTION_OUTCOME,
+    EXECUTION_REPORT_PATH,
+    EXECUTION_STRICT_OUTCOME,
     EXECUTION_TARGET,
     EXECUTION_TARGET_KIND,
+    EXPECTED_GUARDRAIL_SHA256,
     GUARDRAIL_OUTCOME,
     GUARDRAIL_REPORT_PATH,
     GUARDRAIL_STRICT_OUTCOME,
     GUARDRAIL_TARGET,
     PACKET_ID,
     PACKET_SCHEMA_ID,
+    REVIEW_TARGET,
+    REVIEW_TARGET_KIND,
     THRESHOLD_REPAIR_TARGET,
+    build_execution_report,
     build_guardrail_payload,
     canonical_json_bytes,
     report_json_bytes,
+    sha256_path,
     validate_guardrail_payload,
 )
 
@@ -197,3 +214,139 @@ def test_canonical_contract_rejects_nonfinite_numbers() -> None:
     payload["inputs"]["conformal_hubble_parameter_H"] = math.inf
     with pytest.raises(ValueError):
         canonical_json_bytes(payload)
+
+
+def test_execution_report_verifies_hashes_and_selects_separate_review() -> None:
+    payload = build_execution_report()
+    assert payload["status"] == "executed_pending_result_review"
+    assert payload["consumed_target"] == EXECUTION_TARGET
+    assert payload["consumed_target_kind"] == EXECUTION_TARGET_KIND
+    assert payload["selected_next_target"] == REVIEW_TARGET
+    assert payload["selected_next_target_kind"] == REVIEW_TARGET_KIND
+    assert payload["packet_result"] == EXECUTION_OUTCOME
+    assert payload["strict_packet_result"] == EXECUTION_STRICT_OUTCOME
+    assert payload["guardrail_sha256"] == EXPECTED_GUARDRAIL_SHA256
+    assert payload["calculation_output_sha256"] == (
+        "4d0d04421c8b0d310f0caa73c4da3755f2afa91a4043bab9f96011c9b03ecf4f"
+    )
+    assert payload["calculation_manifest_sha256"] == (
+        "46e752fd0a8571fd06dd0f1f9a7046f12a43413761ea39a3cb904b959a4a6827"
+    )
+    assert payload["calculation_script_sha256"] == (
+        "253632cc6773d242a76db26befde13dc2578a2950c097a8c628b8e061ffdbd03"
+    )
+    assert payload["calculation_output_sha256"] == sha256_path(
+        CALCULATION_OUTPUT_PATH
+    )
+    assert payload["calculation_manifest_sha256"] == sha256_path(
+        CALCULATION_MANIFEST_PATH
+    )
+    assert payload["calculation_script_sha256"] == sha256_path(
+        CALCULATION_SCRIPT_PATH
+    )
+
+
+def test_execution_report_records_curvature_patch_and_three_controls() -> None:
+    payload = build_execution_report()
+    assert payload["background_geometry_classification"] == (
+        "fixed_nonzero_curvature_1plus1_de_sitter_patch"
+    )
+    assert payload["guardrail_geometry_classification"] == (
+        "fixed_1_plus_1_de_sitter_conformal_patch"
+    )
+    assert payload["scalar_curvature_expected"] == 0.08
+    assert payload["scalar_curvature_measured"] == 0.08
+    curvature = payload["curvature_verification"]
+    assert curvature["maximum_route_agreement_absolute_error"] <= 1e-12
+    assert curvature["minimum_absolute_measured_scalar_curvature"] >= 0.05
+    assert curvature["ricci_relation_max_absolute_error"] <= 1e-12
+    patch = payload["patch_domain_safety"]
+    assert patch["eta_domain"] == [0.0, 1.0]
+    assert patch["minimum_one_minus_H_eta_over_domain"] == 0.8
+    assert patch["maximum_scale_factor_over_domain"] == 1.25
+    assert patch[
+        "minimum_coordinate_distance_to_patch_singularity_over_domain"
+    ] == 4.0
+    assert patch["coordinate_patch_singularity_eta"] == 5.0
+    assert patch["strictly_inside_coordinate_patch"] is True
+    assert patch["derived_invariant_not_additional_guardrail_threshold"] is True
+    assert set(payload["negative_controls"]) == {
+        "naive_partial_divergence",
+        "inconsistent_frozen_connection",
+        "curvature_derivative_omission",
+    }
+    assert all(
+        control["failure_detected"] is True
+        for control in payload["negative_controls"].values()
+    )
+
+
+def test_execution_report_records_all_thresholds_and_2d_gravity_boundary() -> None:
+    payload = build_execution_report()
+    assert payload["control_counts"] == {
+        "curvature_verification_route_count": 2,
+        "negative_control_count": 3,
+        "frozen_threshold_count": 11,
+        "on_shell_time_resolution_rows": 12,
+        "off_shell_time_resolution_rows": 12,
+        "time_slice_count": 3,
+        "resolution_count": 4,
+        "divergence_component_count": 2,
+    }
+    assert len(payload["threshold_checks"]) == 11
+    assert all(payload["threshold_checks"].values())
+    assert payload["all_thresholds_passed"] is True
+    assert payload["claim"] == {
+        "primary_label": "E-REPRO",
+        "claim_status": "generated_pending_result_review",
+        "claim_ceiling_level": 3,
+        "claim_scope": (
+            "scoped E-REPRO pending review for the scalar covariant "
+            "stress-energy divergence identity on one fixed 1+1 de Sitter "
+            "background"
+        ),
+    }
+    boundary = payload["boundary"]
+    assert payload["gravity_evolved"] is False
+    assert payload["einstein_tensor_source_tested"] is False
+    assert payload["two_dimensional_einstein_gravity_degenerate"] is True
+    assert payload["covariant_matter_identity_tested"] is True
+    assert boundary["einstein_tensor_identically_zero_in_two_dimensions"] is True
+    assert boundary["ordinary_einstein_scalar_dynamics_claimed"] is False
+    assert boundary["source_admissibility_claimed"] is False
+    assert boundary["bianchi_compatibility_claimed"] is False
+    assert boundary["qft_gr_seam_admissibility_claimed"] is False
+    assert boundary["master_action_promoted"] is False
+
+
+def test_execution_release_artifact_matches_deterministic_builder_bytes() -> None:
+    payload = build_execution_report()
+    assert EXECUTION_REPORT_PATH.read_bytes() == report_json_bytes(payload)
+
+
+def test_execution_is_preserved_and_separate_result_review_is_live() -> None:
+    registry = loop_registry()
+    state = current_target_state(registry)
+    active = active_workstream(registry)
+    execution = workstream(EXECUTION_TARGET, registry)
+    review = workstream(REVIEW_TARGET, registry)
+    assert execution["status"] == "paused"
+    assert execution["selected_next_target"] == REVIEW_TARGET
+    assert review["status"] == "active"
+    assert review["report_sha256"] == (
+        "21068eaff2b509401afb635e4f7bce4eb409edb8a5cff6dfe4bea7dfe7a3d2c8"
+    )
+    assert review["calculation_output_sha256"] == (
+        "4d0d04421c8b0d310f0caa73c4da3755f2afa91a4043bab9f96011c9b03ecf4f"
+    )
+    assert review["calculation_manifest_sha256"] == (
+        "46e752fd0a8571fd06dd0f1f9a7046f12a43413761ea39a3cb904b959a4a6827"
+    )
+    assert review["frozen_threshold_count"] == 11
+    assert len(review["threshold_checks"]) == 11
+    assert all(review["threshold_checks"].values())
+    assert review["two_dimensional_einstein_gravity_degenerate"] == "yes"
+    assert review["einstein_tensor_source_tested"] == "no"
+    assert state["previous_live_next_target"] == EXECUTION_TARGET
+    assert state["live_next_target"] == REVIEW_TARGET
+    assert active["workstream_id"] == REVIEW_TARGET

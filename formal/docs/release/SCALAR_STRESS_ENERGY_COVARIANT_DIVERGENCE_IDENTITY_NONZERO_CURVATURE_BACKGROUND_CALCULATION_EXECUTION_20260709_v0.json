@@ -1,0 +1,263 @@
+{
+  "all_thresholds_passed": true,
+  "background_geometry_classification": "fixed_nonzero_curvature_1plus1_de_sitter_patch",
+  "boundary": {
+    "background_metric_evolved": false,
+    "bianchi_compatibility_claimed": false,
+    "calculation_executed": true,
+    "ccft_resumed": false,
+    "ccft_validated": false,
+    "covariant_matter_identity_tested": true,
+    "curvature_test_claimed": true,
+    "einstein_equation_solved": false,
+    "einstein_tensor_identically_zero_in_two_dimensions": true,
+    "einstein_tensor_source_tested": false,
+    "genuine_nonzero_curvature_test_executed": true,
+    "gravity_evolved": false,
+    "higher_dimensional_robustness_claimed": false,
+    "master_action_promoted": false,
+    "multi_background_robustness_claimed": false,
+    "ordinary_einstein_scalar_dynamics_claimed": false,
+    "pillar_completion_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "quantum_stress_energy_source_claimed": false,
+    "source_admissibility_claimed": false,
+    "two_dimensional_einstein_gravity_degenerate": true
+  },
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-v0",
+  "calculation_manifest_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-MANIFEST-v0.json",
+  "calculation_manifest_sha256": "46e752fd0a8571fd06dd0f1f9a7046f12a43413761ea39a3cb904b959a4a6827",
+  "calculation_output_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-v0.json",
+  "calculation_output_sha256": "4d0d04421c8b0d310f0caa73c4da3755f2afa91a4043bab9f96011c9b03ecf4f",
+  "calculation_script_path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background.py",
+  "calculation_script_sha256": "253632cc6773d242a76db26befde13dc2578a2950c097a8c628b8e061ffdbd03",
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "array_order": "preserved",
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "scoped E-REPRO pending review for the scalar covariant stress-energy divergence identity on one fixed 1+1 de Sitter background",
+    "claim_status": "generated_pending_result_review",
+    "primary_label": "E-REPRO"
+  },
+  "consumed_target": "execute_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_calculation_execution",
+  "control_counts": {
+    "curvature_verification_route_count": 2,
+    "divergence_component_count": 2,
+    "frozen_threshold_count": 11,
+    "negative_control_count": 3,
+    "off_shell_time_resolution_rows": 12,
+    "on_shell_time_resolution_rows": 12,
+    "resolution_count": 4,
+    "time_slice_count": 3
+  },
+  "covariant_matter_identity_tested": true,
+  "curvature_verification": {
+    "analytic_conformal_route": {
+      "formula": "R = 2*a(eta)^(-2)*partial_eta q(eta) = 2*H^2",
+      "rows": [
+        {
+          "scalar_curvature": 0.08000000000000002,
+          "time_eta": 0.0
+        },
+        {
+          "scalar_curvature": 0.08,
+          "time_eta": 0.37
+        },
+        {
+          "scalar_curvature": 0.08,
+          "time_eta": 0.91
+        }
+      ]
+    },
+    "curvature_derivative_omission_negative_control": {
+      "failure_detected": true,
+      "minimum_absolute_discrepancy_from_correct_route": 0.07999999999999999,
+      "operation": "omit all derivative-of-Gamma terms",
+      "rows": [
+        {
+          "bad_scalar_curvature": 0.0,
+          "time_eta": 0.0
+        },
+        {
+          "bad_scalar_curvature": 0.0,
+          "time_eta": 0.37
+        },
+        {
+          "bad_scalar_curvature": 0.0,
+          "time_eta": 0.91
+        }
+      ]
+    },
+    "independent_component_route": {
+      "method": "g,dg,ddg -> Gamma,dGamma -> Riemann -> Ricci -> scalar; analytic conformal scalar-curvature shortcut not used",
+      "rows": [
+        {
+          "nonzero_connection_component_count": 4,
+          "ricci_relation_max_absolute_error": 0.0,
+          "ricci_tensor": [
+            [
+              -0.04000000000000001,
+              0.0
+            ],
+            [
+              0.0,
+              0.04000000000000001
+            ]
+          ],
+          "riemann_tensor_max_absolute_component": 0.04000000000000001,
+          "scalar_curvature": 0.08000000000000002,
+          "time_eta": 0.0
+        },
+        {
+          "nonzero_connection_component_count": 4,
+          "ricci_relation_max_absolute_error": 1.3877787807814457e-17,
+          "ricci_tensor": [
+            [
+              -0.04664853593569966,
+              0.0
+            ],
+            [
+              0.0,
+              0.04664853593569967
+            ]
+          ],
+          "riemann_tensor_max_absolute_component": 0.04664853593569967,
+          "scalar_curvature": 0.08000000000000002,
+          "time_eta": 0.37
+        },
+        {
+          "nonzero_connection_component_count": 4,
+          "ricci_relation_max_absolute_error": 2.7755575615628914e-17,
+          "ricci_tensor": [
+            [
+              -0.05977965220198349,
+              0.0
+            ],
+            [
+              0.0,
+              0.05977965220198348
+            ]
+          ],
+          "riemann_tensor_max_absolute_component": 0.05977965220198349,
+          "scalar_curvature": 0.07999999999999999,
+          "time_eta": 0.91
+        }
+      ]
+    },
+    "maximum_route_agreement_absolute_error": 1.3877787807814457e-17,
+    "minimum_absolute_measured_scalar_curvature": 0.07999999999999999,
+    "ricci_relation_max_absolute_error": 2.7755575615628914e-17,
+    "scalar_curvature_expected": 0.08,
+    "scalar_curvature_measured": 0.08
+  },
+  "einstein_tensor_source_tested": false,
+  "equation_compendium_edited": false,
+  "execution_report_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+  "existing_equation_id_reused": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0",
+  "gravity_evolved": false,
+  "guardrail_geometry_classification": "fixed_1_plus_1_de_sitter_conformal_patch",
+  "guardrail_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_GUARDRAIL_PACKET_20260709_v0.json",
+  "guardrail_sha256": "3670bfaa98876b32e95f5ff7406546a41aa691f937fe738fee6e3ab36a399191",
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "negative_controls": {
+    "curvature_derivative_omission": {
+      "failure_detected": true,
+      "minimum_absolute_discrepancy_from_correct_route": 0.07999999999999999,
+      "operation": "omit all derivative-of-Gamma terms",
+      "rows": [
+        {
+          "bad_scalar_curvature": 0.0,
+          "time_eta": 0.0
+        },
+        {
+          "bad_scalar_curvature": 0.0,
+          "time_eta": 0.37
+        },
+        {
+          "bad_scalar_curvature": 0.0,
+          "time_eta": 0.91
+        }
+      ]
+    },
+    "inconsistent_frozen_connection": {
+      "description": "replace q(eta) by H only in the divergence connection terms while retaining the true curved stress and partial derivative",
+      "eta_zero_slice_expected_to_match_correct_connection": true,
+      "failure_detected": true,
+      "finest_off_shell_error_ratio": 75.62153132288371,
+      "finest_on_shell_error_ratio": 75.62153132288083,
+      "minimum_finest_on_off_error_ratio": 75.62153132288083
+    },
+    "naive_partial_divergence": {
+      "description": "omit all connection terms from nabla_mu T^{mu nu}",
+      "failure_detected": true,
+      "finest_on_shell_error_ratio": 908.3037262654399
+    }
+  },
+  "packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTED_PASSES_LEVEL_3_FIXED_1PLUS1_DE_SITTER_CURVATURE_CONNECTION_AND_MATTER_IDENTITY_CONTROLS_PENDING_RESULT_REVIEW",
+  "patch_domain_safety": {
+    "coordinate_patch_boundary_is_physical_curvature_singularity": false,
+    "coordinate_patch_singularity_eta": 5.0,
+    "derived_invariant_not_additional_guardrail_threshold": true,
+    "eta_domain": [
+      0.0,
+      1.0
+    ],
+    "maximum_scale_factor_over_domain": 1.25,
+    "minimum_coordinate_distance_to_patch_singularity_over_domain": 4.0,
+    "minimum_one_minus_H_eta_over_domain": 0.8,
+    "sampled_maximum_scale_factor": 1.2224938875305624,
+    "sampled_minimum_coordinate_distance_to_patch_singularity": 4.09,
+    "sampled_minimum_one_minus_H_eta": 0.818,
+    "strictly_inside_coordinate_patch": true
+  },
+  "recommended_post_review_target": "prepare_scalar_stress_energy_covariant_divergence_identity_structurally_distinct_curved_background_guardrail_packet",
+  "scalar_curvature_expected": 0.08,
+  "scalar_curvature_measured": 0.08,
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0",
+  "selected_next_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0_result",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_calculation_result_review",
+  "status": "executed_pending_result_review",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTED_SCOPED_E_REPRO_PENDING_REVIEW_FIXED_1PLUS1_DE_SITTER_MATTER_IDENTITY_ONLY_TWO_DIMENSIONAL_EINSTEIN_GRAVITY_DEGENERATE_NO_EINSTEIN_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION",
+  "threshold_checks": {
+    "absolute_scalar_curvature_at_least_0_05": true,
+    "curvature_omission_discrepancy_at_least_0_04": true,
+    "curvature_route_discrepancy_at_most_1e_12": true,
+    "exact_coefficient_error_at_most_1e_12": true,
+    "finest_combined_off_shell_relative_error_at_most_2_percent": true,
+    "finest_off_shell_divergence_over_100_times_on_shell": true,
+    "flat_limit_discrepancy_at_most_1e_12": true,
+    "inconsistent_frozen_connection_error_ratio_at_least_50": true,
+    "metric_compatibility_error_at_most_1e_12": true,
+    "naive_partial_divergence_error_ratio_at_least_100": true,
+    "two_finest_convergence_order_at_least_1_8": true
+  },
+  "threshold_evidence": {
+    "curvature_omission_minimum_absolute_discrepancy": 0.07999999999999999,
+    "curvature_route_max_absolute_discrepancy": 1.3877787807814457e-17,
+    "exact_coefficient_absolute_error": 7.771561172376096e-16,
+    "finest_combined_off_shell_relative_error": 0.004010933857742557,
+    "finest_minimum_on_off_frozen_connection_to_correct_error_ratio": 75.62153132288083,
+    "finest_off_to_on_divergence_norm_ratio": 275.97548803474746,
+    "finest_on_shell_naive_to_correct_error_ratio": 908.3037262654399,
+    "flat_limit_max_absolute_discrepancy": 0.0,
+    "metric_compatibility_max_absolute_error": 0.0,
+    "minimum_absolute_measured_scalar_curvature": 0.07999999999999999,
+    "minimum_observed_two_finest_convergence_order": 1.9979141144314259
+  },
+  "two_dimensional_einstein_gravity_degenerate": true
+}

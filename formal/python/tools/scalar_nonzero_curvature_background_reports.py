@@ -24,6 +24,14 @@ EXECUTION_TARGET_KIND = (
     "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_"
     "background_calculation_execution"
 )
+REVIEW_TARGET = (
+    "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+    "curvature_background_v0_result"
+)
+REVIEW_TARGET_KIND = (
+    "scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_"
+    "background_calculation_result_review"
+)
 THRESHOLD_REPAIR_TARGET = (
     "repair_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
     "curvature_background_v0_threshold_failure"
@@ -39,6 +47,18 @@ GUARDRAIL_STRICT_OUTCOME = (
     "BACKGROUND_GUARDRAIL_PACKET_PREPARED_LEVEL_3_SINGLE_NONZERO_CURVATURE_"
     "BACKGROUND_TEST_ONLY_NO_GRAVITY_EVOLUTION_NO_SOURCE_ADMISSIBILITY_NO_"
     "BIANCHI_OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION"
+)
+EXECUTION_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_"
+    "BACKGROUND_CALCULATION_EXECUTED_PASSES_LEVEL_3_FIXED_1PLUS1_DE_SITTER_"
+    "CURVATURE_CONNECTION_AND_MATTER_IDENTITY_CONTROLS_PENDING_RESULT_REVIEW"
+)
+EXECUTION_STRICT_OUTCOME = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_"
+    "BACKGROUND_CALCULATION_EXECUTED_SCOPED_E_REPRO_PENDING_REVIEW_FIXED_"
+    "1PLUS1_DE_SITTER_MATTER_IDENTITY_ONLY_TWO_DIMENSIONAL_EINSTEIN_GRAVITY_"
+    "DEGENERATE_NO_EINSTEIN_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_NO_BIANCHI_"
+    "OR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION"
 )
 
 PACKET_SCHEMA_ID = (
@@ -77,6 +97,47 @@ READINESS_PATH = (
     / "docs"
     / "release"
     / "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json"
+)
+CALCULATION_OUTPUT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-"
+    "CURVATURE-BACKGROUND-v0.json"
+)
+CALCULATION_MANIFEST_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-"
+    "CURVATURE-BACKGROUND-MANIFEST-v0.json"
+)
+CALCULATION_SCRIPT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "toe"
+    / "calculations"
+    / "calc_scalar_stress_energy_covariant_divergence_identity_nonzero_"
+    "curvature_background.py"
+)
+EXECUTION_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+    "CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json"
+)
+
+BACKGROUND_GEOMETRY_CLASSIFICATION = (
+    "fixed_nonzero_curvature_1plus1_de_sitter_patch"
+)
+GUARDRAIL_GEOMETRY_CLASSIFICATION = (
+    "fixed_1_plus_1_de_sitter_conformal_patch"
+)
+EXPECTED_GUARDRAIL_SHA256 = (
+    "3670bfaa98876b32e95f5ff7406546a41aa691f937fe738fee6e3ab36a399191"
 )
 
 
@@ -509,6 +570,242 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     canonical_json_bytes(payload)
 
 
+def _reject_nonfinite_json(token: str) -> None:
+    raise ValueError(f"non-finite JSON token: {token}")
+
+
+def _load_strict_json(path: Path) -> dict[str, Any]:
+    payload = json.loads(
+        path.read_text(encoding="utf-8"),
+        parse_constant=_reject_nonfinite_json,
+    )
+    if not isinstance(payload, dict):
+        raise ValueError(f"expected a JSON object at {path}")
+    canonical_json_bytes(payload)
+    return payload
+
+
+def build_execution_report(
+    *,
+    output_path: Path = CALCULATION_OUTPUT_PATH,
+    manifest_path: Path = CALCULATION_MANIFEST_PATH,
+    guardrail_path: Path = GUARDRAIL_REPORT_PATH,
+    script_path: Path = CALCULATION_SCRIPT_PATH,
+) -> dict[str, Any]:
+    result = _load_strict_json(output_path)
+    manifest = _load_strict_json(manifest_path)
+    guardrail = _load_strict_json(guardrail_path)
+
+    if output_path.read_bytes() != canonical_json_bytes(result):
+        raise ValueError("calculation output is not canonical JSON")
+    if manifest_path.read_bytes() != canonical_json_bytes(manifest):
+        raise ValueError("calculation manifest is not canonical JSON")
+
+    output_sha256 = sha256_path(output_path)
+    manifest_sha256 = sha256_path(manifest_path)
+    guardrail_sha256 = sha256_path(guardrail_path)
+    script_sha256 = sha256_path(script_path)
+    if guardrail_sha256 != EXPECTED_GUARDRAIL_SHA256:
+        raise ValueError("accepted guardrail bytes changed")
+    if manifest.get("output_sha256") != output_sha256:
+        raise ValueError("manifest output hash differs from the output bytes")
+    if manifest.get("guardrail_sha256") != guardrail_sha256:
+        raise ValueError("manifest guardrail hash differs from the accepted packet")
+    if manifest.get("script_sha256") != script_sha256:
+        raise ValueError("manifest script hash differs from the execution source")
+    if manifest.get("calculation_id") != CALCULATION_ID:
+        raise ValueError("manifest calculation id differs")
+    if result.get("calculation_id") != CALCULATION_ID:
+        raise ValueError("result calculation id differs")
+    if result.get("calculation_status") != "executed_pending_result_review":
+        raise ValueError("calculation is not in the pending-review state")
+    if result.get("all_thresholds_passed") is not True:
+        raise ValueError("calculation thresholds did not all pass")
+    checks = result.get("threshold_checks", {})
+    if len(checks) != 11 or not all(checks.values()):
+        raise ValueError("the eleven frozen threshold checks were not preserved")
+    if result.get("frozen_threshold_count") != 11:
+        raise ValueError("frozen threshold count differs")
+    if result.get("thresholds") != guardrail.get("success_criteria"):
+        raise ValueError("execution thresholds differ from the accepted guardrail")
+
+    if result.get("background_geometry_classification") != (
+        BACKGROUND_GEOMETRY_CLASSIFICATION
+    ):
+        raise ValueError("execution geometry classification differs")
+    background = result.get("background_geometry", {})
+    if background.get("guardrail_geometry_classification") != (
+        GUARDRAIL_GEOMETRY_CLASSIFICATION
+    ):
+        raise ValueError("guardrail geometry classification was not preserved")
+    if result.get("scalar_curvature_expected") != 0.08:
+        raise ValueError("expected scalar curvature differs")
+    if result.get("scalar_curvature_measured") != 0.08:
+        raise ValueError("measured scalar curvature differs")
+    curvature = result.get("curvature_verification", {})
+    if curvature.get("maximum_route_agreement_absolute_error", 1.0) > 1e-12:
+        raise ValueError("curvature routes do not agree within tolerance")
+    if curvature.get("minimum_absolute_measured_scalar_curvature", 0.0) < 0.05:
+        raise ValueError("measured curvature does not clear the nonzero floor")
+    if curvature.get("ricci_relation_max_absolute_error", 1.0) > 1e-12:
+        raise ValueError("independent Ricci reconstruction differs")
+
+    patch = result.get("patch_domain_safety", {})
+    expected_patch_values = {
+        "eta_domain": [0.0, 1.0],
+        "coordinate_patch_singularity_eta": 5.0,
+        "minimum_one_minus_H_eta_over_domain": 0.8,
+        "maximum_scale_factor_over_domain": 1.25,
+        "minimum_coordinate_distance_to_patch_singularity_over_domain": 4.0,
+        "strictly_inside_coordinate_patch": True,
+        "coordinate_patch_boundary_is_physical_curvature_singularity": False,
+        "derived_invariant_not_additional_guardrail_threshold": True,
+    }
+    if any(patch.get(key) != value for key, value in expected_patch_values.items()):
+        raise ValueError("coordinate-patch safety metadata differs")
+
+    negative_controls = result.get("negative_controls", {})
+    expected_negative_controls = {
+        "naive_partial_divergence",
+        "inconsistent_frozen_connection",
+        "curvature_derivative_omission",
+    }
+    if set(negative_controls) != expected_negative_controls:
+        raise ValueError("the three frozen negative controls were not preserved")
+    if not all(
+        negative_controls[name].get("failure_detected") is True
+        for name in expected_negative_controls
+    ):
+        raise ValueError("one or more negative controls did not detect failure")
+
+    boundary = result.get("boundary", {})
+    required_true_boundary = {
+        "calculation_executed",
+        "two_dimensional_einstein_gravity_degenerate",
+        "einstein_tensor_identically_zero_in_two_dimensions",
+        "covariant_matter_identity_tested",
+        "genuine_nonzero_curvature_test_executed",
+        "curvature_test_claimed",
+    }
+    required_false_boundary = {
+        "gravity_evolved",
+        "background_metric_evolved",
+        "einstein_equation_solved",
+        "einstein_tensor_source_tested",
+        "ordinary_einstein_scalar_dynamics_claimed",
+        "source_admissibility_claimed",
+        "bianchi_compatibility_claimed",
+        "qft_gr_seam_admissibility_claimed",
+        "qft_gr_seam_closure_claimed",
+        "quantum_stress_energy_source_claimed",
+        "multi_background_robustness_claimed",
+        "higher_dimensional_robustness_claimed",
+        "pillar_completion_claimed",
+        "ccft_resumed",
+        "ccft_validated",
+        "master_action_promoted",
+    }
+    if not all(boundary.get(key) is True for key in required_true_boundary):
+        raise ValueError("required execution boundary metadata is missing")
+    if not all(boundary.get(key) is False for key in required_false_boundary):
+        raise ValueError("a forbidden execution-boundary claim is present")
+    if result.get("gravity_evolved") is not False:
+        raise ValueError("top-level gravity-evolved metadata differs")
+    if result.get("einstein_tensor_source_tested") is not False:
+        raise ValueError("top-level Einstein-source metadata differs")
+    if result.get("two_dimensional_einstein_gravity_degenerate") is not True:
+        raise ValueError("two-dimensional Einstein degeneracy was not recorded")
+    if result.get("covariant_matter_identity_tested") is not True:
+        raise ValueError("covariant matter identity was not recorded")
+    if result.get("equation_compendium_edited") is not False:
+        raise ValueError("execution cannot edit the equation compendium")
+    if result.get("claim", {}).get("next_work_status") != REVIEW_TARGET:
+        raise ValueError("result does not select the separate review target")
+    if result.get("result_review", {}).get("target") != REVIEW_TARGET:
+        raise ValueError("result-review target differs")
+    if manifest.get("result_review_target") != REVIEW_TARGET:
+        raise ValueError("manifest result-review target differs")
+
+    return {
+        "schema_id": (
+            "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_"
+            "CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0"
+        ),
+        "calculation_id": CALCULATION_ID,
+        "status": "executed_pending_result_review",
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "consumed_target": EXECUTION_TARGET,
+        "consumed_target_kind": EXECUTION_TARGET_KIND,
+        "selected_next_target": REVIEW_TARGET,
+        "selected_next_target_kind": REVIEW_TARGET_KIND,
+        "packet_result": EXECUTION_OUTCOME,
+        "strict_packet_result": EXECUTION_STRICT_OUTCOME,
+        "calculation_output_path": manifest["output_path"],
+        "calculation_output_sha256": output_sha256,
+        "calculation_manifest_path": (
+            "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-"
+            "IDENTITY-NONZERO-CURVATURE-BACKGROUND-MANIFEST-v0.json"
+        ),
+        "calculation_manifest_sha256": manifest_sha256,
+        "guardrail_path": manifest["guardrail_path"],
+        "guardrail_sha256": guardrail_sha256,
+        "calculation_script_path": manifest["script_path"],
+        "calculation_script_sha256": script_sha256,
+        "execution_report_path": (
+            "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_"
+            "IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTION_"
+            "20260709_v0.json"
+        ),
+        "canonical_json_contract": manifest["canonical_json_contract"],
+        "background_geometry_classification": (
+            BACKGROUND_GEOMETRY_CLASSIFICATION
+        ),
+        "guardrail_geometry_classification": GUARDRAIL_GEOMETRY_CLASSIFICATION,
+        "scalar_curvature_expected": result["scalar_curvature_expected"],
+        "scalar_curvature_measured": result["scalar_curvature_measured"],
+        "curvature_verification": curvature,
+        "patch_domain_safety": patch,
+        "control_counts": {
+            "curvature_verification_route_count": 2,
+            "negative_control_count": 3,
+            "frozen_threshold_count": 11,
+            "on_shell_time_resolution_rows": len(
+                result["on_shell"]["time_slice_results"]
+            ),
+            "off_shell_time_resolution_rows": len(
+                result["off_shell"]["time_slice_results"]
+            ),
+            "time_slice_count": len(result["parameters"]["time_slices_eta"]),
+            "resolution_count": len(result["parameters"]["resolutions_N"]),
+            "divergence_component_count": 2,
+        },
+        "negative_controls": negative_controls,
+        "threshold_evidence": result["threshold_evidence"],
+        "threshold_checks": checks,
+        "all_thresholds_passed": True,
+        "claim": {
+            "primary_label": "E-REPRO",
+            "claim_status": "generated_pending_result_review",
+            "claim_ceiling_level": 3,
+            "claim_scope": result["claim"]["claim_scope"],
+        },
+        "gravity_evolved": False,
+        "einstein_tensor_source_tested": False,
+        "two_dimensional_einstein_gravity_degenerate": True,
+        "covariant_matter_identity_tested": True,
+        "existing_equation_id_reused": result["existing_equation_id_reused"],
+        "equation_compendium_edited": False,
+        "recommended_post_review_target": result[
+            "recommended_post_review_target"
+        ],
+        "boundary": boundary,
+        "ccft_lane_status": "paused_upstream_prerequisites",
+        "lean_status_wording": (
+            "scoped Lean passed; full ToeFormal aggregate not run / not upgraded"
+        ),
+    }
+
+
 def write_report(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(report_json_bytes(payload))
@@ -532,6 +829,38 @@ def guardrail_main(argv: list[str] | None = None) -> int:
                 ],
                 "selected_next_target": EXECUTION_TARGET,
             }
+        )
+    )
+    return 0
+
+
+def execution_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Record the fixed 1+1 de Sitter scalar execution."
+    )
+    parser.add_argument("--out", type=Path, default=EXECUTION_REPORT_PATH)
+    args = parser.parse_args(argv)
+    payload = build_execution_report()
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "outcome": EXECUTION_OUTCOME,
+                "background_geometry_classification": payload[
+                    "background_geometry_classification"
+                ],
+                "scalar_curvature_measured": payload[
+                    "scalar_curvature_measured"
+                ],
+                "calculation_output_sha256": payload[
+                    "calculation_output_sha256"
+                ],
+                "calculation_manifest_sha256": payload[
+                    "calculation_manifest_sha256"
+                ],
+                "selected_next_target": REVIEW_TARGET,
+            },
+            sort_keys=True,
         )
     )
     return 0
