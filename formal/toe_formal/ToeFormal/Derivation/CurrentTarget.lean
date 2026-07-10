@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ScalarStressEnergyCovariantDivergenceIdentityNonzeroCurvatureBackgroundCalculationResultReview
+import ToeFormal.Derivation.ScalarStressEnergyCovariantDivergenceIdentityHigherDimensionalCurvedBackgroundGuardrailPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityNonzeroCurvatureBackgroundCalculationResultReview.selectedNextTarget
+  ScalarStressEnergyCovariantDivergenceIdentityHigherDimensionalCurvedBackgroundGuardrailPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityNonzeroCurvatureBackgroundCalculationResultReview.reviewId
+  ScalarStressEnergyCovariantDivergenceIdentityHigherDimensionalCurvedBackgroundGuardrailPacket.packetId
 
-theorem current_target_points_to_higher_dimensional_curved_background_guardrail :
+theorem current_target_points_to_higher_dimensional_curved_background_execution :
     currentLiveTarget =
-      "prepare_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_guardrail_packet" := by
+      "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0" := by
   rfl
 
 end CurrentTarget

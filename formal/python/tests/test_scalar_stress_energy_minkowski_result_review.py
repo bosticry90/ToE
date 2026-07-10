@@ -88,14 +88,15 @@ def test_review_is_preserved_after_curved_guardrail_rotation() -> None:
     assert review["status"] == "paused"
     assert review["selected_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "review_calc_scalar_stress_energy_covariant_divergence_identity_"
-        "nonzero_curvature_background_v0_result"
-    )
-    assert state["live_next_target"] == (
         "prepare_scalar_stress_energy_covariant_divergence_identity_higher_"
         "dimensional_curved_background_guardrail_packet"
     )
+    assert state["live_next_target"] == (
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
+        "dimensional_curved_background_v0"
+    )
     assert active["workstream_id"] == state["live_next_target"]
+    assert active["calculation_executed"] == "no"
 
 
 def test_successful_review_preserves_the_two_minkowski_equation_surfaces() -> None:

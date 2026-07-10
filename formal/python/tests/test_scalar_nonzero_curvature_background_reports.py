@@ -331,6 +331,10 @@ def test_execution_and_review_are_preserved_after_review_rotation() -> None:
     active = active_workstream(registry)
     execution = workstream(EXECUTION_TARGET, registry)
     review = workstream(REVIEW_TARGET, registry)
+    higher_dimensional_guardrail = workstream(
+        HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET,
+        registry,
+    )
     assert execution["status"] == "paused"
     assert execution["selected_next_target"] == REVIEW_TARGET
     assert review["status"] == "paused"
@@ -351,8 +355,20 @@ def test_execution_and_review_are_preserved_after_review_rotation() -> None:
     assert all(review["threshold_checks"].values())
     assert review["two_dimensional_einstein_gravity_degenerate"] == "yes"
     assert review["einstein_tensor_source_tested"] == "no"
-    assert state["previous_live_next_target"] == REVIEW_TARGET
-    assert state["live_next_target"] == (
+    assert higher_dimensional_guardrail["status"] == "paused"
+    assert higher_dimensional_guardrail["selected_next_target"] == (
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "higher_dimensional_curved_background_v0"
+    )
+    assert state["previous_live_next_target"] == (
         HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_TARGET
     )
+    assert state["live_next_target"] == (
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
+        "higher_dimensional_curved_background_v0"
+    )
     assert active["workstream_id"] == state["live_next_target"]
+    assert active["calculation_executed"] == "no"
+    assert active["report_sha256"] == (
+        "381adc90f542e6cca4dbfe1c2b858d59ee763ed804c9aa07be08feb00118bfe8"
+    )
