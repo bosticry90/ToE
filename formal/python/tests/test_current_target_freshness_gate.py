@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_science_first_pillar_seam_dependency_rebase_packet_result"
+    "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1347,7 +1347,7 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_science_first_pillar_seam_dependency_rebase_packet"
+    "review_science_first_pillar_seam_dependency_rebase_packet_result"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1694,7 +1694,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_science_first_pillar_seam_dependency_rebase_packet_result"
+    "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1789,11 +1789,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ScienceFirstPillarSeamDependencyRebasePacket.lean"
+    / "ScienceFirstPillarSeamDependencyRebasePacketResultReview.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
-    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_20260709_v0.json"
+    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_"
+    "20260709_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1925,8 +1926,9 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_PREPARED_COMPACT_"
-    "READINESS_AUTHORITY_PENDING_REVIEW_NO_PILLAR_OR_SEAM_CLOSURE"
+    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_ACCEPTS_"
+    "COMPACT_SCIENCE_SPRINT_READINESS_AUTHORITY_AND_SELECTS_FLAT_LIMIT_"
+    "PRETEST_ONLY"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2056,8 +2058,9 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_PREPARED_ENTRY_"
-    "MATURITY_AND_SEAM_GATES_ONLY_NO_MASTER_ACTION_PROMOTION_OR_CCFT_RESUMPTION"
+    "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_ACCEPTS_"
+    "READINESS_CLASSIFICATION_ONLY_NO_QFT_GR_SEAM_ADMISSIBILITY_NO_MASTER_"
+    "ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2164,8 +2167,11 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTC
 SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_KIND = (
     "science_first_pillar_seam_dependency_rebase_packet"
 )
+SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
+    "prepare_science_first_pillar_seam_dependency_rebase_packet"
+)
 LIVE_TARGET_KIND = (
-    "science_first_pillar_seam_dependency_rebase_packet_result_review"
+    "scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
@@ -8075,12 +8081,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["prepared_review_strict_result"] == (
         SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_REVIEW_STRICT_OUTCOME
     )
-    assert interaction_active_workstream["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert interaction_active_workstream["selected_next_target"] == (
+        SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET
+    )
     assert interaction_active_workstream["selected_next_target_kind"] == (
         SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_KIND
     )
     assert interaction_active_workstream["suggested_next_packet_target"] == (
-        PREVIOUS_LIVE_TARGET
+        SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET
     )
     assert interaction_active_workstream["suggested_next_packet_kind"] == (
         SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_KIND

@@ -1,0 +1,104 @@
+{
+  "authority_roles": {
+    "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md": "evidence inventory and input surface",
+    "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json": "legacy operational/governance authority",
+    "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json": "current science-sprint readiness authority"
+  },
+  "captured_at_utc": "2026-07-09T00:00:00Z",
+  "ccft_lane_status": "paused_upstream_prerequisites",
+  "ccft_resume_gates": [
+    {
+      "gate_id": "open_system_qm_object",
+      "status": "missing"
+    },
+    {
+      "gate_id": "qm_stat_decoherence_bridge",
+      "status": "missing"
+    },
+    {
+      "gate_id": "scqed_em_qm_mapping",
+      "status": "missing"
+    },
+    {
+      "gate_id": "validated_variable_map",
+      "status": "missing"
+    },
+    {
+      "gate_id": "validated_unit_map",
+      "status": "missing"
+    },
+    {
+      "gate_id": "validated_assumption_map",
+      "status": "missing"
+    },
+    {
+      "gate_id": "source_validation_criteria",
+      "status": "partial"
+    },
+    {
+      "gate_id": "adopted_baseline_equation_family",
+      "status": "missing"
+    }
+  ],
+  "claim_boundary": {
+    "ccft_resumed": false,
+    "ccft_validated": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "seam_admissibility_claimed": false,
+    "seam_closure_claimed": false
+  },
+  "consumed_target": "review_science_first_pillar_seam_dependency_rebase_packet_result",
+  "consumed_target_kind": "science_first_pillar_seam_dependency_rebase_packet_result_review",
+  "equation_compendium_row_added": false,
+  "first_science_sprint": {
+    "claim_ceiling": "Level 3 toy-model demonstration",
+    "execution_target": "execute_calc_scalar_stress_energy_divergence_identity_minkowski_v0",
+    "not_a_qft_gr_seam_admissibility_claim": true,
+    "scope": "Minkowski scalar stress-energy divergence identity flat-limit pretest",
+    "selection_status": "selected_after_review",
+    "target": "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet"
+  },
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "packet_id": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_v0",
+  "packet_result": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_ACCEPTS_COMPACT_SCIENCE_SPRINT_READINESS_AUTHORITY_AND_SELECTS_FLAT_LIMIT_PRETEST_ONLY",
+  "readiness_artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+  "readiness_artifact_path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+  "readiness_artifact_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+  "readiness_rows_embedded_in_loop_registry": false,
+  "readiness_summary_counts": {
+    "exploratory_seam_entry_eligible_count": 0,
+    "level_5_seam_admissible_count": 0,
+    "pillar_count": 7,
+    "pillar_criterion_count": 10,
+    "pillar_entry_row_count": 35,
+    "pillar_maturity_row_count": 35,
+    "pillar_row_count": 70,
+    "pillar_status_counts": {
+      "blocked": 1,
+      "met": 5,
+      "missing": 15,
+      "not_applicable": 0,
+      "not_assessed": 5,
+      "partial": 44
+    },
+    "seam_count": 5,
+    "seam_criterion_count": 8,
+    "seam_row_count": 40,
+    "seam_status_counts": {
+      "blocked": 3,
+      "met": 1,
+      "missing": 10,
+      "not_applicable": 0,
+      "not_assessed": 0,
+      "partial": 26
+    }
+  },
+  "review_result": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_ACCEPTS_COMPACT_SCIENCE_SPRINT_READINESS_AUTHORITY_AND_SELECTS_FLAT_LIMIT_PRETEST_ONLY",
+  "schema_id": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_20260709_v0",
+  "selected_next_target": "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet",
+  "selected_next_target_kind": "scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet",
+  "status": "accepted_current_science_sprint_readiness_authority",
+  "strict_packet_result": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_ACCEPTS_READINESS_CLASSIFICATION_ONLY_NO_QFT_GR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION",
+  "strict_review_result": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_ACCEPTS_READINESS_CLASSIFICATION_ONLY_NO_QFT_GR_SEAM_ADMISSIBILITY_NO_MASTER_ACTION_PROMOTION"
+}

@@ -147,6 +147,9 @@ def test_loop_registry_contains_only_compact_readiness_pointers() -> None:
     assert registry["science_first_readiness_summary_counts"]["pillar_row_count"] == 70
     assert registry["science_first_readiness_summary_counts"]["seam_row_count"] == 40
     assert registry["science_first_readiness_rows_embedded_in_registry"] == "no"
+    assert registry["science_first_readiness_authority_status"] == (
+        "accepted_current_science_sprint_readiness_authority"
+    )
     assert "pillar_readiness_rows" not in registry
     assert "seam_readiness_rows" not in registry
     assert "pillar_readiness_rows" not in active

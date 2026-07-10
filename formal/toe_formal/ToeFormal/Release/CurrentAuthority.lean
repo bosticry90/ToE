@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_science_first_pillar_seam_dependency_rebase_packet_result" := by
+      "prepare_scalar_qft_gr_source_contract_flat_limit_pretest_guardrail_packet" := by
   native_decide
 
 end CurrentAuthority
