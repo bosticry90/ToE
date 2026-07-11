@@ -197,6 +197,7 @@ def currentLiveNextStrictTargetV0 : String :=
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
+import ToeFormal.Derivation.ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -435,7 +436,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result"
+        "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -481,13 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the multi-background calculation execution. -/
+/-- Previous live target consumed by the multi-background calculation result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "execute_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0"
-
-/-- Current live target after the multi-background calculation execution. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result"
+
+/-- Current live target after the multi-background calculation result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+
+/-- Evidence certificate for the accepted review that selected the live target. -/
+def currentLiveNextStrictTargetEvidenceV0 : String :=
+  "formal/toe_formal/ToeFormal/Derivation/ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.lean"
+
+/-- Immutable review report supporting the current target transition. -/
+def currentLiveNextStrictTargetReportV0 : String :=
+  "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json"
+
+/-- Accepted bounded review outcome supporting the current target. -/
+def currentLiveNextStrictTargetOutcomeV0 : String :=
+  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.reviewResult
+
+/-- Strict claim-ceiling outcome supporting the current target. -/
+def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
+  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.strictReviewResult
+
+/-- Kind of the selected current target. -/
+def currentLiveNextStrictTargetKindV0 : String :=
+  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.selectedNextTargetKind
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -500,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result"
+    "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -624,6 +645,26 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       |>.previous_live_next_target) =
       previousLiveNextStrictTargetV0 := by
   rfl
+
+/-- The accepted review evidence and claim ceiling support the unit-ledger target. -/
+theorem cross_pillar_frontier_current_authority_metadata_v0 :
+    currentLiveNextStrictTargetEvidenceV0 =
+        "formal/toe_formal/ToeFormal/Derivation/ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.lean" ∧
+      currentLiveNextStrictTargetReportV0 =
+        "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json" ∧
+      currentLiveNextStrictTargetOutcomeV0 =
+        "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_ROBUSTNESS_ACROSS_THE_EXACT_FOUR_ENUMERATED_FIXED_BACKGROUND_EVIDENCE_CHAINS" ∧
+      currentLiveNextStrictTargetStrictOutcomeV0 =
+        "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_LEVEL3_CLOSED_ENUMERATED_FIXED_BACKGROUND_FIXED_COORDINATE_SHARED_LINEAGE_E_REPRO_ONLY_NO_THEOREM_NO_STATISTICAL_OR_ARBITRARY_BACKGROUND_GENERALIZATION_NO_LEVEL4_OR5" ∧
+      currentLiveNextStrictTargetKindV0 =
+        "pillar_seam_unit_mapping_ledger_guardrail_packet" := by
+  constructor
+  · rfl
+  constructor
+  · rfl
+  constructor
+  · rfl
+  constructor <;> rfl
 
 end CrossPillarClosureFrontier
 end Derivation

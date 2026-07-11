@@ -1,0 +1,397 @@
+{
+  "accepted_e_repro": true,
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "C_k_dynamics_claimed": false,
+    "all_background_validity_claimed": false,
+    "bianchi_compatibility_claimed": false,
+    "ccft_resumed": false,
+    "closed_enumerated_family": true,
+    "einstein_source_compatibility_claimed": false,
+    "fixed_backgrounds": true,
+    "fixed_coordinate_systems": true,
+    "formal_proof_claimed": false,
+    "full_ToeFormal_aggregate_run_or_upgraded": false,
+    "gravity_evolution_claimed": false,
+    "independent_code_replication_claimed": false,
+    "level_4_or_level_5_claimed": false,
+    "master_action_promoted": false,
+    "new_pde_solve_performed": false,
+    "new_physics_claimed": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "quantum_or_renormalized_stress_energy_claimed": false,
+    "scalar_qft_pillar_recovery_claimed": false,
+    "shared_implementation_lineage": true,
+    "statistical_success_probability_claimed": false,
+    "unit_ledger_status_during_review": "queued_non_live_hard_gate",
+    "unit_ledger_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+  },
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-v0",
+  "captured_at_utc": "2026-07-10T00:00:00Z",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "reproducible robustness across the exact four enumerated fixed-background evidence chains",
+    "claim_status": "accepted_level_3_scoped_e_repro_exact_four_case_family_only",
+    "not_a_statistical_generalization": true,
+    "not_a_theorem": true,
+    "not_arbitrary_background_validity": true,
+    "not_independent_code_replication": true,
+    "primary_label": "E-REPRO",
+    "review_accepted": true
+  },
+  "consumed_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_calculation_result_review",
+  "determinism": {
+    "ambient_branch_head_or_dirty_state_serialized": false,
+    "fixed_capture_time": "2026-07-10T00:00:00Z",
+    "fresh_subprocess_count": 2,
+    "report_encoding": "UTF-8 without BOM; sorted indented JSON; exactly one LF",
+    "temporary_paths_serialized": false,
+    "wall_clock_time_serialized": false
+  },
+  "execution_commit": "f733587fedf78cfa4c2fc3a6ce8c7f63f1885b49",
+  "failure_preservation": {
+    "diagnostic_authority_rotation_required": false,
+    "execution_commit_remains_immutable": true,
+    "review_artifact_written_on_failure": true,
+    "source_or_execution_artifacts_amended": false
+  },
+  "five_artifact_chain": {
+    "all_hashes_match": true,
+    "calculation_manifest_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-MANIFEST-v0.json",
+    "calculation_output_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-v0.json",
+    "calculation_script_path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness.py",
+    "execution_report_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_EXECUTION_20260710_v0.json",
+    "expected_hashes": {
+      "execution_report_sha256": "3475e11a9cfee79e895732c0719864f797e8be4f1cdc11de7e776c728daf0a87",
+      "guardrail_sha256": "be308d23673273bf2533f25c58280e92845da146b128dc74a7aad345557c5b95",
+      "manifest_sha256": "5b2bc32e1ba42992f367ec19e4d380fc09ee16bd1c570696f8252eeadcee04b3",
+      "output_sha256": "c05c89a469682375ae6c4f2385596bb02296680b3d0a62c36146f144ef60ab65",
+      "script_sha256": "31c6748161d7e489b35ed25dc298197d5b4c3b67c7d9cb49a98cd30518965342"
+    },
+    "guardrail_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_GUARDRAIL_PACKET_20260710_v0.json"
+  },
+  "mismatch_codes": [],
+  "packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_ROBUSTNESS_ACROSS_THE_EXACT_FOUR_ENUMERATED_FIXED_BACKGROUND_EVIDENCE_CHAINS",
+  "primary_label": "E-REPRO",
+  "review_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_v0",
+  "review_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_ROBUSTNESS_ACROSS_THE_EXACT_FOUR_ENUMERATED_FIXED_BACKGROUND_EVIDENCE_CHAINS",
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0",
+  "selected_next_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_guardrail_packet",
+  "selection_basis": "unit mapping is a hard gate before Level 4/5, physical calibration, cross-sector coupling, or C_k action embedding",
+  "status": "accepted_level_3_scoped_e_repro",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_LEVEL3_CLOSED_ENUMERATED_FIXED_BACKGROUND_FIXED_COORDINATE_SHARED_LINEAGE_E_REPRO_ONLY_NO_THEOREM_NO_STATISTICAL_OR_ARBITRARY_BACKGROUND_GENERALIZATION_NO_LEVEL4_OR5",
+  "strict_review_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_LEVEL3_CLOSED_ENUMERATED_FIXED_BACKGROUND_FIXED_COORDINATE_SHARED_LINEAGE_E_REPRO_ONLY_NO_THEOREM_NO_STATISTICAL_OR_ARBITRARY_BACKGROUND_GENERALIZATION_NO_LEVEL4_OR5",
+  "verification": {
+    "accepted": true,
+    "actual_hashes": {
+      "execution_report_sha256": "3475e11a9cfee79e895732c0719864f797e8be4f1cdc11de7e776c728daf0a87",
+      "guardrail_sha256": "be308d23673273bf2533f25c58280e92845da146b128dc74a7aad345557c5b95",
+      "manifest_sha256": "5b2bc32e1ba42992f367ec19e4d380fc09ee16bd1c570696f8252eeadcee04b3",
+      "output_sha256": "c05c89a469682375ae6c4f2385596bb02296680b3d0a62c36146f144ef60ab65",
+      "script_sha256": "31c6748161d7e489b35ed25dc298197d5b4c3b67c7d9cb49a98cd30518965342"
+    },
+    "all_canonical_bytes_match": true,
+    "all_five_artifact_hashes_match": true,
+    "all_fourteen_independent_tamper_controls_detected": true,
+    "all_sixteen_independent_synthesis_decisions_pass": true,
+    "canonical_byte_checks": {
+      "execution_report": true,
+      "guardrail": true,
+      "manifest": true,
+      "result": true
+    },
+    "claim_status": "accepted_level_3_scoped_e_repro_exact_four_case_family_only",
+    "execution_lifecycle_and_claim_boundary_match": true,
+    "execution_report_hash_and_identity_links_match": true,
+    "execution_report_independent_section_matches": {
+      "applicability": true,
+      "background_rows": true,
+      "comparable_rows_and_envelopes": true,
+      "controls": true,
+      "fourteen_tamper_controls": true,
+      "on_shell_policies": true,
+      "sixteen_decisions": true,
+      "source_chain_records": true,
+      "thirty_seven_source_decisions": true
+    },
+    "execution_self_adjudication_trusted": false,
+    "expected_hashes": {
+      "execution_report_sha256": "3475e11a9cfee79e895732c0719864f797e8be4f1cdc11de7e776c728daf0a87",
+      "guardrail_sha256": "be308d23673273bf2533f25c58280e92845da146b128dc74a7aad345557c5b95",
+      "manifest_sha256": "5b2bc32e1ba42992f367ec19e4d380fc09ee16bd1c570696f8252eeadcee04b3",
+      "output_sha256": "c05c89a469682375ae6c4f2385596bb02296680b3d0a62c36146f144ef60ab65",
+      "script_sha256": "31c6748161d7e489b35ed25dc298197d5b4c3b67c7d9cb49a98cd30518965342"
+    },
+    "fresh_subprocess_reproduction": {
+      "all_twenty_four_source_artifacts_unchanged": true,
+      "both_runs_byte_identical": true,
+      "distinct_temporary_directories": true,
+      "fixed_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PYTHONHASHSEED": "0",
+        "PYTHONUTF8": "1",
+        "TZ": "UTC"
+      },
+      "fresh_runs_match_repository_artifacts": true,
+      "repository_execution_artifacts_unchanged": true,
+      "run_count": 2,
+      "run_one_sha256": {
+        "execution_report": "3475e11a9cfee79e895732c0719864f797e8be4f1cdc11de7e776c728daf0a87",
+        "manifest": "5b2bc32e1ba42992f367ec19e4d380fc09ee16bd1c570696f8252eeadcee04b3",
+        "result": "c05c89a469682375ae6c4f2385596bb02296680b3d0a62c36146f144ef60ab65"
+      },
+      "run_two_sha256": {
+        "execution_report": "3475e11a9cfee79e895732c0719864f797e8be4f1cdc11de7e776c728daf0a87",
+        "manifest": "5b2bc32e1ba42992f367ec19e4d380fc09ee16bd1c570696f8252eeadcee04b3",
+        "result": "c05c89a469682375ae6c4f2385596bb02296680b3d0a62c36146f144ef60ab65"
+      }
+    },
+    "independent_family_sha256": "e6321f9c73ad83786c719814443b328cae7a2b8cd2bbe0dbf9531ac5439d8bf0",
+    "independent_reconstruction_implementation": "review-local chain-specific source adapters, source hash/link checks, family envelopes, decision adjudication, and isolated tamper controls",
+    "independent_section_matches": {
+      "applicability": true,
+      "background_rows": true,
+      "comparable_rows_and_envelopes": true,
+      "controls": true,
+      "fourteen_tamper_controls": true,
+      "on_shell_policies": true,
+      "sixteen_decisions": true,
+      "source_chain_records": true,
+      "thirty_seven_source_decisions": true
+    },
+    "independent_summary": {
+      "applicability_typed_local_check_row_count": 4,
+      "background_comparison_row_count": 4,
+      "bound_artifact_count": 24,
+      "comparable_convergence_row_count": 5,
+      "comparable_off_shell_relative_error_row_count": 5,
+      "control_instance_count": 10,
+      "control_mechanism_count": 8,
+      "family_maximum_off_shell_relative_identity_error": 0.004010933857743127,
+      "family_minimum_p_min": 1.9916550282637009,
+      "qualified_source_decision_count": 37,
+      "source_chain_count": 4,
+      "source_local_on_shell_policy_row_count": 4,
+      "synthesis_decision_count": 16,
+      "synthesis_tamper_control_count": 14
+    },
+    "independent_synthesis_decisions": [
+      {
+        "decision_id": "exact_twenty_four_artifact_chain_integrity",
+        "decision_number": 1,
+        "passed": true
+      },
+      {
+        "decision_id": "four_level3_review_acceptances",
+        "decision_number": 2,
+        "passed": true
+      },
+      {
+        "decision_id": "identity_and_flat_specialization_mapping",
+        "decision_number": 3,
+        "passed": true
+      },
+      {
+        "decision_id": "four_geometry_class_coverage",
+        "decision_number": 4,
+        "passed": true
+      },
+      {
+        "decision_id": "dimension_and_component_coverage",
+        "decision_number": 5,
+        "passed": true
+      },
+      {
+        "decision_id": "connection_class_coverage",
+        "decision_number": 6,
+        "passed": true
+      },
+      {
+        "decision_id": "curvature_class_coverage",
+        "decision_number": 7,
+        "passed": true
+      },
+      {
+        "decision_id": "profile_and_component_role_coverage",
+        "decision_number": 8,
+        "passed": true
+      },
+      {
+        "decision_id": "all_thirty_seven_upstream_decisions_pass",
+        "decision_number": 9,
+        "passed": true
+      },
+      {
+        "decision_id": "family_minimum_convergence_order",
+        "decision_number": 10,
+        "passed": true
+      },
+      {
+        "decision_id": "family_maximum_off_shell_relative_error",
+        "decision_number": 11,
+        "passed": true
+      },
+      {
+        "decision_id": "source_local_on_shell_policies",
+        "decision_number": 12,
+        "passed": true
+      },
+      {
+        "decision_id": "applicability_typed_local_checks",
+        "decision_number": 13,
+        "passed": true
+      },
+      {
+        "decision_id": "ten_control_instances_eight_mechanisms",
+        "decision_number": 14,
+        "passed": true
+      },
+      {
+        "decision_id": "comparison_policy_no_invalid_pooling",
+        "decision_number": 15,
+        "passed": true
+      },
+      {
+        "decision_id": "lifecycle_claim_and_unit_ledger_boundaries",
+        "decision_number": 16,
+        "passed": true
+      }
+    ],
+    "independent_synthesis_tamper_controls": [
+      {
+        "control_id": "omitted_background",
+        "detected": true,
+        "expected_failed_decision_id": "four_geometry_class_coverage",
+        "observed_failed_decision_ids": [
+          "exact_twenty_four_artifact_chain_integrity",
+          "four_level3_review_acceptances",
+          "four_geometry_class_coverage",
+          "dimension_and_component_coverage",
+          "curvature_class_coverage",
+          "profile_and_component_role_coverage",
+          "all_thirty_seven_upstream_decisions_pass",
+          "family_minimum_convergence_order",
+          "family_maximum_off_shell_relative_error",
+          "source_local_on_shell_policies",
+          "applicability_typed_local_checks",
+          "ten_control_instances_eight_mechanisms"
+        ]
+      },
+      {
+        "control_id": "swapped_chain_artifacts",
+        "detected": true,
+        "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+        "observed_failed_decision_ids": [
+          "exact_twenty_four_artifact_chain_integrity"
+        ]
+      },
+      {
+        "control_id": "masked_upstream_failure",
+        "detected": true,
+        "expected_failed_decision_id": "all_thirty_seven_upstream_decisions_pass",
+        "observed_failed_decision_ids": [
+          "all_thirty_seven_upstream_decisions_pass"
+        ]
+      },
+      {
+        "control_id": "inapplicable_zero_fill",
+        "detected": true,
+        "expected_failed_decision_id": "applicability_typed_local_checks",
+        "observed_failed_decision_ids": [
+          "applicability_typed_local_checks"
+        ]
+      },
+      {
+        "control_id": "on_shell_relative_error_injection",
+        "detected": true,
+        "expected_failed_decision_id": "source_local_on_shell_policies",
+        "observed_failed_decision_ids": [
+          "source_local_on_shell_policies"
+        ]
+      },
+      {
+        "control_id": "raw_absolute_error_substitution",
+        "detected": true,
+        "expected_failed_decision_id": "comparison_policy_no_invalid_pooling",
+        "observed_failed_decision_ids": [
+          "comparison_policy_no_invalid_pooling"
+        ]
+      },
+      {
+        "control_id": "removed_control_instance",
+        "detected": true,
+        "expected_failed_decision_id": "ten_control_instances_eight_mechanisms",
+        "observed_failed_decision_ids": [
+          "ten_control_instances_eight_mechanisms"
+        ]
+      },
+      {
+        "control_id": "input_hash_tamper",
+        "detected": true,
+        "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+        "observed_failed_decision_ids": [
+          "exact_twenty_four_artifact_chain_integrity"
+        ]
+      },
+      {
+        "control_id": "review_hash_tamper",
+        "detected": true,
+        "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+        "observed_failed_decision_ids": [
+          "exact_twenty_four_artifact_chain_integrity"
+        ]
+      },
+      {
+        "control_id": "result_hash_tamper",
+        "detected": true,
+        "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+        "observed_failed_decision_ids": [
+          "exact_twenty_four_artifact_chain_integrity"
+        ]
+      },
+      {
+        "control_id": "nonfinite_injection",
+        "detected": true,
+        "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+        "observed_failed_decision_ids": [
+          "exact_twenty_four_artifact_chain_integrity"
+        ]
+      },
+      {
+        "control_id": "degeneracy_language_leak",
+        "detected": true,
+        "expected_failed_decision_id": "lifecycle_claim_and_unit_ledger_boundaries",
+        "observed_failed_decision_ids": [
+          "lifecycle_claim_and_unit_ledger_boundaries"
+        ]
+      },
+      {
+        "control_id": "collapsed_curvature_classes",
+        "detected": true,
+        "expected_failed_decision_id": "curvature_class_coverage",
+        "observed_failed_decision_ids": [
+          "curvature_class_coverage"
+        ]
+      },
+      {
+        "control_id": "forbidden_claim_promotion",
+        "detected": true,
+        "expected_failed_decision_id": "lifecycle_claim_and_unit_ledger_boundaries",
+        "observed_failed_decision_ids": [
+          "lifecycle_claim_and_unit_ledger_boundaries"
+        ]
+      }
+    ],
+    "manifest_hash_and_identity_links_match": true,
+    "mismatch_codes": [],
+    "primary_claim_label": "E-REPRO",
+    "schema_and_required_fields_match": true,
+    "selected_next_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+    "selection_basis": "unit mapping is a hard gate before Level 4/5, physical calibration, cross-sector coupling, or C_k action embedding",
+    "twenty_four_scientific_input_links_match": true
+  }
+}

@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationExecution
+import ToeFormal.Derivation.ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationExecution.selectedNextTarget
+  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationExecution.executionId
+  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.reviewId
 
-theorem current_target_points_to_multi_background_robustness_result_review :
+theorem current_target_points_to_pillar_seam_unit_mapping_ledger_guardrail :
     currentLiveTarget =
-      "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result" := by
+      "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet" := by
   rfl
 
 end CurrentTarget

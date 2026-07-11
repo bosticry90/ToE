@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result" := by
+      "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet" := by
   native_decide
 
 end CurrentAuthority
