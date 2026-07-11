@@ -1,0 +1,4626 @@
+{
+  "authorization": {
+    "consumer_migration_authorized": false,
+    "corrective_v1_independent_review_authorized": true,
+    "corrective_v2_independent_review_authorized": true,
+    "corrective_v3_independent_review_authorized": true,
+    "custody_payload_creation_authorized_now": false,
+    "monolith_modification_or_retirement_authorized": false,
+    "production_validator_implementation_authorized_now": false,
+    "prototype_artifact_creation_authorized_now": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false
+  },
+  "byte_custody_execution_procedure": {
+    "acceptance": {
+      "byte_identical": true,
+      "decompressed_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "decompressed_size_bytes": 52340650,
+      "detached_clean_checkout_required": true,
+      "reconstructed_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+    },
+    "procedure": [
+      "READ_FROZEN_SOURCE_AS_GIT_BLOB_FROM_REVIEWED_COMMIT",
+      "STREAM_ONE_RFC1952_MEMBER_WITH_DEFLATE_LEVEL_9_MTIME_0_FLG_0_XFL_2_OS_255",
+      "RECORD_COMPRESSED_SIZE_AND_SHA256_IN_CLOSED_CUSTODY_MANIFEST",
+      "REJECT_EXTRA_FIELDS_FILENAME_COMMENT_MULTIPLE_MEMBERS_OR_TRAILING_BYTES",
+      "STREAM_DECOMPRESS_WITH_52340650_BYTE_HARD_LIMIT",
+      "COMPARE_DECOMPRESSED_BYTES_AND_SHA256_TO_EXTERNAL_FROZEN_SOURCE",
+      "WRITE_COMPATIBILITY_OUTPUT_ONLY_INSIDE_ISOLATED_PROTOTYPE_ROOT",
+      "VERIFY_RECONSTRUCTED_BYTES_SHA256_AND_SIZE_IN_DETACHED_CLEAN_CHECKOUT",
+      "REMOVE_TEMPORARY_52_MIB_RECONSTRUCTION_AFTER_COMPACT_EVIDENCE_IS_RECORDED"
+    ],
+    "semantic_equivalence_alone_sufficient": false
+  },
+  "control_error_map": {
+    "REGISTRY-READINESS-V1-RC-001": "V1-E-READINESS-PROFILE-CLOSURE",
+    "REGISTRY-READINESS-V1-RC-002": "V1-E-HISTORY-PAYLOAD-BASE64",
+    "REGISTRY-READINESS-V1-RC-003": "V1-E-HISTORY-PAYLOAD-ENVELOPE",
+    "REGISTRY-READINESS-V1-RC-004": "V1-E-HISTORY-PAYLOAD-CANONICAL-IDENTITY",
+    "REGISTRY-READINESS-V1-RC-005": "V1-E-PATH-POSIX-ABSOLUTE",
+    "REGISTRY-READINESS-V1-RC-006": "V1-E-PATH-SLASH-UNC",
+    "REGISTRY-READINESS-V1-RC-007": "V1-E-VALIDATION-REPORT-INVARIANT",
+    "REGISTRY-READINESS-V1-RC-008": "V1-E-HARNESS-REPORT-INVARIANT",
+    "REGISTRY-V1-NC-001": "V1-E-AUTHORITY-EXTERNAL-BINDING",
+    "REGISTRY-V1-NC-002": "V1-E-INDEX-POINTER",
+    "REGISTRY-V1-NC-003": "V1-E-HISTORY-EXTERNAL-ROOT",
+    "REGISTRY-V1-NC-004": "V1-E-SHARD-ID-DUPLICATE",
+    "REGISTRY-V1-NC-005": "V1-E-JSON-NONFINITE",
+    "REGISTRY-V1-NC-006": "V1-E-JSONL-NONCANONICAL",
+    "REGISTRY-V1-NC-007": "V1-E-PROJECTION-SIZE",
+    "REGISTRY-V1-NC-008": "V1-E-MAINTENANCE-TARGET-CARDINALITY",
+    "REGISTRY-V1-NC-009": "V1-E-PROJECTION-FIELD-MISSING",
+    "REGISTRY-V1-NC-010": "V1-E-PROJECTION-FIELD-EXTRA",
+    "REGISTRY-V1-NC-011": "V1-E-HISTORY-PROMOTED",
+    "REGISTRY-V1-NC-012": "V1-E-CURRENT-DEMOTED",
+    "REGISTRY-V1-NC-013": "V1-E-SCIENTIFIC-TARGET-CARDINALITY",
+    "REGISTRY-V1-NC-014": "V1-E-CLAIM-CEILING",
+    "REGISTRY-V1-NC-015": "V1-E-BLOCKER-COMMITMENT",
+    "REGISTRY-V1-NC-016": "V1-E-NONPROMOTION-COMMITMENT",
+    "REGISTRY-V1-NC-017": "V1-E-SHARD-MISSING",
+    "REGISTRY-V1-NC-018": "V1-E-SHARD-EXTRA",
+    "REGISTRY-V1-NC-019": "V1-E-SHARD-PATH-DUPLICATE",
+    "REGISTRY-V1-NC-020": "V1-E-SHARD-EMPTY",
+    "REGISTRY-V1-NC-021": "V1-E-SHARD-SIZE",
+    "REGISTRY-V1-NC-022": "V1-E-SHARD-ORDER",
+    "REGISTRY-V1-NC-023": "V1-E-SHARD-RANGE-GAP",
+    "REGISTRY-V1-NC-024": "V1-E-SHARD-RANGE-OVERLAP",
+    "REGISTRY-V1-NC-025": "V1-E-SHARD-HASH",
+    "REGISTRY-V1-NC-026": "V1-E-RECORD-COUNT",
+    "REGISTRY-V1-NC-027": "V1-E-RECORD-ID-DUPLICATE",
+    "REGISTRY-V1-NC-028": "V1-E-RECORD-ID-FORGED",
+    "REGISTRY-V1-NC-029": "V1-E-RECORD-MISSING",
+    "REGISTRY-V1-NC-030": "V1-E-RECORD-EXTRA",
+    "REGISTRY-V1-NC-031": "V1-E-SOURCE-IDENTITY-DUPLICATE",
+    "REGISTRY-V1-NC-032": "V1-E-RECORD-ID-AMBIGUOUS",
+    "REGISTRY-V1-NC-033": "V1-E-UTF8-BOM",
+    "REGISTRY-V1-NC-034": "V1-E-UTF8-INVALID",
+    "REGISTRY-V1-NC-035": "V1-E-JSONL-CRLF",
+    "REGISTRY-V1-NC-036": "V1-E-TERMINAL-NEWLINE",
+    "REGISTRY-V1-NC-037": "V1-E-JSONL-BLANK",
+    "REGISTRY-V1-NC-038": "V1-E-JSON-KEY-DUPLICATE",
+    "REGISTRY-V1-NC-039": "V1-E-SCHEMA-VERSION",
+    "REGISTRY-V1-NC-040": "V1-E-PATH-TRAVERSAL",
+    "REGISTRY-V1-NC-041": "V1-E-CLOSED-SHARD-WRITE",
+    "REGISTRY-V1-NC-042": "V1-E-WRITE-SCOPE",
+    "REGISTRY-V1-NC-043": "V1-E-VERIFY-BYPASS",
+    "REGISTRY-V1-NC-044": "V1-E-MONOLITH-READER",
+    "REGISTRY-V1-NC-045": "V1-E-CONSUMER-UNCLASSIFIED",
+    "REGISTRY-V1-NC-046": "V1-E-RUNTIME-COVERAGE",
+    "REGISTRY-V1-NC-047": "V1-E-CUSTODY-GZIP-MULTIMEMBER",
+    "REGISTRY-V1-NC-048": "V1-E-CUSTODY-GZIP-TRAILING",
+    "REGISTRY-V1-NC-049": "V1-E-CUSTODY-GZIP-HEADER",
+    "REGISTRY-V1-NC-050": "V1-E-CUSTODY-SIZE",
+    "REGISTRY-V1-NC-051": "V1-E-CUSTODY-HASH",
+    "REGISTRY-V1-NC-052": "V1-E-CUSTODY-SEMANTIC-ROOT"
+  },
+  "control_error_map_sha256": "069d1f873de4a3b80759ff1857c249fbcca5204f7f900e3135bc7a901ca75bb1",
+  "failure_and_rollback": {
+    "fail_closed_triggers": [
+      "SCHEMA_OR_STRICT_PARSE_FAILURE",
+      "EXTERNAL_TRUST_ANCHOR_MISMATCH",
+      "RECORD_COUNT_OR_ROOT_MISMATCH",
+      "CONTROL_DECISION_OR_ERROR_SET_MISMATCH",
+      "SHADOW_PARITY_MISMATCH",
+      "UNTRACED_REQUIRED_CONSUMER",
+      "BYTE_CUSTODY_OR_RECONSTRUCTION_MISMATCH",
+      "DIRTY_DETACHED_CHECKOUT",
+      "UNEXPECTED_WRITE_OUTSIDE_PROTOTYPE_ROOT"
+    ],
+    "failed_or_timed_out_run_classification": "INCOMPLETE_OR_FAILED_NEVER_PASS",
+    "failure_may_rotate_target_or_authority": false,
+    "failure_may_touch_legacy_monolith": false,
+    "failure_may_touch_scientific_artifacts": false,
+    "in_place_candidate_repair_after_failure_allowed": false,
+    "rollback_requires_verified_resolved_path_under_prototype_root": true,
+    "rollback_scope": "DELETE_ONLY_FILES_CREATED_UNDER_THE_EXACT_RUN_ID_PROTOTYPE_ROOT",
+    "rollback_uses_git_history_rewrite": false,
+    "source_and_authority_hashes_rechecked_after_run": true,
+    "unexpected_write_outside_prototype_root": "FAIL_CLOSED_AND_REQUIRE_INDEPENDENT_DAMAGE_AUDIT"
+  },
+  "field_path_profile_map": {
+    "compatibility_reconstruction_result./properties/custody_payload_identity/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "compatibility_reconstruction_result./properties/reconstruction_identity/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "compatibility_reconstruction_result./properties/source_identity/properties/path": "REPOSITORY_RELPATH",
+    "compatibility_reconstruction_result./properties/validator_identity/properties/path": "REPOSITORY_RELPATH",
+    "consumer_source_map./properties/baseline/properties/path": "REPOSITORY_RELPATH",
+    "consumer_source_map./properties/consumers/items/properties/path": "REPOSITORY_RELPATH",
+    "current_projection./properties/active_blockers/items/properties/evidence_pointer": "REPOSITORY_RELPATH",
+    "current_projection./properties/active_scientific_workstream/properties/original_json_pointer": "JSON_POINTER",
+    "current_projection./properties/active_scientific_workstream/properties/report": "REPOSITORY_RELPATH",
+    "current_projection./properties/current_artifacts/items/properties/path": "REPOSITORY_RELPATH",
+    "current_projection./properties/history_index_pointer/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "current_projection./properties/maintenance_authority/properties/evidence/properties/path": "REPOSITORY_RELPATH",
+    "current_projection./properties/source_legacy_identity/properties/path": "REPOSITORY_RELPATH",
+    "history_index./properties/consumer_source_map_pointer/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "history_index./properties/custody_manifest_pointer/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "history_index./properties/shards/items/properties/path": "PROTOTYPE_SHARD_RELPATH",
+    "history_index./properties/source_registry_identity/properties/path": "REPOSITORY_RELPATH",
+    "history_shard_record./properties/original_json_pointer": "JSON_POINTER",
+    "history_shard_record./properties/source_path": "REPOSITORY_RELPATH",
+    "legacy_byte_custody_manifest./properties/contract_pointer/properties/path": "REPOSITORY_RELPATH",
+    "legacy_byte_custody_manifest./properties/generation_provenance/properties/run_id": "RUN_ID",
+    "legacy_byte_custody_manifest./properties/gzip_profile/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "legacy_byte_custody_manifest./properties/payload_identity/properties/path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "legacy_byte_custody_manifest./properties/source_identity/properties/path": "REPOSITORY_RELPATH",
+    "runtime_shadow_trace_event./properties/consumer_path": "REPOSITORY_RELPATH",
+    "runtime_shadow_trace_event./properties/fields_accessed/items": "JSON_POINTER",
+    "runtime_shadow_trace_event./properties/resolved_registry_paths/properties/candidate_prototype_path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "runtime_shadow_trace_event./properties/resolved_registry_paths/properties/legacy_repository_path": "REPOSITORY_RELPATH",
+    "runtime_shadow_trace_event./properties/run_id": "RUN_ID",
+    "runtime_shadow_trace_event./properties/write_paths/items": "CONTEXT_TAGGED_REPOSITORY_OR_PROTOTYPE_RELPATH",
+    "runtime_shadow_trace_manifest./properties/run_id": "RUN_ID",
+    "validation_report./oneOf/*/properties/issues/items/oneOf/*/properties/artifact_path": "PROTOTYPE_ARTIFACT_RELPATH",
+    "validation_report./oneOf/*/properties/issues/items/oneOf/*/properties/json_pointer": "JSON_POINTER"
+  },
+  "field_path_profile_map_sha256": "ab2a1fa4341805b146be7f53eadde70ab28000133c0ea3605fc2e1e4d2ebf54d",
+  "history_payload_validation_algorithm": {
+    "canonical_formats": {
+      "ARTIFACT_CANONICAL_JSON_v1": "UTF8_SORTED_KEYS_INDENT_2_ALLOW_NAN_FALSE_EXACTLY_ONE_TERMINAL_LF",
+      "HISTORY_PAYLOAD_COMPACT_JSON_v1": "UTF8_SORTED_KEYS_COMMA_COLON_SEPARATORS_ALLOW_NAN_FALSE_NO_WHITESPACE_NO_FINAL_LF"
+    },
+    "full_record_identity_root_algorithm": "SORT_RECORD_IDS_LEXICOGRAPHIC_JOIN_UTF8_LF_NO_TERMINAL_LF_SHA256",
+    "identity_payload_pointer_root_algorithm": "FORMAT_RECORD_ID_COLON_PAYLOAD_SHA256_COLON_POINTER_SORT_LEXICOGRAPHIC_JOIN_UTF8_LF_NO_TERMINAL_LF_SHA256",
+    "json_schema_only_success_authorized": false,
+    "mandatory_ordered_steps": [
+      "STRICT_RFC4648_BASE64_DECODE_VALIDATE_TRUE_AND_EXACT_REENCODE",
+      "DECODED_LENGTH_EQUALS_PAYLOAD_SIZE_BYTES",
+      "DECODED_SHA256_EQUALS_PAYLOAD_SHA256",
+      "STRICT_UTF8_DUPLICATE_KEY_AND_NONFINITE_JSON_PARSE",
+      "COMPACT_CANONICAL_RESERIALIZATION_EQUALS_DECODED_BYTES",
+      "PARSED_TOP_LEVEL_TYPE_EQUALS_PAYLOAD_KIND_BOOL_BEFORE_NUMBER",
+      "LOGICAL_KEY_POINTER_SOURCE_AND_OCCURRENCE_MATCH_SOURCE_RECORD",
+      "RECOMPUTE_LOOP_CONTROL_RECORD_ID_V1_PREIMAGE",
+      "RECOMPUTED_LCR1_SHA256_EQUALS_RECORD_ID",
+      "FULL_RECORD_ROOTS_EQUAL_EXTERNALLY_REVIEWED_ROOTS"
+    ],
+    "maximum_decoded_bytes": 2124270,
+    "maximum_encoded_bytes": 2832360,
+    "original_pointer_root_algorithm": "SORT_POINTERS_LEXICOGRAPHIC_JOIN_UTF8_LF_NO_TERMINAL_LF_SHA256",
+    "record_id_domain_value": "LOOP_CONTROL_RECORD_ID_v1",
+    "record_id_preimage_fields": [
+      "domain",
+      "record_class",
+      "source_path",
+      "source_git_blob",
+      "logical_key",
+      "original_json_pointer",
+      "payload_sha256",
+      "identical_occurrence_ordinal"
+    ],
+    "record_id_preimage_serializer": "HISTORY_PAYLOAD_COMPACT_JSON_v1_UTF8_NO_TERMINAL_LF",
+    "record_id_result": "lcr1:PLUS_LOWERCASE_SHA256_HEX_OF_PREIMAGE_BYTES"
+  },
+  "path_type_contract": {
+    "JSON_POINTER": "RFC6901_NOT_A_FILESYSTEM_PATH",
+    "PROTOTYPE_ARTIFACT_RELPATH": {
+      "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+      "runtime_containment_required": true
+    },
+    "REPOSITORY_RELPATH": {
+      "frozen_consumer_compatibility_count": 496,
+      "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))(?!.*[\\\\:\\x00-\\x1f*?<>|\"])(?![^/]*[. ](?:/|$))(?!.*[/][^/]*[. ](?:/|$))[^/]+(?:/[^/]+)*$"
+    },
+    "RUN_ID": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$"
+    },
+    "SHARD_FILENAME": {
+      "pattern": "^LOOP_CONTROL_HISTORY_[0-9]{4}[.]jsonl$"
+    }
+  },
+  "production_validator_interface": {
+    "artifact_contract_validator_entrypoints": {
+      "control_harness_report": "validate_control_harness_report_contract(report, expected_base_candidate_sha256, expected_profile_control_roots) -> ValidationResult",
+      "history_shard_record": "validate_history_record_payload_contract(record, expected_source_path, expected_source_git_blob, expected_record_id, expected_payload_sha256) -> ValidationResult",
+      "validation_report": "validate_validation_report_contract(report, expected_profile, expected_candidate_root_sha256, expected_trust_anchor_sha256) -> ValidationResult"
+    },
+    "candidate_expected_values_are_authoritative": false,
+    "error_result": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-001",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-READINESS-PROFILE-CLOSURE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-002",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-HISTORY-PAYLOAD-BASE64",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-003",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-HISTORY-PAYLOAD-ENVELOPE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-004",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-HISTORY-PAYLOAD-CANONICAL-IDENTITY",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-005",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-PATH-POSIX-ABSOLUTE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-006",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-PATH-SLASH-UNC",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-007",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-VALIDATION-REPORT-INVARIANT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-READINESS-V1-RC-008",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-HARNESS-REPORT-INVARIANT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-001",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-AUTHORITY-EXTERNAL-BINDING",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-002",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-INDEX-POINTER",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-003",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-HISTORY-EXTERNAL-ROOT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-004",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-ID-DUPLICATE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-005",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-JSON-NONFINITE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-006",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-JSONL-NONCANONICAL",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-007",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-PROJECTION-SIZE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-008",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-MAINTENANCE-TARGET-CARDINALITY",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-009",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-PROJECTION-FIELD-MISSING",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-010",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-PROJECTION-FIELD-EXTRA",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-011",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-HISTORY-PROMOTED",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-012",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CURRENT-DEMOTED",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-013",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SCIENTIFIC-TARGET-CARDINALITY",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-014",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CLAIM-CEILING",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-015",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-BLOCKER-COMMITMENT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-016",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-NONPROMOTION-COMMITMENT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-017",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-MISSING",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-018",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-EXTRA",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-019",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-PATH-DUPLICATE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-020",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-EMPTY",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-021",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-SIZE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-022",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-ORDER",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-023",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-RANGE-GAP",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-024",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-RANGE-OVERLAP",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-025",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SHARD-HASH",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-026",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RECORD-COUNT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-027",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RECORD-ID-DUPLICATE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-028",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RECORD-ID-FORGED",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-029",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RECORD-MISSING",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-030",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RECORD-EXTRA",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-031",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SOURCE-IDENTITY-DUPLICATE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-032",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RECORD-ID-AMBIGUOUS",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-033",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-UTF8-BOM",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-034",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-UTF8-INVALID",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-035",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-JSONL-CRLF",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-036",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-TERMINAL-NEWLINE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-037",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-JSONL-BLANK",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-038",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-JSON-KEY-DUPLICATE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-039",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-SCHEMA-VERSION",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-040",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-PATH-TRAVERSAL",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-041",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CLOSED-SHARD-WRITE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-042",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-WRITE-SCOPE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-043",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-VERIFY-BYPASS",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-044",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-MONOLITH-READER",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-045",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CONSUMER-UNCLASSIFIED",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-046",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-RUNTIME-COVERAGE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-047",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CUSTODY-GZIP-MULTIMEMBER",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-048",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CUSTODY-GZIP-TRAILING",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-049",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CUSTODY-GZIP-HEADER",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-050",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CUSTODY-SIZE",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-051",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CUSTODY-HASH",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": "REGISTRY-V1-NC-052",
+              "type": "string"
+            },
+            "error_code": {
+              "const": "V1-E-CUSTODY-SEMANTIC-ROOT",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_path": {
+              "maxLength": 240,
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+              "type": "string"
+            },
+            "control_id": {
+              "const": null,
+              "type": "null"
+            },
+            "error_code": {
+              "const": "V1-E-NONCONTROL-DIAGNOSTIC",
+              "type": "string"
+            },
+            "json_pointer": {
+              "pattern": "^(?:|(?:/(?:[^~/]|~[01])*)+)$",
+              "type": "string"
+            },
+            "message": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_path",
+            "json_pointer",
+            "message",
+            "control_id",
+            "error_code"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "external_trust_anchor_source": {
+      "accepted_v1_guardrail_sha256": "41994b0c1703d7f7f7ff7aeda217900a3136489f070ae55a88f2db10a13d12c0",
+      "accepted_v1_review_sha256": "4b99d6d3801a8bbd2f918311116dfdfce8ef595f7c0e1b629bc3595820612dca",
+      "source_commit": "6aba59d8d399b331db010f1f5f857075b9100b7f"
+    },
+    "frozen_functions": [
+      "strict_load_json(raw: bytes, artifact_kind: ArtifactKind) -> JsonValue",
+      "strict_iter_jsonl(stream: BinaryIO, maximum_bytes: int) -> Iterator[HistoryRecord]",
+      "load_reviewed_trust_anchors(packet_path: Path, expected_packet_sha256: str) -> RegistryTrustAnchors",
+      "validate_prototype_integrity(source: ArtifactSource, anchors: RegistryTrustAnchors) -> ValidationReport",
+      "validate_write_safety(source: ArtifactSource, anchors: RegistryTrustAnchors, writer_probe: WriterProbe) -> ValidationReport",
+      "validate_shadow_parity(source: ArtifactSource, anchors: RegistryTrustAnchors, trace_manifest: ShadowTraceManifest) -> ValidationReport",
+      "validate_cutover_eligibility(source: ArtifactSource, anchors: RegistryTrustAnchors, trace_manifest: ShadowTraceManifest) -> ValidationReport",
+      "reconstruct_and_verify_legacy(candidate_root: Path, output: BinaryIO, anchors: ReviewedTrustAnchors) -> ReconstructionReport",
+      "require_valid(report: ValidationReport) -> None"
+    ],
+    "integrity_bypass_parameter_allowed": false,
+    "module_path_after_separate_execution_authorization": "formal/python/toe/loop_control_registry_v1_validator.py",
+    "profile_selected_by_caller_not_candidate": true,
+    "profile_specific_entrypoints": [
+      "validate_prototype_integrity(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport",
+      "validate_write_safety(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport",
+      "validate_shadow_parity(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport",
+      "validate_cutover_eligibility(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport"
+    ],
+    "read_only": true,
+    "report_contract": {
+      "all_error_codes_sorted": true,
+      "candidate_root_sha256": "REQUIRED",
+      "issue_schema_shared_with_validation_report": true,
+      "issues": "DETERMINISTICALLY_SORTED_TUPLE_UNIQUE_TYPED_LIST",
+      "passed": "TRUE_ONLY_WHEN_ISSUES_EMPTY_AND_REQUIRED_PROFILE_CLOSURE_COMPLETED",
+      "trust_anchor_sha256": "REQUIRED_EXTERNAL_VALUE"
+    },
+    "write_interfaces_separate": true
+  },
+  "prototype_paths": {
+    "artifact_paths_relative_to_run_root": {
+      "compatibility_reconstruction": "compat/LOOP_CONTROL_REGISTRY_v0.reconstructed.json",
+      "consumer_source_map": "consumers/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_v2.json",
+      "control_harness_report": "validation/LOOP_CONTROL_CONTROL_HARNESS_REPORT_v1.json",
+      "current_projection": "projection/LOOP_CONTROL_CURRENT_v1.prototype.json",
+      "custody_manifest": "custody/LOOP_CONTROL_LEGACY_BYTE_CUSTODY_MANIFEST_v1.json",
+      "custody_payload": "custody/LOOP_CONTROL_LEGACY_BYTE_CUSTODY_v1.json.gz",
+      "history_index": "history/LOOP_CONTROL_HISTORY_INDEX_v1.prototype.json",
+      "reconstruction_result": "compat/LOOP_CONTROL_LEGACY_RECONSTRUCTION_RESULT_v1.json",
+      "runtime_shadow_trace": "traces/LOOP_CONTROL_RUNTIME_SHADOW_TRACE_v1.jsonl",
+      "runtime_shadow_trace_manifest": "traces/LOOP_CONTROL_SHADOW_TRACE_MANIFEST_v1.json",
+      "validation_report": "validation/LOOP_CONTROL_REGISTRY_V1_VALIDATION_REPORT.json"
+    },
+    "history_shard_directory_relative_to_run_root": "history/shards",
+    "history_shard_filename_pattern": "^LOOP_CONTROL_HISTORY_[0-9]{4}[.]jsonl$",
+    "prototype_base_repo_relative": "formal/scratch/loop_control_registry_v1_prototype",
+    "run_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$"
+  },
+  "repository_path_validation_algorithm": {
+    "candidate_path_pattern": "^(?!/)(?!.*//)(?![.]{1,2}(?:/|$))(?!.*(?:/[.]{1,2})(?:/|$))[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?(?:/[A-Za-z0-9_-](?:[A-Za-z0-9._-]*[A-Za-z0-9_-])?)*$",
+    "exact_artifact_allowlist_required": true,
+    "lexical_prefix_check_sufficient": false,
+    "mandatory_ordered_steps": [
+      "VALIDATE_ASCII_SAFE_POSIX_SEGMENTS_AND_RUN_ID",
+      "REJECT_ABSOLUTE_UNC_DRIVE_URI_DEVICE_DOT_EMPTY_WILDCARD_CONTROL_OR_RESERVED_SEGMENTS",
+      "RESOLVE_REPOSITORY_ROOT_FIXED_PROTOTYPE_BASE_AND_EXACT_RUN_ROOT",
+      "REJECT_SYMLINK_JUNCTION_OR_REPARSE_POINT_IN_EVERY_EXISTING_ANCESTOR",
+      "RESOLVE_DEEPEST_EXISTING_TARGET_ANCESTOR",
+      "REQUIRE_TARGET_STRICTLY_WITHIN_EXACT_RUN_ROOT_BY_COMMONPATH",
+      "RECHECK_CONTAINMENT_IMMEDIATELY_BEFORE_AND_AFTER_WRITE",
+      "ROLLBACK_ONLY_FROM_CAPTURED_RUN_ROOT_INVENTORY"
+    ],
+    "prototype_base_repo_relative": "formal/scratch/loop_control_registry_v1_prototype",
+    "run_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$"
+  },
+  "runtime_shadow_tracing_protocol": {
+    "all_496_static_rows_require_final_disposition": true,
+    "baseline_count_is_not_an_eternal_current_count": true,
+    "baseline_source_map_sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+    "comparison": "LEGACY_AND_NEW_READ_EXECUTED_FOR_SAME_OPERATION_AND_INPUT",
+    "consumer_migration_or_cutover_during_trace": false,
+    "coverage_acceptance": [
+      "EVERY_RUNTIME_TRACE_REQUIRED_ROW_OBSERVED",
+      "EVERY_REMAINING_ROW_PROVED_NONRUNTIME_BY_CLASSIFICATION",
+      "ALL_DYNAMIC_PATH_CONSTRUCTION_AND_GLOB_READERS_OBSERVED",
+      "ALL_ACTIVE_READER_OPERATION_CLASSES_HAVE_HASH_AND_SEMANTIC_PARITY",
+      "ALL_WRITERS_EXERCISED_IN_DRY_RUN_WITH_NO_HISTORY_MUTATION",
+      "ZERO_UNCLASSIFIED_ACTIVE_CONSUMERS",
+      "ZERO_SEMANTIC_PARITY_MISMATCHES"
+    ],
+    "fresh_full_tree_rescan_and_structured_delta_required": true,
+    "path_context_contract": {
+      "candidate_prototype_path": "PROTOTYPE_ARTIFACT_RELPATH",
+      "consumer_path": "REPOSITORY_RELPATH",
+      "legacy_repository_path": "REPOSITORY_RELPATH",
+      "write_paths": "CONTEXT_TAGGED_REPOSITORY_OR_PROTOTYPE_RELPATH"
+    },
+    "required_trace_fields": [
+      "trace_schema_id",
+      "run_id",
+      "trace_id",
+      "consumer_id",
+      "consumer_path",
+      "consumer_source_sha256",
+      "operation_id",
+      "operation_type",
+      "comparison_mode",
+      "legacy_result_sha256",
+      "candidate_result_sha256",
+      "semantic_parity",
+      "fields_accessed",
+      "access_granularity",
+      "write_attempted",
+      "write_paths",
+      "runtime_entrypoint",
+      "resolved_registry_paths",
+      "source_commit"
+    ],
+    "result_hash_envelope": "CANONICAL_TYPED_VALUE_OR_TYPED_EXCEPTION_ENVELOPE",
+    "trace_output": "traces/LOOP_CONTROL_RUNTIME_SHADOW_TRACE_v1.jsonl",
+    "trace_output_is_relative_to_validated_run_root": true,
+    "unobserved_required_consumer_waiver_allowed": false
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_PROTOCOL_BUNDLE_20260711_v3",
+  "status": "CORRECTIVE_V3_CONCRETE_FIXTURE_ISSUE_MAPPING_AND_TRACE_PATH_PROTOCOL_PREPARED_NOT_EXECUTED",
+  "success_report_invariants": {
+    "control_harness_report": [
+      "BASE_CANDIDATE_SHA256_BEFORE_EQUALS_AFTER",
+      "EXACT_FOUR_PROFILE_KEYS_AND_ORDERED_CLOSURES",
+      "DIRECT_COUNTS_EQUAL_47_2_2_1",
+      "EFFECTIVE_COUNTS_EQUAL_47_49_51_52_AND_SUM_199",
+      "EACH_BASELINE_HASH_EQUALS_TOP_LEVEL_BASELINE_HASH",
+      "SUCCESS_REQUIRES_52_MIGRATION_AND_8_READINESS_CONTROLS_PASS"
+    ],
+    "shadow_manifest": [
+      "OBSERVED_PLUS_UNOBSERVED_EQUALS_REQUIRED_CONSUMER_COUNT",
+      "SUCCESS_REQUIRES_ZERO_UNOBSERVED_UNCLASSIFIED_OR_SEMANTIC_MISMATCHES",
+      "EVENT_COUNT_AND_SHA256_MATCH_TRACE_BYTES_AND_ALL_EVENT_RUN_IDS_MATCH",
+      "OPERATION_AND_MIGRATION_BATCH_COVERAGE_COMPLETE_WITHOUT_CONSUMER_MIGRATION",
+      "CONSUMER_MIGRATION_PERFORMED_FALSE",
+      "CUTOVER_PERFORMED_FALSE",
+      "EVERY_EVENT_RUN_ID_EQUALS_MANIFEST_RUN_ID",
+      "WRITE_ATTEMPT_FALSE_IFF_WRITE_PATHS_EMPTY",
+      "RESOLVED_LEGACY_AND_CANDIDATE_PATHS_USE_DISTINCT_CONTEXTS"
+    ],
+    "validation_report": [
+      "PASSED_IFF_STATUS_PASSED_AND_ISSUES_EMPTY",
+      "FAILED_IFF_STATUS_FAILED_AND_ISSUES_NONEMPTY",
+      "EXACT_REQUIRED_PROFILE_CLOSURE_AND_CONTROL_ROOT_EXECUTED",
+      "CANDIDATE_AND_EXTERNAL_TRUST_ROOTS_VERIFIED",
+      "ISSUES_DETERMINISTICALLY_SORTED_AND_TUPLE_UNIQUE"
+    ]
+  },
+  "typed_control_harness": {
+    "all_controls_run_against_real_candidate_artifacts": true,
+    "artifact_overlay_required_to_prevent_mutation_leakage_without_full_copy": true,
+    "base_candidate_hash_rechecked_before_and_after_every_control": true,
+    "baseline_candidate_must_pass_before_each_mutation": true,
+    "caches_cleared_between_controls": true,
+    "constituent_semantic_tests_required": [
+      "PAYLOAD_HASH_MISMATCH",
+      "PAYLOAD_KIND_MISMATCH",
+      "PAYLOAD_NONCANONICAL_BYTES",
+      "FORGED_RECORD_ID",
+      "VALIDATION_FAILURE_WITHOUT_ISSUE",
+      "HARNESS_PROFILE_COUNT_MISMATCH",
+      "SHADOW_EVENT_COUNT_OR_HASH_MISMATCH",
+      "WRITE_ATTEMPT_WITH_EMPTY_WRITE_PATHS"
+    ],
+    "control_count": 52,
+    "controls": [
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-001",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-AUTHORITY-EXTERNAL-BINDING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "authority_drift_with_rebound_fingerprint",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_authority_drift_with_rebound_fingerprint(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-002",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-INDEX-POINTER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "broken_current_index_pointer",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_broken_current_index_pointer(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-003",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-EXTERNAL-ROOT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "changed_history_with_rebound_index",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_changed_history_with_rebound_index(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-004",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-ID-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_shard_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_shard_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-005",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSON-NONFINITE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "nan_history_with_rebound_index",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_nan_history_with_rebound_index(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-006",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSONL-NONCANONICAL"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "noncanonical_jsonl",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_noncanonical_jsonl(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-007",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PROJECTION-SIZE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "oversized_current_projection",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_oversized_current_projection(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-008",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-MAINTENANCE-TARGET-CARDINALITY"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "two_maintenance_targets",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_two_maintenance_targets(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-009",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PROJECTION-FIELD-MISSING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_projection_field",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_projection_field(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-010",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PROJECTION-FIELD-EXTRA"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "extra_projection_field",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_extra_projection_field(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-011",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-PROMOTED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "history_record_in_projection",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_history_record_in_projection(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-012",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CURRENT-DEMOTED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "current_record_only_in_history",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_current_record_only_in_history(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-013",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SCIENTIFIC-TARGET-CARDINALITY"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "two_scientific_targets",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_two_scientific_targets(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-014",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CLAIM-CEILING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "claim_ceiling_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_claim_ceiling_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-015",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-BLOCKER-COMMITMENT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "blocker_commitment_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_blocker_commitment_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-016",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-NONPROMOTION-COMMITMENT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "nonpromotion_commitment_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_nonpromotion_commitment_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-017",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-MISSING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-018",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-EXTRA"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "extra_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_extra_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-019",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-PATH-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_shard_path",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_shard_path(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-020",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-EMPTY"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "empty_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_empty_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-021",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-SIZE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "oversized_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_oversized_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-022",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-ORDER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "reordered_shards",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_reordered_shards(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-023",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-RANGE-GAP"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "range_gap",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_range_gap(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-024",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-RANGE-OVERLAP"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "range_overlap",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_range_overlap(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-025",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-HASH"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "incorrect_shard_hash",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_incorrect_shard_hash(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-026",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-COUNT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "incorrect_record_count",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_incorrect_record_count(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-027",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-ID-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_record_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_record_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-028",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-ID-FORGED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "forged_record_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_forged_record_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-029",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-MISSING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_record",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_record(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-030",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-EXTRA"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "extra_record",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_extra_record(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-031",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SOURCE-IDENTITY-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_source_identity",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_source_identity(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-032",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-ID-AMBIGUOUS"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "ambiguous_record_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_ambiguous_record_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-033",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-UTF8-BOM"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "utf8_bom",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_utf8_bom(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-034",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-UTF8-INVALID"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "invalid_utf8",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_invalid_utf8(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-035",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSONL-CRLF"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "crlf_jsonl",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_crlf_jsonl(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-036",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-TERMINAL-NEWLINE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_terminal_newline",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_terminal_newline(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-037",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSONL-BLANK"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "blank_jsonl_line",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_blank_jsonl_line(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-038",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSON-KEY-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_json_key",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_json_key(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-039",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SCHEMA-VERSION"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "schema_version_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_schema_version_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-040",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PATH-TRAVERSAL"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "path_traversal",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_path_traversal(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-041",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CLOSED-SHARD-WRITE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "closed_shard_write",
+        "mutation_precondition": "WRITE_SAFETY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_closed_shard_write(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": true,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "WRITE_SAFETY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-042",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-WRITE-SCOPE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "current_writer_touches_history",
+        "mutation_precondition": "WRITE_SAFETY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_current_writer_touches_history(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": true,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "WRITE_SAFETY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-043",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-VERIFY-BYPASS"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "integrity_verification_bypass",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_integrity_verification_bypass(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CONSUMER_OR_TRACE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-044",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-MONOLITH-READER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "active_monolith_reader_remaining",
+        "mutation_precondition": "CUTOVER_ELIGIBILITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_active_monolith_reader_remaining(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": true,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "CUTOVER_ELIGIBILITY"
+      },
+      {
+        "artifact_kind": "CONSUMER_OR_TRACE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-045",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CONSUMER-UNCLASSIFIED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "unclassified_consumer",
+        "mutation_precondition": "SHADOW_PARITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_unclassified_consumer(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "SHADOW_PARITY"
+      },
+      {
+        "artifact_kind": "CONSUMER_OR_TRACE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-046",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RUNTIME-COVERAGE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "runtime_trace_incomplete",
+        "mutation_precondition": "SHADOW_PARITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_runtime_trace_incomplete(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": true,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "SHADOW_PARITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-047",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-GZIP-MULTIMEMBER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "gzip_multiple_members",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_gzip_multiple_members(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-048",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-GZIP-TRAILING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "gzip_trailing_bytes",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_gzip_trailing_bytes(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-049",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-GZIP-HEADER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "gzip_header_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_gzip_header_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-050",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-SIZE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "custody_decompressed_size_mismatch",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_custody_decompressed_size_mismatch(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-051",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-HASH"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "custody_decompressed_hash_mismatch",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_custody_decompressed_hash_mismatch(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-052",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-SEMANTIC-ROOT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "custody_history_semantic_root_disagreement",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_custody_history_semantic_root_disagreement(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      }
+    ],
+    "distinct_control_count": 60,
+    "effective_profile_invocation_count": 199,
+    "execution_complete": false,
+    "full_profile_execution_context_derivation": {
+      "anchors": {
+        "candidate_supplied_values_allowed": false,
+        "derivation": "LOAD_REVIEWED_TRUST_ANCHORS_FROM_ACCEPTED_V3_REVIEW_BINDING_AND_EXTERNAL_V1_TRUST_ANCHOR_SOURCE",
+        "loader_entrypoint": "load_reviewed_trust_anchors",
+        "realized_anchor_sha256_must_be_bound_by_execution_packet": true
+      },
+      "candidate_root": {
+        "derivation": "RESOLVE_FRESH_IMMUTABLE_ARTIFACT_OVERLAY_UNDER_VALIDATED_RUN_ROOT_AND_REJECT_ESCAPE",
+        "realized_path_and_tree_sha256_must_be_bound_by_execution_packet": true
+      },
+      "profile_invocations": {
+        "CUTOVER_ELIGIBILITY": {
+          "arguments": [
+            "candidate_root",
+            "anchors",
+            "accepted_trace_manifest"
+          ],
+          "entrypoint": "validate_cutover_eligibility",
+          "trace_manifest_derivation": "LOAD_PREVIOUSLY_ACCEPTED_IMMUTABLE_SHADOW_MANIFEST_BY_EXECUTION_PACKET_FROZEN_PATH_AND_SHA256"
+        },
+        "PROTOTYPE_INTEGRITY": {
+          "arguments": [
+            "candidate_root",
+            "anchors"
+          ],
+          "entrypoint": "validate_prototype_integrity"
+        },
+        "SHADOW_PARITY": {
+          "arguments": [
+            "candidate_root",
+            "anchors",
+            "runtime_trace_manifest"
+          ],
+          "entrypoint": "validate_shadow_parity",
+          "trace_manifest_derivation": "BUILD_FROM_CURRENT_RUN_TRACE_BYTES_AND_BIND_PATH_SHA256_EVENT_COUNT_AND_RUN_ID"
+        },
+        "WRITE_SAFETY": {
+          "arguments": [
+            "candidate_root",
+            "anchors",
+            "writer_probe"
+          ],
+          "entrypoint": "validate_write_safety",
+          "writer_probe_derivation": "CREATE_FRESH_RUN_SCOPED_PROBE_THAT_RECORDS_ALL_ATTEMPTED_REPOSITORY_AND_PROTOTYPE_WRITES"
+        }
+      },
+      "realized_full_profile_baselines_executed": false,
+      "realized_values_may_not_be_selected_by_candidate_metadata": true
+    },
+    "future_test_path": "formal/python/tests/test_loop_control_registry_v1_production_controls.py",
+    "migration_control_count": 52,
+    "order_independence_required": true,
+    "positive_baseline_rerun_after_complete_suite": true,
+    "positive_fixture_contract_count": 5,
+    "positive_fixture_contracts": {
+      "VALID_CUTOVER_REPORT_v3": {
+        "artifact_contract_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "CUTOVER_ELIGIBILITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "artifact_contract_validator_entrypoint": "validate_validation_report_contract",
+        "builder_args": {},
+        "builder_entrypoint": "build_valid_cutover_report_v3",
+        "canonical_fixture_sha256": "dc396bb11cb0f4f4f1ac4c0620d0239beae9f5d7eccb126120c98c524851ca02",
+        "embedded_fixture_only_not_a_complete_candidate": true,
+        "fixture_payload": {
+          "candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "effective_control_count": 52,
+          "executed_profile_closure": [
+            "PROTOTYPE_INTEGRITY",
+            "WRITE_SAFETY",
+            "SHADOW_PARITY",
+            "CUTOVER_ELIGIBILITY"
+          ],
+          "issues": [],
+          "passed": true,
+          "profile": "CUTOVER_ELIGIBILITY",
+          "profile_control_root_sha256": "5396c779300267c0c3e4a1afad6fa4f1a9ee03807b8c3503112fbe3181b54a93",
+          "schema_id": "LOOP_CONTROL_VALIDATION_REPORT_READINESS_v3",
+          "status": "PASSED",
+          "trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "full_profile_baseline_executed": false,
+        "full_profile_baseline_must_pass_before_mutation_at_execution": true,
+        "identity_posture": "SYNTHETIC_PREPARATION_FIXTURE_IDENTITIES_NOT_PRODUCTION_TRUST_ANCHORS",
+        "preparation_validator_args": {
+          "fixture_id": "VALID_CUTOVER_REPORT_v3"
+        },
+        "preparation_validator_entrypoint": "validate_preparation_fixture_v3",
+        "schema_name": "validation_report"
+      },
+      "VALID_FAILED_REPORT_v3": {
+        "artifact_contract_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "PROTOTYPE_INTEGRITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "artifact_contract_validator_entrypoint": "validate_validation_report_contract",
+        "builder_args": {},
+        "builder_entrypoint": "build_valid_failed_report_v3",
+        "canonical_fixture_sha256": "cc96052e4231ea67ebbfc8d30090b4115870967ac87c6ead7a29289ec9f5a0ae",
+        "embedded_fixture_only_not_a_complete_candidate": true,
+        "fixture_payload": {
+          "candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "effective_control_count": 47,
+          "executed_profile_closure": [
+            "PROTOTYPE_INTEGRITY"
+          ],
+          "issues": [
+            {
+              "artifact_path": "validation/report.json",
+              "control_id": "REGISTRY-V1-NC-001",
+              "error_code": "V1-E-AUTHORITY-EXTERNAL-BINDING",
+              "json_pointer": "",
+              "message": "positive failed-report fixture"
+            }
+          ],
+          "passed": false,
+          "profile": "PROTOTYPE_INTEGRITY",
+          "profile_control_root_sha256": "7a93a7337385e896fce273020a84262b0e1f26b5afbe7c4dbe4d978ea62a408f",
+          "schema_id": "LOOP_CONTROL_VALIDATION_REPORT_READINESS_v3",
+          "status": "FAILED",
+          "trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "full_profile_baseline_executed": false,
+        "full_profile_baseline_must_pass_before_mutation_at_execution": true,
+        "identity_posture": "SYNTHETIC_PREPARATION_FIXTURE_IDENTITIES_NOT_PRODUCTION_TRUST_ANCHORS",
+        "preparation_validator_args": {
+          "fixture_id": "VALID_FAILED_REPORT_v3"
+        },
+        "preparation_validator_entrypoint": "validate_preparation_fixture_v3",
+        "schema_name": "validation_report"
+      },
+      "VALID_HARNESS_SUCCESS_v3": {
+        "artifact_contract_validator_args": {
+          "expected_base_candidate_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "expected_profile_control_roots": {
+            "CUTOVER_ELIGIBILITY": "5396c779300267c0c3e4a1afad6fa4f1a9ee03807b8c3503112fbe3181b54a93",
+            "PROTOTYPE_INTEGRITY": "7a93a7337385e896fce273020a84262b0e1f26b5afbe7c4dbe4d978ea62a408f",
+            "SHADOW_PARITY": "2379b679cfe85a28815809d8de30d12509c1a88f49c1326d40d48b32276d6fd8",
+            "WRITE_SAFETY": "032d777429443786f5f3b5123a705104336c2713ddc9ee261e8de32e1cf7e00e"
+          }
+        },
+        "artifact_contract_validator_entrypoint": "validate_control_harness_report_contract",
+        "builder_args": {},
+        "builder_entrypoint": "build_valid_harness_success_v3",
+        "canonical_fixture_sha256": "8f9d3ea0fafec0e9194267f9a4ac87987b6050e7c783527141c35594e5c9dcea",
+        "embedded_fixture_only_not_a_complete_candidate": true,
+        "fixture_payload": {
+          "base_candidate_sha256_after": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "base_candidate_sha256_before": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "distinct_control_count": 60,
+          "effective_profile_invocation_count": 199,
+          "migration_control_count": 52,
+          "migration_controls_passed": 52,
+          "profile_reports": {
+            "CUTOVER_ELIGIBILITY": {
+              "baseline_after_passed": true,
+              "baseline_before_passed": true,
+              "baseline_candidate_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "direct_control_count": 1,
+              "direct_controls_passed": 1,
+              "effective_control_count": 52,
+              "effective_control_root_sha256": "5396c779300267c0c3e4a1afad6fa4f1a9ee03807b8c3503112fbe3181b54a93",
+              "effective_controls_passed": 52
+            },
+            "PROTOTYPE_INTEGRITY": {
+              "baseline_after_passed": true,
+              "baseline_before_passed": true,
+              "baseline_candidate_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "direct_control_count": 47,
+              "direct_controls_passed": 47,
+              "effective_control_count": 47,
+              "effective_control_root_sha256": "7a93a7337385e896fce273020a84262b0e1f26b5afbe7c4dbe4d978ea62a408f",
+              "effective_controls_passed": 47
+            },
+            "SHADOW_PARITY": {
+              "baseline_after_passed": true,
+              "baseline_before_passed": true,
+              "baseline_candidate_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "direct_control_count": 2,
+              "direct_controls_passed": 2,
+              "effective_control_count": 51,
+              "effective_control_root_sha256": "2379b679cfe85a28815809d8de30d12509c1a88f49c1326d40d48b32276d6fd8",
+              "effective_controls_passed": 51
+            },
+            "WRITE_SAFETY": {
+              "baseline_after_passed": true,
+              "baseline_before_passed": true,
+              "baseline_candidate_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "direct_control_count": 2,
+              "direct_controls_passed": 2,
+              "effective_control_count": 49,
+              "effective_control_root_sha256": "032d777429443786f5f3b5123a705104336c2713ddc9ee261e8de32e1cf7e00e",
+              "effective_controls_passed": 49
+            }
+          },
+          "readiness_regression_control_count": 8,
+          "readiness_regressions_passed": 8,
+          "schema_id": "LOOP_CONTROL_CONTROL_HARNESS_REPORT_READINESS_v3",
+          "status": "ALL_CONTROLS_PASSED"
+        },
+        "full_profile_baseline_executed": false,
+        "full_profile_baseline_must_pass_before_mutation_at_execution": true,
+        "identity_posture": "SYNTHETIC_PREPARATION_FIXTURE_CANDIDATE_IDENTITY_NOT_A_PRODUCTION_TRUST_ANCHOR",
+        "preparation_validator_args": {
+          "fixture_id": "VALID_HARNESS_SUCCESS_v3"
+        },
+        "preparation_validator_entrypoint": "validate_preparation_fixture_v3",
+        "schema_name": "control_harness_report"
+      },
+      "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3": {
+        "artifact_contract_validator_args": {
+          "expected_payload_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a",
+          "expected_record_id": "lcr1:d75b26021e1590269867c3a4535d7069a6443f251600edd394983ad9e0c7fdcf",
+          "expected_source_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+          "expected_source_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
+        },
+        "artifact_contract_validator_entrypoint": "validate_history_record_payload_contract",
+        "builder_args": {},
+        "builder_entrypoint": "build_valid_history_payload_source_string_v3",
+        "canonical_fixture_sha256": "1228b55d72a942237ec17c9e209ed8129f730f76bcafb5800a0311b7c662651f",
+        "embedded_fixture_only_not_a_complete_candidate": true,
+        "fixture_payload": {
+          "identical_occurrence_ordinal": 0,
+          "logical_key": "selected",
+          "original_json_pointer": "/selected",
+          "payload_canonical_json_utf8_base64": "Im5vIg==",
+          "payload_kind": "STRING",
+          "payload_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a",
+          "payload_size_bytes": 4,
+          "record_class": "ROOT_FIELD",
+          "record_id": "lcr1:d75b26021e1590269867c3a4535d7069a6443f251600edd394983ad9e0c7fdcf",
+          "record_version": 1,
+          "schema_id": "LOOP_CONTROL_HISTORY_RECORD_v1",
+          "source_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+          "source_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
+        },
+        "frozen_source_membership": {
+          "logical_key": "selected",
+          "original_json_pointer": "/selected",
+          "payload_canonical_json_utf8_base64": "Im5vIg==",
+          "source_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+          "source_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "verified_by_builder_against_source_commit": "ee287de3db44bd4fe5a1c9c9952c07be9d2e9248"
+        },
+        "full_profile_baseline_executed": false,
+        "full_profile_baseline_must_pass_before_mutation_at_execution": true,
+        "identity_posture": "FROZEN_REVIEWED_SOURCE_MEMBERSHIP_IDENTITY",
+        "preparation_validator_args": {
+          "fixture_id": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3"
+        },
+        "preparation_validator_entrypoint": "validate_preparation_fixture_v3",
+        "schema_name": "history_shard_record"
+      },
+      "VALID_PASSED_REPORT_v3": {
+        "artifact_contract_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "PROTOTYPE_INTEGRITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "artifact_contract_validator_entrypoint": "validate_validation_report_contract",
+        "builder_args": {},
+        "builder_entrypoint": "build_valid_passed_report_v3",
+        "canonical_fixture_sha256": "51ed9726a84a7b9dc1cbcd96e090f62807375a2d70c2dd5d96acf87f925ed735",
+        "embedded_fixture_only_not_a_complete_candidate": true,
+        "fixture_payload": {
+          "candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "effective_control_count": 47,
+          "executed_profile_closure": [
+            "PROTOTYPE_INTEGRITY"
+          ],
+          "issues": [],
+          "passed": true,
+          "profile": "PROTOTYPE_INTEGRITY",
+          "profile_control_root_sha256": "7a93a7337385e896fce273020a84262b0e1f26b5afbe7c4dbe4d978ea62a408f",
+          "schema_id": "LOOP_CONTROL_VALIDATION_REPORT_READINESS_v3",
+          "status": "PASSED",
+          "trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "full_profile_baseline_executed": false,
+        "full_profile_baseline_must_pass_before_mutation_at_execution": true,
+        "identity_posture": "SYNTHETIC_PREPARATION_FIXTURE_IDENTITIES_NOT_PRODUCTION_TRUST_ANCHORS",
+        "preparation_validator_args": {
+          "fixture_id": "VALID_PASSED_REPORT_v3"
+        },
+        "preparation_validator_entrypoint": "validate_preparation_fixture_v3",
+        "schema_name": "validation_report"
+      }
+    },
+    "positive_fixture_scope": "EXECUTABLE_SOURCE_BOUND_ARTIFACT_CONTRACT_FIXTURES_NOT_COMPLETE_PROTOTYPE_CANDIDATES_FULL_PROFILE_BASELINES_REQUIRED_AT_EXECUTION",
+    "production_validator_exists": false,
+    "profile_is_caller_selected_never_candidate_selected": true,
+    "readiness_error_aggregation": {
+      "case_is_single_atomic_transformation": true,
+      "control_passes_only_if_every_matrix_case_returns_exact_singleton_error": true,
+      "error_precedence": [
+        "PROTOTYPE_PATH",
+        "PAYLOAD_BASE64",
+        "PAYLOAD_ENVELOPE",
+        "PAYLOAD_CANONICAL_IDENTITY",
+        "PROFILE_CLOSURE",
+        "REPORT_INVARIANT"
+      ],
+      "multiple_errors_for_one_atomic_case_allowed": false
+    },
+    "readiness_regression_atomic_case_count": 8,
+    "readiness_regression_control_count": 8,
+    "readiness_regressions": [
+      {
+        "artifact_kind": "VALIDATION_REPORT",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-001",
+        "control_sequence": 1,
+        "error_phase": "PROFILE_CLOSURE",
+        "error_precedence_rank": 5,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-READINESS-PROFILE-CLOSURE"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.CUTOVER_ELIGIBILITY",
+        "full_candidate_profile_assignment": "CUTOVER_ELIGIBILITY",
+        "full_candidate_profile_entrypoint": "validate_cutover_eligibility",
+        "mutation_matrix": [
+          {
+            "after": [
+              "CUTOVER_ELIGIBILITY"
+            ],
+            "before": [
+              "PROTOTYPE_INTEGRITY",
+              "WRITE_SAFETY",
+              "SHADOW_PARITY",
+              "CUTOVER_ELIGIBILITY"
+            ],
+            "case_id": "REGISTRY-READINESS-V1-RC-001-CASE-001",
+            "json_pointer": "/executed_profile_closure",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_CUTOVER_REPORT_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_cutover_closure_to_direct_only(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "CUTOVER_ELIGIBILITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "positive_artifact_validator_entrypoint": "validate_validation_report_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_cutover_report_v3",
+        "positive_fixture_contract_sha256": "dc396bb11cb0f4f4f1ac4c0620d0239beae9f5d7eccb126120c98c524851ca02",
+        "positive_fixture_id": "VALID_CUTOVER_REPORT_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_validation_report_contract",
+        "validator_profile": "CUTOVER_ELIGIBILITY"
+      },
+      {
+        "artifact_kind": "HISTORY_RECORD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-002",
+        "control_sequence": 2,
+        "error_phase": "PAYLOAD_BASE64",
+        "error_precedence_rank": 2,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-PAYLOAD-BASE64"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": "Im5vIh==",
+            "before": "Im5vIg==",
+            "case_id": "REGISTRY-READINESS-V1-RC-002-CASE-001",
+            "json_pointer": "/payload_canonical_json_utf8_base64",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_base64_to_noncanonical_pad_bits(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_payload_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a",
+          "expected_record_id": "lcr1:d75b26021e1590269867c3a4535d7069a6443f251600edd394983ad9e0c7fdcf",
+          "expected_source_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+          "expected_source_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
+        },
+        "positive_artifact_validator_entrypoint": "validate_history_record_payload_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_history_payload_source_string_v3",
+        "positive_fixture_contract_sha256": "1228b55d72a942237ec17c9e209ed8129f730f76bcafb5800a0311b7c662651f",
+        "positive_fixture_id": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_history_record_payload_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_RECORD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-003",
+        "control_sequence": 3,
+        "error_phase": "PAYLOAD_ENVELOPE",
+        "error_precedence_rank": 3,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-PAYLOAD-ENVELOPE"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": 5,
+            "before": 4,
+            "case_id": "REGISTRY-READINESS-V1-RC-003-CASE-001",
+            "json_pointer": "/payload_size_bytes",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_payload_size_only(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_payload_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a",
+          "expected_record_id": "lcr1:d75b26021e1590269867c3a4535d7069a6443f251600edd394983ad9e0c7fdcf",
+          "expected_source_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+          "expected_source_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
+        },
+        "positive_artifact_validator_entrypoint": "validate_history_record_payload_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_history_payload_source_string_v3",
+        "positive_fixture_contract_sha256": "1228b55d72a942237ec17c9e209ed8129f730f76bcafb5800a0311b7c662651f",
+        "positive_fixture_id": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_history_record_payload_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_RECORD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-004",
+        "control_sequence": 4,
+        "error_phase": "PAYLOAD_CANONICAL_IDENTITY",
+        "error_precedence_rank": 4,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-PAYLOAD-CANONICAL-IDENTITY"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": "ICJubyI=",
+            "before": "Im5vIg==",
+            "case_id": "REGISTRY-READINESS-V1-RC-004-CASE-001",
+            "json_pointer": "/payload_canonical_json_utf8_base64",
+            "rebind_fields": [
+              "payload_size_bytes",
+              "payload_sha256",
+              "record_id",
+              "candidate_internal_record_roots"
+            ]
+          }
+        ],
+        "mutation_precondition": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_payload_to_whitespace_json_and_rebind_internal_identity(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_payload_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a",
+          "expected_record_id": "lcr1:d75b26021e1590269867c3a4535d7069a6443f251600edd394983ad9e0c7fdcf",
+          "expected_source_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+          "expected_source_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
+        },
+        "positive_artifact_validator_entrypoint": "validate_history_record_payload_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_history_payload_source_string_v3",
+        "positive_fixture_contract_sha256": "1228b55d72a942237ec17c9e209ed8129f730f76bcafb5800a0311b7c662651f",
+        "positive_fixture_id": "VALID_HISTORY_PAYLOAD_SOURCE_STRING_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_history_record_payload_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "VALIDATION_ISSUE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-005",
+        "control_sequence": 5,
+        "error_phase": "PROTOTYPE_PATH",
+        "error_precedence_rank": 1,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PATH-POSIX-ABSOLUTE"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": "/absolute/report.json",
+            "before": "validation/report.json",
+            "case_id": "REGISTRY-READINESS-V1-RC-005-CASE-001",
+            "json_pointer": "/issues/0/artifact_path",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_FAILED_REPORT_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_issue_path_to_posix_absolute(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "PROTOTYPE_INTEGRITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "positive_artifact_validator_entrypoint": "validate_validation_report_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_failed_report_v3",
+        "positive_fixture_contract_sha256": "cc96052e4231ea67ebbfc8d30090b4115870967ac87c6ead7a29289ec9f5a0ae",
+        "positive_fixture_id": "VALID_FAILED_REPORT_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_validation_report_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "VALIDATION_ISSUE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-006",
+        "control_sequence": 6,
+        "error_phase": "PROTOTYPE_PATH",
+        "error_precedence_rank": 1,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PATH-SLASH-UNC"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": "//server/share/report.json",
+            "before": "validation/report.json",
+            "case_id": "REGISTRY-READINESS-V1-RC-006-CASE-001",
+            "json_pointer": "/issues/0/artifact_path",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_FAILED_REPORT_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_issue_path_to_slash_unc(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "PROTOTYPE_INTEGRITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "positive_artifact_validator_entrypoint": "validate_validation_report_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_failed_report_v3",
+        "positive_fixture_contract_sha256": "cc96052e4231ea67ebbfc8d30090b4115870967ac87c6ead7a29289ec9f5a0ae",
+        "positive_fixture_id": "VALID_FAILED_REPORT_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_validation_report_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "VALIDATION_REPORT",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-007",
+        "control_sequence": 7,
+        "error_phase": "REPORT_INVARIANT",
+        "error_precedence_rank": 6,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-VALIDATION-REPORT-INVARIANT"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": [
+              {
+                "artifact_path": "validation/report.json",
+                "control_id": "REGISTRY-READINESS-V1-RC-007",
+                "error_code": "V1-E-VALIDATION-REPORT-INVARIANT",
+                "json_pointer": "/issues",
+                "message": "atomic passed-report issue invariant probe"
+              }
+            ],
+            "before": [],
+            "case_id": "REGISTRY-READINESS-V1-RC-007-CASE-001",
+            "json_pointer": "/issues",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_PASSED_REPORT_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_passed_report_add_one_issue_only(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_candidate_root_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_profile": "PROTOTYPE_INTEGRITY",
+          "expected_trust_anchor_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "positive_artifact_validator_entrypoint": "validate_validation_report_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_passed_report_v3",
+        "positive_fixture_contract_sha256": "51ed9726a84a7b9dc1cbcd96e090f62807375a2d70c2dd5d96acf87f925ed735",
+        "positive_fixture_id": "VALID_PASSED_REPORT_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_validation_report_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HARNESS_REPORT",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-READINESS-V1-RC-008",
+        "control_sequence": 8,
+        "error_phase": "REPORT_INVARIANT",
+        "error_precedence_rank": 6,
+        "execution_status": "NOT_EXECUTED_CORRECTIVE_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HARNESS-REPORT-INVARIANT"
+        ],
+        "fixture_isolation": "FRESH_IMMUTABLE_ARTIFACT_OVERLAY",
+        "full_candidate_profile_args_derivation": "typed_control_harness.full_profile_execution_context_derivation.profile_invocations.PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_assignment": "PROTOTYPE_INTEGRITY",
+        "full_candidate_profile_entrypoint": "validate_prototype_integrity",
+        "mutation_matrix": [
+          {
+            "after": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "before": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "case_id": "REGISTRY-READINESS-V1-RC-008-CASE-001",
+            "json_pointer": "/base_candidate_sha256_after",
+            "rebind_fields": []
+          }
+        ],
+        "mutation_precondition": "VALID_HARNESS_SUCCESS_v3_PASSES_VALIDATE_PREPARATION_FIXTURE_V3_BEFORE_MUTATION",
+        "mutator_entrypoint": "mutate_after_candidate_hash_only(overlay: ArtifactOverlay) -> None",
+        "permanent": true,
+        "positive_artifact_validator_args": {
+          "expected_base_candidate_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "expected_profile_control_roots": {
+            "CUTOVER_ELIGIBILITY": "5396c779300267c0c3e4a1afad6fa4f1a9ee03807b8c3503112fbe3181b54a93",
+            "PROTOTYPE_INTEGRITY": "7a93a7337385e896fce273020a84262b0e1f26b5afbe7c4dbe4d978ea62a408f",
+            "SHADOW_PARITY": "2379b679cfe85a28815809d8de30d12509c1a88f49c1326d40d48b32276d6fd8",
+            "WRITE_SAFETY": "032d777429443786f5f3b5123a705104336c2713ddc9ee261e8de32e1cf7e00e"
+          }
+        },
+        "positive_artifact_validator_entrypoint": "validate_control_harness_report_contract",
+        "positive_fixture_builder_entrypoint": "build_valid_harness_success_v3",
+        "positive_fixture_contract_sha256": "8f9d3ea0fafec0e9194267f9a4ac87987b6050e7c783527141c35594e5c9dcea",
+        "positive_fixture_id": "VALID_HARNESS_SUCCESS_v3",
+        "preparation_does_not_claim_full_profile_baseline_execution": true,
+        "production_artifact_validator_implemented_or_executed": false,
+        "realized_positive_fixture_sha256_must_be_bound_at_execution": true,
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_entrypoint": "validate_control_harness_report_contract",
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      }
+    ]
+  },
+  "validator_engine_and_lock_contract": {
+    "direct_requirements_lock_entry_present_at_source_commit": true,
+    "duplicate_key_and_nonfinite_checks_are_parser_level_not_schema_only": true,
+    "engine": "jsonschema",
+    "implementation_blocked_until_direct_lock_and_transitive_closure_reviewed": true,
+    "required_draft": "2020-12",
+    "required_exact_version": "4.26.0",
+    "requirements_lock_sha256": "79c5d6ca6995338c20fdf4c7bdb2748746cbef0e226de1c55489ddb25658b47b",
+    "requirements_path": "requirements.ci.lock",
+    "transitive_closure_directly_pinned": true
+  },
+  "validator_profile_composition": {
+    "candidate_selectable_profile_allowed": false,
+    "composition_semantics": "EXACT_ORDERED_PREFIX_CLOSURE_ALL_LISTED_STAGES_REQUIRED",
+    "effective_profile_invocation_count": 199,
+    "generic_profile_parameter_allowed": false,
+    "named_entrypoints": {
+      "CUTOVER_ELIGIBILITY": {
+        "direct_control_count": 1,
+        "direct_control_ids": [
+          "REGISTRY-V1-NC-044"
+        ],
+        "effective_control_count": 52,
+        "effective_control_ids": [
+          "REGISTRY-V1-NC-001",
+          "REGISTRY-V1-NC-002",
+          "REGISTRY-V1-NC-003",
+          "REGISTRY-V1-NC-004",
+          "REGISTRY-V1-NC-005",
+          "REGISTRY-V1-NC-006",
+          "REGISTRY-V1-NC-007",
+          "REGISTRY-V1-NC-008",
+          "REGISTRY-V1-NC-009",
+          "REGISTRY-V1-NC-010",
+          "REGISTRY-V1-NC-011",
+          "REGISTRY-V1-NC-012",
+          "REGISTRY-V1-NC-013",
+          "REGISTRY-V1-NC-014",
+          "REGISTRY-V1-NC-015",
+          "REGISTRY-V1-NC-016",
+          "REGISTRY-V1-NC-017",
+          "REGISTRY-V1-NC-018",
+          "REGISTRY-V1-NC-019",
+          "REGISTRY-V1-NC-020",
+          "REGISTRY-V1-NC-021",
+          "REGISTRY-V1-NC-022",
+          "REGISTRY-V1-NC-023",
+          "REGISTRY-V1-NC-024",
+          "REGISTRY-V1-NC-025",
+          "REGISTRY-V1-NC-026",
+          "REGISTRY-V1-NC-027",
+          "REGISTRY-V1-NC-028",
+          "REGISTRY-V1-NC-029",
+          "REGISTRY-V1-NC-030",
+          "REGISTRY-V1-NC-031",
+          "REGISTRY-V1-NC-032",
+          "REGISTRY-V1-NC-033",
+          "REGISTRY-V1-NC-034",
+          "REGISTRY-V1-NC-035",
+          "REGISTRY-V1-NC-036",
+          "REGISTRY-V1-NC-037",
+          "REGISTRY-V1-NC-038",
+          "REGISTRY-V1-NC-039",
+          "REGISTRY-V1-NC-040",
+          "REGISTRY-V1-NC-043",
+          "REGISTRY-V1-NC-047",
+          "REGISTRY-V1-NC-048",
+          "REGISTRY-V1-NC-049",
+          "REGISTRY-V1-NC-050",
+          "REGISTRY-V1-NC-051",
+          "REGISTRY-V1-NC-052",
+          "REGISTRY-V1-NC-041",
+          "REGISTRY-V1-NC-042",
+          "REGISTRY-V1-NC-045",
+          "REGISTRY-V1-NC-046",
+          "REGISTRY-V1-NC-044"
+        ],
+        "effective_control_root_sha256": "5396c779300267c0c3e4a1afad6fa4f1a9ee03807b8c3503112fbe3181b54a93",
+        "live_legacy_reader_requirement": "FORBIDDEN_AT_CUTOVER",
+        "ordered_closure": [
+          "PROTOTYPE_INTEGRITY",
+          "WRITE_SAFETY",
+          "SHADOW_PARITY",
+          "CUTOVER_ELIGIBILITY"
+        ],
+        "shadow_stage_semantics": "VERIFY_PREVIOUSLY_ACCEPTED_IMMUTABLE_SHADOW_MANIFEST_NO_LIVE_DUAL_READ"
+      },
+      "PROTOTYPE_INTEGRITY": {
+        "direct_control_count": 47,
+        "direct_control_ids": [
+          "REGISTRY-V1-NC-001",
+          "REGISTRY-V1-NC-002",
+          "REGISTRY-V1-NC-003",
+          "REGISTRY-V1-NC-004",
+          "REGISTRY-V1-NC-005",
+          "REGISTRY-V1-NC-006",
+          "REGISTRY-V1-NC-007",
+          "REGISTRY-V1-NC-008",
+          "REGISTRY-V1-NC-009",
+          "REGISTRY-V1-NC-010",
+          "REGISTRY-V1-NC-011",
+          "REGISTRY-V1-NC-012",
+          "REGISTRY-V1-NC-013",
+          "REGISTRY-V1-NC-014",
+          "REGISTRY-V1-NC-015",
+          "REGISTRY-V1-NC-016",
+          "REGISTRY-V1-NC-017",
+          "REGISTRY-V1-NC-018",
+          "REGISTRY-V1-NC-019",
+          "REGISTRY-V1-NC-020",
+          "REGISTRY-V1-NC-021",
+          "REGISTRY-V1-NC-022",
+          "REGISTRY-V1-NC-023",
+          "REGISTRY-V1-NC-024",
+          "REGISTRY-V1-NC-025",
+          "REGISTRY-V1-NC-026",
+          "REGISTRY-V1-NC-027",
+          "REGISTRY-V1-NC-028",
+          "REGISTRY-V1-NC-029",
+          "REGISTRY-V1-NC-030",
+          "REGISTRY-V1-NC-031",
+          "REGISTRY-V1-NC-032",
+          "REGISTRY-V1-NC-033",
+          "REGISTRY-V1-NC-034",
+          "REGISTRY-V1-NC-035",
+          "REGISTRY-V1-NC-036",
+          "REGISTRY-V1-NC-037",
+          "REGISTRY-V1-NC-038",
+          "REGISTRY-V1-NC-039",
+          "REGISTRY-V1-NC-040",
+          "REGISTRY-V1-NC-043",
+          "REGISTRY-V1-NC-047",
+          "REGISTRY-V1-NC-048",
+          "REGISTRY-V1-NC-049",
+          "REGISTRY-V1-NC-050",
+          "REGISTRY-V1-NC-051",
+          "REGISTRY-V1-NC-052"
+        ],
+        "effective_control_count": 47,
+        "effective_control_ids": [
+          "REGISTRY-V1-NC-001",
+          "REGISTRY-V1-NC-002",
+          "REGISTRY-V1-NC-003",
+          "REGISTRY-V1-NC-004",
+          "REGISTRY-V1-NC-005",
+          "REGISTRY-V1-NC-006",
+          "REGISTRY-V1-NC-007",
+          "REGISTRY-V1-NC-008",
+          "REGISTRY-V1-NC-009",
+          "REGISTRY-V1-NC-010",
+          "REGISTRY-V1-NC-011",
+          "REGISTRY-V1-NC-012",
+          "REGISTRY-V1-NC-013",
+          "REGISTRY-V1-NC-014",
+          "REGISTRY-V1-NC-015",
+          "REGISTRY-V1-NC-016",
+          "REGISTRY-V1-NC-017",
+          "REGISTRY-V1-NC-018",
+          "REGISTRY-V1-NC-019",
+          "REGISTRY-V1-NC-020",
+          "REGISTRY-V1-NC-021",
+          "REGISTRY-V1-NC-022",
+          "REGISTRY-V1-NC-023",
+          "REGISTRY-V1-NC-024",
+          "REGISTRY-V1-NC-025",
+          "REGISTRY-V1-NC-026",
+          "REGISTRY-V1-NC-027",
+          "REGISTRY-V1-NC-028",
+          "REGISTRY-V1-NC-029",
+          "REGISTRY-V1-NC-030",
+          "REGISTRY-V1-NC-031",
+          "REGISTRY-V1-NC-032",
+          "REGISTRY-V1-NC-033",
+          "REGISTRY-V1-NC-034",
+          "REGISTRY-V1-NC-035",
+          "REGISTRY-V1-NC-036",
+          "REGISTRY-V1-NC-037",
+          "REGISTRY-V1-NC-038",
+          "REGISTRY-V1-NC-039",
+          "REGISTRY-V1-NC-040",
+          "REGISTRY-V1-NC-043",
+          "REGISTRY-V1-NC-047",
+          "REGISTRY-V1-NC-048",
+          "REGISTRY-V1-NC-049",
+          "REGISTRY-V1-NC-050",
+          "REGISTRY-V1-NC-051",
+          "REGISTRY-V1-NC-052"
+        ],
+        "effective_control_root_sha256": "7a93a7337385e896fce273020a84262b0e1f26b5afbe7c4dbe4d978ea62a408f",
+        "ordered_closure": [
+          "PROTOTYPE_INTEGRITY"
+        ]
+      },
+      "SHADOW_PARITY": {
+        "direct_control_count": 2,
+        "direct_control_ids": [
+          "REGISTRY-V1-NC-045",
+          "REGISTRY-V1-NC-046"
+        ],
+        "effective_control_count": 51,
+        "effective_control_ids": [
+          "REGISTRY-V1-NC-001",
+          "REGISTRY-V1-NC-002",
+          "REGISTRY-V1-NC-003",
+          "REGISTRY-V1-NC-004",
+          "REGISTRY-V1-NC-005",
+          "REGISTRY-V1-NC-006",
+          "REGISTRY-V1-NC-007",
+          "REGISTRY-V1-NC-008",
+          "REGISTRY-V1-NC-009",
+          "REGISTRY-V1-NC-010",
+          "REGISTRY-V1-NC-011",
+          "REGISTRY-V1-NC-012",
+          "REGISTRY-V1-NC-013",
+          "REGISTRY-V1-NC-014",
+          "REGISTRY-V1-NC-015",
+          "REGISTRY-V1-NC-016",
+          "REGISTRY-V1-NC-017",
+          "REGISTRY-V1-NC-018",
+          "REGISTRY-V1-NC-019",
+          "REGISTRY-V1-NC-020",
+          "REGISTRY-V1-NC-021",
+          "REGISTRY-V1-NC-022",
+          "REGISTRY-V1-NC-023",
+          "REGISTRY-V1-NC-024",
+          "REGISTRY-V1-NC-025",
+          "REGISTRY-V1-NC-026",
+          "REGISTRY-V1-NC-027",
+          "REGISTRY-V1-NC-028",
+          "REGISTRY-V1-NC-029",
+          "REGISTRY-V1-NC-030",
+          "REGISTRY-V1-NC-031",
+          "REGISTRY-V1-NC-032",
+          "REGISTRY-V1-NC-033",
+          "REGISTRY-V1-NC-034",
+          "REGISTRY-V1-NC-035",
+          "REGISTRY-V1-NC-036",
+          "REGISTRY-V1-NC-037",
+          "REGISTRY-V1-NC-038",
+          "REGISTRY-V1-NC-039",
+          "REGISTRY-V1-NC-040",
+          "REGISTRY-V1-NC-043",
+          "REGISTRY-V1-NC-047",
+          "REGISTRY-V1-NC-048",
+          "REGISTRY-V1-NC-049",
+          "REGISTRY-V1-NC-050",
+          "REGISTRY-V1-NC-051",
+          "REGISTRY-V1-NC-052",
+          "REGISTRY-V1-NC-041",
+          "REGISTRY-V1-NC-042",
+          "REGISTRY-V1-NC-045",
+          "REGISTRY-V1-NC-046"
+        ],
+        "effective_control_root_sha256": "2379b679cfe85a28815809d8de30d12509c1a88f49c1326d40d48b32276d6fd8",
+        "live_legacy_reader_requirement": "REQUIRED_WHILE_CAPTURING_DUAL_READ_TRACE",
+        "ordered_closure": [
+          "PROTOTYPE_INTEGRITY",
+          "WRITE_SAFETY",
+          "SHADOW_PARITY"
+        ]
+      },
+      "WRITE_SAFETY": {
+        "direct_control_count": 2,
+        "direct_control_ids": [
+          "REGISTRY-V1-NC-041",
+          "REGISTRY-V1-NC-042"
+        ],
+        "effective_control_count": 49,
+        "effective_control_ids": [
+          "REGISTRY-V1-NC-001",
+          "REGISTRY-V1-NC-002",
+          "REGISTRY-V1-NC-003",
+          "REGISTRY-V1-NC-004",
+          "REGISTRY-V1-NC-005",
+          "REGISTRY-V1-NC-006",
+          "REGISTRY-V1-NC-007",
+          "REGISTRY-V1-NC-008",
+          "REGISTRY-V1-NC-009",
+          "REGISTRY-V1-NC-010",
+          "REGISTRY-V1-NC-011",
+          "REGISTRY-V1-NC-012",
+          "REGISTRY-V1-NC-013",
+          "REGISTRY-V1-NC-014",
+          "REGISTRY-V1-NC-015",
+          "REGISTRY-V1-NC-016",
+          "REGISTRY-V1-NC-017",
+          "REGISTRY-V1-NC-018",
+          "REGISTRY-V1-NC-019",
+          "REGISTRY-V1-NC-020",
+          "REGISTRY-V1-NC-021",
+          "REGISTRY-V1-NC-022",
+          "REGISTRY-V1-NC-023",
+          "REGISTRY-V1-NC-024",
+          "REGISTRY-V1-NC-025",
+          "REGISTRY-V1-NC-026",
+          "REGISTRY-V1-NC-027",
+          "REGISTRY-V1-NC-028",
+          "REGISTRY-V1-NC-029",
+          "REGISTRY-V1-NC-030",
+          "REGISTRY-V1-NC-031",
+          "REGISTRY-V1-NC-032",
+          "REGISTRY-V1-NC-033",
+          "REGISTRY-V1-NC-034",
+          "REGISTRY-V1-NC-035",
+          "REGISTRY-V1-NC-036",
+          "REGISTRY-V1-NC-037",
+          "REGISTRY-V1-NC-038",
+          "REGISTRY-V1-NC-039",
+          "REGISTRY-V1-NC-040",
+          "REGISTRY-V1-NC-043",
+          "REGISTRY-V1-NC-047",
+          "REGISTRY-V1-NC-048",
+          "REGISTRY-V1-NC-049",
+          "REGISTRY-V1-NC-050",
+          "REGISTRY-V1-NC-051",
+          "REGISTRY-V1-NC-052",
+          "REGISTRY-V1-NC-041",
+          "REGISTRY-V1-NC-042"
+        ],
+        "effective_control_root_sha256": "032d777429443786f5f3b5123a705104336c2713ddc9ee261e8de32e1cf7e00e",
+        "ordered_closure": [
+          "PROTOTYPE_INTEGRITY",
+          "WRITE_SAFETY"
+        ]
+      }
+    },
+    "stage_order": [
+      "PROTOTYPE_INTEGRITY",
+      "WRITE_SAFETY",
+      "SHADOW_PARITY",
+      "CUTOVER_ELIGIBILITY"
+    ]
+  }
+}
