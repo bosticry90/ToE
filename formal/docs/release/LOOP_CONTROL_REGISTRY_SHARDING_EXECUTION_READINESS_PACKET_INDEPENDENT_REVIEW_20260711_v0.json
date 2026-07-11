@@ -1,0 +1,212 @@
+{
+  "accepted_scope": {
+    "closed_schema_preparation_contract": false,
+    "execution_protocol_preparation_contract": false,
+    "historical_preparation_evidence": true,
+    "packet_acceptance": false,
+    "prototype_selection": false,
+    "registry_cutover": false,
+    "registry_migration_execution_readiness": false
+  },
+  "adversarial_contract_review": {
+    "cutover_shadow_reader_requirement_conflict": true,
+    "harness_report_cross_field_false_acceptance": true,
+    "history_payload_cross_field_false_acceptance": true,
+    "history_payload_required_runtime_checks_absent": [
+      "STRICT_BASE64_DECODE",
+      "DECODED_SIZE_EQUALS_PAYLOAD_SIZE_BYTES",
+      "DECODED_SHA256_EQUALS_PAYLOAD_SHA256",
+      "DECODED_KIND_EQUALS_PAYLOAD_KIND",
+      "RECOMPUTED_RECORD_ID_EQUALS_RECORD_ID"
+    ],
+    "path_false_acceptances": [
+      "/absolute/path.json",
+      "//server/share/registry.json"
+    ],
+    "validation_report_cross_field_false_acceptance": true
+  },
+  "authorization": {
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "maintenance_target_rotation_authorized": false,
+    "prototype_execution_target_selected": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "scientific_target_rotation_authorized": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "consumer_review": {
+    "baseline_consumer_count": 496,
+    "baseline_source_map_sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+    "baseline_treated_as_eternal_current_count": false,
+    "consumer_migration_or_cutover_authorized_during_trace": false,
+    "fresh_full_tree_rescan_required": true,
+    "structured_added_removed_changed_delta_required": true,
+    "unclassified_current_consumer_count_allowed": 0
+  },
+  "control_harness_review": {
+    "candidate_selected_mode_present": false,
+    "control_count": 52,
+    "controls_executed": false,
+    "distinct_positive_baseline_count": 4,
+    "exact_v1_control_identity_and_error_mapping": true,
+    "profile_counts": {
+      "CUTOVER_ELIGIBILITY": 1,
+      "PROTOTYPE_INTEGRITY": 47,
+      "SHADOW_PARITY": 2,
+      "WRITE_SAFETY": 2
+    },
+    "special_profile_assignments": {
+      "REGISTRY-V1-NC-041": "WRITE_SAFETY",
+      "REGISTRY-V1-NC-042": "WRITE_SAFETY",
+      "REGISTRY-V1-NC-044": "CUTOVER_ELIGIBILITY",
+      "REGISTRY-V1-NC-045": "SHADOW_PARITY",
+      "REGISTRY-V1-NC-046": "SHADOW_PARITY"
+    },
+    "v0_false_acceptance_regression_count": 8
+  },
+  "custody_review": {
+    "custody_payload_created": false,
+    "detached_clean_checkout_required": true,
+    "gzip_profile_closed_and_single_member": true,
+    "legacy_byte_identity_required": true,
+    "semantic_equivalence_alone_sufficient": false,
+    "source_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "source_registry_size_bytes": 52340650
+  },
+  "findings": [
+    {
+      "finding_id": "REGISTRY-READINESS-REVIEW-001",
+      "packet_defect": true,
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_PACKET_ACCEPTANCE_AND_ALL_EXECUTION",
+      "summary": "CUTOVER_ELIGIBILITY extends SHADOW_PARITY, whose positive baseline requires legacy monolith readers, while the cutover profile requires those readers to be absent; no inheritance override or requirement resolution semantics are frozen."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-REVIEW-002",
+      "packet_defect": true,
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_PACKET_ACCEPTANCE_AND_ALL_EXECUTION",
+      "summary": "The history-record schema treats contentEncoding as an annotation and the protocol does not require strict base64 decoding or enforce decoded payload size, hash, kind, canonical bytes, and recomputed record-ID relations; an invalid mutually inconsistent record validates."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-REVIEW-003",
+      "packet_defect": true,
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_PACKET_ACCEPTANCE_AND_ALL_EXECUTION",
+      "summary": "The reusable repository-path schema rejects drive-qualified and backslash paths but accepts POSIX absolute paths and forward-slash UNC-style paths such as //server/share."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-REVIEW-004",
+      "packet_defect": true,
+      "severity": "MEDIUM",
+      "status": "OPEN_REQUIRES_VERSIONED_SCHEMA_CORRECTION",
+      "summary": "Report schemas do not enforce decision invariants: a validation report can declare passed=true with nonempty issues, and a harness report can declare 52/52 while omitting distinct profiles, mismatching profile sums, or changing the base candidate hash."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-REVIEW-005",
+      "packet_defect": false,
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_READ_ONLY_PROTOTYPE_SELECTION_NOT_PACKET_ACCEPTANCE",
+      "summary": "jsonschema 4.26.0 is available to this review but is not a direct dependency in either committed requirements lock; the packet correctly keeps implementation and prototype selection blocked until the engine and transitive closure are directly locked and reviewed."
+    }
+  ],
+  "immutable_input_review": {
+    "accepted_source_commit": "6aba59d8d399b331db010f1f5f857075b9100b7f",
+    "corrected_review_boundary_commit": "a0d44da40922d6547f02241174fa640edb3f9fa8",
+    "original_preparation_commit": "bf8c12918675d77c27c0eadde009134fc572c281",
+    "portability_correction": {
+      "changed_path_count": 1,
+      "corrected_test_git_blob": "6f907211ef870d582228bd1f4400bf90c757eb56",
+      "corrected_test_sha256": "669f5b8f94fa1a5f0136f88351303e9b5f59bc39cd7f399b1e6d0c4e2381e837",
+      "only_changed_path": "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet.py",
+      "repair": "HARDCODED_WORKSPACE_VENV_INTERPRETER_REPLACED_BY_SYS_EXECUTABLE"
+    },
+    "preparation_git_blobs": {
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_CLOSED_SCHEMA_BUNDLE_20260711_v0.json": "94a8a32517a9015b5a968c029b5fd15dd7ef0aba",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_PROTOCOL_BUNDLE_20260711_v0.json": "9044bed2b99e8bd327d7ad31f6d7c14a8a131818",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_20260711_v0.json": "bd1bc805b614b8d6fbcfa293455b7dfdb79dfe47",
+      "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet.py": "a323c4288688f4f78d7ec7d9e1ab594321d8ae8f",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet.py": "274b8a508c9803ab37d0d61d770380e1d3ce1853",
+      "formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingExecutionReadinessPacket.lean": "ae5c0ebb699aa6a583a79f19bb7320a0729893fb"
+    },
+    "preparation_sha256": {
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_CLOSED_SCHEMA_BUNDLE_20260711_v0.json": "24f1f2703d9c6c2510b314d132bfdfc09ab9f6207d209bc2620eed328e176a58",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_PROTOCOL_BUNDLE_20260711_v0.json": "90a609f6d2be11be94b8c03ea04b1d58452a6f9b9fa26d227383fbfece195c8e",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_20260711_v0.json": "ddca270745ebea3659cf9b53aa09c4c0c25a0983101a1d310e1f98380b3874c8",
+      "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet.py": "eb2e2763302bdeb8ffe90b63be805129cef71147fae55837bcc34b010bbdc869",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet.py": "e87aa161b4ad91fc7103754582d743255c9642e05daef901c584da60df45a323",
+      "formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingExecutionReadinessPacket.lean": "de9b9e4057b39613ddb8064d2900c3e5ab05aeb47c342abca703fe01d584385b"
+    },
+    "reviewed_via_git_show_only": true
+  },
+  "nonauthorization_review": {
+    "all_false": true,
+    "group_counts": {
+      "accepted_v1": 1,
+      "harness_execution": 2,
+      "packet_authorization": 3,
+      "packet_boundary": 21,
+      "protocol_authorization": 7,
+      "readiness_levels": 4
+    },
+    "nonauthorization_boolean_count": 38
+  },
+  "open_execution_obligations": [
+    "PREPARE_AND_INDEPENDENTLY_REVIEW_A_VERSIONED_CORRECTIVE_SUCCESSOR",
+    "REMOVE_CUTOVER_SHADOW_PROFILE_REQUIREMENT_AMBIGUITY",
+    "FREEZE_AND_ENFORCE_HISTORY_PAYLOAD_CROSS_FIELD_VALIDATION",
+    "REJECT_ALL_ABSOLUTE_AND_UNC_REPOSITORY_PATHS",
+    "ENFORCE_VALIDATION_AND_CONTROL_REPORT_DECISION_INVARIANTS",
+    "DIRECTLY_LOCK_VALIDATOR_ENGINE_AND_REVIEW_TRANSITIVE_CLOSURE",
+    "IMPLEMENT_AND_VALIDATE_CLOSED_SCHEMAS_AND_STRICT_PARSER",
+    "EXECUTE_ALL_52_CONTROLS_AGAINST_REAL_PROTOTYPE_CANDIDATES",
+    "EXECUTE_FRESH_CONSUMER_RESCAN_AND_RUNTIME_SHADOW_PARITY",
+    "EXECUTE_BYTE_EXACT_CUSTODY_AND_COMPATIBILITY_RECONSTRUCTION",
+    "INDEPENDENTLY_REVIEW_READ_ONLY_PROTOTYPE_BEFORE_ANY_MIGRATION_SELECTION"
+  ],
+  "packet_sha256": "ddca270745ebea3659cf9b53aa09c4c0c25a0983101a1d310e1f98380b3874c8",
+  "path_absence_review": {
+    "forbidden_path_count": 7,
+    "production_and_prototype_paths_absent": true
+  },
+  "record_and_authority_review": {
+    "authority_commitment_sha256": "fd4348411236648d6216900eced59524b87c561bfa0d36186cf4c4d19a2e6b34",
+    "full_record_identity_root_sha256": "67a23fda6348a2a6e12e4c2af775d115c692ecbe4d0650f0844a982d869e112d",
+    "identity_payload_pointer_root_sha256": "a97799ea412006dde3c259b718b10aad9dee7012181611f3f1d5f1a1e821a967",
+    "original_pointer_set_sha256": "219f4bc866b731b74ef50a439b6a869d8add33c6c5ce8e83a621115c1649c6bf",
+    "record_id_collision_count": 0,
+    "root_field_record_count": 4152,
+    "source_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "source_registry_size_bytes": 52340650,
+    "targets_reproduced_from_legacy_and_maintenance_authority": true,
+    "total_record_count": 4691,
+    "workstream_record_count": 539
+  },
+  "review_id": "LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_INDEPENDENT_REVIEW_20260711_v0",
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_INDEPENDENT_REVIEW_20260711_v0",
+  "schema_review": {
+    "draft": "2020-12",
+    "empty_or_unconstrained_slot_count": 0,
+    "metaschema_validation_passed": true,
+    "object_schema_count": 47,
+    "recursive_closure_error_count": 0,
+    "schema_count": 10,
+    "strict_parser_contract_present": true
+  },
+  "status": "REJECTED_EXECUTION_READINESS_PREPARATION_CONTRACT_V0_HISTORICAL_PREPARATION_EVIDENCE_ONLY_VERSIONED_CORRECTIVE_SUCCESSOR_REQUIRED_NO_PROTOTYPE_MIGRATION_OR_CUTOVER_AUTHORITY",
+  "strict_parser_review": {
+    "duplicate_key_and_nonfinite_rejection_is_parser_level": true,
+    "production_strict_parser_present": false,
+    "review_probe_count": 7,
+    "review_probes_passed": true
+  },
+  "validator_engine_blocker": {
+    "direct_requirements_active_lock_present": false,
+    "direct_requirements_ci_lock_present": false,
+    "observed_review_runtime_version": "4.26.0",
+    "packet_defect": false,
+    "prototype_selection_blocked": true,
+    "required_exact_version": "4.26.0"
+  }
+}
