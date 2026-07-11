@@ -24,6 +24,7 @@ LEGACY DISCOVERY FIXTURE PREPARATION
 The independent review at `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_INDEPENDENT_REVIEW_20260711_v0.json` reproduces the three root hashes and the 21-node/38-edge report graph, accepts the packet, and authorizes only the bounded fixture repair. It does not establish that raw-clean reproducibility has already been repaired, and registry migration remains unauthorized.
 The bounded repair at `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v0.json` commits only the three exact historical root fixtures and adds an exact-test-scoped session materializer for the 18 derived reports. Focused validation passes; raw detached clean-checkout acceptance is still required before the repair can be described as accepted.
 The effective repair evidence is the versioned v1 correction at `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v1.json`. It preserves v0 as the implementation-commit artifact and corrects only the checkout-sensitive `conftest.py` source identity by binding committed Git bytes. Fixture bytes, fixture behavior, both targets, and the registry nonexecution boundary are unchanged; raw detached acceptance remains pending.
+Raw detached acceptance is recorded at `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_ACCEPTANCE_20260711_v0.json`: the combined current critical/integrity manifest passed `195` tests from an initially residue-free checkout, all 21 runtime fixture paths were absent after teardown, and Git remained clean. The full Python aggregate entered a Lean build and timed out at 1800 seconds; it is neither reported as passed nor failed, and the repository is not described as fully green from that run.
 
 DEVELOPER QUICKSTART
 - Windows path support: `git config core.longpaths true`
@@ -37,6 +38,7 @@ DEVELOPER QUICKSTART
 - Validate its independent review: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet_independent_review --check`
 - Validate immutable v0 repair custody: `.\py.ps1 -m pytest -q formal/python/tests/test_legacy_discovery_report_fixture_repair.py`
 - Validate the versioned repair-evidence correction: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_correction_v1 --check`
+- Validate scoped raw-clean acceptance: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 

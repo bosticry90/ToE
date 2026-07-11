@@ -1,0 +1,63 @@
+{
+  "acceptance_id": "LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_ACCEPTANCE_20260711_v0",
+  "authorization": {
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "next_bounded_action": "prepare_corrective_loop_control_registry_sharding_guardrail_v1",
+    "registry_migration_execution_authorized": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "source_commit": "153b183101086e1933a92260743a1cdf91b28498"
+  },
+  "boundary": {
+    "full_python_aggregate_claimed_green": false,
+    "maintenance_target_rotated": false,
+    "registry_migration_executed": false,
+    "scientific_artifacts_modified": false,
+    "scientific_claim_or_blocker_movement": false,
+    "scientific_target_rotated": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "effective_repair_correction_sha256": "7befc5fd9500d2e099a26013eed159a6ece9dff1a3c29365a6c53314cd19b940",
+  "raw_detached_clean_checkout": {
+    "combined_manifest_path_count": 59,
+    "critical_group_expected_count": 6,
+    "critical_group_expected_sha256": "240286f42596d31ebcf2d05a7b238b835e55700f15ce2e5d2930837bba0fdc32",
+    "detached_worktree_git_clean_after": true,
+    "detached_worktree_git_clean_before": true,
+    "initial_runtime_path_absent_count": 21,
+    "integrity_group_expected_count": 53,
+    "integrity_group_expected_sha256": "3275c4574662b6217205915000fcfea58bd88992ab13797b2dedbe0a3c553c9e",
+    "passed_test_count": 195,
+    "runtime_path_count": 21,
+    "teardown_runtime_path_absent_count": 21,
+    "validation_result": "PASS"
+  },
+  "root_fixture_custody": [
+    {
+      "path": "formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_trend_window_20260410_v0.json",
+      "sha256": "802d1e8409bd1cc5602dc11db619bdbd757d4c9a0759709247ae2a6d366442c5",
+      "size_bytes": 1722
+    },
+    {
+      "path": "formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_closure_map_20260410_v0.json",
+      "sha256": "73489f4c96f221d214703e227a4887bda5274490fc6dbcb31da2b44c9e7f0822",
+      "size_bytes": 9749
+    },
+    {
+      "path": "formal/python/tests/fixtures/legacy_discovery_reports/physics_progress_ledger_v0.json",
+      "sha256": "07af32ad04bbcea569a8256a12462404a0ca3334f51dca23eae3e0830ba81a94",
+      "size_bytes": 6096
+    }
+  ],
+  "schema_id": "LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_ACCEPTANCE_20260711_v0",
+  "status": "ACCEPTED_FOCUSED_RAW_CLEAN_CHECKOUT_REPRODUCIBILITY_FULL_PYTHON_AGGREGATE_TIMEOUT_NOT_UPGRADED",
+  "validation_ceiling": {
+    "full_python_aggregate_elapsed_timeout_seconds": 1800,
+    "full_python_aggregate_failed": false,
+    "full_python_aggregate_passed": false,
+    "full_python_aggregate_timed_out": true,
+    "timeout_observed_phase": "LEAN_BUILD_TOEFORMAL_QFT_EVOLUTION_OBJECTSCAFFOLD",
+    "timeout_process_tree_terminated": true,
+    "timeout_runtime_outputs_removed_after_exact_path_and_hash_inspection": true,
+    "wording": "focused raw-clean acceptance passed; full Python aggregate timed out and is not described as green"
+  }
+}

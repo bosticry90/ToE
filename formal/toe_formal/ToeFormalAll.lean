@@ -815,6 +815,7 @@ import ToeFormal.Release.CurrentAuthority
 import ToeFormal.Release.LegacyDiscoveryReportFixturePacket
 import ToeFormal.Release.LegacyDiscoveryReportFixturePacketIndependentReview
 import ToeFormal.Release.LegacyDiscoveryReportFixtureRepair
+import ToeFormal.Release.LegacyDiscoveryReportFixtureRepairAcceptance
 import ToeFormal.Release.LegacyDiscoveryReportFixtureRepairCorrectionV1
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailIndependentReview
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailPacket
@@ -1057,6 +1058,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def trackedModuleCount : Nat := 1050
+def trackedModuleCount : Nat := 1051
 
 end ToeFormalAll

@@ -124,3 +124,7 @@ formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILI
 formal/python/tests/test_legacy_discovery_report_fixture_repair_correction_v1.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_repair_correction_v1.py text eol=lf
 formal/toe_formal/ToeFormal/Release/LegacyDiscoveryReportFixtureRepairCorrectionV1.lean text eol=lf
+formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_ACCEPTANCE_20260711_v0.json text eol=lf
+formal/python/tests/test_legacy_discovery_report_fixture_repair_acceptance.py text eol=lf
+formal/python/tools/legacy_discovery_report_fixture_repair_acceptance.py text eol=lf
+formal/toe_formal/ToeFormal/Release/LegacyDiscoveryReportFixtureRepairAcceptance.lean text eol=lf

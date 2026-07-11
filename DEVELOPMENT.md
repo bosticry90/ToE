@@ -32,6 +32,9 @@ detached checkout passes, the repair remains implemented but not accepted.
 The effective evidence binding is v1: it reads exact committed Git bytes from
 the immutable repair commit. V0 is retained as historical implementation
 evidence; the correction changes no fixture or materializer behavior.
+Raw detached critical/integrity acceptance passed 195 tests with all 21 runtime
+paths absent before and after. The full Python aggregate timed out during a Lean
+build and must not be described as passed, failed, or fully green.
 
 ## Prerequisites
 
@@ -67,6 +70,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet_independent_review --check
 .\py.ps1 -m pytest -q formal/python/tests/test_legacy_discovery_report_fixture_repair.py
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_correction_v1 --check
+.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll
