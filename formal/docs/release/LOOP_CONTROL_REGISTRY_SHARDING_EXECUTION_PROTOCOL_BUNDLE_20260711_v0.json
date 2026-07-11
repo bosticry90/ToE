@@ -1,0 +1,1274 @@
+{
+  "authorization": {
+    "consumer_migration_authorized": false,
+    "custody_payload_creation_authorized_now": false,
+    "monolith_modification_or_retirement_authorized": false,
+    "production_validator_implementation_authorized_now": false,
+    "prototype_artifact_creation_authorized_now": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false
+  },
+  "byte_custody_execution_procedure": {
+    "acceptance": {
+      "byte_identical": true,
+      "decompressed_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "decompressed_size_bytes": 52340650,
+      "detached_clean_checkout_required": true,
+      "reconstructed_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+    },
+    "procedure": [
+      "READ_FROZEN_SOURCE_AS_GIT_BLOB_FROM_REVIEWED_COMMIT",
+      "STREAM_ONE_RFC1952_MEMBER_WITH_DEFLATE_LEVEL_9_MTIME_0_FLG_0_XFL_2_OS_255",
+      "RECORD_COMPRESSED_SIZE_AND_SHA256_IN_CLOSED_CUSTODY_MANIFEST",
+      "REJECT_EXTRA_FIELDS_FILENAME_COMMENT_MULTIPLE_MEMBERS_OR_TRAILING_BYTES",
+      "STREAM_DECOMPRESS_WITH_52340650_BYTE_HARD_LIMIT",
+      "COMPARE_DECOMPRESSED_BYTES_AND_SHA256_TO_EXTERNAL_FROZEN_SOURCE",
+      "WRITE_COMPATIBILITY_OUTPUT_ONLY_INSIDE_ISOLATED_PROTOTYPE_ROOT",
+      "VERIFY_RECONSTRUCTED_BYTES_SHA256_AND_SIZE_IN_DETACHED_CLEAN_CHECKOUT",
+      "REMOVE_TEMPORARY_52_MIB_RECONSTRUCTION_AFTER_COMPACT_EVIDENCE_IS_RECORDED"
+    ],
+    "semantic_equivalence_alone_sufficient": false
+  },
+  "failure_and_rollback": {
+    "fail_closed_triggers": [
+      "SCHEMA_OR_STRICT_PARSE_FAILURE",
+      "EXTERNAL_TRUST_ANCHOR_MISMATCH",
+      "RECORD_COUNT_OR_ROOT_MISMATCH",
+      "CONTROL_DECISION_OR_ERROR_SET_MISMATCH",
+      "SHADOW_PARITY_MISMATCH",
+      "UNTRACED_REQUIRED_CONSUMER",
+      "BYTE_CUSTODY_OR_RECONSTRUCTION_MISMATCH",
+      "DIRTY_DETACHED_CHECKOUT",
+      "UNEXPECTED_WRITE_OUTSIDE_PROTOTYPE_ROOT"
+    ],
+    "failed_or_timed_out_run_classification": "INCOMPLETE_OR_FAILED_NEVER_PASS",
+    "failure_may_rotate_target_or_authority": false,
+    "failure_may_touch_legacy_monolith": false,
+    "failure_may_touch_scientific_artifacts": false,
+    "in_place_candidate_repair_after_failure_allowed": false,
+    "rollback_requires_verified_resolved_path_under_prototype_root": true,
+    "rollback_scope": "DELETE_ONLY_FILES_CREATED_UNDER_THE_EXACT_RUN_ID_PROTOTYPE_ROOT",
+    "rollback_uses_git_history_rewrite": false,
+    "source_and_authority_hashes_rechecked_after_run": true,
+    "unexpected_write_outside_prototype_root": "FAIL_CLOSED_AND_REQUIRE_INDEPENDENT_DAMAGE_AUDIT"
+  },
+  "production_validator_interface": {
+    "candidate_expected_values_are_authoritative": false,
+    "error_result": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_path": {
+          "minLength": 1,
+          "not": {
+            "pattern": "(^|/)(\\.\\.?)(/|$)|\\\\|^[A-Za-z]:"
+          },
+          "type": "string"
+        },
+        "control_id": {
+          "pattern": "^REGISTRY-V1-NC-[0-9]{3}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "error_code": {
+          "pattern": "^V1-E-[A-Z0-9-]+$",
+          "type": "string"
+        },
+        "json_pointer": {
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_path",
+        "control_id",
+        "error_code",
+        "json_pointer",
+        "message"
+      ],
+      "type": "object"
+    },
+    "external_trust_anchor_source": {
+      "accepted_v1_guardrail_sha256": "41994b0c1703d7f7f7ff7aeda217900a3136489f070ae55a88f2db10a13d12c0",
+      "accepted_v1_review_sha256": "4b99d6d3801a8bbd2f918311116dfdfce8ef595f7c0e1b629bc3595820612dca",
+      "source_commit": "6aba59d8d399b331db010f1f5f857075b9100b7f"
+    },
+    "frozen_functions": [
+      "strict_load_json(raw: bytes, artifact_kind: ArtifactKind) -> JsonValue",
+      "strict_iter_jsonl(stream: BinaryIO, maximum_bytes: int) -> Iterator[HistoryRecord]",
+      "load_reviewed_trust_anchors(packet_path: Path, expected_packet_sha256: str) -> RegistryTrustAnchors",
+      "validate_prototype_integrity(source: ArtifactSource, anchors: RegistryTrustAnchors) -> ValidationReport",
+      "validate_write_safety(source: ArtifactSource, anchors: RegistryTrustAnchors, writer_probe: WriterProbe) -> ValidationReport",
+      "validate_shadow_parity(source: ArtifactSource, anchors: RegistryTrustAnchors, trace_manifest: ShadowTraceManifest) -> ValidationReport",
+      "validate_cutover_eligibility(source: ArtifactSource, anchors: RegistryTrustAnchors, trace_manifest: ShadowTraceManifest) -> ValidationReport",
+      "reconstruct_and_verify_legacy(candidate_root: Path, output: BinaryIO, anchors: ReviewedTrustAnchors) -> ReconstructionReport",
+      "require_valid(report: ValidationReport) -> None"
+    ],
+    "integrity_bypass_parameter_allowed": false,
+    "module_path_after_separate_execution_authorization": "formal/python/toe/loop_control_registry_v1_validator.py",
+    "profile_selected_by_caller_not_candidate": true,
+    "profile_specific_entrypoints": [
+      "validate_prototype_integrity(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport",
+      "validate_write_safety(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport",
+      "validate_shadow_parity(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport",
+      "validate_cutover_eligibility(candidate_root: Path, anchors: ReviewedTrustAnchors) -> ValidationReport"
+    ],
+    "read_only": true,
+    "report_contract": {
+      "all_error_codes_sorted": true,
+      "candidate_root_sha256": "REQUIRED",
+      "errors": "ORDERED_TYPED_LIST",
+      "passed": "TRUE_ONLY_WHEN_ERRORS_EMPTY",
+      "trust_anchor_sha256": "REQUIRED_EXTERNAL_VALUE"
+    },
+    "write_interfaces_separate": true
+  },
+  "prototype_paths": {
+    "compatibility_reconstruction": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/compat/LOOP_CONTROL_REGISTRY_v0.reconstructed.json",
+    "consumer_source_map": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/consumers/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_v2.json",
+    "control_harness_report": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/validation/LOOP_CONTROL_CONTROL_HARNESS_REPORT_v1.json",
+    "current_projection": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/projection/LOOP_CONTROL_CURRENT_v1.prototype.json",
+    "custody_manifest": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/custody/LOOP_CONTROL_LEGACY_BYTE_CUSTODY_MANIFEST_v1.json",
+    "custody_payload": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/custody/LOOP_CONTROL_LEGACY_BYTE_CUSTODY_v1.json.gz",
+    "history_index": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/history/LOOP_CONTROL_HISTORY_INDEX_v1.prototype.json",
+    "history_shards": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/history/shards/LOOP_CONTROL_HISTORY_*.jsonl",
+    "reconstruction_result": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/compat/LOOP_CONTROL_LEGACY_RECONSTRUCTION_RESULT_v1.json",
+    "runtime_shadow_trace": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/traces/LOOP_CONTROL_RUNTIME_SHADOW_TRACE_v1.jsonl",
+    "runtime_shadow_trace_manifest": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/traces/LOOP_CONTROL_SHADOW_TRACE_MANIFEST_v1.json",
+    "validation_report": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/validation/LOOP_CONTROL_REGISTRY_V1_VALIDATION_REPORT.json"
+  },
+  "runtime_shadow_tracing_protocol": {
+    "all_496_static_rows_require_final_disposition": true,
+    "baseline_count_is_not_an_eternal_current_count": true,
+    "baseline_source_map_sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+    "comparison": "LEGACY_AND_NEW_READ_EXECUTED_FOR_SAME_OPERATION_AND_INPUT",
+    "consumer_migration_or_cutover_during_trace": false,
+    "coverage_acceptance": [
+      "EVERY_RUNTIME_TRACE_REQUIRED_ROW_OBSERVED",
+      "EVERY_REMAINING_ROW_PROVED_NONRUNTIME_BY_CLASSIFICATION",
+      "ALL_DYNAMIC_PATH_CONSTRUCTION_AND_GLOB_READERS_OBSERVED",
+      "ALL_ACTIVE_READER_OPERATION_CLASSES_HAVE_HASH_AND_SEMANTIC_PARITY",
+      "ALL_WRITERS_EXERCISED_IN_DRY_RUN_WITH_NO_HISTORY_MUTATION",
+      "ZERO_UNCLASSIFIED_ACTIVE_CONSUMERS",
+      "ZERO_SEMANTIC_PARITY_MISMATCHES"
+    ],
+    "fresh_full_tree_rescan_and_structured_delta_required": true,
+    "required_trace_fields": [
+      "trace_schema_id",
+      "run_id",
+      "trace_id",
+      "consumer_id",
+      "consumer_path",
+      "consumer_source_sha256",
+      "operation_id",
+      "operation_type",
+      "comparison_mode",
+      "legacy_result_sha256",
+      "candidate_result_sha256",
+      "semantic_parity",
+      "fields_accessed",
+      "access_granularity",
+      "write_attempted",
+      "write_paths",
+      "runtime_entrypoint",
+      "resolved_registry_path",
+      "source_commit"
+    ],
+    "result_hash_envelope": "CANONICAL_TYPED_VALUE_OR_TYPED_EXCEPTION_ENVELOPE",
+    "trace_output": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/traces/LOOP_CONTROL_RUNTIME_SHADOW_TRACE_v1.jsonl",
+    "unobserved_required_consumer_waiver_allowed": false
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_PROTOCOL_BUNDLE_20260711_v0",
+  "status": "EXECUTION_PROTOCOL_FROZEN_PREPARATION_ONLY_NOT_EXECUTED",
+  "typed_control_harness": {
+    "all_controls_run_against_real_candidate_artifacts": true,
+    "artifact_overlay_required_to_prevent_mutation_leakage_without_full_copy": true,
+    "base_candidate_hash_rechecked_before_and_after_every_control": true,
+    "baseline_candidate_must_pass_before_each_mutation": true,
+    "caches_cleared_between_controls": true,
+    "control_count": 52,
+    "controls": [
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-001",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-AUTHORITY-EXTERNAL-BINDING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "authority_drift_with_rebound_fingerprint",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_authority_drift_with_rebound_fingerprint(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-002",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-INDEX-POINTER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "broken_current_index_pointer",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_broken_current_index_pointer(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-003",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-EXTERNAL-ROOT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "changed_history_with_rebound_index",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_changed_history_with_rebound_index(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-004",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-ID-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_shard_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_shard_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-005",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSON-NONFINITE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "nan_history_with_rebound_index",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_nan_history_with_rebound_index(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": true,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-006",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSONL-NONCANONICAL"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "noncanonical_jsonl",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_noncanonical_jsonl(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-007",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PROJECTION-SIZE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "oversized_current_projection",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_oversized_current_projection(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-008",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-MAINTENANCE-TARGET-CARDINALITY"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "two_maintenance_targets",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_two_maintenance_targets(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": true,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-009",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PROJECTION-FIELD-MISSING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_projection_field",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_projection_field(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-010",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PROJECTION-FIELD-EXTRA"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "extra_projection_field",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_extra_projection_field(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-011",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-HISTORY-PROMOTED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "history_record_in_projection",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_history_record_in_projection(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-012",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CURRENT-DEMOTED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "current_record_only_in_history",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_current_record_only_in_history(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-013",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SCIENTIFIC-TARGET-CARDINALITY"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "two_scientific_targets",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_two_scientific_targets(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-014",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CLAIM-CEILING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "claim_ceiling_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_claim_ceiling_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-015",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-BLOCKER-COMMITMENT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "blocker_commitment_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_blocker_commitment_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CURRENT_PROJECTION",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-016",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-NONPROMOTION-COMMITMENT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "nonpromotion_commitment_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_nonpromotion_commitment_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-017",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-MISSING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-018",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-EXTRA"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "extra_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_extra_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-019",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-PATH-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_shard_path",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_shard_path(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-020",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-EMPTY"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "empty_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_empty_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-021",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-SIZE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "oversized_shard",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_oversized_shard(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-022",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-ORDER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "reordered_shards",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_reordered_shards(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-023",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-RANGE-GAP"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "range_gap",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_range_gap(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-024",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-RANGE-OVERLAP"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "range_overlap",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_range_overlap(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-025",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SHARD-HASH"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "incorrect_shard_hash",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_incorrect_shard_hash(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-026",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-COUNT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "incorrect_record_count",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_incorrect_record_count(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-027",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-ID-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_record_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_record_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-028",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-ID-FORGED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "forged_record_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_forged_record_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-029",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-MISSING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_record",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_record(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-030",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-EXTRA"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "extra_record",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_extra_record(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-031",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SOURCE-IDENTITY-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_source_identity",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_source_identity(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-032",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RECORD-ID-AMBIGUOUS"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "ambiguous_record_id",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_ambiguous_record_id(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-033",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-UTF8-BOM"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "utf8_bom",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_utf8_bom(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-034",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-UTF8-INVALID"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "invalid_utf8",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_invalid_utf8(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-035",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSONL-CRLF"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "crlf_jsonl",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_crlf_jsonl(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-036",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-TERMINAL-NEWLINE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "missing_terminal_newline",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_missing_terminal_newline(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-037",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSONL-BLANK"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "blank_jsonl_line",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_blank_jsonl_line(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-038",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-JSON-KEY-DUPLICATE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "duplicate_json_key",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_duplicate_json_key(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-039",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-SCHEMA-VERSION"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "schema_version_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_schema_version_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-040",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-PATH-TRAVERSAL"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "path_traversal",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_path_traversal(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "HISTORY_INDEX_OR_SHARD",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-041",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CLOSED-SHARD-WRITE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "closed_shard_write",
+        "mutation_precondition": "WRITE_SAFETY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_closed_shard_write(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": true,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "WRITE_SAFETY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-042",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-WRITE-SCOPE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "current_writer_touches_history",
+        "mutation_precondition": "WRITE_SAFETY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_current_writer_touches_history(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": true,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "WRITE_SAFETY"
+      },
+      {
+        "artifact_kind": "CANDIDATE_BUNDLE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-043",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-VERIFY-BYPASS"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "integrity_verification_bypass",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_integrity_verification_bypass(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "CONSUMER_OR_TRACE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-044",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-MONOLITH-READER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "active_monolith_reader_remaining",
+        "mutation_precondition": "CUTOVER_ELIGIBILITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_active_monolith_reader_remaining(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": true,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "CUTOVER_ELIGIBILITY"
+      },
+      {
+        "artifact_kind": "CONSUMER_OR_TRACE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-045",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CONSUMER-UNCLASSIFIED"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "unclassified_consumer",
+        "mutation_precondition": "SHADOW_PARITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_unclassified_consumer(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "SHADOW_PARITY"
+      },
+      {
+        "artifact_kind": "CONSUMER_OR_TRACE",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-046",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-RUNTIME-COVERAGE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "runtime_trace_incomplete",
+        "mutation_precondition": "SHADOW_PARITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_runtime_trace_incomplete(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": true,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "SHADOW_PARITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-047",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-GZIP-MULTIMEMBER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "gzip_multiple_members",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_gzip_multiple_members(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-048",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-GZIP-TRAILING"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "gzip_trailing_bytes",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_gzip_trailing_bytes(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-049",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-GZIP-HEADER"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "gzip_header_drift",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_gzip_header_drift(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-050",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-SIZE"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "custody_decompressed_size_mismatch",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_custody_decompressed_size_mismatch(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-051",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-HASH"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "custody_decompressed_hash_mismatch",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_custody_decompressed_hash_mismatch(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      },
+      {
+        "artifact_kind": "BYTE_CUSTODY",
+        "baseline_candidate_recreated_before_mutation": true,
+        "control_id": "REGISTRY-V1-NC-052",
+        "execution_status": "NOT_EXECUTED_PREPARATION_ONLY",
+        "expected_decision": "REJECT",
+        "expected_exact_error_set": [
+          "V1-E-CUSTODY-SEMANTIC-ROOT"
+        ],
+        "fixture_isolation": "FRESH_TEMPORARY_CANDIDATE_TREE",
+        "mutation": "custody_history_semantic_root_disagreement",
+        "mutation_precondition": "PROTOTYPE_INTEGRITY_POSITIVE_BASELINE_PASSES",
+        "mutator_entrypoint": "mutate_custody_history_semantic_root_disagreement(overlay: ArtifactOverlay) -> None",
+        "rebind_candidate_internal_hashes": false,
+        "requires_runtime_trace": false,
+        "requires_write_sandbox": false,
+        "subsequent_controls_receive_unmodified_baseline": true,
+        "v0_false_acceptance_regression": false,
+        "validator_profile": "PROTOTYPE_INTEGRITY"
+      }
+    ],
+    "execution_complete": false,
+    "future_test_path": "formal/python/tests/test_loop_control_registry_v1_production_controls.py",
+    "order_independence_required": true,
+    "positive_baseline_rerun_after_complete_suite": true,
+    "production_validator_exists": false,
+    "profile_is_caller_selected_never_candidate_selected": true,
+    "validator_profiles": {
+      "CUTOVER_ELIGIBILITY": {
+        "extends": "SHADOW_PARITY",
+        "legacy_monolith_readers_required": false,
+        "positive_baseline": "CUTOVER_CANDIDATE_WITH_ZERO_ACTIVE_MONOLITH_READERS"
+      },
+      "PROTOTYPE_INTEGRITY": {
+        "extends": null,
+        "legacy_monolith_readers_allowed": true,
+        "positive_baseline": "READ_ONLY_PROTOTYPE_WITH_FROZEN_LAYOUT_AND_CUSTODY"
+      },
+      "SHADOW_PARITY": {
+        "extends": "WRITE_SAFETY",
+        "legacy_monolith_readers_required": true,
+        "positive_baseline": "DUAL_READ_SHADOW_CANDIDATE_WITH_COMPLETE_RUNTIME_TRACE"
+      },
+      "WRITE_SAFETY": {
+        "extends": "PROTOTYPE_INTEGRITY",
+        "legacy_monolith_readers_allowed": true,
+        "positive_baseline": "PROTOTYPE_WITH_DRY_RUN_CURRENT_WRITER_AND_CLOSED_HISTORY"
+      }
+    }
+  },
+  "validator_engine_and_lock_contract": {
+    "direct_requirements_lock_entry_present_at_source_commit": false,
+    "duplicate_key_and_nonfinite_checks_are_parser_level_not_schema_only": true,
+    "engine": "jsonschema",
+    "implementation_blocked_until_direct_lock_and_transitive_closure_reviewed": true,
+    "required_draft": "2020-12",
+    "required_exact_version": "4.26.0",
+    "requirements_path": "requirements.ci.lock"
+  }
+}

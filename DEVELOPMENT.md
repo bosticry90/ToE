@@ -23,6 +23,12 @@ Independent review accepts v1 only as a preparation guardrail. Executable
 closed schemas/controls, runtime shadow coverage, custody payload creation, and
 migration execution remain separate open obligations and are unauthorized.
 
+The execution-readiness preparation packet freezes ten closed schemas and the
+future validator, four-profile control harness, shadow tracing, byte-custody,
+prototype-path, rollback, and readiness contracts. It installs or executes none
+of them. Independent review is still required; the current maintenance and
+scientific targets remain unchanged and migration execution remains false.
+
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
 bindings only and preserves every frozen debt count, identity set, and target.
@@ -81,6 +87,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1_independent_review --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll
