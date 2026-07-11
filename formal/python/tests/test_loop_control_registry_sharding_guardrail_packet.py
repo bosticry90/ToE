@@ -3,10 +3,25 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 import pytest
 
 from formal.python.tools import loop_control_registry_sharding_guardrail as guardrail
+
+
+REVIEWED_GUARDRAIL_COMMIT = "c60cebde0116fa82d6e2e67053665711207ec408"
+REVIEWED_ARTIFACT_HASHES = {
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json": (
+        "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4"
+    ),
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0.json": (
+        "7371ff496fc8fd948e892e0136d380991c6f87128201d12fe7ff6f5df9ffa764"
+    ),
+    "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json": (
+        "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b"
+    ),
+}
 
 
 def _json(path: Path) -> dict:
@@ -154,15 +169,16 @@ def _replace_first_record(shards: dict[str, bytes], mutate) -> None:
     shards[path] = b"".join(guardrail.canonical_jsonl_line(row) for row in records)
 
 
-def test_guardrail_artifacts_are_deterministic_and_current() -> None:
-    outputs = guardrail.build_outputs()
-    assert set(outputs) == {
-        guardrail.CONSUMER_INVENTORY_PATH,
-        guardrail.GUARDRAIL_PATH,
-        guardrail.MAINTENANCE_AUTHORITY_PATH,
-    }
-    for path, expected in outputs.items():
-        assert path.read_bytes() == expected
+def test_guardrail_v0_artifacts_are_immutable_reviewed_commit_evidence() -> None:
+    for relative, expected_sha256 in REVIEWED_ARTIFACT_HASHES.items():
+        reviewed = subprocess.run(
+            ["git", "show", f"{REVIEWED_GUARDRAIL_COMMIT}:{relative}"],
+            cwd=guardrail.REPO_ROOT,
+            capture_output=True,
+            check=True,
+        ).stdout
+        assert (guardrail.REPO_ROOT / relative).read_bytes() == reviewed
+        assert hashlib.sha256(reviewed).hexdigest() == expected_sha256
 
 
 def test_consumer_inventory_freezes_the_full_direct_and_helper_surface() -> None:

@@ -46,7 +46,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 
 ```powershell
 .\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check
-.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail --check
+.\py.ps1 -m pytest -q formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_independent_review --check
 .\py.ps1 -m formal.python.tools.technical_debt_baseline_correction_v1 --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check

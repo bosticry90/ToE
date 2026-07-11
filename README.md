@@ -17,13 +17,14 @@ The independent review in `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AN
 
 TECHNICAL-DEBT BASELINE CORRECTION
 `formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json` is the effective clean-checkout-reproducible evidence correction for the frozen debt counts and identity sets. It preserves v0 as an immutable historical artifact, binds normalized source bytes at review commit `887d1b2f`, and corrects the 50 axiom plus 20 opaque empty statement-line hashes. It does not reclassify debt, change any count or identity set, rotate either target, or authorize registry migration.
+The v0 registry-sharding artifacts are likewise checked as immutable `c60cebde` evidence rather than regenerated from worktree-sensitive source hashes. A future corrective guardrail must bind normalized committed inputs before any execution target can be selected.
 
 DEVELOPER QUICKSTART
 - Windows path support: `git config core.longpaths true`
 - Install the active CI/runtime environment: `.\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock`
 - Run Python gates without cache noise: `.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider formal/python/tests`
 - Validate the registry envelope: `.\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check`
-- Validate the registry-sharding preparation contract: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail --check`
+- Validate immutable v0 registry-sharding artifact custody: `.\py.ps1 -m pytest -q formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py`
 - Validate its independent nonauthorization review: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_independent_review --check`
 - Validate the versioned debt-baseline correction: `.\py.ps1 -m formal.python.tools.technical_debt_baseline_correction_v1 --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
