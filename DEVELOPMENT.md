@@ -32,6 +32,10 @@ The v0 independent review rejects contract acceptance after demonstrating
 profile-composition, payload-custody, repository-path, and report-invariant
 false acceptances. V0 remains historical preparation evidence only; a
 versioned corrective successor is required before prototype selection.
+Corrective v1 preserves the rejected v0 bytes and freezes exact ordered
+validator closures, strict payload semantics, resolved root-relative paths,
+success-report invariants, and eight permanent readiness regressions. It still
+requires independent review and authorizes no prototype or migration work.
 
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
@@ -93,6 +97,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_independent_review --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v1 --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll
