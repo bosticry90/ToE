@@ -48,5 +48,7 @@ theorem declared_EL_implies_FN01_form
   have _hFN : Constraints.FN01.FN01_DeformationClass A L P := hFN
   simpa [hEq] using h0
 
+end
+
 end Variational
 end ToeFormal

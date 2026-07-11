@@ -1,14 +1,10 @@
 from __future__ import annotations
 
 import re
+import json
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
-from formal.python.tests.strict_physics_state_helpers import (
-    assert_focused_gate_not_manifest_enrolled,
-)
-
-
 REPO_ROOT = find_repo_root(Path(__file__))
 LEAN_ROOT = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal"
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
@@ -32,6 +28,7 @@ REQUIRED_FIELDS = [
     "replacement_or_discharge_path",
 ]
 AXIOM_RE = re.compile(r"^\s*axiom\s+([A-Za-z_][A-Za-z0-9_'.]*)\b", re.MULTILINE)
+CONSTANT_RE = re.compile(r"^\s*constants?\s+([A-Za-z_][A-Za-z0-9_'.]*)\b", re.MULTILINE)
 SORRY_OR_ADMIT_RE = re.compile(r"\b(?:sorry|admit)\b")
 
 
@@ -133,6 +130,15 @@ def test_every_real_axiom_has_a_ledger_row() -> None:
     assert not extra, "Ledger row(s) do not match real uncommented axioms: " + repr(extra)
 
 
+def test_no_constant_command_bypasses_the_axiom_ledger() -> None:
+    bypasses: list[tuple[str, str]] = []
+    for path in sorted(LEAN_ROOT.rglob("*.lean")):
+        rel = str(path.relative_to(REPO_ROOT)).replace("\\", "/")
+        uncommented = _strip_lean_comments(_read(path))
+        bypasses.extend((match.group(1), rel) for match in CONSTANT_RE.finditer(uncommented))
+    assert not bypasses, "Unledgered Lean constant assumption(s): " + repr(bypasses)
+
+
 def test_ledger_rows_have_required_fields_and_allowed_statuses() -> None:
     rows = _ledger_rows()
     assert len(rows) == 59
@@ -152,5 +158,9 @@ def test_ledger_rows_have_required_fields_and_allowed_statuses() -> None:
             }, row
 
 
-def test_ledger_gate_is_not_governance_manifest_enrolled() -> None:
-    assert_focused_gate_not_manifest_enrolled("test_lean_axiom_spec_backed_ledger_gate.py")
+def test_ledger_gate_is_integrity_manifest_enrolled() -> None:
+    manifest_path = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    test_path = "formal/python/tests/test_lean_axiom_spec_backed_ledger_gate.py"
+    assert manifest["test_tiers"][test_path] == "TIER_INTEGRITY"
+    assert test_path in manifest["groups"]["integrity_gates"]["tests"]

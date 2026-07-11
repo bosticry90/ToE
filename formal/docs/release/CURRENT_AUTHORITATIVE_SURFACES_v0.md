@@ -1,4 +1,4 @@
-ï»¿# Current Authoritative Surfaces v0
+# Current Authoritative Surfaces v0
 
 Spec ID:
 - `CURRENT_AUTHORITATIVE_SURFACES_v0`
@@ -9,6 +9,25 @@ Classification:
 Purpose:
 - Provide a human-facing index for the current live authority chain.
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
+
+Current integrity corrections:
+- `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
+- The candidate, readiness, and downstream external-package checkpoints remain byte-preserved. Their missing contribution-classification dependency is not treated as complete, and no submission or publication authorization follows from those historical readiness tokens.
+- `SCALAR_ROUTE_SUBMISSION_EFFECTIVE_CANDIDATE_STATUS_20260711_v0: BLOCKED_MISSING_PHYSICS_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET`
+- `SCALAR_ROUTE_SUBMISSION_EFFECTIVE_READINESS_STATUS_20260711_v0: NOT_READY_MISSING_PUBLICATION_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET`
+- `SCALAR_ROUTE_SUBMISSION_EFFECTIVE_PACKAGE_STATUS_20260711_v0: NOT_AUTHORIZED_REFERENTIAL_INTEGRITY_CORRECTION_ACTIVE`
+- `formal/docs/release/LOOP_CONTROL_REGISTRY_INTEGRITY_REPAIR_20260711_v0.json`
+- The registry repair restores its nonclaim envelope and current projection without rotating `execute_pillar_seam_unit_mapping_ledger_v0`.
+- Registry readers must use `current_projection_v0` and the uppercase `CURRENT_LIVE_*` tokens. Within the flattened `current_target_state`, only `current_target_state_authority_contract_v0.authoritative_keys` are current authority; every other nested field is historical compatibility data.
+- `formal/docs/release/HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0.json`
+- Exactly 197 test functions that incorrectly rebound historical tranches to mutable current authority are retired as explicit skips. Their sibling artifact, schema, mathematical, and nonclaim gates remain active; no current authority gate is retired.
+- `formal/docs/release/DORMANT_SOURCE_SANITATION_20260711_v0.json`
+- `formal/docs/release/TOOLING_SNAPSHOT_CONTENT_INDEX_20260711_v0.json`
+- `formal/toe_formal/ToeFormalAll.lean` is the exhaustive tracked-module typechecking root. It does not discharge assumptions or promote scientific claims.
+
+Historical proof-debt evidence retained:
+- `formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json`
+- At that checkpoint, the selected next target was `select_next_post_samplerep32_axiom_audit_bounded_attack`; this is historical and does not override the current live target.
 
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
 POST_TRANSLATION_SELECTION_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
@@ -2673,8 +2692,8 @@ Historical calculation-execution outcome tokens:
 - Two isolated subprocess executions in distinct temporary directories reproduced byte-identical result, manifest, and execution-report artifacts under the fixed environment.
 - Review report SHA-256: `2bd90958b5c85f255162bfa7f061e8061250443c3c369aaa33bf12ec2077c3e7`.
 - The frozen synthesis family is exactly four reviewed chains: 1+1 Minkowski, 1+1 locally flat conformal coordinates with nonzero connection, fixed 1+1 de Sitter, and fixed 2+1 spatially warped curvature.
-- The current target is `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet`. Independent review accepted scoped Level 3 `E-REPRO` robustness only across the exact closed four-chain fixed-background, fixed-coordinate family.
-- `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet` is queued as a non-live near-term hard gate before any Level 4/5 claim, physical calibration, cross-sector coupling claim, or `C_k` action embedding.
+- At that review boundary, the selected next target was `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet`. Independent review accepted scoped Level 3 `E-REPRO` robustness only across the exact closed four-chain fixed-background, fixed-coordinate family.
+- `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet` was queued as a non-live near-term hard gate before any Level 4/5 claim, physical calibration, cross-sector coupling claim, or `C_k` action embedding.
 - `C_k` remains audit-only and nondynamical, empirical CCFT work remains paused, and entropic time remains external literature pressure only. Registry repair and the scientific-runtime NumPy/CI lock remain separate maintenance lanes.
 - No gravity evolution, Einstein-source test, Bianchi compatibility, source admissibility, QFT-GR seam admissibility or closure, Level 4/5 promotion, CCFT validation, or master-action promotion follows.
 - `SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_2PLUS1_WARPED_BACKGROUND_LEVEL3_SCOPED_E_REPRO_ONLY`

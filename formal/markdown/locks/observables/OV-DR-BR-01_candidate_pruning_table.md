@@ -17,20 +17,20 @@ Record (computed)
     "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_candidates.py"
   },
   "date": "2026-01-25",
-  "fingerprint": "89065261befb4c400eae8a861d73d0cd655cb70099aa1f4c8031ce6c7e8982db",
+  "fingerprint": "5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2",
   "inputs": {
     "OV-BR-05": {
-      "locked_fingerprint": "5caad193d0c857b5537258776d8fcdf3db1d610695522eeaa96aa881a79354c4",
+      "locked_fingerprint": "428edbd0b97f696165ac0540d6888185e87410d575d9a1b6791b0def345286f8",
       "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary.md",
       "present": true,
-      "record_fingerprint": "5caad193d0c857b5537258776d8fcdf3db1d610695522eeaa96aa881a79354c4",
+      "record_fingerprint": "428edbd0b97f696165ac0540d6888185e87410d575d9a1b6791b0def345286f8",
       "schema": "OV-BR-05_bragg_lowk_slope_summary/v1"
     },
     "OV-DR-BR-00": {
-      "locked_fingerprint": "3e3949df0131f1e409ed805ab4aae1ca2f3a97c6f7c0ea4d0e7ed3021e5600b4",
+      "locked_fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
       "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations.md",
       "present": true,
-      "record_fingerprint": "3e3949df0131f1e409ed805ab4aae1ca2f3a97c6f7c0ea4d0e7ed3021e5600b4",
+      "record_fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
       "schema": "OV-DR-BR-00_br01_prediction_declarations/v1"
     }
   },
@@ -78,7 +78,7 @@ Record (computed)
   "status": {
     "admissibility_manifest": {
       "path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
+      "sha256": "bf44287823ccbff8dc66260fb95611e5c44f4b8076d33a6d6e2072dc95be1a19",
       "version": 1
     },
     "blocked": true,
@@ -117,4 +117,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `89065261befb4c400eae8a861d73d0cd655cb70099aa1f4c8031ce6c7e8982db`
+Record fingerprint: `5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2`

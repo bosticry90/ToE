@@ -1,0 +1,587 @@
+{
+  "boundary": {
+    "artifact_deletion_authorized": false,
+    "authority_or_scientific_claim_changed": false,
+    "content_addressed_migration_executed": false,
+    "historical_paths_preserved": true
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "duplicate_groups": [
+    {
+      "canonical_path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_173735.txt",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_174102.txt"
+      ],
+      "git_blob_object_id": "0691058d099fe5ea44834793481e547499f00a51",
+      "path_count": 2,
+      "redundant_worktree_bytes": 66,
+      "size_bytes": 66
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260118_094146.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260118_094507.jsonl"
+      ],
+      "git_blob_object_id": "0aeba4cac1def1f788808e25340939aadca71483",
+      "path_count": 2,
+      "redundant_worktree_bytes": 33930003,
+      "size_bytes": 33930003
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_175224.txt",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_180248.txt"
+      ],
+      "git_blob_object_id": "15f134366dcbd59a605cbb953fb9136f1d724306",
+      "path_count": 2,
+      "redundant_worktree_bytes": 186,
+      "size_bytes": 186
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260129_175309_WORKING_evidence_external_evidence.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260129_175737_WORKING_evidence_external_evidence.jsonl"
+      ],
+      "git_blob_object_id": "2e467c5f1d19430773ece4c9dc45538eca4f3a5b",
+      "path_count": 2,
+      "redundant_worktree_bytes": 23082,
+      "size_bytes": 23082
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260129_172514_BASELINE_evidence_external_evidence.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260129_174711_WORKING_evidence_external_evidence.jsonl"
+      ],
+      "git_blob_object_id": "6b23d6ee515bece6a712c3ca7bbb3785ac25eefd",
+      "path_count": 2,
+      "redundant_worktree_bytes": 31018,
+      "size_bytes": 31018
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260214_gr01_boundary_baseline.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260214_gr01_boundary_post.jsonl"
+      ],
+      "git_blob_object_id": "834c048b3a9cf181f9c8403b839973723dfaaab9",
+      "path_count": 2,
+      "redundant_worktree_bytes": 39926123,
+      "size_bytes": 39926123
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260129_172514_BASELINE_pipeline_bragg_override_hardened.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260129_172514_WORKING_pipeline.jsonl"
+      ],
+      "git_blob_object_id": "8ee8706795d19f90df4a171440adda5e1cb6dded",
+      "path_count": 2,
+      "redundant_worktree_bytes": 39498914,
+      "size_bytes": 39498914
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260129_180248_WORKING_pipeline.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260129_180945_BASELINE_pipeline.jsonl",
+        "formal/tooling_snapshots/repo_snapshot_20260129_180945_WORKING_pipeline_postfreeze.jsonl",
+        "formal/tooling_snapshots/repo_snapshot_20260129_181544_WORKING_pipeline.jsonl",
+        "formal/tooling_snapshots/repo_snapshot_20260129_182312_WORKING_pipeline.jsonl"
+      ],
+      "git_blob_object_id": "921765e2760b321438db668a98ee340690be0ce9",
+      "path_count": 5,
+      "redundant_worktree_bytes": 157995656,
+      "size_bytes": 39498914
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/LATEST_BASELINE.txt",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/LATEST_BASELINE_PIPELINE.txt"
+      ],
+      "git_blob_object_id": "964b2c8423a184487b1d78eb09d172758c33d63e",
+      "path_count": 2,
+      "redundant_worktree_bytes": 79,
+      "size_bytes": 79
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/diff_BASELINE_pipeline_to_WORKING_20260129_172514.txt",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/diff_BASELINE_pipeline_to_WORKING_20260129_180945_postfreeze.txt",
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_EVIDENCE_to_WORKING_20260129_174711.txt",
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_EVIDENCE_to_WORKING_20260129_175309.txt",
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_EVIDENCE_to_WORKING_20260129_175737.txt",
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_181544.txt",
+        "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_182312.txt",
+        "formal/tooling_snapshots/diff_pre_vs_post_regen_bragg_override_20260129.txt"
+      ],
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "path_count": 8,
+      "redundant_worktree_bytes": 238,
+      "size_bytes": 34
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260118_095250.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260118_095622.jsonl"
+      ],
+      "git_blob_object_id": "abad89ff01ac452260f605839a30527f8ed4f5f4",
+      "path_count": 2,
+      "redundant_worktree_bytes": 33929142,
+      "size_bytes": 33929142
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260129_173735_WORKING_pipeline.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260129_174102_WORKING_pipeline.jsonl"
+      ],
+      "git_blob_object_id": "bf9c8d37e7607dc82cfca794fb1d7688ff8d530f",
+      "path_count": 2,
+      "redundant_worktree_bytes": 39498914,
+      "size_bytes": 39498914
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_current_20260129.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_pre_regen_bragg_override_20260129.jsonl"
+      ],
+      "git_blob_object_id": "d6d9f4a1b64e2b821dc88ff84da9c35e0f0856e2",
+      "path_count": 2,
+      "redundant_worktree_bytes": 39533032,
+      "size_bytes": 39533032
+    },
+    {
+      "canonical_path": "formal/tooling_snapshots/repo_snapshot_20260214_integrity_baseline.jsonl",
+      "duplicate_paths": [
+        "formal/tooling_snapshots/repo_snapshot_20260214_integrity_post.jsonl"
+      ],
+      "git_blob_object_id": "ebb9a73a2e3264af68d653ff8cc0bc6765e5d5f3",
+      "path_count": 2,
+      "redundant_worktree_bytes": 39925645,
+      "size_bytes": 39925645
+    }
+  ],
+  "entries": [
+    {
+      "git_blob_object_id": "0417a697c012f31b52138938279f4c3cb01afbd7",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/BASELINE_evidence_external_evidence_CURRENT.txt",
+      "size_bytes": 321
+    },
+    {
+      "git_blob_object_id": "15dcc6f1ff8b0be3ff788071bc3fecf21d995c02",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/BASELINE_pipeline_CURRENT.txt",
+      "size_bytes": 305
+    },
+    {
+      "git_blob_object_id": "298cdb8373fe3bf7a50ef5a023e6a9219b817b2b",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/BASELINE_pipeline_bragg_override_hardened_CURRENT.txt",
+      "size_bytes": 407
+    },
+    {
+      "git_blob_object_id": "964b2c8423a184487b1d78eb09d172758c33d63e",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/LATEST_BASELINE.txt",
+      "size_bytes": 79
+    },
+    {
+      "git_blob_object_id": "88782e5d199293f1f7e26880d5c82141c508108e",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/LATEST_BASELINE_EVIDENCE.txt",
+      "size_bytes": 97
+    },
+    {
+      "git_blob_object_id": "964b2c8423a184487b1d78eb09d172758c33d63e",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/LATEST_BASELINE_PIPELINE.txt",
+      "size_bytes": 79
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_BASELINE_pipeline_to_WORKING_20260129_172514.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_BASELINE_pipeline_to_WORKING_20260129_180945_postfreeze.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_EVIDENCE_to_WORKING_20260129_174711.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_EVIDENCE_to_WORKING_20260129_175309.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_EVIDENCE_to_WORKING_20260129_175737.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "0691058d099fe5ea44834793481e547499f00a51",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_173735.txt",
+      "size_bytes": 66
+    },
+    {
+      "git_blob_object_id": "0691058d099fe5ea44834793481e547499f00a51",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_174102.txt",
+      "size_bytes": 66
+    },
+    {
+      "git_blob_object_id": "be53b1cf1cdc823dcb3576113a181cc0a2021722",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_174406.txt",
+      "size_bytes": 120
+    },
+    {
+      "git_blob_object_id": "15f134366dcbd59a605cbb953fb9136f1d724306",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_175224.txt",
+      "size_bytes": 186
+    },
+    {
+      "git_blob_object_id": "15f134366dcbd59a605cbb953fb9136f1d724306",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_180248.txt",
+      "size_bytes": 186
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_181544.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_LATEST_BASELINE_PIPELINE_to_WORKING_20260129_182312.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "ffe928a5646c679b3d659851f42e5e880055bc3e",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_baseline_hardened_vs_current_20260129.txt",
+      "size_bytes": 35154
+    },
+    {
+      "git_blob_object_id": "a38f5a1fe4e1390cc3ab2f9c38f35e85539f0661",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257.txt",
+      "size_bytes": 2862017
+    },
+    {
+      "git_blob_object_id": "1d95fad322d58d8e90adc2fcffeef4b3f798017c",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257_ignore_quarantine.txt",
+      "size_bytes": 1500729
+    },
+    {
+      "git_blob_object_id": "41dd70b35664e641676124699ef04cfcdf3c48dd",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257_ignore_quarantine_and_caches.txt",
+      "size_bytes": 1045405
+    },
+    {
+      "git_blob_object_id": "83890599d3e904e9d41b39e566523480df77f2ca",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101956_clean.txt",
+      "size_bytes": 33912
+    },
+    {
+      "git_blob_object_id": "bd52f520cd441fd6621801f43295e0bc585ffa8e",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_evidence_from_latest.ps1",
+      "size_bytes": 2355
+    },
+    {
+      "git_blob_object_id": "a1020e0a70ded67847a0d07819a7db8c3cb5064e",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_pipeline_from_latest.ps1",
+      "size_bytes": 2524
+    },
+    {
+      "git_blob_object_id": "9c3092a5ad6a3c4259771f05d196bae8344bd741",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/diff_pre_vs_post_regen_bragg_override_20260129.txt",
+      "size_bytes": 34
+    },
+    {
+      "git_blob_object_id": "0aeba4cac1def1f788808e25340939aadca71483",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_094146.jsonl",
+      "size_bytes": 33930003
+    },
+    {
+      "git_blob_object_id": "0aeba4cac1def1f788808e25340939aadca71483",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_094507.jsonl",
+      "size_bytes": 33930003
+    },
+    {
+      "git_blob_object_id": "2cc933a3a94502247d98113962be1db151e87307",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_094840.jsonl",
+      "size_bytes": 33929142
+    },
+    {
+      "git_blob_object_id": "abad89ff01ac452260f605839a30527f8ed4f5f4",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_095250.jsonl",
+      "size_bytes": 33929142
+    },
+    {
+      "git_blob_object_id": "abad89ff01ac452260f605839a30527f8ed4f5f4",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_095622.jsonl",
+      "size_bytes": 33929142
+    },
+    {
+      "git_blob_object_id": "3ad3fb4ee2170256fc970e62ca0bc9edd77205aa",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_101257.jsonl",
+      "size_bytes": 32972000
+    },
+    {
+      "git_blob_object_id": "0015735f728cc2e470a924ba65f3a227fc319fe8",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260118_101956.jsonl",
+      "size_bytes": 32952334
+    },
+    {
+      "git_blob_object_id": "6b23d6ee515bece6a712c3ca7bbb3785ac25eefd",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_172514_BASELINE_evidence_external_evidence.jsonl",
+      "size_bytes": 31018
+    },
+    {
+      "git_blob_object_id": "8ee8706795d19f90df4a171440adda5e1cb6dded",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_172514_BASELINE_pipeline_bragg_override_hardened.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "8ee8706795d19f90df4a171440adda5e1cb6dded",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_172514_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "bf9c8d37e7607dc82cfca794fb1d7688ff8d530f",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_173735_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "bf9c8d37e7607dc82cfca794fb1d7688ff8d530f",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_174102_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "1860a0dbf3757b45822784cbc5c15831265673c0",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_174406_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "6b23d6ee515bece6a712c3ca7bbb3785ac25eefd",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_174711_WORKING_evidence_external_evidence.jsonl",
+      "size_bytes": 31018
+    },
+    {
+      "git_blob_object_id": "04b10ffd04a2556bd85ae05659fd96bc79790ce2",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_175224_WORKING_pipeline.jsonl",
+      "size_bytes": 31068066
+    },
+    {
+      "git_blob_object_id": "2e467c5f1d19430773ece4c9dc45538eca4f3a5b",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_175309_WORKING_evidence_external_evidence.jsonl",
+      "size_bytes": 23082
+    },
+    {
+      "git_blob_object_id": "2e467c5f1d19430773ece4c9dc45538eca4f3a5b",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_175737_WORKING_evidence_external_evidence.jsonl",
+      "size_bytes": 23082
+    },
+    {
+      "git_blob_object_id": "921765e2760b321438db668a98ee340690be0ce9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_180248_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "921765e2760b321438db668a98ee340690be0ce9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_180945_BASELINE_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "921765e2760b321438db668a98ee340690be0ce9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_180945_WORKING_pipeline_postfreeze.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "921765e2760b321438db668a98ee340690be0ce9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_181544_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "921765e2760b321438db668a98ee340690be0ce9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260129_182312_WORKING_pipeline.jsonl",
+      "size_bytes": 39498914
+    },
+    {
+      "git_blob_object_id": "834c048b3a9cf181f9c8403b839973723dfaaab9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260214_gr01_boundary_baseline.jsonl",
+      "size_bytes": 39926123
+    },
+    {
+      "git_blob_object_id": "834c048b3a9cf181f9c8403b839973723dfaaab9",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260214_gr01_boundary_post.jsonl",
+      "size_bytes": 39926123
+    },
+    {
+      "git_blob_object_id": "ebb9a73a2e3264af68d653ff8cc0bc6765e5d5f3",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260214_integrity_baseline.jsonl",
+      "size_bytes": 39925645
+    },
+    {
+      "git_blob_object_id": "ebb9a73a2e3264af68d653ff8cc0bc6765e5d5f3",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_20260214_integrity_post.jsonl",
+      "size_bytes": 39925645
+    },
+    {
+      "git_blob_object_id": "615e3a86db46fd513d20651fa506aceed11d918f",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_BASELINE_hardened_20260118_103004.jsonl",
+      "size_bytes": 32966043
+    },
+    {
+      "git_blob_object_id": "ace55ef984d5cf97eb75535af376958b148ed19f",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_check_fast_20260118_104540.jsonl",
+      "size_bytes": 30995539
+    },
+    {
+      "git_blob_object_id": "94b8de3e295cfa56c76cc4128e43d72a55345a73",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_check_fast_20260118_105343.jsonl",
+      "size_bytes": 30995539
+    },
+    {
+      "git_blob_object_id": "d6d9f4a1b64e2b821dc88ff84da9c35e0f0856e2",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_current_20260129.jsonl",
+      "size_bytes": 39533032
+    },
+    {
+      "git_blob_object_id": "84f4d179c585a5f69a95fa90fad7f17fad625eb6",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_post_regen_bragg_override_20260129.jsonl",
+      "size_bytes": 39533032
+    },
+    {
+      "git_blob_object_id": "d6d9f4a1b64e2b821dc88ff84da9c35e0f0856e2",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/repo_snapshot_pre_regen_bragg_override_20260129.jsonl",
+      "size_bytes": 39533032
+    },
+    {
+      "git_blob_object_id": "6e3e9685c47ba3e95fccfccf1c81eb45ab87c156",
+      "git_mode": "100644",
+      "git_stage": 0,
+      "path": "formal/tooling_snapshots/review_bragg_override_hardening_20260129.md",
+      "size_bytes": 4178
+    }
+  ],
+  "git_object_format": "sha1",
+  "metrics": {
+    "duplicate_group_count": 14,
+    "redundant_worktree_bytes": 424292098,
+    "tracked_snapshot_bytes": 1040485383,
+    "tracked_snapshot_path_count": 59,
+    "unique_blob_count": 36
+  },
+  "schema_id": "TOOLING_SNAPSHOT_CONTENT_INDEX_20260711_v0",
+  "source_snapshot_tree_object_id": "a1beaec0d006a8f5fd3f6da42363aa7832a362c1",
+  "source_tree_rule": "Blob IDs and sizes come from the Git index/object database; generation fails when tracked snapshot worktree content is modified.",
+  "status": "INVENTORY_ONLY_PROVENANCE_PRESERVED_NO_DELETION_AUTHORIZED"
+}

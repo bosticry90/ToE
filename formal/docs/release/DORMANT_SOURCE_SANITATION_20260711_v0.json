@@ -1,0 +1,33 @@
+{
+  "boundary": {
+    "historical_snapshot_records_preserved": true,
+    "live_target_rotated": false,
+    "scientific_artifacts_modified": false,
+    "scientific_claim_changed": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "preservation": {
+    "git_history_retains_original_blob": true,
+    "introduced_by_commit": "582addd8323aef8b5602004ae111b5f812dcae45",
+    "snapshot_sha256_records_retained": true
+  },
+  "removed_source": {
+    "consumer_count_before_removal": 0,
+    "import_count_before_removal": 0,
+    "malformed_content_literal": "{\\rtf1}",
+    "path": "formal/toe_formal/ToeFormal/OperatorCore/AdmissibleOperators.lean",
+    "prior_byte_count": 7,
+    "prior_sha256": "0d6afb7e939f0936f40afdc759b5a354ea5427ec250a47e7b904ab1ea800a01d",
+    "reason": "The tracked .lean file contained only an RTF marker and had no imports or consumers."
+  },
+  "removed_zero_byte_scratch": {
+    "consumer_count_before_removal": 0,
+    "git_blob_object_id": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "introduced_by_commit": "582addd8323aef8b5602004ae111b5f812dcae45",
+    "path": "scratch/rl02_lock.diff",
+    "prior_byte_count": 0,
+    "reason": "The tracked empty diff contained no recoverable content and had no consumers."
+  },
+  "schema_id": "DORMANT_SOURCE_SANITATION_20260711_v0",
+  "status": "APPLIED_MALFORMED_DORMANT_SOURCE_AND_EMPTY_SCRATCH_REMOVED"
+}

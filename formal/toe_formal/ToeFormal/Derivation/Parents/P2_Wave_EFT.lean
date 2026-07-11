@@ -11,6 +11,7 @@ a plane wave solves the linear PDE iff ω² matches the derivation-layer symbol 
 import ToeFormal.Derivation.Conventions.FourierSymbols
 
 namespace ToeFormal.Derivation.Parents
+namespace P2Wave
 
 noncomputable section
 
@@ -152,4 +153,5 @@ theorem dispersion_linear_P2 (p : P2Params) (k ω : ℝ)
   exact_mod_cast hc
 
 end
+end P2Wave
 end ToeFormal.Derivation.Parents

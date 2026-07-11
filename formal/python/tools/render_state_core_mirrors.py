@@ -37,6 +37,14 @@ def _validate_state_core(schema: dict[str, Any], state_core: dict[str, Any]) -> 
         state_core["schema_id"] == schema["schema_id"],
         "state_core schema_id mismatch",
     )
+    _ensure(
+        state_core["schema_version"] == schema["schema_version"],
+        "state_core schema_version mismatch",
+    )
+    _ensure(
+        state_core["authority_role"] == "HISTORICAL_WS10_SNAPSHOT_NONAUTHORIZING",
+        "state_core must remain a nonauthorizing historical WS-10 snapshot",
+    )
 
     _ensure(
         len([state_core["active_lane"]]) <= int(schema["max_active_lanes"]),
@@ -307,6 +315,7 @@ def _render_state_snippet(state_core: dict[str, Any]) -> str:
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_ACTIVE_LANE_v0 -->",
+            f"- `STATE_CORE_AUTHORITY_ROLE_v0: {state_core['authority_role']}`",
             f"- `STATE_CORE_ACTIVE_LANE_v0: {active}`",
             f"- `STATE_CORE_ACTIVE_STATUS_v0: {active_lane_data['status']}`",
             f"- `STATE_CORE_ACTIVE_CYCLE_v0: {active_lane_data['active_cycle']}`",
@@ -329,6 +338,7 @@ def _render_roadmap_snippet(state_core: dict[str, Any]) -> str:
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_ROADMAP_STATUS_v0 -->",
+            f"- `STATE_CORE_ROADMAP_AUTHORITY_ROLE_v0: {state_core['authority_role']}`",
             f"- `STATE_CORE_ROADMAP_ACTIVE_LANE_v0: {active}`",
             f"- `STATE_CORE_ROADMAP_ACTIVE_TRANCHE_v0: {tranche['id']}`",
             f"- `STATE_CORE_ROADMAP_MODE_v0: {tranche['mode']}`",
@@ -356,6 +366,7 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
+            f"- `STATE_CORE_TRACKER_AUTHORITY_ROLE_v0: {state_core['authority_role']}`",
             f"- `STATE_CORE_TRACKER_ACTIVE_TRANCHE_v0: {tranche['id']}`",
             f"- `STATE_CORE_TRACKER_GATE_v0: {tranche['gate_test']}`",
             f"- `STATE_CORE_TRACKER_ARTIFACT_v0: {tranche['evidence_artifact']}`",
@@ -402,6 +413,7 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
+            f"- `STATE_CORE_WS10_AUTHORITY_ROLE_v0: {state_core['authority_role']}`",
             f"- `STATE_CORE_WS10_ACTIVE_TRANCHE_v0: {tranche['id']}`",
             f"- `STATE_CORE_WS10_PREDECESSOR_v0: {tranche['predecessor']}`",
             f"- `STATE_CORE_WS10_STOP_CONDITION_v0: {tranche['stop_condition']}`",
@@ -438,10 +450,10 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
 def _write_output(output_dir: Path, filename: str, content: str) -> bool:
     output_dir.mkdir(parents=True, exist_ok=True)
     target = output_dir / filename
-    rendered = content + "\n"
-    if target.exists() and target.read_text(encoding="utf-8") == rendered:
+    rendered = (content + "\n").encode("utf-8")
+    if target.exists() and target.read_bytes() == rendered:
         return False
-    target.write_text(rendered, encoding="utf-8")
+    target.write_bytes(rendered)
     return True
 
 
@@ -453,7 +465,12 @@ def _replace_generated_block(text: str, marker_id: str, replacement: str) -> str
         pattern.search(text) is not None,
         f"Could not locate generated block markers for {marker_id}",
     )
-    return pattern.sub(replacement, text, count=1)
+    def preserve_block_newlines(match: re.Match[str]) -> str:
+        if "\r\n" in match.group(0):
+            return replacement.replace("\n", "\r\n")
+        return replacement
+
+    return pattern.sub(preserve_block_newlines, text, count=1)
 
 
 def _apply_mirror_targets(state_core: dict[str, Any], snippets_by_marker: dict[str, str]) -> int:
@@ -461,10 +478,10 @@ def _apply_mirror_targets(state_core: dict[str, Any], snippets_by_marker: dict[s
     for target in state_core["mirror_targets"]:
         marker_id = target["marker_id"]
         path = REPO_ROOT / target["path"]
-        text = path.read_text(encoding="utf-8")
+        text = path.read_bytes().decode("utf-8")
         updated = _replace_generated_block(text, marker_id, snippets_by_marker[marker_id])
         if updated != text:
-            path.write_text(updated, encoding="utf-8")
+            path.write_bytes(updated.encode("utf-8"))
             changed += 1
     return changed
 
@@ -473,7 +490,7 @@ def _verify_mirror_targets(state_core: dict[str, Any], snippets_by_marker: dict[
     for target in state_core["mirror_targets"]:
         marker_id = target["marker_id"]
         path = REPO_ROOT / target["path"]
-        text = path.read_text(encoding="utf-8")
+        text = path.read_bytes().decode("utf-8")
         expected = _replace_generated_block(text, marker_id, snippets_by_marker[marker_id])
         _ensure(
             expected == text,

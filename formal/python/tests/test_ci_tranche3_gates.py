@@ -51,5 +51,6 @@ def test_lean_build_lane_is_explicit_and_blocking() -> None:
         block_text = tail[:end]
 
     assert "continue-on-error: true" not in block_text, "lean-build must remain blocking."
-    assert "cd formal/toe_formal" in block_text, "lean-build must target formal/toe_formal project root."
-    assert "lake build" in block_text, "lean-build must execute lake build."
+    assert "formal.python.tools.lean_bounded_lake" in block_text
+    assert "--jobs 1 --target ToeFormal --target ToeFormalAll" in block_text
+    assert "--target ToeFormalAll" in block_text, "lean-build must execute the exhaustive target."

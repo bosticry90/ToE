@@ -111,12 +111,17 @@ def main() -> int:
     )
 
     if args.enforce_expected:
-        if expected_count is not None and len(tests) != expected_count:
+        if expected_count is None or expected_sha is None:
+            raise AssertionError(
+                "--enforce-expected requires expected_count and expected_sha256 "
+                f"for manifest group '{args.group}'"
+            )
+        if len(tests) != expected_count:
             raise AssertionError(
                 f"Manifest selection count mismatch: observed={len(tests)} expected={expected_count}"
             )
         observed_sha = _sha256_joined(tests)
-        if expected_sha is not None and observed_sha != expected_sha:
+        if observed_sha != expected_sha:
             raise AssertionError(
                 f"Manifest selection hash mismatch: observed={observed_sha} expected={expected_sha}"
             )

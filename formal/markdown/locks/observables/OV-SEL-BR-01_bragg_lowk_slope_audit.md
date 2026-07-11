@@ -45,12 +45,12 @@ Record (computed)
       "path": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page6_z4.png"
     },
     "OV-BR-04A": {
-      "lock_fingerprint": "60bba0e906e37f7bf21983fcea4cba1060a00757d6f02f7d77efbb6fadb11658",
+      "lock_fingerprint": "9516507f005376bd65e58ddeb5cd4a8720ea4593e289a75b9284235304f95e14",
       "lock_path": "formal/markdown/locks/observables/OV-BR-04A_bragg_lowk_slope_conditionA.md",
       "ok": true
     },
     "OV-BR-04B": {
-      "lock_fingerprint": "7da5093bbb5ea78224b61bebe53a8c529db7cecc3e2bb97594dee51384efb7a6",
+      "lock_fingerprint": "a7c733facb98c24545b1e0b4d32ea946af5b972844df6663502a486391340b0a",
       "lock_path": "formal/markdown/locks/observables/OV-BR-04B_bragg_lowk_slope_conditionB.md",
       "ok": true
     },
@@ -83,11 +83,11 @@ Record (computed)
       "ok": true
     }
   },
-  "fingerprint": "0828cd1d9d57a8c0e560a586feefd941b70402c576c70874d069cac22f7df904",
+  "fingerprint": "f79b4cbf61fb3f27a1400d24c0ada07620de1bc7d799353ba956f86c1024cb90",
   "narrative": "Bragg low-k slope audit (bookkeeping-only; no physics claim):\n0) External anchor: formal/external_evidence/bec_bragg_shammass_2012/source.pdf (sha256=ef5416e243b0863dada51b68483b72edf83e3b3870bf417b9215b236ea61207c).\n1) OV-BR-03N digitization is render-based (axis text is rasterized), so provenance is pinned to a deterministic PNG render.\n2) OV-BR-04A/04B derive low-k slopes using lowk_window_v1 (k<=1.0, 0.1<=omega<=1.3) and pinned OLS slope rules.\n3) Governance posture: lock==computed for OV-BR-03N and OV-BR-04A/04B; frozen artifacts must exist; selection parameters are pinned.\n\nSelf-checks all_ok=True.",
   "schema": "OV-SEL-BR-01_bragg_lowk_slope_audit/v1",
   "status_date": "2026-01-25"
 }
 ```
 
-Record fingerprint: `0828cd1d9d57a8c0e560a586feefd941b70402c576c70874d069cac22f7df904`
+Record fingerprint: `f79b4cbf61fb3f27a1400d24c0ada07620de1bc7d799353ba956f86c1024cb90`

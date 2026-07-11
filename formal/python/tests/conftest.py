@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import json
 import sys
 from pathlib import Path
 
@@ -86,8 +87,32 @@ _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN = re.compile(
     r"test_qft_evol_micro_tranche_01_(0[5-9]|[1-4][0-9]|5[0-1])_completeness_gate\.py"
 )
 
+
+def _historical_current_mirror_retirements() -> tuple[set[str], str]:
+    path = (
+        _repo_root()
+        / "formal"
+        / "docs"
+        / "release"
+        / "HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0.json"
+    )
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    assert payload["schema_id"] == (
+        "HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0"
+    )
+    rows = payload["retired_tests"]
+    nodeids = {row["nodeid"].replace("\\", "/") for row in rows}
+    assert len(nodeids) == len(rows) == payload["source_validation"][
+        "retired_node_count"
+    ]
+    return nodeids, payload["skip_reason"]
+
 def pytest_collection_modifyitems(config, items):
+    retired_nodeids, retirement_reason = _historical_current_mirror_retirements()
     for item in items:
+        if item.nodeid.replace("\\", "/") in retired_nodeids:
+            item.add_marker(pytest.mark.skip(reason=retirement_reason))
+            continue
         if _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN.search(item.nodeid):
             item.add_marker(
                 pytest.mark.skip(

@@ -48,6 +48,18 @@ def test_governance_manifest_selection_is_deterministic_and_contract_valid() -> 
     assert group["tests"] == tests, "Manifest test list order must remain deterministic."
 
 
+def test_ci_governance_groups_have_enforced_count_and_hash_contracts() -> None:
+    manifest_path = _manifest_path()
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    for group_name in ("critical_gates", "integrity_gates"):
+        group = payload["groups"][group_name]
+        tests, expected_count, expected_sha, _ = selector.load_manifest_tests(
+            manifest_path, group_name
+        )
+        assert expected_count == len(tests) == group["expected_count"]
+        assert expected_sha == _sha256_joined(tests) == group["expected_sha256"]
+
+
 def test_governance_suite_is_manifest_authoritative_single_source() -> None:
     manifest_path = _manifest_path()
     tests, _, _, _ = selector.load_manifest_tests(manifest_path, "governance_pytests")

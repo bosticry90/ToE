@@ -111,6 +111,8 @@ theorem actionRep32_variation_deviation_sequence_discrete_default_binding_v0
       P_rep32_def
       ε
       hε
+      δ
+      ψ
 
 theorem actionRep32_fd_deviation_with_Pcubic_from_algebraic_surface_v0
     (ε : Real)
@@ -267,12 +269,13 @@ def actionRep32_fd_expansion_and_vanishing_to_radial_evaluator_transport_interfa
 
 /-- Probe-level interface: EL-core semantics force cubic pairing zero on designated probes. -/
 def actionRep32_el_core_implies_probe_pcubic_pairing_zero_interface_v0
-    (probeVariation probeState : Int -> FieldRep32) : Prop :=
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32) : Prop :=
   EL_toe_rep32 = P_cubic_rep32_def declared_g_rep32 ->
     ∀ i : Int,
       pairingRep32'
         (P_cubic_rep32_def declared_g_rep32 (probeState i))
-        (probeVariation i) = 0
+        (probeVariation i (probeState i)) = 0
 
 /-- Probe-level interface: finite-difference observable realizes the target evaluator. -/
 def actionRep32_probe_fd_matches_radial_evaluator_interface_v0
@@ -280,7 +283,8 @@ def actionRep32_probe_fd_matches_radial_evaluator_interface_v0
     (evalRadial : RadialField -> RadialField -> Real -> Int -> Real)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32) : Prop :=
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32) : Prop :=
   ∀ i : Int,
     formalFirstVariationRep32OpAt
         ε
@@ -293,23 +297,25 @@ def actionRep32_probe_pairing_matches_radial_evaluator_interface_v0
     (evalRadial : RadialField -> RadialField -> Real -> Int -> Real)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32) : Prop :=
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32) : Prop :=
   ∀ i : Int,
     pairingRep32'
       (P_cubic_rep32_def declared_g_rep32 (probeState i))
-      (probeVariation i) =
+      (probeVariation i (probeState i)) =
         evalRadial Φr ρr κ i
 
 structure actionRep32_probe_pairing_to_radial_model_assumptions_v0
     (hLaplacianExtraction : LaplacianExtraction)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32) : Prop where
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32) : Prop where
   pairing_zero :
     ∀ i : Int,
       pairingRep32'
         (P_cubic_rep32_def declared_g_rep32 (probeState i))
-        (probeVariation i) = 0
+        (probeVariation i (probeState i)) = 0
   pairing_matches_eval :
     actionRep32_probe_pairing_matches_radial_evaluator_interface_v0
       (evalRadial_rep32_cubic hLaplacianExtraction)
@@ -323,7 +329,8 @@ def actionRep32_probe_pairing_model_package_v0
     (hLaplacianExtraction : LaplacianExtraction)
     (Φr ρr : RadialField)
     (κ : Real) : Prop :=
-  ∃ (δProbe ψProbe : Int -> FieldRep32),
+  ∃ (δProbe : Int -> FieldRep32 -> FieldRep32)
+      (ψProbe : Int -> FieldRep32),
     actionRep32_probe_pairing_to_radial_model_assumptions_v0
       hLaplacianExtraction
       Φr
@@ -336,7 +343,8 @@ theorem actionRep32_probe_pairing_matches_radial_evaluator_from_model_assumption
     (hLaplacianExtraction : LaplacianExtraction)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeModel :
       actionRep32_probe_pairing_to_radial_model_assumptions_v0
         hLaplacianExtraction
@@ -363,7 +371,8 @@ theorem actionRep32_probe_fd_matches_radial_evaluator_from_pairing_and_fd_expans
     (evalRadial : RadialField -> RadialField -> Real -> Int -> Real)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbePairingMatchesEvaluator :
       actionRep32_probe_pairing_matches_radial_evaluator_interface_v0
         evalRadial
@@ -390,7 +399,7 @@ theorem actionRep32_probe_fd_matches_radial_evaluator_from_pairing_and_fd_expans
         =
         pairingRep32'
           (P_cubic_rep32_def declared_g_rep32 (probeState i))
-          (probeVariation i) :=
+          (probeVariation i (probeState i)) :=
       actionRep32_fd_equals_Pcubic_from_algebraic_surface_and_vanishing_v0
         ε
         hP
@@ -406,7 +415,8 @@ theorem actionRep32_el_to_radial_evaluator_zero_from_fd_expansion_and_probe_inte
     (evalRadial : RadialField -> RadialField -> Real -> Int -> Real)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hDeviationSurface :
       actionRep32_algebraic_deviation_surface_discrete_v0 declared_g_rep32 ε)
     (hDevZero : ActionRep32CubicDeviationZeroAtStep declared_g_rep32 ε)
@@ -438,7 +448,7 @@ theorem actionRep32_el_to_radial_evaluator_zero_from_fd_expansion_and_probe_inte
         =
         pairingRep32'
           (P_cubic_rep32_def declared_g_rep32 (probeState i))
-          (probeVariation i) :=
+          (probeVariation i (probeState i)) :=
     actionRep32_fd_equals_Pcubic_from_algebraic_surface_and_vanishing_v0
       ε
       hP
@@ -449,7 +459,7 @@ theorem actionRep32_el_to_radial_evaluator_zero_from_fd_expansion_and_probe_inte
   have hPairingZeroOnProbe :
       pairingRep32'
         (P_cubic_rep32_def declared_g_rep32 (probeState i))
-        (probeVariation i) = 0 :=
+        (probeVariation i (probeState i)) = 0 :=
     hELCoreImpliesProbePairingZero hEL i
   have hFDZeroOnProbe :
       formalFirstVariationRep32OpAt
@@ -466,7 +476,7 @@ theorem actionRep32_el_to_radial_evaluator_zero_from_fd_expansion_and_probe_inte
           =
           pairingRep32'
             (P_cubic_rep32_def declared_g_rep32 (probeState i))
-            (probeVariation i) := hFdEqPcubicOnProbe
+            (probeVariation i (probeState i)) := hFdEqPcubicOnProbe
       _ = 0 := hPairingZeroOnProbe
   have hEvalEqFD :
       formalFirstVariationRep32OpAt
@@ -495,7 +505,8 @@ theorem actionRep32_fd_expansion_and_vanishing_to_radial_evaluator_transport_con
     (κ : Real)
     (ε : Real)
     (hP : P_rep32 = P_cubic_rep32_def declared_g_rep32)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeFDMatchesEvaluator :
       actionRep32_probe_fd_matches_radial_evaluator_interface_v0
         ε
@@ -533,11 +544,11 @@ theorem actionRep32_fd_expansion_and_vanishing_to_radial_evaluator_transport_con
 
 /-- Canonical probe variation for restricted evaluator slice: identically zero. -/
 def actionRep32_probeVariation_zero_v0 : Int -> FieldRep32 -> FieldRep32 :=
-  fun _ _ => 0
+  fun _ _ => rep32Zero
 
 /-- Canonical probe state for restricted evaluator slice: identically zero. -/
 def actionRep32_probeState_zero_v0 : Int -> FieldRep32 :=
-  fun _ => 0
+  fun _ => rep32Zero
 
 /-- Restricted evaluator slice induced directly by finite-difference probes. -/
 def evalRadial_from_probe_fd_v0
@@ -590,7 +601,22 @@ theorem actionRep32_el_core_implies_probe_pcubic_pairing_zero_of_zero_probe_v0 :
       actionRep32_probeVariation_zero_v0
       actionRep32_probeState_zero_v0 := by
   intro _hEL i
-  simp [actionRep32_probeVariation_zero_v0, actionRep32_probeState_zero_v0]
+  change
+    pairingRep32'
+      (P_cubic_rep32_def declared_g_rep32 rep32Zero)
+      rep32Zero = 0
+  calc
+    pairingRep32' (P_cubic_rep32_def declared_g_rep32 rep32Zero) rep32Zero =
+        pairingRep32'
+          (P_cubic_rep32_def declared_g_rep32 rep32Zero)
+          (rep32Smul 0 rep32Zero) := by rw [rep32Smul_zero]
+    _ = 0 * pairingRep32' (P_cubic_rep32_def declared_g_rep32 rep32Zero) rep32Zero := by
+      simpa using
+        (pairingRep32'_smul_right
+          (P_cubic_rep32_def declared_g_rep32 rep32Zero)
+          rep32Zero
+          0)
+    _ = 0 := by simp
 
 theorem actionRep32_el_to_zero_probe_evaluator_zero_from_fd_expansion_v0
     (ε : Real)
@@ -674,7 +700,8 @@ theorem actionRep32_el_to_evalRadial_rep32_cubic_zero_from_fd_expansion_and_prob
     (hLaplacianExtraction : LaplacianExtraction)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeFDMatchesEvaluator :
       actionRep32_probe_fd_matches_radial_evaluator_interface_v0
         ε
@@ -724,7 +751,8 @@ theorem actionRep32_el_to_evalRadial_rep32_cubic_zero_from_fd_expansion_construc
     (hLaplacianExtraction : LaplacianExtraction)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeFDMatchesEvaluator :
       actionRep32_probe_fd_matches_radial_evaluator_interface_v0
         ε
@@ -765,7 +793,8 @@ theorem actionRep32_el_to_evalRadial_rep32_cubic_zero_from_fd_expansion_construc
     (hLaplacianExtraction : LaplacianExtraction)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbePairingModel :
       actionRep32_probe_pairing_to_radial_model_assumptions_v0
         hLaplacianExtraction
@@ -990,7 +1019,8 @@ theorem actionRep32_el_implies_operator_residual_transport_from_fd_expansion_and
     (hUnitsAndCalibration : UnitsAndCalibration)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeFDMatchesEvaluator :
       actionRep32_probe_fd_matches_radial_evaluator_interface_v0
         ε
@@ -1057,7 +1087,8 @@ theorem actionRep32_el_implies_operator_residual_transport_from_fd_expansion_con
     (hUnitsAndCalibration : UnitsAndCalibration)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeFDMatchesEvaluator :
       actionRep32_probe_fd_matches_radial_evaluator_interface_v0
         ε
@@ -1112,7 +1143,8 @@ theorem actionRep32_el_implies_operator_residual_transport_from_fd_expansion_con
     (hUnitsAndCalibration : UnitsAndCalibration)
     (Φr ρr : RadialField)
     (κ : Real)
-    (probeVariation probeState : Int -> FieldRep32)
+    (probeVariation : Int -> FieldRep32 -> FieldRep32)
+    (probeState : Int -> FieldRep32)
     (hProbeFDMatchesEvaluator :
       actionRep32_probe_fd_matches_radial_evaluator_interface_v0
         ε
@@ -1958,16 +1990,13 @@ theorem actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_
         phiBound
         rhoBound) :
     WeakFieldPoissonLimitStatement := by
-  let _ := actionRep32_operator_residual_transport_of_bridge_witness_constructor_v0
-  let _ := actionRep32_el_to_evalRadial_rep32_cubic_zero_of_bridge_v0
-  let _ := actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_from_radial_evaluator_constructor_v0
-  have hELToEvalZero :
-      actionRep32_el_to_radial_evaluator_zero_transport_interface_v0
-        (evalRadial_rep32_cubic hLaplacianExtraction)
-        hPotentialIdentification.Φ
-        hSourceIdentification.ρ
-        hUnitsAndCalibration.κ :=
-    actionRep32_el_to_evalRadial_rep32_cubic_zero_of_bridge_v0
+  have hOperatorTransport :
+      ELImpliesOperatorResidualTransport
+        hPotentialIdentification
+        hSourceIdentification
+        hLaplacianExtraction
+        hUnitsAndCalibration :=
+    actionRep32_operator_residual_transport_of_bridge_witness_constructor_v0
       hPotentialIdentification
       hSourceIdentification
       hLaplacianExtraction
@@ -1976,14 +2005,8 @@ theorem actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_
       rhoBound
       hWeakFieldUniformBound
       hELImpliesOperatorResidualUnderBound
-      hPotentialIdentification.Φ
-      hSourceIdentification.ρ
-      hUnitsAndCalibration.κ
-      rfl
-      rfl
-      rfl
   exact
-    actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_from_radial_evaluator_constructor_v0
+    actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_constructor_v0
       ε
       hε
       hRAC
@@ -1993,16 +2016,10 @@ theorem actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_
       hSourceIdentification
       hLaplacianExtraction
       hUnitsAndCalibration
-      hPotentialIdentification.Φ
-      hSourceIdentification.ρ
-      hUnitsAndCalibration.κ
-      hELToEvalZero
-      rfl
-      rfl
-      rfl
       phiBound
       rhoBound
       hWeakFieldUniformBound
+      hOperatorTransport
 
 theorem actionRep32_el_to_evalRadial_rep32_cubic_zero_of_el_semantics_v0
     (hLaplacianExtraction : LaplacianExtraction)
@@ -2877,12 +2894,8 @@ theorem gr01_inevitability_counterfactual_breaks_without_required_assumption_v0
     (hMin : GR01InevitabilityMinimizedAssumptions_v0)
     (hMissingNoBridgeRoute : ¬GR01InevitabilityNoBridgeShortcutRoute_v0) :
     ¬GR01InevitabilityBoundedClosureSurface_v0 := by
-  have hClosure : GR01InevitabilityBoundedClosureSurface_v0 :=
-    gr01_inevitability_necessity_under_minimized_assumptions_v0 hMin
-  exact
-    gr01_inevitability_counterfactual_breaks_without_no_bridge_shortcut_assumption_v0
-      hMissingNoBridgeRoute
-      hClosure
+  intro _hClosure
+  exact hMissingNoBridgeRoute hMin.noBridgeShortcutRoute
 
 def GR01InevitabilityConstructiveRouteClassification_v0
     (hMin : GR01InevitabilityMinimizedAssumptions_v0) : Prop :=
@@ -2981,7 +2994,7 @@ theorem gr01_inevitability_independent_necessity_class_from_endpoint_counterfact
         hMin
         hMissingNoBridgeDependency)
         hPhysics
-        exact hCoreBundle.left
+  exact hCoreBundle.left
 
 end
 

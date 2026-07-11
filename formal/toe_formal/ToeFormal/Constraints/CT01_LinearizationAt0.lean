@@ -13,6 +13,7 @@ No physical claims.
 import Mathlib
 import ToeFormal.CPNLSE2D.PlaneWaveOperators
 import ToeFormal.CPNLSE2D.PhaseB.DispersionPreservation
+import ToeFormal.Constraints.CT01_Abstract
 
 noncomputable section
 set_option autoImplicit false
@@ -20,13 +21,9 @@ set_option relaxedAutoImplicit false
 
 namespace ToeFormal
 namespace Constraints
+namespace ProbeRelativeLinearizationAt0
 
 open ToeFormal.CPNLSE2D
-
-/-- CT-01 preservation predicate (probe-family form). -/
-def PreservesDR01_onPlaneWaves (P : Perturbation) : Prop :=
-  ∀ (A : ℂ) (kx ky : ℝ),
-    EQ02PertHolds P (planeWave A kx ky) ↔ EQ02Holds (planeWave A kx ky)
 
 /--
 Abstract "linearization at 0" bridge (probe-relative, structural):
@@ -79,7 +76,9 @@ theorem CT01b_linearizationAt0_zero_preserves_DR01
     (EQ02Pert_planeWave_reduces_to_same_coeff_equality P hP A kx ky)
   have hUn :=
     (EQ02Holds_planeWave_iff A kx ky)
-  simpa [PreservesDR01_onPlaneWaves] using (hPert.trans hUn.symm)
+  simpa [Constraints.PreservesDR01_onPlaneWaves] using (hPert.trans hUn.symm)
 
+end ProbeRelativeLinearizationAt0
 end Constraints
 end ToeFormal
+end

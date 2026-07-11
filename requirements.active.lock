@@ -1,7 +1,7 @@
 # requirements.active.lock
-# Lock version: 3
+# Lock version: 4
 # Format: pip-freeze
-# Last updated: 2026-04-06
-cryptography==46.0.6
+# Last updated: 2026-07-11
+cryptography==48.0.1
 fonttools==4.60.2
-pillow==12.1.1
+pillow==12.2.0

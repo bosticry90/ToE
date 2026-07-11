@@ -10,7 +10,7 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "3e3949df0131f1e409ed805ab4aae1ca2f3a97c6f7c0ea4d0e7ed3021e5600b4",
+  "fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
   "inputs": {
     "declarations": {
       "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
@@ -103,7 +103,7 @@ Record (computed)
   "status": {
     "admissibility_manifest": {
       "path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
+      "sha256": "bf44287823ccbff8dc66260fb95611e5c44f4b8076d33a6d6e2072dc95be1a19",
       "version": 1
     },
     "blocked": true,
@@ -121,4 +121,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `3e3949df0131f1e409ed805ab4aae1ca2f3a97c6f7c0ea4d0e7ed3021e5600b4`
+Record fingerprint: `13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884`

@@ -11,6 +11,7 @@ via bridge lemmas. It does not attempt full functional-analytic variational calc
 import ToeFormal.Derivation.Conventions.FourierSymbols
 
 namespace ToeFormal.Derivation.Parents
+namespace P1NLS
 
 open ToeFormal.Derivation
 
@@ -156,4 +157,5 @@ theorem dispersion_linear_P1 (p : P1Params) (k ω : ℝ)
 
 end
 
+end P1NLS
 end ToeFormal.Derivation.Parents

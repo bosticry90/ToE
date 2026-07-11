@@ -2,6 +2,9 @@
 
 Status: ACTIVE
 Effective date: 2026-03-26
+Authority role: `HISTORICAL_WS10_SNAPSHOT_NONAUTHORIZING`
+
+This generated family preserves the WS-10 control-plane snapshot and its mirrors. It is not current live-target authority and cannot override `CURRENT_LIVE_NEXT_TARGET_v0` or the loop-control registry current projection.
 
 ## Scope
 This policy governs the canonical control-plane families rendered from `formal/docs/release/state_core_v0.json` by `formal/python/tools/render_state_core_mirrors.py`.
@@ -50,11 +53,13 @@ Operator workflow is fixed for migrated control families:
 Manual mirror editing in generated sections is not an authorized workflow.
 
 ## Commit Discipline (Generated Snippets)
-Generated snippet artifacts are excluded from commit by default:
+Generated snippet artifacts are tracked verification mirrors and must be committed whenever their state-core source changes:
+- `formal/output/state_core_generated/state_core_state_snippet_v0.md`
+- `formal/output/state_core_generated/state_core_roadmap_snippet_v0.md`
 - `formal/output/state_core_generated/state_core_tracker_snippet_v0.md`
 - `formal/output/state_core_generated/state_core_ws10_snippet_v0.md`
 
-These snippets are local renderer outputs and are not required as canonical committed artifacts.
+These snippets are nonauthorizing renderer outputs. They preserve deterministic review evidence but do not override `state_core_v0.json`, the live loop-control projection, or current authority surfaces.
 
 ## Next-Family Selection Rule
 Before migrating another family, enforce all of the following:

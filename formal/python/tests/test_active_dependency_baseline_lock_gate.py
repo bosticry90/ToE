@@ -12,9 +12,9 @@ LOCK_PATH = REPO_ROOT / "requirements.active.lock"
 
 
 MIN_SAFE_VERSIONS = {
-    "cryptography": "46.0.6",
+    "cryptography": "48.0.1",
     "fonttools": "4.60.2",
-    "pillow": "12.1.1",
+    "pillow": "12.2.0",
 }
 
 MIN_SAFE_TOOLING_VERSIONS = {

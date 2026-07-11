@@ -23,16 +23,23 @@ noncomputable section
 set_option autoImplicit false
 
 /-- Declared EL operator matches the promoted FN-01 candidate P_cubic. -/
-theorem EL_matches_Pcubic : EL_matches_FN01_form (FN01.P_cubic declared_g) := by
+theorem EL_matches_Pcubic
+    (hPairing : NondegeneratePairing)
+    (hEL : Represents EL_toe)
+    (hPcubic : Represents (FN01.P_cubic declared_g)) :
+    EL_matches_FN01_form (FN01.P_cubic declared_g) := by
   intro ψ
   -- Derived from the first-variation representation assumptions.
-  simpa [EL_toe_eq_Pcubic] 
+  simpa [EL_toe_eq_Pcubic hPairing hEL hPcubic]
 
 /--
 Routing lemma specialized to P_cubic: if P_cubic is admitted by FN-01,
 then the declared EL equation implies P_cubic ψ = 0.
 -/
 theorem declared_EL_implies_Pcubic
+    (hPairing : NondegeneratePairing)
+    (hEL : Represents EL_toe)
+    (hPcubic : Represents (FN01.P_cubic declared_g))
     (A : SYM01.PhaseAction Field2D)
     (L : LinearizationAt0_Field2D)
     (hFN : FN01.FN01_DeformationClass A L (FN01.P_cubic declared_g))
@@ -44,8 +51,10 @@ theorem declared_EL_implies_Pcubic
       (L := L)
       (P := FN01.P_cubic declared_g)
       (hFN := hFN)
-      (hMatch := EL_matches_Pcubic)
+      (hMatch := EL_matches_Pcubic hPairing hEL hPcubic)
       (ψ := ψ)
+
+end
 
 end Variational
 end ToeFormal

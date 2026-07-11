@@ -18,14 +18,8 @@ namespace SubstrateToyLaws
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 
-/-- A candidate law is modeled as a time-step operator. -/
-abbrev CandidateLaw (S : Type) := SubstrateState S -> SubstrateState S
-
-/-- Optional gate wrapper for discipline-style predicates (structure only). -/
-structure Gates (S : Type) where
-  CT01   : SubstrateState S -> Prop
-  SYM01  : SubstrateState S -> Prop
-  CAUS01 : SubstrateState S -> Prop
+/- `CandidateLaw` and `Gates` are the shared structural definitions imported
+from `ViabilityFlow`; this module must not redeclare the same namespace names. -/
 
 /-- Regime label: two-mode switching scaffold. -/
 inductive Regime where
@@ -52,7 +46,7 @@ def switchedLaw {S : Type} (sel : RegimeSelector S) (lawC lawI : CandidateLaw S)
     | Regime.incoherent => lawI s
 
 /-- A placeholder selector instance parameterized by μ and μc (no claims). -/
-def selectorD1 {S : Type} (μ : OrderParam S) (μc : ℝ) : RegimeSelector S :=
+noncomputable def selectorD1 {S : Type} (μ : OrderParam S) (μc : ℝ) : RegimeSelector S :=
   { μ := μ, μc := μc }
 
 end SubstrateToyLaws

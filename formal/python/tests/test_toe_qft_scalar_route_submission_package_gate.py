@@ -7,6 +7,7 @@ from formal.python.meta.repo_environment import find_repo_root
 REPO_ROOT = find_repo_root(Path(__file__))
 PACKAGE_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_SCALAR_ROUTE_SUBMISSION_PACKAGE_v0.md"
 CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_scalar_route_submission_package_checkpoint_v0.json"
+CORRECTION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
@@ -62,6 +63,18 @@ def test_toe_qft_scalar_submission_package_checkpoint_schema_is_pinned() -> None
     assert artifact.get("status_token") == "SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED"
     assert artifact.get("status") == "EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED"
 
+    correction = _read_json(CORRECTION_PATH)
+    corrected = next(
+        row
+        for row in correction["affected_checkpoints"]
+        if row["artifact_id"] == artifact["artifact_id"]
+    )
+    assert corrected["correction_kind"] == "downstream_dependency_invalidation"
+    assert corrected["effective_dependency_complete"] is False
+    assert corrected["corrected_effective_status"] == (
+        "NOT_AUTHORIZED_REFERENTIAL_INTEGRITY_CORRECTION_ACTIVE"
+    )
+
 
 def test_toe_qft_scalar_submission_package_is_mirrored_in_authority_surfaces() -> None:
     state_text = _read(STATE_PATH)
@@ -81,3 +94,10 @@ def test_toe_qft_scalar_submission_package_is_mirrored_in_authority_surfaces() -
             f"State/Inventory missing scalar submission-package ref: {ref}"
         )
         assert ref in roadmap_text, f"Roadmap missing scalar submission-package ref: {ref}"
+
+    effective_status = (
+        "SCALAR_ROUTE_SUBMISSION_EFFECTIVE_PACKAGE_STATUS_20260711_v0: "
+        "NOT_AUTHORIZED_REFERENTIAL_INTEGRITY_CORRECTION_ACTIVE"
+    )
+    assert effective_status in inventory_text
+    assert effective_status in roadmap_text

@@ -11925,7 +11925,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert interaction_active_workstream["action_embedding_claimed"] == "no"
     assert interaction_active_workstream["action_variation_executed"] == "no"
     assert interaction_active_workstream["empirical_validation_claimed"] == "no"
-    assert interaction_active_workstream["CCFT_validated"] == "no"
+    assert interaction_active_workstream["ccft_validated"] == "no"
     assert interaction_active_workstream["CCFT_fundamental_physics_claimed"] == "no"
     assert interaction_active_workstream[
         "CCFT_derivation_from_master_action_claimed"

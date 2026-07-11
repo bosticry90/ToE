@@ -2,6 +2,7 @@ import Mathlib
 
 namespace ToeFormal
 namespace UCFF
+namespace FirstOrder
 
 noncomputable section
 set_option autoImplicit false
@@ -58,5 +59,6 @@ theorem R1_gpe_limit (g : Real) (phi : Field) (t x : Real) :
     - (g : Complex) * (smulR (absSq phi) phi t x) := by
   simp [R1, smulR, absSq]
 end
+end FirstOrder
 end UCFF
 end ToeFormal

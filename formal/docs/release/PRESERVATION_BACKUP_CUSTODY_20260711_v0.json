@@ -1,0 +1,207 @@
+{
+  "artifact_manifest": [
+    {
+      "entries": 9366,
+      "name": "archive_context_full_20260711.tar",
+      "role": "complete_archive_context_including_the_invalid_empty_archive_dot_git_skeleton",
+      "sha256": "5d90564b24f21f9f03f4132cbd26cac4bea78c5a1c957d0673ac14e451052144",
+      "size_bytes": 110822400
+    },
+    {
+      "entries": 101,
+      "name": "formal_aristotle_scratch_full_20260711.tar",
+      "role": "complete_aristotle_scratch_tree_including_dot_git_ignored_and_untracked_content",
+      "sha256": "4338c0147da0afc814b2a0a0a4768ff7ae29c03adefa4941352d875df150ebc7",
+      "size_bytes": 9628672
+    },
+    {
+      "entries": 37,
+      "name": "formal_aristotle_scratch_ignored_20260711.tar",
+      "role": "independent_aristotle_scratch_ignored_file_archive",
+      "sha256": "e73a8e78d2d401d36ef608191d065675d565b6d0e6846839c614d7019e570868",
+      "size_bytes": 9457664
+    },
+    {
+      "entries": 23,
+      "name": "formal_aristotle_scratch_ordinary_untracked_20260711.tar",
+      "role": "independent_aristotle_scratch_ordinary_untracked_file_archive",
+      "sha256": "09d4519bcf885d6ab818d4c0dfbaf2ccb259ff9535fce7dc51ab1770d55c0f8b",
+      "size_bytes": 118784
+    },
+    {
+      "entries": 20863,
+      "name": "scratch_quarantine_20260118_archive_full_20260711.tar",
+      "role": "complete_quarantine_tree_including_dot_git_ignored_untracked_tracked_and_unreachable_object_content",
+      "sha256": "36dd2c519e568be93ef5ad7e7b52a3a97ae3ad2ba9a42068ee9496d714ee876b",
+      "size_bytes": 638957568
+    },
+    {
+      "entries": 5247,
+      "name": "scratch_quarantine_20260118_archive_ignored_20260711.tar",
+      "role": "independent_quarantine_ignored_file_archive",
+      "sha256": "9786f1eba40e379eb9cdea2722928870720104ad7a0b1325d4d220846ae4528c",
+      "size_bytes": 188249600
+    },
+    {
+      "entries": 155,
+      "name": "scratch_quarantine_20260118_archive_ordinary_untracked_20260711.tar",
+      "role": "independent_quarantine_ordinary_untracked_file_archive",
+      "sha256": "1144aa827431975a98f2e7f287b28086e3f4dcb1039419b73dbc67b9b56716d0",
+      "size_bytes": 2988032
+    },
+    {
+      "advertised_refs_including_head": 38,
+      "name": "scratch_quarantine_20260118_archive_reachable_refs_20260711.bundle",
+      "role": "verified_complete_reachable_ref_history_bundle",
+      "sha256": "582f60fc8b2c97e27142023460785e7c1092c17f71960b11cc2e3cb36a176469",
+      "size_bytes": 123552313
+    },
+    {
+      "changed_paths": 2537,
+      "name": "scratch_quarantine_20260118_archive_tracked_HEAD_to_worktree_20260711.patch",
+      "role": "binary_full_index_patch_from_quarantine_head_to_dirty_tracked_worktree",
+      "sha256": "b14401e170d00ebe1e6b9500a681c66b2e92c2c388fb1944c6b80b9e1273874e",
+      "size_bytes": 24975578
+    },
+    {
+      "commit": "00facb291b0ae9b152d31f53b01b428d9406f0b9",
+      "embedded_commit_verified": true,
+      "entries": 11512,
+      "name": "scratch_quarantine_dangling_commit_00facb291b0ae9b152d31f53b01b428d9406f0b9_tree_20260711.tar",
+      "role": "standalone_tree_archive_for_requested_unreachable_stash_commit",
+      "sha256": "dd879884349fe1155e62a65f4e70359d92d6c78ba2ff7ce90ca1e035afdcb796",
+      "size_bytes": 333096960,
+      "tree": "00b1f8732fbac96a66eacd17fc2c50d9903a5605"
+    },
+    {
+      "commit": "074a09d9dfa66b6e2c90eac9a652ed1acf6d4d01",
+      "embedded_commit_verified": true,
+      "entries": 11512,
+      "name": "scratch_quarantine_dangling_commit_074a09d9dfa66b6e2c90eac9a652ed1acf6d4d01_tree_20260711.tar",
+      "role": "standalone_tree_archive_for_requested_unreachable_stash_commit",
+      "sha256": "7e81beb54286d3997f46324686aa4b1fe045f5ace75dc19873e32f2bec375183",
+      "size_bytes": 333096960,
+      "tree": "00b1f8732fbac96a66eacd17fc2c50d9903a5605"
+    },
+    {
+      "commit": "78bb36c01fd1ed1887cdc58d86ace31e0b438279",
+      "embedded_commit_verified": true,
+      "entries": 11512,
+      "name": "scratch_quarantine_dangling_commit_78bb36c01fd1ed1887cdc58d86ace31e0b438279_tree_20260711.tar",
+      "role": "standalone_tree_archive_for_requested_unreachable_stash_commit",
+      "sha256": "e104f2c17906aefa520ba85e98ece973b2f3f878c80509a3ae9c6f77ef36bcb1",
+      "size_bytes": 333096960,
+      "tree": "00b1f8732fbac96a66eacd17fc2c50d9903a5605"
+    }
+  ],
+  "backup_root": "C:\\Users\\psboy\\Documents\\ToE-preservation\\20260711",
+  "boundary": {
+    "archive_dot_git_removed": false,
+    "fetch_performed": false,
+    "git_clean_performed": false,
+    "git_gc_or_prune_performed": false,
+    "git_ref_created_or_modified": false,
+    "git_reset_performed": false,
+    "live_target_changed": false,
+    "scientific_artifacts_modified": false,
+    "scientific_claim_changed": false,
+    "source_content_modified": false
+  },
+  "captured_at_utc": "2026-07-11T09:13:24.673Z",
+  "main_repository_baseline_commit": "4e8036a5a3f3d472d8d5ce70bea51793fb7975ea",
+  "schema_id": "PRESERVATION_BACKUP_CUSTODY_20260711_v0",
+  "source_custody": {
+    "archive_context": {
+      "bytes": 104127605,
+      "content_tree_sha256_before_and_after": "28adc322d90a16139d3e9c51243aa4bd066d44136d17574fc487e7aebe5ffa17",
+      "directories": 2023,
+      "dot_git_skeleton": {
+        "bytes": 0,
+        "config_present": false,
+        "directories_below_root": 273,
+        "files": 0,
+        "head_present": false,
+        "valid_git_repository": false
+      },
+      "files": 7342,
+      "path": "archive"
+    },
+    "formal_aristotle_scratch": {
+      "bytes": 9548168,
+      "content_tree_sha256_before_and_after": "9553530822304147a695c4ab7a679db98d9136d84a6a0b673431080ef9723d1a",
+      "directories": 22,
+      "files": 78,
+      "git": {
+        "fsck_exit": 0,
+        "head": null,
+        "ignored_files": 37,
+        "ordinary_untracked_files": 23,
+        "refs": 0,
+        "refs_sha256_before_and_after": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "status_sha256_before_and_after": "e77cfbad074a6c9f05e04a26f048cf60d4c4a70458b8d7d8c690e0d8904aa120",
+        "symbolic_head": "refs/heads/main",
+        "tracked_files": 0,
+        "unborn_branch": true
+      },
+      "path": "formal/aristotle_scratch"
+    },
+    "scratch_quarantine_20260118_archive": {
+      "bytes": 617186339,
+      "content_tree_sha256_before_and_after": "cd119085169b7e2d25ef50c251d900a61e14ed15d3a95893c9b896f71f346e54",
+      "directories": 1440,
+      "files": 19422,
+      "git": {
+        "fsck_exit": 0,
+        "head": "4342d2224826e8ddc15c8f9b1aa09c543f6641f6",
+        "ignored_files": 5247,
+        "named_refs": 37,
+        "ordinary_untracked_files": 155,
+        "reachable_commits": 55,
+        "refs_including_head_sha256_before_and_after": "4bff0cd8f493bffb33b6f10442ba78e3ce78c8babfadd72dec54a34b2e7cbe80",
+        "status_sha256_before_and_after": "6b924a977ed132cb48cab0409847146d1799e22dc1a5b795cdd728dbca082845",
+        "symbolic_head": "refs/heads/chore/housekeeping-roadmap",
+        "tracked_files": 10493,
+        "unreachable_blobs": 27,
+        "unreachable_commits": [
+          "00facb291b0ae9b152d31f53b01b428d9406f0b9",
+          "074a09d9dfa66b6e2c90eac9a652ed1acf6d4d01",
+          "27a4d121e768d6519ee6d1a21675d60a511fbafc",
+          "3d31a4c32595bdfec231b70059699486aa411f5f",
+          "78bb36c01fd1ed1887cdc58d86ace31e0b438279",
+          "c843558a77a92f3bacd08456ab6f4e6406d25a05"
+        ],
+        "unreachable_trees": 9
+      },
+      "path": "scratch/quarantine/20260118/archive"
+    }
+  },
+  "status": "COMPLETED_READ_ONLY_EXTERNAL_PRESERVATION_BACKUP_NONAUTHORIZING",
+  "total_artifact_bytes_before_manifest_copy": 2108041491,
+  "total_artifacts_before_manifest_copy": 12,
+  "verification": {
+    "all_artifact_sha256_values_recomputed": true,
+    "all_full_tars_listed_without_error": true,
+    "bundle_clone_fsck_strict_exit": 0,
+    "bundle_clone_head": "4342d2224826e8ddc15c8f9b1aa09c543f6641f6",
+    "bundle_complete_history_verified": true,
+    "bundle_ref_count_including_head": 38,
+    "ignored_and_untracked_subset_tars_extracted_with_exact_path_sets": true,
+    "patch_apply_check_against_clean_bundle_clone": true,
+    "postflight_fsck_matches_preflight": true,
+    "postflight_git_fingerprints_match_preflight": true,
+    "postflight_tree_fingerprints_match_preflight": true,
+    "requested_dangling_commit_ids_embedded_in_tree_archives": true,
+    "tool_versions": {
+      "git": "2.50.1.windows.1",
+      "tar": "bsdtar 3.8.4"
+    },
+    "unicode_filename_round_trip_extraction_verified": true
+  },
+  "limitations": [
+    "The preservation root is on the same C: volume as the source repository and is not a disaster-resistant off-machine copy until replicated elsewhere.",
+    "The reachable-ref bundle intentionally excludes unreachable objects; the complete quarantine tar preserves the entire object database, and the three requested stash commits also have standalone tree archives.",
+    "The three additional unreachable index-parent commits are retained inside the complete quarantine tar but do not have separate tree archives.",
+    "No assertion is made that Windows ACLs or alternate data streams are preserved; repository file bytes, directory trees, Git metadata, and the enumerated recovery layers were validated.",
+    "This custody record authorizes no deletion, pruning, release promotion, scientific claim change, or live-target change."
+  ]
+}

@@ -7,6 +7,7 @@ from formal.python.meta.repo_environment import find_repo_root
 REPO_ROOT = find_repo_root(Path(__file__))
 BASELINE_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_SCALAR_ROUTE_SUBMISSION_CANDIDATE_BASELINE_v0.md"
 CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_scalar_route_submission_candidate_checkpoint_v0.json"
+CORRECTION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
@@ -50,6 +51,18 @@ def test_toe_qft_scalar_submission_candidate_checkpoint_schema_is_pinned() -> No
     assert checks.get("section_level_classification_clarity") is True
     assert checks.get("submission_candidate_packaging_completeness") is True
 
+    correction = _read_json(CORRECTION_PATH)
+    corrected = next(
+        row
+        for row in correction["affected_checkpoints"]
+        if row["artifact_id"] == artifact["artifact_id"]
+    )
+    assert corrected["historical_asserted_value"] is True
+    assert corrected["effective_pointer_complete"] is False
+    assert corrected["corrected_effective_status"] == (
+        "BLOCKED_MISSING_PHYSICS_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET"
+    )
+
     policy = artifact.get("policy_constraints", {})
     assert policy.get("scalar_paper1_baseline_freeze") is True
     assert policy.get("scalar_extension_policy_exception_only") is True
@@ -76,3 +89,10 @@ def test_toe_qft_scalar_submission_candidate_is_mirrored_in_authority_surfaces()
             f"State/Inventory missing scalar submission-candidate ref: {ref}"
         )
         assert ref in roadmap_text, f"Roadmap missing scalar submission-candidate ref: {ref}"
+
+    effective_status = (
+        "SCALAR_ROUTE_SUBMISSION_EFFECTIVE_CANDIDATE_STATUS_20260711_v0: "
+        "BLOCKED_MISSING_PHYSICS_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET"
+    )
+    assert effective_status in inventory_text
+    assert effective_status in roadmap_text

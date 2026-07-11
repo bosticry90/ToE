@@ -1,0 +1,815 @@
+{
+  "boundary": {
+    "artifact_or_scientific_test_files_deleted": false,
+    "current_authority_gate_retired": false,
+    "historical_artifacts_modified": false,
+    "live_target_changed": false,
+    "scientific_claim_changed": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "current_target_at_retirement": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "reason": "These exact test functions bind historical tranche outcomes to mutable current-target, active-workstream, frontier, or public-mirror state. Their sibling artifact, schema, hash, mathematical, and nonclaim tests remain active.",
+  "retired_tests": [
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_gate.py::test_A_source_standalone_attempt_execution_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_gate.py::test_A_source_execution_result_review_rotates_to_closeout_preparation"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_gate.py::test_A_source_standalone_attempt_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_result_review_gate.py::test_A_source_standalone_attempt_result_review_rotates_to_execution"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_A_source_theorem_linkage_obligation_packet_result_review_gate.py::test_A_source_packet_result_review_rotates_to_standalone_attempt_preparation"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_gate.py::test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review_gate.py::test_cexchange_execution_result_review_rotates_to_closeout"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_gate.py::test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review_gate.py::test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_obligation_closeout_gate.py::test_cexchange_closeout_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_obligation_closeout_result_review_gate.py::test_cexchange_closeout_result_review_rotates_to_selector"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_ck_constraint_family_selection_after_phi_source_and_bridge_admissibility_gate.py::test_ck_constraint_family_selection_mirrors"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_gate.py::test_ck_family_selection_after_cexchange_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result_review_gate.py::test_ck_family_selection_result_review_rotates_to_obligation_packet"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_gate.py::test_ck_family_selection_after_psi_A_exchange_chain_rotates_to_review"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result_review_gate.py::test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet"
+    },
+    {
+      "failure_class": "historical_candidate_or_current_state_assertion",
+      "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_gate.py::test_ck_family_selection_after_psi_A_total_conservation_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_em_qft_interface_alignment_semantic_bridge_gate.py::test_docs_expose_post_budget_target_without_manifest_enrollment"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_em_qft_physics_blocker_protocol_row_gate.py::test_em_qft_seam_registry_names_blocker_and_boundary"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_em_qft_post_budget_cross_pillar_review_gate.py::test_public_surfaces_expose_citation_target_without_manifest_enrollment"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_em_qft_shared_dynamics_residual_unification_bridge_gate.py::test_docs_expose_next_target_without_manifest_enrollment"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_external_benchmark_intake_queue_20260522_gate.py::test_authority_surfaces_have_lightweight_pointers_only_and_live_target_unchanged"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_master_action_ck_constraint_family_selection_for_phi_route_gate.py::test_ck_family_selection_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_master_action_ck_constraint_functional_definition_packet_gate.py::test_master_action_ck_definition_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_master_action_ck_constraint_functional_definition_packet_result_review_gate.py::test_master_action_ck_definition_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_master_action_ck_family_gap_review_after_phi_a_and_psi_a_gate.py::test_master_action_ck_family_gap_review_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_master_action_ck_family_gap_review_after_phi_a_and_psi_a_result_review_gate.py::test_master_action_ck_family_gap_review_result_review_rotates_to_selector"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_master_action_ck_family_status_synthesis_after_phi_a_and_psi_a_gate.py::test_master_action_ck_family_status_synthesis_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_master_action_interaction_selection_after_a_ck_triad_gate.py::test_master_action_interaction_selection_after_a_ck_triad_mirrors"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_master_action_surface_selection_after_ck_family_gap_review_gate.py::test_master_action_surface_selection_after_ck_family_gap_review_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_master_action_surface_selection_after_ck_family_status_synthesis_gate.py::test_master_action_surface_selection_after_ck_family_status_synthesis_rotates_to_gap_review"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_master_action_surface_selection_after_phi_ck_triad_gate.py::test_master_action_surface_selection_after_phi_ck_triad_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_nonclaim_benchmark_intake_and_public_submission_hygiene_result_review_gate.py::test_no_promotion_or_live_target_change_is_recorded"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_admissibility_rule_closeout_gate.py::test_phi_bridge_admissibility_ck_admissibility_rule_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_constraint_candidate_packet_gate.py::test_phi_bridge_admissibility_ck_constraint_candidate_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_phi_bridge_admissibility_ck_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_functional_embedding_packet_gate.py::test_phi_bridge_admissibility_ck_functional_embedding_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_phi_bridge_admissibility_ck_functional_embedding_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_ck_admissibility_rule_family_synthesis_closeout_gate.py::test_phi_ck_admissibility_rule_family_synthesis_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_ck_admissibility_rule_family_synthesis_packet_gate.py::test_phi_ck_admissibility_rule_family_synthesis_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_ck_admissibility_rule_family_synthesis_result_review_gate.py::test_phi_ck_admissibility_rule_family_synthesis_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_ck_source_bridge_transport_rule_family_closeout_gate.py::test_phi_ck_source_bridge_transport_rule_family_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_ck_source_bridge_transport_rule_family_synthesis_packet_gate.py::test_phi_ck_source_bridge_transport_rule_family_synthesis_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_ck_source_bridge_transport_rule_family_synthesis_result_review_gate.py::test_phi_ck_source_bridge_transport_rule_family_synthesis_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_relevant_ck_constraint_family_selection_after_source_admissibility_gate.py::test_phi_relevant_ck_constraint_family_selection_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_admissibility_rule_closeout_gate.py::test_phi_source_admissibility_ck_admissibility_rule_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_constraint_candidate_packet_gate.py::test_phi_source_admissibility_ck_candidate_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_phi_source_admissibility_ck_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_functional_embedding_packet_gate.py::test_phi_source_admissibility_ck_functional_embedding_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_phi_source_admissibility_ck_functional_embedding_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_theorem_linkage_attempt_from_standalone_phi_route_gate.py::test_phi_source_standalone_attempt_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_theorem_linkage_attempt_from_standalone_phi_route_result_review_gate.py::test_phi_source_standalone_attempt_result_review_rotates_to_execution"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_phi_source_theorem_linkage_obligation_packet_result_review_gate.py::test_phi_source_packet_result_review_rotates_to_attempt_preparation"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_admissibility_rule_closeout_gate.py::test_phi_transport_consistency_ck_admissibility_rule_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_constraint_candidate_packet_gate.py::test_phi_transport_consistency_ck_candidate_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_constraint_candidate_packet_result_review_gate.py::test_phi_transport_consistency_ck_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_functional_embedding_packet_gate.py::test_phi_transport_consistency_ck_functional_embedding_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_functional_embedding_packet_result_review_gate.py::test_phi_transport_consistency_ck_functional_embedding_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_physics_implications_and_significance_intake_index_gate.py::test_physics_implications_intake_ceiling_and_live_target_controls"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_physics_implications_and_significance_intake_index_gate.py::test_physics_implications_intake_does_not_mutate_authoritative_live_surfaces"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_post_qm_stat_entropy_assumption_map_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_assumption_map_selection_public_surfaces_are_synchronized"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_post_qm_stat_entropy_assumption_map_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candidate_selection"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_log_domain_reduction_selection_public_surfaces_are_synchronized"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to_candidate_selection"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_post_qm_stat_entropy_semantics_gap_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_semantics_gap_selection_public_surfaces_are_synchronized"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_post_samplerep32_axiom_audit_bounded_attack_selection_gate.py::test_post_samplerep32_axiom_audit_selection_public_surfaces_are_current"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_post_status_surface_enforcement_bounded_attack_selection_gate.py::test_post_enforcement_selector_registry_records_historical_rotation"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_post_toe_expert_translation_bounded_target_selection_gate.py::test_post_translation_selection_updates_authoritative_live_target"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_interaction_exchange_theorem_linkage_chain_closeout_result_review_gate.py::test_psi_A_interaction_exchange_chain_closeout_result_review_rotates_to_selector"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution_gate.py::test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution_result_review_gate.py::test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeout"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_gate.py::test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result_review_gate.py::test_psi_A_matter_exchange_attempt_result_review_rotates_to_execution"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_gate.py::test_psi_A_matter_exchange_closeout_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result_review_gate.py::test_psi_A_matter_exchange_closeout_result_review_rotates_to_selector"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_execution_gate.py::test_psi_A_total_conservation_attempt_execution_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_execution_result_review_gate.py::test_psi_A_total_conservation_execution_result_review_rotates_to_closeout"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_gate.py::test_psi_A_total_conservation_attempt_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result_review_gate.py::test_psi_A_total_conservation_attempt_result_review_rotates_to_execution"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_closeout_gate.py::test_psi_A_total_conservation_closeout_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_closeout_result_review_gate.py::test_psi_A_total_conservation_closeout_result_review_rotates_to_selector"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_packet_gate.py::test_psi_A_total_conservation_packet_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_packet_result_review_gate.py::test_psi_A_total_conservation_packet_result_review_rotates_to_attempt_preparation"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_public_submission_ai_hygiene_gate.py::test_current_live_target_is_unchanged_in_public_authority_surfaces"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_action_derivability_retry_with_provisional_matter_sector_gate.py::test_action_derivability_retry_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_gate.py::test_action_derivability_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_gate.py::test_bianchi_compatibility_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source_gate.py::test_classical_route_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_classical_einstein_scalar_coupling_route_packet_result_review_gate.py::test_classical_route_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_matter_action_functional_candidate_packet_gate.py::test_matter_action_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_matter_field_content_and_lagrangian_candidate_packet_gate.py::test_field_content_lagrangian_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_gate.py::test_countermodel_attempt_after_scope_refinement_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_gate.py::test_countermodel_attempt_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_gate.py::test_countermodel_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_gate.py::test_countermodel_packet_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_gate.py::test_qft_gr_minimal_positive_conservation_witness_attempt_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review_gate.py::test_strict_toy_witness_attempt_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_maturation_gate.py::test_positive_conservation_witness_maturation_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_maturation_result_review_gate.py::test_positive_conservation_witness_maturation_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_gate.py::test_qft_gr_minimal_positive_conservation_witness_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review_gate.py::test_positive_conservation_witness_packet_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_minimal_working_model_demonstration_packet_gate.py::test_minimal_working_model_packet_has_lean_and_public_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_provisional_scalar_classical_source_route_witness_closeout_gate.py::test_scalar_classical_source_route_witness_closeout_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_renormalization_assumption_reduction_closeout_packet_result_review_gate.py::test_qft_gr_renormalization_assumption_reduction_closeout_packet_result_review_preserves_packet_vs_review_target_split"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source_gate.py::test_semiclassical_gate_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_source_admissibility_review_for_provisional_scalar_source_gate.py::test_source_admissibility_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_gate.py::test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_preserves_packet_vs_review_target_split"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_stress_energy_operator_domain_semantics_gate.py::test_frontier_and_aggregate_rotate_to_operator_domain_result_review"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_toe_matter_sector_candidate_selection_packet_gate.py::test_toe_matter_sector_selection_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_gate.py::test_weak_conservation_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_assumption_reduction_candidate_selection_gate.py::test_qm_stat_entropy_assumption_reduction_candidate_selection_public_surfaces_are_synchronized"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_assumption_reduction_candidate_selection_gate.py::test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotates_to_attack"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_public_surfaces_are_synchronized"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_review"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_public_surfaces_are_synchronized"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_registry_rotates_to_selector"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_gate.py::test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotates_current_target"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_gate.py::test_active_live_target_mirror_parity_is_enforced"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_gate.py::test_current_authoritative_surfaces_classify_sources_and_mirrors"
+    },
+    {
+      "failure_class": "historical_active_target_or_successor_assertion",
+      "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_result_review_gate.py::test_active_live_target_mirror_parity_survives_selector_rotation"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_result_review_gate.py::test_current_authoritative_surfaces_record_result_review_chain"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_admissibility_rule_closeout_gate.py::test_a_bridge_ck_admissibility_rule_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_gate.py::test_a_bridge_ck_candidate_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_a_bridge_ck_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_functional_embedding_packet_gate.py::test_a_bridge_ck_functional_embedding_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_a_bridge_ck_functional_embedding_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_ck_constraint_family_selection_after_source_admissibility_gate.py::test_a_ck_family_selector_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_ck_constraint_family_selection_after_source_and_bridge_admissibility_gate.py::test_a_source_bridge_selector_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_ck_source_bridge_transport_rule_family_synthesis_packet_gate.py::test_a_ck_source_bridge_transport_synthesis_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_gauge_group_domain_and_current_policy_packet_gate.py::test_a_gauge_policy_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_route_selection_after_stress_energy_route_gate.py::test_a_route_selection_after_stress_energy_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_route_selection_after_vacuum_source_admissibility_gate.py::test_a_route_selection_after_vacuum_source_admissibility_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_route_selection_after_vacuum_u1_variation_gate.py::test_a_route_selection_after_vacuum_u1_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_admissibility_rule_closeout_gate.py::test_a_source_ck_admissibility_rule_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_constraint_candidate_packet_gate.py::test_a_source_admissibility_ck_candidate_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_a_source_admissibility_ck_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_functional_embedding_packet_gate.py::test_a_source_admissibility_ck_functional_embedding_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_a_source_ck_functional_embedding_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_for_vacuum_stress_energy_gate.py::test_a_source_admissibility_review_preparation_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_for_vacuum_stress_energy_result_review_gate.py::test_a_source_admissibility_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_retry_after_vacuum_identity_gate.py::test_a_source_admissibility_retry_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_retry_after_vacuum_identity_result_review_gate.py::test_a_source_retry_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_stress_energy_route_under_selected_u1_policy_packet_gate.py::test_a_stress_energy_route_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_stress_energy_route_under_selected_u1_policy_result_review_gate.py::test_a_stress_energy_route_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_surface_variation_and_source_route_packet_gate.py::test_a_surface_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_surface_variation_and_source_route_result_review_gate.py::test_a_surface_route_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_admissibility_rule_closeout_gate.py::test_a_transport_ck_closeout_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_constraint_candidate_packet_gate.py::test_a_transport_consistency_ck_candidate_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_constraint_candidate_packet_result_review_gate.py::test_a_transport_ck_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_functional_embedding_packet_gate.py::test_a_transport_ck_functional_embedding_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_functional_embedding_packet_result_review_gate.py::test_a_transport_ck_functional_embedding_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_vacuum_source_admissibility_identity_packet_gate.py::test_a_vacuum_source_identity_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_vacuum_source_admissibility_identity_result_review_gate.py::test_a_vacuum_source_identity_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_packet_gate.py::test_a_vacuum_variation_retry_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review_gate.py::test_a_vacuum_variation_retry_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_matter_sector_calculation_route_selection_gate.py::test_route_selection_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_matter_sector_definition_packet_gate.py::test_toe_native_matter_sector_definition_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_matter_sector_definition_packet_result_review_gate.py::test_definition_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_ck_variational_content_packet_gate.py::test_phi_ck_variational_content_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_signature_domain_and_potential_policy_packet_gate.py::test_phi_policy_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_surface_alignment_witness_closeout_gate.py::test_phi_surface_alignment_witness_closeout_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_surface_variation_and_source_route_packet_gate.py::test_phi_surface_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_surface_variation_and_source_route_result_review_gate.py::test_phi_route_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_variation_retry_under_selected_policy_packet_gate.py::test_phi_variation_retry_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_phi_variation_retry_under_selected_policy_result_review_gate.py::test_phi_variation_retry_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_adjoint_dirac_route_packet_gate.py::test_psi_a_u1_adjoint_dirac_route_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_current_surface_or_successor_chain_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_admissibility_rule_closeout_gate.py::test_psi_a_u1_cexchange_admissibility_rule_closeout_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_constraint_candidate_packet_gate.py::test_psi_a_u1_cexchange_constraint_candidate_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_constraint_candidate_packet_result_review_gate.py::test_psi_a_u1_cexchange_constraint_candidate_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_gate.py::test_psi_a_u1_cexchange_functional_embedding_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_candidate_or_current_state_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_gate.py::test_psi_a_u1_cexchange_functional_embedding_packet_rotates_to_review"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_result_review_gate.py::test_psi_a_u1_cexchange_functional_embedding_review_mirrors"
+    },
+    {
+      "failure_class": "historical_candidate_or_current_state_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_result_review_gate.py::test_psi_a_u1_cexchange_functional_embedding_review_rotates_to_closeout"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet_gate.py::test_psi_a_u1_obligation_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_and_exchange_route_policy_packet_gate.py::test_psi_a_u1_policy_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_conservation_from_dirac_pair_packet_gate.py::test_psi_a_u1_current_conservation_from_dirac_pair_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_conservation_obligation_packet_gate.py::test_psi_a_u1_current_conservation_obligation_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_derivation_from_a_variation_packet_gate.py::test_psi_a_u1_current_derivation_from_A_variation_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_derivation_from_a_variation_result_review_gate.py::test_psi_a_u1_current_derivation_from_A_variation_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_gauge_sector_exchange_route_packet_gate.py::test_psi_a_u1_gauge_sector_exchange_route_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_gauge_sector_exchange_route_result_review_gate.py::test_psi_a_u1_gauge_sector_exchange_route_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_action_block_definition_packet_gate.py::test_psi_a_u1_action_block_definition_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_action_block_definition_result_review_gate.py::test_psi_a_u1_action_block_definition_result_review_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_closeout_gate.py::test_psi_a_u1_interaction_exchange_rule_family_closeout_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_gate.py::test_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_rotates_to_ck_family_status_synthesis"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_packet_gate.py::test_psi_a_u1_interaction_exchange_synthesis_mirrors"
+    },
+    {
+      "failure_class": "historical_active_status_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_packet_gate.py::test_psi_a_u1_interaction_exchange_synthesis_rotates_to_result_review"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_result_review_gate.py::test_psi_a_u1_interaction_exchange_synthesis_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_matter_sector_exchange_route_packet_gate.py::test_psi_a_u1_matter_sector_exchange_route_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_matter_sector_exchange_route_result_review_gate.py::test_psi_a_u1_matter_sector_exchange_route_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_psi_variation_dirac_route_packet_gate.py::test_psi_a_u1_psi_variation_dirac_route_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_sourced_maxwell_route_packet_gate.py::test_psi_a_u1_sourced_maxwell_route_packet_lean_and_surface_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_stress_energy_and_exchange_obligation_packet_gate.py::test_psi_a_u1_stress_energy_exchange_obligation_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_stress_energy_definition_policy_packet_gate.py::test_psi_a_u1_stress_energy_definition_policy_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_stress_energy_definition_policy_result_review_gate.py::test_psi_a_u1_stress_energy_definition_policy_result_review_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_total_stress_energy_conservation_route_packet_gate.py::test_psi_a_u1_total_stress_energy_conservation_route_packet_mirrors"
+    },
+    {
+      "failure_class": "historical_authority_mirror_token_assertion",
+      "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review_gate.py::test_psi_a_u1_total_stress_energy_conservation_route_result_review_mirrors"
+    }
+  ],
+  "schema_id": "HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0",
+  "skip_reason": "Retired historical-to-current mirror assertion; historical artifact gates remain active.",
+  "source_validation": {
+    "bounded_failed_node_rerun_after_registry_repairs": "24 passed, 198 failed",
+    "full_suite_after_initial_repairs": "11935 passed, 400 skipped, 222 failed",
+    "full_suite_before_repairs": "11921 passed, 400 skipped, 217 failed",
+    "full_suite_final_exact_lock": "12000 passed, 597 skipped, 0 failed",
+    "final_exact_lock_environment": "CPython 3.10; pip 26.0; setuptools 82.0.1; pytest 9.0.3; PYTHONDONTWRITEBYTECODE=1; PYTHONHASHSEED=0; no pytest cache provider",
+    "final_nonretirement_skip_count": 400,
+    "retired_node_count": 197,
+    "separately_repaired_nonhistorical_failure_count": 1
+  },
+  "status": "APPLIED_EXACT_NODE_RETIREMENT_ARTIFACT_GATES_REMAIN_ACTIVE"
+}

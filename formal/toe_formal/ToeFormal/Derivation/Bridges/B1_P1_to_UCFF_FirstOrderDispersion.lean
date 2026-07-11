@@ -19,11 +19,12 @@ This file provides:
 namespace ToeFormal
 namespace Derivation
 namespace Bridges
+namespace B1P1FirstOrder
 
 noncomputable section
 set_option autoImplicit false
 
-open ToeFormal.Derivation.Parents
+open ToeFormal.Derivation.Parents.P1NLS
 
 /-- Parameters needed for the background (Bogoliubov) squared dispersion. -/
 structure P1_BG_Params where
@@ -83,40 +84,51 @@ def coeffMap_P1_to_UCFF (p : P1Params) : Real × Real × Real :=
 
 /-- Operator alignment assumptions (spec-backed, like B2). -/
 axiom Dt_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dt : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field) =
-    (ToeFormal.UCFF.Dt : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field)
+  (ToeFormal.Derivation.Parents.P1NLS.Dt : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field) =
+    (ToeFormal.UCFF.FirstOrder.Dt : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field)
 
 axiom Dxx_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dxx : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field) =
-    (ToeFormal.UCFF.Dxx : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field)
+  (ToeFormal.Derivation.Parents.P1NLS.Dxx : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field) =
+    (ToeFormal.UCFF.FirstOrder.Dxx : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field)
 
 axiom Dxxxx_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dxxxx : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field) =
-    (ToeFormal.UCFF.Dxxxx : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field)
+  (ToeFormal.Derivation.Parents.P1NLS.Dxxxx : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field) =
+    (ToeFormal.UCFF.FirstOrder.Dxxxx : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field)
 
 axiom Dxxxxxx_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dxxxxxx : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field) =
-    (ToeFormal.UCFF.Dxxxxxx : ToeFormal.UCFF.Field → ToeFormal.UCFF.Field)
+  (ToeFormal.Derivation.Parents.P1NLS.Dxxxxxx : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field) =
+    (ToeFormal.UCFF.FirstOrder.Dxxxxxx : ToeFormal.UCFF.FirstOrder.Field →
+      ToeFormal.UCFF.FirstOrder.Field)
 
 /--
 Bridge-local residual for Parent P1 in the *UCFF residual form* (i.e., everything on LHS),
 using the mapped (g,lam,beta) = (p.g, -p.lam, -p.beta).
 -/
-def P1Residual_as_UCFF (p : P1Params) (ψ : ToeFormal.UCFF.Field) : ToeFormal.UCFF.Field :=
+def P1Residual_as_UCFF (p : P1Params) (ψ : ToeFormal.UCFF.FirstOrder.Field) :
+    ToeFormal.UCFF.FirstOrder.Field :=
   let (gU, lamU, betaU) := coeffMap_P1_to_UCFF p
   fun t x =>
-    Complex.I * (ToeFormal.Derivation.Parents.Dt ψ t x)
-    + ((1 : Complex) / (2 : Complex)) * (ToeFormal.Derivation.Parents.Dxx ψ t x)
-    - (gU : Complex) * (ToeFormal.UCFF.smulR (ToeFormal.UCFF.absSq ψ) ψ t x)
-    + (lamU : Complex) * (ToeFormal.Derivation.Parents.Dxxxx ψ t x)
-    + (betaU : Complex) * (ToeFormal.Derivation.Parents.Dxxxxxx ψ t x)
+    Complex.I * (ToeFormal.Derivation.Parents.P1NLS.Dt ψ t x)
+    + ((1 : Complex) / (2 : Complex)) * (ToeFormal.Derivation.Parents.P1NLS.Dxx ψ t x)
+    - (gU : Complex) *
+        (ToeFormal.UCFF.FirstOrder.smulR (ToeFormal.UCFF.FirstOrder.absSq ψ) ψ t x)
+    + (lamU : Complex) * (ToeFormal.Derivation.Parents.P1NLS.Dxxxx ψ t x)
+    + (betaU : Complex) * (ToeFormal.Derivation.Parents.P1NLS.Dxxxxxx ψ t x)
 
 /-- Residual-form equality: Parent-style residual equals the UCFF locked residual R1. -/
-theorem P1Residual_matches_UCFF_R1 (p : P1Params) (ψ : ToeFormal.UCFF.Field) :
-    P1Residual_as_UCFF p ψ = ToeFormal.UCFF.R1 p.g (-p.lam) (-p.beta) ψ := by
+theorem P1Residual_matches_UCFF_R1 (p : P1Params) (ψ : ToeFormal.UCFF.FirstOrder.Field) :
+    P1Residual_as_UCFF p ψ =
+      ToeFormal.UCFF.FirstOrder.R1 p.g (-p.lam) (-p.beta) ψ := by
   funext t x
   -- Unfold both sides and rewrite parent operators into UCFF operators using the spec equalities.
-  simp [P1Residual_as_UCFF, coeffMap_P1_to_UCFF, ToeFormal.UCFF.R1,
+  simp [P1Residual_as_UCFF, coeffMap_P1_to_UCFF, ToeFormal.UCFF.FirstOrder.R1,
         Dt_agrees_spec, Dxx_agrees_spec, Dxxxx_agrees_spec, Dxxxxxx_agrees_spec]
 
 
@@ -125,15 +137,15 @@ Spec axiom: P1 EOM implies the bridge-local residual is zero.
 This removes the need for any algebraic rearrangement while Parent P1 omits the cubic term.
 -/
 axiom P1_eom_implies_P1Residual_as_UCFF_spec :
-  ∀ (p : P1Params) (ψ : ToeFormal.UCFF.Field) (t x : Real),
+  ∀ (p : P1Params) (ψ : ToeFormal.UCFF.FirstOrder.Field) (t x : Real),
     EOM_P1 p (ψ : FieldC) → P1Residual_as_UCFF p ψ t x = 0
 
 
 /-- Bridge theorem: EOM_P1 ⇒ UCFF.SatisfiesR1 under the coefficient map. -/
 theorem B1_P1_to_UCFF_FirstOrder
-    (p : P1Params) (ψ : ToeFormal.UCFF.Field) :
+    (p : P1Params) (ψ : ToeFormal.UCFF.FirstOrder.Field) :
     EOM_P1 p (ψ : FieldC) →
-      ToeFormal.UCFF.SatisfiesR1 p.g (-p.lam) (-p.beta) ψ := by
+      ToeFormal.UCFF.FirstOrder.SatisfiesR1 p.g (-p.lam) (-p.beta) ψ := by
   intro hEOM t x
   -- Get the residual=0 from the spec axiom.
   have hP1 : P1Residual_as_UCFF p ψ t x = 0 :=
@@ -141,12 +153,13 @@ theorem B1_P1_to_UCFF_FirstOrder
   -- Rewrite P1Residual_as_UCFF into UCFF.R1 using the residual-matching lemma.
   have hEq :
       P1Residual_as_UCFF p ψ t x =
-        ToeFormal.UCFF.R1 p.g (-p.lam) (-p.beta) ψ t x := by
+        ToeFormal.UCFF.FirstOrder.R1 p.g (-p.lam) (-p.beta) ψ t x := by
     simpa using congrArg (fun f => f t x) (P1Residual_matches_UCFF_R1 p ψ)
   -- Conclude UCFF.R1 ... = 0.
   simpa [hEq] using hP1
 
 end  -- closes `noncomputable section`
+end B1P1FirstOrder
 end Bridges
 end Derivation
 end ToeFormal

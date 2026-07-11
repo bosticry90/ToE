@@ -464,7 +464,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_calc_ccft_scqed_literature_applicability_matrix_v0_result"
+        "execute_pillar_seam_unit_mapping_ledger_v0"
       status := .retained }
   ]
 

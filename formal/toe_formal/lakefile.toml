@@ -16,3 +16,8 @@ rev = "v4.27.0-rc1"
 
 [[lean_lib]]
 name = "ToeFormal"
+
+# Exhaustive validation root; intentionally nondefault so focused local builds
+# retain their historical cost while CI can request every tracked module.
+[[lean_lib]]
+name = "ToeFormalAll"

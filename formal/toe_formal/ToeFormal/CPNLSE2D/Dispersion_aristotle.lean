@@ -1,67 +1,40 @@
 /-
-This file was edited by Aristotle.
+This proof variant was produced by Aristotle.
 
 Lean version: leanprover/lean4:v4.24.0
 Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
-This project request had uuid: 3fc6de82-1391-4c5e-a661-a128954e18d1
+Project request UUID: 3fc6de82-1391-4c5e-a661-a128954e18d1
+
+The original file repeated the complete canonical dispersion API under the
+same namespace, so it could compile alone but could not be imported together
+with `ToeFormal.CPNLSE2D.Dispersion`.  This integrated form preserves the
+independent proof witness and provenance while using the canonical API.
 -/
 
-import Mathlib
-
+import ToeFormal.CPNLSE2D.Dispersion
 
 namespace ToeFormal
-
 namespace CPNLSE2D
+namespace DispersionAristotle
 
 noncomputable section
-
 set_option autoImplicit false
 
--- LOCK_CP_NLSE_2D_DISPERSION.md
--- Canonical sources:
---   crft/tests/crft_c6_cp_nlse_2d_dispersion.py
---   crft/cp_nlse_2d.py
---   crft/__init__.py
---
--- Scope: linear Schrödinger limit only (g = 0).
---
--- Governing equation (operational 2D CP–NLSE):
---   i ∂t ψ = - (1/2) Δ ψ + g (|ψ|^2 - ρ0) ψ
--- where Δ = ∂xx + ∂yy.
---
--- Locked limiting case:
---   g = 0  ⇒  i ∂t ψ = - (1/2) Δ ψ
---
--- Locked plane-wave dispersion relation:
---   ω(kx, ky) = 1/2 (kx^2 + ky^2)
-
--- Field ψ(x,y,t) as a complex-valued function of (space, space, time).
-abbrev Field2D : Type := ℝ → ℝ → ℝ → ℂ
-
-/-- Angular frequency ω(kx, ky) for the 2D linear Schrödinger dispersion (locked form). -/
-def omega (kx ky : ℝ) : ℝ :=
-  (kx ^ 2 + ky ^ 2) / 2
-
-/-- Expansion lemma: ω is definitionally equal to the locked expression. -/
-theorem omega_expand (kx ky : ℝ) :
+/-- Aristotle-path recheck of the locked two-dimensional dispersion formula. -/
+theorem omega_recheck (kx ky : ℝ) :
     omega kx ky = (kx ^ 2 + ky ^ 2) / 2 := by
+  exact omega_expand kx ky
+
+/-- Aristotle-path recheck of the canonical structural plane-wave template. -/
+theorem planeWave_recheck (A : ℂ) (kx ky : ℝ) :
+    planeWave A kx ky =
+      fun (x y t : ℝ) =>
+        A * Complex.exp (Complex.I * ((kx * x + ky * y - (omega kx ky) * t) : ℂ)) := by
   rfl
-
-/-- Plane-wave ansatz ψ(x,y,t) = A * exp(i (kx x + ky y - ω t)). (Structural template.) -/
-def planeWave (A : ℂ) (kx ky : ℝ) : Field2D :=
-  fun x y t =>
-    A * Complex.exp (Complex.I * ((kx * x + ky * y - (omega kx ky) * t) : ℂ))
-
--- Documentation-only reminders from the lock:
--- Validation procedure (C6):
---   - evolve plane wave with g = 0 on periodic 2π×2π grid (Nx=Ny=32),
---   - measure ω numerically from time series at grid point (0,0),
---   - check relative error < 1e-1.
---
--- This file locks only the dispersion formula ω(kx,ky) in the linear regime.
 
 end
 
-end CPNLSE2D
 
+end DispersionAristotle
+end CPNLSE2D
 end ToeFormal

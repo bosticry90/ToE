@@ -302,7 +302,7 @@ theorem gr_qm_cycle03_transport_and_regime_closure_blocker_discharge_package
   have h_class : witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0" :=
     h_transport_contract.right.right.right.left
   have h_no_shortcut : witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
-    h_transport_contract.right.right.right.right.left
+    h_transport.right
   exact And.intro h_blocker
     (And.intro h_seam
       (And.intro h_compat

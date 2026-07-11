@@ -1,6 +1,22 @@
 README.md
 A Formal Research Hypothesis Toward a Unified Physical Framework
 
+Compact developer setup and validation: `DEVELOPMENT.md`.
+
+Latest nonauthoritative engineering audit:
+`formal/docs/audits/REPOSITORY_INTEGRITY_AUDIT_AND_REMEDIATION_20260711_v0.md`.
+
+CURRENT-AUTHORITY NOTE
+The dated status narratives below are append-only checkpoint history. For the live target and release/blocker posture, read `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` (`current_projection_v0` and the uppercase `CURRENT_LIVE_*` authority tokens) together with `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`. The large `current_target_state` object is a compatibility container; only the keys named by `current_target_state_authority_contract_v0` are authoritative. Historical prose and other flattened fields do not override the current projection.
+
+DEVELOPER QUICKSTART
+- Windows path support: `git config core.longpaths true`
+- Install the active CI/runtime environment: `.\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock`
+- Run Python gates without cache noise: `.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider formal/python/tests`
+- Validate the registry envelope: `.\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check`
+- Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
+- A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
+
 PROJECT STATUS (2026-05-10)
 Tooling is frozen except for bugfixes that preserve existing contracts.
 Current work is in the discriminative science phase, with a strict scalar/QFT derivation lane now synchronized as the active proof-facing status surface.
@@ -2604,8 +2620,8 @@ Historical calculation-execution outcome tokens:
 - Two isolated subprocess executions in distinct temporary directories reproduced byte-identical result, manifest, and execution-report artifacts under the fixed environment.
 - Review report SHA-256: `2bd90958b5c85f255162bfa7f061e8061250443c3c369aaa33bf12ec2077c3e7`.
 - The frozen synthesis family is exactly four reviewed chains: 1+1 Minkowski, 1+1 locally flat conformal coordinates with nonzero connection, fixed 1+1 de Sitter, and fixed 2+1 spatially warped curvature.
-- The current target is `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet`. Independent review accepted scoped Level 3 `E-REPRO` robustness only across the exact closed four-chain fixed-background, fixed-coordinate family.
-- `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet` is queued as a non-live near-term hard gate before any Level 4/5 claim, physical calibration, cross-sector coupling claim, or `C_k` action embedding.
+- At that review boundary, the selected next target was `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet`. Independent review accepted scoped Level 3 `E-REPRO` robustness only across the exact closed four-chain fixed-background, fixed-coordinate family.
+- `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet` was queued as a non-live near-term hard gate before any Level 4/5 claim, physical calibration, cross-sector coupling claim, or `C_k` action embedding.
 - `C_k` remains audit-only and nondynamical, empirical CCFT work remains paused, and entropic time remains external literature pressure only. Registry repair and the scientific-runtime NumPy/CI lock remain separate maintenance lanes.
 - No gravity evolution, Einstein-source test, Bianchi compatibility, source admissibility, QFT-GR seam admissibility or closure, Level 4/5 promotion, CCFT validation, or master-action promotion follows.
 - `SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_2PLUS1_WARPED_BACKGROUND_LEVEL3_SCOPED_E_REPRO_ONLY`

@@ -5,6 +5,12 @@ on:
     branches: ["**"]
   pull_request:
 
+env:
+  # Make checkout portable across the repository's existing long historical paths.
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: core.longpaths
+  GIT_CONFIG_VALUE_0: "true"
+
 jobs:
   governance:
     name: Governance
@@ -21,8 +27,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pytest
-        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+      - name: Install CI dependencies
+        run: |
+          .\.venv\Scripts\python.exe -m pip install --upgrade pip==26.0
+          .\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock
 
       - name: Run dev stack preflight
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.dev_stack_preflight --report-format json
@@ -82,8 +90,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pip-audit and pytest
-        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pip-audit pytest
+      - name: Install CI and security dependencies
+        run: |
+          .\.venv\Scripts\python.exe -m pip install --upgrade pip==26.0
+          .\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock pip-audit==2.10.1
 
       - name: Run dependency security scan
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./dependency_security_scan.ps1
@@ -112,8 +122,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pytest
-        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+      - name: Install CI dependencies
+        run: |
+          .\.venv\Scripts\python.exe -m pip install --upgrade pip==26.0
+          .\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock
 
       - name: Run test suite
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests -q
@@ -134,8 +146,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pytest
-        run: ./.venv/bin/python -m pip install --upgrade pip pytest
+      - name: Install CI dependencies
+        run: |
+          ./.venv/bin/python -m pip install --upgrade pip==26.0
+          ./.venv/bin/python -m pip install -r requirements.ci.lock
 
       - name: Resolve Linux parity critical gate set
         run: ./.venv/bin/python -m formal.python.tools.governance_manifest_select --manifest formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json --group critical_gates --enforce-expected > critical_gates_linux.txt
@@ -163,9 +177,9 @@ jobs:
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
       - name: Build Lean project
-        run: |
-          cd formal/toe_formal
-          lake build
+        run: >
+          python3 -m formal.python.tools.lean_bounded_lake
+          --jobs 1 --target ToeFormal --target ToeFormalAll
 
   orchestration-smoke:
     name: Async Orchestration Smoke
@@ -183,8 +197,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pytest
-        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+      - name: Install CI dependencies
+        run: |
+          .\.venv\Scripts\python.exe -m pip install --upgrade pip==26.0
+          .\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock
 
       - name: Run orchestration unit test
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_orchestration_runner.py -q
@@ -213,8 +229,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pytest
-        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+      - name: Install CI dependencies
+        run: |
+          .\.venv\Scripts\python.exe -m pip install --upgrade pip==26.0
+          .\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock
 
       - name: Run SQL snapshot tool test
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_sql_integrity_snapshot_tool.py -q
@@ -255,8 +273,10 @@ jobs:
       - name: Create venv
         run: python -m venv .venv
 
-      - name: Install pytest
-        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+      - name: Install CI dependencies
+        run: |
+          .\.venv\Scripts\python.exe -m pip install --upgrade pip==26.0
+          .\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock
 
       - name: Run authority forward scaffold gates
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_formal_python_bridge_parity_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py formal/python/tests/test_proof_debt_witness_traceability_gate.py -q

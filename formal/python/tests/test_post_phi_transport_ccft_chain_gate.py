@@ -3112,8 +3112,6 @@ JSON_FALSE_FLAGS = (
     "full_toeformal_aggregate_failed",
     "full_toeformal_aggregate_timed_out",
 )
-
-
 def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(read_text(path))
 
@@ -3123,8 +3121,10 @@ def _rel(path: Path) -> str:
 
 
 def _assert_registry_nonclaims(row: dict[str, Any]) -> None:
-    for flag in JSON_FALSE_FLAGS:
-        assert row[flag] == "no", flag
+    for folded in dict.fromkeys(flag.casefold() for flag in JSON_FALSE_FLAGS):
+        matches = [value for key, value in row.items() if key.casefold() == folded]
+        assert len(matches) == 1, folded
+        assert matches[0] == "no", folded
 
 
 def _assert_gap_resolution_strategy_review_acceptance(row: dict[str, Any]) -> None:

@@ -9,13 +9,13 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "07108d0610f0108d6600436d958904dc33171fb15df87c0d41f58251e3505710",
+  "fingerprint": "80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c",
   "inputs": {
     "OV-FN-WT-01": {
-      "locked_fingerprint": "b15b1c5b5671abd36ca0f38b00f70fdfec15d58c75b903ecb659bc39e4d580d6",
+      "locked_fingerprint": "cb2b6e7a99db7eb1cffaf5340466a2e63816eb52287fa93ae276851a657e3f6b",
       "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-01_fn01_weight_policy_pruning_table.md",
       "present": true,
-      "record_fingerprint": "b15b1c5b5671abd36ca0f38b00f70fdfec15d58c75b903ecb659bc39e4d580d6",
+      "record_fingerprint": "cb2b6e7a99db7eb1cffaf5340466a2e63816eb52287fa93ae276851a657e3f6b",
       "schema": "OV-FN-WT-01_fn01_weight_policy_pruning_table/v1"
     }
   },
@@ -55,7 +55,7 @@ Record (computed)
   "status": {
     "admissibility_manifest": {
       "path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
+      "sha256": "bf44287823ccbff8dc66260fb95611e5c44f4b8076d33a6d6e2072dc95be1a19",
       "version": 1
     },
     "blocked": true,
@@ -74,4 +74,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `07108d0610f0108d6600436d958904dc33171fb15df87c0d41f58251e3505710`
+Record fingerprint: `80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c`

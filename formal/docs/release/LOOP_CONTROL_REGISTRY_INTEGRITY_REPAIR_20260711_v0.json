@@ -1,0 +1,56 @@
+{
+  "boundary": {
+    "embedded_stale_active_projection_removed": true,
+    "git_history_preserved": true,
+    "historical_workstream_catalog_preserved": true,
+    "live_target_changed": false,
+    "scientific_artifacts_modified": false,
+    "scientific_claim_changed": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "post_repair": {
+    "active_workstream_count": 1,
+    "casefold_collision_group_count": 0,
+    "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "deprecated_casefold_alias_rows": 227,
+    "documented_duplicate_workstream_id_count": 1,
+    "flattened_current_state_compatibility_key_count": 3742,
+    "flattened_current_state_compatibility_sha256": "e2ea973f98c80e24cf9f5b23abce1338859873efacb16fd886fe63ef02459ccf",
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "schema_id": "LOOP_CONTROL_REGISTRY_v0",
+    "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "size_bytes": 52340650,
+    "status": "ACTIVE_NONLIVE_NONCLAIM"
+  },
+  "pre_repair": {
+    "casefold_collision_group_occurrences": 229,
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "repository_commit": "4e8036a5a3f3d472d8d5ce70bea51793fb7975ea",
+    "root_schema_id": "SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_RESULT_REVIEW_20260709_v0",
+    "root_status": "ACCEPTED_SCOPED_E_REPRO_MATRIX_COUNTS_ONLY",
+    "sha256": "2fe6294be436d9dc46c15f2f5ce557725826b9370a5eba594dd7521d87efabd4",
+    "size_bytes": 53936012,
+    "stale_active_workstream_projection": {
+      "canonical_json_size_bytes": 1409112,
+      "key_count": 2948,
+      "row_sha256": "bb594564a446f04618efe0f6110e086aeadb2b2e80a0741bb2ac734c34aef753",
+      "workstream_id": "prepare_ccft_scqed_literature_applicability_matrix_calculation_sprint_guardrail_packet"
+    },
+    "flattened_current_target_state": {
+      "canonical_json_size_bytes": 2124429,
+      "key_count": 3753,
+      "row_sha256": "28bbbde8dd2b2bade4028ffe6052424ecebab6fdeae2f6689666a389dc435b0a"
+    }
+  },
+  "repair_contract": {
+    "casefold_alias_policy": "Equal-valued case-fold aliases are removed while their object paths, spellings, canonical keys, and value hashes are retained in casefold_key_aliases_v0. Unequal-valued collisions fail closed.",
+    "current_projection_source": "current_target_state plus the exactly matching active workstream",
+    "deterministic_tool": "formal/python/tools/loop_control_registry_integrity.py",
+    "duplicate_workstream_policy": "The one non-current historical duplicate workstream identifier is quarantined with stable content-hash record IDs rather than silently rewritten.",
+    "legacy_flat_packet_policy": "Flattened packet metadata remains compatibility-only and cannot override the registry envelope or current projection.",
+    "projection_replacement": "The stale embedded active_workstreams projection was removed from the active view and replaced by the exact current row already retained in the historical workstreams catalog.",
+    "root_alias_policy": "Every authoritative-looking root live/current target alias is normalized to the current projection; flattened current_target_state compatibility fields are governed by an explicit authority-key allowlist."
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_INTEGRITY_REPAIR_20260711_v0",
+  "status": "APPLIED_PRESERVATION_FIRST_REGISTRY_ENVELOPE_AND_KEY_REPAIR"
+}

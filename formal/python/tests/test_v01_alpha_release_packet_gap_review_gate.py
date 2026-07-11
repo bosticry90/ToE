@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -21,6 +22,7 @@ SELECTION_PATH = (
 GAP_REVIEW_PATH = RELEASE_DIR / "V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_20260515_v0.json"
 TOOL_PATH = REPO_ROOT / "formal" / "python" / "tools" / "v01_alpha_release_packet_gap_review_report.py"
 PHYSICS_ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+FROZEN_GAP_REVIEW_SHA256 = "cf9ea10e8666e1925dc0950e0a9ef2ecb40af7d887810b5bee5002def984ae04"
 
 FORBIDDEN_TRUE_KEYS = [
     "computational_physics_execution_surface_opened",
@@ -154,6 +156,7 @@ def test_v01_alpha_release_packet_gap_review_selects_exactly_one_next_target() -
 
 def test_v01_alpha_release_packet_gap_review_acceptance_criteria_and_determinism() -> None:
     payload = _json(GAP_REVIEW_PATH)
+    assert hashlib.sha256(GAP_REVIEW_PATH.read_bytes()).hexdigest() == FROZEN_GAP_REVIEW_SHA256
     for key, value in payload["acceptance_criteria"].items():
         assert value is True, f"Acceptance criterion failed: {key}"
 
@@ -166,7 +169,36 @@ def test_v01_alpha_release_packet_gap_review_acceptance_criteria_and_determinism
         captured_at_utc=DEFAULT_CAPTURED_AT_UTC,
     )
     assert generated_1 == generated_2
-    assert payload == generated_1
+    # The dated artifact is hash-frozen above. The builder intentionally reads
+    # mutable public surfaces, so its current output is a separate live
+    # diagnostic and must not be mistaken for historical byte regeneration.
+    for key in (
+        "schema_id",
+        "review_id",
+        "captured_at_utc",
+        "outcome_id",
+        "consumed_target",
+        "selected_next_target",
+        "forbidden_effect_status",
+        "acceptance_criteria",
+    ):
+        assert payload[key] == generated_1[key]
+    assert [row["check_id"] for row in payload["gap_rows"]] == [
+        row["check_id"] for row in generated_1["gap_rows"]
+    ]
+    current_rows = {row["check_id"]: row for row in generated_1["gap_rows"]}
+    assert generated_1["release_packet_assembled"] is False
+    assert generated_1["release_packet_assembly_authorized"] is False
+    assert generated_1["v01_alpha_public_release_completion_authorized"] is False
+    assert all(value is False for value in generated_1["forbidden_effect_status"].values())
+    assert current_rows["public_summary_readiness"]["observed"][
+        "not_complete_signal_count"
+    ] > 0
+    live_legacy_counts = current_rows["remaining_unmigrated_release_facing_labels"][
+        "observed"
+    ]["legacy_label_signal_counts_on_public_surfaces"]
+    assert set(live_legacy_counts) == {"T-PROVED", "T-CONDITIONAL", "DISCHARGED_v0", "LOCKED"}
+    assert all(isinstance(count, int) and count >= 0 for count in live_legacy_counts.values())
 
 
 def test_v01_alpha_release_packet_gap_review_is_pinned_in_physics_roadmap() -> None:

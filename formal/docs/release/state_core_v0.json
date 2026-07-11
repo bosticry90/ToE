@@ -1,6 +1,7 @@
 {
   "schema_id": "STATE_CORE_SCHEMA_v0",
-  "schema_version": 1,
+  "schema_version": 2,
+  "authority_role": "HISTORICAL_WS10_SNAPSHOT_NONAUTHORIZING",
   "active_lane": "QM_STAT",
   "active_tranche_id": "WS-10-T19",
   "queued_lanes": [

@@ -48,5 +48,7 @@ structure RegimeInterfaceBoundednessSeamWitness where
   boundednessWindowTag : String
   validityTransferTag : String
 
+end
+
 end Constraints
 end ToeFormal

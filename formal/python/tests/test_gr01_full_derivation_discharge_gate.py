@@ -441,7 +441,7 @@ def test_gr01_full_derivation_progress_token_exists() -> None:
     )
     forbidden_bridge_transport_tokens = [
         "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_constructor_v0",
-        "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_from_radial_evaluator_constructor_v0",
+        "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_constructor_v0",
         "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_witness_constructor_v0",
     ]
     for tok in forbidden_bridge_transport_tokens:
@@ -768,7 +768,7 @@ def test_gr01_full_derivation_progress_token_exists() -> None:
         "hRAC",
         "hWeakFieldUniformBound",
         "hELImpliesOperatorResidualUnderBound",
-        "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_from_radial_evaluator_constructor_v0",
+        "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_transport_constructor_v0",
     ]
     missing_bridge_witness_wrapper = [
         tok

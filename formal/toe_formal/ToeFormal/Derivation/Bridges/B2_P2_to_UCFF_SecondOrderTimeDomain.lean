@@ -5,10 +5,11 @@ import ToeFormal.Derivation.Parents.P2_Wave_EFT
 namespace ToeFormal
 namespace Derivation
 namespace Bridges
+namespace B2P2SecondOrderTimeDomain
 
 open ToeFormal
-open ToeFormal.UCFF
-open ToeFormal.Derivation.Parents
+open ToeFormal.UCFF.SecondOrderTimeDomain
+open ToeFormal.Derivation.Parents.P2Wave
 
 noncomputable section
 set_option autoImplicit false
@@ -78,24 +79,29 @@ stating that the intended derivative operators and cubic term agree.
 -/
 
 axiom Dtt_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dtt : FieldC → FieldC) =
-    (ToeFormal.UCFF.Dtt : UCFF.Field → UCFF.Field)
+  (ToeFormal.Derivation.Parents.P2Wave.Dtt : FieldC → FieldC) =
+    (ToeFormal.UCFF.SecondOrderTimeDomain.Dtt :
+      UCFF.SecondOrderTimeDomain.Field → UCFF.SecondOrderTimeDomain.Field)
 
 axiom Dxx_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dxx : FieldC → FieldC) =
-    (ToeFormal.UCFF.Dxx : UCFF.Field → UCFF.Field)
+  (ToeFormal.Derivation.Parents.P2Wave.Dxx : FieldC → FieldC) =
+    (ToeFormal.UCFF.SecondOrderTimeDomain.Dxx :
+      UCFF.SecondOrderTimeDomain.Field → UCFF.SecondOrderTimeDomain.Field)
 
 axiom Dxxxx_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dxxxx : FieldC → FieldC) =
-    (ToeFormal.UCFF.Dxxxx : UCFF.Field → UCFF.Field)
+  (ToeFormal.Derivation.Parents.P2Wave.Dxxxx : FieldC → FieldC) =
+    (ToeFormal.UCFF.SecondOrderTimeDomain.Dxxxx :
+      UCFF.SecondOrderTimeDomain.Field → UCFF.SecondOrderTimeDomain.Field)
 
 axiom Dxxxxxx_agrees_spec :
-  (ToeFormal.Derivation.Parents.Dxxxxxx : FieldC → FieldC) =
-    (ToeFormal.UCFF.Dxxxxxx : UCFF.Field → UCFF.Field)
+  (ToeFormal.Derivation.Parents.P2Wave.Dxxxxxx : FieldC → FieldC) =
+    (ToeFormal.UCFF.SecondOrderTimeDomain.Dxxxxxx :
+      UCFF.SecondOrderTimeDomain.Field → UCFF.SecondOrderTimeDomain.Field)
 
-axiom cubicDensity_agrees_spec (g : ℝ) (phi : ToeFormal.UCFF.Field) :
-  ToeFormal.Derivation.Parents.cubicDensity g (phi : FieldC) =
-    ToeFormal.UCFF.cubicDensity g phi
+axiom cubicDensity_agrees_spec
+    (g : ℝ) (phi : ToeFormal.UCFF.SecondOrderTimeDomain.Field) :
+  ToeFormal.Derivation.Parents.P2Wave.cubicDensity g (phi : FieldC) =
+    ToeFormal.UCFF.SecondOrderTimeDomain.cubicDensity g phi
 
 /-! ### (4) Residual-form bridge lemma
 
@@ -104,35 +110,37 @@ this proof should reduce to `simp`/`rfl`.
 -/
 
 theorem parentResidual_matches_ucffResidual
-    (g lam beta : ℝ) (phi : UCFF.Field) (t x : ℝ) :
+    (g lam beta : ℝ) (phi : UCFF.SecondOrderTimeDomain.Field) (t x : ℝ) :
     let (g3, c2, c4, c6) := coeffMap g lam beta
     waveResidual c2 c4 c6 g3 (phi : FieldC) t x
       =
-    UCFF.secondOrderTimeDomainResidual g lam beta phi t x := by
+    UCFF.SecondOrderTimeDomain.secondOrderTimeDomainResidual g lam beta phi t x := by
   dsimp [
     waveResidual,
-    UCFF.secondOrderTimeDomainResidual,
-    UCFF.secondOrderTimeDomainResidual_expand
+    UCFF.SecondOrderTimeDomain.secondOrderTimeDomainResidual,
+    UCFF.SecondOrderTimeDomain.secondOrderTimeDomainResidual_expand
   ]
   have hDtt :
-      (ToeFormal.Derivation.Parents.Dtt (phi : FieldC) t x)
-        = (ToeFormal.UCFF.Dtt phi) t x := by
+      (ToeFormal.Derivation.Parents.P2Wave.Dtt (phi : FieldC) t x)
+        = (ToeFormal.UCFF.SecondOrderTimeDomain.Dtt phi) t x := by
     simpa using congrArg (fun D => D (phi : FieldC) t x) Dtt_agrees_spec
   have hDxx :
-      (ToeFormal.Derivation.Parents.Dxx (phi : FieldC) t x)
-        = (ToeFormal.UCFF.Dxx phi) t x := by
+      (ToeFormal.Derivation.Parents.P2Wave.Dxx (phi : FieldC) t x)
+        = (ToeFormal.UCFF.SecondOrderTimeDomain.Dxx phi) t x := by
     simpa using congrArg (fun D => D (phi : FieldC) t x) Dxx_agrees_spec
   have hDxxxx :
-      (ToeFormal.Derivation.Parents.Dxxxx (phi : FieldC) t x)
-        = (ToeFormal.UCFF.Dxxxx phi) t x := by
+      (ToeFormal.Derivation.Parents.P2Wave.Dxxxx (phi : FieldC) t x)
+        = (ToeFormal.UCFF.SecondOrderTimeDomain.Dxxxx phi) t x := by
     simpa using congrArg (fun D => D (phi : FieldC) t x) Dxxxx_agrees_spec
   have hDxxxxxx :
-      (ToeFormal.Derivation.Parents.Dxxxxxx (phi : FieldC) t x)
-        = (ToeFormal.UCFF.Dxxxxxx phi) t x := by
+      (ToeFormal.Derivation.Parents.P2Wave.Dxxxxxx (phi : FieldC) t x)
+        = (ToeFormal.UCFF.SecondOrderTimeDomain.Dxxxxxx phi) t x := by
     simpa using congrArg (fun D => D (phi : FieldC) t x) Dxxxxxx_agrees_spec
   have hcubic :
-      ToeFormal.Derivation.Parents.cubicDensity (coeffMap g lam beta).1 (phi : FieldC) t x =
-        ToeFormal.UCFF.cubicDensity (coeffMap g lam beta).1 phi t x := by
+      ToeFormal.Derivation.Parents.P2Wave.cubicDensity
+          (coeffMap g lam beta).1 (phi : FieldC) t x =
+        ToeFormal.UCFF.SecondOrderTimeDomain.cubicDensity
+          (coeffMap g lam beta).1 phi t x := by
     simpa using congrArg (fun f => f t x)
       (cubicDensity_agrees_spec (coeffMap g lam beta).1 phi)
   rw [hDtt, hDxx, hDxxxx, hDxxxxxx, hcubic]
@@ -146,11 +154,11 @@ residual holds.
 -/
 
 theorem B2_P2_to_UCFF_SecondOrderTimeDomain
-    (g lam beta : ℝ) (phi : UCFF.Field) :
+    (g lam beta : ℝ) (phi : UCFF.SecondOrderTimeDomain.Field) :
     let (g3, c2, c4, c6) := coeffMap g lam beta
     SatisfiesWaveP2 c2 c4 c6 g3 (phi : FieldC)
       →
-    UCFF.SatisfiesSecondOrderTimeDomain g lam beta phi := by
+    UCFF.SecondOrderTimeDomain.SatisfiesSecondOrderTimeDomain g lam beta phi := by
   intro hP2 t x
   dsimp [SatisfiesWaveP2] at hP2
   have h0 :
@@ -161,14 +169,15 @@ theorem B2_P2_to_UCFF_SecondOrderTimeDomain
   have eq' :
       (let (g3, c2, c4, c6) := coeffMap g lam beta
        waveResidual c2 c4 c6 g3 (phi : FieldC) t x)
-        = UCFF.secondOrderTimeDomainResidual g lam beta phi t x := by
+        = UCFF.SecondOrderTimeDomain.secondOrderTimeDomainResidual g lam beta phi t x := by
     simpa using eq
   -- Rewrite the parent residual into the UCFF residual.
-  have h0' : UCFF.secondOrderTimeDomainResidual g lam beta phi t x = 0 := by
+  have h0' : UCFF.SecondOrderTimeDomain.secondOrderTimeDomainResidual g lam beta phi t x = 0 := by
     simpa [eq'] using h0
   exact h0'
 
 end
+end B2P2SecondOrderTimeDomain
 end Bridges
 end Derivation
 end ToeFormal

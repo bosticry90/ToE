@@ -1,4 +1,5 @@
 <!-- GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->
+- `STATE_CORE_TRACKER_AUTHORITY_ROLE_v0: HISTORICAL_WS10_SNAPSHOT_NONAUTHORIZING`
 - `STATE_CORE_TRACKER_ACTIVE_TRANCHE_v0: WS-10-T19`
 - `STATE_CORE_TRACKER_GATE_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py`
 - `STATE_CORE_TRACKER_ARTIFACT_v0: formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json`

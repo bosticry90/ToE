@@ -2,6 +2,7 @@ import Mathlib
 
 namespace ToeFormal
 namespace UCFF
+namespace SecondOrderNumerics
 
 noncomputable section
 set_option autoImplicit false
@@ -105,5 +106,6 @@ def planeWave (A : ℂ) (lam beta : ℝ) (k : ℝ) : Field :=
 --     (This is an operational sign convention enforced by tests.)
 
 end
+end SecondOrderNumerics
 end UCFF
 end ToeFormal

@@ -2,6 +2,7 @@ import Mathlib
 
 namespace ToeFormal
 namespace UCFF
+namespace SecondOrderTimeDomain
 
 noncomputable section
 set_option autoImplicit false
@@ -90,5 +91,6 @@ theorem omegaSqSecondOrderNaturalUnits_expand
 
 
 end
+end SecondOrderTimeDomain
 end UCFF
 end ToeFormal

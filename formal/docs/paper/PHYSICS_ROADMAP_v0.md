@@ -496,7 +496,7 @@ Strict scalar/QFT derivation synchronization checkpoint (2026-05-02):
 - QFT-GR covariant-conservation obligation semantics status: `QFT_GR_CovariantConservationObligationSemantics.lean` and `formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_BOUNDED_ATTACK_20260503_v0.json` consume `prepare_qft_gr_covariant_conservation_obligation_semantics_bounded_attack`, construct a supplied-only covariant-conservation obligation surface over candidate classical-source semantics, refute classical-source-admissibility-only derivation of a conservation witness, retain `QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_SUPPLIED_ONLY`, and select `review_qft_gr_covariant_conservation_obligation_semantics_result` while actual conservation proof, Bianchi compatibility, Einstein-equation coupling, weak-curvature source identification, Poisson-limit recovery, semiclassical Einstein equation, source-map closure, seam closure, Phase 2, empirical claim, and master-action promotion remain unauthorized.
 - QFT-GR covariant-conservation obligation result-review status: `QFT_GR_CovariantConservationObligationSemanticsResultReview.lean` and `formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_RESULT_REVIEW_20260503_v0.json` consume `review_qft_gr_covariant_conservation_obligation_semantics_result`, accept the supplied-only covariant-conservation obligation result as obligation-only semantic availability, confirm classical-source-admissibility-only derivation of a conservation witness remains refuted, record `QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY`, and select `prepare_qft_gr_bianchi_compatibility_obligation_semantics_bounded_attack` as a preparation-only next target while conservation witnesses, actual conservation proof, Bianchi-compatible source proof, Einstein-equation coupling, weak-curvature source identification, Poisson-limit recovery, semiclassical Einstein equation, source-map closure, seam closure, Phase 2, empirical claim, and master-action promotion remain unauthorized.
 - QFT-GR Bianchi-compatibility obligation semantics status: `QFT_GR_BianchiCompatibilityObligationSemantics.lean` and `formal/docs/release/QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_BOUNDED_ATTACK_20260503_v0.json` consume `prepare_qft_gr_bianchi_compatibility_obligation_semantics_bounded_attack`, construct a supplied-only Bianchi-compatibility obligation surface over candidate classical-source semantics, refute covariant-conservation-obligation-only derivation of a Bianchi witness, retain `QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_SUPPLIED_ONLY`, and select `review_qft_gr_bianchi_compatibility_obligation_semantics_result` while conservation witnesses, actual covariant conservation, Bianchi witness, actual Bianchi compatibility, Einstein-equation coupling, weak-curvature source identification, Poisson-limit recovery, semiclassical Einstein equation, source-map closure, seam closure, Phase 2, empirical claim, and master-action promotion remain unauthorized.
-- Lean axiom/spec-backed ledger status: `formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md` records the uncommented Lean proof-debt baseline used by the full target-map rebase: 60 real axioms, 0 `sorry`/`admit`, and 15 files, with full-pillar blocker flags and replacement/discharge paths.
+- Lean axiom/spec-backed ledger checkpoint status: at the full target-map rebase boundary, `formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md` recorded 60 real axioms, 0 `sorry`/`admit`, and 15 files. The mutable ledger must be read directly for the current proof-debt count.
 - QFT-GR source-map status: `QFT_GR_StressEnergyExpectationSourceMap.lean` defines the QFT stress-energy object, expectation/state functional, GR source object, covariance/conservation assumptions, and residual/error interface; supplied expectation/source and weak-curvature/source alignments construct a zero-residual source-map package. `QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean` proves residual-only zero evidence does not close full source-map semantics when the required semantic fields are false. `QFTGRPostBudgetCrossPillarReview.lean` completes the attempt-budget review, keeps same-lane QFT-GR continuation blocked, preserves the master dependency class, and selected SR covariance through cosmology regime transport.
 - SR/COSMO regime transport status: `SR_CosmologyRegimeTransport.lean` defines supplied local SR covariance, supplied cosmology background/regime evidence, supplied alignment, transported interval residual, regime-scale residual, and unified residual. Supplied alignment constructs a zero-residual package and records `SR_COSMOLOGY_REGIME_TRANSPORT_ZERO_RESIDUAL_FRESH_DELTA_v0` as a `new_theorem` fresh delta. `SR_CosmologyGlobalBridgeSemanticMapObstruction.lean` proves that zero-residual transport package evidence alone does not close global SR/COSMO bridge semantics without additional global semantic-map fields, recorded as `SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_COUNTEREXAMPLE_FRESH_DELTA_v0`. `SRCosmologyPostBudgetCrossPillarReview.lean` completes the attempt-budget review, keeps same-lane SR/COSMO semantic-map continuation blocked, preserves the master dependency class, and selects QM evolution transport-hypotheses work.
 - QM evolution transport-hypotheses adjudication status: `QM_STAT_EvolutionTransportHypothesesAdjudication.lean` proves that a contract-only QM evolution map does not derive the finite transport equivalence, probability-source alignment, STAT target, observable alignment, or transport semantics required by the QM-STAT residual package.
@@ -707,6 +707,8 @@ Repository-wide governance and physics status audit checkpoint (2026-03-15):
 - Scalar submission support package note pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md`.
 - Scalar submission support checkpoint pointer: `formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json`.
 - Scalar submission support gate pointer: `formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py`.
+- Effective 2026-07-11 scalar-submission posture: `NOT_READY_MISSING_PUBLICATION_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET`; the 2026-03-15 readiness token above is historical.
+- Correction pointer: `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`.
 
 Live seam contradiction control checkpoint (2026-04-16):
 - Seam SLA policy pointer: `formal/docs/release/SEAM_RESOLUTION_SLA_POLICY_20260416_v0.md`.
@@ -1719,7 +1721,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T28_REMEDIATION_PHASE_B_ENTRY_CRITERIA_v0: REQUIRES_T27_ACCEPTANCE_PLUS_SINGLE_LANE_SCOPE_LOCK_NONLIVE`
 - `THEORY_RESTART_T28_REMEDIATION_PHASE_B_EXECUTION_LIVE_TOKEN_COUNT_v0: 0`
 - `THEORY_RESTART_T28_REMEDIATION_PHASE_B_SCOPE_TOKEN_v0: CONTROL_SURFACE_BOUNDED_GR_QM_EXECUTION_CHECKPOINT_NONLIVE`
-- `THEORY_RESTART_T28_REMEDIATION_PHASE_B_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T28_REMEDIATION_PHASE_B_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T28_REMEDIATION_PHASE_B_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T28_REMEDIATION_PHASE_B_CHECKPOINT_STATUS_v0: READY_FOR_NEXT_BOUNDED_INCREMENT_NONLIVE`
 - `THEORY_RESTART_T28_REMEDIATION_PHASE_B_STOP_CONDITION_v0: HALT_ON_SCOPE_DRIFT_OR_LIVE_TOKEN_OR_BR01_REACTIVATION`
@@ -1736,7 +1738,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T29_REMEDIATION_PHASE_C_CONTINUITY_SCOPE_TOKEN_v0: CONTROL_SURFACE_CONTINUITY_RECONCILIATION_POST_T28_NONLIVE`
 - `THEORY_RESTART_T29_REMEDIATION_PHASE_C_CONTINUITY_RESULT_v0: CLOSED_CONTINUITY_RECONCILED_SINGLE_LANE_NONLIVE_v0`
 - `THEORY_RESTART_T29_REMEDIATION_PHASE_C_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T29_REMEDIATION_PHASE_C_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T29_REMEDIATION_PHASE_C_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T29_REMEDIATION_PHASE_C_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T29_REMEDIATION_PHASE_C_STOP_CONDITION_v0: HALT_ON_STATUS_AMBIGUITY_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T29_REMEDIATION_PHASE_C_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1754,7 +1756,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T30_REMEDIATION_PHASE_D_PACKET05_PROTOCOL_POINTER_v0: formal/docs/release/FOUNDATIONAL_EMPIRICAL_DECISION_AND_FALSIFICATION_STANDARD_v0.md`
 - `THEORY_RESTART_T30_REMEDIATION_PHASE_D_OPERATIONALIZATION_RESULT_v0: ACTIVE_PACKET05_DECISION_LEDGER_AND_FALSIFICATION_BINDINGS_NONLIVE_v0`
 - `THEORY_RESTART_T30_REMEDIATION_PHASE_D_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T30_REMEDIATION_PHASE_D_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T30_REMEDIATION_PHASE_D_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T30_REMEDIATION_PHASE_D_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T30_REMEDIATION_PHASE_D_STOP_CONDITION_v0: HALT_ON_PACKET05_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T30_REMEDIATION_PHASE_D_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1774,7 +1776,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T31_REMEDIATION_PHASE_E_COUPLING_RESULT_v0: ACTIVE_PROOF_DEBT_WITNESS_COUPLING_NONLIVE_v0`
 - `THEORY_RESTART_T31_REMEDIATION_PHASE_E_ORPHAN_BINDING_STATUS_v0: NO_ORPHAN_PROOF_DEBT_ROWS_v0`
 - `THEORY_RESTART_T31_REMEDIATION_PHASE_E_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T31_REMEDIATION_PHASE_E_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T31_REMEDIATION_PHASE_E_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T31_REMEDIATION_PHASE_E_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T31_REMEDIATION_PHASE_E_STOP_CONDITION_v0: HALT_ON_PROOF_DEBT_DRIFT_OR_ORPHAN_BINDING_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T31_REMEDIATION_PHASE_E_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1793,7 +1795,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T32_REMEDIATION_PHASE_F_PROGRAM_POINTER_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
 - `THEORY_RESTART_T32_REMEDIATION_PHASE_F_CONVERGENCE_RESULT_v0: ACTIVE_AUTHORITY_CONVERGENCE_ACCEPTANCE_READY_NONLIVE_v0`
 - `THEORY_RESTART_T32_REMEDIATION_PHASE_F_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T32_REMEDIATION_PHASE_F_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T32_REMEDIATION_PHASE_F_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T32_REMEDIATION_PHASE_F_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T32_REMEDIATION_PHASE_F_STOP_CONDITION_v0: HALT_ON_CONVERGENCE_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T32_REMEDIATION_PHASE_F_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1812,7 +1814,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T33_CONTINUATION_PHASE_G_TARGET_GATE_POINTER_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py`
 - `THEORY_RESTART_T33_CONTINUATION_PHASE_G_CONTINUATION_RESULT_v0: QM_STAT_CYCLE12_SINGLE_LANE_AUTHORIZED_NONLIVE_v0`
 - `THEORY_RESTART_T33_CONTINUATION_PHASE_G_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T33_CONTINUATION_PHASE_G_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T33_CONTINUATION_PHASE_G_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T33_CONTINUATION_PHASE_G_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T33_CONTINUATION_PHASE_G_STOP_CONDITION_v0: HALT_ON_CONTINUATION_SCOPE_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T33_CONTINUATION_PHASE_G_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1831,7 +1833,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T34_EXECUTION_PHASE_H_TARGET_GATE_POINTER_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py`
 - `THEORY_RESTART_T34_EXECUTION_PHASE_H_EXECUTION_CHECKPOINT_RESULT_v0: QM_STAT_CYCLE12_BOUNDED_EXECUTION_CHECKPOINT_PINNED_NONLIVE_v0`
 - `THEORY_RESTART_T34_EXECUTION_PHASE_H_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T34_EXECUTION_PHASE_H_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T34_EXECUTION_PHASE_H_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T34_EXECUTION_PHASE_H_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T34_EXECUTION_PHASE_H_STOP_CONDITION_v0: HALT_ON_CYCLE12_EXECUTION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T34_EXECUTION_PHASE_H_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1851,7 +1853,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T35_CONTINUATION_PHASE_I_TARGET_GATE_POINTER_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py`
 - `THEORY_RESTART_T35_CONTINUATION_PHASE_I_CONTINUATION_SELECTION_RESULT_v0: QM_STAT_FORWARD_CONTINUATION_SELECTED_NONLIVE_v0`
 - `THEORY_RESTART_T35_CONTINUATION_PHASE_I_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T35_CONTINUATION_PHASE_I_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T35_CONTINUATION_PHASE_I_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T35_CONTINUATION_PHASE_I_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T35_CONTINUATION_PHASE_I_STOP_CONDITION_v0: HALT_ON_FORWARD_SELECTION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T35_CONTINUATION_PHASE_I_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1871,7 +1873,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T36_EXECUTION_PHASE_J_TARGET_GATE_POINTER_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py`
 - `THEORY_RESTART_T36_EXECUTION_PHASE_J_FORWARD_EXECUTION_RESULT_v0: QM_STAT_FORWARD_BOUNDED_EXECUTION_PINNED_NONLIVE_v0`
 - `THEORY_RESTART_T36_EXECUTION_PHASE_J_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T36_EXECUTION_PHASE_J_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T36_EXECUTION_PHASE_J_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T36_EXECUTION_PHASE_J_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T36_EXECUTION_PHASE_J_STOP_CONDITION_v0: HALT_ON_FORWARD_EXECUTION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T36_EXECUTION_PHASE_J_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1891,7 +1893,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T37_EXECUTION_PHASE_K_TARGET_GATE_POINTER_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py`
 - `THEORY_RESTART_T37_EXECUTION_PHASE_K_CONTINUATION_EXECUTION_RESULT_v0: QM_STAT_FORWARD_CONTINUATION_EXECUTION_PINNED_NONLIVE_v0`
 - `THEORY_RESTART_T37_EXECUTION_PHASE_K_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T37_EXECUTION_PHASE_K_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T37_EXECUTION_PHASE_K_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T37_EXECUTION_PHASE_K_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T37_EXECUTION_PHASE_K_STOP_CONDITION_v0: HALT_ON_CONTINUATION_EXECUTION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T37_EXECUTION_PHASE_K_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1911,7 +1913,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T38_EXECUTION_PHASE_L_TARGET_GATE_POINTER_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py`
 - `THEORY_RESTART_T38_EXECUTION_PHASE_L_CONTINUATION_EXECUTION_RESULT_v0: QM_STAT_FORWARD_CONTINUATION_EXECUTION_PINNED_NONLIVE_v1`
 - `THEORY_RESTART_T38_EXECUTION_PHASE_L_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T38_EXECUTION_PHASE_L_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T38_EXECUTION_PHASE_L_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T38_EXECUTION_PHASE_L_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T38_EXECUTION_PHASE_L_STOP_CONDITION_v0: HALT_ON_CONTINUATION_EXECUTION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T38_EXECUTION_PHASE_L_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1932,7 +1934,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T39_EXECUTION_PHASE_M_BOUNDARY_DECISION_RESULT_v0: QM_STAT_FORWARD_CONTINUATION_EXECUTION_V2_PATH_SELECTED_NONLIVE_v0`
 - `THEORY_RESTART_T39_EXECUTION_PHASE_M_PHASE_L_EXIT_CRITERION_v0: PHASE_L_LOOP_TERMINATED_BY_PHASE_M_BOUNDARY_DECISION_v0`
 - `THEORY_RESTART_T39_EXECUTION_PHASE_M_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T39_EXECUTION_PHASE_M_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T39_EXECUTION_PHASE_M_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T39_EXECUTION_PHASE_M_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T39_EXECUTION_PHASE_M_STOP_CONDITION_v0: HALT_ON_BOUNDARY_DECISION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T39_EXECUTION_PHASE_M_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1953,7 +1955,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T40_EXECUTION_PHASE_N_CONTINUITY_AUTHORIZATION_RESULT_v0: QM_STAT_FORWARD_CONTINUATION_EXECUTION_V2_AUTHORIZED_NONLIVE_v0`
 - `THEORY_RESTART_T40_EXECUTION_PHASE_N_PHASE_M_OPERATIONALIZATION_v0: PHASE_M_BOUNDARY_DECISION_OPERATIONALIZED_BY_PHASE_N_CONTINUITY_AUTHORIZATION_v0`
 - `THEORY_RESTART_T40_EXECUTION_PHASE_N_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T40_EXECUTION_PHASE_N_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T40_EXECUTION_PHASE_N_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T40_EXECUTION_PHASE_N_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T40_EXECUTION_PHASE_N_STOP_CONDITION_v0: HALT_ON_CONTINUITY_AUTHORIZATION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T40_EXECUTION_PHASE_N_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -1974,7 +1976,7 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_EXECUTION_CONTROL_RESULT_v0: QM_STAT_FORWARD_CONTINUATION_EXECUTION_V2_CONTROLLED_NONLIVE_v0`
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_PHASE_N_OPERATIONALIZATION_v0: PHASE_N_CONTINUITY_AUTHORIZATION_OPERATIONALIZED_BY_PHASE_O_EXECUTION_CONTROL_v0`
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_BRANCH_CHAIN_STATUS_v0: UNAMBIGUOUS_SINGLE_ACTIVE_LANE`
-- `THEORY_RESTART_T41_EXECUTION_PHASE_O_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `THEORY_RESTART_T41_EXECUTION_PHASE_O_ACTIVE_LANE_v0: A1_GR_QM_SEAM_PROMOTION`
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_PAUSED_LANE_v0: A1_BR01_DISPERSION_TO_METRIC`
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_STOP_CONDITION_v0: HALT_ON_EXECUTION_CONTROL_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_ROLLBACK_ANCHOR_v0: 522eedb`
@@ -3541,9 +3543,13 @@ No-deviation sequencing rule:
   - `formal/output/toe_qft_gr_seam_packet54_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
   - `formal/python/tests/test_toe_qft_gr_seam_packet54_reconsideration_scorecard_cycle01_evaluation_gate.py`
   - `TOE_QFT_GR_SEAM_PACKET54_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
-  - `SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED`
-  - `SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE`
-  - `SCALAR_ROUTE_SUBMISSION_READINESS_STATUS_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`
+  - Historical checkpoint token: `SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED`
+  - Historical checkpoint token: `SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE`
+  - Historical checkpoint token: `SCALAR_ROUTE_SUBMISSION_READINESS_STATUS_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`
+  - `SCALAR_ROUTE_SUBMISSION_EFFECTIVE_CANDIDATE_STATUS_20260711_v0: BLOCKED_MISSING_PHYSICS_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET`
+  - `SCALAR_ROUTE_SUBMISSION_EFFECTIVE_READINESS_STATUS_20260711_v0: NOT_READY_MISSING_PUBLICATION_CONTRIBUTION_CLASSIFICATION_POINTER_TARGET`
+  - `SCALAR_ROUTE_SUBMISSION_EFFECTIVE_PACKAGE_STATUS_20260711_v0: NOT_AUTHORIZED_REFERENTIAL_INTEGRITY_CORRECTION_ACTIVE`
+  - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
   - `QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0`
   - `formal/python/tests/test_em_empirical_comparison_packet_04_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
@@ -5933,7 +5939,8 @@ Legacy historical snapshot (non-authoritative for active adjudication):
 ## STATE_CORE_GENERATED_MIRROR_PILOT_v0
 
 <!-- GENERATED: STATE_CORE_ROADMAP_STATUS_v0 -->
-- `STATE_CORE_ROADMAP_ACTIVE_LANE_v0: review_phi_bridge_theorem_linkage_attempt_from_standalone_phi_bridge_route_execution_result`
+- `STATE_CORE_ROADMAP_AUTHORITY_ROLE_v0: HISTORICAL_WS10_SNAPSHOT_NONAUTHORIZING`
+- `STATE_CORE_ROADMAP_ACTIVE_LANE_v0: QM_STAT`
 - `STATE_CORE_ROADMAP_ACTIVE_TRANCHE_v0: WS-10-T19`
 - `STATE_CORE_ROADMAP_MODE_v0: synthesis`
 - `STATE_CORE_ROADMAP_DELTA_CLASS_v0: math_strengthening`
@@ -7610,8 +7617,8 @@ Historical calculation-execution outcome tokens:
 - Two isolated subprocess executions in distinct temporary directories reproduced byte-identical result, manifest, and execution-report artifacts under the fixed environment.
 - Review report SHA-256: `2bd90958b5c85f255162bfa7f061e8061250443c3c369aaa33bf12ec2077c3e7`.
 - The frozen synthesis family is exactly four reviewed chains: 1+1 Minkowski, 1+1 locally flat conformal coordinates with nonzero connection, fixed 1+1 de Sitter, and fixed 2+1 spatially warped curvature.
-- The current target is `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet`. Independent review accepted scoped Level 3 `E-REPRO` robustness only across the exact closed four-chain fixed-background, fixed-coordinate family.
-- `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet` is queued as a non-live near-term hard gate before any Level 4/5 claim, physical calibration, cross-sector coupling claim, or `C_k` action embedding.
+- At that review boundary, the selected next target was `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet`. Independent review accepted scoped Level 3 `E-REPRO` robustness only across the exact closed four-chain fixed-background, fixed-coordinate family.
+- `prepare_pillar_seam_unit_mapping_ledger_guardrail_packet` was queued as a non-live near-term hard gate before any Level 4/5 claim, physical calibration, cross-sector coupling claim, or `C_k` action embedding.
 - `C_k` remains audit-only and nondynamical, empirical CCFT work remains paused, and entropic time remains external literature pressure only. Registry repair and the scientific-runtime NumPy/CI lock remain separate maintenance lanes.
 - No gravity evolution, Einstein-source test, Bianchi compatibility, source admissibility, QFT-GR seam admissibility or closure, Level 4/5 promotion, CCFT validation, or master-action promotion follows.
 - `SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_2PLUS1_WARPED_BACKGROUND_LEVEL3_SCOPED_E_REPRO_ONLY`

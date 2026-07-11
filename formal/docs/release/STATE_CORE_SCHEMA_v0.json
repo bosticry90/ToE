@@ -1,9 +1,10 @@
 {
   "schema_id": "STATE_CORE_SCHEMA_v0",
-  "schema_version": 1,
+  "schema_version": 2,
   "required_top_level": [
     "schema_id",
     "schema_version",
+    "authority_role",
     "active_lane",
     "active_tranche_id",
     "queued_lanes",

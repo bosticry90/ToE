@@ -38,8 +38,11 @@ theorem noether_from_SYM01
     (hInv : ActionInvariant declaredAction (oneParamAction_of_SYM01 A)) :
     Conserved declaredEvolution declaredQuantity := by
   have hInv' : ActionInvariant declaredAction declaredSymmetry := by
-    simpa [hMatch] using hInv
+    rw [hMatch]
+    exact hInv
   exact declared_noether_conservation hInv'
+
+end
 
 end Variational
 end ToeFormal

@@ -1,0 +1,27 @@
+{
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/.venv/**": true,
+    "**/__pycache__/**": true,
+    "**/archive/**": true,
+    "**/backup/**": true,
+    "**/formal/toe_formal/.lake/**": true,
+    "**/formal/aristotle_scratch/**": true,
+    "**/formal/rust/**/target/**": true,
+    "**/formal/tooling_snapshots/**": true,
+    "**/scratch/**": true,
+    "**/formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json": true
+  },
+  "search.exclude": {
+    "**/.venv/**": true,
+    "**/__pycache__/**": true,
+    "**/archive/**": true,
+    "**/backup/**": true,
+    "**/formal/toe_formal/.lake/**": true,
+    "**/formal/aristotle_scratch/**": true,
+    "**/formal/rust/**/target/**": true,
+    "**/formal/tooling_snapshots/**": true,
+    "**/scratch/**": true,
+    "**/formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json": true
+  }
+}

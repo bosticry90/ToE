@@ -40,8 +40,6 @@ This is intentionally conservative: presence of Lean files does not imply enable
 Actual enforcement remains in the Python admissibility manifest consumed by tooling.
 -/
 def defaultEnabled : List String := []
-def defaultEnabled : List String := ["CT01", "SYM01", "CAUS01"]
-def defaultEnabled : List String := []
 
 end Gates
 end ToeFormal

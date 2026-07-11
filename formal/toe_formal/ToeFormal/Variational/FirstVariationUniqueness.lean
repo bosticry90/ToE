@@ -9,7 +9,7 @@ Scope:
 -/
 
 import Mathlib
-import ToeFormal.Variational.FirstVariationDeclared
+import ToeFormal.Variational.FirstVariationRepresentationCore
 
 namespace ToeFormal
 namespace Variational
@@ -49,6 +49,8 @@ theorem represents_unique_of_nondegenerate
     _ = firstVariation δ ψ := by symm; exact h1'
     _ = pairing (E2 ψ) (δ ψ) := by exact h2'
     _ = pairing (E2 ψ) v := by simpa [hδ]
+
+end
 
 end Variational
 end ToeFormal
