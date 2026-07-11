@@ -1,0 +1,127 @@
+{
+  "accepted_corrections": {
+    "all_496_frozen_consumer_paths_validate": true,
+    "all_ten_schemas_pass_draft_2020_12_metaschema_and_closure": true,
+    "both_control_id_namespaces_validate_in_shared_issue_schema": true,
+    "dependency_lock_direct_and_transitive_closure_pinned": true,
+    "explicit_shadow_nonmigration_and_noncutover_fields_present": true,
+    "original_52_migration_controls_unchanged": true,
+    "profile_branches_counts_and_roots_exact": true,
+    "prototype_absolute_unc_and_traversal_paths_rejected": true,
+    "record_and_root_algorithms_reproduce_frozen_roots": true,
+    "v1_error_interface_field_and_id_namespace_defects_structurally_corrected": true
+  },
+  "authorization": {
+    "corrective_v2_preparation_accepted": false,
+    "cutover_authorized": false,
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "maintenance_target_rotation_authorized": false,
+    "migration_execution_authorized": false,
+    "prototype_selection_authorized": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "scientific_target_rotation_authorized": false,
+    "versioned_v3_required": true
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "custody_and_authority_review": {
+    "authority_and_monolith_inputs_bound_to_reviewed_commit": true,
+    "forbidden_production_or_prototype_path_count": 0,
+    "record_commitments": {
+      "authority_commitment_sha256": "fd4348411236648d6216900eced59524b87c561bfa0d36186cf4c4d19a2e6b34",
+      "full_record_identity_root_sha256": "67a23fda6348a2a6e12e4c2af775d115c692ecbe4d0650f0844a982d869e112d",
+      "identity_payload_pointer_root_sha256": "a97799ea412006dde3c259b718b10aad9dee7012181611f3f1d5f1a1e821a967",
+      "maximum_canonical_payload_bytes": 2124270,
+      "original_pointer_set_sha256": "219f4bc866b731b74ef50a439b6a869d8add33c6c5ce8e83a621115c1649c6bf",
+      "root_field_record_count": 4152,
+      "total_record_count": 4691,
+      "workstream_record_count": 539
+    },
+    "reviewed_commit": "20a57192305cc794397fdcef06f54cab30c37205"
+  },
+  "decision": "REJECT_CORRECTIVE_V2_PREPARATION_ACCEPTANCE_RETAIN_AS_HISTORICAL_CORRECTION_EVIDENCE_REQUIRE_VERSIONED_V3",
+  "findings": [
+    {
+      "finding_id": "REGISTRY-READINESS-V2-REVIEW-001",
+      "packet_defect": true,
+      "probe": {
+        "after": "Zh==",
+        "after_decoded_utf8": "f",
+        "before": "Zg==",
+        "before_decoded_utf8": "f",
+        "positive_fixture_json_valid": false,
+        "recommended_after": "bnVsbB==",
+        "recommended_before": "bnVsbA=="
+      },
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_V2_PACKET_ACCEPTANCE_AND_ALL_EXECUTION",
+      "summary": "RC-002 declares Zg== as the positive history-payload fixture, but it decodes to ASCII f, which is not valid JSON and therefore cannot pass the mandatory strict JSON/canonical positive baseline before mutation. The exact noncanonical-pad-bit pair should use bnVsbA== to bnVsbB==; both decode to JSON null and the latter re-encodes to the former."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-V2-REVIEW-002",
+      "packet_defect": true,
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_V2_PACKET_ACCEPTANCE_AND_ALL_EXECUTION",
+      "summary": "RC-007 and RC-008 still use unresolved symbolic mutation values (ONE_VALID_ISSUE, BASELINE_SHA256, and DIFFERENT_SHA256). No resolver or concrete bytes are frozen, so the claimed exact executable mutation matrices and singleton decisions cannot be independently reproduced.",
+      "symbolic_mutation_vectors": {
+        "REGISTRY-READINESS-V1-RC-007": [
+          [
+            "ONE_VALID_ISSUE"
+          ]
+        ],
+        "REGISTRY-READINESS-V1-RC-008": [
+          "BASELINE_SHA256",
+          "DIFFERENT_SHA256"
+        ]
+      }
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-V2-REVIEW-003",
+      "packet_defect": true,
+      "severity": "MEDIUM",
+      "stale_passed_contract": "TRUE_ONLY_WHEN_ERRORS_EMPTY",
+      "status": "OPEN_REQUIRES_VERSIONED_INTERFACE_WORDING_CORRECTION",
+      "summary": "The shared report field is now correctly named issues, but the same interface still defines passed as TRUE_ONLY_WHEN_ERRORS_EMPTY. This retains the rejected field vocabulary inside the frozen contract."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-V2-REVIEW-004",
+      "packet_defect": true,
+      "severity": "MEDIUM",
+      "status": "OPEN_REQUIRES_VERSIONED_SHADOW_OUTPUT_CORRECTION",
+      "summary": "The v2 prototype-path contract removes run-ID templates and freezes run-root-relative artifact paths, but runtime_shadow_tracing_protocol still carries the v0 <run_id> trace-output template.",
+      "trace_output": "formal/scratch/loop_control_registry_v1_prototype/<run_id>/traces/LOOP_CONTROL_RUNTIME_SHADOW_TRACE_v1.jsonl"
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-V2-REVIEW-005",
+      "issue_schema_accepts_mismatched_control_error_pair": true,
+      "mapping_invariant_present": false,
+      "packet_defect": true,
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_V2_PACKET_ACCEPTANCE_AND_ALL_EXECUTION",
+      "summary": "The shared issue schema accepts either control-ID namespace and any V1-E code independently, but neither the schema nor success invariants bind each control ID to its frozen exact error code. A schema-valid RC-001 issue carrying RC-002's error code therefore passes."
+    },
+    {
+      "finding_id": "REGISTRY-READINESS-V2-REVIEW-006",
+      "packet_defect": true,
+      "resolved_registry_path_is_prototype_typed": true,
+      "severity": "MEDIUM",
+      "status": "OPEN_REQUIRES_VERSIONED_TRACE_PATH_CONTEXT_CORRECTION",
+      "summary": "The trace event includes DIRECT_MONOLITH_READ but types resolved_registry_path and write_paths as prototype-artifact paths whose semantic contract requires containment under the run root. The protocol does not freeze a field map that can represent observed legacy repository paths separately from candidate write paths."
+    }
+  ],
+  "packet_sha256": "7b266614ef80b28595bf617110a18b5853f0171d591d2f43fd2ef06759d82f76",
+  "protocol_sha256": "38f484e16d3fb87fcfe99df4cd92a66d538ff748d8abc9e78d8600955a480e22",
+  "recommended_v3_correction": {
+    "authority_change_allowed": false,
+    "issue_control_id_error_code_pairs_must_match_frozen_controls": true,
+    "rc002_after": "bnVsbB==",
+    "rc002_before": "bnVsbA==",
+    "replace_all_symbolic_mutation_values_with_concrete_json_values": true,
+    "report_passed_contract": "TRUE_ONLY_WHEN_ISSUES_EMPTY",
+    "shadow_trace_output_must_use_frozen_run_root_relative_path": true,
+    "shadow_trace_path_fields_require_explicit_repository_vs_prototype_types": true
+  },
+  "review_id": "LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_INDEPENDENT_REVIEW_20260711_v2",
+  "schema_bundle_sha256": "68dc9a1a3ab9489e84dea59be3b92db1cd0fdc8bc8185338adea007998edb03f",
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_INDEPENDENT_REVIEW_20260711_v2",
+  "status": "REJECTED_CORRECTIVE_V2_PREPARATION_CONTRACT_INVALID_POSITIVE_FIXTURE_NONCONCRETE_MUTATION_VECTORS_AND_ISSUE_MAPPING_NO_EXECUTION_OR_AUTHORITY"
+}
