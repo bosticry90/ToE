@@ -19,6 +19,7 @@
     "formal/python/tests/test_tooling_snapshot_content_index_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_technical_debt_baseline_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_loop_control_registry_sharding_guardrail_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_scalar_route_submission_checkpoint_referential_integrity_correction_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_state_theory_dag.py": "TIER_CRITICAL",
     "formal/python/tests/test_loop_control_registry_envelope_integrity_gate.py": "TIER_CRITICAL",
@@ -69,8 +70,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 46,
-      "expected_sha256": "8a6c3328e72761811cc11c4e12a1d8d5c43e74df75d765f8d2e2ea2027239ca9",
+      "expected_count": 47,
+      "expected_sha256": "63a638e1d505bafa1bdac6b8845b8185bb40ffcfca2ac39009f88fc9c99958c5",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -89,6 +90,7 @@
         "formal/python/tests/test_tooling_snapshot_content_index_gate.py",
         "formal/python/tests/test_technical_debt_baseline_gate.py",
         "formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py",
+        "formal/python/tests/test_loop_control_registry_sharding_guardrail_independent_review.py",
         "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py",
         "formal/python/tests/test_scalar_route_submission_checkpoint_referential_integrity_correction_gate.py",
         "formal/python/tests/test_toe_status_language_lock_guard_gate.py",

@@ -10,6 +10,11 @@ The separate non-scientific maintenance authority is
 `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`. Its registry-
 sharding target does not displace or rotate the scientific target.
 
+The v0 registry-sharding contract is preparation evidence, not migration
+authority. Its independent review rejects execution readiness and recommends a
+versioned v1 corrective guardrail without selecting it. Registry migration and
+both target rotations therefore remain unauthorized.
+
 ## Prerequisites
 
 - Windows 10/11 with PowerShell 7 for the canonical local workflow.
@@ -38,6 +43,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 ```powershell
 .\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_independent_review --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

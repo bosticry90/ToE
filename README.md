@@ -12,12 +12,16 @@ The dated status narratives below are append-only checkpoint history. For the li
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Its bounded current surface is `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`; the current maintenance target is `prepare_loop_control_registry_sharding_and_current_projection_packet_v0`, while the scientific target remains `execute_pillar_seam_unit_mapping_ledger_v0`. The registry-sharding packet is a preparation contract only: no production projection, index, shard, consumer migration, or monolith retirement is authorized or executed.
 
+INDEPENDENT REGISTRY-GUARDRAIL REVIEW
+The independent review in `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v0.json` accepts the frozen debt counts and identity sets, subject to versioned source-hash and statement-line-hash corrections, and accepts the v0 packet only as preparation evidence. It rejects migration-execution readiness because byte-identical JSONL reconstruction and fail-closed external authority/history binding were not demonstrated. The versioned v1 corrective guardrail is recommended but not selected; both current targets remain unchanged and registry migration remains unauthorized.
+
 DEVELOPER QUICKSTART
 - Windows path support: `git config core.longpaths true`
 - Install the active CI/runtime environment: `.\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock`
 - Run Python gates without cache noise: `.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider formal/python/tests`
 - Validate the registry envelope: `.\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check`
 - Validate the registry-sharding preparation contract: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail --check`
+- Validate its independent nonauthorization review: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_independent_review --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 

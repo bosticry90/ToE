@@ -82,3 +82,17 @@ def test_ci_checkout_enables_git_long_paths_before_actions_checkout() -> None:
     assert "--jobs 1 --target ToeFormal --target ToeFormalAll" in workflow_text
     assert "lake build ToeFormalAll" not in workflow_text
     assert "lake env lean ToeFormalAll.lean" not in workflow_text
+
+
+def test_ci_checkouts_retain_reviewed_ancestor_objects() -> None:
+    payload = yaml.safe_load(WORKFLOW_PATH.read_text(encoding="utf-8"))
+    checkout_steps: list[dict] = []
+    for job in payload["jobs"].values():
+        checkout_steps.extend(
+            step
+            for step in job.get("steps", [])
+            if step.get("uses") == "actions/checkout@v4"
+        )
+
+    assert checkout_steps
+    assert all(step.get("with", {}).get("fetch-depth") == 0 for step in checkout_steps)
