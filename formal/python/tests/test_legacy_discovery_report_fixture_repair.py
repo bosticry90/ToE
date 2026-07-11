@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 
 from formal.python.tools import legacy_discovery_report_fixture_repair as repair
 
@@ -13,10 +14,20 @@ def _artifact() -> dict:
     return json.loads(repair.OUTPUT_PATH.read_text(encoding="utf-8"))
 
 
-def test_repair_artifact_is_deterministic_and_current() -> None:
-    raw = repair.canonical_json_bytes(repair.build_artifact())
-    assert repair.OUTPUT_PATH.read_bytes() == raw
+def test_repair_v0_is_the_immutable_implementation_commit_artifact() -> None:
+    relative = repair.OUTPUT_PATH.relative_to(repair.REPO_ROOT).as_posix()
+    raw = subprocess.run(
+        [
+            "git",
+            "show",
+            f"205f19ce0f502c1bb19c5f3d116dcf18506e7b92:{relative}",
+        ],
+        cwd=repair.REPO_ROOT,
+        capture_output=True,
+        check=True,
+    ).stdout
     assert hashlib.sha256(raw).hexdigest() == EXPECTED_SHA256
+    assert repair.OUTPUT_PATH.read_bytes() == raw
 
 
 def test_repair_installs_only_three_exact_historical_roots() -> None:

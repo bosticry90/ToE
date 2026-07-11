@@ -1,0 +1,107 @@
+{
+  "authorization": {
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "registry_migration_execution_authorized": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "source_repair_commit": "205f19ce0f502c1bb19c5f3d116dcf18506e7b92"
+  },
+  "boundary": {
+    "fixture_bytes_changed": false,
+    "fixture_logic_changed": false,
+    "maintenance_target_rotated": false,
+    "registry_migration_executed": false,
+    "scientific_artifacts_modified": false,
+    "scientific_claim_or_blocker_movement": false,
+    "scientific_target_rotated": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "correction": {
+    "corrected_field_class": "IMPLEMENTATION_SOURCE_IDENTITY_BINDING",
+    "corrected_path": "formal/python/tests/conftest.py",
+    "new_committed_sha256": "1decbc64e31851e1db5c70ff3a4a4d6b8ca2358361476b6b9820f55520d16ef9",
+    "new_committed_size_bytes": 4763,
+    "old_worktree_sha256": "ae744d94197987b9a39be37d5a0c6872025bf65660c28c1e69cf5f8fa268033b",
+    "old_worktree_size_bytes": 4850,
+    "reason": "V0_BOUND_MIXED_EOL_WORKTREE_BYTES_INSTEAD_OF_COMMITTED_GIT_BYTES"
+  },
+  "implementation": {
+    "affected_test_count": 20,
+    "canonical_derived_encoding": "UTF-8_NO_BOM_LF_TERMINAL_NEWLINE_SORTED_KEYS_FINITE_JSON",
+    "derived_dependency_edge_count": 35,
+    "derived_report_count": 18,
+    "fixture_activation": "EXACT_AFFECTED_TEST_COLLECTION_ONLY",
+    "fixture_cleanup": "LOCK_HELD_REMOVE_ONLY_SESSION_CREATED_UNCHANGED_PATHS",
+    "preexisting_policy": "VALIDATE_AND_PRESERVE_NEVER_OVERWRITE_OR_DELETE",
+    "report_node_count": 21,
+    "root_fixture_count": 3,
+    "root_lineage_edge_count": 3
+  },
+  "implementation_files": [
+    {
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES",
+      "path": "formal/python/tests/legacy_discovery_report_fixture_materializer.py",
+      "role": "session materializer",
+      "sha256": "997d1d2e52b27e85ee4b4437c888c5677aed79c70d42b64bdc636daa178686e5",
+      "size_bytes": 16848
+    },
+    {
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES",
+      "path": "formal/python/tests/conftest.py",
+      "role": "pytest activation integration",
+      "sha256": "1decbc64e31851e1db5c70ff3a4a4d6b8ca2358361476b6b9820f55520d16ef9",
+      "size_bytes": 4763
+    },
+    {
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES",
+      "path": "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py",
+      "role": "materializer controls",
+      "sha256": "ddee70025f50b0c746f98dec9bf71540b04be16c839ddf0ba03cee4aaabffc9b",
+      "size_bytes": 3939
+    },
+    {
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES",
+      "path": "formal/python/tests/test_legacy_discovery_report_fixture_packet.py",
+      "role": "historical preparation-boundary assertion stabilization",
+      "sha256": "25f8056f5fb01b8467ab0f5a624c7bbaf79178e9b63df77838ee56a1930408d6",
+      "size_bytes": 4191
+    }
+  ],
+  "repair_id": "LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v1",
+  "root_fixtures": [
+    {
+      "fixture_id": "DISCOVERY-FIXTURE-ROOT-001",
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES_NO_TEXT_NORMALIZATION",
+      "historical_runtime_path": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+      "path": "formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_trend_window_20260410_v0.json",
+      "sha256": "802d1e8409bd1cc5602dc11db619bdbd757d4c9a0759709247ae2a6d366442c5",
+      "size_bytes": 1722
+    },
+    {
+      "fixture_id": "DISCOVERY-FIXTURE-ROOT-002",
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES_NO_TEXT_NORMALIZATION",
+      "historical_runtime_path": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+      "path": "formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_closure_map_20260410_v0.json",
+      "sha256": "73489f4c96f221d214703e227a4887bda5274490fc6dbcb31da2b44c9e7f0822",
+      "size_bytes": 9749
+    },
+    {
+      "fixture_id": "DISCOVERY-FIXTURE-ROOT-003",
+      "hash_policy": "EXACT_COMMITTED_GIT_BLOB_BYTES_NO_TEXT_NORMALIZATION",
+      "historical_runtime_path": "formal/output/reports/physics_progress_ledger_v0.json",
+      "path": "formal/python/tests/fixtures/legacy_discovery_reports/physics_progress_ledger_v0.json",
+      "sha256": "07af32ad04bbcea569a8256a12462404a0ca3334f51dca23eae3e0830ba81a94",
+      "size_bytes": 6096
+    }
+  ],
+  "schema_id": "LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v1",
+  "status": "VERSIONED_SOURCE_BINDING_CORRECTION_REPAIR_SCOPE_UNCHANGED_PENDING_RAW_DETACHED_CLEAN_CHECKOUT_ACCEPTANCE",
+  "supersedes_v0_sha256": "e70d8741de6378e4f00bb135607cb92b06ad83ee8b78e0675b93a6226720f9eb",
+  "validation": {
+    "first_raw_detached_run_pass_count": 189,
+    "first_raw_detached_run_source_binding_failure_count": 1,
+    "fixture_chain_failure_count": 0,
+    "raw_detached_clean_checkout_full_manifest_passed": false,
+    "raw_detached_clean_checkout_validation_pending": true,
+    "runtime_paths_absent_after_failed_acceptance_run": 21
+  }
+}
