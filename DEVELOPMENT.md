@@ -19,6 +19,11 @@ The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
 bindings only and preserves every frozen debt count, identity set, and target.
 
+The legacy discovery-report fixture packet freezes a clean-checkout repair
+contract only. Its 20 affected tests, three historical roots, and 18 derived
+reports remain unmodified until an independent review authorizes the bounded
+repair. It does not authorize registry migration or either target rotation.
+
 ## Prerequisites
 
 - Windows 10/11 with PowerShell 7 for the canonical local workflow.
@@ -49,6 +54,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m pytest -q formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_independent_review --check
 .\py.ps1 -m formal.python.tools.technical_debt_baseline_correction_v1 --check
+.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

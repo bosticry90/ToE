@@ -812,6 +812,7 @@ import ToeFormal.QM.QMEvolutionAssumptionLedger
 import ToeFormal.QM.QMFullDerivationScaffold
 import ToeFormal.QM.SymmetryContract
 import ToeFormal.Release.CurrentAuthority
+import ToeFormal.Release.LegacyDiscoveryReportFixturePacket
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailIndependentReview
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailPacket
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
@@ -1053,6 +1054,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def trackedModuleCount : Nat := 1046
+def trackedModuleCount : Nat := 1047
 
 end ToeFormalAll

@@ -19,6 +19,9 @@ TECHNICAL-DEBT BASELINE CORRECTION
 `formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json` is the effective clean-checkout-reproducible evidence correction for the frozen debt counts and identity sets. It preserves v0 as an immutable historical artifact, binds normalized source bytes at review commit `887d1b2f`, and corrects the 50 axiom plus 20 opaque empty statement-line hashes. It does not reclassify debt, change any count or identity set, rotate either target, or authorize registry migration.
 The v0 registry-sharding artifacts are likewise checked as immutable `c60cebde` evidence rather than regenerated from worktree-sensitive source hashes. A future corrective guardrail must bind normalized committed inputs before any execution target can be selected.
 
+LEGACY DISCOVERY FIXTURE PREPARATION
+`formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0.json` freezes the bounded repair contract for the 20 clean-checkout tests that depend on three historical root reports and an 18-report deterministic derivation chain. It adds no fixture, changes no affected test, generates no report, rotates neither authority, and authorizes neither fixture-repair execution nor registry migration. Independent review is required before the repair may begin.
+
 DEVELOPER QUICKSTART
 - Windows path support: `git config core.longpaths true`
 - Install the active CI/runtime environment: `.\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock`
@@ -27,6 +30,7 @@ DEVELOPER QUICKSTART
 - Validate immutable v0 registry-sharding artifact custody: `.\py.ps1 -m pytest -q formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py`
 - Validate its independent nonauthorization review: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_independent_review --check`
 - Validate the versioned debt-baseline correction: `.\py.ps1 -m formal.python.tools.technical_debt_baseline_correction_v1 --check`
+- Validate the legacy discovery-fixture preparation packet: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 

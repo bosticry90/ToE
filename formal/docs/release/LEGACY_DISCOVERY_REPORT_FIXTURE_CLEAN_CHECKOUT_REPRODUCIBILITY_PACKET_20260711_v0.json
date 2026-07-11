@@ -1,0 +1,503 @@
+{
+  "authorization": {
+    "execution_target": "execute_legacy_discovery_report_fixture_and_clean_checkout_reproducibility_repair_v0",
+    "fixture_repair_execution_authorized": false,
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "next_action": "review_legacy_discovery_report_fixture_and_clean_checkout_reproducibility_packet_v0",
+    "registry_migration_execution_authorized": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0"
+  },
+  "boundary": {
+    "broad_ignored_report_commit_authorized": false,
+    "fixture_files_added": false,
+    "fixture_repair_executed": false,
+    "maintenance_target_rotated": false,
+    "registry_migration_executed": false,
+    "scientific_artifacts_modified": false,
+    "scientific_target_rotated": false,
+    "tests_modified": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "clean_checkout_failure_inventory": {
+    "affected_test_count": 20,
+    "affected_tests": [
+      "formal/python/tests/test_discovery_priority_queue_report.py",
+      "formal/python/tests/test_qm_stat_discovery_discriminator_tranche_report.py",
+      "formal/python/tests/test_qm_stat_discovery_ruling_report.py",
+      "formal/python/tests/test_qm_stat_discovery_interpretation_report.py",
+      "formal/python/tests/test_qm_stat_discovery_numerical_probe_report.py",
+      "formal/python/tests/test_qm_stat_discovery_numerical_probe_execution_report.py",
+      "formal/python/tests/test_qm_stat_discovery_derivation_probe_ruling_report.py",
+      "formal/python/tests/test_qm_stat_discovery_post_derivation_probe_decision_report.py",
+      "formal/python/tests/test_qm_stat_discovery_next_route_decision_report.py",
+      "formal/python/tests/test_qft_gr_discovery_discriminator_tranche_report.py",
+      "formal/python/tests/test_qft_gr_discovery_ruling_report.py",
+      "formal/python/tests/test_qft_gr_discovery_tranche_terminal_outcome_gate.py",
+      "formal/python/tests/test_qft_gr_discovery_interpretation_report.py",
+      "formal/python/tests/test_qft_gr_discovery_post_cycle_decision_report.py",
+      "formal/python/tests/test_discovery_queue_transition_decision_report.py",
+      "formal/python/tests/test_discovery_queue_review_pass_report.py",
+      "formal/python/tests/test_discovery_queue_rescoring_pass_report.py",
+      "formal/python/tests/test_gr_discovery_tranche_terminal_outcome_gate.py",
+      "formal/python/tests/test_gr_discovery_discriminator_tranche_report.py",
+      "formal/python/tests/test_gr_discovery_ruling_report.py"
+    ],
+    "derived_report_count": 18,
+    "raw_manifest_failure_count_before_repair": 20,
+    "raw_manifest_pass_count_before_repair": 147,
+    "root_fixture_count": 3
+  },
+  "fixture_contract": {
+    "activation": "session_scoped_only_when_at_least_one_affected_test_is_collected",
+    "cleanup": "remove_only_paths_created_by_the_fixture_session",
+    "derived_reports": [
+      {
+        "captured_at_utc": "2026-04-11T22:00:00Z",
+        "chain_index": 1,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/DISCOVERY_PRIORITY_QUEUE_20260411_v0.json",
+        "output_path": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.discovery_priority_queue_report",
+        "producer_path": "formal/python/tools/discovery_priority_queue_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:35:00Z",
+        "chain_index": 2,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_DISCRIMINATOR_TRANCHE_EXECUTION_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_discriminator_tranche_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_discriminator_tranche_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_discriminator_tranche_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:36:00Z",
+        "chain_index": 3,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_RULING_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_ruling_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_ruling_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_ruling_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:55:00Z",
+        "chain_index": 4,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_INTERPRETATION_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_interpretation_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_interpretation_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_interpretation_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:56:00Z",
+        "chain_index": 5,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_NUMERICAL_PROBE_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_numerical_probe_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_numerical_probe_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_numerical_probe_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:10Z",
+        "chain_index": 6,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_NUMERICAL_PROBE_EXECUTION_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_numerical_probe_execution_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_numerical_probe_execution_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_numerical_probe_execution_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:20Z",
+        "chain_index": 7,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_DERIVATION_PROBE_RULING_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_derivation_probe_ruling_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_derivation_probe_ruling_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_derivation_probe_ruling_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:50Z",
+        "chain_index": 8,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_POST_DERIVATION_PROBE_DECISION_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_post_derivation_probe_decision_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_post_derivation_probe_decision_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:56Z",
+        "chain_index": 9,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QM_STAT_DISCOVERY_NEXT_ROUTE_DECISION_20260411_v0.json",
+        "output_path": "formal/output/reports/qm_stat_discovery_next_route_decision_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qm_stat_discovery_next_route_decision_report",
+        "producer_path": "formal/python/tools/qm_stat_discovery_next_route_decision_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:58Z",
+        "chain_index": 10,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QFT_GR_DISCOVERY_DISCRIMINATOR_TRANCHE_EXECUTION_20260411_v0.json",
+        "output_path": "formal/output/reports/qft_gr_discovery_discriminator_tranche_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qft_gr_discovery_discriminator_tranche_report",
+        "producer_path": "formal/python/tools/qft_gr_discovery_discriminator_tranche_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 11,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QFT_GR_DISCOVERY_RULING_20260411_v0.json",
+        "output_path": "formal/output/reports/qft_gr_discovery_ruling_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qft_gr_discovery_ruling_report",
+        "producer_path": "formal/python/tools/qft_gr_discovery_ruling_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 12,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QFT_GR_DISCOVERY_INTERPRETATION_20260411_v0.json",
+        "output_path": "formal/output/reports/qft_gr_discovery_interpretation_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qft_gr_discovery_interpretation_report",
+        "producer_path": "formal/python/tools/qft_gr_discovery_interpretation_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 13,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/QFT_GR_DISCOVERY_POST_CYCLE_DECISION_20260411_v0.json",
+        "output_path": "formal/output/reports/qft_gr_discovery_post_cycle_decision_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.qft_gr_discovery_post_cycle_decision_report",
+        "producer_path": "formal/python/tools/qft_gr_discovery_post_cycle_decision_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 14,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/DISCOVERY_QUEUE_TRANSITION_DECISION_20260411_v0.json",
+        "output_path": "formal/output/reports/discovery_queue_transition_decision_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.discovery_queue_transition_decision_report",
+        "producer_path": "formal/python/tools/discovery_queue_transition_decision_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 15,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/DISCOVERY_QUEUE_REVIEW_PASS_20260411_v0.json",
+        "output_path": "formal/output/reports/discovery_queue_review_pass_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.discovery_queue_review_pass_report",
+        "producer_path": "formal/python/tools/discovery_queue_review_pass_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 16,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/DISCOVERY_QUEUE_RESCORING_PASS_20260411_v0.json",
+        "output_path": "formal/output/reports/discovery_queue_rescoring_pass_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.discovery_queue_rescoring_pass_report",
+        "producer_path": "formal/python/tools/discovery_queue_rescoring_pass_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 17,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/GR_DISCOVERY_DISCRIMINATOR_TRANCHE_EXECUTION_20260411_v0.json",
+        "output_path": "formal/output/reports/gr_discovery_discriminator_tranche_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.gr_discovery_discriminator_tranche_report",
+        "producer_path": "formal/python/tools/gr_discovery_discriminator_tranche_report.py"
+      },
+      {
+        "captured_at_utc": "2026-04-11T23:59:59Z",
+        "chain_index": 18,
+        "classification": "DETERMINISTIC_SESSION_GENERATED_FIXTURE",
+        "declaration_path": "formal/docs/release/GR_DISCOVERY_RULING_20260411_v0.json",
+        "output_path": "formal/output/reports/gr_discovery_ruling_report_20260411_v0.json",
+        "producer_module": "formal.python.tools.gr_discovery_ruling_report",
+        "producer_path": "formal/python/tools/gr_discovery_ruling_report.py"
+      }
+    ],
+    "preexisting_path_policy": "validate_and_preserve_never_overwrite_or_delete",
+    "root_fixtures": [
+      {
+        "fixture_id": "DISCOVERY-FIXTURE-ROOT-001",
+        "historical_runtime_path": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+        "planned_fixture_path": "formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_trend_window_20260410_v0.json",
+        "sha256": "802d1e8409bd1cc5602dc11db619bdbd757d4c9a0759709247ae2a6d366442c5",
+        "size_bytes": 1722
+      },
+      {
+        "fixture_id": "DISCOVERY-FIXTURE-ROOT-002",
+        "historical_runtime_path": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+        "planned_fixture_path": "formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_closure_map_20260410_v0.json",
+        "sha256": "73489f4c96f221d214703e227a4887bda5274490fc6dbcb31da2b44c9e7f0822",
+        "size_bytes": 9749
+      },
+      {
+        "fixture_id": "DISCOVERY-FIXTURE-ROOT-003",
+        "historical_runtime_path": "formal/output/reports/physics_progress_ledger_v0.json",
+        "planned_fixture_path": "formal/python/tests/fixtures/legacy_discovery_reports/physics_progress_ledger_v0.json",
+        "sha256": "07af32ad04bbcea569a8256a12462404a0ca3334f51dca23eae3e0830ba81a94",
+        "size_bytes": 6096
+      }
+    ],
+    "runtime_output_directory": "formal/output/reports",
+    "tracked_fixture_directory": "formal/python/tests/fixtures/legacy_discovery_reports"
+  },
+  "negative_control_count": 12,
+  "negative_controls": [
+    "missing_root_fixture_rejected",
+    "root_fixture_hash_mismatch_rejected",
+    "root_fixture_size_mismatch_rejected",
+    "duplicate_runtime_output_rejected",
+    "producer_chain_cycle_rejected",
+    "producer_order_violation_rejected",
+    "unclassified_failing_test_rejected",
+    "preexisting_runtime_report_never_overwritten",
+    "cleanup_removes_only_session_created_paths",
+    "fixture_activation_skipped_when_no_affected_test_selected",
+    "generated_report_bytes_deterministic_across_two_runs",
+    "raw_clean_checkout_full_manifest_required"
+  ],
+  "packet_id": "LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0",
+  "repair_classification": {
+    "derived_reports": "generate_deterministically_in_session_dependency_order",
+    "root_inputs": "compact_committed_historical_fixtures_exact_hash_bound",
+    "terminal_gate_inputs": "consume_same_session_generated_chain",
+    "test_retirement_count": 0
+  },
+  "schema_id": "LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0",
+  "source_commit": "d2dfd7d5786dab0d1c41bf34bdea2fa603e6cb3f",
+  "source_inventory": {
+    "producer_files": [
+      {
+        "path": "formal/python/tools/discovery_priority_queue_report.py",
+        "role": "derived report producer",
+        "sha256": "390b6725c721ee94d04bd113dbc0a310461f27b1114a5608b455ed0a8ddeef8c",
+        "size_bytes": 9698
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_discriminator_tranche_report.py",
+        "role": "derived report producer",
+        "sha256": "3177d011257f982a42faa6b940cfe50fcf3bf4ff5bb7ed490c26157018058204",
+        "size_bytes": 5264
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_ruling_report.py",
+        "role": "derived report producer",
+        "sha256": "4bfc9b2b70d292e749f5933d68b6ddddfa3864bff2574f52ffd44052d96e14be",
+        "size_bytes": 5418
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_interpretation_report.py",
+        "role": "derived report producer",
+        "sha256": "6dbb48a4e52f60657d0e1ba8c1c03f966e224a3f9efe7cb50156222482510332",
+        "size_bytes": 6699
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_numerical_probe_report.py",
+        "role": "derived report producer",
+        "sha256": "9b56771082da17bbd950e181739268bd6623bd0ac954838d80f97391eb30687d",
+        "size_bytes": 7286
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_numerical_probe_execution_report.py",
+        "role": "derived report producer",
+        "sha256": "3413e8edf1a74f141a1c482e14da86069dcd48bd8d6b7c521d62ef7aacfc94ee",
+        "size_bytes": 7403
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_derivation_probe_ruling_report.py",
+        "role": "derived report producer",
+        "sha256": "e84c7cc27c384f53592d0b459abcffaf07313d9ae002d3d0b1fabdab80bd2ac8",
+        "size_bytes": 6206
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_post_derivation_probe_decision_report.py",
+        "role": "derived report producer",
+        "sha256": "ad0207a677f16d6657d85c067d53a9939a54aa7db1e76d98e6e0464e5660af62",
+        "size_bytes": 8878
+      },
+      {
+        "path": "formal/python/tools/qm_stat_discovery_next_route_decision_report.py",
+        "role": "derived report producer",
+        "sha256": "184395205e4a01a124090bd42ce5e1009b53ce9ba78748093254093a5ba6ac43",
+        "size_bytes": 8304
+      },
+      {
+        "path": "formal/python/tools/qft_gr_discovery_discriminator_tranche_report.py",
+        "role": "derived report producer",
+        "sha256": "9e60881aca76e5b689a14d53b20ee5d5f09226d7b5b182417d9609289dba6f4a",
+        "size_bytes": 5790
+      },
+      {
+        "path": "formal/python/tools/qft_gr_discovery_ruling_report.py",
+        "role": "derived report producer",
+        "sha256": "bc9572ed123316ba8e0ab346d68bca3dc33d4289469ee4a790ed2b2cc277abab",
+        "size_bytes": 5311
+      },
+      {
+        "path": "formal/python/tools/qft_gr_discovery_interpretation_report.py",
+        "role": "derived report producer",
+        "sha256": "f6035380f4b111b7edb643088a2de46621d942b96ccf6dbc40452cbcba40eb11",
+        "size_bytes": 7335
+      },
+      {
+        "path": "formal/python/tools/qft_gr_discovery_post_cycle_decision_report.py",
+        "role": "derived report producer",
+        "sha256": "6ba85c60a18498d9c2529512b4f841b973cffabd5d8ae71b8ce9c1a119cabf70",
+        "size_bytes": 7908
+      },
+      {
+        "path": "formal/python/tools/discovery_queue_transition_decision_report.py",
+        "role": "derived report producer",
+        "sha256": "b227510c92e8f581abbfabcd0337c7741f61b1342e3b2104c08c3804e7a2704a",
+        "size_bytes": 10239
+      },
+      {
+        "path": "formal/python/tools/discovery_queue_review_pass_report.py",
+        "role": "derived report producer",
+        "sha256": "f0f46ca548710c7b19f9c981d8f48c102c2443a698a366248cb5bba6deb7b8b8",
+        "size_bytes": 8852
+      },
+      {
+        "path": "formal/python/tools/discovery_queue_rescoring_pass_report.py",
+        "role": "derived report producer",
+        "sha256": "61d47a208da191946eb87fdb805b08b46881dc3b5fead191532ccebb6fc3a0ae",
+        "size_bytes": 9748
+      },
+      {
+        "path": "formal/python/tools/gr_discovery_discriminator_tranche_report.py",
+        "role": "derived report producer",
+        "sha256": "35178cabf0befa35ea97c7cc8f7fde0950054d6f09d27cc46ed8d16c12d5a5e3",
+        "size_bytes": 5771
+      },
+      {
+        "path": "formal/python/tools/gr_discovery_ruling_report.py",
+        "role": "derived report producer",
+        "sha256": "75ae63077ac7ddb53e1f3fd6f1a411adb72531ff167ffdfcbc8a24d54e0e85d4",
+        "size_bytes": 5280
+      }
+    ],
+    "test_files": [
+      {
+        "path": "formal/python/tests/test_discovery_priority_queue_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "fe7d84eb418103a8c62cb0f1827bd5132b00421fb70ac004f7cf6961b939f6ca",
+        "size_bytes": 1546
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_discriminator_tranche_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "18a49ff82f3c8dd58222ba51d225fe5a10b954624a2c31487bee110ca2d9110d",
+        "size_bytes": 1065
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_ruling_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "84d5fb2dc06c7fc08d6d3e45929a3944f91c5a1a5357def9a93b97e52d354402",
+        "size_bytes": 955
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_interpretation_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "db4a2bf239fbf3ada2823e1ddf06491fa9077f46dc2ea60cd81baa1604d57c2a",
+        "size_bytes": 1045
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_numerical_probe_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "d051553dcbbe5cbd63048aad5e24b2c1dcc1acd139f962f08ad6140b980743fa",
+        "size_bytes": 1052
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_numerical_probe_execution_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "9706120bebdc07e7a75b25795a694f03f5f88a89fd5a4e96b19a0798109062c4",
+        "size_bytes": 1044
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_derivation_probe_ruling_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "1547a134258b3f12484bd9d881027a5f1f27cea6ff8ac47a895e752985709fb4",
+        "size_bytes": 1053
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_post_derivation_probe_decision_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "9ad40b9cafa91e3a5db6a1bc68f229e25239962d71d4addc8037ed1e34d35485",
+        "size_bytes": 1107
+      },
+      {
+        "path": "formal/python/tests/test_qm_stat_discovery_next_route_decision_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "79029fe54a17219b308e42242639d785721c7e87feec92a6912450b27df49c22",
+        "size_bytes": 1047
+      },
+      {
+        "path": "formal/python/tests/test_qft_gr_discovery_discriminator_tranche_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "1eca3d793c17359bb4da6387acb7d1c97322f834f2589d6da3f29d2219f6b503",
+        "size_bytes": 1244
+      },
+      {
+        "path": "formal/python/tests/test_qft_gr_discovery_ruling_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "9fc72c772c54c2bed16eb1197ba7721f82a886b14332a6c7446025e2ede372b6",
+        "size_bytes": 950
+      },
+      {
+        "path": "formal/python/tests/test_qft_gr_discovery_tranche_terminal_outcome_gate.py",
+        "role": "clean-checkout failing test",
+        "sha256": "a273856cb6a1e0beee85cae9f51449e24a7819685a7d85d181bc841b7ecdf264",
+        "size_bytes": 2226
+      },
+      {
+        "path": "formal/python/tests/test_qft_gr_discovery_interpretation_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "b36c6b4d7664d555456597bead6df995737cd3b6ce20c354a781f09a0ebfc8d1",
+        "size_bytes": 1132
+      },
+      {
+        "path": "formal/python/tests/test_qft_gr_discovery_post_cycle_decision_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "c2de6a88dfa756980b76b6a92b9f85c9f89711bc4a7bed091a1ff00983a9ac36",
+        "size_bytes": 1047
+      },
+      {
+        "path": "formal/python/tests/test_discovery_queue_transition_decision_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "693b08c31989d829ea21b6108df09233ca3cc363b4dec6bd4cc12d7037c20b67",
+        "size_bytes": 1422
+      },
+      {
+        "path": "formal/python/tests/test_discovery_queue_review_pass_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "211383f30480db7489ec94a7f9957a0707902f3071bd4562715a585ca97a7656",
+        "size_bytes": 1382
+      },
+      {
+        "path": "formal/python/tests/test_discovery_queue_rescoring_pass_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "7aad610d84c2b2381145f5d69d5040003cfe0f05cbdfb853c48a8c7273f05f43",
+        "size_bytes": 1383
+      },
+      {
+        "path": "formal/python/tests/test_gr_discovery_tranche_terminal_outcome_gate.py",
+        "role": "clean-checkout failing test",
+        "sha256": "f6d5579303bf0b31ec009992171243767d3b01354a6e0d39840d0aee19bfc48f",
+        "size_bytes": 2195
+      },
+      {
+        "path": "formal/python/tests/test_gr_discovery_discriminator_tranche_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "989a5c47cec8142723350efb779bc5e6b7ba4bf5f6879b8c9a900cbb48879400",
+        "size_bytes": 1227
+      },
+      {
+        "path": "formal/python/tests/test_gr_discovery_ruling_report.py",
+        "role": "clean-checkout failing test",
+        "sha256": "72f9b89ed01c96c16a1ac4d5b7a861247038eddf6b99f2fadba187480e96800e",
+        "size_bytes": 935
+      }
+    ]
+  },
+  "status": "PREPARED_FIXTURE_REPRODUCIBILITY_CONTRACT_ONLY_NO_REPAIR_EXECUTION"
+}
