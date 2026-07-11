@@ -1,0 +1,337 @@
+{
+  "api_contract": {
+    "deprecated_migration_only_function": {
+      "name": "reconstruct_legacy_view",
+      "rule": "may read all shards but may never determine current authority"
+    },
+    "module": "formal/python/meta/loop_control_registry.py",
+    "only_supported_registry_reader_after_migration": true,
+    "supported_functions": {
+      "iter_history": "stream strict JSONL records through the verified shard index without loading all history",
+      "load_current_state": "read and validate only LOOP_CONTROL_CURRENT_v1.json",
+      "resolve_workstream": "resolve stable record IDs; reject ambiguous legacy workstream IDs",
+      "verify_registry_index": "validate schemas, paths, hashes, sizes, counts, ranges, IDs, and complete accounting"
+    }
+  },
+  "authorization": {
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "maintenance_target_kind": "registry_sharding_guardrail_preparation",
+    "migration_execution_authorized": false,
+    "monolith_retirement_authorized": false,
+    "next_maintenance_target_selected": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "scientific_target_displaced": false
+  },
+  "boundary": {
+    "assertion_reconciliation_started": false,
+    "axiom_or_opaque_review_started": false,
+    "blocker_or_claim_status_changed": false,
+    "current_projection_v1_generated": false,
+    "history_index_or_shards_generated": false,
+    "legacy_monolith_deleted_or_modified": false,
+    "registry_consumer_migration_started": false,
+    "scientific_artifacts_modified": false,
+    "scientific_target_rotated": false,
+    "snapshot_migration_or_deletion_started": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "completion_criteria_for_future_execution": [
+    "every_legacy_top_level_field_and_workstream_record_is_accounted_for",
+    "current_authority_loads_only_from_projection_under_one_mib",
+    "history_resolves_only_through_verified_index_and_shards",
+    "no_active_consumer_parses_or_reads_the_legacy_monolith",
+    "authority_rotation_changes_only_current_projection_and_generated_mirrors",
+    "legacy_baseline_view_reconstructs_to_the_frozen_source_sha256",
+    "scientific_target_blockers_claim_ceiling_and_nonpromotion_state_are_unchanged",
+    "monolith_retirement_occurs_only_after_independent_review_and_full_validation"
+  ],
+  "consumer_migration_contract": {
+    "consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
+    "consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
+    "current_direct_consumer_count": 467,
+    "current_direct_or_helper_union_count": 487,
+    "growth_gate": "direct consumer identity set and count may not increase without a versioned exception packet",
+    "historical_citation_policy": "historical path citations remain unchanged and nonauthoritative",
+    "target_end_state": "zero active runtime/test authority readers of the monolith; migration-only reconstruction tooling may remain explicit"
+  },
+  "current_projection_contract": {
+    "active_workstream_required_fields": [
+      "C_k_action_embedding_authorized",
+      "active_lane",
+      "authorization_evidence",
+      "authorized_next_strict_target",
+      "authorized_target",
+      "ccft_resumed",
+      "claim_ceiling_level",
+      "claim_status",
+      "consumed_target",
+      "consumed_target_kind",
+      "cross_sector_coupling_claim_authorized",
+      "guardrail_decision_count",
+      "level_four_or_five_authorized",
+      "live_lane",
+      "master_action_promoted",
+      "negative_control_count",
+      "packet_result",
+      "physical_calibration_authorized",
+      "pillar_or_seam_admissibility_claimed",
+      "pillar_unit_row_count",
+      "qcd_literature_pressure_path",
+      "qcd_literature_pressure_role",
+      "qcd_literature_pressure_sha256",
+      "queue_scope",
+      "readiness_authority_path",
+      "readiness_authority_sha256",
+      "report",
+      "report_path",
+      "report_sha256",
+      "seam_unit_map_row_count",
+      "selected_next_target",
+      "selected_next_target_kind",
+      "status",
+      "strict_packet_result",
+      "total_bound_row_count",
+      "typed_unit_states",
+      "unit_closure_claimed",
+      "workstream_id"
+    ],
+    "current_target_state_authoritative_fields": [
+      "schema_id",
+      "live_next_target",
+      "previous_live_next_target",
+      "live_next_target_kind",
+      "live_next_target_evidence",
+      "live_next_target_report",
+      "live_next_target_outcome",
+      "live_next_target_strict_outcome"
+    ],
+    "forbidden_payload_classes": [
+      "full_historical_workstream_catalog",
+      "flattened_historical_packet_payloads",
+      "historical_target_coverage_collections"
+    ],
+    "max_bytes": 1048576,
+    "required_root_fields": [
+      "ACTIVE_LANE_v0",
+      "CURRENT_LIVE_NEXT_TARGET_v0",
+      "active_lane",
+      "active_workstreams",
+      "authority_role",
+      "blockers",
+      "claim_ceiling",
+      "current_target",
+      "current_target_evidence",
+      "current_target_kind",
+      "current_target_outcome",
+      "current_target_report",
+      "current_target_strict_outcome",
+      "history_index_path",
+      "maintenance_authority",
+      "maintenance_authority_path",
+      "nonpromotion_assertions",
+      "previous_target",
+      "schema_id",
+      "schema_version",
+      "source_legacy_registry_sha256",
+      "status"
+    ],
+    "schema_id": "LOOP_CONTROL_CURRENT_v1",
+    "single_active_scientific_workstream_required": true
+  },
+  "determinism_contract": {
+    "canonical_json": "UTF-8, sorted keys, indent=2, terminal LF",
+    "canonical_jsonl": "UTF-8, one sorted compact strict-JSON object per LF-terminated line",
+    "generation_runs_required": 2,
+    "legacy_reconstruction_must_match_source_bytes_and_sha256": true,
+    "shard_packing": "source sequence order; close shard before next record would exceed exact byte ceiling"
+  },
+  "future_output_paths_declared_not_generated": {
+    "compatibility_legacy_view": "formal/output/loop_control/LOOP_CONTROL_REGISTRY_LEGACY_VIEW_v1.json",
+    "current_projection": "formal/docs/release/loop_control/LOOP_CONTROL_CURRENT_v1.json",
+    "history_index": "formal/docs/release/loop_control/LOOP_CONTROL_HISTORY_INDEX_v1.json",
+    "history_shards": "formal/docs/release/loop_control/shards/LOOP_CONTROL_HISTORY_SHARD_<sequence>_v1.jsonl",
+    "supported_reader_api": "formal/python/meta/loop_control_registry.py"
+  },
+  "history_contract": {
+    "append_closed_shards": true,
+    "index_shard_required_fields": [
+      "first_record_id",
+      "first_sequence",
+      "last_record_id",
+      "last_sequence",
+      "path",
+      "record_count",
+      "schema_version",
+      "sha256",
+      "shard_id"
+    ],
+    "max_shard_bytes": 5242880,
+    "record_required_fields": [
+      "legacy_json_pointer",
+      "payload",
+      "payload_sha256",
+      "record_id",
+      "record_kind",
+      "schema_id",
+      "schema_version",
+      "sequence"
+    ],
+    "record_schema_id": "LOOP_CONTROL_HISTORY_RECORD_v1",
+    "shard_index_schema_id": "LOOP_CONTROL_HISTORY_INDEX_v1",
+    "stable_record_id_rules": {
+      "legacy_root_field": "ROOT:<escaped-root-key>@<first16-sha256-of-canonical-payload>",
+      "legacy_workstream": "WORKSTREAM:<legacy-workstream-id>@<first16-sha256-of-canonical-payload>"
+    },
+    "strict_duplicate_key_rejection": true
+  },
+  "negative_control_count": 24,
+  "negative_controls": [
+    {
+      "control_id": "omitted_shard",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "unindexed_extra_shard",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "duplicate_record_within_or_across_shards",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "incorrect_shard_hash",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "incorrect_shard_record_count",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "broken_index_sequence_or_id_range",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "malformed_jsonl_row",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "duplicate_exact_json_key_in_jsonl_row",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "shard_exceeds_five_mib_ceiling",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "path_traversal_or_path_outside_registry_directory",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "two_active_scientific_targets",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "projection_target_differs_from_active_workstream",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "historical_record_promoted_into_current_projection",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "nested_historical_object_replaces_current_root_schema",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "unequal_current_aliases",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "ambiguous_duplicate_legacy_workstream_id_without_stable_id",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "maintenance_target_overwrites_scientific_target",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "missing_legacy_json_pointer",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "unaccounted_legacy_top_level_key",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "legacy_reconstruction_semantic_mismatch",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "scientific_target_fingerprint_change",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "blocker_fingerprint_change",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "claim_ceiling_fingerprint_change",
+      "expected_result": "reject_fail_closed"
+    },
+    {
+      "control_id": "nonpromotion_fingerprint_change",
+      "expected_result": "reject_fail_closed"
+    }
+  ],
+  "packet_id": "LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_v0",
+  "packet_result": "REGISTRY_SHARDING_AND_CURRENT_PROJECTION_CONTRACT_PREPARED_NO_MIGRATION_EXECUTION_OR_MONOLITH_RETIREMENT_AUTHORIZED",
+  "record_accounting_contract": {
+    "estimated_deterministic_shard_count": 10,
+    "estimated_shard_sizes_bytes": [
+      5239014,
+      5232013,
+      5204626,
+      5037654,
+      4829496,
+      5120211,
+      4681575,
+      4875953,
+      5241815,
+      1744601
+    ],
+    "legacy_root_field_record_count": 4152,
+    "legacy_top_level_json_pointer_count": 4153,
+    "legacy_top_level_json_pointer_set_sha256": "cf0655e9d56fbec32a255436311ef08ac8155f9d9a95441c33dcbe930aed0ae8",
+    "max_encoded_source_record_bytes": 2124584,
+    "record_accounting_sha256": "2ebcfbda1ad754eeadde1c18720dc9f63923086234c9104b04f9e7ee57e30264",
+    "total_history_record_count": 4691,
+    "workstream_record_count": 539,
+    "workstream_stable_record_id_set_sha256": "7fc9747e88ba86b46513bc472b2754455bc880405fb07ff9b82289e2003735aa"
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0",
+  "source_baseline": {
+    "active_workstream_canonical_sha256": "8672624668074bb20e4cc5c89069c1de3519145df5a26929ee69ffd6d4c4ae60",
+    "current_authority_path": "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+    "current_authority_sha256": "3f58eecbc30deafa50629386adf83c214b34b4f395f9b3e80a3f0e433f29622a",
+    "current_projection": {
+      "active_lane": "execute_pillar_seam_unit_mapping_ledger_v0",
+      "active_workstream_count": 1,
+      "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+      "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerGuardrailPacket.lean",
+      "current_target_kind": "pillar_seam_unit_mapping_ledger_execution",
+      "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_TWELVE_ROW_UNIT_MAPPING_LEDGER_CONSTRUCTION_ONLY",
+      "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json",
+      "current_target_strict_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_OR_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_CK_ACTION_EMBEDDING_NO_MASTER_ACTION_PROMOTION",
+      "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+      "schema_id": "LOOP_CONTROL_CURRENT_PROJECTION_v0",
+      "workstream_id": "execute_pillar_seam_unit_mapping_ledger_v0"
+    },
+    "legacy_registry_canonical_reconstruction_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "legacy_registry_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "legacy_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "legacy_registry_size_bytes": 52340650,
+    "technical_debt_baseline_path": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+    "technical_debt_baseline_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6"
+  },
+  "status": "PREPARED_GUARDRAIL_CONTRACT_ONLY_MIGRATION_NOT_RUN"
+}

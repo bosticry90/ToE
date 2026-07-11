@@ -6,6 +6,10 @@ authority. Read the live target from
 the uppercase `CURRENT_LIVE_*` tokens), then confirm the human-facing boundary
 in `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`.
 
+The separate non-scientific maintenance authority is
+`formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`. Its registry-
+sharding target does not displace or rotate the scientific target.
+
 ## Prerequisites
 
 - Windows 10/11 with PowerShell 7 for the canonical local workflow.
@@ -33,6 +37,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 
 ```powershell
 .\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll
@@ -74,6 +79,6 @@ Safe rebuildable cleanup candidates include `.pytest_cache`, Python
 acceptable. The `.lake/build` tree is rebuildable but expensive; prune it only
 after recording a successful validation when disk pressure justifies the cost.
 
-The 52 MB loop-control registry and the tooling snapshots are excluded from VS
+The 52.341 MB decimal (49.916 MiB) loop-control registry and the tooling snapshots are excluded from VS
 Code watching/search through `.vscode/settings.json`; they remain tracked and
 available to targeted tools and Git.

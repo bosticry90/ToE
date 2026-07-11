@@ -9,11 +9,15 @@ Latest nonauthoritative engineering audit:
 CURRENT-AUTHORITY NOTE
 The dated status narratives below are append-only checkpoint history. For the live target and release/blocker posture, read `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` (`current_projection_v0` and the uppercase `CURRENT_LIVE_*` authority tokens) together with `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`. The large `current_target_state` object is a compatibility container; only the keys named by `current_target_state_authority_contract_v0` are authoritative. Historical prose and other flattened fields do not override the current projection.
 
+CURRENT-MAINTENANCE NOTE
+Operational maintenance is separate from scientific authority. Its bounded current surface is `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`; the current maintenance target is `prepare_loop_control_registry_sharding_and_current_projection_packet_v0`, while the scientific target remains `execute_pillar_seam_unit_mapping_ledger_v0`. The registry-sharding packet is a preparation contract only: no production projection, index, shard, consumer migration, or monolith retirement is authorized or executed.
+
 DEVELOPER QUICKSTART
 - Windows path support: `git config core.longpaths true`
 - Install the active CI/runtime environment: `.\.venv\Scripts\python.exe -m pip install -r requirements.ci.lock`
 - Run Python gates without cache noise: `.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider formal/python/tests`
 - Validate the registry envelope: `.\py.ps1 -m formal.python.tools.loop_control_registry_integrity --check`
+- Validate the registry-sharding preparation contract: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 

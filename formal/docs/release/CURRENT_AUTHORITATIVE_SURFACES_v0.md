@@ -19,6 +19,8 @@ Current integrity corrections:
 - `formal/docs/release/LOOP_CONTROL_REGISTRY_INTEGRITY_REPAIR_20260711_v0.json`
 - The registry repair restores its nonclaim envelope and current projection without rotating `execute_pillar_seam_unit_mapping_ledger_v0`.
 - Registry readers must use `current_projection_v0` and the uppercase `CURRENT_LIVE_*` tokens. Within the flattened `current_target_state`, only `current_target_state_authority_contract_v0.authoritative_keys` are current authority; every other nested field is historical compatibility data.
+- `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json` is a separate operational, non-scientific authority surface. It records maintenance target `prepare_loop_control_registry_sharding_and_current_projection_packet_v0` without inserting a second active scientific workstream or rotating `execute_pillar_seam_unit_mapping_ledger_v0`.
+- `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0.json` prepares only the migration contract. It creates no production current projection, history index, history shard, compatibility view, or monolith retirement authorization.
 - `formal/docs/release/HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0.json`
 - Exactly 197 test functions that incorrectly rebound historical tranches to mutable current authority are retired as explicit skips. Their sibling artifact, schema, mathematical, and nonclaim gates remain active; no current authority gate is retired.
 - `formal/docs/release/DORMANT_SOURCE_SANITATION_20260711_v0.json`

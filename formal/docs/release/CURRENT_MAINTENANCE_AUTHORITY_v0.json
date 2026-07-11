@@ -1,0 +1,27 @@
+{
+  "boundary": {
+    "maintenance_target_inserted_into_scientific_workstreams": false,
+    "migration_execution_authorized": false,
+    "next_maintenance_target_selected": false,
+    "scientific_target_displaced": false,
+    "scientific_target_rotated": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "current_maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0.json",
+  "current_maintenance_target_evidence_sha256": "7371ff496fc8fd948e892e0136d380991c6f87128201d12fe7ff6f5df9ffa764",
+  "current_maintenance_target_kind": "registry_sharding_guardrail_preparation",
+  "current_maintenance_target_status": "PREPARED_CONTRACT_CURRENT_NO_EXECUTION_SUCCESSOR_SELECTED",
+  "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
+  "maintenance_consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
+  "maintenance_program_source": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+  "maintenance_program_source_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
+  "scientific_authority": {
+    "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+  },
+  "status": "ACTIVE_OPERATIONAL_NONSCIENTIFIC_MAINTENANCE_GUARDRAIL_ONLY"
+}
