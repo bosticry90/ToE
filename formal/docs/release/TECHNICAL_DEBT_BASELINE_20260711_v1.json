@@ -1,0 +1,2331 @@
+{
+  "boundary": {
+    "assertion_reclassification_authorized": false,
+    "axiom_discharge_or_reclassification_authorized": false,
+    "current_scientific_target_rotated": false,
+    "git_history_rewrite_authorized": false,
+    "opaque_definition_reclassification_authorized": false,
+    "registry_sharding_or_monolith_retirement_executed": false,
+    "scientific_claim_or_blocker_movement_authorized": false,
+    "snapshot_deletion_or_rebinding_authorized": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "correction_contract": {
+    "corrected_review_findings": [
+      "REGISTRY-REVIEW-009",
+      "REGISTRY-REVIEW-011"
+    ],
+    "generator_bindings": {
+      "reviewed_integrity_dependency_sha256": "cb55d30287f197b3ad9e0b4ffb5ee654abe637d0eee4d47c58c5a9700ca8e5b9",
+      "reviewed_v0_generator_commit": "f8c648602d18360d45c76368bfb3e3ef830f2842",
+      "reviewed_v0_generator_sha256": "5adb1560849e76578ed4410df89ce2d129df1c3c7e65e624359de39d8674805b"
+    },
+    "independent_review_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v0.json",
+    "independent_review_sha256": "5e43181b11a4d302a301bd915a43a40636bf947d93edc9f327e9c0a7beceb485",
+    "retained_maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "retained_scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "source_bindings": {
+      "axiom_ledger": {
+        "path": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+        "reviewed_blob_sha256": "373045763f25be50939ff0e4176a0327de65cd9f5b83ea6abd0fc4d563e584e6",
+        "reviewed_commit": "887d1b2f3a4faa249430078280cc65914651e7bb"
+      },
+      "local_preservation_custody": {
+        "path": "formal/docs/release/PRESERVATION_BACKUP_CUSTODY_20260711_v0.json",
+        "reviewed_blob_sha256": "e96493b9d15baf358cd44240ac0ddb171f25c2ff62c655032dc7863450a082e8",
+        "reviewed_commit": "887d1b2f3a4faa249430078280cc65914651e7bb"
+      },
+      "registry": {
+        "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+        "reviewed_blob_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+        "reviewed_commit": "887d1b2f3a4faa249430078280cc65914651e7bb"
+      },
+      "retirements_source_ledger": {
+        "path": "formal/docs/release/HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0.json",
+        "reviewed_blob_sha256": "78c534f097205dcb117ad34161ecf4357a6a434a5ed02dd8bdaacb782ba58691",
+        "reviewed_commit": "887d1b2f3a4faa249430078280cc65914651e7bb"
+      },
+      "snapshot_inventory": {
+        "path": "formal/docs/release/TOOLING_SNAPSHOT_CONTENT_INDEX_20260711_v0.json",
+        "reviewed_blob_sha256": "03a6d1266146f32f2451e3339ce1f7361dc0cc0c10922f35cbf5b539a14c1d1b",
+        "reviewed_commit": "887d1b2f3a4faa249430078280cc65914651e7bb"
+      }
+    },
+    "statement_line_hash_corrections": {
+      "axiom_rows_empty_after_correction": 0,
+      "axiom_rows_previously_empty": 50,
+      "opaque_rows_empty_after_correction": 0,
+      "opaque_rows_previously_empty": 20
+    },
+    "superseded_v0_path": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+    "superseded_v0_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6"
+  },
+  "current_scientific_authority": {
+    "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerGuardrailPacket.lean",
+    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json",
+    "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+  },
+  "maintenance_program": {
+    "lanes": [
+      {
+        "lane_id": "registry_sharding_and_current_projection",
+        "priority": 1,
+        "status": "proposed_guardrail_preparation_pending_separate_authority"
+      },
+      {
+        "lane_id": "quarantined_assertion_reconciliation",
+        "priority": 2,
+        "status": "baseline_frozen_not_started"
+      },
+      {
+        "lane_id": "lean_axiom_and_opaque_definition_review",
+        "priority": 3,
+        "status": "baseline_frozen_not_started"
+      },
+      {
+        "lane_id": "snapshot_deduplication_and_retention_migration",
+        "priority": 4,
+        "status": "inventory_only_no_deletion_authorized"
+      }
+    ],
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "scientific_target_displacement": false
+  },
+  "schema_id": "TECHNICAL_DEBT_BASELINE_20260711_v1",
+  "source_commit": "887d1b2f3a4faa249430078280cc65914651e7bb",
+  "status": "VERSIONED_EVIDENCE_CORRECTION_COUNTS_AND_AUTHORITY_UNCHANGED_NO_REMEDIATION_OR_MIGRATION_EXECUTION",
+  "technical_debt_baselines": {
+    "lean_axioms": {
+      "axiom_count": 59,
+      "axiom_file_count": 14,
+      "axioms": [
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dt_planeWave",
+          "declaration_block_sha256": "d220c4161801ff3e1968ac2d1e7408d9e928be756876847ed80a677c810fce7d",
+          "declaration_id": "AXIOM-24F112B0BD66F9A5",
+          "file": "formal/toe_formal/ToeFormal/CPNLSE2D/PlaneWaveOperatorAxioms.lean",
+          "line": 23,
+          "reason": "Plane-wave operator convention used by bounded CPNLSE numerics.",
+          "replacement_or_discharge_path": "Replace with concrete differentiability and plane-wave evaluation theorem.",
+          "statement_line_sha256": "cea3de20cd85ae967c655547b76e6259f808f86c744edeca946f1bcfb7233a1d",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Delta_planeWave",
+          "declaration_block_sha256": "f2c0413b13973dede6f99d645885e4763fca2f61787696423d44081722cb8227",
+          "declaration_id": "AXIOM-F8525087300FFEC4",
+          "file": "formal/toe_formal/ToeFormal/CPNLSE2D/PlaneWaveOperatorAxioms.lean",
+          "line": 30,
+          "reason": "Plane-wave Laplacian convention used by bounded CPNLSE numerics.",
+          "replacement_or_discharge_path": "Replace with concrete Laplacian plane-wave theorem.",
+          "statement_line_sha256": "5ce7ca03dffc63e72e70bb7e64da373b3b896765206032b4304b76d9dd375521",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "DxxR_zero",
+          "declaration_block_sha256": "ade472a3fd11ecddd52062bcda2841640db63008801079cbe69568c533dee7a5",
+          "declaration_id": "AXIOM-08D765C3662DD0C5",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 42,
+          "reason": "CRFT derivative-zero simplification for a retained model surface.",
+          "replacement_or_discharge_path": "Replace with concrete derivative calculation.",
+          "statement_line_sha256": "ade472a3fd11ecddd52062bcda2841640db63008801079cbe69568c533dee7a5",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "DxxxxR_zero",
+          "declaration_block_sha256": "dd3d0b2a356b3411ce0cf286a91085045387042456726e62a779bae3e3c02b61",
+          "declaration_id": "AXIOM-4EED753FF796EFAE",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 43,
+          "reason": "CRFT higher-derivative simplification for a retained model surface.",
+          "replacement_or_discharge_path": "Replace with concrete derivative calculation.",
+          "statement_line_sha256": "dd3d0b2a356b3411ce0cf286a91085045387042456726e62a779bae3e3c02b61",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "DxxxxxxR_zero",
+          "declaration_block_sha256": "5f83a4b79aadedca7240059641e94cac005d97eac79c1bad340da732d79f1754",
+          "declaration_id": "AXIOM-ACF800C3E741DB3E",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 44,
+          "reason": "CRFT sixth-derivative simplification for a retained model surface.",
+          "replacement_or_discharge_path": "Replace with concrete derivative calculation.",
+          "statement_line_sha256": "a9746db36c038748187bbd129d9d1cdfb49fa8b664d04f374704f74cf26576e7",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "bogoliubov_linearization_from_P1_spec",
+          "declaration_block_sha256": "7818f8b7a10b8f19066c51c1365f438163d701711a1da14c556517b1b4aff091",
+          "declaration_id": "AXIOM-C1DE3F6B9E5758E3",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "line": 48,
+          "reason": "Bridge-level linearization spec, not a derived theorem.",
+          "replacement_or_discharge_path": "Prove bridge from explicit P1 parent dynamics and perturbation semantics.",
+          "statement_line_sha256": "559dd13628c302384a184b56e4381ca9729da6d7eb38e636209c1d1e4207c8b2",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dt_agrees_spec",
+          "declaration_block_sha256": "f3b3cac10faadfe049463393297722d4d1f15a54ffe159a22677aa91ec1118b5",
+          "declaration_id": "AXIOM-FE87A24191CA00BA",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "line": 86,
+          "reason": "Derivative-symbol agreement spec for B1 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "69567868ddf30b3fcce009d635056252a96ccbf5c4295395e7b15a07a960bc7d",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxx_agrees_spec",
+          "declaration_block_sha256": "ceb1e9872c6ada958106da89a40fde5c4c1b9db9eef4e54523e0bc378fa773ec",
+          "declaration_id": "AXIOM-AAF6C9E847A02C7F",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "line": 92,
+          "reason": "Second-derivative symbol agreement spec for B1 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "faac05998aa47f637db2275c0004591f702b16cf33ccbcea607aa95bfae3075c",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxx_agrees_spec",
+          "declaration_block_sha256": "976d532bdb4644ed5e8525fb1904adb6b2d421cd0dd6211e62544cdffc66e66e",
+          "declaration_id": "AXIOM-D9AE331DE64C7828",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "line": 98,
+          "reason": "Fourth-derivative symbol agreement spec for B1 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "ff1aefa0bb1a5a17d141980e1cbc56f5e0ff149f2df4d0d9c18f815b8e6de1b9",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxxxx_agrees_spec",
+          "declaration_block_sha256": "b6dfd2c0c4bdc189cd9575e924000075d56eef937e47feeaf638c2b1c2b332b1",
+          "declaration_id": "AXIOM-E9AA9109CC7FC91D",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "line": 104,
+          "reason": "Sixth-derivative symbol agreement spec for B1 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "554644606f080e6f853fcabe0de6faf35b8268c2de0dbeaa03764e30bb6ef537",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "P1_eom_implies_P1Residual_as_UCFF_spec",
+          "declaration_block_sha256": "15fb26a073b81c7dc59f2372158b0431fa583e2791741dcd300a389cdf9e4a02",
+          "declaration_id": "AXIOM-DFF8BF13F607FD72",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "line": 139,
+          "reason": "P1 equation-to-residual bridge remains spec-backed.",
+          "replacement_or_discharge_path": "Prove from parent equation semantics and residual definition.",
+          "statement_line_sha256": "f2182e3de4f201f87102247f8c540aafdc4b5ed7fad2e7b271bd8ad32829593c",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dtt_agrees_spec",
+          "declaration_block_sha256": "756ffd595ffc55632c8d3423180fd82f59b11caf277b523251d751d567305e35",
+          "declaration_id": "AXIOM-2B36148111437C6A",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+          "line": 81,
+          "reason": "Second-time derivative agreement spec for B2 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "90351913afe7aa702699d028a0907a19d1cdd15587f20901950cd8fd1752ff42",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxx_agrees_spec",
+          "declaration_block_sha256": "38d599b63714ae9e8892a40d8d86e8a55858e0e8d5bcc793ace0e28d78f87607",
+          "declaration_id": "AXIOM-13C9824BF6322147",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+          "line": 86,
+          "reason": "Second-space derivative agreement spec for B2 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "faac05998aa47f637db2275c0004591f702b16cf33ccbcea607aa95bfae3075c",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxx_agrees_spec",
+          "declaration_block_sha256": "5e510cc379da627fb994e4864a6b9bac5d155e93b788392f826bbe69a663f962",
+          "declaration_id": "AXIOM-B25990BAEC95C1FC",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+          "line": 91,
+          "reason": "Fourth-derivative agreement spec for B2 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "ff1aefa0bb1a5a17d141980e1cbc56f5e0ff149f2df4d0d9c18f815b8e6de1b9",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxxxx_agrees_spec",
+          "declaration_block_sha256": "c852d59ed188005e198feaaf54abfe866e7f91a26fc1caa065b26726792fe96f",
+          "declaration_id": "AXIOM-E0EA99F0742EF020",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+          "line": 96,
+          "reason": "Sixth-derivative agreement spec for B2 bridge.",
+          "replacement_or_discharge_path": "Replace with imported Fourier-symbol theorem.",
+          "statement_line_sha256": "554644606f080e6f853fcabe0de6faf35b8268c2de0dbeaa03764e30bb6ef537",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "cubicDensity_agrees_spec",
+          "declaration_block_sha256": "ecc8b0f64de53b0cd901070b96a37a9773bd02e545c04599cfd8059ce70d3946",
+          "declaration_id": "AXIOM-A5AABE5FB23F5C97",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+          "line": 101,
+          "reason": "Cubic density agreement is bridge-spec-backed.",
+          "replacement_or_discharge_path": "Prove from concrete nonlinear density semantics.",
+          "statement_line_sha256": "9df7a4918345cd88fbfbd6b5aea58583564f10ee67bc419d72747af5523d01e1",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "omega_sq_matches_P2_spec",
+          "declaration_block_sha256": "c10ac3147ae7a0b321b903726df41bd7b1d0269721582e42bc78e34f860cf1b0",
+          "declaration_id": "AXIOM-073869C48F290DEA",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B3_P2_to_UCFF_SecondOrderNumerics.lean",
+          "line": 30,
+          "reason": "Numeric dispersion matching is spec-backed.",
+          "replacement_or_discharge_path": "Prove from P2 dispersion relation and numerical symbol definitions.",
+          "statement_line_sha256": "47a28739d33f7b44f4a003a83d752877a5b0051bb2d5ac9e3a135c2f153b86b0",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "GR_QM",
+          "blocks_full_pillar_target": true,
+          "declaration": "B4_CRFT_to_AcousticMetric_spec",
+          "declaration_block_sha256": "41ae6676d29fbd89d374247ffddd5a72fd0ec838e3701c698bc08800f1a73885",
+          "declaration_id": "AXIOM-5339AC7651149B97",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B4_CRFT_to_AcousticMetric.lean",
+          "line": 31,
+          "reason": "CRFT-to-acoustic metric bridge is a spec statement.",
+          "replacement_or_discharge_path": "Prove from CRFT dynamics plus acoustic metric construction.",
+          "statement_line_sha256": "30813a9bf595264963d146e736b6ec324af8c033addf1daac65d98288c125307",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dx_planeWave",
+          "declaration_block_sha256": "1e9fa3e2ab48e68104293801304c62419038417652d22b0d5274fffc04f15e78",
+          "declaration_id": "AXIOM-49242A325ABCBFE7",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 69,
+          "reason": "Fourier derivative convention.",
+          "replacement_or_discharge_path": "Replace with concrete Fourier-symbol lemma.",
+          "statement_line_sha256": "955edf77862cf3cf62511561d824bed79bcb168e83e9dfa76a86df2cc6a895f1",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxx_planeWave",
+          "declaration_block_sha256": "12135a77bb26a9ff6e46bd6aa07f5aa793f0553c1e508693f54437d30a798eba",
+          "declaration_id": "AXIOM-26A7F853481D5A9A",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 72,
+          "reason": "Fourier second-derivative convention.",
+          "replacement_or_discharge_path": "Replace with concrete Fourier-symbol lemma.",
+          "statement_line_sha256": "afbe27e172430dd3cc4dbd4636efc489e964ca972244d2d60acb589b37f4b2bc",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxx_planeWave",
+          "declaration_block_sha256": "f77d5320c300e5f6e3810855eec77826b4ce4cc5189ce78bb33201309f3e3e94",
+          "declaration_id": "AXIOM-E1C682AED7C21A27",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 75,
+          "reason": "Fourier fourth-derivative convention.",
+          "replacement_or_discharge_path": "Replace with concrete Fourier-symbol lemma.",
+          "statement_line_sha256": "a1f6edf870030a7e648fc3f639b79fce7f73c0ec45706d5f35150b690450c8b0",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxxxx_planeWave",
+          "declaration_block_sha256": "cce1e89186c2cb716c3fa2ed4f7faf938cefe69c821d9bef11a2a884d4f8615d",
+          "declaration_id": "AXIOM-D55FE1A6645465C9",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 78,
+          "reason": "Fourier sixth-derivative convention.",
+          "replacement_or_discharge_path": "Replace with concrete Fourier-symbol lemma.",
+          "statement_line_sha256": "074df80b96e5d3f873dfe2458dfabb8554d656dccc82ee6a111761f1accd41eb",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dt_planeWave",
+          "declaration_block_sha256": "c496b16184a67ecb75c818aff61e9bf211fead6b2725d8a2dbad9e8d4fb3cf50",
+          "declaration_id": "AXIOM-2412E8C8F7E2AB87",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 86,
+          "reason": "Fourier time-derivative convention.",
+          "replacement_or_discharge_path": "Replace with concrete Fourier-symbol lemma.",
+          "statement_line_sha256": "193d526dda83f4c3071a05eea2a1e3ae38f8d408951cda52c6759ec0d8b92c62",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dtt_planeWave",
+          "declaration_block_sha256": "55f4ee260e4a1fa31e2b367a45c6612e6554444cc5b443b69be8ab0ae7755672",
+          "declaration_id": "AXIOM-95951BA2AD9420CE",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 89,
+          "reason": "Fourier second-time-derivative convention.",
+          "replacement_or_discharge_path": "Replace with concrete Fourier-symbol lemma.",
+          "statement_line_sha256": "e77fa4787ad719cf17bc4588c505a7928854e4aee4df688e1e1ecb18d22b8eea",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dt_planeWave",
+          "declaration_block_sha256": "9bb899360532ea06710ad6aab66c3260d9755c3727b40751e380f7acf5bbaa32",
+          "declaration_id": "AXIOM-FF440884745E1EC6",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 40,
+          "reason": "P1 parent time derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "cff51c743f9504124ead0709c1139abf382ae64a54ff37ee4a4c7739f505dcae",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxx_planeWave",
+          "declaration_block_sha256": "b92b47a66bca4ec82c53ff9a85b18b279d127ad6835a7932705548ae8b201493",
+          "declaration_id": "AXIOM-4D0ACD8FBEB98556",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 44,
+          "reason": "P1 parent spatial second derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "39d2d3a35068fb2a3c621cc472c91b547a92a7c004b51ea29d2150bfc5488d8c",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxx_planeWave",
+          "declaration_block_sha256": "8942183ef4cc0c05c79411416e014b0b829393106b160e098729ace935ee8309",
+          "declaration_id": "AXIOM-5F164BF9E8EABA9F",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 48,
+          "reason": "P1 parent fourth derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "93fae7069262cffb8ce3bf397335f486fb12a67768c942209e1c565778daf690",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxxxx_planeWave",
+          "declaration_block_sha256": "de6cacf54517cb15e96763514ba3f113e7257ff668feccf23bf9299e87b59d2c",
+          "declaration_id": "AXIOM-F708C330A766EEA2",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 52,
+          "reason": "P1 parent sixth derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "e410e7e41f85d9f27fb1ccca14ed3d04de747cb7b4914025421e730f007b5757",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "P1_rhs_matches_EFT",
+          "declaration_block_sha256": "8515dca3ba39d28b4cfec6fdbad74452c7cb77a0797f54dd5a8b3d22b72aa16e",
+          "declaration_id": "AXIOM-425F43AA940BC929",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 82,
+          "reason": "Parent P1 RHS-to-EFT match remains supplied.",
+          "replacement_or_discharge_path": "Prove from explicit EFT parent action and residual definitions.",
+          "statement_line_sha256": "10c2513b6dcb42327831dc6c4719adccf9aca2d0935bdd4be34da2daa9d6552a",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dtt_planeWave",
+          "declaration_block_sha256": "b21172a9e2cc2a7edcee7adcd3eafe2a8c19da573d210d56706707cc690c8abf",
+          "declaration_id": "AXIOM-5F933ACC1E93DF2B",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 37,
+          "reason": "P2 parent second-time derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "3892c4faeb46de7b8c28658df7a74da2871c427b797aa10206dd17e0828fad01",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxx_planeWave",
+          "declaration_block_sha256": "a8a5acc63d73426a1b64cb6e2a09338dcd667b8dbf22359983a22f7459733788",
+          "declaration_id": "AXIOM-918B2D227A125DAA",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 40,
+          "reason": "P2 parent second-space derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "39d2d3a35068fb2a3c621cc472c91b547a92a7c004b51ea29d2150bfc5488d8c",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxx_planeWave",
+          "declaration_block_sha256": "d46718155b8ae07ef2e86f2de82337a762c2b99438fbbd825487476c1d39bab6",
+          "declaration_id": "AXIOM-74B84C0495FB749E",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 43,
+          "reason": "P2 parent fourth derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "93fae7069262cffb8ce3bf397335f486fb12a67768c942209e1c565778daf690",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Dxxxxxx_planeWave",
+          "declaration_block_sha256": "18b3f7f26a6628a14948c2841a80455bc5949f2cd28cb507b57fc736717fb920",
+          "declaration_id": "AXIOM-D01AB8569E182DD3",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 46,
+          "reason": "P2 parent sixth derivative convention.",
+          "replacement_or_discharge_path": "Replace by importing canonical Fourier convention theorem.",
+          "statement_line_sha256": "e410e7e41f85d9f27fb1ccca14ed3d04de747cb7b4914025421e730f007b5757",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "P2_rhs_matches_EFT",
+          "declaration_block_sha256": "0a8eeeda31bf3996ac9f46d25b5ed13909653e9e68e57ab93c90345f0b3b54d7",
+          "declaration_id": "AXIOM-B6641B2463766014",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 69,
+          "reason": "Parent P2 RHS-to-EFT match remains supplied.",
+          "replacement_or_discharge_path": "Prove from explicit EFT parent action and residual definitions.",
+          "statement_line_sha256": "1594f9d61d3b34e874943bb58c7433d0e84f84fe9a25974cb25dbf45bcb75df9",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "formalFirstVariationRep32_zero_variation_at",
+          "declaration_block_sha256": "cd93de7b7fcb7488fa564adde164daf88efb7ac4311c6f235962d950fc4b3804",
+          "declaration_id": "AXIOM-BABF91B10E73BA05",
+          "file": "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+          "line": 155,
+          "reason": "First-variation bridge algebra is still axiomatized.",
+          "replacement_or_discharge_path": "Replace with theorem over concrete first-variation representation.",
+          "statement_line_sha256": "685eacbefd948c4c8fc87d464a4f290375761de6ae8722234881ea44e8b47682",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "formalFirstVariationRep32_add_variation_at",
+          "declaration_block_sha256": "6e8c9f40804fd13a987197285b7ca3641f3fa21d14038a62f0c0ba939e2add59",
+          "declaration_id": "AXIOM-8C803E24B4CB0F9D",
+          "file": "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+          "line": 160,
+          "reason": "Additivity of the first-variation bridge is axiomatized.",
+          "replacement_or_discharge_path": "Replace with theorem over concrete first-variation representation.",
+          "statement_line_sha256": "74c1a876b190521efc3fc7353e5ceeb9cbe52f0786618458cd8a1e4299b2baf1",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "formalFirstVariationRep32_smul_variation_at",
+          "declaration_block_sha256": "da5a7e1d913344ffb7c2b7dcd09254c3eb8c514b2a5b33e2a519ca40ad4943a8",
+          "declaration_id": "AXIOM-5FFA3AB718C00730",
+          "file": "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+          "line": 166,
+          "reason": "Scalar compatibility of the first-variation bridge is axiomatized.",
+          "replacement_or_discharge_path": "Replace with theorem over concrete first-variation representation.",
+          "statement_line_sha256": "a7e5358987aa7c7e4471084fb341e8f37d8d8d2e19038fd96061680563debde9",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "kinetic",
+          "declaration_block_sha256": "1b0c5175ee5b183b6bc0e1bdf8bac525ec94427b89b81658ade0cd5ffd0d7f41",
+          "declaration_id": "AXIOM-91EAEF344FE4829E",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 33,
+          "reason": "Declared action term placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete structured action term when promoted.",
+          "statement_line_sha256": "1b0c5175ee5b183b6bc0e1bdf8bac525ec94427b89b81658ade0cd5ffd0d7f41",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "dispersion",
+          "declaration_block_sha256": "41cc4cf3687be122e527c33ac946d8ef9d44c306152775df867c37434db449bf",
+          "declaration_id": "AXIOM-572A2E7E4B23B2FB",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 34,
+          "reason": "Declared action term placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete structured action term when promoted.",
+          "statement_line_sha256": "41cc4cf3687be122e527c33ac946d8ef9d44c306152775df867c37434db449bf",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "coherence",
+          "declaration_block_sha256": "b360b8b573db1d51e2e644bd8d6e06d31924f55f595c214cb0012b57bcb8964f",
+          "declaration_id": "AXIOM-CAB339BA3CB5B965",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 35,
+          "reason": "Declared action term placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete structured action term when promoted.",
+          "statement_line_sha256": "b360b8b573db1d51e2e644bd8d6e06d31924f55f595c214cb0012b57bcb8964f",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "wK",
+          "declaration_block_sha256": "42b81311c5bc2880c07aae5341078d2d9c231b4030119ff4e38b14fef6feec93",
+          "declaration_id": "AXIOM-E214D05B446B01A6",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 36,
+          "reason": "Declared coefficient placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete parameter source when promoted.",
+          "statement_line_sha256": "42b81311c5bc2880c07aae5341078d2d9c231b4030119ff4e38b14fef6feec93",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "wD",
+          "declaration_block_sha256": "740fac7a163ce66d2e1f2bba6616ac6b592d9e929e188f317207cf5776cf7b3a",
+          "declaration_id": "AXIOM-A555B37B2F0F4655",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 37,
+          "reason": "Declared coefficient placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete parameter source when promoted.",
+          "statement_line_sha256": "740fac7a163ce66d2e1f2bba6616ac6b592d9e929e188f317207cf5776cf7b3a",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "wC",
+          "declaration_block_sha256": "cb6bda53b390cfd3f7a2bf1845519b68eea17c5fe789fc9d241a3ecfe395f612",
+          "declaration_id": "AXIOM-BCE2899D87D3D9ED",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 38,
+          "reason": "Declared coefficient placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete parameter source when promoted.",
+          "statement_line_sha256": "b54d7c1905296dd383a5a0b488d71b2ac0476af23c4a287cf1fd1f3a044cac06",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": false,
+          "declaration": "declared_g",
+          "declaration_block_sha256": "993ce7bf0baa6e41e2885f74a7233aa1edd48e73bcaa76ea39c08c423a81f1a2",
+          "declaration_id": "AXIOM-137ABD05BE91E23D",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 41,
+          "reason": "Declared geometry object placeholder.",
+          "replacement_or_discharge_path": "Replace with concrete geometry source when promoted.",
+          "statement_line_sha256": "9ade3fe473aca9639adbabf08270dedb1890977254bd10a25fd3917c31b49bdc",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "EL_toe",
+          "declaration_block_sha256": "89db08e0cd9c53edc8f1e872dc0e67314d5cd171620661657f3c80c3564c2d3a",
+          "declaration_id": "AXIOM-55C48BD50FD7C705",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 44,
+          "reason": "Euler-Lagrange equation of the declared action is axiomatized.",
+          "replacement_or_discharge_path": "Derive from concrete action and variation theorem.",
+          "statement_line_sha256": "de7a10ae3cf53dcda2d7a5370be080443c49b22aac2c65c296dfe503595e16ec",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "firstVariation",
+          "declaration_block_sha256": "96cc6550ca07a3732952a93cb784fb7cbd7ae5bd8afcc743cb7c32ec7cf1d49a",
+          "declaration_id": "AXIOM-02EE013D365C707B",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 57,
+          "reason": "First variation of the declared action is axiomatized.",
+          "replacement_or_discharge_path": "Replace with concrete first-variation construction.",
+          "statement_line_sha256": "cf4204411410cbe3aa6decabff886931519dc2f072bf6d19f4151b2d16bf3f84",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredELAssumptions",
+          "declaration_block_sha256": "ccd9d8765477aceb72adc26bae326b35c4f97330d93f06effbad341750209858",
+          "declaration_id": "AXIOM-F1E70DBAB28B2234",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 65,
+          "reason": "EL assumptions remain declared, not derived.",
+          "replacement_or_discharge_path": "Derive from regularity, boundary, and variation assumptions.",
+          "statement_line_sha256": "2b81a4969d0ccf319b7346e3f7a8957165791f2655f0cb79f641da98028f412b",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredSymmetry",
+          "declaration_block_sha256": "0da15ff734fe20e7cbf5863b2bf33906c5aece28e4369c73cd07d79c1b906fb9",
+          "declaration_id": "AXIOM-37A90BD5361C9E7E",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 74,
+          "reason": "Symmetry structure remains declared.",
+          "replacement_or_discharge_path": "Prove from action invariance.",
+          "statement_line_sha256": "d82c741deefc75e4f95af61cff22642a648e6339fd0be99cfe2ec2e82a7976cf",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredSemigroupWithGenerator",
+          "declaration_block_sha256": "9f4c4259cab7cf7fa114c02df86ecc9c28001d05ce3728175885f9f8b8d9b16e",
+          "declaration_id": "AXIOM-AEEF73A434DB3654",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 77,
+          "reason": "Semigroup/generator structure remains declared.",
+          "replacement_or_discharge_path": "Prove from explicit transformation group.",
+          "statement_line_sha256": "ff3fc0723324f8afd76ff0e13f11264d0cdfa44a76409944b4ea5cab42f1f45c",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredQuantity",
+          "declaration_block_sha256": "b6418dece91f1add193c6c4f89068933a3abb610f57fe6eda32211c67fa7519d",
+          "declaration_id": "AXIOM-138C885D482C7DC2",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 84,
+          "reason": "Conserved quantity remains declared.",
+          "replacement_or_discharge_path": "Derive through Noether-style theorem surface.",
+          "statement_line_sha256": "d4b14bfefa706e0ed825cc68283a46d7d4ddb93e910d7806e48bf2ae78d3dd20",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredNoetherAssumptions",
+          "declaration_block_sha256": "008484400fde9135899de68419a64ff69f16e25364a08c9298bb76842d1446c1",
+          "declaration_id": "AXIOM-59E8DEC349A4860D",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 87,
+          "reason": "Noether assumptions remain declared.",
+          "replacement_or_discharge_path": "Prove or discharge against concrete symmetry/action data.",
+          "statement_line_sha256": "36528cc4f4cb6fc2684729b5c4c59a2d14df129821ece177c1ff58707c9a1ec6",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredKineticInvariant",
+          "declaration_block_sha256": "a1dfd204e71bf3f339f4ab72da785cf44a5f4b5c3117a95ab01542316c770358",
+          "declaration_id": "AXIOM-270CCD75F4ADD2F4",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 103,
+          "reason": "Kinetic invariance remains declared.",
+          "replacement_or_discharge_path": "Derive from transformation action on terms.",
+          "statement_line_sha256": "a1dfd204e71bf3f339f4ab72da785cf44a5f4b5c3117a95ab01542316c770358",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredDispersionInvariant",
+          "declaration_block_sha256": "63911f9afa0e1bac0dab56669ba910a914b456b999919a90d1417a76a9d79d19",
+          "declaration_id": "AXIOM-ABC1CAFCCA7624D3",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 104,
+          "reason": "Dispersion invariance remains declared.",
+          "replacement_or_discharge_path": "Derive from transformation action on terms.",
+          "statement_line_sha256": "63911f9afa0e1bac0dab56669ba910a914b456b999919a90d1417a76a9d79d19",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredCoherenceInvariant",
+          "declaration_block_sha256": "3ba65a4fac727a92c46b4cc36f81f574b57f62d66839f894ebbf14ffdf43dd5f",
+          "declaration_id": "AXIOM-EED170AA8AC6E0C8",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 105,
+          "reason": "Coherence invariance remains declared.",
+          "replacement_or_discharge_path": "Derive from transformation action on terms.",
+          "statement_line_sha256": "2579ef26efe8258d69053ba8c4695052f6c6ef6a5306885a50d7e5f0145087be",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": true,
+          "declaration": "declaredSymmetryMatchesPhase",
+          "declaration_block_sha256": "20e049d9883a86f0a8a124414788e5431daed24abcd144d12e7aaef54b391931",
+          "declaration_id": "AXIOM-40ED534C3E3BB6AE",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "line": 108,
+          "reason": "Symmetry-to-phase matching remains declared.",
+          "replacement_or_discharge_path": "Prove by concrete symmetry representation.",
+          "statement_line_sha256": "d0c80f5673f7e90420e3e532d2498ab82d36849c98ba5c33850881b2bb454be5",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Rep",
+          "declaration_block_sha256": "5e90fee0824e5a1297c7260e82e2af636504acb4f939832274b897a6f5d96d11",
+          "declaration_id": "AXIOM-FAD5E43A26540A04",
+          "file": "formal/toe_formal/ToeFormal/Variational/FieldRepresentation.lean",
+          "line": 38,
+          "reason": "Abstract field representation universe.",
+          "replacement_or_discharge_path": "Replace only if a concrete universal representation is selected.",
+          "statement_line_sha256": "08e8e1655df4dea73ab1b9f0fb02c7a6e11889604d6b0c8592a913ed00774d22",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Rep_on_samples_delta_one",
+          "declaration_block_sha256": "fd768a41eaa22cede3b94f5c9f8ee7ce761fec386bf2e3695552d4529d41e8fc",
+          "declaration_id": "AXIOM-9DD5CD6DC24FC52E",
+          "file": "formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean",
+          "line": 61,
+          "reason": "Sample representation convention for delta-one.",
+          "replacement_or_discharge_path": "Replace with concrete sample representation theorem.",
+          "statement_line_sha256": "2822e4ad710e25bf177c64b266ae235fce687d6ead2e43c95a8f7488330847ce",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": false,
+          "declaration": "Rep_on_samples_delta_I",
+          "declaration_block_sha256": "b546f0e5e97520fe1e8edef1f919f31a0815d34c33091a242629b2a3a7dbcea8",
+          "declaration_id": "AXIOM-C8B282BCC0E04FF9",
+          "file": "formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean",
+          "line": 66,
+          "reason": "Sample representation convention for delta-I.",
+          "replacement_or_discharge_path": "Replace with concrete sample representation theorem.",
+          "statement_line_sha256": "9825f70bf6e3bbb3ccfe164b7cf2ea4441da2691afbdb46888db209d6617b506",
+          "status": "spec_backed"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": true,
+          "declaration": "P_rep",
+          "declaration_block_sha256": "c63fef11b5aa67e1ffdba5db51cc414346e666525e847f458206c0dbbbb40829",
+          "declaration_id": "AXIOM-FA147C748ED65A4B",
+          "file": "formal/toe_formal/ToeFormal/Variational/FirstVariationRepDefFieldRep.lean",
+          "line": 31,
+          "reason": "Field representation polynomial remains declared.",
+          "replacement_or_discharge_path": "Derive from concrete representation selection.",
+          "statement_line_sha256": "34847fe9cc80c9b0ac965789dc2fd96380dedb3bde2d40bdeb8a09237187e6d0",
+          "status": "retained_assumption"
+        }
+      ],
+      "blocking_full_pillar_target_count": 22,
+      "ledger_path": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+      "ledger_sha256": "373045763f25be50939ff0e4176a0327de65cd9f5b83ea6abd0fc4d563e584e6",
+      "sorry_or_admit_count": 0,
+      "stable_identity_set_sha256": "14abf743a18794e706d7029e0f6b423139a3d0395fff5fb91829e88541466d80"
+    },
+    "lean_opaque_definitions": {
+      "candidate_count": 46,
+      "candidate_file_count": 14,
+      "candidates": [
+        {
+          "declaration": "Dt",
+          "declaration_block_sha256": "8e47fc870a8d8a17f2031149cab756b7c81fdded71f3aafaf4a75d6c292598c9",
+          "declaration_id": "OPAQUE-DF0DCA735D87236E",
+          "file": "formal/toe_formal/ToeFormal/CPNLSE2D/PlaneWaveOperatorDefs.lean",
+          "line": 27,
+          "statement_line_sha256": "0fa5a3653e600d40c2d0c3ba1ef23d8116f47d5b88ca64e2f751b4a7a40ccec2"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "f517904b2af870f1606e5629eb47918a2349d213e1bbeeefad39fb7ccc627c32",
+          "declaration_id": "OPAQUE-CFA9808F104FF018",
+          "file": "formal/toe_formal/ToeFormal/CPNLSE2D/PlaneWaveOperatorDefs.lean",
+          "line": 30,
+          "statement_line_sha256": "06d9e07af172717cd4471fc7e9d0f53a868388b3388ae858592dd30ef4756fa2"
+        },
+        {
+          "declaration": "Dyy",
+          "declaration_block_sha256": "467894c2d1a147d4e87538f76dd5128bce7c2ed188196793407ada81a2075368",
+          "declaration_id": "OPAQUE-8D9096DE3EC20F71",
+          "file": "formal/toe_formal/ToeFormal/CPNLSE2D/PlaneWaveOperatorDefs.lean",
+          "line": 33,
+          "statement_line_sha256": "dd1414800a1b0db5ad950d1fb60df6ab3ed9a9fbd7e2f89804462d3a0c19d203"
+        },
+        {
+          "declaration": "rfft",
+          "declaration_block_sha256": "121bc9e88d2bdbb135deecf8d11bd3b4dbcc3e5e44c7295d4272f7b9aa440159",
+          "declaration_id": "OPAQUE-467085DE0156AC9C",
+          "file": "formal/toe_formal/ToeFormal/CRFT/Diagnostics/Turbulence.lean",
+          "line": 31,
+          "statement_line_sha256": "121bc9e88d2bdbb135deecf8d11bd3b4dbcc3e5e44c7295d4272f7b9aa440159"
+        },
+        {
+          "declaration": "rfftfreq",
+          "declaration_block_sha256": "d8435a05db46cef62b45eaa8ae7c58e2ef87fd1776b480bfbb213fad031ac75b",
+          "declaration_id": "OPAQUE-4C2084B8E94B95C6",
+          "file": "formal/toe_formal/ToeFormal/CRFT/Diagnostics/Turbulence.lean",
+          "line": 32,
+          "statement_line_sha256": "943d4a09ab5caa6f02dbbe45977b8c8a95564a9d7803712622e43e72a7da515a"
+        },
+        {
+          "declaration": "DxxC",
+          "declaration_block_sha256": "e9a6545dc8283635d53243f6ba3d907d002fb604390a0a5312d52efdbbf7da40",
+          "declaration_id": "OPAQUE-DDB45AB9A634EC71",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 35,
+          "statement_line_sha256": "e9a6545dc8283635d53243f6ba3d907d002fb604390a0a5312d52efdbbf7da40"
+        },
+        {
+          "declaration": "DxxR",
+          "declaration_block_sha256": "a0a697df0e232dcc04282478b5ee909ba6379b71ff3c8e9e3e0501cf4b1cf9b4",
+          "declaration_id": "OPAQUE-558F3C64E133A2BF",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 36,
+          "statement_line_sha256": "a0a697df0e232dcc04282478b5ee909ba6379b71ff3c8e9e3e0501cf4b1cf9b4"
+        },
+        {
+          "declaration": "DxxxxR",
+          "declaration_block_sha256": "e4074d3d768b3f41f0106206a1c616e45e1317524568945dff5d42b2104214ca",
+          "declaration_id": "OPAQUE-423DCC43714A9293",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 37,
+          "statement_line_sha256": "e4074d3d768b3f41f0106206a1c616e45e1317524568945dff5d42b2104214ca"
+        },
+        {
+          "declaration": "DxxxxxxR",
+          "declaration_block_sha256": "197539f0201e52b55f40bfbfc535286d9e4471373a176ac5a748096bd0a81093",
+          "declaration_id": "OPAQUE-63083C2560C23AAA",
+          "file": "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean",
+          "line": 38,
+          "statement_line_sha256": "ddc052415f659eae9d1aef315611f62c7556c7bb29d9fe5d6b26afbeec9a6bd1"
+        },
+        {
+          "declaration": "Dx",
+          "declaration_block_sha256": "3a1db05f266f752d77b3968333288dd5f9901d5e66ad392b0b005a02a5f66ea9",
+          "declaration_id": "OPAQUE-07E0CDA966CC98AF",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 43,
+          "statement_line_sha256": "3a1db05f266f752d77b3968333288dd5f9901d5e66ad392b0b005a02a5f66ea9"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "cafbeaba526ee243cad025abcd5d279be2f8636570dd8ccd059bc8b9b8e3d996",
+          "declaration_id": "OPAQUE-0ABFEF0E61F9856F",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 44,
+          "statement_line_sha256": "cafbeaba526ee243cad025abcd5d279be2f8636570dd8ccd059bc8b9b8e3d996"
+        },
+        {
+          "declaration": "Dxxxx",
+          "declaration_block_sha256": "c8c7450644e2cf03b2155c9aad9bb9a890ea97a12ce4a74a2d8ec11bcd043ca4",
+          "declaration_id": "OPAQUE-05AD1608FFE7BF66",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 45,
+          "statement_line_sha256": "c8c7450644e2cf03b2155c9aad9bb9a890ea97a12ce4a74a2d8ec11bcd043ca4"
+        },
+        {
+          "declaration": "Dxxxxxx",
+          "declaration_block_sha256": "ead1bd85ee6d281a947f84d9931aad1fec902f7582a5840a1ff885bbc20cc007",
+          "declaration_id": "OPAQUE-939618BD322A72A2",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 46,
+          "statement_line_sha256": "af6d43ff01ed93dc36b60dd4e93fac1b1674e734733c37405b7732fd1189a3d8"
+        },
+        {
+          "declaration": "Dt",
+          "declaration_block_sha256": "dc9837472e9a4d95f3c7f7a89635c537504bce5eff936a0a6bd58156d6315048",
+          "declaration_id": "OPAQUE-985818B451623193",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 49,
+          "statement_line_sha256": "dc9837472e9a4d95f3c7f7a89635c537504bce5eff936a0a6bd58156d6315048"
+        },
+        {
+          "declaration": "Dtt",
+          "declaration_block_sha256": "1e80476f2ff087f060198af11a9b27d74cc2a73bbc7ff3ecd32bb17932dcf199",
+          "declaration_id": "OPAQUE-257820732486E70B",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean",
+          "line": 50,
+          "statement_line_sha256": "b29b9c3b1e4dfe5307b1be12ee05a706fbc56cae08ec8d7da2472adcc94c0932"
+        },
+        {
+          "declaration": "Dt",
+          "declaration_block_sha256": "dc9837472e9a4d95f3c7f7a89635c537504bce5eff936a0a6bd58156d6315048",
+          "declaration_id": "OPAQUE-C123281CC3E92BF8",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 29,
+          "statement_line_sha256": "dc9837472e9a4d95f3c7f7a89635c537504bce5eff936a0a6bd58156d6315048"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "cafbeaba526ee243cad025abcd5d279be2f8636570dd8ccd059bc8b9b8e3d996",
+          "declaration_id": "OPAQUE-DED51BF06C0EC05C",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 30,
+          "statement_line_sha256": "cafbeaba526ee243cad025abcd5d279be2f8636570dd8ccd059bc8b9b8e3d996"
+        },
+        {
+          "declaration": "Dxxxx",
+          "declaration_block_sha256": "c8c7450644e2cf03b2155c9aad9bb9a890ea97a12ce4a74a2d8ec11bcd043ca4",
+          "declaration_id": "OPAQUE-AEB4A8729410C998",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 31,
+          "statement_line_sha256": "c8c7450644e2cf03b2155c9aad9bb9a890ea97a12ce4a74a2d8ec11bcd043ca4"
+        },
+        {
+          "declaration": "Dxxxxxx",
+          "declaration_block_sha256": "15fd3afd920f609fd92565da50236bbe7b994723a725c5a8f8d38c62379e9631",
+          "declaration_id": "OPAQUE-132C489BC06BEF42",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 32,
+          "statement_line_sha256": "af6d43ff01ed93dc36b60dd4e93fac1b1674e734733c37405b7732fd1189a3d8"
+        },
+        {
+          "declaration": "RHS_P1",
+          "declaration_block_sha256": "814aae404c2ec4aae04badd9db7fae4abcce493c50744f96e30b9a597767cd4f",
+          "declaration_id": "OPAQUE-D2EC2B88D54B12B9",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "line": 63,
+          "statement_line_sha256": "6f61215ebf9d43459c2c5392ae3a4fed378086c12337b7dccafe059012dbacd6"
+        },
+        {
+          "declaration": "Dtt",
+          "declaration_block_sha256": "b29b9c3b1e4dfe5307b1be12ee05a706fbc56cae08ec8d7da2472adcc94c0932",
+          "declaration_id": "OPAQUE-7002E3774210B12D",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 27,
+          "statement_line_sha256": "b29b9c3b1e4dfe5307b1be12ee05a706fbc56cae08ec8d7da2472adcc94c0932"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "cafbeaba526ee243cad025abcd5d279be2f8636570dd8ccd059bc8b9b8e3d996",
+          "declaration_id": "OPAQUE-8C660F8ABED0C7AD",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 28,
+          "statement_line_sha256": "cafbeaba526ee243cad025abcd5d279be2f8636570dd8ccd059bc8b9b8e3d996"
+        },
+        {
+          "declaration": "Dxxxx",
+          "declaration_block_sha256": "c8c7450644e2cf03b2155c9aad9bb9a890ea97a12ce4a74a2d8ec11bcd043ca4",
+          "declaration_id": "OPAQUE-B07B0A23A2AEA247",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 29,
+          "statement_line_sha256": "c8c7450644e2cf03b2155c9aad9bb9a890ea97a12ce4a74a2d8ec11bcd043ca4"
+        },
+        {
+          "declaration": "Dxxxxxx",
+          "declaration_block_sha256": "fcc811e3b0024476607f7acd0b6b577dfc85b0bbde855d52456ff06447d9ea63",
+          "declaration_id": "OPAQUE-70B7628B4FB53753",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 30,
+          "statement_line_sha256": "af6d43ff01ed93dc36b60dd4e93fac1b1674e734733c37405b7732fd1189a3d8"
+        },
+        {
+          "declaration": "RHS_P2",
+          "declaration_block_sha256": "cb5cc94bbc7b51060a09a4db56cf5b730cee5d8512b0d73d2cf2de79b5c91650",
+          "declaration_id": "OPAQUE-697EEE6A58749F9A",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 56,
+          "statement_line_sha256": "c8243026512302ac45ec3940a2d343f187db4a76a4c9f912e40362025fad364f"
+        },
+        {
+          "declaration": "cubicDensity",
+          "declaration_block_sha256": "2b6caad1838ab94754713e76a0db2f3633fdcfce772cf2dcc29768a44f5bedcd",
+          "declaration_id": "OPAQUE-08DD710E5F3D6AF3",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "line": 77,
+          "statement_line_sha256": "20d82eb4de862260ece363f6e9724144ba6f7940428043f64cdd8595214d1d7f"
+        },
+        {
+          "declaration": "CAUS01",
+          "declaration_block_sha256": "f4932f6263e65c51b3def820f2af4d8f753abf056e32793d5a1613403e4fcc84",
+          "declaration_id": "OPAQUE-771CAE91C77E894A",
+          "file": "formal/toe_formal/ToeFormal/Gates/CAUS01.lean",
+          "line": 8,
+          "statement_line_sha256": "3d0dda77a1280e1d4dc2ffc7c820c42326a20161058d5b0ebaaf9e18c3b88806"
+        },
+        {
+          "declaration": "CT01",
+          "declaration_block_sha256": "b2ec6e97d228400e56764460ab36a4b145ee8e88c9e1d9eb9ebecb7fbce6ebb6",
+          "declaration_id": "OPAQUE-BEBDCE3449420261",
+          "file": "formal/toe_formal/ToeFormal/Gates/CT01.lean",
+          "line": 9,
+          "statement_line_sha256": "999332bbf96c5df9d367eec4538961334ab768ded2696b13ba7a6094ff0a2d9b"
+        },
+        {
+          "declaration": "SYM01",
+          "declaration_block_sha256": "f300f2014447f6cbd562d1970aea5d61c5b2bb9b2c1049ce820a640e974271ae",
+          "declaration_id": "OPAQUE-5153B69DE1AC1C2B",
+          "file": "formal/toe_formal/ToeFormal/Gates/SYM01.lean",
+          "line": 8,
+          "statement_line_sha256": "23d22c01e96f8d05112d2c142632a1073ce20b55799f6436d68cd2f5c30d7471"
+        },
+        {
+          "declaration": "D1",
+          "declaration_block_sha256": "734ca914dab1d2dc1d5ca99e875d2238abdfb0385ce442d6939be32c5faf3fa4",
+          "declaration_id": "OPAQUE-0E588AAD39178530",
+          "file": "formal/toe_formal/ToeFormal/LCRD/V3/RotorCurvature.lean",
+          "line": 40,
+          "statement_line_sha256": "734ca914dab1d2dc1d5ca99e875d2238abdfb0385ce442d6939be32c5faf3fa4"
+        },
+        {
+          "declaration": "D2",
+          "declaration_block_sha256": "0c206ca386d55975e7ecb8f2e022bda817de5e3a69fbd27ec16abab6e03adf65",
+          "declaration_id": "OPAQUE-77C824744B6F3602",
+          "file": "formal/toe_formal/ToeFormal/LCRD/V3/RotorCurvature.lean",
+          "line": 41,
+          "statement_line_sha256": "cb9b978ff0baf6cedd82a01789ceb186a704c935eb6f3a67210acda09729556f"
+        },
+        {
+          "declaration": "D1",
+          "declaration_block_sha256": "734ca914dab1d2dc1d5ca99e875d2238abdfb0385ce442d6939be32c5faf3fa4",
+          "declaration_id": "OPAQUE-3D0DFC4727C96D22",
+          "file": "formal/toe_formal/ToeFormal/LSDA/T1T10.lean",
+          "line": 33,
+          "statement_line_sha256": "734ca914dab1d2dc1d5ca99e875d2238abdfb0385ce442d6939be32c5faf3fa4"
+        },
+        {
+          "declaration": "D2",
+          "declaration_block_sha256": "cb9b978ff0baf6cedd82a01789ceb186a704c935eb6f3a67210acda09729556f",
+          "declaration_id": "OPAQUE-F616E903FB384C7F",
+          "file": "formal/toe_formal/ToeFormal/LSDA/T1T10.lean",
+          "line": 34,
+          "statement_line_sha256": "cb9b978ff0baf6cedd82a01789ceb186a704c935eb6f3a67210acda09729556f"
+        },
+        {
+          "declaration": "D3",
+          "declaration_block_sha256": "a2bb07a5d94a31e15fdbbc00ffe481825d249b1c77eb0554e546f0678bc149f5",
+          "declaration_id": "OPAQUE-ECBDD011EFC3D91B",
+          "file": "formal/toe_formal/ToeFormal/LSDA/T1T10.lean",
+          "line": 35,
+          "statement_line_sha256": "84239389c92571d5535d8f6b4f2c60a9292927a280b9044780a7a95f1fe17266"
+        },
+        {
+          "declaration": "Dt",
+          "declaration_block_sha256": "e2a4e52f950190d4a44c8dc8b891fe7ab85c8e47a6801f8d6714d1943b2c027e",
+          "declaration_id": "OPAQUE-04D4F875CC0B31DF",
+          "file": "formal/toe_formal/ToeFormal/UCFF/FirstOrder.lean",
+          "line": 18,
+          "statement_line_sha256": "e2a4e52f950190d4a44c8dc8b891fe7ab85c8e47a6801f8d6714d1943b2c027e"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "f304b48e424d40f8f3da519282d53c52bc2c164d4d9de4cc6a5422dd705b29af",
+          "declaration_id": "OPAQUE-47FCC4A00EE7EF02",
+          "file": "formal/toe_formal/ToeFormal/UCFF/FirstOrder.lean",
+          "line": 19,
+          "statement_line_sha256": "f304b48e424d40f8f3da519282d53c52bc2c164d4d9de4cc6a5422dd705b29af"
+        },
+        {
+          "declaration": "Dxxxx",
+          "declaration_block_sha256": "8e810f15f59e326fe84d936e49a332aabc49ea490ddd938bb08b073222238b9f",
+          "declaration_id": "OPAQUE-9F8EA22359D73CF3",
+          "file": "formal/toe_formal/ToeFormal/UCFF/FirstOrder.lean",
+          "line": 20,
+          "statement_line_sha256": "8e810f15f59e326fe84d936e49a332aabc49ea490ddd938bb08b073222238b9f"
+        },
+        {
+          "declaration": "Dxxxxxx",
+          "declaration_block_sha256": "75681bd1a052a419d9efc8a4c07f0e3c7e539eef714518eb0209202c0267e425",
+          "declaration_id": "OPAQUE-75FC551189FA6F46",
+          "file": "formal/toe_formal/ToeFormal/UCFF/FirstOrder.lean",
+          "line": 21,
+          "statement_line_sha256": "195b4a9e4b8e28db9791aca6b116aaa4370cb7be22475cbfcab29b9a1289cb01"
+        },
+        {
+          "declaration": "Dt",
+          "declaration_block_sha256": "e2a4e52f950190d4a44c8dc8b891fe7ab85c8e47a6801f8d6714d1943b2c027e",
+          "declaration_id": "OPAQUE-DAEA6B697600BCA0",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderNumerics.lean",
+          "line": 34,
+          "statement_line_sha256": "e2a4e52f950190d4a44c8dc8b891fe7ab85c8e47a6801f8d6714d1943b2c027e"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "f304b48e424d40f8f3da519282d53c52bc2c164d4d9de4cc6a5422dd705b29af",
+          "declaration_id": "OPAQUE-2FD6A724892604FB",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderNumerics.lean",
+          "line": 35,
+          "statement_line_sha256": "f304b48e424d40f8f3da519282d53c52bc2c164d4d9de4cc6a5422dd705b29af"
+        },
+        {
+          "declaration": "Dxxxx",
+          "declaration_block_sha256": "8e810f15f59e326fe84d936e49a332aabc49ea490ddd938bb08b073222238b9f",
+          "declaration_id": "OPAQUE-5602FDD936412896",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderNumerics.lean",
+          "line": 36,
+          "statement_line_sha256": "8e810f15f59e326fe84d936e49a332aabc49ea490ddd938bb08b073222238b9f"
+        },
+        {
+          "declaration": "Dxxxxxx",
+          "declaration_block_sha256": "73d2d6503aecf5668400efd0b01c1a7269c3d319dde991aa988459828c22a357",
+          "declaration_id": "OPAQUE-B5188C1074BAB923",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderNumerics.lean",
+          "line": 37,
+          "statement_line_sha256": "195b4a9e4b8e28db9791aca6b116aaa4370cb7be22475cbfcab29b9a1289cb01"
+        },
+        {
+          "declaration": "Dtt",
+          "declaration_block_sha256": "222d1bc9b2673cd1080e22df3721f1c50797e33b5ce201a5add61381cf585f0a",
+          "declaration_id": "OPAQUE-1E1430A8BC6AAB8B",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean",
+          "line": 29,
+          "statement_line_sha256": "222d1bc9b2673cd1080e22df3721f1c50797e33b5ce201a5add61381cf585f0a"
+        },
+        {
+          "declaration": "Dxx",
+          "declaration_block_sha256": "f304b48e424d40f8f3da519282d53c52bc2c164d4d9de4cc6a5422dd705b29af",
+          "declaration_id": "OPAQUE-024CF5C127FE8E80",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean",
+          "line": 30,
+          "statement_line_sha256": "f304b48e424d40f8f3da519282d53c52bc2c164d4d9de4cc6a5422dd705b29af"
+        },
+        {
+          "declaration": "Dxxxx",
+          "declaration_block_sha256": "8e810f15f59e326fe84d936e49a332aabc49ea490ddd938bb08b073222238b9f",
+          "declaration_id": "OPAQUE-F4CB094A791B1A4E",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean",
+          "line": 31,
+          "statement_line_sha256": "8e810f15f59e326fe84d936e49a332aabc49ea490ddd938bb08b073222238b9f"
+        },
+        {
+          "declaration": "Dxxxxxx",
+          "declaration_block_sha256": "c5a8cb37ea9333f904237f585b6d07a74344f64c75f5161d74bf0949fa7c4cf7",
+          "declaration_id": "OPAQUE-CD80E6180C23A2CE",
+          "file": "formal/toe_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean",
+          "line": 32,
+          "statement_line_sha256": "195b4a9e4b8e28db9791aca6b116aaa4370cb7be22475cbfcab29b9a1289cb01"
+        }
+      ],
+      "classification_status": "UNREVIEWED_BASELINE_CANDIDATES",
+      "file_counts": {
+        "formal/toe_formal/ToeFormal/CPNLSE2D/PlaneWaveOperatorDefs.lean": 3,
+        "formal/toe_formal/ToeFormal/CRFT/Diagnostics/Turbulence.lean": 2,
+        "formal/toe_formal/ToeFormal/CRFT/PhiChi1DExtended.lean": 4,
+        "formal/toe_formal/ToeFormal/Derivation/Conventions/FourierSymbols.lean": 6,
+        "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean": 5,
+        "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean": 6,
+        "formal/toe_formal/ToeFormal/Gates/CAUS01.lean": 1,
+        "formal/toe_formal/ToeFormal/Gates/CT01.lean": 1,
+        "formal/toe_formal/ToeFormal/Gates/SYM01.lean": 1,
+        "formal/toe_formal/ToeFormal/LCRD/V3/RotorCurvature.lean": 2,
+        "formal/toe_formal/ToeFormal/LSDA/T1T10.lean": 3,
+        "formal/toe_formal/ToeFormal/UCFF/FirstOrder.lean": 4,
+        "formal/toe_formal/ToeFormal/UCFF/SecondOrderNumerics.lean": 4,
+        "formal/toe_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean": 4
+      },
+      "stable_identity_set_sha256": "13b215ffc728f202178f4903dcd9ba0744c37019fd09066189f8949b1f975450"
+    },
+    "loop_control_registry": {
+      "active_workstream_count": 1,
+      "casefold_alias_row_count": 227,
+      "current_target_state_authoritative_key_count": 8,
+      "current_target_state_compatibility_key_count": 3742,
+      "current_target_state_key_count": 3750,
+      "duplicate_workstream_extra_record_count": 1,
+      "duplicate_workstream_id_group_count": 1,
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "schema_id": "LOOP_CONTROL_REGISTRY_v0",
+      "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "size_bytes": 52340650,
+      "size_mib": 49.915934,
+      "status_counts": {
+        "active": 1,
+        "consumed_by_qft_gr_covariant_conservation_assumption_reduction_packet": 1,
+        "consumed_by_qft_gr_covariant_conservation_assumption_reduction_packet_result_review": 1,
+        "consumed_by_qft_gr_covariant_conservation_proof_object_attempt": 1,
+        "consumed_by_qft_gr_covariant_conservation_proof_object_attempt_result_review": 1,
+        "consumed_by_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet": 1,
+        "consumed_by_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review": 1,
+        "consumed_by_qft_gr_covariant_conservation_proof_object_packet": 1,
+        "consumed_by_qft_gr_covariant_conservation_proof_object_packet_result_review": 1,
+        "consumed_by_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet": 1,
+        "consumed_by_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_result_review": 1,
+        "paused": 527,
+        "retained": 1
+      },
+      "top_level_key_count": 4153,
+      "unique_workstream_id_count": 538,
+      "workstream_record_count": 539
+    },
+    "quarantined_assertions": {
+      "assertion_count": 197,
+      "assertions": [
+        {
+          "assertion_id": "QASSERT-347712C3D1225C2F",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_gate.py::test_A_source_standalone_attempt_execution_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-F8102D7CEF079959",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_execution_result_review_gate.py::test_A_source_execution_result_review_rotates_to_closeout_preparation"
+        },
+        {
+          "assertion_id": "QASSERT-2D9AD2166C958E5C",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_gate.py::test_A_source_standalone_attempt_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-204C1E575B972792",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_A_source_theorem_linkage_attempt_from_standalone_A_route_result_review_gate.py::test_A_source_standalone_attempt_result_review_rotates_to_execution"
+        },
+        {
+          "assertion_id": "QASSERT-63763CAA774FE905",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_A_source_theorem_linkage_obligation_packet_result_review_gate.py::test_A_source_packet_result_review_rotates_to_standalone_attempt_preparation"
+        },
+        {
+          "assertion_id": "QASSERT-5B14228977637AF0",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_gate.py::test_cexchange_theorem_linkage_attempt_execution_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-2BA1B594F9D9B4E2",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_execution_result_review_gate.py::test_cexchange_execution_result_review_rotates_to_closeout"
+        },
+        {
+          "assertion_id": "QASSERT-9D372C712B095945",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_gate.py::test_cexchange_theorem_linkage_attempt_packet_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-3CD16AF709B99F8D",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_attempt_from_total_conservation_route_result_review_gate.py::test_cexchange_theorem_linkage_attempt_result_review_rotates_to_execution"
+        },
+        {
+          "assertion_id": "QASSERT-372294BCAA422991",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_obligation_closeout_gate.py::test_cexchange_closeout_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-B53C0C5D1E124F83",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_cexchange_theorem_linkage_obligation_closeout_result_review_gate.py::test_cexchange_closeout_result_review_rotates_to_selector"
+        },
+        {
+          "assertion_id": "QASSERT-590F1B8DC3D63B09",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_ck_constraint_family_selection_after_phi_source_and_bridge_admissibility_gate.py::test_ck_constraint_family_selection_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-7A98FF79182F5C83",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_gate.py::test_ck_family_selection_after_cexchange_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-DA829F38884510F7",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_cexchange_closeout_result_review_gate.py::test_ck_family_selection_result_review_rotates_to_obligation_packet"
+        },
+        {
+          "assertion_id": "QASSERT-7A019DCDBF961A3E",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_gate.py::test_ck_family_selection_after_psi_A_exchange_chain_rotates_to_review"
+        },
+        {
+          "assertion_id": "QASSERT-76CB9A0AD9E9E1F1",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_psi_A_exchange_chain_closeout_result_review_gate.py::test_psi_A_exchange_chain_selection_result_review_rotates_to_A_source_packet"
+        },
+        {
+          "assertion_id": "QASSERT-9A164E86301602DB",
+          "failure_class": "historical_candidate_or_current_state_assertion",
+          "nodeid": "formal/python/tests/test_ck_family_theorem_linkage_obligation_selection_after_psi_A_total_conservation_closeout_gate.py::test_ck_family_selection_after_psi_A_total_conservation_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-C12CE3FED13B01B5",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_em_qft_interface_alignment_semantic_bridge_gate.py::test_docs_expose_post_budget_target_without_manifest_enrollment"
+        },
+        {
+          "assertion_id": "QASSERT-6B5DABC79E3FCF89",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_em_qft_physics_blocker_protocol_row_gate.py::test_em_qft_seam_registry_names_blocker_and_boundary"
+        },
+        {
+          "assertion_id": "QASSERT-E6A62609AE6F3B3B",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_em_qft_post_budget_cross_pillar_review_gate.py::test_public_surfaces_expose_citation_target_without_manifest_enrollment"
+        },
+        {
+          "assertion_id": "QASSERT-9B86371539BADC70",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_em_qft_shared_dynamics_residual_unification_bridge_gate.py::test_docs_expose_next_target_without_manifest_enrollment"
+        },
+        {
+          "assertion_id": "QASSERT-E60FCB9F10876D37",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_external_benchmark_intake_queue_20260522_gate.py::test_authority_surfaces_have_lightweight_pointers_only_and_live_target_unchanged"
+        },
+        {
+          "assertion_id": "QASSERT-153A5AE34A2279B2",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_master_action_ck_constraint_family_selection_for_phi_route_gate.py::test_ck_family_selection_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-62EE14E667465A31",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_master_action_ck_constraint_functional_definition_packet_gate.py::test_master_action_ck_definition_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-E1A009B5F6333027",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_master_action_ck_constraint_functional_definition_packet_result_review_gate.py::test_master_action_ck_definition_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-5FC1FB68A06564F6",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_master_action_ck_family_gap_review_after_phi_a_and_psi_a_gate.py::test_master_action_ck_family_gap_review_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-237B38ECE3A9134F",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_master_action_ck_family_gap_review_after_phi_a_and_psi_a_result_review_gate.py::test_master_action_ck_family_gap_review_result_review_rotates_to_selector"
+        },
+        {
+          "assertion_id": "QASSERT-CAC004CDB300F77E",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_master_action_ck_family_status_synthesis_after_phi_a_and_psi_a_gate.py::test_master_action_ck_family_status_synthesis_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-98CA33C7819D67D6",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_master_action_interaction_selection_after_a_ck_triad_gate.py::test_master_action_interaction_selection_after_a_ck_triad_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-F79808DB5AD422CC",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_master_action_surface_selection_after_ck_family_gap_review_gate.py::test_master_action_surface_selection_after_ck_family_gap_review_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-2DC5626EB7B34F32",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_master_action_surface_selection_after_ck_family_status_synthesis_gate.py::test_master_action_surface_selection_after_ck_family_status_synthesis_rotates_to_gap_review"
+        },
+        {
+          "assertion_id": "QASSERT-D72903E8EAB8FA35",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_master_action_surface_selection_after_phi_ck_triad_gate.py::test_master_action_surface_selection_after_phi_ck_triad_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-0E43E76A6AE0C50A",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_nonclaim_benchmark_intake_and_public_submission_hygiene_result_review_gate.py::test_no_promotion_or_live_target_change_is_recorded"
+        },
+        {
+          "assertion_id": "QASSERT-538C2FA63B66B08A",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_admissibility_rule_closeout_gate.py::test_phi_bridge_admissibility_ck_admissibility_rule_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-8648DA548D165CBA",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_constraint_candidate_packet_gate.py::test_phi_bridge_admissibility_ck_constraint_candidate_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-125D861209D911B1",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_phi_bridge_admissibility_ck_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-FD7AB69C4BC17CFC",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_functional_embedding_packet_gate.py::test_phi_bridge_admissibility_ck_functional_embedding_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-535B1C5878EF2E52",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_bridge_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_phi_bridge_admissibility_ck_functional_embedding_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-4CCC162E3D26F980",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_ck_admissibility_rule_family_synthesis_closeout_gate.py::test_phi_ck_admissibility_rule_family_synthesis_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-AE2FB095F82511B1",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_ck_admissibility_rule_family_synthesis_packet_gate.py::test_phi_ck_admissibility_rule_family_synthesis_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-3430B8217D6FD339",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_ck_admissibility_rule_family_synthesis_result_review_gate.py::test_phi_ck_admissibility_rule_family_synthesis_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-16226FFC95961C64",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_ck_source_bridge_transport_rule_family_closeout_gate.py::test_phi_ck_source_bridge_transport_rule_family_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-A80FCBB678B302B3",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_ck_source_bridge_transport_rule_family_synthesis_packet_gate.py::test_phi_ck_source_bridge_transport_rule_family_synthesis_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-03CE7686473E79D9",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_ck_source_bridge_transport_rule_family_synthesis_result_review_gate.py::test_phi_ck_source_bridge_transport_rule_family_synthesis_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-09C2EA8EA04067A6",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_relevant_ck_constraint_family_selection_after_source_admissibility_gate.py::test_phi_relevant_ck_constraint_family_selection_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-8635D32B75E4DE9D",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_admissibility_rule_closeout_gate.py::test_phi_source_admissibility_ck_admissibility_rule_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-E246F693F33ACD48",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_constraint_candidate_packet_gate.py::test_phi_source_admissibility_ck_candidate_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-1B9B6A1CEFF1BD3C",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_phi_source_admissibility_ck_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-C4B1121F215F29B2",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_functional_embedding_packet_gate.py::test_phi_source_admissibility_ck_functional_embedding_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-29A19A9D3C6B4EA8",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_phi_source_admissibility_ck_functional_embedding_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-BD2DAC1CB6A3D32A",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_theorem_linkage_attempt_from_standalone_phi_route_gate.py::test_phi_source_standalone_attempt_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-1471543411ACD94B",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_theorem_linkage_attempt_from_standalone_phi_route_result_review_gate.py::test_phi_source_standalone_attempt_result_review_rotates_to_execution"
+        },
+        {
+          "assertion_id": "QASSERT-30F49C94687A9048",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_phi_source_theorem_linkage_obligation_packet_result_review_gate.py::test_phi_source_packet_result_review_rotates_to_attempt_preparation"
+        },
+        {
+          "assertion_id": "QASSERT-7E22F0A38202B8B4",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_admissibility_rule_closeout_gate.py::test_phi_transport_consistency_ck_admissibility_rule_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-5ED9BEC33C32A7E0",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_constraint_candidate_packet_gate.py::test_phi_transport_consistency_ck_candidate_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-4836957229817366",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_constraint_candidate_packet_result_review_gate.py::test_phi_transport_consistency_ck_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-9F8F3A30C723E908",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_functional_embedding_packet_gate.py::test_phi_transport_consistency_ck_functional_embedding_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-BCEE9D441A80C6B8",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_phi_transport_consistency_ck_functional_embedding_packet_result_review_gate.py::test_phi_transport_consistency_ck_functional_embedding_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-E40BD82C68A9315D",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_physics_implications_and_significance_intake_index_gate.py::test_physics_implications_intake_ceiling_and_live_target_controls"
+        },
+        {
+          "assertion_id": "QASSERT-5FF01D3497E5361D",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_physics_implications_and_significance_intake_index_gate.py::test_physics_implications_intake_does_not_mutate_authoritative_live_surfaces"
+        },
+        {
+          "assertion_id": "QASSERT-45DD7CCB0DF3170E",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_post_qm_stat_entropy_assumption_map_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_assumption_map_selection_public_surfaces_are_synchronized"
+        },
+        {
+          "assertion_id": "QASSERT-D50F1FDDD7FA9C9D",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_post_qm_stat_entropy_assumption_map_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candidate_selection"
+        },
+        {
+          "assertion_id": "QASSERT-8BF03E7A2ECD290E",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_log_domain_reduction_selection_public_surfaces_are_synchronized"
+        },
+        {
+          "assertion_id": "QASSERT-9FF1D9B4479B390F",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to_candidate_selection"
+        },
+        {
+          "assertion_id": "QASSERT-1CA3618EFF36341E",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_post_qm_stat_entropy_semantics_gap_bounded_attack_selection_gate.py::test_post_qm_stat_entropy_semantics_gap_selection_public_surfaces_are_synchronized"
+        },
+        {
+          "assertion_id": "QASSERT-B9644EA65D186368",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_post_samplerep32_axiom_audit_bounded_attack_selection_gate.py::test_post_samplerep32_axiom_audit_selection_public_surfaces_are_current"
+        },
+        {
+          "assertion_id": "QASSERT-A592E7D3D2235B31",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_post_status_surface_enforcement_bounded_attack_selection_gate.py::test_post_enforcement_selector_registry_records_historical_rotation"
+        },
+        {
+          "assertion_id": "QASSERT-7603DF347BB350DB",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_post_toe_expert_translation_bounded_target_selection_gate.py::test_post_translation_selection_updates_authoritative_live_target"
+        },
+        {
+          "assertion_id": "QASSERT-0E07453CA32492DC",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_interaction_exchange_theorem_linkage_chain_closeout_result_review_gate.py::test_psi_A_interaction_exchange_chain_closeout_result_review_rotates_to_selector"
+        },
+        {
+          "assertion_id": "QASSERT-0F024E3EFCF80FCE",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution_gate.py::test_psi_A_matter_exchange_attempt_execution_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-0F0D79D5CB8BC62A",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_execution_result_review_gate.py::test_psi_A_matter_exchange_attempt_execution_result_review_rotates_to_closeout"
+        },
+        {
+          "assertion_id": "QASSERT-6180B5752B9AB0CC",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_gate.py::test_psi_A_matter_sector_exchange_attempt_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-5E6428F80A3B23E7",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_attempt_from_dirac_pair_result_review_gate.py::test_psi_A_matter_exchange_attempt_result_review_rotates_to_execution"
+        },
+        {
+          "assertion_id": "QASSERT-2AD23CE40AFF1CE0",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_gate.py::test_psi_A_matter_exchange_closeout_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-FB0DE82B224F5953",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_matter_sector_exchange_theorem_linkage_obligation_closeout_result_review_gate.py::test_psi_A_matter_exchange_closeout_result_review_rotates_to_selector"
+        },
+        {
+          "assertion_id": "QASSERT-2762FE6DF7610777",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_execution_gate.py::test_psi_A_total_conservation_attempt_execution_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-54985CBE8F793375",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_execution_result_review_gate.py::test_psi_A_total_conservation_execution_result_review_rotates_to_closeout"
+        },
+        {
+          "assertion_id": "QASSERT-C3720827766284D0",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_gate.py::test_psi_A_total_conservation_attempt_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-07E9A3E20BAFCD1A",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_attempt_from_exchange_routes_result_review_gate.py::test_psi_A_total_conservation_attempt_result_review_rotates_to_execution"
+        },
+        {
+          "assertion_id": "QASSERT-FF4238D2372193DD",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_closeout_gate.py::test_psi_A_total_conservation_closeout_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-D2CEC67ED03F1328",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_closeout_result_review_gate.py::test_psi_A_total_conservation_closeout_result_review_rotates_to_selector"
+        },
+        {
+          "assertion_id": "QASSERT-1A62EF06BD86B165",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_packet_gate.py::test_psi_A_total_conservation_packet_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-D9AAC5E2B13621D1",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_psi_A_total_conservation_theorem_linkage_obligation_packet_result_review_gate.py::test_psi_A_total_conservation_packet_result_review_rotates_to_attempt_preparation"
+        },
+        {
+          "assertion_id": "QASSERT-07AE4B0B07C1A6BB",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_public_submission_ai_hygiene_gate.py::test_current_live_target_is_unchanged_in_public_authority_surfaces"
+        },
+        {
+          "assertion_id": "QASSERT-D69F69FF2D055588",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_action_derivability_retry_with_provisional_matter_sector_gate.py::test_action_derivability_retry_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-5356A2DEA05B9161",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_gate.py::test_action_derivability_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-5200BC4795C1B456",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_gate.py::test_bianchi_compatibility_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-6FFB5768DCF23224",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source_gate.py::test_classical_route_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-DE2C44EDEFC36DFF",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_classical_einstein_scalar_coupling_route_packet_result_review_gate.py::test_classical_route_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-D999AA1EDD7DFAF8",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_matter_action_functional_candidate_packet_gate.py::test_matter_action_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-4EF955180EE02273",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_matter_field_content_and_lagrangian_candidate_packet_gate.py::test_field_content_lagrangian_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-2DF2DC366A9B9277",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_gate.py::test_countermodel_attempt_after_scope_refinement_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-7A623D4F11D2F54B",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_gate.py::test_countermodel_attempt_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-620496A33B747072",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_gate.py::test_countermodel_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-2B48B1E90C46665B",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_gate.py::test_countermodel_packet_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B6A8454FA1A552E9",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_gate.py::test_qft_gr_minimal_positive_conservation_witness_attempt_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-A7B57BB5A67CF0D4",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review_gate.py::test_strict_toy_witness_attempt_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-08DD26F4C1EFC663",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_maturation_gate.py::test_positive_conservation_witness_maturation_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-F3110B5875B76EF5",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_maturation_result_review_gate.py::test_positive_conservation_witness_maturation_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-185D6C7DE96D3A0B",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_gate.py::test_qft_gr_minimal_positive_conservation_witness_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-706109122DE0FD61",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review_gate.py::test_positive_conservation_witness_packet_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-4B7DD71D5F1AA017",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_minimal_working_model_demonstration_packet_gate.py::test_minimal_working_model_packet_has_lean_and_public_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-7B6F00A3D63A11B6",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_provisional_scalar_classical_source_route_witness_closeout_gate.py::test_scalar_classical_source_route_witness_closeout_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-C96827430627D693",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_renormalization_assumption_reduction_closeout_packet_result_review_gate.py::test_qft_gr_renormalization_assumption_reduction_closeout_packet_result_review_preserves_packet_vs_review_target_split"
+        },
+        {
+          "assertion_id": "QASSERT-73985B99B8F0DB01",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source_gate.py::test_semiclassical_gate_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-CC41C2DDAFDDF502",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_source_admissibility_review_for_provisional_scalar_source_gate.py::test_source_admissibility_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-40F08C7611D78B31",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_gate.py::test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_preserves_packet_vs_review_target_split"
+        },
+        {
+          "assertion_id": "QASSERT-F8C633DEF70B3F2D",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_stress_energy_operator_domain_semantics_gate.py::test_frontier_and_aggregate_rotate_to_operator_domain_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-AF989115FA686316",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_toe_matter_sector_candidate_selection_packet_gate.py::test_toe_matter_sector_selection_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-C8A89237BF6CF3EA",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_gate.py::test_weak_conservation_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B751220BB212E909",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_assumption_reduction_candidate_selection_gate.py::test_qm_stat_entropy_assumption_reduction_candidate_selection_public_surfaces_are_synchronized"
+        },
+        {
+          "assertion_id": "QASSERT-7B1CAFD4C5FC0C06",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_assumption_reduction_candidate_selection_gate.py::test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotates_to_attack"
+        },
+        {
+          "assertion_id": "QASSERT-667FB25862F2EF10",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_public_surfaces_are_synchronized"
+        },
+        {
+          "assertion_id": "QASSERT-AA535034E80F52E6",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_review"
+        },
+        {
+          "assertion_id": "QASSERT-49A54659B4357433",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_public_surfaces_are_synchronized"
+        },
+        {
+          "assertion_id": "QASSERT-07F45BD45AB70A92",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_gate.py::test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_registry_rotates_to_selector"
+        },
+        {
+          "assertion_id": "QASSERT-646B1CD125ACA5FE",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_gate.py::test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotates_current_target"
+        },
+        {
+          "assertion_id": "QASSERT-CC98F9E2584BB19B",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_gate.py::test_active_live_target_mirror_parity_is_enforced"
+        },
+        {
+          "assertion_id": "QASSERT-0A515E4A9A16FC46",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_gate.py::test_current_authoritative_surfaces_classify_sources_and_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-FFE583DB61E19B06",
+          "failure_class": "historical_active_target_or_successor_assertion",
+          "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_result_review_gate.py::test_active_live_target_mirror_parity_survives_selector_rotation"
+        },
+        {
+          "assertion_id": "QASSERT-682336C67889B21D",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_status_surface_canonicalization_enforcement_packet_result_review_gate.py::test_current_authoritative_surfaces_record_result_review_chain"
+        },
+        {
+          "assertion_id": "QASSERT-3376BCBC46AF9AC3",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_admissibility_rule_closeout_gate.py::test_a_bridge_ck_admissibility_rule_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B04CC5618E3ABE69",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_gate.py::test_a_bridge_ck_candidate_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-4886060047836A71",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_a_bridge_ck_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-27385A698FC00D1F",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_functional_embedding_packet_gate.py::test_a_bridge_ck_functional_embedding_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-8BBC6F8CBF208040",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_bridge_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_a_bridge_ck_functional_embedding_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-EB4166D9E08176FE",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_ck_constraint_family_selection_after_source_admissibility_gate.py::test_a_ck_family_selector_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-6A21EC04BBDA8086",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_ck_constraint_family_selection_after_source_and_bridge_admissibility_gate.py::test_a_source_bridge_selector_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-A4B8438A159145F6",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_ck_source_bridge_transport_rule_family_synthesis_packet_gate.py::test_a_ck_source_bridge_transport_synthesis_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B397FE6914E7B1BF",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_gauge_group_domain_and_current_policy_packet_gate.py::test_a_gauge_policy_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-752E0C25DB66F957",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_route_selection_after_stress_energy_route_gate.py::test_a_route_selection_after_stress_energy_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-61A452F445511D9A",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_route_selection_after_vacuum_source_admissibility_gate.py::test_a_route_selection_after_vacuum_source_admissibility_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-62E14EC172512F98",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_route_selection_after_vacuum_u1_variation_gate.py::test_a_route_selection_after_vacuum_u1_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-1FC9DBEA8B99839F",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_admissibility_rule_closeout_gate.py::test_a_source_ck_admissibility_rule_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-BA96592007E8DC63",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_constraint_candidate_packet_gate.py::test_a_source_admissibility_ck_candidate_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-2AB48257F2BFA275",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_constraint_candidate_packet_result_review_gate.py::test_a_source_admissibility_ck_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-75D2AF616CE0DD71",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_functional_embedding_packet_gate.py::test_a_source_admissibility_ck_functional_embedding_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-087630CA34C36F91",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_ck_functional_embedding_packet_result_review_gate.py::test_a_source_ck_functional_embedding_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-6EC6C94588816754",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_for_vacuum_stress_energy_gate.py::test_a_source_admissibility_review_preparation_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-AC74F9787B4C970A",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_for_vacuum_stress_energy_result_review_gate.py::test_a_source_admissibility_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-225774AB1F624377",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_retry_after_vacuum_identity_gate.py::test_a_source_admissibility_retry_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-5C0CEC72F15A2922",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_source_admissibility_review_retry_after_vacuum_identity_result_review_gate.py::test_a_source_retry_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-DBFF9C853BD1399E",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_stress_energy_route_under_selected_u1_policy_packet_gate.py::test_a_stress_energy_route_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-734AF87A20D5B5BC",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_stress_energy_route_under_selected_u1_policy_result_review_gate.py::test_a_stress_energy_route_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-36BADCE0528ACD92",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_surface_variation_and_source_route_packet_gate.py::test_a_surface_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-03236BF11247DF55",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_surface_variation_and_source_route_result_review_gate.py::test_a_surface_route_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-1814D58DD657C53A",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_admissibility_rule_closeout_gate.py::test_a_transport_ck_closeout_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-7C28B7C1934C0448",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_constraint_candidate_packet_gate.py::test_a_transport_consistency_ck_candidate_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-62A605D1E81DE16B",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_constraint_candidate_packet_result_review_gate.py::test_a_transport_ck_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-3AA6838E4C1F17F2",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_functional_embedding_packet_gate.py::test_a_transport_ck_functional_embedding_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-BE80073E0330D162",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_transport_consistency_ck_functional_embedding_packet_result_review_gate.py::test_a_transport_ck_functional_embedding_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-5457AA7B2E9574B2",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_vacuum_source_admissibility_identity_packet_gate.py::test_a_vacuum_source_identity_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-34B4DDFD0EDBCFBD",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_vacuum_source_admissibility_identity_result_review_gate.py::test_a_vacuum_source_identity_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-1A198DA95D35ED72",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_packet_gate.py::test_a_vacuum_variation_retry_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-2EE2D7CB42DA86C1",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review_gate.py::test_a_vacuum_variation_retry_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-1ACF154E008018A2",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_matter_sector_calculation_route_selection_gate.py::test_route_selection_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-76B23F42AD234331",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_matter_sector_definition_packet_gate.py::test_toe_native_matter_sector_definition_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B0129262DAE06FDE",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_matter_sector_definition_packet_result_review_gate.py::test_definition_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-4E02460B951C89F0",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_ck_variational_content_packet_gate.py::test_phi_ck_variational_content_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B180AF79EC44ED9C",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_signature_domain_and_potential_policy_packet_gate.py::test_phi_policy_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-EF5A22D87CE7FB5E",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_surface_alignment_witness_closeout_gate.py::test_phi_surface_alignment_witness_closeout_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-188F6DD5E32EED21",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_surface_variation_and_source_route_packet_gate.py::test_phi_surface_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-0507AD949E62B110",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_surface_variation_and_source_route_result_review_gate.py::test_phi_route_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-3E4323B4FFC7E83C",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_variation_retry_under_selected_policy_packet_gate.py::test_phi_variation_retry_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-24AB9D40D46683C7",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_phi_variation_retry_under_selected_policy_result_review_gate.py::test_phi_variation_retry_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-43643F5A8133A435",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_adjoint_dirac_route_packet_gate.py::test_psi_a_u1_adjoint_dirac_route_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-A5F39E672F7859BC",
+          "failure_class": "historical_current_surface_or_successor_chain_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_admissibility_rule_closeout_gate.py::test_psi_a_u1_cexchange_admissibility_rule_closeout_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-FC595257642FEBDE",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_constraint_candidate_packet_gate.py::test_psi_a_u1_cexchange_constraint_candidate_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-EE4B185FB5673B2D",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_constraint_candidate_packet_result_review_gate.py::test_psi_a_u1_cexchange_constraint_candidate_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-9504FE4DB4B1A8CC",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_gate.py::test_psi_a_u1_cexchange_functional_embedding_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-7C09CF1F90A6C5FB",
+          "failure_class": "historical_candidate_or_current_state_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_gate.py::test_psi_a_u1_cexchange_functional_embedding_packet_rotates_to_review"
+        },
+        {
+          "assertion_id": "QASSERT-CD2460BE048672CC",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_result_review_gate.py::test_psi_a_u1_cexchange_functional_embedding_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-EB5483F00C0D0F84",
+          "failure_class": "historical_candidate_or_current_state_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_cexchange_functional_embedding_packet_result_review_gate.py::test_psi_a_u1_cexchange_functional_embedding_review_rotates_to_closeout"
+        },
+        {
+          "assertion_id": "QASSERT-2C9586663347D708",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_and_exchange_derivation_obligation_packet_gate.py::test_psi_a_u1_obligation_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-C306EF3CFE4C1342",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_and_exchange_route_policy_packet_gate.py::test_psi_a_u1_policy_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-707DDBBD96AF52B5",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_conservation_from_dirac_pair_packet_gate.py::test_psi_a_u1_current_conservation_from_dirac_pair_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-E8281FC213BB280A",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_conservation_obligation_packet_gate.py::test_psi_a_u1_current_conservation_obligation_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-94BB54AD28DB1D86",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_derivation_from_a_variation_packet_gate.py::test_psi_a_u1_current_derivation_from_A_variation_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-0DB5D058FB9FFF20",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_current_derivation_from_a_variation_result_review_gate.py::test_psi_a_u1_current_derivation_from_A_variation_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-DE34E3759119DA1C",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_gauge_sector_exchange_route_packet_gate.py::test_psi_a_u1_gauge_sector_exchange_route_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-88D5D678C7F80FD7",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_gauge_sector_exchange_route_result_review_gate.py::test_psi_a_u1_gauge_sector_exchange_route_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-C1CDE54EE9E60AFC",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_action_block_definition_packet_gate.py::test_psi_a_u1_action_block_definition_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-3834B622E829A284",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_action_block_definition_result_review_gate.py::test_psi_a_u1_action_block_definition_result_review_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-D8A096449C84E43E",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_closeout_gate.py::test_psi_a_u1_interaction_exchange_rule_family_closeout_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-80401634FAF4F465",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_gate.py::test_psi_a_u1_interaction_exchange_rule_family_closeout_result_review_rotates_to_ck_family_status_synthesis"
+        },
+        {
+          "assertion_id": "QASSERT-EDAD05289E4677E6",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_packet_gate.py::test_psi_a_u1_interaction_exchange_synthesis_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-357A503B0BC8D61B",
+          "failure_class": "historical_active_status_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_packet_gate.py::test_psi_a_u1_interaction_exchange_synthesis_rotates_to_result_review"
+        },
+        {
+          "assertion_id": "QASSERT-741FA5C1BB855E0E",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_interaction_exchange_rule_family_synthesis_result_review_gate.py::test_psi_a_u1_interaction_exchange_synthesis_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-099859FFBC94FBF6",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_matter_sector_exchange_route_packet_gate.py::test_psi_a_u1_matter_sector_exchange_route_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-6F0B58425711EC59",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_matter_sector_exchange_route_result_review_gate.py::test_psi_a_u1_matter_sector_exchange_route_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-6CB575FB5E0D2FEC",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_psi_variation_dirac_route_packet_gate.py::test_psi_a_u1_psi_variation_dirac_route_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-799B2046B854476B",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_sourced_maxwell_route_packet_gate.py::test_psi_a_u1_sourced_maxwell_route_packet_lean_and_surface_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-58BAACD419CE67FA",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_stress_energy_and_exchange_obligation_packet_gate.py::test_psi_a_u1_stress_energy_exchange_obligation_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-3E62E07BCCEC1598",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_stress_energy_definition_policy_packet_gate.py::test_psi_a_u1_stress_energy_definition_policy_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-142D01CB7ED9996E",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_stress_energy_definition_policy_result_review_gate.py::test_psi_a_u1_stress_energy_definition_policy_result_review_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-07CE963ACA07C55B",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_total_stress_energy_conservation_route_packet_gate.py::test_psi_a_u1_total_stress_energy_conservation_route_packet_mirrors"
+        },
+        {
+          "assertion_id": "QASSERT-B500E2395D5F7E9D",
+          "failure_class": "historical_authority_mirror_token_assertion",
+          "nodeid": "formal/python/tests/test_toe_native_psi_a_u1_total_stress_energy_conservation_route_result_review_gate.py::test_psi_a_u1_total_stress_energy_conservation_route_result_review_mirrors"
+        }
+      ],
+      "failure_class_counts": {
+        "historical_active_status_assertion": 8,
+        "historical_active_target_or_successor_assertion": 46,
+        "historical_authority_mirror_token_assertion": 127,
+        "historical_candidate_or_current_state_assertion": 3,
+        "historical_current_surface_or_successor_chain_assertion": 13
+      },
+      "referenced_test_file_count": 186,
+      "source_ledger_path": "formal/docs/release/HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0.json",
+      "source_ledger_sha256": "78c534f097205dcb117ad34161ecf4357a6a434a5ed02dd8bdaacb782ba58691",
+      "stable_identity_set_sha256": "668c44707b50d8c9959f96e8fe9735b23bd2976c9d799dc12a868d7d2d5a0aa2"
+    },
+    "tooling_snapshots": {
+      "duplicate_group_count": 14,
+      "inventory_boundary": {
+        "artifact_deletion_authorized": false,
+        "authority_or_scientific_claim_changed": false,
+        "content_addressed_migration_executed": false,
+        "historical_paths_preserved": true
+      },
+      "inventory_path": "formal/docs/release/TOOLING_SNAPSHOT_CONTENT_INDEX_20260711_v0.json",
+      "inventory_sha256": "03a6d1266146f32f2451e3339ce1f7361dc0cc0c10922f35cbf5b539a14c1d1b",
+      "inventory_status": "INVENTORY_ONLY_PROVENANCE_PRESERVED_NO_DELETION_AUTHORIZED",
+      "redundant_worktree_bytes": 424292098,
+      "redundant_worktree_mib": 404.636477,
+      "source_snapshot_tree_object_id": "a1beaec0d006a8f5fd3f6da42363aa7832a362c1",
+      "tracked_snapshot_bytes": 1040485383,
+      "tracked_snapshot_path_count": 59,
+      "unique_blob_count": 36
+    }
+  },
+  "verification_contract": {
+    "clean_checkout_reproducible_source_binding": true,
+    "count_or_identity_change_requires_versioned_packet": true,
+    "local_preservation_custody_path": "formal/docs/release/PRESERVATION_BACKUP_CUSTODY_20260711_v0.json",
+    "local_preservation_custody_sha256": "e96493b9d15baf358cd44240ac0ddb171f25c2ff62c655032dc7863450a082e8",
+    "off_device_preservation_required_for_current_maintenance_phase": false,
+    "preservation_scope": "same_volume_only_total_C_drive_loss_not_covered_and_risk_accepted",
+    "source_binding_mode": "immutable_git_blob_at_review_commit",
+    "stable_id_rule": "uppercase prefix plus first 16 hex characters of SHA-256 over the canonical identity"
+  }
+}

@@ -2,26 +2,33 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 
 from formal.python.tools.technical_debt_baseline import (
     MAINTENANCE_TARGET,
     OUTPUT_PATH,
     SCIENTIFIC_TARGET,
-    build_baseline,
-    canonical_json_bytes,
 )
+
+
+V0_COMMIT = "f8c648602d18360d45c76368bfb3e3ef830f2842"
+V0_SHA256 = "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6"
 
 
 def _artifact() -> dict:
     return json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
 
 
-def test_technical_debt_baseline_is_deterministic_and_current() -> None:
-    expected = canonical_json_bytes(build_baseline())
-    assert OUTPUT_PATH.read_bytes() == expected
-    assert hashlib.sha256(expected).hexdigest() == hashlib.sha256(
-        OUTPUT_PATH.read_bytes()
-    ).hexdigest()
+def test_technical_debt_baseline_v0_is_the_immutable_reviewed_commit_artifact() -> None:
+    relative = OUTPUT_PATH.relative_to(OUTPUT_PATH.parents[3]).as_posix()
+    completed = subprocess.run(
+        ["git", "show", f"{V0_COMMIT}:{relative}"],
+        cwd=OUTPUT_PATH.parents[3],
+        capture_output=True,
+        check=True,
+    )
+    assert OUTPUT_PATH.read_bytes() == completed.stdout
+    assert hashlib.sha256(completed.stdout).hexdigest() == V0_SHA256
 
 
 def test_technical_debt_counts_and_stable_ids_are_frozen() -> None:
