@@ -1,0 +1,98 @@
+{
+  "accepted_scope": {
+    "byte_exact_compatibility_architecture": true,
+    "committed_external_authority_binding": true,
+    "corrective_v1_preparation_guardrail": true,
+    "full_sha256_record_identity_contract": true,
+    "migration_execution_readiness": false,
+    "runtime_consumer_coverage": false,
+    "typed_controls_executed_against_production_validator": false
+  },
+  "authorization": {
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "maintenance_target_rotation_authorized": false,
+    "migration_execution_authorized": false,
+    "next_migration_execution_target_selected": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "scientific_target_rotation_authorized": false
+  },
+  "boundary": {
+    "consumer_migration_authorized": false,
+    "custody_payload_creation_authorized": false,
+    "legacy_monolith_modification_or_retirement_authorized": false,
+    "production_layout_or_api_authorized": false,
+    "registry_cutover_authorized": false,
+    "scientific_artifact_or_claim_change_authorized": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "consumer_review": {
+    "consumer_count": 496,
+    "literal_external_path_count": 493,
+    "nonliteral_reader_count": 3,
+    "runtime_completeness_proved": false,
+    "source_map_sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642"
+  },
+  "custody_review": {
+    "byte_exact_source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "byte_exact_source_size_bytes": 52340650,
+    "custody_contract_sha256": "bc35c992c9b9fd7dd9c2e84ed6d5b89463b3ce8eb13dc2f7c7d1c539b4d23ce9",
+    "in_memory_single_member_round_trip_reproduced": true,
+    "production_custody_payload_present": false,
+    "transient_reference_size_bytes": 4781507
+  },
+  "findings": [
+    {
+      "finding_id": "REGISTRY-V1-REVIEW-001",
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_MIGRATION_EXECUTION_TARGET",
+      "summary": "The 52 typed controls are frozen obligations, not an executable production-validator regression harness."
+    },
+    {
+      "finding_id": "REGISTRY-V1-REVIEW-002",
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_MIGRATION_EXECUTION_TARGET",
+      "summary": "Projection/history strictness is contract metadata; concrete recursively closed schemas and validator behavior must be instantiated and reviewed in a later prototype boundary."
+    },
+    {
+      "finding_id": "REGISTRY-V1-REVIEW-003",
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKS_CUTOVER",
+      "summary": "The 496-path map is static evidence and runtime shadow-trace completeness remains deliberately false."
+    },
+    {
+      "finding_id": "REGISTRY-V1-REVIEW-004",
+      "severity": "MEDIUM",
+      "status": "OPEN_EXECUTION_EVIDENCE_REQUIRED",
+      "summary": "The gzip profile is frozen but no externally hash-bound production custody payload exists in this preparation tranche."
+    }
+  ],
+  "negative_control_review": {
+    "all_v0_false_acceptances_permanently_named": true,
+    "control_count": 52,
+    "typed_error_codes_unique": true,
+    "v0_false_acceptance_count": 8
+  },
+  "packet_sha256": "41994b0c1703d7f7f7ff7aeda217900a3136489f070ae55a88f2db10a13d12c0",
+  "record_review": {
+    "authority_commitment_sha256": "fd4348411236648d6216900eced59524b87c561bfa0d36186cf4c4d19a2e6b34",
+    "full_record_identity_root_sha256": "67a23fda6348a2a6e12e4c2af775d115c692ecbe4d0650f0844a982d869e112d",
+    "identity_payload_pointer_root_sha256": "a97799ea412006dde3c259b718b10aad9dee7012181611f3f1d5f1a1e821a967",
+    "maximum_canonical_payload_bytes": 2124270,
+    "original_pointer_set_sha256": "219f4bc866b731b74ef50a439b6a869d8add33c6c5ce8e83a621115c1649c6bf",
+    "root_field_record_count": 4152,
+    "total_record_count": 4691,
+    "workstream_record_count": 539
+  },
+  "review_id": "LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v1",
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v1",
+  "source_commit": "5bfbab10b35c4c2d1398a7ab779ba20fd3422371",
+  "status": "ACCEPTED_CORRECTIVE_V1_PREPARATION_GUARDRAIL_ONLY_MIGRATION_EXECUTION_AND_CUTOVER_NOT_READY_OR_AUTHORIZED",
+  "validation": {
+    "focused_python_pass_count": 19,
+    "focused_python_passed": true,
+    "lean_job_count": 109,
+    "lean_target": "ToeFormal.Release.LoopControlRegistryShardingGuardrailPacketV1",
+    "lean_target_passed": true,
+    "production_component_absence_count": 4
+  }
+}

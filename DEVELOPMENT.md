@@ -19,6 +19,9 @@ The corrective v1 guardrail is now prepared for independent review. It freezes
 canonical projection/history contracts plus separate byte-exact custody,
 external committed trust anchors, strict typed controls, and static consumer
 classification. No production migration component or authority change exists.
+Independent review accepts v1 only as a preparation guardrail. Executable
+closed schemas/controls, runtime shadow coverage, custody payload creation, and
+migration execution remain separate open obligations and are unauthorized.
 
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
@@ -77,6 +80,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_correction_v1 --check
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1 --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1_independent_review --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

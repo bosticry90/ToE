@@ -17,6 +17,7 @@ The independent review in `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AN
 
 CORRECTIVE REGISTRY GUARDRAIL V1 PREPARATION
 `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v1.json` prepares a corrective hybrid contract: canonical projection/history data, separately lossless byte custody, committed external trust anchors, full SHA-256 record identities, strict schemas and typed controls, a 496-path static consumer source map with runtime tracing still pending, and separate read/write API contracts. It creates no production projection, index, shard, custody payload, API, consumer migration, authority rotation, cutover, or monolith retirement. Independent v1 review is required; registry migration execution remains unauthorized.
+The independent v1 review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v1.json` accepts that corrective preparation architecture only. It explicitly does not accept migration execution readiness: concrete executable closed schemas/control harnesses, runtime shadow coverage, and a production custody payload remain open. Neither an execution target nor cutover is selected, and registry migration remains unauthorized.
 
 TECHNICAL-DEBT BASELINE CORRECTION
 `formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json` is the effective clean-checkout-reproducible evidence correction for the frozen debt counts and identity sets. It preserves v0 as an immutable historical artifact, binds normalized source bytes at review commit `887d1b2f`, and corrects the 50 axiom plus 20 opaque empty statement-line hashes. It does not reclassify debt, change any count or identity set, rotate either target, or authorize registry migration.
@@ -43,6 +44,7 @@ DEVELOPER QUICKSTART
 - Validate the versioned repair-evidence correction: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_correction_v1 --check`
 - Validate scoped raw-clean acceptance: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check`
 - Validate the corrective registry guardrail v1 preparation: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1 --check`
+- Validate its independent preparation-only review: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1_independent_review --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 
