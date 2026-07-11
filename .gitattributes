@@ -119,3 +119,4 @@ formal/python/tests/test_legacy_discovery_report_fixture_materializer.py text eo
 formal/python/tests/test_legacy_discovery_report_fixture_repair.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_repair.py text eol=lf
 formal/toe_formal/ToeFormal/Release/LegacyDiscoveryReportFixtureRepair.lean text eol=lf
+formal/python/tests/conftest.py text eol=lf
