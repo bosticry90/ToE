@@ -814,6 +814,7 @@ import ToeFormal.QM.SymmetryContract
 import ToeFormal.Release.CurrentAuthority
 import ToeFormal.Release.LegacyDiscoveryReportFixturePacket
 import ToeFormal.Release.LegacyDiscoveryReportFixturePacketIndependentReview
+import ToeFormal.Release.LegacyDiscoveryReportFixtureRepair
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailIndependentReview
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailPacket
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
@@ -1055,6 +1056,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def trackedModuleCount : Nat := 1048
+def trackedModuleCount : Nat := 1049
 
 end ToeFormalAll

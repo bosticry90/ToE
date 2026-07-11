@@ -1,0 +1,51 @@
+{
+  "blocker_counts": {
+    "current": {
+      "EVIDENCE_ALIGNMENT_GAP": 0,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "PARITY_DRIFT": 0,
+      "SEAM_INTEGRATION_GAP": 3,
+      "THEOREM_GAP": 7
+    },
+    "net_delta": -1,
+    "prior": {
+      "EVIDENCE_ALIGNMENT_GAP": 0,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "PARITY_DRIFT": 1,
+      "SEAM_INTEGRATION_GAP": 3,
+      "THEOREM_GAP": 7
+    }
+  },
+  "captured_at_utc": "2026-04-18T03:19:55Z",
+  "exception_requirement": {
+    "ccg02_exception": {
+      "compensating_actions": [
+        "EXECUTE_TGC77_THEOREM_GAP_CLOSURE_QM",
+        "EXECUTE_TGC78_THEOREM_GAP_CLOSURE_COSMO",
+        "HALT_RESUME_IF_BLOCKER_COUNTS_UNCHANGED_AFTER_TGC78"
+      ],
+      "required": true,
+      "scope": "LIMITED_TO_TRANSITION_INTO_THEOREM_GAP_CLOSURE_TRANCHES"
+    },
+    "exception_artifact_pointer": null,
+    "exception_required": false
+  },
+  "non_claim_boundary": "This blocker trend window is a repository-local governance control artifact and does not assert scientific adequacy.",
+  "schema_id": "GOVERNANCE_BLOCKER_TREND_WINDOW_20260410_v0",
+  "source_bundle": {
+    "blocker_burn_review": "formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json",
+    "blocker_closure_map_report": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "tranche_id": "TGC-76",
+  "trend_summary": {
+    "active_blocker_row_count": 10,
+    "movement_rule": "NET_DELTA_LT_0_IS_PROGRESS_NET_DELTA_GE_0_REQUIRES_EXCEPTION",
+    "movement_status": "DECREASING",
+    "row_coverage_count": 11
+  },
+  "window": {
+    "end": "TGC-76",
+    "start": "TGC-69"
+  }
+}

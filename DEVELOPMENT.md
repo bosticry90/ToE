@@ -26,6 +26,9 @@ repair. It does not authorize registry migration or either target rotation.
 Its independent review accepts only the bounded fixture repair after reproducing
 the three root identities and the 21-node/38-edge dependency graph. Raw-clean
 repair validation remains an execution obligation.
+The bounded implementation commits only the three frozen historical roots and
+generates the 18 downstream reports for affected pytest sessions. Until a raw
+detached checkout passes, the repair remains implemented but not accepted.
 
 ## Prerequisites
 
@@ -59,6 +62,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.technical_debt_baseline_correction_v1 --check
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet --check
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet_independent_review --check
+.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

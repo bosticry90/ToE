@@ -1,0 +1,115 @@
+{
+  "active_routing_decision_source": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md",
+  "actual_blocker_state_change": "NEGATIVE_DELTA_DETECTED",
+  "blocker_counts": {
+    "EVIDENCE_ALIGNMENT_GAP": 0,
+    "GOVERNANCE_GUARDRAIL": 0,
+    "PARITY_DRIFT": 0,
+    "SEAM_INTEGRATION_GAP": 3,
+    "THEOREM_GAP": 7
+  },
+  "captured_at_utc": "2026-06-13T04:05:04Z",
+  "closure_map_pointer": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+  "evidence_bundle": {
+    "closure_map": {
+      "pointer": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+      "row_level_evidence": [
+        {
+          "blocker_class": "SEAM_INTEGRATION_GAP",
+          "closure_gate": "formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py",
+          "exit_criterion": "BOUNDED_INCREMENT_CHECKPOINT_AND_GATE_PASS",
+          "required_closure_artifact": "formal/output/toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json",
+          "row_id": "ROW-SEAM-QFT-GR-001"
+        },
+        {
+          "blocker_class": "SEAM_INTEGRATION_GAP",
+          "closure_gate": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py",
+          "exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS",
+          "required_closure_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+          "row_id": "ROW-SEAM-QM-STAT-001"
+        },
+        {
+          "blocker_class": "SEAM_INTEGRATION_GAP",
+          "closure_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py",
+          "exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS",
+          "required_closure_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+          "row_id": "ROW-SEAM-COSMO-SR-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/qm_empirical_comparison_packet_04_v0.json",
+          "row_id": "ROW-PILLAR-QM-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/gr_empirical_comparison_packet_05_v0.json",
+          "row_id": "ROW-PILLAR-GR-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/stat_empirical_comparison_packet_04_v0.json",
+          "row_id": "ROW-PILLAR-STAT-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/cosmo_empirical_comparison_packet_04_v0.json",
+          "row_id": "ROW-PILLAR-COSMO-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_em_empirical_comparison_packet_04_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/em_empirical_comparison_packet_04_v0.json",
+          "row_id": "ROW-PILLAR-EM-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/qft_empirical_comparison_packet_04_v0.json",
+          "row_id": "ROW-PILLAR-QFT-001"
+        },
+        {
+          "blocker_class": "THEOREM_GAP",
+          "closure_gate": "formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py",
+          "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE",
+          "required_closure_artifact": "formal/output/sr_empirical_comparison_packet_05_v0.json",
+          "row_id": "ROW-PILLAR-SR-001"
+        }
+      ],
+      "rows_total": 10
+    },
+    "consistency": {
+      "rule": "FAIL_CLOSED_ON_TREND_DELTA_AND_TGC93_ROUTE_CONTRADICTION",
+      "status": "CONSISTENT"
+    },
+    "tgc_tokens": {
+      "active_routing_decision_source": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md",
+      "tgc92_blocker_reducing_closure_evidence": "TRUE",
+      "tgc93_branch_decision": "AUTHORIZE_SINGLE_SEAM_REENTRY"
+    },
+    "trend_window": {
+      "movement_status": "DECREASING",
+      "net_delta": -1,
+      "pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json"
+    }
+  },
+  "evidence_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+  "matrix_pointer": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+  "non_claim_boundary": "This ledger is a repository-local progress-classification artifact and does not assert global physics adequacy claims.",
+  "program_pointer": "formal/docs/release/WS_10_GLOBAL_COMPLETION_EXECUTION_PROGRAM_20260408_v0.md",
+  "progress_classification": "PROGRESS",
+  "schema_id": "PHYSICS_PROGRESS_LEDGER_v0",
+  "target_blocker_state_change": "REQUIRE_NEGATIVE_DELTA_OR_EXPLICIT_REWORK_ROUTE",
+  "tgc92_pointer": "formal/docs/release/WS_10_TGC_92_CLOSURE_TO_BLOCKER_TRACEABILITY_DECISION_PACKAGE_20260410_v0.md",
+  "tgc93_pointer": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md",
+  "trend_window_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json"
+}

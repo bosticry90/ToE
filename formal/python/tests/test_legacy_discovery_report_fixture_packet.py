@@ -40,7 +40,7 @@ def test_packet_freezes_exact_clean_checkout_failure_and_fixture_scope() -> None
     )
 
 
-def test_packet_binds_compact_root_fixture_hashes_without_adding_them() -> None:
+def test_packet_binds_compact_root_fixture_hashes_absent_at_preparation_commit() -> None:
     roots = _artifact()["fixture_contract"]["root_fixtures"]
     assert sum(row["size_bytes"] for row in roots) == 17_567
     assert {row["sha256"] for row in roots} == {
@@ -48,9 +48,19 @@ def test_packet_binds_compact_root_fixture_hashes_without_adding_them() -> None:
         "73489f4c96f221d214703e227a4887bda5274490fc6dbcb31da2b44c9e7f0822",
         "07af32ad04bbcea569a8256a12462404a0ca3334f51dca23eae3e0830ba81a94",
     }
-    assert all(
-        not (packet.REPO_ROOT / row["planned_fixture_path"]).exists() for row in roots
-    )
+    for row in roots:
+        historical_lookup = subprocess.run(
+            [
+                "git",
+                "cat-file",
+                "-e",
+                f"{packet.SOURCE_COMMIT}:{row['planned_fixture_path']}",
+            ],
+            cwd=packet.REPO_ROOT,
+            capture_output=True,
+            check=False,
+        )
+        assert historical_lookup.returncode != 0
 
 
 def test_packet_source_inventory_is_bound_to_preparation_commit() -> None:

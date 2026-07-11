@@ -9,6 +9,10 @@ import pytest
 
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.meta.repo_environment import normalize_sys_path_entry
+from formal.python.tests.legacy_discovery_report_fixture_materializer import (
+    materialized_legacy_discovery_reports,
+    should_activate,
+)
 
 
 def _repo_root() -> Path:
@@ -81,6 +85,15 @@ def pytest_configure():
 def pytest_runtest_setup(item):
     # Re-assert invariants before each test to catch late sys.path mutations.
     _enforce_sys_path_quarantine_invariants()
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _legacy_discovery_report_clean_checkout_fixture(request):
+    if not should_activate(request.session.items):
+        yield None
+        return
+    with materialized_legacy_discovery_reports() as state:
+        yield state
 
 
 _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN = re.compile(

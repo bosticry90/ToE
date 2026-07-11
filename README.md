@@ -22,6 +22,7 @@ The v0 registry-sharding artifacts are likewise checked as immutable `c60cebde` 
 LEGACY DISCOVERY FIXTURE PREPARATION
 `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0.json` freezes the bounded repair contract for the 20 clean-checkout tests that depend on three historical root reports and an 18-report deterministic derivation chain. It adds no fixture, changes no affected test, generates no report, rotates neither authority, and authorizes neither fixture-repair execution nor registry migration. Independent review is required before the repair may begin.
 The independent review at `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_INDEPENDENT_REVIEW_20260711_v0.json` reproduces the three root hashes and the 21-node/38-edge report graph, accepts the packet, and authorizes only the bounded fixture repair. It does not establish that raw-clean reproducibility has already been repaired, and registry migration remains unauthorized.
+The bounded repair at `formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v0.json` commits only the three exact historical root fixtures and adds an exact-test-scoped session materializer for the 18 derived reports. Focused validation passes; raw detached clean-checkout acceptance is still required before the repair can be described as accepted.
 
 DEVELOPER QUICKSTART
 - Windows path support: `git config core.longpaths true`
@@ -33,6 +34,7 @@ DEVELOPER QUICKSTART
 - Validate the versioned debt-baseline correction: `.\py.ps1 -m formal.python.tools.technical_debt_baseline_correction_v1 --check`
 - Validate the legacy discovery-fixture preparation packet: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet --check`
 - Validate its independent review: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_packet_independent_review --check`
+- Validate the bounded fixture repair artifact: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 

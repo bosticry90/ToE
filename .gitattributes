@@ -110,3 +110,12 @@ formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILI
 formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_packet_independent_review.py text eol=lf
 formal/toe_formal/ToeFormal/Release/LegacyDiscoveryReportFixturePacketIndependentReview.lean text eol=lf
+formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_trend_window_20260410_v0.json -text
+formal/python/tests/fixtures/legacy_discovery_reports/governance_blocker_closure_map_20260410_v0.json -text
+formal/python/tests/fixtures/legacy_discovery_reports/physics_progress_ledger_v0.json -text
+formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v0.json text eol=lf
+formal/python/tests/legacy_discovery_report_fixture_materializer.py text eol=lf
+formal/python/tests/test_legacy_discovery_report_fixture_materializer.py text eol=lf
+formal/python/tests/test_legacy_discovery_report_fixture_repair.py text eol=lf
+formal/python/tools/legacy_discovery_report_fixture_repair.py text eol=lf
+formal/toe_formal/ToeFormal/Release/LegacyDiscoveryReportFixtureRepair.lean text eol=lf
