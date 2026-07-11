@@ -54,6 +54,84 @@ REPRODUCIBILITY_FAILURE_TARGET = (
 )
 UNIT_LEDGER_TARGET = "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
 
+EXPECTED_GUARDRAIL_SHA256 = (
+    "be308d23673273bf2533f25c58280e92845da146b128dc74a7aad345557c5b95"
+)
+CALCULATION_SCRIPT_RELATIVE_PATH = (
+    "formal/python/toe/calculations/"
+    "calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+    "background_robustness.py"
+)
+CALCULATION_TEST_RELATIVE_PATH = (
+    "formal/python/tests/calculations/"
+    "test_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+    "background_robustness.py"
+)
+CALCULATION_OUTPUT_RELATIVE_PATH = (
+    "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-"
+    "MULTI-BACKGROUND-ROBUSTNESS-v0.json"
+)
+CALCULATION_MANIFEST_RELATIVE_PATH = (
+    "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-"
+    "MULTI-BACKGROUND-ROBUSTNESS-MANIFEST-v0.json"
+)
+EXECUTION_REPORT_RELATIVE_PATH = (
+    "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_"
+    "MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_EXECUTION_20260710_v0.json"
+)
+PREFLIGHT_DIAGNOSTIC_RELATIVE_PATH = (
+    "formal/output/diagnostics/CALC-SCALAR-STRESS-ENERGY-COVARIANT-"
+    "DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-PREFLIGHT-"
+    "DIAGNOSTIC-v0.json"
+)
+CALCULATION_SCRIPT_PATH = REPO_ROOT / CALCULATION_SCRIPT_RELATIVE_PATH
+CALCULATION_OUTPUT_PATH = REPO_ROOT / CALCULATION_OUTPUT_RELATIVE_PATH
+CALCULATION_MANIFEST_PATH = REPO_ROOT / CALCULATION_MANIFEST_RELATIVE_PATH
+EXECUTION_REPORT_PATH = REPO_ROOT / EXECUTION_REPORT_RELATIVE_PATH
+PREFLIGHT_DIAGNOSTIC_PATH = REPO_ROOT / PREFLIGHT_DIAGNOSTIC_RELATIVE_PATH
+
+CALCULATION_RESULT_SCHEMA_ID = f"{CALCULATION_ID}-RESULT"
+CALCULATION_MANIFEST_SCHEMA_ID = f"{CALCULATION_ID}-MANIFEST"
+EXECUTION_REPORT_SCHEMA_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
+    "ROBUSTNESS_CALCULATION_EXECUTION_20260710_v0"
+)
+EXECUTION_REPORT_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
+    "ROBUSTNESS_CALCULATION_EXECUTION_v0"
+)
+PREFLIGHT_DIAGNOSTIC_SCHEMA_ID = (
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
+    "ROBUSTNESS_PREFLIGHT_DIAGNOSTIC_20260710_v0"
+)
+CALCULATION_EXECUTION_COMMAND = (
+    "python -m formal.python.toe.calculations."
+    "calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+    "background_robustness"
+)
+
+EXECUTION_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_"
+    "BACKGROUND_ROBUSTNESS_EXECUTED_CLOSED_FOUR_BACKGROUND_FAMILY_"
+    "CANDIDATE_E_REPRO_PENDING_INDEPENDENT_REVIEW"
+)
+EXECUTION_STRICT_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_"
+    "BACKGROUND_ROBUSTNESS_EXECUTED_LEVEL3_CLOSED_ENUMERATED_FIXED_"
+    "BACKGROUND_FAMILY_ONLY_NO_THEOREM_STATISTICAL_OR_ARBITRARY_"
+    "BACKGROUND_GENERALIZATION"
+)
+EXECUTION_BLOCKED_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_"
+    "BACKGROUND_ROBUSTNESS_EXECUTED_BLOCKED_EVIDENCE_INCOMPATIBILITY_"
+    "ARTIFACTS_PRESERVED"
+)
+EXECUTION_BLOCKED_STRICT_OUTCOME = (
+    "CALC_SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_"
+    "BACKGROUND_ROBUSTNESS_BLOCKED_NO_E_REPRO_ACCEPTANCE_NO_THRESHOLD_"
+    "RELAXATION_OR_SOURCE_SUBSTITUTION_DIAGNOSTIC_TARGET_SELECTED"
+)
+
 GUARDRAIL_OUTCOME = (
     "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
     "ROBUSTNESS_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_FOUR_"
@@ -572,6 +650,20 @@ def report_json_bytes(payload: Any) -> bytes:
     ).encode("utf-8")
 
 
+def canonical_json_bytes(payload: Any) -> bytes:
+    """Serialize calculation artifacts without ambient or formatting variance."""
+    return (
+        json.dumps(
+            payload,
+            sort_keys=True,
+            separators=(",", ":"),
+            ensure_ascii=True,
+            allow_nan=False,
+        )
+        + "\n"
+    ).encode("utf-8")
+
+
 def sha256_path(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -618,6 +710,18 @@ def _artifact_by_role(chain: dict[str, Any], role: str) -> dict[str, str]:
             f"chain {chain['chain_id']} must bind exactly one {role} artifact"
         )
     return matches[0]
+
+
+def _require_exact_keys(
+    payload: dict[str, Any], expected: set[str], label: str
+) -> None:
+    actual = set(payload)
+    if actual != expected:
+        missing = sorted(expected - actual)
+        extra = sorted(actual - expected)
+        raise ValueError(
+            f"{label} keys differ: missing={missing!r}, extra={extra!r}"
+        )
 
 
 def build_guardrail_payload() -> dict[str, Any]:
@@ -1157,6 +1261,854 @@ def validate_guardrail_payload(payload: dict[str, Any]) -> None:
     )):
         raise ValueError("guardrail overclaims")
     report_json_bytes(payload)
+
+
+def _rows_by_id(
+    rows: Any, key: str, expected_ids: list[str], label: str
+) -> dict[str, dict[str, Any]]:
+    if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+        raise ValueError(f"{label} must be a list of objects")
+    indexed: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        row_id = row.get(key)
+        if not isinstance(row_id, str) or row_id in indexed:
+            raise ValueError(f"{label} has a missing or duplicate {key}")
+        indexed[row_id] = row
+    if list(indexed) != expected_ids:
+        raise ValueError(f"{label} ids or deterministic order differ")
+    return indexed
+
+
+def _validate_blocked_calculation_result(
+    result: dict[str, Any], guardrail: dict[str, Any]
+) -> None:
+    """Validate a preserved post-preflight failure without requiring it to pass."""
+    list_fields = (
+        "source_chains",
+        "background_comparison_rows",
+        "qualified_source_decisions",
+        "source_local_on_shell_policy_rows",
+        "applicability_typed_local_check_rows",
+        "synthesis_decisions",
+        "synthesis_tamper_controls",
+    )
+    if any(not isinstance(result[key], list) for key in list_fields):
+        raise ValueError("blocked result inventory is not structurally valid")
+    if (
+        result["source_chain_count"] != len(result["source_chains"])
+        or result["synthesis_decision_count"]
+        != len(result["synthesis_decisions"])
+        or result["synthesis_tamper_control_count"]
+        != len(result["synthesis_tamper_controls"])
+    ):
+        raise ValueError("blocked result inventory counts differ")
+    artifact_count = 0
+    frozen_chains = {
+        row["chain_id"]: row for row in guardrail["source_chains"]
+    }
+    seen_chain_ids: set[str] = set()
+    for row in result["source_chains"]:
+        if not isinstance(row, dict) or not isinstance(row.get("chain_id"), str):
+            raise ValueError("blocked source-chain row is invalid")
+        chain_id = row["chain_id"]
+        if chain_id in seen_chain_ids or chain_id not in frozen_chains:
+            raise ValueError("blocked source-chain identity is invalid")
+        seen_chain_ids.add(chain_id)
+        artifacts = row.get("artifacts")
+        if not isinstance(artifacts, list):
+            raise ValueError("blocked source-chain artifacts are invalid")
+        artifact_count += len(artifacts)
+        frozen_artifacts = {
+            item["artifact_role"]: item
+            for item in frozen_chains[chain_id]["artifacts"]
+        }
+        for artifact in artifacts:
+            if (
+                not isinstance(artifact, dict)
+                or artifact.get("artifact_role") not in frozen_artifacts
+                or artifact != frozen_artifacts[artifact["artifact_role"]]
+            ):
+                raise ValueError("blocked result contains an unbound artifact")
+    if result["bound_artifact_count"] != artifact_count:
+        raise ValueError("blocked result artifact count differs")
+    metric = result["comparable_metric_contract"]
+    if not isinstance(metric, dict) or not {
+        "convergence_rows",
+        "off_shell_relative_error_rows",
+        "family_minimum_p_min",
+        "family_maximum_off_shell_relative_identity_error",
+    } <= set(metric):
+        raise ValueError("blocked comparable metric contract is invalid")
+    if not isinstance(result["control_coverage"], dict):
+        raise ValueError("blocked control coverage is invalid")
+    checks = result["threshold_checks"]
+    if not isinstance(checks, dict) or not all(
+        isinstance(key, str) and isinstance(value, bool)
+        for key, value in checks.items()
+    ):
+        raise ValueError("blocked threshold checks are invalid")
+    decision_rows = result["synthesis_decisions"]
+    decision_statuses: dict[str, bool] = {}
+    for row in decision_rows:
+        if (
+            not isinstance(row, dict)
+            or not isinstance(row.get("decision_id"), str)
+            or not isinstance(row.get("passed"), bool)
+            or row["decision_id"] in decision_statuses
+        ):
+            raise ValueError("blocked synthesis decision row is invalid")
+        decision_statuses[row["decision_id"]] = row["passed"]
+    if checks != decision_statuses:
+        raise ValueError("blocked decision rows and threshold checks differ")
+    tamper_passes: list[bool] = []
+    for row in result["synthesis_tamper_controls"]:
+        if not isinstance(row, dict) or not isinstance(row.get("passed"), bool):
+            raise ValueError("blocked tamper-control row is invalid")
+        tamper_passes.append(row["passed"])
+    if (
+        result["all_decisions_passed"] is not False
+        or result["all_thresholds_passed"] is not False
+        or (all(checks.values()) and all(tamper_passes))
+    ):
+        raise ValueError("blocked result does not contain a localized failure")
+    claim = result["claim"]
+    review = result["result_review"]
+    if not isinstance(claim, dict) or not isinstance(review, dict):
+        raise ValueError("blocked claim or review link is invalid")
+    _require_exact_keys(
+        claim,
+        {
+            "primary_label",
+            "claim_status",
+            "claim_ceiling_level",
+            "claim_scope",
+            "review_accepted",
+            "equation_surface_upgraded",
+        },
+        "blocked result claim",
+    )
+    _require_exact_keys(review, {"status", "target"}, "blocked result review")
+    if (
+        result["selected_next_target"] != EVIDENCE_FAILURE_TARGET
+        or claim
+        != {
+            "primary_label": "B-BLOCKED",
+            "claim_status": "blocked_evidence_incompatibility",
+            "claim_ceiling_level": 3,
+            "claim_scope": guardrail["claim_ceiling"][
+                "allowed_after_successful_review"
+            ],
+            "review_accepted": False,
+            "equation_surface_upgraded": False,
+        }
+        or review
+        != {"status": "not_created_synthesis_failure", "target": None}
+        or result["boundary"] != guardrail["boundary"]
+    ):
+        raise ValueError("blocked synthesis lifecycle differs")
+
+
+def validate_calculation_result(
+    result: dict[str, Any], guardrail: dict[str, Any]
+) -> None:
+    """Validate the synthesis result without trusting its combined pass flag."""
+    validate_guardrail_payload(guardrail)
+    _require_exact_keys(
+        result,
+        {
+            "schema_id",
+            "calculation_id",
+            "calculation_status",
+            "captured_at_utc",
+            "guardrail",
+            "question",
+            "source_chain_count",
+            "bound_artifact_count",
+            "source_chains",
+            "background_comparison_rows",
+            "comparable_metric_contract",
+            "qualified_source_decisions",
+            "source_local_on_shell_policy_rows",
+            "applicability_typed_local_check_rows",
+            "control_coverage",
+            "synthesis_decision_count",
+            "synthesis_decisions",
+            "threshold_checks",
+            "synthesis_tamper_control_count",
+            "synthesis_tamper_controls",
+            "all_decisions_passed",
+            "all_thresholds_passed",
+            "selected_next_target",
+            "claim",
+            "boundary",
+            "result_review",
+        },
+        "calculation result",
+    )
+    guardrail_binding = result["guardrail"]
+    if not isinstance(guardrail_binding, dict):
+        raise ValueError("result guardrail binding is not an object")
+    _require_exact_keys(
+        guardrail_binding, {"path", "sha256", "schema_id"}, "result guardrail"
+    )
+    if guardrail_binding != {
+        "path": GUARDRAIL_REPORT_RELATIVE_PATH,
+        "sha256": EXPECTED_GUARDRAIL_SHA256,
+        "schema_id": PACKET_SCHEMA_ID,
+    }:
+        raise ValueError("result guardrail binding differs")
+    if (
+        result["schema_id"] != CALCULATION_RESULT_SCHEMA_ID
+        or result["calculation_id"] != CALCULATION_ID
+        or result["captured_at_utc"] != CAPTURED_AT_UTC
+        or result["question"] != guardrail["question"]
+    ):
+        raise ValueError("calculation result identity differs")
+
+    if result["calculation_status"] == "executed_blocked_evidence_incompatibility":
+        _validate_blocked_calculation_result(result, guardrail)
+        canonical_json_bytes(result)
+        return
+    if result["calculation_status"] != (
+        "executed_candidate_e_repro_pending_independent_review"
+    ):
+        raise ValueError("calculation result has an unknown status")
+    if result["source_chain_count"] != 4 or result["bound_artifact_count"] != 24:
+        raise ValueError("successful calculation frozen counts differ")
+
+    chain_ids = [chain["chain_id"] for chain in guardrail["source_chains"]]
+    source_rows = _rows_by_id(
+        result["source_chains"], "chain_id", chain_ids, "source chains"
+    )
+    for expected_chain in guardrail["source_chains"]:
+        row = source_rows[expected_chain["chain_id"]]
+        artifacts = row.get("artifacts")
+        if artifacts != expected_chain["artifacts"]:
+            raise ValueError(
+                f"result source-chain artifact binding differs: "
+                f"{expected_chain['chain_id']}"
+            )
+
+    background_rows = _rows_by_id(
+        result["background_comparison_rows"],
+        "chain_id",
+        chain_ids,
+        "background comparison rows",
+    )
+    frozen_background_fields = (
+        "spacetime_dimension",
+        "divergence_component_count",
+        "geometry_class",
+        "connection_class",
+        "curvature_class",
+        "grid_schedule",
+        "grid_meaning",
+    )
+    for chain in guardrail["source_chains"]:
+        row = background_rows[chain["chain_id"]]
+        if any(row.get(key) != chain[key] for key in frozen_background_fields):
+            raise ValueError(f"typed background row differs: {chain['chain_id']}")
+        if chain["chain_id"] == "warped_2plus1" and row.get(
+            "finest_grid_shape"
+        ) not in ([256, 256], "256 x 256", "256_by_256"):
+            raise ValueError("2+1 finest grid shape is not explicitly typed")
+
+    metric = result["comparable_metric_contract"]
+    if not isinstance(metric, dict):
+        raise ValueError("comparable metric contract is not an object")
+    _require_exact_keys(
+        metric,
+        {
+            "convergence_rows",
+            "off_shell_relative_error_rows",
+            "family_minimum_p_min",
+            "family_maximum_off_shell_relative_identity_error",
+        },
+        "result comparable metric contract",
+    )
+    expected_profiles = [
+        profile
+        for chain in guardrail["source_chains"]
+        for profile in chain["comparable_profiles"]
+    ]
+    profile_ids = [row["profile_row_id"] for row in expected_profiles]
+    convergence_rows = _rows_by_id(
+        metric["convergence_rows"],
+        "profile_row_id",
+        profile_ids,
+        "convergence rows",
+    )
+    error_rows = _rows_by_id(
+        metric["off_shell_relative_error_rows"],
+        "profile_row_id",
+        profile_ids,
+        "off-shell relative-error rows",
+    )
+    for expected in expected_profiles:
+        profile_id = expected["profile_row_id"]
+        if convergence_rows[profile_id].get("p_min") != expected["p_min"]:
+            raise ValueError(f"convergence row differs: {profile_id}")
+        if error_rows[profile_id].get(
+            "off_shell_relative_identity_error"
+        ) != expected["off_shell_relative_identity_error"]:
+            raise ValueError(f"relative-error row differs: {profile_id}")
+    p_min = min(row["p_min"] for row in expected_profiles)
+    error_max = max(
+        row["off_shell_relative_identity_error"] for row in expected_profiles
+    )
+    if (
+        metric["family_minimum_p_min"] != p_min
+        or metric["family_maximum_off_shell_relative_identity_error"]
+        != error_max
+    ):
+        raise ValueError("family envelope recomputation differs")
+
+    success_status = (
+        result["calculation_status"]
+        == "executed_candidate_e_repro_pending_independent_review"
+    )
+    qualified_ids = [
+        row["qualified_gate_id"]
+        for row in guardrail["upstream_decision_contract"]["gate_inventory"]
+    ]
+    qualified = _rows_by_id(
+        result["qualified_source_decisions"],
+        "qualified_gate_id",
+        qualified_ids,
+        "qualified source decisions",
+    )
+    if any(not isinstance(row.get("passed"), bool) for row in qualified.values()):
+        raise ValueError("a qualified source decision lacks a boolean status")
+    if success_status and any(
+        row.get("passed") is not True for row in qualified.values()
+    ):
+        raise ValueError("a qualified source decision is not explicitly passed")
+
+    on_shell = _rows_by_id(
+        result["source_local_on_shell_policy_rows"],
+        "chain_id",
+        chain_ids,
+        "source-local on-shell policies",
+    )
+    for chain_id, frozen_policy in guardrail["source_local_policy_contract"][
+        "on_shell_policies"
+    ].items():
+        row = on_shell[chain_id]
+        if row.get("policy") != frozen_policy:
+            raise ValueError(f"source-local on-shell policy differs: {chain_id}")
+        if not isinstance(row.get("passed"), bool):
+            raise ValueError(f"source-local policy lacks boolean status: {chain_id}")
+        if success_status and row.get("passed") is not True:
+            raise ValueError(f"source-local on-shell policy failed: {chain_id}")
+        if not isinstance(row.get("relative_error_against_zero_formed"), bool):
+            raise ValueError(f"zero-reference flag is not boolean: {chain_id}")
+        if success_status and row.get("relative_error_against_zero_formed") is not False:
+            raise ValueError(f"zero-reference relative error formed: {chain_id}")
+
+    applicability = _rows_by_id(
+        result["applicability_typed_local_check_rows"],
+        "chain_id",
+        chain_ids,
+        "applicability-typed local checks",
+    )
+    for frozen in guardrail["applicability_typed_local_check_ledger"]:
+        row = applicability[frozen["chain_id"]]
+        checks_by_kind = row.get("checks")
+        expected_kinds = [key for key in frozen if key != "chain_id"]
+        if not isinstance(checks_by_kind, dict) or set(checks_by_kind) != set(
+            expected_kinds
+        ):
+            raise ValueError(
+                f"applicability-typed local-check inventory differs: "
+                f"{frozen['chain_id']}"
+            )
+        for check_kind, frozen_classification in frozen.items():
+            if check_kind == "chain_id":
+                continue
+            check = checks_by_kind[check_kind]
+            if not isinstance(check, dict):
+                raise ValueError(
+                    f"typed local check is not an object: "
+                    f"{frozen['chain_id']}:{check_kind}"
+                )
+            not_applicable = frozen_classification.startswith(
+                "not_applicable"
+            ) or frozen_classification.startswith("baseline_not_")
+            if not_applicable:
+                allowed_status = (
+                    "baseline_not_recovery_test"
+                    if frozen_classification.startswith("baseline_not_")
+                    else "not_applicable"
+                )
+                if (
+                    check.get("status") != allowed_status
+                    or check.get("value") is not None
+                    or not isinstance(check.get("reason"), str)
+                    or not check["reason"]
+                ):
+                    raise ValueError(
+                        f"inapplicable local check is not typed null: "
+                        f"{frozen['chain_id']}:{check_kind}"
+                    )
+            elif (
+                check.get("status") != "passed"
+                or check.get("value") is None
+                or not isinstance(check.get("source_gate_ids"), list)
+            ):
+                raise ValueError(
+                    f"applicable local check lacks passing provenance: "
+                    f"{frozen['chain_id']}:{check_kind}"
+                )
+        if not isinstance(row.get("passed"), bool):
+            raise ValueError(f"local-check status is not boolean: {frozen['chain_id']}")
+        if success_status and row.get("passed") is not True:
+            raise ValueError(f"applicable local check failed: {frozen['chain_id']}")
+
+    controls = result["control_coverage"]
+    if not isinstance(controls, dict):
+        raise ValueError("control coverage is not an object")
+    instances = controls.get("instances")
+    if not isinstance(instances, list) or len(instances) != 10:
+        raise ValueError("control instance inventory differs")
+    for actual, frozen in zip(
+        instances, guardrail["control_contract"]["instances"]
+    ):
+        if not isinstance(actual, dict) or any(
+            actual.get(key) != frozen[key]
+            for key in ("control_instance_id", "chain_id", "mechanism_class")
+        ):
+            raise ValueError("control instance identity or order differs")
+        if not isinstance(actual.get("detected"), bool):
+            raise ValueError("control instance lacks a boolean detection status")
+        if not isinstance(actual.get("source_evidence"), dict):
+            raise ValueError("control instance lacks source evidence")
+        if success_status and actual["detected"] is not True:
+            raise ValueError("successful synthesis has an undetected control")
+    if (
+        controls.get("instance_count") != 10
+        or controls.get("mechanism_count") != 8
+        or controls.get("mechanism_classes")
+        != guardrail["control_contract"]["mechanism_classes"]
+        or not isinstance(controls.get("all_detected"), bool)
+    ):
+        raise ValueError("control coverage differs")
+    if success_status and controls["all_detected"] is not True:
+        raise ValueError("successful synthesis has an undetected control")
+
+    decision_ids = [row["decision_id"] for row in guardrail["frozen_decisions"]]
+    decisions = _rows_by_id(
+        result["synthesis_decisions"],
+        "decision_id",
+        decision_ids,
+        "synthesis decisions",
+    )
+    checks = result["threshold_checks"]
+    if not isinstance(checks, dict) or set(checks) != set(decision_ids):
+        raise ValueError("synthesis threshold-check inventory differs")
+    for decision_id, row in decisions.items():
+        if not isinstance(row.get("passed"), bool):
+            raise ValueError(f"decision lacks boolean status: {decision_id}")
+        if checks[decision_id] is not row["passed"]:
+            raise ValueError(f"decision/check status mismatch: {decision_id}")
+    if result["synthesis_decision_count"] != 16:
+        raise ValueError("synthesis decision count differs")
+
+    tamper_ids = [
+        row["control_id"] for row in guardrail["synthesis_tamper_controls"]
+    ]
+    tamper_rows = _rows_by_id(
+        result["synthesis_tamper_controls"],
+        "control_id",
+        tamper_ids,
+        "synthesis tamper controls",
+    )
+    for frozen in guardrail["synthesis_tamper_controls"]:
+        row = tamper_rows[frozen["control_id"]]
+        if (
+            row.get("expected_failed_decision_id")
+            != frozen["expected_failed_decision_id"]
+            or not isinstance(row.get("passed"), bool)
+        ):
+            raise ValueError(f"tamper-control contract differs: {frozen['control_id']}")
+        observed = row.get("observed_failed_decision_id")
+        if observed is not None and not isinstance(observed, str):
+            raise ValueError(f"tamper-control observation is invalid: {frozen['control_id']}")
+        if success_status and (
+            observed != frozen["expected_failed_decision_id"]
+            or row["passed"] is not True
+        ):
+            raise ValueError(f"tamper control did not isolate: {frozen['control_id']}")
+    if result["synthesis_tamper_control_count"] != len(tamper_ids):
+        raise ValueError("synthesis tamper-control count differs")
+
+    derived_pass = all(checks.values()) and all(
+        row["passed"] for row in tamper_rows.values()
+    )
+    if (
+        result["all_decisions_passed"] is not derived_pass
+        or result["all_thresholds_passed"] is not derived_pass
+    ):
+        raise ValueError("combined result pass flags differ from individual rows")
+
+    claim = result["claim"]
+    if not isinstance(claim, dict):
+        raise ValueError("result claim is not an object")
+    _require_exact_keys(
+        claim,
+        {
+            "primary_label",
+            "claim_status",
+            "claim_ceiling_level",
+            "claim_scope",
+            "review_accepted",
+            "equation_surface_upgraded",
+        },
+        "result claim",
+    )
+    result_review = result["result_review"]
+    if not isinstance(result_review, dict):
+        raise ValueError("result review link is not an object")
+    _require_exact_keys(result_review, {"status", "target"}, "result review")
+    expected_scope = guardrail["claim_ceiling"][
+        "allowed_after_successful_review"
+    ]
+    if (
+        claim["claim_ceiling_level"] != 3
+        or claim["claim_scope"] != expected_scope
+        or claim["review_accepted"] is not False
+        or claim["equation_surface_upgraded"] is not False
+        or result["boundary"] != guardrail["boundary"]
+    ):
+        raise ValueError("result claim ceiling or boundary differs")
+    if derived_pass:
+        if (
+            result["calculation_status"]
+            != "executed_candidate_e_repro_pending_independent_review"
+            or result["selected_next_target"] != REVIEW_TARGET
+            or claim["primary_label"] != "E-REPRO"
+            or claim["claim_status"]
+            != "candidate_pending_independent_result_review"
+            or result_review
+            != {"status": "pending", "target": REVIEW_TARGET}
+        ):
+            raise ValueError("successful execution lifecycle differs")
+    else:
+        if (
+            result["calculation_status"]
+            != "executed_blocked_evidence_incompatibility"
+            or result["selected_next_target"] != EVIDENCE_FAILURE_TARGET
+            or claim["primary_label"] != "B-BLOCKED"
+            or claim["claim_status"] != "blocked_evidence_incompatibility"
+            or result_review
+            != {"status": "not_created_synthesis_failure", "target": None}
+        ):
+            raise ValueError("blocked synthesis lifecycle differs")
+    canonical_json_bytes(result)
+
+
+def _expected_scientific_input_artifacts(
+    guardrail: dict[str, Any],
+) -> list[dict[str, str]]:
+    return [
+        {
+            "chain_id": chain["chain_id"],
+            "artifact_role": artifact["artifact_role"],
+            "path": artifact["path"],
+            "sha256": artifact["sha256"],
+        }
+        for chain in guardrail["source_chains"]
+        for artifact in chain["artifacts"]
+    ]
+
+
+def validate_calculation_manifest(
+    manifest: dict[str, Any],
+    *,
+    result: dict[str, Any],
+    guardrail: dict[str, Any],
+    output_sha256: str,
+    script_sha256: str,
+) -> None:
+    """Validate the non-circular deterministic result manifest."""
+    _require_exact_keys(
+        manifest,
+        {
+            "schema_id",
+            "calculation_id",
+            "captured_at_utc",
+            "guardrail_path",
+            "guardrail_schema_id",
+            "guardrail_sha256",
+            "script_path",
+            "script_sha256",
+            "test_path",
+            "execution_command",
+            "output_path",
+            "output_sha256",
+            "execution_report_path",
+            "canonical_json_contract",
+            "scientific_input_artifacts",
+            "source_chain_count",
+            "bound_artifact_count",
+            "claim_label",
+            "claim_scope",
+            "claim_ceiling_level",
+            "calculation_status",
+            "all_decisions_passed",
+            "all_thresholds_passed",
+            "result_review_status",
+            "result_review_target",
+            "selected_next_target",
+            "boundary",
+            "ambient_repository_state_serialized",
+            "execution_commit_hash_serialized",
+        },
+        "calculation manifest",
+    )
+    expected_contract = {
+        "encoding": "UTF-8 without BOM",
+        "newline": "LF",
+        "object_keys": "sorted",
+        "separators": [",", ":"],
+        "ensure_ascii": True,
+        "allow_nan": False,
+        "array_order": "preserved",
+        "trailing_newline": "exactly one LF",
+    }
+    expected = {
+        "schema_id": CALCULATION_MANIFEST_SCHEMA_ID,
+        "calculation_id": CALCULATION_ID,
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "guardrail_path": GUARDRAIL_REPORT_RELATIVE_PATH,
+        "guardrail_schema_id": PACKET_SCHEMA_ID,
+        "guardrail_sha256": EXPECTED_GUARDRAIL_SHA256,
+        "script_path": CALCULATION_SCRIPT_RELATIVE_PATH,
+        "script_sha256": script_sha256,
+        "test_path": CALCULATION_TEST_RELATIVE_PATH,
+        "execution_command": CALCULATION_EXECUTION_COMMAND,
+        "output_path": CALCULATION_OUTPUT_RELATIVE_PATH,
+        "output_sha256": output_sha256,
+        "execution_report_path": EXECUTION_REPORT_RELATIVE_PATH,
+        "canonical_json_contract": expected_contract,
+        "scientific_input_artifacts": _expected_scientific_input_artifacts(
+            guardrail
+        ),
+        "source_chain_count": result["source_chain_count"],
+        "bound_artifact_count": result["bound_artifact_count"],
+        "claim_label": result["claim"]["primary_label"],
+        "claim_scope": result["claim"]["claim_scope"],
+        "claim_ceiling_level": 3,
+        "calculation_status": result["calculation_status"],
+        "all_decisions_passed": result["all_decisions_passed"],
+        "all_thresholds_passed": result["all_thresholds_passed"],
+        "result_review_status": result["result_review"]["status"],
+        "result_review_target": result["result_review"]["target"],
+        "selected_next_target": result["selected_next_target"],
+        "boundary": result["boundary"],
+        "ambient_repository_state_serialized": False,
+        "execution_commit_hash_serialized": False,
+    }
+    if manifest != expected:
+        raise ValueError("calculation manifest binding or lifecycle differs")
+    canonical_json_bytes(manifest)
+
+
+class ExecutionReportPreflightError(ValueError):
+    """The frozen evidence family was not trusted enough to report execution."""
+
+
+def _load_execution_preflight(guardrail_path: Path) -> dict[str, Any]:
+    try:
+        guardrail = _load_strict_json(guardrail_path)
+        if guardrail_path.read_bytes() != report_json_bytes(guardrail):
+            raise ValueError("guardrail is not canonical sorted report JSON")
+        if sha256_path(guardrail_path) != EXPECTED_GUARDRAIL_SHA256:
+            raise ValueError("frozen guardrail bytes changed")
+        validate_guardrail_payload(guardrail)
+        validate_bound_sources(guardrail)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise ExecutionReportPreflightError(
+            f"execution-report preflight evidence incompatibility: {exc}"
+        ) from exc
+    return guardrail
+
+
+def build_execution_report(
+    *,
+    output_path: Path = CALCULATION_OUTPUT_PATH,
+    manifest_path: Path = CALCULATION_MANIFEST_PATH,
+    guardrail_path: Path = GUARDRAIL_REPORT_PATH,
+    script_path: Path = CALCULATION_SCRIPT_PATH,
+) -> dict[str, Any]:
+    """Build the deterministic execution report from frozen scientific inputs."""
+    guardrail = _load_execution_preflight(guardrail_path)
+    if not output_path.is_file() or not manifest_path.is_file():
+        raise ExecutionReportPreflightError(
+            "canonical calculation result and manifest are absent; no execution "
+            "report may be created"
+        )
+    result = _load_strict_json(output_path)
+    manifest = _load_strict_json(manifest_path)
+    if output_path.read_bytes() != canonical_json_bytes(result):
+        raise ValueError("calculation output is not canonical compact JSON")
+    if manifest_path.read_bytes() != canonical_json_bytes(manifest):
+        raise ValueError("calculation manifest is not canonical compact JSON")
+    if not script_path.is_file():
+        raise ValueError("calculation script is absent")
+    output_sha256 = sha256_path(output_path)
+    manifest_sha256 = sha256_path(manifest_path)
+    script_sha256 = sha256_path(script_path)
+    validate_calculation_result(result, guardrail)
+    validate_calculation_manifest(
+        manifest,
+        result=result,
+        guardrail=guardrail,
+        output_sha256=output_sha256,
+        script_sha256=script_sha256,
+    )
+
+    passed = result["all_decisions_passed"]
+    selected_target = REVIEW_TARGET if passed else EVIDENCE_FAILURE_TARGET
+    claim = copy.deepcopy(result["claim"])
+    if selected_target != result["selected_next_target"]:
+        raise ValueError("execution report/result target mismatch")
+    return {
+        "schema_id": EXECUTION_REPORT_SCHEMA_ID,
+        "report_id": EXECUTION_REPORT_ID,
+        "calculation_id": CALCULATION_ID,
+        "status": result["calculation_status"],
+        "captured_at_utc": CAPTURED_AT_UTC,
+        "consumed_target": EXECUTION_TARGET,
+        "consumed_target_kind": EXECUTION_TARGET_KIND,
+        "selected_next_target": selected_target,
+        "selected_next_target_kind": (
+            REVIEW_TARGET_KIND
+            if passed
+            else "scalar_multi_background_evidence_incompatibility_diagnosis"
+        ),
+        "packet_result": EXECUTION_OUTCOME if passed else EXECUTION_BLOCKED_OUTCOME,
+        "strict_packet_result": (
+            EXECUTION_STRICT_OUTCOME if passed else EXECUTION_BLOCKED_STRICT_OUTCOME
+        ),
+        "preflight": {
+            "status": "passed_before_canonical_execution_artifacts",
+            "guardrail_hash_verified": True,
+            "source_chain_count": 4,
+            "source_artifact_count": 24,
+            "all_source_hashes_and_internal_links_verified": True,
+            "equation_compendium_hash_verified": True,
+            "preflight_failure_would_forbid_result_manifest_and_execution_report": True,
+        },
+        "guardrail_path": GUARDRAIL_REPORT_RELATIVE_PATH,
+        "guardrail_schema_id": PACKET_SCHEMA_ID,
+        "guardrail_sha256": EXPECTED_GUARDRAIL_SHA256,
+        "calculation_script_path": CALCULATION_SCRIPT_RELATIVE_PATH,
+        "calculation_script_sha256": script_sha256,
+        "calculation_output_path": CALCULATION_OUTPUT_RELATIVE_PATH,
+        "calculation_output_sha256": output_sha256,
+        "calculation_manifest_path": CALCULATION_MANIFEST_RELATIVE_PATH,
+        "calculation_manifest_sha256": manifest_sha256,
+        "execution_report_path": EXECUTION_REPORT_RELATIVE_PATH,
+        "five_artifact_chain_prepared_for_independent_review": passed,
+        "canonical_json_contract": copy.deepcopy(
+            manifest["canonical_json_contract"]
+        ),
+        "execution_command": manifest["execution_command"],
+        "scientific_input_artifacts": copy.deepcopy(
+            manifest["scientific_input_artifacts"]
+        ),
+        "source_chain_count": result["source_chain_count"],
+        "bound_artifact_count": result["bound_artifact_count"],
+        "source_chains": copy.deepcopy(result["source_chains"]),
+        "background_comparison_rows": copy.deepcopy(
+            result["background_comparison_rows"]
+        ),
+        "comparable_metric_contract": copy.deepcopy(
+            result["comparable_metric_contract"]
+        ),
+        "qualified_source_decisions": copy.deepcopy(
+            result["qualified_source_decisions"]
+        ),
+        "source_local_on_shell_policy_rows": copy.deepcopy(
+            result["source_local_on_shell_policy_rows"]
+        ),
+        "applicability_typed_local_check_rows": copy.deepcopy(
+            result["applicability_typed_local_check_rows"]
+        ),
+        "control_coverage": copy.deepcopy(result["control_coverage"]),
+        "synthesis_decision_count": result["synthesis_decision_count"],
+        "synthesis_decisions": copy.deepcopy(result["synthesis_decisions"]),
+        "threshold_checks": copy.deepcopy(result["threshold_checks"]),
+        "synthesis_tamper_control_count": result[
+            "synthesis_tamper_control_count"
+        ],
+        "synthesis_tamper_controls": copy.deepcopy(
+            result["synthesis_tamper_controls"]
+        ),
+        "all_decisions_passed": passed,
+        "all_thresholds_passed": result["all_thresholds_passed"],
+        "claim": claim,
+        "result_review": copy.deepcopy(result["result_review"]),
+        "equation_compendium_edited": False,
+        "ambient_repository_state_serialized": False,
+        "execution_commit_hash_serialized": False,
+        "boundary": copy.deepcopy(result["boundary"]),
+        "full_ToeFormal_aggregate_run_or_upgraded": False,
+        "lean_status_wording": (
+            "scoped Lean pending execution certificate; full ToeFormal "
+            "aggregate not run / not upgraded"
+        ),
+    }
+
+
+def execution_report_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Report the closed-family scalar multi-background robustness "
+            "synthesis execution."
+        )
+    )
+    parser.add_argument("--output", type=Path, default=CALCULATION_OUTPUT_PATH)
+    parser.add_argument("--manifest", type=Path, default=CALCULATION_MANIFEST_PATH)
+    parser.add_argument("--guardrail", type=Path, default=GUARDRAIL_REPORT_PATH)
+    parser.add_argument("--script", type=Path, default=CALCULATION_SCRIPT_PATH)
+    parser.add_argument("--out", type=Path, default=EXECUTION_REPORT_PATH)
+    args = parser.parse_args(argv)
+    try:
+        payload = build_execution_report(
+            output_path=args.output,
+            manifest_path=args.manifest,
+            guardrail_path=args.guardrail,
+            script_path=args.script,
+        )
+    except ExecutionReportPreflightError as exc:
+        print(
+            json.dumps(
+                {
+                    "canonical_execution_report_written": False,
+                    "error": str(exc),
+                    "primary_label": "B-BLOCKED",
+                    "selected_next_target": EVIDENCE_FAILURE_TARGET,
+                    "status": "preflight_evidence_incompatibility",
+                },
+                sort_keys=True,
+            )
+        )
+        return 2
+    write_report(args.out, payload)
+    print(
+        json.dumps(
+            {
+                "all_decisions_passed": payload["all_decisions_passed"],
+                "claim_label": payload["claim"]["primary_label"],
+                "execution_report": EXECUTION_REPORT_RELATIVE_PATH,
+                "outcome": payload["packet_result"],
+                "selected_next_target": payload["selected_next_target"],
+            },
+            sort_keys=True,
+        )
+    )
+    return 0 if payload["all_decisions_passed"] else 1
 
 
 def write_report(path: Path, payload: dict[str, Any]) -> None:

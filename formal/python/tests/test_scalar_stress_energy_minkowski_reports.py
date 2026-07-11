@@ -102,17 +102,17 @@ def test_guardrail_and_execution_are_preserved_after_result_review() -> None:
         "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
     )
     assert state["live_next_target"] == (
-        "execute_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
-        "background_robustness_v0"
+        "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+        "background_robustness_v0_result"
     )
     assert state["previous_live_next_target"] == (
-        "prepare_scalar_stress_energy_covariant_divergence_identity_multi_"
-        "background_robustness_guardrail_packet"
+        "execute_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+        "background_robustness_v0"
     )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["authorized_next_strict_target"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
-    assert active["multi_background_robustness_claimed"] == "no"
+    assert active["claim_status"] == "candidate_pending_independent_result_review"
 
 
 def test_execution_report_records_passed_scoped_result_pending_review() -> None:

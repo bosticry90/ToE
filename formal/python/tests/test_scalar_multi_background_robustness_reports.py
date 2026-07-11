@@ -7,10 +7,18 @@ from pathlib import Path
 
 import pytest
 
+from formal.python.toe.calculations import (
+    calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness
+    as calculation,
+)
 from formal.python.tools.scalar_multi_background_robustness_reports import (
+    CALCULATION_MANIFEST_SCHEMA_ID,
+    CALCULATION_RESULT_SCHEMA_ID,
+    CALCULATION_SCRIPT_PATH,
     COMPENDIUM_SHA256,
     CONTROL_MECHANISMS,
     EVIDENCE_FAILURE_TARGET,
+    EXECUTION_REPORT_SCHEMA_ID,
     EXECUTION_TARGET,
     FLAT_EQUATION_ID,
     GUARDRAIL_OUTCOME,
@@ -20,11 +28,16 @@ from formal.python.tools.scalar_multi_background_robustness_reports import (
     REVIEW_TARGET,
     SOURCE_CHAINS,
     UNIT_LEDGER_TARGET,
+    build_execution_report,
     build_guardrail_payload,
+    canonical_json_bytes,
+    execution_report_main,
     guardrail_main,
     report_json_bytes,
     sha256_path,
     validate_bound_sources,
+    validate_calculation_manifest,
+    validate_calculation_result,
     validate_guardrail_payload,
 )
 
@@ -421,3 +434,210 @@ def test_nonfinite_payload_cannot_be_serialized() -> None:
     payload["comparable_metric_contract"]["profile_rows"][0]["p_min"] = math.inf
     with pytest.raises(ValueError):
         report_json_bytes(payload)
+
+
+def test_execution_contract_uses_compact_deterministic_scientific_artifacts() -> None:
+    payload = {"z": [2, 1], "a": {"value": 3}}
+    compact = canonical_json_bytes(payload)
+    assert compact == b'{"a":{"value":3},"z":[2,1]}\n'
+    assert b"\r" not in compact
+    assert CALCULATION_RESULT_SCHEMA_ID.endswith("-RESULT")
+    assert CALCULATION_MANIFEST_SCHEMA_ID.endswith("-MANIFEST")
+    assert EXECUTION_REPORT_SCHEMA_ID.endswith("EXECUTION_20260710_v0")
+
+
+def test_execution_report_preflight_absence_creates_no_canonical_report(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    missing_output = tmp_path / "missing-result.json"
+    missing_manifest = tmp_path / "missing-manifest.json"
+    report_path = tmp_path / "must-not-exist.json"
+    assert CALCULATION_SCRIPT_PATH.is_file()
+    assert execution_report_main(
+        [
+            "--output",
+            str(missing_output),
+            "--manifest",
+            str(missing_manifest),
+            "--out",
+            str(report_path),
+        ]
+    ) == 2
+    assert not report_path.exists()
+    summary = json.loads(capsys.readouterr().out)
+    assert summary["canonical_execution_report_written"] is False
+    assert summary["primary_label"] == "B-BLOCKED"
+    assert summary["selected_next_target"] == EVIDENCE_FAILURE_TARGET
+    assert summary["status"] == "preflight_evidence_incompatibility"
+
+
+def test_execution_report_preserves_synthesis_blocking_and_returns_nonzero(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    blocked = {
+        "all_decisions_passed": False,
+        "claim": {"primary_label": "B-BLOCKED"},
+        "packet_result": "executed_blocked_evidence_incompatibility",
+        "selected_next_target": EVIDENCE_FAILURE_TARGET,
+    }
+    monkeypatch.setattr(
+        "formal.python.tools.scalar_multi_background_robustness_reports."
+        "build_execution_report",
+        lambda **_: blocked,
+    )
+    report_path = tmp_path / "blocked-execution-report.json"
+    assert execution_report_main(["--out", str(report_path)]) == 1
+    assert report_path.read_bytes() == report_json_bytes(blocked)
+    summary = json.loads(capsys.readouterr().out)
+    assert summary["all_decisions_passed"] is False
+    assert summary["claim_label"] == "B-BLOCKED"
+    assert summary["selected_next_target"] == EVIDENCE_FAILURE_TARGET
+
+
+@pytest.fixture()
+def synthesis_execution_artifacts(tmp_path: Path) -> dict[str, object]:
+    output_path = tmp_path / "result.json"
+    manifest_path = tmp_path / "manifest.json"
+    result, manifest = calculation.write_artifacts(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    return {
+        "output_path": output_path,
+        "manifest_path": manifest_path,
+        "result": result,
+        "manifest": manifest,
+    }
+
+
+def test_execution_report_strictly_binds_success_without_accepting_claim(
+    synthesis_execution_artifacts: dict[str, object],
+) -> None:
+    output_path = synthesis_execution_artifacts["output_path"]
+    manifest_path = synthesis_execution_artifacts["manifest_path"]
+    result = synthesis_execution_artifacts["result"]
+    manifest = synthesis_execution_artifacts["manifest"]
+    assert isinstance(output_path, Path)
+    assert isinstance(manifest_path, Path)
+    assert isinstance(result, dict)
+    assert isinstance(manifest, dict)
+    validate_calculation_result(result, build_guardrail_payload())
+    validate_calculation_manifest(
+        manifest,
+        result=result,
+        guardrail=build_guardrail_payload(),
+        output_sha256=sha256_path(output_path),
+        script_sha256=sha256_path(CALCULATION_SCRIPT_PATH),
+    )
+    report = build_execution_report(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    assert report == build_execution_report(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    assert report["schema_id"] == EXECUTION_REPORT_SCHEMA_ID
+    assert report["status"] == (
+        "executed_candidate_e_repro_pending_independent_review"
+    )
+    assert report["selected_next_target"] == REVIEW_TARGET
+    assert report["all_decisions_passed"] is True
+    assert report["all_thresholds_passed"] is True
+    assert report["claim"]["primary_label"] == "E-REPRO"
+    assert report["claim"]["review_accepted"] is False
+    assert report["five_artifact_chain_prepared_for_independent_review"] is True
+    assert report["preflight"]["source_artifact_count"] == 24
+    assert report["ambient_repository_state_serialized"] is False
+    assert report["execution_commit_hash_serialized"] is False
+    assert report["boundary"]["unit_ledger_status"] == (
+        "queued_non_live_hard_gate"
+    )
+
+
+def test_execution_report_preserves_valid_post_preflight_synthesis_failure(
+    tmp_path: Path,
+) -> None:
+    state = calculation.reconstruct_source_family()
+    state["forbidden_cross_background_pooling_detected"] = True
+    output_path = tmp_path / "blocked-result.json"
+    manifest_path = tmp_path / "blocked-manifest.json"
+    result, _ = calculation.write_artifacts(
+        output_path=output_path,
+        manifest_path=manifest_path,
+        state=state,
+    )
+    assert result["all_decisions_passed"] is False
+    assert result["threshold_checks"][
+        "comparison_policy_no_invalid_pooling"
+    ] is False
+    report = build_execution_report(
+        output_path=output_path,
+        manifest_path=manifest_path,
+    )
+    assert report["status"] == "executed_blocked_evidence_incompatibility"
+    assert report["claim"]["primary_label"] == "B-BLOCKED"
+    assert report["claim"]["review_accepted"] is False
+    assert report["selected_next_target"] == EVIDENCE_FAILURE_TARGET
+    assert report["five_artifact_chain_prepared_for_independent_review"] is False
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda p: p.__setitem__("selected_next_target", "review_wrong"),
+        lambda p: p["claim"].__setitem__("review_accepted", True),
+        lambda p: p["source_chains"][0]["artifacts"][0].__setitem__(
+            "sha256", "0" * 64
+        ),
+        lambda p: p["comparable_metric_contract"].__setitem__(
+            "family_minimum_p_min", 0.0
+        ),
+        lambda p: p["applicability_typed_local_check_rows"][0]["checks"][
+            "curvature_route"
+        ].__setitem__("value", 0),
+    ],
+)
+def test_strict_result_validator_rejects_success_tampering(
+    synthesis_execution_artifacts: dict[str, object], mutation: object
+) -> None:
+    result = synthesis_execution_artifacts["result"]
+    assert isinstance(result, dict)
+    tampered = copy.deepcopy(result)
+    mutation(tampered)  # type: ignore[operator]
+    with pytest.raises(ValueError):
+        validate_calculation_result(tampered, build_guardrail_payload())
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda p: p.__setitem__("output_sha256", "0" * 64),
+        lambda p: p.__setitem__("script_path", "temporary/script.py"),
+        lambda p: p.__setitem__("selected_next_target", "review_wrong"),
+        lambda p: p.__setitem__("ambient_repository_state_serialized", True),
+        lambda p: p.__setitem__("execution_commit_hash_serialized", True),
+        lambda p: p["scientific_input_artifacts"].pop(),
+    ],
+)
+def test_strict_manifest_validator_rejects_binding_and_ambient_tampering(
+    synthesis_execution_artifacts: dict[str, object], mutation: object
+) -> None:
+    output_path = synthesis_execution_artifacts["output_path"]
+    result = synthesis_execution_artifacts["result"]
+    manifest = synthesis_execution_artifacts["manifest"]
+    assert isinstance(output_path, Path)
+    assert isinstance(result, dict)
+    assert isinstance(manifest, dict)
+    tampered = copy.deepcopy(manifest)
+    mutation(tampered)  # type: ignore[operator]
+    with pytest.raises(ValueError, match="manifest binding or lifecycle"):
+        validate_calculation_manifest(
+            tampered,
+            result=result,
+            guardrail=build_guardrail_payload(),
+            output_sha256=sha256_path(output_path),
+            script_sha256=sha256_path(CALCULATION_SCRIPT_PATH),
+        )
