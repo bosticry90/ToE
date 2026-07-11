@@ -36,6 +36,10 @@ Corrective v1 preserves the rejected v0 bytes and freezes exact ordered
 validator closures, strict payload semantics, resolved root-relative paths,
 success-report invariants, and eight permanent readiness regressions. It still
 requires independent review and authorizes no prototype or migration work.
+Independent v1 review rejects preparation-contract acceptance after finding
+remaining validator-interface, path-profile, regression-matrix, identity-byte,
+and result-schema defects. V1 is historical corrective evidence only; v2 is
+required before a preparation contract can be accepted.
 
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
@@ -98,6 +102,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v1 --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v1_independent_review --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll
