@@ -60,6 +60,12 @@ It binds ten runtime evidence schemas and the staged `58 -> review -> 60 -> revi
 control lifecycle, while leaving all implementation, prototype, migration,
 cutover, target-rotation, unit-ledger, and claim authority closed until its own
 independent review.
+Its independent review conditionally authorizes only the four-path read-only
+implementation and Stage A's `58 + 18 = 76` controls. The production-control
+test must be invoked directly and recorded; manifest, line-ending, docs, and
+Lean integration are deferred beyond the clean implementation commit. Stage B,
+migration, cutover, writes, target rotation, and scientific authority stay
+closed.
 
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
@@ -128,6 +134,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v3 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v3_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

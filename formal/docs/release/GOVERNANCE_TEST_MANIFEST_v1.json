@@ -32,6 +32,7 @@
     "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py": "TIER_INTEGRITY",
@@ -88,8 +89,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 65,
-      "expected_sha256": "3eab7bee35edba53b060f39f451eaf86990ee27ff9f5663ae5bd2c1a421a2074",
+      "expected_count": 66,
+      "expected_sha256": "58a598d526440c8ab95d69f6d33dd1a233c589cac3c8bc12e51d7c5d84c7b4ba",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -121,6 +122,7 @@
         "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3.py",
         "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
+        "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py",

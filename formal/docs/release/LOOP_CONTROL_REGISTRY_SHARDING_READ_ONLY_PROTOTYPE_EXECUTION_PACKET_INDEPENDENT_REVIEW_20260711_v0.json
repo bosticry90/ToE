@@ -1,0 +1,225 @@
+{
+  "authorization": {
+    "authority_cutover_authorized": false,
+    "bounded_read_only_prototype_implementation_authorized": true,
+    "bounded_stage_a_authorization_conditional_on_execution_evidence": true,
+    "bounded_stage_a_read_only_prototype_execution_authorized": true,
+    "clean_implementation_commit_path_allowlist_expansion_authorized": false,
+    "consumer_migration_authorized": false,
+    "execution_target": "execute_loop_control_registry_sharding_read_only_prototype_v0",
+    "execution_target_selected_in_current_authority": false,
+    "legacy_monolith_modification_or_retirement_authorized": false,
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "maintenance_target_rotation_authorized": false,
+    "new_api_writes_authorized": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false,
+    "release_or_publication_authorized": false,
+    "scientific_claim_or_blocker_movement_authorized": false,
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "scientific_target_rotation_authorized": false,
+    "stage_a_76_control_harness_execution_authorized": true,
+    "stage_b_full_harness_authorized": false,
+    "unit_ledger_execution_authorized": false
+  },
+  "boundary": {
+    "consumer_cutover": false,
+    "legacy_monolith_modification_or_retirement": false,
+    "production_registry_migration": false,
+    "prototype_implementation_or_output_created_by_review": false,
+    "scientific_artifact_or_claim_change": false,
+    "stage_b_execution": false,
+    "target_or_authority_rotation": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "contract_bundle_sha256": "272279d414591b25b3a519d22d92659f4a662ce1c9cbd5fadf3067f1eaa8f0bb",
+  "decision": "ACCEPT_PREPARATION_AND_AUTHORIZE_ONLY_BOUNDED_STAGE_A_76_CONTROL_READ_ONLY_PROTOTYPE_IMPLEMENTATION_AND_EXECUTION",
+  "external_root_review": {
+    "candidate_internal_values_authoritative": false,
+    "contract_bundle_sha256": "272279d414591b25b3a519d22d92659f4a662ce1c9cbd5fadf3067f1eaa8f0bb",
+    "packet_sha256": "661655d3a6ba8f77b75652f45e1709275f0c0ae372b87a18a868316502a76168",
+    "reviewed_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "reviewed_requirements_sha256": "79c5d6ca6995338c20fdf4c7bdb2748746cbef0e226de1c55489ddb25658b47b",
+    "trust_anchors_must_be_loaded_from_git_review": true
+  },
+  "focused_validation": {
+    "command": ".\\py.ps1 -m pytest -q formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
+    "discovered_test_count": 23,
+    "failed_test_count": 0,
+    "passed_test_count": 23,
+    "result": "PASS",
+    "test_path": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py"
+  },
+  "historical_transition_review": {
+    "forbidden_paths_absent_at_reviewed_commit": [
+      "formal/docs/release/loop_control/LOOP_CONTROL_CURRENT_v1.json",
+      "formal/docs/release/loop_control/LOOP_CONTROL_HISTORY_INDEX_v1.json",
+      "formal/docs/release/loop_control/shards",
+      "formal/docs/release/loop_control/LOOP_CONTROL_LEGACY_BYTE_CUSTODY_v1.json.gz",
+      "formal/python/toe/loop_control_registry_v1.py",
+      "formal/python/toe/loop_control_registry_v1_validator.py",
+      "formal/scratch/loop_control_registry_v1_prototype"
+    ],
+    "historical_absence_gate_count": 9,
+    "mechanically_transitioned_check_count": 10,
+    "per_check_boundaries_verified": true,
+    "production_or_prototype_paths_present": 0
+  },
+  "implementation_integration_condition_review": {
+    "authorization_is_conditional_on_execution_evidence": true,
+    "authorized_clean_implementation_path_count": 4,
+    "authorized_clean_implementation_paths": [
+      "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution.py",
+      "formal/python/toe/loop_control_registry_v1.py",
+      "formal/python/toe/loop_control_registry_v1_validator.py",
+      "formal/python/tests/test_loop_control_registry_v1_production_controls.py"
+    ],
+    "clean_implementation_commit_path_allowlist_expansion_authorized": false,
+    "documentation_integration_allowed_in_clean_implementation_commit": false,
+    "gitattributes_integration_allowed_in_clean_implementation_commit": false,
+    "governance_manifest_enrollment_required_before_preflight": false,
+    "governance_manifest_integration_allowed_in_clean_implementation_commit": false,
+    "lean_integration_allowed_in_clean_implementation_commit": false,
+    "post_execution_integration_deferred_to": "INDEPENDENT_STAGE_A_REVIEW_OR_VERSIONED_SUCCESSOR",
+    "production_control_test_direct_invocation_must_be_recorded_in_execution_evidence": true,
+    "production_control_test_must_be_invoked_directly_by_execution_orchestrator": true,
+    "production_control_test_path": "formal/python/tests/test_loop_control_registry_v1_production_controls.py"
+  },
+  "independent_findings": [
+    {
+      "finding_id": "REGISTRY-READ-ONLY-PROTOTYPE-REVIEW-001",
+      "status": "CLOSED_FOR_BOUNDED_STAGE_A_EXECUTION",
+      "summary": "Committed preparation packet, contract, generator, 23-test suite, Lean certificate, external roots, protected hashes, and the exact Stage-A 76-control burden reproduce at the reviewed commit."
+    },
+    {
+      "finding_id": "REGISTRY-READ-ONLY-PROTOTYPE-REVIEW-002",
+      "status": "CLOSED_FOR_BOUNDED_STAGE_A_EXECUTION",
+      "summary": "Ten historical absence checks now use exact committed boundaries, while production authority paths and prototype outputs remain absent."
+    },
+    {
+      "finding_id": "REGISTRY-READ-ONLY-PROTOTYPE-REVIEW-003",
+      "status": "OPEN_DEFERRED_STAGE_B_AND_MIGRATION_OBLIGATION",
+      "summary": "Stage B, consumer migration, registry cutover, monolith retirement, and all scientific or authority effects remain unauthorized."
+    },
+    {
+      "finding_id": "REGISTRY-READ-ONLY-PROTOTYPE-REVIEW-004",
+      "status": "CONDITIONAL_STAGE_A_INTEGRATION_OBLIGATION",
+      "summary": "The production-control test must be invoked directly by the Stage-A execution orchestrator and recorded in execution evidence. Governance manifest, .gitattributes, documentation, and Lean integration are deferred to post-execution independent review or a versioned successor and may not broaden the four-path clean implementation commit."
+    }
+  ],
+  "packet_sha256": "661655d3a6ba8f77b75652f45e1709275f0c0ae372b87a18a868316502a76168",
+  "protected_state_review": {
+    "authority_surface_sha256": "cca3e7cb1855919bae8e5f189f04eb485bf2e2529aaff5e22c2a06e48b316248",
+    "maintenance_authority_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "protected_hashes_unchanged": true,
+    "readiness_surface_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+    "registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0"
+  },
+  "residual_obligations": [
+    "IMPLEMENT_ONLY_THE_FOUR_AUTHORIZED_READ_ONLY_PROTOTYPE_PATHS",
+    "RUN_IMMUTABLE_PREFLIGHT_BEFORE_CREATING_ANY_PROTOTYPE_OUTPUT",
+    "EXECUTE_EXACTLY_58_INHERITED_PLUS_18_RUNTIME_STAGE_A_CONTROLS",
+    "DIRECTLY_INVOKE_THE_PRODUCTION_CONTROL_TEST_FROM_THE_STAGE_A_ORCHESTRATOR_AND_RECORD_IT_IN_EXECUTION_EVIDENCE",
+    "DEFER_GOVERNANCE_MANIFEST_GITATTRIBUTES_DOCUMENTATION_AND_LEAN_INTEGRATION_UNTIL_POST_EXECUTION_REVIEW_OR_SUCCESSOR",
+    "DO_NOT_BROADEN_THE_FOUR_PATH_CLEAN_IMPLEMENTATION_COMMIT",
+    "PROVE_BYTE_EXACT_CUSTODY_AND_RUNTIME_SHADOW_PARITY",
+    "COMMIT_STAGE_A_CANDIDATE_EVIDENCE_PENDING_INDEPENDENT_REVIEW",
+    "PREPARE_A_VERSIONED_SUCCESSOR_BEFORE_ANY_STAGE_B_EXECUTION"
+  ],
+  "review_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v0",
+  "reviewed_commit": "0261ec32029535e70f19587ed2f2755bb0bb9f22",
+  "reviewed_inputs": {
+    "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md": {
+      "git_blob": "d46c5fb1966dcefc6b923776b7d94c4f5009b889",
+      "path": "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+      "sha256": "cca3e7cb1855919bae8e5f189f04eb485bf2e2529aaff5e22c2a06e48b316248",
+      "size_bytes": 714575
+    },
+    "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json": {
+      "git_blob": "dca311d6abe38a872495c07f302d13ad886c0232",
+      "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+      "sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+      "size_bytes": 1768
+    },
+    "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json": {
+      "git_blob": "9a9c7ac4a32b7ac48bf6a0bcca848366cddcbbaf",
+      "path": "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json",
+      "sha256": "0f5bd56ef5b875f36e1d964b69747dd265273063281b15ff1da81ff9e2715161",
+      "size_bytes": 43317
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_20260711_v1.json": {
+      "git_blob": "9f9846ba735813c5b2b18f7a0115d88230a36600",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_20260711_v1.json",
+      "sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+      "size_bytes": 469583
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v0.json": {
+      "git_blob": "abf0d597c05342a37a31db5e166dd2b5531cb888",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v0.json",
+      "sha256": "272279d414591b25b3a519d22d92659f4a662ce1c9cbd5fadf3067f1eaa8f0bb",
+      "size_bytes": 392459
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v0.json": {
+      "git_blob": "a77882a8d601662411bf33ab8b93e9153eb7fe1c",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v0.json",
+      "sha256": "661655d3a6ba8f77b75652f45e1709275f0c0ae372b87a18a868316502a76168",
+      "size_bytes": 3313
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json": {
+      "git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "size_bytes": 52340650
+    },
+    "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json": {
+      "git_blob": "85711a7c8cb0bc6a1f77d85cf3873726a5d6aa22",
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "size_bytes": 79556
+    },
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py": {
+      "git_blob": "62fe9fce6abe84c64e4f172d3bdd7f25a7926269",
+      "path": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
+      "sha256": "094e4814172c3ff92fb762233f37cbe4ccc837508ebc8e8a35a3ac78a6f72402",
+      "size_bytes": 47815
+    },
+    "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet.py": {
+      "git_blob": "3988b67e6efd793840d9da2856e58755fa1ad08c",
+      "path": "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet.py",
+      "sha256": "aa3e1323b2cad2de4b97b369ad7583b65c79692dc5e66f437e427a34ae02f443",
+      "size_bytes": 78289
+    },
+    "formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingReadOnlyPrototypeExecutionPacket.lean": {
+      "git_blob": "a7e6078d4ed788e18bfd34222509dd436d43e609",
+      "path": "formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingReadOnlyPrototypeExecutionPacket.lean",
+      "sha256": "1ec96cd56b9cd2cca062d96180d246b832d8c8719da587636f4a9729ce6c2249",
+      "size_bytes": 4106
+    },
+    "requirements.ci.lock": {
+      "git_blob": "bcc393883b90739408ed14d53d57dd0b42d0c2bd",
+      "path": "requirements.ci.lock",
+      "sha256": "79c5d6ca6995338c20fdf4c7bdb2748746cbef0e226de1c55489ddb25658b47b",
+      "size_bytes": 741
+    }
+  },
+  "schema_and_runtime_contract_review": {
+    "all_schemas_closed": true,
+    "authorized_stage_a_total_control_count": 76,
+    "deferred_stage_b_inherited_control_count": 60,
+    "deferred_stage_b_total_control_count": 78,
+    "excluded_cutover_control_ids": [
+      "REGISTRY-V1-NC-044",
+      "REGISTRY-READINESS-V1-RC-001"
+    ],
+    "inherited_stage_a_control_count": 58,
+    "runtime_negative_control_count": 18,
+    "runtime_schema_count": 10,
+    "runtime_validator_entrypoint_count": 11,
+    "stage_a_runtime_control_count": 18,
+    "stage_b_requires_successor": true
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v0",
+  "status": "ACCEPTED_PREPARATION_PACKET_AND_AUTHORIZED_BOUNDED_STAGE_A_READ_ONLY_PROTOTYPE_EXECUTION_ONLY"
+}
