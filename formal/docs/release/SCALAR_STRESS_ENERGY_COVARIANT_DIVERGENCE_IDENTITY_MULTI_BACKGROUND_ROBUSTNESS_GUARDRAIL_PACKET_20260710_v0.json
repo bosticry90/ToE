@@ -1,0 +1,1247 @@
+{
+  "allowed_operations": [
+    "read and hash the exact twenty-four frozen upstream artifacts",
+    "strictly parse canonical JSON artifacts and verify internal links",
+    "construct the four-row typed comparison matrix",
+    "extract the five comparable convergence and relative-error rows",
+    "recheck all thirty-seven source decisions without averaging",
+    "construct applicability-tagged local-check and control inventories",
+    "run every frozen synthesis tamper control separately",
+    "write deterministic result, manifest, and execution report artifacts"
+  ],
+  "applicability_typed_local_check_ledger": [
+    {
+      "analytic_reference": "applicable_upstream_gate",
+      "chain_id": "minkowski_1plus1",
+      "curvature_route": "not_applicable_flat_baseline",
+      "flat_limit": "baseline_not_recovery_test",
+      "metric_compatibility": "not_applicable_exact_cartesian_metric",
+      "on_off_shell_witness": "applicable_upstream_gate",
+      "patch_or_geometry_safety": "not_applicable_global_cartesian_chart"
+    },
+    {
+      "analytic_reference": "applicable_upstream_gate",
+      "chain_id": "conformal_connection_1plus1",
+      "curvature_route": "not_applicable_locally_flat_classification",
+      "flat_limit": "applicable_upstream_gate",
+      "metric_compatibility": "applicable_upstream_gate",
+      "on_off_shell_witness": "applicable_upstream_gate",
+      "patch_or_geometry_safety": "applicable_reviewed_background_classification"
+    },
+    {
+      "analytic_reference": "applicable_upstream_gate",
+      "chain_id": "de_sitter_1plus1",
+      "curvature_route": "applicable_upstream_gates",
+      "flat_limit": "applicable_upstream_gate",
+      "metric_compatibility": "applicable_upstream_gate",
+      "on_off_shell_witness": "applicable_upstream_gate",
+      "patch_or_geometry_safety": "applicable_reviewed_patch_domain_safety"
+    },
+    {
+      "analytic_reference": "applicable_upstream_gate",
+      "chain_id": "warped_2plus1",
+      "curvature_route": "applicable_upstream_gates",
+      "flat_limit": "applicable_upstream_gate",
+      "metric_compatibility": "applicable_upstream_gate",
+      "on_off_shell_witness": "applicable_upstream_gates",
+      "patch_or_geometry_safety": "applicable_reviewed_determinant_safety"
+    }
+  ],
+  "bound_artifact_count": 24,
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "C_k_dynamics_claimed": false,
+    "bianchi_compatibility_claimed": false,
+    "ccft_resumed": false,
+    "einstein_source_compatibility_claimed": false,
+    "gravity_evolution_claimed": false,
+    "level_4_or_level_5_claimed": false,
+    "master_action_promoted": false,
+    "new_pde_solve_authorized": false,
+    "qft_gr_seam_admissibility_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "quantum_or_renormalized_stress_energy_claimed": false,
+    "readiness_refresh_executed": false,
+    "scalar_qft_pillar_recovery_claimed": false,
+    "unit_ledger_required_before_stronger_claims": true,
+    "unit_ledger_status": "queued_non_live_hard_gate",
+    "unit_ledger_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+  },
+  "calculation_executed": false,
+  "calculation_id": "CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-v0",
+  "canonical_json_contract": {
+    "allow_nan": false,
+    "encoding": "UTF-8 without BOM",
+    "ensure_ascii": true,
+    "indent": 2,
+    "newline": "LF",
+    "object_keys": "sorted",
+    "trailing_newline": "exactly one LF"
+  },
+  "captured_at_utc": "2026-07-10T00:00:00Z",
+  "claim_ceiling": {
+    "allowed_after_successful_review": "reproducible robustness across the exact four enumerated fixed-background evidence chains",
+    "candidate_primary_label": "E-REPRO",
+    "claim_ladder_level": 3,
+    "execution_status": "candidate_pending_independent_review_only",
+    "not_a_statistical_generalization": true,
+    "not_a_theorem": true,
+    "not_arbitrary_background_validity": true,
+    "not_implementation_independence": true
+  },
+  "comparable_metric_contract": {
+    "coordinate_invariant": false,
+    "epsilon_norm": 1e-14,
+    "family_maximum_off_shell_relative_error_reference": 0.004010933857743127,
+    "family_minimum_p_min_reference": 1.9916550282637009,
+    "maximum_allowed_family_off_shell_relative_error": 0.02,
+    "minimum_allowed_family_p_min": 1.8,
+    "norm_name": "uniform_unweighted_coordinate_grid_component_rms",
+    "normalization": "RMS(divergence-analytic_RHS)/max(RMS(analytic_RHS),epsilon_norm)",
+    "profile_row_count": 5,
+    "profile_rows": [
+      {
+        "off_shell_relative_identity_error": 0.0035695975114978873,
+        "p_min": 1.997914114431356,
+        "profile_row_id": "minkowski_off_shell"
+      },
+      {
+        "off_shell_relative_identity_error": 0.004010933857743127,
+        "p_min": 1.9979141144313803,
+        "profile_row_id": "conformal_off_shell"
+      },
+      {
+        "off_shell_relative_identity_error": 0.004010933857742557,
+        "p_min": 1.9979141144314259,
+        "profile_row_id": "de_sitter_off_shell"
+      },
+      {
+        "off_shell_relative_identity_error": 0.0037615209464743715,
+        "p_min": 1.9916550282637009,
+        "profile_row_id": "warped_x_off_shell"
+      },
+      {
+        "off_shell_relative_identity_error": 0.002490250625003484,
+        "p_min": 1.9916554104408082,
+        "profile_row_id": "warped_y_off_shell"
+      }
+    ],
+    "use_as_threshold_envelope_not_performance_ranking": true,
+    "volume_weighted": false
+  },
+  "comparison_policy": {
+    "cross_background_pooling_forbidden": [
+      "absolute_divergence_error",
+      "curvature_magnitude",
+      "curvature_route_absolute_error",
+      "grid_N",
+      "connection_component_count",
+      "analytic_residual_coefficient",
+      "negative_control_ratio_or_discrepancy",
+      "raw_timing_or_cost"
+    ],
+    "family_envelopes_allowed": [
+      "dimensionless_second_order_convergence_p_min",
+      "within_background_dimensionless_off_shell_relative_identity_error"
+    ],
+    "physical_performance_ranking_allowed": false,
+    "source_grid_schedules_must_remain_tagged": true,
+    "two_plus_one_grid_N_means_N_by_N": true
+  },
+  "consumed_target": "prepare_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_guardrail_packet",
+  "consumed_target_kind": "scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_guardrail_packet",
+  "control_contract": {
+    "combined_status_is_logical_and_only": true,
+    "conformal_naive_partial_is_diagnostic_without_new_threshold": true,
+    "instance_count": 10,
+    "instances": [
+      {
+        "chain_id": "minkowski_1plus1",
+        "control_instance_id": "minkowski_off_shell_nonconservation",
+        "mechanism_class": "off_shell_nonconservation"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "control_instance_id": "conformal_naive_partial",
+        "mechanism_class": "naive_partial_divergence"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "control_instance_id": "de_sitter_naive_partial",
+        "mechanism_class": "naive_partial_divergence"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "control_instance_id": "de_sitter_frozen_connection",
+        "mechanism_class": "inconsistent_connection"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "control_instance_id": "de_sitter_curvature_omission",
+        "mechanism_class": "curvature_derivative_omission"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "control_instance_id": "warped_naive_partial",
+        "mechanism_class": "naive_partial_divergence"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "control_instance_id": "warped_omit_tensor_index",
+        "mechanism_class": "omitted_tensor_index_connection"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "control_instance_id": "warped_omit_volume_trace",
+        "mechanism_class": "omitted_volume_trace_connection"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "control_instance_id": "warped_flat_substitution",
+        "mechanism_class": "flat_geometry_substitution"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "control_instance_id": "warped_wrong_inverse_metric",
+        "mechanism_class": "incorrect_inverse_metric_factor"
+      }
+    ],
+    "mechanism_classes": [
+      "curvature_derivative_omission",
+      "flat_geometry_substitution",
+      "inconsistent_connection",
+      "incorrect_inverse_metric_factor",
+      "naive_partial_divergence",
+      "off_shell_nonconservation",
+      "omitted_tensor_index_connection",
+      "omitted_volume_trace_connection"
+    ],
+    "mechanism_count": 8,
+    "ratios_are_source_local_and_must_not_be_ranked": true
+  },
+  "coverage_contract": {
+    "chain_ids": [
+      "minkowski_1plus1",
+      "conformal_connection_1plus1",
+      "de_sitter_1plus1",
+      "warped_2plus1"
+    ],
+    "connection_classes": [
+      "zero_connection",
+      "nonzero_connection"
+    ],
+    "curvature_classes": [
+      "zero_curvature",
+      "constant_nonzero_curvature",
+      "spatially_varying_signed_curvature_with_zero_crossings"
+    ],
+    "dimension_language_policy": {
+      "legacy_1plus1_Einstein_degeneracy_is_source_local": true,
+      "one_plus_one_degeneracy_must_not_be_imported_into_2plus1": true,
+      "warped_2plus1_two_dimensional_Einstein_degeneracy_not_applicable": true
+    },
+    "divergence_component_counts": [
+      2,
+      3
+    ],
+    "geometry_classes": [
+      "cartesian_flat_trivial_connection",
+      "locally_flat_nontrivial_connection",
+      "constant_nonzero_curvature_de_sitter",
+      "spatially_varying_signed_curvature_warped"
+    ],
+    "profile_coverage_by_chain": {
+      "conformal_connection_1plus1": {
+        "applicable_divergence_components": [
+          "nu_eta",
+          "nu_x"
+        ],
+        "off_shell_x": "off_shell_spatial_wave",
+        "off_shell_y": "not_applicable_no_y_coordinate",
+        "on_shell": "on_shell_spatial_wave"
+      },
+      "de_sitter_1plus1": {
+        "applicable_divergence_components": [
+          "nu_eta",
+          "nu_x"
+        ],
+        "off_shell_x": "off_shell_spatial_wave",
+        "off_shell_y": "not_applicable_no_y_coordinate",
+        "on_shell": "on_shell_spatial_wave"
+      },
+      "minkowski_1plus1": {
+        "applicable_divergence_components": [
+          "nu_0",
+          "nu_1"
+        ],
+        "off_shell_x": "legacy_off_shell_spatial_wave",
+        "off_shell_y": "not_applicable_no_y_coordinate",
+        "on_shell": "legacy_on_shell_spatial_wave"
+      },
+      "warped_2plus1": {
+        "applicable_divergence_components": [
+          "nu_t",
+          "nu_x",
+          "nu_y"
+        ],
+        "off_shell_x": "off_shell_x_mode",
+        "off_shell_y": "off_shell_y_mode",
+        "on_shell": "exact_on_shell_temporal_mode"
+      }
+    },
+    "profile_roles": [
+      "exact_on_shell_temporal",
+      "off_shell_x_or_legacy_spatial",
+      "off_shell_y_warped",
+      "all_locally_applicable_divergence_components"
+    ],
+    "spacetime_dimensions": [
+      2,
+      3
+    ]
+  },
+  "e_repro_claimed_by_guardrail": false,
+  "equation_compendium_boundary": {
+    "canonical_covariant_equation_id": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0",
+    "canonical_covariant_equation_status": "ACTIVE_CALCULATION_SURFACE_SCOPED_E_REPRO",
+    "canonical_source_cell_must_remain_unchanged": true,
+    "equation_row_promotion_authorized": false,
+    "flat_specialization_equation_id": "EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0",
+    "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+    "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e"
+  },
+  "equation_compendium_edited": false,
+  "execution_artifact_contract": {
+    "execution_report_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_EXECUTION_20260710_v0.json",
+    "manifest_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-MANIFEST-v0.json",
+    "must_include": [
+      "guardrail identity and hash",
+      "four six-artifact chain records",
+      "four typed background comparison rows",
+      "five convergence rows",
+      "five normalized off-shell-error rows",
+      "thirty-seven source-decision inventory rows",
+      "four source-local on-shell policy rows",
+      "applicability-tagged local-check rows",
+      "ten control-instance rows and eight-mechanism coverage",
+      "sixteen decision rows",
+      "sampling, coordinate-norm, lineage, and claim limitations"
+    ],
+    "must_not_embed": "full upstream numerical row sets",
+    "result_path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-MULTI-BACKGROUND-ROBUSTNESS-v0.json",
+    "review_report_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
+    "temporary_paths_wall_clock_and_random_values_forbidden": true
+  },
+  "failure_policy": {
+    "artifacts_preserved": true,
+    "changes_require_new_versioned_guardrail": true,
+    "nonzero_exit_required": true,
+    "primary_claim_label": "B-BLOCKED",
+    "selected_target": "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_evidence_incompatibility",
+    "threshold_relaxation_or_family_substitution_forbidden": true
+  },
+  "failure_targets": {
+    "execution_evidence_incompatibility": "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_evidence_incompatibility",
+    "review_reproducibility_mismatch": "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_reproducibility_mismatch"
+  },
+  "forbidden_operations": [
+    "solve a new field equation or rerun a fifth background as evidence",
+    "modify any accepted upstream artifact",
+    "average or rank a forbidden raw cross-background metric",
+    "replace an inapplicable field with numeric zero or pass",
+    "form a relative error against an exact-zero on-shell reference",
+    "promote an equation row, pillar, source, seam, C_k, or master action"
+  ],
+  "frozen_decision_count": 16,
+  "frozen_decisions": [
+    {
+      "decision_id": "exact_twenty_four_artifact_chain_integrity",
+      "decision_number": 1,
+      "requirement": "exactly 4 chains and 24 bound artifacts match paths, hashes, schemas, canonical bytes where applicable, and internal links"
+    },
+    {
+      "decision_id": "four_level3_review_acceptances",
+      "decision_number": 2,
+      "requirement": "exactly 4 independent reviews accept E-REPRO at claim ceiling 3"
+    },
+    {
+      "decision_id": "identity_and_flat_specialization_mapping",
+      "decision_number": 3,
+      "requirement": "the shared covariant identity/sign convention matches and Minkowski remains a typed zero-connection flat specialization"
+    },
+    {
+      "decision_id": "four_geometry_class_coverage",
+      "decision_number": 4,
+      "requirement": "the exact four frozen geometry classes are present once each"
+    },
+    {
+      "decision_id": "dimension_and_component_coverage",
+      "decision_number": 5,
+      "requirement": "spacetime dimensions and divergence-component counts are both exactly {2,3}"
+    },
+    {
+      "decision_id": "connection_class_coverage",
+      "decision_number": 6,
+      "requirement": "zero and nonzero connection classes are both present"
+    },
+    {
+      "decision_id": "curvature_class_coverage",
+      "decision_number": 7,
+      "requirement": "zero, constant nonzero, and varying signed curvature with zero crossings are present"
+    },
+    {
+      "decision_id": "profile_and_component_role_coverage",
+      "decision_number": 8,
+      "requirement": "on-shell, off-shell x, off-shell y, and every locally applicable component role are present"
+    },
+    {
+      "decision_id": "all_thirty_seven_upstream_decisions_pass",
+      "decision_number": 9,
+      "requirement": "source decision counts are exactly 4+6+11+16 and every decision passes without masking"
+    },
+    {
+      "decision_id": "family_minimum_convergence_order",
+      "decision_number": 10,
+      "requirement": "exactly five comparable p_min rows exist and their family minimum is at least 1.8"
+    },
+    {
+      "decision_id": "family_maximum_off_shell_relative_error",
+      "decision_number": 11,
+      "requirement": "exactly five normalized off-shell rows exist and their family maximum is at most 0.02"
+    },
+    {
+      "decision_id": "source_local_on_shell_policies",
+      "decision_number": 12,
+      "requirement": "all source-local on-shell policies pass and no relative error against an exact zero is formed"
+    },
+    {
+      "decision_id": "applicability_typed_local_checks",
+      "decision_number": 13,
+      "requirement": "all locally applicable analytic, metric, curvature, patch, flat-limit, and witness checks pass; inapplicable fields remain typed null/not_applicable"
+    },
+    {
+      "decision_id": "ten_control_instances_eight_mechanisms",
+      "decision_number": 14,
+      "requirement": "exactly ten detected source control instances cover the exact eight frozen mechanisms with no combined masking"
+    },
+    {
+      "decision_id": "comparison_policy_no_invalid_pooling",
+      "decision_number": 15,
+      "requirement": "only convergence order and within-background dimensionless off-shell error form family envelopes"
+    },
+    {
+      "decision_id": "lifecycle_claim_and_unit_ledger_boundaries",
+      "decision_number": 16,
+      "requirement": "candidate Level 3 review lifecycle and all nonclaims hold while the unit ledger remains a non-live hard gate"
+    }
+  ],
+  "full_ToeFormal_aggregate_run_or_upgraded": false,
+  "future_review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result",
+  "future_review_target_kind": "scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_calculation_result_review",
+  "identity_contract": {
+    "identity": "nabla_mu T^{mu nu} = (Box_g phi - V'(phi)) nabla^nu phi",
+    "massless_specialization_allowed": true,
+    "minkowski_role": "zero_connection_flat_specialization",
+    "sign_convention_must_match_each_frozen_chain": true
+  },
+  "independent_review_contract": {
+    "accepted_upstream_artifacts_must_not_be_rewritten": true,
+    "byte_identical_result_manifest_and_execution_report_required": true,
+    "fresh_synthesis_subprocess_count": 2,
+    "rederive_every_summary_from_immutable_inputs": true,
+    "review_failure_target": "diagnose_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_reproducibility_mismatch"
+  },
+  "lean_status_wording": "scoped Lean passed; full ToeFormal aggregate not run / not upgraded",
+  "packet_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_GUARDRAIL_PACKET_v0",
+  "packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_FOUR_BACKGROUND_EVIDENCE_SYNTHESIS_ONLY",
+  "question": "Do the four enumerated, previously reviewed scalar identity chains form a coherent bounded Level 3 robustness pattern without pooling incommensurate diagnostics or promoting the claim?",
+  "schema_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_GUARDRAIL_PACKET_20260710_v0",
+  "selected_next_target": "execute_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0",
+  "selected_next_target_kind": "scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_calculation_execution",
+  "source_chain_count": 4,
+  "source_chains": [
+    {
+      "artifacts": [
+        {
+          "artifact_role": "guardrail",
+          "path": "formal/docs/release/SCALAR_QFT_GR_SOURCE_CONTRACT_FLAT_LIMIT_PRETEST_GUARDRAIL_PACKET_20260709_v0.json",
+          "sha256": "a1f29ff370431de8ca1d4e977e00d659a70353ae142472121ea9f44128f07da5"
+        },
+        {
+          "artifact_role": "calculation_script",
+          "path": "formal/python/toe/calculations/calc_scalar_stress_energy_divergence_identity_minkowski.py",
+          "sha256": "0eaa19affa8a74084444247c9a04b6997b632490b5411bf436fc3461028547eb"
+        },
+        {
+          "artifact_role": "calculation_result",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-v0.json",
+          "sha256": "c93f2324c735bf2a06ba9a83c3fc022be87b7d00fb5bf2010b8010c2715f480e"
+        },
+        {
+          "artifact_role": "calculation_manifest",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-DIVERGENCE-IDENTITY-MINKOWSKI-MANIFEST-v0.json",
+          "sha256": "7e2eee401b84c4a8c8dd20c8d54eb6bbba9f16b4e832d53bff6bd7612cd53605"
+        },
+        {
+          "artifact_role": "execution_report",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_EXECUTION_20260709_v0.json",
+          "sha256": "f1a6b0de45a830b9146cc06b3dbf086ab9bf95f53ae55a5bb80e969df9d53f3f"
+        },
+        {
+          "artifact_role": "independent_review",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_DIVERGENCE_IDENTITY_MINKOWSKI_CALCULATION_RESULT_REVIEW_20260709_v0.json",
+          "sha256": "6111a78b0c1ae2ee1170dcbed5ef524ada7c2a720714180808345cffc5b5e916"
+        }
+      ],
+      "chain_id": "minkowski_1plus1",
+      "comparable_profiles": [
+        {
+          "off_shell_relative_identity_error": 0.0035695975114978873,
+          "p_min": 1.997914114431356,
+          "profile_row_id": "minkowski_off_shell"
+        }
+      ],
+      "connection_class": "zero_connection",
+      "curvature_class": "zero_curvature",
+      "divergence_component_count": 2,
+      "equation_mapping": {
+        "canonical_row_replaced": false,
+        "covariant_equation_id": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0",
+        "family_role": "flat_specialization_bridge",
+        "source_equation_id": "EQ-QFT-SCALAR-STRESS-DIVERGENCE-IDENTITY-v0"
+      },
+      "flat_limit_role": "cartesian_baseline_not_a_recovery_test",
+      "fresh_subprocess_review_status": "not_recorded_in_legacy_review",
+      "geometry_class": "cartesian_flat_trivial_connection",
+      "grid_meaning": "N spatial points",
+      "grid_schedule": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "label": "1+1 Minkowski Cartesian baseline",
+      "on_shell_policy": {
+        "policy_id": "legacy_off_to_on_separation",
+        "relative_error_against_zero_allowed": false
+      },
+      "profile_coverage": {
+        "applicable_divergence_components": [
+          "nu_0",
+          "nu_1"
+        ],
+        "off_shell_x": "legacy_off_shell_spatial_wave",
+        "off_shell_y": "not_applicable_no_y_coordinate",
+        "on_shell": "legacy_on_shell_spatial_wave"
+      },
+      "review_status": "accepted_scoped_e_repro",
+      "review_target": "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result",
+      "spacetime_dimension": 2,
+      "upstream_decision_count": 4,
+      "upstream_gate_ids": [
+        "exact_coefficient_error_at_most_1e_12",
+        "finest_combined_off_shell_relative_error_at_most_2_percent",
+        "finest_off_shell_divergence_over_100_times_on_shell",
+        "two_finest_convergence_order_at_least_1_8"
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "artifact_role": "guardrail",
+          "path": "formal/docs/release/BOUNDED_CURVED_SPACE_SCALAR_QFT_GR_SOURCE_CONTRACT_RETEST_GUARDRAIL_PACKET_20260709_v0.json",
+          "sha256": "0e16434fca7015b8f2f1c5096050dc05d75904ec34f6cba38c63e33227679f63"
+        },
+        {
+          "artifact_role": "calculation_script",
+          "path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_conformal_background.py",
+          "sha256": "5ecc11be6538a9f266a671bff92e2e143d592c7426e89033a2185374420ae399"
+        },
+        {
+          "artifact_role": "calculation_result",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-CONFORMAL-BACKGROUND-v0.json",
+          "sha256": "1141870b5a83289a7fc36b32a5375f2a48c96070e15b87c05f17ecfa88e62922"
+        },
+        {
+          "artifact_role": "calculation_manifest",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-CONFORMAL-BACKGROUND-MANIFEST-v0.json",
+          "sha256": "06e609823aea3237d32136f450005458d27f6b985f07f910fd3d37be321c6b79"
+        },
+        {
+          "artifact_role": "execution_report",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+          "sha256": "38746a5089013c5d0044962318409c072b81defd0b54e680f7aedfcbcee5e4b9"
+        },
+        {
+          "artifact_role": "independent_review",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_CONFORMAL_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json",
+          "sha256": "752c4f92521e55ca125024ea0b5956838ac32230dcee5356f6e2a5ed2176c0df"
+        }
+      ],
+      "chain_id": "conformal_connection_1plus1",
+      "comparable_profiles": [
+        {
+          "off_shell_relative_identity_error": 0.004010933857743127,
+          "p_min": 1.9979141144313803,
+          "profile_row_id": "conformal_off_shell"
+        }
+      ],
+      "connection_class": "nonzero_connection",
+      "curvature_class": "zero_curvature",
+      "divergence_component_count": 2,
+      "equation_mapping": {
+        "canonical_row_replaced": false,
+        "family_role": "canonical_covariant_identity_evidence",
+        "source_equation_id": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0"
+      },
+      "flat_limit_role": "source_local_flat_limit_recovery_passed",
+      "fresh_subprocess_review_status": "not_recorded_in_legacy_review",
+      "geometry_class": "locally_flat_nontrivial_connection",
+      "grid_meaning": "N spatial points",
+      "grid_schedule": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "label": "1+1 locally flat conformal nontrivial connection",
+      "on_shell_policy": {
+        "policy_id": "legacy_off_to_on_separation",
+        "relative_error_against_zero_allowed": false
+      },
+      "profile_coverage": {
+        "applicable_divergence_components": [
+          "nu_eta",
+          "nu_x"
+        ],
+        "off_shell_x": "off_shell_spatial_wave",
+        "off_shell_y": "not_applicable_no_y_coordinate",
+        "on_shell": "on_shell_spatial_wave"
+      },
+      "review_status": "accepted_scoped_e_repro",
+      "review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_conformal_background_v0_result",
+      "spacetime_dimension": 2,
+      "upstream_decision_count": 6,
+      "upstream_gate_ids": [
+        "exact_coefficient_error_at_most_1e_12",
+        "finest_combined_off_shell_relative_error_at_most_2_percent",
+        "finest_off_shell_divergence_over_100_times_on_shell",
+        "flat_limit_discrepancy_at_most_1e_12",
+        "metric_compatibility_error_at_most_1e_12",
+        "two_finest_convergence_order_at_least_1_8"
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "artifact_role": "guardrail",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_GUARDRAIL_PACKET_20260709_v0.json",
+          "sha256": "3670bfaa98876b32e95f5ff7406546a41aa691f937fe738fee6e3ab36a399191"
+        },
+        {
+          "artifact_role": "calculation_script",
+          "path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background.py",
+          "sha256": "253632cc6773d242a76db26befde13dc2578a2950c097a8c628b8e061ffdbd03"
+        },
+        {
+          "artifact_role": "calculation_result",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-v0.json",
+          "sha256": "4d0d04421c8b0d310f0caa73c4da3755f2afa91a4043bab9f96011c9b03ecf4f"
+        },
+        {
+          "artifact_role": "calculation_manifest",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-NONZERO-CURVATURE-BACKGROUND-MANIFEST-v0.json",
+          "sha256": "46e752fd0a8571fd06dd0f1f9a7046f12a43413761ea39a3cb904b959a4a6827"
+        },
+        {
+          "artifact_role": "execution_report",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+          "sha256": "21068eaff2b509401afb635e4f7bce4eb409edb8a5cff6dfe4bea7dfe7a3d2c8"
+        },
+        {
+          "artifact_role": "independent_review",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_NONZERO_CURVATURE_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json",
+          "sha256": "538ba6db4e42cdcbaf5f109e3e4beb4c79b0e740db134d04d7293ef1a05d5702"
+        }
+      ],
+      "chain_id": "de_sitter_1plus1",
+      "comparable_profiles": [
+        {
+          "off_shell_relative_identity_error": 0.004010933857742557,
+          "p_min": 1.9979141144314259,
+          "profile_row_id": "de_sitter_off_shell"
+        }
+      ],
+      "connection_class": "nonzero_connection",
+      "curvature_class": "constant_nonzero_curvature",
+      "divergence_component_count": 2,
+      "equation_mapping": {
+        "canonical_row_replaced": false,
+        "family_role": "canonical_covariant_identity_evidence",
+        "source_equation_id": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0"
+      },
+      "flat_limit_role": "source_local_flat_limit_recovery_passed",
+      "fresh_subprocess_review_status": "not_recorded_in_legacy_review",
+      "geometry_class": "constant_nonzero_curvature_de_sitter",
+      "grid_meaning": "N spatial points",
+      "grid_schedule": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "label": "fixed 1+1 de Sitter constant curvature",
+      "on_shell_policy": {
+        "policy_id": "legacy_off_to_on_separation",
+        "relative_error_against_zero_allowed": false
+      },
+      "profile_coverage": {
+        "applicable_divergence_components": [
+          "nu_eta",
+          "nu_x"
+        ],
+        "off_shell_x": "off_shell_spatial_wave",
+        "off_shell_y": "not_applicable_no_y_coordinate",
+        "on_shell": "on_shell_spatial_wave"
+      },
+      "review_status": "accepted_scoped_e_repro",
+      "review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0_result",
+      "spacetime_dimension": 2,
+      "upstream_decision_count": 11,
+      "upstream_gate_ids": [
+        "absolute_scalar_curvature_at_least_0_05",
+        "curvature_omission_discrepancy_at_least_0_04",
+        "curvature_route_discrepancy_at_most_1e_12",
+        "exact_coefficient_error_at_most_1e_12",
+        "finest_combined_off_shell_relative_error_at_most_2_percent",
+        "finest_off_shell_divergence_over_100_times_on_shell",
+        "flat_limit_discrepancy_at_most_1e_12",
+        "inconsistent_frozen_connection_error_ratio_at_least_50",
+        "metric_compatibility_error_at_most_1e_12",
+        "naive_partial_divergence_error_ratio_at_least_100",
+        "two_finest_convergence_order_at_least_1_8"
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "artifact_role": "guardrail",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_GUARDRAIL_PACKET_20260709_v1.json",
+          "sha256": "e6ce9dfb08364e3fa3a0a3895a3d1b16635348ab2fc7b0490f0b3b6e04db6b96"
+        },
+        {
+          "artifact_role": "calculation_script",
+          "path": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background.py",
+          "sha256": "5d43b770a47ec86ccf8a0e09a68d4c1aebf454daea9c471434d288700f57de53"
+        },
+        {
+          "artifact_role": "calculation_result",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-v0.json",
+          "sha256": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce"
+        },
+        {
+          "artifact_role": "calculation_manifest",
+          "path": "formal/output/CALC-SCALAR-STRESS-ENERGY-COVARIANT-DIVERGENCE-IDENTITY-HIGHER-DIMENSIONAL-CURVED-BACKGROUND-MANIFEST-v0.json",
+          "sha256": "12791f7844d1c48ea81c647e5d8ee65e32b264592b0101eed875afc7a9d8e5f3"
+        },
+        {
+          "artifact_role": "execution_report",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_EXECUTION_20260709_v0.json",
+          "sha256": "e502995f084bb9d7cdcce8141f7c54fce60026660a3c94f393cf2633f0f22dd2"
+        },
+        {
+          "artifact_role": "independent_review",
+          "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_CURVED_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json",
+          "sha256": "2bd90958b5c85f255162bfa7f061e8061250443c3c369aaa33bf12ec2077c3e7"
+        }
+      ],
+      "chain_id": "warped_2plus1",
+      "comparable_profiles": [
+        {
+          "off_shell_relative_identity_error": 0.0037615209464743715,
+          "p_min": 1.9916550282637009,
+          "profile_row_id": "warped_x_off_shell"
+        },
+        {
+          "off_shell_relative_identity_error": 0.002490250625003484,
+          "p_min": 1.9916554104408082,
+          "profile_row_id": "warped_y_off_shell"
+        }
+      ],
+      "connection_class": "nonzero_connection",
+      "curvature_class": "spatially_varying_signed_curvature_with_zero_crossings",
+      "divergence_component_count": 3,
+      "equation_mapping": {
+        "canonical_row_replaced": false,
+        "family_role": "canonical_covariant_identity_evidence",
+        "source_equation_id": "EQ-QFT-SCALAR-COVARIANT-STRESS-DIVERGENCE-IDENTITY-v0"
+      },
+      "flat_limit_role": "source_local_flat_limit_recovery_passed",
+      "fresh_subprocess_review_status": "two_fresh_subprocesses_matched",
+      "geometry_class": "spatially_varying_signed_curvature_warped",
+      "grid_meaning": "N x N spatial points",
+      "grid_schedule": [
+        32,
+        64,
+        128,
+        256
+      ],
+      "label": "fixed 2+1 warped spatially varying signed curvature",
+      "on_shell_policy": {
+        "maximum_absolute_divergence": 1e-11,
+        "policy_id": "exact_zero_absolute_divergence",
+        "relative_error_against_zero_allowed": false
+      },
+      "profile_coverage": {
+        "applicable_divergence_components": [
+          "nu_t",
+          "nu_x",
+          "nu_y"
+        ],
+        "off_shell_x": "off_shell_x_mode",
+        "off_shell_y": "off_shell_y_mode",
+        "on_shell": "exact_on_shell_temporal_mode"
+      },
+      "review_status": "accepted_level_3_scoped_e_repro",
+      "review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result",
+      "spacetime_dimension": 3,
+      "upstream_decision_count": 16,
+      "upstream_gate_ids": [
+        "maximum_analytic_profile_residual_reference_error",
+        "maximum_curvature_route_absolute_discrepancy",
+        "maximum_finest_on_shell_combined_absolute_divergence_error",
+        "maximum_finest_x_mode_combined_relative_identity_error",
+        "maximum_finest_y_mode_combined_relative_identity_error",
+        "maximum_flat_limit_absolute_discrepancy",
+        "maximum_metric_compatibility_absolute_error",
+        "minimum_curvature_peak_absolute_value",
+        "minimum_curvature_peak_to_peak_variation",
+        "minimum_flat_geometry_substitution_normalized_discrepancy",
+        "minimum_incorrect_y_inverse_metric_normalized_discrepancy",
+        "minimum_naive_partial_divergence_error_ratio",
+        "minimum_omitted_tensor_index_term_error_ratio",
+        "minimum_omitted_volume_trace_term_error_ratio",
+        "minimum_two_finest_x_mode_convergence_order",
+        "minimum_two_finest_y_mode_convergence_order"
+      ]
+    }
+  ],
+  "source_local_policy_contract": {
+    "flat_limit_roles": {
+      "conformal_connection_1plus1": "source_local_flat_limit_recovery_passed",
+      "de_sitter_1plus1": "source_local_flat_limit_recovery_passed",
+      "minkowski_1plus1": "cartesian_baseline_not_a_recovery_test",
+      "warped_2plus1": "source_local_flat_limit_recovery_passed"
+    },
+    "fresh_subprocess_review_status": {
+      "conformal_connection_1plus1": "not_recorded_in_legacy_review",
+      "de_sitter_1plus1": "not_recorded_in_legacy_review",
+      "minkowski_1plus1": "not_recorded_in_legacy_review",
+      "warped_2plus1": "two_fresh_subprocesses_matched"
+    },
+    "not_applicable_representation": "null_with_not_applicable_status",
+    "on_shell_policies": {
+      "conformal_connection_1plus1": {
+        "policy_id": "legacy_off_to_on_separation",
+        "relative_error_against_zero_allowed": false
+      },
+      "de_sitter_1plus1": {
+        "policy_id": "legacy_off_to_on_separation",
+        "relative_error_against_zero_allowed": false
+      },
+      "minkowski_1plus1": {
+        "policy_id": "legacy_off_to_on_separation",
+        "relative_error_against_zero_allowed": false
+      },
+      "warped_2plus1": {
+        "maximum_absolute_divergence": 1e-11,
+        "policy_id": "exact_zero_absolute_divergence",
+        "relative_error_against_zero_allowed": false
+      }
+    },
+    "on_shell_relative_error_against_exact_zero_forbidden": true,
+    "zero_fill_for_not_applicable_forbidden": true
+  },
+  "source_review_result_link_contract": [
+    {
+      "chain_id": "minkowski_1plus1",
+      "result_review_target": "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result",
+      "result_sha256": "c93f2324c735bf2a06ba9a83c3fc022be87b7d00fb5bf2010b8010c2715f480e",
+      "review_consumed_target": "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result",
+      "review_must_accept_level_3_e_repro": true,
+      "review_must_bind_result_hash": true
+    },
+    {
+      "chain_id": "conformal_connection_1plus1",
+      "result_review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_conformal_background_v0_result",
+      "result_sha256": "1141870b5a83289a7fc36b32a5375f2a48c96070e15b87c05f17ecfa88e62922",
+      "review_consumed_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_conformal_background_v0_result",
+      "review_must_accept_level_3_e_repro": true,
+      "review_must_bind_result_hash": true
+    },
+    {
+      "chain_id": "de_sitter_1plus1",
+      "result_review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0_result",
+      "result_sha256": "4d0d04421c8b0d310f0caa73c4da3755f2afa91a4043bab9f96011c9b03ecf4f",
+      "review_consumed_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_nonzero_curvature_background_v0_result",
+      "review_must_accept_level_3_e_repro": true,
+      "review_must_bind_result_hash": true
+    },
+    {
+      "chain_id": "warped_2plus1",
+      "result_review_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result",
+      "result_sha256": "755e39e4672ad68e2fbf142d0e2bc9140abb80988e4a330ec3a5fd4ddca859ce",
+      "review_consumed_target": "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_dimensional_curved_background_v0_result",
+      "review_must_accept_level_3_e_repro": true,
+      "review_must_bind_result_hash": true
+    }
+  ],
+  "status": "prepared_authorizes_execution_only",
+  "strict_packet_result": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_GUARDRAIL_PACKET_PREPARED_LEVEL3_CLOSED_FAMILY_FIXED_BACKGROUND_SYNTHESIS_ONLY_NO_NEW_PDE_SOLVE_NO_GENERAL_THEOREM_NO_PILLAR_SOURCE_BIANCHI_SEAM_OR_MASTER_ACTION_PROMOTION",
+  "success_criteria": {
+    "all_decisions_required": true,
+    "exact_accepted_review_count": 4,
+    "exact_bound_artifact_count": 24,
+    "exact_comparable_profile_row_count": 5,
+    "exact_control_instance_count": 10,
+    "exact_control_mechanism_count": 8,
+    "exact_divergence_component_count_class_count": 2,
+    "exact_geometry_class_count": 4,
+    "exact_source_chain_count": 4,
+    "exact_spacetime_dimension_count": 2,
+    "exact_upstream_decision_count": 37,
+    "maximum_family_off_shell_relative_error": 0.02,
+    "minimum_family_convergence_order": 1.8
+  },
+  "synthesis_classification": {
+    "arbitrary_background_generalization_allowed": false,
+    "backgrounds_randomly_sampled": false,
+    "backgrounds_selected_sequentially_before_synthesis": true,
+    "implementation_lineage_independent": false,
+    "kind": "closed_enumerated_family_evidence_synthesis",
+    "new_pde_calculation": false,
+    "statistical_sample": false
+  },
+  "synthesis_tamper_control_count": 14,
+  "synthesis_tamper_controls": [
+    {
+      "control_id": "omitted_background",
+      "exact_mutation": "remove one chain",
+      "expected_failed_decision_id": "four_geometry_class_coverage",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "swapped_chain_artifacts",
+      "exact_mutation": "swap artifacts between two chain labels",
+      "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "masked_upstream_failure",
+      "exact_mutation": "flip one upstream decision false while retaining a passing family average",
+      "expected_failed_decision_id": "all_thirty_seven_upstream_decisions_pass",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "inapplicable_zero_fill",
+      "exact_mutation": "replace not_applicable with numeric zero/pass",
+      "expected_failed_decision_id": "applicability_typed_local_checks",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "on_shell_relative_error_injection",
+      "exact_mutation": "inject a floor-divided relative error against an exact-zero reference",
+      "expected_failed_decision_id": "source_local_on_shell_policies",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "raw_absolute_error_substitution",
+      "exact_mutation": "substitute raw absolute divergence for a normalized off-shell ratio",
+      "expected_failed_decision_id": "comparison_policy_no_invalid_pooling",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "removed_control_instance",
+      "exact_mutation": "remove one control instance while leaving a combined pass flag true",
+      "expected_failed_decision_id": "ten_control_instances_eight_mechanisms",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "input_hash_tamper",
+      "exact_mutation": "alter one bound source hash",
+      "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "review_hash_tamper",
+      "exact_mutation": "alter one accepted-review hash",
+      "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "result_hash_tamper",
+      "exact_mutation": "alter one calculation-result hash",
+      "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "nonfinite_injection",
+      "exact_mutation": "inject NaN or infinity",
+      "expected_failed_decision_id": "exact_twenty_four_artifact_chain_integrity",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "degeneracy_language_leak",
+      "exact_mutation": "import 1+1 Einstein-degeneracy language into the 2+1 row",
+      "expected_failed_decision_id": "lifecycle_claim_and_unit_ledger_boundaries",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "collapsed_curvature_classes",
+      "exact_mutation": "merge constant and spatially varying curvature classes",
+      "expected_failed_decision_id": "curvature_class_coverage",
+      "must_fail_individually": true
+    },
+    {
+      "control_id": "forbidden_claim_promotion",
+      "exact_mutation": "set any pillar/source/Bianchi/seam/CCFT/C_k dynamics/master-action promotion true",
+      "expected_failed_decision_id": "lifecycle_claim_and_unit_ledger_boundaries",
+      "must_fail_individually": true
+    }
+  ],
+  "upstream_decision_contract": {
+    "all_must_pass_individually": true,
+    "averaging_or_masking_forbidden": true,
+    "gate_inventory": [
+      {
+        "chain_id": "minkowski_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "minkowski_1plus1::exact_coefficient_error_at_most_1e_12",
+        "source_gate_id": "exact_coefficient_error_at_most_1e_12"
+      },
+      {
+        "chain_id": "minkowski_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "minkowski_1plus1::finest_combined_off_shell_relative_error_at_most_2_percent",
+        "source_gate_id": "finest_combined_off_shell_relative_error_at_most_2_percent"
+      },
+      {
+        "chain_id": "minkowski_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "minkowski_1plus1::finest_off_shell_divergence_over_100_times_on_shell",
+        "source_gate_id": "finest_off_shell_divergence_over_100_times_on_shell"
+      },
+      {
+        "chain_id": "minkowski_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "minkowski_1plus1::two_finest_convergence_order_at_least_1_8",
+        "source_gate_id": "two_finest_convergence_order_at_least_1_8"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "conformal_connection_1plus1::exact_coefficient_error_at_most_1e_12",
+        "source_gate_id": "exact_coefficient_error_at_most_1e_12"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "conformal_connection_1plus1::finest_combined_off_shell_relative_error_at_most_2_percent",
+        "source_gate_id": "finest_combined_off_shell_relative_error_at_most_2_percent"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "conformal_connection_1plus1::finest_off_shell_divergence_over_100_times_on_shell",
+        "source_gate_id": "finest_off_shell_divergence_over_100_times_on_shell"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "conformal_connection_1plus1::flat_limit_discrepancy_at_most_1e_12",
+        "source_gate_id": "flat_limit_discrepancy_at_most_1e_12"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "conformal_connection_1plus1::metric_compatibility_error_at_most_1e_12",
+        "source_gate_id": "metric_compatibility_error_at_most_1e_12"
+      },
+      {
+        "chain_id": "conformal_connection_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "conformal_connection_1plus1::two_finest_convergence_order_at_least_1_8",
+        "source_gate_id": "two_finest_convergence_order_at_least_1_8"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::absolute_scalar_curvature_at_least_0_05",
+        "source_gate_id": "absolute_scalar_curvature_at_least_0_05"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::curvature_omission_discrepancy_at_least_0_04",
+        "source_gate_id": "curvature_omission_discrepancy_at_least_0_04"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::curvature_route_discrepancy_at_most_1e_12",
+        "source_gate_id": "curvature_route_discrepancy_at_most_1e_12"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::exact_coefficient_error_at_most_1e_12",
+        "source_gate_id": "exact_coefficient_error_at_most_1e_12"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::finest_combined_off_shell_relative_error_at_most_2_percent",
+        "source_gate_id": "finest_combined_off_shell_relative_error_at_most_2_percent"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::finest_off_shell_divergence_over_100_times_on_shell",
+        "source_gate_id": "finest_off_shell_divergence_over_100_times_on_shell"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::flat_limit_discrepancy_at_most_1e_12",
+        "source_gate_id": "flat_limit_discrepancy_at_most_1e_12"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::inconsistent_frozen_connection_error_ratio_at_least_50",
+        "source_gate_id": "inconsistent_frozen_connection_error_ratio_at_least_50"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::metric_compatibility_error_at_most_1e_12",
+        "source_gate_id": "metric_compatibility_error_at_most_1e_12"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::naive_partial_divergence_error_ratio_at_least_100",
+        "source_gate_id": "naive_partial_divergence_error_ratio_at_least_100"
+      },
+      {
+        "chain_id": "de_sitter_1plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "de_sitter_1plus1::two_finest_convergence_order_at_least_1_8",
+        "source_gate_id": "two_finest_convergence_order_at_least_1_8"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_analytic_profile_residual_reference_error",
+        "source_gate_id": "maximum_analytic_profile_residual_reference_error"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_curvature_route_absolute_discrepancy",
+        "source_gate_id": "maximum_curvature_route_absolute_discrepancy"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_finest_on_shell_combined_absolute_divergence_error",
+        "source_gate_id": "maximum_finest_on_shell_combined_absolute_divergence_error"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_finest_x_mode_combined_relative_identity_error",
+        "source_gate_id": "maximum_finest_x_mode_combined_relative_identity_error"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_finest_y_mode_combined_relative_identity_error",
+        "source_gate_id": "maximum_finest_y_mode_combined_relative_identity_error"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_flat_limit_absolute_discrepancy",
+        "source_gate_id": "maximum_flat_limit_absolute_discrepancy"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::maximum_metric_compatibility_absolute_error",
+        "source_gate_id": "maximum_metric_compatibility_absolute_error"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_curvature_peak_absolute_value",
+        "source_gate_id": "minimum_curvature_peak_absolute_value"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_curvature_peak_to_peak_variation",
+        "source_gate_id": "minimum_curvature_peak_to_peak_variation"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_flat_geometry_substitution_normalized_discrepancy",
+        "source_gate_id": "minimum_flat_geometry_substitution_normalized_discrepancy"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_incorrect_y_inverse_metric_normalized_discrepancy",
+        "source_gate_id": "minimum_incorrect_y_inverse_metric_normalized_discrepancy"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_naive_partial_divergence_error_ratio",
+        "source_gate_id": "minimum_naive_partial_divergence_error_ratio"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_omitted_tensor_index_term_error_ratio",
+        "source_gate_id": "minimum_omitted_tensor_index_term_error_ratio"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_omitted_volume_trace_term_error_ratio",
+        "source_gate_id": "minimum_omitted_volume_trace_term_error_ratio"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_two_finest_x_mode_convergence_order",
+        "source_gate_id": "minimum_two_finest_x_mode_convergence_order"
+      },
+      {
+        "chain_id": "warped_2plus1",
+        "must_pass_individually": true,
+        "qualified_gate_id": "warped_2plus1::minimum_two_finest_y_mode_convergence_order",
+        "source_gate_id": "minimum_two_finest_y_mode_convergence_order"
+      }
+    ],
+    "per_chain_counts": {
+      "conformal_connection_1plus1": 6,
+      "de_sitter_1plus1": 11,
+      "minkowski_1plus1": 4,
+      "warped_2plus1": 16
+    },
+    "total_count": 37
+  }
+}

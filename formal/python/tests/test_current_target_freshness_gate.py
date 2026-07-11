@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_scalar_stress_energy_covariant_divergence_identity_multi_"
-    "background_robustness_guardrail_packet"
+    "execute_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+    "background_robustness_v0"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1348,8 +1348,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_calc_scalar_stress_energy_covariant_divergence_identity_higher_"
-    "dimensional_curved_background_v0_result"
+    "prepare_scalar_stress_energy_covariant_divergence_identity_multi_"
+    "background_robustness_guardrail_packet"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1696,8 +1696,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_scalar_stress_energy_covariant_divergence_identity_multi_"
-    "background_robustness_guardrail_packet"
+    "execute_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
+    "background_robustness_v0"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1792,12 +1792,12 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ScalarStressEnergyCovariantDivergenceIdentityHigherDimensionalCurvedBackgroundCalculationResultReview.lean"
+    / "ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessGuardrailPacket.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/"
-    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
-    "CURVED_BACKGROUND_CALCULATION_RESULT_REVIEW_20260709_v0.json"
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
+    "ROBUSTNESS_GUARDRAIL_PACKET_20260710_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1929,9 +1929,9 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
-    "CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_FIXED_2PLUS1_"
-    "WARPED_BACKGROUND_LEVEL3_SCOPED_E_REPRO_ONLY"
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
+    "ROBUSTNESS_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_FOUR_"
+    "BACKGROUND_EVIDENCE_SYNTHESIS_ONLY"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2061,10 +2061,10 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_HIGHER_DIMENSIONAL_"
-    "CURVED_BACKGROUND_RESULT_REVIEW_ACCEPTS_FIXED_BACKGROUND_FIXED_"
-    "COORDINATE_LEVEL3_MATTER_IDENTITY_E_REPRO_NO_GRAVITY_EVOLUTION_NO_"
-    "EINSTEIN_SOURCE_NO_BIANCHI_NO_QFT_GR_SEAM_NO_LEVEL4_OR_5_PROMOTION"
+    "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_"
+    "ROBUSTNESS_GUARDRAIL_PACKET_PREPARED_LEVEL3_CLOSED_FAMILY_FIXED_"
+    "BACKGROUND_SYNTHESIS_ONLY_NO_NEW_PDE_SOLVE_NO_GENERAL_THEOREM_NO_"
+    "PILLAR_SOURCE_BIANCHI_SEAM_OR_MASTER_ACTION_PROMOTION"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2176,7 +2176,7 @@ SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
 )
 LIVE_TARGET_KIND = (
     "scalar_stress_energy_covariant_divergence_identity_multi_background_"
-    "robustness_guardrail_packet"
+    "robustness_calculation_execution"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
