@@ -15,6 +15,9 @@ Operational maintenance is separate from scientific authority. Its bounded curre
 INDEPENDENT REGISTRY-GUARDRAIL REVIEW
 The independent review in `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v0.json` accepts the frozen debt counts and identity sets, subject to versioned source-hash and statement-line-hash corrections, and accepts the v0 packet only as preparation evidence. It rejects migration-execution readiness because byte-identical JSONL reconstruction and fail-closed external authority/history binding were not demonstrated. The versioned v1 corrective guardrail is recommended but not selected; both current targets remain unchanged and registry migration remains unauthorized.
 
+CORRECTIVE REGISTRY GUARDRAIL V1 PREPARATION
+`formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v1.json` prepares a corrective hybrid contract: canonical projection/history data, separately lossless byte custody, committed external trust anchors, full SHA-256 record identities, strict schemas and typed controls, a 496-path static consumer source map with runtime tracing still pending, and separate read/write API contracts. It creates no production projection, index, shard, custody payload, API, consumer migration, authority rotation, cutover, or monolith retirement. Independent v1 review is required; registry migration execution remains unauthorized.
+
 TECHNICAL-DEBT BASELINE CORRECTION
 `formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json` is the effective clean-checkout-reproducible evidence correction for the frozen debt counts and identity sets. It preserves v0 as an immutable historical artifact, binds normalized source bytes at review commit `887d1b2f`, and corrects the 50 axiom plus 20 opaque empty statement-line hashes. It does not reclassify debt, change any count or identity set, rotate either target, or authorize registry migration.
 The v0 registry-sharding artifacts are likewise checked as immutable `c60cebde` evidence rather than regenerated from worktree-sensitive source hashes. A future corrective guardrail must bind normalized committed inputs before any execution target can be selected.
@@ -39,6 +42,7 @@ DEVELOPER QUICKSTART
 - Validate immutable v0 repair custody: `.\py.ps1 -m pytest -q formal/python/tests/test_legacy_discovery_report_fixture_repair.py`
 - Validate the versioned repair-evidence correction: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_correction_v1 --check`
 - Validate scoped raw-clean acceptance: `.\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check`
+- Validate the corrective registry guardrail v1 preparation: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1 --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 

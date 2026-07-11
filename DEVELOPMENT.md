@@ -15,6 +15,11 @@ authority. Its independent review rejects execution readiness and recommends a
 versioned v1 corrective guardrail without selecting it. Registry migration and
 both target rotations therefore remain unauthorized.
 
+The corrective v1 guardrail is now prepared for independent review. It freezes
+canonical projection/history contracts plus separate byte-exact custody,
+external committed trust anchors, strict typed controls, and static consumer
+classification. No production migration component or authority change exists.
+
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
 bindings only and preserves every frozen debt count, identity set, and target.
@@ -71,6 +76,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m pytest -q formal/python/tests/test_legacy_discovery_report_fixture_repair.py
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_correction_v1 --check
 .\py.ps1 -m formal.python.tools.legacy_discovery_report_fixture_repair_acceptance --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_guardrail_v1 --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

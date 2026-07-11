@@ -1,0 +1,44 @@
+{
+  "boundary": {
+    "custody_payload_created": false,
+    "legacy_monolith_modified_or_retired": false,
+    "migration_execution_authorized": false
+  },
+  "compatibility_reconstruction": {
+    "acceptance": "BYTE_IDENTICAL_TO_FROZEN_LEGACY_SOURCE",
+    "decompressed_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "decompressed_size_bytes": 52340650,
+    "semantic_reconstruction_alone_sufficient": false
+  },
+  "container_contract": {
+    "algorithm": "RFC1952_GZIP_SINGLE_MEMBER_DEFLATE",
+    "compressed_container_hash_is_normative_before_execution": false,
+    "compression_level": 9,
+    "execution_must_bind_compressed_sha256": true,
+    "flg": 0,
+    "forbid_concatenated_members": true,
+    "forbid_extra_field": true,
+    "forbid_filename": true,
+    "forbid_header_comment": true,
+    "forbid_trailing_bytes": true,
+    "mtime": 0,
+    "require_crc32_and_isize": true,
+    "streaming_decompression_maximum_bytes": 52340650
+  },
+  "reference_observation_non_normative": {
+    "compressed_sha256_windows_python_3_10": "3268402294630434a426b4a9b61ecc2d938bfba43e4a66a92f690e8aa251df16",
+    "compressed_size_bytes_windows_python_3_10": 4781507,
+    "current_runtime_round_trip": true,
+    "current_runtime_transient_size_bytes": 4781507,
+    "reason_non_normative": "GZIP_CONTAINER_BYTES_CAN_VARY_BY_COMPRESSOR_AND_OS_HEADER;_DECOMPRESSED_SOURCE_IDENTITY_IS_NORMATIVE"
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_LEGACY_BYTE_CUSTODY_CONTRACT_20260711_v1",
+  "source_identity": {
+    "git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "size_bytes": 52340650,
+    "source_commit": "f9168ab5f566fb2019b9e76e68ff3e60e5c0dc52"
+  },
+  "status": "LOSSLESS_CUSTODY_CONTRACT_PREPARED_NO_CUSTODY_PAYLOAD_OR_MIGRATION_EXECUTION"
+}

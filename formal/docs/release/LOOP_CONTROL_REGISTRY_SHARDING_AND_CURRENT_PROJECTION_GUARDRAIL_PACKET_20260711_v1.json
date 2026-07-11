@@ -1,0 +1,553 @@
+{
+  "api_contract": {
+    "history_lookup_loads_only_index_selected_shard": true,
+    "integrity_verification_bypass_parameter_allowed": false,
+    "missing_and_ambiguous_ids_raise_distinct_typed_errors": true,
+    "read_api": [
+      "load_current_projection()",
+      "get_current_target()",
+      "get_current_maintenance_target()",
+      "get_current_workstream(workstream_id)",
+      "get_historical_record(record_id)",
+      "iter_historical_records(...)",
+      "verify_registry_integrity()",
+      "reconstruct_legacy_registry()"
+    ],
+    "read_module_separate_from_write_module": true,
+    "write_contract": {
+      "closed_history_mutation_api_exists": false,
+      "current_projection_only": true,
+      "expected_old_hash_required": true,
+      "external_authority_evidence_required": true
+    }
+  },
+  "authorization": {
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "migration_execution_authorized": false,
+    "next_action": "review_loop_control_registry_sharding_and_current_projection_guardrail_packet_v1",
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0"
+  },
+  "boundary": {
+    "compatibility_custody_payload_created": false,
+    "consumer_migration_started": false,
+    "current_projection_generated": false,
+    "history_index_generated": false,
+    "history_shards_generated": false,
+    "legacy_monolith_modified_or_retired": false,
+    "maintenance_target_rotated": false,
+    "production_reader_or_writer_api_created": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false,
+    "scientific_artifacts_modified": false,
+    "scientific_claim_or_blocker_movement": false,
+    "scientific_target_rotated": false
+  },
+  "canonical_history_contract": {
+    "empty_shards_allowed": false,
+    "index_additional_properties_allowed": false,
+    "jsonl_line_contract": "ONE_COMPLETE_CANONICAL_OBJECT_UTF8_NO_BOM_LF_FINITE_NO_DUPLICATE_KEYS",
+    "maximum_uncompressed_shard_bytes": 5242880,
+    "range_contract": "CONTIGUOUS_NONOVERLAPPING_GAP_FREE_SORTED_RECORD_ID_RANGES",
+    "shard_additional_properties_allowed": false,
+    "shard_closed_and_immutable_after_creation": true,
+    "unique_shard_ids_and_paths": true
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "consumer_source_map": {
+    "consumer_count": 496,
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_20260711_v1.json",
+    "runtime_completeness_proved": false,
+    "sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+    "static_literal_external_path_count": 493
+  },
+  "current_projection_contract": {
+    "additional_properties_allowed": false,
+    "maximum_bytes_exclusive": 1048576,
+    "recursive_additional_properties_allowed": false,
+    "required_top_level_fields": [
+      "schema_id",
+      "projection_version",
+      "status",
+      "source_legacy_identity",
+      "history_index_pointer",
+      "scientific_authority",
+      "maintenance_authority",
+      "active_scientific_workstream",
+      "active_blockers",
+      "claim_ceiling",
+      "nonpromotion_assertions",
+      "current_artifacts"
+    ],
+    "serialization": "CANONICAL_SORTED_UTF8_NO_BOM_LF_TERMINAL_NEWLINE_FINITE_JSON",
+    "source_mappings": {
+      "active_blockers": {
+        "emit": "ROW_ID_STATUS_AND_EVIDENCE_POINTER_ONLY_NO_FULL_ROW_PAYLOAD",
+        "include_statuses": [
+          "blocked",
+          "missing",
+          "not_assessed",
+          "partial"
+        ],
+        "row_arrays": [
+          "pillar_readiness_rows",
+          "seam_readiness_rows"
+        ],
+        "source_git_blob": "85711a7c8cb0bc6a1f77d85cf3873726a5d6aa22",
+        "source_path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+        "source_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+      },
+      "active_scientific_workstream": {
+        "source_pointer": "/active_workstreams/0",
+        "source_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+      },
+      "claim_ceiling": {
+        "source_pointers": [
+          "/active_workstreams/0/claim_ceiling_level",
+          "/active_workstreams/0/claim_status",
+          "/active_workstreams/0/strict_packet_result"
+        ]
+      },
+      "maintenance_authority": {
+        "source_path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+        "source_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b"
+      },
+      "nonpromotion_assertions": {
+        "required_source_value": "no",
+        "source_boolean_or_no_fields": [
+          "/active_workstreams/0/unit_closure_claimed",
+          "/active_workstreams/0/pillar_or_seam_admissibility_claimed",
+          "/active_workstreams/0/level_four_or_five_authorized",
+          "/active_workstreams/0/physical_calibration_authorized",
+          "/active_workstreams/0/cross_sector_coupling_claim_authorized",
+          "/active_workstreams/0/C_k_action_embedding_authorized",
+          "/active_workstreams/0/ccft_resumed",
+          "/active_workstreams/0/master_action_promoted"
+        ]
+      },
+      "scientific_authority": {
+        "source_pointer": "/current_projection_v0",
+        "source_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+      }
+    }
+  },
+  "external_trust_anchors": {
+    "authority_commitment_sha256": "fd4348411236648d6216900eced59524b87c561bfa0d36186cf4c4d19a2e6b34",
+    "candidate_owned_expected_hashes_trusted": false,
+    "current_authoritative_surfaces_git_blob": "d46c5fb1966dcefc6b923776b7d94c4f5009b889",
+    "current_authoritative_surfaces_path": "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+    "current_authoritative_surfaces_sha256": "cca3e7cb1855919bae8e5f189f04eb485bf2e2529aaff5e22c2a06e48b316248",
+    "fixture_repair_acceptance_sha256": "b1b0a6a68653e8f7e8e88eaf771be8ae1999f65131f3886d753031504a14a5f8",
+    "maintenance_authority_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+    "rejected_v0_review_sha256": "5e43181b11a4d302a301bd915a43a40636bf947d93edc9f327e9c0a7beceb485",
+    "source_registry_git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+    "source_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "source_registry_size_bytes": 52340650,
+    "technical_debt_baseline_v1_sha256": "a15b323953eb2e27de531dff9a094944ca398e80ddd1fe7bb04015c2889766ce"
+  },
+  "legacy_byte_custody_contract": {
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_LEGACY_BYTE_CUSTODY_CONTRACT_20260711_v1.json",
+    "sha256": "bc35c992c9b9fd7dd9c2e84ed6d5b89463b3ce8eb13dc2f7c7d1c539b4d23ce9"
+  },
+  "mirror_classification": {
+    "/active_workstreams/0": "CURRENT_SCIENTIFIC_MIRROR_WITH_SOURCE_COPY_RETAINED_AS_HISTORY",
+    "/current_projection_v0": "LEGACY_COMPATIBILITY_CONTAINER_NEVER_V1_AUTHORITY",
+    "/current_target_state": "BULKY_HISTORICAL_MIRROR_CONTAINER_NEVER_V1_AUTHORITY",
+    "/current_target_state/active_workstreams/0": "NESTED_COMPATIBILITY_MIRROR_NOT_INDEPENDENT_RECORD"
+  },
+  "negative_control_count": 52,
+  "negative_controls": [
+    {
+      "control_id": "REGISTRY-V1-NC-001",
+      "expected_error_code": "V1-E-AUTHORITY-EXTERNAL-BINDING",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "authority_drift_with_rebound_fingerprint",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-002",
+      "expected_error_code": "V1-E-INDEX-POINTER",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "broken_current_index_pointer",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-003",
+      "expected_error_code": "V1-E-HISTORY-EXTERNAL-ROOT",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "changed_history_with_rebound_index",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-004",
+      "expected_error_code": "V1-E-SHARD-ID-DUPLICATE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "duplicate_shard_id",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-005",
+      "expected_error_code": "V1-E-JSON-NONFINITE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "nan_history_with_rebound_index",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-006",
+      "expected_error_code": "V1-E-JSONL-NONCANONICAL",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "noncanonical_jsonl",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-007",
+      "expected_error_code": "V1-E-PROJECTION-SIZE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "oversized_current_projection",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-008",
+      "expected_error_code": "V1-E-MAINTENANCE-TARGET-CARDINALITY",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "two_maintenance_targets",
+      "v0_false_acceptance_regression": true
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-009",
+      "expected_error_code": "V1-E-PROJECTION-FIELD-MISSING",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "missing_projection_field",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-010",
+      "expected_error_code": "V1-E-PROJECTION-FIELD-EXTRA",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "extra_projection_field",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-011",
+      "expected_error_code": "V1-E-HISTORY-PROMOTED",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "history_record_in_projection",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-012",
+      "expected_error_code": "V1-E-CURRENT-DEMOTED",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "current_record_only_in_history",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-013",
+      "expected_error_code": "V1-E-SCIENTIFIC-TARGET-CARDINALITY",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "two_scientific_targets",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-014",
+      "expected_error_code": "V1-E-CLAIM-CEILING",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "claim_ceiling_drift",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-015",
+      "expected_error_code": "V1-E-BLOCKER-COMMITMENT",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "blocker_commitment_drift",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-016",
+      "expected_error_code": "V1-E-NONPROMOTION-COMMITMENT",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "nonpromotion_commitment_drift",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-017",
+      "expected_error_code": "V1-E-SHARD-MISSING",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "missing_shard",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-018",
+      "expected_error_code": "V1-E-SHARD-EXTRA",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "extra_shard",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-019",
+      "expected_error_code": "V1-E-SHARD-PATH-DUPLICATE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "duplicate_shard_path",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-020",
+      "expected_error_code": "V1-E-SHARD-EMPTY",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "empty_shard",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-021",
+      "expected_error_code": "V1-E-SHARD-SIZE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "oversized_shard",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-022",
+      "expected_error_code": "V1-E-SHARD-ORDER",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "reordered_shards",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-023",
+      "expected_error_code": "V1-E-SHARD-RANGE-GAP",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "range_gap",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-024",
+      "expected_error_code": "V1-E-SHARD-RANGE-OVERLAP",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "range_overlap",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-025",
+      "expected_error_code": "V1-E-SHARD-HASH",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "incorrect_shard_hash",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-026",
+      "expected_error_code": "V1-E-RECORD-COUNT",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "incorrect_record_count",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-027",
+      "expected_error_code": "V1-E-RECORD-ID-DUPLICATE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "duplicate_record_id",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-028",
+      "expected_error_code": "V1-E-RECORD-ID-FORGED",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "forged_record_id",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-029",
+      "expected_error_code": "V1-E-RECORD-MISSING",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "missing_record",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-030",
+      "expected_error_code": "V1-E-RECORD-EXTRA",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "extra_record",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-031",
+      "expected_error_code": "V1-E-SOURCE-IDENTITY-DUPLICATE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "duplicate_source_identity",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-032",
+      "expected_error_code": "V1-E-RECORD-ID-AMBIGUOUS",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "ambiguous_record_id",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-033",
+      "expected_error_code": "V1-E-UTF8-BOM",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "utf8_bom",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-034",
+      "expected_error_code": "V1-E-UTF8-INVALID",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "invalid_utf8",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-035",
+      "expected_error_code": "V1-E-JSONL-CRLF",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "crlf_jsonl",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-036",
+      "expected_error_code": "V1-E-TERMINAL-NEWLINE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "missing_terminal_newline",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-037",
+      "expected_error_code": "V1-E-JSONL-BLANK",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "blank_jsonl_line",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-038",
+      "expected_error_code": "V1-E-JSON-KEY-DUPLICATE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "duplicate_json_key",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-039",
+      "expected_error_code": "V1-E-SCHEMA-VERSION",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "schema_version_drift",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-040",
+      "expected_error_code": "V1-E-PATH-TRAVERSAL",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "path_traversal",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-041",
+      "expected_error_code": "V1-E-CLOSED-SHARD-WRITE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "closed_shard_write",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-042",
+      "expected_error_code": "V1-E-WRITE-SCOPE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "current_writer_touches_history",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-043",
+      "expected_error_code": "V1-E-VERIFY-BYPASS",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "integrity_verification_bypass",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-044",
+      "expected_error_code": "V1-E-MONOLITH-READER",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "active_monolith_reader_remaining",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-045",
+      "expected_error_code": "V1-E-CONSUMER-UNCLASSIFIED",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "unclassified_consumer",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-046",
+      "expected_error_code": "V1-E-RUNTIME-COVERAGE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "runtime_trace_incomplete",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-047",
+      "expected_error_code": "V1-E-CUSTODY-GZIP-MULTIMEMBER",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "gzip_multiple_members",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-048",
+      "expected_error_code": "V1-E-CUSTODY-GZIP-TRAILING",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "gzip_trailing_bytes",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-049",
+      "expected_error_code": "V1-E-CUSTODY-GZIP-HEADER",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "gzip_header_drift",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-050",
+      "expected_error_code": "V1-E-CUSTODY-SIZE",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "custody_decompressed_size_mismatch",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-051",
+      "expected_error_code": "V1-E-CUSTODY-HASH",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "custody_decompressed_hash_mismatch",
+      "v0_false_acceptance_regression": false
+    },
+    {
+      "control_id": "REGISTRY-V1-NC-052",
+      "expected_error_code": "V1-E-CUSTODY-SEMANTIC-ROOT",
+      "implementation_status": "REQUIRED_EXECUTION_REGRESSION_NOT_RUN_BY_PREPARATION",
+      "mutation": "custody_history_semantic_root_disagreement",
+      "v0_false_acceptance_regression": false
+    }
+  ],
+  "packet_id": "LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v1",
+  "record_accounting": {
+    "authority_commitment_sha256": "fd4348411236648d6216900eced59524b87c561bfa0d36186cf4c4d19a2e6b34",
+    "full_record_identity_root_sha256": "67a23fda6348a2a6e12e4c2af775d115c692ecbe4d0650f0844a982d869e112d",
+    "identity_payload_pointer_root_sha256": "a97799ea412006dde3c259b718b10aad9dee7012181611f3f1d5f1a1e821a967",
+    "maximum_canonical_payload_bytes": 2124270,
+    "original_pointer_set_sha256": "219f4bc866b731b74ef50a439b6a869d8add33c6c5ce8e83a621115c1649c6bf",
+    "root_field_record_count": 4152,
+    "total_record_count": 4691,
+    "workstream_record_count": 539
+  },
+  "record_identity_contract": {
+    "digest": "FULL_SHA256_64_HEX_NO_TRUNCATION",
+    "independent_of_migrated_list_position": true,
+    "independent_of_shard_placement": true,
+    "prefix": "lcr1:",
+    "preimage_fields": [
+      "domain",
+      "record_class",
+      "source_path",
+      "source_git_blob",
+      "logical_key",
+      "original_json_pointer",
+      "payload_sha256",
+      "identical_occurrence_ordinal"
+    ]
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v1",
+  "status": "CORRECTIVE_V1_GUARDRAIL_PREPARED_NO_PRODUCTION_LAYOUT_API_CONSUMER_MIGRATION_OR_EXECUTION_AUTHORITY"
+}

@@ -819,6 +819,7 @@ import ToeFormal.Release.LegacyDiscoveryReportFixtureRepairAcceptance
 import ToeFormal.Release.LegacyDiscoveryReportFixtureRepairCorrectionV1
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailIndependentReview
 import ToeFormal.Release.LoopControlRegistryShardingGuardrailPacket
+import ToeFormal.Release.LoopControlRegistryShardingGuardrailPacketV1
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
 import ToeFormal.Release.V01CriticizabilityReadinessAdjudicationResultReview
 import ToeFormal.Release.V01DependencyRemediationCloseoutAfterTranche004Movement
@@ -1058,6 +1059,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def trackedModuleCount : Nat := 1051
+def trackedModuleCount : Nat := 1052
 
 end ToeFormalAll

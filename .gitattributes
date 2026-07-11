@@ -128,3 +128,9 @@ formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILI
 formal/python/tests/test_legacy_discovery_report_fixture_repair_acceptance.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_repair_acceptance.py text eol=lf
 formal/toe_formal/ToeFormal/Release/LegacyDiscoveryReportFixtureRepairAcceptance.lean text eol=lf
+formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v1.json text eol=lf
+formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_20260711_v1.json text eol=lf
+formal/docs/release/LOOP_CONTROL_REGISTRY_LEGACY_BYTE_CUSTODY_CONTRACT_20260711_v1.json text eol=lf
+formal/python/tests/test_loop_control_registry_sharding_guardrail_packet_v1.py text eol=lf
+formal/python/tools/loop_control_registry_sharding_guardrail_v1.py text eol=lf
+formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingGuardrailPacketV1.lean text eol=lf
