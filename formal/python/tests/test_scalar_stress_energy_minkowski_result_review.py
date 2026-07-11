@@ -88,14 +88,11 @@ def test_review_is_preserved_after_curved_guardrail_rotation() -> None:
     assert review["status"] == "paused"
     assert review["selected_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
-        "background_robustness_v0_result"
-    )
-    assert state["live_next_target"] == (
         "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
     )
+    assert state["live_next_target"] == "execute_pillar_seam_unit_mapping_ledger_v0"
     assert active["workstream_id"] == state["live_next_target"]
-    assert active["claim_status"] == "accepted_level_3_scoped_e_repro_exact_four_case_family_only"
+    assert active["claim_status"] == "guardrail_prepared_audit_only_execution_pending"
 
 
 def test_successful_review_preserves_the_two_minkowski_equation_surfaces() -> None:

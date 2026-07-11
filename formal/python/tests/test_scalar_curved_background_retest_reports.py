@@ -142,15 +142,12 @@ def test_prior_guardrail_execution_and_review_are_preserved_after_rotation() -> 
     assert review["status"] == "paused"
     assert review["selected_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_"
-        "background_robustness_v0_result"
-    )
-    assert state["live_next_target"] == (
         "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
     )
+    assert state["live_next_target"] == "execute_pillar_seam_unit_mapping_ledger_v0"
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
-    assert active["claim_status"] == "accepted_level_3_scoped_e_repro_exact_four_case_family_only"
+    assert active["claim_status"] == "guardrail_prepared_audit_only_execution_pending"
 
 
 def test_execution_report_preserves_locally_flat_interpretation() -> None:

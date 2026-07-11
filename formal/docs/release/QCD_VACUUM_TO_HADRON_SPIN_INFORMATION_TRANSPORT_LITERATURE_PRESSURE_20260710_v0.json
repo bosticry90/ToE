@@ -1,0 +1,83 @@
+{
+  "active_lane_interrupted": false,
+  "captured_at_utc": "2026-07-10T00:00:00Z",
+  "claim_upgrade": false,
+  "classification": "peer_reviewed_experimental_qcd_evidence_relevant_to_qft_qm_stat_and_seam_transport_nonpromotional",
+  "concept_id": "qcd_vacuum_to_hadron_spin_information_transport",
+  "current_live_target_after_intake": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+  "current_live_target_before_intake": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+  "future_questions": {
+    "ccft": "Could a QCD-derived effective coherence model predict a correlation-decay law distinguishable from standard hadronization models?",
+    "master_action": "Can a future candidate action recover non-Abelian color gauge structure and its vacuum phases rather than merely append them?",
+    "qft_pillar": "Can a future full pillar represent non-Abelian gauge fields, vacuum condensates, confinement, hadronization, composite states, and spin transport?",
+    "qm_stat": "Can separation-dependent spin-correlation loss be modeled as a controlled quantum-information channel without assuming entanglement or a unique decoherence mechanism?",
+    "seam_theory": "Which invariants can survive when source and target effective objects differ?"
+  },
+  "measured_result": {
+    "collision_system": "proton-proton",
+    "control_channels_consistent_with_zero": [
+      "short_range Lambda-Lambda",
+      "short_range anti-Lambda-anti-Lambda",
+      "all reported long-range hyperon-pair channels",
+      "K0S-K0S spin-zero control",
+      "PYTHIA 8.3 baseline"
+    ],
+    "centre_of_mass_energy_GeV": 200,
+    "pair_channel": "short_range Lambda-anti-Lambda",
+    "relative_polarization": 0.181,
+    "significance_standard_deviations": 4.4,
+    "statistical_uncertainty": 0.035,
+    "systematic_uncertainty": 0.022
+  },
+  "non_authorizing_context_for_unit_ledger": {
+    "role": "external seam-transport context only",
+    "unit_assignments_imported": false,
+    "unit_ledger_scope_changed": false,
+    "unit_mapping_rows_authorized_by_this_source": 0
+  },
+  "nonclaims": [
+    "matter created from zero energy",
+    "virtual particles directly imaged as classical objects",
+    "QCD vacuum is a classical ether",
+    "complete entanglement tensor measured",
+    "decoherence uniquely established as the correlation-loss mechanism",
+    "CCFT describes or predicts QCD hadronization",
+    "CCFT validated",
+    "candidate master action predicts or derives QCD",
+    "C_k constraints established as fundamental laws",
+    "QFT pillar completed",
+    "QFT-GR seam advanced or closed",
+    "quantum gravity tested",
+    "ToE claim or level upgraded"
+  ],
+  "primary_source": {
+    "arxiv_id": "2506.05499",
+    "article_title": "Measuring spin correlation between quarks during QCD confinement",
+    "authors": "STAR Collaboration",
+    "doi": "10.1038/s41586-025-09920-0",
+    "journal": "Nature",
+    "journal_citation": "Nature 650, 65-71 (2026)",
+    "published_date": "2026-02-04",
+    "url": "https://www.nature.com/articles/s41586-025-09920-0"
+  },
+  "provenance_status": "primary_article_verified_20260710",
+  "scientific_interpretation_boundary": {
+    "authors_interpretation": "The short-range hadron-level correlation is evidence for spin-correlated strange quark-antiquark structure associated with the QCD vacuum and preserved through hadronization.",
+    "decoherence_status": "weaker long-range correlation is consistent with decoherence or other interaction mechanisms and is not a unique mechanism identification",
+    "direct_measurement": "final-state hyperon-pair relative polarization inferred from weak-decay angular distributions",
+    "entanglement_status": "a general entanglement conclusion requires fuller correlation-tensor and feed-down analysis",
+    "vacuum_status": "structured relativistic quantum-field ground state, not literal nothing and not a material ether"
+  },
+  "seam_transport_pattern": {
+    "failure_or_decoherence_condition": "correlation weakens with increasing pair separation; the responsible mechanism remains unresolved",
+    "measurement_map": "weak-decay directions to fitted hyperon-pair relative polarization",
+    "physical_channel": "nonperturbative confinement and hadronization",
+    "preserved_quantity": "short-range spin correlation",
+    "source_object": "spin-correlated strange quark-antiquark pair associated with the QCD vacuum interpretation",
+    "source_state": "QCD vacuum plus high-energy collision excitation",
+    "target_object": "short-range Lambda-anti-Lambda hyperon pair"
+  },
+  "selected_as_current_target": false,
+  "status": "external_qft_literature_pressure_verified_nonpromotional",
+  "schema_id": "QCD_VACUUM_TO_HADRON_SPIN_INFORMATION_TRANSPORT_LITERATURE_PRESSURE_20260710_v0"
+}

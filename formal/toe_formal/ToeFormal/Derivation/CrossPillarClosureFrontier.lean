@@ -197,7 +197,7 @@ def currentLiveNextStrictTargetV0 : String :=
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
-import ToeFormal.Derivation.ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview
+import ToeFormal.Derivation.PillarSeamUnitMappingLedgerGuardrailPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -436,7 +436,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+        "execute_pillar_seam_unit_mapping_ledger_v0"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -482,33 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the multi-background calculation result review. -/
+/-- Previous live target consumed by the unit-mapping ledger guardrail. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness_v0_result"
-
-/-- Current live target after the multi-background calculation result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
 
-/-- Evidence certificate for the accepted review that selected the live target. -/
+/-- Current live target after unit-mapping ledger guardrail preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "execute_pillar_seam_unit_mapping_ledger_v0"
+
+/-- Evidence certificate for the guardrail that selected the live target. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.lean"
+  "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerGuardrailPacket.lean"
 
-/-- Immutable review report supporting the current target transition. -/
+/-- Immutable guardrail report supporting the current target transition. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json"
+  "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json"
 
-/-- Accepted bounded review outcome supporting the current target. -/
+/-- Bounded guardrail outcome supporting the current target. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.reviewResult
+  PillarSeamUnitMappingLedgerGuardrailPacket.packetResult
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.strictReviewResult
+  PillarSeamUnitMappingLedgerGuardrailPacket.strictPacketResult
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.selectedNextTargetKind
+  PillarSeamUnitMappingLedgerGuardrailPacket.selectedNextTargetKind
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+    "execute_pillar_seam_unit_mapping_ledger_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -646,18 +646,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The accepted review evidence and claim ceiling support the unit-ledger target. -/
+/-- The guardrail evidence and claim ceiling support bounded ledger execution. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ScalarStressEnergyCovariantDivergenceIdentityMultiBackgroundRobustnessCalculationResultReview.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerGuardrailPacket.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json" ∧
+        "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_ROBUSTNESS_ACROSS_THE_EXACT_FOUR_ENUMERATED_FIXED_BACKGROUND_EVIDENCE_CHAINS" ∧
+        "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_TWELVE_ROW_UNIT_MAPPING_LEDGER_CONSTRUCTION_ONLY" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_RESULT_REVIEW_ACCEPTS_LEVEL3_CLOSED_ENUMERATED_FIXED_BACKGROUND_FIXED_COORDINATE_SHARED_LINEAGE_E_REPRO_ONLY_NO_THEOREM_NO_STATISTICAL_OR_ARBITRARY_BACKGROUND_GENERALIZATION_NO_LEVEL4_OR5" ∧
+        "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_OR_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_CK_ACTION_EMBEDDING_NO_MASTER_ACTION_PROMOTION" ∧
       currentLiveNextStrictTargetKindV0 =
-        "pillar_seam_unit_mapping_ledger_guardrail_packet" := by
+        "pillar_seam_unit_mapping_ledger_execution" := by
   constructor
   · rfl
   constructor

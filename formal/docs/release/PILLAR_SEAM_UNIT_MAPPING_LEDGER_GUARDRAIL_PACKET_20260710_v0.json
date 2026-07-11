@@ -1,0 +1,440 @@
+{
+  "authorization": {
+    "claim_ceiling_level_retained": 3,
+    "consumed_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
+    "execution_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "execution_target_kind": "pillar_seam_unit_mapping_ledger_execution",
+    "failure_target": "diagnose_pillar_seam_unit_mapping_ledger_v0_input_or_schema_mismatch",
+    "selection_basis": "unit mapping is a hard gate before Level 4/5, physical calibration, cross-sector coupling, or C_k action embedding"
+  },
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "arbitrary_missing_unit_assignments_authorized": false,
+    "ccft_resumed": false,
+    "cross_sector_coupling_claim_authorized": false,
+    "dimensionless_numerical_values_physically_calibrated": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_authorized": false,
+    "pillar_completion_claimed": false,
+    "qcd_equations_or_parameters_adopted": false,
+    "seam_admissibility_claimed": false,
+    "seam_closure_claimed": false,
+    "unit_closure_claimed": false
+  },
+  "captured_at_utc": "2026-07-10T00:00:00Z",
+  "determinism_contract": {
+    "canonical_json": "UTF-8, sorted keys, indent=2, terminal newline",
+    "execution_must_emit_manifest": true,
+    "execution_must_preserve_all_input_hashes": true,
+    "execution_must_run_each_negative_control_independently": true,
+    "execution_must_write_only_declared_outputs": true
+  },
+  "guardrail_decision_count": 16,
+  "guardrail_decisions": [
+    {
+      "decision_id": "all_four_input_artifact_hashes_match",
+      "required": true
+    },
+    {
+      "decision_id": "readiness_authority_schema_and_status_are_preserved",
+      "required": true
+    },
+    {
+      "decision_id": "exactly_seven_pillar_unit_rows_are_bound",
+      "required": true
+    },
+    {
+      "decision_id": "exactly_five_seam_unit_map_rows_are_bound",
+      "required": true
+    },
+    {
+      "decision_id": "all_twelve_source_row_ids_are_unique",
+      "required": true
+    },
+    {
+      "decision_id": "all_source_evidence_pointers_are_retained",
+      "required": true
+    },
+    {
+      "decision_id": "source_missing_partial_or_blocked_statuses_are_not_promoted",
+      "required": true
+    },
+    {
+      "decision_id": "every_quantity_declares_a_unit_convention",
+      "required": true
+    },
+    {
+      "decision_id": "every_dimensional_quantity_uses_an_explicit_dimension_vector",
+      "required": true
+    },
+    {
+      "decision_id": "natural_unit_reductions_name_constants_and_restoration_maps",
+      "required": true
+    },
+    {
+      "decision_id": "dimensionless_numerical_units_are_not_physical_calibration",
+      "required": true
+    },
+    {
+      "decision_id": "cross_convention_equalities_require_explicit_conversion_maps",
+      "required": true
+    },
+    {
+      "decision_id": "seam_compatibility_requires_matching_converted_dimensions",
+      "required": true
+    },
+    {
+      "decision_id": "unresolved_unit_assignments_remain_explicit_blockers",
+      "required": true
+    },
+    {
+      "decision_id": "qcd_literature_pressure_remains_non_authorizing_context",
+      "required": true
+    },
+    {
+      "decision_id": "all_claim_ceiling_and_nonpromotion_boundaries_are_preserved",
+      "required": true
+    }
+  ],
+  "input_artifacts": [
+    {
+      "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "role": "frozen pillar and seam readiness row authority",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+    },
+    {
+      "artifact_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
+      "role": "authorization and retained Level 3 claim ceiling",
+      "sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0"
+    },
+    {
+      "artifact_id": "TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0",
+      "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+      "role": "read-only equation inventory; no equation or unit adoption",
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e"
+    },
+    {
+      "artifact_id": "qcd_vacuum_to_hadron_spin_information_transport",
+      "path": "formal/docs/release/QCD_VACUUM_TO_HADRON_SPIN_INFORMATION_TRANSPORT_LITERATURE_PRESSURE_20260710_v0.json",
+      "role": "non-authorizing external seam-transport context only",
+      "sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724"
+    }
+  ],
+  "ledger_schema_contract": {
+    "allowed_unit_conventions": [
+      "SI_base_dimensions",
+      "declared_natural_units_with_explicit_constant_restoration_map",
+      "dimensionless_numerical_test_units_with_explicit_scale_binding_status"
+    ],
+    "canonical_SI_dimension_basis": [
+      "mass",
+      "length",
+      "time",
+      "electric_current",
+      "temperature",
+      "amount_of_substance",
+      "luminous_intensity"
+    ],
+    "mapping_row_required_fields": [
+      "source_quantity_id",
+      "target_quantity_id",
+      "source_dimension_vector",
+      "target_dimension_vector",
+      "conversion_map",
+      "converted_dimensions_match",
+      "mapping_status"
+    ],
+    "pillar_row_required_fields": [
+      "row_id",
+      "pillar_id",
+      "source_status",
+      "evidence_pointer",
+      "unit_convention",
+      "quantity_rows",
+      "conversion_assumptions",
+      "unresolved_items",
+      "adjudication_status"
+    ],
+    "quantity_row_required_fields": [
+      "quantity_id",
+      "symbol",
+      "physical_role",
+      "unit_convention",
+      "dimension_vector",
+      "declared_unit",
+      "source_pointer",
+      "assignment_status"
+    ],
+    "seam_row_required_fields": [
+      "row_id",
+      "seam_id",
+      "pillar_ids",
+      "source_status",
+      "evidence_pointer",
+      "mapping_rows",
+      "conversion_constants",
+      "unresolved_items",
+      "compatibility_status"
+    ],
+    "typed_unit_states": [
+      {
+        "state": "resolved",
+        "value_policy": "declared unit and dimension vector must be supported by an evidence pointer and an explicit convention"
+      },
+      {
+        "state": "unit_unknown",
+        "value_policy": "source evidence supplies no supported unit assignment; a declared unit or dimension vector may not be invented"
+      },
+      {
+        "state": "unresolved",
+        "value_policy": "available evidence is partial or conversion-dependent; an unresolved reason and restoration requirements remain required"
+      }
+    ],
+    "unresolved_policy": "Missing, partial, or otherwise unresolved source status must remain explicit. The execution may inventory, classify, and expose blockers but may not invent units, silently set c or hbar to one, or promote readiness."
+  },
+  "negative_control_count": 8,
+  "negative_controls": [
+    {
+      "control_id": "dropped_source_row",
+      "expected_failure": "exactly_seven_pillar_or_five_seam_rows_bound"
+    },
+    {
+      "control_id": "duplicate_source_row_id",
+      "expected_failure": "all_twelve_source_row_ids_are_unique"
+    },
+    {
+      "control_id": "source_status_promotion",
+      "expected_failure": "source_statuses_are_not_promoted"
+    },
+    {
+      "control_id": "missing_evidence_pointer",
+      "expected_failure": "all_source_evidence_pointers_are_retained"
+    },
+    {
+      "control_id": "implicit_natural_unit_conversion",
+      "expected_failure": "natural_unit_restoration_map_required"
+    },
+    {
+      "control_id": "dimensionless_test_value_promoted_to_physical_calibration",
+      "expected_failure": "dimensionless_numerical_units_are_noncalibrating"
+    },
+    {
+      "control_id": "dimension_vector_mismatch_marked_compatible",
+      "expected_failure": "converted_source_and_target_dimensions_must_match"
+    },
+    {
+      "control_id": "unresolved_assignment_silently_filled",
+      "expected_failure": "unresolved_unit_assignments_remain_blocked"
+    }
+  ],
+  "outputs_authorized": {
+    "execution_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0.json",
+    "ledger": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+    "manifest": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-MANIFEST-v0.json"
+  },
+  "packet_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_v0",
+  "packet_result": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_TWELVE_ROW_UNIT_MAPPING_LEDGER_CONSTRUCTION_ONLY",
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0",
+  "selected_next_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_execution",
+  "source_baseline": {
+    "pillar_row_count": 7,
+    "pillar_rows": [
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+        "guardrail_unit_state": "unit_unknown",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-QFT",
+        "pillar_plain_name": "Scalar/QFT reference pillar",
+        "pillar_scope": "bounded real-scalar reference route",
+        "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+        "status": "missing"
+      },
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+        "guardrail_unit_state": "unresolved",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-GR",
+        "pillar_plain_name": "General relativity pillar",
+        "pillar_scope": "classical metric and source-response route",
+        "row_id": "PILLAR-GR-units_and_dimensions-v0",
+        "status": "partial"
+      },
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+        "guardrail_unit_state": "unit_unknown",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-QM",
+        "pillar_plain_name": "Quantum mechanics pillar",
+        "pillar_scope": "state, observable, measurement, and open-system objects",
+        "row_id": "PILLAR-QM-units_and_dimensions-v0",
+        "status": "missing"
+      },
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+        "guardrail_unit_state": "unit_unknown",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-STAT",
+        "pillar_plain_name": "Statistical mechanics pillar",
+        "pillar_scope": "entropy, ensemble, coarse-graining, and transport objects",
+        "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+        "status": "missing"
+      },
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+        "guardrail_unit_state": "unresolved",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-EM",
+        "pillar_plain_name": "Electromagnetism pillar",
+        "pillar_scope": "U(1) gauge field, current, and stress-energy route",
+        "row_id": "PILLAR-EM-units_and_dimensions-v0",
+        "status": "partial"
+      },
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+        "guardrail_unit_state": "unresolved",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-SR",
+        "pillar_plain_name": "Special relativity pillar",
+        "pillar_scope": "Lorentz covariance and causal compatibility layer",
+        "row_id": "PILLAR-SR-units_and_dimensions-v0",
+        "status": "partial"
+      },
+      {
+        "assessment_reason": "Conservative science-readiness classification from the evidence inventory; legacy closure labels are not imported.",
+        "criterion_class": "entry_gating",
+        "criterion_description": "Units and dimensions",
+        "criterion_id": "units_and_dimensions",
+        "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+        "guardrail_unit_state": "unresolved",
+        "mandatory_for_exploratory_seam_entry": true,
+        "pillar_id": "PILLAR-COSMO",
+        "pillar_plain_name": "Cosmology pillar",
+        "pillar_scope": "GR/SR/STAT-dependent background route",
+        "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+        "status": "partial"
+      }
+    ],
+    "pillar_status_counts": {
+      "missing": 3,
+      "partial": 4
+    },
+    "seam_row_count": 5,
+    "seam_rows": [
+      {
+        "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+        "criterion_description": "Unit map",
+        "criterion_id": "unit_map",
+        "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+        "guardrail_unit_state": "unit_unknown",
+        "pillar_ids": [
+          "PILLAR-QFT",
+          "PILLAR-GR"
+        ],
+        "required_for_level_5_admissibility": true,
+        "row_id": "SEAM-QFT-GR-unit_map-v0",
+        "seam_id": "SEAM-QFT-GR",
+        "seam_plain_name": "Scalar/QFT-GR",
+        "status": "missing"
+      },
+      {
+        "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+        "criterion_description": "Unit map",
+        "criterion_id": "unit_map",
+        "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+        "guardrail_unit_state": "unit_unknown",
+        "pillar_ids": [
+          "PILLAR-QM",
+          "PILLAR-STAT"
+        ],
+        "required_for_level_5_admissibility": true,
+        "row_id": "SEAM-QM-STAT-unit_map-v0",
+        "seam_id": "SEAM-QM-STAT",
+        "seam_plain_name": "QM-STAT",
+        "status": "missing"
+      },
+      {
+        "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+        "criterion_description": "Unit map",
+        "criterion_id": "unit_map",
+        "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+        "guardrail_unit_state": "unresolved",
+        "pillar_ids": [
+          "PILLAR-EM",
+          "PILLAR-QFT"
+        ],
+        "required_for_level_5_admissibility": true,
+        "row_id": "SEAM-EM-QFT-unit_map-v0",
+        "seam_id": "SEAM-EM-QFT",
+        "seam_plain_name": "EM-QFT",
+        "status": "partial"
+      },
+      {
+        "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+        "criterion_description": "Unit map",
+        "criterion_id": "unit_map",
+        "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+        "guardrail_unit_state": "unresolved",
+        "pillar_ids": [
+          "PILLAR-SR",
+          "PILLAR-COSMO"
+        ],
+        "required_for_level_5_admissibility": true,
+        "row_id": "SEAM-SR-COSMO-unit_map-v0",
+        "seam_id": "SEAM-SR-COSMO",
+        "seam_plain_name": "SR-COSMO",
+        "status": "partial"
+      },
+      {
+        "assessment_reason": "Conservative seam-readiness classification; partial route records do not establish seam admissibility.",
+        "criterion_description": "Unit map",
+        "criterion_id": "unit_map",
+        "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+        "guardrail_unit_state": "unit_unknown",
+        "pillar_ids": [
+          "PILLAR-GR",
+          "PILLAR-QM"
+        ],
+        "required_for_level_5_admissibility": true,
+        "row_id": "SEAM-GR-QM-unit_map-v0",
+        "seam_id": "SEAM-GR-QM",
+        "seam_plain_name": "GR-QM",
+        "status": "missing"
+      }
+    ],
+    "seam_status_counts": {
+      "missing": 3,
+      "partial": 2
+    },
+    "total_bound_row_count": 12
+  },
+  "status": "prepared_guardrail_only_execution_not_run",
+  "strict_packet_result": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_OR_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_CK_ACTION_EMBEDDING_NO_MASTER_ACTION_PROMOTION"
+}
