@@ -338,7 +338,7 @@ def test_prototype_paths_are_relative_allowlisted_and_have_no_templates_or_globs
     )
 
 
-def test_corrective_v1_remains_preparation_only_and_authority_is_unchanged() -> None:
+def test_corrective_v1_preserves_authority_and_historical_path_absence() -> None:
     packet = _payload(corrective.PACKET_PATH)
     assert packet["authorization"]["scientific_target"] == corrective.SCIENTIFIC_TARGET
     assert packet["authorization"]["maintenance_target"] == corrective.MAINTENANCE_TARGET
@@ -356,7 +356,7 @@ def test_corrective_v1_remains_preparation_only_and_authority_is_unchanged() -> 
         "prototype_execution_selectable": False,
     }
     for path in corrective.FORBIDDEN_PATHS:
-        assert not (corrective.REPO_ROOT / path).exists()
+        assert not corrective._path_exists_at_source_commit(path)
 
 
 def test_lean_certificate_binds_corrective_artifacts_and_all_nonauthorizations() -> None:

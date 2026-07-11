@@ -1,0 +1,62 @@
+{
+  "authorization": {
+    "consumer_migration_authorized": false,
+    "control_harness_execution_authorized": false,
+    "implementation_authorized": false,
+    "independent_review_required": true,
+    "maintenance_target_rotation_authorized": false,
+    "new_api_writes_authorized": false,
+    "packet_target_is_current_maintenance_authority": false,
+    "prototype_execution_selected_or_authorized": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false,
+    "scientific_target_rotation_authorized": false,
+    "unit_ledger_execution_authorized": false
+  },
+  "boundary": {
+    "authority_cutover_or_target_rotation": false,
+    "consumer_cutover_started": false,
+    "current_projection_prototype_created": false,
+    "custody_payload_or_reconstruction_created": false,
+    "history_index_or_shards_created": false,
+    "legacy_monolith_modified_or_retired": false,
+    "production_reader_or_validator_implemented": false,
+    "runtime_schemas_installed": false,
+    "runtime_shadow_trace_executed": false,
+    "scientific_artifacts_or_claims_changed": false,
+    "stage_a_58_controls_executed": false,
+    "stage_b_60_controls_executed": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "contract_bundle": {
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v0.json",
+    "sha256": "272279d414591b25b3a519d22d92659f4a662ce1c9cbd5fadf3067f1eaa8f0bb"
+  },
+  "counts": {
+    "future_stage_b_total_control_count": 78,
+    "historical_absence_gate_count": 9,
+    "primary_control_count": 52,
+    "readiness_control_count": 8,
+    "runtime_schema_count": 10,
+    "stage_a_distinct_control_count": 58,
+    "stage_a_runtime_contract_control_count": 18,
+    "stage_a_total_control_count": 76,
+    "stage_b_distinct_control_count": 60
+  },
+  "execution_target_recommended_not_selected": "execute_loop_control_registry_sharding_read_only_prototype_v0",
+  "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+  "packet_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v0",
+  "packet_target": "prepare_loop_control_registry_sharding_read_only_prototype_execution_packet_v0",
+  "review_target_recommended_not_selected": "review_loop_control_registry_sharding_read_only_prototype_execution_packet_v0",
+  "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "source_commit": "6e4d1e11b1953b9712588464b31c12047555189c",
+  "status": "READ_ONLY_PROTOTYPE_EXECUTION_PREPARATION_PACKET_REVIEW_REQUIRED_NO_IMPLEMENTATION_EXECUTION_TARGET_ROTATION_MIGRATION_CUTOVER_OR_SCIENCE",
+  "v3_acceptance_binding": {
+    "accepted_review_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_INDEPENDENT_REVIEW_20260711_v3.json",
+    "accepted_review_sha256": "07353bc1c0d379518344aa16c25080fefb6dd9c1527cad4accb64216b15adae0",
+    "protocol_bundle_sha256": "ad65ceb56d3b284b3a55e433afc13745c3c574c9f2e7bf0fe367172924ea08e2",
+    "readiness_packet_sha256": "90037c92d74f4ab18be82863dd240065bc5ebd312e5b8647b52f1b3a549cb216",
+    "registry_migration_execution_readiness_accepted": false,
+    "schema_bundle_sha256": "86289bf922d60c3320f040779a6043cdb3f2acf3d5393ce7503ef9d3375f6cde"
+  }
+}

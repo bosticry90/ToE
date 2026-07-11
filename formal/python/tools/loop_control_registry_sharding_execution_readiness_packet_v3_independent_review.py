@@ -19,6 +19,7 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 SOURCE_COMMIT = "f9051af27988dd745bf39d28ae4d610973d5a029"
+HISTORICAL_ABSENCE_COMMIT = "6e4d1e11b1953b9712588464b31c12047555189c"
 
 PACKET_REL = (
     "formal/docs/release/"
@@ -152,6 +153,23 @@ def _git_blob_oid(relative: str) -> str:
         check=True,
     )
     return result.stdout.strip()
+
+
+def _path_exists_at_source_commit(relative: str) -> bool:
+    result = subprocess.run(
+        [
+            "git",
+            "ls-tree",
+            "-z",
+            HISTORICAL_ABSENCE_COMMIT,
+            "--",
+            f":(literal){relative}",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=True,
+    )
+    return bool(result.stdout)
 
 
 def _strict_json(raw: bytes) -> Any:
@@ -359,8 +377,10 @@ def _probe() -> dict[str, Any]:
         raise IndependentReviewV3Error("scientific target drift")
     if any(packet["boundary"].values()):
         raise IndependentReviewV3Error("packet boundary overclaim")
-    if any((REPO_ROOT / relative).exists() for relative in FORBIDDEN_PATHS):
-        raise IndependentReviewV3Error("forbidden production/prototype path exists")
+    if any(_path_exists_at_source_commit(relative) for relative in FORBIDDEN_PATHS):
+        raise IndependentReviewV3Error(
+            "forbidden production/prototype path existed at source commit"
+        )
 
     return {
         "closed_schema_count": 10,

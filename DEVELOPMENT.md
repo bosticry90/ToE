@@ -55,6 +55,11 @@ profiles are not executed, and independent v3 review remains mandatory.
 Independent v3 review accepts only that corrected preparation contract.
 Production validators, full-profile baselines, prototype execution, migration,
 cutover, and both authority rotations remain unimplemented or unauthorized.
+The read-only prototype execution packet prepares a later implementation only.
+It binds ten runtime evidence schemas and the staged `58 -> review -> 60 -> review`
+control lifecycle, while leaving all implementation, prototype, migration,
+cutover, target-rotation, unit-ledger, and claim authority closed until its own
+independent review.
 
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
@@ -122,6 +127,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v2_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v3 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v3_independent_review --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

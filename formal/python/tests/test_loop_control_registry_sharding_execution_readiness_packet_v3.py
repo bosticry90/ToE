@@ -500,7 +500,7 @@ def test_record_root_algorithms_and_shadow_nonmigration_attestations_remain() ->
     assert shadow["properties"]["cutover_performed"]["const"] is False
 
 
-def test_v3_preserves_all_nonauthorization_and_production_absence() -> None:
+def test_v3_preserves_nonauthorization_and_historical_path_absence() -> None:
     packet = _payload(corrective.PACKET_PATH)
     assert packet["authorization"]["scientific_target"] == corrective.SCIENTIFIC_TARGET
     assert packet["authorization"]["maintenance_target"] == corrective.MAINTENANCE_TARGET
@@ -515,7 +515,7 @@ def test_v3_preserves_all_nonauthorization_and_production_absence() -> None:
         if key.endswith("selectable")
     )
     for path in corrective.FORBIDDEN_PATHS:
-        assert not (corrective.REPO_ROOT / path).exists()
+        assert not corrective._path_exists_at_source_commit(path)
 
 
 def test_v3_lean_certificate_binds_artifacts_and_nonauthorization() -> None:

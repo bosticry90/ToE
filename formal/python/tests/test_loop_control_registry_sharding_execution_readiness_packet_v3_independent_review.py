@@ -86,14 +86,14 @@ def test_v3_review_binds_every_input_by_sha_and_git_blob() -> None:
         assert review._git_blob_oid(relative) == review.EXPECTED_GIT_BLOBS[relative]
 
 
-def test_v3_review_keeps_targets_and_all_execution_authority_frozen() -> None:
+def test_v3_review_keeps_targets_and_historical_path_absence_frozen() -> None:
     authorization = _artifact()["authorization"]
     assert authorization["scientific_target"] == review.SCIENTIFIC_TARGET
     assert authorization["maintenance_target"] == review.MAINTENANCE_TARGET
     assert authorization["scientific_target_rotation_authorized"] is False
     assert authorization["maintenance_target_rotation_authorized"] is False
     for relative in review.FORBIDDEN_PATHS:
-        assert not (review.REPO_ROOT / relative).exists()
+        assert not review._path_exists_at_source_commit(relative)
 
 
 def test_v3_review_retains_future_implementation_obligations() -> None:

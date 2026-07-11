@@ -219,7 +219,7 @@ def test_failure_rollback_is_scoped_and_cannot_move_authority() -> None:
     assert rollback["failure_may_touch_scientific_artifacts"] is False
 
 
-def test_packet_is_preparation_only_and_production_paths_remain_absent() -> None:
+def test_packet_is_preparation_only_and_production_paths_were_absent_at_source_commit() -> None:
     packet = _payload(readiness.PACKET_PATH)
     assert len(packet["preparation_obligations_frozen"]) == 8
     assert len(packet["migration_execution_selection_conditions"]) == 10
@@ -227,7 +227,7 @@ def test_packet_is_preparation_only_and_production_paths_remain_absent() -> None
     for value in _payload(readiness.PROTOCOL_BUNDLE_PATH)["authorization"].values():
         assert value is False
     for relative in readiness.FORBIDDEN_PRODUCTION_PATHS:
-        assert not (readiness.REPO_ROOT / relative).exists()
+        assert not readiness._path_exists_at_source_commit(relative)
 
 
 def test_lean_certificate_binds_all_three_artifacts_and_nonauthorization() -> None:

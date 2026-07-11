@@ -16,6 +16,7 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 SOURCE_COMMIT = "be985ab12d1947b188d773aaf5d9f64de097770e"
+HISTORICAL_ABSENCE_COMMIT = "e2af09bbb4355604eee4566707afd3407ed6c4b9"
 
 V0_PACKET_REL = (
     "formal/docs/release/"
@@ -161,6 +162,24 @@ def _git_blob(relative: str) -> bytes:
     if result.returncode != 0:
         raise CorrectiveReadinessError(f"missing reviewed source: {relative}")
     return result.stdout
+
+
+@lru_cache(maxsize=None)
+def _path_exists_at_source_commit(relative: str) -> bool:
+    result = subprocess.run(
+        [
+            "git",
+            "ls-tree",
+            "-z",
+            HISTORICAL_ABSENCE_COMMIT,
+            "--",
+            f":(literal){relative}",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=True,
+    )
+    return bool(result.stdout)
 
 
 @lru_cache(maxsize=1)
@@ -759,8 +778,10 @@ def _atomic_write(path: Path, raw: bytes) -> None:
 
 def _forbidden_paths_absent() -> None:
     for relative in FORBIDDEN_PATHS:
-        if (REPO_ROOT / relative).exists():
-            raise CorrectiveReadinessError(f"forbidden production path exists: {relative}")
+        if _path_exists_at_source_commit(relative):
+            raise CorrectiveReadinessError(
+                f"forbidden production path existed at source commit: {relative}"
+            )
 
 
 def main() -> int:

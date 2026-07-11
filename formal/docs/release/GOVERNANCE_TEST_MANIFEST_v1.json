@@ -31,6 +31,7 @@
     "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v2_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py": "TIER_INTEGRITY",
@@ -87,8 +88,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 64,
-      "expected_sha256": "91c8062836e6c0535e49a088d40528d0278e4e253471145ae3cdadaaf24ce883",
+      "expected_count": 65,
+      "expected_sha256": "3eab7bee35edba53b060f39f451eaf86990ee27ff9f5663ae5bd2c1a421a2074",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -119,6 +120,7 @@
         "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v2_independent_review.py",
         "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3.py",
         "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py",
+        "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py",

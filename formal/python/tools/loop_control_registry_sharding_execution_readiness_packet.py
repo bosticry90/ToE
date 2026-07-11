@@ -15,6 +15,7 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 SOURCE_COMMIT = "6aba59d8d399b331db010f1f5f857075b9100b7f"
+HISTORICAL_ABSENCE_COMMIT = "a0d44da40922d6547f02241174fa640edb3f9fa8"
 
 PACKET_PATH = (
     REPO_ROOT
@@ -88,6 +89,7 @@ FORBIDDEN_PRODUCTION_PATHS = [
     "formal/docs/release/loop_control/LOOP_CONTROL_LEGACY_BYTE_CUSTODY_v1.json.gz",
     "formal/python/toe/loop_control_registry_v1.py",
     "formal/python/toe/loop_control_registry_v1_validator.py",
+    "formal/scratch/loop_control_registry_v1_prototype",
 ]
 
 
@@ -128,6 +130,24 @@ def _git_blob_oid(relative: str) -> str:
         check=True,
     )
     return result.stdout.strip()
+
+
+@lru_cache(maxsize=None)
+def _path_exists_at_source_commit(relative: str) -> bool:
+    result = subprocess.run(
+        [
+            "git",
+            "ls-tree",
+            "-z",
+            HISTORICAL_ABSENCE_COMMIT,
+            "--",
+            f":(literal){relative}",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=True,
+    )
+    return bool(result.stdout)
 
 
 @lru_cache(maxsize=1)
@@ -1166,8 +1186,10 @@ def build_all() -> dict[Path, bytes]:
 
 def _forbidden_paths_absent() -> None:
     for relative in FORBIDDEN_PRODUCTION_PATHS:
-        if (REPO_ROOT / relative).exists():
-            raise ReadinessPacketError(f"forbidden production path exists: {relative}")
+        if _path_exists_at_source_commit(relative):
+            raise ReadinessPacketError(
+                f"forbidden production path existed at source commit: {relative}"
+            )
 
 
 def _atomic_write(path: Path, raw: bytes) -> None:

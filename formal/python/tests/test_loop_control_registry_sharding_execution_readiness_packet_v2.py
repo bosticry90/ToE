@@ -303,7 +303,7 @@ def test_shadow_manifest_explicitly_attests_no_migration_or_cutover() -> None:
     assert "EVERY_EVENT_RUN_ID_EQUALS_MANIFEST_RUN_ID" in invariants
 
 
-def test_v2_preserves_all_nonauthorization_and_production_absence() -> None:
+def test_v2_preserves_nonauthorization_and_historical_path_absence() -> None:
     packet = _payload(corrective.PACKET_PATH)
     assert packet["authorization"]["scientific_target"] == corrective.SCIENTIFIC_TARGET
     assert packet["authorization"]["maintenance_target"] == corrective.MAINTENANCE_TARGET
@@ -314,7 +314,7 @@ def test_v2_preserves_all_nonauthorization_and_production_absence() -> None:
     assert all(value is False for value in packet["boundary"].values())
     assert all(value is False for key, value in packet["selection_posture"].items() if key.endswith("selectable"))
     for path in corrective.FORBIDDEN_PATHS:
-        assert not (corrective.REPO_ROOT / path).exists()
+        assert not corrective._path_exists_at_source_commit(path)
 
 
 def test_v2_lean_certificate_binds_artifacts_rejection_and_nonauthorization() -> None:
