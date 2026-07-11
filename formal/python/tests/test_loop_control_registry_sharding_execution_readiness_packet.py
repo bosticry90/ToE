@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import subprocess
+import sys
 from typing import Any
 
 from formal.python.tools import (
@@ -48,7 +49,7 @@ def test_readiness_cli_check_is_read_only_and_passes() -> None:
     before = {path: path.read_bytes() for path in readiness.build_all()}
     result = subprocess.run(
         [
-            str(readiness.REPO_ROOT / ".venv/Scripts/python.exe"),
+            sys.executable,
             "-m",
             "formal.python.tools.loop_control_registry_sharding_execution_readiness_packet",
             "--check",
