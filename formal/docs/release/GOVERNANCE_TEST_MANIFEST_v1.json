@@ -17,6 +17,7 @@
     "formal/python/tests/test_repository_tracked_json_integrity_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_repository_yaml_toml_integrity_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_tooling_snapshot_content_index_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_technical_debt_baseline_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_scalar_route_submission_checkpoint_referential_integrity_correction_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_state_theory_dag.py": "TIER_CRITICAL",
     "formal/python/tests/test_loop_control_registry_envelope_integrity_gate.py": "TIER_CRITICAL",
@@ -67,8 +68,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 44,
-      "expected_sha256": "26a4d323f0d7a753ad2c53bdeca73632bec2d4ff07b577d5db05041f0f4a8a1f",
+      "expected_count": 45,
+      "expected_sha256": "cc2a83d3b9755d862a801de3bca03bab865378295f36d67c77aacaae905350fc",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -85,6 +86,7 @@
         "formal/python/tests/test_repository_tracked_json_integrity_gate.py",
         "formal/python/tests/test_repository_yaml_toml_integrity_gate.py",
         "formal/python/tests/test_tooling_snapshot_content_index_gate.py",
+        "formal/python/tests/test_technical_debt_baseline_gate.py",
         "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py",
         "formal/python/tests/test_scalar_route_submission_checkpoint_referential_integrity_correction_gate.py",
         "formal/python/tests/test_toe_status_language_lock_guard_gate.py",
