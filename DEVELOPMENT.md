@@ -81,6 +81,14 @@ preflight/candidate/trace reconciliation, satisfiable complete and blocked
 lifecycle subgraphs, and 15 new typed regressions. It awaits independent review
 and authorizes no implementation, Stage A, Stage B, prototype root, migration,
 cutover, write, target rotation, unit-ledger execution, or scientific promotion.
+The independent v2 review is `B-BLOCKED`. It derives all 111 schema edges but
+finds 14 dynamic candidate edges whose requiredness disagrees with the frozen
+schema, proves that the committed generator does not reproduce the frozen
+packet and contract in two detached runs, and rescans 592 call sites across 524
+paths at the immutable preparation commit rather than trusting the 584-call-site
+model witness. V2 is preserved, a versioned v3 successor is required before any
+Stage-A retry, and maintenance may pause while the separately guardrailed
+unit-ledger scientific target resumes.
 Validation is stated narrowly: focused preparation, review, authority, registry
 and exhaustive Lean validation passed; the combined predecessor invocation timed
 out, while its constituent suites subsequently passed independently; the full
@@ -158,6 +166,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2 --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

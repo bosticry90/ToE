@@ -36,6 +36,7 @@
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py": "TIER_INTEGRITY",
@@ -92,8 +93,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 69,
-      "expected_sha256": "7709fa43a681a20ab8bbb8d10b262889f761d12591fe09ac0cf48af893b510df",
+      "expected_count": 70,
+      "expected_sha256": "e75f8abbd37cdd8b52b6346d107c1c227f180825b4bcdced40c78944f8c254e2",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -129,6 +130,7 @@
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py",
+        "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py",

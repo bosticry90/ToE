@@ -1239,7 +1239,7 @@ def test_v2_integration_and_lean_certificate_bind_generated_evidence() -> None:
     )
     assert manifest["test_tiers"][relative_test] == "TIER_INTEGRITY"
     integrity = manifest["groups"]["integrity_gates"]
-    assert integrity["expected_count"] == len(integrity["tests"]) == 69
+    assert integrity["expected_count"] == len(integrity["tests"]) == 70
     assert relative_test in integrity["tests"]
     assert integrity["expected_sha256"] == v2.sha256(
         "\n".join(integrity["tests"]).encode("utf-8")
@@ -1252,7 +1252,7 @@ def test_v2_integration_and_lean_certificate_bind_generated_evidence() -> None:
         "import ToeFormal.Release."
         "LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV2"
     ) in aggregate
-    assert "def trackedModuleCount : Nat := 1066" in aggregate
+    assert "def trackedModuleCount : Nat := 1067" in aggregate
 
     lean = (
         v2.REPO_ROOT
