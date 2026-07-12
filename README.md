@@ -2743,3 +2743,23 @@ Historical calculation-execution outcome tokens:
 - This tranche prepares the guardrail only. It does not execute the ledger, complete unit assignments, claim unit closure, promote any pillar or seam, authorize Level 4/5, calibrate physical parameters, authorize cross-sector coupling, embed `C_k` in an action, resume CCFT, or promote the master action.
 - `PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUTHORIZES_BOUNDED_TWELVE_ROW_UNIT_MAPPING_LEDGER_CONSTRUCTION_ONLY`
 - `PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_PREPARED_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_OR_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_CK_ACTION_EMBEDDING_NO_MASTER_ACTION_PROMOTION`
+
+
+## Registry Stage-A One-Way Execution Successor
+
+- The first bounded Stage-A implementation stopped before creating a run root
+  because the reviewed v0 contract required reciprocal content hashes between
+  the source manifest and runtime manifest. The permanent diagnostic is
+  `V1-E-UNSATISFIABLE-ARTIFACT-MANIFEST-CYCLE`; the prototype never began and
+  the registry remained unchanged.
+- The v1 successor packet prepares only a directed source -> candidate ->
+  runtime -> execution-report -> terminal-envelope -> independent-review hash
+  chain. Its 12 DAG regressions remain outside the preterminal 76 controls so
+  terminal-mutation results cannot feed backward into the terminal hash.
+- This preparation does not authorize implementation changes, prototype
+  execution, Stage B, consumer migration, authority cutover, monolith
+  retirement, unit-ledger execution, or scientific promotion.
+
+```powershell
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
+```

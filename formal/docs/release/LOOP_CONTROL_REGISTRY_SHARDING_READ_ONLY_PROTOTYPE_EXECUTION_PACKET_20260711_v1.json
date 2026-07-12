@@ -1,0 +1,48 @@
+{
+  "authorization": {
+    "implementation_change_authorized": false,
+    "independent_review_required": true,
+    "maintenance_target_rotation_authorized": false,
+    "prototype_execution_authorized": false,
+    "registry_cutover_authorized": false,
+    "registry_migration_execution_authorized": false,
+    "scientific_target_rotation_authorized": false,
+    "stage_b_authorized": false,
+    "unit_ledger_execution_authorized": false
+  },
+  "boundary": {
+    "candidate_artifacts_created": false,
+    "consumer_migration_started": false,
+    "legacy_monolith_modified_or_retired": false,
+    "one_way_contract_prepared_only": true,
+    "prototype_execution_attempted": false,
+    "scientific_artifacts_or_claims_changed": false,
+    "terminal_execution_envelope_created": false,
+    "v0_implementation_amended": false
+  },
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "contract_bundle": {
+    "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v1.json",
+    "sha256": "ef1d51cd4a9a55c6affe0d7273d183eb69326474d0d0ab904ea13544dac1adff"
+  },
+  "counts": {
+    "authorized_implementation_path_count": 4,
+    "existing_stage_a_control_count": 76,
+    "runtime_schema_count": 7,
+    "successor_regression_control_count": 12
+  },
+  "execution_target_recommended_not_selected": "execute_loop_control_registry_sharding_read_only_prototype_v1",
+  "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+  "packet_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v1",
+  "packet_target": "prepare_loop_control_registry_sharding_read_only_prototype_execution_packet_v1",
+  "review_target_recommended_not_selected": "review_loop_control_registry_sharding_read_only_prototype_execution_packet_v1",
+  "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "source_commit": "04b9200fa7b5b60df4a78f27b6d6fd8905101a22",
+  "status": "ONE_WAY_STAGE_A_EXECUTION_SUCCESSOR_PACKET_PREPARED_INDEPENDENT_REVIEW_REQUIRED_NO_EXECUTION_MIGRATION_CUTOVER_OR_SCIENCE",
+  "v0_blocked_preflight": {
+    "classification": "blocked_preflight_contract_unsatisfiable",
+    "error_code": "V1-E-UNSATISFIABLE-ARTIFACT-MANIFEST-CYCLE",
+    "implementation_commit": "04b9200fa7b5b60df4a78f27b6d6fd8905101a22",
+    "source_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+  }
+}
