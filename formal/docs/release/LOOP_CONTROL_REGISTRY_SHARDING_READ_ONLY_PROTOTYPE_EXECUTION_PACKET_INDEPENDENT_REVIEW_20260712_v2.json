@@ -1,9 +1,8 @@
 {
   "accepted_findings": {
-    "complete_and_blocked_lifecycle_models_are_abstractly_satisfiable": true,
-    "consumer_rebinding_controls_are_present_and_typed": true,
+    "annotated_schema_subgraph_is_acyclic": true,
+    "committed_focused_permanent_control_test_passes": true,
     "full_4691_record_14_shard_byte_custody_model_reconstructs": true,
-    "schema_derived_hash_graph_is_acyclic": true,
     "source_protocol_schema_implementation_and_registry_roots_verify": true
   },
   "authority_and_nonclaim_review": {
@@ -47,22 +46,53 @@
       "severity": "BLOCKING"
     },
     {
-      "finding_id": "V2-IR-BLOCK-003-PREPARATION-COMMIT-CONSUMER-INVENTORY-OMITTED",
-      "impact": "THE_POSITIVE_WITNESS_SCANS_81A3555A_BUT_THE_IMMUTABLE_PREPARATION_COMMIT_HAS_EIGHT_MORE_CALL_SITES_ACROSS_TWO_MORE_CONSUMER_PATHS",
-      "required_disposition": "SUCCESSOR_REVIEW_FIXTURE_MUST_RECONCILE_TO_A_FRESH_SCAN_OF_THE_EXACT_REVIEWED_COMMIT_WITHOUT_MAKING_THE_COUNT_NORMATIVE_FOR_FUTURE_EXECUTION",
+      "finding_id": "V2-IR-BLOCK-003-INVENTORY-ALGORITHM-IMPLEMENTATION-MISMATCH",
+      "impact": "THE_FROZEN_CONTRACT_REQUIRES_SEVEN_LITERAL_AST_DYNAMIC_AND_STRUCTURED_DISCOVERY_MECHANISMS_BUT_THE_EXECUTABLE_SCANNER_AND_REVIEW_WITNESS_USE_TWO_SCHEMA_FORBIDDEN_LITERAL_OR_HARDCODED_MECHANISMS",
+      "required_disposition": "SUCCESSOR_MUST_IMPLEMENT_THE_FROZEN_REPOSITORY_ROOTED_MULTI_PASS_SCANNER_AND_VALIDATE_EVERY_EMITTED_ROW_AGAINST_THE_CONSUMER_SCHEMA_WITHOUT_USING_A_HISTORICAL_COUNT_AS_CURRENT_TRUTH",
+      "severity": "BLOCKING"
+    },
+    {
+      "finding_id": "V2-IR-BLOCK-004-UNDECLARED-PREFIXED-HASH-COMMITMENTS",
+      "impact": "TEN_LCC2_LCR1_LCS1_AND_LCT2_SHA256_DERIVED_IDENTITY_FIELDS_ARE_HASH_BEARING_BUT_HAVE_NO_REVIEWED_EDGE_ANNOTATION_SO_ONLY_AN_ANNOTATED_SUBGRAPH_CAN_BE_TOPOLOGICALLY_VALIDATED",
+      "required_disposition": "SUCCESSOR_MUST_ANNOTATE_EVERY_PREFIXED_HASH_COMMITMENT_AND_DERIVE_COMPLETE_AND_BLOCKED_GRAPHS_FROM_ALL_ACTUAL_SCHEMA_FIELDS",
       "severity": "BLOCKING"
     }
   ],
   "captured_at_utc": "2026-07-12T00:00:00Z",
   "consumer_inventory_review": {
+    "contract_discovery_mechanisms": [
+      "EXACT_REGISTRY_PATH_LITERAL",
+      "PYTHON_AST_DIRECT_FILE_IO",
+      "PYTHON_AST_MUTATION_CALL",
+      "PYTHON_AST_PUBLIC_API_CALL",
+      "REGISTRY_BASENAME_LITERAL",
+      "REVIEWED_DYNAMIC_CONSTRUCTION_RULE",
+      "STRUCTURED_DOCUMENT_REFERENCE"
+    ],
+    "contract_discovery_pass_order": [
+      "EXACT_FULL_REGISTRY_PATH_AND_BASENAME_LITERAL_SCAN",
+      "PYTHON_AST_DIRECT_READ_WRITE_AND_HASH_COMPARISON_SCAN",
+      "PYTHON_AST_PUBLIC_REGISTRY_API_IMPORT_AND_CALL_SCAN",
+      "REVIEWED_DYNAMIC_PATH_CONSTRUCTION_RULE_SCAN",
+      "STRUCTURED_NON_PYTHON_REFERENCE_SCAN"
+    ],
     "contract_frozen_source_commit": "81a3555a1f83a37ec01bacc247f45d1a5bfe8430",
     "contract_historical_callsite_count": 584,
     "contract_historical_scan_is_marked_non_normative": true,
-    "fresh_preparation_commit_scan": {
+    "contract_requires_python_ast_passes": true,
+    "emitted_discovery_mechanisms": [
+      "GIT_COMMIT_BLOB_LITERAL_OCCURRENCE",
+      "REVIEWED_NONLITERAL_PATH_RULE"
+    ],
+    "emitted_mechanisms_are_allowed_by_contract": false,
+    "emitted_row_count_with_schema_forbidden_mechanism": 592,
+    "legacy_literal_preparation_commit_scan": {
       "added_path_count": 28,
       "all_identity_root_sha256": "71b6e4ba1ee4c4f1d0d1e564370b6a84d5a7b96184b0a7dd66eebf136643c45e",
       "baseline_changed_path_count": 3,
       "callsite_identity_count": 592,
+      "contract_domain_all_identity_root_sha256": "004909ae4ed036382d6dd6dbaaad4c16e99bca64137db6f9cc2002cea4354091",
+      "contract_domain_runtime_required_root_sha256": "361a0ad3cd9c38cbbbc87a654fa5ee69728cd2cd06f97fec4d8fcc4ae86a7d04",
       "nonruntime_count": 564,
       "removed_path_count": 0,
       "runtime_required_count": 28,
@@ -70,11 +100,13 @@
       "scan_commit": "0138ba751ef2ae1b08347a3089da077c5a694550",
       "unique_path_count": 524
     },
-    "model_source_commit_scan": {
+    "legacy_literal_source_commit_scan": {
       "added_path_count": 26,
       "all_identity_root_sha256": "fbb65949537a790d13802adf501a6f0b6d7196c39d55fab5e391205704092e78",
       "baseline_changed_path_count": 3,
       "callsite_identity_count": 584,
+      "contract_domain_all_identity_root_sha256": "fd2bb5085be486a0d546125de7a3186e4798144ddfc0b5d2e95f57250f3f3af4",
+      "contract_domain_runtime_required_root_sha256": "816ae18d4b7e87434df1dc46fe82635023029d0cc7b23f3c9c050fe894037e1e",
       "nonruntime_count": 561,
       "removed_path_count": 0,
       "runtime_required_count": 23,
@@ -82,27 +114,50 @@
       "scan_commit": "81a3555a1f83a37ec01bacc247f45d1a5bfe8430",
       "unique_path_count": 522
     },
-    "preparation_only_callsite_count": 8,
     "preparation_only_consumer_paths": [
       "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260712_v2.json",
       "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py"
     ],
+    "preparation_only_identity_count": 19,
     "review_commit_equals_contract_model_source_commit": false,
-    "review_conclusion": "B_BLOCKED_FROZEN_POSITIVE_WITNESS_OMITS_CONSUMERS_PRESENT_AT_THE_IMMUTABLE_PREPARATION_COMMIT"
+    "review_conclusion": "B_BLOCKED_EXECUTABLE_LITERAL_SCANNER_DOES_NOT_IMPLEMENT_THE_FROZEN_MULTI_PASS_INVENTORY_ALGORITHM_OR_SCHEMA_MECHANISMS",
+    "review_scanner_contract_conformant": false,
+    "schema_discovery_mechanisms": [
+      "EXACT_REGISTRY_PATH_LITERAL",
+      "PYTHON_AST_DIRECT_FILE_IO",
+      "PYTHON_AST_MUTATION_CALL",
+      "PYTHON_AST_PUBLIC_API_CALL",
+      "REGISTRY_BASENAME_LITERAL",
+      "REVIEWED_DYNAMIC_CONSTRUCTION_RULE",
+      "STRUCTURED_DOCUMENT_REFERENCE"
+    ],
+    "source_only_identity_count": 11,
+    "source_witness_identity_root_matches_frozen_evidence": false
   },
   "contract_bundle_sha256": "36d7bdfe8f03e0e6cceb2fd653b98f0f0f26fcadaf40ff53a0dc2450b4f04432",
   "control_review": {
+    "detached_frozen_validator_control_test": {
+      "detached_head": "0138ba751ef2ae1b08347a3089da077c5a694550",
+      "exact_test_node": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py::test_all_permanent_controls_run_from_fresh_positive_fixtures",
+      "passed": true,
+      "prototype_root_created": false,
+      "return_code": 0,
+      "selected_test_count": 1
+    },
     "frozen_control_count": 27,
     "frozen_control_ids_unique": true,
     "frozen_control_result_root_sha256": "cf0b3635ee9dec4ad3353be49effc767e58eb0efeb4fcfebbc994d45af4c0253",
     "frozen_results_all_report_intended_code": true,
     "frozen_results_all_report_isolated_clean_baselines": true,
-    "independent_new_v2_probe_count": 15,
-    "independent_new_v2_probe_results": [
+    "new_v2_control_count": 15,
+    "retained_v1_control_count": 12,
+    "reviewer_model_probe_count": 15,
+    "reviewer_model_probe_results": [
       {
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-001",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-DECLARED-SCHEMA-GRAPH-MISMATCH",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "88a20f5258b432ce7805e054a7b5697f362e523a83bb795ceda30e324c3d3cc3",
@@ -115,6 +170,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-002",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-SCHEMA-GENERATION-ORDER-MISMATCH",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "72fda072dfb88f3f6456a7e18d08a0e5121163100742709df9d76ebfed32bab4",
@@ -127,6 +183,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-003",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-HASH-FIELD-UNDECLARED",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "e7945f79d3deb7cb0f7ee0249921e65f9edbe93a0adefb726767be07594a054f",
@@ -139,6 +196,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-004",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-LATER-PHASE-REFERENCE",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "147b8943041a0abfcb6d1fd7c1f6703652dccd517c4d02842303cd46914bfd19",
@@ -151,6 +209,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-005",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-CONSUMER-INVENTORY-INCOMPLETE",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "4f24931bcbe1039d61bf9b215498dfcc145c29c138e3be04523b6d938c84d8ee",
@@ -163,6 +222,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-006",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-RUNTIME-TRACE-INCOMPLETE",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "250c01a3fdb7091c68564f436467768a8f1b17bd4b3960e4da39d07ebd13cc29",
@@ -175,6 +235,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-007",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-CONSUMER-LOCAL-REBIND",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "2b215be5443da29cf82ec36af6e522280c96edd07b045c5a40dd26276ae16424",
@@ -187,6 +248,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-008",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-STALE-CONSUMER-COUNT",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "9ad639fb67913a06aeab4f4e8fea74e5eec7a127c170364326de01edaee377e0",
@@ -199,6 +261,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-009",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-FRESH-CONSUMER-OMITTED",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "e7bf04aebe7897bc3dddceb948a959c8bae02c51461f35de428082de11122b22",
@@ -211,6 +274,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-010",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-CONSUMER-INVENTED",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "224e816846de574c8318453a1739ddfeabbcb44397ec77de3fba8693f659b84a",
@@ -223,6 +287,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-011",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-RUNTIME-REQUIRED-MISCLASSIFIED",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "897202376d017e3195b7b9e6cbd32a3e841da7cabd84e4ccffd0152d182b84d0",
@@ -235,6 +300,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-012",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-BASELINE-CHANGE-UNCLASSIFIED",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "b030a3650fa98e75fe47e76be4ceef545f49a72497279fb0f1977fe85c955726",
@@ -247,6 +313,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-013",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-PREFLIGHT-INVENTORY-BINDING-MISMATCH",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "2d7d3633fc6e8442b994e7bf6f7f7b21167994346ad048bbf3eb53cc8b256aae",
@@ -259,6 +326,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-014",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-CONSUMER-INVENTORY-TRUST-ROOT",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "ef7bed2bdd35e00601a1a28eff66a3c05bdfe889bd5e21ba2763717090f684a7",
@@ -271,6 +339,7 @@
         "baseline_root_sha256_after": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "baseline_root_sha256_before": "7368daf2d65973394e493b69ae6c4a76b21dcc45a2e7f1f249f464a45f8be033",
         "control_id": "V2-NC-015",
+        "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
         "expected_error_code": "V2-E-REVIEW-CONSUMER-RESCAN-REQUIRED",
         "isolated_deep_copy": true,
         "mutated_fixture_root_sha256": "0fcdea63c7f4022329eec7ddb8fe4e065afe73f3285eba263ac90bb7d9e12023",
@@ -280,8 +349,7 @@
         "subsequent_controls_uncontaminated": true
       }
     ],
-    "new_v2_control_count": 15,
-    "retained_v1_control_count": 12
+    "reviewer_model_probes_are_frozen_validator_evidence": false
   },
   "custody_review": {
     "all_record_ids_unique": true,
@@ -470,27 +538,82 @@
   "detached_clean_checkout_determinism_review": {
     "committed_contract_sha256": "36d7bdfe8f03e0e6cceb2fd653b98f0f0f26fcadaf40ff53a0dc2450b4f04432",
     "committed_packet_sha256": "8381ae2101610eab7ae307e4c3849efbe1a1d9786b4edee7702f70d2662b723a",
+    "committed_parent": "81a3555a1f83a37ec01bacc247f45d1a5bfe8430",
+    "committed_tree": "f193aac1c15b082e6c5500dd6a426cf13871a9c1",
     "detached_clean_checkout_commit": "0138ba751ef2ae1b08347a3089da077c5a694550",
+    "detached_control_execution": {
+      "detached_head": "0138ba751ef2ae1b08347a3089da077c5a694550",
+      "exact_test_node": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py::test_all_permanent_controls_run_from_fresh_positive_fixtures",
+      "passed": true,
+      "prototype_root_created": false,
+      "return_code": 0,
+      "selected_test_count": 1
+    },
     "detached_regeneration_count": 2,
+    "regenerated_consumer_discovery_mechanisms": [
+      "GIT_COMMIT_BLOB_LITERAL_OCCURRENCE",
+      "REVIEWED_NONLITERAL_PATH_RULE"
+    ],
+    "regenerated_consumer_discovery_pass_order": [
+      "ENUMERATE_EXACT_COMMIT_TREE",
+      "SCAN_EVERY_NONREGISTRY_BLOB_FOR_EXACT_REGISTRY_BASENAME_BYTES",
+      "ADD_FROZEN_REVIEWED_NONLITERAL_PATH_RULES"
+    ],
     "regenerated_contract_sha256": "081e666a1cd4d5b06f27764249418b4cc55563b25426821c73b67d516dc45323",
     "regenerated_contract_size_bytes": 712942,
     "regenerated_packet_sha256": "fbbe09b35ba567a8686094fd66a96cfb854410d8b72c223a2bbb709c5ba1f555",
     "regenerated_packet_size_bytes": 2173,
-    "regenerations_byte_identical_to_each_other": true,
-    "regenerations_equal_committed_artifacts": false,
-    "review_conclusion": "B_BLOCKED_FROZEN_ARTIFACTS_ARE_NOT_OUTPUTS_OF_THEIR_COMMITTED_GENERATOR",
-    "run_environments": [
+    "regeneration_runs": [
       {
-        "PYTHONHASHSEED": "1",
-        "TZ": "UTC",
-        "detached_head": true
+        "changed_paths": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260712_v2.json",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260712_v2.json"
+        ],
+        "consumer_discovery_mechanisms": [
+          "GIT_COMMIT_BLOB_LITERAL_OCCURRENCE",
+          "REVIEWED_NONLITERAL_PATH_RULE"
+        ],
+        "consumer_discovery_pass_order": [
+          "ENUMERATE_EXACT_COMMIT_TREE",
+          "SCAN_EVERY_NONREGISTRY_BLOB_FOR_EXACT_REGISTRY_BASENAME_BYTES",
+          "ADD_FROZEN_REVIEWED_NONLITERAL_PATH_RULES"
+        ],
+        "contract_sha256": "081e666a1cd4d5b06f27764249418b4cc55563b25426821c73b67d516dc45323",
+        "contract_size_bytes": 712942,
+        "detached_head": "0138ba751ef2ae1b08347a3089da077c5a694550",
+        "packet_sha256": "fbbe09b35ba567a8686094fd66a96cfb854410d8b72c223a2bbb709c5ba1f555",
+        "packet_size_bytes": 2173,
+        "prototype_root_created": false,
+        "python_hash_seed": "1",
+        "timezone": "UTC"
       },
       {
-        "PYTHONHASHSEED": "777",
-        "TZ": "America/Chicago",
-        "detached_head": true
+        "changed_paths": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260712_v2.json",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260712_v2.json"
+        ],
+        "consumer_discovery_mechanisms": [
+          "GIT_COMMIT_BLOB_LITERAL_OCCURRENCE",
+          "REVIEWED_NONLITERAL_PATH_RULE"
+        ],
+        "consumer_discovery_pass_order": [
+          "ENUMERATE_EXACT_COMMIT_TREE",
+          "SCAN_EVERY_NONREGISTRY_BLOB_FOR_EXACT_REGISTRY_BASENAME_BYTES",
+          "ADD_FROZEN_REVIEWED_NONLITERAL_PATH_RULES"
+        ],
+        "contract_sha256": "081e666a1cd4d5b06f27764249418b4cc55563b25426821c73b67d516dc45323",
+        "contract_size_bytes": 712942,
+        "detached_head": "0138ba751ef2ae1b08347a3089da077c5a694550",
+        "packet_sha256": "fbbe09b35ba567a8686094fd66a96cfb854410d8b72c223a2bbb709c5ba1f555",
+        "packet_size_bytes": 2173,
+        "prototype_root_created": false,
+        "python_hash_seed": "777",
+        "timezone": "America/Chicago"
       }
-    ]
+    ],
+    "regenerations_byte_identical_to_each_other": true,
+    "regenerations_equal_committed_artifacts": false,
+    "review_conclusion": "B_BLOCKED_FROZEN_ARTIFACTS_ARE_NOT_OUTPUTS_OF_THEIR_COMMITTED_GENERATOR"
   },
   "external_root_review": {
     "candidate_may_rebind_expected_values": false,
@@ -609,7 +732,69 @@
     "runtime_schema_count": 22,
     "schema_catalog_valid_draft_2020_12": true,
     "self_edge_count": 0,
-    "unannotated_hash_bearing_field_count": 0
+    "unannotated_hash_bearing_field_count": 10,
+    "unannotated_hash_bearing_fields": [
+      {
+        "field_name": "consumer_id",
+        "pattern": "^lcc2:[0-9a-f]{64}$",
+        "schema_field_path": "/consumers/*/consumer_id",
+        "schema_name": "candidate_consumer_map"
+      },
+      {
+        "field_name": "record_id",
+        "pattern": "^lcr1:[0-9a-f]{64}$",
+        "schema_field_path": "/active_scientific_workstream/record_id",
+        "schema_name": "current_projection"
+      },
+      {
+        "field_name": "first_record_id",
+        "pattern": "^lcr1:[0-9a-f]{64}$",
+        "schema_field_path": "/shards/*/first_record_id",
+        "schema_name": "history_index"
+      },
+      {
+        "field_name": "last_record_id",
+        "pattern": "^lcr1:[0-9a-f]{64}$",
+        "schema_field_path": "/shards/*/last_record_id",
+        "schema_name": "history_index"
+      },
+      {
+        "field_name": "shard_id",
+        "pattern": "^lcs1:[0-9a-f]{64}$",
+        "schema_field_path": "/shards/*/shard_id",
+        "schema_name": "history_index"
+      },
+      {
+        "field_name": "record_id",
+        "pattern": "^lcr1:[0-9a-f]{64}$",
+        "schema_field_path": "/record_id",
+        "schema_name": "history_shard_record"
+      },
+      {
+        "field_name": "consumer_id",
+        "pattern": "^lcc2:[0-9a-f]{64}$",
+        "schema_field_path": "/consumers/*/consumer_id",
+        "schema_name": "independent_review_consumer_inventory"
+      },
+      {
+        "field_name": "consumer_id",
+        "pattern": "^lcc2:[0-9a-f]{64}$",
+        "schema_field_path": "/consumers/*/consumer_id",
+        "schema_name": "preflight_consumer_inventory"
+      },
+      {
+        "field_name": "consumer_id",
+        "pattern": "^lcc2:[0-9a-f]{64}$",
+        "schema_field_path": "/consumer_id",
+        "schema_name": "runtime_trace_event"
+      },
+      {
+        "field_name": "trace_id",
+        "pattern": "^lct2:[0-9a-f]{64}$",
+        "schema_field_path": "/trace_id",
+        "schema_name": "runtime_trace_event"
+      }
+    ]
   },
   "implementation_and_actual_generation_order_review": {
     "actual_production_v2_generation_order": [],
@@ -673,8 +858,10 @@
     "schema_phase_and_actual_production_order_agree": false
   },
   "lifecycle_review": {
-    "complete_branch_model_valid": true,
-    "post_generation_blocked_branch_model_valid": true,
+    "complete_branch_frozen_positive_model_flag": true,
+    "complete_branch_full_graph_independently_validated": false,
+    "post_generation_blocked_branch_frozen_positive_model_flag": true,
+    "post_generation_blocked_branch_full_graph_independently_validated": false,
     "preflight_blocked_branch_has_no_candidate_artifacts": true,
     "production_complete_branch_executable": false,
     "production_post_generation_blocked_branch_executable": false,
@@ -740,5 +927,5 @@
   },
   "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260712_v2",
   "status": "B_BLOCKED_V2_PREPARATION_PRESERVED_STAGE_A_AND_STAGE_B_UNAUTHORIZED_MAINTENANCE_MAY_PAUSE_AND_SCIENCE_MAY_RESUME_SEPARATELY",
-  "validation_interpretation": "focused preparation, predecessor review, authority, registry and exhaustive Lean validation passed; the combined predecessor invocation timed out while constituent suites later passed independently; the full unbounded Python aggregate was not run; the repository is not described as universally green; no Stage A, Stage B, registry migration or scientific execution occurred."
+  "validation_interpretation": "focused preparation, review, authority, registry and exhaustive Lean validation passed; the combined predecessor invocation timed out, while its constituent suites subsequently passed independently; the full unbounded Python aggregate was not run; the repository is not described as universally green."
 }

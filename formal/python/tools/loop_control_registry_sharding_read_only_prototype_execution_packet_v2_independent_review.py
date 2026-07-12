@@ -784,6 +784,11 @@ def _consumer_review(contract: dict[str, Any]) -> dict[str, Any]:
     ]
     algorithm = contract["consumer_inventory_algorithm"]
     allowed_mechanisms = set(algorithm["discovery_mechanisms"])
+    schema_allowed_mechanisms = set(
+        contract["runtime_schemas"]["preflight_consumer_inventory"]
+        ["properties"]["consumers"]["items"]["properties"]
+        ["discovery_mechanism"]["enum"]
+    )
     emitted_mechanisms = {
         row["discovery_mechanism"] for row in preparation_rows
     }
@@ -801,6 +806,10 @@ def _consumer_review(contract: dict[str, Any]) -> dict[str, Any]:
             "evidence_only_not_future_expectation"
         ],
         "emitted_discovery_mechanisms": sorted(emitted_mechanisms),
+        "emitted_row_count_with_schema_forbidden_mechanism": sum(
+            row["discovery_mechanism"] not in schema_allowed_mechanisms
+            for row in preparation_rows
+        ),
         "emitted_mechanisms_are_allowed_by_contract": (
             emitted_mechanisms <= allowed_mechanisms
         ),
@@ -816,7 +825,11 @@ def _consumer_review(contract: dict[str, Any]) -> dict[str, Any]:
             source_summary["contract_domain_all_identity_root_sha256"]
             == frozen["identity_root_sha256"]
         ),
-        "review_scanner_contract_conformant": False,
+        "review_scanner_contract_conformant": (
+            emitted_mechanisms <= allowed_mechanisms
+            and emitted_mechanisms <= schema_allowed_mechanisms
+        ),
+        "schema_discovery_mechanisms": sorted(schema_allowed_mechanisms),
         "review_conclusion": (
             "B_BLOCKED_EXECUTABLE_LITERAL_SCANNER_DOES_NOT_IMPLEMENT_THE_"
             "FROZEN_MULTI_PASS_INVENTORY_ALGORITHM_OR_SCHEMA_MECHANISMS"
@@ -846,8 +859,13 @@ def _implementation_review(contract: dict[str, Any]) -> dict[str, Any]:
     orchestrator = _git_blob(
         PREPARATION_COMMIT, AUTHORIZED_IMPLEMENTATION_PATHS[0]
     )
+    actual_generation_order: list[dict[str, Any]] = []
+    modeled_generation_order = contract["lifecycle_contract"]["COMPLETE"][
+        "generation_ledger"
+    ]
+    declared_edges = contract["reviewed_schema_hash_edge_table"]["rows"]
     return {
-        "actual_production_v2_generation_order": [],
+        "actual_production_v2_generation_order": actual_generation_order,
         "authorized_implementation_path_count": len(evidence),
         "authorized_implementation_paths": evidence,
         "blocked_v0_contract_binding_still_present": (
@@ -856,9 +874,7 @@ def _implementation_review(contract: dict[str, Any]) -> dict[str, Any]:
         "blocked_v0_orchestrator_description_still_present": (
             b"blocked-v0 orchestrator" in orchestrator
         ),
-        "contract_modeled_generation_order": contract["lifecycle_contract"][
-            "COMPLETE"
-        ]["generation_ledger"],
+        "contract_modeled_generation_order": modeled_generation_order,
         "preparation_generator_is_in_authorized_implementation_set": (
             GENERATOR_REL in AUTHORIZED_IMPLEMENTATION_PATHS
         ),
@@ -866,8 +882,15 @@ def _implementation_review(contract: dict[str, Any]) -> dict[str, Any]:
         "production_v2_execution_implementation_exists": any(
             row["v2_marker_count"] for row in evidence
         ),
-        "schema_graph_and_generation_phase_table_agree": True,
-        "schema_phase_and_actual_production_order_agree": False,
+        "schema_graph_and_generation_phase_table_agree": all(
+            row["referenced_generation_ordinal"]
+            < row["containing_generation_ordinal"]
+            for row in declared_edges
+        ),
+        "schema_phase_and_actual_production_order_agree": (
+            bool(actual_generation_order)
+            and actual_generation_order == modeled_generation_order
+        ),
     }
 
 
@@ -1027,6 +1050,7 @@ def _inventory_probe_results() -> list[dict[str, Any]]:
                 "baseline_root_sha256_before": baseline_root,
                 "control_id": control_id,
                 "expected_error_code": expected,
+                "evidence_scope": "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR",
                 "isolated_deep_copy": True,
                 "mutation": mutation,
                 "mutated_fixture_root_sha256": sha256(compact_json_bytes(isolated)),
@@ -1038,11 +1062,13 @@ def _inventory_probe_results() -> list[dict[str, Any]]:
     return results
 
 
-def _control_review(contract: dict[str, Any]) -> dict[str, Any]:
+def _control_review(
+    contract: dict[str, Any], detached_execution: dict[str, Any]
+) -> dict[str, Any]:
     frozen = contract["stage_a_control_contract"][
         "permanent_successor_regression_results"
     ]
-    independent = _inventory_probe_results()
+    model_probes = _inventory_probe_results()
     return {
         "frozen_control_count": len(frozen),
         "frozen_control_ids_unique": len({row["control_id"] for row in frozen}) == len(frozen),
@@ -1060,8 +1086,12 @@ def _control_review(contract: dict[str, Any]) -> dict[str, Any]:
             and row["expected_error_code"] == row["observed_error_code"]
             for row in frozen
         ),
-        "independent_new_v2_probe_count": len(independent),
-        "independent_new_v2_probe_results": independent,
+        "detached_frozen_validator_control_test": detached_execution[
+            "detached_control_execution"
+        ],
+        "reviewer_model_probe_count": len(model_probes),
+        "reviewer_model_probe_results": model_probes,
+        "reviewer_model_probes_are_frozen_validator_evidence": False,
         "new_v2_control_count": sum(row["control_id"].startswith("V2-NC-") for row in frozen),
         "retained_v1_control_count": sum(row["control_id"].startswith("DAG-V1-") for row in frozen),
     }
@@ -1312,28 +1342,247 @@ def _external_root_review(contract: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _determinism_review() -> dict[str, Any]:
+_DETACHED_EXECUTION_CACHE: dict[str, Any] | None = None
+
+
+def _git_revision(revision: str) -> str:
+    return subprocess.run(
+        ["git", "rev-parse", revision],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.strip()
+
+
+def _run_detached_generator(
+    worktree: Path, *, python_hash_seed: str, timezone: str
+) -> dict[str, Any]:
+    environment = os.environ.copy()
+    environment.update(
+        {
+            "GIT_OPTIONAL_LOCKS": "0",
+            "PYTHONDONTWRITEBYTECODE": "1",
+            "PYTHONHASHSEED": python_hash_seed,
+            "PYTHONPATH": str(worktree),
+            "TZ": timezone,
+        }
+    )
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "formal.python.tools."
+            "loop_control_registry_sharding_read_only_prototype_execution_packet_v2",
+            "--write",
+        ],
+        cwd=worktree,
+        env=environment,
+        capture_output=True,
+        timeout=900,
+    )
+    if result.returncode != 0:
+        raise IndependentV2ReviewError(
+            "detached v2 regeneration failed: "
+            + result.stderr.decode("utf-8", errors="replace")[-2_000:]
+        )
+    contract_raw = (worktree / CONTRACT_REL).read_bytes()
+    packet_raw = (worktree / PACKET_REL).read_bytes()
+    changed = subprocess.run(
+        ["git", "diff", "--name-only", "HEAD", "--"],
+        cwd=worktree,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.splitlines()
+    regenerated_contract = _strict_json(contract_raw)
     return {
+        "changed_paths": sorted(changed),
+        "contract_sha256": sha256(contract_raw),
+        "contract_size_bytes": len(contract_raw),
+        "consumer_discovery_mechanisms": regenerated_contract[
+            "consumer_inventory_algorithm"
+        ]["discovery_mechanisms"],
+        "consumer_discovery_pass_order": regenerated_contract[
+            "consumer_inventory_algorithm"
+        ]["discovery_pass_order"],
+        "detached_head": _git_revision_at(worktree, "HEAD"),
+        "packet_sha256": sha256(packet_raw),
+        "packet_size_bytes": len(packet_raw),
+        "prototype_root_created": (worktree / PROTOTYPE_REL).exists(),
+        "python_hash_seed": python_hash_seed,
+        "timezone": timezone,
+    }
+
+
+def _git_revision_at(worktree: Path, revision: str) -> str:
+    return subprocess.run(
+        ["git", "rev-parse", revision],
+        cwd=worktree,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.strip()
+
+
+def _run_detached_control_test(worktree: Path) -> dict[str, Any]:
+    environment = os.environ.copy()
+    environment.update(
+        {
+            "GIT_OPTIONAL_LOCKS": "0",
+            "PYTHONDONTWRITEBYTECODE": "1",
+            "PYTHONHASHSEED": "31337",
+            "PYTHONPATH": str(worktree),
+            "TZ": "UTC",
+        }
+    )
+    node_id = (
+        TEST_REL
+        + "::test_all_permanent_controls_run_from_fresh_positive_fixtures"
+    )
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "-q",
+            "-p",
+            "no:cacheprovider",
+            node_id,
+        ],
+        cwd=worktree,
+        env=environment,
+        capture_output=True,
+        timeout=900,
+    )
+    stdout = result.stdout.decode("utf-8", errors="replace")
+    return {
+        "detached_head": _git_revision_at(worktree, "HEAD"),
+        "exact_test_node": node_id,
+        "passed": result.returncode == 0 and "1 passed" in stdout,
+        "prototype_root_created": (worktree / PROTOTYPE_REL).exists(),
+        "return_code": result.returncode,
+        "selected_test_count": 1,
+    }
+
+
+def _detached_execution_review() -> dict[str, Any]:
+    global _DETACHED_EXECUTION_CACHE
+    if _DETACHED_EXECUTION_CACHE is not None:
+        return deepcopy(_DETACHED_EXECUTION_CACHE)
+
+    temporary_roots = [
+        tempfile.TemporaryDirectory(prefix=f"toe-v2-review-{index}-")
+        for index in range(3)
+    ]
+    worktrees = [Path(root.name) / "checkout" for root in temporary_roots]
+    try:
+        for worktree in worktrees:
+            subprocess.run(
+                [
+                    "git",
+                    "-c",
+                    "core.longpaths=true",
+                    "clone",
+                    "--shared",
+                    "--no-checkout",
+                    "--quiet",
+                    str(REPO_ROOT),
+                    str(worktree),
+                ],
+                cwd=REPO_ROOT,
+                capture_output=True,
+                check=True,
+            )
+            subprocess.run(
+                ["git", "config", "core.longpaths", "true"],
+                cwd=worktree,
+                capture_output=True,
+                check=True,
+            )
+            subprocess.run(
+                [
+                    "git",
+                    "-c",
+                    "core.longpaths=true",
+                    "checkout",
+                    "--detach",
+                    "--quiet",
+                    PREPARATION_COMMIT,
+                ],
+                cwd=worktree,
+                capture_output=True,
+                check=True,
+            )
+            clean = subprocess.run(
+                ["git", "status", "--porcelain"],
+                cwd=worktree,
+                capture_output=True,
+                text=True,
+                check=True,
+            ).stdout
+            if clean:
+                raise IndependentV2ReviewError(
+                    "detached clone is not clean before regeneration"
+                )
+        environments = [("1", "UTC"), ("777", "America/Chicago")]
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            futures = [
+                executor.submit(
+                    _run_detached_generator,
+                    worktrees[index],
+                    python_hash_seed=seed,
+                    timezone=timezone,
+                )
+                for index, (seed, timezone) in enumerate(environments)
+            ]
+            regenerations = [future.result() for future in futures]
+        control_execution = _run_detached_control_test(worktrees[2])
+    finally:
+        for root in temporary_roots:
+            root.cleanup()
+
+    first, second = regenerations
+    regenerated_equal = all(
+        first[key] == second[key]
+        for key in (
+            "contract_sha256",
+            "contract_size_bytes",
+            "packet_sha256",
+            "packet_size_bytes",
+        )
+    )
+    _DETACHED_EXECUTION_CACHE = {
         "committed_contract_sha256": CONTRACT_SHA256,
         "committed_packet_sha256": PACKET_SHA256,
+        "committed_parent": _git_revision(PREPARATION_COMMIT + "^"),
+        "committed_tree": _git_revision(PREPARATION_COMMIT + "^{tree}"),
         "detached_clean_checkout_commit": PREPARATION_COMMIT,
-        "detached_regeneration_count": 2,
-        "regenerated_contract_sha256": REGENERATED_CONTRACT_SHA256,
-        "regenerated_contract_size_bytes": 712_942,
-        "regenerated_packet_sha256": REGENERATED_PACKET_SHA256,
-        "regenerated_packet_size_bytes": 2_173,
-        "regenerations_byte_identical_to_each_other": True,
-        "regenerations_equal_committed_artifacts": False,
-        "run_environments": [
-            {"PYTHONHASHSEED": "1", "TZ": "UTC", "detached_head": True},
-            {
-                "PYTHONHASHSEED": "777",
-                "TZ": "America/Chicago",
-                "detached_head": True,
-            },
+        "detached_control_execution": control_execution,
+        "detached_regeneration_count": len(regenerations),
+        "regenerated_contract_sha256": first["contract_sha256"],
+        "regenerated_contract_size_bytes": first["contract_size_bytes"],
+        "regenerated_consumer_discovery_mechanisms": first[
+            "consumer_discovery_mechanisms"
         ],
-        "review_conclusion": "B_BLOCKED_FROZEN_ARTIFACTS_ARE_NOT_OUTPUTS_OF_THEIR_COMMITTED_GENERATOR",
+        "regenerated_consumer_discovery_pass_order": first[
+            "consumer_discovery_pass_order"
+        ],
+        "regenerated_packet_sha256": first["packet_sha256"],
+        "regenerated_packet_size_bytes": first["packet_size_bytes"],
+        "regeneration_runs": regenerations,
+        "regenerations_byte_identical_to_each_other": regenerated_equal,
+        "regenerations_equal_committed_artifacts": (
+            regenerated_equal
+            and first["contract_sha256"] == CONTRACT_SHA256
+            and first["packet_sha256"] == PACKET_SHA256
+        ),
+        "review_conclusion": (
+            "B_BLOCKED_FROZEN_ARTIFACTS_ARE_NOT_OUTPUTS_OF_THEIR_COMMITTED_"
+            "GENERATOR"
+        ),
     }
+    return deepcopy(_DETACHED_EXECUTION_CACHE)
 
 
 def _authority_review(packet: dict[str, Any]) -> dict[str, Any]:
@@ -1368,6 +1617,7 @@ def build_review() -> dict[str, Any]:
     graph = _graph_review(contract)
     if not (
         graph["independently_derived_edge_count"] == 111
+        and graph["unannotated_hash_bearing_field_count"] == 10
         and graph["self_edge_count"] == 0
         and graph["reciprocal_edge_count"] == 0
         and graph["later_or_same_phase_edge_count"] == 0
@@ -1380,7 +1630,32 @@ def build_review() -> dict[str, Any]:
     implementation = _implementation_review(contract)
     consumers = _consumer_review(contract)
     custody = _custody_review(contract)
-    controls = _control_review(contract)
+    detached_execution = _detached_execution_review()
+    controls = _control_review(contract, detached_execution)
+    if not (
+        detached_execution["committed_tree"] == PREPARATION_TREE
+        and detached_execution["committed_parent"] == SOURCE_COMMIT
+        and detached_execution["detached_regeneration_count"] == 2
+        and detached_execution["regenerations_byte_identical_to_each_other"]
+        and not detached_execution["regenerations_equal_committed_artifacts"]
+        and detached_execution["regenerated_contract_sha256"]
+        == REGENERATED_CONTRACT_SHA256
+        and detached_execution["regenerated_packet_sha256"]
+        == REGENERATED_PACKET_SHA256
+        and all(
+            not row["prototype_root_created"]
+            and row["detached_head"] == PREPARATION_COMMIT
+            and set(row["changed_paths"]) == {CONTRACT_REL, PACKET_REL}
+            for row in detached_execution["regeneration_runs"]
+        )
+        and controls["detached_frozen_validator_control_test"]["passed"]
+        and not controls["detached_frozen_validator_control_test"][
+            "prototype_root_created"
+        ]
+    ):
+        raise IndependentV2ReviewError(
+            "unexpected detached preparation execution evidence"
+        )
     if not (
         custody["record_count"] == 4_691
         and custody["shard_count"] == 14
@@ -1391,14 +1666,16 @@ def build_review() -> dict[str, Any]:
     blocking_codes = [
         "V2-IR-BLOCK-001-DYNAMIC-CANDIDATE-EDGE-REQUIREDNESS-MISMATCH",
         "V2-IR-BLOCK-002-PREPARATION-GENERATOR-ARTIFACT-DRIFT",
-        "V2-IR-BLOCK-003-PREPARATION-COMMIT-CONSUMER-INVENTORY-OMITTED",
+        "V2-IR-BLOCK-003-INVENTORY-ALGORITHM-IMPLEMENTATION-MISMATCH",
+        "V2-IR-BLOCK-004-UNDECLARED-PREFIXED-HASH-COMMITMENTS",
     ]
     return {
         "accepted_findings": {
-            "complete_and_blocked_lifecycle_models_are_abstractly_satisfiable": True,
-            "consumer_rebinding_controls_are_present_and_typed": True,
+            "annotated_schema_subgraph_is_acyclic": True,
+            "committed_focused_permanent_control_test_passes": controls[
+                "detached_frozen_validator_control_test"
+            ]["passed"],
             "full_4691_record_14_shard_byte_custody_model_reconstructs": True,
-            "schema_derived_hash_graph_is_acyclic": True,
             "source_protocol_schema_implementation_and_registry_roots_verify": True,
         },
         "authorization": {
@@ -1432,8 +1709,14 @@ def build_review() -> dict[str, Any]:
             },
             {
                 "finding_id": blocking_codes[2],
-                "impact": "THE_POSITIVE_WITNESS_SCANS_81A3555A_BUT_THE_IMMUTABLE_PREPARATION_COMMIT_HAS_EIGHT_MORE_CALL_SITES_ACROSS_TWO_MORE_CONSUMER_PATHS",
-                "required_disposition": "SUCCESSOR_REVIEW_FIXTURE_MUST_RECONCILE_TO_A_FRESH_SCAN_OF_THE_EXACT_REVIEWED_COMMIT_WITHOUT_MAKING_THE_COUNT_NORMATIVE_FOR_FUTURE_EXECUTION",
+                "impact": "THE_FROZEN_CONTRACT_REQUIRES_SEVEN_LITERAL_AST_DYNAMIC_AND_STRUCTURED_DISCOVERY_MECHANISMS_BUT_THE_EXECUTABLE_SCANNER_AND_REVIEW_WITNESS_USE_TWO_SCHEMA_FORBIDDEN_LITERAL_OR_HARDCODED_MECHANISMS",
+                "required_disposition": "SUCCESSOR_MUST_IMPLEMENT_THE_FROZEN_REPOSITORY_ROOTED_MULTI_PASS_SCANNER_AND_VALIDATE_EVERY_EMITTED_ROW_AGAINST_THE_CONSUMER_SCHEMA_WITHOUT_USING_A_HISTORICAL_COUNT_AS_CURRENT_TRUTH",
+                "severity": "BLOCKING",
+            },
+            {
+                "finding_id": blocking_codes[3],
+                "impact": "TEN_LCC2_LCR1_LCS1_AND_LCT2_SHA256_DERIVED_IDENTITY_FIELDS_ARE_HASH_BEARING_BUT_HAVE_NO_REVIEWED_EDGE_ANNOTATION_SO_ONLY_AN_ANNOTATED_SUBGRAPH_CAN_BE_TOPOLOGICALLY_VALIDATED",
+                "required_disposition": "SUCCESSOR_MUST_ANNOTATE_EVERY_PREFIXED_HASH_COMMITMENT_AND_DERIVE_COMPLETE_AND_BLOCKED_GRAPHS_FROM_ALL_ACTUAL_SCHEMA_FIELDS",
                 "severity": "BLOCKING",
             },
         ],
@@ -1443,13 +1726,15 @@ def build_review() -> dict[str, Any]:
         "control_review": controls,
         "custody_review": custody,
         "decision": "B_BLOCKED_REJECT_STAGE_A_V2_EXECUTION_AUTHORIZATION_REQUIRE_VERSIONED_V3_SUCCESSOR",
-        "detached_clean_checkout_determinism_review": _determinism_review(),
+        "detached_clean_checkout_determinism_review": detached_execution,
         "external_root_review": _external_root_review(contract),
         "graph_review": graph,
         "implementation_and_actual_generation_order_review": implementation,
         "lifecycle_review": {
-            "complete_branch_model_valid": contract["lifecycle_contract"]["COMPLETE"]["positive_model_valid"],
-            "post_generation_blocked_branch_model_valid": contract["lifecycle_contract"]["POST_GENERATION_BLOCKED"]["positive_model_valid"],
+            "complete_branch_frozen_positive_model_flag": contract["lifecycle_contract"]["COMPLETE"]["positive_model_valid"],
+            "complete_branch_full_graph_independently_validated": False,
+            "post_generation_blocked_branch_frozen_positive_model_flag": contract["lifecycle_contract"]["POST_GENERATION_BLOCKED"]["positive_model_valid"],
+            "post_generation_blocked_branch_full_graph_independently_validated": False,
             "preflight_blocked_branch_has_no_candidate_artifacts": not contract["lifecycle_contract"]["PREFLIGHT_BLOCKED"]["candidate_artifacts_created"],
             "production_complete_branch_executable": False,
             "production_post_generation_blocked_branch_executable": False,
@@ -1480,10 +1765,10 @@ def build_review() -> dict[str, Any]:
         "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260712_v2",
         "status": "B_BLOCKED_V2_PREPARATION_PRESERVED_STAGE_A_AND_STAGE_B_UNAUTHORIZED_MAINTENANCE_MAY_PAUSE_AND_SCIENCE_MAY_RESUME_SEPARATELY",
         "validation_interpretation": (
-            "focused preparation, predecessor review, authority, registry and exhaustive Lean validation passed; "
-            "the combined predecessor invocation timed out while constituent suites later passed independently; "
-            "the full unbounded Python aggregate was not run; the repository is not described as universally green; "
-            "no Stage A, Stage B, registry migration or scientific execution occurred."
+            "focused preparation, review, authority, registry and exhaustive Lean validation passed; "
+            "the combined predecessor invocation timed out, while its constituent suites subsequently passed independently; "
+            "the full unbounded Python aggregate was not run; "
+            "the repository is not described as universally green."
         ),
     }
 

@@ -28,11 +28,12 @@ def _sha256(raw: bytes) -> str:
     return hashlib.sha256(raw).hexdigest()
 
 
-def test_blocked_review_regenerates_deterministically() -> None:
+def test_blocked_review_is_canonical_and_exactly_hash_bound() -> None:
     observed = review.OUTPUT_PATH.read_bytes()
-    expected = review.canonical_json_bytes(review.build_review())
-    assert observed == expected
     assert observed == review.canonical_json_bytes(_artifact())
+    assert _sha256(observed) == (
+        "5b1505fb722121329a3d0d08dc9fe8d10674ede0ccce9c1b7a2ffed1ef7d3cd6"
+    )
 
 
 def test_review_binds_immutable_preparation_commit_tree_packet_and_contract() -> None:
@@ -56,11 +57,26 @@ def test_packet_and_contract_are_strict_canonical_finite_json() -> None:
         assert review.canonical_json_bytes(review._strict_json(raw)) == raw
 
 
-def test_independent_schema_walk_finds_all_111_hash_edges() -> None:
+def test_independent_schema_walk_finds_111_annotated_edges_and_ten_omissions() -> None:
     result = review._graph_review(_contract())
     assert result["independently_derived_edge_count"] == 111
     assert result["contract_edge_count"] == 111
-    assert result["unannotated_hash_bearing_field_count"] == 0
+    assert result["unannotated_hash_bearing_field_count"] == 10
+    assert {
+        (row["schema_name"], row["schema_field_path"])
+        for row in result["unannotated_hash_bearing_fields"]
+    } == {
+        ("candidate_consumer_map", "/consumers/*/consumer_id"),
+        ("current_projection", "/active_scientific_workstream/record_id"),
+        ("history_index", "/shards/*/first_record_id"),
+        ("history_index", "/shards/*/last_record_id"),
+        ("history_index", "/shards/*/shard_id"),
+        ("history_shard_record", "/record_id"),
+        ("independent_review_consumer_inventory", "/consumers/*/consumer_id"),
+        ("preflight_consumer_inventory", "/consumers/*/consumer_id"),
+        ("runtime_trace_event", "/consumer_id"),
+        ("runtime_trace_event", "/trace_id"),
+    }
     assert result["self_edge_count"] == 0
     assert result["reciprocal_edge_count"] == 0
     assert result["later_or_same_phase_edge_count"] == 0
@@ -70,7 +86,13 @@ def test_independent_schema_walk_finds_all_111_hash_edges() -> None:
 
 def test_fourteen_dynamic_candidate_edges_have_real_requiredness_mismatch() -> None:
     contract = _contract()
-    derived = review.derive_schema_edge_table(contract)
+    unannotated = []
+    derived = review.derive_schema_edge_table(
+        contract,
+        reject_unannotated=False,
+        unannotated=unannotated,
+    )
+    assert len(unannotated) == 10
     declared = contract["reviewed_schema_hash_edge_table"]["rows"]
     omitted = [row for row in derived if row not in declared]
     invented = [row for row in declared if row not in derived]
@@ -101,12 +123,20 @@ def test_frozen_generator_does_not_reproduce_frozen_artifacts() -> None:
     assert result["regenerated_contract_sha256"] == review.REGENERATED_CONTRACT_SHA256
     assert result["committed_packet_sha256"] == review.PACKET_SHA256
     assert result["committed_contract_sha256"] == review.CONTRACT_SHA256
+    assert result["committed_tree"] == review.PREPARATION_TREE
+    assert result["committed_parent"] == review.SOURCE_COMMIT
+    assert all(
+        row["detached_head"] == review.PREPARATION_COMMIT
+        and row["prototype_root_created"] is False
+        and set(row["changed_paths"]) == {review.CONTRACT_REL, review.PACKET_REL}
+        for row in result["regeneration_runs"]
+    )
 
 
 def test_independent_source_and_preparation_consumer_rescans_are_exact() -> None:
     result = review._consumer_review(_contract())
-    source = result["model_source_commit_scan"]
-    preparation = result["fresh_preparation_commit_scan"]
+    source = result["legacy_literal_source_commit_scan"]
+    preparation = result["legacy_literal_preparation_commit_scan"]
     assert source["callsite_identity_count"] == 584
     assert source["unique_path_count"] == 522
     assert source["runtime_required_count"] == 23
@@ -120,28 +150,46 @@ def test_independent_source_and_preparation_consumer_rescans_are_exact() -> None
     assert preparation["baseline_changed_path_count"] == 3
 
 
-def test_preparation_commit_adds_two_paths_and_eight_call_sites() -> None:
+def test_preparation_delta_is_non_normative_and_identity_sets_are_not_subtracted() -> None:
     result = _artifact()["consumer_inventory_review"]
-    assert result["preparation_only_callsite_count"] == 8
+    assert result["preparation_only_identity_count"] == 19
+    assert result["source_only_identity_count"] == 11
     assert result["preparation_only_consumer_paths"] == [
         review.CONTRACT_REL,
         review.GENERATOR_REL,
     ]
     assert result["review_commit_equals_contract_model_source_commit"] is False
     assert result["contract_historical_scan_is_marked_non_normative"] is True
+    assert result["source_witness_identity_root_matches_frozen_evidence"] is False
+
+
+def test_executable_inventory_scanner_violates_frozen_algorithm_and_schema() -> None:
+    result = _artifact()["consumer_inventory_review"]
+    assert result["contract_requires_python_ast_passes"] is True
+    assert result["review_scanner_contract_conformant"] is False
+    assert result["emitted_mechanisms_are_allowed_by_contract"] is False
+    assert result["emitted_row_count_with_schema_forbidden_mechanism"] == 592
+    assert result["emitted_discovery_mechanisms"] == [
+        "GIT_COMMIT_BLOB_LITERAL_OCCURRENCE",
+        "REVIEWED_NONLITERAL_PATH_RULE",
+    ]
 
 
 def test_all_27_frozen_controls_report_exact_isolated_failures() -> None:
-    result = review._control_review(_contract())
+    result = _artifact()["control_review"]
     assert result["frozen_control_count"] == 27
     assert result["retained_v1_control_count"] == 12
     assert result["new_v2_control_count"] == 15
     assert result["frozen_control_ids_unique"] is True
     assert result["frozen_results_all_report_isolated_clean_baselines"] is True
     assert result["frozen_results_all_report_intended_code"] is True
+    execution = result["detached_frozen_validator_control_test"]
+    assert execution["passed"] is True
+    assert execution["selected_test_count"] == 1
+    assert execution["prototype_root_created"] is False
 
 
-def test_independent_v2_mutation_probes_are_isolated_and_code_specific() -> None:
+def test_reviewer_model_probes_are_isolated_but_not_frozen_validator_evidence() -> None:
     rows = review._inventory_probe_results()
     assert len(rows) == 15
     assert len({row["control_id"] for row in rows}) == 15
@@ -155,6 +203,12 @@ def test_independent_v2_mutation_probes_are_isolated_and_code_specific() -> None
         for row in rows
     )
     assert all(row["subsequent_controls_uncontaminated"] for row in rows)
+    assert {row["evidence_scope"] for row in rows} == {
+        "REVIEWER_MODEL_ONLY_NOT_FROZEN_VALIDATOR"
+    }
+    assert _artifact()["control_review"][
+        "reviewer_model_probes_are_frozen_validator_evidence"
+    ] is False
 
 
 def test_full_custody_model_accounts_for_every_record_exactly_once() -> None:
@@ -212,10 +266,14 @@ def test_production_paths_remain_the_unchanged_blocked_v0_boundary() -> None:
     assert result["preparation_generator_is_in_authorized_implementation_set"] is False
 
 
-def test_all_three_lifecycle_models_remain_non_authorizing() -> None:
+def test_lifecycle_flags_remain_non_authorizing_and_full_graph_is_not_accepted() -> None:
     result = _artifact()["lifecycle_review"]
-    assert result["complete_branch_model_valid"] is True
-    assert result["post_generation_blocked_branch_model_valid"] is True
+    assert result["complete_branch_frozen_positive_model_flag"] is True
+    assert result["complete_branch_full_graph_independently_validated"] is False
+    assert result["post_generation_blocked_branch_frozen_positive_model_flag"] is True
+    assert result[
+        "post_generation_blocked_branch_full_graph_independently_validated"
+    ] is False
     assert result["preflight_blocked_branch_has_no_candidate_artifacts"] is True
     assert result["production_complete_branch_executable"] is False
     assert result["review_accepts_abstract_models_as_execution_authority"] is False
@@ -227,7 +285,12 @@ def test_review_is_b_blocked_and_requires_versioned_v3() -> None:
         "B_BLOCKED_REJECT_STAGE_A_V2_EXECUTION_AUTHORIZATION_REQUIRE_VERSIONED_V3_SUCCESSOR"
     )
     assert artifact["status"].startswith("B_BLOCKED_V2_PREPARATION_PRESERVED")
-    assert len(artifact["blocking_findings"]) == 3
+    assert [row["finding_id"] for row in artifact["blocking_findings"]] == [
+        "V2-IR-BLOCK-001-DYNAMIC-CANDIDATE-EDGE-REQUIREDNESS-MISMATCH",
+        "V2-IR-BLOCK-002-PREPARATION-GENERATOR-ARTIFACT-DRIFT",
+        "V2-IR-BLOCK-003-INVENTORY-ALGORITHM-IMPLEMENTATION-MISMATCH",
+        "V2-IR-BLOCK-004-UNDECLARED-PREFIXED-HASH-COMMITMENTS",
+    ]
     assert artifact["recommended_next_boundary"]["versioned_successor_target"] == (
         review.SUCCESSOR_TARGET
     )
@@ -260,6 +323,17 @@ def test_review_output_has_no_self_hash_or_review_commit_binding() -> None:
     artifact = _artifact()
     assert "review_sha256" not in artifact
     assert "review_commit" not in artifact
+
+
+def test_validation_interpretation_preserves_the_required_narrow_wording() -> None:
+    required = (
+        "focused preparation, review, authority, registry and exhaustive Lean "
+        "validation passed; the combined predecessor invocation timed out, while "
+        "its constituent suites subsequently passed independently; the full "
+        "unbounded Python aggregate was not run; the repository is not described "
+        "as universally green."
+    )
+    assert _artifact()["validation_interpretation"] == required
 
 
 def test_review_integration_enrolls_integrity_gate_and_lean_module() -> None:
@@ -300,7 +374,9 @@ def test_lean_certificate_binds_blocked_review_and_nonpromotion() -> None:
         review.CONTRACT_SHA256,
         review.EDGE_ROOT_SHA256,
         review_hash,
-        "def blockingFindingCount : Nat := 3",
+        "def blockingFindingCount : Nat := 4",
+        "def unannotatedHashBearingFieldCount : Nat := 10",
+        "def inventoryScannerContractConformant : Bool := false",
         "def stageAAuthorized : Bool := false",
         "def versionedV3SuccessorRequired : Bool := true",
         "def stageBAuthorized : Bool := false",

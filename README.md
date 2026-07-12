@@ -31,7 +31,7 @@ The independent v3 review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING
 The bounded read-only prototype execution packet at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v0.json` prepares the implementation and validation contract only. It resolves the accepted-v3 interface conflicts, binds ten runtime evidence schemas, stages Stage A as `58` inherited plus `18` runtime-contract controls, defers the full `60 + 18` burden to a versioned Stage-B successor, and versions the historical absence gates without creating a projection, shard, validator, custody payload, trace, or prototype run. Independent review is required before even Stage-A implementation or execution; neither current target is rotated and migration, cutover, writes, unit-ledger execution, and claim movement remain unauthorized.
 The independent review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v0.json` accepts the preparation and conditionally authorizes only the four-path read-only implementation plus Stage A's `58 + 18 = 76` controls. The production-control test must be invoked directly and recorded; governance, line-ending, documentation, and Lean integration remain outside the clean implementation commit and are deferred to post-execution review. Stage B (`60 + 18 = 78`), migration, cutover, writes, target rotation, unit-ledger execution, and claim movement remain unauthorized.
 The v2 successor preparation at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260712_v2.json` preserves v1 unchanged and freezes a schema-derived hash-edge table, repository-rooted preflight consumer attestation, exact preflight/candidate/trace reconciliation, valid complete and blocked lifecycle subgraphs, and 15 new typed regressions. It is preparation evidence awaiting independent review: implementation, Stage A, Stage B, prototype creation, migration, cutover, writes, target rotation, unit-ledger execution, and claim movement remain unauthorized.
-The independent v2 review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260712_v2.json` is `B-BLOCKED`. Its schema walk finds 14 dynamic candidate-artifact edges whose requiredness differs between the frozen runtime schema and reviewed edge table; two detached regenerations agree with each other but not with the committed packet and contract; and a fresh scan of the immutable preparation commit finds 592 call sites across 524 paths, eight call sites and two paths beyond the frozen positive witness. V2 remains unchanged, Stage A and Stage B remain unauthorized, and a versioned v3 successor is required before any retry. Registry maintenance may pause at this immutable boundary while the separately guardrailed unit-ledger scientific target resumes.
+The independent v2 review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260712_v2.json` is `B-BLOCKED` on four contract defects. Its schema walk finds 14 dynamic candidate-artifact edges with incorrect requiredness and ten prefixed SHA-256 commitments with no reviewed edge; two clean detached regenerations agree with each other but not with the committed packet and contract; and the executable inventory witness emits 592 rows using two mechanisms forbidden by the frozen seven-mechanism scanner contract. The preparation/source count delta remains non-normative evidence, not a blocker. V2 remains unchanged, Stage A and Stage B remain unauthorized, and a versioned v3 successor is required before any retry. Registry maintenance may pause at this immutable boundary while the separately guardrailed scientific target may resume separately.
 Validation is stated narrowly: focused preparation, review, authority, registry and exhaustive Lean validation passed; the combined predecessor invocation timed out, while its constituent suites subsequently passed independently; the full unbounded Python aggregate was not run; the repository is not described as universally green.
 
 TECHNICAL-DEBT BASELINE CORRECTION
@@ -2774,8 +2774,14 @@ Historical calculation-execution outcome tokens:
 - The v2 successor freezes the actual schema-edge and generation-phase tables,
   a repository-rooted execution preflight inventory, exact consumer and trace
   reconciliation, complete and blocked DAGs, and 15 new typed regressions. It
-  remains preparation evidence pending independent review; Stage A and Stage B
-  are unauthorized, and no prototype root or candidate artifact was created.
+  was submitted as preparation evidence; Stage A and Stage B were not
+  authorized, and no prototype root or candidate artifact was created.
+- The independent v2 review is `B-BLOCKED`: dynamic candidate-edge
+  requiredness disagrees with the runtime schema, ten prefixed hash commitments
+  lack reviewed edges, two detached regenerations do not reproduce the frozen
+  artifacts, and the executable inventory scanner does not implement the
+  frozen seven-mechanism contract. V2 is preserved and no Stage-A retry is
+  authorized before a versioned v3 successor is independently accepted.
 - Validation is stated narrowly: focused preparation, review, authority,
   registry and exhaustive Lean validation passed; the combined predecessor
   invocation timed out, while its constituent suites subsequently passed
@@ -2786,4 +2792,5 @@ Historical calculation-execution outcome tokens:
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2 --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review --check
 ```

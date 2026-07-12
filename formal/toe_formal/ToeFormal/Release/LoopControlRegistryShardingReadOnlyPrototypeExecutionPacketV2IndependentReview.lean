@@ -2,11 +2,12 @@ import ToeFormal.Release.LoopControlRegistryShardingReadOnlyPrototypeExecutionPa
 
 /-
   Independent review certificate for the frozen registry Stage-A v2
-  preparation.  The review reconstructs the schema graph and full custody
-  scale, but rejects authorization because dynamic candidate-edge
+  preparation.  The review reconstructs the annotated schema subgraph and
+  full custody scale, but rejects authorization because dynamic candidate-edge
   requiredness differs between schema and edge table, the committed generator
-  does not reproduce the frozen artifacts, and the immutable preparation
-  commit contains consumers omitted by the positive witness.
+  does not reproduce the frozen artifacts, the executable inventory scanner
+  does not implement the frozen discovery contract, and ten prefixed SHA-256
+  commitments have no reviewed edge annotations.
 -/
 
 namespace ToeFormal.Release.LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV2IndependentReview
@@ -30,11 +31,18 @@ def independentlyDerivedSchemaEdgeRootSha256 : String :=
   "1db029814955bab15a248aa2bb9f61a67a2faa3a4c1fcaca4169878756ff989c"
 
 def independentReviewSha256 : String :=
-  "1a82c3681658b11d1bc477ba3c61079be6d3b93bad30135d9bd6e0870b82953e"
+  "5b1505fb722121329a3d0d08dc9fe8d10674ede0ccce9c1b7a2ffed1ef7d3cd6"
+
+def regeneratedContractBundleSha256 : String :=
+  "081e666a1cd4d5b06f27764249418b4cc55563b25426821c73b67d516dc45323"
+
+def regeneratedPacketSha256 : String :=
+  "fbbe09b35ba567a8686094fd66a96cfb854410d8b72c223a2bbb709c5ba1f555"
 
 def declaredSchemaEdgeCount : Nat := 111
 def independentlyDerivedSchemaEdgeCount : Nat := 111
 def dynamicRequirednessMismatchCount : Nat := 14
+def unannotatedHashBearingFieldCount : Nat := 10
 def retainedV1RegressionCount : Nat := 12
 def newV2RegressionCount : Nat := 15
 def permanentRegressionCount : Nat := 27
@@ -42,11 +50,17 @@ def historyRecordCount : Nat := 4691
 def historyShardCount : Nat := 14
 def preparationConsumerCallsiteCount : Nat := 592
 def modelSourceConsumerCallsiteCount : Nat := 584
-def blockingFindingCount : Nat := 3
+def preparationOnlyConsumerIdentityCount : Nat := 19
+def sourceOnlyConsumerIdentityCount : Nat := 11
+def blockingFindingCount : Nat := 4
 
-def schemaEdgeTablesEqual : Bool := false
+def annotatedSchemaEdgeTablesEqual : Bool := false
+def completeSchemaHashGraphCovered : Bool := false
 def frozenArtifactsReproducedByCommittedGenerator : Bool := false
-def preparationInventoryEqualsModelSourceInventory : Bool := false
+def inventoryScannerContractConformant : Bool := false
+def frozenSourceIdentityRootReproduced : Bool := false
+def detachedPermanentControlTestPassed : Bool := true
+def historicalConsumerCountsNormativeForExecution : Bool := false
 def byteExactCustodyReconstruction : Bool := true
 def stageAAuthorized : Bool := false
 def stageBAuthorized : Bool := false
@@ -63,15 +77,22 @@ theorem regressionAndCustodyScaleReconciles :
       historyShardCount = 14 := by
   decide
 
-theorem independentlyObservedPreparationDelta :
+theorem independentlyObservedNonNormativeInventoryEvidence :
     modelSourceConsumerCallsiteCount + 8 = preparationConsumerCallsiteCount ∧
-      dynamicRequirednessMismatchCount = 14 := by
+      preparationOnlyConsumerIdentityCount = 19 ∧
+      sourceOnlyConsumerIdentityCount = 11 ∧
+      historicalConsumerCountsNormativeForExecution = false := by
   decide
 
 theorem blockedReviewBoundary :
-    schemaEdgeTablesEqual = false ∧
+    annotatedSchemaEdgeTablesEqual = false ∧
+      completeSchemaHashGraphCovered = false ∧
+      dynamicRequirednessMismatchCount = 14 ∧
+      unannotatedHashBearingFieldCount = 10 ∧
       frozenArtifactsReproducedByCommittedGenerator = false ∧
-      preparationInventoryEqualsModelSourceInventory = false ∧
+      inventoryScannerContractConformant = false ∧
+      frozenSourceIdentityRootReproduced = false ∧
+      detachedPermanentControlTestPassed = true ∧
       byteExactCustodyReconstruction = true ∧
       stageAAuthorized = false ∧
       stageBAuthorized = false ∧

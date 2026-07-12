@@ -81,14 +81,16 @@ preflight/candidate/trace reconciliation, satisfiable complete and blocked
 lifecycle subgraphs, and 15 new typed regressions. It awaits independent review
 and authorizes no implementation, Stage A, Stage B, prototype root, migration,
 cutover, write, target rotation, unit-ledger execution, or scientific promotion.
-The independent v2 review is `B-BLOCKED`. It derives all 111 schema edges but
-finds 14 dynamic candidate edges whose requiredness disagrees with the frozen
-schema, proves that the committed generator does not reproduce the frozen
-packet and contract in two detached runs, and rescans 592 call sites across 524
-paths at the immutable preparation commit rather than trusting the 584-call-site
-model witness. V2 is preserved, a versioned v3 successor is required before any
-Stage-A retry, and maintenance may pause while the separately guardrailed
-unit-ledger scientific target resumes.
+The independent v2 review is `B-BLOCKED` on four contract defects. It derives
+111 annotated edges but finds 14 dynamic candidate edges with incorrect
+requiredness and ten prefixed SHA-256 commitments with no reviewed edge. Two
+clean detached regenerations agree with each other but not with the committed
+packet and contract. The executable inventory witness emits 592 rows using two
+mechanisms forbidden by the frozen seven-mechanism scanner contract; the
+preparation/source count delta remains non-normative evidence, not a blocker.
+V2 is preserved, a versioned v3 successor is required before any Stage-A retry,
+and maintenance may pause while the separately guardrailed scientific target
+may resume separately.
 Validation is stated narrowly: focused preparation, review, authority, registry
 and exhaustive Lean validation passed; the combined predecessor invocation timed
 out, while its constituent suites subsequently passed independently; the full
