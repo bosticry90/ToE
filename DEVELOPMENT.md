@@ -75,6 +75,18 @@ frozen baseline plus fresh preflight delta. A versioned v2 successor is
 required. No prototype, Stage A, Stage B, migration, cutover, target rotation,
 unit-ledger execution, or scientific promotion occurred.
 
+The v2 successor preparation freezes schema-derived hash edges and generation
+phases, a repository-rooted execution preflight consumer attestation, exact
+preflight/candidate/trace reconciliation, satisfiable complete and blocked
+lifecycle subgraphs, and 15 new typed regressions. It awaits independent review
+and authorizes no implementation, Stage A, Stage B, prototype root, migration,
+cutover, write, target rotation, unit-ledger execution, or scientific promotion.
+Validation is stated narrowly: focused preparation, review, authority, registry
+and exhaustive Lean validation passed; the combined predecessor invocation timed
+out, while its constituent suites subsequently passed independently; the full
+unbounded Python aggregate was not run; the repository is not described as
+universally green.
+
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
 bindings only and preserves every frozen debt count, identity set, and target.
@@ -145,6 +157,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2 --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

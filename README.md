@@ -30,6 +30,8 @@ Corrective v3 at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_R
 The independent v3 review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_READINESS_PACKET_INDEPENDENT_REVIEW_20260711_v3.json` accepts v3 only as a corrected preparation contract. It reproduces ten closed schemas, five executable artifact fixtures, 60 exact control/error pairs, eight atomic regressions, all 496 consumer paths, and the 33-field semantic profile map. Production validators and full-profile baselines remain unimplemented and unexecuted; prototype selection, migration, cutover, target rotation, unit-ledger execution, and claim movement remain unauthorized.
 The bounded read-only prototype execution packet at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v0.json` prepares the implementation and validation contract only. It resolves the accepted-v3 interface conflicts, binds ten runtime evidence schemas, stages Stage A as `58` inherited plus `18` runtime-contract controls, defers the full `60 + 18` burden to a versioned Stage-B successor, and versions the historical absence gates without creating a projection, shard, validator, custody payload, trace, or prototype run. Independent review is required before even Stage-A implementation or execution; neither current target is rotated and migration, cutover, writes, unit-ledger execution, and claim movement remain unauthorized.
 The independent review at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v0.json` accepts the preparation and conditionally authorizes only the four-path read-only implementation plus Stage A's `58 + 18 = 76` controls. The production-control test must be invoked directly and recorded; governance, line-ending, documentation, and Lean integration remain outside the clean implementation commit and are deferred to post-execution review. Stage B (`60 + 18 = 78`), migration, cutover, writes, target rotation, unit-ledger execution, and claim movement remain unauthorized.
+The v2 successor preparation at `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260712_v2.json` preserves v1 unchanged and freezes a schema-derived hash-edge table, repository-rooted preflight consumer attestation, exact preflight/candidate/trace reconciliation, valid complete and blocked lifecycle subgraphs, and 15 new typed regressions. It is preparation evidence awaiting independent review: implementation, Stage A, Stage B, prototype creation, migration, cutover, writes, target rotation, unit-ledger execution, and claim movement remain unauthorized.
+Validation is stated narrowly: focused preparation, review, authority, registry and exhaustive Lean validation passed; the combined predecessor invocation timed out, while its constituent suites subsequently passed independently; the full unbounded Python aggregate was not run; the repository is not described as universally green.
 
 TECHNICAL-DEBT BASELINE CORRECTION
 `formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json` is the effective clean-checkout-reproducible evidence correction for the frozen debt counts and identity sets. It preserves v0 as an immutable historical artifact, binds normalized source bytes at review commit `887d1b2f`, and corrects the 50 axiom plus 20 opaque empty statement-line hashes. It does not reclassify debt, change any count or identity set, rotate either target, or authorize registry migration.
@@ -67,6 +69,7 @@ DEVELOPER QUICKSTART
 - Validate its independent preparation-only acceptance: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_execution_readiness_packet_v3_independent_review --check`
 - Validate the bounded read-only prototype execution preparation packet: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet --check`
 - Validate its independent Stage-A-only authorization review: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review --check`
+- Validate the v2 successor preparation without running Stage A: `.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2 --check`
 - Validate all tracked Lean modules: `.\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check`, then `.\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll`
 - A passing gate or Lean build does not by itself authorize a scientific, theorem, seam, pillar, release, empirical, or master-action promotion.
 
@@ -2766,8 +2769,19 @@ Historical calculation-execution outcome tokens:
   Stage A remains unauthorized and a versioned v2 successor is required. No
   prototype, Stage B, migration, cutover, target rotation, unit-ledger
   execution, or scientific promotion occurred in the review.
+- The v2 successor freezes the actual schema-edge and generation-phase tables,
+  a repository-rooted execution preflight inventory, exact consumer and trace
+  reconciliation, complete and blocked DAGs, and 15 new typed regressions. It
+  remains preparation evidence pending independent review; Stage A and Stage B
+  are unauthorized, and no prototype root or candidate artifact was created.
+- Validation is stated narrowly: focused preparation, review, authority,
+  registry and exhaustive Lean validation passed; the combined predecessor
+  invocation timed out, while its constituent suites subsequently passed
+  independently; the full unbounded Python aggregate was not run; the
+  repository is not described as universally green.
 
 ```powershell
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v2 --check
 ```

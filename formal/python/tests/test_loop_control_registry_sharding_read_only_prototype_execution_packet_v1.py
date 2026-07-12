@@ -1099,7 +1099,7 @@ def test_preparation_integration_is_complete_without_implementation_or_authority
     assert manifest["test_tiers"][relative_test] == "TIER_INTEGRITY"
     integrity = manifest["groups"]["integrity_gates"]
     assert relative_test in integrity["tests"]
-    assert integrity["expected_count"] == len(integrity["tests"]) == 68
+    assert integrity["expected_count"] == len(integrity["tests"]) == 69
     assert integrity["expected_sha256"] == _sha256(
         "\n".join(integrity["tests"]).encode("utf-8")
     )
@@ -1148,4 +1148,4 @@ def test_preparation_integration_is_complete_without_implementation_or_authority
         "import ToeFormal.Release."
         "LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV1"
     ) in aggregate
-    assert "def trackedModuleCount : Nat := 1065" in aggregate
+    assert "def trackedModuleCount : Nat := 1066" in aggregate

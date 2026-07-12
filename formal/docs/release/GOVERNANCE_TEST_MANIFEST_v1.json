@@ -33,6 +33,7 @@
     "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet.py": "TIER_INTEGRITY",
@@ -91,8 +92,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 68,
-      "expected_sha256": "d35f1018bcc6b21839790a107cf4ff8ac810c72989f2587b228526c06bff8f14",
+      "expected_count": 69,
+      "expected_sha256": "7709fa43a681a20ab8bbb8d10b262889f761d12591fe09ac0cf48af893b510df",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -125,6 +126,7 @@
         "formal/python/tests/test_loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py",
+        "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet.py",

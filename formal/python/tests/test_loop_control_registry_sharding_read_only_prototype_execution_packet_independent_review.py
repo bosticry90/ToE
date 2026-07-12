@@ -335,7 +335,7 @@ def test_review_integration_enrolls_one_integrity_gate_and_one_lean_module() -> 
     assert manifest["test_tiers"][relative_test] == "TIER_INTEGRITY"
     integrity = manifest["groups"]["integrity_gates"]
     assert relative_test in integrity["tests"]
-    assert integrity["expected_count"] == len(integrity["tests"]) == 68
+    assert integrity["expected_count"] == len(integrity["tests"]) == 69
     assert integrity["expected_sha256"] == _sha256(
         "\n".join(integrity["tests"]).encode("utf-8")
     )
@@ -368,4 +368,4 @@ def test_review_integration_enrolls_one_integrity_gate_and_one_lean_module() -> 
         "import ToeFormal.Release."
         "LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketIndependentReview"
     ) in aggregate
-    assert "def trackedModuleCount : Nat := 1065" in aggregate
+    assert "def trackedModuleCount : Nat := 1066" in aggregate
