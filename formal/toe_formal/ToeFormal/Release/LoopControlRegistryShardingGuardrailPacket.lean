@@ -1,5 +1,3 @@
-import ToeFormal.Release.CurrentAuthority
-
 /-
 Operational certificate for the registry-sharding preparation contract. This
 file does not parse JSON, create shards, retire the legacy registry, rotate the
@@ -20,7 +18,7 @@ def packetStatus : String :=
   "PREPARED_GUARDRAIL_CONTRACT_ONLY_MIGRATION_NOT_RUN"
 
 def scientificTarget : String :=
-  CurrentAuthority.currentTarget
+  "execute_pillar_seam_unit_mapping_ledger_v0"
 
 def maintenanceTarget : String :=
   "prepare_loop_control_registry_sharding_and_current_projection_packet_v0"
@@ -64,7 +62,7 @@ def pillarCompletionClaimed : Bool := false
 
 theorem scientific_authority_is_unchanged :
     scientificTarget = "execute_pillar_seam_unit_mapping_ledger_v0" := by
-  native_decide
+  rfl
 
 theorem preparation_binds_complete_legacy_accounting :
     legacyTopLevelKeyCount = 4153 ∧

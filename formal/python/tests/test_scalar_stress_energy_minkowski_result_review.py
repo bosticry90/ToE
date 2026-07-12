@@ -88,11 +88,15 @@ def test_review_is_preserved_after_curved_guardrail_rotation() -> None:
     assert review["status"] == "paused"
     assert review["selected_next_target"] == CURVED_RETEST_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+        "execute_pillar_seam_unit_mapping_ledger_v0"
     )
-    assert state["live_next_target"] == "execute_pillar_seam_unit_mapping_ledger_v0"
+    assert state["live_next_target"] == (
+        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+    )
     assert active["workstream_id"] == state["live_next_target"]
-    assert active["claim_status"] == "guardrail_prepared_audit_only_execution_pending"
+    assert active["claim_status"] == (
+        "accepted_twelve_row_blocker_preserving_audit_route_selection_pending"
+    )
 
 
 def test_successful_review_preserves_the_two_minkowski_equation_surfaces() -> None:

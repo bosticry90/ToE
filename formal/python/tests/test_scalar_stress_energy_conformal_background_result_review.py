@@ -108,12 +108,16 @@ def test_review_and_nonzero_curvature_guardrail_are_preserved_after_rotation() -
     assert review["status"] == "paused"
     assert review["selected_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet"
+        "execute_pillar_seam_unit_mapping_ledger_v0"
     )
-    assert state["live_next_target"] == "execute_pillar_seam_unit_mapping_ledger_v0"
+    assert state["live_next_target"] == (
+        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+    )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
-    assert active["claim_status"] == "guardrail_prepared_audit_only_execution_pending"
+    assert active["claim_status"] == (
+        "accepted_twelve_row_blocker_preserving_audit_route_selection_pending"
+    )
 
 
 def test_successful_review_activates_only_covariant_identity_surface() -> None:

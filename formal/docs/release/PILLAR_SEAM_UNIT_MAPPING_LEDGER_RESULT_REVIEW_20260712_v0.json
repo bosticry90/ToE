@@ -1,0 +1,680 @@
+{
+  "accepted": true,
+  "artifact_chain": {
+    "execution_report_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0.json",
+    "expected_execution_hashes": {
+      "execution_report_sha256": "9c32106d3220945094a32525ee7f626b32b71146c518a353955974bd386285ec",
+      "executor_sha256": "c947d2211c0fa62e743dd3f3937473fc1e2671760059a28c332b2ebec4fef9b2",
+      "guardrail_sha256": "7fd4e988ea1a3c435247c2427686c2f3d3024a01c179d99fab30a4d027e364cf",
+      "ledger_sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+      "manifest_sha256": "7804844617dea99df2c875d144966b0b196b08bbc884c8aa28a4c441bc7836b1"
+    },
+    "expected_input_hashes": {
+      "compendium_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "qcd_context_sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724",
+      "readiness_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "scalar_review_sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0"
+    },
+    "ledger_path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+    "manifest_path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-MANIFEST-v0.json"
+  },
+  "authority_rotation": {
+    "execution_time_rotation_performed": false,
+    "maintenance_authority_rotation_authorized": false,
+    "review_time_rotation_authorized": true
+  },
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "ccft_resumed": false,
+    "cross_sector_coupling_claim_authorized": false,
+    "dimensional_closure_claimed": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_authorized": false,
+    "pillar_completion_claimed": false,
+    "seam_admissibility_claimed": false,
+    "seam_closure_claimed": false,
+    "unit_closure_claimed": false
+  },
+  "captured_at_utc": "2026-07-12T00:00:00Z",
+  "claim": {
+    "claim_ceiling_level": 3,
+    "claim_scope": "reproducible reconstruction, classification, and adversarial testing of the exact twelve frozen pillar and seam unit-readiness rows",
+    "invented_quantity_or_mapping_count": 0,
+    "pillar_unit_row_count": 7,
+    "seam_unit_map_row_count": 5,
+    "total_row_count": 12,
+    "unit_unknown_row_count": 6,
+    "unresolved_row_count": 6
+  },
+  "consumed_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "determinism": {
+    "canonical_json": true,
+    "fresh_subprocess_count_required": 2,
+    "report_contains_no_ambient_repository_state": true
+  },
+  "execution_commit": "2d2617950437b7465e6f322b89463d6417d8cf35",
+  "execution_parent": "cfa61bdbb0147a8759f7159ef2588fcaabca472a",
+  "failure_preservation": {
+    "authority_rotation_authorized": true,
+    "execution_commit_remains_immutable": true,
+    "failure_target": "diagnose_pillar_seam_unit_mapping_ledger_v0_reproducibility_mismatch",
+    "source_or_execution_artifacts_amended_by_review": false
+  },
+  "maintenance_boundary": {
+    "maintenance_authority_unchanged": true,
+    "registry_maintenance_paused": true,
+    "registry_monolith_remains_authoritative": true,
+    "registry_v3_live": false,
+    "stage_a_authorized": false,
+    "stage_b_authorized": false
+  },
+  "mismatch_codes": [],
+  "primary_label": "ACCEPT",
+  "review_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_v0",
+  "review_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_TWELVE_ROW_BLOCKER_PRESERVING_AUDIT_AND_AUTHORIZES_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_PREPARATION_ONLY",
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0",
+  "selected_next_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet",
+  "selection_basis": "all twelve audited rows retain typed blockers, so a bounded source-backed blocker-response route must be selected before any unit assignment or readiness promotion",
+  "status": "accepted_bounded_unit_mapping_ledger",
+  "strict_review_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_ACCEPTS_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4OR5_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+  "successor_selection": {
+    "direct_unit_assignment_authorized": false,
+    "readiness_promotion_authorized": false,
+    "selected_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet",
+    "selected_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+  },
+  "verification": {
+    "accepted": true,
+    "actual_execution_hashes": {
+      "execution_report_sha256": "9c32106d3220945094a32525ee7f626b32b71146c518a353955974bd386285ec",
+      "executor_sha256": "c947d2211c0fa62e743dd3f3937473fc1e2671760059a28c332b2ebec4fef9b2",
+      "guardrail_sha256": "7fd4e988ea1a3c435247c2427686c2f3d3024a01c179d99fab30a4d027e364cf",
+      "ledger_sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+      "manifest_sha256": "7804844617dea99df2c875d144966b0b196b08bbc884c8aa28a4c441bc7836b1"
+    },
+    "actual_input_hashes": {
+      "compendium_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "qcd_context_sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724",
+      "readiness_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "scalar_review_sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0"
+    },
+    "all_eight_independent_controls_detected": true,
+    "all_five_execution_hashes_match": true,
+    "all_four_input_hashes_match": true,
+    "all_sixteen_independent_decisions_pass": true,
+    "execution_self_adjudication_trusted": false,
+    "execution_time_custody": {
+      "execution_commit": "2d2617950437b7465e6f322b89463d6417d8cf35",
+      "execution_parent": "cfa61bdbb0147a8759f7159ef2588fcaabca472a",
+      "maintenance_authority_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+      "maintenance_authority_unchanged_from_parent": true,
+      "maintenance_v2_review_sha256": "5b1505fb722121329a3d0d08dc9fe8d10674ede0ccce9c1b7a2ffed1ef7d3cd6",
+      "maintenance_v2_review_unchanged_from_parent": true,
+      "maintenance_v2_status": "B_BLOCKED_V2_PREPARATION_PRESERVED_STAGE_A_AND_STAGE_B_UNAUTHORIZED_MAINTENANCE_MAY_PAUSE_AND_SCIENCE_MAY_RESUME_SEPARATELY",
+      "prototype_execution_authorized": false,
+      "registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "registry_unchanged_from_parent": true,
+      "review_time_maintenance_authority_unchanged": true,
+      "review_time_maintenance_v2_evidence_unchanged": true,
+      "stage_a_authorized": false,
+      "stage_b_authorized": false,
+      "versioned_v3_successor_required": true
+    },
+    "fresh_subprocess_reproduction": {
+      "all_frozen_inputs_unchanged": true,
+      "both_runs_byte_identical": true,
+      "distinct_temporary_directories": true,
+      "failure": null,
+      "fresh_runs_match_repository_artifacts": true,
+      "repository_execution_artifacts_unchanged": true,
+      "run_count": 2,
+      "subprocess_stdout_byte_identical": true
+    },
+    "independent_decisions": [
+      {
+        "decision_id": "all_four_input_artifact_hashes_match",
+        "decision_number": 1,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "readiness_authority_schema_and_status_are_preserved",
+        "decision_number": 2,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "exactly_seven_pillar_unit_rows_are_bound",
+        "decision_number": 3,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "exactly_five_seam_unit_map_rows_are_bound",
+        "decision_number": 4,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "all_twelve_source_row_ids_are_unique",
+        "decision_number": 5,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "all_source_evidence_pointers_are_retained",
+        "decision_number": 6,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "source_missing_partial_or_blocked_statuses_are_not_promoted",
+        "decision_number": 7,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "assignment_domain_count": 0,
+        "decision_id": "every_quantity_declares_a_unit_convention",
+        "decision_number": 8,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "assignment_domain_count": 0,
+        "decision_id": "every_dimensional_quantity_uses_an_explicit_dimension_vector",
+        "decision_number": 9,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "assignment_domain_count": 0,
+        "decision_id": "natural_unit_reductions_name_constants_and_restoration_maps",
+        "decision_number": 10,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "assignment_domain_count": 0,
+        "decision_id": "dimensionless_numerical_units_are_not_physical_calibration",
+        "decision_number": 11,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "assignment_domain_count": 0,
+        "decision_id": "cross_convention_equalities_require_explicit_conversion_maps",
+        "decision_number": 12,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "assignment_domain_count": 0,
+        "decision_id": "seam_compatibility_requires_matching_converted_dimensions",
+        "decision_number": 13,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "unresolved_unit_assignments_remain_explicit_blockers",
+        "decision_number": 14,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "qcd_literature_pressure_remains_non_authorizing_context",
+        "decision_number": 15,
+        "passed": true,
+        "source": "independent_result_review"
+      },
+      {
+        "decision_id": "all_claim_ceiling_and_nonpromotion_boundaries_are_preserved",
+        "decision_number": 16,
+        "passed": true,
+        "source": "independent_result_review"
+      }
+    ],
+    "independent_negative_controls": [
+      {
+        "control_id": "dropped_source_row",
+        "detected": true,
+        "expected_failed_decision_id": "exactly_seven_pillar_unit_rows_are_bound",
+        "expected_failed_decision_ids": [
+          "exactly_seven_pillar_unit_rows_are_bound",
+          "exactly_five_seam_unit_map_rows_are_bound"
+        ],
+        "expected_failure": "exactly_seven_pillar_or_five_seam_rows_bound",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "exactly_seven_pillar_unit_rows_are_bound",
+          "exactly_five_seam_unit_map_rows_are_bound"
+        ],
+        "passed": true,
+        "subcases": [
+          {
+            "expected_failed_decision_id": "exactly_seven_pillar_unit_rows_are_bound",
+            "fresh_deep_copy_used": true,
+            "mutation": "drop one row from pillar_rows",
+            "observed_failed_decision_ids": [
+              "exactly_seven_pillar_unit_rows_are_bound"
+            ],
+            "passed": true
+          },
+          {
+            "expected_failed_decision_id": "exactly_five_seam_unit_map_rows_are_bound",
+            "fresh_deep_copy_used": true,
+            "mutation": "drop one row from seam_rows",
+            "observed_failed_decision_ids": [
+              "exactly_five_seam_unit_map_rows_are_bound"
+            ],
+            "passed": true
+          }
+        ]
+      },
+      {
+        "control_id": "duplicate_source_row_id",
+        "detected": true,
+        "expected_failed_decision_id": "all_twelve_source_row_ids_are_unique",
+        "expected_failed_decision_ids": [
+          "all_twelve_source_row_ids_are_unique"
+        ],
+        "expected_failure": "all_twelve_source_row_ids_are_unique",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "all_twelve_source_row_ids_are_unique"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "source_status_promotion",
+        "detected": true,
+        "expected_failed_decision_id": "source_missing_partial_or_blocked_statuses_are_not_promoted",
+        "expected_failed_decision_ids": [
+          "source_missing_partial_or_blocked_statuses_are_not_promoted"
+        ],
+        "expected_failure": "source_statuses_are_not_promoted",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "source_missing_partial_or_blocked_statuses_are_not_promoted"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "missing_evidence_pointer",
+        "detected": true,
+        "expected_failed_decision_id": "all_source_evidence_pointers_are_retained",
+        "expected_failed_decision_ids": [
+          "all_source_evidence_pointers_are_retained"
+        ],
+        "expected_failure": "all_source_evidence_pointers_are_retained",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "all_source_evidence_pointers_are_retained"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "implicit_natural_unit_conversion",
+        "detected": true,
+        "expected_failed_decision_id": "natural_unit_reductions_name_constants_and_restoration_maps",
+        "expected_failed_decision_ids": [
+          "natural_unit_reductions_name_constants_and_restoration_maps"
+        ],
+        "expected_failure": "natural_unit_restoration_map_required",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "natural_unit_reductions_name_constants_and_restoration_maps",
+          "unresolved_unit_assignments_remain_explicit_blockers"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "dimensionless_test_value_promoted_to_physical_calibration",
+        "detected": true,
+        "expected_failed_decision_id": "dimensionless_numerical_units_are_not_physical_calibration",
+        "expected_failed_decision_ids": [
+          "dimensionless_numerical_units_are_not_physical_calibration"
+        ],
+        "expected_failure": "dimensionless_numerical_units_are_noncalibrating",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "dimensionless_numerical_units_are_not_physical_calibration",
+          "unresolved_unit_assignments_remain_explicit_blockers"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "dimension_vector_mismatch_marked_compatible",
+        "detected": true,
+        "expected_failed_decision_id": "seam_compatibility_requires_matching_converted_dimensions",
+        "expected_failed_decision_ids": [
+          "seam_compatibility_requires_matching_converted_dimensions"
+        ],
+        "expected_failure": "converted_source_and_target_dimensions_must_match",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "seam_compatibility_requires_matching_converted_dimensions",
+          "unresolved_unit_assignments_remain_explicit_blockers"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "unresolved_assignment_silently_filled",
+        "detected": true,
+        "expected_failed_decision_id": "unresolved_unit_assignments_remain_explicit_blockers",
+        "expected_failed_decision_ids": [
+          "unresolved_unit_assignments_remain_explicit_blockers"
+        ],
+        "expected_failure": "unresolved_unit_assignments_remain_blocked",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "unresolved_unit_assignments_remain_explicit_blockers"
+        ],
+        "passed": true
+      }
+    ],
+    "independent_reconstruction": {
+      "boundary": {
+        "C_k_action_embedding_authorized": false,
+        "ccft_resumed": false,
+        "cross_sector_coupling_claim_authorized": false,
+        "dimensional_closure_claimed": false,
+        "level_4_or_level_5_authorized": false,
+        "master_action_promoted": false,
+        "physical_calibration_authorized": false,
+        "pillar_completion_claimed": false,
+        "seam_admissibility_claimed": false,
+        "seam_closure_claimed": false,
+        "unit_closure_claimed": false
+      },
+      "claim_ceiling_level": 3,
+      "input_hashes_match": true,
+      "invention_counts": {
+        "conversion_assumptions": 0,
+        "conversion_constants": 0,
+        "conversion_maps": 0,
+        "declared_units": 0,
+        "dimension_vectors": 0,
+        "mapping_rows": 0,
+        "nonnull_unit_conventions": 0,
+        "physical_calibrations": 0,
+        "quantity_rows": 0,
+        "restoration_maps": 0
+      },
+      "pillar_row_count": 7,
+      "pillar_rows": [
+        {
+          "adjudication_status": "blocked_unit_unknown",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+          "guardrail_unit_state": "unit_unknown",
+          "pillar_id": "PILLAR-QFT",
+          "quantity_rows": [],
+          "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+          "source_status": "missing",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-QFT-units_and_dimensions-v0-unit_unknown-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+              "reason": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unit_unknown"
+            }
+          ]
+        },
+        {
+          "adjudication_status": "blocked_unresolved",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+          "guardrail_unit_state": "unresolved",
+          "pillar_id": "PILLAR-GR",
+          "quantity_rows": [],
+          "row_id": "PILLAR-GR-units_and_dimensions-v0",
+          "source_status": "partial",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-GR-units_and_dimensions-v0-unresolved-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+              "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unresolved"
+            }
+          ]
+        },
+        {
+          "adjudication_status": "blocked_unit_unknown",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+          "guardrail_unit_state": "unit_unknown",
+          "pillar_id": "PILLAR-QM",
+          "quantity_rows": [],
+          "row_id": "PILLAR-QM-units_and_dimensions-v0",
+          "source_status": "missing",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-QM-units_and_dimensions-v0-unit_unknown-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+              "reason": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unit_unknown"
+            }
+          ]
+        },
+        {
+          "adjudication_status": "blocked_unit_unknown",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+          "guardrail_unit_state": "unit_unknown",
+          "pillar_id": "PILLAR-STAT",
+          "quantity_rows": [],
+          "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+          "source_status": "missing",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-STAT-units_and_dimensions-v0-unit_unknown-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+              "reason": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unit_unknown"
+            }
+          ]
+        },
+        {
+          "adjudication_status": "blocked_unresolved",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+          "guardrail_unit_state": "unresolved",
+          "pillar_id": "PILLAR-EM",
+          "quantity_rows": [],
+          "row_id": "PILLAR-EM-units_and_dimensions-v0",
+          "source_status": "partial",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-EM-units_and_dimensions-v0-unresolved-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+              "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unresolved"
+            }
+          ]
+        },
+        {
+          "adjudication_status": "blocked_unresolved",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+          "guardrail_unit_state": "unresolved",
+          "pillar_id": "PILLAR-SR",
+          "quantity_rows": [],
+          "row_id": "PILLAR-SR-units_and_dimensions-v0",
+          "source_status": "partial",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-SR-units_and_dimensions-v0-unresolved-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+              "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unresolved"
+            }
+          ]
+        },
+        {
+          "adjudication_status": "blocked_unresolved",
+          "conversion_assumptions": [],
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+          "guardrail_unit_state": "unresolved",
+          "pillar_id": "PILLAR-COSMO",
+          "quantity_rows": [],
+          "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+          "source_status": "partial",
+          "unit_convention": null,
+          "unresolved_items": [
+            {
+              "blocker_id": "PILLAR-COSMO-units_and_dimensions-v0-unresolved-blocker",
+              "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+              "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+              "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+              "state": "unresolved"
+            }
+          ]
+        }
+      ],
+      "qcd_context": {
+        "claim_upgrade": false,
+        "selected_as_current_target": false,
+        "unit_assignments_imported": false,
+        "unit_ledger_scope_changed": false,
+        "unit_mapping_rows_authorized": 0
+      },
+      "readiness_schema_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+      "readiness_status": "accepted_current_science_sprint_readiness_authority",
+      "seam_row_count": 5,
+      "seam_rows": [
+        {
+          "compatibility_status": "blocked_unit_unknown",
+          "conversion_constants": [],
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "guardrail_unit_state": "unit_unknown",
+          "mapping_rows": [],
+          "pillar_ids": [
+            "PILLAR-QFT",
+            "PILLAR-GR"
+          ],
+          "row_id": "SEAM-QFT-GR-unit_map-v0",
+          "seam_id": "SEAM-QFT-GR",
+          "source_status": "missing",
+          "unresolved_items": [
+            {
+              "blocker_id": "SEAM-QFT-GR-unit_map-v0-unit_unknown-blocker",
+              "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+              "reason": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+              "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+              "state": "unit_unknown"
+            }
+          ]
+        },
+        {
+          "compatibility_status": "blocked_unit_unknown",
+          "conversion_constants": [],
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "guardrail_unit_state": "unit_unknown",
+          "mapping_rows": [],
+          "pillar_ids": [
+            "PILLAR-QM",
+            "PILLAR-STAT"
+          ],
+          "row_id": "SEAM-QM-STAT-unit_map-v0",
+          "seam_id": "SEAM-QM-STAT",
+          "source_status": "missing",
+          "unresolved_items": [
+            {
+              "blocker_id": "SEAM-QM-STAT-unit_map-v0-unit_unknown-blocker",
+              "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+              "reason": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+              "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+              "state": "unit_unknown"
+            }
+          ]
+        },
+        {
+          "compatibility_status": "blocked_unresolved",
+          "conversion_constants": [],
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "guardrail_unit_state": "unresolved",
+          "mapping_rows": [],
+          "pillar_ids": [
+            "PILLAR-EM",
+            "PILLAR-QFT"
+          ],
+          "row_id": "SEAM-EM-QFT-unit_map-v0",
+          "seam_id": "SEAM-EM-QFT",
+          "source_status": "partial",
+          "unresolved_items": [
+            {
+              "blocker_id": "SEAM-EM-QFT-unit_map-v0-unresolved-blocker",
+              "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+              "reason": "Frozen source status is partial; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+              "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+              "state": "unresolved"
+            }
+          ]
+        },
+        {
+          "compatibility_status": "blocked_unresolved",
+          "conversion_constants": [],
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "guardrail_unit_state": "unresolved",
+          "mapping_rows": [],
+          "pillar_ids": [
+            "PILLAR-SR",
+            "PILLAR-COSMO"
+          ],
+          "row_id": "SEAM-SR-COSMO-unit_map-v0",
+          "seam_id": "SEAM-SR-COSMO",
+          "source_status": "partial",
+          "unresolved_items": [
+            {
+              "blocker_id": "SEAM-SR-COSMO-unit_map-v0-unresolved-blocker",
+              "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+              "reason": "Frozen source status is partial; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+              "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+              "state": "unresolved"
+            }
+          ]
+        },
+        {
+          "compatibility_status": "blocked_unit_unknown",
+          "conversion_constants": [],
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "guardrail_unit_state": "unit_unknown",
+          "mapping_rows": [],
+          "pillar_ids": [
+            "PILLAR-GR",
+            "PILLAR-QM"
+          ],
+          "row_id": "SEAM-GR-QM-unit_map-v0",
+          "seam_id": "SEAM-GR-QM",
+          "source_status": "missing",
+          "unresolved_items": [
+            {
+              "blocker_id": "SEAM-GR-QM-unit_map-v0-unit_unknown-blocker",
+              "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+              "reason": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+              "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+              "state": "unit_unknown"
+            }
+          ]
+        }
+      ],
+      "total_row_count": 12
+    },
+    "mismatch_codes": []
+  }
+}
