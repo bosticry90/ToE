@@ -1,0 +1,54 @@
+{
+  "ambient_repository_state_serialized": false,
+  "authority_rotation_executed": false,
+  "captured_at_utc": "2026-07-12T00:00:00Z",
+  "execution_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_v0",
+  "execution_report_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0.json",
+  "execution_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "executor_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_execution.py",
+  "executor_sha256": "c947d2211c0fa62e743dd3f3937473fc1e2671760059a28c332b2ebec4fef9b2",
+  "guardrail_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json",
+  "guardrail_sha256": "7fd4e988ea1a3c435247c2427686c2f3d3024a01c179d99fab30a4d027e364cf",
+  "input_artifacts": [
+    {
+      "actual_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "role": "frozen pillar and seam readiness row authority",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "verified": true
+    },
+    {
+      "actual_sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0",
+      "artifact_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
+      "role": "authorization and retained Level 3 claim ceiling",
+      "sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0",
+      "verified": true
+    },
+    {
+      "actual_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "artifact_id": "TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0",
+      "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+      "role": "read-only equation inventory; no equation or unit adoption",
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "verified": true
+    },
+    {
+      "actual_sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724",
+      "artifact_id": "qcd_vacuum_to_hadron_spin_information_transport",
+      "path": "formal/docs/release/QCD_VACUUM_TO_HADRON_SPIN_INFORMATION_TRANSPORT_LITERATURE_PRESSURE_20260710_v0.json",
+      "role": "non-authorizing external seam-transport context only",
+      "sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724",
+      "verified": true
+    }
+  ],
+  "ledger_path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+  "ledger_sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+  "result_review_status": "pending_independent_review_target_not_selected",
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_MANIFEST_v0",
+  "selected_next_target": null,
+  "selected_next_target_kind": null,
+  "status": "executed_guardrail_passed_with_explicit_unit_blockers",
+  "successor_selection_status": "not_authorized_by_guardrail"
+}

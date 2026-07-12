@@ -1,0 +1,659 @@
+{
+  "all_guardrail_decisions_passed": true,
+  "authority_rotation_executed": false,
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "arbitrary_missing_unit_assignments_authorized": false,
+    "ccft_resumed": false,
+    "cross_sector_coupling_claim_authorized": false,
+    "dimensionless_numerical_values_physically_calibrated": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_authorized": false,
+    "pillar_completion_claimed": false,
+    "qcd_equations_or_parameters_adopted": false,
+    "seam_admissibility_claimed": false,
+    "seam_closure_claimed": false,
+    "unit_closure_claimed": false
+  },
+  "captured_at_utc": "2026-07-12T00:00:00Z",
+  "claim_ceiling_level": 3,
+  "dimensional_closure_claimed": false,
+  "execution_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_v0",
+  "execution_schema_decisions": [
+    {
+      "choice": "The v0 guardrail leaves output top-level schemas open; this executor freezes the exact deterministic ledger, manifest, and report schemas implemented here for this execution tranche only.",
+      "decision_id": "closed_top_level_schema"
+    },
+    {
+      "choice": "A missing or partial source uses a null row-level unit convention, an empty quantity or mapping array, and one exact explicit blocker; no zero vector, identity conversion, or unit label is inferred.",
+      "decision_id": "unknown_value_encoding"
+    },
+    {
+      "choice": "The guardrail sets no nonzero minimum. Because no bound source supports a general unit assignment or seam map, all quantity and mapping arrays remain empty in the canonical audit.",
+      "decision_id": "quantity_and_mapping_minimum"
+    },
+    {
+      "choice": "Any future supported dimension vector must contain exactly seven integer exponents in the guardrail's ordered SI basis; this execution emits none.",
+      "decision_id": "dimension_vector_encoding"
+    },
+    {
+      "choice": "The guardrail names no success successor, so the review remains pending without a selected target and no authority rotation is executed.",
+      "decision_id": "successor_selection"
+    }
+  ],
+  "execution_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+  "failure_target": "diagnose_pillar_seam_unit_mapping_ledger_v0_input_or_schema_mismatch",
+  "guardrail": {
+    "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json",
+    "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0",
+    "sha256": "7fd4e988ea1a3c435247c2427686c2f3d3024a01c179d99fab30a4d027e364cf"
+  },
+  "guardrail_decision_count": 16,
+  "guardrail_decisions": [
+    {
+      "decision_id": "all_four_input_artifact_hashes_match",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "readiness_authority_schema_and_status_are_preserved",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "exactly_seven_pillar_unit_rows_are_bound",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "exactly_five_seam_unit_map_rows_are_bound",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "all_twelve_source_row_ids_are_unique",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "all_source_evidence_pointers_are_retained",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "source_missing_partial_or_blocked_statuses_are_not_promoted",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "every_quantity_declares_a_unit_convention",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "every_dimensional_quantity_uses_an_explicit_dimension_vector",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "natural_unit_reductions_name_constants_and_restoration_maps",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "dimensionless_numerical_units_are_not_physical_calibration",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "cross_convention_equalities_require_explicit_conversion_maps",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "seam_compatibility_requires_matching_converted_dimensions",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "unresolved_unit_assignments_remain_explicit_blockers",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "qcd_literature_pressure_remains_non_authorizing_context",
+      "passed": true,
+      "required": true
+    },
+    {
+      "decision_id": "all_claim_ceiling_and_nonpromotion_boundaries_are_preserved",
+      "passed": true,
+      "required": true
+    }
+  ],
+  "input_artifacts": [
+    {
+      "actual_sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "artifact_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "role": "frozen pillar and seam readiness row authority",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "verified": true
+    },
+    {
+      "actual_sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0",
+      "artifact_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
+      "role": "authorization and retained Level 3 claim ceiling",
+      "sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0",
+      "verified": true
+    },
+    {
+      "actual_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "artifact_id": "TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0",
+      "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+      "role": "read-only equation inventory; no equation or unit adoption",
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "verified": true
+    },
+    {
+      "actual_sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724",
+      "artifact_id": "qcd_vacuum_to_hadron_spin_information_transport",
+      "path": "formal/docs/release/QCD_VACUUM_TO_HADRON_SPIN_INFORMATION_TRANSPORT_LITERATURE_PRESSURE_20260710_v0.json",
+      "role": "non-authorizing external seam-transport context only",
+      "sha256": "a6ca799b72fa3b1d0324f62bc9914a39e32c810584e86b3900776c05df6ca724",
+      "verified": true
+    }
+  ],
+  "ledger_status": "complete_bounded_inventory_unit_closure_blocked",
+  "negative_control_count": 8,
+  "negative_control_results": [
+    {
+      "control_id": "dropped_source_row",
+      "expected_failed_decision_ids": [
+        "exactly_seven_pillar_unit_rows_are_bound",
+        "exactly_five_seam_unit_map_rows_are_bound"
+      ],
+      "expected_failure": "exactly_seven_pillar_or_five_seam_rows_bound",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "exactly_seven_pillar_unit_rows_are_bound",
+        "exactly_five_seam_unit_map_rows_are_bound"
+      ],
+      "passed": true,
+      "subcases": [
+        {
+          "expected_failed_decision_id": "exactly_seven_pillar_unit_rows_are_bound",
+          "fresh_deep_copy_used": true,
+          "mutation": "drop one row from pillar_rows",
+          "observed_failed_decision_ids": [
+            "exactly_seven_pillar_unit_rows_are_bound"
+          ],
+          "passed": true
+        },
+        {
+          "expected_failed_decision_id": "exactly_five_seam_unit_map_rows_are_bound",
+          "fresh_deep_copy_used": true,
+          "mutation": "drop one row from seam_rows",
+          "observed_failed_decision_ids": [
+            "exactly_five_seam_unit_map_rows_are_bound"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "control_id": "duplicate_source_row_id",
+      "expected_failed_decision_ids": [
+        "all_twelve_source_row_ids_are_unique"
+      ],
+      "expected_failure": "all_twelve_source_row_ids_are_unique",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "all_twelve_source_row_ids_are_unique"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "source_status_promotion",
+      "expected_failed_decision_ids": [
+        "source_missing_partial_or_blocked_statuses_are_not_promoted"
+      ],
+      "expected_failure": "source_statuses_are_not_promoted",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "source_missing_partial_or_blocked_statuses_are_not_promoted"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "missing_evidence_pointer",
+      "expected_failed_decision_ids": [
+        "all_source_evidence_pointers_are_retained"
+      ],
+      "expected_failure": "all_source_evidence_pointers_are_retained",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "all_source_evidence_pointers_are_retained"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "implicit_natural_unit_conversion",
+      "expected_failed_decision_ids": [
+        "natural_unit_reductions_name_constants_and_restoration_maps"
+      ],
+      "expected_failure": "natural_unit_restoration_map_required",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "natural_unit_reductions_name_constants_and_restoration_maps",
+        "unresolved_unit_assignments_remain_explicit_blockers"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "dimensionless_test_value_promoted_to_physical_calibration",
+      "expected_failed_decision_ids": [
+        "dimensionless_numerical_units_are_not_physical_calibration"
+      ],
+      "expected_failure": "dimensionless_numerical_units_are_noncalibrating",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "dimensionless_numerical_units_are_not_physical_calibration",
+        "unresolved_unit_assignments_remain_explicit_blockers"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "dimension_vector_mismatch_marked_compatible",
+      "expected_failed_decision_ids": [
+        "seam_compatibility_requires_matching_converted_dimensions"
+      ],
+      "expected_failure": "converted_source_and_target_dimensions_must_match",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "seam_compatibility_requires_matching_converted_dimensions",
+        "unresolved_unit_assignments_remain_explicit_blockers"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "unresolved_assignment_silently_filled",
+      "expected_failed_decision_ids": [
+        "unresolved_unit_assignments_remain_explicit_blockers"
+      ],
+      "expected_failure": "unresolved_unit_assignments_remain_blocked",
+      "fresh_deep_copy_used": true,
+      "observed_failed_decision_ids": [
+        "unresolved_unit_assignments_remain_explicit_blockers"
+      ],
+      "passed": true
+    }
+  ],
+  "packet_result": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTED_TWELVE_ROW_BLOCKER_PRESERVING_AUDIT_PENDING_INDEPENDENT_REVIEW",
+  "pillar_row_count": 7,
+  "pillar_rows": [
+    {
+      "adjudication_status": "blocked_unit_unknown",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "guardrail_unit_state": "unit_unknown",
+      "pillar_id": "PILLAR-QFT",
+      "quantity_rows": [],
+      "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+      "source_status": "missing",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-QFT-units_and_dimensions-v0-unit_unknown-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+          "reason": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unit_unknown"
+        }
+      ]
+    },
+    {
+      "adjudication_status": "blocked_unresolved",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "guardrail_unit_state": "unresolved",
+      "pillar_id": "PILLAR-GR",
+      "quantity_rows": [],
+      "row_id": "PILLAR-GR-units_and_dimensions-v0",
+      "source_status": "partial",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-GR-units_and_dimensions-v0-unresolved-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+          "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unresolved"
+        }
+      ]
+    },
+    {
+      "adjudication_status": "blocked_unit_unknown",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "guardrail_unit_state": "unit_unknown",
+      "pillar_id": "PILLAR-QM",
+      "quantity_rows": [],
+      "row_id": "PILLAR-QM-units_and_dimensions-v0",
+      "source_status": "missing",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-QM-units_and_dimensions-v0-unit_unknown-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+          "reason": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unit_unknown"
+        }
+      ]
+    },
+    {
+      "adjudication_status": "blocked_unit_unknown",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "guardrail_unit_state": "unit_unknown",
+      "pillar_id": "PILLAR-STAT",
+      "quantity_rows": [],
+      "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+      "source_status": "missing",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-STAT-units_and_dimensions-v0-unit_unknown-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+          "reason": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unit_unknown"
+        }
+      ]
+    },
+    {
+      "adjudication_status": "blocked_unresolved",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "guardrail_unit_state": "unresolved",
+      "pillar_id": "PILLAR-EM",
+      "quantity_rows": [],
+      "row_id": "PILLAR-EM-units_and_dimensions-v0",
+      "source_status": "partial",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-EM-units_and_dimensions-v0-unresolved-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+          "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unresolved"
+        }
+      ]
+    },
+    {
+      "adjudication_status": "blocked_unresolved",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "guardrail_unit_state": "unresolved",
+      "pillar_id": "PILLAR-SR",
+      "quantity_rows": [],
+      "row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "source_status": "partial",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-SR-units_and_dimensions-v0-unresolved-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+          "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unresolved"
+        }
+      ]
+    },
+    {
+      "adjudication_status": "blocked_unresolved",
+      "conversion_assumptions": [],
+      "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "guardrail_unit_state": "unresolved",
+      "pillar_id": "PILLAR-COSMO",
+      "quantity_rows": [],
+      "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+      "source_status": "partial",
+      "unit_convention": null,
+      "unresolved_items": [
+        {
+          "blocker_id": "PILLAR-COSMO-units_and_dimensions-v0-unresolved-blocker",
+          "evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+          "reason": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+          "required_resolution": "supply source-backed quantity rows with an explicit allowed convention, declared units, seven-component SI-basis dimension vectors, and any required constant-restoration maps",
+          "state": "unresolved"
+        }
+      ]
+    }
+  ],
+  "qcd_context": {
+    "equations_or_parameters_adopted": false,
+    "role": "external seam-transport context only",
+    "selected_as_current_target": false,
+    "unit_assignments_imported": false,
+    "unit_mapping_rows_authorized": 0
+  },
+  "readiness_schema_id": "SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0",
+  "result_review": {
+    "status": "pending_independent_review_target_not_selected",
+    "target": null,
+    "target_selection_authorized": false
+  },
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_v0",
+  "seam_row_count": 5,
+  "seam_rows": [
+    {
+      "compatibility_status": "blocked_unit_unknown",
+      "conversion_constants": [],
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "guardrail_unit_state": "unit_unknown",
+      "mapping_rows": [],
+      "pillar_ids": [
+        "PILLAR-QFT",
+        "PILLAR-GR"
+      ],
+      "row_id": "SEAM-QFT-GR-unit_map-v0",
+      "seam_id": "SEAM-QFT-GR",
+      "source_status": "missing",
+      "unresolved_items": [
+        {
+          "blocker_id": "SEAM-QFT-GR-unit_map-v0-unit_unknown-blocker",
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "reason": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+          "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+          "state": "unit_unknown"
+        }
+      ]
+    },
+    {
+      "compatibility_status": "blocked_unit_unknown",
+      "conversion_constants": [],
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "guardrail_unit_state": "unit_unknown",
+      "mapping_rows": [],
+      "pillar_ids": [
+        "PILLAR-QM",
+        "PILLAR-STAT"
+      ],
+      "row_id": "SEAM-QM-STAT-unit_map-v0",
+      "seam_id": "SEAM-QM-STAT",
+      "source_status": "missing",
+      "unresolved_items": [
+        {
+          "blocker_id": "SEAM-QM-STAT-unit_map-v0-unit_unknown-blocker",
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "reason": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+          "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+          "state": "unit_unknown"
+        }
+      ]
+    },
+    {
+      "compatibility_status": "blocked_unresolved",
+      "conversion_constants": [],
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "guardrail_unit_state": "unresolved",
+      "mapping_rows": [],
+      "pillar_ids": [
+        "PILLAR-EM",
+        "PILLAR-QFT"
+      ],
+      "row_id": "SEAM-EM-QFT-unit_map-v0",
+      "seam_id": "SEAM-EM-QFT",
+      "source_status": "partial",
+      "unresolved_items": [
+        {
+          "blocker_id": "SEAM-EM-QFT-unit_map-v0-unresolved-blocker",
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "reason": "Frozen source status is partial; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+          "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+          "state": "unresolved"
+        }
+      ]
+    },
+    {
+      "compatibility_status": "blocked_unresolved",
+      "conversion_constants": [],
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "guardrail_unit_state": "unresolved",
+      "mapping_rows": [],
+      "pillar_ids": [
+        "PILLAR-SR",
+        "PILLAR-COSMO"
+      ],
+      "row_id": "SEAM-SR-COSMO-unit_map-v0",
+      "seam_id": "SEAM-SR-COSMO",
+      "source_status": "partial",
+      "unresolved_items": [
+        {
+          "blocker_id": "SEAM-SR-COSMO-unit_map-v0-unresolved-blocker",
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "reason": "Frozen source status is partial; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+          "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+          "state": "unresolved"
+        }
+      ]
+    },
+    {
+      "compatibility_status": "blocked_unit_unknown",
+      "conversion_constants": [],
+      "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "guardrail_unit_state": "unit_unknown",
+      "mapping_rows": [],
+      "pillar_ids": [
+        "PILLAR-GR",
+        "PILLAR-QM"
+      ],
+      "row_id": "SEAM-GR-QM-unit_map-v0",
+      "seam_id": "SEAM-GR-QM",
+      "source_status": "missing",
+      "unresolved_items": [
+        {
+          "blocker_id": "SEAM-GR-QM-unit_map-v0-unit_unknown-blocker",
+          "evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "reason": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+          "required_resolution": "supply source-backed quantity pairs, explicit conversion constants and maps, and matching converted seven-component dimension vectors",
+          "state": "unit_unknown"
+        }
+      ]
+    }
+  ],
+  "selected_next_target": null,
+  "selected_next_target_kind": null,
+  "source_baseline_status_counts": {
+    "pillar": {
+      "missing": 3,
+      "partial": 4
+    },
+    "seam": {
+      "missing": 3,
+      "partial": 2
+    }
+  },
+  "status": "executed_guardrail_passed_with_explicit_unit_blockers",
+  "strict_packet_result": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTED_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+  "successor_selection_status": "not_authorized_by_guardrail",
+  "total_row_count": 12,
+  "unit_closure_claimed": false,
+  "unit_schema": {
+    "allowed_unit_conventions": [
+      "SI_base_dimensions",
+      "declared_natural_units_with_explicit_constant_restoration_map",
+      "dimensionless_numerical_test_units_with_explicit_scale_binding_status"
+    ],
+    "canonical_SI_dimension_basis": [
+      "mass",
+      "length",
+      "time",
+      "electric_current",
+      "temperature",
+      "amount_of_substance",
+      "luminous_intensity"
+    ],
+    "mapping_row_required_fields": [
+      "source_quantity_id",
+      "target_quantity_id",
+      "source_dimension_vector",
+      "target_dimension_vector",
+      "conversion_map",
+      "converted_dimensions_match",
+      "mapping_status"
+    ],
+    "pillar_row_required_fields": [
+      "row_id",
+      "pillar_id",
+      "source_status",
+      "evidence_pointer",
+      "unit_convention",
+      "quantity_rows",
+      "conversion_assumptions",
+      "unresolved_items",
+      "adjudication_status"
+    ],
+    "quantity_row_required_fields": [
+      "quantity_id",
+      "symbol",
+      "physical_role",
+      "unit_convention",
+      "dimension_vector",
+      "declared_unit",
+      "source_pointer",
+      "assignment_status"
+    ],
+    "seam_row_required_fields": [
+      "row_id",
+      "seam_id",
+      "pillar_ids",
+      "source_status",
+      "evidence_pointer",
+      "mapping_rows",
+      "conversion_constants",
+      "unresolved_items",
+      "compatibility_status"
+    ],
+    "typed_unit_states": [
+      {
+        "state": "resolved",
+        "value_policy": "declared unit and dimension vector must be supported by an evidence pointer and an explicit convention"
+      },
+      {
+        "state": "unit_unknown",
+        "value_policy": "source evidence supplies no supported unit assignment; a declared unit or dimension vector may not be invented"
+      },
+      {
+        "state": "unresolved",
+        "value_policy": "available evidence is partial or conversion-dependent; an unresolved reason and restoration requirements remain required"
+      }
+    ],
+    "unresolved_policy": "Missing, partial, or otherwise unresolved source status must remain explicit. The execution may inventory, classify, and expose blockers but may not invent units, silently set c or hbar to one, or promote readiness."
+  }
+}

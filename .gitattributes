@@ -205,3 +205,8 @@ formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION
 formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py text eol=lf
 formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py text eol=lf
 formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV2IndependentReview.lean text eol=lf
+formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0.json text eol=lf
+formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json text eol=lf
+formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-MANIFEST-v0.json text eol=lf
+formal/python/tests/test_pillar_seam_unit_mapping_ledger_execution.py text eol=lf
+formal/python/tools/pillar_seam_unit_mapping_ledger_execution.py text eol=lf
