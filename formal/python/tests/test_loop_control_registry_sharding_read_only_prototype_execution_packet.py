@@ -1094,5 +1094,5 @@ def test_preparation_integration_is_complete_without_authority_rotation() -> Non
     ) in aggregate
     assert any(
         f"def trackedModuleCount : Nat := {count}" in aggregate
-        for count in (1062, 1063, 1064)
+        for count in (1062, 1063, 1064, 1065)
     )

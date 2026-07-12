@@ -2759,7 +2759,15 @@ Historical calculation-execution outcome tokens:
 - This preparation does not authorize implementation changes, prototype
   execution, Stage B, consumer migration, authority cutover, monolith
   retirement, unit-ledger execution, or scientific promotion.
+- The independent v1 review is `B-BLOCKED`: v1 removes the historical
+  reciprocal manifest cycle, but its declared hash graph does not match the
+  hash-bearing schema fields and its consumer map/trace lacks an external
+  cross-document binding to the frozen baseline and fresh preflight delta.
+  Stage A remains unauthorized and a versioned v2 successor is required. No
+  prototype, Stage B, migration, cutover, target rotation, unit-ledger
+  execution, or scientific promotion occurred in the review.
 
 ```powershell
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review --check
 ```

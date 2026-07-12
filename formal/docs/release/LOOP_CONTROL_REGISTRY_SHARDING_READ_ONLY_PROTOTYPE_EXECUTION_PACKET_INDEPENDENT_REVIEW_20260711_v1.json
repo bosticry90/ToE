@@ -1,0 +1,445 @@
+{
+  "accepted_corrections": {
+    "historical_reciprocal_source_runtime_manifest_cycle_removed": true,
+    "source_runtime_report_terminal_order_is_directional": true,
+    "terminal_envelope_schema_present": true,
+    "twelve_cycle_and_self_reference_regression_definitions_present": true,
+    "v1_retained_as_versioned_preparation_evidence": true
+  },
+  "authority_and_nonclaim_review": {
+    "authority_or_target_rotated": false,
+    "maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+    "migration_execution_authorized": false,
+    "prototype_artifacts_created": false,
+    "real_stage_a_execution_occurred": false,
+    "registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "scientific_target": "execute_pillar_seam_unit_mapping_ledger_v0",
+    "stage_b_authorized": false,
+    "unit_ledger_execution_occurred": false
+  },
+  "authorization": {
+    "authority_cutover_authorized": false,
+    "bounded_stage_a_v1_attempt_authorized": false,
+    "consumer_migration_authorized": false,
+    "exact_four_path_stage_a_implementation_authorized": false,
+    "legacy_monolith_modification_or_retirement_authorized": false,
+    "maintenance_target_rotation_authorized": false,
+    "new_registry_api_writes_authorized": false,
+    "production_registry_migration_authorized": false,
+    "release_or_publication_authorized": false,
+    "scientific_claim_or_blocker_movement_authorized": false,
+    "scientific_target_rotation_authorized": false,
+    "stage_b_authorized": false,
+    "unit_ledger_execution_authorized": false,
+    "versioned_v2_successor_required": true
+  },
+  "blocked_v0_baseline_commit": "04b9200fa7b5b60df4a78f27b6d6fd8905101a22",
+  "blocking_findings": [
+    {
+      "finding_id": "V1-IR-BLOCK-001-DECLARED-HASH-GRAPH-NOT-BYTE-FAITHFUL",
+      "impact": "THE_DECLARED_HASH_EDGES_AND_OUTER_PHASE_ORDER_DO_NOT_MATCH_THE_HASH_BEARING_FIELDS_REQUIRED_BY_THE_CLOSED_SCHEMAS",
+      "required_disposition": "VERSIONED_SUCCESSOR_MUST_SEPARATE_CONTENT_HASH_EDGES_GENERATION_DEPENDENCIES_AND_INVENTORY_MEMBERSHIP",
+      "severity": "BLOCKING"
+    },
+    {
+      "finding_id": "V1-IR-BLOCK-002-CONSUMER-INVENTORY-CROSS-DOCUMENT-GAP",
+      "impact": "A_TRUNCATED_CONSUMER_MAP_AND_TRACE_CAN_REBIND_CANDIDATE_LOCAL_HASHES_WITHOUT_RECONCILIATION_TO_THE_FROZEN_BASELINE_AND_FRESH_PREFLIGHT_DELTA",
+      "required_disposition": "ADD_V1_E_CONSUMER_INVENTORY_CROSS_DOCUMENT_AND_A_PERMANENT_SELF_REBOUND_TRUNCATION_CONTROL",
+      "severity": "BLOCKING"
+    },
+    {
+      "finding_id": "V1-IR-BLOCK-003-NO-INDEPENDENTLY-VALID-POSITIVE-LIFECYCLE-BASELINE",
+      "impact": "COMPLETE_AND_POST_GENERATION_BLOCKED_LIFECYCLE_SATISFIABILITY_CANNOT_BE_ACCEPTED_AND_THE_TWELVE_REGRESSIONS_CANNOT_BE_RUN_FROM_A_CLEAN_POSITIVE_BASELINE",
+      "required_disposition": "SUCCESSOR_REVIEW_MUST_VALIDATE_REAL_CROSS_DOCUMENT_MODELS_AND_MUTATE_THEM_THROUGH_AN_INDEPENDENT_VALIDATOR",
+      "severity": "BLOCKING"
+    }
+  ],
+  "captured_at_utc": "2026-07-11T00:00:00Z",
+  "consumer_inventory_and_shadow_contract_review": {
+    "added_consumer_count": 24,
+    "added_consumer_paths": [
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_LEGACY_BYTE_CUSTODY_CONTRACT_20260711_v1.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_CLOSED_SCHEMA_BUNDLE_20260711_v0.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_CLOSED_SCHEMA_BUNDLE_20260711_v1.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_CLOSED_SCHEMA_BUNDLE_20260711_v2.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_CLOSED_SCHEMA_BUNDLE_20260711_v3.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_EXECUTION_PROTOCOL_BUNDLE_20260711_v3.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v0.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v1.json",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v0.json",
+      "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
+      "formal/python/tests/test_loop_control_registry_v1_production_controls.py",
+      "formal/python/toe/loop_control_registry_v1.py",
+      "formal/python/toe/loop_control_registry_v1_validator.py",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet.py",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet_independent_review.py",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet_v1_independent_review.py",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet_v2_independent_review.py",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet_v3.py",
+      "formal/python/tools/loop_control_registry_sharding_execution_readiness_packet_v3_independent_review.py",
+      "formal/python/tools/loop_control_registry_sharding_guardrail_v1.py",
+      "formal/python/tools/loop_control_registry_sharding_guardrail_v1_independent_review.py",
+      "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet.py",
+      "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
+      "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py"
+    ],
+    "baseline_consumer_count": 496,
+    "baseline_is_not_an_eternal_current_count": true,
+    "baseline_nonruntime_count": 26,
+    "baseline_runtime_required_count": 470,
+    "baseline_source_map_sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+    "candidate_self_rebind_counterexample": {
+      "baseline_claimed_consumer_count": 496,
+      "candidate_local_consumer_count": 1,
+      "candidate_local_required_consumer_count": 1,
+      "candidate_local_trace_event_count": 1,
+      "candidate_map_schema_valid": true,
+      "candidate_map_sha256_after_internal_rebind": "6c3f2198d8503a603bfd1ddcaea118431282cadcfd89ac30f0502d2521020b9c",
+      "candidate_trace_event_schema_valid": true,
+      "candidate_trace_manifest_schema_valid": true,
+      "candidate_trace_manifest_sha256_after_internal_rebind": "457444e555f40eff69e1b981d03ce2b6e9ff8c70ba0c620aaf1edb5fa014acef",
+      "cross_document_consumer_or_trace_reconciliation_keys": [],
+      "frozen_preflight_inventory_can_remain_496_while_candidate_map_is_1": true,
+      "required_successor_error_code": "V1-E-CONSUMER-INVENTORY-CROSS-DOCUMENT",
+      "self_rebound_truncation_rejected_by_reviewed_contract": false
+    },
+    "changed_baseline_consumer_count": 3,
+    "changed_baseline_consumer_paths": [
+      ".gitattributes",
+      "DEVELOPMENT.md",
+      "README.md"
+    ],
+    "current_consumer_count_at_reviewed_commit": 520,
+    "current_nonruntime_count_at_reviewed_commit": 35,
+    "current_runtime_required_count_at_reviewed_commit": 485,
+    "current_sorted_path_lf_root_sha256": "45a66d4608517dd823ae9b56fea3f54644cc0ae572e7e1160c07ce30593a04a5",
+    "exact_literal_path_count_at_reviewed_commit": 517,
+    "explicit_nonliteral_reader_count": 3,
+    "production_validator_evidence_at_reviewed_commit": {
+      "candidate_required_ids_derived_from_candidate_rows_line": 915,
+      "consumer_trace_validator_start_line": 838,
+      "execution_preflight_validator_start_line": 1321,
+      "preflight_to_candidate_consumer_map_reconciliation_present": false
+    },
+    "removed_consumer_count": 0,
+    "removed_consumer_paths": [],
+    "review_conclusion": "B_BLOCKED_CONSUMER_CUSTODY_NOT_EXTERNALLY_CROSS_BOUND"
+  },
+  "contract_bundle_sha256": "ef1d51cd4a9a55c6affe0d7273d183eb69326474d0d0ab904ea13544dac1adff",
+  "control_contract_review": {
+    "control_definition_count": 76,
+    "control_id_root_sha256": "d26d65fe981a3bd864e1f7567ef4cd309f9874915fcdf41f5755823779e827eb",
+    "control_profile_root_sha256": "7168a309bcb668a9c53b64912b0d801bf4c0ee9fd6aaea268e232deee931f1a5",
+    "direct_orchestrator_invocation_remains_mandatory": true,
+    "duplicate_control_id_count": 0,
+    "inherited_control_count": 58,
+    "primary_control_count": 51,
+    "readiness_control_count": 7,
+    "real_stage_a_controls_executed_by_review": 0,
+    "runtime_contract_control_count": 18,
+    "successor_regression_definition_count": 12,
+    "successor_regression_execution_eligible": false,
+    "successor_regressions_accepted_as_independent_production_mutations": 0,
+    "successor_regressions_not_executed_reason": "POSITIVE_BASELINE_FAILS_INDEPENDENT_GRAPH_AND_CONSUMER_CUSTODY_REVIEW"
+  },
+  "decision": "B_BLOCKED_REJECT_ONE_WAY_STAGE_A_V1_EXECUTION_AUTHORIZATION_REQUIRE_VERSIONED_V2_SUCCESSOR",
+  "detached_clean_checkout_review": {
+    "canonical_json_allow_nan_false": true,
+    "detached_checkout_clean_after": true,
+    "detached_focused_test_count": 27,
+    "detached_regeneration_count": 2,
+    "generator_check_passed": true,
+    "host_or_temporary_absolute_path_embedded": false,
+    "packet_and_contract_byte_identical_across_regenerations": true,
+    "regeneration_results": [
+      {
+        "contract_sha256": "ef1d51cd4a9a55c6affe0d7273d183eb69326474d0d0ab904ea13544dac1adff",
+        "packet_sha256": "bbefe919ffe2f4bd55538fdcee83a29be4e2d17d3d82d5391dede6b097270854",
+        "returncode": 0
+      },
+      {
+        "contract_sha256": "ef1d51cd4a9a55c6affe0d7273d183eb69326474d0d0ab904ea13544dac1adff",
+        "packet_sha256": "bbefe919ffe2f4bd55538fdcee83a29be4e2d17d3d82d5391dede6b097270854",
+        "returncode": 0
+      }
+    ],
+    "wall_clock_or_ambient_branch_input_used": false
+  },
+  "external_root_review": {
+    "candidate_consumer_inventory_externally_cross_bound": false,
+    "contract_sha256_frozen_by_review": "ef1d51cd4a9a55c6affe0d7273d183eb69326474d0d0ab904ea13544dac1adff",
+    "frozen_input_count": 14,
+    "frozen_input_inventory_root_sha256": "e052e94b0f7c9a52b6ffb8a60ec448f9fcccd904b52e90cb5b2bbe7e6bfed819",
+    "packet_sha256_frozen_by_review": "bbefe919ffe2f4bd55538fdcee83a29be4e2d17d3d82d5391dede6b097270854",
+    "registry_sha256_frozen_outside_candidate": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "source_roots_verified": true
+  },
+  "graph_review": {
+    "actual_direct_content_dependencies": {
+      "CONSUMER_SOURCE_MAP": [
+        "BASELINE_CONSUMER_SOURCE_MAP"
+      ],
+      "CONTROL_EVIDENCE": [
+        "CORE_CANDIDATE_ROOT"
+      ],
+      "CURRENT_PROJECTION": [
+        "HISTORY_INDEX"
+      ],
+      "CUSTODY_MANIFEST": [
+        "CUSTODY_PAYLOAD"
+      ],
+      "CUSTODY_PAYLOAD": [],
+      "EXECUTION_PREFLIGHT": [],
+      "HISTORY_INDEX": [
+        "CONSUMER_SOURCE_MAP",
+        "CUSTODY_MANIFEST",
+        "HISTORY_SHARDS"
+      ],
+      "HISTORY_SHARDS": [],
+      "RECONSTRUCTION_RESULT": [
+        "CUSTODY_PAYLOAD"
+      ],
+      "REVIEWED_TRUST_ANCHORS": [],
+      "ROLLBACK_INVENTORY": [],
+      "RUNTIME_TRACE": [],
+      "RUNTIME_TRACE_MANIFEST": [
+        "CONSUMER_SOURCE_MAP",
+        "RUNTIME_TRACE"
+      ],
+      "SOURCE_MANIFEST": [],
+      "VALIDATION_REPORT": [
+        "CORE_CANDIDATE_ROOT",
+        "REVIEWED_TRUST_ANCHORS"
+      ],
+      "WRITER_PROBE": []
+    },
+    "actual_direct_content_graph_acyclic": true,
+    "actual_direct_content_topological_order": [
+      "CONSUMER_SOURCE_MAP",
+      "CONTROL_EVIDENCE",
+      "CUSTODY_PAYLOAD",
+      "EXECUTION_PREFLIGHT",
+      "HISTORY_SHARDS",
+      "REVIEWED_TRUST_ANCHORS",
+      "ROLLBACK_INVENTORY",
+      "RUNTIME_TRACE",
+      "SOURCE_MANIFEST",
+      "WRITER_PROBE",
+      "CUSTODY_MANIFEST",
+      "RECONSTRUCTION_RESULT",
+      "RUNTIME_TRACE_MANIFEST",
+      "VALIDATION_REPORT",
+      "HISTORY_INDEX",
+      "CURRENT_PROJECTION"
+    ],
+    "declared_candidate_graph_node_count": 16,
+    "declared_candidate_graph_topological_order": [
+      "SOURCE_MANIFEST",
+      "CONSUMER_SOURCE_MAP",
+      "CUSTODY_PAYLOAD",
+      "EXECUTION_PREFLIGHT",
+      "HISTORY_SHARDS",
+      "REVIEWED_TRUST_ANCHORS",
+      "ROLLBACK_INVENTORY",
+      "CUSTODY_MANIFEST",
+      "RECONSTRUCTION_RESULT",
+      "HISTORY_INDEX",
+      "CURRENT_PROJECTION",
+      "RUNTIME_TRACE",
+      "WRITER_PROBE",
+      "CONTROL_EVIDENCE",
+      "RUNTIME_TRACE_MANIFEST",
+      "VALIDATION_REPORT"
+    ],
+    "declared_edge_semantics": "NODE_BINDS_ONLY_HASHES_OF_NODES_LISTED_IN_BINDS",
+    "declared_graph_is_acyclic": true,
+    "declared_graph_matches_hash_bearing_schema_fields": false,
+    "declared_outer_graph_node_count": 9,
+    "declared_outer_topological_order": [
+      "EXTERNAL_TRUST_ROOTS",
+      "SOURCE_MANIFEST",
+      "CORE_CANDIDATE_ARTIFACTS",
+      "GENERATED_EVIDENCE",
+      "RUNTIME_MANIFEST",
+      "EXECUTION_REPORT",
+      "TERMINAL_ENVELOPE",
+      "POSTTERMINAL_DAG_CONTROL_RESULTS",
+      "STAGE_A_INDEPENDENT_REVIEW"
+    ],
+    "declared_source_manifest_edge_count": 15,
+    "explicit_source_manifest_identity_field_count_in_candidate_and_evidence_schemas": 0,
+    "mismatch_examples": [
+      {
+        "declared_dependencies": [
+          "SOURCE_MANIFEST",
+          "RUNTIME_TRACE"
+        ],
+        "node": "RUNTIME_TRACE_MANIFEST",
+        "observed_direct_content_dependencies": [
+          "CONSUMER_SOURCE_MAP",
+          "RUNTIME_TRACE"
+        ]
+      },
+      {
+        "declared_dependencies": [
+          "SOURCE_MANIFEST",
+          "CURRENT_PROJECTION",
+          "CONTROL_EVIDENCE",
+          "RUNTIME_TRACE_MANIFEST"
+        ],
+        "node": "VALIDATION_REPORT",
+        "observed_direct_content_dependencies": [
+          "CORE_CANDIDATE_ROOT",
+          "REVIEWED_TRUST_ANCHORS"
+        ]
+      },
+      {
+        "declared_dependencies": [
+          "SOURCE_MANIFEST",
+          "CURRENT_PROJECTION",
+          "RUNTIME_TRACE",
+          "WRITER_PROBE"
+        ],
+        "node": "CONTROL_EVIDENCE",
+        "observed_direct_content_dependencies": [
+          "CORE_CANDIDATE_ROOT"
+        ]
+      }
+    ],
+    "outer_core_before_evidence_phase_contract_matches_direct_hash_order": false,
+    "outer_phase_conflict_reproduced": true,
+    "review_conclusion": "B_BLOCKED_DECLARED_HASH_GRAPH_IS_NOT_BYTE_FAITHFUL"
+  },
+  "implementation_boundary_review": {
+    "authorized_implementation_path_count": 4,
+    "authorized_implementation_paths": [
+      "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution.py",
+      "formal/python/toe/loop_control_registry_v1.py",
+      "formal/python/toe/loop_control_registry_v1_validator.py",
+      "formal/python/tests/test_loop_control_registry_v1_production_controls.py"
+    ],
+    "fifth_implementation_path_authorized": false,
+    "implementation_bytes_unchanged_from_blocked_v0_baseline": true,
+    "review_integration_files_counted_as_implementation": false,
+    "stage_a_implementation_authorized_by_this_review": false
+  },
+  "lifecycle_satisfiability_review": {
+    "complete_path_independently_proved_satisfiable": false,
+    "post_generation_blocked_path_independently_proved_satisfiable": false,
+    "preflight_failure_can_remain_diagnostic_only": true,
+    "real_candidate_artifacts_created": false,
+    "rejection_reason_codes": [
+      "V1-IR-BLOCK-001-DECLARED-HASH-GRAPH-NOT-BYTE-FAITHFUL",
+      "V1-IR-BLOCK-002-CONSUMER-INVENTORY-CROSS-DOCUMENT-GAP",
+      "V1-IR-BLOCK-003-NO-INDEPENDENTLY-VALID-POSITIVE-LIFECYCLE-BASELINE"
+    ],
+    "runtime_schema_count": 7,
+    "schema_closedness_verified": true,
+    "stage_a_execution_authorized": false
+  },
+  "packet_sha256": "bbefe919ffe2f4bd55538fdcee83a29be4e2d17d3d82d5391dede6b097270854",
+  "recommended_successor": {
+    "required_target": "prepare_loop_control_registry_sharding_read_only_prototype_execution_packet_v2",
+    "requirements": [
+      "DERIVE_THE_ARTIFACT_HASH_GRAPH_FROM_ACTUAL_SCHEMA_FIELDS_AND_BYTES",
+      "SEPARATE_DIRECT_CONTENT_HASH_EDGES_FROM_GENERATION_DEPENDENCIES_AND_INVENTORY_ROOTS",
+      "ADD_OR_REMOVE_SOURCE_MANIFEST_IDENTITY_FIELDS_TO_MATCH_THE_DECLARED_EDGE_SEMANTICS",
+      "ALIGN_CORE_AND_EVIDENCE_PHASES_WITH_HISTORY_INDEX_HASH_DEPENDENCIES",
+      "CROSS_BIND_BASELINE_CONSUMER_MAP_FRESH_TYPED_DELTA_CURRENT_MAP_AND_TRACE_ID_SET",
+      "ADD_V1_E_CONSUMER_INVENTORY_CROSS_DOCUMENT_AND_SELF_REBOUND_TRUNCATION_REGRESSION",
+      "RUN_SUCCESSOR_REGRESSIONS_AGAINST_REAL_MUTATED_LIFECYCLE_DOCUMENTS_THROUGH_AN_INDEPENDENT_VALIDATOR"
+    ]
+  },
+  "review_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v1",
+  "review_scope": {
+    "candidate_artifacts_created": false,
+    "prototype_execution_attempted": false,
+    "real_stage_a_preterminal_controls_executed": 0,
+    "stage_b_executed": false,
+    "successor_regression_definitions_reconciled": 12,
+    "successor_regressions_accepted_as_production_mutations": 0
+  },
+  "reviewed_commit": "6ce5f8389a8b4ac0cba2ab68ba9f4bb1e39743df",
+  "reviewed_inputs": {
+    "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md": {
+      "git_blob": "d46c5fb1966dcefc6b923776b7d94c4f5009b889",
+      "path": "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+      "sha256": "cca3e7cb1855919bae8e5f189f04eb485bf2e2529aaff5e22c2a06e48b316248",
+      "size_bytes": 714575
+    },
+    "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json": {
+      "git_blob": "dca311d6abe38a872495c07f302d13ad886c0232",
+      "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+      "sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+      "size_bytes": 1768
+    },
+    "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json": {
+      "git_blob": "88bd9e9303949040246b95ff2976771197dd7c6f",
+      "path": "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json",
+      "sha256": "9ef73889d436e2cd8332b69b92e63a45947e9b6c9828ade5189dc069509e422c",
+      "size_bytes": 43817
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_20260711_v1.json": {
+      "git_blob": "9f9846ba735813c5b2b18f7a0115d88230a36600",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_SOURCE_MAP_20260711_v1.json",
+      "sha256": "5592a666adf8cf2ee70d4ab661001cf7d386caa79c3d7a7df7e9f5ac242fb642",
+      "size_bytes": 469583
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v0.json": {
+      "git_blob": "abf0d597c05342a37a31db5e166dd2b5531cb888",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v0.json",
+      "sha256": "272279d414591b25b3a519d22d92659f4a662ce1c9cbd5fadf3067f1eaa8f0bb",
+      "size_bytes": 392459
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v1.json": {
+      "git_blob": "737c74f7ac66f145c347cd621e1fb9a6d03b8a39",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_CONTRACT_BUNDLE_20260711_v1.json",
+      "sha256": "ef1d51cd4a9a55c6affe0d7273d183eb69326474d0d0ab904ea13544dac1adff",
+      "size_bytes": 439612
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v1.json": {
+      "git_blob": "d8b040ce202781fc65b28015e0917f2d0c272817",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_20260711_v1.json",
+      "sha256": "bbefe919ffe2f4bd55538fdcee83a29be4e2d17d3d82d5391dede6b097270854",
+      "size_bytes": 2430
+    },
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json": {
+      "git_blob": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "size_bytes": 52340650
+    },
+    "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json": {
+      "git_blob": "85711a7c8cb0bc6a1f77d85cf3873726a5d6aa22",
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "size_bytes": 79556
+    },
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py": {
+      "git_blob": "0d6fc6b5e6132e57c6da14f611bf674c33e00206",
+      "path": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py",
+      "sha256": "0fefe5629ca38bbe1f25514e3379d08d19d277c7f9778638e9e61bfdf7fa52bd",
+      "size_bytes": 48406
+    },
+    "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py": {
+      "git_blob": "6dac76df3c6e10503c736c5ea5a5824f5e527767",
+      "path": "formal/python/tools/loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py",
+      "sha256": "a7a4430fe90e2ab3734bcc986e59c3990b55474b800e7c862cca7f06622ba7c0",
+      "size_bytes": 93171
+    },
+    "formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV1.lean": {
+      "git_blob": "52ab21eeb8aba64724e92c518c9338b38d7eb7df",
+      "path": "formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV1.lean",
+      "sha256": "b194acf8c2b806d7d675091fd31e9ab6ed7730dcccb78cee3f0fbcf25453b6b7",
+      "size_bytes": 3261
+    },
+    "requirements.ci.lock": {
+      "git_blob": "bcc393883b90739408ed14d53d57dd0b42d0c2bd",
+      "path": "requirements.ci.lock",
+      "sha256": "79c5d6ca6995338c20fdf4c7bdb2748746cbef0e226de1c55489ddb25658b47b",
+      "size_bytes": 741
+    }
+  },
+  "schema_id": "LOOP_CONTROL_REGISTRY_SHARDING_READ_ONLY_PROTOTYPE_EXECUTION_PACKET_INDEPENDENT_REVIEW_20260711_v1",
+  "status": "B_BLOCKED_V1_CONTRACT_PRESERVED_NO_STAGE_A_STAGE_B_MIGRATION_CUTOVER_AUTHORITY_OR_SCIENCE"
+}

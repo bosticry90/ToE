@@ -67,6 +67,14 @@ Lean integration are deferred beyond the clean implementation commit. Stage B,
 migration, cutover, writes, target rotation, and scientific authority stay
 closed.
 
+The independent v1 successor review is `B-BLOCKED`. It confirms that v1 removes
+the historical reciprocal manifest cycle, but rejects Stage-A authorization:
+the declared hash graph does not match the hash-bearing schema fields, and the
+consumer map/trace can be truncated and rebound without reconciliation to the
+frozen baseline plus fresh preflight delta. A versioned v2 successor is
+required. No prototype, Stage A, Stage B, migration, cutover, target rotation,
+unit-ledger execution, or scientific promotion occurred.
+
 The effective technical-debt evidence baseline is the versioned v1 correction;
 v0 remains immutable historical evidence. V1 changes source/statement hash
 bindings only and preserves every frozen debt count, identity set, and target.
@@ -136,6 +144,7 @@ Normal Lean restoration uses the pinned `lake-manifest.json`. Do not run
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review --check
 .\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1 --check
+.\py.ps1 -m formal.python.tools.loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review --check
 .\py.ps1 -m formal.python.tools.generate_lean_all_modules_aggregate --check
 .\py.ps1 -m pytest -q -p no:cacheprovider formal/python/tests
 .\py.ps1 -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll

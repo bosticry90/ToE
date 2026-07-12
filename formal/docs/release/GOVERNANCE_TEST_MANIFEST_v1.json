@@ -34,6 +34,7 @@
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py": "TIER_INTEGRITY",
     "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py": "TIER_INTEGRITY",
     "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py": "TIER_INTEGRITY",
@@ -90,8 +91,8 @@
       ]
     },
     "integrity_gates": {
-      "expected_count": 67,
-      "expected_sha256": "f44a2bfe9671d5fa25ab6edd10d74785289a660cc078e11d0cb05f6387807cb1",
+      "expected_count": 68,
+      "expected_sha256": "d35f1018bcc6b21839790a107cf4ff8ac810c72989f2587b228526c06bff8f14",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -125,6 +126,7 @@
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py",
         "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
+        "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_packet_independent_review.py",
         "formal/python/tests/test_legacy_discovery_report_fixture_materializer.py",
