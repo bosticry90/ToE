@@ -1,0 +1,85 @@
+{
+  "canonicalization": "UTF-8 JSON, sorted keys, indent=2, trailing newline",
+  "captured_at_utc": "2026-07-12T00:00:00Z",
+  "generator": {
+    "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+    "sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c"
+  },
+  "input_artifacts": [
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_v0",
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+      "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0"
+    },
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_MANIFEST_v0",
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-MANIFEST-v0.json",
+      "sha256": "7804844617dea99df2c875d144966b0b196b08bbc884c8aa28a4c441bc7836b1"
+    },
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0",
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0.json",
+      "sha256": "9c32106d3220945094a32525ee7f626b32b71146c518a353955974bd386285ec"
+    },
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0",
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json",
+      "sha256": "268525f4646c60bab7077faa559907c581d08d08d1b2ae001c316581fd9b55f6"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00"
+    },
+    {
+      "artifact_id": "FULL_PILLAR_TARGET_MAP_REBASE_v0",
+      "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+    },
+    {
+      "artifact_id": "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0",
+      "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v0.json",
+    "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_v0",
+    "sha256": "e3aad41e3ed886f43bcd6dfafc0b3736c5f981a49278a6bd89460ffdf89875b9"
+  },
+  "route_count": 8,
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_MANIFEST_v0",
+  "selected_next_target": "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review",
+  "total_row_count": 12
+}

@@ -350,6 +350,7 @@ import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationCloseout
 import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationCloseoutResultReview
 import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationPacket
 import ToeFormal.Derivation.PhiTransportTheoremLinkageObligationPacketResultReview
+import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket
 import ToeFormal.Derivation.PillarSeamUnitMappingLedgerGuardrailPacket
 import ToeFormal.Derivation.PillarSeamUnitMappingLedgerResultReview
 import ToeFormal.Derivation.PostArtifactRetentionEnforcementBoundedAttackSelection
@@ -1075,6 +1076,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def trackedModuleCount : Nat := 1068
+def trackedModuleCount : Nat := 1069
 
 end ToeFormalAll

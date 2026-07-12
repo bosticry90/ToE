@@ -197,7 +197,7 @@ def currentLiveNextStrictTargetV0 : String :=
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
-import ToeFormal.Derivation.PillarSeamUnitMappingLedgerResultReview
+import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -436,7 +436,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -464,7 +464,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
       status := .retained }
   ]
 
@@ -482,33 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the unit-mapping ledger result review. -/
+/-- Previous live target consumed by the blocker-response route-selection packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "execute_pillar_seam_unit_mapping_ledger_v0"
-
-/-- Current live target after independent unit-mapping ledger result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
 
-/-- Evidence certificate for the result review that selected the live target. -/
+/-- Current live target after bounded blocker-response route selection. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
+
+/-- Evidence certificate for the packet that selected the live review target. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerResultReview.lean"
+  "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.lean"
 
-/-- Immutable result-review report supporting the current target transition. -/
+/-- Immutable route-selection report supporting the current target transition. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json"
+  "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260712_v0.json"
 
-/-- Bounded review outcome supporting the current target. -/
+/-- Bounded route-selection outcome supporting the current target. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  PillarSeamUnitMappingLedgerResultReview.reviewResult
+  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.packetResult
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  PillarSeamUnitMappingLedgerResultReview.strictReviewResult
+  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.strictPacketResult
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  PillarSeamUnitMappingLedgerResultReview.selectedNextTargetKind
+  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.selectedNextTargetKind
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+    "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -646,18 +646,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The result review supports only bounded blocker-response route selection. -/
+/-- The route-selection packet supports only independent result review. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerResultReview.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json" ∧
+        "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260712_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_ACCEPTS_REPRODUCIBLE_TWELVE_ROW_BLOCKER_PRESERVING_AUDIT_AND_AUTHORIZES_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_PREPARATION_ONLY" ∧
+        "TWELVE_UNIT_BLOCKERS_ROUTED_ONCE_WITHOUT_UNIT_ASSIGNMENT_OR_DIMENSIONAL_RESOLUTION_PENDING_INDEPENDENT_REVIEW" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_ACCEPTS_AUDIT_ONLY_NO_UNIT_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4OR5_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION" ∧
+        "ROUTE_SELECTION_ONLY_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION" ∧
       currentLiveNextStrictTargetKindV0 =
-        "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet" := by
+        "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review" := by
   constructor
   · rfl
   constructor
