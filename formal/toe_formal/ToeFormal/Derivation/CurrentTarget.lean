@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketResultReview
+import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketResultReview.selectedNextTarget
+  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketResultReview.reviewId
+  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1.packetId
 
-theorem current_target_points_to_versioned_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_correction :
+theorem current_target_points_to_versioned_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_review :
     currentLiveTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1" := by
+      "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result" := by
   rfl
 
 end CurrentTarget

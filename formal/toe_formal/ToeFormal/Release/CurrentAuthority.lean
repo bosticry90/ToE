@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1" := by
+      "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result" := by
   native_decide
 
 end CurrentAuthority

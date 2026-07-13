@@ -1,0 +1,3000 @@
+{
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "ccft_resumed": false,
+    "conversion_constants_emitted": 0,
+    "cross_sector_coupling_validation_claimed": false,
+    "dimension_vectors_emitted": 0,
+    "dimensional_closure_claimed": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_claimed": false,
+    "pillar_completion_claimed": false,
+    "route_selection_is_resolution": false,
+    "seam_admissibility_claimed": false,
+    "seam_mappings_emitted": 0,
+    "unit_assignments_emitted": 0
+  },
+  "captured_at_utc": "2026-07-12T00:00:00Z",
+  "claim_ceiling_level": 3,
+  "evidence_classification_taxonomy": [
+    "EXPLICITLY_STATED_BY_SOURCE",
+    "DERIVED_FROM_SOURCE",
+    "INFERRED_NOT_ESTABLISHED",
+    "ABSENT_FROM_SOURCE"
+  ],
+  "failure_target": "diagnose_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_mismatch",
+  "family_level_counts": {
+    "action_derivations_required": 0,
+    "convention_restorations_required": 2,
+    "empirical_calibrations_required": 0,
+    "equation_balance_derivations_required": 1,
+    "research_blocked_routes_required": 5,
+    "rows_rejected": 0,
+    "rows_remaining_blocked": 12,
+    "seam_maps_required": 0,
+    "semantic_clarifications_required": 4,
+    "total_rows": 12
+  },
+  "input_artifacts": [
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_v0",
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+      "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0"
+    },
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_MANIFEST_v0",
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-MANIFEST-v0.json",
+      "sha256": "7804844617dea99df2c875d144966b0b196b08bbc884c8aa28a4c441bc7836b1"
+    },
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0",
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_EXECUTION_20260710_v0.json",
+      "sha256": "9c32106d3220945094a32525ee7f626b32b71146c518a353955974bd386285ec"
+    },
+    {
+      "artifact_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0",
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json",
+      "sha256": "268525f4646c60bab7077faa559907c581d08d08d1b2ae001c316581fd9b55f6"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0",
+      "path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00"
+    },
+    {
+      "artifact_id": "FULL_PILLAR_TARGET_MAP_REBASE_v0",
+      "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+    },
+    {
+      "artifact_id": "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0",
+      "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+    },
+    {
+      "artifact_id": "ROUTE_SELECTION_PACKET_v0",
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v0.json",
+      "sha256": "e3aad41e3ed886f43bcd6dfafc0b3736c5f981a49278a6bd89460ffdf89875b9"
+    },
+    {
+      "artifact_id": "ROUTE_SELECTION_MANIFEST_v0",
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v0.json",
+      "sha256": "23015cfac12edd4d627d8db5af0613f10bc6924f8ea1ce422e0bf3e384457c88"
+    },
+    {
+      "artifact_id": "ROUTE_SELECTION_REPORT_v0",
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260712_v0.json",
+      "sha256": "56e55ff41d015a2337edeecd25da8397eff54289f8e05271fa0a309df4342444"
+    },
+    {
+      "artifact_id": "ROUTE_SELECTION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v0.json",
+      "sha256": "8e977f23dca29b78ba54daeb60d53a282fa75dd45f3ba34ddaa32c7258280162"
+    },
+    {
+      "artifact_id": "ROUTE_SELECTION_RESULT_REVIEW_TOOL_v0",
+      "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py",
+      "sha256": "da7766b4e51a3b11b6d823aa6833ba3f90b0b79e36b9c56786054197478e0f80"
+    }
+  ],
+  "lineage": {
+    "v0_preparation_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+    "v0_preparation_packet_sha256": "e3aad41e3ed886f43bcd6dfafc0b3736c5f981a49278a6bd89460ffdf89875b9",
+    "v0_rejection_commit": "145c30255ff90ca2df97f8526a98c6923e5db2bf",
+    "v0_rejection_report_sha256": "8e977f23dca29b78ba54daeb60d53a282fa75dd45f3ba34ddaa32c7258280162"
+  },
+  "nonclaims": [
+    "dimensional_closure",
+    "pillar_completion",
+    "seam_admissibility",
+    "level_4_or_level_5",
+    "physical_calibration_claims",
+    "cross_sector_coupling_validation",
+    "C_k_action_embedding",
+    "CCFT_resumption",
+    "master_action_promotion"
+  ],
+  "ordered_selection_criteria": [
+    "Is the physical object unambiguously defined?",
+    "Is the governing equation or action authoritative?",
+    "Is the unit system explicit?",
+    "Are coordinates physical, normalized, or dimensionless?",
+    "Are natural constants suppressed?",
+    "Can dimensions be derived without circularly assuming the desired bridge?",
+    "Does the row require an experimental scale?",
+    "Does the source pillar map to the target pillar without changing physical meaning?",
+    "Would the proposed resolution alter the candidate master action?",
+    "Should the row remain blocked?"
+  ],
+  "packet_result": "TWELVE_UNIT_BLOCKERS_RECOMPUTED_AND_ROUTED_ONCE_FROM_EXACT_SOURCE_ATTRIBUTION_WITHOUT_UNIT_ASSIGNMENT_OR_DIMENSIONAL_RESOLUTION_PENDING_INDEPENDENT_REVIEW",
+  "policy": {
+    "candidate_master_action_self_support_allowed": false,
+    "dimensionless_coordinates_are_physical_distances": false,
+    "normalization_convention_is_empirical_scale": false,
+    "route_selection_resolves_blocker": false,
+    "suppressed_constant_omission_allowed": false,
+    "suppressed_constants_requiring_explicit_treatment": [
+      "c",
+      "hbar",
+      "G",
+      "k_B"
+    ],
+    "unit_or_dimension_assignment_authorized": false
+  },
+  "route_count": 8,
+  "route_map_recomputed_not_inherited": true,
+  "route_selections": [
+    {
+      "authority_limit": "accepted_imported_real_scalar_action_only_no_candidate_master_action_no_ToE_native_phi_no_wider_QFT_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-QFT-units_and_dimensions-v0 as unit_unknown with an empty quantity_rows array.",
+        "The QFT surface explicitly covers canonical momentum, Hamiltonian-generator compatibility, unitarity, and normalization under bounded assumptions.",
+        "The accepted imported action evidence is confined to a provisional classical real-scalar sandbox and grants no row-wide QFT or master-action authority.",
+        "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "high: the candidate master action and desired cross-pillar bridge may not be used to supply their own missing dimensions",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unit_unknown",
+      "evidence_matrix": {
+        "object_coverage": [
+          "narrow_scalar_sandbox",
+          "qft_physical_action",
+          "qft_quantity_inventory",
+          "qft_row_wide_inventory",
+          "qft_surface_scope"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unit_unknown",
+              "row_id": "PILLAR-QFT-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-QFT-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "qft_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-QFT-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-QFT-units_and_dimensions-v0 as unit_unknown with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded canonical-momentum, generator, unitarity, and normalization surfaces",
+                "object_id": "qft_surface_scope"
+              }
+            ],
+            "proposition_id": "qft_direct_scope_explicit",
+            "required_substrings": [
+              "Canonical momentum surface assumptions",
+              "Hamiltonian-generator interface compatibility",
+              "Unitarity/injectivity assumptions",
+              "Generator-unitarity route normalization"
+            ],
+            "source_id": "qft_bounded_surface",
+            "statement": "The QFT surface explicitly covers canonical momentum, Hamiltonian-generator compatibility, unitarity, and normalization under bounded assumptions.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "accepted imported classical real-scalar sandbox only",
+                "object_id": "narrow_scalar_sandbox"
+              }
+            ],
+            "proposition_id": "qft_scalar_sandbox_explicit",
+            "required_substrings": [
+              "provisional_classical_sandbox_route_only",
+              "master_action_promoted",
+              "toe_native_matter_derivation_claimed"
+            ],
+            "source_id": "accepted_scalar_sandbox_review",
+            "statement": "The accepted imported action evidence is confined to a provisional classical real-scalar sandbox and grants no row-wide QFT or master-action authority.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-QFT-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "qft_direct_scope_explicit",
+              "qft_scalar_sandbox_explicit"
+            ],
+            "proposition_id": "PILLAR-QFT-units_and_dimensions-v0_route_signal",
+            "route_signal": "OBJECT_SCOPE_REQUIRES_REFINEMENT",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "absence_check": {
+              "expected_match_count": 0,
+              "flags": [
+                "IGNORECASE"
+              ],
+              "kind": "regex",
+              "pattern": "(?<![-\\w])action(?![-\\w])"
+            },
+            "classification": "ABSENT_FROM_SOURCE",
+            "objects": [
+              {
+                "definition": "row-wide QFT physical action",
+                "object_id": "qft_physical_action"
+              }
+            ],
+            "proposition_id": "qft_direct_physical_action_absent",
+            "required_substrings": [],
+            "source_id": "qft_bounded_surface",
+            "statement": "The direct QFT source does not establish a physical action.",
+            "supports_route": false
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "complete row-wide QFT unit-bearing object inventory",
+                "object_id": "qft_row_wide_inventory"
+              }
+            ],
+            "proposition_id": "qft_row_wide_inventory_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "A row-wide QFT object and unit inventory is not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "qft_quantity_inventory",
+          "qft_surface_scope",
+          "narrow_scalar_sandbox"
+        ],
+        "route_reason": "The accepted ledger has no QFT quantity inventory, while the direct source covers several bounded QFT surfaces and the separate scalar action remains narrow; row-wide object semantics must be fixed first.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NARROW_CLASSICAL_REAL_SCALAR_ONLY",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_AUTHORITATIVE_SURFACE",
+            "path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+            "sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc",
+            "source_id": "qft_bounded_surface"
+          },
+          {
+            "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+            "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+            "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+            "source_id": "accepted_scalar_sandbox_review"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-QFT-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "qft_direct_scope_explicit",
+          "qft_scalar_sandbox_explicit",
+          "PILLAR-QFT-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "qft_direct_physical_action_absent",
+          "qft_row_wide_inventory_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_infer_units_from_symbol_names_or_the_candidate_master_action",
+      "missing_evidence": [
+        "The direct QFT source does not establish a physical action.",
+        "A row-wide QFT object and unit inventory is not established."
+      ],
+      "rationale_object_ids": [
+        "qft_quantity_inventory",
+        "qft_surface_scope",
+        "narrow_scalar_sandbox"
+      ],
+      "required_derivation_class": "semantic_definition_before_dimensional_analysis",
+      "required_source_class": "canonical_qft_unit_bearing_object_inventory_with_explicit_scope",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-QFT-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "qft_direct_scope_explicit",
+        "qft_scalar_sandbox_explicit",
+        "PILLAR-QFT-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "OBJECT_SEMANTICS_REFINEMENT",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: the unit-bearing physical object requires semantic refinement",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "insufficient for units: planning or theorem surfaces do not define the required quantity inventory",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "not yet: object semantics must be fixed first",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger has no QFT quantity inventory, while the direct source covers several bounded QFT surfaces and the separate scalar action remains narrow; row-wide object semantics must be fixed first.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "source_evidence_sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc",
+      "successor_target": "prepare_qft_pillar_unit_object_semantics_refinement_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+          "sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+          "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-GR-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+        "The GR source explicitly supplies a bounded discrete weak-field Poisson surface and an action-native route.",
+        "The supported ledger and bounded-source propositions produce the route signal GOVERNING_EQUATION_READY without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "medium: full-action claims must not be imported into the bounded weak-field surface",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unresolved",
+      "evidence_matrix": {
+        "object_coverage": [
+          "full_gr_dimensional_system",
+          "gr_quantity_inventory",
+          "weak_field_poisson_surface"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unresolved",
+              "row_id": "PILLAR-GR-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-GR-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "gr_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-GR-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-GR-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded discrete weak-field Poisson governing-equation surface",
+                "object_id": "weak_field_poisson_surface"
+              }
+            ],
+            "proposition_id": "gr_bounded_poisson_explicit",
+            "required_substrings": [
+              "action-level derivation of the weak-field discrete Poisson equation",
+              "Bounded/discrete weak-field v0 only",
+              "Canonical route remains action-native"
+            ],
+            "source_id": "gr_bounded_surface",
+            "statement": "The GR source explicitly supplies a bounded discrete weak-field Poisson surface and an action-native route.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-GR-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "gr_bounded_poisson_explicit"
+            ],
+            "proposition_id": "PILLAR-GR-units_and_dimensions-v0_route_signal",
+            "route_signal": "GOVERNING_EQUATION_READY",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal GOVERNING_EQUATION_READY without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "full GR dimensional system",
+                "object_id": "full_gr_dimensional_system"
+              }
+            ],
+            "proposition_id": "gr_full_dimensional_closure_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Full Einstein dimensional closure, term units, coordinate conventions, and explicit constants are not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "gr_quantity_inventory",
+          "weak_field_poisson_surface"
+        ],
+        "route_reason": "The bounded weak-field Poisson equation surface can organize a later term-balance derivation without importing full-GR or master-action authority.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-GR-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_AUTHORITATIVE_SURFACE",
+            "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+            "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67",
+            "source_id": "gr_bounded_surface"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-GR-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "gr_bounded_poisson_explicit",
+          "PILLAR-GR-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "gr_full_dimensional_closure_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_promote_weak_field_balance_to_full_gr_dimensional_closure",
+      "missing_evidence": [
+        "Full Einstein dimensional closure, term units, coordinate conventions, and explicit constants are not established."
+      ],
+      "rationale_object_ids": [
+        "gr_quantity_inventory",
+        "weak_field_poisson_surface"
+      ],
+      "required_derivation_class": "term_by_term_governing_equation_dimension_balance",
+      "required_source_class": "accepted_governing_equation_and_quantity_semantics",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-GR-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "gr_bounded_poisson_explicit",
+        "PILLAR-GR-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-GR-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "EQUATION_BALANCE_DERIVATION",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "partly: bounded weak-field quantities are identified",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "yes only for the bounded governing-equation surface under its retained assumptions",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "yes in a later tranche by term balance without importing full-action conclusions",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The bounded weak-field Poisson equation surface can organize a later term-balance derivation without importing full-GR or master-action authority.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "source_evidence_sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67",
+      "successor_target": "prepare_pillar_gr_equation_balance_dimension_derivation_guardrail_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+          "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-QM-units_and_dimensions-v0 as unit_unknown with an empty quantity_rows array.",
+        "The QM source explicitly supplies bounded Schrodinger-form, state-evolution-contract, and unitary-consistency surfaces.",
+        "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "high: normalization and unitarity tokens are not dimensional evidence by themselves",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unit_unknown",
+      "evidence_matrix": {
+        "object_coverage": [
+          "qm_hamiltonian",
+          "qm_quantity_inventory",
+          "qm_row_wide_inventory",
+          "qm_supported_surfaces"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unit_unknown",
+              "row_id": "PILLAR-QM-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-QM-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "qm_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-QM-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-QM-units_and_dimensions-v0 as unit_unknown with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded Schrodinger-form, state-contract, and unitary-consistency surfaces",
+                "object_id": "qm_supported_surfaces"
+              }
+            ],
+            "proposition_id": "qm_direct_scope_explicit",
+            "required_substrings": [
+              "Schrodinger-form derivation",
+              "QMStateEvolvesUnderContract",
+              "Unitary-consistency track"
+            ],
+            "source_id": "qm_bounded_surface",
+            "statement": "The QM source explicitly supplies bounded Schrodinger-form, state-evolution-contract, and unitary-consistency surfaces.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-QM-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "qm_direct_scope_explicit"
+            ],
+            "proposition_id": "PILLAR-QM-units_and_dimensions-v0_route_signal",
+            "route_signal": "OBJECT_SCOPE_REQUIRES_REFINEMENT",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "absence_check": {
+              "expected_match_count": 0,
+              "kind": "casefold_substring",
+              "substring": "Hamiltonian"
+            },
+            "classification": "ABSENT_FROM_SOURCE",
+            "objects": [
+              {
+                "definition": "QM Hamiltonian object",
+                "object_id": "qm_hamiltonian"
+              }
+            ],
+            "proposition_id": "qm_hamiltonian_absent",
+            "required_substrings": [],
+            "source_id": "qm_bounded_surface",
+            "statement": "The bound QM source does not establish a Hamiltonian.",
+            "supports_route": false
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "state, observable, generator, time, probability, measurement, and open-system objects",
+                "object_id": "qm_row_wide_inventory"
+              }
+            ],
+            "proposition_id": "qm_row_wide_inventory_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "The row-wide QM object inventory is not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "qm_quantity_inventory",
+          "qm_supported_surfaces"
+        ],
+        "route_reason": "The accepted ledger has no QM quantity inventory; the supported bounded surfaces do not by themselves define the row-wide state, observable, generator, time, probability, measurement, or open-system object inventory.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-QM-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_AUTHORITATIVE_SURFACE",
+            "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+            "sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc",
+            "source_id": "qm_bounded_surface"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-QM-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "qm_direct_scope_explicit",
+          "PILLAR-QM-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "qm_hamiltonian_absent",
+          "qm_row_wide_inventory_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_infer_a_state_or_observable_unit_from_schrodinger_notation_or_set_hbar_to_one",
+      "missing_evidence": [
+        "The bound QM source does not establish a Hamiltonian.",
+        "The row-wide QM object inventory is not established."
+      ],
+      "rationale_object_ids": [
+        "qm_quantity_inventory",
+        "qm_supported_surfaces"
+      ],
+      "required_derivation_class": "semantic_definition_before_dimensional_analysis",
+      "required_source_class": "canonical_qm_physical_object_definitions",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-QM-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "qm_direct_scope_explicit",
+        "PILLAR-QM-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-QM-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "OBJECT_SEMANTICS_REFINEMENT",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: the unit-bearing physical object requires semantic refinement",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "insufficient for units: planning or theorem surfaces do not define the required quantity inventory",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "not yet: object semantics must be fixed first",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger has no QM quantity inventory; the supported bounded surfaces do not by themselves define the row-wide state, observable, generator, time, probability, measurement, or open-system object inventory.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "source_evidence_sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc",
+      "successor_target": "prepare_qm_pillar_unit_object_semantics_refinement_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+          "sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-STAT-units_and_dimensions-v0 as unit_unknown with an empty quantity_rows array.",
+        "The STAT planning source explicitly names entropy/entropy-production, flux/balance-law, regime, and admissibility surfaces as bounded placeholders.",
+        "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is missing; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "high: target entropy semantics may not be inferred from the desired QM_STAT seam",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unit_unknown",
+      "evidence_matrix": {
+        "object_coverage": [
+          "stat_probability",
+          "stat_quantity_inventory",
+          "stat_supported_surfaces",
+          "stat_transport"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unit_unknown",
+              "row_id": "PILLAR-STAT-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-STAT-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "stat_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-STAT-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-STAT-units_and_dimensions-v0 as unit_unknown with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded entropy, flux, balance, regime, and admissibility planning surfaces",
+                "object_id": "stat_supported_surfaces"
+              }
+            ],
+            "proposition_id": "stat_direct_scope_explicit",
+            "required_substrings": [
+              "planning-only artifact",
+              "entropy / entropy-production object surface",
+              "flux / balance law object surface",
+              "regime assumptions object surface",
+              "admissibility / causality / positivity"
+            ],
+            "source_id": "stat_planning_surface",
+            "statement": "The STAT planning source explicitly names entropy/entropy-production, flux/balance-law, regime, and admissibility surfaces as bounded placeholders.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-STAT-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "stat_direct_scope_explicit"
+            ],
+            "proposition_id": "PILLAR-STAT-units_and_dimensions-v0_route_signal",
+            "route_signal": "OBJECT_SCOPE_REQUIRES_REFINEMENT",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "absence_check": {
+              "expected_match_count": 0,
+              "kind": "casefold_substring",
+              "substring": "probability"
+            },
+            "classification": "ABSENT_FROM_SOURCE",
+            "objects": [
+              {
+                "definition": "probability distribution or probability rule",
+                "object_id": "stat_probability"
+              }
+            ],
+            "proposition_id": "stat_probability_absent",
+            "required_substrings": [],
+            "source_id": "stat_planning_surface",
+            "statement": "The bound STAT source does not establish probability semantics.",
+            "supports_route": false
+          },
+          {
+            "absence_check": {
+              "expected_match_count": 0,
+              "kind": "casefold_substring",
+              "substring": "transport"
+            },
+            "classification": "ABSENT_FROM_SOURCE",
+            "objects": [
+              {
+                "definition": "transport equation or transport law",
+                "object_id": "stat_transport"
+              }
+            ],
+            "proposition_id": "stat_transport_absent",
+            "required_substrings": [],
+            "source_id": "stat_planning_surface",
+            "statement": "The bound STAT source does not establish a transport law.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "stat_quantity_inventory",
+          "stat_supported_surfaces"
+        ],
+        "route_reason": "The accepted ledger has no STAT quantity inventory and the bounded planning surface distinguishes several carriers; exact object semantics must precede dimensional analysis.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+            "sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77",
+            "source_id": "stat_planning_surface"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-STAT-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "stat_direct_scope_explicit",
+          "PILLAR-STAT-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "stat_probability_absent",
+          "stat_transport_absent"
+        ]
+      },
+      "forbidden_shortcut": "do_not_treat_probability_entropy_and_entropy_density_as_one_unit_bearing_object",
+      "missing_evidence": [
+        "The bound STAT source does not establish probability semantics.",
+        "The bound STAT source does not establish a transport law."
+      ],
+      "rationale_object_ids": [
+        "stat_quantity_inventory",
+        "stat_supported_surfaces"
+      ],
+      "required_derivation_class": "semantic_definition_before_dimensional_analysis",
+      "required_source_class": "canonical_physical_object_definition",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-STAT-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "stat_direct_scope_explicit",
+        "PILLAR-STAT-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "OBJECT_SEMANTICS_REFINEMENT",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: the unit-bearing physical object requires semantic refinement",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "insufficient for units: planning or theorem surfaces do not define the required quantity inventory",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "not yet: object semantics must be fixed first",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger has no STAT quantity inventory and the bounded planning surface distinguishes several carriers; exact object semantics must precede dimensional analysis.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "source_evidence_sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77",
+      "successor_target": "prepare_stat_pillar_unit_object_semantics_refinement_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+          "sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-EM-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+        "The EM source explicitly identifies gauge-potential and field-strength objects while recording UNITS_NOT_SELECTED.",
+        "The supported ledger and bounded-source propositions produce the route signal CONVENTION_OPEN without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "medium: the EM_QFT seam may not choose the EM convention retroactively",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unresolved",
+      "evidence_matrix": {
+        "object_coverage": [
+          "em_dimensional_system",
+          "em_quantity_inventory",
+          "em_typed_objects",
+          "em_unit_convention"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unresolved",
+              "row_id": "PILLAR-EM-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-EM-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "em_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-EM-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-EM-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "gauge-potential and field-strength object chain",
+                "object_id": "em_typed_objects"
+              },
+              {
+                "definition": "currently unselected EM unit convention",
+                "object_id": "em_unit_convention"
+              }
+            ],
+            "proposition_id": "em_objects_and_open_units_explicit",
+            "required_substrings": [
+              "Gauge potential object",
+              "typed `F_munu` structure",
+              "UNITS_NOT_SELECTED"
+            ],
+            "source_id": "em_bounded_surface",
+            "statement": "The EM source explicitly identifies gauge-potential and field-strength objects while recording UNITS_NOT_SELECTED.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-EM-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "em_objects_and_open_units_explicit"
+            ],
+            "proposition_id": "PILLAR-EM-units_and_dimensions-v0_route_signal",
+            "route_signal": "CONVENTION_OPEN",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal CONVENTION_OPEN without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "complete EM dimensional convention",
+                "object_id": "em_dimensional_system"
+              }
+            ],
+            "proposition_id": "em_units_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "No EM unit system, dimensions, constants, or restoration map is established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "em_typed_objects",
+          "em_unit_convention"
+        ],
+        "route_reason": "Typed EM objects are available but the source explicitly leaves the unit convention unselected, so convention and constant-restoration work must precede assignments.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-EM-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_AUTHORITATIVE_SURFACE",
+            "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+            "sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+            "source_id": "em_bounded_surface"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-EM-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "em_objects_and_open_units_explicit",
+          "PILLAR-EM-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "em_units_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_mix_em_unit_systems_or_omit_required_constants",
+      "missing_evidence": [
+        "No EM unit system, dimensions, constants, or restoration map is established."
+      ],
+      "rationale_object_ids": [
+        "em_typed_objects",
+        "em_unit_convention"
+      ],
+      "required_derivation_class": "convention_audit_and_suppressed_constant_restoration",
+      "required_source_class": "canonical_em_unit_convention_and_constant_policy",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-EM-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "em_objects_and_open_units_explicit",
+        "PILLAR-EM-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-EM-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "partly: the principal objects are identified but their unit or coordinate convention is open",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "yes for identifying the convention gap; no convention is selected by this packet",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "not a derivation route: convention restoration must precede dimensional conclusions",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "Typed EM objects are available but the source explicitly leaves the unit convention unselected, so convention and constant-restoration work must precede assignments.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "source_evidence_sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+      "successor_target": "prepare_em_pillar_unit_convention_and_constant_restoration_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+          "sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-SR-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+        "The SR source explicitly records Lorentz-transform, interval-invariance, and symbolic dimensional-structure checks.",
+        "The supported ledger and bounded-source propositions produce the route signal CONVENTION_OPEN without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "low: retain the distinction between coordinate normalization and physical dimensions",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unresolved",
+      "evidence_matrix": {
+        "object_coverage": [
+          "sr_constant_policy",
+          "sr_quantity_inventory",
+          "sr_transform_interval"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unresolved",
+              "row_id": "PILLAR-SR-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-SR-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "sr_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-SR-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-SR-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "Lorentz-transform and interval dimensional-structure surface",
+                "object_id": "sr_transform_interval"
+              }
+            ],
+            "proposition_id": "sr_interval_dimension_explicit",
+            "required_substrings": [
+              "Lorentz transform object theorem surface",
+              "interval-invariance preservation theorem surface",
+              "dimensional structure is preserved"
+            ],
+            "source_id": "sr_bounded_surface",
+            "statement": "The SR source explicitly records Lorentz-transform, interval-invariance, and symbolic dimensional-structure checks.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-SR-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "sr_interval_dimension_explicit"
+            ],
+            "proposition_id": "PILLAR-SR-units_and_dimensions-v0_route_signal",
+            "route_signal": "CONVENTION_OPEN",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal CONVENTION_OPEN without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "SR coordinate and c-restoration policy",
+                "object_id": "sr_constant_policy"
+              }
+            ],
+            "proposition_id": "sr_c_suppression_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "The source does not establish whether coordinates are normalized or whether c is suppressed; v1 asserts no restoration value.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "sr_transform_interval",
+          "sr_quantity_inventory"
+        ],
+        "route_reason": "The transform and interval surfaces are explicit while the accepted ledger leaves the coordinate/unit convention null; a convention audit and possible constant restoration must come first.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-SR-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_AUTHORITATIVE_SURFACE",
+            "path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+            "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206",
+            "source_id": "sr_bounded_surface"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-SR-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "sr_interval_dimension_explicit",
+          "PILLAR-SR-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "sr_c_suppression_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_identify_dimensionless_coordinates_with_dimensionless_physical_distance",
+      "missing_evidence": [
+        "The source does not establish whether coordinates are normalized or whether c is suppressed; v1 asserts no restoration value."
+      ],
+      "rationale_object_ids": [
+        "sr_transform_interval",
+        "sr_quantity_inventory"
+      ],
+      "required_derivation_class": "coordinate_convention_audit_and_constant_restoration",
+      "required_source_class": "canonical_coordinate_convention_and_constant_policy",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-SR-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "sr_interval_dimension_explicit",
+        "PILLAR-SR-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "partly: the principal objects are identified but their unit or coordinate convention is open",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "yes for identifying the convention gap; no convention is selected by this packet",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "not a derivation route: convention restoration must precede dimensional conclusions",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The transform and interval surfaces are explicit while the accepted ledger leaves the coordinate/unit convention null; a convention audit and possible constant restoration must come first.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "source_evidence_sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206",
+      "successor_target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+          "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records PILLAR-COSMO-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+        "The COSMO source explicitly freezes a planning-only background surface with metric, expansion-rate/Hubble-like, source-sector, and validity-domain objects.",
+        "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit."
+      ],
+      "blocker_summary": "Frozen source status is partial; the bound evidence does not support unit convention, declared units, and dimension vectors.",
+      "circularity_risk": "high: a desired local_to_global bridge may not supply the missing cosmology dimensions",
+      "claim_impact": "planning_only_blocker_retained_no_unit_assignment",
+      "current_status": "unresolved",
+      "evidence_matrix": {
+        "object_coverage": [
+          "cosmo_background_objects",
+          "cosmo_quantity_inventory",
+          "cosmo_unit_inventory"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "quantity_rows",
+              "guardrail_unit_state": "unresolved",
+              "row_id": "PILLAR-COSMO-units_and_dimensions-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger PILLAR-COSMO-units_and_dimensions-v0 quantity_rows and blocker state",
+                "object_id": "cosmo_quantity_inventory"
+              }
+            ],
+            "proposition_id": "PILLAR-COSMO-units_and_dimensions-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records PILLAR-COSMO-units_and_dimensions-v0 as unresolved with an empty quantity_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "background metric, Hubble-like expansion, source-sector, and validity-domain planning objects",
+                "object_id": "cosmo_background_objects"
+              }
+            ],
+            "proposition_id": "cosmo_background_scope_explicit",
+            "required_substrings": [
+              "planning-only cosmology target",
+              "background metric object",
+              "expansion-rate/Hubble-like object",
+              "source-sector object",
+              "domain-of-validity assumptions"
+            ],
+            "source_id": "cosmo_planning_surface",
+            "statement": "The COSMO source explicitly freezes a planning-only background surface with metric, expansion-rate/Hubble-like, source-sector, and validity-domain objects.",
+            "supports_route": true
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "CLOSED_ROUTE_TAXONOMY_FROM_SUPPORTED_EVIDENCE",
+            "objects": [],
+            "premise_ids": [
+              "PILLAR-COSMO-units_and_dimensions-v0_accepted_ledger_snapshot",
+              "cosmo_background_scope_explicit"
+            ],
+            "proposition_id": "PILLAR-COSMO-units_and_dimensions-v0_route_signal",
+            "route_signal": "OBJECT_SCOPE_REQUIRES_REFINEMENT",
+            "source_id": null,
+            "statement": "The supported ledger and bounded-source propositions produce the route signal OBJECT_SCOPE_REQUIRES_REFINEMENT without assigning a unit.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "row-wide cosmology unit-bearing object inventory",
+                "object_id": "cosmo_unit_inventory"
+              }
+            ],
+            "proposition_id": "cosmo_unit_inventory_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Exact coordinates, scale factor, density variables, observables, and units are not established by this source.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "cosmo_quantity_inventory",
+          "cosmo_background_objects"
+        ],
+        "route_reason": "The accepted ledger has no COSMO quantity inventory; the bounded planning source names several background carriers but does not define a row-wide unit-bearing inventory.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+            "sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00",
+            "source_id": "cosmo_planning_surface"
+          }
+        ],
+        "supported_proposition_ids": [
+          "PILLAR-COSMO-units_and_dimensions-v0_accepted_ledger_snapshot",
+          "cosmo_background_scope_explicit",
+          "PILLAR-COSMO-units_and_dimensions-v0_route_signal"
+        ],
+        "unsupported_proposition_ids": [
+          "cosmo_unit_inventory_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_treat_a_normalization_scale_as_empirical_calibration_or_a_resolved_unit",
+      "missing_evidence": [
+        "Exact coordinates, scale factor, density variables, observables, and units are not established by this source."
+      ],
+      "rationale_object_ids": [
+        "cosmo_quantity_inventory",
+        "cosmo_background_objects"
+      ],
+      "required_derivation_class": "semantic_definition_before_dimensional_analysis",
+      "required_source_class": "canonical_cosmology_background_and_observable_definitions",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "PILLAR-COSMO-units_and_dimensions-v0_accepted_ledger_snapshot",
+        "cosmo_background_scope_explicit",
+        "PILLAR-COSMO-units_and_dimensions-v0_route_signal"
+      ],
+      "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+      "row_kind": "pillar",
+      "seam_endpoint_readiness": {
+        "applicable": false,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": []
+      },
+      "selected_response_route": "OBJECT_SEMANTICS_REFINEMENT",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: the unit-bearing physical object requires semantic refinement",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "insufficient for units: planning or theorem surfaces do not define the required quantity inventory",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "not yet: object semantics must be fixed first",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not applicable to this pillar-only route",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger has no COSMO quantity inventory; the bounded planning source names several background carriers but does not define a row-wide unit-bearing inventory.",
+      "source_evidence_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "source_evidence_sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00",
+      "successor_target": "prepare_cosmo_pillar_unit_object_semantics_refinement_packet",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+          "sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records SEAM-QFT-GR-unit_map-v0 as unit_unknown with an empty mapping_rows array.",
+        "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-QFT': 'unit_unknown', 'PILLAR-GR': 'unresolved'}.",
+        "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED."
+      ],
+      "blocker_summary": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+      "circularity_risk": "high: the desired seam may not define either pillar's internal units",
+      "claim_impact": "planning_only_seam_blocker_retained_no_mapping_or_admissibility",
+      "current_status": "unit_unknown",
+      "evidence_matrix": {
+        "object_coverage": [
+          "SEAM-QFT-GR-unit_map-v0_endpoint_readiness",
+          "qft_seam_readiness",
+          "seam_conversion_map",
+          "seam_scope"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "mapping_rows",
+              "guardrail_unit_state": "unit_unknown",
+              "row_id": "SEAM-QFT-GR-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger SEAM-QFT-GR-unit_map-v0 mapping_rows and blocker state",
+                "object_id": "qft_seam_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-QFT-GR-unit_map-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records SEAM-QFT-GR-unit_map-v0 as unit_unknown with an empty mapping_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "endpoint_readiness",
+              "endpoint_states": {
+                "PILLAR-GR": "unresolved",
+                "PILLAR-QFT": "unit_unknown"
+              },
+              "pillar_ids": [
+                "PILLAR-QFT",
+                "PILLAR-GR"
+              ],
+              "seam_row_id": "SEAM-QFT-GR-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger endpoint pillar identities and exact blocker states",
+                "object_id": "SEAM-QFT-GR-unit_map-v0_endpoint_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-QFT-GR-unit_map-v0_endpoint_readiness_explicit",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-QFT': 'unit_unknown', 'PILLAR-GR': 'unresolved'}.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded seam identity and open-scope planning surface",
+                "object_id": "seam_scope"
+              }
+            ],
+            "proposition_id": "SEAM-QFT-GR-unit_map-v0_target_map_scope_explicit",
+            "required_substrings": [
+              "QFT_GR"
+            ],
+            "source_id": "pillar_target_map",
+            "statement": "The bounded target map identifies this seam as an open nonclaim scope.",
+            "supports_route": false
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "UNRESOLVED_ENDPOINTS_BLOCK_SEAM_CONVERSION",
+            "derived_facts": {
+              "endpoint_states": {
+                "PILLAR-GR": "unresolved",
+                "PILLAR-QFT": "unit_unknown"
+              }
+            },
+            "objects": [],
+            "premise_ids": [
+              "SEAM-QFT-GR-unit_map-v0_accepted_ledger_snapshot",
+              "SEAM-QFT-GR-unit_map-v0_endpoint_readiness_explicit"
+            ],
+            "proposition_id": "SEAM-QFT-GR-unit_map-v0_route_research_blocked",
+            "route_signal": "ENDPOINTS_NOT_RESOLVED",
+            "source_id": null,
+            "statement": "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "reviewed cross-pillar unit conversion map",
+                "object_id": "seam_conversion_map"
+              }
+            ],
+            "proposition_id": "SEAM-QFT-GR-unit_map-v0_conversion_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "qft_seam_readiness",
+          "SEAM-QFT-GR-unit_map-v0_endpoint_readiness"
+        ],
+        "route_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "SEAM-QFT-GR-unit_map-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+            "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+            "source_id": "pillar_target_map"
+          }
+        ],
+        "supported_proposition_ids": [
+          "SEAM-QFT-GR-unit_map-v0_accepted_ledger_snapshot",
+          "SEAM-QFT-GR-unit_map-v0_endpoint_readiness_explicit",
+          "SEAM-QFT-GR-unit_map-v0_route_research_blocked"
+        ],
+        "unsupported_proposition_ids": [
+          "SEAM-QFT-GR-unit_map-v0_target_map_scope_explicit",
+          "SEAM-QFT-GR-unit_map-v0_conversion_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_build_a_seam_map_while_either_pillar_unit_system_is_unknown_or_unresolved",
+      "missing_evidence": [
+        "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established."
+      ],
+      "rationale_object_ids": [
+        "qft_seam_readiness",
+        "SEAM-QFT-GR-unit_map-v0_endpoint_readiness"
+      ],
+      "required_derivation_class": "none_until_both_pillar_prerequisites_are_reviewed",
+      "required_source_class": "reviewed_internal_unit_systems_for_both_pillars",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "SEAM-QFT-GR-unit_map-v0_accepted_ledger_snapshot",
+        "SEAM-QFT-GR-unit_map-v0_endpoint_readiness_explicit",
+        "SEAM-QFT-GR-unit_map-v0_route_research_blocked"
+      ],
+      "row_id": "SEAM-QFT-GR-unit_map-v0",
+      "row_kind": "seam",
+      "seam_endpoint_readiness": {
+        "applicable": true,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": [
+          {
+            "current_status": "unit_unknown",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-QFT"
+          },
+          {
+            "current_status": "unresolved",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-GR"
+          }
+        ]
+      },
+      "selected_response_route": "RESEARCH_BLOCKED",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: no source-to-target quantity pairs are defined",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "no: endpoint unit systems are not both independently reviewed",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "no: a desired seam may not supply either endpoint's internal units",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not yet: cross-pillar physical-meaning preservation is unproved",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+      "source_evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "source_evidence_sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+      "successor_target": "reassess_seam_qft_gr_unit_map_route_after_qft_gr_endpoint_unit_reviews",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records SEAM-QM-STAT-unit_map-v0 as unit_unknown with an empty mapping_rows array.",
+        "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-QM': 'unit_unknown', 'PILLAR-STAT': 'unit_unknown'}.",
+        "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED."
+      ],
+      "blocker_summary": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+      "circularity_risk": "high: the desired seam may not define either pillar's internal units",
+      "claim_impact": "planning_only_seam_blocker_retained_no_mapping_or_admissibility",
+      "current_status": "unit_unknown",
+      "evidence_matrix": {
+        "object_coverage": [
+          "SEAM-QM-STAT-unit_map-v0_endpoint_readiness",
+          "qm_seam_readiness",
+          "seam_conversion_map",
+          "seam_scope"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "mapping_rows",
+              "guardrail_unit_state": "unit_unknown",
+              "row_id": "SEAM-QM-STAT-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger SEAM-QM-STAT-unit_map-v0 mapping_rows and blocker state",
+                "object_id": "qm_seam_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-QM-STAT-unit_map-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records SEAM-QM-STAT-unit_map-v0 as unit_unknown with an empty mapping_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "endpoint_readiness",
+              "endpoint_states": {
+                "PILLAR-QM": "unit_unknown",
+                "PILLAR-STAT": "unit_unknown"
+              },
+              "pillar_ids": [
+                "PILLAR-QM",
+                "PILLAR-STAT"
+              ],
+              "seam_row_id": "SEAM-QM-STAT-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger endpoint pillar identities and exact blocker states",
+                "object_id": "SEAM-QM-STAT-unit_map-v0_endpoint_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-QM-STAT-unit_map-v0_endpoint_readiness_explicit",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-QM': 'unit_unknown', 'PILLAR-STAT': 'unit_unknown'}.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded seam identity and open-scope planning surface",
+                "object_id": "seam_scope"
+              }
+            ],
+            "proposition_id": "SEAM-QM-STAT-unit_map-v0_target_map_scope_explicit",
+            "required_substrings": [
+              "QM_STAT"
+            ],
+            "source_id": "pillar_target_map",
+            "statement": "The bounded target map identifies this seam as an open nonclaim scope.",
+            "supports_route": false
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "UNRESOLVED_ENDPOINTS_BLOCK_SEAM_CONVERSION",
+            "derived_facts": {
+              "endpoint_states": {
+                "PILLAR-QM": "unit_unknown",
+                "PILLAR-STAT": "unit_unknown"
+              }
+            },
+            "objects": [],
+            "premise_ids": [
+              "SEAM-QM-STAT-unit_map-v0_accepted_ledger_snapshot",
+              "SEAM-QM-STAT-unit_map-v0_endpoint_readiness_explicit"
+            ],
+            "proposition_id": "SEAM-QM-STAT-unit_map-v0_route_research_blocked",
+            "route_signal": "ENDPOINTS_NOT_RESOLVED",
+            "source_id": null,
+            "statement": "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "reviewed cross-pillar unit conversion map",
+                "object_id": "seam_conversion_map"
+              }
+            ],
+            "proposition_id": "SEAM-QM-STAT-unit_map-v0_conversion_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "qm_seam_readiness",
+          "SEAM-QM-STAT-unit_map-v0_endpoint_readiness"
+        ],
+        "route_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "SEAM-QM-STAT-unit_map-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+            "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+            "source_id": "pillar_target_map"
+          }
+        ],
+        "supported_proposition_ids": [
+          "SEAM-QM-STAT-unit_map-v0_accepted_ledger_snapshot",
+          "SEAM-QM-STAT-unit_map-v0_endpoint_readiness_explicit",
+          "SEAM-QM-STAT-unit_map-v0_route_research_blocked"
+        ],
+        "unsupported_proposition_ids": [
+          "SEAM-QM-STAT-unit_map-v0_target_map_scope_explicit",
+          "SEAM-QM-STAT-unit_map-v0_conversion_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_build_a_seam_map_while_either_pillar_unit_system_is_unknown_or_unresolved",
+      "missing_evidence": [
+        "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established."
+      ],
+      "rationale_object_ids": [
+        "qm_seam_readiness",
+        "SEAM-QM-STAT-unit_map-v0_endpoint_readiness"
+      ],
+      "required_derivation_class": "none_until_both_pillar_prerequisites_are_reviewed",
+      "required_source_class": "reviewed_internal_unit_systems_for_both_pillars",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "SEAM-QM-STAT-unit_map-v0_accepted_ledger_snapshot",
+        "SEAM-QM-STAT-unit_map-v0_endpoint_readiness_explicit",
+        "SEAM-QM-STAT-unit_map-v0_route_research_blocked"
+      ],
+      "row_id": "SEAM-QM-STAT-unit_map-v0",
+      "row_kind": "seam",
+      "seam_endpoint_readiness": {
+        "applicable": true,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": [
+          {
+            "current_status": "unit_unknown",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-QM"
+          },
+          {
+            "current_status": "unit_unknown",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-STAT"
+          }
+        ]
+      },
+      "selected_response_route": "RESEARCH_BLOCKED",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: no source-to-target quantity pairs are defined",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "no: endpoint unit systems are not both independently reviewed",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "no: a desired seam may not supply either endpoint's internal units",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not yet: cross-pillar physical-meaning preservation is unproved",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+      "source_evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "source_evidence_sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+      "successor_target": "reassess_seam_qm_stat_unit_map_route_after_qm_stat_endpoint_unit_reviews",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records SEAM-EM-QFT-unit_map-v0 as unresolved with an empty mapping_rows array.",
+        "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-EM': 'unresolved', 'PILLAR-QFT': 'unit_unknown'}.",
+        "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED."
+      ],
+      "blocker_summary": "Frozen source status is partial; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+      "circularity_risk": "high: the desired seam may not define either pillar's internal units",
+      "claim_impact": "planning_only_seam_blocker_retained_no_mapping_or_admissibility",
+      "current_status": "unresolved",
+      "evidence_matrix": {
+        "object_coverage": [
+          "SEAM-EM-QFT-unit_map-v0_endpoint_readiness",
+          "em_seam_readiness",
+          "seam_conversion_map",
+          "seam_scope"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "mapping_rows",
+              "guardrail_unit_state": "unresolved",
+              "row_id": "SEAM-EM-QFT-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger SEAM-EM-QFT-unit_map-v0 mapping_rows and blocker state",
+                "object_id": "em_seam_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-EM-QFT-unit_map-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records SEAM-EM-QFT-unit_map-v0 as unresolved with an empty mapping_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "endpoint_readiness",
+              "endpoint_states": {
+                "PILLAR-EM": "unresolved",
+                "PILLAR-QFT": "unit_unknown"
+              },
+              "pillar_ids": [
+                "PILLAR-EM",
+                "PILLAR-QFT"
+              ],
+              "seam_row_id": "SEAM-EM-QFT-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger endpoint pillar identities and exact blocker states",
+                "object_id": "SEAM-EM-QFT-unit_map-v0_endpoint_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-EM-QFT-unit_map-v0_endpoint_readiness_explicit",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-EM': 'unresolved', 'PILLAR-QFT': 'unit_unknown'}.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded seam identity and open-scope planning surface",
+                "object_id": "seam_scope"
+              }
+            ],
+            "proposition_id": "SEAM-EM-QFT-unit_map-v0_target_map_scope_explicit",
+            "required_substrings": [
+              "EM_QFT"
+            ],
+            "source_id": "pillar_target_map",
+            "statement": "The bounded target map identifies this seam as an open nonclaim scope.",
+            "supports_route": false
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "UNRESOLVED_ENDPOINTS_BLOCK_SEAM_CONVERSION",
+            "derived_facts": {
+              "endpoint_states": {
+                "PILLAR-EM": "unresolved",
+                "PILLAR-QFT": "unit_unknown"
+              }
+            },
+            "objects": [],
+            "premise_ids": [
+              "SEAM-EM-QFT-unit_map-v0_accepted_ledger_snapshot",
+              "SEAM-EM-QFT-unit_map-v0_endpoint_readiness_explicit"
+            ],
+            "proposition_id": "SEAM-EM-QFT-unit_map-v0_route_research_blocked",
+            "route_signal": "ENDPOINTS_NOT_RESOLVED",
+            "source_id": null,
+            "statement": "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "reviewed cross-pillar unit conversion map",
+                "object_id": "seam_conversion_map"
+              }
+            ],
+            "proposition_id": "SEAM-EM-QFT-unit_map-v0_conversion_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "em_seam_readiness",
+          "SEAM-EM-QFT-unit_map-v0_endpoint_readiness"
+        ],
+        "route_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "SEAM-EM-QFT-unit_map-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+            "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+            "source_id": "pillar_target_map"
+          }
+        ],
+        "supported_proposition_ids": [
+          "SEAM-EM-QFT-unit_map-v0_accepted_ledger_snapshot",
+          "SEAM-EM-QFT-unit_map-v0_endpoint_readiness_explicit",
+          "SEAM-EM-QFT-unit_map-v0_route_research_blocked"
+        ],
+        "unsupported_proposition_ids": [
+          "SEAM-EM-QFT-unit_map-v0_target_map_scope_explicit",
+          "SEAM-EM-QFT-unit_map-v0_conversion_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_build_a_seam_map_while_either_pillar_unit_system_is_unknown_or_unresolved",
+      "missing_evidence": [
+        "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established."
+      ],
+      "rationale_object_ids": [
+        "em_seam_readiness",
+        "SEAM-EM-QFT-unit_map-v0_endpoint_readiness"
+      ],
+      "required_derivation_class": "none_until_both_pillar_prerequisites_are_reviewed",
+      "required_source_class": "reviewed_internal_unit_systems_for_both_pillars",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "SEAM-EM-QFT-unit_map-v0_accepted_ledger_snapshot",
+        "SEAM-EM-QFT-unit_map-v0_endpoint_readiness_explicit",
+        "SEAM-EM-QFT-unit_map-v0_route_research_blocked"
+      ],
+      "row_id": "SEAM-EM-QFT-unit_map-v0",
+      "row_kind": "seam",
+      "seam_endpoint_readiness": {
+        "applicable": true,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": [
+          {
+            "current_status": "unresolved",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-EM"
+          },
+          {
+            "current_status": "unit_unknown",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-QFT"
+          }
+        ]
+      },
+      "selected_response_route": "RESEARCH_BLOCKED",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: no source-to-target quantity pairs are defined",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "no: endpoint unit systems are not both independently reviewed",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "no: a desired seam may not supply either endpoint's internal units",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not yet: cross-pillar physical-meaning preservation is unproved",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+      "source_evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "source_evidence_sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+      "successor_target": "reassess_seam_em_qft_unit_map_route_after_em_qft_endpoint_unit_reviews",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records SEAM-SR-COSMO-unit_map-v0 as unresolved with an empty mapping_rows array.",
+        "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-SR': 'unresolved', 'PILLAR-COSMO': 'unresolved'}.",
+        "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED."
+      ],
+      "blocker_summary": "Frozen source status is partial; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+      "circularity_risk": "high: the desired seam may not define either pillar's internal units",
+      "claim_impact": "planning_only_seam_blocker_retained_no_mapping_or_admissibility",
+      "current_status": "unresolved",
+      "evidence_matrix": {
+        "object_coverage": [
+          "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness",
+          "seam_conversion_map",
+          "seam_scope",
+          "sr_seam_readiness"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "mapping_rows",
+              "guardrail_unit_state": "unresolved",
+              "row_id": "SEAM-SR-COSMO-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger SEAM-SR-COSMO-unit_map-v0 mapping_rows and blocker state",
+                "object_id": "sr_seam_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-SR-COSMO-unit_map-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records SEAM-SR-COSMO-unit_map-v0 as unresolved with an empty mapping_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "endpoint_readiness",
+              "endpoint_states": {
+                "PILLAR-COSMO": "unresolved",
+                "PILLAR-SR": "unresolved"
+              },
+              "pillar_ids": [
+                "PILLAR-SR",
+                "PILLAR-COSMO"
+              ],
+              "seam_row_id": "SEAM-SR-COSMO-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger endpoint pillar identities and exact blocker states",
+                "object_id": "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness_explicit",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-SR': 'unresolved', 'PILLAR-COSMO': 'unresolved'}.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded seam identity and open-scope planning surface",
+                "object_id": "seam_scope"
+              }
+            ],
+            "proposition_id": "SEAM-SR-COSMO-unit_map-v0_target_map_scope_explicit",
+            "required_substrings": [
+              "SR_COSMO"
+            ],
+            "source_id": "pillar_target_map",
+            "statement": "The bounded target map identifies this seam as an open nonclaim scope.",
+            "supports_route": false
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "UNRESOLVED_ENDPOINTS_BLOCK_SEAM_CONVERSION",
+            "derived_facts": {
+              "endpoint_states": {
+                "PILLAR-COSMO": "unresolved",
+                "PILLAR-SR": "unresolved"
+              }
+            },
+            "objects": [],
+            "premise_ids": [
+              "SEAM-SR-COSMO-unit_map-v0_accepted_ledger_snapshot",
+              "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness_explicit"
+            ],
+            "proposition_id": "SEAM-SR-COSMO-unit_map-v0_route_research_blocked",
+            "route_signal": "ENDPOINTS_NOT_RESOLVED",
+            "source_id": null,
+            "statement": "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "reviewed cross-pillar unit conversion map",
+                "object_id": "seam_conversion_map"
+              }
+            ],
+            "proposition_id": "SEAM-SR-COSMO-unit_map-v0_conversion_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "sr_seam_readiness",
+          "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness"
+        ],
+        "route_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "SEAM-SR-COSMO-unit_map-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+            "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+            "source_id": "pillar_target_map"
+          }
+        ],
+        "supported_proposition_ids": [
+          "SEAM-SR-COSMO-unit_map-v0_accepted_ledger_snapshot",
+          "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness_explicit",
+          "SEAM-SR-COSMO-unit_map-v0_route_research_blocked"
+        ],
+        "unsupported_proposition_ids": [
+          "SEAM-SR-COSMO-unit_map-v0_target_map_scope_explicit",
+          "SEAM-SR-COSMO-unit_map-v0_conversion_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_build_a_seam_map_while_either_pillar_unit_system_is_unknown_or_unresolved",
+      "missing_evidence": [
+        "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established."
+      ],
+      "rationale_object_ids": [
+        "sr_seam_readiness",
+        "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness"
+      ],
+      "required_derivation_class": "none_until_both_pillar_prerequisites_are_reviewed",
+      "required_source_class": "reviewed_internal_unit_systems_for_both_pillars",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "SEAM-SR-COSMO-unit_map-v0_accepted_ledger_snapshot",
+        "SEAM-SR-COSMO-unit_map-v0_endpoint_readiness_explicit",
+        "SEAM-SR-COSMO-unit_map-v0_route_research_blocked"
+      ],
+      "row_id": "SEAM-SR-COSMO-unit_map-v0",
+      "row_kind": "seam",
+      "seam_endpoint_readiness": {
+        "applicable": true,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": [
+          {
+            "current_status": "unresolved",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-SR"
+          },
+          {
+            "current_status": "unresolved",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-COSMO"
+          }
+        ]
+      },
+      "selected_response_route": "RESEARCH_BLOCKED",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: no source-to-target quantity pairs are defined",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "no: endpoint unit systems are not both independently reviewed",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "no: a desired seam may not supply either endpoint's internal units",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not yet: cross-pillar physical-meaning preservation is unproved",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+      "source_evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "source_evidence_sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+      "successor_target": "reassess_seam_sr_cosmo_unit_map_route_after_sr_cosmo_endpoint_unit_reviews",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+        }
+      ]
+    },
+    {
+      "authority_limit": "planning_route_only_no_unit_resolution_no_master_action_authority",
+      "available_evidence": [
+        "The accepted ledger records SEAM-GR-QM-unit_map-v0 as unit_unknown with an empty mapping_rows array.",
+        "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-GR': 'unresolved', 'PILLAR-QM': 'unit_unknown'}.",
+        "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED."
+      ],
+      "blocker_summary": "Frozen source status is missing; the bound evidence does not support source-to-target quantity pairing and converted dimension evidence.",
+      "circularity_risk": "high: the desired seam may not define either pillar's internal units",
+      "claim_impact": "planning_only_seam_blocker_retained_no_mapping_or_admissibility",
+      "current_status": "unit_unknown",
+      "evidence_matrix": {
+        "object_coverage": [
+          "SEAM-GR-QM-unit_map-v0_endpoint_readiness",
+          "gr_seam_readiness",
+          "seam_conversion_map",
+          "seam_scope"
+        ],
+        "propositions": [
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "row_snapshot",
+              "empty_field": "mapping_rows",
+              "guardrail_unit_state": "unit_unknown",
+              "row_id": "SEAM-GR-QM-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger SEAM-GR-QM-unit_map-v0 mapping_rows and blocker state",
+                "object_id": "gr_seam_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-GR-QM-unit_map-v0_accepted_ledger_snapshot",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger records SEAM-GR-QM-unit_map-v0 as unit_unknown with an empty mapping_rows array.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "ledger_assertion": {
+              "assertion_type": "endpoint_readiness",
+              "endpoint_states": {
+                "PILLAR-GR": "unresolved",
+                "PILLAR-QM": "unit_unknown"
+              },
+              "pillar_ids": [
+                "PILLAR-GR",
+                "PILLAR-QM"
+              ],
+              "seam_row_id": "SEAM-GR-QM-unit_map-v0"
+            },
+            "objects": [
+              {
+                "definition": "accepted-ledger endpoint pillar identities and exact blocker states",
+                "object_id": "SEAM-GR-QM-unit_map-v0_endpoint_readiness"
+              }
+            ],
+            "proposition_id": "SEAM-GR-QM-unit_map-v0_endpoint_readiness_explicit",
+            "required_substrings": [],
+            "source_id": "accepted_unit_ledger",
+            "statement": "The accepted ledger binds this seam to the exact endpoint pillar states {'PILLAR-GR': 'unresolved', 'PILLAR-QM': 'unit_unknown'}.",
+            "supports_route": true
+          },
+          {
+            "classification": "EXPLICITLY_STATED_BY_SOURCE",
+            "objects": [
+              {
+                "definition": "bounded seam identity and open-scope planning surface",
+                "object_id": "seam_scope"
+              }
+            ],
+            "proposition_id": "SEAM-GR-QM-unit_map-v0_target_map_scope_explicit",
+            "required_substrings": [
+              "GR_QM"
+            ],
+            "source_id": "pillar_target_map",
+            "statement": "The bounded target map identifies this seam as an open nonclaim scope.",
+            "supports_route": false
+          },
+          {
+            "classification": "DERIVED_FROM_SOURCE",
+            "derivation_rule": "UNRESOLVED_ENDPOINTS_BLOCK_SEAM_CONVERSION",
+            "derived_facts": {
+              "endpoint_states": {
+                "PILLAR-GR": "unresolved",
+                "PILLAR-QM": "unit_unknown"
+              }
+            },
+            "objects": [],
+            "premise_ids": [
+              "SEAM-GR-QM-unit_map-v0_accepted_ledger_snapshot",
+              "SEAM-GR-QM-unit_map-v0_endpoint_readiness_explicit"
+            ],
+            "proposition_id": "SEAM-GR-QM-unit_map-v0_route_research_blocked",
+            "route_signal": "ENDPOINTS_NOT_RESOLVED",
+            "source_id": null,
+            "statement": "Neither endpoint has a resolved internal unit system, so SEAM_CONVERSION_MAP is unavailable and the closed taxonomy selects RESEARCH_BLOCKED.",
+            "supports_route": true
+          },
+          {
+            "classification": "INFERRED_NOT_ESTABLISHED",
+            "objects": [
+              {
+                "definition": "reviewed cross-pillar unit conversion map",
+                "object_id": "seam_conversion_map"
+              }
+            ],
+            "proposition_id": "SEAM-GR-QM-unit_map-v0_conversion_unestablished",
+            "required_substrings": [],
+            "source_id": null,
+            "statement": "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established.",
+            "supports_route": false
+          }
+        ],
+        "rationale_object_ids": [
+          "gr_seam_readiness",
+          "SEAM-GR-QM-unit_map-v0_endpoint_readiness"
+        ],
+        "route_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+        "route_recomputed_not_inherited": true,
+        "row_id": "SEAM-GR-QM-unit_map-v0",
+        "scalar_evidence_scope": "NOT_APPLICABLE",
+        "source_bindings": [
+          {
+            "authority_class": "FROZEN_ACCEPTED_LEDGER",
+            "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
+            "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+            "source_id": "accepted_unit_ledger"
+          },
+          {
+            "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+            "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+            "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+            "source_id": "pillar_target_map"
+          }
+        ],
+        "supported_proposition_ids": [
+          "SEAM-GR-QM-unit_map-v0_accepted_ledger_snapshot",
+          "SEAM-GR-QM-unit_map-v0_endpoint_readiness_explicit",
+          "SEAM-GR-QM-unit_map-v0_route_research_blocked"
+        ],
+        "unsupported_proposition_ids": [
+          "SEAM-GR-QM-unit_map-v0_target_map_scope_explicit",
+          "SEAM-GR-QM-unit_map-v0_conversion_unestablished"
+        ]
+      },
+      "forbidden_shortcut": "do_not_build_a_seam_map_while_either_pillar_unit_system_is_unknown_or_unresolved",
+      "missing_evidence": [
+        "Quantity pairs, conversion constants/maps, matching dimensions, physical-meaning preservation, and seam admissibility are not established."
+      ],
+      "rationale_object_ids": [
+        "gr_seam_readiness",
+        "SEAM-GR-QM-unit_map-v0_endpoint_readiness"
+      ],
+      "required_derivation_class": "none_until_both_pillar_prerequisites_are_reviewed",
+      "required_source_class": "reviewed_internal_unit_systems_for_both_pillars",
+      "route_recomputed_from_supported_evidence": true,
+      "route_support_proposition_ids": [
+        "SEAM-GR-QM-unit_map-v0_accepted_ledger_snapshot",
+        "SEAM-GR-QM-unit_map-v0_endpoint_readiness_explicit",
+        "SEAM-GR-QM-unit_map-v0_route_research_blocked"
+      ],
+      "row_id": "SEAM-GR-QM-unit_map-v0",
+      "row_kind": "seam",
+      "seam_endpoint_readiness": {
+        "applicable": true,
+        "both_internal_unit_systems_reviewed": false,
+        "endpoints": [
+          {
+            "current_status": "unresolved",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-GR"
+          },
+          {
+            "current_status": "unit_unknown",
+            "internal_unit_system_reviewed": false,
+            "pillar_id": "PILLAR-QM"
+          }
+        ]
+      },
+      "selected_response_route": "RESEARCH_BLOCKED",
+      "selection_criteria_evaluation": [
+        {
+          "answer": "no: no source-to-target quantity pairs are defined",
+          "criterion": "Is the physical object unambiguously defined?",
+          "criterion_number": 1
+        },
+        {
+          "answer": "no: endpoint unit systems are not both independently reviewed",
+          "criterion": "Is the governing equation or action authoritative?",
+          "criterion_number": 2
+        },
+        {
+          "answer": "no: the accepted ledger records no explicit row-level unit system",
+          "criterion": "Is the unit system explicit?",
+          "criterion_number": 3
+        },
+        {
+          "answer": "not established: physical, normalized, and dimensionless coordinates remain distinguished",
+          "criterion": "Are coordinates physical, normalized, or dimensionless?",
+          "criterion_number": 4
+        },
+        {
+          "answer": "not established: suppressed constants require an explicit restoration audit",
+          "criterion": "Are natural constants suppressed?",
+          "criterion_number": 5
+        },
+        {
+          "answer": "no: a desired seam may not supply either endpoint's internal units",
+          "criterion": "Can dimensions be derived without circularly assuming the desired bridge?",
+          "criterion_number": 6
+        },
+        {
+          "answer": "no empirical scale is established or selected by current evidence",
+          "criterion": "Does the row require an experimental scale?",
+          "criterion_number": 7
+        },
+        {
+          "answer": "not yet: cross-pillar physical-meaning preservation is unproved",
+          "criterion": "Does the source pillar map to the target pillar without changing physical meaning?",
+          "criterion_number": 8
+        },
+        {
+          "answer": "no: this planning route may not alter or validate the candidate master action",
+          "criterion": "Would the proposed resolution alter the candidate master action?",
+          "criterion_number": 9
+        },
+        {
+          "answer": "yes: the row remains blocked until routed work and independent review are complete",
+          "criterion": "Should the row remain blocked?",
+          "criterion_number": 10
+        }
+      ],
+      "selection_reason": "The accepted ledger explicitly leaves both endpoint unit systems unresolved or unknown; therefore no seam conversion route is available.",
+      "source_evidence_pointer": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "source_evidence_sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+      "successor_target": "reassess_seam_gr_qm_unit_map_route_after_gr_qm_endpoint_unit_reviews",
+      "supplemental_evidence_bindings": [
+        {
+          "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+          "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+        }
+      ]
+    }
+  ],
+  "route_taxonomy": [
+    {
+      "route": "ACTION_DIMENSION_DERIVATION",
+      "selection_condition": "Use when an accepted action route identifies this work class; the successor must bind its measure and normalization before deriving dimensions in a later tranche."
+    },
+    {
+      "route": "EQUATION_BALANCE_DERIVATION",
+      "selection_condition": "Use only when an authoritative governing equation can support a later non-circular term-balance derivation."
+    },
+    {
+      "route": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "selection_condition": "Use for hidden natural constants, normalized coordinates, or an unselected unit convention; no constant value is supplied here."
+    },
+    {
+      "route": "SEAM_CONVERSION_MAP",
+      "selection_condition": "Use only after both participating pillars have independently reviewed internal unit systems."
+    },
+    {
+      "route": "EMPIRICAL_SCALE_CALIBRATION",
+      "selection_condition": "Use only when a source-backed physical scale must be measured and cannot be obtained from a convention or derivation."
+    },
+    {
+      "route": "OBJECT_SEMANTICS_REFINEMENT",
+      "selection_condition": "Use when the physical object must be defined more precisely before a unit question is meaningful."
+    },
+    {
+      "route": "RESEARCH_BLOCKED",
+      "selection_condition": "Use when present evidence cannot authorize a derivation, calibration, conversion map, or rejection."
+    },
+    {
+      "route": "DIMENSIONAL_INCOMPATIBILITY_REJECTION",
+      "selection_condition": "Use only after reviewed dimensional evidence proves that the bridge is incompatible in its present form."
+    }
+  ],
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_v1",
+  "selected_next_target": "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result_review",
+  "source_attribution_repair": {
+    "corrected_mismatch_codes": [
+      "QFT_BOUND_SOURCE_ACTION_ATTRIBUTION_MISMATCH",
+      "QM_BOUND_SOURCE_HAMILTONIAN_ATTRIBUTION_MISMATCH",
+      "STAT_BOUND_SOURCE_PROBABILITY_TRANSPORT_ATTRIBUTION_MISMATCH"
+    ],
+    "correction_scope": "SOURCE_ATTRIBUTION_ONLY",
+    "v0_route_map_treated_as_authority": false,
+    "v1_route_map_changed_after_recomputation": false
+  },
+  "status": "prepared_twelve_row_source_attribution_corrected_route_selection_v1_only_resolution_not_performed",
+  "strict_packet_result": "SOURCE_ATTRIBUTION_CORRECTION_AND_ROUTE_SELECTION_ONLY_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+  "target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1",
+  "total_row_count": 12
+}

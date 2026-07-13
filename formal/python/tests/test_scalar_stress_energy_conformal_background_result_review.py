@@ -108,15 +108,15 @@ def test_review_and_nonzero_curvature_guardrail_are_preserved_after_rotation() -
     assert review["status"] == "paused"
     assert review["selected_next_target"] == NONZERO_CURVATURE_GUARDRAIL_TARGET
     assert state["previous_live_next_target"] == (
-        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
+        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1"
     )
     assert state["live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1"
+        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result"
     )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
     assert active["claim_status"] == (
-        "versioned_source_evidence_summary_correction_required"
+        "source_attribution_corrected_v1_review_pending"
     )
 
 
