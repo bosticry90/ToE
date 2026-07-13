@@ -361,13 +361,13 @@ def test_execution_and_review_are_preserved_after_review_rotation() -> None:
         "higher_dimensional_curved_background_v0"
     )
     assert state["previous_live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
     )
     assert state["live_next_target"] == (
-        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
+        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1"
     )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["claim_status"] == (
-        "prepared_twelve_row_route_selection_result_review_pending"
+        "versioned_source_evidence_summary_correction_required"
     )
     assert active["report"] == state["live_next_target_report"]

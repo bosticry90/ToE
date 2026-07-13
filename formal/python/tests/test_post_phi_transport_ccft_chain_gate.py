@@ -85,18 +85,19 @@ from formal.python.tools.pillar_seam_unit_mapping_ledger_result_review import (
     SUCCESS_TARGET as UNIT_LEDGER_SUCCESS_TARGET,
     SUCCESS_TARGET_KIND as UNIT_LEDGER_SUCCESS_TARGET_KIND,
 )
-from formal.python.tools.pillar_seam_unit_mapping_ledger_blocker_response_route_selection import (
-    PACKET_RESULT as UNIT_ROUTE_SELECTION_PACKET_OUTCOME,
-    REPORT_PATH as UNIT_ROUTE_SELECTION_PACKET_REPORT_PATH,
-    STRICT_PACKET_RESULT as UNIT_ROUTE_SELECTION_PACKET_STRICT_OUTCOME,
-    SUCCESSOR_TARGET as UNIT_ROUTE_SELECTION_REVIEW_TARGET,
-    SUCCESSOR_TARGET_KIND as UNIT_ROUTE_SELECTION_REVIEW_TARGET_KIND,
-    TARGET as UNIT_ROUTE_SELECTION_PACKET_TARGET,
+from formal.python.tools.pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review import (
+    REVIEW_OUTCOME as UNIT_ROUTE_SELECTION_REVIEW_OUTCOME,
+    REVIEW_REPORT_PATH as UNIT_ROUTE_SELECTION_REVIEW_REPORT_PATH,
+    SELECTED_NEXT_TARGET as UNIT_ROUTE_SELECTION_V1_TARGET,
+    SELECTED_NEXT_TARGET_KIND as UNIT_ROUTE_SELECTION_V1_TARGET_KIND,
+    STRICT_REVIEW_OUTCOME as UNIT_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME,
 )
 
 
-FINAL_LIVE_TARGET = UNIT_ROUTE_SELECTION_REVIEW_TARGET
-FINAL_PREVIOUS_TARGET = UNIT_ROUTE_SELECTION_PACKET_TARGET
+FINAL_LIVE_TARGET = UNIT_ROUTE_SELECTION_V1_TARGET
+FINAL_PREVIOUS_TARGET = (
+    "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
+)
 TARGETED_LITERATURE_REVIEW_EXPANSION_CANDIDATE_DISCOVERY_PACKET_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_targeted_literature_review_expansion_candidate_discovery_packet"
 )
@@ -1821,13 +1822,13 @@ CCFT_SCQED_LITERATURE_APPLICABILITY_MATRIX_CALCULATION_RESULT_REVIEW_STRICT_OUTC
 )
 FINAL_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
-    "PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.lean"
+    "PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketResultReview.lean"
 )
 FINAL_REPORT = str(
-    UNIT_ROUTE_SELECTION_PACKET_REPORT_PATH.relative_to(REPO_ROOT)
+    UNIT_ROUTE_SELECTION_REVIEW_REPORT_PATH.relative_to(REPO_ROOT)
 ).replace("\\", "/")
-FINAL_OUTCOME = UNIT_ROUTE_SELECTION_PACKET_OUTCOME
-FINAL_STRICT_OUTCOME = UNIT_ROUTE_SELECTION_PACKET_STRICT_OUTCOME
+FINAL_OUTCOME = UNIT_ROUTE_SELECTION_REVIEW_OUTCOME
+FINAL_STRICT_OUTCOME = UNIT_ROUTE_SELECTION_REVIEW_STRICT_OUTCOME
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE = (
     "formal/toe_formal/ToeFormal/Derivation/"
     "SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacket.lean"
@@ -2071,7 +2072,7 @@ BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_OPEN_SYSTEM_DECOHERENCE_SUPERCO
     "selected_ccft_empirical_discriminator_baseline_component_equation_"
     "source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result_review"
 )
-FINAL_KIND = UNIT_ROUTE_SELECTION_REVIEW_TARGET_KIND
+FINAL_KIND = UNIT_ROUTE_SELECTION_V1_TARGET_KIND
 NEXT_PACKET_OUTCOME = (
     "CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_PACKET_PREPARED_LAGRANGIAN_"
     "HAMILTONIAN_SOURCE_AND_TRANSPORT_TARGETS_NO_ACTION_EMBEDDING_OR_"

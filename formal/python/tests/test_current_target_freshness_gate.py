@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
+    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1347,7 +1347,7 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet"
+    "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1694,7 +1694,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result"
+    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1789,11 +1789,11 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacket.lean"
+    / "PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketResultReview.lean"
 )
 LIVE_TARGET_REPORT = (
     "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_"
-    "ROUTE_SELECTION_PACKET_20260712_v0.json"
+    "ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1925,8 +1925,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "TWELVE_UNIT_BLOCKERS_ROUTED_ONCE_WITHOUT_UNIT_ASSIGNMENT_OR_"
-    "DIMENSIONAL_RESOLUTION_PENDING_INDEPENDENT_REVIEW"
+    "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_"
+    "RESULT_REVIEW_B_BLOCKED_SOURCE_EVIDENCE_SUMMARY_MISMATCH"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2056,8 +2056,9 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "ROUTE_SELECTION_ONLY_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_"
-    "NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_"
+    "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_"
+    "RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_"
+    "SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_"
     "SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_"
     "ACTION_PROMOTION"
 )
@@ -2170,8 +2171,7 @@ SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
     "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 LIVE_TARGET_KIND = (
-    "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_"
-    "result_review"
+    "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"

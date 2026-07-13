@@ -1,0 +1,308 @@
+{
+  "accepted": false,
+  "artifact_chain": {
+    "accepted_ledger_review_schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0",
+    "expected_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260712_v0.json": "56e55ff41d015a2337edeecd25da8397eff54289f8e05271fa0a309df4342444",
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json": "268525f4646c60bab7077faa559907c581d08d08d1b2ae001c316581fd9b55f6",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v0.json": "23015cfac12edd4d627d8db5af0613f10bc6924f8ea1ce422e0bf3e384457c88",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v0.json": "e3aad41e3ed886f43bcd6dfafc0b3736c5f981a49278a6bd89460ffdf89875b9",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c"
+    },
+    "manifest_schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_MANIFEST_v0",
+    "preparation_report_schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260712_v0"
+  },
+  "authority_rotation": {
+    "corrective_v1_preparation_authorized": true,
+    "first_blocker_resolution_guardrail_authorized": false,
+    "maintenance_authority_rotation_authorized": false,
+    "packet_acceptance_authorized": false
+  },
+  "boundary": {
+    "C_k_action_embedding_authorized": false,
+    "ccft_resumed": false,
+    "cross_sector_coupling_validation_claimed": false,
+    "dimensional_closure_claimed": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_claimed": false,
+    "pillar_completion_claimed": false,
+    "route_map_changed_by_review": false,
+    "seam_admissibility_claimed": false,
+    "unit_or_dimension_assignment_emitted": false
+  },
+  "captured_at_utc": "2026-07-12T00:00:00Z",
+  "consumed_target": "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result",
+  "diagnostic_target": "diagnose_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_mismatch",
+  "failure_preservation": {
+    "preparation_artifacts_amended_by_review": false,
+    "preparation_commit_remains_immutable": true,
+    "versioned_successor_required": true
+  },
+  "implemented_decision_reproduction": {
+    "all_implemented_decisions_reproduced": true,
+    "decision_count": 16,
+    "decisions": [
+      {
+        "decision_id": "frozen_preparation_and_accepted_ledger_hashes_match",
+        "passed": true
+      },
+      {
+        "decision_id": "exact_twelve_row_identity_status_and_evidence_pointers_reconstructed",
+        "passed": true
+      },
+      {
+        "decision_id": "each_row_has_exactly_one_independently_reproduced_primary_route",
+        "passed": true
+      },
+      {
+        "decision_id": "eight_route_taxonomy_and_ten_ordered_criteria_are_preserved",
+        "passed": true
+      },
+      {
+        "decision_id": "no_unit_dimension_constant_calibration_or_seam_map_is_emitted",
+        "passed": true
+      },
+      {
+        "decision_id": "unit_unknown_rows_receive_no_assignment",
+        "passed": true
+      },
+      {
+        "decision_id": "natural_units_do_not_resolve_unresolved_rows",
+        "passed": true
+      },
+      {
+        "decision_id": "dimensionless_coordinates_are_not_promoted_to_physical_distances",
+        "passed": true
+      },
+      {
+        "decision_id": "suppressed_constants_require_explicit_restoration",
+        "passed": true
+      },
+      {
+        "decision_id": "seam_conversion_requires_two_reviewed_endpoint_unit_systems",
+        "passed": true
+      },
+      {
+        "decision_id": "candidate_master_action_is_not_self_supporting_evidence",
+        "passed": true
+      },
+      {
+        "decision_id": "normalization_convention_is_not_empirical_calibration",
+        "passed": true
+      },
+      {
+        "decision_id": "route_selection_does_not_promote_dimensional_closure",
+        "passed": true
+      },
+      {
+        "decision_id": "C_k_action_embedding_remains_unauthorized",
+        "passed": true
+      },
+      {
+        "decision_id": "family_counts_and_all_twelve_blocked_rows_are_reproduced",
+        "passed": true
+      },
+      {
+        "decision_id": "all_nonclaims_and_claim_ceiling_boundaries_are_preserved",
+        "passed": true
+      }
+    ],
+    "failed_decision_ids": []
+  },
+  "maintenance_boundary": {
+    "registry_maintenance_paused": true,
+    "registry_monolith_remains_authoritative": true,
+    "registry_v3_live": false,
+    "stage_a_authorized": false,
+    "stage_b_authorized": false
+  },
+  "mismatch_codes": [
+    "QFT_BOUND_SOURCE_ACTION_ATTRIBUTION_MISMATCH",
+    "QM_BOUND_SOURCE_HAMILTONIAN_ATTRIBUTION_MISMATCH",
+    "STAT_BOUND_SOURCE_PROBABILITY_TRANSPORT_ATTRIBUTION_MISMATCH"
+  ],
+  "negative_control_reproduction": {
+    "all_controls_reproduced": true,
+    "control_count": 10,
+    "controls": [
+      {
+        "control_id": "assign_unit_to_unit_unknown_without_evidence",
+        "expected_failed_decision_id": "unit_unknown_rows_receive_no_assignment",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "no_unit_dimension_constant_calibration_or_seam_map_is_emitted",
+          "unit_unknown_rows_receive_no_assignment"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "natural_units_mark_unresolved_resolved",
+        "expected_failed_decision_id": "natural_units_do_not_resolve_unresolved_rows",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "exact_twelve_row_identity_status_and_evidence_pointers_reconstructed",
+          "natural_units_do_not_resolve_unresolved_rows",
+          "family_counts_and_all_twelve_blocked_rows_are_reproduced"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "dimensionless_coordinates_promoted_to_physical_distance",
+        "expected_failed_decision_id": "dimensionless_coordinates_are_not_promoted_to_physical_distances",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "dimensionless_coordinates_are_not_promoted_to_physical_distances"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "suppressed_constant_omitted",
+        "expected_failed_decision_id": "suppressed_constants_require_explicit_restoration",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "suppressed_constants_require_explicit_restoration"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "two_incompatible_routes_assigned_without_priority",
+        "expected_failed_decision_id": "each_row_has_exactly_one_independently_reproduced_primary_route",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "each_row_has_exactly_one_independently_reproduced_primary_route",
+          "family_counts_and_all_twelve_blocked_rows_are_reproduced"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "seam_map_selected_with_incomplete_pillar_units",
+        "expected_failed_decision_id": "seam_conversion_requires_two_reviewed_endpoint_unit_systems",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "each_row_has_exactly_one_independently_reproduced_primary_route",
+          "seam_conversion_requires_two_reviewed_endpoint_unit_systems",
+          "family_counts_and_all_twelve_blocked_rows_are_reproduced"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "candidate_master_action_used_as_self_evidence",
+        "expected_failed_decision_id": "candidate_master_action_is_not_self_supporting_evidence",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "candidate_master_action_is_not_self_supporting_evidence"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "normalization_convention_promoted_to_empirical_scale",
+        "expected_failed_decision_id": "normalization_convention_is_not_empirical_calibration",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "normalization_convention_is_not_empirical_calibration"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "routed_blocker_promoted_to_dimensional_closure",
+        "expected_failed_decision_id": "route_selection_does_not_promote_dimensional_closure",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "route_selection_does_not_promote_dimensional_closure"
+        ],
+        "passed": true
+      },
+      {
+        "control_id": "C_k_embedding_before_dimensions_known",
+        "expected_failed_decision_id": "C_k_action_embedding_remains_unauthorized",
+        "fresh_deep_copy_used": true,
+        "observed_failed_decision_ids": [
+          "C_k_action_embedding_remains_unauthorized"
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "preparation_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+  "preparation_parent": "e0ba685c3d62040dc04a849b5d6808498fc9d63b",
+  "primary_label": "B-BLOCKED",
+  "regeneration": {
+    "fresh_subprocess_count": 2,
+    "passed": true,
+    "preparation_artifact_hashes_unchanged": true,
+    "return_codes": [
+      0,
+      0
+    ],
+    "subprocess_outputs_byte_identical": true,
+    "subprocess_report_matches_committed_report": true
+  },
+  "review_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_v0",
+  "review_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_B_BLOCKED_SOURCE_EVIDENCE_SUMMARY_MISMATCH",
+  "route_reproduction": {
+    "expected_route_counts": {
+      "ACTION_DIMENSION_DERIVATION": 0,
+      "CONVENTION_AND_CONSTANT_RESTORATION": 2,
+      "DIMENSIONAL_INCOMPATIBILITY_REJECTION": 0,
+      "EMPIRICAL_SCALE_CALIBRATION": 0,
+      "EQUATION_BALANCE_DERIVATION": 1,
+      "OBJECT_SEMANTICS_REFINEMENT": 4,
+      "RESEARCH_BLOCKED": 5,
+      "SEAM_CONVERSION_MAP": 0
+    },
+    "expected_routes": {
+      "PILLAR-COSMO-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "PILLAR-EM-units_and_dimensions-v0": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "PILLAR-GR-units_and_dimensions-v0": "EQUATION_BALANCE_DERIVATION",
+      "PILLAR-QFT-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "PILLAR-QM-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "PILLAR-SR-units_and_dimensions-v0": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "PILLAR-STAT-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "SEAM-EM-QFT-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-GR-QM-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-QFT-GR-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-QM-STAT-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-SR-COSMO-unit_map-v0": "RESEARCH_BLOCKED"
+    },
+    "route_map_reproduced": true,
+    "rows_remaining_blocked": 12,
+    "unit_unknown_row_count": 6,
+    "unresolved_row_count": 6
+  },
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v0",
+  "selected_next_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1",
+  "selection_basis": "Correct the three source-evidence summary attributions in a versioned successor while retaining the independently reproduced route map.",
+  "source_evidence_review": {
+    "all_positive_route_evidence_checks_passed": true,
+    "mismatch_checks": {
+      "QFT_BOUND_SOURCE_ACTION_ATTRIBUTION_MISMATCH": true,
+      "QM_BOUND_SOURCE_HAMILTONIAN_ATTRIBUTION_MISMATCH": true,
+      "STAT_BOUND_SOURCE_PROBABILITY_TRANSPORT_ATTRIBUTION_MISMATCH": true
+    },
+    "mismatch_codes": [
+      "QFT_BOUND_SOURCE_ACTION_ATTRIBUTION_MISMATCH",
+      "QM_BOUND_SOURCE_HAMILTONIAN_ATTRIBUTION_MISMATCH",
+      "STAT_BOUND_SOURCE_PROBABILITY_TRANSPORT_ATTRIBUTION_MISMATCH"
+    ],
+    "positive_route_evidence_checks": {
+      "em_typed_objects_and_units_not_selected_supported": true,
+      "gr_bounded_poisson_and_action_native_surface_supported": true,
+      "qft_narrow_scalar_anti_promotion_preserved": true,
+      "qm_supported_surfaces_are_schrodinger_state_contract_and_unitarity": true,
+      "sr_interval_and_dimensional_structure_supported": true,
+      "stat_supported_surfaces_are_entropy_flux_balance_and_regime": true
+    },
+    "review_note": "The twelve routes remain independently reproducible, but three direct available_evidence summaries are not faithful to their named bound sources."
+  },
+  "status": "blocked_source_evidence_attribution_mismatch",
+  "strict_review_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+  "successor_boundary": {
+    "corrective_successor": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1",
+    "first_resolution_guardrail_selected_now": false,
+    "would_be_first_resolution_guardrail_after_future_acceptance": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet"
+  },
+  "verdict": "B-BLOCKED"
+}
