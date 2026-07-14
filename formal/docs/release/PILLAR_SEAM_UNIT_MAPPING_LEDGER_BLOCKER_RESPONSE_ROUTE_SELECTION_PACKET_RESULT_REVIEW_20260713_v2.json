@@ -1,0 +1,281 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "Maxwell_Dirac_selected": false,
+    "downstream_pairs_authorized": false,
+    "first_unit_selector_preparation_authorized": true,
+    "unit_resolution_execution_authorized": false,
+    "v2_packet_accepted": true
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_action_embedding_authorized": false,
+    "C_k_audit_only": true,
+    "Maxwell_Dirac_selected": false,
+    "candidate_master_action_self_support_allowed": false,
+    "ccft_resumed": false,
+    "conversion_constants_emitted": 0,
+    "cross_sector_coupling_validation_claimed": false,
+    "dimension_vectors_emitted": 0,
+    "dimensional_closure_claimed": false,
+    "first_unit_selector_authorized_before_review": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_claimed": false,
+    "pillar_completion_claimed": false,
+    "registry_maintenance_paused": true,
+    "route_selection_is_resolution": false,
+    "seam_admissibility_claimed": false,
+    "seam_mappings_emitted": 0,
+    "unit_assignments_emitted": 0
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The proposition-specific v2 evidence-authority repair and twelve planning routes are accepted; only preparation of the scored first-unit selector is authorized.",
+  "decision_count": 16,
+  "decisions": [
+    {
+      "decision_id": "preparation_commit_and_hashes_are_immutable",
+      "passed": true
+    },
+    {
+      "decision_id": "strict_json_and_canonical_bytes_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "v2_consumes_exact_live_target",
+      "passed": true
+    },
+    {
+      "decision_id": "source_claim_labels_recomputed_from_exact_bytes",
+      "passed": true
+    },
+    {
+      "decision_id": "authority_classes_recomputed_independently",
+      "passed": true
+    },
+    {
+      "decision_id": "review_artifacts_remain_repository_state_evidence",
+      "passed": true
+    },
+    {
+      "decision_id": "source_locators_and_hashes_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "compatibility_matrix_recomputed_exhaustively",
+      "passed": true
+    },
+    {
+      "decision_id": "eligibility_recomputed_not_trusted",
+      "passed": true
+    },
+    {
+      "decision_id": "route_map_recomputed_without_historical_count_oracle",
+      "passed": true
+    },
+    {
+      "decision_id": "primary_routes_and_prerequisites_are_well_formed",
+      "passed": true
+    },
+    {
+      "decision_id": "dependency_closures_are_bounded_and_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "thirty_four_controls_are_fresh_unique_and_diagnostic",
+      "passed": true
+    },
+    {
+      "decision_id": "two_clean_detached_regenerations_are_byte_identical",
+      "passed": true
+    },
+    {
+      "decision_id": "no_unit_resolution_or_downstream_benchmark_is_authorized_early",
+      "passed": true
+    },
+    {
+      "decision_id": "prompt_hash_is_preserved_outside_scientific_inputs",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_packet_audit": {
+    "all_checks_passed": true,
+    "authority_mismatches": [],
+    "checks": {
+      "authority_classes_recomputed_independently": true,
+      "compatibility_matrix_recomputed_exhaustively": true,
+      "dependency_closures_are_bounded_and_complete": true,
+      "eligibility_recomputed_not_trusted": true,
+      "no_unit_resolution_or_downstream_benchmark_is_authorized_early": true,
+      "primary_routes_and_prerequisites_are_well_formed": true,
+      "prompt_hash_is_preserved_outside_scientific_inputs": true,
+      "review_artifacts_remain_repository_state_evidence": true,
+      "route_map_recomputed_without_historical_count_oracle": true,
+      "source_claim_labels_recomputed_from_exact_bytes": true,
+      "source_locators_and_hashes_recomputed": true,
+      "strict_json_and_canonical_bytes_reproduce": true,
+      "thirty_four_controls_are_fresh_unique_and_diagnostic": true,
+      "v2_consumes_exact_live_target": true
+    },
+    "declared_label_failures": [],
+    "eligibility_failures": [],
+    "independently_selected_route_map": {
+      "PILLAR-COSMO-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "PILLAR-EM-units_and_dimensions-v0": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "PILLAR-GR-units_and_dimensions-v0": "EQUATION_BALANCE_DERIVATION",
+      "PILLAR-QFT-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "PILLAR-QM-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "PILLAR-SR-units_and_dimensions-v0": "CONVENTION_AND_CONSTANT_RESTORATION",
+      "PILLAR-STAT-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+      "SEAM-EM-QFT-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-GR-QM-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-QFT-GR-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-QM-STAT-unit_map-v0": "RESEARCH_BLOCKED",
+      "SEAM-SR-COSMO-unit_map-v0": "RESEARCH_BLOCKED"
+    },
+    "locator_failures": [],
+    "prerequisite_failures": [],
+    "review_role_failures": [],
+    "route_failures": []
+  },
+  "isolated_regeneration": {
+    "cross_run_byte_identity": true,
+    "passed": true,
+    "run_count": 2,
+    "runs": [
+      {
+        "all_bound_inputs_rebound_to_exact_hash_bound_bytes": true,
+        "clean_detached_start": true,
+        "environment": {
+          "PYTHONHASHSEED": "0",
+          "UTF8": "1",
+          "locale": "C",
+          "timezone": "UTC"
+        },
+        "expected_hashes": {
+          "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
+        },
+        "generator_returncode": 0,
+        "generator_stderr": "",
+        "observed_hashes": {
+          "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
+        },
+        "passed": true,
+        "run": 1,
+        "worktree_commit": "c0140b89e2a6614c9ae02c2b8554295fa0e8fb10",
+        "worktree_status_after_regeneration": "M formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md\n M formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md\n M formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md\n M formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md\n M formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md\n M formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md\n M formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md\n M formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json\n M formal/python/meta/repo_environment.py\n M formal/toe_formal/lake-manifest.json\n M formal/toe_formal/lakefile.toml\n M formal/toe_formal/lean-toolchain\n M pytest.ini\n M requirements.active.lock"
+      },
+      {
+        "all_bound_inputs_rebound_to_exact_hash_bound_bytes": true,
+        "clean_detached_start": true,
+        "environment": {
+          "PYTHONHASHSEED": "0",
+          "UTF8": "1",
+          "locale": "C",
+          "timezone": "UTC"
+        },
+        "expected_hashes": {
+          "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
+        },
+        "generator_returncode": 0,
+        "generator_stderr": "",
+        "observed_hashes": {
+          "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+          "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
+        },
+        "passed": true,
+        "run": 2,
+        "worktree_commit": "c0140b89e2a6614c9ae02c2b8554295fa0e8fb10",
+        "worktree_status_after_regeneration": "M formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md\n M formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md\n M formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md\n M formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md\n M formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md\n M formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md\n M formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md\n M formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json\n M formal/python/meta/repo_environment.py\n M formal/toe_formal/lake-manifest.json\n M formal/toe_formal/lakefile.toml\n M formal/toe_formal/lean-toolchain\n M pytest.ini\n M requirements.active.lock"
+      }
+    ]
+  },
+  "nonclaims": [
+    "CCFT_resumption",
+    "C_k_action_embedding",
+    "Maxwell-Dirac remains a preferred downstream candidate only",
+    "cross_sector_coupling_validation",
+    "dimensional_closure",
+    "level_4_or_level_5",
+    "master_action_promotion",
+    "no first-unit target is selected before independent v2 review",
+    "no registry-maintenance, C_k, CCFT, seam-closure, or master-action work is authorized",
+    "no unit, dimension vector, constant restoration, or seam map is assigned",
+    "physical_calibration_claims",
+    "pillar_completion",
+    "seam_admissibility"
+  ],
+  "passed_decision_count": 16,
+  "preparation_custody": {
+    "checks": {
+      "commit_hashes_match": true,
+      "commit_matches": true,
+      "parent_matches": true,
+      "working_hashes_match": true
+    },
+    "commit_hash_comparisons": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": true,
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": true,
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": true,
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py": true
+    },
+    "commit_tree_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py": "08c21d5e8163e5657c8b61daa2a04de94aef2157e913a8bb219c951f43e4178d"
+    },
+    "expected_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py": "08c21d5e8163e5657c8b61daa2a04de94aef2157e913a8bb219c951f43e4178d"
+    },
+    "expected_preparation_commit": "c0140b89e2a6614c9ae02c2b8554295fa0e8fb10",
+    "expected_preparation_parent": "c8b4248bc589f6d1c28d3585481178cb050aac0f",
+    "passed": true,
+    "preparation_commit": "c0140b89e2a6614c9ae02c2b8554295fa0e8fb10",
+    "preparation_parent": "c8b4248bc589f6d1c28d3585481178cb050aac0f",
+    "working_hash_comparisons": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": true,
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": true,
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": true,
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py": true
+    },
+    "working_tree_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json": "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json": "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py": "08c21d5e8163e5657c8b61daa2a04de94aef2157e913a8bb219c951f43e4178d"
+    }
+  },
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "review_target": "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2_result",
+  "reviewer_independence": {
+    "imports_preparation_generator": false,
+    "shared_only": [
+      "artifact formats",
+      "canonical JSON contract",
+      "hash primitives",
+      "source-reading primitives"
+    ],
+    "shares_combined_pass_flags": false,
+    "shares_eligibility_implementation": false,
+    "shares_mutation_constructors": false,
+    "shares_role_assignment_logic": false,
+    "shares_route_selection_implementation": false
+  },
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260713_v2",
+  "selected_next_target": "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0",
+  "selected_next_target_kind": "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0",
+  "status": "accepted_v2_evidence_authority_repair",
+  "verdict": "ACCEPT"
+}
