@@ -1,0 +1,803 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "CCFT_validation_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "bounded_non_authoritative_pilot_authorized": true,
+    "broad_robustness_claim_authorized": false,
+    "canonical_E_REPRO_result_remains_accepted": true,
+    "canonical_robustness_execution_authorized": false,
+    "descendant_materiality_classification_authorized": false,
+    "guardrail_v1_accepted": true,
+    "historical_guardrail_v0_rewritten": false,
+    "historical_signed_axis_rehabilitated": false,
+    "master_action_promotion_authorized": false,
+    "new_E_REPRO_claim_authorized": false,
+    "new_scientific_claim_authorized": false,
+    "numerical_threshold_calibration_may_be_observed_in_pilot": true,
+    "numerical_threshold_or_parameter_freeze_authorized": false,
+    "pillar_completion_authorized": false,
+    "pilot_subset_remains_frozen": true,
+    "scientific_materiality_thresholds_remain_frozen": true,
+    "seam_closure_authorized": false
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "Guardrail v1 is independently accepted and authorizes only the five-row bounded non-authoritative robustness pilot. The pilot may exercise the frozen construction and estimate engineering tolerances under the frozen rule; it may not freeze calibration, execute canonical robustness, alter scientific definitions, or support a new scientific claim.",
+  "independent_matrix_reconstruction": {
+    "all_positive_bases_strictly_positive": true,
+    "all_rows_match_packet": true,
+    "loading_odds": {
+      "anchor": 0.27086052148941786,
+      "high": 1.0834420859576717,
+      "low": 0.06771513037235447
+    },
+    "maximum_loading_round_trip_error": 1.3877787807814457e-17,
+    "maximum_other_axis_drift": 0.0,
+    "multiplicative_loading_symmetry": true,
+    "reference_inventory": {
+      "canonical_loading": 0.2131315883288088,
+      "descendant_reference_energy": 0.003478109122024757,
+      "number_by_species": {
+        "psi_minus": 0.006420480000000003,
+        "psi_plus": 0.006420480000000002
+      },
+      "parallel_Maxwell_energy": 0.0,
+      "positive_base_energy_at_mass_one": 0.012840960000000005,
+      "total_matter_number": 0.012840960000000005
+    },
+    "role_counts": {
+      "CANONICAL_ANCHOR": 1,
+      "INTERACTION_CORNER": 3,
+      "ONE_AT_A_TIME": 10
+    },
+    "row_audits": [
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R00_CANONICAL",
+        "row_role": "CANONICAL_ANCHOR"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R01_ETA_WEAK",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R02_ETA_STRONG",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0,
+        "reference_descendant_profile_alpha": 0.0,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0,
+        "row_id": "R03_F_ZERO",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 1.3877787807814457e-17,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.06342059641764139,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0008695272805061891,
+        "reference_descendant_profile_alpha": 0.49999999999999994,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0634205964176414,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0008695272805061892,
+        "row_id": "R04_F_LOW",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.013912436488099028,
+        "reference_descendant_profile_alpha": 2.0,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.01391243648809903,
+        "row_id": "R05_F_HIGH",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.0
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.0
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R06_THETA_TRIVIAL",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": -0.3
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": -0.3
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R07_THETA_PARTNER",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R08_PHASE_POSITIVE",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0034781091220247567,
+        "row_id": "R09_PHASE_NEGATIVE",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0069562182440495125,
+        "reference_descendant_profile_alpha": 1.414213562373095,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.006956218244049513,
+        "row_id": "R10_MU_HIGH",
+        "row_role": "ONE_AT_A_TIME"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": -0.3
+        },
+        "reconstructed_descendant_energy": 0.027824872976198064,
+        "reference_descendant_profile_alpha": 2.8284271247461903,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": -0.3
+        },
+        "requested_descendant_energy": 0.02782487297619806,
+        "row_id": "R11_CORNER_WEAK_HIGH",
+        "row_role": "INTERACTION_CORNER"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 0.0,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.0
+        },
+        "reconstructed_descendant_energy": 0.0,
+        "reference_descendant_profile_alpha": 0.0,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.0
+        },
+        "requested_descendant_energy": 0.0,
+        "row_id": "R12_CORNER_STRONG_ZERO",
+        "row_role": "INTERACTION_CORNER"
+      },
+      {
+        "all_five_axes_pass": true,
+        "loading_round_trip_error": 1.3877787807814457e-17,
+        "maximum_other_axis_drift": 0.0,
+        "packet_row_matches_independent_reconstruction": true,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.06342059641764139,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "reconstructed_descendant_energy": 0.0017390545610123781,
+        "reference_descendant_profile_alpha": 0.7071067811865475,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0634205964176414,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "requested_descendant_energy": 0.0017390545610123783,
+        "row_id": "R13_CORNER_STRONG_LOW",
+        "row_role": "INTERACTION_CORNER"
+      }
+    ],
+    "scientific_row_count": 14,
+    "unique_circular_parameter_tuple_count": 14,
+    "unique_row_identity_count": 14,
+    "zero_and_two_pi_duplicate_absent": true
+  },
+  "independent_mutation_audit": {
+    "all_eighteen_isolated": true,
+    "baseline_diagnostics": [],
+    "mutation_results": [
+      {
+        "actual_diagnostics": [
+          "targets"
+        ],
+        "expected_diagnostic": "targets",
+        "mutation_id": "M_TARGET_CHANGED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "axis_levels"
+        ],
+        "expected_diagnostic": "axis_levels",
+        "mutation_id": "M_AXIS_REMOVED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "axis_levels"
+        ],
+        "expected_diagnostic": "axis_levels",
+        "mutation_id": "M_LEVELS_UNFROZEN",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "scientific_matrix"
+        ],
+        "expected_diagnostic": "scientific_matrix",
+        "mutation_id": "M_MATRIX_ROW_REMOVED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "scientific_matrix"
+        ],
+        "expected_diagnostic": "scientific_matrix",
+        "mutation_id": "M_MATRIX_DUPLICATE",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "scientific_matrix"
+        ],
+        "expected_diagnostic": "scientific_matrix",
+        "mutation_id": "M_BASE_NONPOSITIVE",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "scientific_matrix"
+        ],
+        "expected_diagnostic": "scientific_matrix",
+        "mutation_id": "M_ROUND_TRIP_FAILED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "comparator"
+        ],
+        "expected_diagnostic": "comparator",
+        "mutation_id": "M_COMPARATOR_PROMOTED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "comparator"
+        ],
+        "expected_diagnostic": "comparator",
+        "mutation_id": "M_COMPARATOR_RELABELLED_ZERO",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "observables"
+        ],
+        "expected_diagnostic": "observables",
+        "mutation_id": "M_OBSERVABLE_REMOVED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "materiality_thresholds"
+        ],
+        "expected_diagnostic": "materiality_thresholds",
+        "mutation_id": "M_MATERIALITY_UNFROZEN",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "pilot"
+        ],
+        "expected_diagnostic": "pilot",
+        "mutation_id": "M_PILOT_AUTHORIZED_EARLY",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "execution"
+        ],
+        "expected_diagnostic": "execution",
+        "mutation_id": "M_EXECUTION_AUTHORIZED_EARLY",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "semantic_roles"
+        ],
+        "expected_diagnostic": "semantic_roles",
+        "mutation_id": "M_SIGNED_ROLE_CONFLATED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "normalization_controls"
+        ],
+        "expected_diagnostic": "normalization_controls",
+        "mutation_id": "M_NORMALIZATION_CONTROL_REMOVED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "control_inventory"
+        ],
+        "expected_diagnostic": "control_inventory",
+        "mutation_id": "M_ACCEPTED_NEGATIVE_CONTROL_REMOVED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "outcome_taxonomy"
+        ],
+        "expected_diagnostic": "outcome_taxonomy",
+        "mutation_id": "M_OUTCOME_REMOVED",
+        "only_intended_diagnostic_fired": true
+      },
+      {
+        "actual_diagnostics": [
+          "nonclaims"
+        ],
+        "expected_diagnostic": "nonclaims",
+        "mutation_id": "M_PILLAR_PROMOTED",
+        "only_intended_diagnostic_fired": true
+      }
+    ],
+    "packet_inventory_matches": true
+  },
+  "independent_normalization_regression_controls": [
+    {
+      "control_id": "NORM01_HISTORICAL_RATIO_EXCEEDS_ONE",
+      "independently_reproduced": true,
+      "observed": 1.0003377834191158
+    },
+    {
+      "control_id": "NORM02_HISTORICAL_DENOMINATOR_CROSSES_ZERO",
+      "independently_reproduced": true,
+      "observed": 0.0003376693644345549
+    },
+    {
+      "control_id": "NORM03_HISTORICAL_RATIO_CHANGES_SIGN",
+      "independently_reproduced": true,
+      "observed": [
+        -9.914402456146513e-11,
+        7.931521808792097e-10
+      ]
+    },
+    {
+      "control_id": "NORM04_CLAMPING_REJECTED",
+      "independently_reproduced": true,
+      "observed": "clamping rejected by frozen contract"
+    },
+    {
+      "control_id": "NORM05_ABSOLUTE_TOTAL_SHORTCUT_REJECTED",
+      "independently_reproduced": true,
+      "observed": "absolute-total shortcut rejected by frozen contract"
+    },
+    {
+      "control_id": "NORM06_POST_OBSERVATION_DOMAIN_WIDENING_REJECTED",
+      "independently_reproduced": true,
+      "observed": "post-observation widening rejected by frozen contract"
+    },
+    {
+      "control_id": "NORM07_ZERO_DESCENDANTS_MAP_ZERO",
+      "independently_reproduced": true,
+      "observed": 0.0
+    },
+    {
+      "control_id": "NORM08_FINITE_LOADING_BELOW_ONE",
+      "independently_reproduced": true,
+      "observed": true
+    },
+    {
+      "control_id": "NORM09_LOADING_MONOTONE_IN_AMPLITUDE",
+      "independently_reproduced": true,
+      "observed": [
+        0.0634205964176414,
+        0.2131315883288088,
+        0.5200250552967295
+      ]
+    },
+    {
+      "control_id": "NORM10_INVERSE_RECONSTRUCTION",
+      "independently_reproduced": true,
+      "observed": 1.3877787807814457e-17
+    },
+    {
+      "control_id": "NORM11_GAUGE_INVARIANCE",
+      "independently_reproduced": true,
+      "observed": 5.551115123125783e-17
+    },
+    {
+      "control_id": "NORM12_PHASE_STABILITY_AFTER_RECONSTRUCTION",
+      "independently_reproduced": true,
+      "observed": 0.0
+    },
+    {
+      "control_id": "NORM13_HOLONOMY_BOUNDEDNESS",
+      "independently_reproduced": true,
+      "observed": [
+        0.2131315883288088,
+        0.2131315883288088,
+        0.2131315883288088
+      ]
+    },
+    {
+      "control_id": "NORM14_MASS_DOMAIN_DENOMINATOR_POSITIVITY",
+      "independently_reproduced": true,
+      "observed": true
+    },
+    {
+      "control_id": "NORM15_VACUUM_AXIS_NOT_APPLICABLE",
+      "independently_reproduced": true,
+      "observed": "NOT_APPLICABLE_CONTROL"
+    },
+    {
+      "control_id": "NORM16_SIGNED_ENERGY_ROLE_SEPARATE",
+      "independently_reproduced": true,
+      "observed": true
+    },
+    {
+      "control_id": "NORM17_CANONICAL_MAPPING_EXACT",
+      "independently_reproduced": true,
+      "observed": 0.2131315883288088
+    },
+    {
+      "control_id": "NORM18_CORRUPTED_MASS_NUMBER_DETECTED",
+      "independently_reproduced": true,
+      "observed": {
+        "actual_diagnostics": [
+          "MASS_WEIGHTED_NUMBER_TERM_CORRUPTED"
+        ],
+        "expected_diagnostic": "MASS_WEIGHTED_NUMBER_TERM_CORRUPTED",
+        "passed": true
+      }
+    },
+    {
+      "control_id": "NORM19_NUMBER_NORMALIZATION_OR_MULTIPLICITY_OMISSION_DETECTED",
+      "independently_reproduced": true,
+      "observed": [
+        {
+          "actual_diagnostics": [
+            "NUMBER_CURRENT_NORMALIZATION_CORRUPTED"
+          ],
+          "expected_diagnostic": "NUMBER_CURRENT_NORMALIZATION_CORRUPTED",
+          "passed": true
+        },
+        {
+          "actual_diagnostics": [
+            "SECTOR_MULTIPLICITY_OMITTED"
+          ],
+          "expected_diagnostic": "SECTOR_MULTIPLICITY_OMITTED",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "control_id": "NORM20_INTERACTION_ENERGY_DOUBLE_COUNT_REJECTED",
+      "independently_reproduced": true,
+      "observed": {
+        "actual_diagnostics": [
+          "INTERACTION_ENERGY_DOUBLE_COUNTED"
+        ],
+        "expected_diagnostic": "INTERACTION_ENERGY_DOUBLE_COUNTED",
+        "passed": true
+      }
+    }
+  ],
+  "lean_status_boundary": {
+    "direct_affected_preparation_witness": "PASSED",
+    "jobs_reached_before_timeout": 8441,
+    "jobs_total": 8507,
+    "repository_wide_aggregate": "INCOMPLETE_DUE_TO_600_SECOND_TIMEOUT",
+    "repository_wide_green_claim_made": false,
+    "theorem_error_observed_before_timeout": false
+  },
+  "observable_outcome_and_pilot_audit": {
+    "classification_order_exact": true,
+    "deterministic_precedence_truth_table_cases": 32,
+    "difficult_rows_must_remain": true,
+    "every_precedence_case_has_exactly_one_label": true,
+    "formulas_and_norms_frozen": true,
+    "numerical_thresholds_remain_pending_pilot": true,
+    "observable_ids_exact": true,
+    "pilot_not_yet_executed_or_preaccepted": true,
+    "pilot_scope_is_engineering_only": true,
+    "pilot_subset_exact_and_frozen": true,
+    "robustness_and_significance_tracks_separate": true,
+    "scientific_materiality_frozen_before_pilot": true
+  },
+  "preparation_binding": {
+    "bound_historical_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0.json": "2840f6edbd1414b8e685c661de1f51cc13c28b3c629e6ff2be36b16921d3d391",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json": "367aeabdf2964dd532ade7f9d8bcd7d1231e7a76dd9e298afc850d46639784d6",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v0.json": "48f4657fbfb93730678774e56ebdf13f3bfbb039b49e1941a40ab9e5ab718fef"
+    },
+    "bound_preparation_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_20260714_v1.json": "0986e58e9d7f9b85b029a73a69915a9124b72e3a6774ec92dc539dc61f9dc147",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-MANIFEST-v1.json": "718963d7819ce39af4a065d309fbf2a1df9fd2343edd80f01e70d4c928bd6445",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v1.json": "54f3c8137986db1ba1bf7cc1a9e0ffade11ed7b6fdf480bf103cdd6b13d964f1",
+      "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1.py": "bb25d6accb8cd0dd48a26722a0f4327a4dd40d704165af509071aab490334b60",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1.py": "9a741072ffc8102dcdf9690a911e5cfa34772e3a4f62821a265905cd5fa9b5a1",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessGuardrailPacketV1.lean": "c28154057f0c61d9bc196674a0dbecb1e52d6e7bec79fe7ec59c01989fce4541"
+    },
+    "preparation_commit": "f88d98a0e82cdc577f17db1e8230ea28c4c49aaa",
+    "preparation_parent": "74b3199502d5aae98e84bdb552c683657c8e54b8"
+  },
+  "preparation_generator_imported": false,
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "review_decisions": {
+    "all_eighteen_mutations_fail_for_only_the_intended_reason": true,
+    "all_five_axes_and_levels_reconstructed": true,
+    "all_six_preparation_artifacts_bound": true,
+    "all_twenty_normalization_regressions_independently_reproduced": true,
+    "axis_repair_is_sole_v1_normalization_authority": true,
+    "canonical_E_REPRO_result_and_all_authority_inputs_are_unchanged": true,
+    "canonical_robustness_execution_remains_unauthorized": true,
+    "descendant_energy_amplitude_and_loading_reconstructed": true,
+    "forced_comparator_is_negative_only_and_keeps_parent_provenance": true,
+    "full_model_is_positive_evidence_system_for_every_row": true,
+    "guardrail_v0_and_signed_axis_blocker_remain_immutable": true,
+    "invariant_descendant_free_comparator_requires_analytic_authority": true,
+    "loading_odds_are_multiplicatively_symmetric": true,
+    "materiality_is_frozen_but_numerical_thresholds_are_not": true,
+    "matrix_identity_is_exact_unique_and_circular_safe": true,
+    "matrix_precedes_and_is_independent_of_pilot_results": true,
+    "matrix_roles_are_one_ten_three": true,
+    "nonclaims_remain_closed": true,
+    "observables_formulas_and_norms_are_fixed": true,
+    "original_transverse_blocker_remains_permanent": true,
+    "other_four_axes_do_not_drift": true,
+    "outcome_precedence_is_deterministic_and_unambiguous": true,
+    "pilot_subset_and_engineering_only_boundary_are_fixed": true,
+    "positive_base_reconstructed_and_strictly_positive": true,
+    "preparation_target_and_review_boundary_exact": true,
+    "robustness_and_significance_tracks_are_separate": true
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260714_v1",
+  "selected_next_target": "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1",
+  "selected_next_target_kind": "BOUNDED_NON_AUTHORITATIVE_ROBUSTNESS_PILOT_v1",
+  "verdict": "ACCEPT_GUARDRAIL_V1"
+}
