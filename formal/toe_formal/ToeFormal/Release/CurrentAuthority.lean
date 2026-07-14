@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "execute_dirac_maxwell_full_zero_mode_canonical_simulation_v0" := by
+      "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0" := by
   native_decide
 
 end CurrentAuthority

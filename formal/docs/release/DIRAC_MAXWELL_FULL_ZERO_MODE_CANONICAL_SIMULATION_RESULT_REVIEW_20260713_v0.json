@@ -1,0 +1,3495 @@
+{
+  "accepted": true,
+  "accepted_claim_label": "E-REPRO",
+  "authority_rotation": {
+    "CCFT_validation_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "E_REPRO_authorized": true,
+    "bounded_scientific_result_accepted": true,
+    "canonical_execution_accepted": true,
+    "empirical_adequacy_authorized": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_authorized": false,
+    "seam_admissibility_or_closure_authorized": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "A bounded, unit-complete c-number zero-mode reduction of the classical (3+1) Maxwell–Dirac system—retaining the (1+1) gauge field, both transverse gauge-field descendants, two opposite-charge species, and both reduced spin sectors—exhibits reproducible matter–field energy exchange and total conservation within the frozen bounded-convergent numerical tolerance under the frozen dimensional, boundary, gauge, and discretization assumptions.",
+  "decision_count": 24,
+  "decisions": [
+    {
+      "decision_id": "immutable_canonical_execution_commit_and_all_outputs_are_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_freeze_and_exact_fifty_record_matrix_are_consumed",
+      "passed": true
+    },
+    {
+      "decision_id": "environment_identity_matches_the_frozen_environment",
+      "passed": true
+    },
+    {
+      "decision_id": "all_fifty_records_complete_with_unique_role_qualified_identities",
+      "passed": true
+    },
+    {
+      "decision_id": "all_fifty_records_are_independently_reproduced",
+      "passed": true
+    },
+    {
+      "decision_id": "all_input_and_numeric_payload_hashes_match",
+      "passed": true
+    },
+    {
+      "decision_id": "twelve_positive_controls_meet_their_frozen_expectations",
+      "passed": true
+    },
+    {
+      "decision_id": "twenty_seven_negative_controls_discriminate_as_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "deterministic_duplicate_numeric_payloads_are_identical",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_residual_thresholds_pass_for_every_simulation_run",
+      "passed": true
+    },
+    {
+      "decision_id": "Gauss_continuity_link_and_solver_residuals_pass",
+      "passed": true
+    },
+    {
+      "decision_id": "spatial_convergence_meets_the_frozen_minimum",
+      "passed": true
+    },
+    {
+      "decision_id": "temporal_phi2_convergence_meets_the_frozen_minimum",
+      "passed": true
+    },
+    {
+      "decision_id": "temporal_energy_error_convergence_meets_the_frozen_minimum",
+      "passed": true
+    },
+    {
+      "decision_id": "Wilson_finite_grid_formula_and_continuum_order_pass",
+      "passed": true
+    },
+    {
+      "decision_id": "transverse_descendant_signal_meets_the_frozen_minimum",
+      "passed": true
+    },
+    {
+      "decision_id": "exchange_to_drift_plus_floor_ratio_meets_the_frozen_minimum",
+      "passed": true
+    },
+    {
+      "decision_id": "bounded_convergent_energy_error_class_is_observed",
+      "passed": true
+    },
+    {
+      "decision_id": "longitudinal_descendant_Wilson_zero_mode_and_spinor_energy_terms_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "no_run_is_missing_excluded_or_interpretation_rerun",
+      "passed": true
+    },
+    {
+      "decision_id": "execution_did_not_assign_its_own_scientific_verdict",
+      "passed": true
+    },
+    {
+      "decision_id": "bounded_E_REPRO_claim_wording_and_nonclaims_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "pillar_seam_C_k_CCFT_and_master_action_nonpromotions_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_is_preserved",
+      "passed": true
+    }
+  ],
+  "execution_custody": {
+    "commit": "d2cb2cf08df3b6fb812c3aed12cbdb9c66dd0b3c",
+    "expected_main_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_20260713_v0.json": "9c73941116b2889b9402519656442f1d9ff155deac0c49bec5f253e2671b4a73",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-ARRAYS-v0.json": "4d9fbbc2a4a3efd8621ef884839ced3c8716978399b280e040454acdc299d746",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-MANIFEST-v0.json": "1f67e85dca8a9c47cff6a4073e0f16acbfa1b1d23824ea27ddba2c7aebe6cfed",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-PACKET-v0.json": "f66282a4403e273a8ba25e25f6b9e8a2e547af762ad252b38726fae03aed6dcd",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation.py": "750f64a9a68abc83033e011ae196a431d3cba390ff1eb168605987c290e48781"
+    },
+    "main_commit_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_20260713_v0.json": "9c73941116b2889b9402519656442f1d9ff155deac0c49bec5f253e2671b4a73",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-ARRAYS-v0.json": "4d9fbbc2a4a3efd8621ef884839ced3c8716978399b280e040454acdc299d746",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-MANIFEST-v0.json": "1f67e85dca8a9c47cff6a4073e0f16acbfa1b1d23824ea27ddba2c7aebe6cfed",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-PACKET-v0.json": "f66282a4403e273a8ba25e25f6b9e8a2e547af762ad252b38726fae03aed6dcd",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation.py": "750f64a9a68abc83033e011ae196a431d3cba390ff1eb168605987c290e48781"
+    },
+    "main_working_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_20260713_v0.json": "9c73941116b2889b9402519656442f1d9ff155deac0c49bec5f253e2671b4a73",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-ARRAYS-v0.json": "4d9fbbc2a4a3efd8621ef884839ced3c8716978399b280e040454acdc299d746",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-MANIFEST-v0.json": "1f67e85dca8a9c47cff6a4073e0f16acbfa1b1d23824ea27ddba2c7aebe6cfed",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-SIMULATION-PACKET-v0.json": "f66282a4403e273a8ba25e25f6b9e8a2e547af762ad252b38726fae03aed6dcd",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation.py": "750f64a9a68abc83033e011ae196a431d3cba390ff1eb168605987c290e48781"
+    },
+    "parent": "c6576782dcb694353bb80baeb7bb3991f43546b6",
+    "passed": true,
+    "run_output_checks": [
+      {
+        "committed_sha256": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a",
+        "expected_sha256": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json",
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "working_sha256": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a"
+      },
+      {
+        "committed_sha256": "25bda0c842088130565c65d5c53ee25bb5170dc15a9330a1d68e51c94ed81a9c",
+        "expected_sha256": "25bda0c842088130565c65d5c53ee25bb5170dc15a9330a1d68e51c94ed81a9c",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/SPATIAL_REFINEMENT_N8.json",
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "working_sha256": "25bda0c842088130565c65d5c53ee25bb5170dc15a9330a1d68e51c94ed81a9c"
+      },
+      {
+        "committed_sha256": "4f2ef19b3303d9c6cfe5ce4b4300ffceb6a00db2691f827fa290328b675d8e17",
+        "expected_sha256": "4f2ef19b3303d9c6cfe5ce4b4300ffceb6a00db2691f827fa290328b675d8e17",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/SPATIAL_REFINEMENT_N16.json",
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "working_sha256": "4f2ef19b3303d9c6cfe5ce4b4300ffceb6a00db2691f827fa290328b675d8e17"
+      },
+      {
+        "committed_sha256": "ee0854e12aa0f00642924985af423fbadfb99e337622d57517ba1f5fc2d6ade1",
+        "expected_sha256": "ee0854e12aa0f00642924985af423fbadfb99e337622d57517ba1f5fc2d6ade1",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/SPATIAL_REFINEMENT_N32.json",
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "working_sha256": "ee0854e12aa0f00642924985af423fbadfb99e337622d57517ba1f5fc2d6ade1"
+      },
+      {
+        "committed_sha256": "dba51368ca4d5b6a8a9b9735c1ef51d8bdf92d532f9efe673ea379bdd949817b",
+        "expected_sha256": "dba51368ca4d5b6a8a9b9735c1ef51d8bdf92d532f9efe673ea379bdd949817b",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/TEMPORAL_REFINEMENT_DT0P00625.json",
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "working_sha256": "dba51368ca4d5b6a8a9b9735c1ef51d8bdf92d532f9efe673ea379bdd949817b"
+      },
+      {
+        "committed_sha256": "cb7fc043845b836717b6f864e6de05805d3878a8e8f1dcafddc957a904b571a3",
+        "expected_sha256": "cb7fc043845b836717b6f864e6de05805d3878a8e8f1dcafddc957a904b571a3",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/TEMPORAL_REFINEMENT_DT0P003125.json",
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "working_sha256": "cb7fc043845b836717b6f864e6de05805d3878a8e8f1dcafddc957a904b571a3"
+      },
+      {
+        "committed_sha256": "0f6e799bad6a8c78b24941045b4a02814595b5d8f01b2699b1e3e4e3f763b347",
+        "expected_sha256": "0f6e799bad6a8c78b24941045b4a02814595b5d8f01b2699b1e3e4e3f763b347",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/TEMPORAL_REFINEMENT_DT0P0015625.json",
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "working_sha256": "0f6e799bad6a8c78b24941045b4a02814595b5d8f01b2699b1e3e4e3f763b347"
+      },
+      {
+        "committed_sha256": "0885d104e881abaec25da524f6ed178e93ba6611dfc51224684e75e64c6ed56d",
+        "expected_sha256": "0885d104e881abaec25da524f6ed178e93ba6611dfc51224684e75e64c6ed56d",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/SOLVER_VERIFY_TOL1E_MINUS10.json",
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "working_sha256": "0885d104e881abaec25da524f6ed178e93ba6611dfc51224684e75e64c6ed56d"
+      },
+      {
+        "committed_sha256": "fe876e7c08d6ba1523c2f62cc7c4fbb8f459b57607732b2615280ff56af0768a",
+        "expected_sha256": "fe876e7c08d6ba1523c2f62cc7c4fbb8f459b57607732b2615280ff56af0768a",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/SOLVER_VERIFY_TOL1E_MINUS12.json",
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "working_sha256": "fe876e7c08d6ba1523c2f62cc7c4fbb8f459b57607732b2615280ff56af0768a"
+      },
+      {
+        "committed_sha256": "9c7c48b314a1382951d1e66b4762bf289d500e027a0d121d033960b0ce8da115",
+        "expected_sha256": "9c7c48b314a1382951d1e66b4762bf289d500e027a0d121d033960b0ce8da115",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/DETERMINISTIC_PRIMARY_A.json",
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "working_sha256": "9c7c48b314a1382951d1e66b4762bf289d500e027a0d121d033960b0ce8da115"
+      },
+      {
+        "committed_sha256": "1b2a0228b94d0167b1919fa3912314950704465346e7657d172101bca915a984",
+        "expected_sha256": "1b2a0228b94d0167b1919fa3912314950704465346e7657d172101bca915a984",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/DETERMINISTIC_PRIMARY_B.json",
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "working_sha256": "1b2a0228b94d0167b1919fa3912314950704465346e7657d172101bca915a984"
+      },
+      {
+        "committed_sha256": "3e4ecbda7811442a1a9687559ba72380a40f0343c9ab36df4035f296c3f0a2f7",
+        "expected_sha256": "3e4ecbda7811442a1a9687559ba72380a40f0343c9ab36df4035f296c3f0a2f7",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_VACUUM.json",
+        "run_id": "POSITIVE_VACUUM",
+        "working_sha256": "3e4ecbda7811442a1a9687559ba72380a40f0343c9ab36df4035f296c3f0a2f7"
+      },
+      {
+        "committed_sha256": "760582dabbfd3cf15ca0c42dc846a1848b10f580dca458a5a83cf0999bcfddd8",
+        "expected_sha256": "760582dabbfd3cf15ca0c42dc846a1848b10f580dca458a5a83cf0999bcfddd8",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES.json",
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "working_sha256": "760582dabbfd3cf15ca0c42dc846a1848b10f580dca458a5a83cf0999bcfddd8"
+      },
+      {
+        "committed_sha256": "abd477a0dbae75f6f48f7360c16064ed71e0549d0eaecc4845d9ceb52b2dedab",
+        "expected_sha256": "abd477a0dbae75f6f48f7360c16064ed71e0549d0eaecc4845d9ceb52b2dedab",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_WILSON_DISCRETE_PLANE_WAVE.json",
+        "run_id": "POSITIVE_WILSON_DISCRETE_PLANE_WAVE",
+        "working_sha256": "abd477a0dbae75f6f48f7360c16064ed71e0549d0eaecc4845d9ceb52b2dedab"
+      },
+      {
+        "committed_sha256": "af99fb32346c2d362acab28b77e5d811369f53afadd35e8966579d6197b3c06b",
+        "expected_sha256": "af99fb32346c2d362acab28b77e5d811369f53afadd35e8966579d6197b3c06b",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_CONTINUUM_DISPERSION_RECOVERY.json",
+        "run_id": "POSITIVE_CONTINUUM_DISPERSION_RECOVERY",
+        "working_sha256": "af99fb32346c2d362acab28b77e5d811369f53afadd35e8966579d6197b3c06b"
+      },
+      {
+        "committed_sha256": "bc702a3d74a0f232859fe85b514fc7a1c4c847848bd6181cfccbcfe479e3d79d",
+        "expected_sha256": "bc702a3d74a0f232859fe85b514fc7a1c4c847848bd6181cfccbcfe479e3d79d",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_TRIVIAL_PURE_GAUGE.json",
+        "run_id": "POSITIVE_TRIVIAL_PURE_GAUGE",
+        "working_sha256": "bc702a3d74a0f232859fe85b514fc7a1c4c847848bd6181cfccbcfe479e3d79d"
+      },
+      {
+        "committed_sha256": "7111d6a9b19889ca3cdd5fd09e5ade0a53f210cd6a84c6b8ebd925e6d1bdf42a",
+        "expected_sha256": "7111d6a9b19889ca3cdd5fd09e5ade0a53f210cd6a84c6b8ebd925e6d1bdf42a",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_FLAT_NONTRIVIAL_HOLONOMY.json",
+        "run_id": "POSITIVE_FLAT_NONTRIVIAL_HOLONOMY",
+        "working_sha256": "7111d6a9b19889ca3cdd5fd09e5ade0a53f210cd6a84c6b8ebd925e6d1bdf42a"
+      },
+      {
+        "committed_sha256": "42cc3b234faf49b42a188719e5a93546817efaff8c1cb53d2389f6c1365e172b",
+        "expected_sha256": "42cc3b234faf49b42a188719e5a93546817efaff8c1cb53d2389f6c1365e172b",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_STATIONARY_DENSITY_NEUTRAL.json",
+        "run_id": "POSITIVE_STATIONARY_DENSITY_NEUTRAL",
+        "working_sha256": "42cc3b234faf49b42a188719e5a93546817efaff8c1cb53d2389f6c1365e172b"
+      },
+      {
+        "committed_sha256": "779a572f02adba29fb0b67851900b8ebb89a339e80f9bdf70f5e2377def0027b",
+        "expected_sha256": "779a572f02adba29fb0b67851900b8ebb89a339e80f9bdf70f5e2377def0027b",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT.json",
+        "run_id": "POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT",
+        "working_sha256": "779a572f02adba29fb0b67851900b8ebb89a339e80f9bdf70f5e2377def0027b"
+      },
+      {
+        "committed_sha256": "012fdc9e259801e8ff9b9894247300407eb45862c63c7b4221fb1d460b883998",
+        "expected_sha256": "012fdc9e259801e8ff9b9894247300407eb45862c63c7b4221fb1d460b883998",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_J2_SOURCES_PHI2.json",
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "working_sha256": "012fdc9e259801e8ff9b9894247300407eb45862c63c7b4221fb1d460b883998"
+      },
+      {
+        "committed_sha256": "51c072b296bfeb13226cf047761d8f67c0091c01151a2427839d79c0f5b6bd8a",
+        "expected_sha256": "51c072b296bfeb13226cf047761d8f67c0091c01151a2427839d79c0f5b6bd8a",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_J3_SOURCES_PHI3.json",
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "working_sha256": "51c072b296bfeb13226cf047761d8f67c0091c01151a2427839d79c0f5b6bd8a"
+      },
+      {
+        "committed_sha256": "7afedba9f4f00c0693e0dfc3370044727303fc819ffad2b358f40d0e801b1498",
+        "expected_sha256": "7afedba9f4f00c0693e0dfc3370044727303fc819ffad2b358f40d0e801b1498",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_CHARGE_CONJUGATE_TRANSPORT.json",
+        "run_id": "POSITIVE_CHARGE_CONJUGATE_TRANSPORT",
+        "working_sha256": "7afedba9f4f00c0693e0dfc3370044727303fc819ffad2b358f40d0e801b1498"
+      },
+      {
+        "committed_sha256": "c258bc02cdca2b8b4cfbcef79b7355f639b6ff9b13fa708a584053d3ff50efcc",
+        "expected_sha256": "c258bc02cdca2b8b4cfbcef79b7355f639b6ff9b13fa708a584053d3ff50efcc",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_FULL_ENERGY_INVENTORY.json",
+        "run_id": "POSITIVE_FULL_ENERGY_INVENTORY",
+        "working_sha256": "c258bc02cdca2b8b4cfbcef79b7355f639b6ff9b13fa708a584053d3ff50efcc"
+      },
+      {
+        "committed_sha256": "16ccbe63d47aefc4440c3842b7ccef80906d5e41884d9fe02cf5220410262d2a",
+        "expected_sha256": "16ccbe63d47aefc4440c3842b7ccef80906d5e41884d9fe02cf5220410262d2a",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_spatial_stencil.json",
+        "run_id": "NEGATIVE_MUTATE_spatial_stencil",
+        "working_sha256": "16ccbe63d47aefc4440c3842b7ccef80906d5e41884d9fe02cf5220410262d2a"
+      },
+      {
+        "committed_sha256": "b95d320c3c943d5d4026e96bbaaf891ce60584936a510eb18ffea404c168b2f3",
+        "expected_sha256": "b95d320c3c943d5d4026e96bbaaf891ce60584936a510eb18ffea404c168b2f3",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_Wilson_energy.json",
+        "run_id": "NEGATIVE_MUTATE_Wilson_energy",
+        "working_sha256": "b95d320c3c943d5d4026e96bbaaf891ce60584936a510eb18ffea404c168b2f3"
+      },
+      {
+        "committed_sha256": "8bb14dd4f402a87c93e3163f5fcc3adfc9346d233927c1be13d57d0d952dc031",
+        "expected_sha256": "8bb14dd4f402a87c93e3163f5fcc3adfc9346d233927c1be13d57d0d952dc031",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_link_update.json",
+        "run_id": "NEGATIVE_MUTATE_link_update",
+        "working_sha256": "8bb14dd4f402a87c93e3163f5fcc3adfc9346d233927c1be13d57d0d952dc031"
+      },
+      {
+        "committed_sha256": "4b83b80d43837ce079c7002f941e9d93050baf69f3dce5682ca19892a880c41b",
+        "expected_sha256": "4b83b80d43837ce079c7002f941e9d93050baf69f3dce5682ca19892a880c41b",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_negative_transport.json",
+        "run_id": "NEGATIVE_MUTATE_negative_transport",
+        "working_sha256": "4b83b80d43837ce079c7002f941e9d93050baf69f3dce5682ca19892a880c41b"
+      },
+      {
+        "committed_sha256": "19cefcd46a3b5f97ffb2125fe5c95c75e0e29fa0817c00f02ab5e75049b3b0b9",
+        "expected_sha256": "19cefcd46a3b5f97ffb2125fe5c95c75e0e29fa0817c00f02ab5e75049b3b0b9",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_species_count.json",
+        "run_id": "NEGATIVE_MUTATE_species_count",
+        "working_sha256": "19cefcd46a3b5f97ffb2125fe5c95c75e0e29fa0817c00f02ab5e75049b3b0b9"
+      },
+      {
+        "committed_sha256": "b3f8ce3fbe071f3a61144d34a381809a909b111be447e6b00eb632e39af38d43",
+        "expected_sha256": "b3f8ce3fbe071f3a61144d34a381809a909b111be447e6b00eb632e39af38d43",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_current_types_distinct.json",
+        "run_id": "NEGATIVE_MUTATE_current_types_distinct",
+        "working_sha256": "b3f8ce3fbe071f3a61144d34a381809a909b111be447e6b00eb632e39af38d43"
+      },
+      {
+        "committed_sha256": "7f1aeed62dd3911c2b8dd1855cc57a2d8359ac89826a806c5fe67aea84307822",
+        "expected_sha256": "7f1aeed62dd3911c2b8dd1855cc57a2d8359ac89826a806c5fe67aea84307822",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_residual_gauge_handled.json",
+        "run_id": "NEGATIVE_MUTATE_residual_gauge_handled",
+        "working_sha256": "7f1aeed62dd3911c2b8dd1855cc57a2d8359ac89826a806c5fe67aea84307822"
+      },
+      {
+        "committed_sha256": "fad87df22042d40dde68def0399071d7e6142f3ed1989a66e071e2454b37734e",
+        "expected_sha256": "fad87df22042d40dde68def0399071d7e6142f3ed1989a66e071e2454b37734e",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_holonomy_global_distinction.json",
+        "run_id": "NEGATIVE_MUTATE_holonomy_global_distinction",
+        "working_sha256": "fad87df22042d40dde68def0399071d7e6142f3ed1989a66e071e2454b37734e"
+      },
+      {
+        "committed_sha256": "99ca8a41bc91570a9549d3b3c06750d37cb1b9d4747fe3f7a93f7d6017ccc694",
+        "expected_sha256": "99ca8a41bc91570a9549d3b3c06750d37cb1b9d4747fe3f7a93f7d6017ccc694",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_J2_source.json",
+        "run_id": "NEGATIVE_MUTATE_J2_source",
+        "working_sha256": "99ca8a41bc91570a9549d3b3c06750d37cb1b9d4747fe3f7a93f7d6017ccc694"
+      },
+      {
+        "committed_sha256": "5a5ef73cb22ecaba36801cec0040ef679b84809bc928e44d3907abe966464535",
+        "expected_sha256": "5a5ef73cb22ecaba36801cec0040ef679b84809bc928e44d3907abe966464535",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_J3_source.json",
+        "run_id": "NEGATIVE_MUTATE_J3_source",
+        "working_sha256": "5a5ef73cb22ecaba36801cec0040ef679b84809bc928e44d3907abe966464535"
+      },
+      {
+        "committed_sha256": "b83dd87f9fcfbfe01af236118939e710dd2b18ba5421172372997774d42be3c2",
+        "expected_sha256": "b83dd87f9fcfbfe01af236118939e710dd2b18ba5421172372997774d42be3c2",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendant_energy.json",
+        "run_id": "NEGATIVE_MUTATE_descendant_energy",
+        "working_sha256": "b83dd87f9fcfbfe01af236118939e710dd2b18ba5421172372997774d42be3c2"
+      },
+      {
+        "committed_sha256": "61eb34b306166d0cec64b3a8809a6486bb1c110dbf5b59ebd10eaee82899f663",
+        "expected_sha256": "61eb34b306166d0cec64b3a8809a6486bb1c110dbf5b59ebd10eaee82899f663",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_both_transverse_couplings.json",
+        "run_id": "NEGATIVE_MUTATE_both_transverse_couplings",
+        "working_sha256": "61eb34b306166d0cec64b3a8809a6486bb1c110dbf5b59ebd10eaee82899f663"
+      },
+      {
+        "committed_sha256": "c5c997d28f8413ba9c9dba0ae14b356615e66ca57e694746d52cafe5b31790a3",
+        "expected_sha256": "c5c997d28f8413ba9c9dba0ae14b356615e66ca57e694746d52cafe5b31790a3",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_gamma_blocks.json",
+        "run_id": "NEGATIVE_MUTATE_gamma_blocks",
+        "working_sha256": "c5c997d28f8413ba9c9dba0ae14b356615e66ca57e694746d52cafe5b31790a3"
+      },
+      {
+        "committed_sha256": "92fd0315c48e43585cc1bba1fd030aaddc039550548184f7c728ad8522369fb0",
+        "expected_sha256": "92fd0315c48e43585cc1bba1fd030aaddc039550548184f7c728ad8522369fb0",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendants_gauge_removable.json",
+        "run_id": "NEGATIVE_MUTATE_descendants_gauge_removable",
+        "working_sha256": "92fd0315c48e43585cc1bba1fd030aaddc039550548184f7c728ad8522369fb0"
+      },
+      {
+        "committed_sha256": "b148d22aa49e032a951701d80f0882262b76f2650db863e52590b78027996d73",
+        "expected_sha256": "b148d22aa49e032a951701d80f0882262b76f2650db863e52590b78027996d73",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendants_new_matter.json",
+        "run_id": "NEGATIVE_MUTATE_descendants_new_matter",
+        "working_sha256": "b148d22aa49e032a951701d80f0882262b76f2650db863e52590b78027996d73"
+      },
+      {
+        "committed_sha256": "c229e7451fd04fc2345af9ab19dfc4a84888237328bad33b590d1a07e0780872",
+        "expected_sha256": "c229e7451fd04fc2345af9ab19dfc4a84888237328bad33b590d1a07e0780872",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_sector_count.json",
+        "run_id": "NEGATIVE_MUTATE_sector_count",
+        "working_sha256": "c229e7451fd04fc2345af9ab19dfc4a84888237328bad33b590d1a07e0780872"
+      },
+      {
+        "committed_sha256": "ec7f945f7e40923433ca8b735d4f299099d9dd46b4cabc95b26d0bb042ffad75",
+        "expected_sha256": "ec7f945f7e40923433ca8b735d4f299099d9dd46b4cabc95b26d0bb042ffad75",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_pure_1p1_claim.json",
+        "run_id": "NEGATIVE_MUTATE_pure_1p1_claim",
+        "working_sha256": "ec7f945f7e40923433ca8b735d4f299099d9dd46b4cabc95b26d0bb042ffad75"
+      },
+      {
+        "committed_sha256": "2703f5626f07cebe69b605aba5a629a48cfeee7283bf965ac7b26f1f2e9d9300",
+        "expected_sha256": "2703f5626f07cebe69b605aba5a629a48cfeee7283bf965ac7b26f1f2e9d9300",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_invariant_truncation_claim.json",
+        "run_id": "NEGATIVE_MUTATE_invariant_truncation_claim",
+        "working_sha256": "2703f5626f07cebe69b605aba5a629a48cfeee7283bf965ac7b26f1f2e9d9300"
+      },
+      {
+        "committed_sha256": "adfb788722151c91750f1a7e94e78b09e99d52d0e0f151baf42511d4655d3a04",
+        "expected_sha256": "adfb788722151c91750f1a7e94e78b09e99d52d0e0f151baf42511d4655d3a04",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_energy_interpretation.json",
+        "run_id": "NEGATIVE_MUTATE_energy_interpretation",
+        "working_sha256": "adfb788722151c91750f1a7e94e78b09e99d52d0e0f151baf42511d4655d3a04"
+      },
+      {
+        "committed_sha256": "d9012401accf6dbe1e9169755d240666a49e158cfc035dc94a5e3b9ef80ef631",
+        "expected_sha256": "d9012401accf6dbe1e9169755d240666a49e158cfc035dc94a5e3b9ef80ef631",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_stress_mass_dimension.json",
+        "run_id": "NEGATIVE_MUTATE_stress_mass_dimension",
+        "working_sha256": "d9012401accf6dbe1e9169755d240666a49e158cfc035dc94a5e3b9ef80ef631"
+      },
+      {
+        "committed_sha256": "da95cd0166c1202c7a467574f10b05e09e5a7af0728363ec0636e6d2c758a51b",
+        "expected_sha256": "da95cd0166c1202c7a467574f10b05e09e5a7af0728363ec0636e6d2c758a51b",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_coupling_rescaling.json",
+        "run_id": "NEGATIVE_MUTATE_coupling_rescaling",
+        "working_sha256": "da95cd0166c1202c7a467574f10b05e09e5a7af0728363ec0636e6d2c758a51b"
+      },
+      {
+        "committed_sha256": "f910672e63aaba9fac2c62aca75e5201325070393c498a8437d44ee9e1948690",
+        "expected_sha256": "f910672e63aaba9fac2c62aca75e5201325070393c498a8437d44ee9e1948690",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_dimension_order.json",
+        "run_id": "NEGATIVE_MUTATE_dimension_order",
+        "working_sha256": "f910672e63aaba9fac2c62aca75e5201325070393c498a8437d44ee9e1948690"
+      },
+      {
+        "committed_sha256": "872a9b79ed9fc9a6b812ebcaa46e4f1de0eabf9a3745aff92d34e6c6dddc2966",
+        "expected_sha256": "872a9b79ed9fc9a6b812ebcaa46e4f1de0eabf9a3745aff92d34e6c6dddc2966",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_variation_reduction.json",
+        "run_id": "NEGATIVE_MUTATE_variation_reduction",
+        "working_sha256": "872a9b79ed9fc9a6b812ebcaa46e4f1de0eabf9a3745aff92d34e6c6dddc2966"
+      },
+      {
+        "committed_sha256": "89fc0b502c20ad20f1e384391fb8167414209b0413c652162fe73ee1ff02bb31",
+        "expected_sha256": "89fc0b502c20ad20f1e384391fb8167414209b0413c652162fe73ee1ff02bb31",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendant_stress_normalization.json",
+        "run_id": "NEGATIVE_MUTATE_descendant_stress_normalization",
+        "working_sha256": "89fc0b502c20ad20f1e384391fb8167414209b0413c652162fe73ee1ff02bb31"
+      },
+      {
+        "committed_sha256": "5febb90815831984c234cea04cede860768c9b041a7864880b83f22e84cbe208",
+        "expected_sha256": "5febb90815831984c234cea04cede860768c9b041a7864880b83f22e84cbe208",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_exchange_signs.json",
+        "run_id": "NEGATIVE_MUTATE_exchange_signs",
+        "working_sha256": "5febb90815831984c234cea04cede860768c9b041a7864880b83f22e84cbe208"
+      },
+      {
+        "committed_sha256": "97ede7727f014f31f8c30ca1a8988371de6d2c55ddf92d8bf2dec62bc325a54d",
+        "expected_sha256": "97ede7727f014f31f8c30ca1a8988371de6d2c55ddf92d8bf2dec62bc325a54d",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_all_Maxwell_sources.json",
+        "run_id": "NEGATIVE_MUTATE_all_Maxwell_sources",
+        "working_sha256": "97ede7727f014f31f8c30ca1a8988371de6d2c55ddf92d8bf2dec62bc325a54d"
+      },
+      {
+        "committed_sha256": "340f6e9f9792c19cd23932c227fa2bedc03d3392ee279db3cd81ea073140e38c",
+        "expected_sha256": "340f6e9f9792c19cd23932c227fa2bedc03d3392ee279db3cd81ea073140e38c",
+        "passed": true,
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_C_exchange_dynamic.json",
+        "run_id": "NEGATIVE_MUTATE_C_exchange_dynamic",
+        "working_sha256": "340f6e9f9792c19cd23932c227fa2bedc03d3392ee279db3cd81ea073140e38c"
+      }
+    ]
+  },
+  "failed_decision_ids": [],
+  "independent_reproduction": {
+    "Wilson_dispersion": {
+      "doubler_energy_monotonically_separated": true,
+      "maximum_discrete_formula_error": 8.881784197001252e-16,
+      "observed_continuum_order": 0.9355092887458452,
+      "rows": [
+        {
+          "N": 64,
+          "a": 0.015625,
+          "continuum_energy": 6.362265131567328,
+          "continuum_error": 0.04578247182341855,
+          "doubler_energy_at_pi_over_a": 129.0,
+          "exact_discrete_energy": 6.408047603390747,
+          "k": 6.283185307179586,
+          "matrix_eigenvalues": [
+            -6.408047603390748,
+            -6.408047603390748,
+            6.408047603390748,
+            6.408047603390748
+          ],
+          "matrix_formula_error": 8.881784197001252e-16
+        },
+        {
+          "N": 128,
+          "a": 0.0078125,
+          "continuum_energy": 6.362265131567328,
+          "continuum_error": 0.023567177567237252,
+          "doubler_energy_at_pi_over_a": 257.0,
+          "exact_discrete_energy": 6.385832309134566,
+          "k": 6.283185307179586,
+          "matrix_eigenvalues": [
+            -6.385832309134566,
+            -6.385832309134566,
+            6.385832309134566,
+            6.385832309134566
+          ],
+          "matrix_formula_error": 0.0
+        },
+        {
+          "N": 256,
+          "a": 0.00390625,
+          "continuum_energy": 6.362265131567328,
+          "continuum_error": 0.011951736304668614,
+          "doubler_energy_at_pi_over_a": 513.0,
+          "exact_discrete_energy": 6.374216867871997,
+          "k": 6.283185307179586,
+          "matrix_eigenvalues": [
+            -6.374216867871996,
+            -6.374216867871996,
+            6.374216867871996,
+            6.374216867871996
+          ],
+          "matrix_formula_error": 8.881784197001252e-16
+        }
+      ]
+    },
+    "all_fifty_records_reproduced": true,
+    "all_thresholds_pass": true,
+    "deterministic_duplicates_match": true,
+    "deterministic_numeric_hashes": [
+      "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e",
+      "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e"
+    ],
+    "negative_controls": [
+      {
+        "diagnostics": [
+          "DOUBLER_CONTAMINATION"
+        ],
+        "mutation_id": "MUTATE_spatial_stencil",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_spatial_stencil"
+      },
+      {
+        "diagnostics": [
+          "WILSON_ENERGY_OMITTED"
+        ],
+        "mutation_id": "MUTATE_Wilson_energy",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_Wilson_energy"
+      },
+      {
+        "diagnostics": [
+          "LINK_GROUP_VIOLATION"
+        ],
+        "mutation_id": "MUTATE_link_update",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_link_update"
+      },
+      {
+        "diagnostics": [
+          "NEGATIVE_SPECIES_TRANSPORT_MISMATCH"
+        ],
+        "mutation_id": "MUTATE_negative_transport",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_negative_transport"
+      },
+      {
+        "diagnostics": [
+          "PERIODIC_CHARGE_NEUTRALITY_UNSATISFIED"
+        ],
+        "mutation_id": "MUTATE_species_count",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_species_count"
+      },
+      {
+        "diagnostics": [
+          "NUMBER_SOURCE_CURRENT_CONFUSION"
+        ],
+        "mutation_id": "MUTATE_current_types_distinct",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_current_types_distinct"
+      },
+      {
+        "diagnostics": [
+          "RESIDUAL_GAUGE_ZERO_MODE_MISHANDLED"
+        ],
+        "mutation_id": "MUTATE_residual_gauge_handled",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_residual_gauge_handled"
+      },
+      {
+        "diagnostics": [
+          "HOLONOMY_GLOBAL_CLASSIFICATION_ERROR"
+        ],
+        "mutation_id": "MUTATE_holonomy_global_distinction",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_holonomy_global_distinction"
+      },
+      {
+        "diagnostics": [
+          "PHI2_SOURCE_OMITTED"
+        ],
+        "mutation_id": "MUTATE_J2_source",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_J2_source"
+      },
+      {
+        "diagnostics": [
+          "PHI3_SOURCE_OMITTED"
+        ],
+        "mutation_id": "MUTATE_J3_source",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_J3_source"
+      },
+      {
+        "diagnostics": [
+          "TRANSVERSE_ENERGY_OMITTED"
+        ],
+        "mutation_id": "MUTATE_descendant_energy",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_descendant_energy"
+      },
+      {
+        "diagnostics": [
+          "TRANSVERSE_SPINOR_COUPLING_OMITTED"
+        ],
+        "mutation_id": "MUTATE_both_transverse_couplings",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_both_transverse_couplings"
+      },
+      {
+        "diagnostics": [
+          "TRANSVERSE_GAMMA_BLOCK_MISMATCH"
+        ],
+        "mutation_id": "MUTATE_gamma_blocks",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_gamma_blocks"
+      },
+      {
+        "diagnostics": [
+          "DESCENDANT_GAUGE_SEMANTICS_ERROR"
+        ],
+        "mutation_id": "MUTATE_descendants_gauge_removable",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_descendants_gauge_removable"
+      },
+      {
+        "diagnostics": [
+          "DESCENDANT_ORIGIN_MISCLASSIFIED"
+        ],
+        "mutation_id": "MUTATE_descendants_new_matter",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_descendants_new_matter"
+      },
+      {
+        "diagnostics": [
+          "SECTOR_MULTIPLICITY_OMITTED"
+        ],
+        "mutation_id": "MUTATE_sector_count",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_sector_count"
+      },
+      {
+        "diagnostics": [
+          "PURE_1P1_CLOSURE_FALSE_CLAIM"
+        ],
+        "mutation_id": "MUTATE_pure_1p1_claim",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_pure_1p1_claim"
+      },
+      {
+        "diagnostics": [
+          "REJECTED_TRUNCATION_REINTRODUCED"
+        ],
+        "mutation_id": "MUTATE_invariant_truncation_claim",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_invariant_truncation_claim"
+      },
+      {
+        "diagnostics": [
+          "ENERGY_PER_AREA_TOTAL_CONFUSION"
+        ],
+        "mutation_id": "MUTATE_energy_interpretation",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_energy_interpretation"
+      },
+      {
+        "diagnostics": [
+          "LOWER_DIMENSIONAL_STRESS_DIMENSION_ERROR"
+        ],
+        "mutation_id": "MUTATE_stress_mass_dimension",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_stress_mass_dimension"
+      },
+      {
+        "diagnostics": [
+          "COUPLING_AREA_RESCALING_OMITTED"
+        ],
+        "mutation_id": "MUTATE_coupling_rescaling",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_coupling_rescaling"
+      },
+      {
+        "diagnostics": [
+          "DIMENSION_REDUCTION_ORDER_MISMATCH"
+        ],
+        "mutation_id": "MUTATE_dimension_order",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_dimension_order"
+      },
+      {
+        "diagnostics": [
+          "VARIATION_REDUCTION_MISMATCH"
+        ],
+        "mutation_id": "MUTATE_variation_reduction",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_variation_reduction"
+      },
+      {
+        "diagnostics": [
+          "DESCENDANT_STRESS_NORMALIZATION_ERROR"
+        ],
+        "mutation_id": "MUTATE_descendant_stress_normalization",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_descendant_stress_normalization"
+      },
+      {
+        "diagnostics": [
+          "EXCHANGE_SIGN_REVERSAL"
+        ],
+        "mutation_id": "MUTATE_exchange_signs",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_exchange_signs"
+      },
+      {
+        "diagnostics": [
+          "MAXWELL_SOURCE_OMITTED"
+        ],
+        "mutation_id": "MUTATE_all_Maxwell_sources",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_all_Maxwell_sources"
+      },
+      {
+        "diagnostics": [
+          "C_EXCHANGE_TAUTOLOGY"
+        ],
+        "mutation_id": "MUTATE_C_exchange_dynamic",
+        "passed": true,
+        "run_id": "NEGATIVE_MUTATE_C_exchange_dynamic"
+      }
+    ],
+    "positive_controls": [
+      {
+        "control_id": "vacuum",
+        "observed": {
+          "maximum_Gauss_residual": 0.0,
+          "maximum_energy_drift": 0.0
+        },
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM"
+      },
+      {
+        "control_id": "q0_free_and_descendant_waves",
+        "observed": {
+          "maximum_energy_drift": 3.0531133177191805e-16
+        },
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES"
+      },
+      {
+        "control_id": "Wilson_discrete_plane_wave",
+        "observed": {
+          "maximum_discrete_formula_error": 8.881784197001252e-16
+        },
+        "passed": true,
+        "run_id": "POSITIVE_WILSON_DISCRETE_PLANE_WAVE"
+      },
+      {
+        "control_id": "continuum_dispersion_recovery",
+        "observed": {
+          "doubler_separated": true,
+          "observed_order": 0.9355092887458452
+        },
+        "passed": true,
+        "run_id": "POSITIVE_CONTINUUM_DISPERSION_RECOVERY"
+      },
+      {
+        "control_id": "trivial_pure_gauge",
+        "observed": {
+          "Wilson_loop": [
+            1.0,
+            0.0
+          ],
+          "field_strength": 0.0
+        },
+        "passed": true,
+        "run_id": "POSITIVE_TRIVIAL_PURE_GAUGE"
+      },
+      {
+        "control_id": "flat_nontrivial_holonomy",
+        "observed": {
+          "Wilson_loop": [
+            0.955336489125606,
+            0.29552020666133955
+          ],
+          "field_strength": 0.0
+        },
+        "passed": true,
+        "run_id": "POSITIVE_FLAT_NONTRIVIAL_HOLONOMY"
+      },
+      {
+        "control_id": "stationary_density_neutral",
+        "observed": {
+          "maximum_J2": 0.0,
+          "maximum_J3": 0.0,
+          "maximum_charge_density": 0.0
+        },
+        "passed": true,
+        "run_id": "POSITIVE_STATIONARY_DENSITY_NEUTRAL"
+      },
+      {
+        "control_id": "analytic_zero_transverse_current",
+        "observed": {
+          "maximum_J2": 0.0,
+          "maximum_J3": 0.0,
+          "maximum_charge_density": 0.0
+        },
+        "passed": true,
+        "run_id": "POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT"
+      },
+      {
+        "control_id": "J2_sources_phi2",
+        "observed": {
+          "final_phi2_l2": 3.197282199750657e-06,
+          "initial_J2_l2": 0.002560000000000001
+        },
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2"
+      },
+      {
+        "control_id": "J3_sources_phi3",
+        "observed": {
+          "final_phi3_l2": 3.197282199750657e-06,
+          "initial_J3_l2": 0.002560000000000001
+        },
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3"
+      },
+      {
+        "control_id": "charge_conjugate_transport",
+        "observed": {
+          "negative_transport": "U*",
+          "positive_transport": "U"
+        },
+        "passed": true,
+        "run_id": "POSITIVE_CHARGE_CONJUGATE_TRANSPORT"
+      },
+      {
+        "control_id": "full_energy_inventory",
+        "observed": {
+          "component_count": 8
+        },
+        "passed": true,
+        "run_id": "POSITIVE_FULL_ENERGY_INVENTORY"
+      }
+    ],
+    "primary_energy_drift_class": "OSCILLATORY_OR_BOUNDED",
+    "primary_exchange": {
+      "energy_floor": 2e-10,
+      "exchange_ratio": 352.6967159703898,
+      "maximum_sector_change": 7.124120972182638e-08,
+      "maximum_total_energy_drift": 1.990000178531126e-12,
+      "maximum_transverse_descendant_change": 6.826809919994493e-08,
+      "sector_changes": {
+        "longitudinal": 3.5223980545249103e-15,
+        "matter_including_interactions": 7.124120972182638e-08,
+        "phi2_descendant": 6.826809919994493e-08,
+        "phi3_descendant": 2.9750969999207955e-09
+      }
+    },
+    "rows": [
+      {
+        "input_hash": "91e0d647330d054f1586e22c2e633b1b52667a0466de7b8d57d2b01f1f814d4b",
+        "matched": true,
+        "numeric_payload_hash": "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e",
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "stored_input_hash": "91e0d647330d054f1586e22c2e633b1b52667a0466de7b8d57d2b01f1f814d4b",
+        "stored_numeric_payload_hash": "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e"
+      },
+      {
+        "input_hash": "0502d3b6c29b56274f3db40404323ae0d3e6be7d06f36478e606bdec60d46cda",
+        "matched": true,
+        "numeric_payload_hash": "e8faa2d16c02b68a6db0284e8c0ac46b5391c2e599e5bfb124628e27ad54d46e",
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "stored_input_hash": "0502d3b6c29b56274f3db40404323ae0d3e6be7d06f36478e606bdec60d46cda",
+        "stored_numeric_payload_hash": "e8faa2d16c02b68a6db0284e8c0ac46b5391c2e599e5bfb124628e27ad54d46e"
+      },
+      {
+        "input_hash": "e08ed6bd83c19c1d3a41f2c3f74140066cb426233257465453a0fc9a510b426f",
+        "matched": true,
+        "numeric_payload_hash": "971c6f2ceb18037bd2c15531114af005eac6eddad72588ea9665f459fc7c5381",
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "stored_input_hash": "e08ed6bd83c19c1d3a41f2c3f74140066cb426233257465453a0fc9a510b426f",
+        "stored_numeric_payload_hash": "971c6f2ceb18037bd2c15531114af005eac6eddad72588ea9665f459fc7c5381"
+      },
+      {
+        "input_hash": "f746f2d16b11dcf9c5d1086d43b3b57ddedeadb390cd9dc691d360b058b7a263",
+        "matched": true,
+        "numeric_payload_hash": "c15982034d553b23a0127d395362cf5336aaaeddfc50dbf0403da8e88a5ec8da",
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "stored_input_hash": "f746f2d16b11dcf9c5d1086d43b3b57ddedeadb390cd9dc691d360b058b7a263",
+        "stored_numeric_payload_hash": "c15982034d553b23a0127d395362cf5336aaaeddfc50dbf0403da8e88a5ec8da"
+      },
+      {
+        "input_hash": "722bcbf958bce82dadc40dd660ebe868441b2e891baae7a14b7fd956666ba6e5",
+        "matched": true,
+        "numeric_payload_hash": "971c6f2ceb18037bd2c15531114af005eac6eddad72588ea9665f459fc7c5381",
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "stored_input_hash": "722bcbf958bce82dadc40dd660ebe868441b2e891baae7a14b7fd956666ba6e5",
+        "stored_numeric_payload_hash": "971c6f2ceb18037bd2c15531114af005eac6eddad72588ea9665f459fc7c5381"
+      },
+      {
+        "input_hash": "e20a0b9cc642932f25563fe4c5b974412137d606fcd8f11d002d5064b3cfe6de",
+        "matched": true,
+        "numeric_payload_hash": "33ebe8faa7590c3a8670f37f0bb3b756be1cbd1c6c65070a9701b9fd6c193b8b",
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "stored_input_hash": "e20a0b9cc642932f25563fe4c5b974412137d606fcd8f11d002d5064b3cfe6de",
+        "stored_numeric_payload_hash": "33ebe8faa7590c3a8670f37f0bb3b756be1cbd1c6c65070a9701b9fd6c193b8b"
+      },
+      {
+        "input_hash": "b158c3172b1f325c5e22ac4c80b5f0c25560a097e46baaf6b20780192f79c87d",
+        "matched": true,
+        "numeric_payload_hash": "67e718a07abb6e9edd558ba9f0c574db4e33b99b7086d41e5d495b3462f3290a",
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "stored_input_hash": "b158c3172b1f325c5e22ac4c80b5f0c25560a097e46baaf6b20780192f79c87d",
+        "stored_numeric_payload_hash": "67e718a07abb6e9edd558ba9f0c574db4e33b99b7086d41e5d495b3462f3290a"
+      },
+      {
+        "input_hash": "5e7c2b64fc7ddf11977d52022d093f36a2ca04b0183ec57e1018778a1f07dacc",
+        "matched": true,
+        "numeric_payload_hash": "51eee65157323b78cf49f96daf0b534d32d1ea1d9a7beb86eee9698c83e0f90c",
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "stored_input_hash": "5e7c2b64fc7ddf11977d52022d093f36a2ca04b0183ec57e1018778a1f07dacc",
+        "stored_numeric_payload_hash": "51eee65157323b78cf49f96daf0b534d32d1ea1d9a7beb86eee9698c83e0f90c"
+      },
+      {
+        "input_hash": "5aee70ba0c3cdb077e8c2080af10bb61c7b3c13e53ecf3a05c7af3dc420990fe",
+        "matched": true,
+        "numeric_payload_hash": "33ebe8faa7590c3a8670f37f0bb3b756be1cbd1c6c65070a9701b9fd6c193b8b",
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "stored_input_hash": "5aee70ba0c3cdb077e8c2080af10bb61c7b3c13e53ecf3a05c7af3dc420990fe",
+        "stored_numeric_payload_hash": "33ebe8faa7590c3a8670f37f0bb3b756be1cbd1c6c65070a9701b9fd6c193b8b"
+      },
+      {
+        "input_hash": "5d04efeb0d1bd29ca2f5c12a10121efb2b5c16f79a70ab955c939c22e00bd435",
+        "matched": true,
+        "numeric_payload_hash": "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e",
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "stored_input_hash": "5d04efeb0d1bd29ca2f5c12a10121efb2b5c16f79a70ab955c939c22e00bd435",
+        "stored_numeric_payload_hash": "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e"
+      },
+      {
+        "input_hash": "c4e06ee701bdb5554e60451ad6b42f6b3bf1bea679f992a47c0b061be306663d",
+        "matched": true,
+        "numeric_payload_hash": "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e",
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "stored_input_hash": "c4e06ee701bdb5554e60451ad6b42f6b3bf1bea679f992a47c0b061be306663d",
+        "stored_numeric_payload_hash": "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e"
+      },
+      {
+        "input_hash": "7036f1da6558d5d595cf9ed7b0bba730537dfb5b945943b670aa16b86d6b8c89",
+        "matched": true,
+        "numeric_payload_hash": "059326b4898bbf4968027e199ea8c69ca69a11b9aa7f008399b7e79fb9a281ef",
+        "run_id": "POSITIVE_VACUUM",
+        "stored_input_hash": "7036f1da6558d5d595cf9ed7b0bba730537dfb5b945943b670aa16b86d6b8c89",
+        "stored_numeric_payload_hash": "059326b4898bbf4968027e199ea8c69ca69a11b9aa7f008399b7e79fb9a281ef"
+      },
+      {
+        "input_hash": "f92569e2656705f2b2f8fa4bb69bdc819ff96486a540427c7eb86a35807eb4fb",
+        "matched": true,
+        "numeric_payload_hash": "badc8277812b6224cc7e6516380173f3d87f8dbd50531ddead9c9b381d0ff98d",
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "stored_input_hash": "f92569e2656705f2b2f8fa4bb69bdc819ff96486a540427c7eb86a35807eb4fb",
+        "stored_numeric_payload_hash": "badc8277812b6224cc7e6516380173f3d87f8dbd50531ddead9c9b381d0ff98d"
+      },
+      {
+        "input_hash": "f3b951c95855ea8c548e25572efa56099c5f67223a1b06b4819697e05ccc5f11",
+        "matched": true,
+        "numeric_payload_hash": "0a7d7012e5231a3c2d4ee0ef06d9707f5e88b28350efcf62142a5b4d2416462b",
+        "run_id": "POSITIVE_WILSON_DISCRETE_PLANE_WAVE",
+        "stored_input_hash": "f3b951c95855ea8c548e25572efa56099c5f67223a1b06b4819697e05ccc5f11",
+        "stored_numeric_payload_hash": "0a7d7012e5231a3c2d4ee0ef06d9707f5e88b28350efcf62142a5b4d2416462b"
+      },
+      {
+        "input_hash": "1c60cc07daa5bbb288d8848162340b98737efede126069da53746065e4c6ddda",
+        "matched": true,
+        "numeric_payload_hash": "d85ea05f17d42520e61362ee038b448a509ecbeaaf14e978db7c91344032cc51",
+        "run_id": "POSITIVE_CONTINUUM_DISPERSION_RECOVERY",
+        "stored_input_hash": "1c60cc07daa5bbb288d8848162340b98737efede126069da53746065e4c6ddda",
+        "stored_numeric_payload_hash": "d85ea05f17d42520e61362ee038b448a509ecbeaaf14e978db7c91344032cc51"
+      },
+      {
+        "input_hash": "d6df166a0f02241bab51d3709ce692d10eec5e83414faa4ae2292df1d47a533a",
+        "matched": true,
+        "numeric_payload_hash": "3538f80a0567d3fc220c118ae3444fb86a947d30adaf3efa584e6883eea9ab18",
+        "run_id": "POSITIVE_TRIVIAL_PURE_GAUGE",
+        "stored_input_hash": "d6df166a0f02241bab51d3709ce692d10eec5e83414faa4ae2292df1d47a533a",
+        "stored_numeric_payload_hash": "3538f80a0567d3fc220c118ae3444fb86a947d30adaf3efa584e6883eea9ab18"
+      },
+      {
+        "input_hash": "41674a03fe99e01deab633510bc852e133d448c7c71e6d4e415a06f9049df94a",
+        "matched": true,
+        "numeric_payload_hash": "198ead5493ae3a44c5b7b15c8604b80753f6571dfae697361dc09cf9b59c5914",
+        "run_id": "POSITIVE_FLAT_NONTRIVIAL_HOLONOMY",
+        "stored_input_hash": "41674a03fe99e01deab633510bc852e133d448c7c71e6d4e415a06f9049df94a",
+        "stored_numeric_payload_hash": "198ead5493ae3a44c5b7b15c8604b80753f6571dfae697361dc09cf9b59c5914"
+      },
+      {
+        "input_hash": "4b6a73e8f94f0f14d957235def795032af4f0b38eced582a32094ac94ffe7ebf",
+        "matched": true,
+        "numeric_payload_hash": "83b9de48d62910fb988a8e25d9c416205b960ac1bf3feb0d7283747b30cc3623",
+        "run_id": "POSITIVE_STATIONARY_DENSITY_NEUTRAL",
+        "stored_input_hash": "4b6a73e8f94f0f14d957235def795032af4f0b38eced582a32094ac94ffe7ebf",
+        "stored_numeric_payload_hash": "83b9de48d62910fb988a8e25d9c416205b960ac1bf3feb0d7283747b30cc3623"
+      },
+      {
+        "input_hash": "b1f91552ec400187bbdbbebf20fd47c351e43fac3f3e24c35c6f68bbe2656cfc",
+        "matched": true,
+        "numeric_payload_hash": "0a7d606dde45e2f0225bc9cfc5b4a787bc2c7f5569bced806f467b4861791e20",
+        "run_id": "POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT",
+        "stored_input_hash": "b1f91552ec400187bbdbbebf20fd47c351e43fac3f3e24c35c6f68bbe2656cfc",
+        "stored_numeric_payload_hash": "0a7d606dde45e2f0225bc9cfc5b4a787bc2c7f5569bced806f467b4861791e20"
+      },
+      {
+        "input_hash": "ef05b116b7606e5dd9372782d00f224479987c4e6afaeb45a7effb1a5fb31a77",
+        "matched": true,
+        "numeric_payload_hash": "6ad6390e0e7d470466d5960a1f04a6b3dd652186cd783d0ab169d6b4c465ac24",
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "stored_input_hash": "ef05b116b7606e5dd9372782d00f224479987c4e6afaeb45a7effb1a5fb31a77",
+        "stored_numeric_payload_hash": "6ad6390e0e7d470466d5960a1f04a6b3dd652186cd783d0ab169d6b4c465ac24"
+      },
+      {
+        "input_hash": "e303713e2b840f263e993ec1fdf63d7f0650753c8b3029c202beadc1e4c3f4a9",
+        "matched": true,
+        "numeric_payload_hash": "8dfeb6ed2bd6325139ed341ef0a02c53af83b761ec5ebe6c17e0a4913011af7d",
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "stored_input_hash": "e303713e2b840f263e993ec1fdf63d7f0650753c8b3029c202beadc1e4c3f4a9",
+        "stored_numeric_payload_hash": "8dfeb6ed2bd6325139ed341ef0a02c53af83b761ec5ebe6c17e0a4913011af7d"
+      },
+      {
+        "input_hash": "95abc92d32a40002d3f50dd0561b42bae2c965b29ee5012b1bd4c896315ab964",
+        "matched": true,
+        "numeric_payload_hash": "1585c49c8a93bd7fbef1dae56394badae8df899fa2c86b7fba871d7290c05448",
+        "run_id": "POSITIVE_CHARGE_CONJUGATE_TRANSPORT",
+        "stored_input_hash": "95abc92d32a40002d3f50dd0561b42bae2c965b29ee5012b1bd4c896315ab964",
+        "stored_numeric_payload_hash": "1585c49c8a93bd7fbef1dae56394badae8df899fa2c86b7fba871d7290c05448"
+      },
+      {
+        "input_hash": "8b0364bc5ba5536ea38389ff3aa21ed2f18d49755643fd3d66324328b3710082",
+        "matched": true,
+        "numeric_payload_hash": "993cee2dc6dcbba923e28acc9b1f0553e9ad1c38a50a7707534c4684951b0f6f",
+        "run_id": "POSITIVE_FULL_ENERGY_INVENTORY",
+        "stored_input_hash": "8b0364bc5ba5536ea38389ff3aa21ed2f18d49755643fd3d66324328b3710082",
+        "stored_numeric_payload_hash": "993cee2dc6dcbba923e28acc9b1f0553e9ad1c38a50a7707534c4684951b0f6f"
+      },
+      {
+        "input_hash": "3f3cbf7342313f2032ac4e11d932c256a9b47b3207bb1a67967f7aa21d386087",
+        "matched": true,
+        "numeric_payload_hash": "eae059f4200045db820c26b875cb9ec645776e44293440457fdc68b69b70a464",
+        "run_id": "NEGATIVE_MUTATE_spatial_stencil",
+        "stored_input_hash": "3f3cbf7342313f2032ac4e11d932c256a9b47b3207bb1a67967f7aa21d386087",
+        "stored_numeric_payload_hash": "eae059f4200045db820c26b875cb9ec645776e44293440457fdc68b69b70a464"
+      },
+      {
+        "input_hash": "7004c913ad79b5098f4c0632a1aefedd25e3d88e0b0157c458ac607af21dcde2",
+        "matched": true,
+        "numeric_payload_hash": "39caaf3f8acba374b4f21c0936799bd415098fa2828d032fc54e783414ef2c55",
+        "run_id": "NEGATIVE_MUTATE_Wilson_energy",
+        "stored_input_hash": "7004c913ad79b5098f4c0632a1aefedd25e3d88e0b0157c458ac607af21dcde2",
+        "stored_numeric_payload_hash": "39caaf3f8acba374b4f21c0936799bd415098fa2828d032fc54e783414ef2c55"
+      },
+      {
+        "input_hash": "4e98cfb92e0fe25ed40f3da6e81ca65d9a9fb1b7fd617c5905d0cc45a9ca2ed5",
+        "matched": true,
+        "numeric_payload_hash": "56cdbb57f7a0664cb7c9d499b5d6e93ba0f3510e29e5bb532ea90eda5e6a9c81",
+        "run_id": "NEGATIVE_MUTATE_link_update",
+        "stored_input_hash": "4e98cfb92e0fe25ed40f3da6e81ca65d9a9fb1b7fd617c5905d0cc45a9ca2ed5",
+        "stored_numeric_payload_hash": "56cdbb57f7a0664cb7c9d499b5d6e93ba0f3510e29e5bb532ea90eda5e6a9c81"
+      },
+      {
+        "input_hash": "eed831c9d6021811274597591b0fce73c3ff836121b581d9dbe0fe8df9dccc22",
+        "matched": true,
+        "numeric_payload_hash": "92c0acd40d5a79263046ef5e6e18b8ef9ab18d8afce59a91868698eda87dfaa4",
+        "run_id": "NEGATIVE_MUTATE_negative_transport",
+        "stored_input_hash": "eed831c9d6021811274597591b0fce73c3ff836121b581d9dbe0fe8df9dccc22",
+        "stored_numeric_payload_hash": "92c0acd40d5a79263046ef5e6e18b8ef9ab18d8afce59a91868698eda87dfaa4"
+      },
+      {
+        "input_hash": "2e3da4b3ab903bcd1d092b814bf8225b1f029db66bde9479a7b9fb168b2ab1fb",
+        "matched": true,
+        "numeric_payload_hash": "c73a9705039d8610c235b5325e6a60acf31296ef5d31ad110eaa3ed2699fb827",
+        "run_id": "NEGATIVE_MUTATE_species_count",
+        "stored_input_hash": "2e3da4b3ab903bcd1d092b814bf8225b1f029db66bde9479a7b9fb168b2ab1fb",
+        "stored_numeric_payload_hash": "c73a9705039d8610c235b5325e6a60acf31296ef5d31ad110eaa3ed2699fb827"
+      },
+      {
+        "input_hash": "131d19a8fbfb9c2c04096e692c007699ed6cdbc4ef5c06ec9e1028da5bb90a44",
+        "matched": true,
+        "numeric_payload_hash": "e3b03d0f686fbb414a24632820f28515e6f1c4f7fc343a1d95bbdd8a4c50d345",
+        "run_id": "NEGATIVE_MUTATE_current_types_distinct",
+        "stored_input_hash": "131d19a8fbfb9c2c04096e692c007699ed6cdbc4ef5c06ec9e1028da5bb90a44",
+        "stored_numeric_payload_hash": "e3b03d0f686fbb414a24632820f28515e6f1c4f7fc343a1d95bbdd8a4c50d345"
+      },
+      {
+        "input_hash": "1d7b364cc9ba96d36ec2b3ce3418773af328a4fe3eabbd8b843139d4b14c5bcf",
+        "matched": true,
+        "numeric_payload_hash": "5d45a428860be4ab8a50f314ea61e54bc4a5128940db3264c8700709503b4b81",
+        "run_id": "NEGATIVE_MUTATE_residual_gauge_handled",
+        "stored_input_hash": "1d7b364cc9ba96d36ec2b3ce3418773af328a4fe3eabbd8b843139d4b14c5bcf",
+        "stored_numeric_payload_hash": "5d45a428860be4ab8a50f314ea61e54bc4a5128940db3264c8700709503b4b81"
+      },
+      {
+        "input_hash": "1766a5af7af0953f738bca8b2e437f2c8cdbfd40d72bc69eef50d99a88afa12a",
+        "matched": true,
+        "numeric_payload_hash": "87264bbb5171f188998e7541b1d01f9b509cef7f52696e4d7883af87ec0de446",
+        "run_id": "NEGATIVE_MUTATE_holonomy_global_distinction",
+        "stored_input_hash": "1766a5af7af0953f738bca8b2e437f2c8cdbfd40d72bc69eef50d99a88afa12a",
+        "stored_numeric_payload_hash": "87264bbb5171f188998e7541b1d01f9b509cef7f52696e4d7883af87ec0de446"
+      },
+      {
+        "input_hash": "b16c5d0e4990b2d7812b981d4053ad88797ebf347f15acb50763cd5290f4532f",
+        "matched": true,
+        "numeric_payload_hash": "5d19352608d00a614eddf235632889b4044e986317ebc940b093c00796872407",
+        "run_id": "NEGATIVE_MUTATE_J2_source",
+        "stored_input_hash": "b16c5d0e4990b2d7812b981d4053ad88797ebf347f15acb50763cd5290f4532f",
+        "stored_numeric_payload_hash": "5d19352608d00a614eddf235632889b4044e986317ebc940b093c00796872407"
+      },
+      {
+        "input_hash": "f4c2c618e98d6c6aa525c051f2c6707d7d2cdd3df53f7237d3fb0939e37cf8ed",
+        "matched": true,
+        "numeric_payload_hash": "e4b07c55c51415953ab193f22e6e03d348b88a1a96961289363238e513cf2d9a",
+        "run_id": "NEGATIVE_MUTATE_J3_source",
+        "stored_input_hash": "f4c2c618e98d6c6aa525c051f2c6707d7d2cdd3df53f7237d3fb0939e37cf8ed",
+        "stored_numeric_payload_hash": "e4b07c55c51415953ab193f22e6e03d348b88a1a96961289363238e513cf2d9a"
+      },
+      {
+        "input_hash": "b477ec9372ab119b5937104b63b469ec3852751535540f8883f9e74ca633e49a",
+        "matched": true,
+        "numeric_payload_hash": "d07a5af7b03583b77aaebc482cd3db2111ae41c13159bae3cf5376a29f53dd4b",
+        "run_id": "NEGATIVE_MUTATE_descendant_energy",
+        "stored_input_hash": "b477ec9372ab119b5937104b63b469ec3852751535540f8883f9e74ca633e49a",
+        "stored_numeric_payload_hash": "d07a5af7b03583b77aaebc482cd3db2111ae41c13159bae3cf5376a29f53dd4b"
+      },
+      {
+        "input_hash": "3c244fa1f4a801f8cf38ff41e2c27885869556695cefb7e39be86f644202a33f",
+        "matched": true,
+        "numeric_payload_hash": "78318d77767a72fe4d6a33d90467291effe302f62de08eae7a853b812129c967",
+        "run_id": "NEGATIVE_MUTATE_both_transverse_couplings",
+        "stored_input_hash": "3c244fa1f4a801f8cf38ff41e2c27885869556695cefb7e39be86f644202a33f",
+        "stored_numeric_payload_hash": "78318d77767a72fe4d6a33d90467291effe302f62de08eae7a853b812129c967"
+      },
+      {
+        "input_hash": "1bda03929dd4395e1b5328a124a418549dff4978cfbd18c363eb9e730c3e9558",
+        "matched": true,
+        "numeric_payload_hash": "3add0c282fddfadd585f106b5dd258217094e7344dc3d88d72d4021eca45c035",
+        "run_id": "NEGATIVE_MUTATE_gamma_blocks",
+        "stored_input_hash": "1bda03929dd4395e1b5328a124a418549dff4978cfbd18c363eb9e730c3e9558",
+        "stored_numeric_payload_hash": "3add0c282fddfadd585f106b5dd258217094e7344dc3d88d72d4021eca45c035"
+      },
+      {
+        "input_hash": "f36c29bd1979526ba98c6c965745ec2fe968ffbae554d5d1a4be6c9007443c96",
+        "matched": true,
+        "numeric_payload_hash": "b3eb9f5ace9773874c952a29a0a7ca46f9102c26b92a2ac3adeae33c4e464798",
+        "run_id": "NEGATIVE_MUTATE_descendants_gauge_removable",
+        "stored_input_hash": "f36c29bd1979526ba98c6c965745ec2fe968ffbae554d5d1a4be6c9007443c96",
+        "stored_numeric_payload_hash": "b3eb9f5ace9773874c952a29a0a7ca46f9102c26b92a2ac3adeae33c4e464798"
+      },
+      {
+        "input_hash": "e81f580272ccb5aafcefd01647f070f642d845df4f72280e93200d6cffc02fb9",
+        "matched": true,
+        "numeric_payload_hash": "f7cdea89e552db9115e513a75c0e6979ec93265cf30d43aaef2ae4872e2a1bdc",
+        "run_id": "NEGATIVE_MUTATE_descendants_new_matter",
+        "stored_input_hash": "e81f580272ccb5aafcefd01647f070f642d845df4f72280e93200d6cffc02fb9",
+        "stored_numeric_payload_hash": "f7cdea89e552db9115e513a75c0e6979ec93265cf30d43aaef2ae4872e2a1bdc"
+      },
+      {
+        "input_hash": "31e6cd9f61b752504ceaed31b37c7f07bd913420e162e075b1c67a262dacfb2c",
+        "matched": true,
+        "numeric_payload_hash": "ba9624dcf41f3557ad8259d964f7f3d8474b44f282613c9c37704112c75a8181",
+        "run_id": "NEGATIVE_MUTATE_sector_count",
+        "stored_input_hash": "31e6cd9f61b752504ceaed31b37c7f07bd913420e162e075b1c67a262dacfb2c",
+        "stored_numeric_payload_hash": "ba9624dcf41f3557ad8259d964f7f3d8474b44f282613c9c37704112c75a8181"
+      },
+      {
+        "input_hash": "d9c3564c0813691d3600d7fdb7cababd178dd6a912f68e84356d76603d9c2099",
+        "matched": true,
+        "numeric_payload_hash": "8eb2e83f790cef28a022bc51b2e2f6afc68e4329ae39d98d4c91233b06a9d43c",
+        "run_id": "NEGATIVE_MUTATE_pure_1p1_claim",
+        "stored_input_hash": "d9c3564c0813691d3600d7fdb7cababd178dd6a912f68e84356d76603d9c2099",
+        "stored_numeric_payload_hash": "8eb2e83f790cef28a022bc51b2e2f6afc68e4329ae39d98d4c91233b06a9d43c"
+      },
+      {
+        "input_hash": "eeba52ac7cd3665f74b4f125951d2f3a447d86df3b6dd6d390e029939daf9630",
+        "matched": true,
+        "numeric_payload_hash": "872d09e40027f6b0cf3d5f4f6a177bcb67b6de13cc66518bacfb447425e5e138",
+        "run_id": "NEGATIVE_MUTATE_invariant_truncation_claim",
+        "stored_input_hash": "eeba52ac7cd3665f74b4f125951d2f3a447d86df3b6dd6d390e029939daf9630",
+        "stored_numeric_payload_hash": "872d09e40027f6b0cf3d5f4f6a177bcb67b6de13cc66518bacfb447425e5e138"
+      },
+      {
+        "input_hash": "813ae2e3095a1e86b515b4856db1c142d28a0fa3f12d8806c2c8d4c0ab2f9ed2",
+        "matched": true,
+        "numeric_payload_hash": "3e76ea86a7011193d43b061f327d98622acbc0b5d6da07e4b5a416c5d9c9a04d",
+        "run_id": "NEGATIVE_MUTATE_energy_interpretation",
+        "stored_input_hash": "813ae2e3095a1e86b515b4856db1c142d28a0fa3f12d8806c2c8d4c0ab2f9ed2",
+        "stored_numeric_payload_hash": "3e76ea86a7011193d43b061f327d98622acbc0b5d6da07e4b5a416c5d9c9a04d"
+      },
+      {
+        "input_hash": "e93782a4dd1f66e22542faa0dbacccef91a1b0c503019742b6fffd4d50e2d11d",
+        "matched": true,
+        "numeric_payload_hash": "2cba0462a1b824ad75b3bc8dbda32d362d40d89a9c3b3c2860ba15d392daf36a",
+        "run_id": "NEGATIVE_MUTATE_stress_mass_dimension",
+        "stored_input_hash": "e93782a4dd1f66e22542faa0dbacccef91a1b0c503019742b6fffd4d50e2d11d",
+        "stored_numeric_payload_hash": "2cba0462a1b824ad75b3bc8dbda32d362d40d89a9c3b3c2860ba15d392daf36a"
+      },
+      {
+        "input_hash": "8c58ca7bf900a8f86f0c92c290c5c819629c5259cea4efca2b585537ca200799",
+        "matched": true,
+        "numeric_payload_hash": "a9ae13150d8f7d9723cd8b0da13c09086d1791b0ffb2d529e9e0e2608be98bc2",
+        "run_id": "NEGATIVE_MUTATE_coupling_rescaling",
+        "stored_input_hash": "8c58ca7bf900a8f86f0c92c290c5c819629c5259cea4efca2b585537ca200799",
+        "stored_numeric_payload_hash": "a9ae13150d8f7d9723cd8b0da13c09086d1791b0ffb2d529e9e0e2608be98bc2"
+      },
+      {
+        "input_hash": "78ffa4a8194793af1227c7bee5bbbea1d3a09d6cbb4e82baafe0feff8ab5ad6d",
+        "matched": true,
+        "numeric_payload_hash": "64079d4ec674429567f649d7925391f23417e0ac8856b540d6bc4f55a19717ec",
+        "run_id": "NEGATIVE_MUTATE_dimension_order",
+        "stored_input_hash": "78ffa4a8194793af1227c7bee5bbbea1d3a09d6cbb4e82baafe0feff8ab5ad6d",
+        "stored_numeric_payload_hash": "64079d4ec674429567f649d7925391f23417e0ac8856b540d6bc4f55a19717ec"
+      },
+      {
+        "input_hash": "18ca74d8ae496e9319ab2e8130c098ad4bf62b08a4c3a4f32761cb7c1210189d",
+        "matched": true,
+        "numeric_payload_hash": "2b12e72ddd0baf7252f937279aa61883230c4a84a3b2fbb05331d191345bf5d2",
+        "run_id": "NEGATIVE_MUTATE_variation_reduction",
+        "stored_input_hash": "18ca74d8ae496e9319ab2e8130c098ad4bf62b08a4c3a4f32761cb7c1210189d",
+        "stored_numeric_payload_hash": "2b12e72ddd0baf7252f937279aa61883230c4a84a3b2fbb05331d191345bf5d2"
+      },
+      {
+        "input_hash": "4766a328a6d0ff303eb74a3c07dc8b203cfce525663d4ff97f05c02c309781ba",
+        "matched": true,
+        "numeric_payload_hash": "8d635f6f6e5bce97ffa8b11dbbfb15a23d60a0d99154caf31045caf61cb94cae",
+        "run_id": "NEGATIVE_MUTATE_descendant_stress_normalization",
+        "stored_input_hash": "4766a328a6d0ff303eb74a3c07dc8b203cfce525663d4ff97f05c02c309781ba",
+        "stored_numeric_payload_hash": "8d635f6f6e5bce97ffa8b11dbbfb15a23d60a0d99154caf31045caf61cb94cae"
+      },
+      {
+        "input_hash": "303fef13cd2a2942910d62984506aba80e1751b277c4c29eb8af0be6f8c24dfd",
+        "matched": true,
+        "numeric_payload_hash": "c87481f83aa1fd8f8d02dd31d1f466c9969b373907d77e0c8bb5caca269c3b00",
+        "run_id": "NEGATIVE_MUTATE_exchange_signs",
+        "stored_input_hash": "303fef13cd2a2942910d62984506aba80e1751b277c4c29eb8af0be6f8c24dfd",
+        "stored_numeric_payload_hash": "c87481f83aa1fd8f8d02dd31d1f466c9969b373907d77e0c8bb5caca269c3b00"
+      },
+      {
+        "input_hash": "f9cdc13baaa85d08719267f311da9255bcf6798cd12cc486c629bad5acd843ef",
+        "matched": true,
+        "numeric_payload_hash": "0ea13a4f87d0033082503c7d48ae8a0b8e1e455a8ae78262efe060de00c92f41",
+        "run_id": "NEGATIVE_MUTATE_all_Maxwell_sources",
+        "stored_input_hash": "f9cdc13baaa85d08719267f311da9255bcf6798cd12cc486c629bad5acd843ef",
+        "stored_numeric_payload_hash": "0ea13a4f87d0033082503c7d48ae8a0b8e1e455a8ae78262efe060de00c92f41"
+      },
+      {
+        "input_hash": "321d96fe523d01b72f374676422e57c3dd20875f45241039cc0a94c39129bcc7",
+        "matched": true,
+        "numeric_payload_hash": "ecbcb794bdc6f537b7cf42c6643e92af0c4b34ad689a32c5abe38dd63e60de7b",
+        "run_id": "NEGATIVE_MUTATE_C_exchange_dynamic",
+        "stored_input_hash": "321d96fe523d01b72f374676422e57c3dd20875f45241039cc0a94c39129bcc7",
+        "stored_numeric_payload_hash": "ecbcb794bdc6f537b7cf42c6643e92af0c4b34ad689a32c5abe38dd63e60de7b"
+      }
+    ],
+    "simulation_count": 15,
+    "spatial_phi2_order": 1.9689720461647104,
+    "temporal_energy_order": 2.0750213758270375,
+    "temporal_phi2_order": 1.9996050420957903,
+    "threshold_evaluations": [
+      {
+        "limit": 5e-09,
+        "observed": 9.19884719612074e-13,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 9.636199186905868e-19,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 2.5805638008413734e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 4.0131425008469076e-26,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.5490925424509987e-17,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 8.594818876686489e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 8.650036429637996e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 1.989870507951297e-12,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 3.672274074195113e-18,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 2.852266982848609e-16,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.3788174263093794e-14,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.411491335297138e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.410223587603228e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.461931849109344e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.456061027137856e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.411491335297138e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.410223587603228e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.461931849109344e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.456061027137856e-15,
+        "passed": true,
+        "run_id": "CANONICAL_PRIMARY_N32_DT0P0015625",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 9.903818216916438e-13,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 8.24101101850554e-18,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 6.795941847465015e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 4.238223252552961e-25,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 2.9299996265520546e-17,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 2.5472900432647317e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 2.550220042881636e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 8.407083883221755e-11,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 1.3182491321163235e-17,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 1.578327312595773e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 4.951925371490806e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.328555673724725e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.318991541814314e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.476774433793611e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.46228577779103e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.328555673724725e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.318991541814314e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.476774433793611e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 3.46228577779103e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N8",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 7.360952125612386e-14,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.399388361215386e-19,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 6.390728061762135e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 5.4445454045124064e-27,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 1.680764830258748e-19,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 6.517588189374339e-17,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 6.500780540527297e-17,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 2.5599921921887203e-11,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 6.998416499236269e-18,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 4.065758146820642e-18,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 2.1560986503132984e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2594233560290318e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2602832680261361e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2695659305214215e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2715625196880992e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2594233560290318e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2602832680261361e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2695659305214215e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2715625196880992e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N16",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 8.824278113772621e-13,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 1.4524919325155517e-18,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 2.8164972050025334e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 9.048352912020789e-26,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 2.7489362424729748e-19,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 2.1018398394659052e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 2.103396940656114e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 6.857497642648314e-12,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 3.954752626650758e-18,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 5.659535340374333e-17,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 9.508127792046128e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.8499389018363e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.85092546202564e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.858669897960806e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.859600007622055e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.8499389018363e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.85092546202564e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.858669897960806e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.859600007622055e-15,
+        "passed": true,
+        "run_id": "SPATIAL_REFINEMENT_N32",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 7.360952125612386e-14,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.399388361215386e-19,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 6.390728061762135e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 5.4445454045124064e-27,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 1.680764830258748e-19,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 6.517588189374339e-17,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 6.500780540527297e-17,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 2.5599921921887203e-11,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 6.998416499236269e-18,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 4.065758146820642e-18,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 2.1560986503132984e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2594233560290318e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2602832680261361e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2695659305214215e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2715625196880992e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2594233560290318e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2602832680261361e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2695659305214215e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.2715625196880992e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P00625",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 7.854966677101061e-13,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 2.4077943433517647e-18,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 2.36755873152944e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 3.393837386441837e-26,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 3.051626444024504e-19,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 1.7281762287250914e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 1.727373383752366e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 6.392610833044765e-12,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 7.223235778981563e-18,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 7.024274824990462e-17,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.1501541906377977e-14,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.215964389159902e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.218838268402993e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.237784834055536e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.240958954429312e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.215964389159902e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.218838268402993e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.237784834055536e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.240958954429312e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P003125",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 9.818684493928531e-13,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 2.186962142013636e-18,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 3.2807144587782e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 5.045544489032276e-26,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.3402643163688754e-17,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 7.359323096628426e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 7.412373079342226e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 1.8341010134259594e-12,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 7.039730634764285e-18,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 2.776955165925861e-16,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.2273445784067899e-14,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.38293383343789e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.372682712907868e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.459735666649413e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.448832974143857e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.38293383343789e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.372682712907868e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.459735666649413e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.448832974143857e-15,
+        "passed": true,
+        "run_id": "TEMPORAL_REFINEMENT_DT0P0015625",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 3.141981922034909e-11,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 6.823630090578782e-17,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 8.70879974038119e-14,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 3.1898686233193738e-24,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 3.400853869024478e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 4.708242391320829e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 4.74225001941093e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 1.3980658644663357e-11,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 1.602017230773821e-17,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 1.7732954505706366e-14,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 7.85496026506165e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.724607742971962e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.718469681740557e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.773309875293974e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.767115035766088e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.724607742971962e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.718469681740557e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.773309875293974e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 4.767115035766088e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS10",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 7.854966677101061e-13,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 2.4077943433517647e-18,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 2.36755873152944e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 3.393837386441837e-26,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 3.051626444024504e-19,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 1.7281762287250914e-16,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 1.727373383752366e-16,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 6.392610833044765e-12,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 7.223235778981563e-18,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 7.024274824990462e-17,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.1501541906377977e-14,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.215964389159902e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.218838268402993e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.237784834055536e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.240958954429312e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.215964389159902e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.218838268402993e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.237784834055536e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.240958954429312e-15,
+        "passed": true,
+        "run_id": "SOLVER_VERIFY_TOL1E_MINUS12",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 9.19884719612074e-13,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 9.636199186905868e-19,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 2.5805638008413734e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 4.0131425008469076e-26,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.5490925424509987e-17,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 8.594818876686489e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 8.650036429637996e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 1.989870507951297e-12,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 3.672274074195113e-18,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 2.852266982848609e-16,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.3788174263093794e-14,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.411491335297138e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.410223587603228e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.461931849109344e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.456061027137856e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.411491335297138e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.410223587603228e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.461931849109344e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.456061027137856e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_A",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 9.19884719612074e-13,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 9.636199186905868e-19,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 2.5805638008413734e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 4.0131425008469076e-26,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.5490925424509987e-17,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 8.594818876686489e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 8.650036429637996e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 1.989870507951297e-12,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 2.220446049250313e-16,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 3.672274074195113e-18,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 2.852266982848609e-16,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.3788174263093794e-14,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.411491335297138e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.410223587603228e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.461931849109344e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.456061027137856e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.411491335297138e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.410223587603228e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.461931849109344e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 7.456061027137856e-15,
+        "passed": true,
+        "run_id": "DETERMINISTIC_PRIMARY_B",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_VACUUM",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 1.775940505766016e-13,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 2.168404344971009e-18,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 4.052205619664573e-18,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 6.213833701057547e-18,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 3.0531133177191805e-16,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 1.3113425276212176e-16,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 2.300378854416807e-15,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 8.013902711546415e-16,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.6996557593095931e-15,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 8.013902711546415e-16,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.6996557593095931e-15,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 8.013902711546415e-16,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.6996557593095931e-15,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 8.013902711546415e-16,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.6996557593095931e-15,
+        "passed": true,
+        "run_id": "POSITIVE_Q0_FREE_AND_DESCENDANT_WAVES",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 3.3803472174187554e-14,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 1.0298398626285195e-22,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 5.361972138676257e-23,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 4.9364264876089376e-23,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 7.993544903876883e-14,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 9.536651308907562e-18,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 1.1920665243624192e-18,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J2_SOURCES_PHI2",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      },
+      {
+        "limit": 5e-09,
+        "observed": 3.3803472174187554e-14,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "solver"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "Gauss"
+      },
+      {
+        "limit": 5e-12,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "continuity"
+      },
+      {
+        "limit": 3e-22,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "limit": 7e-15,
+        "observed": 5.361972138676257e-23,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 1.0298398626285195e-22,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "limit": 1e-12,
+        "observed": 4.9364264876089376e-23,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "limit": 2e-10,
+        "observed": 7.993544903921796e-14,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "energy_drift"
+      },
+      {
+        "limit": 5e-16,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "link_norm"
+      },
+      {
+        "limit": 1e-15,
+        "observed": 0.0,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "limit": 2e-12,
+        "observed": 1.1920665243624192e-18,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "limit": 6.999999999999999e-11,
+        "observed": 9.536651308907562e-18,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.0605785396374833e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "limit": 6e-11,
+        "observed": 1.066437120958192e-16,
+        "passed": true,
+        "run_id": "POSITIVE_J3_SOURCES_PHI3",
+        "threshold_id": "adjoint_minus_sector2_residual"
+      }
+    ]
+  },
+  "maximum_accepted_claim": "A bounded, unit-complete c-number zero-mode reduction of the classical (3+1) Maxwell–Dirac system—retaining the (1+1) gauge field, both transverse gauge-field descendants, two opposite-charge species, and both reduced spin sectors—exhibits reproducible matter–field energy exchange and total conservation within the frozen bounded-convergent numerical tolerance under the frozen dimensional, boundary, gauge, and discretization assumptions.",
+  "nonclaims": [
+    "no canonical simulation executed",
+    "no canonical conservation result",
+    "no empirical adequacy",
+    "no EM or QFT pillar completion",
+    "no EM-QFT seam admissibility or closure",
+    "no new physics",
+    "no C_k dynamics",
+    "no CCFT validation",
+    "no master-action validation or promotion",
+    "no repository-wide green claim"
+  ],
+  "outcome_class": "ACCEPTED_BOUNDED_SCIENTIFIC_RESULT",
+  "passed_decision_count": 24,
+  "result_metrics": {
+    "Wilson_continuum_order": 0.9355092887458452,
+    "exchange_ratio": 352.6967159703898,
+    "maximum_total_energy_drift": 1.990000178531126e-12,
+    "negative_controls": 27,
+    "positive_controls": 12,
+    "spatial_phi2_order": 1.9689720461647104,
+    "temporal_energy_order": 2.0750213758270375,
+    "temporal_phi2_order": 1.9996050420957903,
+    "transverse_signal": 6.826809919994493e-08
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_canonical_simulation_v0_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0",
+  "selected_next_target_kind": "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0",
+  "verdict": "ACCEPT_BOUNDED_SCIENTIFIC_RESULT"
+}
