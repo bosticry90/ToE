@@ -1,0 +1,50 @@
+{
+  "artifacts": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-AXIS-NORMALIZATION-REPAIR-PACKET-v0.json",
+      "sha256": "7863ae08a12841f3dba9e9a5a7b2375af8ec9c1b4ae8eef9918d15bbad3bfb88"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_20260713_v0.json",
+      "sha256": "83015c24fcb2266ee52c3630dfd56fba01147c2ef23aa3b1c82b3538fa57e2ab"
+    }
+  ],
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair.py",
+    "sha256": "c74491ba453cffc7634c60a402cf3d3faa8bb8048bdceeee4226ff098a032db0"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "367aeabdf2964dd532ade7f9d8bcd7d1231e7a76dd9e298afc850d46639784d6"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "84140ac762b660a1f4ab86d9376a50bad256de1bf0f4faa9898195a5eb9fa0f9"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v0.json",
+      "sha256": "48f4657fbfb93730678774e56ebdf13f3bfbb039b49e1941a40ab9e5ab718fef"
+    },
+    {
+      "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json",
+      "sha256": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    }
+  ],
+  "prompt": {
+    "path": "Prompt.txt",
+    "preserved": true,
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_MANIFEST_v0",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0"
+}

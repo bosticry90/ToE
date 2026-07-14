@@ -1,0 +1,25 @@
+{
+  "candidate_weighted_totals": {
+    "ABSOLUTE_COMPONENT_BUDGET_FRACTION": 37,
+    "FIXED_PROFILE_AMPLITUDE_LOADING": 51,
+    "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING": 50,
+    "REST_NUMBER_POSITIVE_REFERENCE_LOADING": 62,
+    "SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY": 29
+  },
+  "canonical_replacement_coordinate": 0.2131315883288088,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling": "A versioned positive diagnostic loading coordinate is prepared for independent review; no robustness parameter values, calibration, execution, pillar, or seam claim is authorized.",
+  "historical_axis_id": "F_PERP_INITIAL_SIGNED_TOTAL_v0",
+  "mutation_control_count": 15,
+  "mutation_controls_passed": 15,
+  "packet_sha256": "7863ae08a12841f3dba9e9a5a7b2375af8ec9c1b4ae8eef9918d15bbad3bfb88",
+  "pilot_authorized": false,
+  "replacement_axis_id": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_20260713_v0",
+  "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0_result",
+  "selected_weighted_total": 62,
+  "selection_stable_at_all_sensitivity_thresholds": true,
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0",
+  "verdict": "PREPARED_AXIS_NORMALIZATION_REPAIR_PENDING_INDEPENDENT_REVIEW"
+}

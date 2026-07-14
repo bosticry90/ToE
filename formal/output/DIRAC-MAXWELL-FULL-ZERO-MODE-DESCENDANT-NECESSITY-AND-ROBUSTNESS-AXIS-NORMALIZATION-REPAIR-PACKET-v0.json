@@ -1,0 +1,1178 @@
+{
+  "authority_boundary": {
+    "CCFT_validation_claimed": false,
+    "C_k_dynamics_claimed": false,
+    "accepted_reduction_reopened": false,
+    "action_or_stress_tensor_changed": false,
+    "canonical_result_reopened": false,
+    "guardrail_v1_preparation_authorized_before_review": false,
+    "independent_review_authorized": true,
+    "master_action_promotion_claimed": false,
+    "pillar_completion_claimed": false,
+    "robustness_execution_authorized": false,
+    "robustness_pilot_authorized": false,
+    "seam_closure_claimed": false
+  },
+  "axis_contract": {
+    "historical_axis": {
+      "axis_id": "F_PERP_INITIAL_SIGNED_TOTAL_v0",
+      "blocker_code": "B-BLOCKED_F_PERP_NORMALIZATION_NOT_BOUNDED",
+      "formula": "E_perp_initial/E_total_signed_initial",
+      "status": "REJECTED_AS_BOUNDED_AXIS_RETAINED_AS_SIGNED_DIAGNOSTIC"
+    },
+    "replacement_axis": {
+      "N_formula": "integral_dx(psi_s,r_dagger*psi_s,r)",
+      "axis_id": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+      "descendant_energy_nonnegative": true,
+      "dimensionless": true,
+      "domain": "0 <= f_perp_positive_initial < 1",
+      "exact_low_anchor_high_values_frozen": false,
+      "forbidden_interpretation": "Fraction of the conserved signed physical energy stored in descendants.",
+      "formula": "E_perp_initial/(E_perp_initial+E_base_positive_initial)",
+      "gauge_invariant": true,
+      "interaction_energy_double_counted": false,
+      "interpretation": "Initial descendant loading relative to a positive longitudinal-Maxwell and matter rest-number reference norm.",
+      "inverse_profile_scaling": "alpha=sqrt((f/(1-f))*E_base_positive/E_perp_reference) for 0<f<1; alpha=0 for f=0",
+      "positive_base_formula": "E_parallel_Maxwell_initial+m*sum_s,r(N_s,r_initial)",
+      "reference_profile_requirements": [
+        "fixed profile identity",
+        "E_perp_reference > 0",
+        "profile shape frozen in guardrail v1"
+      ],
+      "signed_conserved_energy_remains_separate": true,
+      "strict_positivity_preconditions": [
+        "m > 0",
+        "sum_s,r(N_s,r_initial) > 0 or E_parallel_Maxwell_initial > 0"
+      ],
+      "symbol": "f_perp_positive_initial"
+    }
+  },
+  "blocker_code_repaired_if_review_accepts": "B-BLOCKED_F_PERP_NORMALIZATION_NOT_BOUNDED",
+  "candidate_definitions": {
+    "ABSOLUTE_COMPONENT_BUDGET_FRACTION": {
+      "declared_domain": "[0,1] when the denominator is positive",
+      "formula": "E_perp/(E_perp+sum_i(abs(E_i_nonperp)))",
+      "principal_defect": "partition-dependent, nondifferentiable at component sign changes, and interaction-allocation sensitive",
+      "status": "CANDIDATE"
+    },
+    "FIXED_PROFILE_AMPLITUDE_LOADING": {
+      "declared_domain": "[0,1]",
+      "formula": "F_profile=alpha_perp^2 for 0<=alpha_perp<=1",
+      "principal_defect": "profile- and maximum-amplitude-dependent; not an energy loading fraction",
+      "status": "CANDIDATE"
+    },
+    "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING": {
+      "declared_domain": "[0,1)",
+      "formula": "E_perp/(E_perp+E_parallel_Maxwell+sum(<psi,abs(H_W[A1])psi>))",
+      "principal_defect": "requires a new reviewed gauge-covariant matrix-absolute operator and is holonomy dependent",
+      "status": "CANDIDATE"
+    },
+    "REST_NUMBER_POSITIVE_REFERENCE_LOADING": {
+      "declared_domain": "[0,1)",
+      "formula": "E_perp/(E_perp+E_parallel_Maxwell+m*sum(N_s,r))",
+      "principal_defect": "is a positive rest-number loading norm, not a conserved-energy fraction",
+      "status": "CANDIDATE"
+    },
+    "SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY": {
+      "declared_domain": "real where E_total_signed != 0",
+      "formula": "E_perp/E_total_signed",
+      "principal_defect": "unbounded, sign-changing, singular, and phase-entangled",
+      "status": "RETAIN_AS_DIAGNOSTIC_NOT_AXIS"
+    }
+  },
+  "candidate_order": [
+    "SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY",
+    "ABSOLUTE_COMPONENT_BUDGET_FRACTION",
+    "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING",
+    "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+    "FIXED_PROFILE_AMPLITUDE_LOADING"
+  ],
+  "candidate_order_is_identity_only_not_preference": true,
+  "canonical_selection": {
+    "eligible_candidate_ids": [
+      "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "FIXED_PROFILE_AMPLITUDE_LOADING",
+      "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+    ],
+    "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+    "selected_weighted_total": 62,
+    "threshold": 44,
+    "tie_break_used": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "criterion_weights": {
+    "accepted_object_reuse": 3,
+    "auditability": 2,
+    "boundedness_and_nonsingularity": 5,
+    "cross_axis_stability": 4,
+    "gauge_invariance": 4,
+    "inverse_constructibility": 5,
+    "profile_independence": 3,
+    "semantic_role_fidelity": 5
+  },
+  "criterion_weights_frozen_before_scoring": true,
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v1",
+  "future_guardrail_v1_obligations": {
+    "calibration_remains_unauthorized_until_guardrail_v1_review": true,
+    "construct_descendant_scale_after_other_four_axes_are_set": true,
+    "enforce_positive_base_preconditions_per_row": true,
+    "freeze_exact_low_anchor_high_values": true,
+    "freeze_reference_descendant_profile_identity": true,
+    "retain_historical_signed_ratio_as_diagnostic": true,
+    "retain_positive_pi_over_two_regression": true,
+    "verify_requested_coordinate_after_construction": true
+  },
+  "input_hashes": {
+    "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+    "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json": "367aeabdf2964dd532ade7f9d8bcd7d1231e7a76dd9e298afc850d46639784d6",
+    "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_PACKET_RESULT_REVIEW_20260713_v0.json": "84140ac762b660a1f4ab86d9376a50bad256de1bf0f4faa9898195a5eb9fa0f9",
+    "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v0.json": "48f4657fbfb93730678774e56ebdf13f3bfbb039b49e1941a40ab9e5ab718fef",
+    "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a",
+    "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+  },
+  "maximum_weighted_total": 62,
+  "mutation_controls": [
+    {
+      "actual_diagnostics": [
+        "current_target"
+      ],
+      "expected_diagnostic": "current_target",
+      "mutation_id": "M_TARGET",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "closed_candidate_set"
+      ],
+      "expected_diagnostic": "closed_candidate_set",
+      "mutation_id": "M_CANDIDATE_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "weights"
+      ],
+      "expected_diagnostic": "weights",
+      "mutation_id": "M_WEIGHT_CHANGED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "scores_reproduce"
+      ],
+      "expected_diagnostic": "scores_reproduce",
+      "mutation_id": "M_TOTAL_FORGED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "selection"
+      ],
+      "expected_diagnostic": "selection",
+      "mutation_id": "M_SIGNED_RATIO_SELECTED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "sensitivity"
+      ],
+      "expected_diagnostic": "sensitivity",
+      "mutation_id": "M_SENSITIVITY_CHANGED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "versioned_axis_identity"
+      ],
+      "expected_diagnostic": "versioned_axis_identity",
+      "mutation_id": "M_HISTORICAL_ID_REUSED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "replacement_physics"
+      ],
+      "expected_diagnostic": "replacement_physics",
+      "mutation_id": "M_GAUGE_INVARIANCE_DROPPED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "replacement_physics"
+      ],
+      "expected_diagnostic": "replacement_physics",
+      "mutation_id": "M_SIGNED_ENERGY_REINTERPRETED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "values_unfrozen"
+      ],
+      "expected_diagnostic": "values_unfrozen",
+      "mutation_id": "M_VALUES_FROZEN",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "shortcuts_rejected"
+      ],
+      "expected_diagnostic": "shortcuts_rejected",
+      "mutation_id": "M_CLAMPING_ALLOWED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "recommendation_nondecisive"
+      ],
+      "expected_diagnostic": "recommendation_nondecisive",
+      "mutation_id": "M_RECOMMENDATION_DECISIVE",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "authority_boundary"
+      ],
+      "expected_diagnostic": "authority_boundary",
+      "mutation_id": "M_PILOT_AUTHORIZED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "authority_boundary"
+      ],
+      "expected_diagnostic": "authority_boundary",
+      "mutation_id": "M_CANONICAL_REOPENED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "targets"
+      ],
+      "expected_diagnostic": "targets",
+      "mutation_id": "M_POST_TARGET_CHANGED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    }
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1",
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_v0",
+  "score_domain": [
+    0,
+    1,
+    2
+  ],
+  "scored_candidates": [
+    {
+      "candidate_id": "SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY",
+      "criterion_scores": [
+        {
+          "criterion": "boundedness_and_nonsingularity",
+          "eligibility_basis": "Score 0: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: boundedness_and_nonsingularity.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 0,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "semantic_role_fidelity",
+          "eligibility_basis": "Score 1: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: semantic_role_fidelity.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "inverse_constructibility",
+          "eligibility_basis": "Score 0: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: inverse_constructibility.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 0,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "cross_axis_stability",
+          "eligibility_basis": "Score 0: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: cross_axis_stability.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 0,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "gauge_invariance",
+          "eligibility_basis": "Score 2: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: gauge_invariance.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "accepted_object_reuse",
+          "eligibility_basis": "Score 2: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: accepted_object_reuse.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "profile_independence",
+          "eligibility_basis": "Score 2: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: profile_independence.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "auditability",
+          "eligibility_basis": "Score 2: The accepted blocker proves that the signed ratio is not a bounded design coordinate, although it remains an honest diagnostic. Criterion: auditability.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY"
+          ],
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gates": {
+        "boundedness_equals_2": false,
+        "gauge_invariance_equals_2": true,
+        "inverse_constructibility_at_least_1": false,
+        "semantic_role_at_least_1": true
+      },
+      "minimum_gates_passed": false,
+      "unresolved_conflicts": [],
+      "weighted_total": 29
+    },
+    {
+      "candidate_id": "ABSOLUTE_COMPONENT_BUDGET_FRACTION",
+      "criterion_scores": [
+        {
+          "criterion": "boundedness_and_nonsingularity",
+          "eligibility_basis": "Score 2: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: boundedness_and_nonsingularity.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "semantic_role_fidelity",
+          "eligibility_basis": "Score 1: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: semantic_role_fidelity.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "inverse_constructibility",
+          "eligibility_basis": "Score 1: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: inverse_constructibility.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "cross_axis_stability",
+          "eligibility_basis": "Score 1: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: cross_axis_stability.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "gauge_invariance",
+          "eligibility_basis": "Score 2: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: gauge_invariance.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "accepted_object_reuse",
+          "eligibility_basis": "Score 1: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: accepted_object_reuse.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "profile_independence",
+          "eligibility_basis": "Score 0: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: profile_independence.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 0,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 3,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "auditability",
+          "eligibility_basis": "Score 1: Absolute components bound the ratio but import partition and interaction-allocation choices. Criterion: auditability.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_ABSOLUTE_COMPONENT_BUDGET_FRACTION"
+          ],
+          "weight": 2,
+          "weighted_score": 2
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gates": {
+        "boundedness_equals_2": true,
+        "gauge_invariance_equals_2": true,
+        "inverse_constructibility_at_least_1": true,
+        "semantic_role_at_least_1": true
+      },
+      "minimum_gates_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 37
+    },
+    {
+      "candidate_id": "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING",
+      "criterion_scores": [
+        {
+          "criterion": "boundedness_and_nonsingularity",
+          "eligibility_basis": "Score 2: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: boundedness_and_nonsingularity.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "semantic_role_fidelity",
+          "eligibility_basis": "Score 2: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: semantic_role_fidelity.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "inverse_constructibility",
+          "eligibility_basis": "Score 2: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: inverse_constructibility.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "cross_axis_stability",
+          "eligibility_basis": "Score 1: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: cross_axis_stability.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "gauge_invariance",
+          "eligibility_basis": "Score 2: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: gauge_invariance.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "accepted_object_reuse",
+          "eligibility_basis": "Score 1: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: accepted_object_reuse.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "profile_independence",
+          "eligibility_basis": "Score 1: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: profile_independence.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "auditability",
+          "eligibility_basis": "Score 1: A covariant spectral norm is positive and meaningful but requires a new operator construction not present in the accepted implementation. Criterion: auditability.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+          ],
+          "weight": 2,
+          "weighted_score": 2
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gates": {
+        "boundedness_equals_2": true,
+        "gauge_invariance_equals_2": true,
+        "inverse_constructibility_at_least_1": true,
+        "semantic_role_at_least_1": true
+      },
+      "minimum_gates_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 50
+    },
+    {
+      "candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "criterion_scores": [
+        {
+          "criterion": "boundedness_and_nonsingularity",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: boundedness_and_nonsingularity.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "semantic_role_fidelity",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: semantic_role_fidelity.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "inverse_constructibility",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: inverse_constructibility.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "cross_axis_stability",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: cross_axis_stability.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "gauge_invariance",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: gauge_invariance.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "accepted_object_reuse",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: accepted_object_reuse.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "profile_independence",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: profile_independence.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "auditability",
+          "eligibility_basis": "Score 2: Accepted number currents, positive mass, and nonnegative longitudinal Maxwell energy give a gauge-invariant positive base with a closed inverse. Criterion: auditability.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_REST_NUMBER_POSITIVE_REFERENCE_LOADING"
+          ],
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gates": {
+        "boundedness_equals_2": true,
+        "gauge_invariance_equals_2": true,
+        "inverse_constructibility_at_least_1": true,
+        "semantic_role_at_least_1": true
+      },
+      "minimum_gates_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 62
+    },
+    {
+      "candidate_id": "FIXED_PROFILE_AMPLITUDE_LOADING",
+      "criterion_scores": [
+        {
+          "criterion": "boundedness_and_nonsingularity",
+          "eligibility_basis": "Score 2: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: boundedness_and_nonsingularity.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "semantic_role_fidelity",
+          "eligibility_basis": "Score 1: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: semantic_role_fidelity.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 1,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "inverse_constructibility",
+          "eligibility_basis": "Score 2: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: inverse_constructibility.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "cross_axis_stability",
+          "eligibility_basis": "Score 2: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: cross_axis_stability.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "gauge_invariance",
+          "eligibility_basis": "Score 2: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: gauge_invariance.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "accepted_object_reuse",
+          "eligibility_basis": "Score 2: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: accepted_object_reuse.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "profile_independence",
+          "eligibility_basis": "Score 0: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: profile_independence.",
+          "missing_for_next_score": "A reviewed construction resolving the stated principal defect.",
+          "score": 0,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 3,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "auditability",
+          "eligibility_basis": "Score 2: Amplitude scaling is bounded and constructible but is tied to a selected reference profile rather than a profile-independent loading norm. Criterion: auditability.",
+          "missing_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "support_ids": [
+            "P_SIGNED_RATIO_BLOCKED",
+            "P_CANONICAL_RESULT_IMMUTABLE",
+            "P_AUDIT_FIXED_PROFILE_AMPLITUDE_LOADING"
+          ],
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gates": {
+        "boundedness_equals_2": true,
+        "gauge_invariance_equals_2": true,
+        "inverse_constructibility_at_least_1": true,
+        "semantic_role_at_least_1": true
+      },
+      "minimum_gates_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 51
+    }
+  ],
+  "selected_candidate_audit": {
+    "amplitude_rows": [
+      {
+        "alpha": 0.0,
+        "coordinate": 0.0
+      },
+      {
+        "alpha": 0.25,
+        "coordinate": 0.01664696966283278
+      },
+      {
+        "alpha": 0.5,
+        "coordinate": 0.0634205964176414
+      },
+      {
+        "alpha": 1.0,
+        "coordinate": 0.2131315883288088
+      },
+      {
+        "alpha": 2.0,
+        "coordinate": 0.5200250552967295
+      },
+      {
+        "alpha": 10.0,
+        "coordinate": 0.9643951383876613
+      },
+      {
+        "alpha": 100.0,
+        "coordinate": 0.9996309425467211
+      }
+    ],
+    "canonical_mapping": {
+      "descendant_energy": 0.003478109122024757,
+      "historical_axis_id": "F_PERP_INITIAL_SIGNED_TOTAL_v0",
+      "historical_value": 0.9995178477828972,
+      "positive_base_energy": 0.012840960000000005,
+      "replacement_axis_id": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+      "replacement_value": 0.2131315883288088
+    },
+    "gauge_transform_audit": {
+      "absolute_difference": 5.551115123125783e-17,
+      "after": 0.21313158832880885,
+      "before": 0.2131315883288088,
+      "invariant": true
+    },
+    "holonomy_does_not_break_boundedness": true,
+    "holonomy_rows": [
+      {
+        "coordinate": 0.2131315883288088,
+        "theta_W": -1.5707963267948966
+      },
+      {
+        "coordinate": 0.2131315883288088,
+        "theta_W": 0.0
+      },
+      {
+        "coordinate": 0.2131315883288088,
+        "theta_W": 0.3
+      },
+      {
+        "coordinate": 0.2131315883288088,
+        "theta_W": 1.5707963267948966
+      }
+    ],
+    "inverse_reconstruction_maximum_error": 1.1102230246251565e-16,
+    "inverse_rows": [
+      {
+        "absolute_error": 0.0,
+        "alpha": 0.0,
+        "reconstructed": 0.0,
+        "target": 0.0
+      },
+      {
+        "absolute_error": 2.7755575615628914e-17,
+        "alpha": 0.9607207020879346,
+        "reconstructed": 0.19999999999999998,
+        "target": 0.2
+      },
+      {
+        "absolute_error": 0.0,
+        "alpha": 1.9214414041758692,
+        "reconstructed": 0.5,
+        "target": 0.5
+      },
+      {
+        "absolute_error": 1.1102230246251565e-16,
+        "alpha": 3.842882808351739,
+        "reconstructed": 0.8000000000000002,
+        "target": 0.8
+      },
+      {
+        "absolute_error": 0.0,
+        "alpha": 8.375368906737501,
+        "reconstructed": 0.95,
+        "target": 0.95
+      }
+    ],
+    "large_finite_loading_below_one": true,
+    "phase_boundary_rows": [
+      {
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": -3.141592653589793,
+        "positive_base_energy": 0.012840960000000005
+      },
+      {
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": -1.5707963267948966,
+        "positive_base_energy": 0.012840960000000005
+      },
+      {
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": 0.0,
+        "positive_base_energy": 0.012840960000000005
+      },
+      {
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": 1.5707963267948966,
+        "positive_base_energy": 0.012840960000000005
+      }
+    ],
+    "phase_independent": true,
+    "signed_total_energy_mutated_by_coordinate_definition": false,
+    "strictly_monotone_for_positive_amplitudes": true,
+    "zero_maps_exactly_to_zero": true
+  },
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0_result",
+  "selection_stable_at_all_sensitivity_thresholds": true,
+  "selection_threshold": 44,
+  "sensitivity_analysis": [
+    {
+      "eligible_candidate_ids": [
+        "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+        "FIXED_PROFILE_AMPLITUDE_LOADING",
+        "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+      ],
+      "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "selected_weighted_total": 62,
+      "threshold": 40,
+      "tie_break_used": false
+    },
+    {
+      "eligible_candidate_ids": [
+        "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+        "FIXED_PROFILE_AMPLITUDE_LOADING",
+        "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+      ],
+      "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "selected_weighted_total": 62,
+      "threshold": 42,
+      "tie_break_used": false
+    },
+    {
+      "eligible_candidate_ids": [
+        "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+        "FIXED_PROFILE_AMPLITUDE_LOADING",
+        "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+      ],
+      "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "selected_weighted_total": 62,
+      "threshold": 44,
+      "tie_break_used": false
+    },
+    {
+      "eligible_candidate_ids": [
+        "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+        "FIXED_PROFILE_AMPLITUDE_LOADING",
+        "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+      ],
+      "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "selected_weighted_total": 62,
+      "threshold": 46,
+      "tie_break_used": false
+    },
+    {
+      "eligible_candidate_ids": [
+        "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+        "FIXED_PROFILE_AMPLITUDE_LOADING",
+        "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING"
+      ],
+      "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+      "selected_weighted_total": 62,
+      "threshold": 48,
+      "tie_break_used": false
+    }
+  ],
+  "sensitivity_thresholds": [
+    40,
+    42,
+    44,
+    46,
+    48
+  ],
+  "shortcut_policy": {
+    "absolute_value_substitution_allowed": false,
+    "clamping_allowed": false,
+    "historical_formula_silently_widened": false,
+    "tolerance_based_domain_repair_allowed": false
+  },
+  "signed_component_and_singularity_audit": {
+    "conservation_interpretation": "The signed registered total remains the physical conservation diagnostic; the audit changes only the proposed normalization role.",
+    "phase_rows": [
+      {
+        "delta_theta_psi": -1.5707963267948966,
+        "descendant_energy": 0.003478109122024757,
+        "historical_signed_ratio": 0.9996624446221067,
+        "number_by_species": {
+          "psi_minus": 0.006420480000000003,
+          "psi_plus": 0.006420480000000003
+        },
+        "parallel_Maxwell_energy": 0.0,
+        "phase_label": "NEGATIVE_PI_OVER_TWO",
+        "positive_base_energy": 0.012840960000000005,
+        "positive_loading_coordinate": 0.2131315883288088,
+        "registered_components": {
+          "Wilson_Dirac_local": -4.90059381963448e-17,
+          "electric_fluctuating": 0.0,
+          "electric_zero_mode": 0.0,
+          "gamma2_interaction": 1.174450881256097e-06,
+          "gamma3_interaction": 5.558653716356346e-22,
+          "link_interaction": 4.2934406030425976e-17,
+          "phi2": 0.000983793643354601,
+          "phi3": 0.002494315478670156
+        },
+        "signed_non_descendant_remainder": 1.1744508812499242e-06,
+        "signed_total_energy": 0.003479283572906007
+      },
+      {
+        "delta_theta_psi": 0.0,
+        "descendant_energy": 0.003478109122024757,
+        "historical_signed_ratio": 0.9995178477828972,
+        "number_by_species": {
+          "psi_minus": 0.006420480000000003,
+          "psi_plus": 0.006420480000000002
+        },
+        "parallel_Maxwell_energy": 0.0,
+        "phase_label": "ZERO",
+        "positive_base_energy": 0.012840960000000005,
+        "positive_loading_coordinate": 0.2131315883288088,
+        "registered_components": {
+          "Wilson_Dirac_local": -4.7704895589362195e-17,
+          "electric_fluctuating": 0.0,
+          "electric_zero_mode": 0.0,
+          "gamma2_interaction": 1.6777869732229962e-06,
+          "gamma3_interaction": -1.3234889800848443e-23,
+          "link_interaction": 4.336808689942018e-17,
+          "phi2": 0.000983793643354601,
+          "phi3": 0.002494315478670156
+        },
+        "signed_non_descendant_remainder": 1.6777869732186382e-06,
+        "signed_total_energy": 0.0034797869089979758
+      },
+      {
+        "delta_theta_psi": 1.5707963267948966,
+        "descendant_energy": 0.003478109122024757,
+        "historical_signed_ratio": 1.0003377834191158,
+        "number_by_species": {
+          "psi_minus": 0.006420480000000003,
+          "psi_plus": 0.006420480000000002
+        },
+        "parallel_Maxwell_energy": 0.0,
+        "phase_label": "POSITIVE_PI_OVER_TWO",
+        "positive_base_energy": 0.012840960000000005,
+        "positive_loading_coordinate": 0.2131315883288088,
+        "registered_components": {
+          "Wilson_Dirac_local": -4.7704895589362195e-17,
+          "electric_fluctuating": 0.0,
+          "electric_zero_mode": 0.0,
+          "gamma2_interaction": -1.174450881256097e-06,
+          "gamma3_interaction": -2.9778502051908996e-22,
+          "link_interaction": 4.2500725161431774e-17,
+          "phi2": 0.000983793643354601,
+          "phi3": 0.002494315478670156
+        },
+        "signed_non_descendant_remainder": -1.1744508812612e-06,
+        "signed_total_energy": 0.003476934671143496
+      }
+    ],
+    "positive_pi_over_two_counterexample": {
+      "exact_negative_contributor_identified": "gamma2_interaction",
+      "exceeds_one": true,
+      "historical_signed_ratio": 1.0003377834191158,
+      "no_unmeasured_sector_blamed": true,
+      "signed_remainder_over_descendant": -0.00033766936000486996,
+      "signed_remainder_over_total": -0.0003377834191158231
+    },
+    "signed_denominator_singularity_probe": {
+      "coefficients": {
+        "a_descendant_quadratic": 0.003478109122024757,
+        "b_descendant_interaction_linear": -1.1744508812560972e-06,
+        "c_descendant_independent_signed": -5.204170427930421e-18
+      },
+      "historical_ratio_is_singular_at_crossing": true,
+      "positive_zero_crossing_scale": 0.0003376693644345549,
+      "total_energy_polynomial_in_descendant_profile_scale": "a*alpha^2+b*alpha+c"
+    }
+  },
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0",
+  "user_recommendation": {
+    "recommended_family": "POSITIVE_REFERENCE_LOADING",
+    "used_as_score_input": false
+  },
+  "verdict": "PREPARED_AXIS_NORMALIZATION_REPAIR_PENDING_INDEPENDENT_REVIEW"
+}
