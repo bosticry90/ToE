@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "ENERGY_PER_AREA_TOTAL_CONFUSION"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "ENERGY_PER_AREA_TOTAL_CONFUSION",
+    "mutation_id": "MUTATE_energy_interpretation"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with ENERGY_PER_AREA_TOTAL_CONFUSION",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_energy_interpretation",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with ENERGY_PER_AREA_TOTAL_CONFUSION",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_energy_interpretation.json",
+    "run_id": "NEGATIVE_MUTATE_energy_interpretation",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "813ae2e3095a1e86b515b4856db1c142d28a0fa3f12d8806c2c8d4c0ab2f9ed2",
+  "numeric_payload_hash": "3e76ea86a7011193d43b061f327d98622acbc0b5d6da07e4b5a416c5d9c9a04d",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_energy_interpretation",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

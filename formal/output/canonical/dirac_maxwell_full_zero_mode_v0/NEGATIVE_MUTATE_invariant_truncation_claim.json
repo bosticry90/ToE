@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "REJECTED_TRUNCATION_REINTRODUCED"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "REJECTED_TRUNCATION_REINTRODUCED",
+    "mutation_id": "MUTATE_invariant_truncation_claim"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with REJECTED_TRUNCATION_REINTRODUCED",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_invariant_truncation_claim",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with REJECTED_TRUNCATION_REINTRODUCED",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_invariant_truncation_claim.json",
+    "run_id": "NEGATIVE_MUTATE_invariant_truncation_claim",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "eeba52ac7cd3665f74b4f125951d2f3a447d86df3b6dd6d390e029939daf9630",
+  "numeric_payload_hash": "872d09e40027f6b0cf3d5f4f6a177bcb67b6de13cc66518bacfb447425e5e138",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_invariant_truncation_claim",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

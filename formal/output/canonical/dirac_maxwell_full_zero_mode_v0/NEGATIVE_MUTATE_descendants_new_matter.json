@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "DESCENDANT_ORIGIN_MISCLASSIFIED"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "DESCENDANT_ORIGIN_MISCLASSIFIED",
+    "mutation_id": "MUTATE_descendants_new_matter"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with DESCENDANT_ORIGIN_MISCLASSIFIED",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_descendants_new_matter",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with DESCENDANT_ORIGIN_MISCLASSIFIED",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendants_new_matter.json",
+    "run_id": "NEGATIVE_MUTATE_descendants_new_matter",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "e81f580272ccb5aafcefd01647f070f642d845df4f72280e93200d6cffc02fb9",
+  "numeric_payload_hash": "f7cdea89e552db9115e513a75c0e6979ec93265cf30d43aaef2ae4872e2a1bdc",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_descendants_new_matter",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

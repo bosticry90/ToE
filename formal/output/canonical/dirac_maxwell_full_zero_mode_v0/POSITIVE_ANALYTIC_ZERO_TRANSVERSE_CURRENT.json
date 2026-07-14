@@ -1,0 +1,39 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_BEHAVIOR_OBSERVED",
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_behavior": "J2=J3=0",
+    "observed": {
+      "maximum_J2": 0.0,
+      "maximum_J3": 0.0,
+      "maximum_charge_density": 0.0
+    }
+  },
+  "actual_control_outcome": "EXPECTED_BEHAVIOR_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "J2=J3=0",
+  "frozen_input": {
+    "control_or_mutation_id": "analytic_zero_transverse_current",
+    "duration": 0.0,
+    "execution_kind": "ANALYTIC_CHECK",
+    "expected_outcome": "J2=J3=0",
+    "grid_size": 8,
+    "initial_condition_id": "ZERO_TRANSVERSE_CURRENT_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT.json",
+    "run_id": "POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT",
+    "run_role": "POSITIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "b1f91552ec400187bbdbbebf20fd47c351e43fac3f3e24c35c6f68bbe2656cfc",
+  "numeric_payload_hash": "0a7d606dde45e2f0225bc9cfc5b4a787bc2c7f5569bced806f467b4861791e20",
+  "registered_arrays": null,
+  "run_id": "POSITIVE_ANALYTIC_ZERO_TRANSVERSE_CURRENT",
+  "run_role": "POSITIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

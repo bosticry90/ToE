@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "NEGATIVE_SPECIES_TRANSPORT_MISMATCH"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "NEGATIVE_SPECIES_TRANSPORT_MISMATCH",
+    "mutation_id": "MUTATE_negative_transport"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with NEGATIVE_SPECIES_TRANSPORT_MISMATCH",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_negative_transport",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with NEGATIVE_SPECIES_TRANSPORT_MISMATCH",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_negative_transport.json",
+    "run_id": "NEGATIVE_MUTATE_negative_transport",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "eed831c9d6021811274597591b0fce73c3ff836121b581d9dbe0fe8df9dccc22",
+  "numeric_payload_hash": "92c0acd40d5a79263046ef5e6e18b8ef9ab18d8afce59a91868698eda87dfaa4",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_negative_transport",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "NUMBER_SOURCE_CURRENT_CONFUSION"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "NUMBER_SOURCE_CURRENT_CONFUSION",
+    "mutation_id": "MUTATE_current_types_distinct"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with NUMBER_SOURCE_CURRENT_CONFUSION",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_current_types_distinct",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with NUMBER_SOURCE_CURRENT_CONFUSION",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_current_types_distinct.json",
+    "run_id": "NEGATIVE_MUTATE_current_types_distinct",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "131d19a8fbfb9c2c04096e692c007699ed6cdbc4ef5c06ec9e1028da5bb90a44",
+  "numeric_payload_hash": "e3b03d0f686fbb414a24632820f28515e6f1c4f7fc343a1d95bbdd8a4c50d345",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_current_types_distinct",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

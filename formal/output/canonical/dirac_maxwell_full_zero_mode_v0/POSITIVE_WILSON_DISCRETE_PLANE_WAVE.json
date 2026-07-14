@@ -1,0 +1,37 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_BEHAVIOR_OBSERVED",
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_behavior": "matrix eigenvalue matches exact Wilson dispersion",
+    "observed": {
+      "maximum_discrete_formula_error": 8.881784197001252e-16
+    }
+  },
+  "actual_control_outcome": "EXPECTED_BEHAVIOR_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "matrix eigenvalue matches exact Wilson dispersion",
+  "frozen_input": {
+    "control_or_mutation_id": "Wilson_discrete_plane_wave",
+    "duration": 0.0,
+    "execution_kind": "ANALYTIC_CHECK",
+    "expected_outcome": "matrix eigenvalue matches exact Wilson dispersion",
+    "grid_size": 256,
+    "initial_condition_id": "WILSON_PLANE_WAVE_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_WILSON_DISCRETE_PLANE_WAVE.json",
+    "run_id": "POSITIVE_WILSON_DISCRETE_PLANE_WAVE",
+    "run_role": "POSITIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "f3b951c95855ea8c548e25572efa56099c5f67223a1b06b4819697e05ccc5f11",
+  "numeric_payload_hash": "0a7d7012e5231a3c2d4ee0ef06d9707f5e88b28350efcf62142a5b4d2416462b",
+  "registered_arrays": null,
+  "run_id": "POSITIVE_WILSON_DISCRETE_PLANE_WAVE",
+  "run_role": "POSITIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

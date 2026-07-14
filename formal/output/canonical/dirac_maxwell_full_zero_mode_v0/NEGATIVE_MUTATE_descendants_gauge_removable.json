@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "DESCENDANT_GAUGE_SEMANTICS_ERROR"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "DESCENDANT_GAUGE_SEMANTICS_ERROR",
+    "mutation_id": "MUTATE_descendants_gauge_removable"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with DESCENDANT_GAUGE_SEMANTICS_ERROR",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_descendants_gauge_removable",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with DESCENDANT_GAUGE_SEMANTICS_ERROR",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendants_gauge_removable.json",
+    "run_id": "NEGATIVE_MUTATE_descendants_gauge_removable",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "f36c29bd1979526ba98c6c965745ec2fe968ffbae554d5d1a4be6c9007443c96",
+  "numeric_payload_hash": "b3eb9f5ace9773874c952a29a0a7ca46f9102c26b92a2ac3adeae33c4e464798",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_descendants_gauge_removable",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

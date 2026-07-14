@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "DOUBLER_CONTAMINATION"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "DOUBLER_CONTAMINATION",
+    "mutation_id": "MUTATE_spatial_stencil"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with DOUBLER_CONTAMINATION",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_spatial_stencil",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with DOUBLER_CONTAMINATION",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_spatial_stencil.json",
+    "run_id": "NEGATIVE_MUTATE_spatial_stencil",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "3f3cbf7342313f2032ac4e11d932c256a9b47b3207bb1a67967f7aa21d386087",
+  "numeric_payload_hash": "eae059f4200045db820c26b875cb9ec645776e44293440457fdc68b69b70a464",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_spatial_stencil",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

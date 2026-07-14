@@ -1,0 +1,47 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_BEHAVIOR_OBSERVED",
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_behavior": "all eight components registered and finite",
+    "observed": {
+      "registered_component_count": 8,
+      "registered_components": [
+        "energy_Wilson_Dirac_local",
+        "energy_electric_fluctuating",
+        "energy_electric_zero_mode",
+        "energy_gamma2_interaction",
+        "energy_gamma3_interaction",
+        "energy_link_interaction",
+        "energy_phi2",
+        "energy_phi3"
+      ]
+    }
+  },
+  "actual_control_outcome": "EXPECTED_BEHAVIOR_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "all eight components registered and finite",
+  "frozen_input": {
+    "control_or_mutation_id": "full_energy_inventory",
+    "duration": 0.0,
+    "execution_kind": "ANALYTIC_CHECK",
+    "expected_outcome": "all eight components registered and finite",
+    "grid_size": 32,
+    "initial_condition_id": "FULL_MIXED_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/POSITIVE_FULL_ENERGY_INVENTORY.json",
+    "run_id": "POSITIVE_FULL_ENERGY_INVENTORY",
+    "run_role": "POSITIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": 0.0015625
+  },
+  "input_hash": "8b0364bc5ba5536ea38389ff3aa21ed2f18d49755643fd3d66324328b3710082",
+  "numeric_payload_hash": "993cee2dc6dcbba923e28acc9b1f0553e9ad1c38a50a7707534c4684951b0f6f",
+  "registered_arrays": null,
+  "run_id": "POSITIVE_FULL_ENERGY_INVENTORY",
+  "run_role": "POSITIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

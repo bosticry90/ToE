@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "PURE_1P1_CLOSURE_FALSE_CLAIM"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "PURE_1P1_CLOSURE_FALSE_CLAIM",
+    "mutation_id": "MUTATE_pure_1p1_claim"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with PURE_1P1_CLOSURE_FALSE_CLAIM",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_pure_1p1_claim",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with PURE_1P1_CLOSURE_FALSE_CLAIM",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_pure_1p1_claim.json",
+    "run_id": "NEGATIVE_MUTATE_pure_1p1_claim",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "d9c3564c0813691d3600d7fdb7cababd178dd6a912f68e84356d76603d9c2099",
+  "numeric_payload_hash": "8eb2e83f790cef28a022bc51b2e2f6afc68e4329ae39d98d4c91233b06a9d43c",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_pure_1p1_claim",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

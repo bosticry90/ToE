@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "HOLONOMY_GLOBAL_CLASSIFICATION_ERROR"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "HOLONOMY_GLOBAL_CLASSIFICATION_ERROR",
+    "mutation_id": "MUTATE_holonomy_global_distinction"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with HOLONOMY_GLOBAL_CLASSIFICATION_ERROR",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_holonomy_global_distinction",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with HOLONOMY_GLOBAL_CLASSIFICATION_ERROR",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_holonomy_global_distinction.json",
+    "run_id": "NEGATIVE_MUTATE_holonomy_global_distinction",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "1766a5af7af0953f738bca8b2e437f2c8cdbfd40d72bc69eef50d99a88afa12a",
+  "numeric_payload_hash": "87264bbb5171f188998e7541b1d01f9b509cef7f52696e4d7883af87ec0de446",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_holonomy_global_distinction",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

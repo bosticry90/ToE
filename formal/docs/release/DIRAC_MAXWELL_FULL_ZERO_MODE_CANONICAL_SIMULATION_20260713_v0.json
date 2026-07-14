@@ -1,0 +1,157 @@
+{
+  "artifact_hashes": {
+    "arrays_sha256": "4d9fbbc2a4a3efd8621ef884839ced3c8716978399b280e040454acdc299d746",
+    "generator_sha256": "750f64a9a68abc83033e011ae196a431d3cba390ff1eb168605987c290e48781",
+    "manifest_sha256": "1f67e85dca8a9c47cff6a4073e0f16acbfa1b1d23824ea27ddba2c7aebe6cfed",
+    "packet_sha256": "f66282a4403e273a8ba25e25f6b9e8a2e547af762ad252b38726fae03aed6dcd"
+  },
+  "canonical_result_accepted": false,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The frozen canonical matrix completed and is preserved for independent reproduction and classification; execution does not determine its scientific verdict.",
+  "completed_run_count": 50,
+  "deterministic_duplicates_match": true,
+  "execution_status": "COMPLETE_PENDING_INDEPENDENT_RESULT_REVIEW",
+  "mechanical_observations": {
+    "Wilson_dispersion": {
+      "doubler_energy_monotonically_separated": true,
+      "maximum_discrete_formula_error": 8.881784197001252e-16,
+      "observed_continuum_order": 0.9355092887458452,
+      "rows": [
+        {
+          "N": 64,
+          "a": 0.015625,
+          "continuum_energy": 6.362265131567328,
+          "continuum_error": 0.04578247182341855,
+          "doubler_energy_at_pi_over_a": 129.0,
+          "exact_discrete_energy": 6.408047603390747,
+          "k": 6.283185307179586,
+          "matrix_eigenvalues": [
+            -6.408047603390748,
+            -6.408047603390748,
+            6.408047603390748,
+            6.408047603390748
+          ],
+          "matrix_formula_error": 8.881784197001252e-16
+        },
+        {
+          "N": 128,
+          "a": 0.0078125,
+          "continuum_energy": 6.362265131567328,
+          "continuum_error": 0.023567177567237252,
+          "doubler_energy_at_pi_over_a": 257.0,
+          "exact_discrete_energy": 6.385832309134566,
+          "k": 6.283185307179586,
+          "matrix_eigenvalues": [
+            -6.385832309134566,
+            -6.385832309134566,
+            6.385832309134566,
+            6.385832309134566
+          ],
+          "matrix_formula_error": 0.0
+        },
+        {
+          "N": 256,
+          "a": 0.00390625,
+          "continuum_energy": 6.362265131567328,
+          "continuum_error": 0.011951736304668614,
+          "doubler_energy_at_pi_over_a": 513.0,
+          "exact_discrete_energy": 6.374216867871997,
+          "k": 6.283185307179586,
+          "matrix_eigenvalues": [
+            -6.374216867871996,
+            -6.374216867871996,
+            6.374216867871996,
+            6.374216867871996
+          ],
+          "matrix_formula_error": 8.881784197001252e-16
+        }
+      ]
+    },
+    "all_simulation_threshold_evaluations_passed": true,
+    "completed_run_count": 50,
+    "deterministic_duplicates_match": true,
+    "deterministic_numeric_payload_hashes": [
+      "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e",
+      "fd700948db54be7b44aa918e41bb3cbcfcb27758cc561b6a0415eae312706d9e"
+    ],
+    "negative_control_match_count": 27,
+    "positive_control_match_count": 12,
+    "primary_energy_drift_class": "OSCILLATORY_OR_BOUNDED",
+    "primary_exchange": {
+      "energy_floor": 2e-10,
+      "exchange_ratio": 352.6967159703898,
+      "maximum_sector_change": 7.124120972182638e-08,
+      "maximum_total_energy_drift": 1.990000178531126e-12,
+      "maximum_transverse_descendant_change": 6.826809919994493e-08,
+      "sector_changes": {
+        "longitudinal": 3.5223980545249103e-15,
+        "matter_including_interactions": 7.124120972182638e-08,
+        "phi2_descendant": 6.826809919994493e-08,
+        "phi3_descendant": 2.9750969999207955e-09
+      }
+    },
+    "primary_summary": {
+      "N": 32,
+      "a": 0.03125,
+      "all_steps_converged": true,
+      "case": "full_mixed",
+      "dt": 0.0015625,
+      "duration": 0.05,
+      "energy_drift_class": "OSCILLATORY_OR_BOUNDED",
+      "final_energy_drift": 1.989870507951297e-12,
+      "final_phi2_l2": 0.006725824656144178,
+      "final_phi3_l2": 0.00458991805490352,
+      "final_total_energy": 0.0034797869109878463,
+      "initial_J2_l2": 0.002117287390702909,
+      "initial_J3_l2": 0.0014821011734920363,
+      "max_iterations_allowed": 80,
+      "maximum_Dirac_minus_sector1_residual": 7.461931849109344e-15,
+      "maximum_Dirac_minus_sector2_residual": 7.456061027137856e-15,
+      "maximum_Dirac_plus_sector1_residual": 7.411491335297138e-15,
+      "maximum_Dirac_plus_sector2_residual": 7.410223587603228e-15,
+      "maximum_Gauss_residual": 9.636199186905868e-19,
+      "maximum_adjoint_minus_sector1_residual": 7.461931849109344e-15,
+      "maximum_adjoint_minus_sector2_residual": 7.456061027137856e-15,
+      "maximum_adjoint_plus_sector1_residual": 7.411491335297138e-15,
+      "maximum_adjoint_plus_sector2_residual": 7.410223587603228e-15,
+      "maximum_continuity_residual": 2.5805638008413734e-15,
+      "maximum_energy_drift": 1.989870507951297e-12,
+      "maximum_exchange_combined_residual": 8.650036429637996e-15,
+      "maximum_exchange_longitudinal_residual": 4.0131425008469076e-26,
+      "maximum_exchange_phi2_residual": 5.5490925424509987e-17,
+      "maximum_exchange_phi3_residual": 8.594818876686489e-15,
+      "maximum_iterations_used": 4,
+      "maximum_link_norm_error": 2.220446049250313e-16,
+      "maximum_longitudinal_Maxwell_residual": 3.672274074195113e-18,
+      "maximum_phi2_wave_residual": 2.852266982848609e-16,
+      "maximum_phi3_wave_residual": 1.3788174263093794e-14,
+      "maximum_solver_residual": 9.19884719612074e-13,
+      "run_id": "full_mixed_N32_dt0.00156250_tol1e-12",
+      "solver_tolerance": 1e-12,
+      "steps": 32
+    },
+    "spatial_phi2_order": 1.9689720461647104,
+    "temporal_energy_order": 2.0750213758270375,
+    "temporal_phi2_order": 1.9996050420957903,
+    "unique_run_id_count": 50
+  },
+  "negative_control_match_count": 27,
+  "nonclaims": [
+    "no canonical simulation executed",
+    "no canonical conservation result",
+    "no empirical adequacy",
+    "no EM or QFT pillar completion",
+    "no EM-QFT seam admissibility or closure",
+    "no new physics",
+    "no C_k dynamics",
+    "no CCFT validation",
+    "no master-action validation or promotion",
+    "no repository-wide green claim"
+  ],
+  "positive_control_match_count": 12,
+  "run_count": 50,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_20260713_v0",
+  "scientific_result_claimed": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_canonical_simulation_v0_result",
+  "target": "execute_dirac_maxwell_full_zero_mode_canonical_simulation_v0"
+}

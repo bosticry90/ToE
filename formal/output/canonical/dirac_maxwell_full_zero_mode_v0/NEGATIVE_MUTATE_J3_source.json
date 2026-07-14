@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "PHI3_SOURCE_OMITTED"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "PHI3_SOURCE_OMITTED",
+    "mutation_id": "MUTATE_J3_source"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with PHI3_SOURCE_OMITTED",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_J3_source",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with PHI3_SOURCE_OMITTED",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_J3_source.json",
+    "run_id": "NEGATIVE_MUTATE_J3_source",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "f4c2c618e98d6c6aa525c051f2c6707d7d2cdd3df53f7237d3fb0939e37cf8ed",
+  "numeric_payload_hash": "e4b07c55c51415953ab193f22e6e03d348b88a1a96961289363238e513cf2d9a",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_J3_source",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

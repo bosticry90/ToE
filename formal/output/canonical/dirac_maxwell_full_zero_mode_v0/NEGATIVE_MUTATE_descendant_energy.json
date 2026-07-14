@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "TRANSVERSE_ENERGY_OMITTED"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "TRANSVERSE_ENERGY_OMITTED",
+    "mutation_id": "MUTATE_descendant_energy"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with TRANSVERSE_ENERGY_OMITTED",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_descendant_energy",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with TRANSVERSE_ENERGY_OMITTED",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_descendant_energy.json",
+    "run_id": "NEGATIVE_MUTATE_descendant_energy",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "b477ec9372ab119b5937104b63b469ec3852751535540f8883f9e74ca633e49a",
+  "numeric_payload_hash": "d07a5af7b03583b77aaebc482cd3db2111ae41c13159bae3cf5376a29f53dd4b",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_descendant_energy",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

@@ -1,0 +1,38 @@
+{
+  "actual": {
+    "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+    "actual_diagnostics": [
+      "COUPLING_AREA_RESCALING_OMITTED"
+    ],
+    "completion": "COMPLETED",
+    "control_match_mechanical": true,
+    "expected_diagnostic": "COUPLING_AREA_RESCALING_OMITTED",
+    "mutation_id": "MUTATE_coupling_rescaling"
+  },
+  "actual_control_outcome": "EXPECTED_REJECTION_OBSERVED",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "reject with COUPLING_AREA_RESCALING_OMITTED",
+  "frozen_input": {
+    "control_or_mutation_id": "MUTATE_coupling_rescaling",
+    "duration": 0.0,
+    "execution_kind": "MUTATION_CHECK",
+    "expected_outcome": "reject with COUPLING_AREA_RESCALING_OMITTED",
+    "grid_size": null,
+    "initial_condition_id": "FROZEN_BASELINE_CONFIGURATION_v0",
+    "max_iterations": null,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/NEGATIVE_MUTATE_coupling_rescaling.json",
+    "run_id": "NEGATIVE_MUTATE_coupling_rescaling",
+    "run_role": "NEGATIVE_CONTROL",
+    "solver_tolerance": null,
+    "time_step": null
+  },
+  "input_hash": "8c58ca7bf900a8f86f0c92c290c5c819629c5259cea4efca2b585537ca200799",
+  "numeric_payload_hash": "a9ae13150d8f7d9723cd8b0da13c09086d1791b0ffb2d529e9e0e2608be98bc2",
+  "registered_arrays": null,
+  "run_id": "NEGATIVE_MUTATE_coupling_rescaling",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}

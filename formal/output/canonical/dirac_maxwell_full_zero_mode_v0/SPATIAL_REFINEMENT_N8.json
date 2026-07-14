@@ -1,0 +1,492 @@
+{
+  "actual": {
+    "all_thresholds_passed_mechanically": true,
+    "completion": "COMPLETED",
+    "summary_observables": {
+      "N": 8,
+      "a": 0.125,
+      "all_steps_converged": true,
+      "case": "full_mixed",
+      "dt": 0.0125,
+      "duration": 0.05,
+      "energy_drift_class": "OSCILLATORY_OR_BOUNDED",
+      "final_energy_drift": 8.407083883221755e-11,
+      "final_phi2_l2": 0.006742344765644418,
+      "final_phi3_l2": 0.004778485937368678,
+      "final_total_energy": 0.002986936171247101,
+      "initial_J2_l2": 0.0021172873907029095,
+      "initial_J3_l2": 0.0014821011734920365,
+      "max_iterations_allowed": 80,
+      "maximum_Dirac_minus_sector1_residual": 3.476774433793611e-14,
+      "maximum_Dirac_minus_sector2_residual": 3.46228577779103e-14,
+      "maximum_Dirac_plus_sector1_residual": 3.328555673724725e-14,
+      "maximum_Dirac_plus_sector2_residual": 3.318991541814314e-14,
+      "maximum_Gauss_residual": 8.24101101850554e-18,
+      "maximum_adjoint_minus_sector1_residual": 3.476774433793611e-14,
+      "maximum_adjoint_minus_sector2_residual": 3.46228577779103e-14,
+      "maximum_adjoint_plus_sector1_residual": 3.328555673724725e-14,
+      "maximum_adjoint_plus_sector2_residual": 3.318991541814314e-14,
+      "maximum_continuity_residual": 6.795941847465015e-15,
+      "maximum_energy_drift": 8.407083883221755e-11,
+      "maximum_exchange_combined_residual": 2.550220042881636e-14,
+      "maximum_exchange_longitudinal_residual": 4.238223252552961e-25,
+      "maximum_exchange_phi2_residual": 2.9299996265520546e-17,
+      "maximum_exchange_phi3_residual": 2.5472900432647317e-14,
+      "maximum_iterations_used": 9,
+      "maximum_link_norm_error": 2.220446049250313e-16,
+      "maximum_longitudinal_Maxwell_residual": 1.3182491321163235e-17,
+      "maximum_phi2_wave_residual": 1.578327312595773e-16,
+      "maximum_phi3_wave_residual": 4.951925371490806e-14,
+      "maximum_solver_residual": 9.903818216916438e-13,
+      "run_id": "full_mixed_N8_dt0.01250000_tol1e-12",
+      "solver_tolerance": 1e-12,
+      "steps": 4
+    },
+    "threshold_evaluations": [
+      {
+        "frozen_limit": 5e-09,
+        "observed_value": 9.903818216916438e-13,
+        "passed": true,
+        "threshold_id": "solver"
+      },
+      {
+        "frozen_limit": 7e-15,
+        "observed_value": 8.24101101850554e-18,
+        "passed": true,
+        "threshold_id": "Gauss"
+      },
+      {
+        "frozen_limit": 5e-12,
+        "observed_value": 6.795941847465015e-15,
+        "passed": true,
+        "threshold_id": "continuity"
+      },
+      {
+        "frozen_limit": 3e-22,
+        "observed_value": 4.238223252552961e-25,
+        "passed": true,
+        "threshold_id": "exchange_longitudinal"
+      },
+      {
+        "frozen_limit": 7e-15,
+        "observed_value": 2.9299996265520546e-17,
+        "passed": true,
+        "threshold_id": "exchange_phi2"
+      },
+      {
+        "frozen_limit": 1e-12,
+        "observed_value": 2.5472900432647317e-14,
+        "passed": true,
+        "threshold_id": "exchange_phi3"
+      },
+      {
+        "frozen_limit": 1e-12,
+        "observed_value": 2.550220042881636e-14,
+        "passed": true,
+        "threshold_id": "exchange_combined"
+      },
+      {
+        "frozen_limit": 2e-10,
+        "observed_value": 8.407083883221755e-11,
+        "passed": true,
+        "threshold_id": "energy_drift"
+      },
+      {
+        "frozen_limit": 5e-16,
+        "observed_value": 2.220446049250313e-16,
+        "passed": true,
+        "threshold_id": "link_norm"
+      },
+      {
+        "frozen_limit": 1e-15,
+        "observed_value": 1.3182491321163235e-17,
+        "passed": true,
+        "threshold_id": "longitudinal_Maxwell_residual"
+      },
+      {
+        "frozen_limit": 2e-12,
+        "observed_value": 1.578327312595773e-16,
+        "passed": true,
+        "threshold_id": "phi2_wave_residual"
+      },
+      {
+        "frozen_limit": 6.999999999999999e-11,
+        "observed_value": 4.951925371490806e-14,
+        "passed": true,
+        "threshold_id": "phi3_wave_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.328555673724725e-14,
+        "passed": true,
+        "threshold_id": "Dirac_plus_sector1_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.318991541814314e-14,
+        "passed": true,
+        "threshold_id": "Dirac_plus_sector2_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.476774433793611e-14,
+        "passed": true,
+        "threshold_id": "Dirac_minus_sector1_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.46228577779103e-14,
+        "passed": true,
+        "threshold_id": "Dirac_minus_sector2_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.328555673724725e-14,
+        "passed": true,
+        "threshold_id": "adjoint_plus_sector1_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.318991541814314e-14,
+        "passed": true,
+        "threshold_id": "adjoint_plus_sector2_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.476774433793611e-14,
+        "passed": true,
+        "threshold_id": "adjoint_minus_sector1_residual"
+      },
+      {
+        "frozen_limit": 6e-11,
+        "observed_value": 3.46228577779103e-14,
+        "passed": true,
+        "threshold_id": "adjoint_minus_sector2_residual"
+      }
+    ]
+  },
+  "actual_control_outcome": "NOT_A_CONTROL",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completion_status": "COMPLETED",
+  "environment_identity_hash": "fafd25677c9142f46c37ac38f77f483b4267de53108f36c214d52be0d8ec5395",
+  "expected_control_outcome": "included in frozen spatial fit",
+  "frozen_input": {
+    "control_or_mutation_id": null,
+    "duration": 0.05,
+    "execution_kind": "SIMULATION",
+    "expected_outcome": "included in frozen spatial fit",
+    "grid_size": 8,
+    "initial_condition_id": "FULL_MIXED_v0",
+    "max_iterations": 80,
+    "output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/SPATIAL_REFINEMENT_N8.json",
+    "run_id": "SPATIAL_REFINEMENT_N8",
+    "run_role": "SPATIAL_REFINEMENT",
+    "solver_tolerance": 1e-12,
+    "time_step": 0.0125
+  },
+  "input_hash": "0502d3b6c29b56274f3db40404323ae0d3e6be7d06f36478e606bdec60d46cda",
+  "numeric_payload_hash": "e8faa2d16c02b68a6db0284e8c0ac46b5391c2e599e5bfb124628e27ad54d46e",
+  "registered_arrays": {
+    "run_id": "full_mixed_N8_dt0.01250000_tol1e-12",
+    "series": {
+      "Dirac_minus_sector1_residual": [
+        "0.000000000000e+00",
+        "1.984153119052e-15",
+        "3.476774433794e-14",
+        "3.428216226171e-14",
+        "3.349033927497e-14"
+      ],
+      "Dirac_minus_sector2_residual": [
+        "0.000000000000e+00",
+        "1.971672223310e-15",
+        "3.462285777791e-14",
+        "3.413891607973e-14",
+        "3.334396790120e-14"
+      ],
+      "Dirac_plus_sector1_residual": [
+        "0.000000000000e+00",
+        "1.906811011145e-15",
+        "3.328555673725e-14",
+        "3.285912810964e-14",
+        "3.215604466745e-14"
+      ],
+      "Dirac_plus_sector2_residual": [
+        "0.000000000000e+00",
+        "1.900297970188e-15",
+        "3.318991541814e-14",
+        "3.276610139123e-14",
+        "3.205077100705e-14"
+      ],
+      "J1_l2": [
+        "2.037838669420e-18",
+        "3.968167633129e-07",
+        "8.297443262952e-07",
+        "1.290468950113e-06",
+        "1.769516906790e-06"
+      ],
+      "J2_l2": [
+        "2.117287390703e-03",
+        "1.954471332640e-03",
+        "1.734264257567e-03",
+        "1.463232231116e-03",
+        "1.149450696838e-03"
+      ],
+      "J3_l2": [
+        "1.482101173492e-03",
+        "1.648454026586e-03",
+        "1.766290761325e-03",
+        "1.832112637981e-03",
+        "1.843984593697e-03"
+      ],
+      "adjoint_minus_sector1_residual": [
+        "0.000000000000e+00",
+        "1.984153119052e-15",
+        "3.476774433794e-14",
+        "3.428216226171e-14",
+        "3.349033927497e-14"
+      ],
+      "adjoint_minus_sector2_residual": [
+        "0.000000000000e+00",
+        "1.971672223310e-15",
+        "3.462285777791e-14",
+        "3.413891607973e-14",
+        "3.334396790120e-14"
+      ],
+      "adjoint_plus_sector1_residual": [
+        "0.000000000000e+00",
+        "1.906811011145e-15",
+        "3.328555673725e-14",
+        "3.285912810964e-14",
+        "3.215604466745e-14"
+      ],
+      "adjoint_plus_sector2_residual": [
+        "0.000000000000e+00",
+        "1.900297970188e-15",
+        "3.318991541814e-14",
+        "3.276610139123e-14",
+        "3.205077100705e-14"
+      ],
+      "continuity_residual": [
+        "0.000000000000e+00",
+        "4.794748582546e-16",
+        "6.439984721711e-15",
+        "6.702266779762e-15",
+        "6.795941847465e-15"
+      ],
+      "energy_Wilson_Dirac_local": [
+        "-1.301042606983e-17",
+        "2.822070699869e-07",
+        "5.918940525883e-07",
+        "9.141460782249e-07",
+        "1.233431284886e-06"
+      ],
+      "energy_electric_fluctuating": [
+        "0.000000000000e+00",
+        "2.872068220596e-18",
+        "4.934826677428e-17",
+        "2.641622318450e-16",
+        "8.736104073649e-16"
+      ],
+      "energy_electric_zero_mode": [
+        "0.000000000000e+00",
+        "1.938012974994e-20",
+        "3.725702360293e-19",
+        "2.155928719181e-18",
+        "7.538854680557e-18"
+      ],
+      "energy_gamma2_interaction": [
+        "1.677786973223e-06",
+        "1.519103548042e-06",
+        "1.306006071892e-06",
+        "1.052510227511e-06",
+        "7.753193091119e-07"
+      ],
+      "energy_gamma3_interaction": [
+        "8.470329472543e-22",
+        "-2.019519508549e-10",
+        "-8.851773701258e-10",
+        "-2.114623575398e-09",
+        "-3.857310130497e-09"
+      ],
+      "energy_link_interaction": [
+        "4.336808689942e-18",
+        "-1.285197231151e-07",
+        "-2.383892448304e-07",
+        "-3.257467480057e-07",
+        "-3.882850799519e-07"
+      ],
+      "energy_phi2": [
+        "9.372583002030e-04",
+        "9.372633147333e-04",
+        "9.372766521970e-04",
+        "9.372953338419e-04",
+        "9.373158194210e-04"
+      ],
+      "energy_phi3": [
+        "2.048000000000e-03",
+        "2.048000192116e-03",
+        "2.048000839819e-03",
+        "2.048002016988e-03",
+        "2.048003743621e-03"
+      ],
+      "exchange_combined": [
+        "0.000000000000e+00",
+        "1.273243566220e-16",
+        "2.550220042882e-14",
+        "2.550164313559e-14",
+        "2.550186304571e-14"
+      ],
+      "exchange_longitudinal": [
+        "0.000000000000e+00",
+        "-1.095356092873e-27",
+        "-9.647850222134e-26",
+        "-2.415390279426e-25",
+        "-4.238223252553e-25"
+      ],
+      "exchange_phi2": [
+        "0.000000000000e+00",
+        "-1.685041354026e-19",
+        "2.929999626552e-17",
+        "2.920171562822e-17",
+        "2.920696657075e-17"
+      ],
+      "exchange_phi3": [
+        "0.000000000000e+00",
+        "1.274928607585e-16",
+        "2.547290043265e-14",
+        "2.547244142020e-14",
+        "2.547265607957e-14"
+      ],
+      "gauss_residual": [
+        "2.710505431214e-20",
+        "2.428602278456e-19",
+        "2.920839676603e-18",
+        "5.593397783625e-18",
+        "8.241011018506e-18"
+      ],
+      "link_norm_error": [
+        "0.000000000000e+00",
+        "2.220446049250e-16",
+        "2.220446049250e-16",
+        "1.110223024625e-16",
+        "2.220446049250e-16"
+      ],
+      "longitudinal_Maxwell_residual": [
+        "0.000000000000e+00",
+        "9.447846258169e-18",
+        "8.952363218171e-18",
+        "1.318249132116e-17",
+        "9.639722976315e-18"
+      ],
+      "periodic_boundary_flux": [
+        "0.000000000000e+00",
+        "0.000000000000e+00",
+        "0.000000000000e+00",
+        "0.000000000000e+00",
+        "0.000000000000e+00"
+      ],
+      "phi2_l2": [
+        "7.071067811865e-03",
+        "7.050369731376e-03",
+        "6.988398543873e-03",
+        "6.885521195504e-03",
+        "6.742344765644e-03"
+      ],
+      "phi2_wave_residual": [
+        "0.000000000000e+00",
+        "6.505213034913e-18",
+        "1.578327312596e-16",
+        "1.523575102885e-16",
+        "1.437652080716e-16"
+      ],
+      "phi3_l2": [
+        "5.656854249492e-03",
+        "5.600567143872e-03",
+        "5.432825986232e-03",
+        "5.156968973302e-03",
+        "4.778485937369e-03"
+      ],
+      "phi3_wave_residual": [
+        "0.000000000000e+00",
+        "5.001858302545e-15",
+        "4.951925371491e-14",
+        "4.803774565632e-14",
+        "4.560056759279e-14"
+      ],
+      "psi_minus_negative_frequency_weight": [
+        "3.210240000000e-03",
+        "3.210234159515e-03",
+        "3.210226943052e-03",
+        "3.210218669800e-03",
+        "3.210209720549e-03"
+      ],
+      "psi_minus_positive_frequency_weight": [
+        "3.210240000000e-03",
+        "3.210245840485e-03",
+        "3.210253056949e-03",
+        "3.210261330202e-03",
+        "3.210270279453e-03"
+      ],
+      "psi_plus_negative_frequency_weight": [
+        "3.210240000000e-03",
+        "3.210234159524e-03",
+        "3.210226943079e-03",
+        "3.210218669823e-03",
+        "3.210209720503e-03"
+      ],
+      "psi_plus_positive_frequency_weight": [
+        "3.210240000000e-03",
+        "3.210245840476e-03",
+        "3.210253056922e-03",
+        "3.210261330179e-03",
+        "3.210270279499e-03"
+      ],
+      "solver_iterations": [
+        "0.000000000000e+00",
+        "9.000000000000e+00",
+        "8.000000000000e+00",
+        "8.000000000000e+00",
+        "8.000000000000e+00"
+      ],
+      "solver_residual": [
+        "0.000000000000e+00",
+        "5.001381253589e-14",
+        "9.903818216916e-13",
+        "9.607601172967e-13",
+        "9.120065813661e-13"
+      ],
+      "time": [
+        "0.000000000000e+00",
+        "1.250000000000e-02",
+        "2.500000000000e-02",
+        "3.750000000000e-02",
+        "5.000000000000e-02"
+      ],
+      "total_charge": [
+        "0.000000000000e+00",
+        "-5.421010862428e-20",
+        "2.710505431214e-20",
+        "-2.710505431214e-20",
+        "-8.131516293641e-20"
+      ],
+      "total_energy": [
+        "2.986936087176e-03",
+        "2.986936095793e-03",
+        "2.986936117719e-03",
+        "2.986936145765e-03",
+        "2.986936171247e-03"
+      ],
+      "total_energy_delta": [
+        "0.000000000000e+00",
+        "8.616451302457e-12",
+        "3.054227660712e-11",
+        "5.858847825294e-11",
+        "8.407083883222e-11"
+      ]
+    }
+  },
+  "run_id": "SPATIAL_REFINEMENT_N8",
+  "run_role": "SPATIAL_REFINEMENT",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW"
+}
