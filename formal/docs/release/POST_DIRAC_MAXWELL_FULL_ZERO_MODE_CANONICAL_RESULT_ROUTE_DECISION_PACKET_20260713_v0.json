@@ -1,0 +1,192 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "314a4bb0ee644dd81266a16e08f2e91f9ba2c9479f93bddb86f460c9a27c570f",
+    "manifest_sha256": "48a2d25bcf08b04f60e198d19d4efd89aa789ec10e933e643ea75eeda89ab550",
+    "packet_sha256": "b79b888bd5854caf630a97c4edca6c8ead00ab4fd8d8a9dcda49b8ac2323a425"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "canonical_result_recalibrated": false,
+    "canonical_result_rerun": false,
+    "empirical_adequacy_claimed": false,
+    "master_action_promoted": false,
+    "new_parameter_values_frozen": false,
+    "new_physics_claimed": false,
+    "only_route_specific_preparation_authorized_after_review": true,
+    "pillar_completion_claimed": false,
+    "repository_wide_green_claimed": false,
+    "robustness_execution_authorized": false,
+    "seam_admissibility_or_closure_claimed": false
+  },
+  "canonical_selection": {
+    "eligible_candidate_ids": [
+      "DESCENDANT_NECESSITY_ROBUSTNESS"
+    ],
+    "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+    "selected_candidate_label": "descendant necessity and parameter robustness",
+    "selected_weighted_total": 56,
+    "threshold": 44,
+    "tie_break_used": false,
+    "tied_candidate_ids": [
+      "DESCENDANT_NECESSITY_ROBUSTNESS"
+    ]
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "A frozen proposition-backed five-route comparison selects descendant necessity and parameter robustness; only independent route-decision review is authorized.",
+  "decision_count": 15,
+  "decisions": [
+    {
+      "decision_id": "accepted_canonical_result_authorizes_post_result_route_decision_only",
+      "passed": true
+    },
+    {
+      "decision_id": "exactly_five_candidate_routes_are_scored",
+      "passed": true
+    },
+    {
+      "decision_id": "weights_threshold_score_domain_and_gates_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "all_forty_scores_are_proposition_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "all_weighted_totals_reproduce_without_expected_winner",
+      "passed": true
+    },
+    {
+      "decision_id": "user_recommendation_and_external_context_are_nondecisive",
+      "passed": true
+    },
+    {
+      "decision_id": "descendant_necessity_robustness_is_highest_scoring_eligible_route",
+      "passed": true
+    },
+    {
+      "decision_id": "selection_is_stable_at_40_42_44_46_48",
+      "passed": true
+    },
+    {
+      "decision_id": "selected_route_freezes_bounded_axes_comparators_observables_and_outcomes_for_later_preparation",
+      "passed": true
+    },
+    {
+      "decision_id": "invalid_truncation_is_comparator_only_not_a_rival_model",
+      "passed": true
+    },
+    {
+      "decision_id": "ten_mutation_controls_are_independently_diagnosed",
+      "passed": true
+    },
+    {
+      "decision_id": "completed_tranches_and_canonical_result_remain_immutable",
+      "passed": true
+    },
+    {
+      "decision_id": "only_independent_route_review_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "pillar_seam_empirical_C_k_CCFT_master_action_and_repository_nonpromotions_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_is_preserved",
+      "passed": true
+    }
+  ],
+  "failure_target": "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v1",
+  "mutation_control_count": 10,
+  "mutation_controls_passed": 10,
+  "nonclaims": [
+    "no robustness parameter family frozen or executed",
+    "no canonical result recalibration or rerun",
+    "no pillar completion or seam admissibility or closure",
+    "no empirical adequacy or new physics",
+    "no C_k dynamics, CCFT validation, or master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0",
+  "schema_id": "POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_20260713_v0",
+  "selected_next_target": "review_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0_result",
+  "selected_next_target_kind": "post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0_result_review",
+  "sensitivity_analysis": [
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 40,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 42,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 44,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 46,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 48,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    }
+  ],
+  "target": "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+  "weighted_totals": {
+    "DESCENDANT_NECESSITY_ROBUSTNESS": 56,
+    "DIMENSIONAL_ASCENT_2P1": 36,
+    "DYNAMIC_EINSTEIN_SCALAR": 29,
+    "FIXED_CURVED_BACKGROUND_EXTENSION": 36,
+    "NEXT_UNIT_PILLAR_TARGET": 34
+  }
+}

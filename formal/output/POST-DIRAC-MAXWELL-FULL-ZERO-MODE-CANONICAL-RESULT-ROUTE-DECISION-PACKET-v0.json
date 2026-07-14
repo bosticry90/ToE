@@ -1,0 +1,1276 @@
+{
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "canonical_result_recalibrated": false,
+    "canonical_result_rerun": false,
+    "empirical_adequacy_claimed": false,
+    "master_action_promoted": false,
+    "new_parameter_values_frozen": false,
+    "new_physics_claimed": false,
+    "only_route_specific_preparation_authorized_after_review": true,
+    "pillar_completion_claimed": false,
+    "repository_wide_green_claimed": false,
+    "robustness_execution_authorized": false,
+    "seam_admissibility_or_closure_claimed": false
+  },
+  "candidate_order_is_identity_only_not_preference": true,
+  "canonical_rerun_authorized": false,
+  "canonical_selection": {
+    "eligible_candidate_ids": [
+      "DESCENDANT_NECESSITY_ROBUSTNESS"
+    ],
+    "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+    "selected_candidate_label": "descendant necessity and parameter robustness",
+    "selected_weighted_total": 56,
+    "threshold": 44,
+    "tie_break_used": false,
+    "tied_candidate_ids": [
+      "DESCENDANT_NECESSITY_ROBUSTNESS"
+    ]
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "completed_tranches_reopened": false,
+  "criterion_weights": {
+    "accepted_infrastructure_reuse": 5,
+    "analytic_readiness": 4,
+    "bounded_scope": 3,
+    "current_result_information_gain": 5,
+    "falsifiable_discrimination": 5,
+    "numerical_readiness": 4,
+    "project_portfolio_value": 2,
+    "seam_method_leverage": 3
+  },
+  "criterion_weights_frozen_before_scoring": true,
+  "evidence_records": [
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "RELEASE_FACING_CURRENT",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_CANONICAL_RESULT_ACCEPTED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The descendant-aware canonical Maxwell-Dirac result is accepted as a bounded scientific result.",
+      "expected_source_value": "ACCEPT_BOUNDED_SCIENTIFIC_RESULT",
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_CANONICAL_RESULT_ACCEPTED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/verdict"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "RELEASE_FACING_CURRENT",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_CANONICAL_E_REPRO_SCOPE",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The accepted canonical result has claim class E-REPRO.",
+      "expected_source_value": "E-REPRO",
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_CANONICAL_E_REPRO_SCOPE",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/accepted_claim_label"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "RELEASE_FACING_CURRENT",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_TRANSVERSE_SIGNAL_ACTIVE",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The canonical result registers a nonzero transverse-descendant signal above its frozen gate.",
+      "expected_source_value": 6.826809919994493e-08,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_TRANSVERSE_SIGNAL_ACTIVE",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/result_metrics/transverse_signal"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "RELEASE_FACING_CURRENT",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_EXCHANGE_SIGNAL_SEPARATED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The canonical exchange-to-drift ratio is 352.6967159703898.",
+      "expected_source_value": 352.6967159703898,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_EXCHANGE_SIGNAL_SEPARATED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/result_metrics/exchange_ratio"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "RELEASE_FACING_CURRENT",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_COMPLETE_MATRIX_REPRODUCED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "All fifty canonical records were independently reproduced.",
+      "expected_source_value": true,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_COMPLETE_MATRIX_REPRODUCED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/independent_reproduction/all_fifty_records_reproduced"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "RELEASE_FACING_CURRENT",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_NONPROMOTION_BOUNDARY",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The bounded result does not authorize pillar completion.",
+      "expected_source_value": false,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_NONPROMOTION_BOUNDARY",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/authority_rotation/pillar_completion_authorized"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "HISTORICAL_ARCHIVED",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The full zero-mode analytic reduction retaining both transverse descendants is accepted.",
+      "expected_source_value": true,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "e4a830678d863319d5509bf43e332a778708b7b82bd6db5903be5a389fef34de",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/authority_rotation/full_zero_mode_analytic_repair_accepted"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "HISTORICAL_ARCHIVED",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_NUMERICAL_GUARDRAIL_ACCEPTED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The mixed link/site descendant-aware numerical guardrail is accepted.",
+      "expected_source_value": true,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_NUMERICAL_GUARDRAIL_ACCEPTED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "b881d23e9bd201b09bb023a1e897306afff681bd57ccb224a9c6baf562be57b6",
+      "source_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/authority_rotation/numerical_guardrail_accepted"
+      },
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "HISTORICAL_ARCHIVED",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The exact four-case fixed-background scalar robustness family is accepted as scoped E-REPRO.",
+      "expected_source_value": true,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0",
+      "source_id": "SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/accepted_e_repro"
+      },
+      "source_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "HISTORICAL_ARCHIVED",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_EINSTEIN_SCALAR_ROUTE_ONLY",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The accepted Einstein-scalar work remains a provisional classical sandbox route.",
+      "expected_source_value": true,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+      "source_id": "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/provisional_classical_sandbox_route_only"
+      },
+      "source_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "HISTORICAL_ARCHIVED",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_EINSTEIN_SCALAR_NOT_SOLVED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The coupled Einstein-scalar system has not been solved in the accepted route review.",
+      "expected_source_value": false,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_EINSTEIN_SCALAR_NOT_SOLVED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+      "source_id": "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/coupled_einstein_scalar_system_solved"
+      },
+      "source_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    },
+    {
+      "authority_class": "ACCEPTED_BOUNDED_REVIEW",
+      "claim_label_context": "HISTORICAL_ARCHIVED",
+      "conflict_status": "NO_UNRESOLVED_CONFLICT",
+      "eligible_route_types": [
+        "PLANNING_ROUTE_SELECTION"
+      ],
+      "evidence_id": "E_P_FIRST_UNIT_SELECTOR_ACCEPTED",
+      "evidence_role": "REPOSITORY_STATE_EVIDENCE",
+      "exact_supported_proposition": "The first-unit selector is accepted as preparation authority only.",
+      "expected_source_value": true,
+      "proposition_extraction_method": "EXACT_FIELD_READ",
+      "proposition_id": "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+      "route_support_eligible": true,
+      "scope_ceiling": "Bounded planning evidence about the accepted repository state only.",
+      "source_declared_claim_label": "REVIEW_ACCEPTED_STATE",
+      "source_hash": "e84d7a00a29a21dae59a8d3fb26f56a6a97cf3b6021766a6b176fde81a3d610d",
+      "source_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0",
+      "source_locator": {
+        "locator_type": "JSON_POINTER",
+        "pointer": "/accepted"
+      },
+      "source_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "support_mode": "ACCEPTED_REVIEW_STATE",
+      "unsupported_propositions": [
+        "pillar completion",
+        "seam closure",
+        "empirical adequacy",
+        "master-action promotion"
+      ]
+    }
+  ],
+  "external_literature_used_as_score_input": false,
+  "failure_target": "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v1",
+  "input_artifacts": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e4a830678d863319d5509bf43e332a778708b7b82bd6db5903be5a389fef34de"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "b881d23e9bd201b09bb023a1e897306afff681bd57ccb224a9c6baf562be57b6"
+    },
+    {
+      "path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
+      "sha256": "cca24f7a9d72d035b974a781213235dc7e8f0685a63bb5189ee465b1c3aa17a0"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+    },
+    {
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e84d7a00a29a21dae59a8d3fb26f56a6a97cf3b6021766a6b176fde81a3d610d"
+    }
+  ],
+  "maximum_weighted_total": 62,
+  "mutation_controls": [
+    {
+      "changed_premise_count": 1,
+      "control_id": "candidate_removed",
+      "expected_diagnostic": "exact_five_candidates",
+      "observed_diagnostics": [
+        "exact_five_candidates"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "rubric_weight_changed",
+      "expected_diagnostic": "frozen_rubric",
+      "observed_diagnostics": [
+        "frozen_rubric"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "total_forged",
+      "expected_diagnostic": "totals_reproduce",
+      "observed_diagnostics": [
+        "totals_reproduce"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "proposition_support_replaced",
+      "expected_diagnostic": "proposition_support_closure",
+      "observed_diagnostics": [
+        "proposition_support_closure"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "recommendation_made_decisive",
+      "expected_diagnostic": "recommendation_nondecisive",
+      "observed_diagnostics": [
+        "recommendation_nondecisive"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "external_context_promoted",
+      "expected_diagnostic": "external_context_nondecisive",
+      "observed_diagnostics": [
+        "external_context_nondecisive"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "completed_tranche_reopened",
+      "expected_diagnostic": "completed_tranches_immutable",
+      "observed_diagnostics": [
+        "completed_tranches_immutable"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "robustness_execution_authorized_early",
+      "expected_diagnostic": "preparation_only_boundary",
+      "observed_diagnostics": [
+        "preparation_only_boundary"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "pillar_completion_promoted",
+      "expected_diagnostic": "nonpromotion_boundary",
+      "observed_diagnostics": [
+        "nonpromotion_boundary"
+      ],
+      "passed": true
+    },
+    {
+      "changed_premise_count": 1,
+      "control_id": "expected_winner_injected",
+      "expected_diagnostic": "no_expected_winner_oracle",
+      "observed_diagnostics": [
+        "no_expected_winner_oracle"
+      ],
+      "passed": true
+    }
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0",
+  "prompt_protection": {
+    "excluded_from_scientific_inputs": true,
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "schema_id": "POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_v0",
+  "score_domain": [
+    0,
+    1,
+    2
+  ],
+  "scored_candidates": [
+    {
+      "candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "candidate_label": "descendant necessity and parameter robustness",
+      "criterion_scores": [
+        {
+          "criterion": "current_result_information_gain",
+          "eligibility_basis": "Score 2: Directly tests the least-over-threshold canonical signal and the obstruction that forced descendant retention.",
+          "exact_supporting_proposition_ids": [
+            "P_TRANSVERSE_SIGNAL_ACTIVE",
+            "P_EXCHANGE_SIGNAL_SEPARATED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "accepted_infrastructure_reuse",
+          "eligibility_basis": "Score 2: Reuses the accepted action, reduction, guardrail, canonical implementation, controls, and observables.",
+          "exact_supporting_proposition_ids": [
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED",
+            "P_NUMERICAL_GUARDRAIL_ACCEPTED",
+            "P_COMPLETE_MATRIX_REPRODUCED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "falsifiable_discrimination",
+          "eligibility_basis": "Score 2: A preregistered family can compare the full system with the already-rejected truncation and classify broad, conditional, or limited robustness.",
+          "exact_supporting_proposition_ids": [
+            "P_TRANSVERSE_SIGNAL_ACTIVE",
+            "P_COMPLETE_MATRIX_REPRODUCED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "analytic_readiness",
+          "eligibility_basis": "Score 1: The model is accepted, but parameter-family semantics and descendant-necessity observables still require a new guardrail.",
+          "exact_supporting_proposition_ids": [
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific action, equation, stress-energy, boundary, and conservation packet.",
+          "score": 1,
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "numerical_readiness",
+          "eligibility_basis": "Score 2: The complete descendant-aware implementation and deterministic canonical matrix are accepted.",
+          "exact_supporting_proposition_ids": [
+            "P_NUMERICAL_GUARDRAIL_ACCEPTED",
+            "P_COMPLETE_MATRIX_REPRODUCED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 2: A small preregistered family can vary only q, m, holonomy, descendant excitation, and relative phase.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "seam_method_leverage",
+          "eligibility_basis": "Score 2: Quantifies whether the restored destination objects materially alter transport across the admitted reduction.",
+          "exact_supporting_proposition_ids": [
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED",
+            "P_TRANSVERSE_SIGNAL_ACTIVE"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "project_portfolio_value",
+          "eligibility_basis": "Score 1: Deepens the strongest coupled result but does not broaden the project to a new pillar.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed reason that this route improves both depth and breadth relative to the accepted portfolio.",
+          "score": 1,
+          "weight": 2,
+          "weighted_score": 2
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate": {
+        "bounded_scope_at_least_1": true,
+        "current_result_information_gain_at_least_1": true,
+        "falsifiable_discrimination_at_least_1": true
+      },
+      "minimum_gate_passed": true,
+      "scientific_question": "Is the accepted result robust, and how much do the transverse descendants change the dynamics?",
+      "unresolved_conflicts": [],
+      "weighted_total": 56
+    },
+    {
+      "candidate_id": "DIMENSIONAL_ASCENT_2P1",
+      "candidate_label": "dimensional ascent to 2+1",
+      "criterion_scores": [
+        {
+          "criterion": "current_result_information_gain",
+          "eligibility_basis": "Score 2: Tests whether the accepted coupled result survives a less severe dimensional reduction.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "accepted_infrastructure_reuse",
+          "eligibility_basis": "Score 1: Reuses the parent action and semantics, but not the accepted 1+1 discrete architecture unchanged.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed map showing that the accepted descendant-aware analytic and numerical infrastructure transfers without replacement.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "falsifiable_discrimination",
+          "eligibility_basis": "Score 2: Can expose new gauge, constraint, and descendant failures under ascent.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "analytic_readiness",
+          "eligibility_basis": "Score 0: No accepted 3+1 to 2+1 reduction packet establishes the retained object inventory and tensor map.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific action, equation, stress-energy, boundary, and conservation packet.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "numerical_readiness",
+          "eligibility_basis": "Score 0: No reviewed two-spatial-dimensional implementation or convergence guardrail exists.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific discrete architecture, controls, convergence policy, and calibration boundary.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 1: A 2+1 ascent is definable but materially enlarges fields, constraints, costs, and control space.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "A smaller frozen field and parameter inventory with explicit omissions and failure semantics.",
+          "score": 1,
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "seam_method_leverage",
+          "eligibility_basis": "Score 2: Directly tests object and source transport under a different dimensional seam.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "project_portfolio_value",
+          "eligibility_basis": "Score 1: Broadens electromagnetic dynamics but remains within the same classical matter family.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed reason that this route improves both depth and breadth relative to the accepted portfolio.",
+          "score": 1,
+          "weight": 2,
+          "weighted_score": 2
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate": {
+        "bounded_scope_at_least_1": true,
+        "current_result_information_gain_at_least_1": true,
+        "falsifiable_discrimination_at_least_1": true
+      },
+      "minimum_gate_passed": true,
+      "scientific_question": "Does a descendant-complete coupled result survive when a second spatial dimension and propagating gauge structure are introduced?",
+      "unresolved_conflicts": [],
+      "weighted_total": 36
+    },
+    {
+      "candidate_id": "FIXED_CURVED_BACKGROUND_EXTENSION",
+      "candidate_label": "fixed curved-background extension",
+      "criterion_scores": [
+        {
+          "criterion": "current_result_information_gain",
+          "eligibility_basis": "Score 2: Tests transport of the accepted coupled exchange structure through tetrads, spin connection, and fixed curvature.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "accepted_infrastructure_reuse",
+          "eligibility_basis": "Score 1: Reuses the Maxwell-Dirac foundation, while geometry-dependent equations and discretization require new work.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed map showing that the accepted descendant-aware analytic and numerical infrastructure transfers without replacement.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "falsifiable_discrimination",
+          "eligibility_basis": "Score 2: Curvature can expose convention, covariant-current, and stress-energy transport failures.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "analytic_readiness",
+          "eligibility_basis": "Score 0: Accepted scalar fixed-background evidence does not supply a curved Maxwell-Dirac derivation.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific action, equation, stress-energy, boundary, and conservation packet.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "numerical_readiness",
+          "eligibility_basis": "Score 0: No reviewed curved-background Maxwell-Dirac discrete architecture exists.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific discrete architecture, controls, convergence policy, and calibration boundary.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 1: A fixed background is narrower than dynamic gravity but broader than the accepted flat zero-mode model.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "A smaller frozen field and parameter inventory with explicit omissions and failure semantics.",
+          "score": 1,
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "seam_method_leverage",
+          "eligibility_basis": "Score 2: Tests covariant object and conservation transport into a geometric regime.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "project_portfolio_value",
+          "eligibility_basis": "Score 1: Connects the coupled result to GR-facing methods without dynamic backreaction.",
+          "exact_supporting_proposition_ids": [
+            "P_CANONICAL_RESULT_ACCEPTED",
+            "P_CANONICAL_E_REPRO_SCOPE",
+            "P_NONPROMOTION_BOUNDARY",
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed reason that this route improves both depth and breadth relative to the accepted portfolio.",
+          "score": 1,
+          "weight": 2,
+          "weighted_score": 2
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate": {
+        "bounded_scope_at_least_1": true,
+        "current_result_information_gain_at_least_1": true,
+        "falsifiable_discrimination_at_least_1": true
+      },
+      "minimum_gate_passed": true,
+      "scientific_question": "Does the accepted coupled exchange structure survive tetrad, spin-connection, and fixed-curvature transport?",
+      "unresolved_conflicts": [],
+      "weighted_total": 36
+    },
+    {
+      "candidate_id": "DYNAMIC_EINSTEIN_SCALAR",
+      "candidate_label": "dynamic Einstein-scalar program",
+      "criterion_scores": [
+        {
+          "criterion": "current_result_information_gain",
+          "eligibility_basis": "Score 1: Advances dynamic geometry but does not directly probe the accepted Maxwell-Dirac descendants.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A direct preregistered discriminator tied to the accepted canonical result's unresolved scope.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "accepted_infrastructure_reuse",
+          "eligibility_basis": "Score 0: Uses the separate scalar route rather than the accepted descendant-aware numerical implementation.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed map showing that the accepted descendant-aware analytic and numerical infrastructure transfers without replacement.",
+          "score": 0,
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "falsifiable_discrimination",
+          "eligibility_basis": "Score 2: Constraint preservation and backreaction create a strong independent coupled-system test.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "analytic_readiness",
+          "eligibility_basis": "Score 1: A provisional classical Einstein-scalar route exists, but no coupled solution has been accepted.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific action, equation, stress-energy, boundary, and conservation packet.",
+          "score": 1,
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "numerical_readiness",
+          "eligibility_basis": "Score 0: No accepted dynamic-gravity numerical guardrail is bound by the cited route review.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific discrete architecture, controls, convergence policy, and calibration boundary.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 0: Dynamic geometry, gauge choice, constraints, and boundary data exceed a near-term bounded extension.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A smaller frozen field and parameter inventory with explicit omissions and failure semantics.",
+          "score": 0,
+          "weight": 3,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "seam_method_leverage",
+          "eligibility_basis": "Score 2: Strongly tests matter-geometry compatibility and conservation obligations.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "project_portfolio_value",
+          "eligibility_basis": "Score 2: Would open the most distinct scientific lane among these candidates.",
+          "exact_supporting_proposition_ids": [
+            "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+            "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+            "P_EINSTEIN_SCALAR_NOT_SOLVED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate": {
+        "bounded_scope_at_least_1": false,
+        "current_result_information_gain_at_least_1": true,
+        "falsifiable_discrimination_at_least_1": true
+      },
+      "minimum_gate_passed": false,
+      "scientific_question": "Can scalar matter and geometry evolve together with constraint and stress-energy preservation?",
+      "unresolved_conflicts": [],
+      "weighted_total": 29
+    },
+    {
+      "candidate_id": "NEXT_UNIT_PILLAR_TARGET",
+      "candidate_label": "next unit or pillar target",
+      "criterion_scores": [
+        {
+          "criterion": "current_result_information_gain",
+          "eligibility_basis": "Score 1: Broadens readiness but does not test the accepted coupled result's least-established behavior.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A direct preregistered discriminator tied to the accepted canonical result's unresolved scope.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "accepted_infrastructure_reuse",
+          "eligibility_basis": "Score 0: Does not reuse the canonical simulator as the principal evidence engine.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed map showing that the accepted descendant-aware analytic and numerical infrastructure transfers without replacement.",
+          "score": 0,
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "falsifiable_discrimination",
+          "eligibility_basis": "Score 1: A unit or pillar packet can resolve a bounded surface but is not yet one specified experiment.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "A closed observable, comparator, and outcome taxonomy that can reject the route's central hypothesis.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "analytic_readiness",
+          "eligibility_basis": "Score 2: The accepted selector architecture can select bounded preparation work without claiming resolution.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "numerical_readiness",
+          "eligibility_basis": "Score 0: No single numerical system is defined by this broad portfolio route.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted route-specific discrete architecture, controls, convergence policy, and calibration boundary.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 2: The route can remain bounded by selecting one reviewed unit or pillar target.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "seam_method_leverage",
+          "eligibility_basis": "Score 2: Returns directly to the repository's broader source, unit, and seam readiness program.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "project_portfolio_value",
+          "eligibility_basis": "Score 2: Provides the strongest breadth and avoids concentrating all effort in one model.",
+          "exact_supporting_proposition_ids": [
+            "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+            "P_NONPROMOTION_BOUNDARY"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate": {
+        "bounded_scope_at_least_1": true,
+        "current_result_information_gain_at_least_1": true,
+        "falsifiable_discrimination_at_least_1": true
+      },
+      "minimum_gate_passed": true,
+      "scientific_question": "Should effort return to broader unit and pillar readiness instead of deepening this Maxwell-Dirac model?",
+      "unresolved_conflicts": [],
+      "weighted_total": 34
+    }
+  ],
+  "selected_next_target": "review_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0_result",
+  "selected_next_target_kind": "post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0_result_review",
+  "selected_route_definition": {
+    "bounded_parameter_axes": [
+      "q",
+      "m",
+      "holonomy_W",
+      "initial_descendant_energy",
+      "relative_species_phase"
+    ],
+    "invalid_comparator_is_not_a_rival_physical_model": true,
+    "required_comparators": [
+      "FULL_ACCEPTED_MODEL",
+      "FORCED_REJECTED_A2_A3_ZERO_TRUNCATION"
+    ],
+    "required_observables": [
+      "descendant_necessity_ratio",
+      "transverse_source_residual",
+      "exchange_to_drift_ratio",
+      "time_to_full_truncated_divergence"
+    ],
+    "required_outcome_classes": [
+      "BROADLY_ROBUST",
+      "CONDITIONALLY_ROBUST",
+      "THRESHOLD_SENSITIVE",
+      "NUMERICALLY_BLOCKED",
+      "MODEL_DOMAIN_LIMITED"
+    ],
+    "route_id": "DESCENDANT_NECESSITY_ROBUSTNESS"
+  },
+  "selection_stable_40_through_48": true,
+  "selection_threshold": 44,
+  "sensitivity_analysis": [
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 40,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 42,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 44,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 46,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ],
+      "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "selected_candidate_label": "descendant necessity and parameter robustness",
+      "selected_weighted_total": 56,
+      "threshold": 48,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "DESCENDANT_NECESSITY_ROBUSTNESS"
+      ]
+    }
+  ],
+  "sensitivity_thresholds": [
+    40,
+    42,
+    44,
+    46,
+    48
+  ],
+  "target": "prepare_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0",
+  "threshold_frozen_before_scoring": true,
+  "user_recommendation": {
+    "candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+    "role": "NONDECISIVE_CONTEXT",
+    "used_as_score_input": false
+  }
+}
