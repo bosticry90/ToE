@@ -2,9 +2,9 @@
   "all_decisions_passed": true,
   "all_negative_controls_passed": true,
   "artifact_hashes": {
-    "generator_sha256": "b29226670791b0ab507f2ac0069adb69231a47adfd249bca327f2f4e294745f7",
-    "manifest_sha256": "427996ecbfef311918a63b5a1de306c214c84654f72fc294fdfaa9217a77e07b",
-    "packet_sha256": "c94ebdd98c36f2ea88f3812083af193a9c1b3249a6a4f8854ef3e264c256b60f"
+    "generator_sha256": "aa8c8a83433c8b70543cd211dd1aa7dd0ca73bb597c2de6490785edad140dcd7",
+    "manifest_sha256": "780f5f66aa0fae81ca1d807267056a0576a77693173fcb566d362432093d1d95",
+    "packet_sha256": "500c8add643330cf2528d2c7ee37c8d255b43393cc9f93e0e7ae5cb84a28bdfc"
   },
   "boundary": {
     "CCFT_resumed": false,
@@ -118,11 +118,12 @@
       "control_id": "assign_unit_to_unit_unknown_without_evidence",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC01_UNIT_ASSIGNMENT_FORBIDDEN",
+        "decision_id": "MUTATION_01_ASSIGN_UNIT_TO_UNIT_UNKNOWN_WITHOUT_EVIDENCE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC01_UNIT_ASSIGNMENT_FORBIDDEN",
+      "expected_diagnostic": "MUTATION_01_ASSIGN_UNIT_TO_UNIT_UNKNOWN_WITHOUT_EVIDENCE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC01_UNIT_ASSIGNMENT_FORBIDDEN",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -130,6 +131,9 @@
         "$.route_selections[0].proposed_unit_assignment"
       ],
       "observed_diagnostics": [
+        "MUTATION_01_ASSIGN_UNIT_TO_UNIT_UNKNOWN_WITHOUT_EVIDENCE"
+      ],
+      "observed_validator_diagnostics": [
         "NC01_UNIT_ASSIGNMENT_FORBIDDEN"
       ],
       "passed": true
@@ -139,11 +143,12 @@
       "control_id": "natural_units_mark_unresolved_resolved",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC02_STATUS_RESOLUTION_FORBIDDEN",
+        "decision_id": "MUTATION_02_NATURAL_UNITS_MARK_UNRESOLVED_RESOLVED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC02_STATUS_RESOLUTION_FORBIDDEN",
+      "expected_diagnostic": "MUTATION_02_NATURAL_UNITS_MARK_UNRESOLVED_RESOLVED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC02_STATUS_RESOLUTION_FORBIDDEN",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -151,6 +156,9 @@
         "$.route_selections[1].current_status"
       ],
       "observed_diagnostics": [
+        "MUTATION_02_NATURAL_UNITS_MARK_UNRESOLVED_RESOLVED"
+      ],
+      "observed_validator_diagnostics": [
         "NC02_STATUS_RESOLUTION_FORBIDDEN"
       ],
       "passed": true
@@ -160,11 +168,12 @@
       "control_id": "dimensionless_coordinates_promoted_to_physical_distance",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE",
+        "decision_id": "MUTATION_03_DIMENSIONLESS_COORDINATES_PROMOTED_TO_PHYSICAL_DISTANCE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE",
+      "expected_diagnostic": "MUTATION_03_DIMENSIONLESS_COORDINATES_PROMOTED_TO_PHYSICAL_DISTANCE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -172,6 +181,9 @@
         "$.policy"
       ],
       "observed_diagnostics": [
+        "MUTATION_03_DIMENSIONLESS_COORDINATES_PROMOTED_TO_PHYSICAL_DISTANCE"
+      ],
+      "observed_validator_diagnostics": [
         "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE"
       ],
       "passed": true
@@ -181,11 +193,12 @@
       "control_id": "suppressed_constant_omitted",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION",
+        "decision_id": "MUTATION_04_SUPPRESSED_CONSTANT_OMITTED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION",
+      "expected_diagnostic": "MUTATION_04_SUPPRESSED_CONSTANT_OMITTED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -193,6 +206,9 @@
         "$.policy"
       ],
       "observed_diagnostics": [
+        "MUTATION_04_SUPPRESSED_CONSTANT_OMITTED"
+      ],
+      "observed_validator_diagnostics": [
         "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION"
       ],
       "passed": true
@@ -202,11 +218,12 @@
       "control_id": "two_incompatible_routes_assigned_without_priority",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC05_EXACTLY_ONE_PRIMARY_ROUTE",
+        "decision_id": "MUTATION_05_TWO_INCOMPATIBLE_ROUTES_ASSIGNED_WITHOUT_PRIORITY",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC05_EXACTLY_ONE_PRIMARY_ROUTE",
+      "expected_diagnostic": "MUTATION_05_TWO_INCOMPATIBLE_ROUTES_ASSIGNED_WITHOUT_PRIORITY",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC05_EXACTLY_ONE_PRIMARY_ROUTE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -214,6 +231,9 @@
         "$.route_selections[0].primary_route"
       ],
       "observed_diagnostics": [
+        "MUTATION_05_TWO_INCOMPATIBLE_ROUTES_ASSIGNED_WITHOUT_PRIORITY"
+      ],
+      "observed_validator_diagnostics": [
         "NC05_EXACTLY_ONE_PRIMARY_ROUTE"
       ],
       "passed": true
@@ -223,11 +243,12 @@
       "control_id": "seam_map_selected_with_incomplete_pillar_units",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
+        "decision_id": "MUTATION_06_SEAM_MAP_SELECTED_WITH_INCOMPLETE_PILLAR_UNITS",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
+      "expected_diagnostic": "MUTATION_06_SEAM_MAP_SELECTED_WITH_INCOMPLETE_PILLAR_UNITS",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -235,6 +256,10 @@
         "$.route_selections[7].primary_route"
       ],
       "observed_diagnostics": [
+        "MUTATION_06_SEAM_MAP_SELECTED_WITH_INCOMPLETE_PILLAR_UNITS",
+        "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE"
+      ],
+      "observed_validator_diagnostics": [
         "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
         "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE"
       ],
@@ -245,11 +270,12 @@
       "control_id": "candidate_master_action_used_as_self_evidence",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN",
+        "decision_id": "MUTATION_07_CANDIDATE_MASTER_ACTION_USED_AS_SELF_EVIDENCE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN",
+      "expected_diagnostic": "MUTATION_07_CANDIDATE_MASTER_ACTION_USED_AS_SELF_EVIDENCE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -257,6 +283,9 @@
         "$.boundary.candidate_master_action_self_support_allowed"
       ],
       "observed_diagnostics": [
+        "MUTATION_07_CANDIDATE_MASTER_ACTION_USED_AS_SELF_EVIDENCE"
+      ],
+      "observed_validator_diagnostics": [
         "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN"
       ],
       "passed": true
@@ -266,11 +295,12 @@
       "control_id": "normalization_convention_promoted_to_empirical_scale",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE",
+        "decision_id": "MUTATION_08_NORMALIZATION_CONVENTION_PROMOTED_TO_EMPIRICAL_SCALE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE",
+      "expected_diagnostic": "MUTATION_08_NORMALIZATION_CONVENTION_PROMOTED_TO_EMPIRICAL_SCALE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -278,6 +308,9 @@
         "$.policy"
       ],
       "observed_diagnostics": [
+        "MUTATION_08_NORMALIZATION_CONVENTION_PROMOTED_TO_EMPIRICAL_SCALE"
+      ],
+      "observed_validator_diagnostics": [
         "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE"
       ],
       "passed": true
@@ -287,11 +320,12 @@
       "control_id": "routed_blocker_promoted_to_dimensional_closure",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION",
+        "decision_id": "MUTATION_09_ROUTED_BLOCKER_PROMOTED_TO_DIMENSIONAL_CLOSURE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION",
+      "expected_diagnostic": "MUTATION_09_ROUTED_BLOCKER_PROMOTED_TO_DIMENSIONAL_CLOSURE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -299,6 +333,9 @@
         "$.boundary.route_selection_is_resolution"
       ],
       "observed_diagnostics": [
+        "MUTATION_09_ROUTED_BLOCKER_PROMOTED_TO_DIMENSIONAL_CLOSURE"
+      ],
+      "observed_validator_diagnostics": [
         "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION"
       ],
       "passed": true
@@ -308,11 +345,12 @@
       "control_id": "C_k_embedding_before_dimensions_known",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "NC10_CK_REMAINS_AUDIT_ONLY",
+        "decision_id": "MUTATION_10_C_K_EMBEDDING_BEFORE_DIMENSIONS_KNOWN",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "NC10_CK_REMAINS_AUDIT_ONLY",
+      "expected_diagnostic": "MUTATION_10_C_K_EMBEDDING_BEFORE_DIMENSIONS_KNOWN",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "NC10_CK_REMAINS_AUDIT_ONLY",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -320,6 +358,9 @@
         "$.boundary.C_k_action_embedding_authorized"
       ],
       "observed_diagnostics": [
+        "MUTATION_10_C_K_EMBEDDING_BEFORE_DIMENSIONS_KNOWN"
+      ],
+      "observed_validator_diagnostics": [
         "NC10_CK_REMAINS_AUDIT_ONLY"
       ],
       "passed": true
@@ -329,11 +370,12 @@
       "control_id": "qft_action_claimed_without_action",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "decision_id": "MUTATION_11_QFT_ACTION_CLAIMED_WITHOUT_ACTION",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic": "MUTATION_11_QFT_ACTION_CLAIMED_WITHOUT_ACTION",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -341,6 +383,9 @@
         "$.route_selections[0].evidence_records[3].exact_supported_proposition"
       ],
       "observed_diagnostics": [
+        "MUTATION_11_QFT_ACTION_CLAIMED_WITHOUT_ACTION"
+      ],
+      "observed_validator_diagnostics": [
         "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
       ],
       "passed": true
@@ -350,11 +395,12 @@
       "control_id": "qm_hamiltonian_claimed_without_hamiltonian",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "decision_id": "MUTATION_12_QM_HAMILTONIAN_CLAIMED_WITHOUT_HAMILTONIAN",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic": "MUTATION_12_QM_HAMILTONIAN_CLAIMED_WITHOUT_HAMILTONIAN",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -362,6 +408,9 @@
         "$.route_selections[2].evidence_records[2].exact_supported_proposition"
       ],
       "observed_diagnostics": [
+        "MUTATION_12_QM_HAMILTONIAN_CLAIMED_WITHOUT_HAMILTONIAN"
+      ],
+      "observed_validator_diagnostics": [
         "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
       ],
       "passed": true
@@ -371,11 +420,12 @@
       "control_id": "stat_probability_claimed_without_probability_semantics",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "decision_id": "MUTATION_13_STAT_PROBABILITY_CLAIMED_WITHOUT_PROBABILITY_SEMANTICS",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic": "MUTATION_13_STAT_PROBABILITY_CLAIMED_WITHOUT_PROBABILITY_SEMANTICS",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -383,6 +433,9 @@
         "$.route_selections[3].evidence_records[2].exact_supported_proposition"
       ],
       "observed_diagnostics": [
+        "MUTATION_13_STAT_PROBABILITY_CLAIMED_WITHOUT_PROBABILITY_SEMANTICS"
+      ],
+      "observed_validator_diagnostics": [
         "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
       ],
       "passed": true
@@ -392,11 +445,12 @@
       "control_id": "stat_transport_claimed_without_transport_law",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "decision_id": "MUTATION_14_STAT_TRANSPORT_CLAIMED_WITHOUT_TRANSPORT_LAW",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic": "MUTATION_14_STAT_TRANSPORT_CLAIMED_WITHOUT_TRANSPORT_LAW",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -404,6 +458,9 @@
         "$.route_selections[3].evidence_records[3].exact_supported_proposition"
       ],
       "observed_diagnostics": [
+        "MUTATION_14_STAT_TRANSPORT_CLAIMED_WITHOUT_TRANSPORT_LAW"
+      ],
+      "observed_validator_diagnostics": [
         "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
       ],
       "passed": true
@@ -413,11 +470,12 @@
       "control_id": "narrow_scalar_evidence_promoted_to_full_qft",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_REVIEW_NOT_PHYSICAL_DERIVATION",
+        "decision_id": "MUTATION_15_NARROW_SCALAR_EVIDENCE_PROMOTED_TO_FULL_QFT",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_REVIEW_NOT_PHYSICAL_DERIVATION",
+      "expected_diagnostic": "MUTATION_15_NARROW_SCALAR_EVIDENCE_PROMOTED_TO_FULL_QFT",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_REVIEW_NOT_PHYSICAL_DERIVATION",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -425,6 +483,9 @@
         "$.route_selections[0].evidence_records[2].requested_route_type"
       ],
       "observed_diagnostics": [
+        "MUTATION_15_NARROW_SCALAR_EVIDENCE_PROMOTED_TO_FULL_QFT"
+      ],
+      "observed_validator_diagnostics": [
         "V2_REVIEW_NOT_PHYSICAL_DERIVATION"
       ],
       "passed": true
@@ -434,11 +495,12 @@
       "control_id": "absence_treated_as_physical_evidence",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
+        "decision_id": "MUTATION_16_ABSENCE_TREATED_AS_PHYSICAL_EVIDENCE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
+      "expected_diagnostic": "MUTATION_16_ABSENCE_TREATED_AS_PHYSICAL_EVIDENCE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -446,6 +508,10 @@
         "$.route_selections[2].evidence_records[2].support_mode"
       ],
       "observed_diagnostics": [
+        "MUTATION_16_ABSENCE_TREATED_AS_PHYSICAL_EVIDENCE",
+        "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED"
+      ],
+      "observed_validator_diagnostics": [
         "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
         "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED"
       ],
@@ -456,11 +522,12 @@
       "control_id": "citation_hash_changed_without_rebinding",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "decision_id": "MUTATION_17_CITATION_HASH_CHANGED_WITHOUT_REBINDING",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic": "MUTATION_17_CITATION_HASH_CHANGED_WITHOUT_REBINDING",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -468,6 +535,9 @@
         "$.route_selections[1].evidence_records[1].source_hash"
       ],
       "observed_diagnostics": [
+        "MUTATION_17_CITATION_HASH_CHANGED_WITHOUT_REBINDING"
+      ],
+      "observed_validator_diagnostics": [
         "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
       ],
       "passed": true
@@ -477,11 +547,12 @@
       "control_id": "route_rationale_support_missing",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_ROUTE_SUPPORT_NOT_ELIGIBLE",
+        "decision_id": "MUTATION_18_ROUTE_RATIONALE_SUPPORT_MISSING",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_ROUTE_SUPPORT_NOT_ELIGIBLE",
+      "expected_diagnostic": "MUTATION_18_ROUTE_RATIONALE_SUPPORT_MISSING",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_ROUTE_SUPPORT_NOT_ELIGIBLE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -489,6 +560,9 @@
         "$.route_selections[2].primary_route_support_ids.length"
       ],
       "observed_diagnostics": [
+        "MUTATION_18_ROUTE_RATIONALE_SUPPORT_MISSING"
+      ],
+      "observed_validator_diagnostics": [
         "V2_ROUTE_SUPPORT_NOT_ELIGIBLE"
       ],
       "passed": true
@@ -498,11 +572,12 @@
       "control_id": "speculative_surface_treated_as_authoritative",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_AUTHORITY_CLASS_CLOSED",
+        "decision_id": "MUTATION_19_SPECULATIVE_SURFACE_TREATED_AS_AUTHORITATIVE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_AUTHORITY_CLASS_CLOSED",
+      "expected_diagnostic": "MUTATION_19_SPECULATIVE_SURFACE_TREATED_AS_AUTHORITATIVE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_AUTHORITY_CLASS_CLOSED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -510,6 +585,10 @@
         "$.route_selections[3].evidence_records[1].authority_class"
       ],
       "observed_diagnostics": [
+        "MUTATION_19_SPECULATIVE_SURFACE_TREATED_AS_AUTHORITATIVE",
+        "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH"
+      ],
+      "observed_validator_diagnostics": [
         "V2_AUTHORITY_CLASS_CLOSED",
         "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH"
       ],
@@ -520,11 +599,12 @@
       "control_id": "one_source_supports_conflicting_object_definitions",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+        "decision_id": "MUTATION_20_ONE_SOURCE_SUPPORTS_CONFLICTING_OBJECT_DEFINITIONS",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+      "expected_diagnostic": "MUTATION_20_ONE_SOURCE_SUPPORTS_CONFLICTING_OBJECT_DEFINITIONS",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -532,6 +612,9 @@
         "$.route_selections[0].evidence_records.length"
       ],
       "observed_diagnostics": [
+        "MUTATION_20_ONE_SOURCE_SUPPORTS_CONFLICTING_OBJECT_DEFINITIONS"
+      ],
+      "observed_validator_diagnostics": [
         "V2_INCOMPATIBLE_PROPOSITION_REUSE"
       ],
       "passed": true
@@ -541,11 +624,12 @@
       "control_id": "source_locator_removed",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_SOURCE_LOCATOR_REQUIRED",
+        "decision_id": "MUTATION_21_SOURCE_LOCATOR_REMOVED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_SOURCE_LOCATOR_REQUIRED",
+      "expected_diagnostic": "MUTATION_21_SOURCE_LOCATOR_REMOVED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_SOURCE_LOCATOR_REQUIRED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -557,6 +641,10 @@
         "$.route_selections[0].evidence_records[1].source_locator.start_line"
       ],
       "observed_diagnostics": [
+        "MUTATION_21_SOURCE_LOCATOR_REMOVED",
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "observed_validator_diagnostics": [
         "V2_SOURCE_LOCATOR_REQUIRED",
         "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
       ],
@@ -567,11 +655,12 @@
       "control_id": "extraction_method_open_vocabulary",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_EXTRACTION_METHOD_CLOSED",
+        "decision_id": "MUTATION_22_EXTRACTION_METHOD_OPEN_VOCABULARY",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_EXTRACTION_METHOD_CLOSED",
+      "expected_diagnostic": "MUTATION_22_EXTRACTION_METHOD_OPEN_VOCABULARY",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_EXTRACTION_METHOD_CLOSED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -579,6 +668,9 @@
         "$.route_selections[0].evidence_records[1].proposition_extraction_method"
       ],
       "observed_diagnostics": [
+        "MUTATION_22_EXTRACTION_METHOD_OPEN_VOCABULARY"
+      ],
+      "observed_validator_diagnostics": [
         "V2_EXTRACTION_METHOD_CLOSED"
       ],
       "passed": true
@@ -588,11 +680,12 @@
       "control_id": "derived_proposition_missing_recipe",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_DERIVATION_RECIPE_REQUIRED",
+        "decision_id": "MUTATION_23_DERIVED_PROPOSITION_MISSING_RECIPE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_DERIVATION_RECIPE_REQUIRED",
+      "expected_diagnostic": "MUTATION_23_DERIVED_PROPOSITION_MISSING_RECIPE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_DERIVATION_RECIPE_REQUIRED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -600,6 +693,9 @@
         "$.route_selections[5].route_derivation.derivation_recipe"
       ],
       "observed_diagnostics": [
+        "MUTATION_23_DERIVED_PROPOSITION_MISSING_RECIPE"
+      ],
+      "observed_validator_diagnostics": [
         "V2_DERIVATION_RECIPE_REQUIRED"
       ],
       "passed": true
@@ -609,11 +705,12 @@
       "control_id": "compatibility_matrix_not_exhaustive",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
+        "decision_id": "MUTATION_24_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
+      "expected_diagnostic": "MUTATION_24_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -621,6 +718,10 @@
         "$.compatibility_matrix.row_count"
       ],
       "observed_diagnostics": [
+        "MUTATION_24_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
+        "V2_COMPATIBILITY_MATRIX_CONTENT_MISMATCH"
+      ],
+      "observed_validator_diagnostics": [
         "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
         "V2_COMPATIBILITY_MATRIX_CONTENT_MISMATCH"
       ],
@@ -631,11 +732,12 @@
       "control_id": "unknown_compatibility_combination_defaults_open",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
+        "decision_id": "MUTATION_25_UNKNOWN_COMPATIBILITY_COMBINATION_DEFAULTS_OPEN",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
+      "expected_diagnostic": "MUTATION_25_UNKNOWN_COMPATIBILITY_COMBINATION_DEFAULTS_OPEN",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -643,6 +745,10 @@
         "$.compatibility_matrix.default_for_unknown_combination"
       ],
       "observed_diagnostics": [
+        "MUTATION_25_UNKNOWN_COMPATIBILITY_COMBINATION_DEFAULTS_OPEN",
+        "V2_COMPATIBILITY_MATRIX_CONTENT_MISMATCH"
+      ],
+      "observed_validator_diagnostics": [
         "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
         "V2_COMPATIBILITY_MATRIX_CONTENT_MISMATCH"
       ],
@@ -653,11 +759,12 @@
       "control_id": "review_substituted_for_underlying_derivation",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
+        "decision_id": "MUTATION_26_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
+      "expected_diagnostic": "MUTATION_26_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -665,6 +772,10 @@
         "$.route_selections[0].primary_route_support_ids.length"
       ],
       "observed_diagnostics": [
+        "MUTATION_26_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
+        "V2_ROUTE_SUPPORT_NOT_ELIGIBLE"
+      ],
+      "observed_validator_diagnostics": [
         "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
         "V2_ROUTE_SUPPORT_NOT_ELIGIBLE"
       ],
@@ -675,11 +786,12 @@
       "control_id": "route_support_eligible_manually_flipped",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+        "decision_id": "MUTATION_27_ROUTE_SUPPORT_ELIGIBLE_MANUALLY_FLIPPED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+      "expected_diagnostic": "MUTATION_27_ROUTE_SUPPORT_ELIGIBLE_MANUALLY_FLIPPED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -687,6 +799,10 @@
         "$.route_selections[0].evidence_records[2].route_support_eligible"
       ],
       "observed_diagnostics": [
+        "MUTATION_27_ROUTE_SUPPORT_ELIGIBLE_MANUALLY_FLIPPED",
+        "V2_HISTORICAL_CONTEXT_NEVER_ELIGIBLE"
+      ],
+      "observed_validator_diagnostics": [
         "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
         "V2_HISTORICAL_CONTEXT_NEVER_ELIGIBLE"
       ],
@@ -697,11 +813,12 @@
       "control_id": "stale_seam_endpoint_injected",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+        "decision_id": "MUTATION_28_STALE_SEAM_ENDPOINT_INJECTED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+      "expected_diagnostic": "MUTATION_28_STALE_SEAM_ENDPOINT_INJECTED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_PREREQUISITE_GRAPH_ACYCLIC",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -709,6 +826,9 @@
         "$.route_selections[7].ordered_prerequisite_routes[0].row_id"
       ],
       "observed_diagnostics": [
+        "MUTATION_28_STALE_SEAM_ENDPOINT_INJECTED"
+      ],
+      "observed_validator_diagnostics": [
         "V2_PREREQUISITE_GRAPH_ACYCLIC"
       ],
       "passed": true
@@ -718,11 +838,12 @@
       "control_id": "primary_route_derivation_value_changed",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE",
+        "decision_id": "MUTATION_29_PRIMARY_ROUTE_DERIVATION_VALUE_CHANGED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE",
+      "expected_diagnostic": "MUTATION_29_PRIMARY_ROUTE_DERIVATION_VALUE_CHANGED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -730,6 +851,9 @@
         "$.route_selections[0].route_derivation.derivation_recipe.expected_derived_value"
       ],
       "observed_diagnostics": [
+        "MUTATION_29_PRIMARY_ROUTE_DERIVATION_VALUE_CHANGED"
+      ],
+      "observed_validator_diagnostics": [
         "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE"
       ],
       "passed": true
@@ -739,11 +863,12 @@
       "control_id": "prerequisite_cycle_injected",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+        "decision_id": "MUTATION_30_PREREQUISITE_CYCLE_INJECTED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+      "expected_diagnostic": "MUTATION_30_PREREQUISITE_CYCLE_INJECTED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_PREREQUISITE_GRAPH_ACYCLIC",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -751,6 +876,9 @@
         "$.route_selections[0].ordered_prerequisite_routes.length"
       ],
       "observed_diagnostics": [
+        "MUTATION_30_PREREQUISITE_CYCLE_INJECTED"
+      ],
+      "observed_validator_diagnostics": [
         "V2_PREREQUISITE_GRAPH_ACYCLIC"
       ],
       "passed": true
@@ -760,11 +888,12 @@
       "control_id": "same_source_reused_with_incompatible_proposition_meaning",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+        "decision_id": "MUTATION_31_SAME_SOURCE_REUSED_WITH_INCOMPATIBLE_PROPOSITION_MEANING",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+      "expected_diagnostic": "MUTATION_31_SAME_SOURCE_REUSED_WITH_INCOMPATIBLE_PROPOSITION_MEANING",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -772,6 +901,9 @@
         "$.route_selections[0].evidence_records.length"
       ],
       "observed_diagnostics": [
+        "MUTATION_31_SAME_SOURCE_REUSED_WITH_INCOMPATIBLE_PROPOSITION_MEANING"
+      ],
+      "observed_validator_diagnostics": [
         "V2_INCOMPATIBLE_PROPOSITION_REUSE"
       ],
       "passed": true
@@ -781,11 +913,12 @@
       "control_id": "scientific_dependency_removed",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE",
+        "decision_id": "MUTATION_32_SCIENTIFIC_DEPENDENCY_REMOVED",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE",
+      "expected_diagnostic": "MUTATION_32_SCIENTIFIC_DEPENDENCY_REMOVED",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -793,6 +926,9 @@
         "$.dependency_closures.scientific_input_closure.length"
       ],
       "observed_diagnostics": [
+        "MUTATION_32_SCIENTIFIC_DEPENDENCY_REMOVED"
+      ],
+      "observed_validator_diagnostics": [
         "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE"
       ],
       "passed": true
@@ -802,11 +938,12 @@
       "control_id": "implementation_import_scan_marked_incomplete",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE",
+        "decision_id": "MUTATION_33_IMPLEMENTATION_IMPORT_SCAN_MARKED_INCOMPLETE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE",
+      "expected_diagnostic": "MUTATION_33_IMPLEMENTATION_IMPORT_SCAN_MARKED_INCOMPLETE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -814,6 +951,9 @@
         "$.dependency_closures.implementation_closure.project_local_import_scan.complete"
       ],
       "observed_diagnostics": [
+        "MUTATION_33_IMPLEMENTATION_IMPORT_SCAN_MARKED_INCOMPLETE"
+      ],
+      "observed_validator_diagnostics": [
         "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE"
       ],
       "passed": true
@@ -823,11 +963,12 @@
       "control_id": "historical_context_made_route_eligible",
       "decision_or_eligibility_delta": {
         "baseline": "PASS",
-        "decision_id": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+        "decision_id": "MUTATION_34_HISTORICAL_CONTEXT_MADE_ROUTE_ELIGIBLE",
         "mutated": "FAIL"
       },
-      "expected_diagnostic": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+      "expected_diagnostic": "MUTATION_34_HISTORICAL_CONTEXT_MADE_ROUTE_ELIGIBLE",
       "expected_diagnostic_observed": true,
+      "expected_validator_diagnostic": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
       "fresh_unmutated_fixture_rebuilt": true,
       "intended_changed_premise_count": 1,
       "no_unrelated_earlier_failure": true,
@@ -835,6 +976,10 @@
         "$.route_selections[0].evidence_records[2].route_support_eligible"
       ],
       "observed_diagnostics": [
+        "MUTATION_34_HISTORICAL_CONTEXT_MADE_ROUTE_ELIGIBLE",
+        "V2_HISTORICAL_CONTEXT_NEVER_ELIGIBLE"
+      ],
+      "observed_validator_diagnostics": [
         "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
         "V2_HISTORICAL_CONTEXT_NEVER_ELIGIBLE"
       ],

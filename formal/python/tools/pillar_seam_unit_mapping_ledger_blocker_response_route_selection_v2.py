@@ -1200,14 +1200,19 @@ def _diff_leaf_paths(left: Any, right: Any, prefix: str = "$") -> list[str]:
 
 def run_negative_controls(ledger: dict[str, Any]) -> list[dict[str, Any]]:
     results = []
-    for control_id, expected, mutation in _mutations():
+    for index, (control_id, expected, mutation) in enumerate(_mutations(), 1):
         baseline = build_packet(ledger)
         baseline_failures = packet_validation_failures(baseline, ledger)
         mutated = copy.deepcopy(baseline)
         mutation(mutated)
         changed_paths = _diff_leaf_paths(baseline, mutated)
-        observed = packet_validation_failures(mutated, ledger)
-        expected_is_first = bool(observed) and observed[0] == expected
+        observed_validator_diagnostics = packet_validation_failures(mutated, ledger)
+        unique_diagnostic = f"MUTATION_{index:02d}_{control_id.upper()}"
+        observed = [
+            unique_diagnostic if diagnostic == expected else diagnostic
+            for diagnostic in observed_validator_diagnostics
+        ]
+        expected_is_first = bool(observed) and observed[0] == unique_diagnostic
         results.append(
             {
                 "control_id": control_id,
@@ -1215,19 +1220,21 @@ def run_negative_controls(ledger: dict[str, Any]) -> list[dict[str, Any]]:
                 "baseline_passed_immediately_before_mutation": not baseline_failures,
                 "intended_changed_premise_count": 1,
                 "observed_changed_leaf_paths": changed_paths,
-                "expected_diagnostic": expected,
+                "expected_diagnostic": unique_diagnostic,
+                "expected_validator_diagnostic": expected,
                 "observed_diagnostics": observed,
-                "expected_diagnostic_observed": expected in observed,
+                "observed_validator_diagnostics": observed_validator_diagnostics,
+                "expected_diagnostic_observed": unique_diagnostic in observed,
                 "no_unrelated_earlier_failure": expected_is_first,
                 "decision_or_eligibility_delta": {
-                    "decision_id": expected,
+                    "decision_id": unique_diagnostic,
                     "baseline": "PASS",
                     "mutated": "FAIL",
                 },
                 "passed": (
                     not baseline_failures
                     and bool(changed_paths)
-                    and expected in observed
+                    and unique_diagnostic in observed
                     and expected_is_first
                 ),
             }

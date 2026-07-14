@@ -23,16 +23,16 @@ def postAcceptanceTarget : String :=
   "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0"
 
 def generatorSha256 : String :=
-  "b29226670791b0ab507f2ac0069adb69231a47adfd249bca327f2f4e294745f7"
+  "aa8c8a83433c8b70543cd211dd1aa7dd0ca73bb597c2de6490785edad140dcd7"
 
 def packetSha256 : String :=
-  "c94ebdd98c36f2ea88f3812083af193a9c1b3249a6a4f8854ef3e264c256b60f"
+  "500c8add643330cf2528d2c7ee37c8d255b43393cc9f93e0e7ae5cb84a28bdfc"
 
 def manifestSha256 : String :=
-  "427996ecbfef311918a63b5a1de306c214c84654f72fc294fdfaa9217a77e07b"
+  "780f5f66aa0fae81ca1d807267056a0576a77693173fcb566d362432093d1d95"
 
 def reportSha256 : String :=
-  "e6ac4f993c055d0498b13576c04d91bc2b2bd2fa4c1761fad928ea762396a6b2"
+  "20690b3c15b7e96b2303157987c04eb8ea385829aeaabe5b42ad5aada50f9014"
 
 def promptSha256 : String :=
   "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"

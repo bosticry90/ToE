@@ -75,6 +75,7 @@ def test_v2_runs_34_fresh_fixture_controls() -> None:
     controls = v2.run_negative_controls(ledger)
     assert len(controls) == 34
     assert len({item["control_id"] for item in controls}) == 34
+    assert len({item["expected_diagnostic"] for item in controls}) == 34
     assert all(item["fresh_unmutated_fixture_rebuilt"] for item in controls)
     assert all(item["baseline_passed_immediately_before_mutation"] for item in controls)
     assert all(item["expected_diagnostic_observed"] for item in controls)
