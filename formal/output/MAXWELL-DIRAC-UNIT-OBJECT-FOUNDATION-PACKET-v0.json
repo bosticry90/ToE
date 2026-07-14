@@ -1,0 +1,1261 @@
+{
+  "C_dim_order_checks": [
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "psi",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "A_mu",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "1",
+        "2",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "1",
+        "2",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "F_munu",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "q",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "0",
+        "-1",
+        "0",
+        "1",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "0",
+        "-1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "j_number_mu",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "J_em_mu",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "0",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "0",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "L_physical",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "T_munu",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "C_dim_order_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "audit_only_not_dynamic": true,
+      "object_id": "action",
+      "passed": true,
+      "reduce_after_restore_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "restore_after_reduce_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "Maxwell_Dirac_result_claimed": false,
+    "foundation_accepted": false,
+    "master_action_promoted": false,
+    "numerical_execution_authorized": false,
+    "reduction_authorized": false,
+    "registry_maintenance_paused": true
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "conventions": {
+    "Clifford_relation": "{gamma^a,gamma^b}=2 eta^{ab}",
+    "Dirac_adjoint": "bar(psi)=psi^dagger gamma^0",
+    "adjoint_derivative": "D_mu bar(psi_s)=nabla_mu bar(psi_s)-i q_s A_mu bar(psi_s)/hbar",
+    "coordinates": "length-valued",
+    "covariant_derivative_negative_charge": "D_mu psi_-=(nabla_mu-i q A_mu/hbar)psi_-",
+    "covariant_derivative_positive_charge": "D_mu psi_+=(nabla_mu+i q A_mu/hbar)psi_+",
+    "derivative": "inverse length",
+    "electromagnetic_normalization": "rationalized SI with mu_0 explicit",
+    "external_action_unit": "hbar",
+    "internal_units": "c=hbar=1",
+    "metric_and_tetrads": "dimensionless",
+    "metric_signature": "+---",
+    "oriented_tetrad": "det(e)>0",
+    "x0_external": "ct"
+  },
+  "derived_equations": {
+    "Dirac_minus": "(i hbar c gamma^mu D_mu-m c^2)psi_-=0",
+    "Dirac_plus": "(i hbar c gamma^mu D_mu-m c^2)psi_+=0",
+    "Maxwell": "nabla_mu F^munu=mu_0 J^nu",
+    "Maxwell_exchange": "nabla_mu T_EM^munu=-F^nu_lambda J^lambda",
+    "adjoint_equations": "i hbar c (D_mu bar(psi_s))gamma^mu+m c^2 bar(psi_s)=0",
+    "matter_exchange": "nabla_mu sum_s T_D,s^munu=+F^nu_lambda J^lambda",
+    "number_current_conservation": "nabla_mu j_s^mu=0 for each species",
+    "source_current_conservation": "nabla_mu J^mu=0",
+    "total_conservation": "nabla_mu(T_EM^munu+sum_s T_D,s^munu)=0"
+  },
+  "dimension_checks": [
+    {
+      "check_id": "D4_Dirac_kinetic",
+      "expected_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D4_Dirac_mass",
+      "expected_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D4_Maxwell",
+      "expected_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D4_interaction",
+      "expected_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D4_current_restoration",
+      "expected_vector": [
+        "0",
+        "-2",
+        "-1",
+        "1",
+        "0"
+      ],
+      "observed_vector": [
+        "0",
+        "-2",
+        "-1",
+        "1",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D4_action",
+      "expected_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D2_Dirac_kinetic",
+      "expected_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D2_Dirac_mass",
+      "expected_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D2_Maxwell",
+      "expected_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D2_interaction",
+      "expected_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D2_current_restoration",
+      "expected_vector": [
+        "0",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ],
+      "observed_vector": [
+        "0",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "check_id": "D2_action",
+      "expected_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "observed_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "passed": true,
+      "residual_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "external_dimension_ledger": [
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "x_mu",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "x^0=ct; all coordinates are length-valued"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "partial_mu",
+      "restoration_dependencies": [],
+      "restoration_expression": "partial/partial x^mu"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "metric_g_munu",
+      "restoration_dependencies": [],
+      "restoration_expression": "dimensionless"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "tetrad_e_a_mu",
+      "restoration_dependencies": [],
+      "restoration_expression": "dimensionless"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "hbar",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "retained explicitly externally"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "1",
+        "-1",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "c",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "retained explicitly externally"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "1",
+        "0",
+        "-2",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "mu_0",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "rationalized SI electromagnetic normalization"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "mass_m",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "equal species masses"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "charge_q_3p1",
+      "restoration_dependencies": [],
+      "restoration_expression": "q_+=+q, q_-=-q"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-3/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": "3/2",
+      "object_id": "psi_3p1",
+      "restoration_dependencies": [],
+      "restoration_expression": "number-density normalization: psi^dagger psi has L^-3"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": "1",
+      "object_id": "A_mu_3p1",
+      "restoration_dependencies": [
+        "hbar"
+      ],
+      "restoration_expression": "q A_mu / hbar has inverse-length dimension"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "0",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": "2",
+      "object_id": "F_munu_3p1",
+      "restoration_dependencies": [],
+      "restoration_expression": "partial_mu A_nu - partial_nu A_mu"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-3",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": "3",
+      "object_id": "j_number_mu_3p1",
+      "restoration_dependencies": [],
+      "restoration_expression": "bar(psi) gamma^mu psi"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-2",
+        "-1",
+        "1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "J_em_mu_3p1",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "q c j_number^mu"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "L_physical_3p1",
+      "restoration_dependencies": [],
+      "restoration_expression": "energy per spatial volume"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "T_munu_3p1",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "physical stress-energy density"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "action_S",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "S=(1/c) integral d^4x sqrt(-g) L_physical"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "A_perp",
+      "restoration_dependencies": [
+        "c"
+      ],
+      "restoration_expression": "transverse physical area reserved for reviewed reduction"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-1",
+        "0",
+        "1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "q_1p1_candidate",
+      "restoration_dependencies": [
+        "c",
+        "A_perp"
+      ],
+      "restoration_expression": "q_3p1/sqrt(A_perp); not reduction-authoritative before Pair D"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "psi_1p1_candidate",
+      "restoration_dependencies": [
+        "A_perp"
+      ],
+      "restoration_expression": "sqrt(A_perp) psi_3p1"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "2",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "A_mu_1p1_candidate",
+      "restoration_dependencies": [
+        "A_perp"
+      ],
+      "restoration_expression": "sqrt(A_perp) A_mu_3p1"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "F_munu_1p1_candidate",
+      "restoration_dependencies": [
+        "A_perp"
+      ],
+      "restoration_expression": "sqrt(A_perp) F_munu_3p1"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "j_number_mu_1p1_candidate",
+      "restoration_dependencies": [
+        "A_perp"
+      ],
+      "restoration_expression": "A_perp j_number_3p1"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "0",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "J_em_mu_1p1_candidate",
+      "restoration_dependencies": [
+        "A_perp"
+      ],
+      "restoration_expression": "sqrt(A_perp) J_em_3p1"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "L_physical_1p1_candidate",
+      "restoration_dependencies": [
+        "c",
+        "A_perp"
+      ],
+      "restoration_expression": "A_perp L_physical_3p1"
+    },
+    {
+      "external_dimension_axes": [
+        "M",
+        "L",
+        "T",
+        "Q",
+        "Theta"
+      ],
+      "external_dimension_vector": [
+        "1",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ],
+      "internal_mass_dimension_D4": null,
+      "object_id": "T_munu_1p1_candidate",
+      "restoration_dependencies": [
+        "A_perp"
+      ],
+      "restoration_expression": "A_perp T_munu_3p1"
+    }
+  ],
+  "failure_target": "prepare_maxwell_dirac_unit_object_foundation_packet_v1",
+  "field_semantics": {
+    "electromagnetic_source_current_external": "J_SI^mu=q c j_+^mu-q c j_-^mu",
+    "electromagnetic_source_current_internal": "J^mu=q j_+^mu-q j_-^mu",
+    "equal_masses": true,
+    "interpretation": "classical Maxwell-Dirac PDE surrogate",
+    "number_current": "j_s^mu=bar(psi_s) gamma^mu psi_s",
+    "opposite_charges": true,
+    "spectral_diagnostics": [
+      "initial free-Hamiltonian positive-frequency weight",
+      "initial free-Hamiltonian negative-frequency weight",
+      "time-dependent projections onto the frozen free diagnostic basis",
+      "interaction-driven redistribution is not quantum pair creation"
+    ],
+    "spinor_type": "commuting complex c-number spinor"
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e84d7a00a29a21dae59a8d3fb26f56a6a97cf3b6021766a6b176fde81a3d610d"
+    }
+  ],
+  "internal_mass_dimension_formula": {
+    "D2": {
+      "A_mu": "0",
+      "F_munu": "1",
+      "J_em_mu_equals_q_times_j": "2",
+      "Lagrangian_density": "2",
+      "j_number_mu": "1",
+      "psi": "1/2",
+      "q": "1",
+      "stress_energy": "2"
+    },
+    "D4": {
+      "A_mu": "1",
+      "F_munu": "2",
+      "J_em_mu_equals_q_times_j": "3",
+      "Lagrangian_density": "4",
+      "j_number_mu": "3",
+      "psi": "3/2",
+      "q": "0",
+      "stress_energy": "4"
+    },
+    "general_D": {
+      "A_mu": "(D-2)/2",
+      "F_munu": "D/2",
+      "J_em_mu_equals_q_times_j": "(D+2)/2",
+      "Lagrangian_density": "D",
+      "j_number_mu": "D-1",
+      "psi": "(D-1)/2",
+      "q": "(4-D)/2",
+      "stress_energy": "D"
+    }
+  },
+  "nonclaims": [
+    "no Grassmann variables",
+    "no Fermi statistics or anticommutation relations",
+    "no Fock space, Pauli exclusion, or vacuum interpretation",
+    "no quantum particle creation",
+    "no stable classical fermionic matter theory",
+    "no dimensional reduction accepted in Pair C",
+    "no numerical guardrail or execution accepted in Pair C",
+    "no EM or QFT pillar recovery or seam closure",
+    "no Standard Model, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0",
+  "preferred_benchmark_candidate": "TWO_SPECIES_CNUMBER_MAXWELL_DIRAC",
+  "prompt_protection": {
+    "excluded_from_scientific_inputs": true,
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "resolution_execution_readiness_candidate": {
+    "authoritative_before_review": false,
+    "dependency_readiness": 2,
+    "evidence_authority": 2,
+    "noncircularity": 2,
+    "object_clarity": 2,
+    "ready_if_and_only_if_independent_review_accepts": true,
+    "restoration_clarity": 2,
+    "unresolved_conflicts": []
+  },
+  "schema_id": "MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_v0",
+  "selected_next_target": "review_maxwell_dirac_unit_object_foundation_packet_v0_result",
+  "selected_next_target_kind": "maxwell_dirac_unit_object_foundation_packet_v0_result_review",
+  "selected_unit_prerequisite": "PILLAR-SR-units_and_dimensions-v0",
+  "shared_action": {
+    "boundary_assumption": "compact-support variations or frozen periodic boundaries make admitted total divergences integrate to zero",
+    "external": "S=(1/c) integral d^4x sqrt(-g) [sum_s {i hbar c/2 (bar(psi_s) gamma^mu D_mu psi_s-(D_mu bar(psi_s)) gamma^mu psi_s)-m c^2 bar(psi_s)psi_s}-F_munu F^munu/(4 mu_0)]",
+    "internal": "S=sum_s integral d^4x sqrt(-g) [i/2 (bar(psi_s) gamma^mu D_mu psi_s-(D_mu bar(psi_s)) gamma^mu psi_s)-m bar(psi_s)psi_s]-integral d^4x sqrt(-g) F_munu F^munu/4",
+    "real_symmetrized": true,
+    "species": [
+      {
+        "charge": "+q",
+        "mass": "m",
+        "species_id": "psi_plus"
+      },
+      {
+        "charge": "-q",
+        "mass": "m",
+        "species_id": "psi_minus"
+      }
+    ]
+  },
+  "target": "prepare_maxwell_dirac_unit_object_foundation_packet_v0",
+  "tetrad_variation_derivation": {
+    "Belinfante_status": "OPTIONAL_EQUIVALENCE_CROSS_CHECK_ONLY",
+    "Dirac_Hilbert_tensor_each_species": "T_D,s^munu=(i hbar c/4)[bar(psi_s)gamma^mu D^nu psi_s+bar(psi_s)gamma^nu D^mu psi_s-(D^nu bar(psi_s))gamma^mu psi_s-(D^mu bar(psi_s))gamma^nu psi_s]",
+    "Maxwell_Hilbert_tensor": "T_EM^munu=(1/mu_0)[-F^mu_lambda F^{nu lambda}+(1/4)g^munu F_ab F^ab]",
+    "canonical_route": "HILBERT_TENSOR_FROM_ORIENTED_TETRAD_VARIATION",
+    "off_shell_note": "The displayed Dirac tensor is the on-shell Hilbert representative; the off-shell tetrad response differs by the explicitly tracked action/Euler-Lagrange term and admitted boundary improvement.",
+    "ordered_steps": [
+      "vary det(e) with fixed orientation",
+      "vary gamma^mu=e_a^mu gamma^a and the spin connection consistently",
+      "integrate the spin-connection variation by parts under the admitted boundary assumption",
+      "use the real symmetrized Dirac action without mixing signatures",
+      "collect the symmetric tetrad response for each charged species",
+      "vary A_mu independently to obtain the sourced Maxwell equation",
+      "apply the on-shell Dirac, adjoint, and Maxwell equations to the Hilbert identity"
+    ],
+    "policy_selected_tensor_used": false,
+    "variation_variable": "e^a_mu"
+  }
+}

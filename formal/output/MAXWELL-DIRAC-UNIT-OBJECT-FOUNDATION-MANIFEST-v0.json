@@ -1,0 +1,20 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 14,
+  "generator": {
+    "path": "formal/python/tools/maxwell_dirac_unit_object_foundation.py",
+    "sha256": "19a8892a1feb020d36cdb46c5901116393259f6e21015db8b9e9743532ed7e50"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e84d7a00a29a21dae59a8d3fb26f56a6a97cf3b6021766a6b176fde81a3d610d"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-PACKET-v0.json",
+    "sha256": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc"
+  },
+  "schema_id": "MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_MANIFEST_v0",
+  "selected_next_target": "review_maxwell_dirac_unit_object_foundation_packet_v0_result"
+}

@@ -1,0 +1,100 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "19a8892a1feb020d36cdb46c5901116393259f6e21015db8b9e9743532ed7e50",
+    "manifest_sha256": "d7bc5592457e335b83609de499b9f3e3c72a57f2960cd0e9e50f2782f3bae97a",
+    "packet_sha256": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "Maxwell_Dirac_result_claimed": false,
+    "foundation_accepted": false,
+    "master_action_promoted": false,
+    "numerical_execution_authorized": false,
+    "reduction_authorized": false,
+    "registry_maintenance_paused": true
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "A review-pending, unit-complete two-species c-number Maxwell-Dirac foundation is derived from one symmetrized action; no reduction or numerical result is claimed.",
+  "decision_count": 14,
+  "decisions": [
+    {
+      "decision_id": "accepted_selector_review_authorizes_foundation_preparation",
+      "passed": true
+    },
+    {
+      "decision_id": "SR_conventions_are_exact_and_restorable",
+      "passed": true
+    },
+    {
+      "decision_id": "general_D_internal_dimensions_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "D4_and_D2_dimension_tables_are_distinct",
+      "passed": true
+    },
+    {
+      "decision_id": "external_dimension_ledger_is_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "all_action_terms_have_common_external_dimension",
+      "passed": true
+    },
+    {
+      "decision_id": "restore_reduce_commutation_is_zero_audit_only",
+      "passed": true
+    },
+    {
+      "decision_id": "two_equal_mass_opposite_charge_species_are_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "cnumber_spinor_semantics_and_negative_frequency_nonclaim_are_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "real_symmetrized_shared_action_is_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "Hilbert_tensor_is_derived_by_tetrad_variation_route",
+      "passed": true
+    },
+    {
+      "decision_id": "Dirac_Maxwell_current_exchange_and_total_conservation_share_one_action",
+      "passed": true
+    },
+    {
+      "decision_id": "resolution_execution_readiness_remains_review_conditional",
+      "passed": true
+    },
+    {
+      "decision_id": "all_downstream_nonclaims_and_Prompt_guard_hold",
+      "passed": true
+    }
+  ],
+  "dimension_check_count": 12,
+  "dimension_order_check_count": 9,
+  "failure_target": "prepare_maxwell_dirac_unit_object_foundation_packet_v1",
+  "nonclaims": [
+    "no Grassmann variables",
+    "no Fermi statistics or anticommutation relations",
+    "no Fock space, Pauli exclusion, or vacuum interpretation",
+    "no quantum particle creation",
+    "no stable classical fermionic matter theory",
+    "no dimensional reduction accepted in Pair C",
+    "no numerical guardrail or execution accepted in Pair C",
+    "no EM or QFT pillar recovery or seam closure",
+    "no Standard Model, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0",
+  "resolution_execution_readiness_authoritative": false,
+  "schema_id": "MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_20260713_v0",
+  "selected_next_target": "review_maxwell_dirac_unit_object_foundation_packet_v0_result",
+  "selected_next_target_kind": "maxwell_dirac_unit_object_foundation_packet_v0_result_review",
+  "target": "prepare_maxwell_dirac_unit_object_foundation_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}
