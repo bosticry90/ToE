@@ -1,0 +1,170 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "canonical_execution_authorized": false,
+    "canonical_result_claimed": false,
+    "non_authoritative_pilot_execution_authorized": true,
+    "numerical_guardrail_accepted": true,
+    "pilot_result_authoritative": false,
+    "pure_1p1_truncation_rehabilitated": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The descendant-aware mixed link/site numerical guardrail is accepted; only a non-authoritative engineering pilot is authorized.",
+  "decision_count": 20,
+  "decisions": [
+    {
+      "decision_id": "immutable_numerical_guardrail_preparation_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "periodic_neutral_two_species_domain_is_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "positive_and_negative_link_covariance_is_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "group_update_preserves_unit_modulus_without_projection",
+      "passed": true
+    },
+    {
+      "decision_id": "phi2_phi3_are_gauge_invariant_real_site_descendants",
+      "passed": true
+    },
+    {
+      "decision_id": "temporal_residual_gauge_and_holonomy_controls_are_distinct",
+      "passed": true
+    },
+    {
+      "decision_id": "Wilson_r1_dispersion_and_doubler_shift_are_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_descendant_momenta_gradients_and_gamma_couplings_are_present",
+      "passed": true
+    },
+    {
+      "decision_id": "discrete_action_symmetry_earns_continuity_and_Gauss_constraints",
+      "passed": true
+    },
+    {
+      "decision_id": "bounded_convergent_energy_class_is_the_honest_selection",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eight_energy_terms_are_present",
+      "passed": true
+    },
+    {
+      "decision_id": "four_exchange_channels_are_diagnostic_not_tautological",
+      "passed": true
+    },
+    {
+      "decision_id": "twelve_positive_and_twenty_seven_negative_controls_are_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "previous_transverse_blocker_remains_a_regression_control",
+      "passed": true
+    },
+    {
+      "decision_id": "pilot_scientific_choices_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "pilot_may_change_only_six_engineering_parameters",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_and_threshold_rules_are_proportionate_and_non_circular",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_observable_inventory_covers_descendant_channels",
+      "passed": true
+    },
+    {
+      "decision_id": "only_non_authoritative_pilot_execution_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "claim_nonclaims_nonpromotion_and_Prompt_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_discrete_audit": {
+    "Gauss_rule_reason": "discrete gauge symmetry gives an algebraic Noether identity; floating-point preservation is limited by the coupled nonlinear solve",
+    "Wilson_dispersion_samples_r1": [
+      {
+        "Wilson_mass_shift_times_a": 0,
+        "ka": "0",
+        "sin_squared": 0
+      },
+      {
+        "Wilson_mass_shift_times_a": 1,
+        "ka": "pi/2",
+        "sin_squared": 1
+      },
+      {
+        "Wilson_mass_shift_times_a": 2,
+        "ka": "pi",
+        "sin_squared": 0
+      }
+    ],
+    "both_species_covariant": true,
+    "descendants_gauge_invariant_under_zero_modes": true,
+    "doubler_mass_shift_at_pi_over_a": "2/a",
+    "energy_classification_reason": "fixed-step implicit midpoint is second-order and time-symmetric but does not generally conserve the nonlinear continuum Hamiltonian exactly",
+    "group_update_norm_identity": "|exp(i Delta_theta) U|=|U|=1",
+    "negative_link_covariance": {
+      "conjugate_link_after_transform": "+alpha_n-theta_n-alpha_(n+1)",
+      "neighbor_spinor": "+alpha_(n+1)",
+      "result": "alpha_n-theta_n"
+    },
+    "positive_link_covariance": {
+      "link_after_transform": "-alpha_n+theta_n+alpha_(n+1)",
+      "neighbor_spinor": "-alpha_(n+1)",
+      "result": "theta_n-alpha_n"
+    }
+  },
+  "nonclaims": [
+    "no canonical numerical result yet",
+    "no exact continuum-energy conservation claim",
+    "no pure 1+1 truncation or transverse decoupling",
+    "no stable classical fermionic matter or fermionic QFT",
+    "no quantum pair creation, Fermi statistics, or quantized electromagnetism",
+    "no full 3+1 photon recovery",
+    "no pillar completion, seam closure, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "passed_decision_count": 20,
+  "preparation_custody": {
+    "commit": "5608ae1d464c9de2cfc741e89137b6865f5de79b",
+    "commit_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_20260713_v0.json": "e128a71881a56be1a089781dac2defa3aee25975ed2589d99c2f0319be963088",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-MANIFEST-v0.json": "f26597414bf2fb7183d0edadc9b75869df8c2790ac6119f067a6203212a376df",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py": "76265ff0e54e2d826a9fa5268ec41f3d91bfed8a6cbf279d7eae3528ee7d1542"
+    },
+    "expected_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_20260713_v0.json": "e128a71881a56be1a089781dac2defa3aee25975ed2589d99c2f0319be963088",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-MANIFEST-v0.json": "f26597414bf2fb7183d0edadc9b75869df8c2790ac6119f067a6203212a376df",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py": "76265ff0e54e2d826a9fa5268ec41f3d91bfed8a6cbf279d7eae3528ee7d1542"
+    },
+    "parent": "b5e12343138d9218457066ca4b2462ccae795a65",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_20260713_v0.json": "e128a71881a56be1a089781dac2defa3aee25975ed2589d99c2f0319be963088",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-MANIFEST-v0.json": "f26597414bf2fb7183d0edadc9b75869df8c2790ac6119f067a6203212a376df",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py": "76265ff0e54e2d826a9fa5268ec41f3d91bfed8a6cbf279d7eae3528ee7d1542"
+    }
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0",
+  "selected_next_target_kind": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0",
+  "verdict": "ACCEPT"
+}
