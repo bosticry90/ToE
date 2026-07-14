@@ -1,0 +1,68 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "CCFT_validation_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "accepted_scientific_design_rewritten": false,
+    "axis_normalization_repair_preparation_authorized": true,
+    "canonical_E_REPRO_result_remains_accepted": true,
+    "canonical_robustness_execution_authorized": false,
+    "exact_parameter_matrix_frozen": false,
+    "guardrail_blocker_accepted": true,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_authorized": false,
+    "repair_method_selected": false,
+    "robustness_guardrail_accepted": false,
+    "robustness_pilot_authorized": false,
+    "seam_closure_authorized": false
+  },
+  "blocker_confirmed": true,
+  "blocker_statement": "F_PERP_INITIAL cannot be frozen as a bounded [0,1] fraction because its accepted denominator is the signed registered c-number Dirac total energy; an admitted +pi/2 sector-phase row gives f_perp_initial > 1.",
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling": "An independent review confirms a normalization contradiction in the unexecuted robustness guardrail. The accepted canonical E-REPRO result remains immutable; no robustness matrix, calibration, or execution is authorized.",
+  "independent_counterexample": {
+    "calculation_imports_preparation_generator": false,
+    "delta_theta_psi_radians": 1.5707963267948966,
+    "exceeds_declared_upper_bound": true,
+    "f_perp_initial": 1.0003377834191158,
+    "grid_size": 32,
+    "registered_signed_total_energy": 0.003476934671143496,
+    "transverse_descendant_energy": 0.003478109122024757
+  },
+  "preparation_binding": {
+    "preparation_commit": "a38e1884bb05851cb96e37f748129cacccb38c8d",
+    "preparation_parent": "88e054232edf8f93c9b765e60d15748145f5747d",
+    "preparation_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_20260713_v0.json": "bdcc24e71d447c2cd176f0450ec8cfe151cf553b821841f5d0a26476e043ef17",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-MANIFEST-v0.json": "b5227816910494b5f81bfd69a4a87ba99fb8d5c2b0f2cf2d24e862dafead07d5",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v0.json": "48f4657fbfb93730678774e56ebdf13f3bfbb039b49e1941a40ab9e5ab718fef",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail.py": "04c9683fb363d273507abb96a6cc67c9154984a3dfd92e33662638e163476157",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessGuardrailPacket.lean": "b17334cab717476b0cb8942fb253f66e1c46aee244e14077a35abeb1661b18f5"
+    }
+  },
+  "preparation_generator_imported": false,
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "review_decisions": {
+    "accepted_axis_formula_preserved": true,
+    "accepted_fraction_domain_preserved": true,
+    "all_preparation_mutations_discriminate": true,
+    "blocker_code_exact": true,
+    "bounded_fraction_contract_fails": true,
+    "canonical_result_not_reopened": true,
+    "claim_nonpromotion_preserved": true,
+    "counterexample_independently_exceeds_one": true,
+    "counterexample_value_agrees": true,
+    "matrix_and_thresholds_unfrozen": true,
+    "no_repair_method_auto_selected": true,
+    "only_admitted_phase_axis_varied": true,
+    "pilot_and_execution_unauthorized": true,
+    "preparation_reports_blocker_pending_review": true,
+    "preparation_target_exact": true,
+    "signed_denominator_not_declared_positive_definite": true
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v0_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0",
+  "selected_next_target_kind": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0",
+  "verdict": "B-BLOCKED_F_PERP_NORMALIZATION_NOT_BOUNDED"
+}
