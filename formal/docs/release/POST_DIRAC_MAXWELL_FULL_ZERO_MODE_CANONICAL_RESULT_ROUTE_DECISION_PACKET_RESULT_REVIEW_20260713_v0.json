@@ -1,0 +1,308 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "CCFT_validation_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "canonical_result_reopened": false,
+    "descendant_necessity_robustness_preparation_authorized": true,
+    "empirical_adequacy_authorized": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_authorized": false,
+    "post_result_route_decision_accepted": true,
+    "robustness_design_accepted": false,
+    "robustness_execution_authorized": false,
+    "robustness_parameter_family_frozen": false,
+    "seam_admissibility_or_closure_authorized": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "Independent proposition and score reconstruction selects a bounded descendant-necessity and parameter-robustness preparation; no robustness execution or broader authority promotion is authorized.",
+  "decision_count": 18,
+  "decisions": [
+    {
+      "decision_id": "immutable_post_result_route_decision_preparation_is_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_canonical_E_REPRO_result_is_the_exact_live_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "all_six_planning_sources_and_twelve_propositions_are_independently_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_five_candidate_identity_is_reproduced",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eight_criterion_weights_are_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_forty_scores_are_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_five_weighted_totals_are_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "every_score_support_id_resolves_to_an_eligible_proposition",
+      "passed": true
+    },
+    {
+      "decision_id": "user_recommendation_and_external_context_did_not_enter_scoring",
+      "passed": true
+    },
+    {
+      "decision_id": "descendant_necessity_robustness_is_independent_highest_score",
+      "passed": true
+    },
+    {
+      "decision_id": "selection_is_stable_from_40_through_48",
+      "passed": true
+    },
+    {
+      "decision_id": "selected_route_axes_comparators_observables_and_outcomes_are_bounded",
+      "passed": true
+    },
+    {
+      "decision_id": "invalid_truncation_is_comparator_only_not_a_rival_model",
+      "passed": true
+    },
+    {
+      "decision_id": "ten_mutation_controls_and_no_oracle_boundary_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "completed_tranches_and_canonical_result_are_not_reopened",
+      "passed": true
+    },
+    {
+      "decision_id": "only_descendant_necessity_robustness_preparation_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "pillar_seam_empirical_C_k_CCFT_master_action_and_repository_nonpromotions_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_is_preserved",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_evidence_audit": {
+    "all_propositions_match": true,
+    "all_score_support_ids_are_known": true,
+    "proposition_checks": [
+      {
+        "observed_value": "ACCEPT_BOUNDED_SCIENTIFIC_RESULT",
+        "passed": true,
+        "pointer": "/verdict",
+        "proposition_id": "P_CANONICAL_RESULT_ACCEPTED",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": "E-REPRO",
+        "passed": true,
+        "pointer": "/accepted_claim_label",
+        "proposition_id": "P_CANONICAL_E_REPRO_SCOPE",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": 6.826809919994493e-08,
+        "passed": true,
+        "pointer": "/result_metrics/transverse_signal",
+        "proposition_id": "P_TRANSVERSE_SIGNAL_ACTIVE",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": 352.6967159703898,
+        "passed": true,
+        "pointer": "/result_metrics/exchange_ratio",
+        "proposition_id": "P_EXCHANGE_SIGNAL_SEPARATED",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": true,
+        "passed": true,
+        "pointer": "/independent_reproduction/all_fifty_records_reproduced",
+        "proposition_id": "P_COMPLETE_MATRIX_REPRODUCED",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": false,
+        "passed": true,
+        "pointer": "/authority_rotation/pillar_completion_authorized",
+        "proposition_id": "P_NONPROMOTION_BOUNDARY",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": true,
+        "passed": true,
+        "pointer": "/authority_rotation/full_zero_mode_analytic_repair_accepted",
+        "proposition_id": "P_ANALYTIC_DESCENDANT_REDUCTION_ACCEPTED",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": true,
+        "passed": true,
+        "pointer": "/authority_rotation/numerical_guardrail_accepted",
+        "proposition_id": "P_NUMERICAL_GUARDRAIL_ACCEPTED",
+        "source_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json"
+      },
+      {
+        "observed_value": true,
+        "passed": true,
+        "pointer": "/accepted_e_repro",
+        "proposition_id": "P_SCALAR_FIXED_BACKGROUND_ROBUSTNESS_ACCEPTED",
+        "source_path": "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json"
+      },
+      {
+        "observed_value": true,
+        "passed": true,
+        "pointer": "/provisional_classical_sandbox_route_only",
+        "proposition_id": "P_EINSTEIN_SCALAR_ROUTE_ONLY",
+        "source_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json"
+      },
+      {
+        "observed_value": false,
+        "passed": true,
+        "pointer": "/coupled_einstein_scalar_system_solved",
+        "proposition_id": "P_EINSTEIN_SCALAR_NOT_SOLVED",
+        "source_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json"
+      },
+      {
+        "observed_value": true,
+        "passed": true,
+        "pointer": "/accepted",
+        "proposition_id": "P_FIRST_UNIT_SELECTOR_ACCEPTED",
+        "source_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json"
+      }
+    ],
+    "proposition_count": 12,
+    "source_hashes_match": true
+  },
+  "independent_scoring": {
+    "canonical_selected_candidate": "DESCENDANT_NECESSITY_ROBUSTNESS",
+    "criterion_weights": {
+      "accepted_infrastructure_reuse": 5,
+      "analytic_readiness": 4,
+      "bounded_scope": 3,
+      "current_result_information_gain": 5,
+      "falsifiable_discrimination": 5,
+      "numerical_readiness": 4,
+      "project_portfolio_value": 2,
+      "seam_method_leverage": 3
+    },
+    "packet_score_vectors_match": true,
+    "packet_totals_match": true,
+    "score_vectors": {
+      "DESCENDANT_NECESSITY_ROBUSTNESS": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "DIMENSIONAL_ASCENT_2P1": [
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "DYNAMIC_EINSTEIN_SCALAR": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        0,
+        2,
+        2
+      ],
+      "FIXED_CURVED_BACKGROUND_EXTENSION": [
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "NEXT_UNIT_PILLAR_TARGET": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2
+      ]
+    },
+    "selected_by_threshold": {
+      "40": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "42": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "44": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "46": "DESCENDANT_NECESSITY_ROBUSTNESS",
+      "48": "DESCENDANT_NECESSITY_ROBUSTNESS"
+    },
+    "stable_selection": true,
+    "weighted_totals": {
+      "DESCENDANT_NECESSITY_ROBUSTNESS": 56,
+      "DIMENSIONAL_ASCENT_2P1": 36,
+      "DYNAMIC_EINSTEIN_SCALAR": 29,
+      "FIXED_CURVED_BACKGROUND_EXTENSION": 36,
+      "NEXT_UNIT_PILLAR_TARGET": 34
+    }
+  },
+  "nonclaims": [
+    "no canonical result recalibration or rerun",
+    "no robustness parameter family frozen or executed",
+    "no pillar completion or seam admissibility or closure",
+    "no empirical adequacy or new physics",
+    "no C_k dynamics, CCFT validation, or master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 18,
+  "preparation_custody": {
+    "commit": "519bdff5a72f7310e51a11a56d77c3a76dd0a435",
+    "commit_hashes": {
+      "formal/docs/release/POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_20260713_v0.json": "e556823c55a50ae7561c873366e2c3475fb7be6c72dc82020a7061f733395633",
+      "formal/output/POST-DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RESULT-ROUTE-DECISION-MANIFEST-v0.json": "48a2d25bcf08b04f60e198d19d4efd89aa789ec10e933e643ea75eeda89ab550",
+      "formal/output/POST-DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RESULT-ROUTE-DECISION-PACKET-v0.json": "b79b888bd5854caf630a97c4edca6c8ead00ab4fd8d8a9dcda49b8ac2323a425",
+      "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py": "314a4bb0ee644dd81266a16e08f2e91f9ba2c9479f93bddb86f460c9a27c570f"
+    },
+    "expected_hashes": {
+      "formal/docs/release/POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_20260713_v0.json": "e556823c55a50ae7561c873366e2c3475fb7be6c72dc82020a7061f733395633",
+      "formal/output/POST-DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RESULT-ROUTE-DECISION-MANIFEST-v0.json": "48a2d25bcf08b04f60e198d19d4efd89aa789ec10e933e643ea75eeda89ab550",
+      "formal/output/POST-DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RESULT-ROUTE-DECISION-PACKET-v0.json": "b79b888bd5854caf630a97c4edca6c8ead00ab4fd8d8a9dcda49b8ac2323a425",
+      "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py": "314a4bb0ee644dd81266a16e08f2e91f9ba2c9479f93bddb86f460c9a27c570f"
+    },
+    "parent": "1824e2db6e79a39ef21453d8bb080ebbb54b99ae",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_20260713_v0.json": "e556823c55a50ae7561c873366e2c3475fb7be6c72dc82020a7061f733395633",
+      "formal/output/POST-DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RESULT-ROUTE-DECISION-MANIFEST-v0.json": "48a2d25bcf08b04f60e198d19d4efd89aa789ec10e933e643ea75eeda89ab550",
+      "formal/output/POST-DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RESULT-ROUTE-DECISION-PACKET-v0.json": "b79b888bd5854caf630a97c4edca6c8ead00ab4fd8d8a9dcda49b8ac2323a425",
+      "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py": "314a4bb0ee644dd81266a16e08f2e91f9ba2c9479f93bddb86f460c9a27c570f"
+    }
+  },
+  "review_target": "review_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_packet_v0_result",
+  "schema_id": "POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_candidate_id": "DESCENDANT_NECESSITY_ROBUSTNESS",
+  "selected_candidate_label": "descendant necessity and parameter robustness",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0",
+  "selected_next_target_kind": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0",
+  "verdict": "ACCEPT_ROUTE_DECISION"
+}
