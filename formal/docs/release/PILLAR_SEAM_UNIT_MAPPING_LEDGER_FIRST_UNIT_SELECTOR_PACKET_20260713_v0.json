@@ -1,0 +1,179 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "91a224102775972c1ff43a544ae1e0acd67cd8b6d962dd1249a62b72a41ebb5b",
+    "manifest_sha256": "b8b4554a1e9f134c6e83c64eb4e6770fadf53e4acd3aef9c7884626743447b6e",
+    "packet_sha256": "2441f3e766f4546ef31530ff2ca00b79251591e868226ff7e41b1ad3b4d12375"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "Maxwell_Dirac_selected": false,
+    "master_action_promoted": false,
+    "pillar_completion_claimed": false,
+    "registry_maintenance_paused": true,
+    "resolution_execution_authorized": false,
+    "seam_closure_claimed": false,
+    "unit_assignment_emitted": false
+  },
+  "canonical_selection": {
+    "eligible_row_ids": [
+      "PILLAR-SR-units_and_dimensions-v0",
+      "PILLAR-EM-units_and_dimensions-v0",
+      "PILLAR-GR-units_and_dimensions-v0"
+    ],
+    "selected_pillar_code": "SR",
+    "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+    "selected_weighted_total": 51,
+    "threshold": 44,
+    "tie_break_used": false,
+    "tied_row_ids": [
+      "PILLAR-SR-units_and_dimensions-v0"
+    ]
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "SR is the stable highest-scoring first unit target for preparation; no unit resolution or Maxwell-Dirac result is authorized.",
+  "decision_count": 14,
+  "decisions": [
+    {
+      "decision_id": "accepted_v2_review_authorizes_selector_only",
+      "passed": true
+    },
+    {
+      "decision_id": "weights_and_threshold_frozen_before_scoring",
+      "passed": true
+    },
+    {
+      "decision_id": "seven_rows_score_all_eight_criteria",
+      "passed": true
+    },
+    {
+      "decision_id": "criterion_reasons_bind_exact_propositions",
+      "passed": true
+    },
+    {
+      "decision_id": "weighted_totals_reproduce_out_of_sixty_two",
+      "passed": true
+    },
+    {
+      "decision_id": "target_selection_readiness_gates_apply",
+      "passed": true
+    },
+    {
+      "decision_id": "resolution_execution_readiness_is_separate",
+      "passed": true
+    },
+    {
+      "decision_id": "sensitivity_at_40_42_44_46_48_is_recorded",
+      "passed": true
+    },
+    {
+      "decision_id": "tie_break_is_exact_score_only",
+      "passed": true
+    },
+    {
+      "decision_id": "SR_is_highest_scoring_eligible_row",
+      "passed": true
+    },
+    {
+      "decision_id": "selection_is_stable_at_42_and_46",
+      "passed": true
+    },
+    {
+      "decision_id": "no_unit_or_restoration_rule_is_emitted",
+      "passed": true
+    },
+    {
+      "decision_id": "Maxwell_Dirac_remains_a_preferred_candidate",
+      "passed": true
+    },
+    {
+      "decision_id": "all_nonclaims_and_prompt_guard_are_preserved",
+      "passed": true
+    }
+  ],
+  "failure_target": "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v1",
+  "post_acceptance_target": "prepare_maxwell_dirac_unit_object_foundation_packet_v0",
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_20260713_v0",
+  "selected_next_target": "review_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0_result",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0_result_review",
+  "selected_row_resolution_execution_ready": false,
+  "selection_authorizes_preparation_only": true,
+  "sensitivity_analysis": [
+    {
+      "eligible_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0",
+        "PILLAR-EM-units_and_dimensions-v0",
+        "PILLAR-GR-units_and_dimensions-v0"
+      ],
+      "selected_pillar_code": "SR",
+      "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "selected_weighted_total": 51,
+      "threshold": 40,
+      "tie_break_used": false,
+      "tied_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0"
+      ]
+    },
+    {
+      "eligible_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0",
+        "PILLAR-EM-units_and_dimensions-v0",
+        "PILLAR-GR-units_and_dimensions-v0"
+      ],
+      "selected_pillar_code": "SR",
+      "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "selected_weighted_total": 51,
+      "threshold": 42,
+      "tie_break_used": false,
+      "tied_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0"
+      ]
+    },
+    {
+      "eligible_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0",
+        "PILLAR-EM-units_and_dimensions-v0",
+        "PILLAR-GR-units_and_dimensions-v0"
+      ],
+      "selected_pillar_code": "SR",
+      "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "selected_weighted_total": 51,
+      "threshold": 44,
+      "tie_break_used": false,
+      "tied_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0"
+      ]
+    },
+    {
+      "eligible_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0",
+        "PILLAR-EM-units_and_dimensions-v0"
+      ],
+      "selected_pillar_code": "SR",
+      "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "selected_weighted_total": 51,
+      "threshold": 46,
+      "tie_break_used": false,
+      "tied_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0"
+      ]
+    },
+    {
+      "eligible_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0",
+        "PILLAR-EM-units_and_dimensions-v0"
+      ],
+      "selected_pillar_code": "SR",
+      "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "selected_weighted_total": 51,
+      "threshold": 48,
+      "tie_break_used": false,
+      "tied_row_ids": [
+        "PILLAR-SR-units_and_dimensions-v0"
+      ]
+    }
+  ],
+  "target": "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

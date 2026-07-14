@@ -1,0 +1,25 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 14,
+  "generator": {
+    "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector.py",
+    "sha256": "91a224102775972c1ff43a544ae1e0acd67cd8b6d962dd1249a62b72a41ebb5b"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+      "sha256": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
+    },
+    {
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260713_v2.json",
+      "sha256": "6dac3d95a29e7ab0d29a99d5903b682bf235b92e025b044890a2e927d8b6f875"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-PACKET-v0.json",
+    "sha256": "2441f3e766f4546ef31530ff2ca00b79251591e868226ff7e41b1ad3b4d12375"
+  },
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_MANIFEST_v0",
+  "selected_next_target": "review_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0_result",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0_result_review"
+}
