@@ -1,0 +1,184 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "Maxwell_Dirac_result_claimed": false,
+    "bounded_blocker_accepted": true,
+    "execution_authorized": false,
+    "numerical_guardrail_authorized": false,
+    "post_block_route_decision_preparation_authorized": true,
+    "reduction_accepted": false
+  },
+  "blocker_code": "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT",
+  "blocker_confirmed": true,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "Independent reconstruction confirms that generic retained-sector data source A2 or A3; the requested transverse truncation is boundedly blocked and only a new route-decision preparation is authorized.",
+  "decision_count": 14,
+  "decisions": [
+    {
+      "decision_id": "immutable_reduction_preparation_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "torus_geometry_and_Ramond_zero_mode_scope_is_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "Clifford_algebra_independently_reconstructed",
+      "passed": true
+    },
+    {
+      "decision_id": "two_sectors_per_species_and_four_spinors_are_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "longitudinal_coupling_is_sector_diagonal",
+      "passed": true
+    },
+    {
+      "decision_id": "transverse_coupling_is_sector_offdiagonal",
+      "passed": true
+    },
+    {
+      "decision_id": "explicit_normalized_state_independently_sources_A2_or_A3",
+      "passed": true
+    },
+    {
+      "decision_id": "full_zero_mode_system_is_distinguished_from_the_truncation",
+      "passed": true
+    },
+    {
+      "decision_id": "variation_reduction_residual_matches_transverse_Maxwell_source",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_rescaling_and_energy_interpretations_are_bounded",
+      "passed": true
+    },
+    {
+      "decision_id": "transverse_invariance_blocker_is_confirmed",
+      "passed": true
+    },
+    {
+      "decision_id": "blocker_does_not_expand_to_a_physical_no_go",
+      "passed": true
+    },
+    {
+      "decision_id": "no_projection_fallback_numerics_or_execution_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_algebra_audit": {
+    "Clifford_passed": true,
+    "Clifford_residuals": [
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 0
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 1
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 2
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 3
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 1,
+        "nu": 1
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 1,
+        "nu": 2
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 1,
+        "nu": 3
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 2,
+        "nu": 2
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 2,
+        "nu": 3
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 3,
+        "nu": 3
+      }
+    ],
+    "counterexample_j2": {
+      "imag": "0",
+      "real": "-1"
+    },
+    "counterexample_j3": {
+      "imag": "0",
+      "real": "0"
+    },
+    "counterexample_norm": "1",
+    "counterexample_sources_transverse_equation": true,
+    "longitudinal_sector_mixing_norm": "0.0e+00",
+    "transverse_sector_mixing_min_norm": "1.0e+00"
+  },
+  "nonclaims": [
+    "no analytic 3+1 to truncated 1+1 consistency claim",
+    "no numerical guardrail or execution authorization",
+    "no automatic native 1+1, 2+1, or matter-sector fallback",
+    "no fermionic QFT, quantum particle creation, pillar recovery, seam closure, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "passed_decision_count": 14,
+  "post_block_route_decision_candidates": [
+    "repair reduction",
+    "adopt a native 1+1 model",
+    "move to 2+1",
+    "change the matter sector"
+  ],
+  "post_block_route_selected_automatically": false,
+  "preparation_custody": {
+    "commit": "8aa48069db94082bdb639719b549466bd92862cd",
+    "commit_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_20260713_v0.json": "5af33a154a0079d4965d968833f4c3ba4cf70710e33ca9f59a88a06452d53f3c",
+      "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-MANIFEST-v0.json": "ab7654254319d0ace1bfe95ef50e3078ff13b59c980c8bcfb012195a326ee06e",
+      "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-PACKET-v0.json": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb",
+      "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency.py": "ccc236945980e4d6cf2771564fc772c2c85165c522d9338226e54c289716e4fb"
+    },
+    "expected_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_20260713_v0.json": "5af33a154a0079d4965d968833f4c3ba4cf70710e33ca9f59a88a06452d53f3c",
+      "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-MANIFEST-v0.json": "ab7654254319d0ace1bfe95ef50e3078ff13b59c980c8bcfb012195a326ee06e",
+      "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-PACKET-v0.json": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb",
+      "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency.py": "ccc236945980e4d6cf2771564fc772c2c85165c522d9338226e54c289716e4fb"
+    },
+    "parent": "113dee3c4026334c535b4ba994ddb170abd0c9fe",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_20260713_v0.json": "5af33a154a0079d4965d968833f4c3ba4cf70710e33ca9f59a88a06452d53f3c",
+      "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-MANIFEST-v0.json": "ab7654254319d0ace1bfe95ef50e3078ff13b59c980c8bcfb012195a326ee06e",
+      "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-PACKET-v0.json": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb",
+      "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency.py": "ccc236945980e4d6cf2771564fc772c2c85165c522d9338226e54c289716e4fb"
+    }
+  },
+  "review_target": "review_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0_result",
+  "schema_id": "DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0",
+  "selected_next_target_kind": "post_dirac_maxwell_reduction_blocked_route_decision_packet_v0",
+  "verdict": "B-BLOCKED"
+}

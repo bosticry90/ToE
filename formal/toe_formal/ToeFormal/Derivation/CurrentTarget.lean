@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.MaxwellDiracUnitObjectFoundationPacketResultReview
+import ToeFormal.Derivation.DiracMaxwell3p1To1p1ReductionConsistencyPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  MaxwellDiracUnitObjectFoundationPacketResultReview.selectedNextTarget
+  DiracMaxwell3p1To1p1ReductionConsistencyPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  MaxwellDiracUnitObjectFoundationPacketResultReview.reviewId
+  DiracMaxwell3p1To1p1ReductionConsistencyPacketResultReview.reviewId
 
-theorem current_target_points_to_dirac_maxwell_reduction_consistency_v0 :
+theorem current_target_points_to_post_reduction_blocked_route_decision_v0 :
     currentLiveTarget =
-      "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0" := by
+      "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0" := by
   rfl
 
 end CurrentTarget
