@@ -1,0 +1,17 @@
+{
+  "blocker_code": "B-BLOCKED_F_PERP_NORMALIZATION_NOT_BOUNDED",
+  "blocker_confirmed_by_preparation": true,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling": "Guardrail preparation found a bounded scientific-design contradiction; it does not alter the accepted canonical E-REPRO result or authorize robustness calibration or execution.",
+  "counterexample_f_perp_initial": 1.0003377834191158,
+  "declared_upper_bound": 1.0,
+  "matrix_frozen": false,
+  "mutation_control_count": 14,
+  "mutation_controls_passed": 14,
+  "packet_sha256": "48f4657fbfb93730678774e56ebdf13f3bfbb039b49e1941a40ab9e5ab718fef",
+  "pilot_authorized": false,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_20260713_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v0_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v0",
+  "verdict": "PREPARED_BLOCKER_PENDING_INDEPENDENT_REVIEW"
+}

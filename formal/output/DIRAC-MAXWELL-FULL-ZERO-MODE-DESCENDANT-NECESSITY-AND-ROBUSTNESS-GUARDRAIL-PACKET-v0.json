@@ -1,0 +1,268 @@
+{
+  "accepted_design_reopened": false,
+  "authority_boundary": {
+    "CCFT_validation_claimed": false,
+    "C_k_dynamics_claimed": false,
+    "axis_normalization_repair_authorized_before_review": false,
+    "canonical_result_remains_accepted_E_REPRO": true,
+    "canonical_robustness_execution_authorized": false,
+    "independent_blocker_review_authorized": true,
+    "master_action_promotion_claimed": false,
+    "pillar_completion_claimed": false,
+    "pilot_authorized": false,
+    "seam_closure_claimed": false
+  },
+  "blocker_code": "B-BLOCKED_F_PERP_NORMALIZATION_NOT_BOUNDED",
+  "blocker_statement": "The accepted F_PERP_INITIAL definition is not a bounded energy fraction over the admitted DELTA_THETA_PSI domain, so an exact 12-14-row matrix cannot be frozen without an unreviewed scientific-design change.",
+  "canonical_result_reopened": false,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "guardrail_completion": {
+    "comparator_eligibility_matrix_frozen": false,
+    "control_run_roles_frozen": false,
+    "exact_axis_values_frozen": false,
+    "observable_thresholds_frozen": false,
+    "pilot_subset_frozen": false,
+    "reason": "B-BLOCKED_F_PERP_NORMALIZATION_NOT_BOUNDED",
+    "scientific_parameter_matrix_frozen": false
+  },
+  "input_hashes": {
+    "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040",
+    "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_PACKET_RESULT_REVIEW_20260713_v0.json": "84140ac762b660a1f4ab86d9376a50bad256de1bf0f4faa9898195a5eb9fa0f9",
+    "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-PACKET-v0.json": "98a635b92d3a2b5479cc41aca80760a965a249fb3ae16c476b3a50aab6e10100",
+    "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a",
+    "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+  },
+  "mutation_controls": [
+    {
+      "actual_diagnostics": [
+        "CURRENT_TARGET_MISMATCH"
+      ],
+      "expected_diagnostic": "CURRENT_TARGET_MISMATCH",
+      "mutation_id": "M_CURRENT_TARGET",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "ACCEPTED_DESIGN_NOT_BOUND"
+      ],
+      "expected_diagnostic": "ACCEPTED_DESIGN_NOT_BOUND",
+      "mutation_id": "M_DESIGN_UNBOUND",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "CANONICAL_RESULT_REOPENED"
+      ],
+      "expected_diagnostic": "CANONICAL_RESULT_REOPENED",
+      "mutation_id": "M_CANONICAL_REOPENED",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "ACCEPTED_AXIS_FORMULA_CHANGED"
+      ],
+      "expected_diagnostic": "ACCEPTED_AXIS_FORMULA_CHANGED",
+      "mutation_id": "M_AXIS_FORMULA",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "ACCEPTED_AXIS_DOMAIN_CHANGED"
+      ],
+      "expected_diagnostic": "ACCEPTED_AXIS_DOMAIN_CHANGED",
+      "mutation_id": "M_AXIS_DOMAIN",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "ADMITTED_PHASE_COUNTEREXAMPLE_REMOVED"
+      ],
+      "expected_diagnostic": "ADMITTED_PHASE_COUNTEREXAMPLE_REMOVED",
+      "mutation_id": "M_PHASE_ROW_REMOVED",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "COUNTEREXAMPLE_NOT_REPRODUCED"
+      ],
+      "expected_diagnostic": "COUNTEREXAMPLE_NOT_REPRODUCED",
+      "mutation_id": "M_COUNTEREXAMPLE_ERASED",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "BOUNDEDNESS_VIOLATION_IGNORED"
+      ],
+      "expected_diagnostic": "BOUNDEDNESS_VIOLATION_IGNORED",
+      "mutation_id": "M_VIOLATION_IGNORED",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "UNREVIEWED_AXIS_REDEFINITION"
+      ],
+      "expected_diagnostic": "UNREVIEWED_AXIS_REDEFINITION",
+      "mutation_id": "M_SILENT_REDEFINITION",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "MATRIX_FROZEN_DESPITE_AXIS_CONTRADICTION"
+      ],
+      "expected_diagnostic": "MATRIX_FROZEN_DESPITE_AXIS_CONTRADICTION",
+      "mutation_id": "M_MATRIX_FROZEN",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "PILOT_AUTHORIZED_DESPITE_GUARDRAIL_BLOCKER"
+      ],
+      "expected_diagnostic": "PILOT_AUTHORIZED_DESPITE_GUARDRAIL_BLOCKER",
+      "mutation_id": "M_PILOT_AUTHORIZED",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "EXECUTION_AUTHORIZED_DESPITE_GUARDRAIL_BLOCKER"
+      ],
+      "expected_diagnostic": "EXECUTION_AUTHORIZED_DESPITE_GUARDRAIL_BLOCKER",
+      "mutation_id": "M_EXECUTION_AUTHORIZED",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "NORMALIZATION_REPAIR_AUTO_SELECTED"
+      ],
+      "expected_diagnostic": "NORMALIZATION_REPAIR_AUTO_SELECTED",
+      "mutation_id": "M_AUTO_REPAIR",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "BLOCKER_CODE_CHANGED"
+      ],
+      "expected_diagnostic": "BLOCKER_CODE_CHANGED",
+      "mutation_id": "M_BLOCKER_CODE",
+      "no_unrelated_earlier_failure": true,
+      "one_intended_premise_changed": true,
+      "passed": true
+    }
+  ],
+  "normalization_audit": {
+    "accepted_declared_domain": "0 <= f_perp_initial <= 1",
+    "accepted_definition": "(E_phi2(0)+E_phi3(0))/E_total(0)",
+    "axis_id": "F_PERP_INITIAL",
+    "bounded_fraction_contract_satisfied": false,
+    "canonical_output_anchor": {
+      "energy_phi2_initial": 0.0009837936433546,
+      "energy_phi3_initial": 0.00249431547867,
+      "f_perp_initial": 0.999517847782845,
+      "registered_signed_total_energy_initial": 0.003479786908998,
+      "source_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json"
+    },
+    "counterexample": {
+      "delta_theta_psi_radians": 1.5707963267948966,
+      "f_perp_initial": 1.0003377834191158,
+      "phase_label": "POSITIVE_PI_OVER_TWO",
+      "registered_signed_total_energy": 0.003476934671143496,
+      "transverse_descendant_energy": 0.003478109122024757,
+      "within_declared_fraction_domain": false
+    },
+    "counterexample_uses_only_admitted_axes": true,
+    "denominator_positive_definite_established": false,
+    "fixed_audit_inputs": {
+      "descendant_initial_fields": "accepted canonical full_mixed fields",
+      "eta_q": 0.2,
+      "grid_size": 32,
+      "mu_mass_domain": 1.0,
+      "reduced_sector_phase_applied_to_components": [
+        1,
+        3
+      ],
+      "species_phase_application": [
+        "psi_plus",
+        "psi_minus"
+      ],
+      "theta_W": 0.3,
+      "varied_axis": "DELTA_THETA_PSI"
+    },
+    "phase_rows": [
+      {
+        "delta_theta_psi_radians": -1.5707963267948966,
+        "f_perp_initial": 0.9996624446221067,
+        "phase_label": "NEGATIVE_PI_OVER_TWO",
+        "registered_signed_total_energy": 0.003479283572906007,
+        "transverse_descendant_energy": 0.003478109122024757,
+        "within_declared_fraction_domain": true
+      },
+      {
+        "delta_theta_psi_radians": 0.0,
+        "f_perp_initial": 0.9995178477828972,
+        "phase_label": "CANONICAL_ZERO",
+        "registered_signed_total_energy": 0.0034797869089979758,
+        "transverse_descendant_energy": 0.003478109122024757,
+        "within_declared_fraction_domain": true
+      },
+      {
+        "delta_theta_psi_radians": 1.5707963267948966,
+        "f_perp_initial": 1.0003377834191158,
+        "phase_label": "POSITIVE_PI_OVER_TWO",
+        "registered_signed_total_energy": 0.003476934671143496,
+        "transverse_descendant_energy": 0.003478109122024757,
+        "within_declared_fraction_domain": false
+      }
+    ],
+    "scientific_reason": "The registered c-number Dirac energy is signed and not a positive-definite energy budget. Relative reduced-sector phase changes matter and interaction contributions while the positive descendant numerator is fixed."
+  },
+  "post_review_blocker_target_if_confirmed": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0",
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "repair_route_candidates_for_separate_review": [
+    {
+      "candidate_id": "POSITIVE_ABSOLUTE_ENERGY_INVENTORY_DENOMINATOR",
+      "selected": false
+    },
+    {
+      "candidate_id": "TRANSVERSE_TO_NONTRANSVERSE_ENERGY_ODDS",
+      "selected": false
+    },
+    {
+      "candidate_id": "DIRECT_DESCENDANT_AMPLITUDE_SCALE",
+      "selected": false
+    },
+    {
+      "candidate_id": "FIXED_POSITIVE_CANONICAL_ENERGY_BUDGET_NORMALIZATION",
+      "selected": false
+    }
+  ],
+  "repair_selection_policy": "No candidate is selected by this blocker packet. A versioned scientific-design repair must define, score, and independently review the replacement axis before guardrail work resumes.",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v0_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v0",
+  "verdict": "PREPARED_BLOCKER_PENDING_INDEPENDENT_REVIEW"
+}
