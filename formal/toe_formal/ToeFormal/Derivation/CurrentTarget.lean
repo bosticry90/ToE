@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV2ResultReview
+import ToeFormal.Derivation.PillarSeamUnitMappingLedgerFirstUnitSelectorPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV2ResultReview.selectedNextTarget
+  PillarSeamUnitMappingLedgerFirstUnitSelectorPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV2ResultReview.reviewId
+  PillarSeamUnitMappingLedgerFirstUnitSelectorPacketResultReview.reviewId
 
-theorem current_target_points_to_first_unit_selector_v0 :
+theorem current_target_points_to_maxwell_dirac_unit_object_foundation_v0 :
     currentLiveTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0" := by
+      "prepare_maxwell_dirac_unit_object_foundation_packet_v0" := by
   rfl
 
 end CurrentTarget

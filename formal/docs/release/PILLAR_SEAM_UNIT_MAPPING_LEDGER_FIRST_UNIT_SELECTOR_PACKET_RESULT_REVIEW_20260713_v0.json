@@ -1,0 +1,229 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "Maxwell_Dirac_result_authorized": false,
+    "foundation_preparation_authorized": true,
+    "unit_resolution_execution_authorized": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The selector is accepted: SR is stable at 51/62 for preparation only; execution readiness remains unmet.",
+  "decision_count": 12,
+  "decisions": [
+    {
+      "decision_id": "immutable_selector_preparation_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eight_criteria_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "every_score_binds_propositions_reasons_and_next_evidence",
+      "passed": true
+    },
+    {
+      "decision_id": "weighted_totals_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "target_readiness_gates_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "execution_readiness_gates_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "sensitivity_selection_recomputed_at_all_thresholds",
+      "passed": true
+    },
+    {
+      "decision_id": "SR_is_stable_highest_scoring_selection",
+      "passed": true
+    },
+    {
+      "decision_id": "tie_break_used_only_for_exact_score_tie",
+      "passed": true
+    },
+    {
+      "decision_id": "no_unit_assignment_or_restoration_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Maxwell_Dirac_remains_candidate_and_nonclaims_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_preserved",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independently_recomputed_rows": [
+    {
+      "code": "QFT",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-QFT-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 1,
+        "computational_enablement": 1,
+        "dependency_readiness": 1,
+        "downstream_leverage": 2,
+        "evidence_authority": 1,
+        "noncircularity": 2,
+        "object_clarity": 1,
+        "restoration_clarity": 0
+      },
+      "target_ready": false,
+      "total": 37
+    },
+    {
+      "code": "GR",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-GR-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 1,
+        "computational_enablement": 1,
+        "dependency_readiness": 1,
+        "downstream_leverage": 2,
+        "evidence_authority": 2,
+        "noncircularity": 2,
+        "object_clarity": 1,
+        "restoration_clarity": 1
+      },
+      "target_ready": true,
+      "total": 45
+    },
+    {
+      "code": "QM",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-QM-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 1,
+        "computational_enablement": 1,
+        "dependency_readiness": 1,
+        "downstream_leverage": 1,
+        "evidence_authority": 1,
+        "noncircularity": 2,
+        "object_clarity": 1,
+        "restoration_clarity": 0
+      },
+      "target_ready": false,
+      "total": 33
+    },
+    {
+      "code": "STAT",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-STAT-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 1,
+        "computational_enablement": 0,
+        "dependency_readiness": 1,
+        "downstream_leverage": 1,
+        "evidence_authority": 1,
+        "noncircularity": 2,
+        "object_clarity": 1,
+        "restoration_clarity": 0
+      },
+      "target_ready": false,
+      "total": 31
+    },
+    {
+      "code": "EM",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-EM-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 2,
+        "computational_enablement": 2,
+        "dependency_readiness": 1,
+        "downstream_leverage": 2,
+        "evidence_authority": 1,
+        "noncircularity": 2,
+        "object_clarity": 2,
+        "restoration_clarity": 1
+      },
+      "target_ready": true,
+      "total": 50
+    },
+    {
+      "code": "SR",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-SR-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 2,
+        "computational_enablement": 1,
+        "dependency_readiness": 1,
+        "downstream_leverage": 2,
+        "evidence_authority": 1,
+        "noncircularity": 2,
+        "object_clarity": 2,
+        "restoration_clarity": 2
+      },
+      "target_ready": true,
+      "total": 51
+    },
+    {
+      "code": "COSMO",
+      "conflicts": [],
+      "execution_ready": false,
+      "row_id": "PILLAR-COSMO-units_and_dimensions-v0",
+      "scores": {
+        "bounded_scope": 1,
+        "computational_enablement": 1,
+        "dependency_readiness": 1,
+        "downstream_leverage": 1,
+        "evidence_authority": 1,
+        "noncircularity": 2,
+        "object_clarity": 1,
+        "restoration_clarity": 1
+      },
+      "target_ready": false,
+      "total": 36
+    }
+  ],
+  "independently_recomputed_sensitivity": {
+    "40": "PILLAR-SR-units_and_dimensions-v0",
+    "42": "PILLAR-SR-units_and_dimensions-v0",
+    "44": "PILLAR-SR-units_and_dimensions-v0",
+    "46": "PILLAR-SR-units_and_dimensions-v0",
+    "48": "PILLAR-SR-units_and_dimensions-v0"
+  },
+  "passed_decision_count": 12,
+  "preparation_custody": {
+    "commit_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_20260713_v0.json": "afb502f24ab74a99104dab130ff26256a31dc8e5444f72fe3575c18eceb175a3",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-MANIFEST-v0.json": "b8b4554a1e9f134c6e83c64eb4e6770fadf53e4acd3aef9c7884626743447b6e",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-PACKET-v0.json": "2441f3e766f4546ef31530ff2ca00b79251591e868226ff7e41b1ad3b4d12375",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector.py": "91a224102775972c1ff43a544ae1e0acd67cd8b6d962dd1249a62b72a41ebb5b"
+    },
+    "expected_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_20260713_v0.json": "afb502f24ab74a99104dab130ff26256a31dc8e5444f72fe3575c18eceb175a3",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-MANIFEST-v0.json": "b8b4554a1e9f134c6e83c64eb4e6770fadf53e4acd3aef9c7884626743447b6e",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-PACKET-v0.json": "2441f3e766f4546ef31530ff2ca00b79251591e868226ff7e41b1ad3b4d12375",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector.py": "91a224102775972c1ff43a544ae1e0acd67cd8b6d962dd1249a62b72a41ebb5b"
+    },
+    "passed": true,
+    "preparation_commit": "e02c6d078321e43ebe3834da38bb86aa8c7b236e",
+    "preparation_parent": "7ec3bd88a666914f0a3255f22d41265435341d5f",
+    "working_hashes": {
+      "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_20260713_v0.json": "afb502f24ab74a99104dab130ff26256a31dc8e5444f72fe3575c18eceb175a3",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-MANIFEST-v0.json": "b8b4554a1e9f134c6e83c64eb4e6770fadf53e4acd3aef9c7884626743447b6e",
+      "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-FIRST-UNIT-SELECTOR-PACKET-v0.json": "2441f3e766f4546ef31530ff2ca00b79251591e868226ff7e41b1ad3b4d12375",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector.py": "91a224102775972c1ff43a544ae1e0acd67cd8b6d962dd1249a62b72a41ebb5b"
+    }
+  },
+  "review_target": "review_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0_result",
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_maxwell_dirac_unit_object_foundation_packet_v0",
+  "selected_next_target_kind": "prepare_maxwell_dirac_unit_object_foundation_packet_v0",
+  "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+  "selected_row_resolution_execution_ready": false,
+  "selected_weighted_score": 51,
+  "verdict": "ACCEPT"
+}
