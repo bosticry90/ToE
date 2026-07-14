@@ -1,0 +1,20 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 16,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency.py",
+    "sha256": "ccc236945980e4d6cf2771564fc772c2c85165c522d9338226e54c289716e4fb"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-PACKET-v0.json",
+    "sha256": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb"
+  },
+  "schema_id": "DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0_result"
+}

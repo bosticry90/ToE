@@ -1,0 +1,209 @@
+{
+  "analytic_result": "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT",
+  "blocker": {
+    "code": "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT",
+    "does_not_refute": [
+      "the full 3+1 Maxwell-Dirac action",
+      "the full zero-mode reduction retaining A2 and A3",
+      "a separately reviewed sector-polarized branch",
+      "native 1+1, 2+1, or changed-matter benchmarks"
+    ],
+    "execution_authorized": false,
+    "numerical_guardrail_authorized": false,
+    "scientific_scope": "the requested retain-both-sectors plus A2=A3=0 truncation"
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "correction_target_if_review_disagrees": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v1",
+  "energy_interpretations": {
+    "3p1_energy_per_transverse_area": "canonical 1p1 energy/A_perp",
+    "3p1_total_energy_on_transverse_torus": "equal to canonical 1p1 energy under full zero-mode rescaling",
+    "canonical_1p1_energy": "integral dx T00_1p1",
+    "mixing_forbidden": true
+  },
+  "full_zero_mode_reduction": {
+    "A2_A3_lower_dimensional_role": "two scalar fields coupled through transverse Dirac currents",
+    "canonical_rescaling": {
+      "A_mu_1p1": "sqrt(A_perp) A_mu_3p1",
+      "psi_1p1": "sqrt(A_perp) psi_3p1",
+      "q_1p1": "q_3p1/sqrt(A_perp)"
+    },
+    "full_zero_mode_action_reduction_consistent": true,
+    "full_zero_mode_variation_reduction_commutes": true,
+    "retained_gauge_components": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ]
+  },
+  "gamma_representation": {
+    "A0_A1_coupling_does_not_mix_sectors": true,
+    "A2_A3_coupling_mixes_sectors": true,
+    "Clifford_checks": [
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 0,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 1,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 2,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 0,
+        "nu": 3,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 1,
+        "nu": 1,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 1,
+        "nu": 2,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 1,
+        "nu": 3,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 2,
+        "nu": 2,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 2,
+        "nu": 3,
+        "passed": true
+      },
+      {
+        "max_residual": "0.0e+00",
+        "mu": 3,
+        "nu": 3,
+        "passed": true
+      }
+    ],
+    "derived_1p1_sector_representation": {
+      "gamma0": "sigma3",
+      "gamma1": "i sigma2"
+    },
+    "gamma0": "rho0 tensor I2",
+    "gamma1": "rho1 tensor I2",
+    "gamma2": "i rho5 tensor sigma1",
+    "gamma3": "i rho5 tensor sigma2",
+    "longitudinal_gamma_sector_mixing_norm": "0.0e+00",
+    "rho0": "sigma3",
+    "rho1": "i sigma2",
+    "rho5": "sigma1",
+    "tensor_order": "1+1 spinor factor tensor transverse-sector factor",
+    "transverse_gamma_min_sector_mixing_norm": "1.0e+00"
+  },
+  "geometry": {
+    "gauge_transverse_boundary_conditions": "periodic on both T2 cycles",
+    "longitudinal_boundary_conditions": "periodic on S1_x",
+    "spacetime": "R_t x S1_x x T2_yz",
+    "spinor_transverse_spin_structure": "periodic/Ramond on both T2 cycles",
+    "transverse_area": "A_perp=L_y L_z",
+    "zero_mode_assumption": [
+      "partial_y=0",
+      "partial_z=0"
+    ]
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09"
+    }
+  ],
+  "nonclaims": [
+    "no analytic 3+1 to truncated 1+1 consistency claim",
+    "no numerical guardrail or execution authorization",
+    "no automatic native 1+1, 2+1, or matter-sector fallback",
+    "no fermionic QFT, quantum particle creation, pillar recovery, seam closure, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "post_block_route_decision_candidates": [
+    "repair reduction",
+    "adopt a native 1+1 model",
+    "move to 2+1",
+    "change the matter sector"
+  ],
+  "post_block_route_selected_automatically": false,
+  "post_block_route_target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0",
+  "prompt_protection": {
+    "excluded_from_scientific_inputs": true,
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "proposed_transverse_truncation": {
+    "constraint": [
+      "A2=0",
+      "A3=0"
+    ],
+    "constraint_surface_invariant_for_all_retained_sector_data": false,
+    "counterexample": {
+      "at_least_one_transverse_current_nonzero": true,
+      "both_sector_components_nonzero": true,
+      "j2": {
+        "imag": "0",
+        "real": "-1"
+      },
+      "j3": {
+        "imag": "0",
+        "real": "0"
+      },
+      "state_in_spinor_tensor_sector_order": [
+        "1/2",
+        "1/2",
+        "i/2",
+        "i/2"
+      ],
+      "state_norm": "1",
+      "transverse_Maxwell_equation_at_A2_A3_zero": "Box A_perp^i=mu_0 J^i, so nonzero J^i immediately leaves the proposed truncation surface"
+    },
+    "failure_mechanism": "gamma2 and gamma3 are off-diagonal in the two retained 1+1 sectors, so generic cross-sector coherence sources A2 or A3",
+    "reason_not_adopted": "It would impose an additional projection/invariant-branch restriction contrary to the frozen retain-both-sectors v0 question.",
+    "required_source_constraints": [
+      "J2=0",
+      "J3=0"
+    ],
+    "sector_polarization_adopted": false,
+    "sector_polarization_would_repair_counterexample": true
+  },
+  "schema_id": "DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0_result_review",
+  "spinor_multiplicity": {
+    "one_sector_projected_away": false,
+    "opposite_charge_original_species_count": 2,
+    "sector_multiplicity_tracked_in_full_untruncated_reduced_action": 2,
+    "total_2component_reduced_spinors": 4,
+    "two_1p1_sectors_per_original_4component_spinor": true
+  },
+  "target": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0",
+  "variation_reduction_commutation": {
+    "C_dim_order": "PASS_AUDIT_ONLY_FOR_CANONICAL_RESCALINGS",
+    "counterexample_residual_nonzero": true,
+    "stress_reduction_review": "NOT_AUTHORIZED_AFTER_EQUATION_LEVEL_TRUNCATION_FAILURE",
+    "truncated_A2_equation_residual": "C_variation_reduction(A2)=-mu_0 J2",
+    "truncated_A3_equation_residual": "C_variation_reduction(A3)=-mu_0 J3",
+    "untruncated_A0_A1_A2_A3_system": "PASS"
+  }
+}

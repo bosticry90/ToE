@@ -1,0 +1,93 @@
+{
+  "all_decisions_passed": true,
+  "analytic_result": "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT",
+  "artifact_hashes": {
+    "generator_sha256": "ccc236945980e4d6cf2771564fc772c2c85165c522d9338226e54c289716e4fb",
+    "manifest_sha256": "ab7654254319d0ace1bfe95ef50e3078ff13b59c980c8bcfb012195a326ee06e",
+    "packet_sha256": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb"
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The full zero-mode system is consistent only with A2 and A3 retained; the requested retain-both-sectors A2=A3=0 truncation is B-BLOCKED by an explicit transverse-current counterexample.",
+  "decision_count": 16,
+  "decisions": [
+    {
+      "decision_id": "accepted_foundation_review_authorizes_analytic_reduction_only",
+      "passed": true
+    },
+    {
+      "decision_id": "torus_geometry_and_Ramond_spin_structure_are_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "4D_Clifford_representation_reproduces",
+      "passed": true
+    },
+    {
+      "decision_id": "two_1p1_sectors_per_species_are_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "A0_A1_coupling_is_sector_diagonal",
+      "passed": true
+    },
+    {
+      "decision_id": "A2_A3_coupling_is_sector_offdiagonal",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_field_and_coupling_rescalings_are_recorded",
+      "passed": true
+    },
+    {
+      "decision_id": "full_zero_mode_reduction_retaining_transverse_fields_is_consistent",
+      "passed": true
+    },
+    {
+      "decision_id": "explicit_retained_sector_state_has_nonzero_transverse_current",
+      "passed": true
+    },
+    {
+      "decision_id": "A2_A3_zero_constraint_surface_is_not_invariant",
+      "passed": true
+    },
+    {
+      "decision_id": "variation_reduction_commutation_fails_for_truncated_transverse_equations",
+      "passed": true
+    },
+    {
+      "decision_id": "energy_interpretations_are_not_mixed",
+      "passed": true
+    },
+    {
+      "decision_id": "blocker_scope_does_not_become_a_physical_no_go",
+      "passed": true
+    },
+    {
+      "decision_id": "no_sector_projection_or_fallback_is_silently_adopted",
+      "passed": true
+    },
+    {
+      "decision_id": "no_numerical_guardrail_or_execution_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_all_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "execution_authorized": false,
+  "nonclaims": [
+    "no analytic 3+1 to truncated 1+1 consistency claim",
+    "no numerical guardrail or execution authorization",
+    "no automatic native 1+1, 2+1, or matter-sector fallback",
+    "no fermionic QFT, quantum particle creation, pillar recovery, seam closure, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "numerical_guardrail_authorized": false,
+  "post_block_route_selected_automatically": false,
+  "post_block_route_target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0",
+  "schema_id": "DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_20260713_v0",
+  "selected_next_target": "review_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0_result_review",
+  "target": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0",
+  "verdict": "PREPARED_B_BLOCKED_PENDING_INDEPENDENT_REVIEW"
+}
