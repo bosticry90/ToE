@@ -1,0 +1,28 @@
+{
+  "arrays": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json",
+    "sha256": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65"
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 18,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+    "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json",
+      "sha256": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "b881d23e9bd201b09bb023a1e897306afff681bd57ccb224a9c6baf562be57b6"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v0.json",
+    "sha256": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0_result"
+}

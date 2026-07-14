@@ -1,0 +1,117 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "arrays_sha256": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65",
+    "generator_sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1",
+    "manifest_sha256": "ae62989ecc87f951e59bd15fc45669838ae126147c7daf7aef373ddc94b0d1f8",
+    "packet_sha256": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6"
+  },
+  "canonical_execution_authorized": false,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The non-authoritative pilot classifies engineering readiness only; independent pilot review is required before any canonical parameter freeze.",
+  "decision_count": 18,
+  "decisions": [
+    {
+      "decision_id": "accepted_guardrail_authorizes_non_authoritative_pilot_only",
+      "passed": true
+    },
+    {
+      "decision_id": "frozen_scientific_choices_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "all_per_run_series_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "link_group_preservation_is_measured",
+      "passed": true
+    },
+    {
+      "decision_id": "Wilson_dispersion_and_doubler_separation_are_measured",
+      "passed": true
+    },
+    {
+      "decision_id": "Gauss_and_continuity_scaling_are_recorded",
+      "passed": true
+    },
+    {
+      "decision_id": "J2_phi2_and_J3_phi3_responses_are_exercised",
+      "passed": true
+    },
+    {
+      "decision_id": "three_exchange_channels_and_combined_residual_are_separate",
+      "passed": true
+    },
+    {
+      "decision_id": "energy_drift_and_all_eight_components_are_recorded",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_hierarchy_is_compared_to_truncation",
+      "passed": true
+    },
+    {
+      "decision_id": "twelve_positive_controls_have_expected_behavior",
+      "passed": true
+    },
+    {
+      "decision_id": "twenty_seven_mutations_have_unique_expected_diagnostics",
+      "passed": true
+    },
+    {
+      "decision_id": "two_fresh_executions_are_byte_identical",
+      "passed": true
+    },
+    {
+      "decision_id": "candidate_thresholds_follow_the_frozen_rule",
+      "passed": true
+    },
+    {
+      "decision_id": "outcome_class_is_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_parameters_and_thresholds_remain_unreviewed",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_execution_and_scientific_claim_remain_unauthorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_all_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "deterministic_reproductions": {
+    "byte_identical": true,
+    "environment": {
+      "LC_ALL": "C",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC",
+      "numpy_version": "2.2.6"
+    },
+    "execution_count": 2,
+    "execution_sha256": [
+      "5ab2902bd1c05c6b962edaf96bc24f18e8de0fc96c0db023b576d3a0ebc72386",
+      "5ab2902bd1c05c6b962edaf96bc24f18e8de0fc96c0db023b576d3a0ebc72386"
+    ]
+  },
+  "negative_controls_passed": 27,
+  "nonclaims": [
+    "pilot values are not canonical",
+    "candidate thresholds are unreviewed",
+    "no conservation claim",
+    "no coupled-field scientific result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim"
+  ],
+  "pilot_outcome": "ENGINEERING_READY",
+  "positive_controls_passed": 12,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_20260713_v0",
+  "scientific_result_claimed": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0_result_review",
+  "target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0",
+  "verdict": "ENGINEERING_READY_PENDING_INDEPENDENT_REVIEW"
+}
