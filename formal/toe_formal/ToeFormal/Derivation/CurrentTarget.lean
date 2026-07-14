@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.DiracMaxwellFullZeroModeNonAuthoritativePilotResultReview
+import ToeFormal.Derivation.DiracMaxwellFullZeroModePilotImplementationRepairPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  DiracMaxwellFullZeroModeNonAuthoritativePilotResultReview.selectedNextTarget
+  DiracMaxwellFullZeroModePilotImplementationRepairPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  DiracMaxwellFullZeroModeNonAuthoritativePilotResultReview.reviewId
+  DiracMaxwellFullZeroModePilotImplementationRepairPacketResultReview.reviewId
 
-theorem current_target_points_to_pilot_implementation_repair_v0 :
+theorem current_target_points_to_non_authoritative_pilot_v1 :
     currentLiveTarget =
-      "prepare_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0" := by
+      "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1" := by
   rfl
 
 end CurrentTarget

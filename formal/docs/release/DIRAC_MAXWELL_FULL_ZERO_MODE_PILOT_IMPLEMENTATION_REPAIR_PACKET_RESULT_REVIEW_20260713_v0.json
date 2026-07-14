@@ -1,0 +1,123 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "canonical_execution_authorized": false,
+    "canonical_parameter_freeze_authorized": false,
+    "non_authoritative_pilot_v1_authorized": true,
+    "pilot_v0_engineering_evidence_accepted": false,
+    "run_identity_repair_accepted": true,
+    "scientific_result_claimed": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The evidence-identity repair is accepted; only a versioned non-authoritative pilot rerun is authorized.",
+  "decision_count": 13,
+  "decisions": [
+    {
+      "decision_id": "immutable_repair_preparation_is_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "blocked_v0_review_is_the_exact_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "thirteen_closed_calibration_roles_are_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "execution_ids_are_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "run_record_ids_are_role_qualified_and_unique",
+      "passed": true
+    },
+    {
+      "decision_id": "duplicate_parameter_executions_remain_visible_across_distinct_roles",
+      "passed": true
+    },
+    {
+      "decision_id": "legacy_arrays_and_numerical_values_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "repair_changes_only_evidence_identity",
+      "passed": true
+    },
+    {
+      "decision_id": "all_four_identity_mutations_discriminate",
+      "passed": true
+    },
+    {
+      "decision_id": "v0_blocker_remains_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "only_versioned_pilot_v1_is_authorized_after_acceptance",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_parameters_thresholds_execution_and_claim_remain_unauthorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_identity_audit": {
+    "all_ids_role_qualified": true,
+    "duplicate_legacy_run_ids": [
+      "full_mixed_N16_dt0.00312500_tol1e-12",
+      "full_mixed_N16_dt0.00625000_tol1e-12"
+    ],
+    "legacy_arrays_hash": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65",
+    "record_count": 13,
+    "records_match_independent_recomputation": true,
+    "role_count": 13,
+    "roles_unique": true,
+    "run_record_ids_unique": true,
+    "shared_execution_ids_across_distinct_roles": [
+      "EXECUTION_4669d51ad0cba19a",
+      "EXECUTION_e3fba205cba1b55c"
+    ]
+  },
+  "nonclaims": [
+    "no v0 rewrite",
+    "no numerical recalibration",
+    "no canonical parameter or threshold",
+    "no canonical execution",
+    "no conservation or coupled-field result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim"
+  ],
+  "passed_decision_count": 13,
+  "preparation_custody": {
+    "commit": "9101bb3a6ca12b41f5f76d98281aef73cf2b4ff3",
+    "commit_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_20260713_v0.json": "30a2a5dfd58d0a912970f10142d6645e845cf50d6544ae3d71cb9adf684e30b1",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-MANIFEST-v0.json": "bcb4e6b9ca795716b1bc9272f773d42533207d11ae1da8c700aeeb4e71026e99",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair.py": "8279f8105aa16437f6cb90cb589480dd133586f0fa43badc51a8ccf722d7ceb7"
+    },
+    "expected_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_20260713_v0.json": "30a2a5dfd58d0a912970f10142d6645e845cf50d6544ae3d71cb9adf684e30b1",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-MANIFEST-v0.json": "bcb4e6b9ca795716b1bc9272f773d42533207d11ae1da8c700aeeb4e71026e99",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair.py": "8279f8105aa16437f6cb90cb589480dd133586f0fa43badc51a8ccf722d7ceb7"
+    },
+    "parent": "9ef41433a93e554c9cc697a76800191eed10f2e8",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_20260713_v0.json": "30a2a5dfd58d0a912970f10142d6645e845cf50d6544ae3d71cb9adf684e30b1",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-MANIFEST-v0.json": "bcb4e6b9ca795716b1bc9272f773d42533207d11ae1da8c700aeeb4e71026e99",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair.py": "8279f8105aa16437f6cb90cb589480dd133586f0fa43badc51a8ccf722d7ceb7"
+    }
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1",
+  "selected_next_target_kind": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1",
+  "verdict": "ACCEPT"
+}
