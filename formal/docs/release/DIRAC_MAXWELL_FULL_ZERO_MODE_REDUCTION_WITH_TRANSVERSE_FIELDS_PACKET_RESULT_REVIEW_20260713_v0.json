@@ -1,0 +1,168 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "execution_authorized": false,
+    "full_zero_mode_analytic_repair_accepted": true,
+    "numerical_guardrail_accepted": false,
+    "numerical_guardrail_preparation_authorized": true,
+    "pillar_or_seam_completion_claimed": false,
+    "pure_1p1_truncation_rehabilitated": false,
+    "transverse_mode_decoupling_claimed": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The parent-derived full zero-mode c-number Maxwell-Dirac reduction is analytically accepted with A2 and A3 retained; only numerical-guardrail preparation is authorized.",
+  "decision_count": 16,
+  "decisions": [
+    {
+      "decision_id": "immutable_full_zero_mode_preparation_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "complete_parent_field_inventory_is_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "descendants_are_gauge_components_not_new_scalar_matter",
+      "passed": true
+    },
+    {
+      "decision_id": "zero_mode_gauge_transformations_are_independently_consistent",
+      "passed": true
+    },
+    {
+      "decision_id": "Maxwell_action_decomposition_is_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "gamma2_gamma3_sector_mixing_is_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "transverse_wave_equation_signs_follow_Euler_Lagrange_variation",
+      "passed": true
+    },
+    {
+      "decision_id": "all_parent_and_reduced_action_equations_match",
+      "passed": true
+    },
+    {
+      "decision_id": "variation_reduction_commutation_has_six_zero_residuals",
+      "passed": true
+    },
+    {
+      "decision_id": "descendant_Hilbert_tensors_match_parent_ab_components",
+      "passed": true
+    },
+    {
+      "decision_id": "three_exchange_channels_independently_sum_to_zero",
+      "passed": true
+    },
+    {
+      "decision_id": "dimension_order_and_parent_tensor_residuals_are_zero",
+      "passed": true
+    },
+    {
+      "decision_id": "positive_negative_and_permanent_regression_controls_are_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "later_discrete_architecture_preserves_link_site_distinction",
+      "passed": true
+    },
+    {
+      "decision_id": "maximum_claim_and_nonclaims_are_bounded",
+      "passed": true
+    },
+    {
+      "decision_id": "only_numerical_guardrail_preparation_is_next_authorized",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_reduction_audit": {
+    "Maxwell_decomposition_passed": true,
+    "exchange_coefficients": {
+      "longitudinal": {
+        "field": -1,
+        "matter": 1,
+        "sum": 0
+      },
+      "phi2": {
+        "field": -1,
+        "matter": 1,
+        "sum": 0
+      },
+      "phi3": {
+        "field": -1,
+        "matter": 1,
+        "sum": 0
+      }
+    },
+    "exchange_sum_zero": true,
+    "gamma_longitudinal_mixing_norm": "0.0e+00",
+    "gamma_transverse_min_mixing_norm": "1.0e+00",
+    "lagrangian_coefficients": {
+      "F01_squared": 0.5,
+      "phi2_space_squared": -0.5,
+      "phi2_time_squared": 0.5,
+      "phi3_space_squared": -0.5,
+      "phi3_time_squared": 0.5
+    },
+    "pair_coefficients": {
+      "F01_in_F2": -2,
+      "F02_in_F2": -2,
+      "F03_in_F2": -2,
+      "F12_in_F2": 2,
+      "F13_in_F2": 2
+    },
+    "scalar_wave_signs": {
+      "Euler_Lagrange_equation": "Box phi_I=-mu_0 J^I=mu_0 J_I",
+      "L_derivative_coefficient": 1,
+      "L_source_coefficient_for_J_upper": -1
+    },
+    "stress_tensor_descendant_coefficients": {
+      "gradient_outer_product": 1,
+      "matches_parent_ab_components": true,
+      "metric_trace": "-1/2"
+    }
+  },
+  "maximum_future_result_claim": "A bounded, unit-complete c-number zero-mode reduction retaining the 1+1 gauge field, both transverse gauge descendants, two opposite-charge species, and both reduced spin sectors may be tested numerically after a separately accepted guardrail.",
+  "nonclaims": [
+    "no pure 1+1 Maxwell-Dirac truncation",
+    "no transverse-mode decoupling",
+    "no stable classical fermionic matter",
+    "no fermionic QFT, quantum pair creation, Fermi statistics, or quantized electromagnetism",
+    "no full 3+1 photon recovery",
+    "no EM or QFT pillar completion or EM-QFT seam closure",
+    "no new physics, C_k dynamics, CCFT validation, or master-action validation"
+  ],
+  "passed_decision_count": 16,
+  "preparation_custody": {
+    "commit": "8fb73ca66d97f91625aa657c6fea7c2496451f40",
+    "commit_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_20260713_v0.json": "044ca568da1a4830b26c61c732eb8a013da712cb5c34758bf1bbb4df29ab6086",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-MANIFEST-v0.json": "1b32cc1f0777214453a751cdc66f8de4cf81335621ade151ce823e4bd124e0fd",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-PACKET-v0.json": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py": "068125c5174216f29d18afa91f2387a501644a03317139cb3655da60ff5bff96"
+    },
+    "expected_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_20260713_v0.json": "044ca568da1a4830b26c61c732eb8a013da712cb5c34758bf1bbb4df29ab6086",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-MANIFEST-v0.json": "1b32cc1f0777214453a751cdc66f8de4cf81335621ade151ce823e4bd124e0fd",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-PACKET-v0.json": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py": "068125c5174216f29d18afa91f2387a501644a03317139cb3655da60ff5bff96"
+    },
+    "parent": "f953552a61366c72b20b55857e2db33a35254619",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_20260713_v0.json": "044ca568da1a4830b26c61c732eb8a013da712cb5c34758bf1bbb4df29ab6086",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-MANIFEST-v0.json": "1b32cc1f0777214453a751cdc66f8de4cf81335621ade151ce823e4bd124e0fd",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-PACKET-v0.json": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py": "068125c5174216f29d18afa91f2387a501644a03317139cb3655da60ff5bff96"
+    }
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0",
+  "selected_next_target_kind": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0",
+  "verdict": "ACCEPT"
+}
