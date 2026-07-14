@@ -1,0 +1,182 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "execution_authorized": false,
+    "full_zero_mode_repair_preparation_authorized": true,
+    "numerical_guardrail_authorized": false,
+    "pillar_or_seam_completion_claimed": false,
+    "pure_1p1_truncation_rehabilitated": false,
+    "route_decision_accepted": true
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "Independent rescoring selects repair reduction by retaining A2 and A3; only the full zero-mode analytic repair preparation is authorized.",
+  "decision_count": 14,
+  "decisions": [
+    {
+      "decision_id": "immutable_route_decision_preparation_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_four_candidate_identity_reproduced",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eight_criterion_weights_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_thirty_two_scores_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_weighted_totals_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "every_packet_score_binds_repository_propositions",
+      "passed": true
+    },
+    {
+      "decision_id": "user_recommendation_did_not_enter_scoring",
+      "passed": true
+    },
+    {
+      "decision_id": "external_context_did_not_enter_scoring",
+      "passed": true
+    },
+    {
+      "decision_id": "repair_reduction_is_independent_highest_score",
+      "passed": true
+    },
+    {
+      "decision_id": "selection_is_stable_from_40_through_48",
+      "passed": true
+    },
+    {
+      "decision_id": "mutation_controls_and_no_oracle_boundary_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "restricted_sector_hunting_is_not_default_repair",
+      "passed": true
+    },
+    {
+      "decision_id": "only_full_zero_mode_repair_preparation_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_all_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_scoring": {
+    "all_packet_scores_bind_propositions": true,
+    "canonical_selected_candidate": "REPAIR_REDUCTION",
+    "criterion_weights": {
+      "accepted_foundation_reuse": 4,
+      "analytic_closure_readiness": 5,
+      "benchmark_continuity": 2,
+      "blocker_resolution_directness": 5,
+      "bounded_scope": 3,
+      "numerical_tractability": 3,
+      "parent_action_fidelity": 5,
+      "seam_scientific_value": 4
+    },
+    "packet_score_vectors_match": true,
+    "packet_totals_match": true,
+    "score_vectors": {
+      "ADOPT_NATIVE_1P1": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "CHANGE_MATTER_SECTOR": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "MOVE_TO_2P1": [
+        2,
+        1,
+        2,
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "REPAIR_REDUCTION": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    "selected_by_threshold": {
+      "40": "REPAIR_REDUCTION",
+      "42": "REPAIR_REDUCTION",
+      "44": "REPAIR_REDUCTION",
+      "46": "REPAIR_REDUCTION",
+      "48": "REPAIR_REDUCTION"
+    },
+    "stable_selection": true,
+    "weighted_totals": {
+      "ADOPT_NATIVE_1P1": 37,
+      "CHANGE_MATTER_SECTOR": 31,
+      "MOVE_TO_2P1": 38,
+      "REPAIR_REDUCTION": 51
+    }
+  },
+  "nonclaims": [
+    "no numerical guardrail or execution",
+    "no restricted-sector default",
+    "no pure 1+1 truncation recovery",
+    "no QFT, pillar completion, seam closure, C_k dynamics, CCFT, or master-action promotion"
+  ],
+  "passed_decision_count": 14,
+  "preparation_custody": {
+    "commit": "2ced60dc0aaf44f54386872d0de6f5ec1f17c481",
+    "commit_hashes": {
+      "formal/docs/release/POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_20260713_v0.json": "552ebe36ec3f3d2e3739e01d9add879501e976e83ae5b0d06a1ed9561ec0d11e",
+      "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-MANIFEST-v0.json": "e0d077ae88606f438717cb48138927088c080fcb171270917c17b0b6d121fc37",
+      "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-PACKET-v0.json": "877796d69cb09211b3160a72d2cee948703ec5985279c84bbae9983eb938a23e",
+      "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision.py": "88257fb53c68e117c6baf276c1aa3423129814a802a073f1be3a925f31bc97bb"
+    },
+    "expected_hashes": {
+      "formal/docs/release/POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_20260713_v0.json": "552ebe36ec3f3d2e3739e01d9add879501e976e83ae5b0d06a1ed9561ec0d11e",
+      "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-MANIFEST-v0.json": "e0d077ae88606f438717cb48138927088c080fcb171270917c17b0b6d121fc37",
+      "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-PACKET-v0.json": "877796d69cb09211b3160a72d2cee948703ec5985279c84bbae9983eb938a23e",
+      "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision.py": "88257fb53c68e117c6baf276c1aa3423129814a802a073f1be3a925f31bc97bb"
+    },
+    "parent": "677294016ca6e1b855b024470025fd631755b6e8",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_20260713_v0.json": "552ebe36ec3f3d2e3739e01d9add879501e976e83ae5b0d06a1ed9561ec0d11e",
+      "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-MANIFEST-v0.json": "e0d077ae88606f438717cb48138927088c080fcb171270917c17b0b6d121fc37",
+      "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-PACKET-v0.json": "877796d69cb09211b3160a72d2cee948703ec5985279c84bbae9983eb938a23e",
+      "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision.py": "88257fb53c68e117c6baf276c1aa3423129814a802a073f1be3a925f31bc97bb"
+    }
+  },
+  "review_target": "review_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0_result",
+  "schema_id": "POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_candidate_id": "REPAIR_REDUCTION",
+  "selected_candidate_label": "repair reduction",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0",
+  "selected_next_target_kind": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0",
+  "verdict": "ACCEPT"
+}
