@@ -1,0 +1,146 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "d88998839f35aa1bfd269a9488f38df806338f8724c77fc7860f56bab7512df1",
+    "manifest_sha256": "d5383d4ba773e18fbe6bb350da859a4cd22ec17f4e0f947b30c41417257bf291",
+    "packet_sha256": "98a635b92d3a2b5479cc41aca80760a965a249fb3ae16c476b3a50aab6e10100"
+  },
+  "boundary": {
+    "C_k_dynamics_claimed": false,
+    "canonical_robustness_execution_authorized": false,
+    "exact_parameter_matrix_frozen": false,
+    "fermionic_QFT_claimed": false,
+    "master_action_validated": false,
+    "new_fundamental_physics_claimed": false,
+    "physical_necessity_in_nature_claimed": false,
+    "pillar_completion_claimed": false,
+    "pilot_authorized": false,
+    "quantized_electromagnetism_claimed": false,
+    "repository_wide_green_claimed": false,
+    "robustness_guardrail_accepted": false,
+    "robustness_guardrail_preparation_authorized": false,
+    "scientific_design_accepted": false,
+    "scientific_design_prepared": true,
+    "seam_closure_claimed": false,
+    "thresholds_frozen": false,
+    "universal_Maxwell_Dirac_robustness_claimed": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The bounded descendant-necessity and robustness scientific design is prepared; exact parameter values, thresholds, pilot, and execution remain unauthorized pending independent review and later guardrails.",
+  "decision_count": 20,
+  "decisions": [
+    {
+      "decision_id": "accepted_route_review_authorizes_scientific_design_only",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_result_blocker_repair_guardrail_and_freeze_sources_are_hash_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "necessity_and_robustness_are_separate_claim_tracks",
+      "passed": true
+    },
+    {
+      "decision_id": "full_model_is_the_only_positive_robustness_candidate",
+      "passed": true
+    },
+    {
+      "decision_id": "forced_truncation_is_intentionally_noninvariant_negative_comparator_only",
+      "passed": true
+    },
+    {
+      "decision_id": "descendant_free_special_case_requires_separate_invariant_subdomain_proof",
+      "passed": true
+    },
+    {
+      "decision_id": "five_dimensionless_or_normalized_scientific_axes_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_axis_values_and_thresholds_remain_unfrozen",
+      "passed": true
+    },
+    {
+      "decision_id": "anchor_plus_OAT_plus_corner_matrix_is_bounded_before_pilot",
+      "passed": true
+    },
+    {
+      "decision_id": "all_existing_and_descendant_observables_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "eight_positive_and_thirteen_negative_control_definitions_are frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "original_reduction_blocker_is_a_permanent_regression_control",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_thresholds_are_reference_only_and_not_automatically_reused",
+      "passed": true
+    },
+    {
+      "decision_id": "pilot_may_not_change_scientific_axes_comparators_observables_controls_or_outcomes",
+      "passed": true
+    },
+    {
+      "decision_id": "multi_axis_outcome_taxonomy_preserves conditional blocked and domain-limited results",
+      "passed": true
+    },
+    {
+      "decision_id": "fifteen_design_mutations_are_independently_diagnosed",
+      "passed": true
+    },
+    {
+      "decision_id": "completed_canonical_result_remains_immutable",
+      "passed": true
+    },
+    {
+      "decision_id": "only_independent_design_review_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "claim_ceiling_and_all_nonpromotion_boundaries_hold",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_is_preserved",
+      "passed": true
+    }
+  ],
+  "design_summary": {
+    "comparison_track_count": 3,
+    "descendant_observable_count": 9,
+    "descendant_significance_class_count": 3,
+    "existing_observable_count": 10,
+    "future_scientific_row_count_range": [
+      12,
+      14
+    ],
+    "negative_control_count": 13,
+    "parameter_axis_count": 5,
+    "positive_control_count": 8,
+    "robustness_status_class_count": 5,
+    "scientific_question_count": 2
+  },
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v1",
+  "mutation_control_count": 15,
+  "mutation_controls_passed": 15,
+  "nonclaims": [
+    "no robustness design accepted yet",
+    "no exact robustness matrix or thresholds frozen",
+    "no pilot or robustness execution authorized",
+    "no universal robustness or physical necessity in nature",
+    "no fermionic QFT or quantized electromagnetism",
+    "no pillar completion, seam closure, new physics, C_k dynamics, or master-action validation",
+    "no repository-wide green claim"
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v0",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_PACKET_20260713_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0_result_review",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

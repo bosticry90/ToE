@@ -1,0 +1,46 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 20,
+  "descendant_observable_count": 9,
+  "existing_observable_count": 10,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness.py",
+    "sha256": "d88998839f35aa1bfd269a9488f38df806338f8724c77fc7860f56bab7512df1"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "6e6426de69dfbb831a7ed3c1c76f0acb32321a47eb663e3ce0fd2f96f7af637d"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "9b518024fa8a13b73d19e01576375484d5acc24e4f5896adaa612b46f500e040"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e4a830678d863319d5509bf43e332a778708b7b82bd6db5903be5a389fef34de"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "b881d23e9bd201b09bb023a1e897306afff681bd57ccb224a9c6baf562be57b6"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "2fb867bcc8cf8271d2511db2de8d9d605db5888d0ec407db9eab9085149d81f3"
+    }
+  ],
+  "mutation_control_count": 15,
+  "negative_control_count": 13,
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-PACKET-v0.json",
+    "sha256": "98a635b92d3a2b5479cc41aca80760a965a249fb3ae16c476b3a50aab6e10100"
+  },
+  "parameter_axis_count": 5,
+  "positive_control_count": 8,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_packet_v0_result"
+}
