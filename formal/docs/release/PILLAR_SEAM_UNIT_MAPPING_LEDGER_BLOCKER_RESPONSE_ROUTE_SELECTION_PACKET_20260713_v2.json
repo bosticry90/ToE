@@ -1,0 +1,913 @@
+{
+  "all_decisions_passed": true,
+  "all_negative_controls_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "64b824a862688acb052b8875c50bb70590cc8b321909e97462093804d5203496",
+    "manifest_sha256": "fffb682a00142594df1d4f75d25a98aa92a16d2ead0ee8807226b6015aaffdb8",
+    "packet_sha256": "92d802c09bdf5724f6c7a8855b8e2eaf73afbac1c644df4402aeaaa8d92c95f7"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_action_embedding_authorized": false,
+    "C_k_audit_only": true,
+    "Maxwell_Dirac_selected": false,
+    "candidate_master_action_self_support_allowed": false,
+    "ccft_resumed": false,
+    "conversion_constants_emitted": 0,
+    "cross_sector_coupling_validation_claimed": false,
+    "dimension_vectors_emitted": 0,
+    "dimensional_closure_claimed": false,
+    "first_unit_selector_authorized_before_review": false,
+    "level_4_or_level_5_authorized": false,
+    "master_action_promoted": false,
+    "physical_calibration_claimed": false,
+    "pillar_completion_claimed": false,
+    "registry_maintenance_paused": true,
+    "route_selection_is_resolution": false,
+    "seam_admissibility_claimed": false,
+    "seam_mappings_emitted": 0,
+    "unit_assignments_emitted": 0
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "V2 repairs evidence authority at proposition granularity and recomputes twelve bounded planning routes; it assigns no unit and authorizes only independent result review.",
+  "decision_count": 19,
+  "decisions": [
+    {
+      "decision_id": "exact_v1_blocker_and_v2_authorization_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "proposition_specific_evidence_schema_closed",
+      "passed": true
+    },
+    {
+      "decision_id": "source_locators_and_hashes_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "claim_contexts_and_authority_classes_closed",
+      "passed": true
+    },
+    {
+      "decision_id": "policy_sources_are_planning_nonclaims",
+      "passed": true
+    },
+    {
+      "decision_id": "gr_legacy_theorem_context_is_bounded",
+      "passed": true
+    },
+    {
+      "decision_id": "review_artifacts_are_repository_state_evidence_only",
+      "passed": true
+    },
+    {
+      "decision_id": "compatibility_matrix_is_exhaustive_and_fail_closed",
+      "passed": true
+    },
+    {
+      "decision_id": "route_support_eligibility_is_generated",
+      "passed": true
+    },
+    {
+      "decision_id": "derived_routes_have_reproducible_recipes",
+      "passed": true
+    },
+    {
+      "decision_id": "exactly_one_primary_route_per_row",
+      "passed": true
+    },
+    {
+      "decision_id": "ordered_prerequisites_are_acyclic",
+      "passed": true
+    },
+    {
+      "decision_id": "primary_and_prerequisite_counts_are_separate",
+      "passed": true
+    },
+    {
+      "decision_id": "scientific_implementation_environment_closures_are_bounded",
+      "passed": true
+    },
+    {
+      "decision_id": "historical_counts_are_not_an_oracle",
+      "passed": true
+    },
+    {
+      "decision_id": "no_units_dimensions_constants_or_mappings_emitted",
+      "passed": true
+    },
+    {
+      "decision_id": "all_boundaries_and_nonclaims_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "prompt_hash_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "thirty_four_mutations_pass",
+      "passed": true
+    }
+  ],
+  "failure_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v3",
+  "first_unit_selector_authorized": false,
+  "negative_control_count": 34,
+  "negative_controls": [
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "assign_unit_to_unit_unknown_without_evidence",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC01_UNIT_ASSIGNMENT_FORBIDDEN",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC01_UNIT_ASSIGNMENT_FORBIDDEN",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].proposed_unit_assignment"
+      ],
+      "observed_diagnostics": [
+        "NC01_UNIT_ASSIGNMENT_FORBIDDEN"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "natural_units_mark_unresolved_resolved",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC02_STATUS_RESOLUTION_FORBIDDEN",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC02_STATUS_RESOLUTION_FORBIDDEN",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[1].current_status"
+      ],
+      "observed_diagnostics": [
+        "NC02_STATUS_RESOLUTION_FORBIDDEN"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "dimensionless_coordinates_promoted_to_physical_distance",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.policy"
+      ],
+      "observed_diagnostics": [
+        "NC03_DIMENSIONLESS_COORDINATES_NOT_DISTANCE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "suppressed_constant_omitted",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.policy"
+      ],
+      "observed_diagnostics": [
+        "NC04_SUPPRESSED_CONSTANTS_REQUIRE_RESTORATION"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "two_incompatible_routes_assigned_without_priority",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC05_EXACTLY_ONE_PRIMARY_ROUTE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC05_EXACTLY_ONE_PRIMARY_ROUTE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].primary_route"
+      ],
+      "observed_diagnostics": [
+        "NC05_EXACTLY_ONE_PRIMARY_ROUTE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "seam_map_selected_with_incomplete_pillar_units",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[7].primary_route"
+      ],
+      "observed_diagnostics": [
+        "NC06_SEAM_MAP_REQUIRES_RESOLVED_ENDPOINTS",
+        "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "candidate_master_action_used_as_self_evidence",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.boundary.candidate_master_action_self_support_allowed"
+      ],
+      "observed_diagnostics": [
+        "NC07_MASTER_ACTION_SELF_EVIDENCE_FORBIDDEN"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "normalization_convention_promoted_to_empirical_scale",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.policy"
+      ],
+      "observed_diagnostics": [
+        "NC08_NORMALIZATION_IS_NOT_EMPIRICAL_SCALE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "routed_blocker_promoted_to_dimensional_closure",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.boundary.route_selection_is_resolution"
+      ],
+      "observed_diagnostics": [
+        "NC09_ROUTE_SELECTION_IS_NOT_RESOLUTION"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "C_k_embedding_before_dimensions_known",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "NC10_CK_REMAINS_AUDIT_ONLY",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "NC10_CK_REMAINS_AUDIT_ONLY",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.boundary.C_k_action_embedding_authorized"
+      ],
+      "observed_diagnostics": [
+        "NC10_CK_REMAINS_AUDIT_ONLY"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "qft_action_claimed_without_action",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records[3].exact_supported_proposition"
+      ],
+      "observed_diagnostics": [
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "qm_hamiltonian_claimed_without_hamiltonian",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[2].evidence_records[2].exact_supported_proposition"
+      ],
+      "observed_diagnostics": [
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "stat_probability_claimed_without_probability_semantics",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[3].evidence_records[2].exact_supported_proposition"
+      ],
+      "observed_diagnostics": [
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "stat_transport_claimed_without_transport_law",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[3].evidence_records[3].exact_supported_proposition"
+      ],
+      "observed_diagnostics": [
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "narrow_scalar_evidence_promoted_to_full_qft",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_REVIEW_NOT_PHYSICAL_DERIVATION",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_REVIEW_NOT_PHYSICAL_DERIVATION",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records[2].requested_route_type"
+      ],
+      "observed_diagnostics": [
+        "V2_REVIEW_NOT_PHYSICAL_DERIVATION"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "absence_treated_as_physical_evidence",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[2].evidence_records[2].support_mode"
+      ],
+      "observed_diagnostics": [
+        "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH",
+        "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "citation_hash_changed_without_rebinding",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[1].evidence_records[1].source_hash"
+      ],
+      "observed_diagnostics": [
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "route_rationale_support_missing",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_ROUTE_SUPPORT_NOT_ELIGIBLE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_ROUTE_SUPPORT_NOT_ELIGIBLE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[2].primary_route_support_ids.length"
+      ],
+      "observed_diagnostics": [
+        "V2_ROUTE_SUPPORT_NOT_ELIGIBLE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "speculative_surface_treated_as_authoritative",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_AUTHORITY_CLASS_CLOSED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_AUTHORITY_CLASS_CLOSED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[3].evidence_records[1].authority_class"
+      ],
+      "observed_diagnostics": [
+        "V2_AUTHORITY_CLASS_CLOSED",
+        "V2_SOURCE_AUTHORITY_MAPPING_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "one_source_supports_conflicting_object_definitions",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records.length"
+      ],
+      "observed_diagnostics": [
+        "V2_INCOMPATIBLE_PROPOSITION_REUSE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "source_locator_removed",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_SOURCE_LOCATOR_REQUIRED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_SOURCE_LOCATOR_REQUIRED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records[1].source_locator.end_line",
+        "$.route_selections[0].evidence_records[1].source_locator.heading",
+        "$.route_selections[0].evidence_records[1].source_locator.heading_line",
+        "$.route_selections[0].evidence_records[1].source_locator.locator_type",
+        "$.route_selections[0].evidence_records[1].source_locator.start_line"
+      ],
+      "observed_diagnostics": [
+        "V2_SOURCE_LOCATOR_REQUIRED",
+        "V2_LOCATOR_OR_SOURCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "extraction_method_open_vocabulary",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_EXTRACTION_METHOD_CLOSED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_EXTRACTION_METHOD_CLOSED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records[1].proposition_extraction_method"
+      ],
+      "observed_diagnostics": [
+        "V2_EXTRACTION_METHOD_CLOSED"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "derived_proposition_missing_recipe",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_DERIVATION_RECIPE_REQUIRED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_DERIVATION_RECIPE_REQUIRED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[5].route_derivation.derivation_recipe"
+      ],
+      "observed_diagnostics": [
+        "V2_DERIVATION_RECIPE_REQUIRED"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "compatibility_matrix_not_exhaustive",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.compatibility_matrix.row_count"
+      ],
+      "observed_diagnostics": [
+        "V2_COMPATIBILITY_MATRIX_NOT_EXHAUSTIVE",
+        "V2_COMPATIBILITY_MATRIX_CONTENT_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "unknown_compatibility_combination_defaults_open",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.compatibility_matrix.default_for_unknown_combination"
+      ],
+      "observed_diagnostics": [
+        "V2_UNKNOWN_COMBINATION_NOT_FAIL_CLOSED",
+        "V2_COMPATIBILITY_MATRIX_CONTENT_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "review_substituted_for_underlying_derivation",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].primary_route_support_ids.length"
+      ],
+      "observed_diagnostics": [
+        "V2_REVIEW_SUBSTITUTED_FOR_UNDERLYING_DERIVATION",
+        "V2_ROUTE_SUPPORT_NOT_ELIGIBLE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "route_support_eligible_manually_flipped",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records[2].route_support_eligible"
+      ],
+      "observed_diagnostics": [
+        "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+        "V2_HISTORICAL_CONTEXT_NEVER_ELIGIBLE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "stale_seam_endpoint_injected",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[7].ordered_prerequisite_routes[0].row_id"
+      ],
+      "observed_diagnostics": [
+        "V2_PREREQUISITE_GRAPH_ACYCLIC"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "primary_route_derivation_value_changed",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].route_derivation.derivation_recipe.expected_derived_value"
+      ],
+      "observed_diagnostics": [
+        "V2_ROUTE_DERIVATION_DOES_NOT_REPRODUCE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "prerequisite_cycle_injected",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_PREREQUISITE_GRAPH_ACYCLIC",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].ordered_prerequisite_routes.length"
+      ],
+      "observed_diagnostics": [
+        "V2_PREREQUISITE_GRAPH_ACYCLIC"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "same_source_reused_with_incompatible_proposition_meaning",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_INCOMPATIBLE_PROPOSITION_REUSE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records.length"
+      ],
+      "observed_diagnostics": [
+        "V2_INCOMPATIBLE_PROPOSITION_REUSE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "scientific_dependency_removed",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.dependency_closures.scientific_input_closure.length"
+      ],
+      "observed_diagnostics": [
+        "V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "implementation_import_scan_marked_incomplete",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.dependency_closures.implementation_closure.project_local_import_scan.complete"
+      ],
+      "observed_diagnostics": [
+        "V2_IMPLEMENTATION_CLOSURE_INCOMPLETE"
+      ],
+      "passed": true
+    },
+    {
+      "baseline_passed_immediately_before_mutation": true,
+      "control_id": "historical_context_made_route_eligible",
+      "decision_or_eligibility_delta": {
+        "baseline": "PASS",
+        "decision_id": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+        "mutated": "FAIL"
+      },
+      "expected_diagnostic": "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+      "expected_diagnostic_observed": true,
+      "fresh_unmutated_fixture_rebuilt": true,
+      "intended_changed_premise_count": 1,
+      "no_unrelated_earlier_failure": true,
+      "observed_changed_leaf_paths": [
+        "$.route_selections[0].evidence_records[2].route_support_eligible"
+      ],
+      "observed_diagnostics": [
+        "V2_MANUAL_ELIGIBILITY_FLIP_REJECTED",
+        "V2_HISTORICAL_CONTEXT_NEVER_ELIGIBLE"
+      ],
+      "passed": true
+    }
+  ],
+  "nonclaims": [
+    "CCFT_resumption",
+    "C_k_action_embedding",
+    "Maxwell-Dirac remains a preferred downstream candidate only",
+    "cross_sector_coupling_validation",
+    "dimensional_closure",
+    "level_4_or_level_5",
+    "master_action_promotion",
+    "no first-unit target is selected before independent v2 review",
+    "no registry-maintenance, C_k, CCFT, seam-closure, or master-action work is authorized",
+    "no unit, dimension vector, constant restoration, or seam map is assigned",
+    "physical_calibration_claims",
+    "pillar_completion",
+    "seam_admissibility"
+  ],
+  "packet_acceptance_authorized": false,
+  "post_acceptance_target": "prepare_pillar_seam_unit_mapping_ledger_first_unit_selector_packet_v0",
+  "prerequisite_route_counts": {
+    "CONVENTION_AND_CONSTANT_RESTORATION": 2,
+    "EQUATION_BALANCE_DERIVATION": 2,
+    "OBJECT_SEMANTICS_REFINEMENT": 6
+  },
+  "primary_route_counts": {
+    "CONVENTION_AND_CONSTANT_RESTORATION": 2,
+    "EQUATION_BALANCE_DERIVATION": 1,
+    "OBJECT_SEMANTICS_REFINEMENT": 4,
+    "RESEARCH_BLOCKED": 5
+  },
+  "route_map": {
+    "PILLAR-COSMO-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+    "PILLAR-EM-units_and_dimensions-v0": "CONVENTION_AND_CONSTANT_RESTORATION",
+    "PILLAR-GR-units_and_dimensions-v0": "EQUATION_BALANCE_DERIVATION",
+    "PILLAR-QFT-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+    "PILLAR-QM-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+    "PILLAR-SR-units_and_dimensions-v0": "CONVENTION_AND_CONSTANT_RESTORATION",
+    "PILLAR-STAT-units_and_dimensions-v0": "OBJECT_SEMANTICS_REFINEMENT",
+    "SEAM-EM-QFT-unit_map-v0": "RESEARCH_BLOCKED",
+    "SEAM-GR-QM-unit_map-v0": "RESEARCH_BLOCKED",
+    "SEAM-QFT-GR-unit_map-v0": "RESEARCH_BLOCKED",
+    "SEAM-QM-STAT-unit_map-v0": "RESEARCH_BLOCKED",
+    "SEAM-SR-COSMO-unit_map-v0": "RESEARCH_BLOCKED"
+  },
+  "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2",
+  "selected_next_target": "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2_result",
+  "selected_next_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2_result_review",
+  "source_authority_repair": {
+    "all_policy_sources_classified_as_planning_nonclaims": [
+      "cosmo_planning_surface",
+      "em_bounded_surface",
+      "pillar_target_map",
+      "qft_bounded_surface",
+      "qm_bounded_surface",
+      "sr_bounded_surface",
+      "stat_planning_surface"
+    ],
+    "four_failed_v1_sources_corrected": [
+      "qft_bounded_surface",
+      "qm_bounded_surface",
+      "em_bounded_surface",
+      "sr_bounded_surface"
+    ],
+    "gr_legacy_source_context": "LEGACY_UNMIGRATED_NONRELEASE",
+    "review_artifacts_are_repository_state_evidence_only": true,
+    "v1_historical_authority_vocabulary_preserved_only_in_immutable_v1": true,
+    "v2_uses_bounded_authoritative_surface": false
+  },
+  "status": "prepared_v2_proposition_specific_evidence_authority_correction_pending_independent_review",
+  "target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}
