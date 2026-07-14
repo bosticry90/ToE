@@ -1,0 +1,2210 @@
+{
+  "authority_boundary": {
+    "CCFT_empirical_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "accepted_reduction_reopened": false,
+    "canonical_E_REPRO_result_remains_accepted": true,
+    "canonical_result_reopened": false,
+    "guardrail_v1_accepted_before_review": false,
+    "independent_guardrail_review_authorized": true,
+    "master_action_promotion_authorized": false,
+    "pillar_promotion_authorized": false,
+    "repository_wide_tier3_green_authorized": false,
+    "robustness_execution_authorized": false,
+    "robustness_parameter_calibration_authorized": false,
+    "robustness_pilot_authorized": false,
+    "seam_closure_authorized": false
+  },
+  "authority_inputs": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "2840f6edbd1414b8e685c661de1f51cc13c28b3c629e6ff2be36b16921d3d391"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "84140ac762b660a1f4ab86d9376a50bad256de1bf0f4faa9898195a5eb9fa0f9"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-AXIS-NORMALIZATION-REPAIR-PACKET-v0.json",
+      "sha256": "7863ae08a12841f3dba9e9a5a7b2375af8ec9c1b4ae8eef9918d15bbad3bfb88"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-PACKET-v0.json",
+      "sha256": "98a635b92d3a2b5479cc41aca80760a965a249fb3ae16c476b3a50aab6e10100"
+    },
+    {
+      "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json",
+      "sha256": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    }
+  ],
+  "axis_level_freeze": {
+    "DELTA_THETA_PSI": {
+      "definition": "relative phase applied to reduced components [1,3] of both charge species",
+      "exact_values_frozen": true,
+      "levels": {
+        "CANONICAL": 0.0,
+        "NEGATIVE_OFFSET": -1.5707963267948966,
+        "POSITIVE_OFFSET": 1.5707963267948966
+      },
+      "selection_rule": "canonical phase and quarter-turn sign partners"
+    },
+    "ETA_Q": {
+      "definition": "q_1p1/m",
+      "exact_values_frozen": true,
+      "levels": {
+        "CANONICAL": 0.2,
+        "STRONGER": 0.4,
+        "WEAKER": 0.1
+      },
+      "selection_rule": "factor-two log-symmetric variation around the accepted canonical 0.2"
+    },
+    "F_PERP_POSITIVE_LOADING_INITIAL_v1": {
+      "anchor_loading_odds": 0.27086052148941786,
+      "definition": "E_perp/(E_perp+B_plus)",
+      "exact_values_frozen": true,
+      "historical_axis_retained_as_diagnostic_only": "F_PERP_INITIAL_SIGNED_TOTAL_v0",
+      "levels": {
+        "CANONICAL": 0.2131315883288088,
+        "HIGH": 0.5200250552967295,
+        "LOW_NONZERO": 0.0634205964176414,
+        "ZERO": 0.0
+      },
+      "loading_odds_multiplier": 4.0,
+      "low_high_rule": "low/high use one-half/two-times reference descendant amplitude, equivalently anchor loading odds divided/multiplied by four",
+      "positive_base_definition": "B_plus=E_parallel_Maxwell+m*sum_s,r(N_s,r)",
+      "upper_admissibility_ceiling": 0.8
+    },
+    "MU_MASS_DOMAIN": {
+      "definition": "m*L_x with L_x fixed to one",
+      "exact_values_frozen": true,
+      "levels": {
+        "BOUNDED_VARIATION": 2.0,
+        "CANONICAL": 1.0
+      },
+      "selection_rule": "accepted canonical value and one factor-two mass/domain variation"
+    },
+    "THETA_W": {
+      "definition": "principal Arg(W) in (-pi,pi]",
+      "exact_values_frozen": true,
+      "levels": {
+        "NONTRIVIAL": 0.3,
+        "SYMMETRY_PARTNER": -0.3,
+        "TRIVIAL": 0.0
+      },
+      "selection_rule": "accepted nontrivial anchor, its sign partner, and the trivial holonomy"
+    }
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "Guardrail-v1 preparation freezes a bounded 14-row design, positive-loading reconstruction, materiality rules, controls, pilot subset, classifications, and nonclaims. No pilot, calibration, robustness execution, pillar, seam, CCFT, C_k, or master-action claim is authorized before independent review.",
+  "comparator_policy": {
+    "descendant_free_special_subdomain": "NOT_AVAILABLE_WITHOUT_SEPARATE_ACCEPTED_INVARIANCE_PROOF",
+    "forced_comparator_eligible_for_positive_robustness_claim": false,
+    "forced_comparator_id": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+    "forced_comparator_use": "negative control for descendant necessity only",
+    "full_model_eligible_for_positive_robustness_claim": true,
+    "full_model_id": "FULL_ACCEPTED_DESCENDANT_AWARE_SYSTEM",
+    "parent_requested_loading_preserved": true,
+    "realized_loading_after_forced_removal": "NOT_PHYSICALLY_ELIGIBLE",
+    "recompute_as_zero_for_scientific_axis_forbidden": true
+  },
+  "control_freeze": {
+    "accepted_negative_control_ids": [
+      "N_FORCE_BOTH_DESCENDANTS_ZERO_WITH_SOURCE",
+      "N_DROP_ONLY_PHI2",
+      "N_DROP_ONLY_PHI3",
+      "N_OMIT_DESCENDANT_ENERGY",
+      "N_OMIT_TRANSVERSE_EXCHANGE_CHANNEL",
+      "N_REVERSE_TRANSVERSE_EXCHANGE_SIGN",
+      "N_WRONG_GAMMA2_BLOCK",
+      "N_WRONG_GAMMA3_BLOCK",
+      "N_SUPPRESS_SECTOR_MULTIPLICITY",
+      "N_DESCENDANTS_RELABELED_INVENTED_MATTER",
+      "N_CANONICAL_THRESHOLDS_REUSED_UNSCALED",
+      "N_POST_EXECUTION_FAVORABLE_POINT_SELECTION",
+      "N_FAILED_POINTS_EXCLUDED_FROM_DOMAIN"
+    ],
+    "accepted_positive_control_ids": [
+      "P_CANONICAL_ACCEPTED_RESULT_UNCHANGED",
+      "P_CHARGE_CONJUGATE_PARAMETER_CASE",
+      "P_ANALYTIC_INVARIANT_DESCENDANT_FREE",
+      "P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED",
+      "P_INDEPENDENT_PHI2_EXCITATION",
+      "P_INDEPENDENT_PHI3_EXCITATION",
+      "P_PHI2_PHI3_INTERCHANGE",
+      "P_WEAK_COUPLING_APPROACH"
+    ],
+    "all_control_ids_frozen": true,
+    "normalization_regression_control_ids": [
+      "NORM01_HISTORICAL_RATIO_EXCEEDS_ONE",
+      "NORM02_HISTORICAL_DENOMINATOR_CROSSES_ZERO",
+      "NORM03_HISTORICAL_RATIO_CHANGES_SIGN",
+      "NORM04_CLAMPING_REJECTED",
+      "NORM05_ABSOLUTE_TOTAL_SHORTCUT_REJECTED",
+      "NORM06_POST_OBSERVATION_DOMAIN_WIDENING_REJECTED",
+      "NORM07_ZERO_DESCENDANTS_MAP_ZERO",
+      "NORM08_FINITE_LOADING_BELOW_ONE",
+      "NORM09_LOADING_MONOTONE_IN_AMPLITUDE",
+      "NORM10_INVERSE_RECONSTRUCTION",
+      "NORM11_GAUGE_INVARIANCE",
+      "NORM12_PHASE_STABILITY_AFTER_RECONSTRUCTION",
+      "NORM13_HOLONOMY_BOUNDEDNESS",
+      "NORM14_MASS_DOMAIN_DENOMINATOR_POSITIVITY",
+      "NORM15_VACUUM_AXIS_NOT_APPLICABLE",
+      "NORM16_SIGNED_ENERGY_ROLE_SEPARATE",
+      "NORM17_CANONICAL_MAPPING_EXACT",
+      "NORM18_CORRUPTED_MASS_NUMBER_DETECTED",
+      "NORM19_NUMBER_NORMALIZATION_OR_MULTIPLICITY_OMISSION_DETECTED",
+      "NORM20_INTERACTION_ENERGY_DOUBLE_COUNT_REJECTED"
+    ],
+    "original_transverse_sector_blocker_remains_permanent_regression": true,
+    "post_result_control_addition_removal_or_relabeling_forbidden": true
+  },
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v2",
+  "future_sequence_if_independently_accepted": [
+    "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1",
+    "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result",
+    "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_parameter_freeze_packet_v1",
+    "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_parameter_freeze_packet_v1_result",
+    "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v1",
+    "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v1_result"
+  ],
+  "matrix_wide_reconstruction_audit": {
+    "all_comparators_preserve_parent_loading_as_provenance": true,
+    "all_descendant_amplitudes_finite": true,
+    "all_five_axis_round_trips_pass": true,
+    "all_initial_data_inside_domain": true,
+    "all_loading_values_bounded": true,
+    "all_positive_bases_strictly_positive": true,
+    "all_requested_tuples_unique": true,
+    "canonical_anchor_count": 1,
+    "interaction_corner_count": 3,
+    "maximum_loading_round_trip_error": 1.3877787807814457e-17,
+    "no_comparator_realized_loading_falsely_assigned_zero": true,
+    "one_at_a_time_count": 10,
+    "row_count_inside_accepted_range_12_through_14": true,
+    "scientific_row_count": 14,
+    "unique_requested_tuple_count": 14
+  },
+  "mutation_controls": [
+    {
+      "actual_diagnostics": [
+        "targets"
+      ],
+      "expected_diagnostic": "targets",
+      "mutation_id": "M_TARGET_CHANGED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "axis_levels"
+      ],
+      "expected_diagnostic": "axis_levels",
+      "mutation_id": "M_AXIS_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "axis_levels"
+      ],
+      "expected_diagnostic": "axis_levels",
+      "mutation_id": "M_LEVELS_UNFROZEN",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "scientific_matrix"
+      ],
+      "expected_diagnostic": "scientific_matrix",
+      "mutation_id": "M_MATRIX_ROW_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "scientific_matrix"
+      ],
+      "expected_diagnostic": "scientific_matrix",
+      "mutation_id": "M_MATRIX_DUPLICATE",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "scientific_matrix"
+      ],
+      "expected_diagnostic": "scientific_matrix",
+      "mutation_id": "M_BASE_NONPOSITIVE",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "scientific_matrix"
+      ],
+      "expected_diagnostic": "scientific_matrix",
+      "mutation_id": "M_ROUND_TRIP_FAILED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "comparator"
+      ],
+      "expected_diagnostic": "comparator",
+      "mutation_id": "M_COMPARATOR_PROMOTED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "comparator"
+      ],
+      "expected_diagnostic": "comparator",
+      "mutation_id": "M_COMPARATOR_RELABELLED_ZERO",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "observables"
+      ],
+      "expected_diagnostic": "observables",
+      "mutation_id": "M_OBSERVABLE_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "materiality_thresholds"
+      ],
+      "expected_diagnostic": "materiality_thresholds",
+      "mutation_id": "M_MATERIALITY_UNFROZEN",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "pilot"
+      ],
+      "expected_diagnostic": "pilot",
+      "mutation_id": "M_PILOT_AUTHORIZED_EARLY",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "execution"
+      ],
+      "expected_diagnostic": "execution",
+      "mutation_id": "M_EXECUTION_AUTHORIZED_EARLY",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "semantic_roles"
+      ],
+      "expected_diagnostic": "semantic_roles",
+      "mutation_id": "M_SIGNED_ROLE_CONFLATED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "normalization_controls"
+      ],
+      "expected_diagnostic": "normalization_controls",
+      "mutation_id": "M_NORMALIZATION_CONTROL_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "control_inventory"
+      ],
+      "expected_diagnostic": "control_inventory",
+      "mutation_id": "M_ACCEPTED_NEGATIVE_CONTROL_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "outcome_taxonomy"
+      ],
+      "expected_diagnostic": "outcome_taxonomy",
+      "mutation_id": "M_OUTCOME_REMOVED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "nonclaims"
+      ],
+      "expected_diagnostic": "nonclaims",
+      "mutation_id": "M_PILLAR_PROMOTED",
+      "one_intended_premise_changed": true,
+      "passed": true
+    }
+  ],
+  "negative_controls": [
+    {
+      "control_id": "N_FORCE_BOTH_DESCENDANTS_ZERO_WITH_SOURCE",
+      "diagnostic": "ORIGINAL_TRANSVERSE_BLOCKER_REGRESSION",
+      "permanent_regression": true
+    },
+    {
+      "control_id": "N_DROP_ONLY_PHI2",
+      "diagnostic": "PHI2_DESCENDANT_OMITTED"
+    },
+    {
+      "control_id": "N_DROP_ONLY_PHI3",
+      "diagnostic": "PHI3_DESCENDANT_OMITTED"
+    },
+    {
+      "control_id": "N_OMIT_DESCENDANT_ENERGY",
+      "diagnostic": "DESCENDANT_ENERGY_ACCOUNTING_OMITTED"
+    },
+    {
+      "control_id": "N_OMIT_TRANSVERSE_EXCHANGE_CHANNEL",
+      "diagnostic": "TRANSVERSE_EXCHANGE_CHANNEL_OMITTED"
+    },
+    {
+      "control_id": "N_REVERSE_TRANSVERSE_EXCHANGE_SIGN",
+      "diagnostic": "TRANSVERSE_EXCHANGE_SIGN_REVERSED"
+    },
+    {
+      "control_id": "N_WRONG_GAMMA2_BLOCK",
+      "diagnostic": "GAMMA2_BLOCK_MISMATCH"
+    },
+    {
+      "control_id": "N_WRONG_GAMMA3_BLOCK",
+      "diagnostic": "GAMMA3_BLOCK_MISMATCH"
+    },
+    {
+      "control_id": "N_SUPPRESS_SECTOR_MULTIPLICITY",
+      "diagnostic": "SECTOR_MULTIPLICITY_SUPPRESSED"
+    },
+    {
+      "control_id": "N_DESCENDANTS_RELABELED_INVENTED_MATTER",
+      "diagnostic": "DESCENDANT_ORIGIN_MISCLASSIFIED"
+    },
+    {
+      "control_id": "N_CANONICAL_THRESHOLDS_REUSED_UNSCALED",
+      "diagnostic": "UNREVIEWED_THRESHOLD_TRANSFER"
+    },
+    {
+      "control_id": "N_POST_EXECUTION_FAVORABLE_POINT_SELECTION",
+      "diagnostic": "POST_RESULT_PARAMETER_SELECTION"
+    },
+    {
+      "control_id": "N_FAILED_POINTS_EXCLUDED_FROM_DOMAIN",
+      "diagnostic": "FAILED_DOMAIN_POINTS_EXCLUDED"
+    }
+  ],
+  "nonclaims": {
+    "CCFT_empirical_support_claimed": false,
+    "C_k_dynamics_claimed": false,
+    "broad_robustness_claimed": false,
+    "fermionic_QFT_claimed": false,
+    "master_action_promotion_claimed": false,
+    "new_fundamental_physics_claimed": false,
+    "physical_descendant_necessity_in_nature_claimed": false,
+    "pillar_completion_claimed": false,
+    "quantized_electromagnetism_claimed": false,
+    "repository_wide_green_claimed": false,
+    "robustness_execution_performed": false,
+    "robustness_parameter_calibrated": false,
+    "robustness_pilot_executed": false,
+    "seam_closure_claimed": false
+  },
+  "normalization_audit": {
+    "historical_signed_axis": {
+      "absolute_total_substitution_allowed_without_review": false,
+      "axis_id": "F_PERP_INITIAL_SIGNED_TOTAL_v0",
+      "clamping_allowed": false,
+      "denominator_above_crossing": 7.931521808792097e-10,
+      "denominator_below_crossing": -9.914402456146513e-11,
+      "positive_pi_over_two_ratio": 1.0003377834191158,
+      "post_observation_domain_widening_allowed": false,
+      "ratio_exceeds_one": true,
+      "retained_as_bounded_loading_axis": false,
+      "retained_as_conservation_diagnostic": true,
+      "sign_changes_across_crossing": true,
+      "zero_denominator_crossing_scale": 0.0003376693644345549
+    },
+    "replacement_axis": {
+      "all_finite_matrix_loadings_below_one": true,
+      "axis_id": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+      "canonical_mapping": 0.2131315883288088,
+      "canonical_mapping_matches_accepted": true,
+      "gauge_after": 0.21313158832880885,
+      "gauge_before": 0.2131315883288088,
+      "gauge_error": 5.551115123125783e-17,
+      "gauge_invariant": true,
+      "holonomy_bounded": true,
+      "holonomy_loading_values": [
+        0.2131315883288088,
+        0.2131315883288088,
+        0.2131315883288088
+      ],
+      "low_anchor_high_strictly_monotone": true,
+      "mass_rows_keep_positive_base": true,
+      "matrix_inverse_maximum_error": 1.3877787807814457e-17,
+      "phase_loading_spread": 0.0,
+      "phase_stable": true,
+      "replacement_contract": {
+        "all_four_two_component_reduced_sectors_included": true,
+        "interaction_energy_in_positive_base": false,
+        "mass_weighted_number_term_present": true,
+        "number_current_normalization": "integral_dx(psi_dagger*psi)",
+        "signed_total_energy_kept_separate": true,
+        "vacuum_loading_policy": "NOT_APPLICABLE_CONTROL"
+      },
+      "replacement_contract_mutations": [
+        {
+          "actual_diagnostics": [
+            "MASS_WEIGHTED_NUMBER_TERM_CORRUPTED"
+          ],
+          "expected_diagnostic": "MASS_WEIGHTED_NUMBER_TERM_CORRUPTED",
+          "mutation_id": "CORRUPT_MASS_WEIGHTED_NUMBER",
+          "passed": true
+        },
+        {
+          "actual_diagnostics": [
+            "NUMBER_CURRENT_NORMALIZATION_CORRUPTED"
+          ],
+          "expected_diagnostic": "NUMBER_CURRENT_NORMALIZATION_CORRUPTED",
+          "mutation_id": "OMIT_NUMBER_NORMALIZATION",
+          "passed": true
+        },
+        {
+          "actual_diagnostics": [
+            "SECTOR_MULTIPLICITY_OMITTED"
+          ],
+          "expected_diagnostic": "SECTOR_MULTIPLICITY_OMITTED",
+          "mutation_id": "OMIT_SECTOR_MULTIPLICITY",
+          "passed": true
+        },
+        {
+          "actual_diagnostics": [
+            "INTERACTION_ENERGY_DOUBLE_COUNTED"
+          ],
+          "expected_diagnostic": "INTERACTION_ENERGY_DOUBLE_COUNTED",
+          "mutation_id": "ADD_INTERACTION_ENERGY",
+          "passed": true
+        }
+      ],
+      "signed_total_energy_remains_separate": true,
+      "vacuum_axis_status": "NOT_APPLICABLE_CONTROL",
+      "vacuum_axis_value": null,
+      "zero_descendants_with_positive_base_maps_exactly_zero": true
+    }
+  },
+  "normalization_regression_controls": [
+    {
+      "control_id": "NORM01_HISTORICAL_RATIO_EXCEEDS_ONE",
+      "observed": 1.0003377834191158,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM02_HISTORICAL_DENOMINATOR_CROSSES_ZERO",
+      "observed": 0.0003376693644345549,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM03_HISTORICAL_RATIO_CHANGES_SIGN",
+      "observed": [
+        -9.914402456146513e-11,
+        7.931521808792097e-10
+      ],
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM04_CLAMPING_REJECTED",
+      "observed": false,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM05_ABSOLUTE_TOTAL_SHORTCUT_REJECTED",
+      "observed": false,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM06_POST_OBSERVATION_DOMAIN_WIDENING_REJECTED",
+      "observed": false,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM07_ZERO_DESCENDANTS_MAP_ZERO",
+      "observed": 0.0,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM08_FINITE_LOADING_BELOW_ONE",
+      "observed": true,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM09_LOADING_MONOTONE_IN_AMPLITUDE",
+      "observed": [
+        0.0634205964176414,
+        0.2131315883288088,
+        0.5200250552967295
+      ],
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM10_INVERSE_RECONSTRUCTION",
+      "observed": 1.3877787807814457e-17,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM11_GAUGE_INVARIANCE",
+      "observed": 5.551115123125783e-17,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM12_PHASE_STABILITY_AFTER_RECONSTRUCTION",
+      "observed": 0.0,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM13_HOLONOMY_BOUNDEDNESS",
+      "observed": [
+        0.2131315883288088,
+        0.2131315883288088,
+        0.2131315883288088
+      ],
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM14_MASS_DOMAIN_DENOMINATOR_POSITIVITY",
+      "observed": true,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM15_VACUUM_AXIS_NOT_APPLICABLE",
+      "observed": "NOT_APPLICABLE_CONTROL",
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM16_SIGNED_ENERGY_ROLE_SEPARATE",
+      "observed": true,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM17_CANONICAL_MAPPING_EXACT",
+      "observed": 0.2131315883288088,
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM18_CORRUPTED_MASS_NUMBER_DETECTED",
+      "observed": {
+        "actual_diagnostics": [
+          "MASS_WEIGHTED_NUMBER_TERM_CORRUPTED"
+        ],
+        "expected_diagnostic": "MASS_WEIGHTED_NUMBER_TERM_CORRUPTED",
+        "mutation_id": "CORRUPT_MASS_WEIGHTED_NUMBER",
+        "passed": true
+      },
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM19_NUMBER_NORMALIZATION_OR_MULTIPLICITY_OMISSION_DETECTED",
+      "observed": [
+        {
+          "actual_diagnostics": [
+            "NUMBER_CURRENT_NORMALIZATION_CORRUPTED"
+          ],
+          "expected_diagnostic": "NUMBER_CURRENT_NORMALIZATION_CORRUPTED",
+          "mutation_id": "OMIT_NUMBER_NORMALIZATION",
+          "passed": true
+        },
+        {
+          "actual_diagnostics": [
+            "SECTOR_MULTIPLICITY_OMITTED"
+          ],
+          "expected_diagnostic": "SECTOR_MULTIPLICITY_OMITTED",
+          "mutation_id": "OMIT_SECTOR_MULTIPLICITY",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "permanent_regression": true
+    },
+    {
+      "control_id": "NORM20_INTERACTION_ENERGY_DOUBLE_COUNT_REJECTED",
+      "observed": {
+        "actual_diagnostics": [
+          "INTERACTION_ENERGY_DOUBLE_COUNTED"
+        ],
+        "expected_diagnostic": "INTERACTION_ENERGY_DOUBLE_COUNTED",
+        "mutation_id": "ADD_INTERACTION_ENERGY",
+        "passed": true
+      },
+      "passed": true,
+      "permanent_regression": true
+    }
+  ],
+  "observable_freeze": {
+    "inventory": {
+      "all_observable_ids_frozen": true,
+      "descendant_observables": [
+        {
+          "definition": "E_phi2(t)-E_phi2(0)",
+          "observable_id": "DELTA_E_PHI2"
+        },
+        {
+          "definition": "E_phi3(t)-E_phi3(0)",
+          "observable_id": "DELTA_E_PHI3"
+        },
+        {
+          "definition": "registered spinor-to-phi2 exchange integral with the accepted sign convention",
+          "observable_id": "X2_SPINOR_PHI2_EXCHANGE"
+        },
+        {
+          "definition": "registered spinor-to-phi3 exchange integral with the accepted sign convention",
+          "observable_id": "X3_SPINOR_PHI3_EXCHANGE"
+        },
+        {
+          "definition": "(|X2|+|X3|)/(|X_longitudinal|+|X2|+|X3|+epsilon_exchange_floor)",
+          "observable_id": "F_EXCHANGE_PERP"
+        },
+        {
+          "definition": "|O_full-O_forced_truncation|/(|O_full|+epsilon_observable_floor)",
+          "observable_id": "R_PERP_OBSERVABLE",
+          "registered_O_ids": [
+            "MATTER_DENSITY",
+            "LONGITUDINAL_ELECTRIC_FIELD",
+            "MATTER_ENERGY",
+            "LONGITUDINAL_EXCHANGE",
+            "TOTAL_SOURCE_CURRENT"
+          ]
+        },
+        {
+          "definition": "sqrt(|J2|^2+|J3|^2) under the forced truncation",
+          "observable_id": "C_PERP_SOURCE_NORM"
+        },
+        {
+          "definition": "sqrt(|Box(phi2)-J2|^2+|Box(phi3)-J3|^2) evaluated for the forced truncation",
+          "observable_id": "R_TRUNC_EQUATION_RESIDUAL"
+        },
+        {
+          "definition": "inf{t: R_perp,O(t) >= delta_O}",
+          "observable_id": "T_DIVERGENCE",
+          "registered_O_ids": [
+            "MATTER_DENSITY",
+            "LONGITUDINAL_ELECTRIC_FIELD",
+            "MATTER_ENERGY",
+            "LONGITUDINAL_EXCHANGE",
+            "TOTAL_SOURCE_CURRENT"
+          ]
+        }
+      ],
+      "existing_observables": [
+        {
+          "observable_id": "GAUSS_RESIDUAL",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "CONTINUITY_RESIDUAL",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "DIRAC_ADJOINT_RESIDUALS",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "MAXWELL_RESIDUALS",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "LINK_NORM_ERROR",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "ENERGY_DRIFT",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "SPATIAL_CONVERGENCE",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "TEMPORAL_CONVERGENCE",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "WILSON_CONTINUUM_BEHAVIOR",
+          "retained_from_canonical_guardrail": true
+        },
+        {
+          "observable_id": "EXCHANGE_TO_DRIFT_RATIO",
+          "retained_from_canonical_guardrail": true
+        }
+      ],
+      "future_freeze_requirements": {
+        "delta_O_frozen_per_registered_observable": true,
+        "epsilon_exchange_floor_generation_rule_frozen": true,
+        "epsilon_observable_floor_generation_rule_frozen": true,
+        "no_post_result_observable_selection": true,
+        "norms_time_aggregation_and_spatial_aggregation_frozen": true
+      }
+    },
+    "measurement_contract": {
+      "C_PERP_SOURCE_NORM": "max_t sqrt(||J2||_2^2+||J3||_2^2) in the forced comparator",
+      "F_EXCHANGE_PERP": "(|X2|+|X3|)/(|X_longitudinal|+|X2|+|X3|+epsilon_exchange_floor) using the maximum absolute cumulative exchanges",
+      "R_PERP_OBSERVABLE": "max_t ||O_full-O_comparator||_2/(max_t ||O_full||_2+epsilon_observable_floor), reported separately for every registered O",
+      "R_TRUNC_EQUATION_RESIDUAL": "max_t sqrt(||Box(phi2)-J2||_2^2+||Box(phi3)-J3||_2^2) in the forced comparator",
+      "T_DIVERGENCE": "first stored time at which the corresponding pointwise-in-time R_perp,O reaches delta_O; RIGHT_CENSORED_AT_DURATION if absent",
+      "full_vs_comparator_alignment": "same parent row, grid, time samples, duration, and solver settings",
+      "positive_loading_denominator_role": "initial-state design and normalization only",
+      "registered_R_PERP_O_ids": [
+        "MATTER_DENSITY",
+        "LONGITUDINAL_ELECTRIC_FIELD",
+        "MATTER_ENERGY",
+        "LONGITUDINAL_EXCHANGE",
+        "TOTAL_SOURCE_CURRENT"
+      ],
+      "signed_total_energy_role": "physical conservation and exchange diagnostic only",
+      "spatial_constraint_norm": "max_x absolute value, with L2 also reported",
+      "spatial_field_norm": "sqrt(dx*sum_x(|field(x)|^2))",
+      "time_aggregation_for_energy_changes": "maximum absolute departure from the row's initial value",
+      "time_aggregation_for_exchange": "maximum absolute cumulative registered exchange over the common duration",
+      "time_aggregation_for_residuals": "maximum over every stored time sample"
+    }
+  },
+  "pilot_freeze": {
+    "calibration_generation_rule": "for each numerical residual/floor, take the maximum across every frozen pilot row and calibration refinement, multiply by two, and round upward to one significant digit",
+    "failed_pilot_rows_retained": true,
+    "implementation_requirements_before_any_pilot_run": {
+      "accepted_v0_numerical_implementation_is_reference_only": true,
+      "all_five_axes_must_round_trip_before_time_evolution": true,
+      "charge_must_be_constructed_as_eta_q_times_mass": true,
+      "descendant_profile_alpha_must_be_applied_after_B_plus_is_computed": true,
+      "holonomy_must_be_constructed_from_the_requested_THETA_W": true,
+      "implementation_change_cannot_alter_the_accepted_equations_or_energy_inventory": true,
+      "mass_must_be_an_explicit_runtime_parameter_not_a_module_global": true,
+      "new_versioned_pilot_implementation_required": true,
+      "relative_spinor_phase_must_be_applied_to_reduced_components_1_and_3": true
+    },
+    "pilot_authorized": false,
+    "pilot_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_v1",
+    "pilot_is_not_scientific_robustness_execution": true,
+    "pilot_may_calibrate_only": [
+      "solver_tolerance",
+      "grid_sequence",
+      "time_step_sequence",
+      "duration",
+      "iteration_cap",
+      "epsilon_exchange_floor",
+      "epsilon_observable_floor",
+      "residual_acceptance_thresholds"
+    ],
+    "pilot_may_not_change": [
+      "scientific_questions",
+      "five_parameter_axes",
+      "axis_values",
+      "fourteen_scientific_rows",
+      "comparator_eligibility",
+      "observable_ids_or_formulas",
+      "materiality_thresholds",
+      "control_ids",
+      "outcome_classes",
+      "claim_ceiling"
+    ],
+    "pilot_requires_guardrail_v1_independent_acceptance": true,
+    "pilot_row_ids": [
+      "R00_CANONICAL",
+      "R03_F_ZERO",
+      "R05_F_HIGH",
+      "R10_MU_HIGH",
+      "R11_CORNER_WEAK_HIGH"
+    ],
+    "pilot_subset_frozen": true
+  },
+  "positive_controls": [
+    {
+      "control_id": "P_CANONICAL_ACCEPTED_RESULT_UNCHANGED",
+      "expected": "Exact canonical inputs reproduce the accepted registered result within exact canonical thresholds.",
+      "status": "REQUIRED"
+    },
+    {
+      "control_id": "P_CHARGE_CONJUGATE_PARAMETER_CASE",
+      "expected": "Charge-conjugate transport and registered symmetry relations hold.",
+      "status": "REQUIRED"
+    },
+    {
+      "control_id": "P_ANALYTIC_INVARIANT_DESCENDANT_FREE",
+      "expected": "J2=J3=0 is analytically and numerically preserved without generalization.",
+      "status": "CONDITIONAL_ON_ACCEPTED_INVARIANT_SUBDOMAIN_PROOF"
+    },
+    {
+      "control_id": "P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED",
+      "expected": "Initially unexcited descendants respond when admitted transverse currents are nonzero.",
+      "status": "REQUIRED"
+    },
+    {
+      "control_id": "P_INDEPENDENT_PHI2_EXCITATION",
+      "expected": "The phi2 channel is resolved with its energy and exchange registered.",
+      "status": "REQUIRED"
+    },
+    {
+      "control_id": "P_INDEPENDENT_PHI3_EXCITATION",
+      "expected": "The phi3 channel is resolved with its energy and exchange registered.",
+      "status": "REQUIRED"
+    },
+    {
+      "control_id": "P_PHI2_PHI3_INTERCHANGE",
+      "expected": "The accepted symmetry-related phi2/phi3 interchange produces the preregistered relation.",
+      "status": "REQUIRED_WHERE_ACCEPTED_SYMMETRY_SUPPORTS"
+    },
+    {
+      "control_id": "P_WEAK_COUPLING_APPROACH",
+      "expected": "The weaker eta_q point approaches the registered decoupled trend without changing the model definition.",
+      "status": "REQUIRED"
+    }
+  ],
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1",
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "reference_initial_state_freeze": {
+    "base_state_id": "FULL_MIXED_SPINOR_AND_LONGITUDINAL_BASE_N32_v0",
+    "canonical_loading": 0.2131315883288088,
+    "descendant_profile": {
+      "P2": "0",
+      "P3": "0",
+      "phi2": "0.01*cos(2*pi*x/L)",
+      "phi3": "0.008*sin(4*pi*x/L)",
+      "scaling_rule": "multiply phi2, P2, phi3, and P3 by the reconstructed finite alpha",
+      "source_function": "dirac_maxwell_full_zero_mode_non_authoritative_pilot.initial_state('full_mixed',32,q)"
+    },
+    "descendant_reference_energy": 0.003478109122024757,
+    "grid_size": 32,
+    "length": 1.0,
+    "number_by_species": {
+      "psi_minus": 0.006420480000000003,
+      "psi_plus": 0.006420480000000002
+    },
+    "parallel_Maxwell_energy": 0.0,
+    "positive_base_energy_at_mass_one": 0.012840960000000005,
+    "profile_id": "FULL_MIXED_DESCENDANT_PROFILE_N32_v0",
+    "strict_positivity_witness": "Every scientific row has m>=1 and the fixed total matter number is strictly positive, so B_plus>=m*N_total>0.",
+    "total_matter_number": 0.012840960000000005
+  },
+  "result_classification_freeze": {
+    "classification_order": [
+      "NUMERICALLY_BLOCKED",
+      "MODEL_DOMAIN_LIMITED",
+      "THRESHOLD_SENSITIVE",
+      "BROADLY_ROBUST",
+      "CONDITIONALLY_ROBUST"
+    ],
+    "descendant_significance_classes": [
+      {
+        "definition": "The forced truncation is noninvariant, while preregistered observable differences remain small over the tested duration in a reported subdomain.",
+        "outcome_id": "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL"
+      },
+      {
+        "definition": "Transverse descendants carry a preregistered substantial exchange fraction or strongly alter longitudinal or matter evolution.",
+        "outcome_id": "DESCENDANT_DOMINATED_REGIME"
+      },
+      {
+        "definition": "Descendant contributions are resolved and material but do not cross the descendant-dominated gate.",
+        "outcome_id": "INTERMEDIATE_DESCENDANT_CONTRIBUTION"
+      }
+    ],
+    "descendant_significance_decision_rules": {
+      "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL": "the structural noninvariance/source residual is resolved while all registered R_PERP and F_EXCHANGE_PERP values remain below 0.1",
+      "DESCENDANT_DOMINATED_REGIME": "resolved evidence has F_EXCHANGE_PERP>=0.5 or any registered R_PERP_OBSERVABLE>=0.5",
+      "INTERMEDIATE_DESCENDANT_CONTRIBUTION": "resolved evidence crosses a 0.1 materiality gate but neither dominated gate",
+      "NO_SIGNIFICANCE_CLASS_WHEN_BLOCKED": "no descendant-significance class is assigned when required numerical evidence is blocked or outside the model domain"
+    },
+    "difficult_or_failed_rows_cannot_be_dropped": true,
+    "forced_comparator_cannot_support_robustness_pass": true,
+    "multi_axis_classification_required": true,
+    "negative_inconclusive_and_blocked_outcomes_preserved": true,
+    "robustness_decision_rules": {
+      "BROADLY_ROBUST": "every full-model scientific row meets every frozen numerical-quality and control criterion and the conclusion is not threshold-sensitive",
+      "CONDITIONALLY_ROBUST": "a nonempty explicitly listed preregistered subdomain meets every criterion but the full frozen matrix does not",
+      "MODEL_DOMAIN_LIMITED": "one or more preregistered rows exit the admitted classical model domain; the row remains reported",
+      "NUMERICALLY_BLOCKED": "one or more required rows lack controlled solver, residual, or convergence evidence",
+      "THRESHOLD_SENSITIVE": "the robustness or descendant-significance conclusion changes across the frozen 0.05, 0.1, 0.2 sensitivity values"
+    },
+    "robustness_status_classes": [
+      {
+        "definition": "The complete model meets every frozen criterion across the full preregistered domain.",
+        "outcome_id": "BROADLY_ROBUST"
+      },
+      {
+        "definition": "The complete model meets the frozen criteria only on an explicitly reported preregistered subdomain.",
+        "outcome_id": "CONDITIONALLY_ROBUST"
+      },
+      {
+        "definition": "A conclusion changes materially under the preregistered admissible threshold-sensitivity analysis.",
+        "outcome_id": "THRESHOLD_SENSITIVE"
+      },
+      {
+        "definition": "No controlled numerical conclusion is available for part or all of the domain.",
+        "outcome_id": "NUMERICALLY_BLOCKED"
+      },
+      {
+        "definition": "The classical PDE surrogate ceases to provide a controlled result in an explicitly identified region.",
+        "outcome_id": "MODEL_DOMAIN_LIMITED"
+      }
+    ],
+    "simple_pass_fail_forbidden": true,
+    "taxonomy_frozen": true
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_v1",
+  "scientific_matrix": [
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [
+        "CANONICAL_ANCHOR"
+      ],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R00_CANONICAL",
+      "row_role": "CANONICAL_ANCHOR"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [
+        "WEAK_COUPLING_APPROACH"
+      ],
+      "derived_initial_state_parameters": {
+        "charge": 0.1,
+        "constant_link_coordinate_theta_n": 0.09374999999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.1,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "WEAKER",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.1,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R01_ETA_WEAK",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.4,
+        "constant_link_coordinate_theta_n": 0.023437499999999997,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.4,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "STRONGER",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.4,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R02_ETA_STRONG",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.0
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [
+        "ZERO_DESCENDANT_SOURCE_RESPONSE"
+      ],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0,
+        "reference_descendant_profile_alpha": 0.0,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "ZERO",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R03_F_ZERO",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0634205964176414,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.0634205964176414
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0008695272805061891,
+        "reference_descendant_profile_alpha": 0.49999999999999994,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0008695272805061892,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0634205964176414,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "LOW_NONZERO",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 1.3877787807814457e-17,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.06342059641764139,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R04_F_LOW",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.5200250552967295
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.013912436488099028,
+        "reference_descendant_profile_alpha": 2.0,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.01391243648809903,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "HIGH",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R05_F_HIGH",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.0
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.0,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.0
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "TRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R06_THETA_TRIVIAL",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": -0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": -0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": -0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "SYMMETRY_PARTNER"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": -0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R07_THETA_PARTNER",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": 1.5707963267948966,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 1.5707963267948966,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "POSITIVE_OFFSET",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 1.5707963267948966,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R08_PHASE_POSITIVE",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": 0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0034781091220247562,
+        "reference_descendant_profile_alpha": 0.9999999999999999,
+        "relative_spinor_phase_radians": -1.5707963267948966,
+        "requested_descendant_energy": 0.0034781091220247567,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": -1.5707963267948966,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "NEGATIVE_OFFSET",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": -1.5707963267948966,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R09_PHASE_NEGATIVE",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.2131315883288088
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [],
+      "derived_initial_state_parameters": {
+        "charge": 0.4,
+        "constant_link_coordinate_theta_n": 0.023437499999999997,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 2.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "reconstructed_descendant_energy": 0.0069562182440495125,
+        "reference_descendant_profile_alpha": 1.414213562373095,
+        "relative_spinor_phase_radians": 0.0,
+        "requested_descendant_energy": 0.006956218244049513,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 2.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "CANONICAL",
+        "ETA_Q": "CANONICAL",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "CANONICAL",
+        "MU_MASS_DOMAIN": "BOUNDED_VARIATION",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.2,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+        "MU_MASS_DOMAIN": 2.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R10_MU_HIGH",
+      "row_role": "ONE_AT_A_TIME"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": -0.3
+        },
+        "requested_parent_row_loading": 0.5200250552967295
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [
+        "WEAK_COUPLING_APPROACH",
+        "INTERACTION_CORNER"
+      ],
+      "derived_initial_state_parameters": {
+        "charge": 0.2,
+        "constant_link_coordinate_theta_n": -0.04687499999999999,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 2.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "reconstructed_descendant_energy": 0.027824872976198064,
+        "reference_descendant_profile_alpha": 2.8284271247461903,
+        "relative_spinor_phase_radians": 1.5707963267948966,
+        "requested_descendant_energy": 0.02782487297619806,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": 1.5707963267948966,
+        "ETA_Q": 0.1,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+        "MU_MASS_DOMAIN": 2.0,
+        "THETA_W": -0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "POSITIVE_OFFSET",
+        "ETA_Q": "WEAKER",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "HIGH",
+        "MU_MASS_DOMAIN": "BOUNDED_VARIATION",
+        "THETA_W": "SYMMETRY_PARTNER"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": 1.5707963267948966,
+        "ETA_Q": 0.1,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+        "MU_MASS_DOMAIN": 2.0,
+        "THETA_W": -0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R11_CORNER_WEAK_HIGH",
+      "row_role": "INTERACTION_CORNER"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.0
+        },
+        "requested_parent_row_loading": 0.0
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [
+        "ZERO_DESCENDANT_SOURCE_RESPONSE",
+        "INTERACTION_CORNER"
+      ],
+      "derived_initial_state_parameters": {
+        "charge": 0.4,
+        "constant_link_coordinate_theta_n": 0.0,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 1.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "reconstructed_descendant_energy": 0.0,
+        "reference_descendant_profile_alpha": 0.0,
+        "relative_spinor_phase_radians": -1.5707963267948966,
+        "requested_descendant_energy": 0.0,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": -1.5707963267948966,
+        "ETA_Q": 0.4,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.0
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "NEGATIVE_OFFSET",
+        "ETA_Q": "STRONGER",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "ZERO",
+        "MU_MASS_DOMAIN": "CANONICAL",
+        "THETA_W": "TRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": -1.5707963267948966,
+        "ETA_Q": 0.4,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+        "MU_MASS_DOMAIN": 1.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R12_CORNER_STRONG_ZERO",
+      "row_role": "INTERACTION_CORNER"
+    },
+    {
+      "comparator_provenance": {
+        "comparator_class": "INTENTIONALLY_NONINVARIANT_COMPARATOR",
+        "comparator_realized_loading": null,
+        "comparator_realized_loading_status": "NOT_PHYSICALLY_ELIGIBLE",
+        "descendants_removed_after_full_parent_row_construction": true,
+        "eligible_for_positive_model_robustness_claim": false,
+        "eligible_only_for_descendant_necessity_negative_control": true,
+        "requested_parent_axis_values_preserved_as_provenance": {
+          "DELTA_THETA_PSI": -1.5707963267948966,
+          "ETA_Q": 0.4,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0634205964176414,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "requested_parent_row_loading": 0.0634205964176414
+      },
+      "construction_order": [
+        "set ETA_Q",
+        "set THETA_W",
+        "set DELTA_THETA_PSI",
+        "set MU_MASS_DOMAIN",
+        "construct longitudinal Maxwell and spinor base state",
+        "compute B_plus",
+        "select requested F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "invert loading formula for E_perp",
+        "compute fixed descendant-profile alpha",
+        "recalculate all five axes",
+        "enforce frozen round-trip tolerance"
+      ],
+      "control_roles": [
+        "INTERACTION_CORNER"
+      ],
+      "derived_initial_state_parameters": {
+        "charge": 0.8,
+        "constant_link_coordinate_theta_n": 0.011718749999999998,
+        "grid_size": 32,
+        "length": 1.0,
+        "mass": 2.0,
+        "parallel_Maxwell_energy": 0.0,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "reconstructed_descendant_energy": 0.0017390545610123781,
+        "reference_descendant_profile_alpha": 0.7071067811865475,
+        "relative_spinor_phase_radians": -1.5707963267948966,
+        "requested_descendant_energy": 0.0017390545610123783,
+        "total_matter_number": 0.012840960000000005
+      },
+      "gauge_equivalent_loading_error": 0.0,
+      "gauge_witness": "E_perp, E_parallel_Maxwell, and every registered number norm are gauge invariant under the accepted U(1) transformation",
+      "initial_data_domain_passed": true,
+      "loading_bounded": true,
+      "positive_base_strictly_positive": true,
+      "requested_axis_values": {
+        "DELTA_THETA_PSI": -1.5707963267948966,
+        "ETA_Q": 0.4,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0634205964176414,
+        "MU_MASS_DOMAIN": 2.0,
+        "THETA_W": 0.3
+      },
+      "requested_level_ids": {
+        "DELTA_THETA_PSI": "NEGATIVE_OFFSET",
+        "ETA_Q": "STRONGER",
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": "LOW_NONZERO",
+        "MU_MASS_DOMAIN": "BOUNDED_VARIATION",
+        "THETA_W": "NONTRIVIAL"
+      },
+      "round_trip_absolute_errors": {
+        "DELTA_THETA_PSI": 0.0,
+        "ETA_Q": 0.0,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 1.3877787807814457e-17,
+        "MU_MASS_DOMAIN": 0.0,
+        "THETA_W": 0.0
+      },
+      "round_trip_axis_values": {
+        "DELTA_THETA_PSI": -1.5707963267948966,
+        "ETA_Q": 0.4,
+        "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.06342059641764139,
+        "MU_MASS_DOMAIN": 2.0,
+        "THETA_W": 0.3
+      },
+      "round_trip_passed": true,
+      "round_trip_tolerance": 2e-15,
+      "row_id": "R13_CORNER_STRONG_LOW",
+      "row_role": "INTERACTION_CORNER"
+    }
+  ],
+  "scientific_matrix_design": {
+    "canonical_anchor_count": 1,
+    "design": "CANONICAL_ANCHOR_PLUS_ONE_AT_A_TIME_PLUS_PREREGISTERED_INTERACTION_CORNERS",
+    "difficult_or_failed_points_remain_in_evidence": true,
+    "duplicate_parameter_tuples_forbidden": true,
+    "exact_scientific_row_count": 14,
+    "full_cartesian_sweep_forbidden": true,
+    "interaction_corner_count": 3,
+    "one_at_a_time_count": 10
+  },
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1_result",
+  "semantic_role_separation": {
+    "conservation_equations_rewritten_with_positive_denominator": false,
+    "positive_loading_forbidden_interpretation": "Fraction of the conserved total energy stored in descendants.",
+    "positive_loading_interpretation": "Initial transverse-descendant loading relative to a positive longitudinal-Maxwell and matter-number reference scale.",
+    "positive_loading_is_design_coordinate_only": true,
+    "signed_total_energy_is_physical_conservation_diagnostic": true
+  },
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1",
+  "threshold_freeze": {
+    "canonical_numerical_thresholds_automatically_reused": false,
+    "delta_O_for_T_DIVERGENCE": {
+      "LONGITUDINAL_ELECTRIC_FIELD": 0.1,
+      "LONGITUDINAL_EXCHANGE": 0.1,
+      "MATTER_DENSITY": 0.1,
+      "MATTER_ENERGY": 0.1,
+      "TOTAL_SOURCE_CURRENT": 0.1
+    },
+    "descendant_dominated_F_exchange_perp_gate": 0.5,
+    "descendant_dominated_R_perp_gate": 0.5,
+    "epsilon_F_round_trip": 2e-15,
+    "loading_upper_admissibility_ceiling": 0.8,
+    "material_F_exchange_perp_gate": 0.1,
+    "material_R_perp_gate": 0.1,
+    "no_post_result_threshold_relaxation": true,
+    "numerical_acceptance_threshold_values_frozen": false,
+    "numerical_floor_values_frozen": false,
+    "reason_numerical_values_pending": "Only a reviewed non-authoritative pilot may calibrate numerical floors and solver thresholds under the frozen rules.",
+    "resolved_above_numerical_floor_rule": "signal must exceed ten times its independently calibrated numerical floor",
+    "scientific_materiality_thresholds_frozen": true,
+    "threshold_sensitivity_rule": "replace both 0.1 materiality gates by each frozen sensitivity value while retaining the 0.5 dominated gates",
+    "threshold_sensitivity_values": [
+      0.05,
+      0.1,
+      0.2
+    ]
+  },
+  "verdict": "PREPARED_GUARDRAIL_V1_PENDING_INDEPENDENT_REVIEW"
+}

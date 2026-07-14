@@ -1,0 +1,50 @@
+{
+  "artifacts": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v1.json",
+      "sha256": "54f3c8137986db1ba1bf7cc1a9e0ffade11ed7b6fdf480bf103cdd6b13d964f1"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_20260714_v1.json",
+      "sha256": "0986e58e9d7f9b85b029a73a69915a9124b72e3a6774ec92dc539dc61f9dc147"
+    }
+  ],
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1.py",
+    "sha256": "9a741072ffc8102dcdf9690a911e5cfa34772e3a4f62821a265905cd5fa9b5a1"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "2840f6edbd1414b8e685c661de1f51cc13c28b3c629e6ff2be36b16921d3d391"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "84140ac762b660a1f4ab86d9376a50bad256de1bf0f4faa9898195a5eb9fa0f9"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-AXIS-NORMALIZATION-REPAIR-PACKET-v0.json",
+      "sha256": "7863ae08a12841f3dba9e9a5a7b2375af8ec9c1b4ae8eef9918d15bbad3bfb88"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-PACKET-v0.json",
+      "sha256": "98a635b92d3a2b5479cc41aca80760a965a249fb3ae16c476b3a50aab6e10100"
+    },
+    {
+      "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_v0/CANONICAL_PRIMARY_N32_DT0P0015625.json",
+      "sha256": "97b3fe6c4ed0cfee904158fcbf778a74b0501b40580dba33e0f9300ea7b28e7a"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    }
+  ],
+  "prompt": {
+    "path": "Prompt.txt",
+    "preserved": true,
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_MANIFEST_v1",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1"
+}
