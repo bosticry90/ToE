@@ -1,0 +1,758 @@
+{
+  "additional_pilot_target_only_if_review_proves_needed": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v2",
+  "blocked_target": "prepare_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_packet_v1",
+  "boundary": {
+    "canonical_execution_authorized": false,
+    "canonical_parameters_frozen_before_review": false,
+    "canonical_thresholds_frozen_before_review": false,
+    "freeze_accepted_before_review": false,
+    "scientific_result_claimed": false
+  },
+  "canonical_run_matrix": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RUN-MATRIX-v0.json",
+    "record_count": 50,
+    "sha256": "d9cc778d2e1731efc451b79781e4a58696c09cd464fedb800fe220cb429378b0"
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling": "A reviewed freeze may preregister a bounded canonical numerical experiment; it is not a conservation or coupled-field result.",
+  "convergence_definitions": {
+    "Wilson_dispersion": {
+      "continuum_fit": "pairwise Richardson log2 ratio",
+      "exclusions": "none",
+      "finite_grid_target": "exact Wilson dispersion",
+      "grids": [
+        64,
+        128,
+        256
+      ],
+      "maximum_discrete_formula_error": 1e-12,
+      "minimum_order": 0.8,
+      "mode": "k=2*pi/L"
+    },
+    "outlier_policy": "no run may be excluded; any missing, failed, or nonfinite fit member blocks the corresponding claim",
+    "post_execution_fit_range_changes": "forbidden",
+    "spatial": {
+      "exclusions": "none",
+      "fit": "pairwise Richardson log2(|coarse-middle|/|middle-fine|)",
+      "metric": "final_phi2_l2",
+      "minimum_order": 0.8,
+      "reason": "Wilson artifact is leading O(a)",
+      "run_ids": [
+        "SPATIAL_REFINEMENT_N8",
+        "SPATIAL_REFINEMENT_N16",
+        "SPATIAL_REFINEMENT_N32"
+      ]
+    },
+    "temporal_energy": {
+      "exclusions": "none",
+      "expected_order": 2,
+      "fit": "pairwise Richardson log2 ratio",
+      "metric": "maximum absolute total-energy drift",
+      "minimum_order": 1.5,
+      "run_ids": [
+        "TEMPORAL_REFINEMENT_DT0P00625",
+        "TEMPORAL_REFINEMENT_DT0P003125",
+        "TEMPORAL_REFINEMENT_DT0P0015625"
+      ]
+    },
+    "temporal_phi2": {
+      "exclusions": "none",
+      "expected_order": 2,
+      "fit": "pairwise Richardson log2 ratio",
+      "metric": "final_phi2_l2",
+      "minimum_order": 1.5,
+      "run_ids": [
+        "TEMPORAL_REFINEMENT_DT0P00625",
+        "TEMPORAL_REFINEMENT_DT0P003125",
+        "TEMPORAL_REFINEMENT_DT0P0015625"
+      ]
+    }
+  },
+  "energy_freeze": {
+    "Wilson_zero_mode_and_descendant_terms_required": true,
+    "absolute_drift_threshold_id": "energy_drift",
+    "boundary_flux": "periodic S1 net boundary flux is exactly zero",
+    "classification": "BOUNDED_CONVERGENT_ENERGY_ERROR",
+    "formula": "sum of all eight registered components",
+    "interpretation": "canonically normalized 1+1 total energy corresponding to the admitted 3+1 zero-mode torus total; never energy per area",
+    "normalized_drift_denominator": "absolute initial registered energy |E(0)|; zero-energy controls use absolute drift only",
+    "registered_components": [
+      "electric fluctuating",
+      "uniform electric zero mode",
+      "phi2 kinetic and gradient",
+      "phi3 kinetic and gradient",
+      "Wilson-Dirac local",
+      "link interaction",
+      "gamma2 interaction",
+      "gamma3 interaction"
+    ],
+    "sector_multiplicity": "four two-component reduced spinors: two sectors for each of two opposite-charge species"
+  },
+  "environment_identity": {
+    "PYTHONHASHSEED": "0",
+    "UTF8_normalization": "NFC",
+    "bound_files": [
+      {
+        "path": "requirements.active.lock",
+        "sha256": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d"
+      },
+      {
+        "path": "formal/toe_formal/lean-toolchain",
+        "sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+      },
+      {
+        "path": "formal/toe_formal/lake-manifest.json",
+        "sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+      },
+      {
+        "path": ".gitattributes",
+        "sha256": "8f1e4dfa773e52d1cc34d8c3f0798411dd3d60111c99746e883ed42e9f4f4f76"
+      }
+    ],
+    "float_serialization": "finite JSON numbers; canonical sorted-key UTF-8 LF JSON",
+    "git_core_autocrlf": "true",
+    "locale": "C",
+    "numpy_version": "2.2.6",
+    "operating_system": "Windows",
+    "os_release": "10",
+    "python_version": "3.10.11",
+    "timezone": "UTC"
+  },
+  "evidence_class_if_reviewed_and_accepted": "E-REPRO computational engineering prerequisite only",
+  "exchange_signal_separation": {
+    "canonical_minimum_exchange_ratio": 100.0,
+    "canonical_minimum_transverse_signal": 3e-08,
+    "definition": "max sector energy change/(max total-energy drift+frozen energy-error floor)",
+    "derivation_rule": "minimum across both accepted finest spatial and finest temporal pilot roles; divide by two for margin; round downward to one significant digit",
+    "minimum_pilot_ratio": 334.102415749328,
+    "minimum_pilot_transverse_signal": 6.42017671999848e-08,
+    "pilot_rows": [
+      {
+        "energy_floor": 2e-10,
+        "exchange_ratio": 344.4234301707067,
+        "maximum_sector_change": 7.124639741801914e-08,
+        "maximum_total_energy_drift": 6.856999777010708e-12,
+        "maximum_transverse_descendant_change": 6.827858789991426e-08,
+        "pilot_source_run_id": "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "sector_changes": {
+          "longitudinal": 3.51822084820121e-15,
+          "matter_including_interactions": 7.124639741801914e-08,
+          "phi2_descendant": 6.827858789991426e-08,
+          "phi3_descendant": 2.9746630002963625e-09
+        }
+      },
+      {
+        "energy_floor": 2e-10,
+        "exchange_ratio": 334.102415749328,
+        "maximum_sector_change": 6.743322696891804e-08,
+        "maximum_total_energy_drift": 1.8339999657834838e-12,
+        "maximum_transverse_descendant_change": 6.42017671999848e-08,
+        "pilot_source_run_id": "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "sector_changes": {
+          "longitudinal": 1.7684333188488299e-15,
+          "matter_including_interactions": 6.743322696891804e-08,
+          "phi2_descendant": 6.42017671999848e-08,
+          "phi3_descendant": 3.2332920000231746e-09
+        }
+      }
+    ],
+    "requires_active_channel": "phi2 or phi3 descendant energy change must meet the transverse-signal minimum",
+    "sector_partition": "longitudinal; phi2 descendant; phi3 descendant; matter including all link, gamma, and Wilson interactions"
+  },
+  "failure_semantics": {
+    "Gauss_threshold_failure": "constraint-preservation failure -> versioned numerical-method repair",
+    "Wilson_order_failure": "continuum-recovery failure -> canonical result B-BLOCKED",
+    "continuity_threshold_failure": "discrete current-consistency failure -> versioned numerical-method repair",
+    "determinism_failure": "reproducibility failure -> evidence implementation repair",
+    "duplicate_run_identity": "evidence custody failure -> versioned identity repair",
+    "energy_order_failure": "conservation claim not earned -> canonical result B-BLOCKED",
+    "exchange_signal_failure": "matter-field exchange not separated from drift/noise -> scientific result inconclusive",
+    "negative_control_passes": "guardrail discrimination failure -> guardrail repair",
+    "positive_control_failure": "analytic/discrete target not reproduced -> guardrail repair",
+    "solver_nonconvergence": "implementation/numerical stability failure -> versioned numerical-method repair",
+    "threshold_relaxation_request": "forbidden; preserve failure and select a versioned review target"
+  },
+  "identity_policy": {
+    "duplicate_identity_diagnostic": "EVIDENCE_CUSTODY_FAILURE",
+    "record_count": 50,
+    "unique_role_qualified_run_id_required": true,
+    "v0_blocker_preserved": "REGISTERED_RUN_IDENTITIES_NOT_UNIQUE"
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json",
+      "sha256": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "b881d23e9bd201b09bb023a1e897306afff681bd57ccb224a9c6baf562be57b6"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v0.json",
+      "sha256": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json",
+      "sha256": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "1b6ea74e9eedf501dcbc8fc767fe99694742035d9f58959bcf10d215cf619a4a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json",
+      "sha256": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "13fa544264e4bc5d004f19bd860e702c4c71a907e83a05bdbee4d0fa9ce1ff1f"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v1.json",
+      "sha256": "456fb3a73d8cbc50c1392ed71ccc43e5f7c6783faa9e2fe22e15ce041a2372e3"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json",
+      "sha256": "62f66647c4588f6bd4b2db03a9d64d4c1019f43c10fdd73aca0a5a8ed54c13f8"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_V1_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "0c6aa468858805c8f2dfd39384b85532762f8f936b657a2f742b155deaa314d0"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1.py",
+      "sha256": "90acc15a46891ab289edb41d536765913e2e58979ae150897efe3a59fe94a2dd"
+    }
+  ],
+  "nonclaims": [
+    "no canonical simulation executed",
+    "no canonical conservation result",
+    "no empirical adequacy",
+    "no EM or QFT pillar completion",
+    "no EM-QFT seam admissibility or closure",
+    "no new physics",
+    "no C_k dynamics",
+    "no CCFT validation",
+    "no master-action validation or promotion",
+    "no repository-wide green claim"
+  ],
+  "parameter_provenance": {
+    "N": "finest accepted pilot spatial grid",
+    "dt": "finest accepted pilot temporal step",
+    "duration": "accepted pilot duration with transverse descendant activity and exchange separation",
+    "max_iterations": "accepted pilot cap with all steps converged",
+    "selection_is_cross_product_not_an_observed_single_pilot_tuple": true,
+    "solver_tolerance": "tightest accepted pilot tolerance; solver/truncation ratio 4.846521139395604e-05"
+  },
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_canonical_simulation_v0",
+  "prompt_protection": {
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "proposed_canonical_parameters": {
+    "N": 32,
+    "dt": 0.0015625,
+    "duration": 0.05,
+    "max_iterations": 80,
+    "solver_tolerance": 1e-12
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_PARAMETER_FREEZE_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_packet_v0_result",
+  "solver_freeze": {
+    "failure_behavior": "any step not converged by the cap or above the frozen solver threshold blocks the run; no retry with altered settings",
+    "initial_guess": "one explicit-Euler predictor from the accepted right-hand side",
+    "linear_solver": "none; deterministic vectorized fixed-point update",
+    "maximum_iterations": 80,
+    "method": "fully coupled implicit midpoint fixed-point iteration",
+    "norm": "absolute infinity norm: max(update difference, implicit midpoint equation defect)",
+    "relative_tolerance": false,
+    "tolerance": 1e-12
+  },
+  "target": "prepare_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_packet_v0",
+  "threshold_provenance": [
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical Dirac_minus_sector1_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.8169297256104882e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "Dirac_minus_sector1_residual"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical Dirac_minus_sector2_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.8174985055471394e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "Dirac_minus_sector2_residual"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical Dirac_plus_sector1_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.8149257070630828e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "Dirac_plus_sector1_residual"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical Dirac_plus_sector2_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.815490189735162e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "Dirac_plus_sector2_residual"
+    },
+    {
+      "candidate_canonical_value": 7e-15,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical Gauss residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 3.4041702890106755e-15,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 7e-15,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "Gauss"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical adjoint_minus_sector1_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.8169297256104882e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "adjoint_minus_sector1_residual"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical adjoint_minus_sector2_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.8174985055471394e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "adjoint_minus_sector2_residual"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical adjoint_plus_sector1_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.8149257070630828e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "adjoint_plus_sector1_residual"
+    },
+    {
+      "candidate_canonical_value": 6e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical adjoint_plus_sector2_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.815490189735162e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "adjoint_plus_sector2_residual"
+    },
+    {
+      "candidate_canonical_value": 5e-12,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical continuity residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.4054563950524216e-12,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 5e-12,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "continuity"
+    },
+    {
+      "candidate_canonical_value": 2e-10,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical energy_drift residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 8.407083883221755e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 2e-10,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "energy_drift"
+    },
+    {
+      "candidate_canonical_value": 1e-12,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical exchange_combined residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 4.74225001941093e-13,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 1e-12,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "exchange_combined"
+    },
+    {
+      "candidate_canonical_value": 3e-22,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical exchange_longitudinal residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 1.0433879264616513e-22,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 3e-22,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "exchange_longitudinal"
+    },
+    {
+      "candidate_canonical_value": 7e-15,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical exchange_phi2 residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 3.400853869024478e-15,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 7e-15,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "exchange_phi2"
+    },
+    {
+      "candidate_canonical_value": 1e-12,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical exchange_phi3 residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 4.708342683516105e-13,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 1e-12,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "exchange_phi3"
+    },
+    {
+      "candidate_canonical_value": 5e-16,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical link_norm residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.220446049250313e-16,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 5e-16,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "link_norm"
+    },
+    {
+      "candidate_canonical_value": 1e-15,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical longitudinal_Maxwell_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 4.855890943789261e-16,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 1e-15,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "longitudinal_Maxwell_residual"
+    },
+    {
+      "candidate_canonical_value": 2e-12,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical phi2_wave_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 7.093511975725386e-13,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 2e-12,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "phi2_wave_residual"
+    },
+    {
+      "candidate_canonical_value": 6.999999999999999e-11,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical phi3_wave_residual residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 3.141981922034909e-11,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 6.999999999999999e-11,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "phi3_wave_residual"
+    },
+    {
+      "candidate_canonical_value": 5e-09,
+      "generation_formula": "round_up_one_significant(2 * pilot_measured_value)",
+      "meaning": "maximum accepted canonical solver residual/error unless a stricter structural rule applies",
+      "pilot_measured_value": 2.212690509983961e-09,
+      "pilot_source_run_ids": [
+        "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a",
+        "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3",
+        "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9",
+        "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812",
+        "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34",
+        "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a",
+        "SPATIAL_N16:EXECUTION_e3fba205cba1b55c",
+        "SPATIAL_N32:EXECUTION_50a4de09fb21a65b",
+        "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc",
+        "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061",
+        "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a",
+        "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c",
+        "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+      ],
+      "recomputed_value": 5e-09,
+      "rounding_rule": "multiply by two, then round upward to one significant digit",
+      "threshold_id": "solver"
+    }
+  ]
+}

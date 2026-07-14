@@ -1,0 +1,115 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "f069237463bcf16c4914bc43ee6f8f5a8d9c6c15da8af2ebc5bd7792beb6915d",
+    "manifest_sha256": "4ced6618dcdc4f22f57ad9f7726a0e72dd5c94c91ca6cd30fa73273ce6c8128f",
+    "packet_sha256": "fa16cbf5ef767cd29b9cae3bcea80191e74656d51c1e2c74fa87bfca5bb4075e",
+    "run_matrix_sha256": "d9cc778d2e1731efc451b79781e4a58696c09cd464fedb800fe220cb429378b0"
+  },
+  "canonical_execution_authorized": false,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "Canonical parameters, thresholds, run identities, fits, solver semantics, exchange gates, energy accounting, and failure routes are prepared for independent freeze review only.",
+  "decision_count": 18,
+  "decisions": [
+    {
+      "decision_id": "accepted_pilot_v1_review_is_the_exact_live_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "all_guardrail_pilot_blocker_repair_and_v1_inputs_are_hash_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "v0_duplicate_identity_blocker_remains_visible",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_primary_parameters_are_mechanically_selected_from_pilot_v1",
+      "passed": true
+    },
+    {
+      "decision_id": "fifty_run_records_are_literal_complete_and_uniquely_identified",
+      "passed": true
+    },
+    {
+      "decision_id": "spatial_temporal_solver_deterministic_positive_and_negative_roles_are_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "every_threshold_has_source_measurement_formula_rounding_and_value",
+      "passed": true
+    },
+    {
+      "decision_id": "thresholds_reproduce_the_accepted_two_x_round_up_rule",
+      "passed": true
+    },
+    {
+      "decision_id": "exchange_signal_and_transverse_activity_gates_are_mechanically_derived",
+      "passed": true
+    },
+    {
+      "decision_id": "convergence_fit_ranges_orders_metrics_and_no_exclusion_rule_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_norm_initial_guess_iteration_and_failure_rules_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "registered_energy_inventory_normalization_multiplicity_and_boundary_flux_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "failure_semantics_block_relaxation_and_route_repairs_explicitly",
+      "passed": true
+    },
+    {
+      "decision_id": "environment_and_dependency_identity_are_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "no_dynamic_file_discovery_or_post_result_fit_selection_is_allowed",
+      "passed": true
+    },
+    {
+      "decision_id": "preparation_selects_only_independent_freeze_review",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_execution_and_scientific_result_remain_unauthorized_before_review",
+      "passed": true
+    },
+    {
+      "decision_id": "claim_ceiling_nonpromotions_and_Prompt_boundary_hold",
+      "passed": true
+    }
+  ],
+  "exchange_minimum_ratio": 100.0,
+  "exchange_minimum_transverse_signal": 3e-08,
+  "nonclaims": [
+    "no canonical simulation executed",
+    "no canonical conservation result",
+    "no empirical adequacy",
+    "no EM or QFT pillar completion",
+    "no EM-QFT seam admissibility or closure",
+    "no new physics",
+    "no C_k dynamics",
+    "no CCFT validation",
+    "no master-action validation or promotion",
+    "no repository-wide green claim"
+  ],
+  "proposed_canonical_parameters": {
+    "N": 32,
+    "dt": 0.0015625,
+    "duration": 0.05,
+    "max_iterations": 80,
+    "solver_tolerance": 1e-12
+  },
+  "run_record_count": 50,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_PARAMETER_FREEZE_PACKET_20260713_v0",
+  "scientific_result_claimed": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_packet_v0_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_packet_v0",
+  "threshold_count": 20,
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

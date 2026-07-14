@@ -1,0 +1,98 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 18,
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "UTF8_normalization": "NFC",
+    "bound_files": [
+      {
+        "path": "requirements.active.lock",
+        "sha256": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d"
+      },
+      {
+        "path": "formal/toe_formal/lean-toolchain",
+        "sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+      },
+      {
+        "path": "formal/toe_formal/lake-manifest.json",
+        "sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+      },
+      {
+        "path": ".gitattributes",
+        "sha256": "8f1e4dfa773e52d1cc34d8c3f0798411dd3d60111c99746e883ed42e9f4f4f76"
+      }
+    ],
+    "float_serialization": "finite JSON numbers; canonical sorted-key UTF-8 LF JSON",
+    "git_core_autocrlf": "true",
+    "locale": "C",
+    "numpy_version": "2.2.6",
+    "operating_system": "Windows",
+    "os_release": "10",
+    "python_version": "3.10.11",
+    "timezone": "UTC"
+  },
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_parameter_freeze.py",
+    "sha256": "f069237463bcf16c4914bc43ee6f8f5a8d9c6c15da8af2ebc5bd7792beb6915d"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json",
+      "sha256": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "b881d23e9bd201b09bb023a1e897306afff681bd57ccb224a9c6baf562be57b6"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v0.json",
+      "sha256": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json",
+      "sha256": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "1b6ea74e9eedf501dcbc8fc767fe99694742035d9f58959bcf10d215cf619a4a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json",
+      "sha256": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "13fa544264e4bc5d004f19bd860e702c4c71a907e83a05bdbee4d0fa9ce1ff1f"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v1.json",
+      "sha256": "456fb3a73d8cbc50c1392ed71ccc43e5f7c6783faa9e2fe22e15ce041a2372e3"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json",
+      "sha256": "62f66647c4588f6bd4b2db03a9d64d4c1019f43c10fdd73aca0a5a8ed54c13f8"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_V1_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "0c6aa468858805c8f2dfd39384b85532762f8f936b657a2f742b155deaa314d0"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1.py",
+      "sha256": "90acc15a46891ab289edb41d536765913e2e58979ae150897efe3a59fe94a2dd"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-PARAMETER-FREEZE-PACKET-v0.json",
+    "sha256": "fa16cbf5ef767cd29b9cae3bcea80191e74656d51c1e2c74fa87bfca5bb4075e"
+  },
+  "run_matrix": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-RUN-MATRIX-v0.json",
+    "sha256": "d9cc778d2e1731efc451b79781e4a58696c09cd464fedb800fe220cb429378b0"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_PARAMETER_FREEZE_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_packet_v0_result"
+}
