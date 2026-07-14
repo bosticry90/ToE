@@ -1,0 +1,36 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 16,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py",
+    "sha256": "068125c5174216f29d18afa91f2387a501644a03317139cb3655da60ff5bff96"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "c179418b41a8afeac1a3de7405d254dee8733e41ec2e9fbd2805beba1d0a9d63"
+    },
+    {
+      "path": "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-PACKET-v0.json",
+      "sha256": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc"
+    },
+    {
+      "path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-PACKET-v0.json",
+      "sha256": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-PACKET-v0.json",
+    "sha256": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0_result"
+}

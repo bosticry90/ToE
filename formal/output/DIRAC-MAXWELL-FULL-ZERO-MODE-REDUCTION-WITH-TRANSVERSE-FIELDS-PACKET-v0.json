@@ -1,0 +1,363 @@
+{
+  "analytic_controls": {
+    "negative": [
+      "force phi_2=phi_3=0 while J2 or J3 is nonzero",
+      "drop J2 from phi_2 equation",
+      "drop J3 from phi_3 equation",
+      "omit transverse-field energy",
+      "omit one transverse spinor coupling",
+      "use wrong gamma2 or gamma3 block",
+      "treat descendants as removable gauge modes",
+      "count descendants as new scalar matter",
+      "omit sector multiplicity",
+      "claim pure 1+1 Maxwell-Dirac closure",
+      "reintroduce rejected invariant-truncation claim"
+    ],
+    "permanent_regression_control": "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT must reappear if descendants are deleted while generic retained sectors remain",
+    "positive": [
+      "vacuum",
+      "full zero-mode free-field limit",
+      "q=0 with independent phi_2 and phi_3 waves",
+      "analytic configuration with J2=J3=0",
+      "nonzero J2 sourcing phi_2",
+      "nonzero J3 sourcing phi_3",
+      "charge-conjugate species exchange symmetry",
+      "full reduced Hilbert tensor matching parent reduction"
+    ]
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "analytic_repair_accepted_before_review": false,
+    "execution_authorized": false,
+    "master_action_promoted": false,
+    "numerical_guardrail_authorized": false,
+    "registry_maintenance_paused": true
+  },
+  "canonical_rescaling": {
+    "A_M_1p1": "sqrt(A_perp) A_M_3p1 for M=0,1,2,3",
+    "gauge_parameter": "lambda_1p1=sqrt(A_perp) lambda_3p1",
+    "psi_1p1": "sqrt(A_perp) psi_3p1",
+    "q_1p1": "q_3p1/sqrt(A_perp)"
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling": "A bounded, unit-complete c-number zero-mode reduction of the classical 3+1 Maxwell-Dirac system retaining the 1+1 gauge field, both transverse gauge-field descendants, two opposite-charge species, and both reduced spin sectors is analytically closed under the frozen zero-mode and boundary assumptions.",
+  "currents": {
+    "continuity": "partial_a J^a=0; transverse currents source descendants but do not enter the zero-mode divergence",
+    "number_current_each_species": "j_s^M=bar(psi_s) gamma^M psi_s",
+    "source_current": "J^M=q j_+^M-q j_-^M",
+    "transverse_currents": [
+      "J^2",
+      "J^3"
+    ]
+  },
+  "dimension_order_audit": {
+    "all_zero": true,
+    "audit_only": true,
+    "checks": [
+      {
+        "C_dim_order": "0",
+        "object": "phi_2",
+        "passed": true,
+        "reduce_then_restore": "sqrt(A_perp) A_2^(3+1)",
+        "restore_then_reduce": "sqrt(A_perp) A_2^(3+1)"
+      },
+      {
+        "C_dim_order": "0",
+        "object": "phi_3",
+        "passed": true,
+        "reduce_then_restore": "sqrt(A_perp) A_3^(3+1)",
+        "restore_then_reduce": "sqrt(A_perp) A_3^(3+1)"
+      },
+      {
+        "C_dim_order": "0",
+        "object": "q_1p1",
+        "passed": true,
+        "reduce_then_restore": "q_3p1/sqrt(A_perp)",
+        "restore_then_reduce": "q_3p1/sqrt(A_perp)"
+      },
+      {
+        "C_dim_order": "0",
+        "object": "J_2",
+        "passed": true,
+        "reduce_then_restore": "q_1p1 bar(psi_1p1) gamma_2 psi_1p1",
+        "restore_then_reduce": "q_1p1 bar(psi_1p1) gamma_2 psi_1p1"
+      },
+      {
+        "C_dim_order": "0",
+        "object": "J_3",
+        "passed": true,
+        "reduce_then_restore": "q_1p1 bar(psi_1p1) gamma_3 psi_1p1",
+        "restore_then_reduce": "q_1p1 bar(psi_1p1) gamma_3 psi_1p1"
+      },
+      {
+        "C_dim_order": "0",
+        "object": "T_phi2",
+        "passed": true,
+        "reduce_then_restore": "A_perp T_(A2)^(3+1)",
+        "restore_then_reduce": "A_perp T_(A2)^(3+1)"
+      },
+      {
+        "C_dim_order": "0",
+        "object": "T_phi3",
+        "passed": true,
+        "reduce_then_restore": "A_perp T_(A3)^(3+1)",
+        "restore_then_reduce": "A_perp T_(A3)^(3+1)"
+      }
+    ]
+  },
+  "exchange_structure": {
+    "C_exchange_embedded_dynamically": false,
+    "all_channels_cancel": true,
+    "channels": [
+      {
+        "channel": "longitudinal_gauge_to_matter",
+        "field_divergence": "partial_a T_gauge^ab=-F^b_a J^a",
+        "matter_divergence_contribution": "+F^b_a J^a",
+        "passed": true,
+        "sum": "0"
+      },
+      {
+        "channel": "phi2_to_matter",
+        "field_divergence": "partial_a T_phi2^ab=-partial^b phi_2 J^2",
+        "matter_divergence_contribution": "+partial^b phi_2 J^2",
+        "passed": true,
+        "sum": "0"
+      },
+      {
+        "channel": "phi3_to_matter",
+        "field_divergence": "partial_a T_phi3^ab=-partial^b phi_3 J^3",
+        "matter_divergence_contribution": "+partial^b phi_3 J^3",
+        "passed": true,
+        "sum": "0"
+      }
+    ],
+    "matter_total": "partial_a T_matter^ab=F^b_a J^a+partial^b phi_2 J^2+partial^b phi_3 J^3",
+    "overall_total_conservation": "partial_a T_total^ab=0"
+  },
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v1",
+  "field_inventory": {
+    "charge_species": [
+      "psi_plus",
+      "psi_minus"
+    ],
+    "longitudinal_gauge_field": [
+      "A_0(t,x)",
+      "A_1(t,x)"
+    ],
+    "reduced_sectors_per_species": 2,
+    "sector_notation": "psi_(s,r), s in {+,-}, r in {1,2}",
+    "sector_projection_used": false,
+    "total_two_component_spinors": 4,
+    "transverse_descendants_are_new_independent_scalar_matter": false,
+    "transverse_gauge_descendants": [
+      "phi_2(t,x):=A_2(t,x)",
+      "phi_3(t,x):=A_3(t,x)"
+    ]
+  },
+  "field_strength_decomposition": {
+    "F_23": "0",
+    "F_MN_F^MN": "F_ab F^ab-2 partial_a phi_2 partial^a phi_2-2 partial_a phi_3 partial^a phi_3",
+    "F_a2": "partial_a phi_2",
+    "F_a3": "partial_a phi_3",
+    "F_ab": "partial_a A_b-partial_b A_a",
+    "metric_signature": "+---"
+  },
+  "gamma_sector_structure": {
+    "all_sectors_retained": true,
+    "gamma0_gamma1": "sector diagonal",
+    "gamma2": "i rho5 tensor sigma1; sector off-diagonal",
+    "gamma3": "i rho5 tensor sigma2; sector off-diagonal",
+    "previous_counterexample_now_sourced_consistently": true,
+    "transverse_couplings_mix_retained_sectors": true
+  },
+  "gauge_transformations": {
+    "A_a": "A_a -> A_a+partial_a lambda",
+    "interpretation": "phi_2 and phi_3 are zero-mode gauge descendants, not removable longitudinal gauge modes",
+    "phi_2": "invariant because partial_2 lambda=0",
+    "phi_3": "invariant because partial_3 lambda=0",
+    "psi_s": "psi_s -> exp(-i q_s lambda/hbar) psi_s"
+  },
+  "geometry": {
+    "longitudinal_boundary": "periodic S1_x",
+    "spacetime": "R_t x S1_x x T2_yz",
+    "spin_structure": "Ramond on both transverse cycles",
+    "transverse_area": "A_perp=L_y L_z",
+    "zero_modes": [
+      "partial_2=0",
+      "partial_3=0"
+    ]
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/docs/release/POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "c179418b41a8afeac1a3de7405d254dee8733e41ec2e9fbd2805beba1d0a9d63"
+    },
+    {
+      "path": "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-PACKET-v0.json",
+      "sha256": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc"
+    },
+    {
+      "path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-3P1-TO-1P1-REDUCTION-CONSISTENCY-PACKET-v0.json",
+      "sha256": "14f6ff3b44e661d2fece77ddb0ca8d878762ac7f8700f042a30190cc69b67eeb"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6"
+    }
+  ],
+  "nonclaims": [
+    "no pure 1+1 Maxwell-Dirac truncation",
+    "no transverse-mode decoupling",
+    "no stable classical fermionic matter",
+    "no fermionic QFT, quantum pair creation, Fermi statistics, or quantized electromagnetism",
+    "no full 3+1 photon recovery",
+    "no EM or QFT pillar completion or EM-QFT seam closure",
+    "no new physics, C_k dynamics, CCFT validation, or master-action validation"
+  ],
+  "numerical_architecture_constraints_for_later_guardrail": {
+    "A1": "group-valued spatial Wilson links",
+    "phi2_phi3": "site-centered real descendant fields with compatible conjugate momenta",
+    "required_energy_terms": [
+      "Wilson contribution",
+      "phi2 energy",
+      "phi3 energy",
+      "zero-mode electric energy"
+    ],
+    "scientific_choices_frozen_before_pilot": true,
+    "spinor_couplings": "site terms through gamma2 and gamma3"
+  },
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0",
+  "prompt_protection": {
+    "excluded_from_scientific_inputs": true,
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "reduced_action": {
+    "derived_from_parent_without_added_terms": true,
+    "external_measure_relation": "S_1p1=S_3p1 evaluated on zero modes after canonical rescaling",
+    "internal_compact": "S_1p1=integral d2x {-F_ab F^ab/4+sum_I partial_a phi_I partial^a phi_I/2+sum_s [i/2 bar(psi_s) gamma^a <->D_a psi_s-m bar(psi_s)psi_s-q_s bar(psi_s)(gamma^2 phi_2+gamma^3 phi_3)psi_s]}",
+    "terms": [
+      {
+        "external_expression": "-F_ab F^ab/(4 mu_0)",
+        "internal_expression": "-F_ab F^ab/4",
+        "introduced_to_repair_conservation": false,
+        "origin": "-F_MN F^MN/4 after zero-mode decomposition",
+        "term_id": "longitudinal_Maxwell"
+      },
+      {
+        "external_expression": "+partial_a phi_2 partial^a phi_2/(2 mu_0)",
+        "internal_expression": "+partial_a phi_2 partial^a phi_2/2",
+        "introduced_to_repair_conservation": false,
+        "origin": "-2 F_a2 F^a2/4 with F_a2=partial_a phi_2",
+        "term_id": "phi2_kinetic"
+      },
+      {
+        "external_expression": "+partial_a phi_3 partial^a phi_3/(2 mu_0)",
+        "internal_expression": "+partial_a phi_3 partial^a phi_3/2",
+        "introduced_to_repair_conservation": false,
+        "origin": "-2 F_a3 F^a3/4 with F_a3=partial_a phi_3",
+        "term_id": "phi3_kinetic"
+      },
+      {
+        "external_expression": "sum_s i hbar c/2 [bar(psi_s) gamma^a D_a psi_s-(D_a bar(psi_s)) gamma^a psi_s]-m c^2 bar(psi_s)psi_s",
+        "internal_expression": "sum_s i/2 [bar(psi_s) gamma^a D_a psi_s-(D_a bar(psi_s)) gamma^a psi_s]-m bar(psi_s)psi_s",
+        "introduced_to_repair_conservation": false,
+        "origin": "accepted symmetrized parent Dirac action",
+        "term_id": "Dirac_longitudinal"
+      },
+      {
+        "external_expression": "-sum_s c q_s bar(psi_s) gamma^2 phi_2 psi_s",
+        "internal_expression": "-sum_s q_s bar(psi_s) gamma^2 phi_2 psi_s",
+        "introduced_to_repair_conservation": false,
+        "origin": "i gamma^2 D_2 with partial_2=0",
+        "term_id": "phi2_spinor_coupling"
+      },
+      {
+        "external_expression": "-sum_s c q_s bar(psi_s) gamma^3 phi_3 psi_s",
+        "internal_expression": "-sum_s q_s bar(psi_s) gamma^3 phi_3 psi_s",
+        "introduced_to_repair_conservation": false,
+        "origin": "i gamma^3 D_3 with partial_3=0",
+        "term_id": "phi3_spinor_coupling"
+      }
+    ]
+  },
+  "reduced_equations": {
+    "Dirac_minus": "[i gamma^a D_a-m+q gamma^2 phi_2+q gamma^3 phi_3]psi_-=0 internally",
+    "Dirac_plus": "[i gamma^a D_a-m-q gamma^2 phi_2-q gamma^3 phi_3]psi_+=0 internally",
+    "adjoint_equations_required": true,
+    "longitudinal_Maxwell": "partial_a F^ab=mu_0 J^b",
+    "phi2": "Box phi_2=mu_0 J_2=-mu_0 J^2",
+    "phi3": "Box phi_3=mu_0 J_3=-mu_0 J^3"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0_result_review",
+  "selected_route": "REPAIR_REDUCTION",
+  "stress_energy": {
+    "C_T_reduction": "0",
+    "each_spinor_sector": "T_psi(s,r)^ab=(i hbar c/4)[bar(psi) gamma^a D^b psi+bar(psi) gamma^b D^a psi-(D^b bar(psi))gamma^a psi-(D^a bar(psi))gamma^b psi]",
+    "each_transverse_descendant": "T_phiI^ab=(1/mu_0)[partial^a phi_I partial^b phi_I-eta^ab partial_c phi_I partial^c phi_I/2]",
+    "energy_components": {
+      "longitudinal_electric": "E_x^2/(2 mu_0)",
+      "matter": "sum_(s,r) T_psi(s,r)^00",
+      "phi2": "[(partial_t phi_2)^2+(partial_x phi_2)^2]/(2 mu_0) in c=1 coordinates",
+      "phi3": "[(partial_t phi_3)^2+(partial_x phi_3)^2]/(2 mu_0) in c=1 coordinates"
+    },
+    "longitudinal_gauge": "T_gauge^ab=(1/mu_0)[-F^a_c F^{bc}+eta^ab F_cd F^cd/4]",
+    "parent_match": "T_total_1p1^ab=A_perp T_total_3p1^ab on zero modes after canonical rescaling",
+    "total": "T_total^ab=T_gauge^ab+T_phi2^ab+T_phi3^ab+sum_(s,r) T_psi(s,r)^ab"
+  },
+  "target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0",
+  "variation_reduction_commutation": {
+    "all_residuals_zero": true,
+    "checks": [
+      {
+        "field": "A_0",
+        "passed": true,
+        "reduced_action_equation": "partial_a F^a0=mu_0 J^0",
+        "reduced_parent_equation": "partial_a F^a0=mu_0 J^0",
+        "residual": "0"
+      },
+      {
+        "field": "A_1",
+        "passed": true,
+        "reduced_action_equation": "partial_a F^a1=mu_0 J^1",
+        "reduced_parent_equation": "partial_a F^a1=mu_0 J^1",
+        "residual": "0"
+      },
+      {
+        "field": "phi_2=A_2",
+        "passed": true,
+        "reduced_action_equation": "Box phi_2=mu_0 J_2=-mu_0 J^2",
+        "reduced_parent_equation": "Box phi_2=mu_0 J_2=-mu_0 J^2",
+        "residual": "0"
+      },
+      {
+        "field": "phi_3=A_3",
+        "passed": true,
+        "reduced_action_equation": "Box phi_3=mu_0 J_3=-mu_0 J^3",
+        "reduced_parent_equation": "Box phi_3=mu_0 J_3=-mu_0 J^3",
+        "residual": "0"
+      },
+      {
+        "field": "psi_plus",
+        "passed": true,
+        "reduced_action_equation": "[i gamma^a D_a-m-q gamma^2 phi_2-q gamma^3 phi_3]psi_+=0",
+        "reduced_parent_equation": "[i gamma^a D_a-m-q gamma^2 phi_2-q gamma^3 phi_3]psi_+=0",
+        "residual": "0"
+      },
+      {
+        "field": "psi_minus",
+        "passed": true,
+        "reduced_action_equation": "[i gamma^a D_a-m+q gamma^2 phi_2+q gamma^3 phi_3]psi_-=0",
+        "reduced_parent_equation": "[i gamma^a D_a-m+q gamma^2 phi_2+q gamma^3 phi_3]psi_-=0",
+        "residual": "0"
+      }
+    ]
+  }
+}

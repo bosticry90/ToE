@@ -1,0 +1,105 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "068125c5174216f29d18afa91f2387a501644a03317139cb3655da60ff5bff96",
+    "manifest_sha256": "1b32cc1f0777214453a751cdc66f8de4cf81335621ade151ce823e4bd124e0fd",
+    "packet_sha256": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "analytic_repair_accepted_before_review": false,
+    "execution_authorized": false,
+    "master_action_promoted": false,
+    "numerical_guardrail_authorized": false,
+    "registry_maintenance_paused": true
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The complete zero-mode reduction retaining A2 and A3 is prepared as a parent-derived analytic system; only independent analytic review is authorized.",
+  "decision_count": 16,
+  "decisions": [
+    {
+      "decision_id": "accepted_route_review_authorizes_full_zero_mode_repair_only",
+      "passed": true
+    },
+    {
+      "decision_id": "complete_A0_A1_phi2_phi3_and_four_spinor_inventory_is_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "transverse_descendants_are_parent_gauge_components_not_new_matter",
+      "passed": true
+    },
+    {
+      "decision_id": "zero_mode_gauge_transformations_are_closed",
+      "passed": true
+    },
+    {
+      "decision_id": "Maxwell_term_decomposes_into_gauge_plus_two_scalar_kinetics",
+      "passed": true
+    },
+    {
+      "decision_id": "gamma2_gamma3_couplings_and_all_sector_multiplicity_are_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "all_reduced_equations_follow_from_the_parent_derived_action",
+      "passed": true
+    },
+    {
+      "decision_id": "variation_and_reduction_commute_for_all_six_varied_fields",
+      "passed": true
+    },
+    {
+      "decision_id": "reduced_Hilbert_tensor_matches_parent_reduction",
+      "passed": true
+    },
+    {
+      "decision_id": "three_exchange_channels_cancel_to_total_conservation",
+      "passed": true
+    },
+    {
+      "decision_id": "dimension_restoration_and_reduction_commute",
+      "passed": true
+    },
+    {
+      "decision_id": "eight_positive_and_eleven_negative_controls_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "previous_transverse_blocker_is_a_permanent_regression_control",
+      "passed": true
+    },
+    {
+      "decision_id": "later_discrete_architecture_tracks_site_descendants_and_link_gauge_field",
+      "passed": true
+    },
+    {
+      "decision_id": "claim_ceiling_and_all_nonclaims_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "numerical_guardrail_execution_and_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v1",
+  "negative_control_count": 11,
+  "nonclaims": [
+    "no pure 1+1 Maxwell-Dirac truncation",
+    "no transverse-mode decoupling",
+    "no stable classical fermionic matter",
+    "no fermionic QFT, quantum pair creation, Fermi statistics, or quantized electromagnetism",
+    "no full 3+1 photon recovery",
+    "no EM or QFT pillar completion or EM-QFT seam closure",
+    "no new physics, C_k dynamics, CCFT validation, or master-action validation"
+  ],
+  "positive_control_count": 8,
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_20260713_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0_result_review",
+  "target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0",
+  "variation_check_count": 6,
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}
