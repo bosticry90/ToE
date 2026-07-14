@@ -1,0 +1,147 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "CCFT_validation_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "accepted_reduction_reopened": false,
+    "action_or_stress_tensor_changed": false,
+    "axis_normalization_repair_accepted": true,
+    "canonical_E_REPRO_result_remains_accepted": true,
+    "exact_parameter_values_frozen": false,
+    "guardrail_v1_preparation_authorized": true,
+    "historical_guardrail_v0_rewritten": false,
+    "historical_signed_axis_rehabilitated": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_authorized": false,
+    "robustness_execution_authorized": false,
+    "robustness_pilot_authorized": false,
+    "seam_closure_authorized": false
+  },
+  "candidate_weighted_totals": {
+    "ABSOLUTE_COMPONENT_BUDGET_FRACTION": 37,
+    "FIXED_PROFILE_AMPLITUDE_LOADING": 51,
+    "GAUGE_COVARIANT_SPECTRAL_REFERENCE_LOADING": 50,
+    "REST_NUMBER_POSITIVE_REFERENCE_LOADING": 62,
+    "SIGNED_TOTAL_RATIO_DIAGNOSTIC_ONLY": 29
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling": "The versioned positive rest-number reference loading coordinate is accepted for robustness guardrail-v1 preparation only. It is a diagnostic design coordinate, not a fraction of conserved signed energy; no calibration or robustness execution is authorized.",
+  "historical_axis_id": "F_PERP_INITIAL_SIGNED_TOTAL_v0",
+  "independent_scientific_audit": {
+    "canonical_positive_base": 0.012840960000000005,
+    "canonical_replacement_coordinate": 0.2131315883288088,
+    "gauge_audit": {
+      "after": 0.21313158832880885,
+      "before": 0.2131315883288088,
+      "error": 5.551115123125783e-17,
+      "invariant": true
+    },
+    "historical_counterexample_reproduced": true,
+    "historical_positive_pi_over_two_ratio": 1.0003377834191158,
+    "inverse_maximum_error": 1.1102230246251565e-16,
+    "inverse_rows": [
+      {
+        "alpha": 0.0,
+        "error": 0.0,
+        "reconstructed": 0.0,
+        "target": 0.0
+      },
+      {
+        "alpha": 0.9607207020879346,
+        "error": 2.7755575615628914e-17,
+        "reconstructed": 0.19999999999999998,
+        "target": 0.2
+      },
+      {
+        "alpha": 1.9214414041758692,
+        "error": 0.0,
+        "reconstructed": 0.5,
+        "target": 0.5
+      },
+      {
+        "alpha": 3.842882808351739,
+        "error": 1.1102230246251565e-16,
+        "reconstructed": 0.8000000000000002,
+        "target": 0.8
+      },
+      {
+        "alpha": 8.375368906737501,
+        "error": 0.0,
+        "reconstructed": 0.95,
+        "target": 0.95
+      }
+    ],
+    "phase_rows": [
+      {
+        "base": 0.012840960000000005,
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": -3.141592653589793,
+        "descendant": 0.003478109122024757,
+        "signed_total": 0.00347643133505153
+      },
+      {
+        "base": 0.012840960000000005,
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": -1.5707963267948966,
+        "descendant": 0.003478109122024757,
+        "signed_total": 0.003479283572906007
+      },
+      {
+        "base": 0.012840960000000005,
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": 0.0,
+        "descendant": 0.003478109122024757,
+        "signed_total": 0.0034797869089979758
+      },
+      {
+        "base": 0.012840960000000005,
+        "coordinate": 0.2131315883288088,
+        "delta_theta_psi": 1.5707963267948966,
+        "descendant": 0.003478109122024757,
+        "signed_total": 0.003476934671143496
+      }
+    ],
+    "phase_stable": true
+  },
+  "preparation_binding": {
+    "bound_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_20260713_v0.json": "83015c24fcb2266ee52c3630dfd56fba01147c2ef23aa3b1c82b3538fa57e2ab",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-AXIS-NORMALIZATION-REPAIR-MANIFEST-v0.json": "003a9a556c6f1536371b805ae793440db2e5e325bc4371ad3cad2d89f0081bb6",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-AXIS-NORMALIZATION-REPAIR-PACKET-v0.json": "7863ae08a12841f3dba9e9a5a7b2375af8ec9c1b4ae8eef9918d15bbad3bfb88",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair.py": "c74491ba453cffc7634c60a402cf3d3faa8bb8048bdceeee4226ff098a032db0",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessAxisNormalizationRepairPacket.lean": "619ef13178c7aeb7b78bb449e62c8c633bbf05ba6c0bdcaa5291c8a666836419"
+    },
+    "preparation_commit": "ad18e99bc42f61c16e84dd8b02499711ab3d6685",
+    "preparation_parent": "42dc17bbf0e8aac579d09de19ff034650f204d1a"
+  },
+  "preparation_generator_imported": false,
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "replacement_axis_id": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+  "review_decisions": {
+    "all_forty_scores_reconstructed": true,
+    "canonical_mapping_reproduced": true,
+    "canonical_model_and_nonclaims_preserved": true,
+    "exact_closed_candidate_set": true,
+    "exact_preparation_target": true,
+    "historical_axis_versioned_and_diagnostic_only": true,
+    "historical_counterexample_reproduced": true,
+    "mutations_discriminate": true,
+    "numerical_authority_remains_closed": true,
+    "phase_gauge_and_inverse_audits_pass": true,
+    "recommendation_not_used": true,
+    "replacement_axis_versioned": true,
+    "replacement_formula_exact": true,
+    "selection_reconstructed_at_44": true,
+    "selection_stable_40_through_48": true,
+    "semantic_nonconfusion_explicit": true,
+    "shortcuts_rejected": true,
+    "weighted_totals_reconstructed": true
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_packet_v0_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_AXIS_NORMALIZATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_candidate_id": "REST_NUMBER_POSITIVE_REFERENCE_LOADING",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1",
+  "selected_next_target_kind": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_packet_v1",
+  "selected_weighted_total": 62,
+  "verdict": "ACCEPT_AXIS_NORMALIZATION_REPAIR"
+}
