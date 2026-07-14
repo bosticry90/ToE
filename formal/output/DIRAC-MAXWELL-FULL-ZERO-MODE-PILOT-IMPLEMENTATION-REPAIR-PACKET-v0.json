@@ -1,0 +1,210 @@
+{
+  "baseline_diagnostics": [],
+  "blocked_target": "prepare_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v1",
+  "boundary": {
+    "canonical_execution_authorized": false,
+    "canonical_parameters_frozen": false,
+    "canonical_thresholds_frozen": false,
+    "pilot_v0_engineering_evidence_accepted": false,
+    "pilot_v1_authorized_before_review": false,
+    "repair_accepted_before_review": false,
+    "scientific_result_claimed": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "defect": {
+    "diagnostic": "REGISTERED_RUN_IDENTITIES_NOT_UNIQUE",
+    "duplicate_legacy_run_ids": [
+      "full_mixed_N16_dt0.00312500_tol1e-12",
+      "full_mixed_N16_dt0.00625000_tol1e-12"
+    ],
+    "evidence_identity_defect": true,
+    "scientific_or_numerical_defect": false
+  },
+  "identity_schema": {
+    "calibration_role_closed_vocabulary": [
+      "POSITIVE_PHI2_RESPONSE",
+      "POSITIVE_PHI3_RESPONSE",
+      "POSITIVE_Q0_WAVE",
+      "SOLVER_TOLERANCE_1E_MINUS_8",
+      "SOLVER_TOLERANCE_1E_MINUS_10",
+      "SOLVER_TOLERANCE_1E_MINUS_12",
+      "SPATIAL_N16",
+      "SPATIAL_N32",
+      "SPATIAL_N8",
+      "TEMPORAL_DT_0P0015625",
+      "TEMPORAL_DT_0P003125",
+      "TEMPORAL_DT_0P00625",
+      "POSITIVE_VACUUM"
+    ],
+    "execution_id": "SHA256-derived identifier of the canonical legacy parameter tuple",
+    "legacy_run_id_preserved": true,
+    "run_record_id": "calibration_role:execution_id",
+    "shared_execution_id_across_roles_allowed": true,
+    "unique_field": "run_record_id"
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "1b6ea74e9eedf501dcbc8fc767fe99694742035d9f58959bcf10d215cf619a4a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json",
+      "sha256": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65"
+    }
+  ],
+  "mutation_controls": [
+    {
+      "actual_diagnostics": [
+        "RUN_RECORD_ID_NOT_UNIQUE"
+      ],
+      "expected_diagnostic": "RUN_RECORD_ID_NOT_UNIQUE",
+      "mutation_id": "DUPLICATE_RUN_RECORD_ID",
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "EXECUTION_ID_MISSING_OR_MALFORMED"
+      ],
+      "expected_diagnostic": "EXECUTION_ID_MISSING_OR_MALFORMED",
+      "mutation_id": "MISSING_EXECUTION_ID",
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "CALIBRATION_ROLE_CLOSURE_MISMATCH"
+      ],
+      "expected_diagnostic": "CALIBRATION_ROLE_CLOSURE_MISMATCH",
+      "mutation_id": "ROLE_ORDER_CHANGED",
+      "passed": true
+    },
+    {
+      "actual_diagnostics": [
+        "RUN_RECORD_ID_NOT_ROLE_QUALIFIED"
+      ],
+      "expected_diagnostic": "RUN_RECORD_ID_NOT_ROLE_QUALIFIED",
+      "mutation_id": "ROLE_QUALIFIER_REMOVED",
+      "passed": true
+    }
+  ],
+  "nonclaims": [
+    "no v0 rewrite",
+    "no numerical recalibration",
+    "no canonical parameter or threshold",
+    "no canonical execution",
+    "no conservation or coupled-field result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim"
+  ],
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1",
+  "prompt_protection": {
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "repair_scope": {
+    "changed": [
+      "run identity schema",
+      "role-qualified record identifiers",
+      "closed calibration-role field"
+    ],
+    "unchanged": [
+      "action",
+      "field inventory",
+      "charge convention",
+      "spin sectors",
+      "descendants",
+      "boundary conditions",
+      "gauge choice",
+      "Wilson operator and r",
+      "integrator",
+      "solver",
+      "all numerical arrays",
+      "all pilot values",
+      "all 12 positive controls",
+      "all 27 negative controls",
+      "energy classification",
+      "claim ceiling"
+    ]
+  },
+  "repaired_identity_preview": [
+    {
+      "calibration_role": "POSITIVE_PHI2_RESPONSE",
+      "execution_id": "EXECUTION_2a61651a38b50e1a",
+      "legacy_run_id": "phi2_response_N8_dt0.00625000_tol1e-12",
+      "run_record_id": "POSITIVE_PHI2_RESPONSE:EXECUTION_2a61651a38b50e1a"
+    },
+    {
+      "calibration_role": "POSITIVE_PHI3_RESPONSE",
+      "execution_id": "EXECUTION_6bd3633a0bed8cc3",
+      "legacy_run_id": "phi3_response_N8_dt0.00625000_tol1e-12",
+      "run_record_id": "POSITIVE_PHI3_RESPONSE:EXECUTION_6bd3633a0bed8cc3"
+    },
+    {
+      "calibration_role": "POSITIVE_Q0_WAVE",
+      "execution_id": "EXECUTION_d337e5be048657b9",
+      "legacy_run_id": "q0_wave_N16_dt0.00312500_tol1e-12",
+      "run_record_id": "POSITIVE_Q0_WAVE:EXECUTION_d337e5be048657b9"
+    },
+    {
+      "calibration_role": "SOLVER_TOLERANCE_1E_MINUS_8",
+      "execution_id": "EXECUTION_5667af0e03c5e812",
+      "legacy_run_id": "full_mixed_N16_dt0.00312500_tol1e-08",
+      "run_record_id": "SOLVER_TOLERANCE_1E_MINUS_8:EXECUTION_5667af0e03c5e812"
+    },
+    {
+      "calibration_role": "SOLVER_TOLERANCE_1E_MINUS_10",
+      "execution_id": "EXECUTION_30da66c76bc51b34",
+      "legacy_run_id": "full_mixed_N16_dt0.00312500_tol1e-10",
+      "run_record_id": "SOLVER_TOLERANCE_1E_MINUS_10:EXECUTION_30da66c76bc51b34"
+    },
+    {
+      "calibration_role": "SOLVER_TOLERANCE_1E_MINUS_12",
+      "execution_id": "EXECUTION_4669d51ad0cba19a",
+      "legacy_run_id": "full_mixed_N16_dt0.00312500_tol1e-12",
+      "run_record_id": "SOLVER_TOLERANCE_1E_MINUS_12:EXECUTION_4669d51ad0cba19a"
+    },
+    {
+      "calibration_role": "SPATIAL_N16",
+      "execution_id": "EXECUTION_e3fba205cba1b55c",
+      "legacy_run_id": "full_mixed_N16_dt0.00625000_tol1e-12",
+      "run_record_id": "SPATIAL_N16:EXECUTION_e3fba205cba1b55c"
+    },
+    {
+      "calibration_role": "SPATIAL_N32",
+      "execution_id": "EXECUTION_50a4de09fb21a65b",
+      "legacy_run_id": "full_mixed_N32_dt0.00312500_tol1e-12",
+      "run_record_id": "SPATIAL_N32:EXECUTION_50a4de09fb21a65b"
+    },
+    {
+      "calibration_role": "SPATIAL_N8",
+      "execution_id": "EXECUTION_5b46de9b9118f0cc",
+      "legacy_run_id": "full_mixed_N8_dt0.01250000_tol1e-12",
+      "run_record_id": "SPATIAL_N8:EXECUTION_5b46de9b9118f0cc"
+    },
+    {
+      "calibration_role": "TEMPORAL_DT_0P0015625",
+      "execution_id": "EXECUTION_517ae1f3c26b6061",
+      "legacy_run_id": "full_mixed_N16_dt0.00156250_tol1e-12",
+      "run_record_id": "TEMPORAL_DT_0P0015625:EXECUTION_517ae1f3c26b6061"
+    },
+    {
+      "calibration_role": "TEMPORAL_DT_0P003125",
+      "execution_id": "EXECUTION_4669d51ad0cba19a",
+      "legacy_run_id": "full_mixed_N16_dt0.00312500_tol1e-12",
+      "run_record_id": "TEMPORAL_DT_0P003125:EXECUTION_4669d51ad0cba19a"
+    },
+    {
+      "calibration_role": "TEMPORAL_DT_0P00625",
+      "execution_id": "EXECUTION_e3fba205cba1b55c",
+      "legacy_run_id": "full_mixed_N16_dt0.00625000_tol1e-12",
+      "run_record_id": "TEMPORAL_DT_0P00625:EXECUTION_e3fba205cba1b55c"
+    },
+    {
+      "calibration_role": "POSITIVE_VACUUM",
+      "execution_id": "EXECUTION_2747dfe6c28f22c4",
+      "legacy_run_id": "vacuum_N8_dt0.00625000_tol1e-12",
+      "run_record_id": "POSITIVE_VACUUM:EXECUTION_2747dfe6c28f22c4"
+    }
+  ],
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0"
+}

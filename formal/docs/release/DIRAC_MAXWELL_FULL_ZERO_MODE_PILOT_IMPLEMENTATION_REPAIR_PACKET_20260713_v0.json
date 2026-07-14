@@ -1,0 +1,78 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "8279f8105aa16437f6cb90cb589480dd133586f0fa43badc51a8ccf722d7ceb7",
+    "manifest_sha256": "bcb4e6b9ca795716b1bc9272f773d42533207d11ae1da8c700aeeb4e71026e99",
+    "packet_sha256": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda"
+  },
+  "canonical_execution_authorized": false,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "A run-identity-only repair is prepared; independent review is required before pilot v1 execution.",
+  "decision_count": 12,
+  "decisions": [
+    {
+      "decision_id": "blocked_v0_review_is_the_exact_live_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "v0_preparation_and_arrays_remain_immutable",
+      "passed": true
+    },
+    {
+      "decision_id": "repair_scope_is_run_identity_only",
+      "passed": true
+    },
+    {
+      "decision_id": "calibration_role_vocabulary_is_closed",
+      "passed": true
+    },
+    {
+      "decision_id": "execution_identity_is_parameter_derived",
+      "passed": true
+    },
+    {
+      "decision_id": "run_record_identity_is_role_qualified_and_unique",
+      "passed": true
+    },
+    {
+      "decision_id": "identical_parameter_tuples_may_have_distinct_calibration_roles",
+      "passed": true
+    },
+    {
+      "decision_id": "four_identity_mutations_fail_with_unique_diagnostics",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_action_guardrail_controls_and_values_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "only_versioned_pilot_v1_execution_can_follow_acceptance",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_parameters_thresholds_execution_and_claim_remain_unauthorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "identity_record_count": 13,
+  "mutation_controls_passed": 4,
+  "nonclaims": [
+    "no v0 rewrite",
+    "no numerical recalibration",
+    "no canonical parameter or threshold",
+    "no canonical execution",
+    "no conservation or coupled-field result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim"
+  ],
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_20260713_v0",
+  "scientific_result_claimed": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0",
+  "unique_run_record_count": 13,
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

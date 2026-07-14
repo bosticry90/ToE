@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 12,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair.py",
+    "sha256": "8279f8105aa16437f6cb90cb589480dd133586f0fa43badc51a8ccf722d7ceb7"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "1b6ea74e9eedf501dcbc8fc767fe99694742035d9f58959bcf10d215cf619a4a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json",
+      "sha256": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json",
+    "sha256": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0_result"
+}
