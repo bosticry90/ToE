@@ -1,0 +1,246 @@
+{
+  "Wilson_dispersion": {
+    "continuum_recovery_required": true,
+    "doubler_branch_separation_required": true,
+    "exact_discrete_comparison_each_grid": true,
+    "formula": "E_W(k)^2=sin(ka)^2/a^2+[m+r(1-cos(ka))/a]^2",
+    "r": 1
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "canonical_execution_authorized": false,
+    "guardrail_accepted_before_review": false,
+    "master_action_promoted": false,
+    "non_authoritative_pilot_authorized": false,
+    "registry_maintenance_paused": true,
+    "result_claimed": false
+  },
+  "canonical_observables": [
+    "Dirac and adjoint residuals by sector/species",
+    "longitudinal Maxwell residual",
+    "phi2 and phi3 wave residuals",
+    "Gauss residual",
+    "discrete continuity residual",
+    "sector number currents",
+    "J0 J1 J2 J3 source currents",
+    "positive/negative-frequency diagnostic weights",
+    "link electric energy",
+    "phi2 and phi3 energies",
+    "Wilson contribution",
+    "zero-mode electric energy",
+    "three local exchange residuals",
+    "periodic boundary flux",
+    "selected bounded energy error",
+    "spatial and temporal convergence"
+  ],
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim_ceiling_after_future_execution": "A bounded unit-complete c-number full zero-mode Maxwell-Dirac surrogate retaining both transverse gauge descendants exhibits reproducible constrained matter-field exchange and bounded convergent total-energy error under the frozen lattice assumptions.",
+  "controls": {
+    "negative": [
+      "doubler-contaminated naive centered Dirac stencil",
+      "Wilson contribution omitted from energy",
+      "group-valued link norm not preserved",
+      "U used instead of U* for the negative species",
+      "one charge species removed on the periodic domain",
+      "number current j^mu confused with source current J^mu",
+      "residual temporal-gauge zero mode mishandled",
+      "nontrivial holonomy treated as globally trivial",
+      "J2 omitted from the phi2 equation",
+      "J3 omitted from the phi3 equation",
+      "phi2 or phi3 energy omitted",
+      "gamma2 phi2 or gamma3 phi3 spinor coupling omitted",
+      "wrong gamma2 or gamma3 block used",
+      "transverse descendants treated as removable gauge modes",
+      "transverse descendants counted as new independent scalar matter",
+      "reduced spin-sector multiplicity omitted",
+      "pure 1+1 Maxwell-Dirac closure claimed despite descendants",
+      "rejected A2=A3 invariant truncation reintroduced",
+      "energy per transverse area treated as total energy",
+      "1+1 stress-energy assigned mass dimension four",
+      "3+1 coupling imported without A_perp rescaling",
+      "dimension restoration and reduction order mismatch",
+      "variation and reduction mismatch",
+      "incorrect descendant stress normalization",
+      "one exchange-channel sign reversed",
+      "longitudinal or transverse Maxwell source omitted",
+      "C_exchange=0 imposed definitionally"
+    ],
+    "positive": [
+      "vacuum",
+      "q=0 two-species free evolution with independent phi2 and phi3 waves",
+      "Wilson-Dirac plane wave against exact discrete dispersion",
+      "continuum dispersion recovery under refinement and doubler-branch separation",
+      "trivial pure gauge with W=1",
+      "flat globally nontrivial connection with W!=1",
+      "stationary-density charge-neutral two-species configuration",
+      "analytic J2=J3=0 configuration",
+      "nonzero J2 sources phi2 with the derived sign",
+      "nonzero J3 sources phi3 with the derived sign",
+      "charge-conjugate species exchange symmetry under U versus U*",
+      "full discrete energy inventory converges to the reduced parent Hilbert energy"
+    ],
+    "previous_blocker_permanent": true
+  },
+  "discrete_action_requirements": [
+    "link electric term",
+    "site phi2 and phi3 kinetic and nearest-neighbor gradient terms",
+    "two-species four-sector Wilson-Dirac term",
+    "link-based A1 spinor transport using U and U*",
+    "site gamma2 phi2 and gamma3 phi3 spinor couplings",
+    "periodic boundary and holonomy terms without cutting the circle"
+  ],
+  "discrete_energy": {
+    "acceptance_form": "energy error remains bounded over the frozen run and decreases at second order until the solver/numerical floor",
+    "classification": "BOUNDED_CONVERGENT_ENERGY_ERROR",
+    "exact_continuum_energy_claimed": false,
+    "inventory": [
+      "link electric energy",
+      "uniform electric zero-mode energy",
+      "phi2 kinetic and gradient energy",
+      "phi3 kinetic and gradient energy",
+      "Wilson-Dirac matter energy",
+      "link interaction",
+      "gamma2 phi2 interaction",
+      "gamma3 phi3 interaction"
+    ],
+    "modified_Hamiltonian_claimed_exact": false
+  },
+  "discrete_exchange": {
+    "C_exchange_embedded_as_equation": false,
+    "boundary_flux": "periodic telescoping sum must vanish independently",
+    "channels": [
+      "longitudinal link field <-> spinors",
+      "phi2 descendant <-> spinors",
+      "phi3 descendant <-> spinors",
+      "total field <-> total matter"
+    ],
+    "local_residual": "computed from independently evolved sector energies and source work terms"
+  },
+  "discrete_symmetry_and_constraints": {
+    "Gauss_law": "backward_difference(E)_n-mu_0 J0_n=0 with frozen normalization",
+    "Gauss_preservation": "exact for the algebraic discrete solution and bounded by nonlinear solver residual in floating-point execution",
+    "continuity_identity": "derived as the discrete Noether identity, not separately imposed",
+    "gauge_invariant_action_required": true,
+    "total_charge_zero_mode": "sum_n a J0_n=0 is an initial-data admissibility condition"
+  },
+  "domain": {
+    "charge_solvability": "sum_n a J0_n=0",
+    "space": "periodic S1 with N sites and spacing a=L/N",
+    "species": [
+      "q_plus=+q",
+      "q_minus=-q"
+    ],
+    "time": "uniform step Delta_t"
+  },
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v1",
+  "gauge": {
+    "choice": "temporal gauge A0=0",
+    "descendant_transform": "phiI_n invariant for I=2,3",
+    "diagnostic_phase_pin": "one reference-site phase, excluded from dynamics",
+    "link_transform": "U_n -> exp(-i alpha_n) U_n exp(+i alpha_(n+1))",
+    "negative_species_transform": "psi-_n -> exp(+i alpha_n) psi-_n",
+    "positive_species_transform": "psi+_n -> exp(-i alpha_n) psi+_n",
+    "residual_symmetry": "time-independent site phases alpha_n"
+  },
+  "holonomy_controls": {
+    "large_gauge_behavior": "link-angle zero mode shifts by an allowed winding while W is invariant",
+    "nontrivial": {
+      "F": "0",
+      "W": "not 1",
+      "globally_pure_gauge": false,
+      "locally_flat": true
+    },
+    "trivial": {
+      "F": "0",
+      "W": "1",
+      "globally_pure_gauge": true
+    }
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-PACKET-v0.json",
+      "sha256": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e4a830678d863319d5509bf43e332a778708b7b82bd6db5903be5a389fef34de"
+    }
+  ],
+  "lattice_variables": {
+    "A1": "group-valued links U_n=exp(i q_1p1 a A1_n/hbar)",
+    "Pi2_Pi3": "real site momenta at the compatible midpoint time location",
+    "electric_flux": "real link momentum E_n conjugate to the link angle",
+    "holonomy": "W=ordered product_n U_n",
+    "phi2_phi3": "real site fields",
+    "spinors": "four two-component site spinors psi_(s,r), stored as two sector doublets per charge species",
+    "uniform_mode": "spatial link-angle zero mode with conjugate uniform electric flux and exact E_zero^2 L/(2 mu_0) energy"
+  },
+  "link_update": {
+    "componentwise_update_then_projection": false,
+    "formula": "U_n^(k+1)=exp(i Delta_theta_n) U_n^k",
+    "negative_species_transport": "U*",
+    "positive_species_transport": "U",
+    "preserves_unit_modulus_by_construction": true
+  },
+  "nonclaims": [
+    "no canonical numerical result yet",
+    "no exact continuum-energy conservation claim",
+    "no pure 1+1 truncation or transverse decoupling",
+    "no stable classical fermionic matter or fermionic QFT",
+    "no quantum pair creation, Fermi statistics, or quantized electromagnetism",
+    "no full 3+1 photon recovery",
+    "no pillar completion, seam closure, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "pilot_policy": {
+    "canonical_threshold_rule": "twice the maximum corresponding pilot residual, rounded upward to one significant digit, while preserving expected refinement order",
+    "engineering_parameters_only": [
+      "solver tolerance",
+      "grid sequence",
+      "time-step range",
+      "run duration",
+      "nonlinear iteration cap",
+      "expected numerical floor"
+    ],
+    "pilot_result_authoritative": false,
+    "scientific_choices_frozen_before_pilot": [
+      "action",
+      "Hilbert tensor",
+      "charges",
+      "all four spinor sectors",
+      "phi2 and phi3 descendants",
+      "periodic boundary",
+      "temporal gauge",
+      "Wilson r=1 operator",
+      "energy classification",
+      "positive and negative control definitions"
+    ],
+    "solver_rule": "solver error <=0.01 times estimated finest-grid truncation error",
+    "status": "PENDING_NONAUTHORITATIVE_PILOT"
+  },
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0",
+  "prompt_protection": {
+    "excluded_from_scientific_inputs": true,
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0_result_review",
+  "spatial_operators": {
+    "Wilson_laplacian": "(2 psi_n-U_n^sigma psi_(n+1)-U_(n-1)^(-sigma) psi_(n-1))/(2a) multiplied by r beta",
+    "Wilson_parameter": 1,
+    "covariant_centered_derivative": "(U_n^sigma psi_(n+1)-U_(n-1)^(-sigma) psi_(n-1))/(2a), sigma=+1 for q and -1 for -q",
+    "naive_centered_operator_role": "negative control only",
+    "phi_gradient": "(phiI_(n+1)-phiI_n)/a",
+    "transverse_site_coupling": "q_s psi_s^dagger [alpha2 phi2_n+alpha3 phi3_n] psi_s with alphaI=gamma0 gammaI"
+  },
+  "target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0",
+  "time_integrator": {
+    "family": "time-symmetric variational implicit-midpoint",
+    "fixed_step_energy_caveat": "implicit midpoint is not assumed to conserve the nonlinear continuum Hamiltonian exactly",
+    "link_group_update_required": true,
+    "nonlinear_system": "all links, electric fluxes, descendants, momenta, and spinors solved at the common midpoint",
+    "order": 2
+  }
+}

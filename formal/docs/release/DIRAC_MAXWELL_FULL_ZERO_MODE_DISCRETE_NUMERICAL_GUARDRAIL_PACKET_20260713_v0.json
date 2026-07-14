@@ -1,0 +1,118 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "76265ff0e54e2d826a9fa5268ec41f3d91bfed8a6cbf279d7eae3528ee7d1542",
+    "manifest_sha256": "f26597414bf2fb7183d0edadc9b75869df8c2790ac6119f067a6203212a376df",
+    "packet_sha256": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "canonical_execution_authorized": false,
+    "guardrail_accepted_before_review": false,
+    "master_action_promoted": false,
+    "non_authoritative_pilot_authorized": false,
+    "registry_maintenance_paused": true,
+    "result_claimed": false
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The descendant-aware Wilson-link/site-field numerical guardrail is prepared; only independent guardrail review is authorized.",
+  "decision_count": 19,
+  "decisions": [
+    {
+      "decision_id": "accepted_analytic_repair_authorizes_guardrail_preparation_only",
+      "passed": true
+    },
+    {
+      "decision_id": "periodic_two_species_charge_neutral_domain_is_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "temporal_gauge_residual_symmetry_and_holonomy_are_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "A1_uses_group_links_while_phi2_phi3_are_real_site_fields",
+      "passed": true
+    },
+    {
+      "decision_id": "link_updates_preserve_unit_modulus_without_projection",
+      "passed": true
+    },
+    {
+      "decision_id": "negative_species_uses_complex_conjugate_links",
+      "passed": true
+    },
+    {
+      "decision_id": "Wilson_r1_operator_and_exact_discrete_dispersion_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "phi2_phi3_gradient_momentum_and_gamma_couplings_are_in_action",
+      "passed": true
+    },
+    {
+      "decision_id": "discrete_gauge_symmetry_earns_continuity_and_Gauss_rules",
+      "passed": true
+    },
+    {
+      "decision_id": "energy_class_is_bounded_convergent_not_falsely_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_descendant_Wilson_zero_mode_and_interaction_energies_are_counted",
+      "passed": true
+    },
+    {
+      "decision_id": "four_exchange_channels_are_observed_not_imposed",
+      "passed": true
+    },
+    {
+      "decision_id": "twelve_positive_and_twenty_seven_negative_controls_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "previous_transverse_blocker_is_permanent_regression_control",
+      "passed": true
+    },
+    {
+      "decision_id": "pilot_changes_engineering_parameters_only",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_and_threshold_rules_are_non_circular",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_observables_cover_all_parent_and_descendant_channels",
+      "passed": true
+    },
+    {
+      "decision_id": "only_non_authoritative_pilot_can_follow_review",
+      "passed": true
+    },
+    {
+      "decision_id": "claim_ceiling_nonclaims_and_Prompt_boundary_hold",
+      "passed": true
+    }
+  ],
+  "energy_classification": "BOUNDED_CONVERGENT_ENERGY_ERROR",
+  "failure_target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v1",
+  "negative_control_count": 27,
+  "nonclaims": [
+    "no canonical numerical result yet",
+    "no exact continuum-energy conservation claim",
+    "no pure 1+1 truncation or transverse decoupling",
+    "no stable classical fermionic matter or fermionic QFT",
+    "no quantum pair creation, Fermi statistics, or quantized electromagnetism",
+    "no full 3+1 photon recovery",
+    "no pillar completion, seam closure, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "positive_control_count": 12,
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_PACKET_20260713_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0_result",
+  "selected_next_target_kind": "dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0_result_review",
+  "target": "prepare_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

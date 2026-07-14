@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 19,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py",
+    "sha256": "76265ff0e54e2d826a9fa5268ec41f3d91bfed8a6cbf279d7eae3528ee7d1542"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-REDUCTION-WITH-TRANSVERSE-FIELDS-PACKET-v0.json",
+      "sha256": "5582abceb645e5e63e0ab750a50b56b82a8fd8f3b27ed4be02586ae5e56f5488"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_REDUCTION_WITH_TRANSVERSE_FIELDS_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e4a830678d863319d5509bf43e332a778708b7b82bd6db5903be5a389fef34de"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DISCRETE-NUMERICAL-GUARDRAIL-PACKET-v0.json",
+    "sha256": "52ffd123b3eb516ab824291364afd2006c90951f04d12587658941cbe499da82"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DISCRETE_NUMERICAL_GUARDRAIL_MANIFEST_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_packet_v0_result"
+}
