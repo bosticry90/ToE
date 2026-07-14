@@ -29,7 +29,7 @@ def packetSha256 : String :=
   "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
 
 def manifestSha256 : String :=
-  "f02714f8472a672e859c2110db3d3cae28eeec80ea81f46f8810d8bfbdad650"
+  "f02714f8472a672e859c2110db3d3cae28eeeec80ea81f46f8810d8bfbdad650"
 
 def reportSha256 : String :=
   "f782ca247ef80a67a89bc814d578144f81e04ce87af43c0373947874be646c9c"
