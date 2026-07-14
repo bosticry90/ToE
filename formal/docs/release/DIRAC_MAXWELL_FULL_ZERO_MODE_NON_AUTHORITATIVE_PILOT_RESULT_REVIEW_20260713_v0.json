@@ -1,0 +1,280 @@
+{
+  "accepted": false,
+  "authority_rotation": {
+    "candidate_parameters_accepted_as_canonical": false,
+    "canonical_execution_authorized": false,
+    "canonical_parameter_freeze_preparation_authorized": false,
+    "canonical_thresholds_accepted": false,
+    "pilot_engineering_evidence_accepted": false,
+    "scientific_numerical_result_claimed": false
+  },
+  "blocker_diagnostics": [
+    "REGISTERED_RUN_IDENTITIES_NOT_UNIQUE"
+  ],
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The pilot review is blocked.",
+  "decision_count": 22,
+  "decisions": [
+    {
+      "decision_id": "immutable_pilot_preparation_is_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_guardrail_is_the_exact_input_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "common_longitudinal_and_transverse_charge_normalization_is_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "two_clean_reproductions_are_byte_identical",
+      "passed": true
+    },
+    {
+      "decision_id": "clean_reproduction_matches_registered_packet_and_arrays",
+      "passed": true
+    },
+    {
+      "decision_id": "all_registered_per_run_series_are_complete",
+      "passed": false
+    },
+    {
+      "decision_id": "array_derived_residual_maxima_match_the_packet",
+      "passed": true
+    },
+    {
+      "decision_id": "link_group_preservation_is_at_floating_point_floor",
+      "passed": true
+    },
+    {
+      "decision_id": "Wilson_dispersion_and_doubler_separation_are_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "Gauss_and_continuity_residuals_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "transverse_J2_phi2_and_J3_phi3_responses_are_exercised",
+      "passed": true
+    },
+    {
+      "decision_id": "all_exchange_channels_are_separately_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "all_energy_components_and_energy_drift_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "temporal_and_energy_refinement_orders_are_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_error_is_below_one_percent_of_finest_truncation",
+      "passed": true
+    },
+    {
+      "decision_id": "twelve_positive_controls_have_expected_behavior",
+      "passed": true
+    },
+    {
+      "decision_id": "twenty_seven_negative_controls_fail_uniquely_as_intended",
+      "passed": true
+    },
+    {
+      "decision_id": "threshold_candidates_follow_the_frozen_margin_rule",
+      "passed": true
+    },
+    {
+      "decision_id": "pilot_outcome_is_engineering_ready",
+      "passed": true
+    },
+    {
+      "decision_id": "candidate_values_remain_unreviewed_and_noncanonical",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_execution_and_scientific_claim_remain_unauthorized",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [
+    "all_registered_per_run_series_are_complete"
+  ],
+  "independent_array_audit": {
+    "all_required_series_complete": true,
+    "recomputed_maximum_residuals": {
+      "Dirac_minus_sector1_residual": 2.81692972561e-11,
+      "Dirac_minus_sector2_residual": 2.817498505547e-11,
+      "Dirac_plus_sector1_residual": 2.814925707063e-11,
+      "Dirac_plus_sector2_residual": 2.815490189735e-11,
+      "Gauss": 3.404170289011e-15,
+      "adjoint_minus_sector1_residual": 2.81692972561e-11,
+      "adjoint_minus_sector2_residual": 2.817498505547e-11,
+      "adjoint_plus_sector1_residual": 2.814925707063e-11,
+      "adjoint_plus_sector2_residual": 2.815490189735e-11,
+      "continuity": 2.405456395052e-12,
+      "energy_drift": 8.407083883222e-11,
+      "exchange_combined": 4.742250019411e-13,
+      "exchange_longitudinal": 1.043387926462e-22,
+      "exchange_phi2": 3.400853869024e-15,
+      "exchange_phi3": 4.708342683516e-13,
+      "link_norm": 2.22044604925e-16,
+      "longitudinal_Maxwell_residual": 4.855890943789e-16,
+      "phi2_wave_residual": 7.093511975725e-13,
+      "phi3_wave_residual": 3.141981922035e-11,
+      "solver": 2.212690509984e-09
+    },
+    "recomputed_threshold_candidates": {
+      "Dirac_minus_sector1_residual": 6e-11,
+      "Dirac_minus_sector2_residual": 6e-11,
+      "Dirac_plus_sector1_residual": 6e-11,
+      "Dirac_plus_sector2_residual": 6e-11,
+      "Gauss": 7e-15,
+      "adjoint_minus_sector1_residual": 6e-11,
+      "adjoint_minus_sector2_residual": 6e-11,
+      "adjoint_plus_sector1_residual": 6e-11,
+      "adjoint_plus_sector2_residual": 6e-11,
+      "continuity": 5e-12,
+      "energy_drift": 2e-10,
+      "exchange_combined": 1e-12,
+      "exchange_longitudinal": 3e-22,
+      "exchange_phi2": 7e-15,
+      "exchange_phi3": 1e-12,
+      "link_norm": 5e-16,
+      "longitudinal_Maxwell_residual": 1e-15,
+      "phi2_wave_residual": 2e-12,
+      "phi3_wave_residual": 6.999999999999999e-11,
+      "solver": 5e-09
+    },
+    "reported_maxima_match_arrays": true,
+    "run_count": 13,
+    "run_ids_unique": false,
+    "threshold_rule_matches": true
+  },
+  "independent_clean_reproduction": {
+    "byte_identical": true,
+    "execution_count": 2,
+    "execution_sha256": [
+      "5ab2902bd1c05c6b962edaf96bc24f18e8de0fc96c0db023b576d3a0ebc72386",
+      "5ab2902bd1c05c6b962edaf96bc24f18e8de0fc96c0db023b576d3a0ebc72386"
+    ],
+    "payloads_equal": true
+  },
+  "independent_dispersion_audit": {
+    "all_row_formulas_match": true,
+    "continuum_order_exceeds_guardrail_floor": true,
+    "doubler_branch_monotonically_separated": true,
+    "recomputed_continuum_order": 0.9355092887458452,
+    "reported_order_matches": true,
+    "row_formula_checks": [
+      true,
+      true,
+      true
+    ]
+  },
+  "independent_refinement_audit": {
+    "energy_bounded_and_refines": true,
+    "recomputed_energy_order": 2.0750213758270375,
+    "recomputed_phi2_order": 1.9996050420957903,
+    "reported_orders_match": true,
+    "second_order_floor_met": true,
+    "solver_hierarchy_met": true,
+    "solver_ratio": 4.846521139395604e-05
+  },
+  "nonclaims": [
+    "pilot values are not canonical",
+    "candidate thresholds are unreviewed",
+    "no conservation claim",
+    "no coupled-field scientific result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim"
+  ],
+  "passed_decision_count": 21,
+  "preparation_custody": {
+    "commit": "1327a1582ad318468d84c001a9737a2e4c74e168",
+    "commit_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_20260713_v0.json": "bc0a29c60744ba6077fc24f941a768f6863c2e2b67c1ea6aca919e7ae8bf6197",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-MANIFEST-v0.json": "ae62989ecc87f951e59bd15fc45669838ae126147c7daf7aef373ddc94b0d1f8",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v0.json": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    },
+    "expected_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_20260713_v0.json": "bc0a29c60744ba6077fc24f941a768f6863c2e2b67c1ea6aca919e7ae8bf6197",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-MANIFEST-v0.json": "ae62989ecc87f951e59bd15fc45669838ae126147c7daf7aef373ddc94b0d1f8",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v0.json": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    },
+    "parent": "51ff96a1b7297b42cd1767cff08cf1a1c79aeec2",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_20260713_v0.json": "bc0a29c60744ba6077fc24f941a768f6863c2e2b67c1ea6aca919e7ae8bf6197",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v0.json": "3191ebf1c6ba6c65ae917aa16016b33ac1966136d540bc8819dfd0577d208e65",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-MANIFEST-v0.json": "ae62989ecc87f951e59bd15fc45669838ae126147c7daf7aef373ddc94b0d1f8",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v0.json": "b4435ef3fab1ad04873538ef4abc3df807b018d74ace99cd2a69757325fc52c6",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    }
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v0_result",
+  "reviewed_engineering_evidence": {
+    "candidate_canonical_parameters_unreviewed": {
+      "N": 32,
+      "dt": 0.0015625,
+      "duration": 0.05,
+      "max_iterations": 80,
+      "solver_tolerance": 1e-12
+    },
+    "candidate_thresholds_unreviewed": {
+      "Dirac_minus_sector1_residual": 6e-11,
+      "Dirac_minus_sector2_residual": 6e-11,
+      "Dirac_plus_sector1_residual": 6e-11,
+      "Dirac_plus_sector2_residual": 6e-11,
+      "Gauss": 7e-15,
+      "adjoint_minus_sector1_residual": 6e-11,
+      "adjoint_minus_sector2_residual": 6e-11,
+      "adjoint_plus_sector1_residual": 6e-11,
+      "adjoint_plus_sector2_residual": 6e-11,
+      "continuity": 5e-12,
+      "energy_drift": 2e-10,
+      "exchange_combined": 1e-12,
+      "exchange_longitudinal": 3e-22,
+      "exchange_phi2": 7e-15,
+      "exchange_phi3": 1e-12,
+      "link_norm": 5e-16,
+      "longitudinal_Maxwell_residual": 1e-15,
+      "phi2_wave_residual": 2e-12,
+      "phi3_wave_residual": 6.999999999999999e-11,
+      "solver": 5e-09
+    },
+    "pilot_outcome": "ENGINEERING_READY",
+    "stable_parameter_range_observed": {
+      "N": [
+        8,
+        16,
+        32
+      ],
+      "dt": [
+        0.00625,
+        0.003125,
+        0.0015625
+      ],
+      "duration": 0.05,
+      "solver_tolerance": [
+        1e-08,
+        1e-10,
+        1e-12
+      ]
+    }
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0",
+  "selected_next_target_kind": "prepare_dirac_maxwell_full_zero_mode_pilot_implementation_repair_packet_v0",
+  "verdict": "B-BLOCKED_IMPLEMENTATION_DEFECT"
+}
