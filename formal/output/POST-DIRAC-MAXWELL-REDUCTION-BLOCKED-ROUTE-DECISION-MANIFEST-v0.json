@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 14,
+  "generator": {
+    "path": "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision.py",
+    "sha256": "88257fb53c68e117c6baf276c1aa3423129814a802a073f1be3a925f31bc97bb"
+  },
+  "inputs": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6"
+    },
+    {
+      "path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/POST-DIRAC-MAXWELL-REDUCTION-BLOCKED-ROUTE-DECISION-PACKET-v0.json",
+    "sha256": "877796d69cb09211b3160a72d2cee948703ec5985279c84bbae9983eb938a23e"
+  },
+  "schema_id": "POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_MANIFEST_v0",
+  "selected_next_target": "review_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0_result"
+}

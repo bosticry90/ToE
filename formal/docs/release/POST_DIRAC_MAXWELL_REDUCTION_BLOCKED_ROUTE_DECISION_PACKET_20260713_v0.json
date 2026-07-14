@@ -1,0 +1,168 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "generator_sha256": "88257fb53c68e117c6baf276c1aa3423129814a802a073f1be3a925f31bc97bb",
+    "manifest_sha256": "e0d077ae88606f438717cb48138927088c080fcb171270917c17b0b6d121fc37",
+    "packet_sha256": "877796d69cb09211b3160a72d2cee948703ec5985279c84bbae9983eb938a23e"
+  },
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "execution_authorized": false,
+    "master_action_promoted": false,
+    "numerical_guardrail_authorized": false,
+    "pillar_completion_claimed": false,
+    "pure_1p1_truncation_rehabilitated": false,
+    "seam_closure_claimed": false
+  },
+  "canonical_selection": {
+    "eligible_candidate_ids": [
+      "REPAIR_REDUCTION"
+    ],
+    "selected_candidate_id": "REPAIR_REDUCTION",
+    "selected_candidate_label": "repair reduction",
+    "selected_weighted_total": 51,
+    "threshold": 44,
+    "tie_break_used": false,
+    "tied_candidate_ids": [
+      "REPAIR_REDUCTION"
+    ]
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "A frozen proposition-backed comparison selects full zero-mode repair by retaining A2 and A3; only independent decision review is authorized.",
+  "decision_count": 14,
+  "decisions": [
+    {
+      "decision_id": "accepted_blocker_review_authorizes_route_decision_only",
+      "passed": true
+    },
+    {
+      "decision_id": "exactly_four_authorized_candidates_are_scored",
+      "passed": true
+    },
+    {
+      "decision_id": "weights_threshold_and_score_domain_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "all_candidates_receive_all_eight_scores",
+      "passed": true
+    },
+    {
+      "decision_id": "every_score_binds_repository_propositions",
+      "passed": true
+    },
+    {
+      "decision_id": "user_recommendation_is_nondecisive_context",
+      "passed": true
+    },
+    {
+      "decision_id": "external_papers_are_nondecisive_context",
+      "passed": true
+    },
+    {
+      "decision_id": "weighted_totals_reproduce_without_expected_winner",
+      "passed": true
+    },
+    {
+      "decision_id": "repair_reduction_is_highest_scoring_eligible_route",
+      "passed": true
+    },
+    {
+      "decision_id": "selection_is_stable_at_40_42_44_46_48",
+      "passed": true
+    },
+    {
+      "decision_id": "restricted_spinor_sector_is_not_default_repair",
+      "passed": true
+    },
+    {
+      "decision_id": "eight_mutation_controls_are_independently_diagnosed",
+      "passed": true
+    },
+    {
+      "decision_id": "numerical_guardrail_and_execution_remain_unauthorized",
+      "passed": true
+    },
+    {
+      "decision_id": "all_nonpromotion_boundaries_and_Prompt_hold",
+      "passed": true
+    }
+  ],
+  "failure_target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v1",
+  "mutation_control_count": 8,
+  "mutation_controls_passed": 8,
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0",
+  "schema_id": "POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_20260713_v0",
+  "selected_next_target": "review_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0_result",
+  "selected_next_target_kind": "post_dirac_maxwell_reduction_blocked_route_decision_packet_v0_result_review",
+  "sensitivity_analysis": [
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 40,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 42,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 44,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 46,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 48,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    }
+  ],
+  "target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

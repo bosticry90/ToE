@@ -1,0 +1,725 @@
+{
+  "boundary": {
+    "CCFT_resumed": false,
+    "C_k_audit_only": true,
+    "execution_authorized": false,
+    "master_action_promoted": false,
+    "numerical_guardrail_authorized": false,
+    "pillar_completion_claimed": false,
+    "pure_1p1_truncation_rehabilitated": false,
+    "seam_closure_claimed": false
+  },
+  "candidate_order_is_identity_only_not_preference": true,
+  "canonical_selection": {
+    "eligible_candidate_ids": [
+      "REPAIR_REDUCTION"
+    ],
+    "selected_candidate_id": "REPAIR_REDUCTION",
+    "selected_candidate_label": "repair reduction",
+    "selected_weighted_total": 51,
+    "threshold": 44,
+    "tie_break_used": false,
+    "tied_candidate_ids": [
+      "REPAIR_REDUCTION"
+    ]
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "criterion_weights": {
+    "accepted_foundation_reuse": 4,
+    "analytic_closure_readiness": 5,
+    "benchmark_continuity": 2,
+    "blocker_resolution_directness": 5,
+    "bounded_scope": 3,
+    "numerical_tractability": 3,
+    "parent_action_fidelity": 5,
+    "seam_scientific_value": 4
+  },
+  "criterion_weights_frozen_before_scoring": true,
+  "external_context": [
+    {
+      "arxiv_id": "2211.08581",
+      "bounded_context": "Electromagnetic coupling restricts lower-dimensional sector decoupling to special solution classes.",
+      "route_support_eligible": false,
+      "url": "https://arxiv.org/abs/2211.08581"
+    },
+    {
+      "arxiv_id": "1004.1715",
+      "bounded_context": "A full Maxwell-Dirac system in two spatial dimensions is a mathematically established PDE object.",
+      "route_support_eligible": false,
+      "url": "https://arxiv.org/abs/1004.1715"
+    }
+  ],
+  "failure_target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v1",
+  "input_artifacts": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6"
+    },
+    {
+      "path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09"
+    }
+  ],
+  "maximum_weighted_total": 62,
+  "mutation_controls": [
+    {
+      "control_id": "candidate_removed",
+      "expected_diagnostic": "exact_four_candidates",
+      "observed_diagnostics": [
+        "exact_four_candidates"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "rubric_weight_changed",
+      "expected_diagnostic": "frozen_rubric",
+      "observed_diagnostics": [
+        "frozen_rubric"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "total_forged",
+      "expected_diagnostic": "totals_reproduce",
+      "observed_diagnostics": [
+        "totals_reproduce"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "recommendation_made_decisive",
+      "expected_diagnostic": "recommendation_nondecisive",
+      "observed_diagnostics": [
+        "recommendation_nondecisive"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "external_context_promoted",
+      "expected_diagnostic": "external_context_nondecisive",
+      "observed_diagnostics": [
+        "external_context_nondecisive"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "restricted_sector_defaulted",
+      "expected_diagnostic": "no_tailored_sector_default",
+      "observed_diagnostics": [
+        "no_tailored_sector_default"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "numerics_authorized_early",
+      "expected_diagnostic": "no_numerics_before_review",
+      "observed_diagnostics": [
+        "no_numerics_before_review"
+      ],
+      "passed": true
+    },
+    {
+      "control_id": "expected_winner_injected",
+      "expected_diagnostic": "no_expected_winner_oracle",
+      "observed_diagnostics": [
+        "no_expected_winner_oracle"
+      ],
+      "passed": true
+    }
+  ],
+  "post_acceptance_target": "prepare_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_packet_v0",
+  "prompt_protection": {
+    "excluded_from_scientific_inputs": true,
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "proposition_catalog": [
+    {
+      "exact_proposition": "The bounded unit/object foundation is accepted.",
+      "proposition_id": "P_FOUNDATION_ACCEPTED",
+      "route_support_eligible": true,
+      "source_hash": "7e29469017b45d841f0e44647a152225e2f49e552a1d6345abff3d9805ff3d09",
+      "source_locator": "/authority_rotation/foundation_accepted",
+      "source_path": "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "The retain-both-sectors A2=A3=0 truncation is not dynamically invariant.",
+      "proposition_id": "P_TRANSVERSE_TRUNCATION_BLOCKED",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/blocker_code",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "The full zero-mode system retaining A2 and A3 is distinct from the invalid truncation.",
+      "proposition_id": "P_FULL_ZERO_MODE_PARENT_PRESERVED",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/decisions/7",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "Generic retained-sector data source A2 or A3 through nonzero transverse current.",
+      "proposition_id": "P_TRANSVERSE_DESCENDANTS_REQUIRED",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/independent_algebra_audit",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "Two reduced sectors per each of two charge species remain in scope.",
+      "proposition_id": "P_TWO_SPECIES_FOUR_SECTORS",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/decisions/3",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "The proposed lower-dimensional object inventory omitted sourced transverse descendants.",
+      "proposition_id": "P_OBJECT_INVENTORY_NOT_CLOSED",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/claim",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "The blocker does not expand into a no-go for the parent or full zero-mode theory.",
+      "proposition_id": "P_BLOCKER_SCOPE_BOUNDED",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/decisions/11",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "No fallback route was automatically selected.",
+      "proposition_id": "P_NO_AUTOMATIC_FALLBACK",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/post_block_route_selected_automatically",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    },
+    {
+      "exact_proposition": "Numerical guardrail and execution are not authorized.",
+      "proposition_id": "P_NUMERICS_UNAUTHORIZED",
+      "route_support_eligible": true,
+      "source_hash": "3f2879163b5e8e90fba286eacdbdebdfdf3ce5b043169ade5f5b8db41b95eec6",
+      "source_locator": "/authority_rotation/numerical_guardrail_authorized",
+      "source_path": "formal/docs/release/DIRAC_MAXWELL_3P1_TO_1P1_REDUCTION_CONSISTENCY_PACKET_RESULT_REVIEW_20260713_v0.json"
+    }
+  ],
+  "repair_route_definition": "Retain A2 and A3 as dynamical scalar-like gauge descendants together with A0, A1, both charge species, and both reduced sectors.",
+  "restricted_spinor_sector_default_repair": false,
+  "schema_id": "POST_DIRAC_MAXWELL_REDUCTION_BLOCKED_ROUTE_DECISION_PACKET_v0",
+  "score_domain": [
+    0,
+    1,
+    2
+  ],
+  "scored_candidates": [
+    {
+      "candidate_id": "REPAIR_REDUCTION",
+      "candidate_label": "repair reduction",
+      "criterion_scores": [
+        {
+          "criterion": "parent_action_fidelity",
+          "eligibility_basis": "Score 2: Retains the accepted 3+1 action and its complete zero-mode field inventory.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "blocker_resolution_directness",
+          "eligibility_basis": "Score 2: Restores exactly the A2 and A3 descendants whose sourced omission caused the blocker.",
+          "exact_supporting_proposition_ids": [
+            "P_TRANSVERSE_TRUNCATION_BLOCKED",
+            "P_TRANSVERSE_DESCENDANTS_REQUIRED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "accepted_foundation_reuse",
+          "eligibility_basis": "Score 2: Reuses the accepted two-species action, dimensions, currents, and Hilbert route.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "seam_scientific_value",
+          "eligibility_basis": "Score 2: Continues the original dimensional-transport question with the ontology produced by the parent.",
+          "exact_supporting_proposition_ids": [
+            "P_OBJECT_INVENTORY_NOT_CLOSED",
+            "P_BLOCKER_SCOPE_BOUNDED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "analytic_closure_readiness",
+          "eligibility_basis": "Score 1: The closed field inventory is identified, but the reduced action, tensor, and exchange proof still require review.",
+          "exact_supporting_proposition_ids": [
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED",
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted complete reduced action, equation, stress-energy, and exchange derivation for this route.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "numerical_tractability",
+          "eligibility_basis": "Score 1: Adds two site fields, their momenta, exchange channels, and controls.",
+          "exact_supporting_proposition_ids": [
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed discrete architecture with bounded field count, constraints, and convergence cost.",
+          "score": 1,
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 1: The repair is exact but materially larger than the rejected longitudinal truncation.",
+          "exact_supporting_proposition_ids": [
+            "P_BLOCKER_SCOPE_BOUNDED",
+            "P_NO_AUTOMATIC_FALLBACK"
+          ],
+          "missing_evidence_required_for_next_score": "A smaller closed field inventory with explicit omissions proven invariant.",
+          "score": 1,
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "benchmark_continuity",
+          "eligibility_basis": "Score 2: Preserves both charge species and all four reduced spinors.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 51
+    },
+    {
+      "candidate_id": "ADOPT_NATIVE_1P1",
+      "candidate_label": "adopt a native 1+1 model",
+      "criterion_scores": [
+        {
+          "criterion": "parent_action_fidelity",
+          "eligibility_basis": "Score 0: Defines a different native theory and makes no descent claim from the accepted parent.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED"
+          ],
+          "missing_evidence_required_for_next_score": "A derivation showing that this route transports the accepted 3+1 parent action without changing the matter question.",
+          "score": 0,
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "blocker_resolution_directness",
+          "eligibility_basis": "Score 1: Avoids the invalid truncation but does not repair the parent-to-child seam.",
+          "exact_supporting_proposition_ids": [
+            "P_TRANSVERSE_TRUNCATION_BLOCKED",
+            "P_TRANSVERSE_DESCENDANTS_REQUIRED"
+          ],
+          "missing_evidence_required_for_next_score": "A proof that the discovered transverse sources are retained or vanish on a non-tailored invariant interacting sector.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "accepted_foundation_reuse",
+          "eligibility_basis": "Score 1: Reuses some conventions and c-number semantics, not the 3+1 reduction map.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "Exact reuse of the accepted action, object semantics, dimensions, currents, and Hilbert derivation.",
+          "score": 1,
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "seam_scientific_value",
+          "eligibility_basis": "Score 1: Provides a coupled benchmark but abandons the dimensional-transport question.",
+          "exact_supporting_proposition_ids": [
+            "P_OBJECT_INVENTORY_NOT_CLOSED",
+            "P_BLOCKER_SCOPE_BOUNDED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed parent-to-child transport map preserving objects, units, dynamics, and conservation.",
+          "score": 1,
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "analytic_closure_readiness",
+          "eligibility_basis": "Score 2: A native 1+1 action can be closed without transverse descendants.",
+          "exact_supporting_proposition_ids": [
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED",
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "numerical_tractability",
+          "eligibility_basis": "Score 2: This is the smallest coupled numerical route among the candidates.",
+          "exact_supporting_proposition_ids": [
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 2: The native-model claim is compact and easy to separate from 3+1 descent.",
+          "exact_supporting_proposition_ids": [
+            "P_BLOCKER_SCOPE_BOUNDED",
+            "P_NO_AUTOMATIC_FALLBACK"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "benchmark_continuity",
+          "eligibility_basis": "Score 1: Retains Dirac-like matter but changes the scientific origin of the coupling.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "Exact continuity with the accepted two-species, two-sector benchmark question.",
+          "score": 1,
+          "weight": 2,
+          "weighted_score": 2
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 37
+    },
+    {
+      "candidate_id": "MOVE_TO_2P1",
+      "candidate_label": "move to 2+1",
+      "criterion_scores": [
+        {
+          "criterion": "parent_action_fidelity",
+          "eligibility_basis": "Score 2: Retains descent from the accepted 3+1 action after only one spatial reduction.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "blocker_resolution_directness",
+          "eligibility_basis": "Score 1: Changes the reduction depth; a remaining transverse descendant still needs closure analysis.",
+          "exact_supporting_proposition_ids": [
+            "P_TRANSVERSE_TRUNCATION_BLOCKED",
+            "P_TRANSVERSE_DESCENDANTS_REQUIRED"
+          ],
+          "missing_evidence_required_for_next_score": "A proof that the discovered transverse sources are retained or vanish on a non-tailored invariant interacting sector.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "accepted_foundation_reuse",
+          "eligibility_basis": "Score 2: Reuses the accepted parent action, spinor semantics, currents, and tensor route.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "seam_scientific_value",
+          "eligibility_basis": "Score 2: Preserves a substantial dimensional-transport test and more electromagnetic geometry.",
+          "exact_supporting_proposition_ids": [
+            "P_OBJECT_INVENTORY_NOT_CLOSED",
+            "P_BLOCKER_SCOPE_BOUNDED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 4,
+          "weighted_score": 8
+        },
+        {
+          "criterion": "analytic_closure_readiness",
+          "eligibility_basis": "Score 0: No accepted packet yet proves the remaining transverse sector closes or supplies its full reduced tensor.",
+          "exact_supporting_proposition_ids": [
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED",
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "An accepted complete reduced action, equation, stress-energy, and exchange derivation for this route.",
+          "score": 0,
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "numerical_tractability",
+          "eligibility_basis": "Score 0: Two spatial dimensions materially enlarge gauge, constraint, and convergence costs.",
+          "exact_supporting_proposition_ids": [
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed discrete architecture with bounded field count, constraints, and convergence cost.",
+          "score": 0,
+          "weight": 3,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 1: The route is definable but broader than the full zero-mode 1+1 repair.",
+          "exact_supporting_proposition_ids": [
+            "P_BLOCKER_SCOPE_BOUNDED",
+            "P_NO_AUTOMATIC_FALLBACK"
+          ],
+          "missing_evidence_required_for_next_score": "A smaller closed field inventory with explicit omissions proven invariant.",
+          "score": 1,
+          "weight": 3,
+          "weighted_score": 3
+        },
+        {
+          "criterion": "benchmark_continuity",
+          "eligibility_basis": "Score 2: Preserves the accepted Dirac matter and parent-action lineage.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 2,
+          "weighted_score": 4
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 38
+    },
+    {
+      "candidate_id": "CHANGE_MATTER_SECTOR",
+      "candidate_label": "change the matter sector",
+      "criterion_scores": [
+        {
+          "criterion": "parent_action_fidelity",
+          "eligibility_basis": "Score 0: Replaces the accepted Dirac matter block.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED"
+          ],
+          "missing_evidence_required_for_next_score": "A derivation showing that this route transports the accepted 3+1 parent action without changing the matter question.",
+          "score": 0,
+          "weight": 5,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "blocker_resolution_directness",
+          "eligibility_basis": "Score 1: Avoids the spinor-sector obstruction but changes the scientific question.",
+          "exact_supporting_proposition_ids": [
+            "P_TRANSVERSE_TRUNCATION_BLOCKED",
+            "P_TRANSVERSE_DESCENDANTS_REQUIRED"
+          ],
+          "missing_evidence_required_for_next_score": "A proof that the discovered transverse sources are retained or vanish on a non-tailored invariant interacting sector.",
+          "score": 1,
+          "weight": 5,
+          "weighted_score": 5
+        },
+        {
+          "criterion": "accepted_foundation_reuse",
+          "eligibility_basis": "Score 0: Does not reuse the accepted Dirac action, adjoint, gamma, or tetrad obligations.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "Exact reuse of the accepted action, object semantics, dimensions, currents, and Hilbert derivation.",
+          "score": 0,
+          "weight": 4,
+          "weighted_score": 0
+        },
+        {
+          "criterion": "seam_scientific_value",
+          "eligibility_basis": "Score 1: Still tests coupled fields, but no longer tests the accepted spinor seam.",
+          "exact_supporting_proposition_ids": [
+            "P_OBJECT_INVENTORY_NOT_CLOSED",
+            "P_BLOCKER_SCOPE_BOUNDED"
+          ],
+          "missing_evidence_required_for_next_score": "A reviewed parent-to-child transport map preserving objects, units, dynamics, and conservation.",
+          "score": 1,
+          "weight": 4,
+          "weighted_score": 4
+        },
+        {
+          "criterion": "analytic_closure_readiness",
+          "eligibility_basis": "Score 2: A charged scalar action and tensor admit a comparatively direct bounded derivation.",
+          "exact_supporting_proposition_ids": [
+            "P_FULL_ZERO_MODE_PARENT_PRESERVED",
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 5,
+          "weighted_score": 10
+        },
+        {
+          "criterion": "numerical_tractability",
+          "eligibility_basis": "Score 2: Scalar electrodynamics is simpler to discretize and diagnose.",
+          "exact_supporting_proposition_ids": [
+            "P_NUMERICS_UNAUTHORIZED"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "bounded_scope",
+          "eligibility_basis": "Score 2: The replacement theory can be scoped compactly.",
+          "exact_supporting_proposition_ids": [
+            "P_BLOCKER_SCOPE_BOUNDED",
+            "P_NO_AUTOMATIC_FALLBACK"
+          ],
+          "missing_evidence_required_for_next_score": "MAXIMUM_SCORE",
+          "score": 2,
+          "weight": 3,
+          "weighted_score": 6
+        },
+        {
+          "criterion": "benchmark_continuity",
+          "eligibility_basis": "Score 0: The existing Dirac-specific foundation is abandoned.",
+          "exact_supporting_proposition_ids": [
+            "P_FOUNDATION_ACCEPTED",
+            "P_TWO_SPECIES_FOUR_SECTORS"
+          ],
+          "missing_evidence_required_for_next_score": "Exact continuity with the accepted two-species, two-sector benchmark question.",
+          "score": 0,
+          "weight": 2,
+          "weighted_score": 0
+        }
+      ],
+      "maximum_total": 62,
+      "minimum_gate_passed": true,
+      "unresolved_conflicts": [],
+      "weighted_total": 31
+    }
+  ],
+  "selected_next_target": "review_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0_result",
+  "selected_next_target_kind": "post_dirac_maxwell_reduction_blocked_route_decision_packet_v0_result_review",
+  "selection_stable_40_through_48": true,
+  "selection_threshold": 44,
+  "sensitivity_analysis": [
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 40,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 42,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 44,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 46,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    },
+    {
+      "eligible_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ],
+      "selected_candidate_id": "REPAIR_REDUCTION",
+      "selected_candidate_label": "repair reduction",
+      "selected_weighted_total": 51,
+      "threshold": 48,
+      "tie_break_used": false,
+      "tied_candidate_ids": [
+        "REPAIR_REDUCTION"
+      ]
+    }
+  ],
+  "sensitivity_thresholds": [
+    40,
+    42,
+    44,
+    46,
+    48
+  ],
+  "target": "prepare_post_dirac_maxwell_reduction_blocked_route_decision_packet_v0",
+  "threshold_frozen_before_scoring": true,
+  "user_recommendation": {
+    "candidate_id": "REPAIR_REDUCTION",
+    "role": "NONDECISIVE_CONTEXT",
+    "used_as_score_input": false
+  }
+}
