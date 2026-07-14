@@ -1,0 +1,32 @@
+{
+  "arrays": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json",
+    "sha256": "62f66647c4588f6bd4b2db03a9d64d4c1019f43c10fdd73aca0a5a8ed54c13f8"
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "decision_count": 13,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1.py",
+    "sha256": "90acc15a46891ab289edb41d536765913e2e58979ae150897efe3a59fe94a2dd"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-PILOT-IMPLEMENTATION-REPAIR-PACKET-v0.json",
+      "sha256": "96d977aa5551d36b2467c3636e5bd5be6a1fad7808738c250acdfb283bb42cda"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_PILOT_IMPLEMENTATION_REPAIR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "13fa544264e4bc5d004f19bd860e702c4c71a907e83a05bdbee4d0fa9ce1ff1f"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-NON-AUTHORITATIVE-PILOT-PACKET-v1.json",
+    "sha256": "456fb3a73d8cbc50c1392ed71ccc43e5f7c6783faa9e2fe22e15ce041a2372e3"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_MANIFEST_v1",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1_result"
+}

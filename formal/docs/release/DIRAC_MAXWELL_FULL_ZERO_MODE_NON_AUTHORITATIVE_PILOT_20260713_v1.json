@@ -1,0 +1,94 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "arrays_sha256": "62f66647c4588f6bd4b2db03a9d64d4c1019f43c10fdd73aca0a5a8ed54c13f8",
+    "generator_sha256": "90acc15a46891ab289edb41d536765913e2e58979ae150897efe3a59fe94a2dd",
+    "manifest_sha256": "84315ee8d7bae940af29abd4dc0d5a4aa4ff39ff76d743467998a5fe7c6cf082",
+    "packet_sha256": "456fb3a73d8cbc50c1392ed71ccc43e5f7c6783faa9e2fe22e15ce041a2372e3"
+  },
+  "canonical_execution_authorized": false,
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "Pilot v1 repairs evidence identity while preserving v0 numerical evidence; independent review is required before any parameter freeze.",
+  "decision_count": 13,
+  "decisions": [
+    {
+      "decision_id": "accepted_identity_repair_authorizes_pilot_v1_only",
+      "passed": true
+    },
+    {
+      "decision_id": "immutable_v0_numerical_implementation_is_reused",
+      "passed": true
+    },
+    {
+      "decision_id": "thirteen_run_records_have_unique_role_qualified_ids",
+      "passed": true
+    },
+    {
+      "decision_id": "identical_parameter_executions_are_visible_across_roles",
+      "passed": true
+    },
+    {
+      "decision_id": "all_numerical_values_and_scientific_choices_match_v0",
+      "passed": true
+    },
+    {
+      "decision_id": "all_v0_engineering_readiness_criteria_remain_true",
+      "passed": true
+    },
+    {
+      "decision_id": "twelve_positive_and_twenty_seven_negative_controls_still_pass",
+      "passed": true
+    },
+    {
+      "decision_id": "all_per_run_equation_spectral_exchange_and_energy_series_remain_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "candidate_parameters_and_thresholds_remain_unreviewed",
+      "passed": true
+    },
+    {
+      "decision_id": "two_clean_v1_executions_are_byte_identical",
+      "passed": true
+    },
+    {
+      "decision_id": "only_independent_pilot_v1_review_is_selected",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_execution_scientific_claim_and_nonpromotions_remain_blocked",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_is_preserved",
+      "passed": true
+    }
+  ],
+  "deterministic_reproductions": {
+    "byte_identical": true,
+    "environment": {
+      "LC_ALL": "C",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC",
+      "numpy_version": "2.2.6"
+    },
+    "execution_count": 2,
+    "execution_sha256": [
+      "a439893ae1bef3838fa424c3fdb3dbdc3a38e5c5d737f82e2994d330dca6d957",
+      "a439893ae1bef3838fa424c3fdb3dbdc3a38e5c5d737f82e2994d330dca6d957"
+    ]
+  },
+  "nonclaims": [
+    "pilot v1 is non-authoritative engineering evidence",
+    "candidate values are not canonical",
+    "no conservation or coupled-field result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim"
+  ],
+  "pilot_outcome": "ENGINEERING_READY",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_NON_AUTHORITATIVE_PILOT_20260713_v1",
+  "scientific_result_claimed": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1_result",
+  "target": "execute_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1",
+  "unique_run_record_count": 13,
+  "verdict": "ENGINEERING_READY_PENDING_INDEPENDENT_REVIEW"
+}
