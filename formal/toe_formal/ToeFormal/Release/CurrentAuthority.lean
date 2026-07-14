@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_maxwell_dirac_unit_object_foundation_packet_v0" := by
+      "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0" := by
   native_decide
 
 end CurrentAuthority

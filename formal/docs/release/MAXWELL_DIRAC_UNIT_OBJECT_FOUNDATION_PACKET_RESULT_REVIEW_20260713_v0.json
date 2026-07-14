@@ -1,0 +1,126 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "Maxwell_Dirac_result_claimed": false,
+    "analytic_reduction_preparation_authorized": true,
+    "foundation_accepted": true,
+    "numerical_guardrail_authorized": false,
+    "resolution_execution_readiness": true
+  },
+  "captured_at_utc": "2026-07-13T00:00:00Z",
+  "claim": "The unit-complete two-species c-number Maxwell-Dirac foundation is accepted; only analytic 3+1 to 1+1 reduction preparation is authorized.",
+  "decision_count": 14,
+  "decisions": [
+    {
+      "decision_id": "immutable_foundation_preparation_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "SR_coordinate_and_restoration_conventions_are_coherent",
+      "passed": true
+    },
+    {
+      "decision_id": "internal_mass_dimensions_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "external_dimension_vectors_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "D4_and_D2_action_terms_independently_balance",
+      "passed": true
+    },
+    {
+      "decision_id": "dimension_order_commutation_independently_recomputed",
+      "passed": true
+    },
+    {
+      "decision_id": "two_species_charge_and_cnumber_semantics_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "shared_action_is_real_symmetrized_and_gauge_covariant",
+      "passed": true
+    },
+    {
+      "decision_id": "tetrad_variation_route_derives_Hilbert_not_policy_tensor",
+      "passed": true
+    },
+    {
+      "decision_id": "current_and_exchange_signs_sum_to_total_conservation",
+      "passed": true
+    },
+    {
+      "decision_id": "negative_frequency_diagnostic_is_not_quantum_pair_creation",
+      "passed": true
+    },
+    {
+      "decision_id": "resolution_execution_readiness_is_accepted",
+      "passed": true
+    },
+    {
+      "decision_id": "reduction_and_numerical_work_remain_unperformed",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_and_all_nonpromotion_boundaries_hold",
+      "passed": true
+    }
+  ],
+  "failed_decision_ids": [],
+  "independent_dimension_audit": {
+    "dimension_order_passed": true,
+    "internal_dimensions_passed": true,
+    "passed": true,
+    "term_checks": {
+      "D2_Maxwell": true,
+      "D2_interaction": true,
+      "D2_kinetic": true,
+      "D4_Maxwell": true,
+      "D4_interaction": true,
+      "D4_kinetic": true
+    },
+    "vector_failures": []
+  },
+  "nonclaims": [
+    "no Grassmann variables",
+    "no Fermi statistics or anticommutation relations",
+    "no Fock space, Pauli exclusion, or vacuum interpretation",
+    "no quantum particle creation",
+    "no stable classical fermionic matter theory",
+    "no dimensional reduction accepted in Pair C",
+    "no numerical guardrail or execution accepted in Pair C",
+    "no EM or QFT pillar recovery or seam closure",
+    "no Standard Model, new physics, C_k dynamics, CCFT, or master-action validation"
+  ],
+  "passed_decision_count": 14,
+  "preparation_custody": {
+    "commit": "4a5096d88cea14983eba966af96ee8ad28ac0e87",
+    "commit_hashes": {
+      "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_20260713_v0.json": "ea360f655417ffe6bfb590d90b4a5e4c9386b3fcc550a7057bf049607e85c4e1",
+      "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-MANIFEST-v0.json": "d7bc5592457e335b83609de499b9f3e3c72a57f2960cd0e9e50f2782f3bae97a",
+      "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-PACKET-v0.json": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc",
+      "formal/python/tools/maxwell_dirac_unit_object_foundation.py": "19a8892a1feb020d36cdb46c5901116393259f6e21015db8b9e9743532ed7e50"
+    },
+    "expected_hashes": {
+      "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_20260713_v0.json": "ea360f655417ffe6bfb590d90b4a5e4c9386b3fcc550a7057bf049607e85c4e1",
+      "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-MANIFEST-v0.json": "d7bc5592457e335b83609de499b9f3e3c72a57f2960cd0e9e50f2782f3bae97a",
+      "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-PACKET-v0.json": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc",
+      "formal/python/tools/maxwell_dirac_unit_object_foundation.py": "19a8892a1feb020d36cdb46c5901116393259f6e21015db8b9e9743532ed7e50"
+    },
+    "parent": "1b85995a6ba0322e9f6c0ccf95dc6987c9f80a94",
+    "passed": true,
+    "working_hashes": {
+      "formal/docs/release/MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_20260713_v0.json": "ea360f655417ffe6bfb590d90b4a5e4c9386b3fcc550a7057bf049607e85c4e1",
+      "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-MANIFEST-v0.json": "d7bc5592457e335b83609de499b9f3e3c72a57f2960cd0e9e50f2782f3bae97a",
+      "formal/output/MAXWELL-DIRAC-UNIT-OBJECT-FOUNDATION-PACKET-v0.json": "5e6aa5049194579c9c7c38f6d8784ad689ea625377d079df4c00ac9db23c54bc",
+      "formal/python/tools/maxwell_dirac_unit_object_foundation.py": "19a8892a1feb020d36cdb46c5901116393259f6e21015db8b9e9743532ed7e50"
+    }
+  },
+  "review_target": "review_maxwell_dirac_unit_object_foundation_packet_v0_result",
+  "schema_id": "MAXWELL_DIRAC_UNIT_OBJECT_FOUNDATION_PACKET_RESULT_REVIEW_20260713_v0",
+  "selected_next_target": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0",
+  "selected_next_target_kind": "prepare_dirac_maxwell_3p1_to_1p1_reduction_consistency_packet_v0",
+  "verdict": "ACCEPT"
+}
