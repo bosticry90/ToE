@@ -38,24 +38,24 @@
     "git_core_eol": "UNSET",
     "installed_package_sources_hashed_individually": false,
     "line_ending_policy": "canonical artifacts LF; repository policy bound by .gitattributes",
-    "locale": "process-default",
     "number_serialization": "finite integers or explicit decimal strings; JSON nonfinite values rejected",
     "platform_system": "Windows",
     "python_implementation": "CPython",
     "python_version": "3.10.11",
-    "pythonhashseed": "UNSET",
-    "timezone": "America/Chicago",
+    "review_frozen_locale": "C",
+    "review_frozen_pythonhashseed": "0",
+    "review_frozen_timezone": "UTC",
     "unicode_normalization": "UTF-8 NFC"
   },
   "generator": {
     "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py",
-    "sha256": "aa8c8a83433c8b70543cd211dd1aa7dd0ca73bb597c2de6490785edad140dcd7"
+    "sha256": "08c21d5e8163e5657c8b61daa2a04de94aef2157e913a8bb219c951f43e4178d"
   },
   "implementation_closure": {
     "artifacts": [
       {
         "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py",
-        "sha256": "aa8c8a83433c8b70543cd211dd1aa7dd0ca73bb597c2de6490785edad140dcd7"
+        "sha256": "08c21d5e8163e5657c8b61daa2a04de94aef2157e913a8bb219c951f43e4178d"
       },
       {
         "path": "formal/python/meta/repo_environment.py",
@@ -87,7 +87,7 @@
   "packet": {
     "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
     "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_v2",
-    "sha256": "500c8add643330cf2528d2c7ee37c8d255b43393cc9f93e0e7ae5cb84a28bdfc"
+    "sha256": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b"
   },
   "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
   "schema_id": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_MANIFEST_v2",

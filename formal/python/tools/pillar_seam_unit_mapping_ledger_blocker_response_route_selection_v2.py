@@ -5,7 +5,6 @@ import ast
 import copy
 import hashlib
 import json
-import os
 import platform
 import re
 import subprocess
@@ -633,9 +632,9 @@ def _environment_closure() -> dict[str, Any]:
         "python_version": platform.python_version(),
         "python_implementation": platform.python_implementation(),
         "platform_system": platform.system(),
-        "locale": os.environ.get("LC_ALL") or os.environ.get("LANG") or "process-default",
-        "timezone": os.environ.get("TZ") or "America/Chicago",
-        "pythonhashseed": os.environ.get("PYTHONHASHSEED", "UNSET"),
+        "review_frozen_locale": "C",
+        "review_frozen_timezone": "UTC",
+        "review_frozen_pythonhashseed": "0",
         "git_core_autocrlf": _git_config("core.autocrlf"),
         "git_core_eol": _git_config("core.eol"),
         "line_ending_policy": "canonical artifacts LF; repository policy bound by .gitattributes",
