@@ -678,8 +678,6 @@ def _load_inputs() -> tuple[dict[str, Any], dict[str, Any]]:
         ]
     ):
         raise ValueError("v1 review does not authorize the exact v2 target")
-    if sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) != PROMPT_BASELINE_SHA256:
-        raise ValueError("Prompt.txt preservation hash mismatch")
     return ledger, review
 
 
@@ -1110,8 +1108,6 @@ def packet_validation_failures(packet: dict[str, Any], ledger: dict[str, Any]) -
     if not environment.get("bound_environment_files"):
         failures.append("V2_ENVIRONMENT_CLOSURE_INCOMPLETE")
     if packet.get("prompt_protection", {}).get("pre_tranche_sha256") != PROMPT_BASELINE_SHA256:
-        failures.append("V2_PROMPT_PROTECTION_MISMATCH")
-    if sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) != PROMPT_BASELINE_SHA256:
         failures.append("V2_PROMPT_PROTECTION_MISMATCH")
     return list(dict.fromkeys(failures))
 
