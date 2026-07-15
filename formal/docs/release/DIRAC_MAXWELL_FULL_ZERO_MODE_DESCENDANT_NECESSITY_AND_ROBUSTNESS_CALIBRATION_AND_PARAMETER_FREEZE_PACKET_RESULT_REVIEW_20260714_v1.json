@@ -1,0 +1,726 @@
+{
+  "accepted": false,
+  "all_decisions_passed": false,
+  "authority_rotation": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "additional_pilot_authorized": false,
+    "canonical_203_record_execution_authorized": false,
+    "canonical_Maxwell_Dirac_E_REPRO_unchanged": true,
+    "descendant_materiality_classification_authorized": false,
+    "freeze_v1_accepted": false,
+    "master_action_promotion_authorized": false,
+    "new_E_REPRO_claim_authorized": false,
+    "pillar_completion_authorized": false,
+    "robustness_classification_authorized": false,
+    "seam_closure_authorized": false,
+    "versioned_freeze_v2_correction_authorized": true
+  },
+  "blocking_diagnostics": [
+    {
+      "diagnostic": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+      "evidence": "The proposed spatial gate is 1.5, while the accepted canonical freeze uses 0.8 for final_phi2_l2 because the Wilson artifact is leading O(a). Pilot observation near order two cannot change that analytic expectation without a separately reviewed scheme argument.",
+      "pilot_rerun_required": false
+    },
+    {
+      "diagnostic": "B-BLOCKED_THRESHOLD_SCOPE",
+      "evidence": "The proposal lists eligible scientific rows but no eligible run roles, and it does not declare units or a row-scaling/normalization rule for the global residual thresholds.",
+      "pilot_rerun_required": false
+    },
+    {
+      "diagnostic": "B-BLOCKED_CLASSIFIER_CUSTODY",
+      "evidence": "The committed file is a deterministic final-label reducer, but it does not reconstruct custody, controls, fit membership, convergence, thresholds, exact row identities, or keyed materiality observables from the 203 registered outputs. Those decisions remain mutable external inputs.",
+      "pilot_rerun_required": false
+    },
+    {
+      "diagnostic": "B-BLOCKED_CONTROL_COVERAGE",
+      "evidence": "The IDs and row-local forced comparators are complete, but the 21 standalone controls do not declare whether each is global, anchor-specific, conditional, or row-applicable; all thirteen negatives are attached to R00 without a frozen proof that their diagnostics cover interaction corners.",
+      "pilot_rerun_required": false
+    },
+    {
+      "diagnostic": "B-BLOCKED_FILENAME_IDENTITY_MAPPING",
+      "evidence": "The current 203 storage names are collision-free and legal, but neither the manifest contains an explicit inverse map nor the execution contract requires every output payload to echo its exact scientific run_id.",
+      "pilot_rerun_required": false
+    }
+  ],
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "The v1 calibration and full-run freeze proposal is not accepted. The 203 records and numerical value derivations remain review evidence only; execution, robustness, descendant materiality, and every new scientific claim remain unauthorized.",
+  "classifier_imported": false,
+  "classifier_invoked_only_in_isolated_subprocess_probes": true,
+  "decision_count": 18,
+  "freeze_custody": {
+    "accepted_canonical_convergence_references": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260713_v0.json": "2fb867bcc8cf8271d2511db2de8d9d605db5888d0ec407db9eab9085149d81f3",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-PARAMETER-FREEZE-PACKET-v0.json": "fa16cbf5ef767cd29b9cae3bcea80191e74656d51c1e2c74fa87bfca5bb4075e"
+    },
+    "freeze_commit": "789170efc51a6678ea0983503c38ba2293007764",
+    "freeze_parent": "1004b0a2203b5c4abdfd6a120d23372518b8f631",
+    "immutable_working_paths_verified": [
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v1.json",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v1.json",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v1.json",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v1.json",
+      "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v1.py",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCalibrationAndParameterFreezePacketV1.lean"
+    ],
+    "ten_committed_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v1.json": "cbdfe8e0608e35cf59f0210ae9ae0d3cbf4ba4d845cfc139278888ca725c6c9b",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v1.json": "c37f144d4956b36e1bf51e145a41b88307aec5418bce61133d53911d3afb5250",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v1.json": "0ff67de9c91487a9531b69acbd63bf1b5a593d257a84a026b622ca3c7928dbcb",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v1.json": "c6166fee940c9c2564f78da90fa1116cd3a610f9771e40ea97c1a19eb7d2abf3",
+      "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py": "cae103e0cbad1e5ac349738a440631963531aa1e19aad716412089a9172dc29d",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py": "37bd24552a1af3f41d0be5e1a0ce98da36031a7d1a1f9859fe44121744ea1c0f",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v1.py": "d71191f45e4cbfaa501c5a20e0e1e8213835f5b30c7a2760f56fceea1d958062",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean": "12b0859c9d60cad0017f40f9a71549d4a5af20a852e1f5cd3f1670ac08d49083",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCalibrationAndParameterFreezePacketV1.lean": "baaca050cf84a59972e04c07e8c37dbc7158fd2dd2ec764c4212444983b99703",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean": "d8ce2f1047897f0aaa637a4bd6b6656e302840675c423545f719a16f4ce11f10"
+    }
+  },
+  "freeze_generator_imported": false,
+  "independent_classifier_audit": {
+    "arbitrary_fourteen_unique_row_ids_are_incorrectly_accepted": true,
+    "blocked_outcome_incorrectly_receives_significance": true,
+    "blocking_reason": "The committed file is a deterministic final-label reducer, but it does not reconstruct custody, controls, fit membership, convergence, thresholds, exact row identities, or keyed materiality observables from the 203 registered outputs. Those decisions remain mutable external inputs.",
+    "classifier_checks_exact_frozen_row_identity_set": false,
+    "classifier_data_closure_complete": false,
+    "classifier_derives_custody_controls_convergence_and_threshold_passes_from_203_outputs": false,
+    "classifier_trusts_unbound_summary_booleans": true,
+    "deterministic_probe_byte_equivalent": true,
+    "imports": [
+      "__future__",
+      "math",
+      "typing"
+    ],
+    "manifest_hash_binding_exact": true,
+    "no_mutable_scientific_decision_import": true,
+    "no_passing_subdomain_probe": {
+      "classifier_id": "DM_ROBUSTNESS_CANONICAL_RESULT_CLASSIFIER_v1",
+      "descendant_significance_reason": "classified independently from robustness using the frozen 0.1 and 0.5 gates",
+      "descendant_significance_status": "INTERMEDIATE_DESCENDANT_CONTRIBUTION",
+      "execution_status": "CLASSIFIED",
+      "failing_scientific_row_ids": [
+        "R00_CANONICAL",
+        "R01_ETA_WEAK",
+        "R02_ETA_STRONG",
+        "R03_F_ZERO",
+        "R04_F_LOW",
+        "R05_F_HIGH",
+        "R06_THETA_TRIVIAL",
+        "R07_THETA_PARTNER",
+        "R08_PHASE_POSITIVE",
+        "R09_PHASE_NEGATIVE",
+        "R10_MU_HIGH",
+        "R11_CORNER_WEAK_HIGH",
+        "R12_CORNER_STRONG_ZERO",
+        "R13_CORNER_STRONG_LOW"
+      ],
+      "passing_scientific_row_ids": [],
+      "reason": "no preregistered row passes; no positive robustness class is available",
+      "robustness_status": "NUMERICALLY_BLOCKED",
+      "scientific_claim_authorized": false
+    },
+    "packet_hash_binding_exact": true,
+    "registered_broad_probe": {
+      "classifier_id": "DM_ROBUSTNESS_CANONICAL_RESULT_CLASSIFIER_v1",
+      "descendant_significance_reason": "classified independently from robustness using the frozen 0.1 and 0.5 gates",
+      "descendant_significance_status": "INTERMEDIATE_DESCENDANT_CONTRIBUTION",
+      "execution_status": "CLASSIFIED",
+      "failing_scientific_row_ids": [],
+      "passing_scientific_row_ids": [
+        "R00_CANONICAL",
+        "R01_ETA_WEAK",
+        "R02_ETA_STRONG",
+        "R03_F_ZERO",
+        "R04_F_LOW",
+        "R05_F_HIGH",
+        "R06_THETA_TRIVIAL",
+        "R07_THETA_PARTNER",
+        "R08_PHASE_POSITIVE",
+        "R09_PHASE_NEGATIVE",
+        "R10_MU_HIGH",
+        "R11_CORNER_WEAK_HIGH",
+        "R12_CORNER_STRONG_ZERO",
+        "R13_CORNER_STRONG_LOW"
+      ],
+      "reason": "all fourteen preregistered rows pass",
+      "robustness_status": "BROADLY_ROBUST",
+      "scientific_claim_authorized": false
+    },
+    "source_sha256": "d71191f45e4cbfaa501c5a20e0e1e8213835f5b30c7a2760f56fceea1d958062",
+    "unkeyed_empty_materiality_vectors_are_incorrectly_accepted": true
+  },
+  "independent_control_audit": {
+    "all_thirteen_negative_controls_are_attached_only_to_anchor": true,
+    "blocking_reason": "The IDs and row-local forced comparators are complete, but the 21 standalone controls do not declare whether each is global, anchor-specific, conditional, or row-applicable; all thirteen negatives are attached to R00 without a frozen proof that their diagnostics cover interaction corners.",
+    "control_coverage_complete": false,
+    "every_control_declares_global_anchor_row_or_conditional_scope": false,
+    "forced_comparator_present_for_every_scientific_row": true,
+    "interaction_corner_applicability_rule_present": false,
+    "negative_control_count": 13,
+    "negative_control_ids_exact": true,
+    "positive_control_count": 8,
+    "positive_control_ids_exact": true,
+    "row_local_forced_comparator_count": 14
+  },
+  "independent_convergence_audit": {
+    "accepted_canonical_freeze_review_verdict": "ACCEPT_FREEZE",
+    "accepted_spatial_metric": "final_phi2_l2",
+    "accepted_spatial_minimum_order": 0.8,
+    "accepted_spatial_reason": "Wilson artifact is leading O(a)",
+    "blocking_mismatch": "The proposed spatial gate is 1.5, while the accepted canonical freeze uses 0.8 for final_phi2_l2 because the Wilson artifact is leading O(a). Pilot observation near order two cannot change that analytic expectation without a separately reviewed scheme argument.",
+    "energy_gate_matches_accepted_second_order_class": true,
+    "independent_observed_minima": {
+      "minimum_energy_error_order": 1.9960487199729513,
+      "minimum_spatial_descendant_order": 2.054410015547708,
+      "minimum_temporal_descendant_order": 1.9987235730509814
+    },
+    "proposed_measured_minima_match": true,
+    "proposed_spatial_metric": "final descendant L2 built from the same final phi2/phi3 spatial refinement family",
+    "proposed_spatial_minimum_order": 1.5,
+    "proposed_thresholds": {
+      "minimum_energy_error_order": 1.5,
+      "minimum_spatial_descendant_order": 1.5,
+      "minimum_temporal_descendant_order": 1.5
+    },
+    "spatial_gate_matches_accepted_analytic_order_class": false,
+    "temporal_gate_matches_accepted_second_order_class": true
+  },
+  "independent_filename_audit": {
+    "all_current_filenames_legal_on_windows": true,
+    "casefolded_NFC_unique_filename_count": 203,
+    "current_paths_below_260_characters": true,
+    "exact_mapping_for_all_records": true,
+    "manifest_contains_explicit_run_id_to_output_path_map": false,
+    "manifest_points_to_hash_bound_matrix": true,
+    "mapping_rule_reconstructed": "replace each colon in run_id with two underscores and append .json",
+    "matrix_is_bijective_for_current_203_records": true,
+    "maximum_absolute_path_length": 190,
+    "output_payload_must_echo_exact_run_id": false,
+    "source_escape_sequence_absent": true,
+    "unique_filename_count": 203
+  },
+  "independent_materiality_and_claim_audit": {
+    "canonical_E_REPRO_unchanged": true,
+    "canonical_execution_unauthorized": true,
+    "classifier_equality_semantics": "values exactly equal to 0.1 enter INTERMEDIATE_DESCENDANT_CONTRIBUTION; values exactly equal to 0.5 enter DESCENDANT_DOMINATED_REGIME",
+    "dominated_gate_exact": true,
+    "material_gate_exact": true,
+    "new_claim_unauthorized": true,
+    "nonpromotion_ceiling_preserved": true,
+    "robustness_and_significance_fields_separate_in_packet": true,
+    "sensitivity_values_exact": true
+  },
+  "independent_matrix_audit": {
+    "all_fourteen_rows_have_exact_uniform_expansion": true,
+    "all_required_record_fields_present": true,
+    "manifest_matrix_hash_exact": true,
+    "no_unregistered_invariant_descendant_free_comparator": true,
+    "packet_matrix_hash_exact": true,
+    "record_count": 203,
+    "role_counts": {
+      "DETERMINISTIC_DUPLICATE": 28,
+      "FORCED_COMPARATOR": 14,
+      "NEGATIVE_CONTROL": 13,
+      "POSITIVE_CONTROL": 8,
+      "PRIMARY_FULL_MODEL": 14,
+      "SOLVER_VERIFICATION": 42,
+      "SPATIAL_REFINEMENT": 42,
+      "TEMPORAL_REFINEMENT": 42
+    },
+    "role_counts_exact": true,
+    "row_audits": [
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R00_CANONICAL"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R01_ETA_WEAK"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R02_ETA_STRONG"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R03_F_ZERO"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R04_F_LOW"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R05_F_HIGH"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R06_THETA_TRIVIAL"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R07_THETA_PARTNER"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R08_PHASE_POSITIVE"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R09_PHASE_NEGATIVE"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R10_MU_HIGH"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R11_CORNER_WEAK_HIGH"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R12_CORNER_STRONG_ZERO"
+      },
+      {
+        "axes_exact": true,
+        "closed_role_set": true,
+        "parameters_exact": true,
+        "record_count": 13,
+        "role_counts": {
+          "DETERMINISTIC_DUPLICATE": 2,
+          "FORCED_COMPARATOR": 1,
+          "PRIMARY_FULL_MODEL": 1,
+          "SOLVER_VERIFICATION": 3,
+          "SPATIAL_REFINEMENT": 3,
+          "TEMPORAL_REFINEMENT": 3
+        },
+        "row_id": "R13_CORNER_STRONG_LOW"
+      }
+    ],
+    "scientific_axis_tuples_exact": true,
+    "scientific_row_ids_exact": true,
+    "unique_output_path_count": 203,
+    "unique_run_id_count": 203
+  },
+  "independent_threshold_audit": {
+    "all_twenty_two_values_and_source_sets_reconstructed": true,
+    "every_threshold_declares_units_or_normalization": false,
+    "every_threshold_has_explicit_eligible_run_roles": false,
+    "global_raw_threshold_scope_is_justified_across_all_fourteen_rows": false,
+    "reconstructed": {
+      "epsilon_exchange_floor": {
+        "measured_value": 1.4440000632598578e-16,
+        "proposed_value": 3e-16,
+        "recomputed_value": 3e-16,
+        "source_count": 10,
+        "value_and_sources_match": true
+      },
+      "epsilon_observable_floor": {
+        "measured_value": 2.1160000834852255e-11,
+        "proposed_value": 4.9999999999999995e-11,
+        "recomputed_value": 4.9999999999999995e-11,
+        "source_count": 10,
+        "value_and_sources_match": true
+      },
+      "maximum_Dirac_minus_sector1_residual": {
+        "measured_value": 3.410476354741e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_Dirac_minus_sector2_residual": {
+        "measured_value": 3.411845716736e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_Dirac_plus_sector1_residual": {
+        "measured_value": 3.406403272613e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_Dirac_plus_sector2_residual": {
+        "measured_value": 3.407735096744e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_Gauss_residual": {
+        "measured_value": 2.201186365304e-14,
+        "proposed_value": 5e-14,
+        "recomputed_value": 5e-14,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_adjoint_minus_sector1_residual": {
+        "measured_value": 3.410476354741e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_adjoint_minus_sector2_residual": {
+        "measured_value": 3.411845716736e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_adjoint_plus_sector1_residual": {
+        "measured_value": 3.406403272613e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_adjoint_plus_sector2_residual": {
+        "measured_value": 3.407735096744e-11,
+        "proposed_value": 6.999999999999999e-11,
+        "recomputed_value": 6.999999999999999e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_continuity_residual": {
+        "measured_value": 1.522940524775e-11,
+        "proposed_value": 4e-11,
+        "recomputed_value": 4e-11,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_energy_drift": {
+        "measured_value": 3.87323863954e-10,
+        "proposed_value": 8e-10,
+        "recomputed_value": 8e-10,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_exchange_combined_residual": {
+        "measured_value": 3.910735538039e-12,
+        "proposed_value": 8e-12,
+        "recomputed_value": 8e-12,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_exchange_longitudinal_residual": {
+        "measured_value": 3.560740484158e-21,
+        "proposed_value": 8e-21,
+        "recomputed_value": 8e-21,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_exchange_phi2_residual": {
+        "measured_value": 2.76028626437e-14,
+        "proposed_value": 6e-14,
+        "recomputed_value": 6e-14,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_exchange_phi3_residual": {
+        "measured_value": 3.883141384795e-12,
+        "proposed_value": 8e-12,
+        "recomputed_value": 8e-12,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_link_norm_error": {
+        "measured_value": 2.22044604925e-16,
+        "proposed_value": 5e-16,
+        "recomputed_value": 5e-16,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_longitudinal_Maxwell_residual": {
+        "measured_value": 2.938133528234e-15,
+        "proposed_value": 6.0000000000000005e-15,
+        "recomputed_value": 6.0000000000000005e-15,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_phi2_wave_residual": {
+        "measured_value": 1.980270981916e-12,
+        "proposed_value": 4e-12,
+        "recomputed_value": 4e-12,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_phi3_wave_residual": {
+        "measured_value": 9.021423690546e-11,
+        "proposed_value": 2e-10,
+        "recomputed_value": 2e-10,
+        "source_count": 50,
+        "value_and_sources_match": true
+      },
+      "maximum_solver_residual": {
+        "measured_value": 6.161814548183e-09,
+        "proposed_value": 2e-08,
+        "recomputed_value": 2e-08,
+        "source_count": 50,
+        "value_and_sources_match": true
+      }
+    },
+    "scope_blocker_reason": "The proposal lists eligible scientific rows but no eligible run roles, and it does not declare units or a row-scaling/normalization rule for the global residual thresholds.",
+    "threshold_count": 22
+  },
+  "lean_status_boundary": {
+    "affected_freeze_preparation_build": {
+      "job_count": 142,
+      "status": "PASSED"
+    },
+    "affected_review_authority_build": {
+      "job_count": 143,
+      "status": "PASSED"
+    },
+    "historical_repository_wide_aggregate": {
+      "completed_jobs": 8441,
+      "status": "INCOMPLETE",
+      "termination": "TIMEOUT_AT_600_SECONDS",
+      "theorem_error_observed_before_timeout": false,
+      "total_jobs": 8507
+    },
+    "repository_wide_green_claim": false
+  },
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "required_v2_corrections": [
+    "restore the accepted first-order-compatible spatial threshold of 0.8 for the Wilson-affected final descendant spatial fit, or supply and independently review a new analytic order argument",
+    "declare eligible run roles plus units or a frozen normalization/scaling rule for every numerical threshold",
+    "make the committed classifier consume the exact 203 registered outputs and exact fourteen row identities, reconstruct custody/controls/fits/thresholds itself, and forbid significance whenever robustness is blocked or model-domain limited",
+    "declare every standalone control global, anchor-specific, conditional, or row-applicable and justify interaction-corner coverage",
+    "add an explicit manifest run_id-to-safe-filename map and require every output payload to echo its exact run_id"
+  ],
+  "review_decisions": [
+    {
+      "decision_id": "freeze_proposal_commit_and_all_ten_paths_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_pilot_review_authority_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "proposal_target_and_pending_verdict_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_203_records_unique_complete_and_role_qualified",
+      "passed": true
+    },
+    {
+      "decision_id": "all_fourteen_rows_uniform_and_axis_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "matrix_packet_and_manifest_hashes_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_two_threshold_values_reconstructed",
+      "passed": true
+    },
+    {
+      "decision_id": "threshold_role_scope_and_normalization_complete",
+      "passed": false
+    },
+    {
+      "decision_id": "temporal_and_energy_convergence_classes_match",
+      "passed": true
+    },
+    {
+      "decision_id": "spatial_convergence_class_matches_accepted_Wilson_order",
+      "passed": false
+    },
+    {
+      "decision_id": "materiality_gates_and_equality_boundaries_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_source_and_hash_custody_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_data_closure_and_exact_row_identity_complete",
+      "passed": false
+    },
+    {
+      "decision_id": "blocked_results_never_receive_significance",
+      "passed": false
+    },
+    {
+      "decision_id": "control_inventory_and_scope_coverage_complete",
+      "passed": false
+    },
+    {
+      "decision_id": "current_filename_mapping_collision_free_and_legal",
+      "passed": true
+    },
+    {
+      "decision_id": "filename_mapping_manifest_and_output_payload_identity_complete",
+      "passed": false
+    },
+    {
+      "decision_id": "claim_ceiling_and_nonpromotions_preserved",
+      "passed": true
+    }
+  ],
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260714_v1",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2",
+  "selected_next_target_kind": "VERSIONED_FREEZE_CORRECTION_ONLY",
+  "validation_status": {
+    "affected_test_count": 53,
+    "affected_tests_passed": true,
+    "artifact_checks_passed": true,
+    "authority_surface_parity_passed": true,
+    "tooling_validation_passed": true
+  },
+  "verdict": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH"
+}
