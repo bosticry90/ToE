@@ -1,0 +1,221 @@
+{
+  "authority_basis": {
+    "freeze_v2_review_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+    "freeze_v2_review_parent": "b83833d81ccd95b77e1d2a7538a31c5c7b8f791f",
+    "freeze_v2_review_verdict": "B-BLOCKED_MUTATION_NONATOMIC",
+    "preserved_input_artifacts": [
+      {
+        "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json",
+        "sha256": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680"
+      },
+      {
+        "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json",
+        "sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+      },
+      {
+        "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json",
+        "sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e"
+      },
+      {
+        "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v2.json",
+        "sha256": "cebe7a6cc1e5b3c01c6abb47ff0ea5050fa08f18701e62de0691d8564fdc763c"
+      },
+      {
+        "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v2.json",
+        "sha256": "d4ebaa700242c722dda1c45461b90cac2b59f63cb8c81074e84634b337ccd56c"
+      },
+      {
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py",
+        "sha256": "eaa5ba960731c8828f0208d8e8bc58b20dd74961606715f8f330295d00b7bb99"
+      },
+      {
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py",
+        "sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9"
+      },
+      {
+        "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py",
+        "sha256": "db46a0b9e4fa12d7f4ef0e1b0012cd22f70f8ab3664043bfe181b7952f271dcb"
+      },
+      {
+        "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCalibrationAndParameterFreezePacketV2.lean",
+        "sha256": "7bc5fb1939f015a1597b447268ac7adc0270c5ae13beb09013787858d5447459"
+      },
+      {
+        "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260714_v2.json",
+        "sha256": "f3eb0ffa6383ae3b0b1f26593f46af379688e4f503a167fcb1529ef08eba0429"
+      }
+    ]
+  },
+  "authority_boundary": {
+    "canonical_203_record_execution_authorized": false,
+    "descendant_materiality_classification_assigned": false,
+    "freeze_v1_immutable_and_blocked": true,
+    "freeze_v2_immutable_and_blocked": true,
+    "freeze_v3_independently_accepted": false,
+    "freeze_v3_prepared": true,
+    "new_E_REPRO_claim": false,
+    "robustness_classification_assigned": false
+  },
+  "bounded_v3_correction_scope": {
+    "additional_pilot_required": false,
+    "canonical_run_matrix_changed": false,
+    "classifier_changed": false,
+    "corrected_only": [
+      "mutation causal contracts",
+      "fresh-fixture atomicity",
+      "first-diagnostic precedence",
+      "committed-configuration custody"
+    ],
+    "pilot_changed_or_reopened": false,
+    "scientific_design_changed": false,
+    "threshold_values_changed": false
+  },
+  "canonical_execution_contract": {
+    "all_four_are_preserved_byte_for_byte": true,
+    "classifier_v2": {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py",
+      "sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9"
+    },
+    "identity_manifest_v2": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json",
+      "record_count": 203,
+      "sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e"
+    },
+    "packet_v2": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json",
+      "sha256": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680"
+    },
+    "run_matrix_v2": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json",
+      "record_count": 203,
+      "sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+    }
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "Freeze v3 is a reviewable evidence-contract correction only. Only an independent ACCEPT_FREEZE verdict may authorize one exact 203-record execution; no result is authorized in advance.",
+  "committed_configuration_custody": {
+    "all_authoritative_hashes_use_committed_bytes": true,
+    "records": [
+      {
+        "git_blob_oid": "f24c8d0fd36577c71855674cd904e3b6476396d2",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": ".gitattributes",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:.gitattributes",
+        "sha256_of_committed_bytes": "e71d3f1ac9b613abe3b2c4b8b1f0d882044dfaacd52ceda625937e0bd1a27d77",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "476d90927cd2881dcebb2c6651e3b464708ef4f4d76eb36b24aea21c09d743d2"
+      },
+      {
+        "git_blob_oid": "ccae5044059a1a5607fd8e7760092a1a72873c9d",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": "requirements.active.lock",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:requirements.active.lock",
+        "sha256_of_committed_bytes": "eefb37359a4d4fcbe1df8f87c6ee786974f27d8d338dd59b413d418948d7ab9a",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d"
+      },
+      {
+        "git_blob_oid": "bd19bde0ce12df3a11c3f4fd0b7513c30693d72c",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": "formal/toe_formal/lean-toolchain",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:formal/toe_formal/lean-toolchain",
+        "sha256_of_committed_bytes": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+      },
+      {
+        "git_blob_oid": "e90c7d8e2adffdc5772a0e21ac104966ac3238f4",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": "formal/toe_formal/lake-manifest.json",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:formal/toe_formal/lake-manifest.json",
+        "sha256_of_committed_bytes": "19e09b5f13d32af5353532484e6b3040d4cccdd2c8b5961ec5663d7de8b2d36b",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+      }
+    ],
+    "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+    "source_commit_parent": "b83833d81ccd95b77e1d2a7538a31c5c7b8f791f"
+  },
+  "historical_repository_wide_Lean": {
+    "completed_jobs": 8441,
+    "repository_wide_green_claim": false,
+    "status": "INCOMPLETE_TIMEOUT",
+    "theorem_error_observed_before_timeout": false,
+    "total_jobs": 8507
+  },
+  "historical_validation_correction": {
+    "committed_v2_artifact_identities_remain_exact": true,
+    "freeze_v2_post_commit_99_test_assertion_fully_reproducible": false,
+    "freeze_v2_report_rewritten": false,
+    "reason": "two historical regeneration tests depended on mutable working-tree .gitattributes bytes",
+    "v3_authoritative_configuration_hashes_use_git_show_committed_bytes": true
+  },
+  "mutation_causal_contract": {
+    "baseline_fixture_hash": "5491af5ebdb884bfac58c5118ae6ca739bc3ec5bb1202f82545693f2673dcfb8",
+    "meta_regression_count": 6,
+    "mutation_count": 23,
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-MUTATION-CAUSAL-CONTRACT-BUNDLE-v3.json",
+    "review_fixtures_are_not_scientific_execution_records": true,
+    "sha256": "5f45fac5948abd39a1e1643ae1072a7ea85268baa7bee31ab8ffc5effbd9cdfa"
+  },
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v2",
+  "preparation_validation_status": {
+    "affected_Lean_build": {
+      "job_count": 146,
+      "status": "PASSED"
+    },
+    "authority_surface_rotated_only_to_independent_v3_review": true,
+    "current_descendant_robustness_affected_chain": {
+      "deselected_historical_worktree_sensitive_tests": 2,
+      "failed": 0,
+      "passed": 190
+    },
+    "deselection_reason": "the two immutable historical generators read mutable working-tree .gitattributes; v3 replaces this authority input with committed Git blob bytes",
+    "deselection_scope": [
+      "freeze-v1::test_generated_artifacts_are_current",
+      "freeze-v2::test_generated_artifacts_are_current"
+    ],
+    "focused_v3_tests": {
+      "failed": 0,
+      "passed": 11
+    }
+  },
+  "preserved_v2_contract": {
+    "convergence_classes": {
+      "FIRST_ORDER_WILSON_AFFECTED_SPATIAL": 0.8,
+      "SECOND_ORDER_ENERGY_ERROR": 1.5,
+      "SECOND_ORDER_TEMPORAL": 1.5
+    },
+    "existing_canonical_E_REPRO_unchanged": true,
+    "invariant_descendant_free_comparator_invented": false,
+    "materiality_gates": {
+      "descendant_dominated": 0.5,
+      "materially_influential": 0.1
+    },
+    "materiality_suppressed_after_numerical_or_model_domain_block": true,
+    "negative_controls": 13,
+    "numerical_threshold_values": 22,
+    "positive_controls": 8,
+    "raw_output_classifier_sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9",
+    "scientific_axes": 5,
+    "scientific_records": 182,
+    "scientific_rows": 14,
+    "total_canonical_records": 203
+  },
+  "prompt_protection": {
+    "path": "Prompt.txt",
+    "sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_v3",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

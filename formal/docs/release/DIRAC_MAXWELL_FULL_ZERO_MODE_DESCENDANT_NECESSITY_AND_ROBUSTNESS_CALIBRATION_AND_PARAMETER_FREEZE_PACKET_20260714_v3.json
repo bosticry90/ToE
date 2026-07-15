@@ -1,0 +1,144 @@
+{
+  "artifacts": {
+    "classifier_preserved": {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py",
+      "sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9"
+    },
+    "manifest": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v3.json",
+      "sha256": "f2b422fc00516021113dfaf5fa79ccbc536e13db2cbe56f850324994e27c135b"
+    },
+    "matrix_preserved": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json",
+      "sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+    },
+    "mutation_bundle": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-MUTATION-CAUSAL-CONTRACT-BUNDLE-v3.json",
+      "sha256": "5f45fac5948abd39a1e1643ae1072a7ea85268baa7bee31ab8ffc5effbd9cdfa"
+    },
+    "packet": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v3.json",
+      "sha256": "7d4c78ef15a24045a16d0fbed3ebcb4cabf77d2b8dbfddc4d6dbafe7739bc5af"
+    }
+  },
+  "authority_boundary": {
+    "canonical_203_record_execution_authorized": false,
+    "descendant_materiality_classification_assigned": false,
+    "freeze_v1_immutable_and_blocked": true,
+    "freeze_v2_immutable_and_blocked": true,
+    "freeze_v3_independently_accepted": false,
+    "freeze_v3_prepared": true,
+    "new_E_REPRO_claim": false,
+    "robustness_classification_assigned": false
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "Freeze v3 is a reviewable evidence-contract correction only. Only an independent ACCEPT_FREEZE verdict may authorize one exact 203-record execution; no result is authorized in advance.",
+  "committed_configuration_custody": {
+    "all_authoritative_hashes_use_committed_bytes": true,
+    "records": [
+      {
+        "git_blob_oid": "f24c8d0fd36577c71855674cd904e3b6476396d2",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": ".gitattributes",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:.gitattributes",
+        "sha256_of_committed_bytes": "e71d3f1ac9b613abe3b2c4b8b1f0d882044dfaacd52ceda625937e0bd1a27d77",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "476d90927cd2881dcebb2c6651e3b464708ef4f4d76eb36b24aea21c09d743d2"
+      },
+      {
+        "git_blob_oid": "ccae5044059a1a5607fd8e7760092a1a72873c9d",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": "requirements.active.lock",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:requirements.active.lock",
+        "sha256_of_committed_bytes": "eefb37359a4d4fcbe1df8f87c6ee786974f27d8d338dd59b413d418948d7ab9a",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d"
+      },
+      {
+        "git_blob_oid": "bd19bde0ce12df3a11c3f4fd0b7513c30693d72c",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": "formal/toe_formal/lean-toolchain",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:formal/toe_formal/lean-toolchain",
+        "sha256_of_committed_bytes": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+      },
+      {
+        "git_blob_oid": "e90c7d8e2adffdc5772a0e21ac104966ac3238f4",
+        "normalization_mode": "committed Git blob bytes; no working-tree conversion",
+        "path": "formal/toe_formal/lake-manifest.json",
+        "read_contract": "git show 5d8ae50d053cb9edb3ac71e77a6211c6de710277:formal/toe_formal/lake-manifest.json",
+        "sha256_of_committed_bytes": "19e09b5f13d32af5353532484e6b3040d4cccdd2c8b5961ec5663d7de8b2d36b",
+        "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_is_regeneration_input": false,
+        "working_tree_sha256_at_preparation": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+      }
+    ],
+    "source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+    "source_commit_parent": "b83833d81ccd95b77e1d2a7538a31c5c7b8f791f"
+  },
+  "five_v2_findings_repaired": {
+    "comparator_direction_exact": true,
+    "holonomy_control_targets_holonomy_feature": true,
+    "materiality_after_block_single_premise_and_reachable": true,
+    "phase_control_targets_phase_feature": true,
+    "supplied_pass_probe_contains_real_raw_failure": true
+  },
+  "mutation_results": {
+    "atomic_exact_first_diagnostic_and_decision_delta_passed": 23,
+    "meta_regressions_passed": 6,
+    "meta_regressions_registered": 6,
+    "registered": 23
+  },
+  "preserved_counts": {
+    "convergence_classes": {
+      "FIRST_ORDER_WILSON_AFFECTED_SPATIAL": 0.8,
+      "SECOND_ORDER_ENERGY_ERROR": 1.5,
+      "SECOND_ORDER_TEMPORAL": 1.5
+    },
+    "existing_canonical_E_REPRO_unchanged": true,
+    "invariant_descendant_free_comparator_invented": false,
+    "materiality_gates": {
+      "descendant_dominated": 0.5,
+      "materially_influential": 0.1
+    },
+    "materiality_suppressed_after_numerical_or_model_domain_block": true,
+    "negative_controls": 13,
+    "numerical_threshold_values": 22,
+    "positive_controls": 8,
+    "raw_output_classifier_sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9",
+    "scientific_axes": 5,
+    "scientific_records": 182,
+    "scientific_rows": 14,
+    "total_canonical_records": 203
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v3",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 146,
+      "status": "PASSED"
+    },
+    "artifact_regeneration_passed": true,
+    "authority_surface_parity_passed": true,
+    "current_affected_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 190
+    },
+    "focused_v3_tests": {
+      "failed": 0,
+      "passed": 11
+    },
+    "repository_wide_Lean": "INCOMPLETE_HISTORICAL_TIMEOUT"
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}
