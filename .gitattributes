@@ -210,3 +210,17 @@ formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json text eol=lf
 formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-MANIFEST-v0.json text eol=lf
 formal/python/tests/test_pillar_seam_unit_mapping_ledger_execution.py text eol=lf
 formal/python/tools/pillar_seam_unit_mapping_ledger_execution.py text eol=lf
+
+# Freeze-v2 decision and custody closure. These files are byte-hash-bound and
+# must retain LF bytes on Windows clean checkout.
+formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v2.json text eol=lf
+formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v2.json text eol=lf
+formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json text eol=lf
+formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json text eol=lf
+formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json text eol=lf
+formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py text eol=lf
+formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py text eol=lf
+formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py text eol=lf
+formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCalibrationAndParameterFreezePacketV2.lean text eol=lf
+formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean text eol=lf

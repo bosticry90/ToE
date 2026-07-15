@@ -1,0 +1,86 @@
+{
+  "artifacts": {
+    "classifier": {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py",
+      "sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9"
+    },
+    "manifest": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v2.json",
+      "sha256": "cebe7a6cc1e5b3c01c6abb47ff0ea5050fa08f18701e62de0691d8564fdc763c"
+    },
+    "output_identity": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json",
+      "sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e"
+    },
+    "packet": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json",
+      "sha256": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680"
+    },
+    "run_matrix": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json",
+      "sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+    }
+  },
+  "authority_boundary": {
+    "canonical_fourteen_row_execution_authorized": false,
+    "new_E_REPRO_claim": false,
+    "numerical_parameters_or_thresholds_authoritatively_frozen": false,
+    "packet_independently_accepted": false,
+    "packet_prepared": true,
+    "previous_canonical_E_REPRO_unchanged": true,
+    "robustness_or_materiality_classification_assigned": false
+  },
+  "blocker_mutation_count": 23,
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "A bounded freeze-v2 correction is prepared for independent review. It does not authorize canonical execution or assign robustness, descendant significance, or a new E-REPRO claim.",
+  "corrected_convergence_floors": {
+    "FIRST_ORDER_WILSON_AFFECTED_SPATIAL": 0.8,
+    "SECOND_ORDER_ENERGY_ERROR": 1.5,
+    "SECOND_ORDER_TEMPORAL": 1.5
+  },
+  "decision_count": 19,
+  "decision_ids": [
+    "v1_blocked_review_is_exact_authority",
+    "accepted_scientific_rows_pilot_arrays_parameters_and_materiality_are_unchanged",
+    "wilson_affected_spatial_fit_is_first_order_with_floor_0p8",
+    "temporal_and_energy_error_fits_remain_second_order_with_floor_1p5",
+    "all_twenty_two_numerical_values_are_preserved",
+    "every_threshold_has_fail_closed_role_row_unit_normalization_scaling_and_provenance_semantics",
+    "exact_203_record_matrix_is_preserved_with_feature_appropriate_control_reassignment",
+    "all_controls_have_exact_scope_predicate_representativeness_and_raw_evaluation_contracts",
+    "classifier_consumes_only_frozen_inputs_and_raw_exact_output_payloads",
+    "classifier_reconstructs_every_decision_and_rejects_supplied_booleans_or_classes",
+    "classifier_requires_exact_run_identity_closure",
+    "materiality_is_not_evaluated_after_numerical_or_model_domain_block",
+    "filename_mapping_is_casefold_safe_explicit_bijective_and_payload_reconciled",
+    "forced_comparators_remain_negative_necessity_only",
+    "no_invariant_descendant_free_comparator_is_invented",
+    "blocker_mutations_have_exact_diagnostics_without_unrelated_prior_failure",
+    "no_additional_pilot_is_needed_or_authorized",
+    "preparation_rotates_only_to_independent_v2_freeze_review",
+    "canonical_execution_and_new_claims_remain_unauthorized"
+  ],
+  "preserved_counts": {
+    "convergence_classes": 3,
+    "negative_controls": 13,
+    "numerical_values": 22,
+    "positive_controls": 8,
+    "scientific_records": 182,
+    "scientific_rows": 14,
+    "total_records": 203
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v2",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2",
+  "validation_status": {
+    "affected_lean_build_passed": true,
+    "affected_lean_job_count": 144,
+    "affected_test_count": 99,
+    "affected_tests_passed": true,
+    "artifact_regeneration_check_passed": true,
+    "authority_surface_parity_passed": true,
+    "tooling_gate_test_count": 6,
+    "tooling_gate_tests_passed": true
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

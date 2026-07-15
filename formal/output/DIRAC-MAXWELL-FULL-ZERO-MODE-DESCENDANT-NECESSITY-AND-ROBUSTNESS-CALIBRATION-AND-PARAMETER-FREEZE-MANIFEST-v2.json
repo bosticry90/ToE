@@ -1,0 +1,64 @@
+{
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "classifier": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py",
+    "sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9"
+  },
+  "decision_count": 19,
+  "expected_output_identity_manifest": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json",
+    "sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e"
+  },
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py",
+    "sha256": "eaa5ba960731c8828f0208d8e8bc58b20dd74961606715f8f330295d00b7bb99"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v1.json",
+      "sha256": "0ff67de9c91487a9531b69acbd63bf1b5a593d257a84a026b622ca3c7928dbcb"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v1.json",
+      "sha256": "c6166fee940c9c2564f78da90fa1116cd3a610f9771e40ea97c1a19eb7d2abf3"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260714_v1.json",
+      "sha256": "ad4d112a0377b5ea3c311b67f344ee98e8fd99e432676fe1ed385b331bfa4361"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCalibrationAndParameterFreezePacketV1ResultReview.lean",
+      "sha256": "cc2161576365887341785ed4c604819950c9e48d6ad778b79a60e107a8a14913"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v1.json",
+      "sha256": "54f3c8137986db1ba1bf7cc1a9e0ffade11ed7b6fdf480bf103cdd6b13d964f1"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-PACKET-v1.json",
+      "sha256": "d8c1f75c955b9a368159bd579f7d886523e8c66b0e611a6e6290a179422cf03a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json",
+      "sha256": "5ffaca2e6e07e95ef1bb1b1451b2bda01eab355e55294a6dd51b2ffe8ecf8e8e"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-PARAMETER-FREEZE-PACKET-v0.json",
+      "sha256": "fa16cbf5ef767cd29b9cae3bcea80191e74656d51c1e2c74fa87bfca5bb4075e"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "2fb867bcc8cf8271d2511db2de8d9d605db5888d0ec407db9eab9085149d81f3"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json",
+    "sha256": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680"
+  },
+  "run_matrix": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json",
+    "sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_MANIFEST_v2",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result"
+}
