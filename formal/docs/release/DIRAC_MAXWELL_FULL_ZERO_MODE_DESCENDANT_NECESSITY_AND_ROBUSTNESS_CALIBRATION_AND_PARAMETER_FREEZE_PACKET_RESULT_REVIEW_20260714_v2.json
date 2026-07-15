@@ -1,0 +1,722 @@
+{
+  "accepted": false,
+  "all_decisions_passed": false,
+  "authority_rotation": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "additional_pilot_authorized": false,
+    "canonical_203_record_execution_authorized": false,
+    "canonical_Maxwell_Dirac_E_REPRO_unchanged": true,
+    "descendant_materiality_classification_authorized": false,
+    "freeze_v2_accepted": false,
+    "master_action_promotion_authorized": false,
+    "new_E_REPRO_claim_authorized": false,
+    "pillar_completion_authorized": false,
+    "robustness_classification_authorized": false,
+    "seam_closure_authorized": false,
+    "versioned_freeze_v3_correction_authorized": true
+  },
+  "blocking_diagnostics": [
+    {
+      "additional_pilot_required": false,
+      "affected_mutation_ids": [
+        "M_V2_COMPARATOR_THRESHOLD_APPLIED_TO_PRIMARY",
+        "M_V2_PHASE_CONTROL_MARKED_GLOBAL",
+        "M_V2_HOLONOMY_CONTROL_ON_TRIVIAL_ONLY_ROW",
+        "M_V2_MATERIALITY_SUPPLIED_AFTER_NUMERICAL_BLOCK",
+        "M_V2_SUPPLIED_PASSED_TRUE_WITH_RAW_FAILURE"
+      ],
+      "diagnostic": "B-BLOCKED_MUTATION_NONATOMIC",
+      "evidence": "The 23-entry registry records only an ID, expected diagnostic, and an unrelated-failure flag. It omits the frozen premise delta and expected decision delta, and at least five preparation probes do not implement the semantic mutation named by their IDs or change multiple premises before precedence is evaluated."
+    }
+  ],
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "Freeze v2 is not accepted because its 23 mutation controls are not independently self-describing and at least five preparation probes are non-atomic or semantically mismatched. The 203-record execution, robustness classification, descendant materiality, and every new scientific claim remain unauthorized.",
+  "classifier_imported": false,
+  "classifier_invoked_only_in_isolated_subprocess_probes": true,
+  "decision_count": 17,
+  "freeze_custody": {
+    "committed_path_count": 12,
+    "freeze_commit": "b83833d81ccd95b77e1d2a7538a31c5c7b8f791f",
+    "freeze_parent": "9a3b0e47488bbffa4f77d7ec8abcde06ef9dc28e",
+    "immutable_working_path_count": 9
+  },
+  "freeze_generator_imported": false,
+  "freeze_test_imported": false,
+  "independent_classifier_probe_audit": {
+    "baseline_deterministic": true,
+    "baseline_reconstructs_candidate_without_authorizing_claim": true,
+    "baseline_result": {
+      "claim_ceiling": "candidate classification only; independent result review is required before any E-REPRO claim",
+      "classifier_id": "DM_ROBUSTNESS_CANONICAL_RESULT_CLASSIFIER_v2",
+      "control_ids_reconstructed": [
+        "N_CANONICAL_THRESHOLDS_REUSED_UNSCALED",
+        "N_DESCENDANTS_RELABELED_INVENTED_MATTER",
+        "N_DROP_ONLY_PHI2",
+        "N_DROP_ONLY_PHI3",
+        "N_FAILED_POINTS_EXCLUDED_FROM_DOMAIN",
+        "N_FORCE_BOTH_DESCENDANTS_ZERO_WITH_SOURCE",
+        "N_OMIT_DESCENDANT_ENERGY",
+        "N_OMIT_TRANSVERSE_EXCHANGE_CHANNEL",
+        "N_POST_EXECUTION_FAVORABLE_POINT_SELECTION",
+        "N_REVERSE_TRANSVERSE_EXCHANGE_SIGN",
+        "N_SUPPRESS_SECTOR_MULTIPLICITY",
+        "N_WRONG_GAMMA2_BLOCK",
+        "N_WRONG_GAMMA3_BLOCK",
+        "P_ANALYTIC_INVARIANT_DESCENDANT_FREE",
+        "P_CANONICAL_ACCEPTED_RESULT_UNCHANGED",
+        "P_CHARGE_CONJUGATE_PARAMETER_CASE",
+        "P_INDEPENDENT_PHI2_EXCITATION",
+        "P_INDEPENDENT_PHI3_EXCITATION",
+        "P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED",
+        "P_PHI2_PHI3_INTERCHANGE",
+        "P_WEAK_COUPLING_APPROACH"
+      ],
+      "descendant_significance_status": "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL",
+      "execution_status": "CLASSIFIED_PENDING_INDEPENDENT_RESULT_REVIEW",
+      "materiality_evidence": {
+        "maximum_materiality_measure": 0.01999999999900002,
+        "per_row": {
+          "R00_CANONICAL": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R01_ETA_WEAK": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R02_ETA_STRONG": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R03_F_ZERO": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R04_F_LOW": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R05_F_HIGH": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R06_THETA_TRIVIAL": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R07_THETA_PARTNER": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R08_PHASE_POSITIVE": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R09_PHASE_NEGATIVE": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R10_MU_HIGH": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R11_CORNER_WEAK_HIGH": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R12_CORNER_STRONG_ZERO": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          },
+          "R13_CORNER_STRONG_LOW": {
+            "F_EXCHANGE_PERP": 0.019607843137254898,
+            "R_PERP_OBSERVABLE": {
+              "LONGITUDINAL_ELECTRIC_FIELD": 0.01999999999900002,
+              "LONGITUDINAL_EXCHANGE": 0.01999999999900002,
+              "MATTER_DENSITY": 0.01999999999900002,
+              "MATTER_ENERGY": 0.01999999999900002,
+              "TOTAL_SOURCE_CURRENT": 0.01999999999900002
+            },
+            "R_TRUNC_EQUATION_RESIDUAL": 0.001
+          }
+        },
+        "threshold_sensitivity": {
+          "0.05": "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL",
+          "0.1": "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL",
+          "0.2": "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL"
+        }
+      },
+      "observed_convergence_orders": {
+        "R00_CANONICAL": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R01_ETA_WEAK": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R02_ETA_STRONG": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R03_F_ZERO": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R04_F_LOW": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R05_F_HIGH": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R06_THETA_TRIVIAL": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R07_THETA_PARTNER": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R08_PHASE_POSITIVE": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R09_PHASE_NEGATIVE": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R10_MU_HIGH": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R11_CORNER_WEAK_HIGH": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R12_CORNER_STRONG_ZERO": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        },
+        "R13_CORNER_STRONG_LOW": {
+          "minimum_energy_error_order": 2.0,
+          "minimum_spatial_descendant_order": 1.0,
+          "minimum_temporal_descendant_order": 2.0000000000109344
+        }
+      },
+      "passing_scientific_row_ids": [
+        "R00_CANONICAL",
+        "R01_ETA_WEAK",
+        "R02_ETA_STRONG",
+        "R03_F_ZERO",
+        "R04_F_LOW",
+        "R05_F_HIGH",
+        "R06_THETA_TRIVIAL",
+        "R07_THETA_PARTNER",
+        "R08_PHASE_POSITIVE",
+        "R09_PHASE_NEGATIVE",
+        "R10_MU_HIGH",
+        "R11_CORNER_WEAK_HIGH",
+        "R12_CORNER_STRONG_ZERO",
+        "R13_CORNER_STRONG_LOW"
+      ],
+      "robustness_status": "BROADLY_ROBUST",
+      "scientific_claim_authorized": false
+    },
+    "missing_output_fails_identity": true,
+    "raw_failure_reconstructed_as_numeric_block": true,
+    "supplied_pass_boolean_rejected_before_use": true,
+    "wrong_internal_run_id_fails_identity": true
+  },
+  "independent_classifier_source_audit": {
+    "blocked_materiality_sentinels_present": true,
+    "classifier_sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9",
+    "imports": [
+      "__future__",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "typing",
+      "unicodedata"
+    ],
+    "manifest_binding_exact": true,
+    "no_project_local_or_mutable_decision_import": true,
+    "packet_binding_exact": true,
+    "raw_reconstruction_functions_present": true,
+    "supplied_decision_fields_explicitly_forbidden": true
+  },
+  "independent_control_audit": {
+    "all_interaction_corners_receive_row_local_forced_pressure": true,
+    "control_count": 21,
+    "control_ids_exact": true,
+    "feature_dependent_representatives_exact": true,
+    "matrix_contracts_equal_packet_contracts": true,
+    "negative_count": 13,
+    "positive_count": 8,
+    "representativeness_and_feature_predicates_nonempty": true,
+    "row_local_forced_comparator_count": 14,
+    "scope_classes_closed": true
+  },
+  "independent_convergence_audit": {
+    "Wilson_spatial_class_exact": true,
+    "all_fit_members_fixed_for_all_fourteen_rows": true,
+    "convergence_class_count": 3,
+    "energy_class_exact": true,
+    "temporal_class_exact": true
+  },
+  "independent_identity_audit": {
+    "exact_matrix_manifest_field_reconciliation": true,
+    "forward_map_exact": true,
+    "inverse_map_exact": true,
+    "manifest_identity_hash_exact": true,
+    "maximum_absolute_path_length": 190,
+    "packet_identity_hash_exact": true,
+    "payload_echo_contract_exact": true,
+    "record_count": 203,
+    "unique_run_ids_paths_and_casefolded_NFC_filenames": true,
+    "windows_filenames_legal": true
+  },
+  "independent_materiality_and_authority_audit": {
+    "canonical_E_REPRO_unchanged": true,
+    "dominated_gate_exact": true,
+    "execution_unauthorized_in_proposal": true,
+    "material_gate_exact": true,
+    "new_claim_unauthorized": true,
+    "sensitivity_exact": true
+  },
+  "independent_matrix_audit": {
+    "all_fourteen_rows_have_exact_thirteen_record_expansion": true,
+    "all_input_hashes_reconstructed": true,
+    "packet_matrix_hash_exact": true,
+    "record_count": 203,
+    "role_counts": {
+      "DETERMINISTIC_DUPLICATE": 28,
+      "FORCED_COMPARATOR": 14,
+      "NEGATIVE_CONTROL": 13,
+      "POSITIVE_CONTROL": 8,
+      "PRIMARY_FULL_MODEL": 14,
+      "SOLVER_VERIFICATION": 42,
+      "SPATIAL_REFINEMENT": 42,
+      "TEMPORAL_REFINEMENT": 42
+    },
+    "role_counts_exact": true,
+    "row_audits": [
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R00_CANONICAL"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R01_ETA_WEAK"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R02_ETA_STRONG"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R03_F_ZERO"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R04_F_LOW"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R05_F_HIGH"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R06_THETA_TRIVIAL"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R07_THETA_PARTNER"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R08_PHASE_POSITIVE"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R09_PHASE_NEGATIVE"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R10_MU_HIGH"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R11_CORNER_WEAK_HIGH"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R12_CORNER_STRONG_ZERO"
+      },
+      {
+        "axes_exact": true,
+        "forced_parent_exact": true,
+        "record_count": 13,
+        "role_counts_exact": true,
+        "row_id": "R13_CORNER_STRONG_LOW"
+      }
+    ],
+    "unique_run_id_count": 203
+  },
+  "independent_mutation_atomicity_audit": {
+    "all_twenty_three_atomic_and_independently_reconstructible": false,
+    "blocking_reason": "The 23-entry registry records only an ID, expected diagnostic, and an unrelated-failure flag. It omits the frozen premise delta and expected decision delta, and at least five preparation probes do not implement the semantic mutation named by their IDs or change multiple premises before precedence is evaluated.",
+    "non_atomic_count": 5,
+    "non_atomic_or_semantically_mismatched_mutations": [
+      {
+        "atomic": false,
+        "evidence": "The preparation probe appends FORCED_COMPARATOR to maximum_phi2_wave_residual, which is the reverse direction of the registered comparator-threshold-applied-to-primary mutation name.",
+        "mutation_id": "M_V2_COMPARATOR_THRESHOLD_APPLIED_TO_PRIMARY"
+      },
+      {
+        "atomic": false,
+        "evidence": "The preparation probe mutates P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED, a loading/source control, not a phase-dependent control.",
+        "mutation_id": "M_V2_PHASE_CONTROL_MARKED_GLOBAL"
+      },
+      {
+        "atomic": false,
+        "evidence": "The preparation probe mutates P_PHI2_PHI3_INTERCHANGE, not a holonomy control; no frozen holonomy-control mutation definition is supplied.",
+        "mutation_id": "M_V2_HOLONOMY_CONTROL_ON_TRIVIAL_ONLY_ROW"
+      },
+      {
+        "atomic": false,
+        "evidence": "The preparation probe changes both a forbidden materiality_class field and the raw solver residual; classifier-trust precedence fires before the numerical-block/materiality-suppression premise can be tested.",
+        "mutation_id": "M_V2_MATERIALITY_SUPPLIED_AFTER_NUMERICAL_BLOCK"
+      },
+      {
+        "atomic": false,
+        "evidence": "The preparation probe adds passed=true but does not introduce the raw failure named by the mutation; a separate test covers raw failure.",
+        "mutation_id": "M_V2_SUPPLIED_PASSED_TRUE_WITH_RAW_FAILURE"
+      }
+    ],
+    "preparation_source_markers_reconstructed": {
+      "comparator_probe_direction_reversed": true,
+      "holonomy_probe_targets_interchange_control": true,
+      "materiality_probe_changes_two_premises": true,
+      "phase_probe_targets_nonphase_control": true
+    },
+    "registered_mutation_count": 23,
+    "registry_fields_present": [
+      "expected_exact_diagnostic",
+      "mutation_id",
+      "unrelated_prior_failure_forbidden"
+    ],
+    "registry_is_independently_self_describing": false,
+    "required_self_describing_fields": [
+      "expected_decision_delta",
+      "expected_exact_diagnostic",
+      "mutation_definition",
+      "mutation_id",
+      "single_premise_delta",
+      "unrelated_prior_failure_forbidden"
+    ],
+    "unique_mutation_count": 23
+  },
+  "independent_threshold_audit": {
+    "all_threshold_schemas_complete": true,
+    "all_values_sources_and_raw_reductions_reconstructed": true,
+    "reconstructed_threshold_ids": [
+      "epsilon_exchange_floor",
+      "epsilon_observable_floor",
+      "maximum_Dirac_minus_sector1_residual",
+      "maximum_Dirac_minus_sector2_residual",
+      "maximum_Dirac_plus_sector1_residual",
+      "maximum_Dirac_plus_sector2_residual",
+      "maximum_Gauss_residual",
+      "maximum_adjoint_minus_sector1_residual",
+      "maximum_adjoint_minus_sector2_residual",
+      "maximum_adjoint_plus_sector1_residual",
+      "maximum_adjoint_plus_sector2_residual",
+      "maximum_continuity_residual",
+      "maximum_energy_drift",
+      "maximum_exchange_combined_residual",
+      "maximum_exchange_longitudinal_residual",
+      "maximum_exchange_phi2_residual",
+      "maximum_exchange_phi3_residual",
+      "maximum_link_norm_error",
+      "maximum_longitudinal_Maxwell_residual",
+      "maximum_phi2_wave_residual",
+      "maximum_phi3_wave_residual",
+      "maximum_solver_residual"
+    ],
+    "threshold_count": 22
+  },
+  "lean_status_boundary": {
+    "affected_freeze_v2_build": {
+      "job_count": 144,
+      "status": "PASSED"
+    },
+    "affected_review_authority_build": {
+      "job_count": 145,
+      "status": "PASSED"
+    },
+    "historical_repository_wide_aggregate": {
+      "completed_jobs": 8441,
+      "status": "INCOMPLETE",
+      "termination": "TIMEOUT_AT_600_SECONDS",
+      "theorem_error_observed_before_timeout": false,
+      "total_jobs": 8507
+    },
+    "repository_wide_green_claim": false
+  },
+  "preserved_accepted_v2_repairs": [
+    "203-record matrix closure",
+    "twenty-two threshold reconstructions and semantics",
+    "0.8/1.5/1.5 convergence-class split",
+    "raw-output classifier trust boundary",
+    "blocked-materiality suppression",
+    "control applicability map",
+    "manifest/path/payload identity closure",
+    "clean-checkout LF custody"
+  ],
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "required_v3_corrections": [
+    "make every mutation registry entry self-describing with the exact single premise delta, exact expected diagnostic, exact expected decision delta, and explicit prerequisite/rebinding semantics",
+    "replace the comparator-threshold mutation with a probe whose direction matches its registered name",
+    "use actual phase-dependent and holonomy-dependent control fixtures, or rename the mutations to the loading and interchange controls they truly exercise",
+    "split the supplied-materiality and numerical-block probes so each changes one premise and reaches its intended precedence layer",
+    "make the supplied-pass-with-raw-failure probe actually contain an independently failing raw value while preserving the supplied favorable Boolean",
+    "make historical regeneration checks consume their version-bound environment identity instead of the mutable working .gitattributes file, and correct the freeze-v2 affected-test claim"
+  ],
+  "review_decisions": [
+    {
+      "decision_id": "freeze_v2_commit_and_twelve_paths_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "proposal_target_and_pending_verdict_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_203_records_unique_complete_and_role_qualified",
+      "passed": true
+    },
+    {
+      "decision_id": "all_fourteen_rows_uniform_axis_exact_and_parent_safe",
+      "passed": true
+    },
+    {
+      "decision_id": "all_record_input_hashes_independently_reconstructed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_two_threshold_values_sources_and_raw_reductions_reconstructed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_threshold_semantics_complete",
+      "passed": true
+    },
+    {
+      "decision_id": "Wilson_temporal_and_energy_convergence_classes_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "control_inventory_scope_and_feature_representatives_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_interaction_corners_have_row_local_forced_pressure",
+      "passed": true
+    },
+    {
+      "decision_id": "identity_forward_inverse_path_payload_contract_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "identity_collision_free_windows_safe_and_hash_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_source_closure_and_hash_custody_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_reconstructs_raw_failures_and_suppresses_blocked_materiality",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_rejects_supplied_booleans_missing_outputs_and_wrong_ids",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_three_mutations_atomic_self_describing_and_independently_reconstructible",
+      "passed": false
+    },
+    {
+      "decision_id": "materiality_gates_and_nonpromotion_boundary_exact",
+      "passed": true
+    }
+  ],
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260714_v2",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3",
+  "selected_next_target_kind": "VERSIONED_FREEZE_CORRECTION_ONLY",
+  "validation_status": {
+    "artifact_custody_hash_checks_passed": true,
+    "authority_surface_parity_passed": true,
+    "current_affected_test_count": 119,
+    "current_affected_tests_passed": true,
+    "deselected_tests": [
+      "freeze-v1::test_generated_artifacts_are_current",
+      "freeze-v2::test_generated_artifacts_are_current"
+    ],
+    "deselection_reason": "Both historical generators hash the mutable working .gitattributes file. Freeze-v2 added LF custody entries, so the v1 historical artifact-current probe became unreproducible; this review adds its own LF entries, so the v2 probe also becomes environment-stale. Committed artifact hashes remain exact.",
+    "freeze_v2_reported_99_test_claim_reproduced_after_commit": false,
+    "historical_environment_sensitive_regeneration_tests_deselected": 2,
+    "independent_review_report_regeneration_passed": true,
+    "tooling_validation_passed": true
+  },
+  "verdict": "B-BLOCKED_MUTATION_NONATOMIC"
+}
