@@ -1,0 +1,108 @@
+{
+  "captured_at_utc": "2026-07-15T03:33:54.027480Z",
+  "completion_status": "RECORD_COMPLETED_RAW_EVIDENCE_PRESERVED",
+  "control_execution_evidence": {
+    "actual_diagnostics": [
+      "DESCENDANT_ORIGIN_MISCLASSIFIED"
+    ],
+    "baseline_configuration": {
+      "canonical_thresholds_reused": false,
+      "descendant_energy_present": true,
+      "descendant_role": "GAUGE_FIELD_DESCENDANTS",
+      "exchange_sign": "ACCEPTED",
+      "failed_points_excluded": false,
+      "gamma2_block": "ACCEPTED",
+      "gamma3_block": "ACCEPTED",
+      "phi2_present": true,
+      "phi3_present": true,
+      "post_execution_selection": false,
+      "sector_count": 4,
+      "transverse_exchange_present": true
+    },
+    "expected_diagnostic": "DESCENDANT_ORIGIN_MISCLASSIFIED",
+    "feature_floor": 0.0,
+    "feature_signal": 1.0,
+    "mutated_configuration": {
+      "canonical_thresholds_reused": false,
+      "descendant_energy_present": true,
+      "descendant_role": "INVENTED_MATTER",
+      "exchange_sign": "ACCEPTED",
+      "failed_points_excluded": false,
+      "gamma2_block": "ACCEPTED",
+      "gamma3_block": "ACCEPTED",
+      "phi2_present": true,
+      "phi3_present": true,
+      "post_execution_selection": false,
+      "sector_count": 4,
+      "transverse_exchange_present": true
+    }
+  },
+  "control_observables": {
+    "alternate_diagnostic_magnitude": 0.0,
+    "expected_diagnostic_magnitude": 9.999999999999999e+299
+  },
+  "environment_identity_hash": "f9575c12d55fd78b89afae9e079a8b7d5cd4bd53ad3d27ded8c6517eb499a214",
+  "input_hash": "d02a65352de5284cabd9587335ef38d0bc3397d71cb30802353b5d999b49421d",
+  "model_class": "STATIC_GUARDRAIL_MUTATION",
+  "parent_run_or_row_id": "R00_CANONICAL",
+  "raw_observables": {
+    "model_domain_margin": 1.0,
+    "solver_error_norm": 0.0,
+    "truncation_error_norm": 1.0
+  },
+  "registered_numerical_payload": {
+    "analytic_or_eligibility_evidence": {
+      "actual_diagnostics": [
+        "DESCENDANT_ORIGIN_MISCLASSIFIED"
+      ],
+      "baseline_configuration": {
+        "canonical_thresholds_reused": false,
+        "descendant_energy_present": true,
+        "descendant_role": "GAUGE_FIELD_DESCENDANTS",
+        "exchange_sign": "ACCEPTED",
+        "failed_points_excluded": false,
+        "gamma2_block": "ACCEPTED",
+        "gamma3_block": "ACCEPTED",
+        "phi2_present": true,
+        "phi3_present": true,
+        "post_execution_selection": false,
+        "sector_count": 4,
+        "transverse_exchange_present": true
+      },
+      "expected_diagnostic": "DESCENDANT_ORIGIN_MISCLASSIFIED",
+      "feature_floor": 0.0,
+      "feature_signal": 1.0,
+      "mutated_configuration": {
+        "canonical_thresholds_reused": false,
+        "descendant_energy_present": true,
+        "descendant_role": "INVENTED_MATTER",
+        "exchange_sign": "ACCEPTED",
+        "failed_points_excluded": false,
+        "gamma2_block": "ACCEPTED",
+        "gamma3_block": "ACCEPTED",
+        "phi2_present": true,
+        "phi3_present": true,
+        "post_execution_selection": false,
+        "sector_count": 4,
+        "transverse_exchange_present": true
+      }
+    },
+    "series": {
+      "time": [
+        0.0
+      ]
+    }
+  },
+  "registered_numerical_payload_sha256": "7112b3837cf097aa280fb20fe00ad07be718c16f1eee7b2307ea4a4db2a3bdff",
+  "relative_output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_DESCENDANTS_RELABELED_INVENTED_MATTER.json",
+  "run_id": "CONTROL_NEGATIVE:N_DESCENDANTS_RELABELED_INVENTED_MATTER",
+  "run_role": "NEGATIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RUN_OUTPUT_v2",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW",
+  "scientific_row_id": "R00_CANONICAL",
+  "series": {
+    "time": [
+      0.0
+    ]
+  }
+}

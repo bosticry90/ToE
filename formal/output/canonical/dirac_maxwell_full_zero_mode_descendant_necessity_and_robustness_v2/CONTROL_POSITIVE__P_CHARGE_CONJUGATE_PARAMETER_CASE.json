@@ -1,0 +1,41 @@
+{
+  "captured_at_utc": "2026-07-15T03:33:53.989792Z",
+  "completion_status": "RECORD_COMPLETED_RAW_EVIDENCE_PRESERVED",
+  "control_execution_evidence": {
+    "numerical_witness_run_id": "R00_CANONICAL:PRIMARY_FULL"
+  },
+  "control_observables": {
+    "charge_conjugation_relation_error": 1.8295911660692887e-19
+  },
+  "environment_identity_hash": "f9575c12d55fd78b89afae9e079a8b7d5cd4bd53ad3d27ded8c6517eb499a214",
+  "input_hash": "ed4d3902000ca474646895968d9296430c801f722c8a515783567733de9f5970",
+  "model_class": "POSITIVE_CONTROL_FIXTURE",
+  "parent_run_or_row_id": "R00_CANONICAL",
+  "raw_observables": {
+    "model_domain_margin": 1.0,
+    "solver_error_norm": 0.0,
+    "truncation_error_norm": 1.0
+  },
+  "registered_numerical_payload": {
+    "analytic_or_eligibility_evidence": {
+      "numerical_witness_run_id": "R00_CANONICAL:PRIMARY_FULL"
+    },
+    "series": {
+      "time": [
+        0.0
+      ]
+    }
+  },
+  "registered_numerical_payload_sha256": "65430a3ac0340fe2dc32e47c574879051d94f67f9b45c6a2db5596bde305ad8a",
+  "relative_output_path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_CHARGE_CONJUGATE_PARAMETER_CASE.json",
+  "run_id": "CONTROL_POSITIVE:P_CHARGE_CONJUGATE_PARAMETER_CASE",
+  "run_role": "POSITIVE_CONTROL",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RUN_OUTPUT_v2",
+  "scientific_interpretation": "PENDING_INDEPENDENT_RESULT_REVIEW",
+  "scientific_row_id": "R00_CANONICAL",
+  "series": {
+    "time": [
+      0.0
+    ]
+  }
+}

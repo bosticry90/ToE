@@ -1,0 +1,829 @@
+{
+  "artifacts": {
+    "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_EXECUTION_20260714_v2.json": "8d9b4d6994409898082785f39c53942416c38c5a869bb6c9eda5ef3fa5789c0e",
+    "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-CLASSIFIER-CANDIDATE-v2.json": "dba49f02dec827026747b99c8140efae378f66f58e249fa53fc2b329bfae2f38",
+    "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+    "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a"
+  },
+  "completed_at_utc": "2026-07-15T03:33:55.659805Z",
+  "execution_start_identity": "9170c6caa6c428f6a5bf5ad2a6103c92555e89cf9d26cbec3d8476de92e76c49",
+  "record_count": 203,
+  "run_output_hashes": [
+    {
+      "run_id": "R00_CANONICAL:PRIMARY_FULL",
+      "sha256": "040d908bf53d85f76c481dd1d82171e1d63135cd196ec8a195b1d4585f2f04e3"
+    },
+    {
+      "run_id": "R00_CANONICAL:SPATIAL_N8",
+      "sha256": "ec7f5aa0b1a0bffddd66f7fe97d105e2efbaed92a296c68a660c762b16ae1dd9"
+    },
+    {
+      "run_id": "R00_CANONICAL:SPATIAL_N16",
+      "sha256": "7ebce84ab54c59d59c239cc2a4a8ea8c223fa98baa103177e104668470850247"
+    },
+    {
+      "run_id": "R00_CANONICAL:SPATIAL_N32",
+      "sha256": "3389fd83ae31d383d743bf124a1f7781305ebb47831c2b8294b75402b073eca8"
+    },
+    {
+      "run_id": "R00_CANONICAL:TEMPORAL_DT0P00625",
+      "sha256": "6df2727a9b755dff733c23e5811a46484c05d5e804fc71e5da10ee738bce3b41"
+    },
+    {
+      "run_id": "R00_CANONICAL:TEMPORAL_DT0P003125",
+      "sha256": "be03a4dc7499440090a44d050b8e8fd59da4ca0d392d753650fcb9880fee0627"
+    },
+    {
+      "run_id": "R00_CANONICAL:TEMPORAL_DT0P0015625",
+      "sha256": "7b84443f1df0af130e9e027ac97323f9acef63a345a0925a86dd12c867cececc"
+    },
+    {
+      "run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+      "sha256": "a7035dbc79b8203b48fc38e7ee238be55afa8a074bd0c79c8ff76dc55cb7806a"
+    },
+    {
+      "run_id": "R00_CANONICAL:SOLVER_TOL1eM10",
+      "sha256": "744002eb995a0844ba05ff8751f0f715f2b2beae88460b1fa2df347695bd3e99"
+    },
+    {
+      "run_id": "R00_CANONICAL:SOLVER_TOL1eM12",
+      "sha256": "b36b4c07a759907fa37ad5f6ff9c68e04a9366b58332467372948002f884e6a1"
+    },
+    {
+      "run_id": "R00_CANONICAL:DETERMINISTIC_A",
+      "sha256": "d8de43046d193b90bfefc71aa65c8ca8098a10ecbf5eba7947339c6519d396c7"
+    },
+    {
+      "run_id": "R00_CANONICAL:DETERMINISTIC_B",
+      "sha256": "e509b21dbdb5ec78116bc4addcf70ed738c4a7cee82233c6e7633b8772abd68b"
+    },
+    {
+      "run_id": "R00_CANONICAL:FORCED_COMPARATOR",
+      "sha256": "75a4fc85a33ea266db31e430f5790c68e5f069b182490ffca8d331f8653ea6f8"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:PRIMARY_FULL",
+      "sha256": "344598d1d70400feed596249f56530151fbf971880b2cb5ab14485314230fb7a"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:SPATIAL_N8",
+      "sha256": "88f9d7749487a4699207263bb4855da77eedd047683715357c373b39af40fb62"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:SPATIAL_N16",
+      "sha256": "3f014979ff12b85fc8febf00db9513286da70eb473ed436fdf134e55a7b8ca3f"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:SPATIAL_N32",
+      "sha256": "5e7c161f8c3a143e8ac0a01d363a4606f8fcc9de148fb1d726a1571272a6efdd"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:TEMPORAL_DT0P00625",
+      "sha256": "add07b1026bb7b2d691986cebc8714b44603cac760ab8b7ad61f29640c3076e6"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:TEMPORAL_DT0P003125",
+      "sha256": "9ad98e54247fc6aa19fa85bdb9e2d222d6b15b4e8f7f3e260ab60197a861e219"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:TEMPORAL_DT0P0015625",
+      "sha256": "f78d0dc0185e8c513b4adf3c7e32242a889982441a1e7436f00019895e0f2098"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+      "sha256": "5da2445de0634bb8a55086c883a7839f567f37ea38148f7756d1c6f1dea247ba"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:SOLVER_TOL1eM10",
+      "sha256": "1223e9e3cb6c3242341456e98adc2644c299e8a1ecd19daba1c71f18f573a0ec"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:SOLVER_TOL1eM12",
+      "sha256": "4af44b58c6babcd72063232921dda42d974e6e873bc6c1c3664df0ed943af65e"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:DETERMINISTIC_A",
+      "sha256": "d7ea71cdaf0e00c6cb805c7089deb263416c1e3fe6b979088a37ede19a131c5c"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:DETERMINISTIC_B",
+      "sha256": "77bdd206b9b2d43aedf6524bda8da06eff5b90685d3097357b112d33355c5d18"
+    },
+    {
+      "run_id": "R01_ETA_WEAK:FORCED_COMPARATOR",
+      "sha256": "852bd78149e89120de710963300d22b9b2347ce36f038018add1276f793a0628"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:PRIMARY_FULL",
+      "sha256": "8e18f372f7dc2341f98a33f2c3cda85f19a38486c18c1f215e71813b33d4f1f1"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:SPATIAL_N8",
+      "sha256": "ea67a6ecbb44b93fd8d666a03a0231ea6363b9483685b37a3ebb0044c252ece5"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:SPATIAL_N16",
+      "sha256": "5424d01f36acd22b6d2797863cbed2fd934f3661fcd7a0562271df4e7fb65e23"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:SPATIAL_N32",
+      "sha256": "314bdbba804eecf99343cd4eca96f13d2649afc161024f910b86f074975944c3"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:TEMPORAL_DT0P00625",
+      "sha256": "6e6c1f32d993f9a8b79ee7df3ea950584008f4f6282b2e0f16435e9dd690ba82"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:TEMPORAL_DT0P003125",
+      "sha256": "d04c6289e5c1a5badcff9042e3fd9595f81fe640fcff9087d4d809f1f56b2019"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:TEMPORAL_DT0P0015625",
+      "sha256": "36397bd9af8d7dafad7bcde4cf3728e7ea25406ff54455d32ec7db3382f8cda7"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+      "sha256": "74fe80f33e63ec218a69ac8b126cbb6330b3eaa3dfa9f3c301affd0f67017a20"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:SOLVER_TOL1eM10",
+      "sha256": "9ca00e756785aa0667bce4a6958e45154b1bf7d9d12280949944f8bb92476983"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:SOLVER_TOL1eM12",
+      "sha256": "da11750ae24ed507d670638ed0c08e5bbccc571835cd47506fc6455b81914e06"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:DETERMINISTIC_A",
+      "sha256": "7e2066b0f01a653b78c032b00cfe44916d6c94a5fe5c4f1381ac087baf83cdf2"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:DETERMINISTIC_B",
+      "sha256": "6f5e279ed1c5366518374fec4500f573b0e6ef1b87cd8afa4ade57b577700125"
+    },
+    {
+      "run_id": "R02_ETA_STRONG:FORCED_COMPARATOR",
+      "sha256": "9bf6ecccd3b268ec56cd9c7672389c065dbe1da9a0f3fbaf7ee7ca4147887d71"
+    },
+    {
+      "run_id": "R03_F_ZERO:PRIMARY_FULL",
+      "sha256": "0d0139a8dfff523f1395bec95a0d676f03fdff6394657cb0ce2274a34fa07eb3"
+    },
+    {
+      "run_id": "R03_F_ZERO:SPATIAL_N8",
+      "sha256": "45fe5bccd44973102ce96a2ebd9a6c2e6cc551ab5d9f69773652d90754109566"
+    },
+    {
+      "run_id": "R03_F_ZERO:SPATIAL_N16",
+      "sha256": "55347c86a24fcbf68e30e1f498f6f6e9018aec1e96a4ba003e7a94a5284ea977"
+    },
+    {
+      "run_id": "R03_F_ZERO:SPATIAL_N32",
+      "sha256": "912c09db179661cec4eefe624e97f0093989ee44169244bb3d5b86e4163a5f65"
+    },
+    {
+      "run_id": "R03_F_ZERO:TEMPORAL_DT0P00625",
+      "sha256": "6d699d5d645940a71c1ccde2cdf149d3ee8e7d31bf54fc7369ff662bc280aeb4"
+    },
+    {
+      "run_id": "R03_F_ZERO:TEMPORAL_DT0P003125",
+      "sha256": "9a70ca5f0f0b28f4e32636fd3a92c05b045fe99c9271e5d5e8f46756352e9a3e"
+    },
+    {
+      "run_id": "R03_F_ZERO:TEMPORAL_DT0P0015625",
+      "sha256": "77fbf816f5e08469f60a3b594f7f409de3586a15af81999c90a7de4e8455168b"
+    },
+    {
+      "run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+      "sha256": "24f51cf19a63a85a0ad91478791d1dcf7b6b96a4e47cfc66deebc4677ece3c33"
+    },
+    {
+      "run_id": "R03_F_ZERO:SOLVER_TOL1eM10",
+      "sha256": "10e869b3deefd0b373412454e379055cd67935ad5f454074c03f84316a9ee568"
+    },
+    {
+      "run_id": "R03_F_ZERO:SOLVER_TOL1eM12",
+      "sha256": "b990a2d2acf2c033416a2c0449bcd464dcc40a7c9e00bdc6b4a425253ec47cd5"
+    },
+    {
+      "run_id": "R03_F_ZERO:DETERMINISTIC_A",
+      "sha256": "89cad5d1202dfd4ef51697cc759ab66b4d095ef839b4a62e83fa49889fcb69f5"
+    },
+    {
+      "run_id": "R03_F_ZERO:DETERMINISTIC_B",
+      "sha256": "ae9745bf3e19df655474240bb475e5054d0e0414f9564591bc91decba0ff30ed"
+    },
+    {
+      "run_id": "R03_F_ZERO:FORCED_COMPARATOR",
+      "sha256": "ddb7c66780619aed4c186fcf47a2d311258a200937a1c50243b310a5d4590b02"
+    },
+    {
+      "run_id": "R04_F_LOW:PRIMARY_FULL",
+      "sha256": "f11c39497a36e54bb9b2783d5dd72aa4f3db5cadbfbfa3263bd7974353afc6f4"
+    },
+    {
+      "run_id": "R04_F_LOW:SPATIAL_N8",
+      "sha256": "c21f89ebe82407ec93a48a70cb733b4d415eb204b3bb507f2d3ac590089819d6"
+    },
+    {
+      "run_id": "R04_F_LOW:SPATIAL_N16",
+      "sha256": "7ea16476bc4c475c06717b0c9e5f50b56cc964eca87e6bd6af284cd04e756bce"
+    },
+    {
+      "run_id": "R04_F_LOW:SPATIAL_N32",
+      "sha256": "580af5de71a91b6105b2e436a91ac4f2009c7118d42350a2b6856c144b9f3dd7"
+    },
+    {
+      "run_id": "R04_F_LOW:TEMPORAL_DT0P00625",
+      "sha256": "bf4aea0ef8a5184b53515465727aa50055b1d1aa6398e83c5f07d9a3c81b240e"
+    },
+    {
+      "run_id": "R04_F_LOW:TEMPORAL_DT0P003125",
+      "sha256": "3512dbd2f14062aae78cd7d2314d49827c97a3d921b8ae93f83be950b2cda58e"
+    },
+    {
+      "run_id": "R04_F_LOW:TEMPORAL_DT0P0015625",
+      "sha256": "14a573947c75f4a3af22d5738811add6cf1d2a65827994af300d2503380f6a65"
+    },
+    {
+      "run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+      "sha256": "eb9c4dbde59786e91d658b59bfd79e13d6af3ab5191a90c3c0fe974465d2add7"
+    },
+    {
+      "run_id": "R04_F_LOW:SOLVER_TOL1eM10",
+      "sha256": "86048e971de64927ebacefc5c2ad20b798acf33a253f9a30afaebb88abb0f51d"
+    },
+    {
+      "run_id": "R04_F_LOW:SOLVER_TOL1eM12",
+      "sha256": "99564ef1af5a3f93679b9213f9e621d6c844d0391281f059aed6a693bbb286e9"
+    },
+    {
+      "run_id": "R04_F_LOW:DETERMINISTIC_A",
+      "sha256": "f6b866690eebff9540c48e87e513f924c15c11551dc9c41b37d42fcded2793cb"
+    },
+    {
+      "run_id": "R04_F_LOW:DETERMINISTIC_B",
+      "sha256": "fa6156d1ab8388967e54f9e23964cbbc07e08ec4e3fd40a6391fdf6564cbbc4c"
+    },
+    {
+      "run_id": "R04_F_LOW:FORCED_COMPARATOR",
+      "sha256": "0b23abcc563920296415b9bf0f2ed0c2b6249874c5f73b163cabaaac1a6743d3"
+    },
+    {
+      "run_id": "R05_F_HIGH:PRIMARY_FULL",
+      "sha256": "8f6a22ead675368afac5f7070d5f1cb4b6d12c3d2335fb1c229d3f1691737ac7"
+    },
+    {
+      "run_id": "R05_F_HIGH:SPATIAL_N8",
+      "sha256": "e0e017617b01bbf374db675cc8116336ebd6f15e94027aa723514bcd58932cd7"
+    },
+    {
+      "run_id": "R05_F_HIGH:SPATIAL_N16",
+      "sha256": "44b97365b65021d36bf6ed699051d7a81b7e97c9492f5e17dc0fdfdf8d8c2753"
+    },
+    {
+      "run_id": "R05_F_HIGH:SPATIAL_N32",
+      "sha256": "e7571763119eb8d0eec850b72adbd962c1730a52c176b77aba44ad6af43a73ec"
+    },
+    {
+      "run_id": "R05_F_HIGH:TEMPORAL_DT0P00625",
+      "sha256": "51b8e73ac5955ff294de414d3f08160ab21c30d352e7d67ec510bc2556cee5a0"
+    },
+    {
+      "run_id": "R05_F_HIGH:TEMPORAL_DT0P003125",
+      "sha256": "f8c3be604976f1484f50ce0a90c6776d9a53111b420044b2419d7ca75b4875fb"
+    },
+    {
+      "run_id": "R05_F_HIGH:TEMPORAL_DT0P0015625",
+      "sha256": "6ff7777d3da8e630144db740c77ee07e4b204ee2894403b6424256a840d8e8a2"
+    },
+    {
+      "run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+      "sha256": "6a4c999b3ef68154ea49dbe1d6784596698c5b528d8c379cca0d9dc67a523090"
+    },
+    {
+      "run_id": "R05_F_HIGH:SOLVER_TOL1eM10",
+      "sha256": "80295594720efdc8fccd18a7ea48055793e8be88d590bd14b86c794ddb899b64"
+    },
+    {
+      "run_id": "R05_F_HIGH:SOLVER_TOL1eM12",
+      "sha256": "2c56a0358b48a66ee6982068ba7fbd6d3c1a2121918313a41f5d89e40684f24e"
+    },
+    {
+      "run_id": "R05_F_HIGH:DETERMINISTIC_A",
+      "sha256": "aed0deb364e34f639e01fd9710815dc7008c1eeb383783109bf4a87cde0b8eae"
+    },
+    {
+      "run_id": "R05_F_HIGH:DETERMINISTIC_B",
+      "sha256": "a063cf60cb07f10e5f52658597a79357c6f1c62f2212f3cf2d0c347189ec4b71"
+    },
+    {
+      "run_id": "R05_F_HIGH:FORCED_COMPARATOR",
+      "sha256": "35db55d112ade52b9f8991f6041599ba4e2b0403cc1ace9c9d1edbca98f4b809"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:PRIMARY_FULL",
+      "sha256": "e828f5ef7d63e8bf3875a47326996e92faa5f333aa9c09dc6c33d9a6dfda022f"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:SPATIAL_N8",
+      "sha256": "db872a239db33810e9e4310235f924c2e346a94230af8ddd0ca142a47a5b9a1a"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:SPATIAL_N16",
+      "sha256": "226e25c3accbbbb907079720ee38bd66922e0ce5af73a3f686b8c05a7f59091f"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:SPATIAL_N32",
+      "sha256": "6443852234aa475868b005c6b0067a78a865e458baadbef4212e81ca6510f3e0"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:TEMPORAL_DT0P00625",
+      "sha256": "7adfb35f6adaba7aad0915a0400c4591703412be116bb6168c74a0554a7940e7"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:TEMPORAL_DT0P003125",
+      "sha256": "aa8f341c49d7bb6d13dc1b7a3b8bdc42e1911a8c4274c2fba4c52e2a57897bd8"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:TEMPORAL_DT0P0015625",
+      "sha256": "2a97f9baf0e8f8e375d09a21cd0409e83366f5ae98d1332f7b13f7d0dbdc3953"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM08",
+      "sha256": "bdbb8184fab9027883ca63d42a7959b528082d6d66e93f145c01a083a31b508c"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM10",
+      "sha256": "80cfd4d1c1546eada8c827d4ab7de2e9644c8862d90c2e5437bfded478f1fb21"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM12",
+      "sha256": "f8446aa3ca365cb7ac99b29bba3b5403c137494146c27ccea6049b32330b82bc"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:DETERMINISTIC_A",
+      "sha256": "71eb87b30dbd1313428b4e180cf02693e0d4b4367c28cdd9b13fb07ad1bedf0d"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:DETERMINISTIC_B",
+      "sha256": "533829f5afcd00dc3a935ed91bc189ec2f832217d7a3ff204f6615ee3a3bb7be"
+    },
+    {
+      "run_id": "R06_THETA_TRIVIAL:FORCED_COMPARATOR",
+      "sha256": "6295ed532e44b9286fb91ccdad2c1e8031bb0b2975c42749158dc4fc37cee8e2"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:PRIMARY_FULL",
+      "sha256": "d13f68a2553969d7fa9efc42574f1980db64123140fe07fb153a6607fe4b5f81"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:SPATIAL_N8",
+      "sha256": "90a09d8f2a8d0f3e70ff3e18f7846cb39438b70c441fdbe09d67d7e1af0ace7b"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:SPATIAL_N16",
+      "sha256": "66c236c5cc1ce774aabbcb866e0ad9332292f39878628f39377f9f68a2c157bf"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:SPATIAL_N32",
+      "sha256": "04ddc37eb4b57892223f3612956352ba8bc9c475fc95500a0723fdf03c60dbdb"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:TEMPORAL_DT0P00625",
+      "sha256": "430e3482b5511eb3c8262064a4e54f0f501a3b89d0ece0d77e6db2e7756f5c75"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:TEMPORAL_DT0P003125",
+      "sha256": "1144be4cca04f26bab457901936764b134ba51d25d7fcfeebd626ec5513d43cc"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:TEMPORAL_DT0P0015625",
+      "sha256": "9d5ff9ccab07276bf951dbbc738da25705ffa098b220739a3f32b34fe9b620d4"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM08",
+      "sha256": "ed64152a34f26c0fd042d97298557913c30111122959d690b1d71d60a002cb92"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM10",
+      "sha256": "9f71a7b55bf218ceb4a557893d825222142d890e949314742026f474f03125f4"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM12",
+      "sha256": "c0a3898c9162fc4d70092af423ba39029cd940ce535a0284b8c5c2489d504558"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:DETERMINISTIC_A",
+      "sha256": "e56472bd1c3463e4b392fbcb31c1cc4d050620096d1bb3dca3f450b9ea67db3a"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:DETERMINISTIC_B",
+      "sha256": "cfd33f57b1ae608731219b6cec302964506bb418cf4cf07ecf29458c3c776524"
+    },
+    {
+      "run_id": "R07_THETA_PARTNER:FORCED_COMPARATOR",
+      "sha256": "8326465d5faaa1c09cfc5cd10fc2850c7af0f5931f684e71ac0f1e1fa750056a"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:PRIMARY_FULL",
+      "sha256": "eaf00da062086b5e477001eed58d36f915ab9e8c25698ed03959e6ec8286f80f"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:SPATIAL_N8",
+      "sha256": "7ff227f839c74c33b7f63d3bbda6b7c5bfe06839bbb217e17635e1814c664dff"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:SPATIAL_N16",
+      "sha256": "83d310c41c0045fa37804dbd83425a9f0ebad98fd56190b0073372bec48c8b7f"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:SPATIAL_N32",
+      "sha256": "8a1269fcc9ac674c34297d7d0c9d652ffd0a878b2b66e91542a4f8e02e2203df"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:TEMPORAL_DT0P00625",
+      "sha256": "4835ea7e150ebd363507c8fc92148825757ad6210cbeca0428697b8ab2fdc3d4"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:TEMPORAL_DT0P003125",
+      "sha256": "ad728d57d4450df501ad419c15270ae11d0dbbb8b311b11d3c678fd111586e0e"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:TEMPORAL_DT0P0015625",
+      "sha256": "5d525c91ad97ef4e49d2f01cc2137f066add87e31f3dbfd1398a12b280b2940d"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+      "sha256": "2e1a65bb2197c1f90faa17e67f88f633a9aa3c3fe8ead1dd50082084f9d2ef6d"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM10",
+      "sha256": "c0eedc4e8b86c0e3455ac18354f292e8db73a87743a366f7cdc5c66ce23fd6dc"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM12",
+      "sha256": "916ad84b8cfa46f2bb91b8424d2e2ed54c4df7defdb6224df183272a80c5d1f7"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:DETERMINISTIC_A",
+      "sha256": "017da22966a855a7c3a11c6b9a6a75e25a2f8019cbbdb7b10ce75a4ffee1ce0f"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:DETERMINISTIC_B",
+      "sha256": "5313147e3d0ee7e9a8006fc38dd0b17a8e7a1dca863e456436d3bb1ca605219d"
+    },
+    {
+      "run_id": "R08_PHASE_POSITIVE:FORCED_COMPARATOR",
+      "sha256": "d3a248efb20f52c15fa41f138e7671c5167474671c8cba17d2470d149fad64db"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:PRIMARY_FULL",
+      "sha256": "dd1296e0eeca08b3f84823ff8c69f89be046257218d2b591b559cb7906a0c2b0"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:SPATIAL_N8",
+      "sha256": "564c1efe5beff77f609ffb8ee65ad98941d736cf8789379124056deb5f41a1f1"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:SPATIAL_N16",
+      "sha256": "847acfd93d9436c4d2f87d1db2c88d7596eca1da2c04420e30aa6f1ad14d32d4"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:SPATIAL_N32",
+      "sha256": "eb701e636767be77c83fc7a3a915a5058a33e713a7d0cb2e2c5d37e32ecb1510"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:TEMPORAL_DT0P00625",
+      "sha256": "673b383b0a60e609a27ef8d4036b8f339399348ec169bd280251d8bc270fb23f"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:TEMPORAL_DT0P003125",
+      "sha256": "59f2db1ca5172ebe77b2bf26e50ac39cf8dad64d0817ac8641d01f6d299bdc40"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:TEMPORAL_DT0P0015625",
+      "sha256": "193480d3c0894266129201913c31149702d25e81942081dadc3c658f6699733c"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+      "sha256": "51f2a20e116105270795b0e0d1e47b87ba90acdd3320470e7fc233b48fb3c425"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM10",
+      "sha256": "16aa089bd9a9d2b122ec5203441a20e10c5f6fc59b171cda0880c2b31042a92c"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM12",
+      "sha256": "4a9b5ca1464490579c1229de7497cf4bb8a7ac1395c2b3665906de3d2e85210d"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:DETERMINISTIC_A",
+      "sha256": "8e8595d4ed1bf338255070b1a2491a879d781b361eadf7ce4dade96e1bb95330"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:DETERMINISTIC_B",
+      "sha256": "56869266e2b2139250b36a42c5b67fd5ec068ed911746b26c2f4d37f4425f7ef"
+    },
+    {
+      "run_id": "R09_PHASE_NEGATIVE:FORCED_COMPARATOR",
+      "sha256": "682584c91ed26ba83b21e118bfb0ea3f042a130db2de63270bfa828b02ac4d32"
+    },
+    {
+      "run_id": "R10_MU_HIGH:PRIMARY_FULL",
+      "sha256": "850878c2edfc4a1733532fa90fa8164b2e05cd16e2fb6a9b3883bee6ebccf6a1"
+    },
+    {
+      "run_id": "R10_MU_HIGH:SPATIAL_N8",
+      "sha256": "1f7e1b04758c811608a44a9c7b07c73662c500607224e976f54cfbb630f704cc"
+    },
+    {
+      "run_id": "R10_MU_HIGH:SPATIAL_N16",
+      "sha256": "0299efbf77ee4fbef21c058a0c690a4efe5d51a21f4905f582e2f0fdeac4f47e"
+    },
+    {
+      "run_id": "R10_MU_HIGH:SPATIAL_N32",
+      "sha256": "30d70ed6c7ea3d9d6941a90d5725fc79ae9dc04c4bad50d67cde5a3d6d824350"
+    },
+    {
+      "run_id": "R10_MU_HIGH:TEMPORAL_DT0P00625",
+      "sha256": "54286fa2e0bc8e636fc2ca5746bc3bb51da1a2e706118a122bd0da03df3af3e6"
+    },
+    {
+      "run_id": "R10_MU_HIGH:TEMPORAL_DT0P003125",
+      "sha256": "0df03dff44e89ae2a6b423d77b8130f14b4a65853af1476138a212ae8a4d9f8c"
+    },
+    {
+      "run_id": "R10_MU_HIGH:TEMPORAL_DT0P0015625",
+      "sha256": "30dd51d3204643c3fe8523a7bfb4984c9ac90927c1de0a1dbf1792fe187a554a"
+    },
+    {
+      "run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+      "sha256": "4a396cc3e636e626e562d22307416796eda2dcc1aa5aaa59d5c27bd0c59e8fd1"
+    },
+    {
+      "run_id": "R10_MU_HIGH:SOLVER_TOL1eM10",
+      "sha256": "da3229adb74530b2d8c108c60f9bbdba65d0b16c53bc1fd8ee6b55be8f8168b9"
+    },
+    {
+      "run_id": "R10_MU_HIGH:SOLVER_TOL1eM12",
+      "sha256": "0415d19722eb59c0b98507eb0a0f9ec07b81a00c72e558c01099e6beb93e9448"
+    },
+    {
+      "run_id": "R10_MU_HIGH:DETERMINISTIC_A",
+      "sha256": "afd40a81e3d7a90f8d4fb077d37aa2b17bdbcb0c26989c03b172b21a463c33a8"
+    },
+    {
+      "run_id": "R10_MU_HIGH:DETERMINISTIC_B",
+      "sha256": "e130609b32c89855704e61962a31a83f83b2eeb2197463c368f124f242bbf6c3"
+    },
+    {
+      "run_id": "R10_MU_HIGH:FORCED_COMPARATOR",
+      "sha256": "1badeae97b97242c22123303a42b12a5f01792acd3727aa2681ab75f8a6e37b2"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:PRIMARY_FULL",
+      "sha256": "df2c765ac6a749f66283dc46de5a4eee44a650c98c239f51762dd95d5e777355"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:SPATIAL_N8",
+      "sha256": "79e8a759accb5597a323b2eacc8624dd365c8807b271656391cff894f101afed"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:SPATIAL_N16",
+      "sha256": "9e7f1e0ca39f5b983fc868b2df65109f38f6206c51f926d5d4de159817db54f5"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:SPATIAL_N32",
+      "sha256": "f3a78c993983e912a42c0bdd6a512baaeb9b362a0e42848a914df65f19a6884e"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:TEMPORAL_DT0P00625",
+      "sha256": "cfa73ce08dfe584ead5b2dd837421cdb6cc502274edb800209f60b99f7afe9c8"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:TEMPORAL_DT0P003125",
+      "sha256": "a2a09115796b61483d6340ef91cb7a15b6c3fa68a1abf98589a0ccb85277450c"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:TEMPORAL_DT0P0015625",
+      "sha256": "3347597d1844d28626b2a042ef8814502a59f96f081716d025cfd13feaa70db9"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+      "sha256": "238086dc3f5afeabd9f9086b41746e46c4613b1aada030c0f5242f3e2bbd6190"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM10",
+      "sha256": "e661de95e4f77393e38affa5e78223a3be8345abc47334358872947b028dd705"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM12",
+      "sha256": "a6ab77426ad67bea5e810615183a1f06c5648768469474f7f0329c2afcd6cef1"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:DETERMINISTIC_A",
+      "sha256": "15a99ab8e3b4197579b4ec536f087d90fa12a76b96005ab690c6e882f3ccd649"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:DETERMINISTIC_B",
+      "sha256": "4dfb78f683ca2e9f6b4594ce4a25674152e4cef3165cd0b4e39976195475737f"
+    },
+    {
+      "run_id": "R11_CORNER_WEAK_HIGH:FORCED_COMPARATOR",
+      "sha256": "820db11524e974abd716560fe777ad676c48a2b657100e63843f39b4beac926c"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:PRIMARY_FULL",
+      "sha256": "9a1a1b97c20f237dbf9cdd92df66c10254c7aa9cbcc6457509d290d0ae281772"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:SPATIAL_N8",
+      "sha256": "ce93d637f73ed301875d49b5298762e81ce634d968dbf9d859e92e663170294f"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:SPATIAL_N16",
+      "sha256": "02eb4fd9b4598060fb98dc7f27f0b5bce0c38f426f9537708bd935cc345cd775"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:SPATIAL_N32",
+      "sha256": "91464ba83c24bce16d90c5ba3133ed4366beeb61572dd8b0f1a77b1f9b875bd2"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:TEMPORAL_DT0P00625",
+      "sha256": "89021ad01562bcb9c346a8cdb580dc14d03074bbc95ba27f60b166960387914f"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:TEMPORAL_DT0P003125",
+      "sha256": "01e3f5752e724035d14e3b54927d2c32d8d349220734b4a4056b63b2159c03c1"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:TEMPORAL_DT0P0015625",
+      "sha256": "e474b8864e6dc99cd33ee38b0751ee0c9427e01956695cabc8a342c7b0ab77cd"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+      "sha256": "8bc5128ec7f6eb373f1db03966874b17487e656365fe5a3aedc24739927589c9"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM10",
+      "sha256": "06429f32d603f9781c0437c53465ff40b67ed9869ef6f1c6a3f53ea2fc486920"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM12",
+      "sha256": "c2b42f2d1b241b377f94ff9b5eee08edb46d01be6f3ed599c046d6b6a00b297a"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:DETERMINISTIC_A",
+      "sha256": "b7ead3dbd712670b5dd977406422fbb9c9f7b58fa8177ad1b15ad80819941866"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:DETERMINISTIC_B",
+      "sha256": "02dfe3f05f4ed49c59d8c887d61d167f66bbe40d466b3b884c0f3872f73f1819"
+    },
+    {
+      "run_id": "R12_CORNER_STRONG_ZERO:FORCED_COMPARATOR",
+      "sha256": "61dc84ab362df01155f6975742005a307eee4cc5684ee56a825f12b2780b1726"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:PRIMARY_FULL",
+      "sha256": "c2b547e3133e15c74c00a807136f878836f9626e32793a1b74ce440037da4c62"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:SPATIAL_N8",
+      "sha256": "d76e7ead85118aea91446a9b59c02cef8ad616da3fbdd45837ef668cbdeabe66"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:SPATIAL_N16",
+      "sha256": "9330618297800c1343c5d75052f41b41585c5e8b310d48a6211bec9cc8aeb049"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:SPATIAL_N32",
+      "sha256": "09c7d759a409296821335ca74b365d627b27b5234a4d12a23d505e96315be1b7"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:TEMPORAL_DT0P00625",
+      "sha256": "ceb199f06d70d4348a2890e6c49a797fc985583bf7b71f671dbffa81e18c25b6"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:TEMPORAL_DT0P003125",
+      "sha256": "ea11da6b9aae8946cd0e9ef0c02fa3f783083673e7f92f35784d2d9c448638e2"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:TEMPORAL_DT0P0015625",
+      "sha256": "fc8cb2cb14e715f2bc67b3961fbd14157c34ff9d4964584e44b5b0dc3eb2d9c8"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+      "sha256": "00f45cde686c90c6bc28413df8257874c994e7bd8a6d64d10357c6bd57d22e0f"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM10",
+      "sha256": "027cc2c1d9fd9ecda949bf8c9161954faafa4d8710ddc7bf4477c5242c582249"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+      "sha256": "cc4a33e76c9cf640c207a9c1ce1875c0c10d0e7f9ed9cab3ffa1807bb6148ee5"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:DETERMINISTIC_A",
+      "sha256": "193d37abf3aab97babc7d61a29bde9c9fff6ee759f19ec9dad1b0c0caf79059d"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:DETERMINISTIC_B",
+      "sha256": "5a38e6f13077a8d05d17674e0e45d83dda3b99c6e9bfeebecfabbd40f53fec7d"
+    },
+    {
+      "run_id": "R13_CORNER_STRONG_LOW:FORCED_COMPARATOR",
+      "sha256": "318d315b8d9908757c2b1f4b5db5e5b6d22182c71816ef5450b4779c93c24e05"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_CANONICAL_ACCEPTED_RESULT_UNCHANGED",
+      "sha256": "36b7b96f7af824d373347f7900bb582a1703c161125e0d4f078d429a07a9f808"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_CHARGE_CONJUGATE_PARAMETER_CASE",
+      "sha256": "5091792e4491ced58b738a6f1a305dfe288021b83cb2a8b074473be53bf7307a"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_ANALYTIC_INVARIANT_DESCENDANT_FREE",
+      "sha256": "78e8de6d52636c3e2997ee956c57b74cc3246e49ea38c691da0616fb664c2e12"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED",
+      "sha256": "64d00b78a3f458774fbc8a552087d3d565913621adc47ad36af5f1f5ddfad7e4"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_INDEPENDENT_PHI2_EXCITATION",
+      "sha256": "627c028b1aeb6fca0ccf42c8e52bec3f8d5a438cbaf03dd5d8b96c107c0a0659"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_INDEPENDENT_PHI3_EXCITATION",
+      "sha256": "c3c19917f95cff1fb435f30362806f0d6f470c2fe9bf06628bbfa825b965a405"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_PHI2_PHI3_INTERCHANGE",
+      "sha256": "0a513ab3ce572878c8f89d653e1d6ad7175cb9b9e70393b593464d6add2c293e"
+    },
+    {
+      "run_id": "CONTROL_POSITIVE:P_WEAK_COUPLING_APPROACH",
+      "sha256": "56d131d8e70a735df0d20303fa58914a566aa1358e8ee2307764ad060671bc43"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_FORCE_BOTH_DESCENDANTS_ZERO_WITH_SOURCE",
+      "sha256": "bc8a912f2753c86a8614f8a1180b7874836cd8b9a048845b3a0226237a425b70"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_DROP_ONLY_PHI2",
+      "sha256": "5f62c496b89d7585ed2c9a2c9ea4c344907b1d54749b34d3832ceaa4644ef2af"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_DROP_ONLY_PHI3",
+      "sha256": "207e51c15793794135050bc438059511e354ee6529ee218b108f1d4a29731d13"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_OMIT_DESCENDANT_ENERGY",
+      "sha256": "1c8039c4d2760d8b0fab9e9e51884aa3a10f64d7617e065a47d56ea1ede24bbf"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_OMIT_TRANSVERSE_EXCHANGE_CHANNEL",
+      "sha256": "2d95ff83d196aac727623a59cabe30fffa176bc201c8e52e26c61d254f9907f0"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_REVERSE_TRANSVERSE_EXCHANGE_SIGN",
+      "sha256": "bf5f0680192cf30a4bf904f91e516155ff4752d040a5b0b4430d9668ffea54be"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_WRONG_GAMMA2_BLOCK",
+      "sha256": "dc3b6599ffb0b00c6ebb7f922324fc0def1b9380e19309e16c2c84752da66b06"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_WRONG_GAMMA3_BLOCK",
+      "sha256": "bbf9cfab9019e666d484fc94f2945bfe8ecb82798ba9399895a3f8aef2f87ec0"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_SUPPRESS_SECTOR_MULTIPLICITY",
+      "sha256": "3cd43c72299c1ababc66a2ca4ab4bf092d026a880b1c0e27c544dbdd73f0923a"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_DESCENDANTS_RELABELED_INVENTED_MATTER",
+      "sha256": "c01f13b7780287929bf2f0804db66049c9a5fcd6f27ca0519d470d9ad6639dc1"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_CANONICAL_THRESHOLDS_REUSED_UNSCALED",
+      "sha256": "ac65a75fb8f7b328e90af1a49d4d13b4244d1b4998822cb9983167f729ea40cc"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_POST_EXECUTION_FAVORABLE_POINT_SELECTION",
+      "sha256": "7de4ad56618fe38e7de9a36a99252cdff247f0cba0907106c901ed87857c3f41"
+    },
+    {
+      "run_id": "CONTROL_NEGATIVE:N_FAILED_POINTS_EXCLUDED_FROM_DOMAIN",
+      "sha256": "75823adf73e8429aab0ff0377c3454f2ec49be71341372a36d1044abf66db030"
+    }
+  ],
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_EXECUTION_TERMINAL_v2",
+  "scientific_verdict_awarded": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v2_result",
+  "terminal_state": "COMPLETE_PENDING_INDEPENDENT_RESULT_REVIEW"
+}

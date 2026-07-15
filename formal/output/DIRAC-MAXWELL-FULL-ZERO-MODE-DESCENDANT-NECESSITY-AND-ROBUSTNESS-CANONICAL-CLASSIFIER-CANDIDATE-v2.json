@@ -1,0 +1,98 @@
+{
+  "candidate_result_not_project_authority": {
+    "classifier_id": "DM_ROBUSTNESS_CANONICAL_RESULT_CLASSIFIER_v2",
+    "descendant_significance_status": "NOT_EVALUATED_NUMERICAL_BLOCK",
+    "execution_status": "CLASSIFIED_BLOCKED",
+    "failure_diagnostics": {
+      "R13_CORNER_STRONG_LOW": [
+        "NUMERICALLY_BLOCKED:CONSTRAINT",
+        "NUMERICALLY_BLOCKED:EQUATION_OR_EXCHANGE_RESIDUAL"
+      ]
+    },
+    "numerically_blocked_rows": [
+      "R13_CORNER_STRONG_LOW"
+    ],
+    "observed_convergence_orders": {
+      "R00_CANONICAL": {
+        "minimum_energy_error_order": 1.7981140562603486,
+        "minimum_spatial_descendant_order": 2.061148163483984,
+        "minimum_temporal_descendant_order": 1.998726074233982
+      },
+      "R01_ETA_WEAK": {
+        "minimum_energy_error_order": 1.5984989216053676,
+        "minimum_spatial_descendant_order": 2.061174730501849,
+        "minimum_temporal_descendant_order": 1.998726053469621
+      },
+      "R02_ETA_STRONG": {
+        "minimum_energy_error_order": 1.9070650437039112,
+        "minimum_spatial_descendant_order": 2.061095226561192,
+        "minimum_temporal_descendant_order": 1.9987261159801557
+      },
+      "R03_F_ZERO": {
+        "minimum_energy_error_order": 1.999722422135891,
+        "minimum_spatial_descendant_order": 0.9645051335755582,
+        "minimum_temporal_descendant_order": 1.9991787237335144
+      },
+      "R04_F_LOW": {
+        "minimum_energy_error_order": 1.9070614304969418,
+        "minimum_spatial_descendant_order": 2.061095226604427,
+        "minimum_temporal_descendant_order": 1.9987254817773958
+      },
+      "R05_F_HIGH": {
+        "minimum_energy_error_order": 1.99922233574908,
+        "minimum_spatial_descendant_order": 2.061174730509472,
+        "minimum_temporal_descendant_order": 1.9987235623561437
+      },
+      "R06_THETA_TRIVIAL": {
+        "minimum_energy_error_order": 1.7843402736176042,
+        "minimum_spatial_descendant_order": 2.0611514355344775,
+        "minimum_temporal_descendant_order": 1.9987260904769837
+      },
+      "R07_THETA_PARTNER": {
+        "minimum_energy_error_order": 1.768584726713301,
+        "minimum_spatial_descendant_order": 2.0611545588151556,
+        "minimum_temporal_descendant_order": 1.9987261054366812
+      },
+      "R08_PHASE_POSITIVE": {
+        "minimum_energy_error_order": 1.9999036253420996,
+        "minimum_spatial_descendant_order": 2.0611321099023368,
+        "minimum_temporal_descendant_order": 1.9987261576147366
+      },
+      "R09_PHASE_NEGATIVE": {
+        "minimum_energy_error_order": 1.8340326622531726,
+        "minimum_spatial_descendant_order": 2.0612703928350196,
+        "minimum_temporal_descendant_order": 1.9987259082627897
+      },
+      "R10_MU_HIGH": {
+        "minimum_energy_error_order": 2.000463525605676,
+        "minimum_spatial_descendant_order": 2.0611217046345836,
+        "minimum_temporal_descendant_order": 1.9987237665622557
+      },
+      "R11_CORNER_WEAK_HIGH": {
+        "minimum_energy_error_order": 1.9973712125290053,
+        "minimum_spatial_descendant_order": 2.0611807390221104,
+        "minimum_temporal_descendant_order": 1.998723602405164
+      },
+      "R12_CORNER_STRONG_ZERO": {
+        "minimum_energy_error_order": 1.9997494306292793,
+        "minimum_spatial_descendant_order": 0.9541043077843276,
+        "minimum_temporal_descendant_order": 1.9992202563662425
+      },
+      "R13_CORNER_STRONG_LOW": {
+        "minimum_energy_error_order": 1.9948818978993117,
+        "minimum_spatial_descendant_order": 2.0615732884759534,
+        "minimum_temporal_descendant_order": 1.9987237170973087
+      }
+    },
+    "robustness_status": "NUMERICALLY_BLOCKED",
+    "scientific_claim_authorized": false
+  },
+  "captured_at_utc": "2026-07-15T03:33:55.641125Z",
+  "classifier": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py",
+    "sha256": "a72627d67ac31c5055fb921e54e640322d4d37a58c46908bc01c2ed70da0c9c9"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_CLASSIFIER_CANDIDATE_v2",
+  "scientific_verdict_awarded": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v2_result"
+}
