@@ -1,0 +1,106 @@
+{
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "classifier": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v1.py",
+    "sha256": "d71191f45e4cbfaa501c5a20e0e1e8213835f5b30c7a2760f56fceea1d958062"
+  },
+  "decision_count": 19,
+  "environment": {
+    "bound_files": [
+      {
+        "path": "requirements.active.lock",
+        "sha256": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d"
+      },
+      {
+        "path": "formal/toe_formal/lean-toolchain",
+        "sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+      },
+      {
+        "path": "formal/toe_formal/lake-manifest.json",
+        "sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+      },
+      {
+        "path": ".gitattributes",
+        "sha256": "8f1e4dfa773e52d1cc34d8c3f0798411dd3d60111c99746e883ed42e9f4f4f76"
+      }
+    ],
+    "canonical_serialization": "sorted-key UTF-8 NFC JSON with LF and finite numbers only",
+    "operating_system": "Windows",
+    "os_release": "10",
+    "python_version": "3.10.11",
+    "required_process_environment": {
+      "LANG": "C",
+      "LC_ALL": "C",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC"
+    }
+  },
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py",
+    "sha256": "37bd24552a1af3f41d0be5e1a0ce98da36031a7d1a1f9859fe44121744ea1c0f"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v1.json",
+      "sha256": "54f3c8137986db1ba1bf7cc1a9e0ffade11ed7b6fdf480bf103cdd6b13d964f1"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260714_v1.json",
+      "sha256": "a2c1de4f699bf0a2fc1cb38ce0e72b7682df5c0757fa61692f1d32b8e236832e"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py",
+      "sha256": "05e7015499e3d15bc172840ac637fd0fa86b6c50f87489d6b555657ac290adb6"
+    },
+    {
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py",
+      "sha256": "be2b00a7fda37a79e2dd1b904d367a1277914d40a525a21de258903c6d3c1a71"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-PACKET-v1.json",
+      "sha256": "d8c1f75c955b9a368159bd579f7d886523e8c66b0e611a6e6290a179422cf03a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json",
+      "sha256": "5ffaca2e6e07e95ef1bb1b1451b2bda01eab355e55294a6dd51b2ffe8ecf8e8e"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-MANIFEST-v1.json",
+      "sha256": "51226ec5af368967c895bb5dc9c4333f7ee3d89756de4fcc1c5f82600161ab93"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_20260714_v1.json",
+      "sha256": "a898245a13b24629af5c705c47710b8672f32dc6aded27073601e612efa379cb"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessNonAuthoritativePilotV1.lean",
+      "sha256": "b4001f3f089175bbc09be7aa5cc84249876b83caa1b2024e7f513ba6789c5fb7"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result_review.py",
+      "sha256": "9a64587b7884211e85094a752145ab669925efe34267138f3f27b078b947cebe"
+    },
+    {
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result_review.py",
+      "sha256": "39172afb23df903ab9fa70768e522903491849fc427ae0a2c0ee1b993e47cc7f"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260714_v1.json",
+      "sha256": "e2e55a07b929f42601653e4a0f6eed5ecae7dc765441277fbc2ef62b253b302d"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessNonAuthoritativePilotV1ResultReview.lean",
+      "sha256": "fa2546fa8c091df601de5e2af80298dcb2d348d4197978b45561c55e1820c948"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v1.json",
+    "sha256": "0ff67de9c91487a9531b69acbd63bf1b5a593d257a84a026b622ca3c7928dbcb"
+  },
+  "run_matrix": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v1.json",
+    "sha256": "c6166fee940c9c2564f78da90fa1116cd3a610f9771e40ea97c1a19eb7d2abf3"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_MANIFEST_v1",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result"
+}

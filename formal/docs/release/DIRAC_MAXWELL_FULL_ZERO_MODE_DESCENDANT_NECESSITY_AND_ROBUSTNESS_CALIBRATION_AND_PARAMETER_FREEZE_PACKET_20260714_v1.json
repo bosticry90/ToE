@@ -1,0 +1,140 @@
+{
+  "all_decisions_passed": true,
+  "artifact_hashes": {
+    "classifier_sha256": "d71191f45e4cbfaa501c5a20e0e1e8213835f5b30c7a2760f56fceea1d958062",
+    "generator_sha256": "37bd24552a1af3f41d0be5e1a0ce98da36031a7d1a1f9859fe44121744ea1c0f",
+    "manifest_sha256": "c37f144d4956b36e1bf51e145a41b88307aec5418bce61133d53911d3afb5250",
+    "packet_sha256": "0ff67de9c91487a9531b69acbd63bf1b5a593d257a84a026b622ca3c7928dbcb",
+    "run_matrix_sha256": "c6166fee940c9c2564f78da90fa1116cd3a610f9771e40ea97c1a19eb7d2abf3"
+  },
+  "authority_boundary": {
+    "canonical_fourteen_row_execution_authorized": false,
+    "descendant_significance_assigned": false,
+    "new_E_REPRO_claim": false,
+    "numerical_parameters_authoritatively_frozen": false,
+    "numerical_thresholds_authoritatively_frozen": false,
+    "packet_independently_accepted": false,
+    "packet_prepared": true,
+    "previous_canonical_E_REPRO_unchanged": true,
+    "robustness_classification_assigned": false
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim": "A complete calibration and fourteen-row execution-freeze proposal is prepared for independent review. It does not authorize execution or assign robustness, descendant significance, or a new E-REPRO claim.",
+  "decision_count": 19,
+  "decisions": [
+    {
+      "decision_id": "accepted_pilot_review_is_exact_live_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_guardrail_pilot_and_independent_review_artifacts_are_hash_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "all_fourteen_scientific_rows_are_immutable_and_uniformly_expanded",
+      "passed": true
+    },
+    {
+      "decision_id": "two_hundred_three_role_qualified_records_are_literal_complete_and_unique",
+      "passed": true
+    },
+    {
+      "decision_id": "primary_spatial_temporal_solver_duplicate_and_forced_roles_exist_for_every_row",
+      "passed": true
+    },
+    {
+      "decision_id": "eight_positive_and_thirteen_negative_control_records_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "no_invariant_descendant_free_comparator_is_invented_without_accepted_proof",
+      "passed": true
+    },
+    {
+      "decision_id": "twenty_two_residual_and_floor_thresholds_reconstruct_mechanically_from_registered_pilot_arrays",
+      "passed": true
+    },
+    {
+      "decision_id": "three_convergence_thresholds_are_mechanically_generated_with_fixed_fit_members",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_ratio_iteration_axis_and_determinism_gates_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "scientific_materiality_gates_and_sensitivity_values_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "forced_comparators_preserve_parent_provenance_and_remain_negative_only",
+      "passed": true
+    },
+    {
+      "decision_id": "robustness_and_descendant_significance_outcomes_remain_separate",
+      "passed": true
+    },
+    {
+      "decision_id": "custody_controls_numerical_admissibility_domain_robustness_necessity_materiality_and_claim_order_is_deterministic",
+      "passed": true
+    },
+    {
+      "decision_id": "no_row_exclusion_threshold_relaxation_fit_change_or_interpretation_rerun_is_allowed",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_implementation_must_be_committed_and_hash_bound_before_evaluation",
+      "passed": true
+    },
+    {
+      "decision_id": "pre_correction_classifier_source_blob_limitation_is_permanently_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "preparation_selects_only_independent_freeze_review",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_execution_and_all_new_scientific_claims_remain_unauthorized_before_review",
+      "passed": true
+    }
+  ],
+  "mechanically_generated_convergence_threshold_count": 3,
+  "mechanically_reconstructed_residual_and_floor_threshold_count": 22,
+  "nonclaims": [
+    "no canonical fourteen-row run executed",
+    "no robustness classification",
+    "no descendant-materiality classification",
+    "no new E-REPRO result",
+    "no empirical validation",
+    "no pillar completion",
+    "no seam closure",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "proposed_primary_parameters": {
+    "duration": 0.05,
+    "grid_size": 32,
+    "maximum_iterations": 80,
+    "solver_tolerance": 1e-12,
+    "time_step": 0.0015625
+  },
+  "role_counts": {
+    "DETERMINISTIC_DUPLICATE": 28,
+    "FORCED_COMPARATOR": 14,
+    "NEGATIVE_CONTROL": 13,
+    "POSITIVE_CONTROL": 8,
+    "PRIMARY_FULL_MODEL": 14,
+    "SOLVER_VERIFICATION": 42,
+    "SPATIAL_REFINEMENT": 42,
+    "TEMPORAL_REFINEMENT": 42
+  },
+  "run_record_count": 203,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v1",
+  "scientific_row_count": 14,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}
