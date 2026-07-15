@@ -1,0 +1,741 @@
+{
+  "authority_rotation": {
+    "additional_pilot_authorized": false,
+    "dynamic_run_generation_or_exclusion_authorized": false,
+    "exact_203_record_execution_authorized_once": true,
+    "execution_may_award_final_scientific_verdict": false,
+    "freeze_v3_independently_accepted": true,
+    "independent_canonical_result_review_required": true,
+    "interpretation_driven_rerun_authorized": false,
+    "new_scientific_claim_authorized": false,
+    "threshold_or_classifier_change_authorized": false
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "ACCEPT_FREEZE authorizes one exact execution of the preserved 203-record matrix only. It does not assign robustness, descendant materiality, or a new E-REPRO result.",
+  "historical_validation_boundary": {
+    "committed_v2_artifact_identities_exact": true,
+    "freeze_v2_report_rewritten": false,
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "status": "INCOMPLETE_TIMEOUT",
+      "theorem_error_observed_before_timeout": false,
+      "total_jobs": 8507
+    },
+    "repository_wide_green_claim": false,
+    "two_historical_worktree_sensitive_regeneration_tests_remain_documented": true,
+    "v3_acceptance_uses_committed_Git_bytes": true
+  },
+  "independent_baseline_audit": {
+    "baseline_fixture_hash": "5491af5ebdb884bfac58c5118ae6ca739bc3ec5bb1202f82545693f2673dcfb8",
+    "independent_baseline_result": {
+      "decision": "CLASSIFIED_PENDING_INDEPENDENT_RESULT_REVIEW:BROADLY_ROBUST",
+      "eligibility": "ELIGIBLE_PENDING_INDEPENDENT_RESULT_REVIEW",
+      "first_diagnostic": "BASELINE_ACCEPTED",
+      "materiality": "DESCENDANTS_DYNAMICALLY_NECESSARY_QUANTITATIVELY_SMALL"
+    },
+    "output_payload_count": 203,
+    "preparation_baseline_hash_exact": true,
+    "preparation_baseline_payload_exact": true,
+    "preparation_pass_flag_used": false
+  },
+  "independent_committed_input_custody_audit": {
+    "all_records_exact": true,
+    "configuration_source_commit": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+    "configuration_source_parent_exact": true,
+    "generator_does_not_read_worktree_config_as_authority": true,
+    "generator_reads_authoritative_config_with_git_show": true,
+    "preparation_commit_gitattributes_blob_oid": "b50a3d753f107c0146287404a3dd73b640117955",
+    "preparation_commit_gitattributes_sha256": "476d90927cd2881dcebb2c6651e3b464708ef4f4d76eb36b24aea21c09d743d2",
+    "record_count": 4,
+    "records": [
+      {
+        "committed_sha256_exact": true,
+        "git_blob_oid_exact": true,
+        "path": ".gitattributes",
+        "read_contract_exact": true,
+        "source_commit_exact": true,
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_not_regeneration_input": true
+      },
+      {
+        "committed_sha256_exact": true,
+        "git_blob_oid_exact": true,
+        "path": "requirements.active.lock",
+        "read_contract_exact": true,
+        "source_commit_exact": true,
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_not_regeneration_input": true
+      },
+      {
+        "committed_sha256_exact": true,
+        "git_blob_oid_exact": true,
+        "path": "formal/toe_formal/lean-toolchain",
+        "read_contract_exact": true,
+        "source_commit_exact": true,
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_not_regeneration_input": true
+      },
+      {
+        "committed_sha256_exact": true,
+        "git_blob_oid_exact": true,
+        "path": "formal/toe_formal/lake-manifest.json",
+        "read_contract_exact": true,
+        "source_commit_exact": true,
+        "working_tree_hash_advisory_only": true,
+        "working_tree_hash_not_regeneration_input": true
+      }
+    ],
+    "v3_paths_have_LF_custody_in_preparation_commit": true
+  },
+  "independent_five_defect_audit": {
+    "comparator_scope_direction_exact": true,
+    "holonomy_control_targets_holonomy_feature": true,
+    "materiality_block_probe_is_one_raw_premise_and_reaches_suppression": true,
+    "phase_control_targets_phase_feature": true,
+    "supplied_pass_probe_has_real_raw_failure_and_ignores_summary": true
+  },
+  "independent_meta_regression_audit": {
+    "all_seven_review_probes_passed": true,
+    "independently_reconstructed_preparation_meta_regressions": 6,
+    "preparation_meta_regression_count": 6,
+    "probes": [
+      {
+        "expected_diagnostic": "MUTATION_DIRECTION_MISMATCH",
+        "observed_diagnostic": "MUTATION_DIRECTION_MISMATCH",
+        "passed": true,
+        "probe_id": "REVIEW_DIRECTION"
+      },
+      {
+        "expected_diagnostic": "MUTATION_TARGET_FEATURE_CLASS_MISMATCH",
+        "observed_diagnostic": "MUTATION_TARGET_FEATURE_CLASS_MISMATCH",
+        "passed": true,
+        "probe_id": "REVIEW_PHASE_SEMANTICS"
+      },
+      {
+        "expected_diagnostic": "MUTATION_TARGET_FEATURE_CLASS_MISMATCH",
+        "observed_diagnostic": "MUTATION_TARGET_FEATURE_CLASS_MISMATCH",
+        "passed": true,
+        "probe_id": "REVIEW_HOLONOMY_SEMANTICS"
+      },
+      {
+        "expected_diagnostic": "MUTATION_NONATOMIC_CHANGED_FIELD_COUNT_2",
+        "observed_diagnostic": "MUTATION_NONATOMIC_CHANGED_FIELD_COUNT_2",
+        "passed": true,
+        "probe_id": "REVIEW_TWO_PREMISES"
+      },
+      {
+        "expected_diagnostic": "B-BLOCKED_DIAGNOSTIC_PRECEDENCE",
+        "observed_diagnostic": "B-BLOCKED_DIAGNOSTIC_PRECEDENCE",
+        "passed": true,
+        "probe_id": "REVIEW_PRECEDENCE"
+      },
+      {
+        "expected_diagnostic": "MUTATION_RAW_FAILURE_NOT_REALIZED",
+        "observed_diagnostic": "MUTATION_RAW_FAILURE_NOT_REALIZED",
+        "passed": true,
+        "probe_id": "REVIEW_RAW_FAILURE_REALIZATION"
+      },
+      {
+        "expected_diagnostic": "B-BLOCKED_DECISION_DELTA",
+        "observed_diagnostic": "B-BLOCKED_DECISION_DELTA",
+        "passed": true,
+        "probe_id": "REVIEW_DECISION_DELTA"
+      }
+    ],
+    "reviewer_only_decision_delta_probe_count": 1
+  },
+  "independent_mutation_audit": {
+    "all_changed_exactly_one_premise": true,
+    "all_expected_decision_deltas_reproduced": true,
+    "all_expected_first_diagnostics_reproduced": true,
+    "all_registered_old_and_new_values_confirmed": true,
+    "independently_replayed_count": 23,
+    "preparation_execution_result_agreement": true,
+    "reconstructions": [
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+        "independent_diff_pointer": "/freeze_packet/convergence_threshold_provenance/0/frozen_value",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_SPATIAL_FLOOR_REVERTED_TO_1P5",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+        "independent_diff_pointer": "/freeze_packet/convergence_threshold_provenance/1/frozen_value",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_TEMPORAL_FLOOR_CHANGED_TO_0P8",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+        "independent_diff_pointer": "/freeze_packet/convergence_threshold_provenance/2/expected_convergence_class",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_CONVERGENCE_CLASS_MISMATCH",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_EXPECTED_ORDER_METADATA_REMOVED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_THRESHOLD_SCHEMA",
+        "independent_diff_pointer": "/freeze_packet/numerical_threshold_provenance/21/eligible_run_roles",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_THRESHOLD_SCHEMA",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_THRESHOLD_ELIGIBLE_ROLES_REMOVED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_THRESHOLD_SCHEMA",
+        "independent_diff_pointer": "/freeze_packet/numerical_threshold_provenance/6/units",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_THRESHOLD_SCHEMA",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_THRESHOLD_UNITS_REMOVED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_THRESHOLD_SCHEMA",
+        "independent_diff_pointer": "/freeze_packet/numerical_threshold_provenance/11/normalization_formula",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_THRESHOLD_SCHEMA",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_THRESHOLD_NORMALIZATION_REMOVED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_THRESHOLD_SCOPE",
+        "independent_diff_pointer": "/review_threshold_contracts/THR_FORCED_TRANSVERSE_RESIDUAL/eligible_model_classes",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "THRESHOLD_SCOPE_MODEL_CLASS_MISMATCH",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_COMPARATOR_THRESHOLD_APPLIED_TO_PRIMARY",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_THRESHOLD_SCOPE",
+        "independent_diff_pointer": "/freeze_packet/numerical_threshold_provenance/19/row_scaling_rule",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_THRESHOLD_SCOPE",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_UNSCALED_ABSOLUTE_THRESHOLD_SUBSTITUTED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "NUMERICALLY_BLOCKED",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2~1R00_CANONICAL__PRIMARY_FULL.json/series/solver_residual/1",
+        "independent_eligibility_after": "NUMERICAL_EVIDENCE_INELIGIBLE",
+        "independent_first_diagnostic": "RAW_OUTPUT_THRESHOLD_FAILURE_SUPPLIED_PASS_IGNORED",
+        "independent_materiality_after": "NOT_EVALUATED_NUMERICAL_BLOCK",
+        "mutation_id": "M_V3_SUPPLIED_PASS_TRUE_WITH_RAW_FAILURE",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/declared_expected_run_ids/0",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_IDENTITY_BLOCK",
+        "mutation_id": "M_V3_UNKNOWN_RUN_ID_ADDED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2~1R00_CANONICAL__PRIMARY_FULL.json",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_REQUIRED_RUN_OMITTED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1v3-review-duplicate.json",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_VALID_RUN_DUPLICATED_UNDER_NEW_PATH",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "NUMERICALLY_BLOCKED",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2~1R00_CANONICAL__PRIMARY_FULL.json/series/gauss_residual/1",
+        "independent_eligibility_after": "NUMERICAL_EVIDENCE_INELIGIBLE",
+        "independent_first_diagnostic": "MATERIALITY_SUPPRESSED_AFTER_NUMERICAL_BLOCK",
+        "independent_materiality_after": "NOT_EVALUATED_NUMERICAL_BLOCK",
+        "mutation_id": "M_V3_MATERIALITY_AFTER_NUMERICAL_BLOCK",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "NUMERICALLY_BLOCKED",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2~1R00_CANONICAL__PRIMARY_FULL.json/series/continuity_residual/1",
+        "independent_eligibility_after": "NUMERICAL_EVIDENCE_INELIGIBLE",
+        "independent_first_diagnostic": "NUMERICALLY_BLOCKED_FROM_RAW_OUTPUT",
+        "independent_materiality_after": "NOT_EVALUATED_NUMERICAL_BLOCK",
+        "mutation_id": "M_V3_RAW_OUTPUT_CHANGED_SUMMARY_UNCHANGED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONTROL_APPLICABILITY",
+        "independent_diff_pointer": "/review_feature_controls/PHASE_EXCHANGE_SIGN_CONTROL/assigned_row_id",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "CONTROL_REQUIRED_PHASE_FEATURE_ABSENT",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_PHASE_CONTROL_ON_PHASE_TRIVIAL_ROW",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONTROL_APPLICABILITY",
+        "independent_diff_pointer": "/review_feature_controls/NONTRIVIAL_HOLONOMY_CONTROL/assigned_row_id",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "CONTROL_REQUIRED_HOLONOMY_FEATURE_ABSENT",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_HOLONOMY_CONTROL_ON_TRIVIAL_ROW",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONTROL_SCHEMA",
+        "independent_diff_pointer": "/freeze_packet/control_applicability_freeze/contracts/6/representativeness_basis",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_CONTROL_SCHEMA",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_REPRESENTATIVE_BASIS_REMOVED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_CONTROL_SCHEMA",
+        "independent_diff_pointer": "/freeze_packet/control_applicability_freeze/contracts/13/applicable_row_ids",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_CONTROL_SCHEMA",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_CORNER_RELEVANT_CONTROL_EXCLUDED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [
+          "/freeze_packet/expected_output_identity_manifest/sha256"
+        ],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_manifest/safe_filename_to_run_id/R00_CANONICAL__PRIMARY_FULL.json",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_INVERSE_FILENAME_MAPPING_REMOVED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [
+          "/freeze_packet/expected_output_identity_manifest/sha256"
+        ],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_manifest/outputs/1/safe_filename",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_TWO_IDS_ONE_FILENAME",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2~1R00_CANONICAL__PRIMARY_FULL.json/run_id",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_WRONG_PAYLOAD_RUN_ID",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [
+          "/freeze_packet/expected_output_identity_manifest/sha256"
+        ],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_manifest/outputs/0/relative_output_path",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_FILE_RENAMED_PAYLOAD_UNCHANGED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      },
+      {
+        "derived_custody_rebindings": [],
+        "fresh_fixture_used": true,
+        "independent_changed_field_count": 1,
+        "independent_decision_after": "B-BLOCKED_RUN_IDENTITY",
+        "independent_diff_pointer": "/output_payloads/formal~1output~1canonical~1v3-orphan.json",
+        "independent_eligibility_after": "INELIGIBLE",
+        "independent_first_diagnostic": "B-BLOCKED_RUN_IDENTITY",
+        "independent_materiality_after": "NOT_EVALUATED_CONTRACT_BLOCK",
+        "mutation_id": "M_V3_ORPHAN_OUTPUT_ADDED",
+        "passed": true,
+        "preparation_combined_pass_flag_used": false,
+        "registered_new_value_confirmed": true,
+        "registered_old_value_confirmed": true
+      }
+    ],
+    "registered_mutation_count": 23
+  },
+  "independent_scientific_freeze_audit": {
+    "all_fourteen_rows_have_thirteen_records": true,
+    "central_numerical_parameters": {
+      "primary_full_model": {
+        "duration": 0.05,
+        "grid_size": 32,
+        "maximum_iterations": 80,
+        "solver_tolerance": 1e-12,
+        "time_step": 0.0015625
+      },
+      "primary_is_declared_cross_product_not_a_claim_that_exact_tuple_was_piloted": true,
+      "row_specific_rescue_parameters_forbidden": true,
+      "selection_rule": "uniform across all fourteen rows; primary uses the finest accepted pilot grid, finest accepted pilot timestep, tightest accepted pilot tolerance, accepted duration, and accepted cap",
+      "solver_verification": {
+        "duration": 0.05,
+        "grid_size": 16,
+        "maximum_iterations": 80,
+        "solver_tolerance_sequence": [
+          1e-08,
+          1e-10,
+          1e-12
+        ],
+        "time_step": 0.003125
+      },
+      "spatial_refinement": {
+        "duration": 0.05,
+        "grid_sequence": [
+          8,
+          16,
+          32
+        ],
+        "maximum_iterations": 80,
+        "solver_tolerance": 1e-12,
+        "time_step_rule": "dt=0.1/N"
+      },
+      "temporal_refinement": {
+        "duration": 0.05,
+        "grid_size": 16,
+        "maximum_iterations": 80,
+        "solver_tolerance": 1e-12,
+        "time_step_sequence": [
+          0.00625,
+          0.003125,
+          0.0015625
+        ]
+      }
+    },
+    "control_records": 21,
+    "convergence_classes": {
+      "FIRST_ORDER_WILSON_AFFECTED_SPATIAL": 0.8,
+      "SECOND_ORDER_ENERGY_ERROR": 1.5,
+      "SECOND_ORDER_TEMPORAL": 1.5
+    },
+    "identity_records": 203,
+    "materiality_gates": {
+      "descendant_dominated_R_perp_gate": 0.5,
+      "material_R_perp_gate": 0.1
+    },
+    "matrix_identity_run_ids_equal": true,
+    "role_counts": {
+      "DETERMINISTIC_DUPLICATE": 28,
+      "FORCED_COMPARATOR": 14,
+      "NEGATIVE_CONTROL": 13,
+      "POSITIVE_CONTROL": 8,
+      "PRIMARY_FULL_MODEL": 14,
+      "SOLVER_VERIFICATION": 42,
+      "SPATIAL_REFINEMENT": 42,
+      "TEMPORAL_REFINEMENT": 42
+    },
+    "run_ids_unique": true,
+    "scientific_records": 182,
+    "scientific_rows": 14,
+    "threshold_count": 22,
+    "total_records": 203
+  },
+  "input_artifacts": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v3.json",
+      "sha256": "7d4c78ef15a24045a16d0fbed3ebcb4cabf77d2b8dbfddc4d6dbafe7739bc5af"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-MUTATION-CAUSAL-CONTRACT-BUNDLE-v3.json",
+      "sha256": "5f45fac5948abd39a1e1643ae1072a7ea85268baa7bee31ab8ffc5effbd9cdfa"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v3.json",
+      "sha256": "f2b422fc00516021113dfaf5fa79ccbc536e13db2cbe56f850324994e27c135b"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v3.json",
+      "sha256": "2eccc9d6929e159995db25530bcbd65657f62c232da2ef17e6d37a9f5a37fcfc"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3.py",
+      "sha256": "de7633b7b1fe4e968b0028d944ab0aa2a7333fd8418362e067864b73e8d92450"
+    },
+    {
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3.py",
+      "sha256": "5a218dea5f8153b58745e96872fb2cf7fc34d1eff2b4213fe5aba026e7c8ec87"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCalibrationAndParameterFreezePacketV3.lean",
+      "sha256": "3f5781790afffd67962f83d753fe7603c5b2a39639b3d8dae4fbcac81f180c02"
+    }
+  ],
+  "preparation_commit": "4b670b3a6c202b5e5457a62e8b9175f4b07edaa5",
+  "preparation_parent": "5d8ae50d053cb9edb3ac71e77a6211c6de710277",
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "review_decision_count": 21,
+  "review_decisions": [
+    {
+      "decision_id": "preparation_commit_and_seven_artifacts_bound",
+      "passed": true
+    },
+    {
+      "decision_id": "freeze_v3_target_and_pending_verdict_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "v2_packet_matrix_identity_and_classifier_byte_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "fourteen_rows_182_scientific_21_controls_and_203_total_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "twenty_two_thresholds_and_central_parameters_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "0p8_1p5_1p5_convergence_classes_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "0p1_0p5_materiality_gates_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "baseline_independently_reconstructed_from_v2_inputs",
+      "passed": true
+    },
+    {
+      "decision_id": "baseline_hash_and_admissible_classifier_result_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_three_registry_contracts_closed_and_old_values_present",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_three_canonical_diffs_change_one_exact_premise",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_three_expected_first_diagnostics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "decision_id": "all_twenty_three_expected_decision_deltas_independently_reproduced",
+      "passed": true
+    },
+    {
+      "decision_id": "five_v2_defective_mutations_semantically_repaired",
+      "passed": true
+    },
+    {
+      "decision_id": "six_preparation_meta_regressions_independently_reconstructed",
+      "passed": true
+    },
+    {
+      "decision_id": "reviewer_only_decision_delta_meta_probe_discriminates",
+      "passed": true
+    },
+    {
+      "decision_id": "committed_configuration_blob_custody_independently_reproduced",
+      "passed": true
+    },
+    {
+      "decision_id": "working_tree_configuration_is_not_an_authoritative_regeneration_input",
+      "passed": true
+    },
+    {
+      "decision_id": "historical_v2_validation_limitation_preserved_without_rewrite",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_freeze_authorizes_only_one_exact_203_record_execution",
+      "passed": true
+    },
+    {
+      "decision_id": "no_scientific_result_or_claim_is_assigned",
+      "passed": true
+    }
+  ],
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result",
+  "reviewer_independence": {
+    "baseline_reconstructed_from_v2_packet_matrix_identity": true,
+    "canonical_diff_independently_implemented": true,
+    "first_diagnostic_and_decision_reconstructed": true,
+    "json_pointer_application_independently_implemented": true,
+    "preparation_combined_pass_flags_used": false,
+    "shared_allowed_components": [
+      "canonical JSON and SHA-256 conventions",
+      "immutable v2 raw-output classifier",
+      "registered schema and field deltas"
+    ],
+    "v3_mutation_constructors_shared": false,
+    "v3_preparation_module_imported": false
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_RESULT_REVIEW_20260714_v3",
+  "selected_next_target": "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v2",
+  "selected_next_target_kind": "ONE_TIME_EXACT_203_RECORD_CANONICAL_EXECUTION",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 147,
+      "status": "PASSED"
+    },
+    "artifact_regeneration": "PASSED",
+    "authority_surface_parity": "PASSED",
+    "current_affected_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 202
+    },
+    "deselection_reason": "the two immutable v1/v2 artifact-current probes read mutable working-tree .gitattributes; committed artifact hashes remain exact and v3 custody uses committed Git bytes",
+    "focused_independent_review_tests": {
+      "failed": 0,
+      "passed": 12
+    }
+  },
+  "verdict": "ACCEPT_FREEZE"
+}
