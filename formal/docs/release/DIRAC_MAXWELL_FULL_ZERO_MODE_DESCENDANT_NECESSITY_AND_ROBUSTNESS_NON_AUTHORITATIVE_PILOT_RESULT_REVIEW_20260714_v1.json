@@ -1,0 +1,720 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "CCFT_validation_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "calibration_and_full_run_freeze_packet_preparation_authorized": true,
+    "candidate_parameters_or_thresholds_frozen": false,
+    "canonical_Maxwell_Dirac_E_REPRO_remains_accepted": true,
+    "canonical_fourteen_row_robustness_execution_authorized": false,
+    "descendant_materiality_classification_authorized": false,
+    "freeze_packet_accepted_before_review": false,
+    "master_action_promotion_authorized": false,
+    "new_E_REPRO_claim_authorized": false,
+    "pillar_completion_authorized": false,
+    "pilot_result_accepted_engineering_ready": true,
+    "robustness_classification_authorized": false,
+    "seam_closure_authorized": false
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim_ceiling": "The independently reviewed five-row pilot is accepted as engineering-ready evidence. This authorizes preparation of a calibration and full-run freeze packet only; numerical values remain unfrozen, the fourteen-row robustness execution remains unauthorized, and no robustness, descendant-materiality, or new E-REPRO claim is made.",
+  "classifier_repair_audit": {
+    "accepted_energy_class_unchanged": true,
+    "classifier_repair_traceable_despite_missing_historical_blob": true,
+    "controls_observables_and_materiality_unchanged": true,
+    "corrected_predicate": "accept BOUNDED_CONVERGENT_ENERGY_ERROR iff maximum error is bounded over the frozen duration, the finest error does not exceed the coarsest error, and the three-level refinement order exceeds 1.5; record monotone/oscillatory shape separately.",
+    "corrected_rule_passes_all_rows": true,
+    "correction_is_postprocessing_only_in_final_source": true,
+    "equations_initial_data_rows_and_engineering_sequences_unchanged": true,
+    "pre_correction_aggregate_would_block": true,
+    "pre_correction_predicate": "classify each temporal run BOUNDED_OR_OSCILLATORY iff abs(linear_energy_drift_slope)*duration <= max(maximum_absolute_energy_drift, solver_tolerance); otherwise SECULAR_CANDIDATE; require every temporal run bounded.",
+    "pre_correction_source_blob_bound": false,
+    "pre_correction_traceability_limitation": "No separate pre-correction source blob was committed. The preliminary predicate and outcome are reconstructed explicitly against the immutable registered arrays.",
+    "same_hash_bound_arrays_used_for_both_predicates": true
+  },
+  "independent_axis_audit": {
+    "all_positive_bases_strictly_positive": true,
+    "all_registered_arrays_and_packet_rows_match": true,
+    "maximum_loading_error": 2.7755575615628914e-17,
+    "maximum_other_axis_drift": 0.0,
+    "row_audits": [
+      {
+        "other_four_axis_maximum_drift": 0.0,
+        "packet_reconstruction_matches": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.21313158832880882,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.2999999999999998
+        },
+        "reconstructed_descendant_energy": 0.0034781091220247575,
+        "reference_descendant_energy": 0.0033737232323753337,
+        "reference_descendant_profile_alpha": 1.0153525779068457,
+        "registered_arrays_match": true,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "round_trip_absolute_errors": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 2.7755575615628914e-17,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "row_id": "R00_CANONICAL"
+      },
+      {
+        "other_four_axis_maximum_drift": 0.0,
+        "packet_reconstruction_matches": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.2999999999999998
+        },
+        "reconstructed_descendant_energy": 0.0,
+        "reference_descendant_energy": 0.0033737232323753337,
+        "reference_descendant_profile_alpha": 0.0,
+        "registered_arrays_match": true,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "round_trip_absolute_errors": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "row_id": "R03_F_ZERO"
+      },
+      {
+        "other_four_axis_maximum_drift": 0.0,
+        "packet_reconstruction_matches": true,
+        "positive_base_energy_B_plus": 0.012840960000000005,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.2999999999999998
+        },
+        "reconstructed_descendant_energy": 0.01391243648809903,
+        "reference_descendant_energy": 0.0033737232323753337,
+        "reference_descendant_profile_alpha": 2.0307051558136915,
+        "registered_arrays_match": true,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 1.0,
+          "THETA_W": 0.3
+        },
+        "round_trip_absolute_errors": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "row_id": "R05_F_HIGH"
+      },
+      {
+        "other_four_axis_maximum_drift": 0.0,
+        "packet_reconstruction_matches": true,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.21313158832880877,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.2999999999999998
+        },
+        "reconstructed_descendant_energy": 0.006956218244049513,
+        "reference_descendant_energy": 0.0033737232323753337,
+        "reference_descendant_profile_alpha": 1.4359253862663457,
+        "registered_arrays_match": true,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.2,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2131315883288088,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": 0.3
+        },
+        "round_trip_absolute_errors": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 2.7755575615628914e-17,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "row_id": "R10_MU_HIGH"
+      },
+      {
+        "other_four_axis_maximum_drift": 0.0,
+        "packet_reconstruction_matches": true,
+        "positive_base_energy_B_plus": 0.02568192000000001,
+        "positive_base_strictly_positive": true,
+        "realized_axis_values": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": -0.2999999999999998
+        },
+        "reconstructed_descendant_energy": 0.02782487297619806,
+        "reference_descendant_energy": 0.0033737232323753337,
+        "reference_descendant_profile_alpha": 2.871850772532692,
+        "registered_arrays_match": true,
+        "requested_axis_values": {
+          "DELTA_THETA_PSI": 1.5707963267948966,
+          "ETA_Q": 0.1,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.5200250552967295,
+          "MU_MASS_DOMAIN": 2.0,
+          "THETA_W": -0.3
+        },
+        "round_trip_absolute_errors": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "row_id": "R11_CORNER_WEAK_HIGH"
+      }
+    ]
+  },
+  "independent_comparator_audit": {
+    "all_five_exhibit_transverse_failure": true,
+    "all_parent_provenance_preserved": true,
+    "all_remain_ineligible_for_positive_robustness": true,
+    "comparator_audits": [
+      {
+        "forced_descendants_remain_zero": true,
+        "parent_loading_preserved": true,
+        "realized_loading_not_falsely_zero": true,
+        "row_id": "R00_CANONICAL",
+        "transverse_equation_residual": 0.002582403077027
+      },
+      {
+        "forced_descendants_remain_zero": true,
+        "parent_loading_preserved": true,
+        "realized_loading_not_falsely_zero": true,
+        "row_id": "R03_F_ZERO",
+        "transverse_equation_residual": 0.002582403077027
+      },
+      {
+        "forced_descendants_remain_zero": true,
+        "parent_loading_preserved": true,
+        "realized_loading_not_falsely_zero": true,
+        "row_id": "R05_F_HIGH",
+        "transverse_equation_residual": 0.002582403077027
+      },
+      {
+        "forced_descendants_remain_zero": true,
+        "parent_loading_preserved": true,
+        "realized_loading_not_falsely_zero": true,
+        "row_id": "R10_MU_HIGH",
+        "transverse_equation_residual": 0.005164806500372
+      },
+      {
+        "forced_descendants_remain_zero": true,
+        "parent_loading_preserved": true,
+        "realized_loading_not_falsely_zero": true,
+        "row_id": "R11_CORNER_WEAK_HIGH",
+        "transverse_equation_residual": 0.002582745119652
+      }
+    ]
+  },
+  "independent_control_audit": {
+    "all_eight_positive_pass": true,
+    "all_thirteen_negative_fail_for_only_intended_reason": true,
+    "baseline_diagnostics": [],
+    "maximum_forced_transverse_residual": 0.005164806500372,
+    "negative_controls": [
+      {
+        "actual_diagnostics": [
+          "ORIGINAL_TRANSVERSE_BLOCKER_REGRESSION"
+        ],
+        "control_id": "N_FORCE_BOTH_DESCENDANTS_ZERO_WITH_SOURCE",
+        "expected_diagnostic": "ORIGINAL_TRANSVERSE_BLOCKER_REGRESSION",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "PHI2_REQUIRED_FIELD_OMITTED"
+        ],
+        "control_id": "N_DROP_ONLY_PHI2",
+        "expected_diagnostic": "PHI2_REQUIRED_FIELD_OMITTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "PHI3_REQUIRED_FIELD_OMITTED"
+        ],
+        "control_id": "N_DROP_ONLY_PHI3",
+        "expected_diagnostic": "PHI3_REQUIRED_FIELD_OMITTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "TRANSVERSE_ENERGY_OMITTED"
+        ],
+        "control_id": "N_OMIT_DESCENDANT_ENERGY",
+        "expected_diagnostic": "TRANSVERSE_ENERGY_OMITTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "TRANSVERSE_EXCHANGE_CHANNEL_OMITTED"
+        ],
+        "control_id": "N_OMIT_TRANSVERSE_EXCHANGE_CHANNEL",
+        "expected_diagnostic": "TRANSVERSE_EXCHANGE_CHANNEL_OMITTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "TRANSVERSE_EXCHANGE_SIGN_REVERSED"
+        ],
+        "control_id": "N_REVERSE_TRANSVERSE_EXCHANGE_SIGN",
+        "expected_diagnostic": "TRANSVERSE_EXCHANGE_SIGN_REVERSED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "GAMMA2_BLOCK_CORRUPTED"
+        ],
+        "control_id": "N_WRONG_GAMMA2_BLOCK",
+        "expected_diagnostic": "GAMMA2_BLOCK_CORRUPTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "GAMMA3_BLOCK_CORRUPTED"
+        ],
+        "control_id": "N_WRONG_GAMMA3_BLOCK",
+        "expected_diagnostic": "GAMMA3_BLOCK_CORRUPTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "SECTOR_MULTIPLICITY_SUPPRESSED"
+        ],
+        "control_id": "N_SUPPRESS_SECTOR_MULTIPLICITY",
+        "expected_diagnostic": "SECTOR_MULTIPLICITY_SUPPRESSED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "DESCENDANT_SEMANTIC_ROLE_CORRUPTED"
+        ],
+        "control_id": "N_DESCENDANTS_RELABELED_INVENTED_MATTER",
+        "expected_diagnostic": "DESCENDANT_SEMANTIC_ROLE_CORRUPTED",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "UNREVIEWED_CANONICAL_THRESHOLD_REUSE"
+        ],
+        "control_id": "N_CANONICAL_THRESHOLDS_REUSED_UNSCALED",
+        "expected_diagnostic": "UNREVIEWED_CANONICAL_THRESHOLD_REUSE",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "POST_EXECUTION_POINT_SELECTION"
+        ],
+        "control_id": "N_POST_EXECUTION_FAVORABLE_POINT_SELECTION",
+        "expected_diagnostic": "POST_EXECUTION_POINT_SELECTION",
+        "passed": true
+      },
+      {
+        "actual_diagnostics": [
+          "FAILED_POINT_EXCLUDED"
+        ],
+        "control_id": "N_FAILED_POINTS_EXCLUDED_FROM_DOMAIN",
+        "expected_diagnostic": "FAILED_POINT_EXCLUDED",
+        "passed": true
+      }
+    ],
+    "positive_controls": [
+      {
+        "control_id": "P_CANONICAL_ACCEPTED_RESULT_UNCHANGED",
+        "passed": true
+      },
+      {
+        "control_id": "P_CHARGE_CONJUGATE_PARAMETER_CASE",
+        "passed": true
+      },
+      {
+        "control_id": "P_ANALYTIC_INVARIANT_DESCENDANT_FREE",
+        "passed": true
+      },
+      {
+        "control_id": "P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED",
+        "passed": true
+      },
+      {
+        "control_id": "P_INDEPENDENT_PHI2_EXCITATION",
+        "passed": true
+      },
+      {
+        "control_id": "P_INDEPENDENT_PHI3_EXCITATION",
+        "passed": true
+      },
+      {
+        "control_id": "P_PHI2_PHI3_INTERCHANGE",
+        "passed": true
+      },
+      {
+        "control_id": "P_WEAK_COUPLING_APPROACH",
+        "passed": true
+      }
+    ],
+    "reported_controls_match": true
+  },
+  "independent_determinism_audit": {
+    "byte_identical": true,
+    "execution_count": 2,
+    "execution_sha256": [
+      "7559e7a999d16511ecd70db1b5e40201305b5e1a026868ccf10029635ec5bc7c",
+      "7559e7a999d16511ecd70db1b5e40201305b5e1a026868ccf10029635ec5bc7c"
+    ],
+    "fresh_hashes_match_stored": true,
+    "pilot_generator_imported": false,
+    "pilot_generator_invoked_only_as_clean_subprocess": true,
+    "stored_execution_sha256": [
+      "7559e7a999d16511ecd70db1b5e40201305b5e1a026868ccf10029635ec5bc7c",
+      "7559e7a999d16511ecd70db1b5e40201305b5e1a026868ccf10029635ec5bc7c"
+    ]
+  },
+  "independent_numerical_audit": {
+    "all_corrected_bounded_convergent_rules_pass": true,
+    "all_reported_values_match": true,
+    "energy_error_order_range": [
+      1.9960487199729513,
+      2.076310222790288
+    ],
+    "maximum_solver_iterations_allowed": 80,
+    "maximum_solver_iterations_used": 9,
+    "maximum_solver_to_truncation_ratio": 0.0011583284585959576,
+    "pre_correction_aggregate_would_block": true,
+    "row_audits": [
+      {
+        "corrected_bounded_convergent_rule_passes": true,
+        "drift_shapes": [
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION"
+        ],
+        "energy_error_order": 2.076310222790288,
+        "final_energy_drift_values": [
+          2.59426156772e-11,
+          6.47821249769e-12,
+          1.862811554315e-12
+        ],
+        "finest_solver_error": 7.975495264212e-13,
+        "finest_truncation_estimate": 1.1837924939438194e-07,
+        "maximum_energy_drift_values": [
+          2.59426156772e-11,
+          6.47821249769e-12,
+          1.862811554315e-12
+        ],
+        "physical_exchange_magnitudes": {
+          "maximum_absolute_X2": 6.513944309783e-08,
+          "maximum_absolute_X3": 3.232869532891e-09,
+          "maximum_absolute_X_longitudinal": 1.821400982457e-15
+        },
+        "pre_correction_classes": [
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE"
+        ],
+        "pre_correction_row_would_pass": false,
+        "reported_values_match": true,
+        "row_id": "R00_CANONICAL",
+        "solver_to_truncation_ratio": 6.737240948066446e-06,
+        "temporal_final_descendant_values": [
+          0.008293666682968498,
+          0.008293193583912825,
+          0.00829307520466343
+        ],
+        "temporal_order": 1.9987260669182747
+      },
+      {
+        "corrected_bounded_convergent_rule_passes": true,
+        "drift_shapes": [
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION"
+        ],
+        "energy_error_order": 1.9996748600439438,
+        "final_energy_drift_values": [
+          3.27791137633e-12,
+          8.196355286848e-13,
+          2.049280458539e-13
+        ],
+        "finest_solver_error": 4.745925874516e-13,
+        "finest_truncation_estimate": 4.097219436591129e-10,
+        "maximum_energy_drift_values": [
+          3.27791137633e-12,
+          8.196355286848e-13,
+          2.049280458539e-13
+        ],
+        "physical_exchange_magnitudes": {
+          "maximum_absolute_X2": 4.002306912633e-09,
+          "maximum_absolute_X3": 3.232868596421e-09,
+          "maximum_absolute_X_longitudinal": 8.847454973617e-24
+        },
+        "pre_correction_classes": [
+          "SECULAR_CANDIDATE",
+          "BOUNDED_OR_OSCILLATORY",
+          "BOUNDED_OR_OSCILLATORY"
+        ],
+        "pre_correction_row_would_pass": false,
+        "reported_values_match": true,
+        "row_id": "R03_F_ZERO",
+        "solver_to_truncation_ratio": 0.0011583284585959576,
+        "temporal_final_descendant_values": [
+          3.1143061091665208e-06,
+          3.1159440642455932e-06,
+          3.1163537861892524e-06
+        ],
+        "temporal_order": 1.9991787245460306
+      },
+      {
+        "corrected_bounded_convergent_rule_passes": true,
+        "drift_shapes": [
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION"
+        ],
+        "energy_error_order": 2.00530813007157,
+        "final_energy_drift_values": [
+          4.860619198799e-11,
+          1.21196819941e-11,
+          3.03155417436e-12
+        ],
+        "finest_solver_error": 2.335328111447e-14,
+        "finest_truncation_estimate": 2.366864387155776e-07,
+        "maximum_energy_drift_values": [
+          4.860619198799e-11,
+          1.21196819941e-11,
+          3.03155417436e-12
+        ],
+        "physical_exchange_magnitudes": {
+          "maximum_absolute_X2": 1.262765782677e-07,
+          "maximum_absolute_X3": 3.232876183973e-09,
+          "maximum_absolute_X_longitudinal": 7.285755256776e-15
+        },
+        "pre_correction_classes": [
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE"
+        ],
+        "pre_correction_row_would_pass": false,
+        "reported_values_match": true,
+        "row_id": "R05_F_HIGH",
+        "solver_to_truncation_ratio": 9.866759262254679e-08,
+        "temporal_final_descendant_values": [
+          0.016587547682961928,
+          0.01658660177446092,
+          0.016586365088022203
+        ],
+        "temporal_order": 1.998723589311878
+      },
+      {
+        "corrected_bounded_convergent_rule_passes": true,
+        "drift_shapes": [
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION"
+        ],
+        "energy_error_order": 2.004062443212915,
+        "final_energy_drift_values": [
+          8.057301267156e-11,
+          2.009912722367e-11,
+          5.023167645724e-12
+        ],
+        "finest_solver_error": 9.917136556403e-13,
+        "finest_truncation_estimate": 1.6747637863329112e-07,
+        "maximum_energy_drift_values": [
+          8.057301267156e-11,
+          2.009912722367e-11,
+          5.023167645724e-12
+        ],
+        "physical_exchange_magnitudes": {
+          "maximum_absolute_X2": 1.738856876427e-07,
+          "maximum_absolute_X3": 1.436485972862e-08,
+          "maximum_absolute_X_longitudinal": 6.006238836875e-14
+        },
+        "pre_correction_classes": [
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE"
+        ],
+        "pre_correction_row_would_pass": false,
+        "reported_values_match": true,
+        "row_id": "R10_MU_HIGH",
+        "solver_to_truncation_ratio": 5.921513611252436e-06,
+        "temporal_final_descendant_values": [
+          0.011728904229728727,
+          0.01172823491656229,
+          0.011728067440183657
+        ],
+        "temporal_order": 1.9987237667330409
+      },
+      {
+        "corrected_bounded_convergent_rule_passes": true,
+        "drift_shapes": [
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION",
+          "MONOTONE_AT_FIXED_RESOLUTION"
+        ],
+        "energy_error_order": 1.9960487199729513,
+        "final_energy_drift_values": [
+          -8.359364936372e-11,
+          -2.093652681778e-11,
+          -5.229285754416e-12
+        ],
+        "finest_solver_error": 3.302631605695e-14,
+        "finest_truncation_estimate": 3.3461828912589864e-07,
+        "maximum_energy_drift_values": [
+          8.359364936372e-11,
+          2.093652681778e-11,
+          5.229285754416e-12
+        ],
+        "physical_exchange_magnitudes": {
+          "maximum_absolute_X2": 1.913609208653e-07,
+          "maximum_absolute_X3": 3.795972583816e-09,
+          "maximum_absolute_X_longitudinal": 7.932452515214e-15
+        },
+        "pre_correction_classes": [
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE",
+          "SECULAR_CANDIDATE"
+        ],
+        "pre_correction_row_would_pass": false,
+        "reported_values_match": true,
+        "row_id": "R11_CORNER_WEAK_HIGH",
+        "solver_to_truncation_ratio": 9.869847862536885e-08,
+        "temporal_final_descendant_values": [
+          0.023458829905079526,
+          0.023457492615615763,
+          0.023457157997326637
+        ],
+        "temporal_order": 1.9987235730509814
+      }
+    ],
+    "temporal_order_range": [
+      1.9987235730509814,
+      1.9991787245460306
+    ]
+  },
+  "independent_run_custody_audit": {
+    "all_role_qualified_identities_reconstructed": true,
+    "arrays_hash_exact": true,
+    "every_row_has_exact_closed_role_set": true,
+    "forced_comparator_record_count": 5,
+    "full_model_record_count": 45,
+    "implementation_hash_exact": true,
+    "no_excluded_or_extra_records": true,
+    "packet_declared_inventory_matches": true,
+    "role_counts": {
+      "FORCED_TRUNCATION_BASE": 5,
+      "SOLVER_TOLERANCE_1e_MINUS_08": 5,
+      "SOLVER_TOLERANCE_1e_MINUS_10": 5,
+      "SOLVER_TOLERANCE_1e_MINUS_12": 5,
+      "SPATIAL_N16": 5,
+      "SPATIAL_N32": 5,
+      "SPATIAL_N8": 5,
+      "TEMPORAL_DT_0P0015625": 5,
+      "TEMPORAL_DT_0P003125": 5,
+      "TEMPORAL_DT_0P00625": 5
+    },
+    "row_counts": {
+      "R00_CANONICAL": 10,
+      "R03_F_ZERO": 10,
+      "R05_F_HIGH": 10,
+      "R10_MU_HIGH": 10,
+      "R11_CORNER_WEAK_HIGH": 10
+    },
+    "total_record_count": 50,
+    "unique_run_record_count": 50
+  },
+  "lean_status_boundary": {
+    "affected_pilot_authority_build": "PASSED_140_JOBS",
+    "jobs_reached_before_timeout": 8441,
+    "jobs_total": 8507,
+    "repository_wide_aggregate": "INCOMPLETE_DUE_TO_600_SECOND_TIMEOUT",
+    "repository_wide_green_claim_made": false,
+    "theorem_error_observed_before_timeout": false
+  },
+  "pilot_custody": {
+    "nine_committed_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_20260714_v1.json": "a898245a13b24629af5c705c47710b8672f32dc6aded27073601e612efa379cb",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json": "5ffaca2e6e07e95ef1bb1b1451b2bda01eab355e55294a6dd51b2ffe8ecf8e8e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-MANIFEST-v1.json": "51226ec5af368967c895bb5dc9c4333f7ee3d89756de4fcc1c5f82600161ab93",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-PACKET-v1.json": "d8c1f75c955b9a368159bd579f7d886523e8c66b0e611a6e6290a179422cf03a",
+      "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py": "be2b00a7fda37a79e2dd1b904d367a1277914d40a525a21de258903c6d3c1a71",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py": "05e7015499e3d15bc172840ac637fd0fa86b6c50f87489d6b555657ac290adb6",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean": "67ff95b9edbf7d25eee2741b2d3cae6cd017e8d93f08346656fe694198a63670",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessNonAuthoritativePilotV1.lean": "b4001f3f089175bbc09be7aa5cc84249876b83caa1b2024e7f513ba6789c5fb7",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean": "95a64fcb74455bac405d01eab1145b7dc8448d3245b887e5549eafa8ec21bc85"
+    },
+    "pilot_commit": "f8f896279f70f464ef5cc927093d242874cd0eef",
+    "pilot_parent": "fe0279cdbba476eba326a307a4491a422cb96d54",
+    "seven_immutable_working_paths": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_20260714_v1.json": "a898245a13b24629af5c705c47710b8672f32dc6aded27073601e612efa379cb",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json": "5ffaca2e6e07e95ef1bb1b1451b2bda01eab355e55294a6dd51b2ffe8ecf8e8e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-MANIFEST-v1.json": "51226ec5af368967c895bb5dc9c4333f7ee3d89756de4fcc1c5f82600161ab93",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-PACKET-v1.json": "d8c1f75c955b9a368159bd579f7d886523e8c66b0e611a6e6290a179422cf03a",
+      "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py": "be2b00a7fda37a79e2dd1b904d367a1277914d40a525a21de258903c6d3c1a71",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py": "05e7015499e3d15bc172840ac637fd0fa86b6c50f87489d6b555657ac290adb6",
+      "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessNonAuthoritativePilotV1.lean": "b4001f3f089175bbc09be7aa5cc84249876b83caa1b2024e7f513ba6789c5fb7"
+    }
+  },
+  "pilot_generator_imported": false,
+  "prompt_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+  "review_decisions": {
+    "all_eight_positive_controls_independently_reproduced": true,
+    "all_five_axes_reconstructed_from_simulation_inputs": true,
+    "all_five_forced_comparators_fail_and_remain_negative_only": true,
+    "all_thirteen_negative_controls_fail_only_for_intended_reason": true,
+    "candidate_parameters_and_thresholds_remain_unfrozen": true,
+    "classifier_repair_changed_no_frozen_experimental_inputs": true,
+    "classifier_repair_is_explicit_same_data_postprocessing": true,
+    "energy_orders_and_bounded_convergent_class_independently_recomputed": true,
+    "exact_fifty_record_custody_reconstructed": true,
+    "full_execution_and_new_scientific_claim_remain_closed": true,
+    "implementation_and_output_hashes_exact": true,
+    "no_robustness_or_materiality_class_was_assigned": true,
+    "pilot_custody_commit_and_all_nine_paths_bound": true,
+    "pilot_target_and_provisional_outcome_exact": true,
+    "role_qualified_ids_parent_rows_and_closed_inventory_reconstructed": true,
+    "solver_hierarchy_and_iteration_headroom_recomputed": true,
+    "temporal_orders_independently_recomputed": true,
+    "two_clean_payloads_are_byte_identical_and_match_stored_hash": true
+  },
+  "review_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_RESULT_REVIEW_20260714_v1",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1",
+  "selected_next_target_kind": "PREPARE_NUMERICAL_CALIBRATION_AND_FULL_RUN_FREEZE_PACKET_ONLY",
+  "verdict": "ACCEPT_ENGINEERING_READY"
+}
