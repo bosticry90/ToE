@@ -1,0 +1,121 @@
+{
+  "all_decisions_registered": true,
+  "artifact_hashes": {
+    "arrays_sha256": "5ffaca2e6e07e95ef1bb1b1451b2bda01eab355e55294a6dd51b2ffe8ecf8e8e",
+    "generator_sha256": "05e7015499e3d15bc172840ac637fd0fa86b6c50f87489d6b555657ac290adb6",
+    "manifest_sha256": "51226ec5af368967c895bb5dc9c4333f7ee3d89756de4fcc1c5f82600161ab93",
+    "packet_sha256": "d8c1f75c955b9a368159bd579f7d886523e8c66b0e611a6e6290a179422cf03a"
+  },
+  "candidate_thresholds_frozen": false,
+  "canonical_robustness_execution_authorized": false,
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "claim": "The fixed five-row pilot has produced non-authoritative engineering evidence and an explicit outcome pending independent review. No calibration freeze or canonical robustness execution is authorized.",
+  "decision_count": 18,
+  "decisions": [
+    {
+      "decision_id": "accepted_guardrail_review_authorizes_exactly_this_five_row_pilot",
+      "passed": true
+    },
+    {
+      "decision_id": "new_versioned_runtime_uses_explicit_mass_and_eta_times_mass_charge",
+      "passed": true
+    },
+    {
+      "decision_id": "all_five_rows_reconstruct_the_frozen_axes_before_evolution",
+      "passed": true
+    },
+    {
+      "decision_id": "full_and_forced_comparator_runs_preserve_parent_provenance",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_constraint_equation_exchange_and_energy_series_registered_per_run",
+      "passed": true
+    },
+    {
+      "decision_id": "spatial_temporal_and_solver_refinements_executed_per_row",
+      "passed": true
+    },
+    {
+      "decision_id": "descendant_phi2_phi3_X2_and_X3_signals_recorded",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eight_positive_and_thirteen_negative_controls_evaluated",
+      "passed": true
+    },
+    {
+      "decision_id": "forced_truncation_violation_is_measured_for_its_transverse_source_reason",
+      "passed": true
+    },
+    {
+      "decision_id": "candidate_thresholds_follow_the_frozen_mechanical_generation_rule",
+      "passed": true
+    },
+    {
+      "decision_id": "two_clean_executions_are_byte_identical",
+      "passed": true
+    },
+    {
+      "decision_id": "pilot_outcome_uses_the_frozen_nonbinary_precedence",
+      "passed": true
+    },
+    {
+      "decision_id": "scientific_materiality_thresholds_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "candidate_parameters_and_numerical_thresholds_remain_unreviewed",
+      "passed": true
+    },
+    {
+      "decision_id": "no_robustness_or_descendant_significance_class_is_assigned",
+      "passed": true
+    },
+    {
+      "decision_id": "full_robustness_execution_and_new_scientific_claim_remain_unauthorized",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_E_REPRO_and_historical_guardrail_authority_remain_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "Prompt_is_preserved",
+      "passed": true
+    }
+  ],
+  "deterministic_reproductions": {
+    "byte_identical": true,
+    "environment": {
+      "LANG": "C",
+      "LC_ALL": "C",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC",
+      "numpy_version": "2.2.6"
+    },
+    "execution_count": 2,
+    "execution_sha256": [
+      "7559e7a999d16511ecd70db1b5e40201305b5e1a026868ccf10029635ec5bc7c",
+      "7559e7a999d16511ecd70db1b5e40201305b5e1a026868ccf10029635ec5bc7c"
+    ]
+  },
+  "negative_controls_passed": 13,
+  "nonclaims": [
+    "pilot outcome is engineering evidence pending independent review",
+    "candidate numerical parameters and thresholds are not frozen",
+    "no fourteen-row robustness execution",
+    "no robustness or descendant-materiality classification",
+    "no new E-REPRO result",
+    "no pillar completion, seam closure, C_k dynamics, CCFT validation, master-action promotion, or repository-wide green claim"
+  ],
+  "pilot_outcome": "ACCEPT_ENGINEERING_READY",
+  "pilot_row_count": 5,
+  "positive_controls_passed": 8,
+  "registered_run_count": 50,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_20260714_v1",
+  "scientific_result_claimed": false,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result",
+  "target": "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1",
+  "verdict": "ACCEPT_ENGINEERING_READY_PENDING_INDEPENDENT_REVIEW"
+}

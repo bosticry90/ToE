@@ -1,0 +1,40 @@
+{
+  "arrays": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json",
+    "sha256": "5ffaca2e6e07e95ef1bb1b1451b2bda01eab355e55294a6dd51b2ffe8ecf8e8e"
+  },
+  "captured_at_utc": "2026-07-14T00:00:00Z",
+  "decision_count": 18,
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py",
+    "sha256": "05e7015499e3d15bc172840ac637fd0fa86b6c50f87489d6b555657ac290adb6"
+  },
+  "inputs": [
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-GUARDRAIL-PACKET-v1.json",
+      "sha256": "54f3c8137986db1ba1bf7cc1a9e0ffade11ed7b6fdf480bf103cdd6b13d964f1"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_GUARDRAIL_PACKET_RESULT_REVIEW_20260714_v1.json",
+      "sha256": "a2c1de4f699bf0a2fc1cb38ce0e72b7682df5c0757fa61692f1d32b8e236832e"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1_result_review.py",
+      "sha256": "c621be40c1108f4f32662f5e40399ee6689620dd5e4cfee38ac07e380a3c38f6"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessGuardrailPacketV1ResultReview.lean",
+      "sha256": "494367751e77aadf77a2fe22a268c403c60f49291161eb81c821038efe90a263"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "sha256": "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1"
+    }
+  ],
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-PACKET-v1.json",
+    "sha256": "d8c1f75c955b9a368159bd579f7d886523e8c66b0e611a6e6290a179422cf03a"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_NON_AUTHORITATIVE_PILOT_MANIFEST_v1",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result"
+}
