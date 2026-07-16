@@ -1,0 +1,1407 @@
+{
+  "accepted": true,
+  "accepted_claim_label": "POLICY_EXPERIMENT_DESIGN_ONLY",
+  "authority_rotation": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "R13_parameter_or_initial_condition_change_authorized": false,
+    "canonical_output_mutation_authorized": false,
+    "different_numerical_method_authorized": false,
+    "exact_run_count_or_values_selected": false,
+    "experiment_frozen": false,
+    "instrumented_R13_experiment_design_accepted": true,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "numerical_freeze_accepted": false,
+    "numerical_freeze_packet_preparation_authorized": true,
+    "numerical_freeze_packet_prepared": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "threshold_or_fit_change_authorized": false
+  },
+  "blocked_role": "SOLVER_TOL1eM08",
+  "blocked_row": "R13_CORNER_STRONG_LOW",
+  "blocking_findings": [],
+  "canonical_robustness_status": "NUMERICALLY_BLOCKED",
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "decision_count": 43,
+  "decisions": [
+    {
+      "decision_id": "live_authority_selects_exact_independent_corrected_design_review",
+      "passed": true
+    },
+    {
+      "decision_id": "design_v1_packet_manifest_report_and_generator_hashes_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "design_v1_artifact_cross_bindings_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "blocked_v0_review_and_three_bounded_corrections_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_canonical_result_binds_thirteen_passing_rows_and_R13_block",
+      "passed": true
+    },
+    {
+      "decision_id": "all_203_canonical_outputs_execution_count_and_root_digest_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "prepared_design_v1_has_31_of_31_passing_decisions",
+      "passed": true
+    },
+    {
+      "decision_id": "all_thirty_four_accepted_v0_review_pass_ledger_ids_are_preserved_exactly",
+      "passed": true
+    },
+    {
+      "decision_id": "legacy_H_D_fallback_and_six_outcome_subconditions_are_explicitly_superseded_within_blocked_contract_repairs",
+      "passed": true
+    },
+    {
+      "decision_id": "all_nine_accepted_scientific_design_sections_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "Route_A_three_questions_four_roles_and_fourteen_observables_are_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "instrumentation_nonperturbation_contract_is_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "actual_discrete_operator_closure_contract_is_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "separate_output_custody_contract_is_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "sixteen_freeze_deferred_items_are_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "neighbor_universe_is_all_thirteen_immutable_canonical_passing_non_R13_rows",
+      "passed": true
+    },
+    {
+      "decision_id": "all_thirteen_historical_loose_payloads_pass_four_frozen_linked_ceilings",
+      "passed": true
+    },
+    {
+      "decision_id": "packet_candidate_universe_and_independent_audit_match_exactly",
+      "passed": true
+    },
+    {
+      "decision_id": "ranking_tuple_is_exact_and_applied_after_candidate_universe_definition",
+      "passed": true
+    },
+    {
+      "decision_id": "packet_ranking_matches_independent_thirteen_row_reconstruction",
+      "passed": true
+    },
+    {
+      "decision_id": "R10_is_unique_provisional_top_and_two_zero_shared_rows_are_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_neighbor_identity_remains_unfrozen",
+      "passed": true
+    },
+    {
+      "decision_id": "H_A_through_H_D_are_independent_positive_hypotheses",
+      "passed": true
+    },
+    {
+      "decision_id": "H_D_has_positive_distributed_accumulation_evidence_and_is_not_a_fallback",
+      "passed": true
+    },
+    {
+      "decision_id": "every_hypothesis_requires_identity_status_evidence_criteria_and_reasons",
+      "passed": true
+    },
+    {
+      "decision_id": "criterion_decision_records_preserve_status_evidence_and_reason",
+      "passed": true
+    },
+    {
+      "decision_id": "supported_mechanism_set_is_required_unique_exact_and_semantically_ordered",
+      "passed": true
+    },
+    {
+      "decision_id": "single_multiple_and_unresolved_aggregates_follow_support_set_cardinality",
+      "passed": true
+    },
+    {
+      "decision_id": "simultaneous_mechanism_support_is_permitted_without_forced_winner",
+      "passed": true
+    },
+    {
+      "decision_id": "evidence_and_mechanism_result_layers_and_blocked_semantics_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "H_E_requires_complete_admissible_nondiscriminating_evidence_and_empty_support",
+      "passed": true
+    },
+    {
+      "decision_id": "fifteen_step_fail_closed_precedence_is_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "missing_required_evidence_blocks_before_and_suppresses_hypothesis_evaluation",
+      "passed": true
+    },
+    {
+      "decision_id": "candidate_universe_mismatch_mutation_is_independently_detected",
+      "passed": true
+    },
+    {
+      "decision_id": "lost_multiple_mechanism_identity_mutation_is_independently_detected",
+      "passed": true
+    },
+    {
+      "decision_id": "incomplete_evidence_as_H_E_mutation_is_independently_detected",
+      "passed": true
+    },
+    {
+      "decision_id": "positive_single_multiple_H_D_unresolved_and_blocked_fixtures_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "generator_contains_no_simulator_subprocess_or_new_mechanism_output_root",
+      "passed": true
+    },
+    {
+      "decision_id": "no_exact_future_run_matrix_tolerance_duration_or_neighbor_is_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "no_mechanism_threshold_floor_contrast_or_classifier_hash_is_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_block_materiality_root_unknown_and_E_REPRO_status_remain_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "acceptance_authorizes_only_numerical_freeze_packet_preparation",
+      "passed": true
+    },
+    {
+      "decision_id": "no_freeze_execution_rerun_reclassification_materiality_or_stronger_claim_is_authorized",
+      "passed": true
+    }
+  ],
+  "descendant_materiality_status": "NOT_EVALUATED_NUMERICAL_BLOCK",
+  "failed_decision_ids": [],
+  "freeze_packet_preparation_obligations": {
+    "deferred_item_count": 16,
+    "deferred_items": [
+      "exact experiment and run count",
+      "exact tight R13 tolerance choice and any additional tolerances",
+      "exact matched-neighbor row identity after deterministic rule confirmation",
+      "exact duration and checkpoint schedule",
+      "exact instrumentation pairing multiplicity",
+      "exact grid, timestep, iteration cap, and environment identity",
+      "exact equation-block registry tied to implementation",
+      "exact output field names, shapes, schema version, and filenames",
+      "exact units, normalizations, numerical floors, and aggregation formulas",
+      "exact discrete closure formula, operator hashes, and truncation remainder",
+      "exact nonperturbation equality or fallback equivalence rule",
+      "exact hypothesis thresholds, contrast rules, association metrics, and tie behavior",
+      "exact positive and negative controls",
+      "exact classifier implementation and hash",
+      "exact implementation closure and code hash",
+      "exact one-execution authorization and no-retry rule"
+    ],
+    "freeze_failure_disposition": "Any unresolved required semantic, operator, nonperturbation, custody, or classifier item blocks freeze acceptance and cannot be filled from results.",
+    "must_close_before_freeze_review": [
+      "exact run matrix and paired-control multiplicity",
+      "exact neighbor identity under the accepted thirteen-row rule",
+      "exact equation-block registry bound to implementation",
+      "exact actual-discrete-operator closure and truncation remainder",
+      "exact nonperturbation equality or independently derived fallback equivalence",
+      "exact units, norms, floors, thresholds, contrasts, associations, and tie rules",
+      "exact output schema, cadence, volume budget, paths, and payload identities",
+      "exact controls, classifier, implementation hashes, and one-execution rule"
+    ]
+  },
+  "independent_adversarial_regression_reconstruction": {
+    "all_three_adversarial_diagnostics_exact": true,
+    "candidate_universe_mutation_diagnostic": [
+      "NEIGHBOR_CANDIDATE_UNIVERSE_MISMATCH"
+    ],
+    "incomplete_as_unresolved_mutation_diagnostic": [
+      "INCOMPLETE_EVIDENCE_MISCLASSIFIED_AS_UNRESOLVED"
+    ],
+    "lost_identity_mutation_diagnostic": [
+      "MULTIPLE_MECHANISM_IDENTITY_SET_MISSING"
+    ],
+    "positive_H_D_is_single_positive_hypothesis": true,
+    "positive_H_D_only_result": {
+      "aggregate_mechanism_result": "SINGLE_SUPPORTED_MECHANISM",
+      "evidence_result": "EVIDENCE_ADMISSIBLE",
+      "hypothesis_decisions": {
+        "H_A_CANCELLATION_CONDITIONING": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_C_DISCRETE_CLOSURE_MISMATCH": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR": {
+          "status": "SUPPORTED"
+        },
+        "H_E_UNRESOLVED_MECHANISM": {
+          "status": "NOT_SUPPORTED"
+        }
+      },
+      "supported_mechanism_ids": [
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR"
+      ]
+    },
+    "positive_complete_nondiscriminating_supports_H_E": true,
+    "positive_complete_unresolved_result": {
+      "aggregate_mechanism_result": "MECHANISM_UNRESOLVED_COMPLETE_EVIDENCE",
+      "evidence_result": "EVIDENCE_ADMISSIBLE",
+      "hypothesis_decisions": {
+        "H_A_CANCELLATION_CONDITIONING": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_C_DISCRETE_CLOSURE_MISMATCH": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_E_UNRESOLVED_MECHANISM": {
+          "status": "SUPPORTED"
+        }
+      },
+      "supported_mechanism_ids": []
+    },
+    "positive_missing_evidence_block_result": {
+      "aggregate_mechanism_result": "BLOCKED",
+      "evidence_result": "BLOCKED_REQUIRED_EVIDENCE_INCOMPLETE",
+      "hypothesis_decisions": {
+        "H_A_CANCELLATION_CONDITIONING": {
+          "status": "NOT_EVALUATED"
+        },
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE": {
+          "status": "NOT_EVALUATED"
+        },
+        "H_C_DISCRETE_CLOSURE_MISMATCH": {
+          "status": "NOT_EVALUATED"
+        },
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR": {
+          "status": "NOT_EVALUATED"
+        },
+        "H_E_UNRESOLVED_MECHANISM": {
+          "status": "NOT_EVALUATED"
+        }
+      },
+      "supported_mechanism_ids": []
+    },
+    "positive_missing_evidence_suppresses_all_hypotheses": true,
+    "positive_multiple_preserves_exact_ids": true,
+    "positive_multiple_result": {
+      "aggregate_mechanism_result": "MULTIPLE_SUPPORTED_MECHANISMS",
+      "evidence_result": "EVIDENCE_ADMISSIBLE",
+      "hypothesis_decisions": {
+        "H_A_CANCELLATION_CONDITIONING": {
+          "status": "SUPPORTED"
+        },
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_C_DISCRETE_CLOSURE_MISMATCH": {
+          "status": "SUPPORTED"
+        },
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR": {
+          "status": "NOT_SUPPORTED"
+        },
+        "H_E_UNRESOLVED_MECHANISM": {
+          "status": "NOT_SUPPORTED"
+        }
+      },
+      "supported_mechanism_ids": [
+        "H_A_CANCELLATION_CONDITIONING",
+        "H_C_DISCRETE_CLOSURE_MISMATCH"
+      ]
+    },
+    "registered_adversarial_control_count": 3,
+    "registered_positive_control_count": 5
+  },
+  "independent_classifier_contract_review": {
+    "H_A_through_H_D_independently_evaluated": true,
+    "H_D_has_positive_distributed_evidence_criteria": true,
+    "H_D_is_not_a_fallback_for_A_through_C_failure": true,
+    "H_E_requires_complete_admissible_empty_support_set": true,
+    "aggregate_cannot_replace_individual_records": true,
+    "aggregate_outcomes_exact": true,
+    "blocked_semantics_exact": true,
+    "criterion_record_fields_exact": true,
+    "evidence_outcomes_exact": true,
+    "hypothesis_ids_exact": true,
+    "materiality_and_physical_claims_not_called": true,
+    "missing_required_evidence_blocks_first": true,
+    "multiple_support_allowed_without_forced_winner": true,
+    "per_hypothesis_required_fields_exact": true,
+    "per_hypothesis_required_ids_exact": true,
+    "precedence_exact": true,
+    "support_set_allowed_ids_and_order_exact": true,
+    "support_set_required_unique_and_exact": true
+  },
+  "independent_neighbor_selection_reconstruction": {
+    "all_candidates_pass_canonical_criteria": true,
+    "all_candidates_pass_four_linked_ceilings": true,
+    "audited_candidate_count": 13,
+    "axis_sharing_candidate_count": 11,
+    "candidate_count": 13,
+    "eligibility_source": "immutable accepted canonical-result review plus independently read historical SOLVER_TOL1eM08 payloads and frozen threshold provenance",
+    "exact_neighbor_frozen": false,
+    "frozen_linked_ceiling_values": {
+      "continuity_residual": 4e-11,
+      "exchange_longitudinal_residual": 8e-21,
+      "gauss_residual": 5e-14,
+      "longitudinal_Maxwell_residual": 6.0000000000000005e-15
+    },
+    "future_mechanism_result_data_used": false,
+    "independent_candidate_audit": [
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "a7035dbc79b8203b48fc38e7ee238be55afa8a074bd0c79c8ff76dc55cb7806a",
+        "historical_loose_run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.06105959498187456,
+          "exchange_longitudinal_residual": 0.013445575369452218,
+          "gauss_residual": 0.06912849628700965,
+          "longitudinal_Maxwell_residual": 0.08303823576140847
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.08303823576140847,
+        "normalized_distance": 1.3331639734955496,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 7,
+        "rank_tuple": [
+          -1,
+          1.3331639734955496,
+          "R00_CANONICAL"
+        ],
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "5da2445de0634bb8a55086c883a7839f567f37ea38148f7756d1c6f1dea247ba",
+        "historical_loose_run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.015264482386423419,
+          "exchange_longitudinal_residual": 0.0008396834046253437,
+          "gauss_residual": 0.017281309854611022,
+          "longitudinal_Maxwell_residual": 0.022711000594795347
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.022711000594795347,
+        "normalized_distance": 1.527377404501585,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 8,
+        "rank_tuple": [
+          -1,
+          1.527377404501585,
+          "R01_ETA_WEAK"
+        ],
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "74fe80f33e63ec218a69ac8b126cbb6330b3eaa3dfa9f3c301affd0f67017a20",
+        "historical_loose_run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.24427238016881422,
+          "exchange_longitudinal_residual": 0.21546844528833403,
+          "gauss_residual": 0.27653432950631185,
+          "longitudinal_Maxwell_residual": 0.3295695173808123
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.3295695173808123,
+        "normalized_distance": 1.1545049743426825,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 3,
+        "rank_tuple": [
+          -2,
+          1.1545049743426825,
+          "R02_ETA_STRONG"
+        ],
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "24f51cf19a63a85a0ad91478791d1dcf7b6b96a4e47cfc66deebc4677ece3c33",
+        "historical_loose_run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 1.6357900277375048e-05,
+          "exchange_longitudinal_residual": 4.448439609076043e-09,
+          "gauss_residual": 5.482976616071198e-06,
+          "longitudinal_Maxwell_residual": 0.0011490137697415805
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0011490137697415805,
+        "normalized_distance": 1.3074088525554775,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 6,
+        "rank_tuple": [
+          -1,
+          1.3074088525554775,
+          "R03_F_ZERO"
+        ],
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "eb9c4dbde59786e91d658b59bfd79e13d6af3ab5191a90c3c0fe974465d2add7",
+        "historical_loose_run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.03053312827859577,
+          "exchange_longitudinal_residual": 0.003366700808576804,
+          "gauss_residual": 0.03456633169979847,
+          "longitudinal_Maxwell_residual": 0.041442437129223894
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.041442437129223894,
+        "normalized_distance": 1.3017082793177757,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 5,
+        "rank_tuple": [
+          -2,
+          1.3017082793177757,
+          "R04_F_LOW"
+        ],
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "6a4c999b3ef68154ea49dbe1d6784596698c5b528d8c379cca0d9dc67a523090",
+        "historical_loose_run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.12210883346130964,
+          "exchange_longitudinal_residual": 0.05373980677343978,
+          "gauss_residual": 0.13825236552833195,
+          "longitudinal_Maxwell_residual": 0.1646153306494586
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.1646153306494586,
+        "normalized_distance": 1.5701605935245453,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 9,
+        "rank_tuple": [
+          -1,
+          1.5701605935245453,
+          "R05_F_HIGH"
+        ],
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "bdbb8184fab9027883ca63d42a7959b528082d6d66e93f145c01a083a31b508c",
+        "historical_loose_run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05773430321196144,
+          "exchange_longitudinal_residual": 0.01199854590162627,
+          "gauss_residual": 0.06453940171852034,
+          "longitudinal_Maxwell_residual": 0.07819458626785569
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07819458626785569,
+        "normalized_distance": 1.4238420489037549,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 12,
+        "rank_tuple": [
+          0,
+          1.4238420489037549,
+          "R06_THETA_TRIVIAL"
+        ],
+        "scientific_row_id": "R06_THETA_TRIVIAL",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "ed64152a34f26c0fd042d97298557913c30111122959d690b1d71d60a002cb92",
+        "historical_loose_run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05448716124286084,
+          "exchange_longitudinal_residual": 0.010669069860468654,
+          "gauss_residual": 0.06014014359307526,
+          "longitudinal_Maxwell_residual": 0.07445612334759456
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07445612334759456,
+        "normalized_distance": 1.666531181894429,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -1.0
+        },
+        "rank": 13,
+        "rank_tuple": [
+          0,
+          1.666531181894429,
+          "R07_THETA_PARTNER"
+        ],
+        "scientific_row_id": "R07_THETA_PARTNER",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "2e1a65bb2197c1f90faa17e67f88f633a9aa3c3fe8ead1dd50082084f9d2ef6d",
+        "historical_loose_run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.1013927833294799,
+          "exchange_longitudinal_residual": 0.0311474753971668,
+          "gauss_residual": 0.08795499600537549,
+          "longitudinal_Maxwell_residual": 0.11326931147188503
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11326931147188503,
+        "normalized_distance": 1.5897566418249187,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 10,
+        "rank_tuple": [
+          -1,
+          1.5897566418249187,
+          "R08_PHASE_POSITIVE"
+        ],
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "51f2a20e116105270795b0e0d1e47b87ba90acdd3320470e7fc233b48fb3c425",
+        "historical_loose_run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.10138483816043466,
+          "exchange_longitudinal_residual": 0.03112682156420582,
+          "gauss_residual": 0.08796384583290535,
+          "longitudinal_Maxwell_residual": 0.11352359782125866
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11352359782125866,
+        "normalized_distance": 1.235850387476754,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 4,
+        "rank_tuple": [
+          -2,
+          1.235850387476754,
+          "R09_PHASE_NEGATIVE"
+        ],
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "4a396cc3e636e626e562d22307416796eda2dcc1aa5aaa59d5c27bd0c59e8fd1",
+        "historical_loose_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.3807351311936776,
+          "exchange_longitudinal_residual": 0.4450925605197653,
+          "gauss_residual": 0.44023727306085214,
+          "longitudinal_Maxwell_residual": 0.4896889213723749
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.4896889213723749,
+        "normalized_distance": 0.8816610347670144,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "rank": 1,
+        "rank_tuple": [
+          -2,
+          0.8816610347670144,
+          "R10_MU_HIGH"
+        ],
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "238086dc3f5afeabd9f9086b41746e46c4613b1aada030c0f5242f3e2bbd6190",
+        "historical_loose_run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.2812864700820102,
+          "exchange_longitudinal_residual": 0.22297695401466314,
+          "gauss_residual": 0.24886846358853237,
+          "longitudinal_Maxwell_residual": 0.31657838403834687
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.31657838403834687,
+        "normalized_distance": 1.9418959408302259,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": -1.0
+        },
+        "rank": 11,
+        "rank_tuple": [
+          -1,
+          1.9418959408302259,
+          "R11_CORNER_WEAK_HIGH"
+        ],
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "8bc5128ec7f6eb373f1db03966874b17487e656365fe5a3aedc24739927589c9",
+        "historical_loose_run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 9.384854005034526e-05,
+          "exchange_longitudinal_residual": 2.5558740807221183e-07,
+          "gauss_residual": 3.625152783321077e-05,
+          "longitudinal_Maxwell_residual": 0.0009939878696604643
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0009939878696604643,
+        "normalized_distance": 1.1246659340870895,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 2,
+        "rank_tuple": [
+          -2,
+          1.1246659340870895,
+          "R12_CORNER_STRONG_ZERO"
+        ],
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ],
+        "shared_axis_count": 2
+      }
+    ],
+    "independent_ranked_candidates": [
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "4a396cc3e636e626e562d22307416796eda2dcc1aa5aaa59d5c27bd0c59e8fd1",
+        "historical_loose_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.3807351311936776,
+          "exchange_longitudinal_residual": 0.4450925605197653,
+          "gauss_residual": 0.44023727306085214,
+          "longitudinal_Maxwell_residual": 0.4896889213723749
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.4896889213723749,
+        "normalized_distance": 0.8816610347670144,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "rank": 1,
+        "rank_tuple": [
+          -2,
+          0.8816610347670144,
+          "R10_MU_HIGH"
+        ],
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "8bc5128ec7f6eb373f1db03966874b17487e656365fe5a3aedc24739927589c9",
+        "historical_loose_run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 9.384854005034526e-05,
+          "exchange_longitudinal_residual": 2.5558740807221183e-07,
+          "gauss_residual": 3.625152783321077e-05,
+          "longitudinal_Maxwell_residual": 0.0009939878696604643
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0009939878696604643,
+        "normalized_distance": 1.1246659340870895,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 2,
+        "rank_tuple": [
+          -2,
+          1.1246659340870895,
+          "R12_CORNER_STRONG_ZERO"
+        ],
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "74fe80f33e63ec218a69ac8b126cbb6330b3eaa3dfa9f3c301affd0f67017a20",
+        "historical_loose_run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.24427238016881422,
+          "exchange_longitudinal_residual": 0.21546844528833403,
+          "gauss_residual": 0.27653432950631185,
+          "longitudinal_Maxwell_residual": 0.3295695173808123
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.3295695173808123,
+        "normalized_distance": 1.1545049743426825,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 3,
+        "rank_tuple": [
+          -2,
+          1.1545049743426825,
+          "R02_ETA_STRONG"
+        ],
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "51f2a20e116105270795b0e0d1e47b87ba90acdd3320470e7fc233b48fb3c425",
+        "historical_loose_run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.10138483816043466,
+          "exchange_longitudinal_residual": 0.03112682156420582,
+          "gauss_residual": 0.08796384583290535,
+          "longitudinal_Maxwell_residual": 0.11352359782125866
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11352359782125866,
+        "normalized_distance": 1.235850387476754,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 4,
+        "rank_tuple": [
+          -2,
+          1.235850387476754,
+          "R09_PHASE_NEGATIVE"
+        ],
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "eb9c4dbde59786e91d658b59bfd79e13d6af3ab5191a90c3c0fe974465d2add7",
+        "historical_loose_run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.03053312827859577,
+          "exchange_longitudinal_residual": 0.003366700808576804,
+          "gauss_residual": 0.03456633169979847,
+          "longitudinal_Maxwell_residual": 0.041442437129223894
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.041442437129223894,
+        "normalized_distance": 1.3017082793177757,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 5,
+        "rank_tuple": [
+          -2,
+          1.3017082793177757,
+          "R04_F_LOW"
+        ],
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "24f51cf19a63a85a0ad91478791d1dcf7b6b96a4e47cfc66deebc4677ece3c33",
+        "historical_loose_run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 1.6357900277375048e-05,
+          "exchange_longitudinal_residual": 4.448439609076043e-09,
+          "gauss_residual": 5.482976616071198e-06,
+          "longitudinal_Maxwell_residual": 0.0011490137697415805
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0011490137697415805,
+        "normalized_distance": 1.3074088525554775,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 6,
+        "rank_tuple": [
+          -1,
+          1.3074088525554775,
+          "R03_F_ZERO"
+        ],
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "a7035dbc79b8203b48fc38e7ee238be55afa8a074bd0c79c8ff76dc55cb7806a",
+        "historical_loose_run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.06105959498187456,
+          "exchange_longitudinal_residual": 0.013445575369452218,
+          "gauss_residual": 0.06912849628700965,
+          "longitudinal_Maxwell_residual": 0.08303823576140847
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.08303823576140847,
+        "normalized_distance": 1.3331639734955496,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 7,
+        "rank_tuple": [
+          -1,
+          1.3331639734955496,
+          "R00_CANONICAL"
+        ],
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "5da2445de0634bb8a55086c883a7839f567f37ea38148f7756d1c6f1dea247ba",
+        "historical_loose_run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.015264482386423419,
+          "exchange_longitudinal_residual": 0.0008396834046253437,
+          "gauss_residual": 0.017281309854611022,
+          "longitudinal_Maxwell_residual": 0.022711000594795347
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.022711000594795347,
+        "normalized_distance": 1.527377404501585,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 8,
+        "rank_tuple": [
+          -1,
+          1.527377404501585,
+          "R01_ETA_WEAK"
+        ],
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "6a4c999b3ef68154ea49dbe1d6784596698c5b528d8c379cca0d9dc67a523090",
+        "historical_loose_run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.12210883346130964,
+          "exchange_longitudinal_residual": 0.05373980677343978,
+          "gauss_residual": 0.13825236552833195,
+          "longitudinal_Maxwell_residual": 0.1646153306494586
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.1646153306494586,
+        "normalized_distance": 1.5701605935245453,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 9,
+        "rank_tuple": [
+          -1,
+          1.5701605935245453,
+          "R05_F_HIGH"
+        ],
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "2e1a65bb2197c1f90faa17e67f88f633a9aa3c3fe8ead1dd50082084f9d2ef6d",
+        "historical_loose_run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.1013927833294799,
+          "exchange_longitudinal_residual": 0.0311474753971668,
+          "gauss_residual": 0.08795499600537549,
+          "longitudinal_Maxwell_residual": 0.11326931147188503
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11326931147188503,
+        "normalized_distance": 1.5897566418249187,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 10,
+        "rank_tuple": [
+          -1,
+          1.5897566418249187,
+          "R08_PHASE_POSITIVE"
+        ],
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "238086dc3f5afeabd9f9086b41746e46c4613b1aada030c0f5242f3e2bbd6190",
+        "historical_loose_run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.2812864700820102,
+          "exchange_longitudinal_residual": 0.22297695401466314,
+          "gauss_residual": 0.24886846358853237,
+          "longitudinal_Maxwell_residual": 0.31657838403834687
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.31657838403834687,
+        "normalized_distance": 1.9418959408302259,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": -1.0
+        },
+        "rank": 11,
+        "rank_tuple": [
+          -1,
+          1.9418959408302259,
+          "R11_CORNER_WEAK_HIGH"
+        ],
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "bdbb8184fab9027883ca63d42a7959b528082d6d66e93f145c01a083a31b508c",
+        "historical_loose_run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05773430321196144,
+          "exchange_longitudinal_residual": 0.01199854590162627,
+          "gauss_residual": 0.06453940171852034,
+          "longitudinal_Maxwell_residual": 0.07819458626785569
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07819458626785569,
+        "normalized_distance": 1.4238420489037549,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 12,
+        "rank_tuple": [
+          0,
+          1.4238420489037549,
+          "R06_THETA_TRIVIAL"
+        ],
+        "scientific_row_id": "R06_THETA_TRIVIAL",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "ed64152a34f26c0fd042d97298557913c30111122959d690b1d71d60a002cb92",
+        "historical_loose_run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05448716124286084,
+          "exchange_longitudinal_residual": 0.010669069860468654,
+          "gauss_residual": 0.06014014359307526,
+          "longitudinal_Maxwell_residual": 0.07445612334759456
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07445612334759456,
+        "normalized_distance": 1.666531181894429,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -1.0
+        },
+        "rank": 13,
+        "rank_tuple": [
+          0,
+          1.666531181894429,
+          "R07_THETA_PARTNER"
+        ],
+        "scientific_row_id": "R07_THETA_PARTNER",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      }
+    ],
+    "independently_reconstructed_candidate_ids": [
+      "R00_CANONICAL",
+      "R01_ETA_WEAK",
+      "R02_ETA_STRONG",
+      "R03_F_ZERO",
+      "R04_F_LOW",
+      "R05_F_HIGH",
+      "R06_THETA_TRIVIAL",
+      "R07_THETA_PARTNER",
+      "R08_PHASE_POSITIVE",
+      "R09_PHASE_NEGATIVE",
+      "R10_MU_HIGH",
+      "R11_CORNER_WEAK_HIGH",
+      "R12_CORNER_STRONG_ZERO"
+    ],
+    "packet_candidate_audit_exact": true,
+    "packet_candidate_universe_exact": true,
+    "packet_ranking_exact": true,
+    "provisional_top_candidate": "R10_MU_HIGH",
+    "provisional_top_matches_packet": true,
+    "ranking_tuple_exact": true,
+    "scientific_limitation": "R10_MU_HIGH is the unique registered leader under the accepted tuple but shares only two of five R13 axes; it remains a nearest registered contrast rather than a one-axis-isolated control.",
+    "unique_top_candidate": true,
+    "zero_shared_axis_candidate_ids": [
+      "R06_THETA_TRIVIAL",
+      "R07_THETA_PARTNER"
+    ]
+  },
+  "independent_preservation_and_freeze_boundary_review": {
+    "accepted_v0_pass_ledger_ids_exact": true,
+    "all_nine_accepted_scientific_sections_byte_semantically_unchanged": true,
+    "all_sixteen_items_deferred": true,
+    "canonical_output_root_write_forbidden": true,
+    "closure_formula_and_threshold_unfrozen": true,
+    "design_generator_creates_no_mechanism_output_root": true,
+    "design_generator_imports_no_simulator": true,
+    "design_generator_invokes_no_subprocess": true,
+    "exact_future_run_matrix_or_tolerances_selected": false,
+    "exact_neighbor_unfrozen": true,
+    "forbidden_authority_values_true": {},
+    "freeze_deferred_item_count": 16,
+    "future_classifier_constants_remain_deferred": true,
+    "historical_tolerances_are_provenance_not_future_selection": [
+      "anchor to historically failing SOLVER_TOL1eM08 (1e-8)",
+      "future freeze selects at least one historically passing canonical reference from 1e-10 and 1e-12 by a predeclared rule",
+      "historical loose-solver role at 1e-8"
+    ],
+    "legacy_classifier_subconditions_are_explicitly_bounded": true,
+    "legacy_classifier_supersession": {
+      "supersession_is_within_failed_identity_and_H_E_contract_repairs": true,
+      "v0_H_D_had_A_to_C_failure_prerequisite": true,
+      "v0_had_six_legacy_outcome_classes": true,
+      "v1_H_D_removes_fallback_and_adds_positive_distributed_contrast": true,
+      "v1_replaces_legacy_outcomes_with_fail_closed_layers": true
+    },
+    "no_forbidden_authority_true": true,
+    "only_three_blocked_decision_ids_named_as_corrected": true,
+    "preservation_term_is_reviewed_as_pass_ledger_and_experiment_core_not_verbatim_classifier_predicates": true,
+    "preserved_section_results": {
+      "aggregation_block_registry_and_missing_data_contract": true,
+      "discrete_Maxwell_continuity_closure_contract": true,
+      "freeze_deferred_registry": true,
+      "instrumentation_nonperturbation_contract": true,
+      "mechanism_observable_registry": true,
+      "output_separation_and_custody_design": true,
+      "required_run_classes": true,
+      "scientific_questions": true,
+      "supporting_modules": true
+    },
+    "route_selection_not_reopened": true
+  },
+  "nonclaims": [
+    "no numerical freeze packet prepared or accepted",
+    "no exact future run count, run matrix, tolerance, duration, or neighbor frozen",
+    "no exact mechanism-output schema, floor, threshold, contrast, association, or classifier hash frozen",
+    "no new output root or simulation",
+    "no canonical output mutation or rerun",
+    "no root mechanism identified",
+    "no physical instability or model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar, seam, C_k, CCFT, or master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 43,
+  "review_completed": true,
+  "review_interpretation": {
+    "claim_ceiling": "Acceptance authorizes preparation of an exact numerical freeze only. It does not accept a freeze, authorize execution, identify a mechanism, reclassify robustness, evaluate materiality, or award a scientific claim.",
+    "design_sufficiency": "The corrected design closes the three v0 decision-contract defects while preserving Route A, its four run classes, fourteen observables, actual-operator audit, nonperturbation controls, and separate output custody.",
+    "historical_anchor_interpretation": "The historical 1e-8 role and frozen canonical residual ceilings are read-only eligibility evidence. They do not select the future run matrix or mechanism classifier thresholds, which remain freeze obligations.",
+    "legacy_classifier_supersession": "The 34-item v0 pass ledger and accepted experiment core are preserved. The v0 H_D fallback prerequisite and six-class aggregate are not claimed verbatim: they are explicitly superseded within the previously blocked mechanism-identity and H_E-completeness contract repairs required by current authority.",
+    "neighbor_limitation": "R10_MU_HIGH is the unique registered leader under the accepted tuple but shares only two of five R13 axes; it remains a nearest registered contrast rather than a one-axis-isolated control."
+  },
+  "reviewer_sha256": "9c0d4b5efcf868be7c0d2261b9f4bd22f71c6699d98253507432c799e60c8b56",
+  "root_numerical_mechanism_status": "UNRESOLVED",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_REVIEW_20260715_v1",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0",
+  "source_custody": {
+    "all_source_artifact_hashes_exact": true,
+    "canonical_output_mutation_count": 0,
+    "canonical_result_authority_exact": true,
+    "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_root_digest_exact": true,
+    "canonical_root_file_count": 205,
+    "canonical_run_output_count_checked": 203,
+    "canonical_run_output_hash_failures": [],
+    "design_artifact_cross_bindings_exact": true,
+    "execution_count_performed": 1,
+    "live_corrected_design_review_authority_exact": true,
+    "passed": true,
+    "prepared_design_has_31_of_31_decisions": true,
+    "simulation_invocation_count_during_review": 0,
+    "source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_20260715_v0.json": "f20afcbb5f37c1212bc15bb162765f2c341e20f5e2d6ffc6c54d0e4f10d546d5",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_20260715_v1.json": "2f188f785a4fa18e4213ab4e252df75773e7eb917a29705c73c4a06b7ab2eeb8",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_REVIEW_20260715_v0.json": "be6a124ba345c7037d1b03aab0f120831e6c62d8ab1e7a2d508288ff7ae0a114",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-MANIFEST-v0.json": "debeacd35c44a1a0e063f758934f4dc3d5983e11c071c67a651c099dda87e6b9",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-MANIFEST-v1.json": "f6f737c7a6c22c33e84f42547f439b80b4068bfb1ebbf7ee2e00e31eb14944b9",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-PACKET-v0.json": "c41a724d4f84566583d970de67ed18ea2490541f4e4a0c4faecff3e057a3b579",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-PACKET-v1.json": "a06e25fb53bed76df140cda935be1e878e0aa0dc437bf2aba4addcd687fb93d1",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_review_v0.py": "0e0d13373e227dcde48e74775868e88d920f472dd2de5aed119239853c5dd95d",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0.py": "cc95782b5be80c3ee0a44d7e6c2d802ceb8c79bcc12f56a85fcbb2d6df57e2e9",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1.py": "30f0ac96cda91b1f928998f7615b7c6125e8a5c70876d0588694863395355946"
+    }
+  },
+  "target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1_result",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 157,
+      "status": "PASSED"
+    },
+    "authority_surface_parity": "PASSED",
+    "canonical_output_mutation_count": 0,
+    "current_affected_descendant_robustness_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 321
+    },
+    "focused_independent_design_v1_review_tests": {
+      "failed": 0,
+      "passed": 19
+    },
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    },
+    "simulation_invocation_count": 0
+  },
+  "verdict": "ACCEPT_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN"
+}

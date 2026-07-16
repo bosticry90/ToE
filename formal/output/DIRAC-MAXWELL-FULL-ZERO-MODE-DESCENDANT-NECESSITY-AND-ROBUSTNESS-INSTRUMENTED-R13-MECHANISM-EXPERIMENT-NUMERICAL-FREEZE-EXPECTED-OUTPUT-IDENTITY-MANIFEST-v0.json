@@ -1,0 +1,192 @@
+{
+  "auxiliary_execution_files": [
+    {
+      "creation_order": "before first role",
+      "exclusive_no_overwrite": true,
+      "relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/EXECUTION-STARTED.json"
+    },
+    {
+      "creation_order": "after all six roles",
+      "exclusive_no_overwrite": true,
+      "relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/MATRIX-RESULT.json"
+    }
+  ],
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "complete_expected_file_count_after_success": 14,
+  "identity_failure_behavior": "BLOCKED_RUN_IDENTITY",
+  "json_relative_output_path_to_run_id": {
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/00-MECHv0_R13_LOOSE_INSTRUMENTED.json": "MECHv0:R13_LOOSE:INSTRUMENTED",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.json": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/02-MECHv0_R13_TIGHT_INSTRUMENTED.json": "MECHv0:R13_TIGHT:INSTRUMENTED",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.json": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/04-MECHv0_R10_LOOSE_INSTRUMENTED.json": "MECHv0:R10_LOOSE:INSTRUMENTED",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.json": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL"
+  },
+  "json_safe_filename_to_run_id": {
+    "00-MECHv0_R13_LOOSE_INSTRUMENTED.json": "MECHv0:R13_LOOSE:INSTRUMENTED",
+    "01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.json": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+    "02-MECHv0_R13_TIGHT_INSTRUMENTED.json": "MECHv0:R13_TIGHT:INSTRUMENTED",
+    "03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.json": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+    "04-MECHv0_R10_LOOSE_INSTRUMENTED.json": "MECHv0:R10_LOOSE:INSTRUMENTED",
+    "05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.json": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL"
+  },
+  "mapping_contract": "run_id <-> ordered JSON and NPZ filenames <-> relative output paths <-> input hash <-> payload identity is exact, reversible, casefold-safe, and fail-closed",
+  "missing_duplicate_orphan_overwrite_or_retry_behavior": "BLOCKED_RUN_IDENTITY",
+  "npz_relative_output_path_to_run_id": {
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/00-MECHv0_R13_LOOSE_INSTRUMENTED.npz": "MECHv0:R13_LOOSE:INSTRUMENTED",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.npz": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/02-MECHv0_R13_TIGHT_INSTRUMENTED.npz": "MECHv0:R13_TIGHT:INSTRUMENTED",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.npz": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/04-MECHv0_R10_LOOSE_INSTRUMENTED.npz": "MECHv0:R10_LOOSE:INSTRUMENTED",
+    "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.npz": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL"
+  },
+  "npz_safe_filename_to_run_id": {
+    "00-MECHv0_R13_LOOSE_INSTRUMENTED.npz": "MECHv0:R13_LOOSE:INSTRUMENTED",
+    "01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.npz": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+    "02-MECHv0_R13_TIGHT_INSTRUMENTED.npz": "MECHv0:R13_TIGHT:INSTRUMENTED",
+    "03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.npz": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+    "04-MECHv0_R10_LOOSE_INSTRUMENTED.npz": "MECHv0:R10_LOOSE:INSTRUMENTED",
+    "05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.npz": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL"
+  },
+  "output_root": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0",
+  "output_root_must_be_absent_before_authorized_execution": true,
+  "outputs": [
+    {
+      "execution_role": "INSTRUMENTED_MECHANISM_RUN",
+      "implementation_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_IMPLEMENTATION_v0",
+      "implementation_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "input_hash": "23b489e22cf59da093fedaa6694a5c458a7f6efbaa20ac011af2b6d643f9f094",
+      "instrumentation_enabled": true,
+      "json_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/00-MECHv0_R13_LOOSE_INSTRUMENTED.json",
+      "json_safe_filename": "00-MECHv0_R13_LOOSE_INSTRUMENTED.json",
+      "mechanism_configuration_role": "R13_LOOSE",
+      "npz_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/00-MECHv0_R13_LOOSE_INSTRUMENTED.npz",
+      "npz_safe_filename": "00-MECHv0_R13_LOOSE_INSTRUMENTED.npz",
+      "output_schema_version": "v0",
+      "paired_run_id": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+      "parent_canonical_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+      "run_id": "MECHv0:R13_LOOSE:INSTRUMENTED",
+      "scientific_row_id": "R13_CORNER_STRONG_LOW"
+    },
+    {
+      "execution_role": "PAIRED_NONINSTRUMENTED_CONTROL",
+      "implementation_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_IMPLEMENTATION_v0",
+      "implementation_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "input_hash": "1fa2066a49011f8316e0b545d0d534dad179a66032794af3df34c0c6590e4a1c",
+      "instrumentation_enabled": false,
+      "json_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.json",
+      "json_safe_filename": "01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.json",
+      "mechanism_configuration_role": "R13_LOOSE",
+      "npz_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+      "npz_safe_filename": "01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+      "output_schema_version": "v0",
+      "paired_run_id": "MECHv0:R13_LOOSE:INSTRUMENTED",
+      "parent_canonical_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+      "run_id": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+      "scientific_row_id": "R13_CORNER_STRONG_LOW"
+    },
+    {
+      "execution_role": "INSTRUMENTED_MECHANISM_RUN",
+      "implementation_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_IMPLEMENTATION_v0",
+      "implementation_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "input_hash": "7e3e753fb9d6200c03b1b640ad2aed78e428f30e61c5876abeb60b169f35a7d1",
+      "instrumentation_enabled": true,
+      "json_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/02-MECHv0_R13_TIGHT_INSTRUMENTED.json",
+      "json_safe_filename": "02-MECHv0_R13_TIGHT_INSTRUMENTED.json",
+      "mechanism_configuration_role": "R13_TIGHT",
+      "npz_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/02-MECHv0_R13_TIGHT_INSTRUMENTED.npz",
+      "npz_safe_filename": "02-MECHv0_R13_TIGHT_INSTRUMENTED.npz",
+      "output_schema_version": "v0",
+      "paired_run_id": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+      "parent_canonical_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+      "run_id": "MECHv0:R13_TIGHT:INSTRUMENTED",
+      "scientific_row_id": "R13_CORNER_STRONG_LOW"
+    },
+    {
+      "execution_role": "PAIRED_NONINSTRUMENTED_CONTROL",
+      "implementation_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_IMPLEMENTATION_v0",
+      "implementation_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "input_hash": "f96f5a8ded5c9abb7b9cac4a153761375427cb0a7fd21659c69aec0abd080b9b",
+      "instrumentation_enabled": false,
+      "json_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.json",
+      "json_safe_filename": "03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.json",
+      "mechanism_configuration_role": "R13_TIGHT",
+      "npz_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.npz",
+      "npz_safe_filename": "03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.npz",
+      "output_schema_version": "v0",
+      "paired_run_id": "MECHv0:R13_TIGHT:INSTRUMENTED",
+      "parent_canonical_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+      "run_id": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+      "scientific_row_id": "R13_CORNER_STRONG_LOW"
+    },
+    {
+      "execution_role": "INSTRUMENTED_MECHANISM_RUN",
+      "implementation_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_IMPLEMENTATION_v0",
+      "implementation_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "input_hash": "fca3c4fdbb2c297705120177438de128096e4ee9909b3c3705ae4910f570d21c",
+      "instrumentation_enabled": true,
+      "json_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/04-MECHv0_R10_LOOSE_INSTRUMENTED.json",
+      "json_safe_filename": "04-MECHv0_R10_LOOSE_INSTRUMENTED.json",
+      "mechanism_configuration_role": "R10_LOOSE_NEIGHBOR",
+      "npz_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/04-MECHv0_R10_LOOSE_INSTRUMENTED.npz",
+      "npz_safe_filename": "04-MECHv0_R10_LOOSE_INSTRUMENTED.npz",
+      "output_schema_version": "v0",
+      "paired_run_id": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL",
+      "parent_canonical_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+      "run_id": "MECHv0:R10_LOOSE:INSTRUMENTED",
+      "scientific_row_id": "R10_MU_HIGH"
+    },
+    {
+      "execution_role": "PAIRED_NONINSTRUMENTED_CONTROL",
+      "implementation_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_IMPLEMENTATION_v0",
+      "implementation_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "input_hash": "279fb57c73d3593a5cd81d2e1ddaf0afda70edd5a8ca03fcde6234a8e2f9c065",
+      "instrumentation_enabled": false,
+      "json_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.json",
+      "json_safe_filename": "05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.json",
+      "mechanism_configuration_role": "R10_LOOSE_NEIGHBOR",
+      "npz_relative_output_path": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+      "npz_safe_filename": "05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+      "output_schema_version": "v0",
+      "paired_run_id": "MECHv0:R10_LOOSE:INSTRUMENTED",
+      "parent_canonical_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+      "run_id": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL",
+      "scientific_row_id": "R10_MU_HIGH"
+    }
+  ],
+  "record_count": 6,
+  "role_payload_file_count": 12,
+  "run_id_to_json_relative_output_path": {
+    "MECHv0:R10_LOOSE:INSTRUMENTED": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/04-MECHv0_R10_LOOSE_INSTRUMENTED.json",
+    "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.json",
+    "MECHv0:R13_LOOSE:INSTRUMENTED": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/00-MECHv0_R13_LOOSE_INSTRUMENTED.json",
+    "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.json",
+    "MECHv0:R13_TIGHT:INSTRUMENTED": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/02-MECHv0_R13_TIGHT_INSTRUMENTED.json",
+    "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.json"
+  },
+  "run_id_to_json_safe_filename": {
+    "MECHv0:R10_LOOSE:INSTRUMENTED": "04-MECHv0_R10_LOOSE_INSTRUMENTED.json",
+    "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL": "05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.json",
+    "MECHv0:R13_LOOSE:INSTRUMENTED": "00-MECHv0_R13_LOOSE_INSTRUMENTED.json",
+    "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL": "01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.json",
+    "MECHv0:R13_TIGHT:INSTRUMENTED": "02-MECHv0_R13_TIGHT_INSTRUMENTED.json",
+    "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL": "03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.json"
+  },
+  "run_id_to_npz_relative_output_path": {
+    "MECHv0:R10_LOOSE:INSTRUMENTED": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/04-MECHv0_R10_LOOSE_INSTRUMENTED.npz",
+    "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+    "MECHv0:R13_LOOSE:INSTRUMENTED": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/00-MECHv0_R13_LOOSE_INSTRUMENTED.npz",
+    "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+    "MECHv0:R13_TIGHT:INSTRUMENTED": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/02-MECHv0_R13_TIGHT_INSTRUMENTED.npz",
+    "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL": "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0/03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.npz"
+  },
+  "run_id_to_npz_safe_filename": {
+    "MECHv0:R10_LOOSE:INSTRUMENTED": "04-MECHv0_R10_LOOSE_INSTRUMENTED.npz",
+    "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL": "05-MECHv0_R10_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+    "MECHv0:R13_LOOSE:INSTRUMENTED": "00-MECHv0_R13_LOOSE_INSTRUMENTED.npz",
+    "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL": "01-MECHv0_R13_LOOSE_NONINSTRUMENTED_CONTROL.npz",
+    "MECHv0:R13_TIGHT:INSTRUMENTED": "02-MECHv0_R13_TIGHT_INSTRUMENTED.npz",
+    "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL": "03-MECHv0_R13_TIGHT_NONINSTRUMENTED_CONTROL.npz"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_NUMERICAL_FREEZE_EXPECTED_OUTPUT_IDENTITY_MANIFEST_v0"
+}

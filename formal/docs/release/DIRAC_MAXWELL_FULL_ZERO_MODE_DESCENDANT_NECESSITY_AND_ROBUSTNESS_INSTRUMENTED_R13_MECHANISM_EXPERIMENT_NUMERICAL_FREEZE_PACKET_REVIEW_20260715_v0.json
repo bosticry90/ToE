@@ -1,0 +1,1661 @@
+{
+  "authority_rotation": {
+    "execution_authorized": false,
+    "materiality_evaluation_authorized": false,
+    "new_scientific_claim_authorized": false,
+    "numerical_freeze_v0_accepted": false,
+    "one_time_execution_count_authorized": 0,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "threshold_change_authorized": false,
+    "versioned_freeze_correction_authorized": true
+  },
+  "blocking_finding_count": 7,
+  "blocking_findings": [
+    {
+      "bounded_correction_required": "Define the final hash material before hashing, include the exclusion metadata in that contract, and add six exact recomputation controls.",
+      "evidence": "0/6 final records reproduce their stored input_hash when the final record is filtered by its own input_hash_material_excludes list",
+      "finding_id": "B_INPUT_HASH_CONTRACT_NOT_SELF_RECONSTRUCTIBLE",
+      "review_outcome": "BLOCK_IDENTITY_CLOSURE"
+    },
+    {
+      "bounded_correction_required": "Bind and validate the exact matrix SHA-256 and every parent, input, implementation, pair, role, schema, and custody field before execution; echo those identities into start and result custody.",
+      "evidence": "20/20 frozen identity-field mutations were accepted by validate_exact_run_matrix",
+      "finding_id": "B_EXECUTION_MATRIX_IDENTITY_VALIDATOR_INCOMPLETE",
+      "review_outcome": "BLOCK_IDENTITY_CLOSURE"
+    },
+    {
+      "bounded_correction_required": "Add a frozen raw JSON/NPZ validator and evidence assembler that recomputes all gates and metrics from the exact twelve payloads.",
+      "evidence": "A payload containing sixteen empty records in every required event family passes validate_run_role_payload, while classifier output is unchanged by empty/wrong raw payload identities and corrupt raw observables.",
+      "finding_id": "B_RAW_PAYLOAD_EVIDENCE_CLOSURE_MISSING",
+      "review_outcome": "BLOCK_OBSERVABLE_SEMANTICS"
+    },
+    {
+      "bounded_correction_required": "Verify each loaded module's resolved __file__ and exact loaded bytes, bind the base-module object relation, and use a clean frozen process entry point.",
+      "evidence": "Dynamic imports can return shadow modules while source_binding_report still passes hashes of unrelated nominal workspace paths.",
+      "finding_id": "B_LOADED_OPERATOR_MODULE_CUSTODY_INCOMPLETE",
+      "review_outcome": "BLOCK_OPERATOR_BINDING"
+    },
+    {
+      "bounded_correction_required": "Use Q as an operator-consistency gate, preregister a non-tautological Maxwell-residual contribution test, and derive or validate a conservative roundoff bound for the actual NumPy operation graph.",
+      "evidence": "Frozen Q is algebraically zero for arbitrary inputs and therefore its Q/B ratio measures floating evaluation/bound behavior; the decision-bearing gamma32 operation count has no auditable forward-error derivation.",
+      "finding_id": "B_H_C_OPERATOR_MECHANISM_AND_GAMMA_BOUND_UNJUSTIFIED",
+      "review_outcome": "BLOCK_OPERATOR_BINDING"
+    },
+    {
+      "bounded_correction_required": "Add a nonfuture threshold-provenance registry for every H_A-H_D constant without fitting or changing values from future mechanism outputs.",
+      "evidence": "The classifier literals are frozen, but no per-constant source artifact, source record, derivation, rounding rule, and scientific-meaning registry exists.",
+      "finding_id": "B_HYPOTHESIS_THRESHOLD_PROVENANCE_INCOMPLETE",
+      "review_outcome": "BLOCK_HYPOTHESIS_RULE_PROVENANCE"
+    },
+    {
+      "bounded_correction_required": "Register and execute the missing payload, parent, block, helper-hash, raw-summary, mechanism-ID, preexisting-root, and committed-byte mutations.",
+      "evidence": "9 of 18 required review-contract mutations are absent from the permanent freeze registry.",
+      "finding_id": "B_ADVERSARIAL_COVERAGE_INCOMPLETE",
+      "review_outcome": "BLOCK_ADVERSARIAL_COVERAGE"
+    }
+  ],
+  "canonical_custody": {
+    "authority_inventory_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_mutation_count": 0,
+    "directory_tree_digest": "886541953dfcfecfffa44b2ff9e2ee62c14c468139042bf4f3477ef3a1f2a721",
+    "file_count": 205,
+    "mechanism_output_root_absent_before_and_after_review": true
+  },
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "This review blocks numerical-freeze v0 and authorizes only a versioned, bounded freeze correction. It does not reopen Route A or design v1 and does not authorize execution or any scientific classification.",
+  "decision_count": 48,
+  "decisions": [
+    {
+      "decision_id": "freeze_packet_matrix_identity_manifest_report_and_sources_are_hash_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_design_v1_review_is_the_consumed_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "freeze_v0_is_prepared_pending_independent_review",
+      "passed": true
+    },
+    {
+      "decision_id": "preparation_records_39_of_39_internal_decisions",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_205_file_inventory_digest_is_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_directory_tree_digest_is_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_203_run_outputs_remain_read_only",
+      "passed": true
+    },
+    {
+      "decision_id": "future_mechanism_output_root_is_separate_and_absent",
+      "passed": true
+    },
+    {
+      "decision_id": "static_run_matrix_has_exact_six_record_order",
+      "passed": true
+    },
+    {
+      "decision_id": "three_instrumented_control_pairs_are_statically_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "R13_loose_static_physical_projection_matches_canonical_parent",
+      "passed": true
+    },
+    {
+      "decision_id": "R13_tight_static_physical_projection_matches_canonical_parent",
+      "passed": true
+    },
+    {
+      "decision_id": "R10_loose_static_physical_projection_matches_canonical_parent",
+      "passed": true
+    },
+    {
+      "decision_id": "all_parent_input_hashes_are_statically_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_parent_output_paths_and_hashes_are_statically_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "grid_timestep_duration_iteration_cap_and_tolerances_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "supporting_tolerance_and_duration_modules_are_disabled",
+      "passed": true
+    },
+    {
+      "decision_id": "output_identity_has_six_JSON_and_six_NPZ_bijections",
+      "passed": true
+    },
+    {
+      "decision_id": "two_auxiliary_execution_files_and_fourteen_total_files_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_output_paths_are_unique_NFC_and_casefold_safe",
+      "passed": true
+    },
+    {
+      "decision_id": "fourteen_observable_identifiers_match_design_and_implementation",
+      "passed": true
+    },
+    {
+      "decision_id": "eight_solver_blocks_cover_the_exact_22N_packed_layout",
+      "passed": true
+    },
+    {
+      "decision_id": "block_normalization_uses_role_tolerance_and_gamma64",
+      "passed": true
+    },
+    {
+      "decision_id": "dominance_fraction_and_registry_order_ties_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "exchange_conditioning_formula_and_gamma64_scale_floor_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "per_iteration_terminal_and_spatial_diagnostics_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "actual_discrete_operator_inputs_and_outputs_are_registered",
+      "passed": true
+    },
+    {
+      "decision_id": "trajectory_nonperturbation_requires_exact_byte_identity",
+      "passed": true
+    },
+    {
+      "decision_id": "bounded_nonperturbation_fallback_is_forbidden",
+      "passed": true
+    },
+    {
+      "decision_id": "H_A_support_rule_and_two_reference_contrasts_are_literal",
+      "passed": true
+    },
+    {
+      "decision_id": "H_B_longitudinal_dominance_rule_is_positive_and_literal",
+      "passed": true
+    },
+    {
+      "decision_id": "H_D_distributed_accumulation_rule_is_positive_not_fallback",
+      "passed": true
+    },
+    {
+      "decision_id": "H_E_is_reserved_for_complete_admissible_empty_support",
+      "passed": true
+    },
+    {
+      "decision_id": "individual_hypothesis_decisions_and_ordered_support_set_are_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_block_precedence_suppresses_hypothesis_decisions",
+      "passed": true
+    },
+    {
+      "decision_id": "committed_Git_blob_configuration_custody_is_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "historical_worktree_gitattributes_is_not_a_regeneration_input",
+      "passed": true
+    },
+    {
+      "decision_id": "no_simulation_rerun_threshold_change_or_materiality_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_NUMERICALLY_BLOCKED_verdict_is_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "no_new_E_REPRO_or_physical_claim_is_assigned",
+      "passed": true
+    },
+    {
+      "decision_id": "blocked_review_preserves_Route_A_and_design_v1_for_versioned_correction",
+      "passed": true
+    },
+    {
+      "decision_id": "final_run_input_hashes_reconstruct_under_their_declared_contract",
+      "passed": false
+    },
+    {
+      "decision_id": "execution_validator_enforces_the_complete_frozen_matrix_identity",
+      "passed": false
+    },
+    {
+      "decision_id": "raw_payload_validator_and_evidence_assembler_are_fail_closed",
+      "passed": false
+    },
+    {
+      "decision_id": "runtime_imported_operator_modules_are_the_exact_hashed_files",
+      "passed": false
+    },
+    {
+      "decision_id": "H_C_measure_and_gamma32_bound_support_the_declared_mechanism",
+      "passed": false
+    },
+    {
+      "decision_id": "all_hypothesis_constants_have_complete_nonfuture_provenance",
+      "passed": false
+    },
+    {
+      "decision_id": "adversarial_registry_covers_the_full_freeze_review_contract",
+      "passed": false
+    }
+  ],
+  "failed_decision_count": 7,
+  "failed_decision_ids": [
+    "final_run_input_hashes_reconstruct_under_their_declared_contract",
+    "execution_validator_enforces_the_complete_frozen_matrix_identity",
+    "raw_payload_validator_and_evidence_assembler_are_fail_closed",
+    "runtime_imported_operator_modules_are_the_exact_hashed_files",
+    "H_C_measure_and_gamma32_bound_support_the_declared_mechanism",
+    "all_hypothesis_constants_have_complete_nonfuture_provenance",
+    "adversarial_registry_covers_the_full_freeze_review_contract"
+  ],
+  "independent_adversarial_coverage_audit": {
+    "complete": false,
+    "missing_required_control_ids": [
+      "M_FREEZE_DUPLICATE_PAYLOAD_IDENTITY",
+      "M_FREEZE_OPERATOR_HELPER_HASH_CHANGED",
+      "M_FREEZE_OUTPUT_ROOT_PREEXISTS",
+      "M_FREEZE_RAW_EVIDENCE_FAILS_FAVORABLE_SUMMARY_TRUE",
+      "M_FREEZE_REQUIRED_PAYLOAD_OMITTED",
+      "M_FREEZE_UNKNOWN_MECHANISM_ID",
+      "M_FREEZE_UNKNOWN_NINTH_SOLVER_BLOCK",
+      "M_FREEZE_WORKTREE_GITATTRIBUTES_SUBSTITUTED",
+      "M_FREEZE_WRONG_PARENT_CANONICAL_IDENTITY"
+    ],
+    "missing_required_count": 9,
+    "registered_control_ids": [
+      "M_FREEZE_CANDIDATE_RUN_OMITTED",
+      "M_FREEZE_CLASSIFICATION_AFTER_NONPERTURBATION_FAILURE",
+      "M_FREEZE_CONTINUUM_OPERATOR_SUBSTITUTED",
+      "M_FREEZE_H_D_WITHOUT_POSITIVE_EVIDENCE",
+      "M_FREEZE_H_E_WITH_MISSING_OBSERVABLE",
+      "M_FREEZE_MULTIPLE_AGGREGATE_IDS_REMOVED",
+      "M_FREEZE_OBSERVABLE_UNITS_OR_NORMALIZATION_MISSING",
+      "M_FREEZE_OUTPUT_ROOT_COLLIDES_CANONICAL",
+      "M_FREEZE_R10_NEIGHBOR_DISPLACED",
+      "M_FREEZE_SUPPORTED_IDENTITY_SET_MISMATCH",
+      "M_FREEZE_TRAJECTORY_BYTE_MISMATCH",
+      "M_FREEZE_UNKNOWN_OR_DUPLICATE_RUN_ID"
+    ],
+    "registered_count": 12,
+    "required_count": 18
+  },
+  "independent_committed_configuration_audit": {
+    "all_records_exact": true,
+    "records": [
+      {
+        "blob_exact": true,
+        "path": "requirements.active.lock",
+        "sha256_exact": true,
+        "working_tree_not_regeneration_input": true
+      },
+      {
+        "blob_exact": true,
+        "path": "formal/toe_formal/lean-toolchain",
+        "sha256_exact": true,
+        "working_tree_not_regeneration_input": true
+      },
+      {
+        "blob_exact": true,
+        "path": "formal/toe_formal/lake-manifest.json",
+        "sha256_exact": true,
+        "working_tree_not_regeneration_input": true
+      },
+      {
+        "blob_exact": true,
+        "path": ".gitattributes",
+        "sha256_exact": true,
+        "working_tree_not_regeneration_input": true
+      }
+    ],
+    "source_commit": "d2f24a13b0c42cabb531dbcf9d87ac9c0f766987",
+    "source_parent_exact": true
+  },
+  "independent_execution_matrix_validator_probe": {
+    "baseline_diagnostics": [],
+    "dynamics_control_diagnostics": [
+      "RUN_MATRIX_N_MISMATCH:MECHv0:R13_LOOSE:INSTRUMENTED",
+      "RUN_MATRIX_PAIR_MISMATCH:MECHv0:R13_LOOSE:INSTRUMENTED:n"
+    ],
+    "executor_accepts_in_memory_matrix_without_frozen_matrix_sha256": true,
+    "identity_mutation_count": 20,
+    "identity_mutations": [
+      {
+        "diagnostics": [],
+        "field": "parent_canonical_run_id",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "parent_canonical_input_hash",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "parent_canonical_output_sha256",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "parent_canonical_output_path",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "input_hash",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "implementation_id",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "implementation_sha256",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "paired_run_id",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "execution_role",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "output_schema_version",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "experiment_id",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "scientific_row_id",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "requested_axis_values",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "parent_initial_condition_identity",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "model_class",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "numerical_method",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "accepted_step_count",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "checkpoint_count_including_initial",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "instrumentation_read_only",
+        "incorrectly_accepted": true
+      },
+      {
+        "diagnostics": [],
+        "field": "trajectory_identity_required",
+        "incorrectly_accepted": true
+      }
+    ],
+    "incorrectly_accepted_identity_mutation_count": 20
+  },
+  "independent_loaded_module_binding_probe": {
+    "evolution_accepted_v0_identity_is_not_checked": true,
+    "loaded_module_file_paths_are_not_checked": true,
+    "shadow_modules_were_loaded": true,
+    "workspace_path_hash_report_still_passed": true
+  },
+  "independent_observable_and_operator_audit": {
+    "H_C_algebraic_identity_audit": {
+      "G1_minus_G0": "roll(p1-p0,1)-(p1-p0)+a*(rho1-rho0)",
+      "Q_exact_arithmetic": 0,
+      "exact_arithmetic_reduction": "identical for arbitrary p0,p1,rho0,rho1,g",
+      "roll_Rp_minus_Rp_plus_a_dt_C": "roll(p1-p0,1)-(p1-p0)+dt*(roll(g,1)-g)+a*(rho1-rho0)+dt*(g-roll(g,1))",
+      "solver_equation_satisfaction_required_for_identity": false
+    },
+    "H_C_current_ratio_can_measure_only_floating_evaluation_or_bound_behavior": true,
+    "all_block_floors_equal_gamma64": true,
+    "all_blocks_use_tolerance_scale": true,
+    "all_documentary_semantic_records_complete": true,
+    "block_count": 8,
+    "block_ids": [
+      "THETA_KINEMATIC",
+      "P_LONGITUDINAL_MAXWELL",
+      "PHI2_KINEMATIC",
+      "P2_DYNAMIC",
+      "PHI3_KINEMATIC",
+      "P3_DYNAMIC",
+      "DIRAC_PLUS",
+      "DIRAC_MINUS"
+    ],
+    "block_ids_exact": true,
+    "closure_gamma32_exact": true,
+    "exchange_exact_cell_sum_comparison_rule_registered": false,
+    "gamma32": 3.5527136788005136e-15,
+    "gamma32_operation_count_derivation_registered": false,
+    "gamma64": 7.105427357601052e-15,
+    "observable_count": 14,
+    "observable_ids": [
+      "EXCHANGE_FIELD_LONGITUDINAL_RAW",
+      "EXCHANGE_MATTER_LONGITUDINAL_RAW",
+      "EXCHANGE_LONGITUDINAL_REMAINDER_RAW",
+      "EXCHANGE_CANCELLATION_KAPPA",
+      "SOLVER_BLOCK_RESIDUAL_RAW",
+      "SOLVER_BLOCK_RESIDUAL_NORMALIZED",
+      "SOLVER_BLOCK_DOMINANCE_FRACTION",
+      "SOLVER_ITERATION_METADATA",
+      "GAUSS_RESIDUAL_FIELD",
+      "CONTINUITY_RESIDUAL_FIELD",
+      "LONGITUDINAL_MAXWELL_RESIDUAL_COMPONENTS",
+      "DISCRETE_OPERATOR_OUTPUTS",
+      "MAXWELL_TO_CONTINUITY_CLOSURE_RESIDUAL",
+      "INSTRUMENTATION_TRAJECTORY_IDENTITY"
+    ],
+    "observable_ids_exact": true,
+    "packed_span_units_total": 22
+  },
+  "independent_payload_and_classifier_closure_probe": {
+    "classifier_baseline_result": {
+      "aggregate_mechanism_result": "MECHANISM_UNRESOLVED_COMPLETE_EVIDENCE",
+      "claim_ceiling": "NUMERICAL_MECHANISM_EVIDENCE_ONLY; no robustness reclassification, materiality, physical instability, model-domain boundary, E-REPRO, pillar, seam, C_k, CCFT, or master-action promotion",
+      "classifier_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_CLASSIFIER_v0",
+      "evidence_diagnostic": "NONE",
+      "evidence_result": "EVIDENCE_ADMISSIBLE",
+      "hypothesis_decisions": {
+        "H_A_CANCELLATION_CONDITIONING": {
+          "decision_reasons": [
+            "observed=10.0; frozen_rule=>=1000000.0",
+            "observed=0.0; frozen_rule=>=0.75",
+            "observed=16; frozen_rule===16",
+            "observed=0.0; frozen_rule=>=1.0",
+            "observed=0.0; frozen_rule=>=1.0"
+          ],
+          "evidence_ids": [
+            "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+            "OBS_EXCHANGE_KAPPA:R13_TIGHT",
+            "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_A_CANCELLATION_CONDITIONING",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_A_KAPPA_MATERIAL",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+                "OBS_EXCHANGE_KAPPA:R13_TIGHT",
+                "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=10.0; frozen_rule=>=1000000.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_A_SEVERE_STEP_PERSISTENCE",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.75",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_A_COMPLETE_STEP_SERIES",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE"
+              ],
+              "reason": "observed=16; frozen_rule===16",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_A_TIGHT_DIRECTIONAL_CONTRAST",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+                "OBS_EXCHANGE_KAPPA:R13_TIGHT"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=1.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_A_NEIGHBOR_DIRECTIONAL_CONTRAST",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+                "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=1.0",
+              "status": "FAILED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE": {
+          "decision_reasons": [
+            "observed='THETA_KINEMATIC'; frozen_rule=in ['THETA_KINEMATIC', 'P_LONGITUDINAL_MAXWELL']",
+            "observed=0.125; frozen_rule=>=0.5",
+            "observed=0.0; frozen_rule=>=0.75",
+            "observed=0.0; frozen_rule=>=0.2",
+            "observed=1.0; frozen_rule=>=2.0",
+            "observed=0.0; frozen_rule=>=0.2",
+            "observed=1.0; frozen_rule=>=2.0"
+          ],
+          "evidence_ids": [
+            "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+            "OBS_BLOCK_DOMINANCE:R13_TIGHT",
+            "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_B_LONGITUDINAL_BLOCK_ID",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE"
+              ],
+              "reason": "observed='THETA_KINEMATIC'; frozen_rule=in ['THETA_KINEMATIC', 'P_LONGITUDINAL_MAXWELL']",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_B_MEDIAN_DOMINANCE",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE"
+              ],
+              "reason": "observed=0.125; frozen_rule=>=0.5",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_STEP_FRACTION",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.75",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_TIGHT_SHARE_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R13_TIGHT"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.2",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_TIGHT_SHARE_RATIO",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R13_TIGHT"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=2.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_NEIGHBOR_SHARE_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.2",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_NEIGHBOR_SHARE_RATIO",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=2.0",
+              "status": "FAILED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_C_DISCRETE_CLOSURE_MISMATCH": {
+          "decision_reasons": [
+            "observed=0.5; frozen_rule=>1.0",
+            "observed=0; frozen_rule=>=2",
+            "observed=16; frozen_rule===16",
+            "observed=1.0; frozen_rule=>=10.0",
+            "observed=1.0; frozen_rule=>=2.0"
+          ],
+          "evidence_ids": [
+            "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+            "OBS_DISCRETE_CLOSURE:R13_TIGHT",
+            "OBS_DISCRETE_CLOSURE:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_C_DISCRETE_CLOSURE_MISMATCH",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_C_CLOSURE_MISMATCH",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE"
+              ],
+              "reason": "observed=0.5; frozen_rule=>1.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_C_CONSECUTIVE_VIOLATIONS",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE"
+              ],
+              "reason": "observed=0; frozen_rule=>=2",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_C_SAMPLE_COUNT",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE"
+              ],
+              "reason": "observed=16; frozen_rule===16",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_C_TIGHT_CONTRAST",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+                "OBS_DISCRETE_CLOSURE:R13_TIGHT"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=10.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_C_NEIGHBOR_CONTRAST",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+                "OBS_DISCRETE_CLOSURE:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=2.0",
+              "status": "FAILED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR": {
+          "decision_reasons": [
+            "observed=0.0; frozen_rule=>=0.75; per-step qualifier is >=3 blocks at share >=0.1, effective count >=3.0, and max share <0.5",
+            "observed=0.0; frozen_rule=>=0.25",
+            "observed=0.0; frozen_rule=>=0.25",
+            "observed=4; frozen_rule===4",
+            "observed=14; frozen_rule=>=14"
+          ],
+          "evidence_ids": [
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_TIGHT",
+            "OBS_DISTRIBUTED_ACCUMULATION:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_D_DISTRIBUTED_STEP_FRACTION",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.75; per-step qualifier is >=3 blocks at share >=0.1, effective count >=3.0, and max share <0.5",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_D_TIGHT_DISTRIBUTED_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_TIGHT"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.25",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_D_NEIGHBOR_DISTRIBUTED_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+                "OBS_DISTRIBUTED_ACCUMULATION:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.25",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_D_ALL_LINKED_MAXIMA_AT_FINAL_TIME",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE"
+              ],
+              "reason": "observed=4; frozen_rule===4",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_D_LINKED_SERIES_ACCUMULATE",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE"
+              ],
+              "reason": "observed=14; frozen_rule=>=14",
+              "status": "PASSED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_E_UNRESOLVED_MECHANISM": {
+          "decision_reasons": [
+            "complete admissible evidence is nondiscriminating"
+          ],
+          "evidence_ids": [
+            "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+            "OBS_EXCHANGE_KAPPA:R13_TIGHT",
+            "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR",
+            "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+            "OBS_BLOCK_DOMINANCE:R13_TIGHT",
+            "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR",
+            "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+            "OBS_DISCRETE_CLOSURE:R13_TIGHT",
+            "OBS_DISCRETE_CLOSURE:R10_LOOSE_NEIGHBOR",
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_TIGHT",
+            "OBS_DISTRIBUTED_ACCUMULATION:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_E_UNRESOLVED_MECHANISM",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_E_COMPLETE_ADMISSIBLE_EVIDENCE",
+              "evidence_ids": [],
+              "reason": "observed='EVIDENCE_ADMISSIBLE'; frozen_rule===EVIDENCE_ADMISSIBLE",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_E_EMPTY_SUPPORT_SET",
+              "evidence_ids": [],
+              "reason": "observed=[]; frozen_rule=supported_mechanism_ids == []",
+              "status": "PASSED"
+            }
+          ],
+          "status": "SUPPORTED",
+          "supporting_condition_decisions": []
+        }
+      },
+      "supported_mechanism_ids": []
+    },
+    "classifier_corrupted_raw_result": {
+      "aggregate_mechanism_result": "MECHANISM_UNRESOLVED_COMPLETE_EVIDENCE",
+      "claim_ceiling": "NUMERICAL_MECHANISM_EVIDENCE_ONLY; no robustness reclassification, materiality, physical instability, model-domain boundary, E-REPRO, pillar, seam, C_k, CCFT, or master-action promotion",
+      "classifier_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_CLASSIFIER_v0",
+      "evidence_diagnostic": "NONE",
+      "evidence_result": "EVIDENCE_ADMISSIBLE",
+      "hypothesis_decisions": {
+        "H_A_CANCELLATION_CONDITIONING": {
+          "decision_reasons": [
+            "observed=10.0; frozen_rule=>=1000000.0",
+            "observed=0.0; frozen_rule=>=0.75",
+            "observed=16; frozen_rule===16",
+            "observed=0.0; frozen_rule=>=1.0",
+            "observed=0.0; frozen_rule=>=1.0"
+          ],
+          "evidence_ids": [
+            "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+            "OBS_EXCHANGE_KAPPA:R13_TIGHT",
+            "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_A_CANCELLATION_CONDITIONING",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_A_KAPPA_MATERIAL",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+                "OBS_EXCHANGE_KAPPA:R13_TIGHT",
+                "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=10.0; frozen_rule=>=1000000.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_A_SEVERE_STEP_PERSISTENCE",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.75",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_A_COMPLETE_STEP_SERIES",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE"
+              ],
+              "reason": "observed=16; frozen_rule===16",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_A_TIGHT_DIRECTIONAL_CONTRAST",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+                "OBS_EXCHANGE_KAPPA:R13_TIGHT"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=1.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_A_NEIGHBOR_DIRECTIONAL_CONTRAST",
+              "evidence_ids": [
+                "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+                "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=1.0",
+              "status": "FAILED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE": {
+          "decision_reasons": [
+            "observed='THETA_KINEMATIC'; frozen_rule=in ['THETA_KINEMATIC', 'P_LONGITUDINAL_MAXWELL']",
+            "observed=0.125; frozen_rule=>=0.5",
+            "observed=0.0; frozen_rule=>=0.75",
+            "observed=0.0; frozen_rule=>=0.2",
+            "observed=1.0; frozen_rule=>=2.0",
+            "observed=0.0; frozen_rule=>=0.2",
+            "observed=1.0; frozen_rule=>=2.0"
+          ],
+          "evidence_ids": [
+            "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+            "OBS_BLOCK_DOMINANCE:R13_TIGHT",
+            "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_B_LONGITUDINAL_BLOCK_ID",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE"
+              ],
+              "reason": "observed='THETA_KINEMATIC'; frozen_rule=in ['THETA_KINEMATIC', 'P_LONGITUDINAL_MAXWELL']",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_B_MEDIAN_DOMINANCE",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE"
+              ],
+              "reason": "observed=0.125; frozen_rule=>=0.5",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_STEP_FRACTION",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.75",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_TIGHT_SHARE_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R13_TIGHT"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.2",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_TIGHT_SHARE_RATIO",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R13_TIGHT"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=2.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_NEIGHBOR_SHARE_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.2",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_B_NEIGHBOR_SHARE_RATIO",
+              "evidence_ids": [
+                "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+                "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=2.0",
+              "status": "FAILED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_C_DISCRETE_CLOSURE_MISMATCH": {
+          "decision_reasons": [
+            "observed=0.5; frozen_rule=>1.0",
+            "observed=0; frozen_rule=>=2",
+            "observed=16; frozen_rule===16",
+            "observed=1.0; frozen_rule=>=10.0",
+            "observed=1.0; frozen_rule=>=2.0"
+          ],
+          "evidence_ids": [
+            "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+            "OBS_DISCRETE_CLOSURE:R13_TIGHT",
+            "OBS_DISCRETE_CLOSURE:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_C_DISCRETE_CLOSURE_MISMATCH",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_C_CLOSURE_MISMATCH",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE"
+              ],
+              "reason": "observed=0.5; frozen_rule=>1.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_C_CONSECUTIVE_VIOLATIONS",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE"
+              ],
+              "reason": "observed=0; frozen_rule=>=2",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_C_SAMPLE_COUNT",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE"
+              ],
+              "reason": "observed=16; frozen_rule===16",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_C_TIGHT_CONTRAST",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+                "OBS_DISCRETE_CLOSURE:R13_TIGHT"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=10.0",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_C_NEIGHBOR_CONTRAST",
+              "evidence_ids": [
+                "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+                "OBS_DISCRETE_CLOSURE:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=1.0; frozen_rule=>=2.0",
+              "status": "FAILED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR": {
+          "decision_reasons": [
+            "observed=0.0; frozen_rule=>=0.75; per-step qualifier is >=3 blocks at share >=0.1, effective count >=3.0, and max share <0.5",
+            "observed=0.0; frozen_rule=>=0.25",
+            "observed=0.0; frozen_rule=>=0.25",
+            "observed=4; frozen_rule===4",
+            "observed=14; frozen_rule=>=14"
+          ],
+          "evidence_ids": [
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_TIGHT",
+            "OBS_DISTRIBUTED_ACCUMULATION:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_D_DISTRIBUTED_STEP_FRACTION",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.75; per-step qualifier is >=3 blocks at share >=0.1, effective count >=3.0, and max share <0.5",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_D_TIGHT_DISTRIBUTED_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_TIGHT"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.25",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_D_NEIGHBOR_DISTRIBUTED_ADVANTAGE",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+                "OBS_DISTRIBUTED_ACCUMULATION:R10_LOOSE_NEIGHBOR"
+              ],
+              "reason": "observed=0.0; frozen_rule=>=0.25",
+              "status": "FAILED"
+            },
+            {
+              "criterion_id": "H_D_ALL_LINKED_MAXIMA_AT_FINAL_TIME",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE"
+              ],
+              "reason": "observed=4; frozen_rule===4",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_D_LINKED_SERIES_ACCUMULATE",
+              "evidence_ids": [
+                "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE"
+              ],
+              "reason": "observed=14; frozen_rule=>=14",
+              "status": "PASSED"
+            }
+          ],
+          "status": "NOT_SUPPORTED",
+          "supporting_condition_decisions": []
+        },
+        "H_E_UNRESOLVED_MECHANISM": {
+          "decision_reasons": [
+            "complete admissible evidence is nondiscriminating"
+          ],
+          "evidence_ids": [
+            "OBS_EXCHANGE_KAPPA:R13_LOOSE",
+            "OBS_EXCHANGE_KAPPA:R13_TIGHT",
+            "OBS_EXCHANGE_KAPPA:R10_LOOSE_NEIGHBOR",
+            "OBS_BLOCK_DOMINANCE:R13_LOOSE",
+            "OBS_BLOCK_DOMINANCE:R13_TIGHT",
+            "OBS_BLOCK_DOMINANCE:R10_LOOSE_NEIGHBOR",
+            "OBS_DISCRETE_CLOSURE:R13_LOOSE",
+            "OBS_DISCRETE_CLOSURE:R13_TIGHT",
+            "OBS_DISCRETE_CLOSURE:R10_LOOSE_NEIGHBOR",
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_LOOSE",
+            "OBS_DISTRIBUTED_ACCUMULATION:R13_TIGHT",
+            "OBS_DISTRIBUTED_ACCUMULATION:R10_LOOSE_NEIGHBOR"
+          ],
+          "hypothesis_id": "H_E_UNRESOLVED_MECHANISM",
+          "necessary_condition_decisions": [
+            {
+              "criterion_id": "H_E_COMPLETE_ADMISSIBLE_EVIDENCE",
+              "evidence_ids": [],
+              "reason": "observed='EVIDENCE_ADMISSIBLE'; frozen_rule===EVIDENCE_ADMISSIBLE",
+              "status": "PASSED"
+            },
+            {
+              "criterion_id": "H_E_EMPTY_SUPPORT_SET",
+              "evidence_ids": [],
+              "reason": "observed=[]; frozen_rule=supported_mechanism_ids == []",
+              "status": "PASSED"
+            }
+          ],
+          "status": "SUPPORTED",
+          "supporting_condition_decisions": []
+        }
+      },
+      "supported_mechanism_ids": []
+    },
+    "classifier_ignores_corrupt_raw_payload_fields": true,
+    "classifier_input_contract_has_no_raw_payload_identity_field": true,
+    "malformed_payload_diagnostics": [],
+    "malformed_payload_with_empty_event_records_is_incorrectly_accepted": true
+  },
+  "independent_static_matrix_audit": {
+    "all_parent_input_output_identities_exact": true,
+    "all_parent_physical_projections_exact": true,
+    "all_role_paths_NFC": true,
+    "all_role_paths_casefold_unique": true,
+    "all_role_paths_unique": true,
+    "all_three_pairs_exact": true,
+    "auxiliary_file_count": 2,
+    "complete_expected_file_count_after_success": 14,
+    "declared_input_hash_contract_pass_count": 0,
+    "declared_input_hash_reconstructions": [
+      {
+        "additional_undeclared_exclusion": "input_hash_material_excludes",
+        "declared_contract_matches": false,
+        "declared_contract_recomputed_sha256": "c22c87a418924ffcca7f654e18ce9b4eb43aef240d33ad5468f8db1d9e0ece2e",
+        "historical_generation_matches": true,
+        "historical_generation_recomputed_sha256": "23b489e22cf59da093fedaa6694a5c458a7f6efbaa20ac011af2b6d643f9f094",
+        "run_id": "MECHv0:R13_LOOSE:INSTRUMENTED",
+        "stored_input_hash": "23b489e22cf59da093fedaa6694a5c458a7f6efbaa20ac011af2b6d643f9f094"
+      },
+      {
+        "additional_undeclared_exclusion": "input_hash_material_excludes",
+        "declared_contract_matches": false,
+        "declared_contract_recomputed_sha256": "f868eb92772b1d95675fef567bf84222254e7083d33dc9efd2d68fd7204d8776",
+        "historical_generation_matches": true,
+        "historical_generation_recomputed_sha256": "1fa2066a49011f8316e0b545d0d534dad179a66032794af3df34c0c6590e4a1c",
+        "run_id": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+        "stored_input_hash": "1fa2066a49011f8316e0b545d0d534dad179a66032794af3df34c0c6590e4a1c"
+      },
+      {
+        "additional_undeclared_exclusion": "input_hash_material_excludes",
+        "declared_contract_matches": false,
+        "declared_contract_recomputed_sha256": "23a28c74fca52d5a9bd8b6f29de1df5c4497a730a1e301869cc08ed1fce39ff9",
+        "historical_generation_matches": true,
+        "historical_generation_recomputed_sha256": "7e3e753fb9d6200c03b1b640ad2aed78e428f30e61c5876abeb60b169f35a7d1",
+        "run_id": "MECHv0:R13_TIGHT:INSTRUMENTED",
+        "stored_input_hash": "7e3e753fb9d6200c03b1b640ad2aed78e428f30e61c5876abeb60b169f35a7d1"
+      },
+      {
+        "additional_undeclared_exclusion": "input_hash_material_excludes",
+        "declared_contract_matches": false,
+        "declared_contract_recomputed_sha256": "a9f232eab5a42f3d93c585f3a06265684218270deefaf50d09cb46b295454a27",
+        "historical_generation_matches": true,
+        "historical_generation_recomputed_sha256": "f96f5a8ded5c9abb7b9cac4a153761375427cb0a7fd21659c69aec0abd080b9b",
+        "run_id": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+        "stored_input_hash": "f96f5a8ded5c9abb7b9cac4a153761375427cb0a7fd21659c69aec0abd080b9b"
+      },
+      {
+        "additional_undeclared_exclusion": "input_hash_material_excludes",
+        "declared_contract_matches": false,
+        "declared_contract_recomputed_sha256": "62bf40510aad00abf6b6175735a00ce1d650d595f47a4d33fccdad422b956d44",
+        "historical_generation_matches": true,
+        "historical_generation_recomputed_sha256": "fca3c4fdbb2c297705120177438de128096e4ee9909b3c3705ae4910f570d21c",
+        "run_id": "MECHv0:R10_LOOSE:INSTRUMENTED",
+        "stored_input_hash": "fca3c4fdbb2c297705120177438de128096e4ee9909b3c3705ae4910f570d21c"
+      },
+      {
+        "additional_undeclared_exclusion": "input_hash_material_excludes",
+        "declared_contract_matches": false,
+        "declared_contract_recomputed_sha256": "5fdc9fd78bee2ec482d35b4b78917cde61bad87c790b0dcc10fa2571f07b748f",
+        "historical_generation_matches": true,
+        "historical_generation_recomputed_sha256": "279fb57c73d3593a5cd81d2e1ddaf0afda70edd5a8ca03fcde6234a8e2f9c065",
+        "run_id": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL",
+        "stored_input_hash": "279fb57c73d3593a5cd81d2e1ddaf0afda70edd5a8ca03fcde6234a8e2f9c065"
+      }
+    ],
+    "historical_generation_hash_pass_count": 6,
+    "identity_forward_reverse_maps_exact": true,
+    "instrumented_count": 3,
+    "noninstrumented_count": 3,
+    "pair_reconstructions": [
+      {
+        "all_physical_and_parent_fields_exact": true,
+        "control_run_id": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+        "instrumentation_flags_are_complementary": true,
+        "instrumented_run_id": "MECHv0:R13_LOOSE:INSTRUMENTED"
+      },
+      {
+        "all_physical_and_parent_fields_exact": true,
+        "control_run_id": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+        "instrumentation_flags_are_complementary": true,
+        "instrumented_run_id": "MECHv0:R13_TIGHT:INSTRUMENTED"
+      },
+      {
+        "all_physical_and_parent_fields_exact": true,
+        "control_run_id": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL",
+        "instrumentation_flags_are_complementary": true,
+        "instrumented_run_id": "MECHv0:R10_LOOSE:INSTRUMENTED"
+      }
+    ],
+    "parent_reconstructions": [
+      {
+        "mechanism_configuration_role": "R13_LOOSE",
+        "parent_input_hash_exact": true,
+        "parent_output_path_exact": true,
+        "parent_output_sha256_exact": true,
+        "parent_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+        "physical_projection_exact": true,
+        "physical_projection_sha256": "015b1f9fa446e8c96e6b0fbc98f27f9d0d95ed8f7824c94bf1eda2f50e49bd5c",
+        "run_id": "MECHv0:R13_LOOSE:INSTRUMENTED"
+      },
+      {
+        "mechanism_configuration_role": "R13_LOOSE",
+        "parent_input_hash_exact": true,
+        "parent_output_path_exact": true,
+        "parent_output_sha256_exact": true,
+        "parent_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+        "physical_projection_exact": true,
+        "physical_projection_sha256": "015b1f9fa446e8c96e6b0fbc98f27f9d0d95ed8f7824c94bf1eda2f50e49bd5c",
+        "run_id": "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL"
+      },
+      {
+        "mechanism_configuration_role": "R13_TIGHT",
+        "parent_input_hash_exact": true,
+        "parent_output_path_exact": true,
+        "parent_output_sha256_exact": true,
+        "parent_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+        "physical_projection_exact": true,
+        "physical_projection_sha256": "902e53294d0cb4c57252908d16eba6bab41ad3fda69a4d31fd41dfb081deb570",
+        "run_id": "MECHv0:R13_TIGHT:INSTRUMENTED"
+      },
+      {
+        "mechanism_configuration_role": "R13_TIGHT",
+        "parent_input_hash_exact": true,
+        "parent_output_path_exact": true,
+        "parent_output_sha256_exact": true,
+        "parent_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+        "physical_projection_exact": true,
+        "physical_projection_sha256": "902e53294d0cb4c57252908d16eba6bab41ad3fda69a4d31fd41dfb081deb570",
+        "run_id": "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL"
+      },
+      {
+        "mechanism_configuration_role": "R10_LOOSE_NEIGHBOR",
+        "parent_input_hash_exact": true,
+        "parent_output_path_exact": true,
+        "parent_output_sha256_exact": true,
+        "parent_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "physical_projection_exact": true,
+        "physical_projection_sha256": "2ebded7eb9faf2d680ba1dcb36e7a95d8b058d0d6aa4be1be61283dfe8b60abf",
+        "run_id": "MECHv0:R10_LOOSE:INSTRUMENTED"
+      },
+      {
+        "mechanism_configuration_role": "R10_LOOSE_NEIGHBOR",
+        "parent_input_hash_exact": true,
+        "parent_output_path_exact": true,
+        "parent_output_sha256_exact": true,
+        "parent_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "physical_projection_exact": true,
+        "physical_projection_sha256": "2ebded7eb9faf2d680ba1dcb36e7a95d8b058d0d6aa4be1be61283dfe8b60abf",
+        "run_id": "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL"
+      }
+    ],
+    "record_count": 6,
+    "role_payload_count": 12,
+    "run_ids": [
+      "MECHv0:R13_LOOSE:INSTRUMENTED",
+      "MECHv0:R13_LOOSE:NONINSTRUMENTED_CONTROL",
+      "MECHv0:R13_TIGHT:INSTRUMENTED",
+      "MECHv0:R13_TIGHT:NONINSTRUMENTED_CONTROL",
+      "MECHv0:R10_LOOSE:INSTRUMENTED",
+      "MECHv0:R10_LOOSE:NONINSTRUMENTED_CONTROL"
+    ],
+    "run_ids_exact": true
+  },
+  "independent_threshold_provenance_audit": {
+    "complete_provenance_record_count": 0,
+    "future_mechanism_outputs_used_as_provenance": false,
+    "packet_has_threshold_provenance_registry": false,
+    "records": [
+      {
+        "constant_id": "directional_log10_contrast_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_A",
+        "value": 1.0
+      },
+      {
+        "constant_id": "loose_median_kappa_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_A",
+        "value": 1000000.0
+      },
+      {
+        "constant_id": "required_postinitial_step_count",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_A",
+        "value": 16
+      },
+      {
+        "constant_id": "severe_step_fraction_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_A",
+        "value": 0.75
+      },
+      {
+        "constant_id": "dominance_share_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_B",
+        "value": 0.5
+      },
+      {
+        "constant_id": "dominant_step_fraction_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_B",
+        "value": 0.75
+      },
+      {
+        "constant_id": "eligible_longitudinal_block_ids",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_B",
+        "value": [
+          "THETA_KINEMATIC",
+          "P_LONGITUDINAL_MAXWELL"
+        ]
+      },
+      {
+        "constant_id": "median_share_advantage_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_B",
+        "value": 0.2
+      },
+      {
+        "constant_id": "median_share_ratio_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_B",
+        "value": 2.0
+      },
+      {
+        "constant_id": "loose_to_neighbor_max_ratio_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_C",
+        "value": 2.0
+      },
+      {
+        "constant_id": "loose_to_tight_max_ratio_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_C",
+        "value": 10.0
+      },
+      {
+        "constant_id": "minimum_consecutive_violation_steps",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_C",
+        "value": 2
+      },
+      {
+        "constant_id": "required_postinitial_step_count",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_C",
+        "value": 16
+      },
+      {
+        "constant_id": "roundoff_bound_gamma_operation_count",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_C",
+        "value": 32
+      },
+      {
+        "constant_id": "roundoff_bound_violation_ratio_strictly_above",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_C",
+        "value": 1.0
+      },
+      {
+        "constant_id": "distributed_fraction_advantage_over_each_reference_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 0.25
+      },
+      {
+        "constant_id": "distributed_step_fraction_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 0.75
+      },
+      {
+        "constant_id": "effective_block_count_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 3.0
+      },
+      {
+        "constant_id": "linked_structural_series_count",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 4
+      },
+      {
+        "constant_id": "minimum_contributing_block_count_per_step",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 3
+      },
+      {
+        "constant_id": "minimum_nondecreasing_increments_per_series",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 14
+      },
+      {
+        "constant_id": "per_block_share_minimum",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 0.1
+      },
+      {
+        "constant_id": "single_block_share_maximum_exclusive",
+        "has_derivation_formula": false,
+        "has_rounding_rule": false,
+        "has_scientific_meaning": false,
+        "has_source_artifact": false,
+        "has_source_record_ids": false,
+        "hypothesis": "H_D",
+        "value": 0.5
+      }
+    ],
+    "support_constant_count": 23
+  },
+  "input_custody": [
+    {
+      "expected_sha256": "9900bef2b60f816a890ca986a3daee64236dc1a11a4ca6cf98f1ce8d5e0a0317",
+      "observed_sha256": "9900bef2b60f816a890ca986a3daee64236dc1a11a4ca6cf98f1ce8d5e0a0317",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-PACKET-v0.json"
+    },
+    {
+      "expected_sha256": "97597b248d6aca1de9abf252bc098493edce318eea1a903a48c2d33a97e22923",
+      "observed_sha256": "97597b248d6aca1de9abf252bc098493edce318eea1a903a48c2d33a97e22923",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-RUN-MATRIX-v0.json"
+    },
+    {
+      "expected_sha256": "9016c5a5cb4f0920a59417acf26023ef79b0dcf61d3751dd91c30282d0d3dd6c",
+      "observed_sha256": "9016c5a5cb4f0920a59417acf26023ef79b0dcf61d3751dd91c30282d0d3dd6c",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v0.json"
+    },
+    {
+      "expected_sha256": "a6d687cc7c854221144d48525f69aad903536a0a1a16a46b550c7fd6c2c7b89b",
+      "observed_sha256": "a6d687cc7c854221144d48525f69aad903536a0a1a16a46b550c7fd6c2c7b89b",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-MANIFEST-v0.json"
+    },
+    {
+      "expected_sha256": "2606cdfd8b09af0a5878bdb05aa9d4694996fd0f3e39e529d545f69ea4d6d95a",
+      "observed_sha256": "2606cdfd8b09af0a5878bdb05aa9d4694996fd0f3e39e529d545f69ea4d6d95a",
+      "passed": true,
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_NUMERICAL_FREEZE_PACKET_20260715_v0.json"
+    },
+    {
+      "expected_sha256": "73051bfcf34853df66f0a8a966231106f1231a9040011501618f96093fc5d6f2",
+      "observed_sha256": "73051bfcf34853df66f0a8a966231106f1231a9040011501618f96093fc5d6f2",
+      "passed": true,
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0.py"
+    },
+    {
+      "expected_sha256": "c36affa6fb95ba92ce93555e0856a89bf92b0e756265e6770a2bfba31c52a88f",
+      "observed_sha256": "c36affa6fb95ba92ce93555e0856a89bf92b0e756265e6770a2bfba31c52a88f",
+      "passed": true,
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0.py"
+    },
+    {
+      "expected_sha256": "3c09d28b8d49f7da81a42b73ad7d8f0b1472a0354b090ce31f5c1e828ca60af4",
+      "observed_sha256": "3c09d28b8d49f7da81a42b73ad7d8f0b1472a0354b090ce31f5c1e828ca60af4",
+      "passed": true,
+      "path": "formal/toe_formal/ToeFormal/Derivation/DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV0.lean"
+    },
+    {
+      "expected_sha256": "6f860716f29da107cd8f70a009d62d6003fce5fc9eb1cc316a3ab9d50171fdca",
+      "observed_sha256": "6f860716f29da107cd8f70a009d62d6003fce5fc9eb1cc316a3ab9d50171fdca",
+      "passed": true,
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_classifier_v0.py"
+    },
+    {
+      "expected_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "observed_sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150",
+      "passed": true,
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_implementation_v0.py"
+    },
+    {
+      "expected_sha256": "29a61d4c019861df1d6807f8410a805d7d099ebc2805b7392103c86aa9850afc",
+      "observed_sha256": "29a61d4c019861df1d6807f8410a805d7d099ebc2805b7392103c86aa9850afc",
+      "passed": true,
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_REVIEW_20260715_v1.json"
+    },
+    {
+      "expected_sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2",
+      "observed_sha256": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json"
+    },
+    {
+      "expected_sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "observed_sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json"
+    },
+    {
+      "expected_sha256": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "observed_sha256": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "passed": true,
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json"
+    },
+    {
+      "expected_sha256": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "observed_sha256": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "passed": true,
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json"
+    }
+  ],
+  "nonclaims": [
+    "no mechanism hypothesis has been evaluated on experiment data",
+    "no six-run mechanism experiment has executed",
+    "no canonical output has changed",
+    "no robustness or materiality result is assigned",
+    "no E-REPRO, pillar, seam, CCFT, C_k, or master-action promotion is assigned"
+  ],
+  "passed_decision_count": 41,
+  "preserved_scientific_core": {
+    "R13_root_mechanism": "UNRESOLVED",
+    "Route_A": "ACCEPTED",
+    "canonical_robustness": "NUMERICALLY_BLOCKED",
+    "eight_block_inventory": "PRESERVED",
+    "fourteen_observable_inventory": "PRESERVED_PENDING_EXECUTABLE_SEMANTIC_REPAIR",
+    "instrumented_design_v1": "ACCEPTED",
+    "materiality": "NOT_EVALUATED_NUMERICAL_BLOCK",
+    "new_E_REPRO": "NONE",
+    "six_run_scientific_comparison_structure": "PRESERVED"
+  },
+  "reviewer_independence": {
+    "canonical_parents_reconstructed_from_canonical_matrix_and_outputs": true,
+    "classifier_and_implementation_subjects_imported_only_for_pure_validation": true,
+    "evolution_runner_invocation_count": 0,
+    "freeze_generator_imported": false,
+    "matrix_and_payload_mutations_independently_executed": true,
+    "preparation_combined_pass_flags_used_as_review_evidence": false,
+    "simulation_invocation_count": 0
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_NUMERICAL_FREEZE_PACKET_REVIEW_20260715_v0",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v1",
+  "selected_next_target_kind": "VERSIONED_NUMERICAL_FREEZE_CORRECTION_ONLY",
+  "target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0_result",
+  "verdict": "BLOCK_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_NUMERICAL_FREEZE"
+}

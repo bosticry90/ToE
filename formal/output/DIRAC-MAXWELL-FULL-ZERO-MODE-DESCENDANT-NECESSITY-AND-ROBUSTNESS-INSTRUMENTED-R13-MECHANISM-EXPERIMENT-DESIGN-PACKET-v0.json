@@ -1,0 +1,831 @@
+{
+  "aggregation_block_registry_and_missing_data_contract": {
+    "block_registry_requirement": "must enumerate every implemented solver block, including Dirac, adjoint, longitudinal Maxwell, phi2, phi3, Gauss, continuity, gauge, zero-mode, and any additional block present in code; omission of an implemented block is B-BLOCKED",
+    "iteration_summaries_required": [
+      "initial, per-iteration, and terminal block residuals",
+      "first and final dominant block",
+      "maximum dominance fraction and its iteration"
+    ],
+    "optional_not_applicable_behavior": "explicit NOT_APPLICABLE with registered implementation reason; never silent zero or null",
+    "per_block_freeze_fields": [
+      "mathematical residual",
+      "discrete residual expression",
+      "units",
+      "norm",
+      "normalization scale",
+      "numerical floor",
+      "spatial aggregation",
+      "time aggregation",
+      "solver-iteration aggregation"
+    ],
+    "required_missing_data_behavior": "B-BLOCKED_REQUIRED_MECHANISM_OBSERVABLE_MISSING",
+    "spatial_summaries_required": [
+      "L_infinity maximum absolute magnitude",
+      "grid-weighted discrete L2 norm",
+      "argmax grid index with lowest-index deterministic tie break"
+    ],
+    "time_summaries_required": [
+      "per-step raw series",
+      "maximum and first-maximum time",
+      "final value",
+      "frozen quadrature integral where the hypothesis requires accumulation"
+    ]
+  },
+  "authority_boundary": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "R13_parameter_or_initial_condition_change_authorized": false,
+    "canonical_output_mutation_authorized": false,
+    "design_independently_accepted": false,
+    "design_packet_prepared": true,
+    "different_numerical_method_authorized": false,
+    "exact_run_count_or_values_selected": false,
+    "experiment_frozen": false,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "numerical_freeze_packet_authorized": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "threshold_or_fit_change_authorized": false
+  },
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "Design-only specification for a future numerical-mechanism experiment. It may define questions, required role classes, observables, controls, hypothesis logic, and freeze obligations; it cannot accept the design, freeze exact values, authorize execution, reclassify robustness, evaluate materiality, or award a scientific claim.",
+  "decision_count": 27,
+  "decisions": [
+    {
+      "decision_id": "accepted_route_review_selects_exact_instrumented_design_target",
+      "passed": true
+    },
+    {
+      "decision_id": "all_bound_sources_and_203_canonical_outputs_have_exact_custody",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_execution_count_and_root_digest_remain_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "three_scientific_questions_map_one_to_one_to_unresolved_mechanisms",
+      "passed": true
+    },
+    {
+      "decision_id": "core_design_contains_loose_R13_tight_R13_and_matched_neighbor_roles",
+      "passed": true
+    },
+    {
+      "decision_id": "every_core_instrumented_configuration_requires_an_uninstrumented_self_control",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_run_count_and_tight_reference_multiplicity_remain_unfrozen",
+      "passed": true
+    },
+    {
+      "decision_id": "neighbor_rule_is_deterministic_and_exact_identity_is_deferred_to_freeze",
+      "passed": true
+    },
+    {
+      "decision_id": "instrumentation_is_read_only_side_channel_with_byte_identity_primary_control",
+      "passed": true
+    },
+    {
+      "decision_id": "fallback_nonperturbation_floor_and_ceiling_are_not_posthoc_or_frozen_now",
+      "passed": true
+    },
+    {
+      "decision_id": "exchange_raw_terms_remainder_and_conditioning_are_all_required",
+      "passed": true
+    },
+    {
+      "decision_id": "equation_block_raw_normalized_dominance_and_iteration_histories_are_required",
+      "passed": true
+    },
+    {
+      "decision_id": "spatial_Gauss_continuity_and_Maxwell_fields_are_required",
+      "passed": true
+    },
+    {
+      "decision_id": "actual_discrete_operator_outputs_and_scheme_derived_closure_are_required",
+      "passed": true
+    },
+    {
+      "decision_id": "posthoc_continuum_derivative_substitution_is_forbidden",
+      "passed": true
+    },
+    {
+      "decision_id": "every_implemented_solver_block_requires_units_norms_scales_floors_and_aggregations",
+      "passed": true
+    },
+    {
+      "decision_id": "required_mechanism_missing_data_is_blocking_not_zero_filled",
+      "passed": true
+    },
+    {
+      "decision_id": "hypotheses_H_A_through_H_E_include_unresolved_outcome",
+      "passed": true
+    },
+    {
+      "decision_id": "classifier_allows_multiple_supported_mechanisms_and_forbids_forced_winner",
+      "passed": true
+    },
+    {
+      "decision_id": "custody_nonperturbation_and_numerical_gates_precede_mechanism_classification",
+      "passed": true
+    },
+    {
+      "decision_id": "supporting_tolerance_and_duration_modules_remain_secondary_freeze_options",
+      "passed": true
+    },
+    {
+      "decision_id": "new_output_family_is_separate_and_canonical_root_is_read_only",
+      "passed": true
+    },
+    {
+      "decision_id": "payload_identity_and_output_volume_failure_contracts_are_defined",
+      "passed": true
+    },
+    {
+      "decision_id": "all_exact_numerical_values_thresholds_schemas_hashes_and_controls_are_freeze_deferred",
+      "passed": true
+    },
+    {
+      "decision_id": "design_claim_ceiling_remains_numerical_mechanism_only",
+      "passed": true
+    },
+    {
+      "decision_id": "no_design_acceptance_freeze_execution_rerun_or_scientific_promotion_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "selected_next_target_is_independent_design_review_only",
+      "passed": true
+    }
+  ],
+  "discrete_Maxwell_continuity_closure_contract": {
+    "closure_formula_frozen_now": false,
+    "closure_threshold_frozen_now": false,
+    "continuum_formula_is_not_the_audit_definition": true,
+    "failure_if_not_closed_before_freeze": "B-BLOCKED_DISCRETE_CLOSURE_DEFINITION",
+    "implementation_closure_requirements_before_freeze": [
+      "symbolic or executable mapping from every closure term to implementation expression",
+      "operator and stencil registry",
+      "operator implementation hashes",
+      "unit and sign audit",
+      "expected truncation remainder derivation",
+      "positive and negative closure controls"
+    ],
+    "posthoc_continuum_derivative_substitution_allowed": false,
+    "required_derivation": "derive the Maxwell-to-continuity closure from the implemented time centering, spatial stencil, gauge links, boundary conditions, signs, charge convention, staggering or collocation, zero-mode treatment, and Wilson terms"
+  },
+  "downstream_target_if_independent_review_accepts": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0",
+  "failed_decision_ids": [],
+  "freeze_deferred_registry": [
+    "exact experiment and run count",
+    "exact tight R13 tolerance choice and any additional tolerances",
+    "exact matched-neighbor row identity after deterministic rule confirmation",
+    "exact duration and checkpoint schedule",
+    "exact instrumentation pairing multiplicity",
+    "exact grid, timestep, iteration cap, and environment identity",
+    "exact equation-block registry tied to implementation",
+    "exact output field names, shapes, schema version, and filenames",
+    "exact units, normalizations, numerical floors, and aggregation formulas",
+    "exact discrete closure formula, operator hashes, and truncation remainder",
+    "exact nonperturbation equality or fallback equivalence rule",
+    "exact hypothesis thresholds, contrast rules, association metrics, and tie behavior",
+    "exact positive and negative controls",
+    "exact classifier implementation and hash",
+    "exact implementation closure and code hash",
+    "exact one-execution authorization and no-retry rule"
+  ],
+  "hypotheses_and_classifier_design": {
+    "classifier_order": [
+      "custody, identity, and instrumentation nonperturbation gate",
+      "required-role completion and required-observable completeness gate",
+      "numerical and discrete-definition admissibility gate",
+      "evaluate H_A, H_B, and H_C necessary conditions independently",
+      "if two or more of H_A to H_C pass, assign MULTIPLE_SUPPORTED_MECHANISMS",
+      "if exactly one of H_A to H_C passes, assign SINGLE_SUPPORTED_MECHANISM",
+      "if none pass and H_D necessary conditions pass, assign DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+      "otherwise assign UNRESOLVED_MECHANISM H_E"
+    ],
+    "forced_single_winner_allowed": false,
+    "hypotheses": [
+      {
+        "hypothesis_id": "H_A_CANCELLATION_CONDITIONING",
+        "necessary_condition_classes": [
+          "kappa_exchange exceeds a future frozen material-conditioning threshold in loose R13",
+          "loose R13 conditioning distinguishes both tight R13 and the matched neighbor under frozen contrasts"
+        ],
+        "supporting_condition_classes": [
+          "exchange remainder sensitivity tracks conditioning",
+          "individual exchange terms remain much less tolerance-sensitive than their remainder"
+        ]
+      },
+      {
+        "hypothesis_id": "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+        "necessary_condition_classes": [
+          "one longitudinal normalized block exceeds a future frozen dominance threshold",
+          "dominance distinguishes loose R13 from tight R13 and the matched neighbor"
+        ],
+        "supporting_condition_classes": [
+          "dominance appears no later than the accepted structural threshold crossings",
+          "continuity and Gauss residual fields track the dominant block under frozen association metrics"
+        ]
+      },
+      {
+        "hypothesis_id": "H_C_DISCRETE_CLOSURE_MISMATCH",
+        "necessary_condition_classes": [
+          "actual scheme-derived closure residual fails its future frozen admissibility criterion",
+          "failure distinguishes loose R13 from tight R13 and the matched neighbor"
+        ],
+        "supporting_condition_classes": [
+          "closure improves predictably with tighter solver tolerance",
+          "spatial closure localization predicts continuity-residual localization"
+        ]
+      },
+      {
+        "hypothesis_id": "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+        "necessary_condition_classes": [
+          "no H_A through H_C necessary-condition set passes",
+          "multiple normalized blocks contribute under future frozen distributed-contribution criteria",
+          "structural residual accumulation is reproduced without a single dominant block"
+        ],
+        "supporting_condition_classes": [
+          "block contributions share a common tolerance response",
+          "cumulative contribution metrics predict later structural residuals"
+        ]
+      },
+      {
+        "hypothesis_id": "H_E_UNRESOLVED_MECHANISM",
+        "necessary_condition_classes": [
+          "required evidence is incomplete, conflicting, below discrimination thresholds, or does not classify as H_A through H_D"
+        ],
+        "supporting_condition_classes": []
+      }
+    ],
+    "materiality_evaluation_called": false,
+    "multiple_H_A_to_H_C_support_allowed": true,
+    "outcome_classes": [
+      "EVIDENCE_BLOCKED_CUSTODY_OR_INSTRUMENTATION",
+      "EVIDENCE_BLOCKED_NUMERICAL_OR_DEFINITION",
+      "SINGLE_SUPPORTED_MECHANISM",
+      "MULTIPLE_SUPPORTED_MECHANISMS",
+      "DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+      "UNRESOLVED_MECHANISM"
+    ],
+    "physical_or_model_domain_claim_called": false,
+    "unresolved_outcome_mandatory": true
+  },
+  "inherited_authority": {
+    "blocked_role": "SOLVER_TOL1eM08",
+    "blocked_row": "R13_CORNER_STRONG_LOW",
+    "canonical_robustness_status": "NUMERICALLY_BLOCKED",
+    "descendant_materiality_status": "NOT_EVALUATED_NUMERICAL_BLOCK",
+    "new_E_REPRO": "NONE",
+    "root_numerical_mechanism_status": "UNRESOLVED",
+    "selected_route": "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT"
+  },
+  "instrumentation_nonperturbation_contract": {
+    "capture_order": "copy already-computed values or immutable state snapshots only after the evolution operation being diagnosed has completed; diagnostic reductions run on the copy",
+    "failure_disposition": "B-BLOCKED_INSTRUMENTATION_PERTURBATION",
+    "fallback_equivalence_rule_status": "NOT_DEFINED_OR_AUTHORIZED_IN_DESIGN_v0",
+    "fallback_requirements_if_byte_identity_is_impossible": [
+      "document the unavoidable arithmetic-path effect before freeze",
+      "freeze the exact compared state fields, units, norm, epsilon floor, and delta ceiling",
+      "derive the ceiling independently of mechanism-experiment results",
+      "treat equivalence failure as B-BLOCKED and suppress mechanism classification"
+    ],
+    "forbidden_effects": [
+      "modify physical equations or source terms",
+      "modify state variables or solver buffers",
+      "modify iteration or reduction order",
+      "modify stopping criteria or requested tolerance",
+      "modify timestep, grid, boundary conditions, or model parameters",
+      "feed a diagnostic quantity back into evolution or acceptance decisions",
+      "adapt logging content based on whether a mechanism looks favorable"
+    ],
+    "instrumentation_permission": "read immutable snapshots of registered state, residual, operator, and solver metadata and emit them to a separate output channel",
+    "nonperturbation_ceiling_frozen_now": false,
+    "nonperturbation_floor_frozen_now": false,
+    "paired_self_control_scope": "every distinct core instrumented physical configuration must have an otherwise identical uninstrumented reference role",
+    "primary_equivalence_rule": "byte-identical registered physical trajectory payload"
+  },
+  "matched_neighbor_selection_design": {
+    "axis_normalization_rule": "(candidate_value - R13_value) / (frozen_axis_max - frozen_axis_min)",
+    "eligibility_rule": "canonical scientific rows other than R13 whose historical 1e-8 solver role passed all four R13-linked residual ceilings",
+    "eligible_axis_sharing_candidate_count": 11,
+    "exact_neighbor_frozen_now": false,
+    "post_result_visual_choice_allowed": false,
+    "provisional_top_candidate_for_freeze_confirmation": "R10_MU_HIGH",
+    "ranked_candidate_audit": [
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.4896889213723749,
+        "normalized_distance": 0.8816610347670144,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.0009939878696604643,
+        "normalized_distance": 1.1246659340870895,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.3295695173808123,
+        "normalized_distance": 1.1545049743426825,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.11352359782125866,
+        "normalized_distance": 1.235850387476754,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.041442437129223894,
+        "normalized_distance": 1.3017082793177757,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.0011490137697415805,
+        "normalized_distance": 1.3074088525554775,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.08303823576140847,
+        "normalized_distance": 1.3331639734955496,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.022711000594795347,
+        "normalized_distance": 1.527377404501585,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.1646153306494586,
+        "normalized_distance": 1.5701605935245453,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.11326931147188503,
+        "normalized_distance": 1.5897566418249187,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "maximum_loose_solver_ceiling_ratio": 0.31657838403834687,
+        "normalized_distance": 1.9418959408302259,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": -1.0
+        },
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ],
+        "shared_axis_count": 1
+      }
+    ],
+    "ranking_rule": [
+      "maximize number of shared R13 axis values",
+      "minimize Euclidean distance after per-axis min-max normalization over the frozen matrix",
+      "break remaining ties by lexicographically ascending scientific_row_id"
+    ],
+    "status": "DESIGN_RULE_AND_FEASIBILITY_AUDIT_EXACT_SELECTION_DEFERRED_TO_FREEZE"
+  },
+  "mechanism_observable_registry": [
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_FIELD_LONGITUDINAL_RAW",
+      "semantic_requirement": "field-sector longitudinal exchange before cancellation",
+      "shape_class": "space_time_and_registered_spatial_integral",
+      "unit_requirement": "native canonical code-energy-rate unit, frozen explicitly"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_MATTER_LONGITUDINAL_RAW",
+      "semantic_requirement": "matter-sector longitudinal exchange before cancellation",
+      "shape_class": "space_time_and_registered_spatial_integral",
+      "unit_requirement": "same registered unit and sign convention as field exchange"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_LONGITUDINAL_REMAINDER_RAW",
+      "semantic_requirement": "field plus matter exchange computed from preserved raw terms",
+      "shape_class": "space_time_and_registered_spatial_integral",
+      "unit_requirement": "same registered unit as each exchange term"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_CANCELLATION_KAPPA",
+      "semantic_requirement": "(|X_field| + |X_matter|) / (|X_field + X_matter| + epsilon_exchange)",
+      "shape_class": "per_time_and_frozen_summary_aggregates",
+      "unit_requirement": "dimensionless; epsilon_exchange has exchange-remainder units"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_BLOCK_RESIDUAL_RAW",
+      "semantic_requirement": "actual implemented residual before cross-block normalization",
+      "shape_class": "time_iteration_equation_block_and_optional_space",
+      "unit_requirement": "native block unit registered separately for every block"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_BLOCK_RESIDUAL_NORMALIZED",
+      "semantic_requirement": "raw block residual norm divided by an independently frozen block scale and floor",
+      "shape_class": "time_iteration_equation_block",
+      "unit_requirement": "dimensionless"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_BLOCK_DOMINANCE_FRACTION",
+      "semantic_requirement": "normalized block magnitude divided by sum of normalized block magnitudes plus epsilon_dominance",
+      "shape_class": "time_iteration_equation_block",
+      "unit_requirement": "dimensionless"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_ITERATION_METADATA",
+      "semantic_requirement": "requested tolerance, terminal residual, stopping reason, step acceptance, iteration count, damping or line search if applicable, and conditioning data if available",
+      "shape_class": "time_iteration",
+      "unit_requirement": "field-specific registered units or dimensionless metadata"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "GAUSS_RESIDUAL_FIELD",
+      "semantic_requirement": "actual discrete Gauss residual field",
+      "shape_class": "space_time",
+      "unit_requirement": "canonical equation-residual unit"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "CONTINUITY_RESIDUAL_FIELD",
+      "semantic_requirement": "actual discrete continuity residual field",
+      "shape_class": "space_time",
+      "unit_requirement": "canonical equation-residual unit"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "LONGITUDINAL_MAXWELL_RESIDUAL_COMPONENTS",
+      "semantic_requirement": "component residuals from the implemented Maxwell equation",
+      "shape_class": "component_space_time",
+      "unit_requirement": "canonical equation-residual unit by component"
+    },
+    {
+      "mechanism_ids": [
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "DISCRETE_OPERATOR_OUTPUTS",
+      "semantic_requirement": "outputs of the exact time and space operators, gauge-link transport, Wilson terms, boundary handling, and staggering used by evolution",
+      "shape_class": "operator_component_space_time",
+      "unit_requirement": "operator-output units registered per component"
+    },
+    {
+      "mechanism_ids": [
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "MAXWELL_TO_CONTINUITY_CLOSURE_RESIDUAL",
+      "semantic_requirement": "scheme-derived closure expression using actual discrete operators minus the implemented continuity residual",
+      "shape_class": "space_time_and_frozen_summary_aggregates",
+      "unit_requirement": "frozen closure-residual unit"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING",
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "INSTRUMENTATION_TRAJECTORY_IDENTITY",
+      "semantic_requirement": "hashes and, if needed, frozen equivalence residuals",
+      "shape_class": "paired_run_physical_trajectory",
+      "unit_requirement": "hash identity or dimensionless frozen equivalence metric"
+    }
+  ],
+  "nonclaims": [
+    "no design accepted",
+    "no numerical freeze prepared or accepted",
+    "no exact run count",
+    "no exact tight-reference multiplicity",
+    "no exact neighbor frozen",
+    "no exact duration schedule",
+    "no exact output schema or filename set",
+    "no diagnostic floor, threshold, or decision constant frozen",
+    "no implementation or classifier hash frozen",
+    "no new output root created",
+    "no new simulation",
+    "no canonical output mutation",
+    "no rerun",
+    "no root mechanism identified",
+    "no physical instability",
+    "no model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar or seam promotion",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "output_separation_and_custody_design": {
+    "canonical_digest_required_before_and_after_every_future_stage": true,
+    "canonical_output_root_write_allowed": false,
+    "new_mechanism_output_created_now": false,
+    "new_output_family_required": true,
+    "new_output_root_created_now": false,
+    "output_volume_contract": [
+      "estimate worst-case record and family size before freeze",
+      "fixed logging cadence only; no value-dependent adaptive logging",
+      "chunking and compression may occur only after immutable capture",
+      "no dropped samples or silent truncation",
+      "disk or serialization failure is B-BLOCKED",
+      "diagnostic writer may not reuse mutable solver storage"
+    ],
+    "payload_identity_fields_required": [
+      "experiment_id",
+      "run_id",
+      "parent_canonical_row_id",
+      "mechanism_role",
+      "solver_tolerance",
+      "duration",
+      "instrumentation_state",
+      "model_hash",
+      "implementation_hash",
+      "discrete_operator_hash",
+      "output_schema_version",
+      "input_hash",
+      "payload_hash"
+    ],
+    "proposed_namespace_not_created_or_frozen": "formal/output/experiments/dirac_maxwell_instrumented_r13_mechanism_v0/"
+  },
+  "passed_decision_count": 27,
+  "required_run_classes": [
+    {
+      "instrumented": true,
+      "purpose": "reproduce and explain the accepted numerical block",
+      "required": true,
+      "role_class": "CORE_R13_LOOSE_MECHANISM",
+      "scientific_row_rule": "exact historical R13_CORNER_STRONG_LOW parameters",
+      "solver_tolerance_rule": "anchor to historically failing SOLVER_TOL1eM08 (1e-8)"
+    },
+    {
+      "instrumented": true,
+      "purpose": "identify internal structures suppressed by a tighter solve",
+      "required": true,
+      "role_class": "CORE_R13_TIGHT_REFERENCE",
+      "scientific_row_rule": "configuration-identical R13_CORNER_STRONG_LOW parameters",
+      "solver_tolerance_rule": "future freeze selects at least one historically passing canonical reference from 1e-10 and 1e-12 by a predeclared rule"
+    },
+    {
+      "instrumented": true,
+      "purpose": "contrast R13 with the closest canonically admissible parameter row",
+      "required": true,
+      "role_class": "CORE_MATCHED_PASSING_NEIGHBOR_LOOSE",
+      "scientific_row_rule": "future freeze applies the deterministic neighbor rule",
+      "solver_tolerance_rule": "historical loose-solver role at 1e-8"
+    },
+    {
+      "instrumented": false,
+      "purpose": "prove diagnostics do not change registered physical trajectories",
+      "required": true,
+      "role_class": "INSTRUMENTATION_NONPERTURBATION_REFERENCE",
+      "scientific_row_rule": "paired configuration for every distinct core instrumented physical role",
+      "solver_tolerance_rule": "identical to its paired instrumented role"
+    }
+  ],
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_v0",
+  "scientific_questions": [
+    {
+      "mechanism_id": "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING",
+      "question": "Is the longitudinal exchange residual amplified by subtraction of large, nearly cancelling field and matter transfers?",
+      "question_id": "Q_A_EXCHANGE_CANCELLATION"
+    },
+    {
+      "mechanism_id": "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+      "question": "Which implemented equation block first carries, dominates, or amplifies the loose-tolerance solver error?",
+      "question_id": "Q_B_EQUATION_BLOCK"
+    },
+    {
+      "mechanism_id": "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE",
+      "question": "Does the actual discrete longitudinal Maxwell equation account for the observed continuity residual within its frozen truncation remainder?",
+      "question_id": "Q_C_DISCRETE_CLOSURE"
+    }
+  ],
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_INSTRUMENTED_R13_DESIGN_REVIEW_ONLY",
+  "source_custody": {
+    "accepted_route_A_design_preparation_authority_exact": true,
+    "all_source_artifact_hashes_exact": true,
+    "canonical_output_mutation_count": 0,
+    "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_root_digest_exact": true,
+    "canonical_root_file_count": 205,
+    "canonical_run_output_count_checked": 203,
+    "canonical_run_output_hash_failures": [],
+    "execution_count_performed": 1,
+    "expected_source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_REVIEW_20260715_v0.json": "15c7bb4ed25f0ce029aac83c231903b69e1073cb356547e0dbc8644b3b200873",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_PACKET_REVIEW_20260715_v0.json": "a7c48d0d14d69a6d1990d03b09598d449b3e8761f20fc0b2f9308449e73028ed",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-PACKET-v0.json": "b0c76f95bc767a9940ba19b6221ba7c113d0d99fe037e5f586723d88b664d712",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_review_v0.py": "953374cad4be66e3f3512039e734aa207c52fe32b7cd0c403192f1ab5759062b"
+    },
+    "new_simulation_run_count": 0,
+    "passed": true,
+    "source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_REVIEW_20260715_v0.json": "15c7bb4ed25f0ce029aac83c231903b69e1073cb356547e0dbc8644b3b200873",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_PACKET_REVIEW_20260715_v0.json": "a7c48d0d14d69a6d1990d03b09598d449b3e8761f20fc0b2f9308449e73028ed",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-PACKET-v0.json": "b0c76f95bc767a9940ba19b6221ba7c113d0d99fe037e5f586723d88b664d712",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_review_v0.py": "953374cad4be66e3f3512039e734aa207c52fe32b7cd0c403192f1ab5759062b"
+    }
+  },
+  "supporting_modules": [
+    {
+      "freeze_requirements_if_included": [
+        "exact tolerance values and role identities",
+        "fit formula, points, weights, floors, and minimum count",
+        "whether the fit is descriptive or decision-bearing",
+        "failure and missing-point behavior"
+      ],
+      "module_id": "SUPPORT_B_EXPANDED_TOLERANCE_LADDER",
+      "purpose": "test stability of the descriptive tolerance response",
+      "status": "SECONDARY_OPTION_FOR_FUTURE_FREEZE_NOT_REQUIRED_FOR_CORE_DESIGN"
+    },
+    {
+      "freeze_requirements_if_included": [
+        "exact durations or checkpoint times",
+        "independent-run versus single-run-checkpoint construction",
+        "prefix identity rule for checkpoints",
+        "time-fit formulas, points, weights, and claim ceiling"
+      ],
+      "module_id": "SUPPORT_C_DURATION_SCALING",
+      "purpose": "test linear-like structural and quadratic-like exchange growth",
+      "status": "SECONDARY_OPTION_FOR_FUTURE_FREEZE_NOT_REQUIRED_FOR_CORE_DESIGN"
+    }
+  ],
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,2557 @@
+{
+  "R13_neighbor_contrast": {
+    "R13_loose_solver_ceiling_ratios": {
+      "continuity_residual": 1.2479160771145665,
+      "exchange_longitudinal_residual": 4.280402909147905,
+      "gauss_residual": 1.137287508309052,
+      "longitudinal_Maxwell_residual": 1.387388637598949
+    },
+    "R13_to_next_highest_neighbor_contrast_by_residual": {
+      "continuity_residual": 3.2776488820511798,
+      "exchange_longitudinal_residual": 9.616882619088,
+      "gauss_residual": 2.5833512469350803,
+      "longitudinal_Maxwell_residual": 2.8332040547511896
+    },
+    "all_axis_sharing_neighbors_pass": true,
+    "axis_sharing_neighbor_count": 11,
+    "axis_sharing_neighbors": [
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.06105959498187456,
+          "exchange_longitudinal_residual": 0.013445575369452218,
+          "gauss_residual": 0.06912849628700965,
+          "longitudinal_Maxwell_residual": 0.08303823576140847
+        },
+        "maximum_ceiling_ratio": 0.08303823576140847,
+        "run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.015264482386423419,
+          "exchange_longitudinal_residual": 0.0008396834046253437,
+          "gauss_residual": 0.017281309854611022,
+          "longitudinal_Maxwell_residual": 0.022711000594795347
+        },
+        "maximum_ceiling_ratio": 0.022711000594795347,
+        "run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.24427238016881422,
+          "exchange_longitudinal_residual": 0.21546844528833403,
+          "gauss_residual": 0.27653432950631185,
+          "longitudinal_Maxwell_residual": 0.3295695173808123
+        },
+        "maximum_ceiling_ratio": 0.3295695173808123,
+        "run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 1.6357900277375048e-05,
+          "exchange_longitudinal_residual": 4.448439609076043e-09,
+          "gauss_residual": 5.482976616071198e-06,
+          "longitudinal_Maxwell_residual": 0.0011490137697415805
+        },
+        "maximum_ceiling_ratio": 0.0011490137697415805,
+        "run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.03053312827859577,
+          "exchange_longitudinal_residual": 0.003366700808576804,
+          "gauss_residual": 0.03456633169979847,
+          "longitudinal_Maxwell_residual": 0.041442437129223894
+        },
+        "maximum_ceiling_ratio": 0.041442437129223894,
+        "run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.12210883346130964,
+          "exchange_longitudinal_residual": 0.05373980677343978,
+          "gauss_residual": 0.13825236552833195,
+          "longitudinal_Maxwell_residual": 0.1646153306494586
+        },
+        "maximum_ceiling_ratio": 0.1646153306494586,
+        "run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.1013927833294799,
+          "exchange_longitudinal_residual": 0.0311474753971668,
+          "gauss_residual": 0.08795499600537549,
+          "longitudinal_Maxwell_residual": 0.11326931147188503
+        },
+        "maximum_ceiling_ratio": 0.11326931147188503,
+        "run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.10138483816043466,
+          "exchange_longitudinal_residual": 0.03112682156420582,
+          "gauss_residual": 0.08796384583290535,
+          "longitudinal_Maxwell_residual": 0.11352359782125866
+        },
+        "maximum_ceiling_ratio": 0.11352359782125866,
+        "run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.3807351311936776,
+          "exchange_longitudinal_residual": 0.4450925605197653,
+          "gauss_residual": 0.44023727306085214,
+          "longitudinal_Maxwell_residual": 0.4896889213723749
+        },
+        "maximum_ceiling_ratio": 0.4896889213723749,
+        "run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.2812864700820102,
+          "exchange_longitudinal_residual": 0.22297695401466314,
+          "gauss_residual": 0.24886846358853237,
+          "longitudinal_Maxwell_residual": 0.31657838403834687
+        },
+        "maximum_ceiling_ratio": 0.31657838403834687,
+        "run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 9.384854005034526e-05,
+          "exchange_longitudinal_residual": 2.5558740807221183e-07,
+          "gauss_residual": 3.625152783321077e-05,
+          "longitudinal_Maxwell_residual": 0.0009939878696604643
+        },
+        "maximum_ceiling_ratio": 0.0009939878696604643,
+        "run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ]
+      }
+    ],
+    "individual_axis_setting_sufficient_in_tested_matrix": false,
+    "interaction_inference_boundary": "Every row sharing an R13 axis value passes, so no individual axis value is sufficient within this matrix. The sparse corner design cannot identify the interaction order or a unique causal parameter combination.",
+    "next_highest_axis_sharing_neighbor_ratio_by_residual": {
+      "continuity_residual": 0.3807351311936776,
+      "exchange_longitudinal_residual": 0.4450925605197653,
+      "gauss_residual": 0.44023727306085214,
+      "longitudinal_Maxwell_residual": 0.4896889213723749
+    },
+    "per_axis_descriptive_check": [
+      {
+        "R13_value": -1.5707963267948966,
+        "all_matching_rows_pass": true,
+        "axis": "DELTA_THETA_PSI",
+        "matching_non_R13_rows": [
+          "R09_PHASE_NEGATIVE",
+          "R12_CORNER_STRONG_ZERO"
+        ],
+        "maximum_matching_row_ceiling_ratio": 0.11352359782125866
+      },
+      {
+        "R13_value": 0.4,
+        "all_matching_rows_pass": true,
+        "axis": "ETA_Q",
+        "matching_non_R13_rows": [
+          "R02_ETA_STRONG",
+          "R12_CORNER_STRONG_ZERO"
+        ],
+        "maximum_matching_row_ceiling_ratio": 0.3295695173808123
+      },
+      {
+        "R13_value": 0.0634205964176414,
+        "all_matching_rows_pass": true,
+        "axis": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "matching_non_R13_rows": [
+          "R04_F_LOW"
+        ],
+        "maximum_matching_row_ceiling_ratio": 0.041442437129223894
+      },
+      {
+        "R13_value": 2.0,
+        "all_matching_rows_pass": true,
+        "axis": "MU_MASS_DOMAIN",
+        "matching_non_R13_rows": [
+          "R10_MU_HIGH",
+          "R11_CORNER_WEAK_HIGH"
+        ],
+        "maximum_matching_row_ceiling_ratio": 0.4896889213723749
+      },
+      {
+        "R13_value": 0.3,
+        "all_matching_rows_pass": true,
+        "axis": "THETA_W",
+        "matching_non_R13_rows": [
+          "R00_CANONICAL",
+          "R01_ETA_WEAK",
+          "R02_ETA_STRONG",
+          "R03_F_ZERO",
+          "R04_F_LOW",
+          "R05_F_HIGH",
+          "R08_PHASE_POSITIVE",
+          "R09_PHASE_NEGATIVE",
+          "R10_MU_HIGH"
+        ],
+        "maximum_matching_row_ceiling_ratio": 0.4896889213723749
+      }
+    ]
+  },
+  "authority_boundary": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "conditional_or_broad_robustness_authorized": false,
+    "fit_range_change_authorized": false,
+    "loose_solver_role_removal_authorized": false,
+    "master_action_promotion_authorized": false,
+    "materiality_assigned": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "packet_independently_accepted": false,
+    "packet_prepared": true,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "row_exclusion_authorized": false,
+    "threshold_change_authorized": false
+  },
+  "cancellation_conditioning": {
+    "available_field_energy_vs_registered_exchange_proxy": {
+      "cancellation_mismatch": [
+        0.0,
+        -1.5664474166631365e-23,
+        -1.1099299217237434e-22,
+        -4.0535750108901104e-22,
+        -1.0642221270451915e-21,
+        -2.3006451464030586e-21,
+        -4.376114416702238e-21,
+        -7.600595583093102e-21,
+        -1.2331671646103074e-20,
+        -1.897268397117461e-20,
+        -2.796979117874947e-20,
+        -3.9807892293755605e-20,
+        -5.500539454282288e-20,
+        -7.410784132401027e-20,
+        -9.768040264226314e-20,
+        -1.2629934523848667e-19,
+        -1.6054256853060257e-19
+      ],
+      "definition": "(|Delta E_electric,long| + |X_long,registered|) / (|Delta E_electric,long + X_long,registered| + epsilon)",
+      "epsilon_exchange_floor": 3e-16,
+      "final_floor_regularized_proxy": 1002.5923773908256,
+      "final_unregularized_proxy": 1874510.1360162827,
+      "floor_regularized_proxy": [
+        0.0,
+        0.01878202954137067,
+        0.2947716277622883,
+        1.467052547868807,
+        4.563100000740582,
+        10.972729425532155,
+        22.426503954081763,
+        40.97734827655748,
+        68.98398376757277,
+        109.09473606954383,
+        164.23027293456406,
+        237.56390576420188,
+        332.4982294477952,
+        452.63707608525374,
+        601.7520113544655,
+        783.7428979105939,
+        1002.5923773908256
+      ],
+      "interpretation_boundary": "This proxy shows strong cancellation between longitudinal electric-energy change and the registered cumulative exchange. It is not the requested independent field-transfer versus matter-transfer conditioning measure and cannot establish the causal mechanism of the residual failure.",
+      "longitudinal_electric_energy_change": [
+        0.0,
+        2.8172967460738247e-18,
+        4.4215705026639645e-17,
+        2.200579768419479e-16,
+        6.84466896076018e-16,
+        1.645920885685598e-15,
+        3.3640224755286908e-15,
+        6.146754167311989e-15,
+        1.0348016743218422e-14,
+        1.636523583406477e-14,
+        2.463682369850862e-14,
+        3.563929441987091e-14,
+        4.988385151261979e-14,
+        6.791229633717334e-14,
+        9.029214255234845e-14,
+        1.1761086464433716e-13,
+        1.5046925571506735e-13
+      ],
+      "registered_cumulative_longitudinal_exchange": [
+        0.0,
+        -2.8173124105479913e-18,
+        -4.421581601963182e-17,
+        -2.20058382199449e-16,
+        -6.844679602981451e-16,
+        -1.6459231863307444e-15,
+        -3.3640268516431075e-15,
+        -6.146761767907572e-15,
+        -1.0348029074890068e-14,
+        -1.6365254806748743e-14,
+        -2.46368516682998e-14,
+        -3.56393342277632e-14,
+        -4.988390651801433e-14,
+        -6.791237044501466e-14,
+        -9.029224023275109e-14,
+        -1.176109909436824e-13,
+        -1.5046941625763588e-13
+      ],
+      "status": "DESCRIPTIVE_PROXY_NOT_EXACT_REQUESTED_KAPPA",
+      "time": [
+        0.0,
+        0.003125,
+        0.00625,
+        0.009375000000000001,
+        0.0125,
+        0.015625,
+        0.018750000000000003,
+        0.021875000000000002,
+        0.025,
+        0.028125,
+        0.03125,
+        0.034375,
+        0.037500000000000006,
+        0.040625,
+        0.043750000000000004,
+        0.046875,
+        0.05
+      ],
+      "unregularized_proxy": [
+        null,
+        359706.243355728,
+        796730.6702475011,
+        1085748.6486841976,
+        1286324.3693071909,
+        1430835.2060129624,
+        1537448.2215302626,
+        1617441.1335034682,
+        1678283.8865685042,
+        1725137.6078651433,
+        1761674.7673198555,
+        1790565.2507710163,
+        1813781.3365371423,
+        1832797.506384551,
+        1848726.8469444916,
+        1862415.4792240474,
+        1874510.1360162827
+      ]
+    },
+    "requested_exact_sector_transfer_kappa": {
+      "missing_fields": [
+        "longitudinal_field_sector_transfer",
+        "longitudinal_matter_sector_transfer"
+      ],
+      "reason": "The preserved output does not separate longitudinal matter-sector and field-sector transfer series. No exact field-versus-matter cancellation kappa is assigned.",
+      "required_fields": [
+        "longitudinal_field_sector_transfer",
+        "longitudinal_matter_sector_transfer"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    }
+  },
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "Read-only diagnosis of the accepted R13 numerical block from preserved outputs only. The packet may report descriptive timing, tolerance response, solver histories, neighbor contrast, and explicit data-availability blockers; it cannot authorize a rerun, change a threshold, assign materiality, or reclassify robustness.",
+  "common_cause_timing": {
+    "causal_boundary": "Timing and correlation can test consistency with a common cause but cannot identify which equation leads causally from stored scalar norms alone.",
+    "minimum_pairwise_correlation": 0.8925903093329086,
+    "normalized_timeline_correlations": [
+      {
+        "left": "continuity_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.8925903093329086,
+        "right": "exchange_longitudinal_residual"
+      },
+      {
+        "left": "continuity_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9968529057398048,
+        "right": "gauss_residual"
+      },
+      {
+        "left": "continuity_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9955051363694426,
+        "right": "longitudinal_Maxwell_residual"
+      },
+      {
+        "left": "exchange_longitudinal_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9254944169999553,
+        "right": "gauss_residual"
+      },
+      {
+        "left": "exchange_longitudinal_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9306894564317807,
+        "right": "longitudinal_Maxwell_residual"
+      },
+      {
+        "left": "gauss_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9997232969382142,
+        "right": "longitudinal_Maxwell_residual"
+      }
+    ],
+    "threshold_crossing_order": [
+      {
+        "threshold_ids": [
+          "maximum_continuity_residual",
+          "maximum_longitudinal_Maxwell_residual"
+        ],
+        "time": 0.0125
+      },
+      {
+        "threshold_ids": [
+          "maximum_exchange_longitudinal_residual"
+        ],
+        "time": 0.03125
+      },
+      {
+        "threshold_ids": [
+          "maximum_Gauss_residual"
+        ],
+        "time": 0.043750000000000004
+      }
+    ],
+    "timing_observation": "Continuity and longitudinal Maxwell cross together first at t=0.0125; longitudinal exchange crosses at t=0.03125; Gauss crosses last at t=0.04375."
+  },
+  "data_availability": [
+    {
+      "diagnostic_id": "EXACT_FAILURE_TIMELINES",
+      "missing_fields": [],
+      "required_fields": [
+        "continuity_residual",
+        "exchange_longitudinal_residual",
+        "gauss_residual",
+        "longitudinal_Maxwell_residual",
+        "time"
+      ],
+      "status": "AVAILABLE_AND_COMPUTED"
+    },
+    {
+      "diagnostic_id": "COMMON_CAUSE_TIMING",
+      "missing_fields": [],
+      "required_fields": [
+        "continuity_residual",
+        "exchange_longitudinal_residual",
+        "gauss_residual",
+        "longitudinal_Maxwell_residual",
+        "time"
+      ],
+      "status": "AVAILABLE_AS_TIMING_AND_CORRELATION_ONLY"
+    },
+    {
+      "diagnostic_id": "EXACT_LONGITUDINAL_FIELD_MATTER_CANCELLATION_KAPPA",
+      "missing_fields": [
+        "longitudinal_field_sector_transfer",
+        "longitudinal_matter_sector_transfer"
+      ],
+      "required_fields": [
+        "longitudinal_field_sector_transfer",
+        "longitudinal_matter_sector_transfer"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    },
+    {
+      "diagnostic_id": "SOLVER_TOLERANCE_RESPONSE",
+      "missing_fields": [],
+      "required_fields": [
+        "continuity_residual",
+        "exchange_longitudinal_residual",
+        "gauss_residual",
+        "longitudinal_Maxwell_residual",
+        "solver_iterations",
+        "solver_residual"
+      ],
+      "status": "AVAILABLE_AND_COMPUTED"
+    },
+    {
+      "diagnostic_id": "R13_AXIS_SHARING_NEIGHBOR_CONTRAST",
+      "missing_fields": [],
+      "required_fields": [
+        "continuity_residual",
+        "exchange_longitudinal_residual",
+        "gauss_residual",
+        "longitudinal_Maxwell_residual"
+      ],
+      "status": "AVAILABLE_AND_COMPUTED"
+    },
+    {
+      "diagnostic_id": "SOLVER_EQUATION_BLOCK_DOMINANCE",
+      "missing_fields": [
+        "solver_residual_by_equation_block"
+      ],
+      "required_fields": [
+        "solver_residual_by_equation_block"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    },
+    {
+      "diagnostic_id": "DISCRETE_MAXWELL_TO_CONTINUITY_IDENTITY_CLOSURE",
+      "missing_fields": [
+        "continuity_residual_components",
+        "longitudinal_Maxwell_residual_components",
+        "spatial_divergence_operator_output"
+      ],
+      "required_fields": [
+        "continuity_residual_components",
+        "longitudinal_Maxwell_residual_components",
+        "spatial_divergence_operator_output"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    },
+    {
+      "diagnostic_id": "HIGHER_PRECISION_ARITHMETIC_CONTRIBUTION",
+      "missing_fields": [
+        "independent higher-precision output under a separately authorized run"
+      ],
+      "required_fields": [
+        "independent higher-precision output under a separately authorized run"
+      ],
+      "status": "NOT_TESTABLE_WITH_EXISTING_DOUBLE_PRECISION_OUTPUTS_ONLY"
+    }
+  ],
+  "decision_count": 16,
+  "decisions": [
+    {
+      "decision_id": "accepted_numerically_blocked_review_selects_exact_packet_target",
+      "passed": true
+    },
+    {
+      "decision_id": "all_bound_source_artifacts_and_203_canonical_outputs_have_exact_hashes",
+      "passed": true
+    },
+    {
+      "decision_id": "packet_reads_preserved_outputs_without_simulator_invocation_or_canonical_write",
+      "passed": true
+    },
+    {
+      "decision_id": "four_exact_failure_timelines_include_R_over_ceiling_and_R_over_own_maximum",
+      "passed": true
+    },
+    {
+      "decision_id": "first_crossing_order_and_normalized_timeline_correlations_are_computed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_four_residual_maxima_strictly_decrease_with_tighter_solver_tolerance",
+      "passed": true
+    },
+    {
+      "decision_id": "overall_tolerance_exponents_are_reported_without_claiming_asymptotic_law",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_iteration_and_scalar_residual_histories_are_computed",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eleven_axis_sharing_neighbors_pass_the_same_loose_solver_ceilings",
+      "passed": true
+    },
+    {
+      "decision_id": "individual_axis_sufficiency_is_rejected_only_descriptively",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_sector_cancellation_kappa_is_withheld_for_missing_registered_fields",
+      "passed": true
+    },
+    {
+      "decision_id": "field_energy_exchange_proxy_is_labeled_nonexact_and_noncausal",
+      "passed": true
+    },
+    {
+      "decision_id": "discrete_identity_closure_is_withheld_for_missing_component_arrays",
+      "passed": true
+    },
+    {
+      "decision_id": "equation_block_solver_dominance_is_withheld_for_missing_block_history",
+      "passed": true
+    },
+    {
+      "decision_id": "failed_thresholds_are_absolute_ceilings_without_small_denominators",
+      "passed": true
+    },
+    {
+      "decision_id": "no_rerun_threshold_change_materiality_or_robustness_reclassification_is_authorized",
+      "passed": true
+    }
+  ],
+  "diagnostic_scope": {
+    "canonical_output_mutation_count": 0,
+    "failing_run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+    "new_simulation_run_count": 0,
+    "preserved_record_count": 203,
+    "preserved_solver_tolerances": [
+      1e-08,
+      1e-10,
+      1e-12
+    ],
+    "scientific_row_id": "R13_CORNER_STRONG_LOW"
+  },
+  "diagnostic_synthesis": {
+    "bounded_diagnostic_conclusion": "The preserved arrays support a common tolerance-sensitive longitudinal numerical structure, not four independent physical failures. They do not contain enough component-level evidence to identify the causal equation block, exact cancellation mechanism, or discrete identity closure.",
+    "not_supported_as_present_conclusions": [
+      "physical inconsistency of R13",
+      "model-domain failure",
+      "initial-condition construction failure",
+      "general implementation defect",
+      "any individual R13 axis value as a sufficient cause",
+      "conditional or broad robustness",
+      "descendant materiality"
+    ],
+    "supported_by_preserved_outputs": [
+      "the four failures arise during evolution rather than at initial time",
+      "continuity and longitudinal Maxwell cross first, exchange next, and Gauss last",
+      "all four residual maxima decrease with tighter solver tolerance",
+      "the four overall tolerance exponents cluster near 0.75",
+      "solver iterations are constant after initialization and do not rise late",
+      "scalar nonlinear residual histories decline after the first step",
+      "all eleven axis-sharing neighbors pass the same four loose-solver ceilings",
+      "a descriptive longitudinal electric-energy versus registered-exchange proxy is strongly cancellation-conditioned"
+    ],
+    "unresolved_from_preserved_outputs": [
+      "causal direction among Maxwell, continuity, Gauss, and exchange residuals",
+      "exact field-sector versus matter-sector longitudinal cancellation conditioning",
+      "equation block dominating the nonlinear solver residual",
+      "discrete Maxwell-divergence to continuity identity closure",
+      "higher-precision arithmetic contribution",
+      "unique interaction order among the five R13 axes"
+    ]
+  },
+  "discrete_identity_closure": {
+    "future_use_requires_separate_authorization": true,
+    "missing_fields": [
+      "continuity_residual_components",
+      "longitudinal_Maxwell_residual_components",
+      "spatial_divergence_operator_output"
+    ],
+    "new_law_proposed": false,
+    "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+  },
+  "failed_decision_ids": [],
+  "failure_timelines": {
+    "all_absolute_magnitudes_monotone_nondecreasing": true,
+    "all_initial_values_pass": true,
+    "all_maxima_at_final_time": true,
+    "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+    "sample_count": 17,
+    "threshold_crossing_order": [
+      {
+        "threshold_ids": [
+          "maximum_continuity_residual",
+          "maximum_longitudinal_Maxwell_residual"
+        ],
+        "time": 0.0125
+      },
+      {
+        "threshold_ids": [
+          "maximum_exchange_longitudinal_residual"
+        ],
+        "time": 0.03125
+      },
+      {
+        "threshold_ids": [
+          "maximum_Gauss_residual"
+        ],
+        "time": 0.043750000000000004
+      }
+    ],
+    "timelines": [
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          2.168404344971009e-19,
+          3.656741252006987e-15,
+          7.323029449420815e-15,
+          1.0993522720741942e-14,
+          1.466260489872368e-14,
+          1.8325384071590156e-14,
+          2.19765942566014e-14,
+          2.5611449802494834e-14,
+          2.9225115718235307e-14,
+          3.2812899016951374e-14,
+          3.6370719880907345e-14,
+          3.9894092254042534e-14,
+          4.337910674016131e-14,
+          4.68222477290161e-14,
+          5.0219545685072015e-14,
+          5.3567865737736905e-14,
+          5.68643754154526e-14
+        ],
+        "first_threshold_crossing_time": 0.043750000000000004,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.00625,
+          "50_percent_of_maximum": 0.025,
+          "90_percent_of_maximum": 0.046875
+        },
+        "frozen_ceiling": 5e-14,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -32.636433721790986,
+            "r_squared_in_log_space": 0.8733513678889189,
+            "rate": 49.115827351809415
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": 4.684613583070377e-16,
+            "r_squared": 0.9997451105508546,
+            "slope": 1.1393174421088062e-12
+          },
+          "linear_in_time_squared": {
+            "intercept": 1.2295032627436134e-14,
+            "r_squared": 0.9377201380774457,
+            "slope": 2.019147106499608e-11
+          },
+          "power_law_log_log": {
+            "exponent": 0.9908052067824813,
+            "log_coefficient": -27.515876999158905,
+            "r_squared_in_log_space": 0.9999184126799008
+          }
+        },
+        "initial_magnitude": 2.168404344971009e-19,
+        "maximum_ceiling_ratio": 1.137287508309052,
+        "maximum_magnitude": 5.68643754154526e-14,
+        "maximum_time": 0.05,
+        "raw_series_key": "gauss_residual",
+        "residual_over_frozen_ceiling": [
+          4.336808689942018e-06,
+          0.07313482504013974,
+          0.1464605889884163,
+          0.21987045441483882,
+          0.29325209797447355,
+          0.3665076814318031,
+          0.439531885132028,
+          0.5122289960498967,
+          0.5845023143647061,
+          0.6562579803390275,
+          0.7274143976181469,
+          0.7978818450808507,
+          0.8675821348032262,
+          0.936444954580322,
+          1.0043909137014402,
+          1.0713573147547382,
+          1.137287508309052
+        ],
+        "residual_over_own_maximum": [
+          3.8132914133472683e-06,
+          0.06430636449078603,
+          0.12878061872514332,
+          0.19332882213904543,
+          0.2578522104850059,
+          0.3222647560569236,
+          0.38647385284793573,
+          0.450395341817736,
+          0.5139441962514466,
+          0.5770378866771944,
+          0.6396046666332291,
+          0.7015656456713938,
+          0.7628520743124748,
+          0.8234021280798663,
+          0.8831459999018141,
+          0.9420285608760968,
+          1.0
+        ],
+        "threshold_id": "maximum_Gauss_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional equation-residual unit"
+      },
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          0.0,
+          3.777697321695234e-11,
+          3.877393961188979e-11,
+          3.976562417025431e-11,
+          4.0746928048470896e-11,
+          4.171407387261808e-11,
+          4.2662268140945814e-11,
+          4.358459150229435e-11,
+          4.447806565329587e-11,
+          4.5336664977746466e-11,
+          4.6154024937843097e-11,
+          4.692639050778158e-11,
+          4.764772745195073e-11,
+          4.831108017973318e-11,
+          4.8915285775878725e-11,
+          4.9452256092180624e-11,
+          4.991664308458266e-11
+        ],
+        "first_threshold_crossing_time": 0.0125,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.003125,
+          "50_percent_of_maximum": 0.003125,
+          "90_percent_of_maximum": 0.028125
+        },
+        "frozen_ceiling": 4e-11,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -23.99845076324254,
+            "r_squared_in_log_space": 0.9830896074396823,
+            "rate": 6.000441125525402
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": 3.7496909881250293e-11,
+            "r_squared": 0.9909427982529369,
+            "slope": 2.640281861750913e-10
+          },
+          "linear_in_time_squared": {
+            "intercept": 4.031872258089014e-11,
+            "r_squared": 0.8945155504173019,
+            "slope": 4.5904069085896055e-09
+          },
+          "power_law_log_log": {
+            "exponent": 0.11055885233622369,
+            "log_coefficient": -23.413265449915464,
+            "r_squared_in_log_space": 0.9389786540648031
+          }
+        },
+        "initial_magnitude": 0.0,
+        "maximum_ceiling_ratio": 1.2479160771145665,
+        "maximum_magnitude": 4.991664308458266e-11,
+        "maximum_time": 0.05,
+        "raw_series_key": "continuity_residual",
+        "residual_over_frozen_ceiling": [
+          0.0,
+          0.9444243304238085,
+          0.9693484902972448,
+          0.9941406042563579,
+          1.0186732012117725,
+          1.042851846815452,
+          1.0665567035236454,
+          1.0896147875573587,
+          1.1119516413323969,
+          1.1334166244436616,
+          1.1538506234460775,
+          1.1731597626945396,
+          1.1911931862987684,
+          1.2077770044933296,
+          1.2228821443969682,
+          1.2363064023045156,
+          1.2479160771145665
+        ],
+        "residual_over_own_maximum": [
+          0.0,
+          0.756801156538914,
+          0.7767737815659639,
+          0.7966405934564216,
+          0.8162994450453352,
+          0.8356746626958567,
+          0.8546702162774755,
+          0.8731474876714208,
+          0.891046811339632,
+          0.9082474737118136,
+          0.9246219714662325,
+          0.9400950786747787,
+          0.9545459090911361,
+          0.9678351185970401,
+          0.9799394100479242,
+          0.9906967503480725,
+          1.0
+        ],
+        "threshold_id": "maximum_continuity_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional equation-residual unit"
+      },
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          0.0,
+          1.5664474166631365e-23,
+          9.532851800689853e-23,
+          2.9436450891047373e-22,
+          6.588646260054843e-22,
+          1.2364230192592595e-21,
+          2.075469270101964e-21,
+          3.224481166390864e-21,
+          4.7310760622211115e-21,
+          6.6410123242826736e-21,
+          8.997107205997138e-21,
+          1.1838101115006136e-20,
+          1.519750225222272e-20,
+          1.9102446781187387e-20,
+          2.3572561318252875e-20,
+          2.8618942608845305e-20,
+          3.4243223273183233e-20
+        ],
+        "first_threshold_crossing_time": 0.03125,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.025,
+          "50_percent_of_maximum": 0.040625,
+          "90_percent_of_maximum": 0.05
+        },
+        "frozen_ceiling": 8e-21,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -50.96311371601635,
+            "r_squared_in_log_space": 0.8881562455375757,
+            "rate": 140.09807553946249
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": -8.366605688518709e-21,
+            "r_squared": 0.8675131971509947,
+            "slope": 6.927253165655046e-19
+          },
+          "linear_in_time_squared": {
+            "intercept": -2.269884339469555e-21,
+            "r_squared": 0.980271442043097,
+            "slope": 1.3474958234390794e-17
+          },
+          "power_law_log_log": {
+            "exponent": 2.8022308098937163,
+            "log_coefficient": -36.449443730354844,
+            "r_squared_in_log_space": 0.9997116911040587
+          }
+        },
+        "initial_magnitude": 0.0,
+        "maximum_ceiling_ratio": 4.280402909147905,
+        "maximum_magnitude": 3.4243223273183233e-20,
+        "maximum_time": 0.05,
+        "raw_series_key": "exchange_longitudinal_residual",
+        "residual_over_frozen_ceiling": [
+          0.0,
+          0.0019580592708289208,
+          0.011916064750862317,
+          0.03679556361380922,
+          0.08235807825068554,
+          0.15455287740740745,
+          0.25943365876274554,
+          0.403060145798858,
+          0.591384507777639,
+          0.8301265405353343,
+          1.1246384007496424,
+          1.4797626393757672,
+          1.8996877815278403,
+          2.3878058476484236,
+          2.9465701647816096,
+          3.5773678261056636,
+          4.280402909147905
+        ],
+        "residual_over_own_maximum": [
+          0.0,
+          0.00045744742081270796,
+          0.002783865211706072,
+          0.008596285068204963,
+          0.019240730370188558,
+          0.036107086339256356,
+          0.060609635183710014,
+          0.09416406687731525,
+          0.1381609442685304,
+          0.19393654245987482,
+          0.26274124763958795,
+          0.34570639044592694,
+          0.4438105061249968,
+          0.5578460482178678,
+          0.6883861700225272,
+          0.8357549282242233,
+          1.0
+        ],
+        "threshold_id": "maximum_exchange_longitudinal_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional code-energy-rate unit"
+      },
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          0.0,
+          5.502502208216964e-15,
+          5.6698179180081805e-15,
+          5.845497697004217e-15,
+          6.028505073292636e-15,
+          6.2177189353268714e-15,
+          6.411940731363774e-15,
+          6.6098835219866975e-15,
+          6.8102104985849805e-15,
+          7.0115273178647455e-15,
+          7.212390932124723e-15,
+          7.411331739821812e-15,
+          7.606843714307844e-15,
+          7.797411855679363e-15,
+          7.981520734726176e-15,
+          8.157660813832005e-15,
+          8.324331825593695e-15
+        ],
+        "first_threshold_crossing_time": 0.0125,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.003125,
+          "50_percent_of_maximum": 0.003125,
+          "90_percent_of_maximum": 0.037500000000000006
+        },
+        "frozen_ceiling": 6.0000000000000005e-15,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -32.85264588079597,
+            "r_squared_in_log_space": 0.9967970687255288,
+            "rate": 8.99169948919054
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": 5.277249921012997e-15,
+            "r_squared": 0.999602088183762,
+            "slope": 6.156022772123934e-14
+          },
+          "linear_in_time_squared": {
+            "intercept": 5.912249902380498e-15,
+            "r_squared": 0.9451680871577836,
+            "slope": 1.0953991583929302e-12
+          },
+          "power_law_log_log": {
+            "exponent": 0.1614397936917074,
+            "log_coefficient": -31.992045984585012,
+            "r_squared_in_log_space": 0.9040371983968276
+          }
+        },
+        "initial_magnitude": 0.0,
+        "maximum_ceiling_ratio": 1.387388637598949,
+        "maximum_magnitude": 8.324331825593695e-15,
+        "maximum_time": 0.05,
+        "raw_series_key": "longitudinal_Maxwell_residual",
+        "residual_over_frozen_ceiling": [
+          0.0,
+          0.9170837013694939,
+          0.9449696530013634,
+          0.9742496161673694,
+          1.0047508455487726,
+          1.0362864892211452,
+          1.0686567885606288,
+          1.1016472536644495,
+          1.1350350830974967,
+          1.1685878863107908,
+          1.2020651553541204,
+          1.2352219566369687,
+          1.2678072857179739,
+          1.299568642613227,
+          1.330253455787696,
+          1.3596101356386674,
+          1.387388637598949
+        ],
+        "residual_over_own_maximum": [
+          0.0,
+          0.6610142800049328,
+          0.6811138763805594,
+          0.7022182463980902,
+          0.7242028789334909,
+          0.7469330951236343,
+          0.7702649132330175,
+          0.7940437335359679,
+          0.8181089655324105,
+          0.842293107094476,
+          0.8664228052454327,
+          0.8903215171018526,
+          0.9138083240411095,
+          0.9367012294855567,
+          0.958818185285031,
+          0.9799778510451435,
+          1.0
+        ],
+        "threshold_id": "maximum_longitudinal_Maxwell_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional equation-residual unit"
+      }
+    ]
+  },
+  "iteration_and_nonlinear_residual_history": {
+    "all_three_scalar_solver_residual_histories_decline_after_first_step": true,
+    "available_scalar_history": [
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 2.4372612955625428e-09,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 3.0,
+        "maximum_solver_residual": 2.713377245111559e-09,
+        "maximum_solver_residual_over_requested_tolerance": 0.2713377245111559,
+        "residual_maxima": {
+          "continuity_residual": 4.991664308458266e-11,
+          "exchange_longitudinal_residual": 3.4243223273183233e-20,
+          "gauss_residual": 5.68643754154526e-14,
+          "longitudinal_Maxwell_residual": 8.324331825593695e-15
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+        "solver_iterations": [
+          0.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "solver_residual": [
+          0.0,
+          2.713377245111559e-09,
+          2.7114471778943994e-09,
+          2.707024021608717e-09,
+          2.7001148400485064e-09,
+          2.690729986043472e-09,
+          2.6788830528867713e-09,
+          2.6645908049460765e-09,
+          2.6478732192969368e-09,
+          2.628753402456052e-09,
+          2.6073269931981002e-09,
+          2.584669055172295e-09,
+          2.55969273554868e-09,
+          2.5324287458716732e-09,
+          2.5029107189600275e-09,
+          2.4711751325789955e-09,
+          2.4372612955625428e-09
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-08
+      },
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 3.021592351326596e-11,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 4.0,
+        "maximum_solver_residual": 3.411274106072948e-11,
+        "maximum_solver_residual_over_requested_tolerance": 0.3411274106072948,
+        "residual_maxima": {
+          "continuity_residual": 7.214756576727228e-13,
+          "exchange_longitudinal_residual": 2.621184101835134e-22,
+          "gauss_residual": 2.214455871952e-16,
+          "longitudinal_Maxwell_residual": 2.066273129186935e-16
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM10",
+        "solver_iterations": [
+          0.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "solver_residual": [
+          0.0,
+          3.411274106072948e-11,
+          3.407647124545332e-11,
+          3.40352767670693e-11,
+          3.3957080203261825e-11,
+          3.3841968290204694e-11,
+          3.369007850473338e-11,
+          3.350159906434502e-11,
+          3.3276773697688e-11,
+          3.3015899042476704e-11,
+          3.2719320308682853e-11,
+          3.238743648270592e-11,
+          3.2020698592649666e-11,
+          3.161960450415169e-11,
+          3.1184704124553875e-11,
+          3.071659940290239e-11,
+          3.021592351326596e-11
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-10
+      },
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 5.403663627667754e-13,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 5.0,
+        "maximum_solver_residual": 6.255759799067562e-13,
+        "maximum_solver_residual_over_requested_tolerance": 0.6255759799067562,
+        "residual_maxima": {
+          "continuity_residual": 5.2322078961108964e-14,
+          "exchange_longitudinal_residual": 3.510465738113332e-23,
+          "gauss_residual": 5.384800865676891e-17,
+          "longitudinal_Maxwell_residual": 8.319643634715443e-18
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+        "solver_iterations": [
+          0.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "solver_residual": [
+          0.0,
+          6.255759799067562e-13,
+          6.245143291394584e-13,
+          6.226338888914995e-13,
+          6.199415980567835e-13,
+          6.164443955292143e-13,
+          6.121492202026957e-13,
+          6.070560720772278e-13,
+          6.020114962090872e-13,
+          5.967379368421177e-13,
+          5.906872213579106e-13,
+          5.838593497564659e-13,
+          5.762612609316875e-13,
+          5.67920710459191e-13,
+          5.588376983389765e-13,
+          5.490330412527555e-13,
+          5.403663627667754e-13
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-12
+      }
+    ],
+    "equation_block_history_status": "NOT_REGISTERED",
+    "late_iteration_growth_observed": false
+  },
+  "nonclaims": [
+    "no new R13 run",
+    "no solver-tolerance substitution",
+    "no threshold relaxation",
+    "no loose-role removal",
+    "no exact cancellation mechanism established",
+    "no discrete identity closure established",
+    "no model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar or seam promotion",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 16,
+  "precision_and_scale_audit": {
+    "all_four_are_absolute_ceilings_without_row_denominators": true,
+    "cancellation_inside_the_registered_exchange_calculation_remains_possible": true,
+    "cross_unit_magnitude_comparison_forbidden": true,
+    "failed_threshold_semantics": [
+      {
+        "contains_ratio_denominator": false,
+        "frozen_ceiling": 5e-14,
+        "normalization_formula": "max_t abs(frozen equation or constraint residual) in its registered canonical code norm",
+        "observed_maximum": 5.68643754154526e-14,
+        "raw_series_key": "gauss_residual",
+        "row_scaling_rule": "NONE_ABSOLUTE_CODE_UNIT; the bounded matrix shares the same canonical nondimensionalization",
+        "threshold_class": "ABSOLUTE_NUMERICAL_CEILING",
+        "threshold_id": "maximum_Gauss_residual",
+        "units": "canonical nondimensional equation-residual unit"
+      },
+      {
+        "contains_ratio_denominator": false,
+        "frozen_ceiling": 4e-11,
+        "normalization_formula": "max_t abs(frozen equation or constraint residual) in its registered canonical code norm",
+        "observed_maximum": 4.991664308458266e-11,
+        "raw_series_key": "continuity_residual",
+        "row_scaling_rule": "NONE_ABSOLUTE_CODE_UNIT; the bounded matrix shares the same canonical nondimensionalization",
+        "threshold_class": "ABSOLUTE_NUMERICAL_CEILING",
+        "threshold_id": "maximum_continuity_residual",
+        "units": "canonical nondimensional equation-residual unit"
+      },
+      {
+        "contains_ratio_denominator": false,
+        "frozen_ceiling": 8e-21,
+        "normalization_formula": "max_t abs(exchange-balance residual) in the common canonical nondimensionalization",
+        "observed_maximum": 3.4243223273183233e-20,
+        "raw_series_key": "exchange_longitudinal_residual",
+        "row_scaling_rule": "NONE_ABSOLUTE_CODE_UNIT; no row scaling",
+        "threshold_class": "ABSOLUTE_NUMERICAL_CEILING",
+        "threshold_id": "maximum_exchange_longitudinal_residual",
+        "units": "canonical nondimensional code-energy-rate unit"
+      },
+      {
+        "contains_ratio_denominator": false,
+        "frozen_ceiling": 6.0000000000000005e-15,
+        "normalization_formula": "max_t abs(frozen equation or constraint residual) in its registered canonical code norm",
+        "observed_maximum": 8.324331825593695e-15,
+        "raw_series_key": "longitudinal_Maxwell_residual",
+        "row_scaling_rule": "NONE_ABSOLUTE_CODE_UNIT; the bounded matrix shares the same canonical nondimensionalization",
+        "threshold_class": "ABSOLUTE_NUMERICAL_CEILING",
+        "threshold_id": "maximum_longitudinal_Maxwell_residual",
+        "units": "canonical nondimensional equation-residual unit"
+      }
+    ],
+    "higher_precision_contribution_status": "UNRESOLVED_NO_HIGHER_PRECISION_OUTPUT",
+    "small_denominator_threshold_explanation_supported": false
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_R13_DIAGNOSTIC_PACKET_RESULT_REVIEW_ONLY",
+  "source_custody": {
+    "all_source_artifact_hashes_exact": true,
+    "canonical_output_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_output_root_file_count": 205,
+    "canonical_output_root_inventory": [
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/_CANONICAL_EXECUTION_START.json",
+        "sha256": "f0d96a01b2a26b227cbe1f272d52643913dea2913a7ceaa8ad0d92b100e7e1f1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/_CANONICAL_EXECUTION_TERMINAL.json",
+        "sha256": "2e992b334604161d88309b531e299da6a623e184581f60e6a13887ab8defec64"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_CANONICAL_THRESHOLDS_REUSED_UNSCALED.json",
+        "sha256": "ac65a75fb8f7b328e90af1a49d4d13b4244d1b4998822cb9983167f729ea40cc"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_DESCENDANTS_RELABELED_INVENTED_MATTER.json",
+        "sha256": "c01f13b7780287929bf2f0804db66049c9a5fcd6f27ca0519d470d9ad6639dc1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_DROP_ONLY_PHI2.json",
+        "sha256": "5f62c496b89d7585ed2c9a2c9ea4c344907b1d54749b34d3832ceaa4644ef2af"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_DROP_ONLY_PHI3.json",
+        "sha256": "207e51c15793794135050bc438059511e354ee6529ee218b108f1d4a29731d13"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_FAILED_POINTS_EXCLUDED_FROM_DOMAIN.json",
+        "sha256": "75823adf73e8429aab0ff0377c3454f2ec49be71341372a36d1044abf66db030"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_FORCE_BOTH_DESCENDANTS_ZERO_WITH_SOURCE.json",
+        "sha256": "bc8a912f2753c86a8614f8a1180b7874836cd8b9a048845b3a0226237a425b70"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_OMIT_DESCENDANT_ENERGY.json",
+        "sha256": "1c8039c4d2760d8b0fab9e9e51884aa3a10f64d7617e065a47d56ea1ede24bbf"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_OMIT_TRANSVERSE_EXCHANGE_CHANNEL.json",
+        "sha256": "2d95ff83d196aac727623a59cabe30fffa176bc201c8e52e26c61d254f9907f0"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_POST_EXECUTION_FAVORABLE_POINT_SELECTION.json",
+        "sha256": "7de4ad56618fe38e7de9a36a99252cdff247f0cba0907106c901ed87857c3f41"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_REVERSE_TRANSVERSE_EXCHANGE_SIGN.json",
+        "sha256": "bf5f0680192cf30a4bf904f91e516155ff4752d040a5b0b4430d9668ffea54be"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_SUPPRESS_SECTOR_MULTIPLICITY.json",
+        "sha256": "3cd43c72299c1ababc66a2ca4ab4bf092d026a880b1c0e27c544dbdd73f0923a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_WRONG_GAMMA2_BLOCK.json",
+        "sha256": "dc3b6599ffb0b00c6ebb7f922324fc0def1b9380e19309e16c2c84752da66b06"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_NEGATIVE__N_WRONG_GAMMA3_BLOCK.json",
+        "sha256": "bbf9cfab9019e666d484fc94f2945bfe8ecb82798ba9399895a3f8aef2f87ec0"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_ANALYTIC_INVARIANT_DESCENDANT_FREE.json",
+        "sha256": "78e8de6d52636c3e2997ee956c57b74cc3246e49ea38c691da0616fb664c2e12"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_CANONICAL_ACCEPTED_RESULT_UNCHANGED.json",
+        "sha256": "36b7b96f7af824d373347f7900bb582a1703c161125e0d4f078d429a07a9f808"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_CHARGE_CONJUGATE_PARAMETER_CASE.json",
+        "sha256": "5091792e4491ced58b738a6f1a305dfe288021b83cb2a8b074473be53bf7307a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_INDEPENDENT_PHI2_EXCITATION.json",
+        "sha256": "627c028b1aeb6fca0ccf42c8e52bec3f8d5a438cbaf03dd5d8b96c107c0a0659"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_INDEPENDENT_PHI3_EXCITATION.json",
+        "sha256": "c3c19917f95cff1fb435f30362806f0d6f470c2fe9bf06628bbfa825b965a405"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_INITIAL_ZERO_DESCENDANTS_DYNAMICALLY_SOURCED.json",
+        "sha256": "64d00b78a3f458774fbc8a552087d3d565913621adc47ad36af5f1f5ddfad7e4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_PHI2_PHI3_INTERCHANGE.json",
+        "sha256": "0a513ab3ce572878c8f89d653e1d6ad7175cb9b9e70393b593464d6add2c293e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/CONTROL_POSITIVE__P_WEAK_COUPLING_APPROACH.json",
+        "sha256": "56d131d8e70a735df0d20303fa58914a566aa1358e8ee2307764ad060671bc43"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__DETERMINISTIC_A.json",
+        "sha256": "d8de43046d193b90bfefc71aa65c8ca8098a10ecbf5eba7947339c6519d396c7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__DETERMINISTIC_B.json",
+        "sha256": "e509b21dbdb5ec78116bc4addcf70ed738c4a7cee82233c6e7633b8772abd68b"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__FORCED_COMPARATOR.json",
+        "sha256": "75a4fc85a33ea266db31e430f5790c68e5f069b182490ffca8d331f8653ea6f8"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__PRIMARY_FULL.json",
+        "sha256": "040d908bf53d85f76c481dd1d82171e1d63135cd196ec8a195b1d4585f2f04e3"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__SOLVER_TOL1eM08.json",
+        "sha256": "a7035dbc79b8203b48fc38e7ee238be55afa8a074bd0c79c8ff76dc55cb7806a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__SOLVER_TOL1eM10.json",
+        "sha256": "744002eb995a0844ba05ff8751f0f715f2b2beae88460b1fa2df347695bd3e99"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__SOLVER_TOL1eM12.json",
+        "sha256": "b36b4c07a759907fa37ad5f6ff9c68e04a9366b58332467372948002f884e6a1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__SPATIAL_N16.json",
+        "sha256": "7ebce84ab54c59d59c239cc2a4a8ea8c223fa98baa103177e104668470850247"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__SPATIAL_N32.json",
+        "sha256": "3389fd83ae31d383d743bf124a1f7781305ebb47831c2b8294b75402b073eca8"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__SPATIAL_N8.json",
+        "sha256": "ec7f5aa0b1a0bffddd66f7fe97d105e2efbaed92a296c68a660c762b16ae1dd9"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__TEMPORAL_DT0P0015625.json",
+        "sha256": "7b84443f1df0af130e9e027ac97323f9acef63a345a0925a86dd12c867cececc"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__TEMPORAL_DT0P003125.json",
+        "sha256": "be03a4dc7499440090a44d050b8e8fd59da4ca0d392d753650fcb9880fee0627"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R00_CANONICAL__TEMPORAL_DT0P00625.json",
+        "sha256": "6df2727a9b755dff733c23e5811a46484c05d5e804fc71e5da10ee738bce3b41"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__DETERMINISTIC_A.json",
+        "sha256": "d7ea71cdaf0e00c6cb805c7089deb263416c1e3fe6b979088a37ede19a131c5c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__DETERMINISTIC_B.json",
+        "sha256": "77bdd206b9b2d43aedf6524bda8da06eff5b90685d3097357b112d33355c5d18"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__FORCED_COMPARATOR.json",
+        "sha256": "852bd78149e89120de710963300d22b9b2347ce36f038018add1276f793a0628"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__PRIMARY_FULL.json",
+        "sha256": "344598d1d70400feed596249f56530151fbf971880b2cb5ab14485314230fb7a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__SOLVER_TOL1eM08.json",
+        "sha256": "5da2445de0634bb8a55086c883a7839f567f37ea38148f7756d1c6f1dea247ba"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__SOLVER_TOL1eM10.json",
+        "sha256": "1223e9e3cb6c3242341456e98adc2644c299e8a1ecd19daba1c71f18f573a0ec"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__SOLVER_TOL1eM12.json",
+        "sha256": "4af44b58c6babcd72063232921dda42d974e6e873bc6c1c3664df0ed943af65e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__SPATIAL_N16.json",
+        "sha256": "3f014979ff12b85fc8febf00db9513286da70eb473ed436fdf134e55a7b8ca3f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__SPATIAL_N32.json",
+        "sha256": "5e7c161f8c3a143e8ac0a01d363a4606f8fcc9de148fb1d726a1571272a6efdd"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__SPATIAL_N8.json",
+        "sha256": "88f9d7749487a4699207263bb4855da77eedd047683715357c373b39af40fb62"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__TEMPORAL_DT0P0015625.json",
+        "sha256": "f78d0dc0185e8c513b4adf3c7e32242a889982441a1e7436f00019895e0f2098"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__TEMPORAL_DT0P003125.json",
+        "sha256": "9ad98e54247fc6aa19fa85bdb9e2d222d6b15b4e8f7f3e260ab60197a861e219"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R01_ETA_WEAK__TEMPORAL_DT0P00625.json",
+        "sha256": "add07b1026bb7b2d691986cebc8714b44603cac760ab8b7ad61f29640c3076e6"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__DETERMINISTIC_A.json",
+        "sha256": "7e2066b0f01a653b78c032b00cfe44916d6c94a5fe5c4f1381ac087baf83cdf2"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__DETERMINISTIC_B.json",
+        "sha256": "6f5e279ed1c5366518374fec4500f573b0e6ef1b87cd8afa4ade57b577700125"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__FORCED_COMPARATOR.json",
+        "sha256": "9bf6ecccd3b268ec56cd9c7672389c065dbe1da9a0f3fbaf7ee7ca4147887d71"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__PRIMARY_FULL.json",
+        "sha256": "8e18f372f7dc2341f98a33f2c3cda85f19a38486c18c1f215e71813b33d4f1f1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__SOLVER_TOL1eM08.json",
+        "sha256": "74fe80f33e63ec218a69ac8b126cbb6330b3eaa3dfa9f3c301affd0f67017a20"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__SOLVER_TOL1eM10.json",
+        "sha256": "9ca00e756785aa0667bce4a6958e45154b1bf7d9d12280949944f8bb92476983"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__SOLVER_TOL1eM12.json",
+        "sha256": "da11750ae24ed507d670638ed0c08e5bbccc571835cd47506fc6455b81914e06"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__SPATIAL_N16.json",
+        "sha256": "5424d01f36acd22b6d2797863cbed2fd934f3661fcd7a0562271df4e7fb65e23"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__SPATIAL_N32.json",
+        "sha256": "314bdbba804eecf99343cd4eca96f13d2649afc161024f910b86f074975944c3"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__SPATIAL_N8.json",
+        "sha256": "ea67a6ecbb44b93fd8d666a03a0231ea6363b9483685b37a3ebb0044c252ece5"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__TEMPORAL_DT0P0015625.json",
+        "sha256": "36397bd9af8d7dafad7bcde4cf3728e7ea25406ff54455d32ec7db3382f8cda7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__TEMPORAL_DT0P003125.json",
+        "sha256": "d04c6289e5c1a5badcff9042e3fd9595f81fe640fcff9087d4d809f1f56b2019"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R02_ETA_STRONG__TEMPORAL_DT0P00625.json",
+        "sha256": "6e6c1f32d993f9a8b79ee7df3ea950584008f4f6282b2e0f16435e9dd690ba82"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__DETERMINISTIC_A.json",
+        "sha256": "89cad5d1202dfd4ef51697cc759ab66b4d095ef839b4a62e83fa49889fcb69f5"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__DETERMINISTIC_B.json",
+        "sha256": "ae9745bf3e19df655474240bb475e5054d0e0414f9564591bc91decba0ff30ed"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__FORCED_COMPARATOR.json",
+        "sha256": "ddb7c66780619aed4c186fcf47a2d311258a200937a1c50243b310a5d4590b02"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__PRIMARY_FULL.json",
+        "sha256": "0d0139a8dfff523f1395bec95a0d676f03fdff6394657cb0ce2274a34fa07eb3"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__SOLVER_TOL1eM08.json",
+        "sha256": "24f51cf19a63a85a0ad91478791d1dcf7b6b96a4e47cfc66deebc4677ece3c33"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__SOLVER_TOL1eM10.json",
+        "sha256": "10e869b3deefd0b373412454e379055cd67935ad5f454074c03f84316a9ee568"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__SOLVER_TOL1eM12.json",
+        "sha256": "b990a2d2acf2c033416a2c0449bcd464dcc40a7c9e00bdc6b4a425253ec47cd5"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__SPATIAL_N16.json",
+        "sha256": "55347c86a24fcbf68e30e1f498f6f6e9018aec1e96a4ba003e7a94a5284ea977"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__SPATIAL_N32.json",
+        "sha256": "912c09db179661cec4eefe624e97f0093989ee44169244bb3d5b86e4163a5f65"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__SPATIAL_N8.json",
+        "sha256": "45fe5bccd44973102ce96a2ebd9a6c2e6cc551ab5d9f69773652d90754109566"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__TEMPORAL_DT0P0015625.json",
+        "sha256": "77fbf816f5e08469f60a3b594f7f409de3586a15af81999c90a7de4e8455168b"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__TEMPORAL_DT0P003125.json",
+        "sha256": "9a70ca5f0f0b28f4e32636fd3a92c05b045fe99c9271e5d5e8f46756352e9a3e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R03_F_ZERO__TEMPORAL_DT0P00625.json",
+        "sha256": "6d699d5d645940a71c1ccde2cdf149d3ee8e7d31bf54fc7369ff662bc280aeb4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__DETERMINISTIC_A.json",
+        "sha256": "f6b866690eebff9540c48e87e513f924c15c11551dc9c41b37d42fcded2793cb"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__DETERMINISTIC_B.json",
+        "sha256": "fa6156d1ab8388967e54f9e23964cbbc07e08ec4e3fd40a6391fdf6564cbbc4c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__FORCED_COMPARATOR.json",
+        "sha256": "0b23abcc563920296415b9bf0f2ed0c2b6249874c5f73b163cabaaac1a6743d3"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__PRIMARY_FULL.json",
+        "sha256": "f11c39497a36e54bb9b2783d5dd72aa4f3db5cadbfbfa3263bd7974353afc6f4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__SOLVER_TOL1eM08.json",
+        "sha256": "eb9c4dbde59786e91d658b59bfd79e13d6af3ab5191a90c3c0fe974465d2add7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__SOLVER_TOL1eM10.json",
+        "sha256": "86048e971de64927ebacefc5c2ad20b798acf33a253f9a30afaebb88abb0f51d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__SOLVER_TOL1eM12.json",
+        "sha256": "99564ef1af5a3f93679b9213f9e621d6c844d0391281f059aed6a693bbb286e9"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__SPATIAL_N16.json",
+        "sha256": "7ea16476bc4c475c06717b0c9e5f50b56cc964eca87e6bd6af284cd04e756bce"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__SPATIAL_N32.json",
+        "sha256": "580af5de71a91b6105b2e436a91ac4f2009c7118d42350a2b6856c144b9f3dd7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__SPATIAL_N8.json",
+        "sha256": "c21f89ebe82407ec93a48a70cb733b4d415eb204b3bb507f2d3ac590089819d6"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__TEMPORAL_DT0P0015625.json",
+        "sha256": "14a573947c75f4a3af22d5738811add6cf1d2a65827994af300d2503380f6a65"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__TEMPORAL_DT0P003125.json",
+        "sha256": "3512dbd2f14062aae78cd7d2314d49827c97a3d921b8ae93f83be950b2cda58e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R04_F_LOW__TEMPORAL_DT0P00625.json",
+        "sha256": "bf4aea0ef8a5184b53515465727aa50055b1d1aa6398e83c5f07d9a3c81b240e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__DETERMINISTIC_A.json",
+        "sha256": "aed0deb364e34f639e01fd9710815dc7008c1eeb383783109bf4a87cde0b8eae"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__DETERMINISTIC_B.json",
+        "sha256": "a063cf60cb07f10e5f52658597a79357c6f1c62f2212f3cf2d0c347189ec4b71"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__FORCED_COMPARATOR.json",
+        "sha256": "35db55d112ade52b9f8991f6041599ba4e2b0403cc1ace9c9d1edbca98f4b809"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__PRIMARY_FULL.json",
+        "sha256": "8f6a22ead675368afac5f7070d5f1cb4b6d12c3d2335fb1c229d3f1691737ac7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__SOLVER_TOL1eM08.json",
+        "sha256": "6a4c999b3ef68154ea49dbe1d6784596698c5b528d8c379cca0d9dc67a523090"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__SOLVER_TOL1eM10.json",
+        "sha256": "80295594720efdc8fccd18a7ea48055793e8be88d590bd14b86c794ddb899b64"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__SOLVER_TOL1eM12.json",
+        "sha256": "2c56a0358b48a66ee6982068ba7fbd6d3c1a2121918313a41f5d89e40684f24e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__SPATIAL_N16.json",
+        "sha256": "44b97365b65021d36bf6ed699051d7a81b7e97c9492f5e17dc0fdfdf8d8c2753"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__SPATIAL_N32.json",
+        "sha256": "e7571763119eb8d0eec850b72adbd962c1730a52c176b77aba44ad6af43a73ec"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__SPATIAL_N8.json",
+        "sha256": "e0e017617b01bbf374db675cc8116336ebd6f15e94027aa723514bcd58932cd7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__TEMPORAL_DT0P0015625.json",
+        "sha256": "6ff7777d3da8e630144db740c77ee07e4b204ee2894403b6424256a840d8e8a2"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__TEMPORAL_DT0P003125.json",
+        "sha256": "f8c3be604976f1484f50ce0a90c6776d9a53111b420044b2419d7ca75b4875fb"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R05_F_HIGH__TEMPORAL_DT0P00625.json",
+        "sha256": "51b8e73ac5955ff294de414d3f08160ab21c30d352e7d67ec510bc2556cee5a0"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__DETERMINISTIC_A.json",
+        "sha256": "71eb87b30dbd1313428b4e180cf02693e0d4b4367c28cdd9b13fb07ad1bedf0d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__DETERMINISTIC_B.json",
+        "sha256": "533829f5afcd00dc3a935ed91bc189ec2f832217d7a3ff204f6615ee3a3bb7be"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__FORCED_COMPARATOR.json",
+        "sha256": "6295ed532e44b9286fb91ccdad2c1e8031bb0b2975c42749158dc4fc37cee8e2"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__PRIMARY_FULL.json",
+        "sha256": "e828f5ef7d63e8bf3875a47326996e92faa5f333aa9c09dc6c33d9a6dfda022f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__SOLVER_TOL1eM08.json",
+        "sha256": "bdbb8184fab9027883ca63d42a7959b528082d6d66e93f145c01a083a31b508c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__SOLVER_TOL1eM10.json",
+        "sha256": "80cfd4d1c1546eada8c827d4ab7de2e9644c8862d90c2e5437bfded478f1fb21"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__SOLVER_TOL1eM12.json",
+        "sha256": "f8446aa3ca365cb7ac99b29bba3b5403c137494146c27ccea6049b32330b82bc"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__SPATIAL_N16.json",
+        "sha256": "226e25c3accbbbb907079720ee38bd66922e0ce5af73a3f686b8c05a7f59091f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__SPATIAL_N32.json",
+        "sha256": "6443852234aa475868b005c6b0067a78a865e458baadbef4212e81ca6510f3e0"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__SPATIAL_N8.json",
+        "sha256": "db872a239db33810e9e4310235f924c2e346a94230af8ddd0ca142a47a5b9a1a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__TEMPORAL_DT0P0015625.json",
+        "sha256": "2a97f9baf0e8f8e375d09a21cd0409e83366f5ae98d1332f7b13f7d0dbdc3953"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__TEMPORAL_DT0P003125.json",
+        "sha256": "aa8f341c49d7bb6d13dc1b7a3b8bdc42e1911a8c4274c2fba4c52e2a57897bd8"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R06_THETA_TRIVIAL__TEMPORAL_DT0P00625.json",
+        "sha256": "7adfb35f6adaba7aad0915a0400c4591703412be116bb6168c74a0554a7940e7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__DETERMINISTIC_A.json",
+        "sha256": "e56472bd1c3463e4b392fbcb31c1cc4d050620096d1bb3dca3f450b9ea67db3a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__DETERMINISTIC_B.json",
+        "sha256": "cfd33f57b1ae608731219b6cec302964506bb418cf4cf07ecf29458c3c776524"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__FORCED_COMPARATOR.json",
+        "sha256": "8326465d5faaa1c09cfc5cd10fc2850c7af0f5931f684e71ac0f1e1fa750056a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__PRIMARY_FULL.json",
+        "sha256": "d13f68a2553969d7fa9efc42574f1980db64123140fe07fb153a6607fe4b5f81"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__SOLVER_TOL1eM08.json",
+        "sha256": "ed64152a34f26c0fd042d97298557913c30111122959d690b1d71d60a002cb92"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__SOLVER_TOL1eM10.json",
+        "sha256": "9f71a7b55bf218ceb4a557893d825222142d890e949314742026f474f03125f4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__SOLVER_TOL1eM12.json",
+        "sha256": "c0a3898c9162fc4d70092af423ba39029cd940ce535a0284b8c5c2489d504558"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__SPATIAL_N16.json",
+        "sha256": "66c236c5cc1ce774aabbcb866e0ad9332292f39878628f39377f9f68a2c157bf"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__SPATIAL_N32.json",
+        "sha256": "04ddc37eb4b57892223f3612956352ba8bc9c475fc95500a0723fdf03c60dbdb"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__SPATIAL_N8.json",
+        "sha256": "90a09d8f2a8d0f3e70ff3e18f7846cb39438b70c441fdbe09d67d7e1af0ace7b"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__TEMPORAL_DT0P0015625.json",
+        "sha256": "9d5ff9ccab07276bf951dbbc738da25705ffa098b220739a3f32b34fe9b620d4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__TEMPORAL_DT0P003125.json",
+        "sha256": "1144be4cca04f26bab457901936764b134ba51d25d7fcfeebd626ec5513d43cc"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R07_THETA_PARTNER__TEMPORAL_DT0P00625.json",
+        "sha256": "430e3482b5511eb3c8262064a4e54f0f501a3b89d0ece0d77e6db2e7756f5c75"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__DETERMINISTIC_A.json",
+        "sha256": "017da22966a855a7c3a11c6b9a6a75e25a2f8019cbbdb7b10ce75a4ffee1ce0f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__DETERMINISTIC_B.json",
+        "sha256": "5313147e3d0ee7e9a8006fc38dd0b17a8e7a1dca863e456436d3bb1ca605219d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__FORCED_COMPARATOR.json",
+        "sha256": "d3a248efb20f52c15fa41f138e7671c5167474671c8cba17d2470d149fad64db"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__PRIMARY_FULL.json",
+        "sha256": "eaf00da062086b5e477001eed58d36f915ab9e8c25698ed03959e6ec8286f80f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__SOLVER_TOL1eM08.json",
+        "sha256": "2e1a65bb2197c1f90faa17e67f88f633a9aa3c3fe8ead1dd50082084f9d2ef6d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__SOLVER_TOL1eM10.json",
+        "sha256": "c0eedc4e8b86c0e3455ac18354f292e8db73a87743a366f7cdc5c66ce23fd6dc"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__SOLVER_TOL1eM12.json",
+        "sha256": "916ad84b8cfa46f2bb91b8424d2e2ed54c4df7defdb6224df183272a80c5d1f7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__SPATIAL_N16.json",
+        "sha256": "83d310c41c0045fa37804dbd83425a9f0ebad98fd56190b0073372bec48c8b7f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__SPATIAL_N32.json",
+        "sha256": "8a1269fcc9ac674c34297d7d0c9d652ffd0a878b2b66e91542a4f8e02e2203df"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__SPATIAL_N8.json",
+        "sha256": "7ff227f839c74c33b7f63d3bbda6b7c5bfe06839bbb217e17635e1814c664dff"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__TEMPORAL_DT0P0015625.json",
+        "sha256": "5d525c91ad97ef4e49d2f01cc2137f066add87e31f3dbfd1398a12b280b2940d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__TEMPORAL_DT0P003125.json",
+        "sha256": "ad728d57d4450df501ad419c15270ae11d0dbbb8b311b11d3c678fd111586e0e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R08_PHASE_POSITIVE__TEMPORAL_DT0P00625.json",
+        "sha256": "4835ea7e150ebd363507c8fc92148825757ad6210cbeca0428697b8ab2fdc3d4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__DETERMINISTIC_A.json",
+        "sha256": "8e8595d4ed1bf338255070b1a2491a879d781b361eadf7ce4dade96e1bb95330"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__DETERMINISTIC_B.json",
+        "sha256": "56869266e2b2139250b36a42c5b67fd5ec068ed911746b26c2f4d37f4425f7ef"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__FORCED_COMPARATOR.json",
+        "sha256": "682584c91ed26ba83b21e118bfb0ea3f042a130db2de63270bfa828b02ac4d32"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__PRIMARY_FULL.json",
+        "sha256": "dd1296e0eeca08b3f84823ff8c69f89be046257218d2b591b559cb7906a0c2b0"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__SOLVER_TOL1eM08.json",
+        "sha256": "51f2a20e116105270795b0e0d1e47b87ba90acdd3320470e7fc233b48fb3c425"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__SOLVER_TOL1eM10.json",
+        "sha256": "16aa089bd9a9d2b122ec5203441a20e10c5f6fc59b171cda0880c2b31042a92c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__SOLVER_TOL1eM12.json",
+        "sha256": "4a9b5ca1464490579c1229de7497cf4bb8a7ac1395c2b3665906de3d2e85210d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__SPATIAL_N16.json",
+        "sha256": "847acfd93d9436c4d2f87d1db2c88d7596eca1da2c04420e30aa6f1ad14d32d4"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__SPATIAL_N32.json",
+        "sha256": "eb701e636767be77c83fc7a3a915a5058a33e713a7d0cb2e2c5d37e32ecb1510"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__SPATIAL_N8.json",
+        "sha256": "564c1efe5beff77f609ffb8ee65ad98941d736cf8789379124056deb5f41a1f1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__TEMPORAL_DT0P0015625.json",
+        "sha256": "193480d3c0894266129201913c31149702d25e81942081dadc3c658f6699733c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__TEMPORAL_DT0P003125.json",
+        "sha256": "59f2db1ca5172ebe77b2bf26e50ac39cf8dad64d0817ac8641d01f6d299bdc40"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R09_PHASE_NEGATIVE__TEMPORAL_DT0P00625.json",
+        "sha256": "673b383b0a60e609a27ef8d4036b8f339399348ec169bd280251d8bc270fb23f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__DETERMINISTIC_A.json",
+        "sha256": "afd40a81e3d7a90f8d4fb077d37aa2b17bdbcb0c26989c03b172b21a463c33a8"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__DETERMINISTIC_B.json",
+        "sha256": "e130609b32c89855704e61962a31a83f83b2eeb2197463c368f124f242bbf6c3"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__FORCED_COMPARATOR.json",
+        "sha256": "1badeae97b97242c22123303a42b12a5f01792acd3727aa2681ab75f8a6e37b2"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__PRIMARY_FULL.json",
+        "sha256": "850878c2edfc4a1733532fa90fa8164b2e05cd16e2fb6a9b3883bee6ebccf6a1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__SOLVER_TOL1eM08.json",
+        "sha256": "4a396cc3e636e626e562d22307416796eda2dcc1aa5aaa59d5c27bd0c59e8fd1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__SOLVER_TOL1eM10.json",
+        "sha256": "da3229adb74530b2d8c108c60f9bbdba65d0b16c53bc1fd8ee6b55be8f8168b9"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__SOLVER_TOL1eM12.json",
+        "sha256": "0415d19722eb59c0b98507eb0a0f9ec07b81a00c72e558c01099e6beb93e9448"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__SPATIAL_N16.json",
+        "sha256": "0299efbf77ee4fbef21c058a0c690a4efe5d51a21f4905f582e2f0fdeac4f47e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__SPATIAL_N32.json",
+        "sha256": "30d70ed6c7ea3d9d6941a90d5725fc79ae9dc04c4bad50d67cde5a3d6d824350"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__SPATIAL_N8.json",
+        "sha256": "1f7e1b04758c811608a44a9c7b07c73662c500607224e976f54cfbb630f704cc"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__TEMPORAL_DT0P0015625.json",
+        "sha256": "30dd51d3204643c3fe8523a7bfb4984c9ac90927c1de0a1dbf1792fe187a554a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__TEMPORAL_DT0P003125.json",
+        "sha256": "0df03dff44e89ae2a6b423d77b8130f14b4a65853af1476138a212ae8a4d9f8c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R10_MU_HIGH__TEMPORAL_DT0P00625.json",
+        "sha256": "54286fa2e0bc8e636fc2ca5746bc3bb51da1a2e706118a122bd0da03df3af3e6"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__DETERMINISTIC_A.json",
+        "sha256": "15a99ab8e3b4197579b4ec536f087d90fa12a76b96005ab690c6e882f3ccd649"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__DETERMINISTIC_B.json",
+        "sha256": "4dfb78f683ca2e9f6b4594ce4a25674152e4cef3165cd0b4e39976195475737f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__FORCED_COMPARATOR.json",
+        "sha256": "820db11524e974abd716560fe777ad676c48a2b657100e63843f39b4beac926c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__PRIMARY_FULL.json",
+        "sha256": "df2c765ac6a749f66283dc46de5a4eee44a650c98c239f51762dd95d5e777355"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__SOLVER_TOL1eM08.json",
+        "sha256": "238086dc3f5afeabd9f9086b41746e46c4613b1aada030c0f5242f3e2bbd6190"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__SOLVER_TOL1eM10.json",
+        "sha256": "e661de95e4f77393e38affa5e78223a3be8345abc47334358872947b028dd705"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__SOLVER_TOL1eM12.json",
+        "sha256": "a6ab77426ad67bea5e810615183a1f06c5648768469474f7f0329c2afcd6cef1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__SPATIAL_N16.json",
+        "sha256": "9e7f1e0ca39f5b983fc868b2df65109f38f6206c51f926d5d4de159817db54f5"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__SPATIAL_N32.json",
+        "sha256": "f3a78c993983e912a42c0bdd6a512baaeb9b362a0e42848a914df65f19a6884e"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__SPATIAL_N8.json",
+        "sha256": "79e8a759accb5597a323b2eacc8624dd365c8807b271656391cff894f101afed"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__TEMPORAL_DT0P0015625.json",
+        "sha256": "3347597d1844d28626b2a042ef8814502a59f96f081716d025cfd13feaa70db9"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__TEMPORAL_DT0P003125.json",
+        "sha256": "a2a09115796b61483d6340ef91cb7a15b6c3fa68a1abf98589a0ccb85277450c"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R11_CORNER_WEAK_HIGH__TEMPORAL_DT0P00625.json",
+        "sha256": "cfa73ce08dfe584ead5b2dd837421cdb6cc502274edb800209f60b99f7afe9c8"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__DETERMINISTIC_A.json",
+        "sha256": "b7ead3dbd712670b5dd977406422fbb9c9f7b58fa8177ad1b15ad80819941866"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__DETERMINISTIC_B.json",
+        "sha256": "02dfe3f05f4ed49c59d8c887d61d167f66bbe40d466b3b884c0f3872f73f1819"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__FORCED_COMPARATOR.json",
+        "sha256": "61dc84ab362df01155f6975742005a307eee4cc5684ee56a825f12b2780b1726"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__PRIMARY_FULL.json",
+        "sha256": "9a1a1b97c20f237dbf9cdd92df66c10254c7aa9cbcc6457509d290d0ae281772"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__SOLVER_TOL1eM08.json",
+        "sha256": "8bc5128ec7f6eb373f1db03966874b17487e656365fe5a3aedc24739927589c9"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__SOLVER_TOL1eM10.json",
+        "sha256": "06429f32d603f9781c0437c53465ff40b67ed9869ef6f1c6a3f53ea2fc486920"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__SOLVER_TOL1eM12.json",
+        "sha256": "c2b42f2d1b241b377f94ff9b5eee08edb46d01be6f3ed599c046d6b6a00b297a"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__SPATIAL_N16.json",
+        "sha256": "02eb4fd9b4598060fb98dc7f27f0b5bce0c38f426f9537708bd935cc345cd775"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__SPATIAL_N32.json",
+        "sha256": "91464ba83c24bce16d90c5ba3133ed4366beeb61572dd8b0f1a77b1f9b875bd2"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__SPATIAL_N8.json",
+        "sha256": "ce93d637f73ed301875d49b5298762e81ce634d968dbf9d859e92e663170294f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__TEMPORAL_DT0P0015625.json",
+        "sha256": "e474b8864e6dc99cd33ee38b0751ee0c9427e01956695cabc8a342c7b0ab77cd"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__TEMPORAL_DT0P003125.json",
+        "sha256": "01e3f5752e724035d14e3b54927d2c32d8d349220734b4a4056b63b2159c03c1"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R12_CORNER_STRONG_ZERO__TEMPORAL_DT0P00625.json",
+        "sha256": "89021ad01562bcb9c346a8cdb580dc14d03074bbc95ba27f60b166960387914f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__DETERMINISTIC_A.json",
+        "sha256": "193d37abf3aab97babc7d61a29bde9c9fff6ee759f19ec9dad1b0c0caf79059d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__DETERMINISTIC_B.json",
+        "sha256": "5a38e6f13077a8d05d17674e0e45d83dda3b99c6e9bfeebecfabbd40f53fec7d"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__FORCED_COMPARATOR.json",
+        "sha256": "318d315b8d9908757c2b1f4b5db5e5b6d22182c71816ef5450b4779c93c24e05"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__PRIMARY_FULL.json",
+        "sha256": "c2b547e3133e15c74c00a807136f878836f9626e32793a1b74ce440037da4c62"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__SOLVER_TOL1eM08.json",
+        "sha256": "00f45cde686c90c6bc28413df8257874c994e7bd8a6d64d10357c6bd57d22e0f"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__SOLVER_TOL1eM10.json",
+        "sha256": "027cc2c1d9fd9ecda949bf8c9161954faafa4d8710ddc7bf4477c5242c582249"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__SOLVER_TOL1eM12.json",
+        "sha256": "cc4a33e76c9cf640c207a9c1ce1875c0c10d0e7f9ed9cab3ffa1807bb6148ee5"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__SPATIAL_N16.json",
+        "sha256": "9330618297800c1343c5d75052f41b41585c5e8b310d48a6211bec9cc8aeb049"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__SPATIAL_N32.json",
+        "sha256": "09c7d759a409296821335ca74b365d627b27b5234a4d12a23d505e96315be1b7"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__SPATIAL_N8.json",
+        "sha256": "d76e7ead85118aea91446a9b59c02cef8ad616da3fbdd45837ef668cbdeabe66"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__TEMPORAL_DT0P0015625.json",
+        "sha256": "fc8cb2cb14e715f2bc67b3961fbd14157c34ff9d4964584e44b5b0dc3eb2d9c8"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__TEMPORAL_DT0P003125.json",
+        "sha256": "ea11da6b9aae8946cd0e9ef0c02fa3f783083673e7f92f35784d2d9c448638e2"
+      },
+      {
+        "path": "formal/output/canonical/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_v2/R13_CORNER_STRONG_LOW__TEMPORAL_DT0P00625.json",
+        "sha256": "ceb199f06d70d4348a2890e6c49a797fc985583bf7b71f671dbffa81e18c25b6"
+      }
+    ],
+    "canonical_output_write_authorized": false,
+    "canonical_run_output_hash_failures": [],
+    "canonical_run_outputs_checked": 203,
+    "execution_count_preserved": true,
+    "expected_source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+    },
+    "passed": true,
+    "review_selected_this_target": true,
+    "review_verdict_exact": true,
+    "simulation_invocation_count": 0,
+    "source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2"
+    }
+  },
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0",
+  "tolerance_response": {
+    "all_four_residual_maxima_strictly_decrease_with_tighter_tolerance": true,
+    "all_solver_iteration_histories_constant_after_initial_state": true,
+    "all_solver_residual_histories_nonincreasing_after_first_step": true,
+    "all_steps_converged": true,
+    "definition": "p_s = ln(R_loose/R_tight) / ln(epsilon_loose/epsilon_tight)",
+    "interpretation": "All four maxima decrease monotonically with tighter solver tolerance, with overall 1e-8-to-1e-12 exponents clustered near 0.75. Pairwise exponents vary, so this is descriptive tolerance response rather than a certified asymptotic law.",
+    "overall_exponent_maximum": 0.7559176564888908,
+    "overall_exponent_median": 0.7486818198236936,
+    "overall_exponent_minimum": 0.7448900948221593,
+    "residual_tolerance_response": [
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 5.68643754154526e-14,
+          "1e-10": 2.214455871952e-16,
+          "1e-12": 5.384800865676891e-17
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7559176564888908,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 1.2047866214583918,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.3070486915193895,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "gauss_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      },
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 4.991664308458266e-11,
+          "1e-10": 7.214756576727228e-13,
+          "1e-12": 5.2322078961108964e-14
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7448900948221593,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 0.9200118442150322,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.5697683454292863,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "continuity_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      },
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 3.4243223273183233e-20,
+          "1e-10": 2.621184101835134e-22,
+          "1e-12": 3.510465738113332e-23
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7473024747085409,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 1.058038556180294,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.436566393236788,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "exchange_longitudinal_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      },
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 8.324331825593695e-15,
+          "1e-10": 2.066273129186935e-16,
+          "1e-12": 8.319643634715443e-18
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7500611649388463,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 0.8025808279150828,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.6975415019626098,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "longitudinal_Maxwell_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      }
+    ],
+    "solver_runs": [
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 2.4372612955625428e-09,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 3.0,
+        "maximum_solver_residual": 2.713377245111559e-09,
+        "maximum_solver_residual_over_requested_tolerance": 0.2713377245111559,
+        "residual_maxima": {
+          "continuity_residual": 4.991664308458266e-11,
+          "exchange_longitudinal_residual": 3.4243223273183233e-20,
+          "gauss_residual": 5.68643754154526e-14,
+          "longitudinal_Maxwell_residual": 8.324331825593695e-15
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+        "solver_iterations": [
+          0.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "solver_residual": [
+          0.0,
+          2.713377245111559e-09,
+          2.7114471778943994e-09,
+          2.707024021608717e-09,
+          2.7001148400485064e-09,
+          2.690729986043472e-09,
+          2.6788830528867713e-09,
+          2.6645908049460765e-09,
+          2.6478732192969368e-09,
+          2.628753402456052e-09,
+          2.6073269931981002e-09,
+          2.584669055172295e-09,
+          2.55969273554868e-09,
+          2.5324287458716732e-09,
+          2.5029107189600275e-09,
+          2.4711751325789955e-09,
+          2.4372612955625428e-09
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-08
+      },
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 3.021592351326596e-11,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 4.0,
+        "maximum_solver_residual": 3.411274106072948e-11,
+        "maximum_solver_residual_over_requested_tolerance": 0.3411274106072948,
+        "residual_maxima": {
+          "continuity_residual": 7.214756576727228e-13,
+          "exchange_longitudinal_residual": 2.621184101835134e-22,
+          "gauss_residual": 2.214455871952e-16,
+          "longitudinal_Maxwell_residual": 2.066273129186935e-16
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM10",
+        "solver_iterations": [
+          0.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "solver_residual": [
+          0.0,
+          3.411274106072948e-11,
+          3.407647124545332e-11,
+          3.40352767670693e-11,
+          3.3957080203261825e-11,
+          3.3841968290204694e-11,
+          3.369007850473338e-11,
+          3.350159906434502e-11,
+          3.3276773697688e-11,
+          3.3015899042476704e-11,
+          3.2719320308682853e-11,
+          3.238743648270592e-11,
+          3.2020698592649666e-11,
+          3.161960450415169e-11,
+          3.1184704124553875e-11,
+          3.071659940290239e-11,
+          3.021592351326596e-11
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-10
+      },
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 5.403663627667754e-13,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 5.0,
+        "maximum_solver_residual": 6.255759799067562e-13,
+        "maximum_solver_residual_over_requested_tolerance": 0.6255759799067562,
+        "residual_maxima": {
+          "continuity_residual": 5.2322078961108964e-14,
+          "exchange_longitudinal_residual": 3.510465738113332e-23,
+          "gauss_residual": 5.384800865676891e-17,
+          "longitudinal_Maxwell_residual": 8.319643634715443e-18
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+        "solver_iterations": [
+          0.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "solver_residual": [
+          0.0,
+          6.255759799067562e-13,
+          6.245143291394584e-13,
+          6.226338888914995e-13,
+          6.199415980567835e-13,
+          6.164443955292143e-13,
+          6.121492202026957e-13,
+          6.070560720772278e-13,
+          6.020114962090872e-13,
+          5.967379368421177e-13,
+          5.906872213579106e-13,
+          5.838593497564659e-13,
+          5.762612609316875e-13,
+          5.67920710459191e-13,
+          5.588376983389765e-13,
+          5.490330412527555e-13,
+          5.403663627667754e-13
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-12
+      }
+    ]
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

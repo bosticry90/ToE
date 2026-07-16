@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v2_result" := by
+      "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v1_result" := by
   native_decide
 
 end CurrentAuthority

@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCanonicalExecutionV2
+import ToeFormal.Derivation.DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV1
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCanonicalExecutionV2.selectedNextTarget
+  DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV1.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessCanonicalExecutionV2.packetId
+  DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV1.packetId
 
-theorem current_target_points_to_independent_canonical_result_review :
+theorem current_target_selects_independent_instrumented_R13_numerical_freeze_v1_review :
     currentLiveTarget =
-      "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_matrix_v2_result" := by
+      "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v1_result" := by
   rfl
 
 end CurrentTarget

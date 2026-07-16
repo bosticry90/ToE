@@ -1,0 +1,87 @@
+{
+  "adversarial_control_count": 3,
+  "artifact_hashes": {
+    "generator_sha256": "30f0ac96cda91b1f928998f7615b7c6125e8a5c70876d0588694863395355946",
+    "manifest_sha256": "f6f737c7a6c22c33e84f42547f439b80b4068bfb1ebbf7ee2e00e31eb14944b9",
+    "packet_sha256": "a06e25fb53bed76df140cda935be1e878e0aa0dc437bf2aba4addcd687fb93d1"
+  },
+  "authority_boundary": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "R13_parameter_or_initial_condition_change_authorized": false,
+    "canonical_output_mutation_authorized": false,
+    "design_independently_accepted": false,
+    "design_packet_prepared": true,
+    "different_numerical_method_authorized": false,
+    "exact_run_count_or_values_selected": false,
+    "experiment_frozen": false,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "numerical_freeze_packet_authorized": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "threshold_or_fit_change_authorized": false
+  },
+  "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "corrected_blocker_count": 3,
+  "correction_source_custody_passed": true,
+  "decision_count": 31,
+  "downstream_target_if_independent_review_accepts": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0",
+  "failed_decision_ids": [],
+  "freeze_deferred_item_count": 16,
+  "hypothesis_count": 5,
+  "mechanism_observable_count": 14,
+  "neighbor_candidate_count": 13,
+  "nonclaims": [
+    "no corrected design independently accepted",
+    "no numerical freeze packet prepared or accepted",
+    "no exact run count, run matrix, tolerance, duration, or neighbor frozen",
+    "no exact output schema, floor, threshold, contrast, association, or classifier hash frozen",
+    "no new output root or simulation",
+    "no canonical output mutation or rerun",
+    "no root mechanism identified",
+    "no physical instability or model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar, seam, C_k, CCFT, or master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 31,
+  "positive_control_count": 5,
+  "preserved_v0_review_decision_count": 34,
+  "provisional_top_neighbor": "R10_MU_HIGH",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_v1_RELEASE_REPORT_20260715",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 156,
+      "status": "PASSED"
+    },
+    "authority_surface_parity": "PASSED",
+    "canonical_output_mutation_count": 0,
+    "current_affected_descendant_robustness_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 302
+    },
+    "focused_corrected_design_v1_tests": {
+      "failed": 0,
+      "passed": 15
+    },
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    },
+    "simulation_invocation_count": 0
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

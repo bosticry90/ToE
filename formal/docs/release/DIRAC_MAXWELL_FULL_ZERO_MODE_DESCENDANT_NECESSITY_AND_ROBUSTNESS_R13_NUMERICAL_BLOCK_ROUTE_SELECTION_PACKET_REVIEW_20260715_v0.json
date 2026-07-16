@@ -1,0 +1,490 @@
+{
+  "accepted": true,
+  "accepted_claim_label": "POLICY_ROUTE_SELECTION_ONLY",
+  "authority_rotation": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "R13_parameter_or_initial_condition_change_authorized": false,
+    "canonical_output_mutation_authorized": false,
+    "different_numerical_method_authorized": false,
+    "experiment_design_accepted": false,
+    "experiment_freeze_authorized": false,
+    "experiment_frozen": false,
+    "instrumented_R13_design_packet_preparation_authorized": true,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "route_selection_accepted": true,
+    "threshold_or_fit_change_authorized": false
+  },
+  "canonical_robustness_status": "NUMERICALLY_BLOCKED",
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "decision_count": 26,
+  "decisions": [
+    {
+      "decision_id": "live_authority_selects_exact_independent_route_review",
+      "passed": true
+    },
+    {
+      "decision_id": "route_packet_manifest_report_and_generator_hashes_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "route_artifact_cross_bindings_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_diagnostic_review_authority_is_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "all_203_canonical_outputs_and_root_digest_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "prepared_packet_has_exact_six_routes_and_twenty_passing_decisions",
+      "passed": true
+    },
+    {
+      "decision_id": "independent_capability_matrix_has_A_direct_direct_direct",
+      "passed": true
+    },
+    {
+      "decision_id": "independent_direct_coverage_counts_match_packet",
+      "passed": true
+    },
+    {
+      "decision_id": "only_route_A_has_complete_direct_mechanism_coverage",
+      "passed": true
+    },
+    {
+      "decision_id": "routes_B_and_C_are_supporting_pattern_modules_not_mechanism_routes",
+      "passed": true
+    },
+    {
+      "decision_id": "route_D_is_indirect_and_method_confounded",
+      "passed": true
+    },
+    {
+      "decision_id": "route_E_is_partial_only_for_precision_and_cancellation_sensitivity",
+      "passed": true
+    },
+    {
+      "decision_id": "route_F_is_a_no_new_data_fallback",
+      "passed": true
+    },
+    {
+      "decision_id": "route_A_selection_follows_coverage_not_preference_for_size",
+      "passed": true
+    },
+    {
+      "decision_id": "route_A_keeps_physical_model_and_numerical_method_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "no_initial_condition_parameter_threshold_solver_or_classification_change_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "every_mandatory_observable_traces_to_an_unresolved_mechanism_question",
+      "passed": true
+    },
+    {
+      "decision_id": "mandatory_observables_collectively_cover_all_three_questions",
+      "passed": true
+    },
+    {
+      "decision_id": "future_controls_preserve_loose_tight_neighbor_and_canonical_separation_obligations",
+      "passed": true
+    },
+    {
+      "decision_id": "tolerance_duration_and_neighbor_additions_remain_unfrozen_design_candidates",
+      "passed": true
+    },
+    {
+      "decision_id": "future_design_must_include_competing_hypotheses_A_through_E",
+      "passed": true
+    },
+    {
+      "decision_id": "future_design_must_freeze_nonperturbing_instrumentation_and_self_control",
+      "passed": true
+    },
+    {
+      "decision_id": "actual_discrete_operators_not_posthoc_continuum_derivatives_are_required",
+      "passed": true
+    },
+    {
+      "decision_id": "packet_contains_no_new_run_result_or_classification",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_block_materiality_and_E_REPRO_authority_remain_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_review_authorizes_design_packet_preparation_only",
+      "passed": true
+    }
+  ],
+  "descendant_materiality_status": "NOT_EVALUATED_NUMERICAL_BLOCK",
+  "downstream_design_packet_requirements": {
+    "actual_discrete_operators_required_not_posthoc_continuum_surrogates": true,
+    "competing_hypotheses_required": [
+      {
+        "hypothesis_id": "H_A_CANCELLATION_CONDITIONING",
+        "required_prediction_class": "Separate field and matter exchanges are individually large, nearly cancel, and yield a tolerance-sensitive remainder."
+      },
+      {
+        "hypothesis_id": "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+        "required_prediction_class": "The longitudinal Maxwell or linked current block dominates the nonlinear residual while other blocks remain smaller."
+      },
+      {
+        "hypothesis_id": "H_C_DISCRETE_CLOSURE_MISMATCH",
+        "required_prediction_class": "The actual discrete Maxwell-divergence relation fails to close with continuity within its frozen truncation remainder."
+      },
+      {
+        "hypothesis_id": "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+        "required_prediction_class": "No single block dominates; several small errors accumulate into the structural residual pattern."
+      },
+      {
+        "hypothesis_id": "H_E_UNRESOLVED_MECHANISM",
+        "required_prediction_class": "Instrumentation reproduces the block without distinguishing H_A through H_D."
+      }
+    ],
+    "exact_run_count_tolerances_durations_controls_schemas_and_thresholds_frozen_now": false,
+    "exchange_conditioning_floor_and_units_must_be_frozen": true,
+    "experiment_execution_authorized": false,
+    "governance_sequence": [
+      "accept route selection",
+      "prepare detailed instrumented experiment design",
+      "independently review design",
+      "prepare numerical freeze if design is accepted",
+      "independently review freeze",
+      "authorize one execution only after accepted freeze"
+    ],
+    "instrumentation_nonperturbation_requirement": "Instrumentation may read registered state and residual data but may not alter solver variables, equation evaluation, arithmetic order, iteration order, stopping rules, timesteps, or state updates. Any unavoidable trajectory effect requires a preregistered equivalence rule and instrumentation self-control.",
+    "instrumentation_self_control_required": true,
+    "per_block_definition_requirements": [
+      "mathematical definition",
+      "units",
+      "norm",
+      "normalization",
+      "spatial aggregation",
+      "time aggregation"
+    ],
+    "status": "REQUIREMENTS_FOR_DESIGN_PACKET_PREPARATION_NOT_A_FROZEN_DESIGN"
+  },
+  "failed_decision_ids": [],
+  "independent_coverage_review": {
+    "capability_matrix": [
+      {
+        "cancellation_conditioning": "DIRECT",
+        "direct_coverage_count": 3,
+        "discrete_Maxwell_continuity_closure": "DIRECT",
+        "equation_block_dominance": "DIRECT",
+        "interpretation": "Directly records every missing mechanism observable.",
+        "route_id": "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT"
+      },
+      {
+        "cancellation_conditioning": "NONE",
+        "direct_coverage_count": 0,
+        "discrete_Maxwell_continuity_closure": "NONE",
+        "equation_block_dominance": "NONE",
+        "interpretation": "Refines tolerance scaling but does not expose internal mechanism.",
+        "route_id": "ROUTE_B_EXPANDED_TOLERANCE_LADDER"
+      },
+      {
+        "cancellation_conditioning": "NONE",
+        "direct_coverage_count": 0,
+        "discrete_Maxwell_continuity_closure": "NONE",
+        "equation_block_dominance": "NONE",
+        "interpretation": "Refines growth shapes but does not establish their cause.",
+        "route_id": "ROUTE_C_DURATION_SCALING_EXPERIMENT"
+      },
+      {
+        "cancellation_conditioning": "INDIRECT",
+        "direct_coverage_count": 0,
+        "discrete_Maxwell_continuity_closure": "POSSIBLY_INDIRECT",
+        "equation_block_dominance": "INDIRECT",
+        "interpretation": "Can test method specificity but changes the method before the present mechanism is identified.",
+        "route_id": "ROUTE_D_CONSTRAINT_PRESERVING_METHOD_COMPARISON"
+      },
+      {
+        "cancellation_conditioning": "PARTIAL",
+        "direct_coverage_count": 0,
+        "discrete_Maxwell_continuity_closure": "NONE",
+        "equation_block_dominance": "NONE",
+        "interpretation": "Can test precision sensitivity but cannot measure cancellation conditioning without separate exchange components.",
+        "route_id": "ROUTE_E_HIGHER_PRECISION_ARITHMETIC"
+      },
+      {
+        "cancellation_conditioning": "NONE",
+        "direct_coverage_count": 0,
+        "discrete_Maxwell_continuity_closure": "NONE",
+        "equation_block_dominance": "NONE",
+        "interpretation": "Documents the boundary without generating mechanism evidence.",
+        "route_id": "ROUTE_F_CERTIFIED_NUMERICAL_DOMAIN_DECLARATION"
+      }
+    ],
+    "direct_coverage_counts_match_packet": true,
+    "independent_direct_coverage_counts": {
+      "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT": 3,
+      "ROUTE_B_EXPANDED_TOLERANCE_LADDER": 0,
+      "ROUTE_C_DURATION_SCALING_EXPERIMENT": 0,
+      "ROUTE_D_CONSTRAINT_PRESERVING_METHOD_COMPARISON": 0,
+      "ROUTE_E_HIGHER_PRECISION_ARITHMETIC": 0,
+      "ROUTE_F_CERTIFIED_NUMERICAL_DOMAIN_DECLARATION": 0
+    },
+    "mechanism_ids": [
+      "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE",
+      "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING",
+      "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+    ],
+    "only_route_A_has_complete_direct_coverage": true,
+    "packet_direct_coverage_counts": {
+      "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT": 3,
+      "ROUTE_B_EXPANDED_TOLERANCE_LADDER": 0,
+      "ROUTE_C_DURATION_SCALING_EXPERIMENT": 0,
+      "ROUTE_D_CONSTRAINT_PRESERVING_METHOD_COMPARISON": 0,
+      "ROUTE_E_HIGHER_PRECISION_ARITHMETIC": 0,
+      "ROUTE_F_CERTIFIED_NUMERICAL_DOMAIN_DECLARATION": 0
+    },
+    "route_A_ranked_first": true,
+    "route_B_and_C_supporting_not_primary": true,
+    "route_D_method_confound_recognized": true,
+    "route_E_cancellation_prerequisite_recognized": true,
+    "route_F_no_new_data_fallback_recognized": true,
+    "route_ids_in_rank_order": [
+      "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT",
+      "ROUTE_B_EXPANDED_TOLERANCE_LADDER",
+      "ROUTE_C_DURATION_SCALING_EXPERIMENT",
+      "ROUTE_D_CONSTRAINT_PRESERVING_METHOD_COMPARISON",
+      "ROUTE_E_HIGHER_PRECISION_ARITHMETIC",
+      "ROUTE_F_CERTIFIED_NUMERICAL_DOMAIN_DECLARATION"
+    ],
+    "selection_follows_coverage_not_experiment_size": "Route A wins because it uniquely provides direct 3/3 mechanism coverage while keeping the physical model and numerical method fixed. The review does not prefer it merely because it records more data."
+  },
+  "independent_nonexecution_review": {
+    "all_forbidden_authority_values_false": true,
+    "canonical_output_root_unchanged": true,
+    "execution_count_preserved": true,
+    "forbidden_authority_values": {
+      "experiment_design_packet_authorized": false,
+      "experiment_frozen": false,
+      "materiality_classification_authorized": false,
+      "new_E_REPRO_authorized": false,
+      "new_simulation_authorized": false,
+      "rerun_authorized": false,
+      "robustness_reclassification_authorized": false,
+      "route_selection_independently_accepted": false,
+      "threshold_or_fit_change_authorized": false
+    },
+    "new_classification_count": 0,
+    "new_duration_result_count": 0,
+    "new_simulation_output_count": 0,
+    "new_solver_comparison_result_count": 0,
+    "new_tolerance_result_count": 0,
+    "packet_decisions_all_pass": true,
+    "packet_verdict_pending_review": true,
+    "route_A_selection_is_provisional": true
+  },
+  "independent_observable_traceability_review": {
+    "all_mandatory_observables_trace_to_unresolved_questions": true,
+    "all_three_mechanism_questions_covered": true,
+    "control_obligations": [
+      "retain R13 at the historically failing 1e-8 tolerance as a diagnostic role",
+      "retain at least one historically passing tighter R13 tolerance as a reference role",
+      "include one preregistered closely matched passing scientific row as a control",
+      "keep all new outputs separate from the immutable 203-record canonical root"
+    ],
+    "historically_failing_loose_role_retained_as_future_design_obligation": true,
+    "mandatory_observable_count": 9,
+    "matched_passing_neighbor_required": true,
+    "new_outputs_must_remain_outside_canonical_root": true,
+    "tight_reference_retained_as_future_design_obligation": true,
+    "traceability_rows": [
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "separate longitudinal field-sector exchange transfer",
+        "traces_to_mechanism_ids": [
+          "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "separate longitudinal matter-sector exchange transfer",
+        "traces_to_mechanism_ids": [
+          "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "exchange normalization and cancellation terms",
+        "traces_to_mechanism_ids": [
+          "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "per-step residual vectors by Dirac, Maxwell, descendant, constraint, and gauge block",
+        "traces_to_mechanism_ids": [
+          "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "per-iteration nonlinear residual histories and stopping metrics by block",
+        "traces_to_mechanism_ids": [
+          "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "Gauss and continuity component fields over space and time",
+        "traces_to_mechanism_ids": [
+          "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+          "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "longitudinal Maxwell residual components over space and time",
+        "traces_to_mechanism_ids": [
+          "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+          "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "outputs of the actual discrete divergence and time-difference operators",
+        "traces_to_mechanism_ids": [
+          "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+        ]
+      },
+      {
+        "necessary_for_at_least_one_unresolved_question": true,
+        "observable": "a preregistered discrete Maxwell-to-continuity closure audit residual",
+        "traces_to_mechanism_ids": [
+          "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+        ]
+      }
+    ],
+    "untraced_mandatory_observables": []
+  },
+  "independent_scope_review": {
+    "R13_parameter_change_authorized": false,
+    "diagnostic_instrumentation_expanded": true,
+    "different_solver_authorized": false,
+    "experiment_design_packet_authorized_by_prepared_packet": false,
+    "experiment_execution_authorized": false,
+    "initial_condition_change_authorized": false,
+    "materiality_evaluation_authorized": false,
+    "numerical_method_unchanged": true,
+    "physical_equations_unchanged": true,
+    "robustness_reclassification_authorized": false,
+    "scope_passed": true,
+    "separate_scientific_object_required": true,
+    "threshold_or_fit_change_authorized": false
+  },
+  "nonclaims": [
+    "no experiment design accepted",
+    "no run matrix frozen",
+    "no exact tolerance ladder selected",
+    "no duration schedule selected",
+    "no control row selected",
+    "no output schema frozen",
+    "no diagnostic normalization or threshold frozen",
+    "no new simulation",
+    "no canonical output mutation",
+    "no rerun",
+    "no root mechanism identified",
+    "no physical instability",
+    "no model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar or seam promotion",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 26,
+  "review_completed": true,
+  "review_interpretation": {
+    "deferred_routes": "Route D is method-confounded, Route E is premature before cancellation conditioning is measured, and Route F remains an honest no-new-data fallback.",
+    "selection_basis": "Route A is accepted because it uniquely covers all three unresolved mechanisms directly while preserving the physical model and numerical method.",
+    "supporting_routes": "Routes B and C may be evaluated as modules inside the future design, but do not replace direct mechanism instrumentation."
+  },
+  "reviewer_sha256": "953374cad4be66e3f3512039e734aa207c52fe32b7cd0c403192f1ab5759062b",
+  "root_numerical_mechanism_status": "UNRESOLVED",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_PACKET_REVIEW_20260715_v0",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0",
+  "selected_route": "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT",
+  "source_custody": {
+    "accepted_diagnostic_authority_exact": true,
+    "all_source_artifact_hashes_exact": true,
+    "canonical_output_mutation_authorized": false,
+    "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_root_digest_exact": true,
+    "canonical_root_file_count": 205,
+    "canonical_run_output_count_checked": 203,
+    "canonical_run_output_hash_failures": [],
+    "execution_count_performed": 1,
+    "expected_source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_REVIEW_20260715_v0.json": "15c7bb4ed25f0ce029aac83c231903b69e1073cb356547e0dbc8644b3b200873",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_PACKET_20260715_v0.json": "f87190238513b16424a779dbbe2e0a36358978923e896e68f0f56fe48a897cef",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-MANIFEST-v0.json": "af71f8770aa51f86711d16acc81efe156671a8d387964f5a3bc8d5e664805f85",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-PACKET-v0.json": "b0c76f95bc767a9940ba19b6221ba7c113d0d99fe037e5f586723d88b664d712",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_v0.py": "d426b8b381a187d56675c580cce54cfda9fd00bdc30f1f1671e3274ba73d3f99"
+    },
+    "live_target_and_downstream_target_exact": true,
+    "passed": true,
+    "route_artifact_cross_bindings_exact": true,
+    "simulation_invocation_count_during_review": 0,
+    "source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_REVIEW_20260715_v0.json": "15c7bb4ed25f0ce029aac83c231903b69e1073cb356547e0dbc8644b3b200873",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_PACKET_20260715_v0.json": "f87190238513b16424a779dbbe2e0a36358978923e896e68f0f56fe48a897cef",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-MANIFEST-v0.json": "af71f8770aa51f86711d16acc81efe156671a8d387964f5a3bc8d5e664805f85",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-PACKET-v0.json": "b0c76f95bc767a9940ba19b6221ba7c113d0d99fe037e5f586723d88b664d712",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_v0.py": "d426b8b381a187d56675c580cce54cfda9fd00bdc30f1f1671e3274ba73d3f99"
+    }
+  },
+  "target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_v0_result",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 153,
+      "status": "PASSED"
+    },
+    "authority_surface_parity": "PASSED",
+    "canonical_output_mutation_count": 0,
+    "current_affected_descendant_robustness_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 258
+    },
+    "focused_independent_route_review_tests": {
+      "failed": 0,
+      "passed": 13
+    },
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    },
+    "simulation_invocation_count": 0
+  },
+  "verdict": "ACCEPT_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_ROUTE_A_DESIGN_PREPARATION_ONLY"
+}

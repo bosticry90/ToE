@@ -1,0 +1,98 @@
+{
+  "artifact_hashes": {
+    "generator_sha256": "cc95782b5be80c3ee0a44d7e6c2d802ceb8c79bcc12f56a85fcbb2d6df57e2e9",
+    "manifest_sha256": "debeacd35c44a1a0e063f758934f4dc3d5983e11c071c67a651c099dda87e6b9",
+    "packet_sha256": "c41a724d4f84566583d970de67ed18ea2490541f4e4a0c4faecff3e057a3b579"
+  },
+  "authority_boundary": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "R13_parameter_or_initial_condition_change_authorized": false,
+    "canonical_output_mutation_authorized": false,
+    "design_independently_accepted": false,
+    "design_packet_prepared": true,
+    "different_numerical_method_authorized": false,
+    "exact_run_count_or_values_selected": false,
+    "experiment_frozen": false,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "numerical_freeze_packet_authorized": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "threshold_or_fit_change_authorized": false
+  },
+  "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "Design-only specification for a future numerical-mechanism experiment. It may define questions, required role classes, observables, controls, hypothesis logic, and freeze obligations; it cannot accept the design, freeze exact values, authorize execution, reclassify robustness, evaluate materiality, or award a scientific claim.",
+  "decision_count": 27,
+  "downstream_target_if_independent_review_accepts": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0",
+  "failed_decision_ids": [],
+  "freeze_deferred_item_count": 16,
+  "hypothesis_count": 5,
+  "mechanism_observable_count": 14,
+  "neighbor_candidate_count": 11,
+  "nonclaims": [
+    "no design accepted",
+    "no numerical freeze prepared or accepted",
+    "no exact run count",
+    "no exact tight-reference multiplicity",
+    "no exact neighbor frozen",
+    "no exact duration schedule",
+    "no exact output schema or filename set",
+    "no diagnostic floor, threshold, or decision constant frozen",
+    "no implementation or classifier hash frozen",
+    "no new output root created",
+    "no new simulation",
+    "no canonical output mutation",
+    "no rerun",
+    "no root mechanism identified",
+    "no physical instability",
+    "no model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar or seam promotion",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "outcome_class_count": 6,
+  "passed_decision_count": 27,
+  "provisional_top_neighbor_for_freeze_confirmation": "R10_MU_HIGH",
+  "required_run_class_count": 4,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_20260715_v0",
+  "scientific_question_count": 3,
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0_result",
+  "source_custody_passed": true,
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 154,
+      "status": "PASSED"
+    },
+    "authority_surface_parity": "PASSED",
+    "canonical_output_mutation_count": 0,
+    "current_affected_descendant_robustness_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 272
+    },
+    "focused_instrumented_R13_design_packet_tests": {
+      "failed": 0,
+      "passed": 14
+    },
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    },
+    "simulation_invocation_count": 0
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

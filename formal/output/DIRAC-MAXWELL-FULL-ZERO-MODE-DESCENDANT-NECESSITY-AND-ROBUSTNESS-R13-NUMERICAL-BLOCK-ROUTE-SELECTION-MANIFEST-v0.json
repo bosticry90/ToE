@@ -1,0 +1,47 @@
+{
+  "bound_source_artifacts": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_REVIEW_20260715_v0.json",
+      "sha256": "15c7bb4ed25f0ce029aac83c231903b69e1073cb356547e0dbc8644b3b200873"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json",
+      "sha256": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json",
+      "sha256": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json",
+      "sha256": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-DIAGNOSTIC-MANIFEST-v0.json",
+      "sha256": "bf8ffa4e606229d0eb0a54a41bddf62fc02c15316cd41efc00eaa2d67f6d6aca"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-DIAGNOSTIC-PACKET-v0.json",
+      "sha256": "8edd51901d2999ea1781c5768a64aeabd7d5328dfda61f45e4a7853865937eed"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_review_v0.py",
+      "sha256": "fcf173e2299edf93523cec588e5558d06b51baf4168cd77aef3e7d29f422615d"
+    }
+  ],
+  "canonical_output_mutation_count": 0,
+  "canonical_output_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+  "canonical_run_output_count_checked": 203,
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_v0.py",
+    "sha256": "d426b8b381a187d56675c580cce54cfda9fd00bdc30f1f1671e3274ba73d3f99"
+  },
+  "new_simulation_run_count": 0,
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-ROUTE-SELECTION-PACKET-v0.json",
+    "sha256": "b0c76f95bc767a9940ba19b6221ba7c113d0d99fe037e5f586723d88b664d712"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_ROUTE_SELECTION_PACKET_v0_MANIFEST",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_v0"
+}

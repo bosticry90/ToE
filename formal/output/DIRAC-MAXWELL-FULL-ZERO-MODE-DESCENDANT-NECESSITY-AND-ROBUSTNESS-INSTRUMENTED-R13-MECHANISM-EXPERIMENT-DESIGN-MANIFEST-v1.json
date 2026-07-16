@@ -1,0 +1,48 @@
+{
+  "bound_correction_sources": [
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json",
+      "sha256": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_20260715_v0.json",
+      "sha256": "f20afcbb5f37c1212bc15bb162765f2c341e20f5e2d6ffc6c54d0e4f10d546d5"
+    },
+    {
+      "path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_REVIEW_20260715_v0.json",
+      "sha256": "be6a124ba345c7037d1b03aab0f120831e6c62d8ab1e7a2d508288ff7ae0a114"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-MANIFEST-v0.json",
+      "sha256": "debeacd35c44a1a0e063f758934f4dc3d5983e11c071c67a651c099dda87e6b9"
+    },
+    {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-PACKET-v0.json",
+      "sha256": "c41a724d4f84566583d970de67ed18ea2490541f4e4a0c4faecff3e057a3b579"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_review_v0.py",
+      "sha256": "0e0d13373e227dcde48e74775868e88d920f472dd2de5aed119239853c5dd95d"
+    },
+    {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0.py",
+      "sha256": "cc95782b5be80c3ee0a44d7e6c2d802ceb8c79bcc12f56a85fcbb2d6df57e2e9"
+    }
+  ],
+  "canonical_output_mutation_count": 0,
+  "canonical_output_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+  "canonical_run_output_count_checked": 203,
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "generator": {
+    "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1.py",
+    "sha256": "30f0ac96cda91b1f928998f7615b7c6125e8a5c70876d0588694863395355946"
+  },
+  "new_experiment_output_root_created": false,
+  "new_simulation_run_count": 0,
+  "packet": {
+    "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-PACKET-v1.json",
+    "sha256": "a06e25fb53bed76df140cda935be1e878e0aa0dc437bf2aba4addcd687fb93d1"
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_v1_MANIFEST",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1"
+}

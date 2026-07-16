@@ -1,0 +1,148 @@
+{
+  "artifacts": {
+    "classifier": {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_classifier_v0.py",
+      "sha256": "6f860716f29da107cd8f70a009d62d6003fce5fc9eb1cc316a3ab9d50171fdca"
+    },
+    "expected_output_identity": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v0.json",
+      "sha256": "9016c5a5cb4f0920a59417acf26023ef79b0dcf61d3751dd91c30282d0d3dd6c"
+    },
+    "instrumented_implementation": {
+      "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_implementation_v0.py",
+      "sha256": "f4bdd5cd0f725f135060e1fe7476ef8edc5ce2a12c72ec0b0357239197006150"
+    },
+    "manifest": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-MANIFEST-v0.json",
+      "sha256": "a6d687cc7c854221144d48525f69aad903536a0a1a16a46b550c7fd6c2c7b89b"
+    },
+    "packet": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-PACKET-v0.json",
+      "sha256": "9900bef2b60f816a890ca986a3daee64236dc1a11a4ca6cf98f1ce8d5e0a0317"
+    },
+    "run_matrix": {
+      "path": "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-NUMERICAL-FREEZE-RUN-MATRIX-v0.json",
+      "sha256": "97597b248d6aca1de9abf252bc098493edce318eea1a903a48c2d33a97e22923"
+    }
+  },
+  "authority_boundary": {
+    "blocked_row": "R13_CORNER_STRONG_LOW",
+    "canonical_execution_count": 1,
+    "canonical_robustness": "NUMERICALLY_BLOCKED",
+    "exact_six_run_matrix_specified": true,
+    "materiality": "NOT_EVALUATED_NUMERICAL_BLOCK",
+    "materiality_classification_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_E_REPRO_claim": false,
+    "new_experiment_execution_authorized": false,
+    "new_experiment_execution_performed": false,
+    "new_simulation_authorized": false,
+    "numerical_freeze_independently_accepted": false,
+    "numerical_freeze_packet_prepared": true,
+    "previous_canonical_Maxwell_Dirac_E_REPRO_unchanged": true,
+    "robustness_reclassification_authorized": false,
+    "root_mechanism": "UNRESOLVED",
+    "threshold_change_authorized": false
+  },
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "Exact numerical freeze prepared for independent review only. Only an independent ACCEPT_FREEZE verdict may authorize one exact six-record execution. No mechanism result, robustness reclassification, materiality, physical claim, E-REPRO, pillar, seam, C_k, CCFT, or master-action promotion is assigned in advance.",
+  "decision_count": 39,
+  "decision_ids": [
+    "accepted_design_v1_review_is_exact_live_authority",
+    "accepted_design_packet_manifest_report_and_generators_are_hash_exact",
+    "canonical_205_file_root_and_203_run_outputs_remain_read_only_and_exact",
+    "authority_inventory_and_execution_preflight_digest_domains_are_both_exact",
+    "future_output_root_is_separate_and_absent",
+    "instrumented_implementation_is_hash_bound_and_imported_only_for_pure_matrix_validation",
+    "classifier_is_hash_bound_and_all_constants_are_consumed_from_source",
+    "exact_six_run_order_matches_implementation_and_classifier",
+    "three_instrumented_roles_have_exact_noninstrumented_pairs",
+    "R13_loose_is_exact_historical_1e_minus_8_parent",
+    "R13_tight_is_exact_tightest_registered_passing_1e_minus_12_parent",
+    "R10_is_exact_unique_accepted_neighbor_at_1e_minus_8",
+    "grid_timestep_duration_step_count_and_iteration_cap_are_exact",
+    "supporting_tolerance_and_duration_modules_are_disabled",
+    "run_matrix_is_directly_executable_by_bound_harness",
+    "twelve_JSON_NPZ_role_paths_and_two_auxiliary_paths_are_exact",
+    "all_paths_are_NFC_casefold_safe_and_bijective",
+    "fourteen_observable_ids_match_design_and_implementation",
+    "eight_actual_packed_solver_blocks_are_complete_and_ordered",
+    "block_normalization_uses_role_tolerance_and_gamma64_floor",
+    "dominance_uses_additive_gamma64_and_registry_order_ties",
+    "exchange_conditioning_uses_additive_gamma64_scale_floor_and_zero_branch",
+    "discrete_closure_uses_actual_roll_midpoint_gauge_and_Wilson_outputs",
+    "closure_roundoff_bound_uses_gamma32_exact_term_scale",
+    "trajectory_nonperturbation_requires_exact_projection_byte_identity",
+    "no_bounded_equivalence_fallback_is_authorized",
+    "H_A_thresholds_and_directional_contrasts_are_exact",
+    "H_B_longitudinal_dominance_and_comparator_contrasts_are_exact",
+    "H_C_roundoff_violation_persistence_and_contrasts_are_exact",
+    "H_D_is_independently_positive_distributed_accumulation_evidence",
+    "H_E_requires_complete_admissible_empty_support",
+    "classifier_fail_closed_precedence_and_multiple_support_are_exact",
+    "positive_and_negative_classifier_controls_all_discriminate",
+    "twelve_freeze_level_adversarial_controls_have_exact_first_diagnostics",
+    "one_execution_no_retry_no_overwrite_contract_is_exact",
+    "canonical_historical_result_and_NUMERICALLY_BLOCKED_verdict_are_unchanged",
+    "materiality_remains_NOT_EVALUATED_NUMERICAL_BLOCK",
+    "no_mechanism_result_robustness_reclassification_or_E_REPRO_is_assigned",
+    "packet_rotates_only_to_independent_numerical_freeze_review"
+  ],
+  "exact_freeze_summary": {
+    "classifier_negative_control_count": 6,
+    "classifier_positive_control_count": 6,
+    "equation_block_count": 8,
+    "freeze_adversarial_control_count": 12,
+    "freeze_obligation_count": 16,
+    "instrumented_run_count": 3,
+    "noninstrumented_control_count": 3,
+    "observable_count": 14,
+    "physical_configuration_count": 3,
+    "role_payload_file_count": 12,
+    "run_count": 6,
+    "successful_execution_total_file_count": 14
+  },
+  "failed_decision_ids": [],
+  "nonclaims": [
+    "no new output root or simulation was created",
+    "no canonical output was changed or rerun",
+    "no R13 root mechanism was identified",
+    "no threshold was relaxed or canonical loose role removed",
+    "no robustness or conditional-robustness class was assigned",
+    "no materiality evaluation was performed",
+    "no new E-REPRO or broader ToE claim was earned",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 39,
+  "post_acceptance_target": "execute_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_v0_once",
+  "preparation_validation_status": {
+    "JSON_NPZ_path_bijection_passed": true,
+    "accepted_input_hashes_exact": true,
+    "affected_Lean_build": "NOT_RECORDED_BY_GENERATOR",
+    "artifact_regeneration_mode_available": true,
+    "canonical_authority_inventory_digest_exact": true,
+    "canonical_execution_preflight_digest_exact": true,
+    "canonical_output_mutation_count": 0,
+    "classifier_controls_passed": true,
+    "evolution_or_execution_runner_invocation_count": 0,
+    "focused_tests": "NOT_RECORDED_BY_GENERATOR",
+    "freeze_adversarial_control_count": 12,
+    "freeze_adversarial_executed_check_count": 12,
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    },
+    "implementation_classifier_run_identity_closure_passed": true,
+    "implementation_literal_registry_parse_passed": true,
+    "new_output_root_created": false,
+    "pure_matrix_validator_imported": true,
+    "run_matrix_pairing_and_executable_schema_passed": true,
+    "simulation_invocation_count": 0
+  },
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_NUMERICAL_FREEZE_PACKET_20260715_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0_result",
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

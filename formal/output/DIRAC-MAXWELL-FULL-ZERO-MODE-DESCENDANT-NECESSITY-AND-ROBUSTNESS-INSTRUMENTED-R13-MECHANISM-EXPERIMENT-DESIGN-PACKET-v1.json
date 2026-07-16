@@ -1,0 +1,1741 @@
+{
+  "aggregation_block_registry_and_missing_data_contract": {
+    "block_registry_requirement": "must enumerate every implemented solver block, including Dirac, adjoint, longitudinal Maxwell, phi2, phi3, Gauss, continuity, gauge, zero-mode, and any additional block present in code; omission of an implemented block is B-BLOCKED",
+    "iteration_summaries_required": [
+      "initial, per-iteration, and terminal block residuals",
+      "first and final dominant block",
+      "maximum dominance fraction and its iteration"
+    ],
+    "optional_not_applicable_behavior": "explicit NOT_APPLICABLE with registered implementation reason; never silent zero or null",
+    "per_block_freeze_fields": [
+      "mathematical residual",
+      "discrete residual expression",
+      "units",
+      "norm",
+      "normalization scale",
+      "numerical floor",
+      "spatial aggregation",
+      "time aggregation",
+      "solver-iteration aggregation"
+    ],
+    "required_missing_data_behavior": "B-BLOCKED_REQUIRED_MECHANISM_OBSERVABLE_MISSING",
+    "spatial_summaries_required": [
+      "L_infinity maximum absolute magnitude",
+      "grid-weighted discrete L2 norm",
+      "argmax grid index with lowest-index deterministic tie break"
+    ],
+    "time_summaries_required": [
+      "per-step raw series",
+      "maximum and first-maximum time",
+      "final value",
+      "frozen quadrature integral where the hypothesis requires accumulation"
+    ]
+  },
+  "authority_boundary": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "R13_parameter_or_initial_condition_change_authorized": false,
+    "canonical_output_mutation_authorized": false,
+    "design_independently_accepted": false,
+    "design_packet_prepared": true,
+    "different_numerical_method_authorized": false,
+    "exact_run_count_or_values_selected": false,
+    "experiment_frozen": false,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "numerical_freeze_packet_authorized": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "threshold_or_fit_change_authorized": false
+  },
+  "blocked_v0_review_preservation": {
+    "accepted_decision_count_preserved": 34,
+    "accepted_decision_ids_preserved": [
+      "live_authority_selects_exact_independent_design_review",
+      "design_packet_manifest_report_and_generator_hashes_are_exact",
+      "design_artifact_cross_bindings_are_exact",
+      "accepted_route_A_authority_is_preserved",
+      "all_203_canonical_outputs_and_root_digest_reproduce",
+      "prepared_design_has_27_of_27_passing_decisions",
+      "four_required_role_classes_are_exact",
+      "loose_tight_comparison_directly_identifies_tolerance_effect",
+      "R13_neighbor_comparison_directly_identifies_corner_contrast",
+      "instrumented_uninstrumented_pairing_directly_tests_observation_effect",
+      "three_questions_map_exactly_to_three_unresolved_mechanisms",
+      "fourteen_observables_are_exact_unique_and_traced",
+      "observables_preserve_time_space_iteration_and_trajectory_structure",
+      "exchange_conditioning_question_is_directly_answerable",
+      "equation_block_question_is_directly_answerable",
+      "discrete_closure_question_is_directly_answerable",
+      "per_block_semantics_and_required_missing_data_behavior_are_freeze_ready",
+      "hypotheses_H_A_through_H_E_and_six_outcomes_are_exact",
+      "classifier_allows_multiple_support_and_unresolved_without_forced_winner",
+      "custody_completeness_and_numerical_gates_precede_mechanism_classification",
+      "hypotheses_require_predeclared_comparator_contrasts_not_self_definition_alone",
+      "instrumentation_is_read_only_and_forbids_state_order_stopping_and_parameter_changes",
+      "every_core_role_has_trajectory_level_noninstrumented_self_control",
+      "fallback_equivalence_is_unfrozen_independent_and_blocking_on_failure",
+      "actual_discrete_operator_outputs_are_required_and_posthoc_continuum_substitution_forbidden",
+      "closure_mapping_hashes_units_remainder_controls_formula_and_threshold_are_freeze_obligations",
+      "neighbor_rule_reconstructs_eleven_eligible_candidates_and_packet_ranking_exactly",
+      "R10_is_unique_provisional_top_but_not_frozen_or_one_axis_isolated",
+      "all_sixteen_exact_numerical_and_custody_items_remain_freeze_deferred",
+      "supporting_tolerance_and_duration_modules_remain_secondary_options",
+      "new_output_family_is_separate_identity_bound_and_canonical_root_read_only",
+      "packet_contains_no_run_output_freeze_or_scientific_reclassification",
+      "canonical_block_materiality_root_unknown_and_E_REPRO_status_remain_unchanged",
+      "blocked_review_withholds_numerical_freeze_packet_preparation"
+    ],
+    "blocked_decision_ids_corrected": [
+      "classifier_preserves_per_hypothesis_support_vector_and_criterion_records",
+      "H_E_is_disjoint_from_required_evidence_completeness_block",
+      "neighbor_eligibility_prose_matches_axis_sharing_candidate_universe"
+    ],
+    "reviewed_design_version": "v0",
+    "route_selection_reopened": false,
+    "scientific_redesign_performed": false
+  },
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "Corrected numerical-mechanism experiment design only. This packet repairs three decision-contract defects and cannot freeze values, authorize execution, identify a mechanism, reclassify robustness, evaluate materiality, or award a scientific claim.",
+  "consumed_authority_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0_result",
+  "correction_source_custody": {
+    "all_correction_source_hashes_exact": true,
+    "blocked_v0_failed_decision_ids": [
+      "classifier_preserves_per_hypothesis_support_vector_and_criterion_records",
+      "H_E_is_disjoint_from_required_evidence_completeness_block",
+      "neighbor_eligibility_prose_matches_axis_sharing_candidate_universe"
+    ],
+    "blocked_v0_passed_decision_count_preserved": 34,
+    "blocked_v0_review_exact": true,
+    "bounded_correction_authority_consumed": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0_result",
+    "canonical_authority_exact": true,
+    "canonical_output_mutation_count": 0,
+    "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_root_digest_exact": true,
+    "canonical_run_output_count_checked": 203,
+    "canonical_run_output_hash_failures": [],
+    "correction_source_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_20260715_v0.json": "f20afcbb5f37c1212bc15bb162765f2c341e20f5e2d6ffc6c54d0e4f10d546d5",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_REVIEW_20260715_v0.json": "be6a124ba345c7037d1b03aab0f120831e6c62d8ab1e7a2d508288ff7ae0a114",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-MANIFEST-v0.json": "debeacd35c44a1a0e063f758934f4dc3d5983e11c071c67a651c099dda87e6b9",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-INSTRUMENTED-R13-MECHANISM-EXPERIMENT-DESIGN-PACKET-v0.json": "c41a724d4f84566583d970de67ed18ea2490541f4e4a0c4faecff3e057a3b579",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_review_v0.py": "0e0d13373e227dcde48e74775868e88d920f472dd2de5aed119239853c5dd95d",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v0.py": "cc95782b5be80c3ee0a44d7e6c2d802ceb8c79bcc12f56a85fcbb2d6df57e2e9"
+    },
+    "design_v0_cross_bindings_exact": true,
+    "execution_count_performed": 1,
+    "new_simulation_run_count": 0,
+    "passed": true
+  },
+  "correction_summary": [
+    "candidate universe expanded and audited from eleven axis-sharing rows to all thirteen passing non-R13 rows",
+    "individual H_A through H_D decisions and the exact supported_mechanism_ids set are mandatory",
+    "H_E is restricted to complete admissible nondiscriminating evidence; incomplete evidence blocks first"
+  ],
+  "decision_count": 31,
+  "decisions": [
+    {
+      "decision_id": "blocked_v0_review_is_exact_and_consumed_as_bounded_correction_authority",
+      "passed": true
+    },
+    {
+      "decision_id": "all_v0_design_and_review_source_hashes_and_cross_bindings_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_203_canonical_outputs_execution_count_and_root_digest_remain_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_thirty_four_accepted_v0_review_decisions_are_preserved",
+      "passed": true
+    },
+    {
+      "decision_id": "Route_A_and_three_scientific_questions_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "four_required_run_classes_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "fourteen_mechanism_observables_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "instrumentation_nonperturbation_contract_is_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "actual_discrete_operator_closure_contract_is_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "separate_output_custody_contract_is_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "sixteen_freeze_deferred_items_are_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "neighbor_candidate_universe_contains_all_thirteen_non_R13_rows",
+      "passed": true
+    },
+    {
+      "decision_id": "all_thirteen_candidates_pass_canonical_and_linked_loose_role_criteria",
+      "passed": true
+    },
+    {
+      "decision_id": "neighbor_ranking_tuple_is_exact_and_applied_after_universe_definition",
+      "passed": true
+    },
+    {
+      "decision_id": "R10_remains_unique_provisional_top_and_zero_shared_rows_are_retained",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_neighbor_identity_remains_unfrozen",
+      "passed": true
+    },
+    {
+      "decision_id": "H_A_through_H_D_are_evaluated_independently",
+      "passed": true
+    },
+    {
+      "decision_id": "every_hypothesis_requires_status_evidence_criterion_records_and_reasons",
+      "passed": true
+    },
+    {
+      "decision_id": "supported_mechanism_ids_is_required_exact_ordered_and_identity_preserving",
+      "passed": true
+    },
+    {
+      "decision_id": "single_and_multiple_aggregates_are_derived_from_support_set_cardinality",
+      "passed": true
+    },
+    {
+      "decision_id": "multiple_mechanism_support_retains_every_supported_identity",
+      "passed": true
+    },
+    {
+      "decision_id": "H_E_requires_complete_admissible_nondiscriminating_evidence",
+      "passed": true
+    },
+    {
+      "decision_id": "missing_required_evidence_blocks_before_all_hypothesis_evaluation",
+      "passed": true
+    },
+    {
+      "decision_id": "evidence_admissibility_and_mechanism_results_are_separate_layers",
+      "passed": true
+    },
+    {
+      "decision_id": "fifteen_step_fail_closed_classifier_precedence_is_explicit",
+      "passed": true
+    },
+    {
+      "decision_id": "three_blocker_regressions_are_permanent_adversarial_controls",
+      "passed": true
+    },
+    {
+      "decision_id": "five_positive_controls_cover_corrected_semantics",
+      "passed": true
+    },
+    {
+      "decision_id": "no_numerical_values_thresholds_run_matrix_or_classifier_hash_are_frozen",
+      "passed": true
+    },
+    {
+      "decision_id": "no_simulation_rerun_canonical_mutation_or_scientific_reclassification_is_authorized",
+      "passed": true
+    },
+    {
+      "decision_id": "canonical_block_materiality_root_unknown_and_E_REPRO_status_remain_unchanged",
+      "passed": true
+    },
+    {
+      "decision_id": "selected_next_target_is_independent_corrected_design_review_only",
+      "passed": true
+    }
+  ],
+  "discrete_Maxwell_continuity_closure_contract": {
+    "closure_formula_frozen_now": false,
+    "closure_threshold_frozen_now": false,
+    "continuum_formula_is_not_the_audit_definition": true,
+    "failure_if_not_closed_before_freeze": "B-BLOCKED_DISCRETE_CLOSURE_DEFINITION",
+    "implementation_closure_requirements_before_freeze": [
+      "symbolic or executable mapping from every closure term to implementation expression",
+      "operator and stencil registry",
+      "operator implementation hashes",
+      "unit and sign audit",
+      "expected truncation remainder derivation",
+      "positive and negative closure controls"
+    ],
+    "posthoc_continuum_derivative_substitution_allowed": false,
+    "required_derivation": "derive the Maxwell-to-continuity closure from the implemented time centering, spatial stencil, gauge links, boundary conditions, signs, charge convention, staggering or collocation, zero-mode treatment, and Wilson terms"
+  },
+  "downstream_target_if_independent_review_accepts": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v0",
+  "failed_decision_ids": [],
+  "freeze_deferred_registry": [
+    "exact experiment and run count",
+    "exact tight R13 tolerance choice and any additional tolerances",
+    "exact matched-neighbor row identity after deterministic rule confirmation",
+    "exact duration and checkpoint schedule",
+    "exact instrumentation pairing multiplicity",
+    "exact grid, timestep, iteration cap, and environment identity",
+    "exact equation-block registry tied to implementation",
+    "exact output field names, shapes, schema version, and filenames",
+    "exact units, normalizations, numerical floors, and aggregation formulas",
+    "exact discrete closure formula, operator hashes, and truncation remainder",
+    "exact nonperturbation equality or fallback equivalence rule",
+    "exact hypothesis thresholds, contrast rules, association metrics, and tie behavior",
+    "exact positive and negative controls",
+    "exact classifier implementation and hash",
+    "exact implementation closure and code hash",
+    "exact one-execution authorization and no-retry rule"
+  ],
+  "hypotheses_and_classifier_design": {
+    "H_E_complete_evidence_only": true,
+    "admissible_aggregation_rules": [
+      "if supported_mechanism_ids has one member, aggregate is SINGLE_SUPPORTED_MECHANISM",
+      "if supported_mechanism_ids has two or more members, aggregate is MULTIPLE_SUPPORTED_MECHANISMS",
+      "if supported_mechanism_ids is empty, H_E is SUPPORTED and aggregate is MECHANISM_UNRESOLVED_COMPLETE_EVIDENCE"
+    ],
+    "aggregate_mechanism_outcomes": [
+      "BLOCKED",
+      "SINGLE_SUPPORTED_MECHANISM",
+      "MULTIPLE_SUPPORTED_MECHANISMS",
+      "MECHANISM_UNRESOLVED_COMPLETE_EVIDENCE"
+    ],
+    "blocked_outcome_precedence": [
+      "BLOCKED_CUSTODY",
+      "BLOCKED_RUN_IDENTITY",
+      "BLOCKED_REQUIRED_EVIDENCE_INCOMPLETE",
+      "BLOCKED_INSTRUMENTATION_PERTURBATION",
+      "BLOCKED_OBSERVABLE_SEMANTICS",
+      "BLOCKED_OPERATOR_BINDING"
+    ],
+    "blocked_semantics": {
+      "H_E_may_be_supported": false,
+      "aggregate_mechanism_result": "BLOCKED",
+      "all_hypothesis_statuses": "NOT_EVALUATED",
+      "supported_mechanism_ids": []
+    },
+    "classifier_precedence": [
+      "verify design, implementation, and operator custody",
+      "verify exact run and payload identities",
+      "verify every mandatory output is present",
+      "verify instrumentation nonperturbation",
+      "verify output units, schemas, norms, and normalization",
+      "verify actual discrete-operator bindings",
+      "evaluate H_A independently",
+      "evaluate H_B independently",
+      "evaluate H_C independently",
+      "evaluate H_D independently",
+      "preserve every individual hypothesis decision and its criterion records",
+      "construct the ordered supported_mechanism_ids set from supported H_A through H_D",
+      "assign the aggregate mechanism result from the support-set cardinality",
+      "use H_E only when all required evidence is complete and admissible and the support set is empty",
+      "apply the numerical-mechanism-only claim ceiling"
+    ],
+    "evidence_admissibility_outcomes": [
+      "EVIDENCE_ADMISSIBLE",
+      "BLOCKED_CUSTODY",
+      "BLOCKED_RUN_IDENTITY",
+      "BLOCKED_REQUIRED_EVIDENCE_INCOMPLETE",
+      "BLOCKED_INSTRUMENTATION_PERTURBATION",
+      "BLOCKED_OBSERVABLE_SEMANTICS",
+      "BLOCKED_OPERATOR_BINDING"
+    ],
+    "forced_single_winner_allowed": false,
+    "hypotheses": [
+      {
+        "hypothesis_id": "H_A_CANCELLATION_CONDITIONING",
+        "necessary_condition_classes": [
+          "kappa_exchange exceeds a future frozen material-conditioning threshold in loose R13",
+          "loose R13 conditioning distinguishes both tight R13 and the matched neighbor under frozen contrasts"
+        ],
+        "supporting_condition_classes": [
+          "exchange remainder sensitivity tracks conditioning",
+          "individual exchange terms remain much less tolerance-sensitive than their remainder"
+        ]
+      },
+      {
+        "hypothesis_id": "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+        "necessary_condition_classes": [
+          "one longitudinal normalized block exceeds a future frozen dominance threshold",
+          "dominance distinguishes loose R13 from tight R13 and the matched neighbor"
+        ],
+        "supporting_condition_classes": [
+          "dominance appears no later than the accepted structural threshold crossings",
+          "continuity and Gauss residual fields track the dominant block under frozen association metrics"
+        ]
+      },
+      {
+        "hypothesis_id": "H_C_DISCRETE_CLOSURE_MISMATCH",
+        "necessary_condition_classes": [
+          "actual scheme-derived closure residual fails its future frozen admissibility criterion",
+          "failure distinguishes loose R13 from tight R13 and the matched neighbor"
+        ],
+        "supporting_condition_classes": [
+          "closure improves predictably with tighter solver tolerance",
+          "spatial closure localization predicts continuity-residual localization"
+        ]
+      },
+      {
+        "hypothesis_id": "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+        "necessary_condition_classes": [
+          "multiple normalized blocks meet future frozen distributed-contribution criteria",
+          "structural residual accumulation is reproduced without one block exceeding the future frozen dominance criterion",
+          "distributed contribution distinguishes loose R13 from tight R13 and the matched neighbor under frozen contrasts"
+        ],
+        "supporting_condition_classes": [
+          "block contributions share a common tolerance response",
+          "cumulative contribution metrics predict later structural residuals"
+        ]
+      },
+      {
+        "hypothesis_id": "H_E_UNRESOLVED_MECHANISM",
+        "incomplete_required_evidence_allowed": false,
+        "necessary_condition_classes": [
+          "evidence_admissibility_result is EVIDENCE_ADMISSIBLE",
+          "all required roles, observables, units, schemas, operator bindings, and nonperturbation controls are complete and valid",
+          "H_A through H_D are each evaluated and all have status NOT_SUPPORTED",
+          "complete valid evidence remains conflicting, below frozen discrimination thresholds, or otherwise nonclassifying"
+        ],
+        "supporting_condition_classes": []
+      }
+    ],
+    "hypothesis_status_domain": [
+      "SUPPORTED",
+      "NOT_SUPPORTED",
+      "NOT_EVALUATED"
+    ],
+    "independently_evaluated_mechanism_ids": [
+      "H_A_CANCELLATION_CONDITIONING",
+      "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+      "H_C_DISCRETE_CLOSURE_MISMATCH",
+      "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR"
+    ],
+    "materiality_evaluation_called": false,
+    "multiple_mechanisms_allowed": true,
+    "per_hypothesis_decision_schema": {
+      "criterion_decision_fields": [
+        "criterion_id",
+        "status",
+        "evidence_ids",
+        "reason"
+      ],
+      "individual_records_may_not_be_replaced_by_aggregate": true,
+      "required_fields": [
+        "hypothesis_id",
+        "status",
+        "evidence_ids",
+        "necessary_condition_decisions",
+        "supporting_condition_decisions",
+        "decision_reasons"
+      ],
+      "required_for_hypothesis_ids": [
+        "H_A_CANCELLATION_CONDITIONING",
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+        "H_C_DISCRETE_CLOSURE_MISMATCH",
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR",
+        "H_E_UNRESOLVED_MECHANISM"
+      ]
+    },
+    "physical_or_model_domain_claim_called": false,
+    "required_evidence_incomplete_routes_to": "BLOCKED_REQUIRED_EVIDENCE_INCOMPLETE",
+    "supported_mechanism_ids_schema": {
+      "allowed_ids": [
+        "H_A_CANCELLATION_CONDITIONING",
+        "H_B_LONGITUDINAL_EQUATION_BLOCK_DOMINANCE",
+        "H_C_DISCRETE_CLOSURE_MISMATCH",
+        "H_D_DISTRIBUTED_ACCUMULATED_SOLVER_ERROR"
+      ],
+      "duplicates_allowed": false,
+      "must_equal_exact_supported_status_set": true,
+      "ordering": "fixed H_A, H_B, H_C, H_D order",
+      "required": true,
+      "required_for_single_and_multiple_outcomes": true
+    },
+    "unresolved_hypothesis_id": "H_E_UNRESOLVED_MECHANISM"
+  },
+  "inherited_authority": {
+    "blocked_role": "SOLVER_TOL1eM08",
+    "blocked_row": "R13_CORNER_STRONG_LOW",
+    "canonical_robustness_status": "NUMERICALLY_BLOCKED",
+    "descendant_materiality_status": "NOT_EVALUATED_NUMERICAL_BLOCK",
+    "new_E_REPRO": "NONE",
+    "root_numerical_mechanism_status": "UNRESOLVED",
+    "selected_route": "ROUTE_A_INSTRUMENTED_R13_MECHANISM_EXPERIMENT"
+  },
+  "instrumentation_nonperturbation_contract": {
+    "capture_order": "copy already-computed values or immutable state snapshots only after the evolution operation being diagnosed has completed; diagnostic reductions run on the copy",
+    "failure_disposition": "B-BLOCKED_INSTRUMENTATION_PERTURBATION",
+    "fallback_equivalence_rule_status": "NOT_DEFINED_OR_AUTHORIZED_IN_DESIGN_v0",
+    "fallback_requirements_if_byte_identity_is_impossible": [
+      "document the unavoidable arithmetic-path effect before freeze",
+      "freeze the exact compared state fields, units, norm, epsilon floor, and delta ceiling",
+      "derive the ceiling independently of mechanism-experiment results",
+      "treat equivalence failure as B-BLOCKED and suppress mechanism classification"
+    ],
+    "forbidden_effects": [
+      "modify physical equations or source terms",
+      "modify state variables or solver buffers",
+      "modify iteration or reduction order",
+      "modify stopping criteria or requested tolerance",
+      "modify timestep, grid, boundary conditions, or model parameters",
+      "feed a diagnostic quantity back into evolution or acceptance decisions",
+      "adapt logging content based on whether a mechanism looks favorable"
+    ],
+    "instrumentation_permission": "read immutable snapshots of registered state, residual, operator, and solver metadata and emit them to a separate output channel",
+    "nonperturbation_ceiling_frozen_now": false,
+    "nonperturbation_floor_frozen_now": false,
+    "paired_self_control_scope": "every distinct core instrumented physical configuration must have an otherwise identical uninstrumented reference role",
+    "primary_equivalence_rule": "byte-identical registered physical trajectory payload"
+  },
+  "matched_neighbor_selection_design": {
+    "all_non_R13_scientific_row_count": 13,
+    "audited_candidate_count": 13,
+    "audited_candidate_universe": [
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "a7035dbc79b8203b48fc38e7ee238be55afa8a074bd0c79c8ff76dc55cb7806a",
+        "historical_loose_run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.06105959498187456,
+          "exchange_longitudinal_residual": 0.013445575369452218,
+          "gauss_residual": 0.06912849628700965,
+          "longitudinal_Maxwell_residual": 0.08303823576140847
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.08303823576140847,
+        "normalized_distance": 1.3331639734955496,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 7,
+        "rank_tuple": [
+          -1,
+          1.3331639734955496,
+          "R00_CANONICAL"
+        ],
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "5da2445de0634bb8a55086c883a7839f567f37ea38148f7756d1c6f1dea247ba",
+        "historical_loose_run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.015264482386423419,
+          "exchange_longitudinal_residual": 0.0008396834046253437,
+          "gauss_residual": 0.017281309854611022,
+          "longitudinal_Maxwell_residual": 0.022711000594795347
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.022711000594795347,
+        "normalized_distance": 1.527377404501585,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 8,
+        "rank_tuple": [
+          -1,
+          1.527377404501585,
+          "R01_ETA_WEAK"
+        ],
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "74fe80f33e63ec218a69ac8b126cbb6330b3eaa3dfa9f3c301affd0f67017a20",
+        "historical_loose_run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.24427238016881422,
+          "exchange_longitudinal_residual": 0.21546844528833403,
+          "gauss_residual": 0.27653432950631185,
+          "longitudinal_Maxwell_residual": 0.3295695173808123
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.3295695173808123,
+        "normalized_distance": 1.1545049743426825,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 3,
+        "rank_tuple": [
+          -2,
+          1.1545049743426825,
+          "R02_ETA_STRONG"
+        ],
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "24f51cf19a63a85a0ad91478791d1dcf7b6b96a4e47cfc66deebc4677ece3c33",
+        "historical_loose_run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 1.6357900277375048e-05,
+          "exchange_longitudinal_residual": 4.448439609076043e-09,
+          "gauss_residual": 5.482976616071198e-06,
+          "longitudinal_Maxwell_residual": 0.0011490137697415805
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0011490137697415805,
+        "normalized_distance": 1.3074088525554775,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 6,
+        "rank_tuple": [
+          -1,
+          1.3074088525554775,
+          "R03_F_ZERO"
+        ],
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "eb9c4dbde59786e91d658b59bfd79e13d6af3ab5191a90c3c0fe974465d2add7",
+        "historical_loose_run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.03053312827859577,
+          "exchange_longitudinal_residual": 0.003366700808576804,
+          "gauss_residual": 0.03456633169979847,
+          "longitudinal_Maxwell_residual": 0.041442437129223894
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.041442437129223894,
+        "normalized_distance": 1.3017082793177757,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 5,
+        "rank_tuple": [
+          -2,
+          1.3017082793177757,
+          "R04_F_LOW"
+        ],
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "6a4c999b3ef68154ea49dbe1d6784596698c5b528d8c379cca0d9dc67a523090",
+        "historical_loose_run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.12210883346130964,
+          "exchange_longitudinal_residual": 0.05373980677343978,
+          "gauss_residual": 0.13825236552833195,
+          "longitudinal_Maxwell_residual": 0.1646153306494586
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.1646153306494586,
+        "normalized_distance": 1.5701605935245453,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 9,
+        "rank_tuple": [
+          -1,
+          1.5701605935245453,
+          "R05_F_HIGH"
+        ],
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "bdbb8184fab9027883ca63d42a7959b528082d6d66e93f145c01a083a31b508c",
+        "historical_loose_run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05773430321196144,
+          "exchange_longitudinal_residual": 0.01199854590162627,
+          "gauss_residual": 0.06453940171852034,
+          "longitudinal_Maxwell_residual": 0.07819458626785569
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07819458626785569,
+        "normalized_distance": 1.4238420489037549,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 12,
+        "rank_tuple": [
+          0,
+          1.4238420489037549,
+          "R06_THETA_TRIVIAL"
+        ],
+        "scientific_row_id": "R06_THETA_TRIVIAL",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "ed64152a34f26c0fd042d97298557913c30111122959d690b1d71d60a002cb92",
+        "historical_loose_run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05448716124286084,
+          "exchange_longitudinal_residual": 0.010669069860468654,
+          "gauss_residual": 0.06014014359307526,
+          "longitudinal_Maxwell_residual": 0.07445612334759456
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07445612334759456,
+        "normalized_distance": 1.666531181894429,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -1.0
+        },
+        "rank": 13,
+        "rank_tuple": [
+          0,
+          1.666531181894429,
+          "R07_THETA_PARTNER"
+        ],
+        "scientific_row_id": "R07_THETA_PARTNER",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "2e1a65bb2197c1f90faa17e67f88f633a9aa3c3fe8ead1dd50082084f9d2ef6d",
+        "historical_loose_run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.1013927833294799,
+          "exchange_longitudinal_residual": 0.0311474753971668,
+          "gauss_residual": 0.08795499600537549,
+          "longitudinal_Maxwell_residual": 0.11326931147188503
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11326931147188503,
+        "normalized_distance": 1.5897566418249187,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 10,
+        "rank_tuple": [
+          -1,
+          1.5897566418249187,
+          "R08_PHASE_POSITIVE"
+        ],
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "51f2a20e116105270795b0e0d1e47b87ba90acdd3320470e7fc233b48fb3c425",
+        "historical_loose_run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.10138483816043466,
+          "exchange_longitudinal_residual": 0.03112682156420582,
+          "gauss_residual": 0.08796384583290535,
+          "longitudinal_Maxwell_residual": 0.11352359782125866
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11352359782125866,
+        "normalized_distance": 1.235850387476754,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 4,
+        "rank_tuple": [
+          -2,
+          1.235850387476754,
+          "R09_PHASE_NEGATIVE"
+        ],
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "4a396cc3e636e626e562d22307416796eda2dcc1aa5aaa59d5c27bd0c59e8fd1",
+        "historical_loose_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.3807351311936776,
+          "exchange_longitudinal_residual": 0.4450925605197653,
+          "gauss_residual": 0.44023727306085214,
+          "longitudinal_Maxwell_residual": 0.4896889213723749
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.4896889213723749,
+        "normalized_distance": 0.8816610347670144,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "rank": 1,
+        "rank_tuple": [
+          -2,
+          0.8816610347670144,
+          "R10_MU_HIGH"
+        ],
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "238086dc3f5afeabd9f9086b41746e46c4613b1aada030c0f5242f3e2bbd6190",
+        "historical_loose_run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.2812864700820102,
+          "exchange_longitudinal_residual": 0.22297695401466314,
+          "gauss_residual": 0.24886846358853237,
+          "longitudinal_Maxwell_residual": 0.31657838403834687
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.31657838403834687,
+        "normalized_distance": 1.9418959408302259,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": -1.0
+        },
+        "rank": 11,
+        "rank_tuple": [
+          -1,
+          1.9418959408302259,
+          "R11_CORNER_WEAK_HIGH"
+        ],
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "8bc5128ec7f6eb373f1db03966874b17487e656365fe5a3aedc24739927589c9",
+        "historical_loose_run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 9.384854005034526e-05,
+          "exchange_longitudinal_residual": 2.5558740807221183e-07,
+          "gauss_residual": 3.625152783321077e-05,
+          "longitudinal_Maxwell_residual": 0.0009939878696604643
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0009939878696604643,
+        "normalized_distance": 1.1246659340870895,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 2,
+        "rank_tuple": [
+          -2,
+          1.1246659340870895,
+          "R12_CORNER_STRONG_ZERO"
+        ],
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ],
+        "shared_axis_count": 2
+      }
+    ],
+    "axis_sharing_candidate_count": 11,
+    "candidate_universe_defined_before_ranking": true,
+    "candidate_universe_matches_ranked_audit": true,
+    "candidate_universe_row_ids": [
+      "R00_CANONICAL",
+      "R01_ETA_WEAK",
+      "R02_ETA_STRONG",
+      "R03_F_ZERO",
+      "R04_F_LOW",
+      "R05_F_HIGH",
+      "R06_THETA_TRIVIAL",
+      "R07_THETA_PARTNER",
+      "R08_PHASE_POSITIVE",
+      "R09_PHASE_NEGATIVE",
+      "R10_MU_HIGH",
+      "R11_CORNER_WEAK_HIGH",
+      "R12_CORNER_STRONG_ZERO"
+    ],
+    "candidate_universe_rule": "every canonical scientific row other than R13 that passed all applicable canonical criteria; the exact historical 1e-8 role is additionally audited against all four R13-linked residual ceilings",
+    "canonical_review_blocked_scientific_row_ids": [
+      "R13_CORNER_STRONG_LOW"
+    ],
+    "canonical_review_passing_scientific_row_count": 13,
+    "eligible_candidate_count": 13,
+    "eligible_candidate_ids": [
+      "R00_CANONICAL",
+      "R01_ETA_WEAK",
+      "R02_ETA_STRONG",
+      "R03_F_ZERO",
+      "R04_F_LOW",
+      "R05_F_HIGH",
+      "R06_THETA_TRIVIAL",
+      "R07_THETA_PARTNER",
+      "R08_PHASE_POSITIVE",
+      "R09_PHASE_NEGATIVE",
+      "R10_MU_HIGH",
+      "R11_CORNER_WEAK_HIGH",
+      "R12_CORNER_STRONG_ZERO"
+    ],
+    "exact_neighbor_frozen_now": false,
+    "excluded_candidate_ids": [],
+    "post_result_visual_choice_allowed": false,
+    "provisional_top_candidate_for_freeze_confirmation": "R10_MU_HIGH",
+    "ranked_candidate_audit": [
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "4a396cc3e636e626e562d22307416796eda2dcc1aa5aaa59d5c27bd0c59e8fd1",
+        "historical_loose_run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.3807351311936776,
+          "exchange_longitudinal_residual": 0.4450925605197653,
+          "gauss_residual": 0.44023727306085214,
+          "longitudinal_Maxwell_residual": 0.4896889213723749
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.4896889213723749,
+        "normalized_distance": 0.8816610347670144,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": 0.0
+        },
+        "rank": 1,
+        "rank_tuple": [
+          -2,
+          0.8816610347670144,
+          "R10_MU_HIGH"
+        ],
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "8bc5128ec7f6eb373f1db03966874b17487e656365fe5a3aedc24739927589c9",
+        "historical_loose_run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 9.384854005034526e-05,
+          "exchange_longitudinal_residual": 2.5558740807221183e-07,
+          "gauss_residual": 3.625152783321077e-05,
+          "longitudinal_Maxwell_residual": 0.0009939878696604643
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0009939878696604643,
+        "normalized_distance": 1.1246659340870895,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 2,
+        "rank_tuple": [
+          -2,
+          1.1246659340870895,
+          "R12_CORNER_STRONG_ZERO"
+        ],
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "74fe80f33e63ec218a69ac8b126cbb6330b3eaa3dfa9f3c301affd0f67017a20",
+        "historical_loose_run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.24427238016881422,
+          "exchange_longitudinal_residual": 0.21546844528833403,
+          "gauss_residual": 0.27653432950631185,
+          "longitudinal_Maxwell_residual": 0.3295695173808123
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.3295695173808123,
+        "normalized_distance": 1.1545049743426825,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": 0.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 3,
+        "rank_tuple": [
+          -2,
+          1.1545049743426825,
+          "R02_ETA_STRONG"
+        ],
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "51f2a20e116105270795b0e0d1e47b87ba90acdd3320470e7fc233b48fb3c425",
+        "historical_loose_run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.10138483816043466,
+          "exchange_longitudinal_residual": 0.03112682156420582,
+          "gauss_residual": 0.08796384583290535,
+          "longitudinal_Maxwell_residual": 0.11352359782125866
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11352359782125866,
+        "normalized_distance": 1.235850387476754,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 4,
+        "rank_tuple": [
+          -2,
+          1.235850387476754,
+          "R09_PHASE_NEGATIVE"
+        ],
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "eb9c4dbde59786e91d658b59bfd79e13d6af3ab5191a90c3c0fe974465d2add7",
+        "historical_loose_run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.03053312827859577,
+          "exchange_longitudinal_residual": 0.003366700808576804,
+          "gauss_residual": 0.03456633169979847,
+          "longitudinal_Maxwell_residual": 0.041442437129223894
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.041442437129223894,
+        "normalized_distance": 1.3017082793177757,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.0,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 5,
+        "rank_tuple": [
+          -2,
+          1.3017082793177757,
+          "R04_F_LOW"
+        ],
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ],
+        "shared_axis_count": 2
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "24f51cf19a63a85a0ad91478791d1dcf7b6b96a4e47cfc66deebc4677ece3c33",
+        "historical_loose_run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 1.6357900277375048e-05,
+          "exchange_longitudinal_residual": 4.448439609076043e-09,
+          "gauss_residual": 5.482976616071198e-06,
+          "longitudinal_Maxwell_residual": 0.0011490137697415805
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.0011490137697415805,
+        "normalized_distance": 1.3074088525554775,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": -0.12195680914153881,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 6,
+        "rank_tuple": [
+          -1,
+          1.3074088525554775,
+          "R03_F_ZERO"
+        ],
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "a7035dbc79b8203b48fc38e7ee238be55afa8a074bd0c79c8ff76dc55cb7806a",
+        "historical_loose_run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.06105959498187456,
+          "exchange_longitudinal_residual": 0.013445575369452218,
+          "gauss_residual": 0.06912849628700965,
+          "longitudinal_Maxwell_residual": 0.08303823576140847
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.08303823576140847,
+        "normalized_distance": 1.3331639734955496,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 7,
+        "rank_tuple": [
+          -1,
+          1.3331639734955496,
+          "R00_CANONICAL"
+        ],
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "5da2445de0634bb8a55086c883a7839f567f37ea38148f7756d1c6f1dea247ba",
+        "historical_loose_run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.015264482386423419,
+          "exchange_longitudinal_residual": 0.0008396834046253437,
+          "gauss_residual": 0.017281309854611022,
+          "longitudinal_Maxwell_residual": 0.022711000594795347
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.022711000594795347,
+        "normalized_distance": 1.527377404501585,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 8,
+        "rank_tuple": [
+          -1,
+          1.527377404501585,
+          "R01_ETA_WEAK"
+        ],
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "6a4c999b3ef68154ea49dbe1d6784596698c5b528d8c379cca0d9dc67a523090",
+        "historical_loose_run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.12210883346130964,
+          "exchange_longitudinal_residual": 0.05373980677343978,
+          "gauss_residual": 0.13825236552833195,
+          "longitudinal_Maxwell_residual": 0.1646153306494586
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.1646153306494586,
+        "normalized_distance": 1.5701605935245453,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 9,
+        "rank_tuple": [
+          -1,
+          1.5701605935245453,
+          "R05_F_HIGH"
+        ],
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "2e1a65bb2197c1f90faa17e67f88f633a9aa3c3fe8ead1dd50082084f9d2ef6d",
+        "historical_loose_run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.1013927833294799,
+          "exchange_longitudinal_residual": 0.0311474753971668,
+          "gauss_residual": 0.08795499600537549,
+          "longitudinal_Maxwell_residual": 0.11326931147188503
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.11326931147188503,
+        "normalized_distance": 1.5897566418249187,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": 0.0
+        },
+        "rank": 10,
+        "rank_tuple": [
+          -1,
+          1.5897566418249187,
+          "R08_PHASE_POSITIVE"
+        ],
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "238086dc3f5afeabd9f9086b41746e46c4613b1aada030c0f5242f3e2bbd6190",
+        "historical_loose_run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.2812864700820102,
+          "exchange_longitudinal_residual": 0.22297695401466314,
+          "gauss_residual": 0.24886846358853237,
+          "longitudinal_Maxwell_residual": 0.31657838403834687
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.31657838403834687,
+        "normalized_distance": 1.9418959408302259,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 1.0,
+          "ETA_Q": -1.0,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.8780431908584612,
+          "MU_MASS_DOMAIN": 0.0,
+          "THETA_W": -1.0
+        },
+        "rank": 11,
+        "rank_tuple": [
+          -1,
+          1.9418959408302259,
+          "R11_CORNER_WEAK_HIGH"
+        ],
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ],
+        "shared_axis_count": 1
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "bdbb8184fab9027883ca63d42a7959b528082d6d66e93f145c01a083a31b508c",
+        "historical_loose_run_id": "R06_THETA_TRIVIAL:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05773430321196144,
+          "exchange_longitudinal_residual": 0.01199854590162627,
+          "gauss_residual": 0.06453940171852034,
+          "longitudinal_Maxwell_residual": 0.07819458626785569
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07819458626785569,
+        "normalized_distance": 1.4238420489037549,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -0.5
+        },
+        "rank": 12,
+        "rank_tuple": [
+          0,
+          1.4238420489037549,
+          "R06_THETA_TRIVIAL"
+        ],
+        "scientific_row_id": "R06_THETA_TRIVIAL",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      },
+      {
+        "all_applicable_canonical_criteria_pass": true,
+        "all_four_loose_solver_residual_ceilings_pass": true,
+        "eligible": true,
+        "historical_loose_output_sha256": "ed64152a34f26c0fd042d97298557913c30111122959d690b1d71d60a002cb92",
+        "historical_loose_run_id": "R07_THETA_PARTNER:SOLVER_TOL1eM08",
+        "loose_solver_ceiling_ratios": {
+          "continuity_residual": 0.05448716124286084,
+          "exchange_longitudinal_residual": 0.010669069860468654,
+          "gauss_residual": 0.06014014359307526,
+          "longitudinal_Maxwell_residual": 0.07445612334759456
+        },
+        "maximum_loose_solver_ceiling_ratio": 0.07445612334759456,
+        "normalized_distance": 1.666531181894429,
+        "normalized_distance_components": {
+          "DELTA_THETA_PSI": 0.5,
+          "ETA_Q": -0.6666666666666666,
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1": 0.2878918821050677,
+          "MU_MASS_DOMAIN": -1.0,
+          "THETA_W": -1.0
+        },
+        "rank": 13,
+        "rank_tuple": [
+          0,
+          1.666531181894429,
+          "R07_THETA_PARTNER"
+        ],
+        "scientific_row_id": "R07_THETA_PARTNER",
+        "shared_axes": [],
+        "shared_axis_count": 0
+      }
+    ],
+    "ranking_rule": [
+      "maximize number of exact R13 axis values shared",
+      "minimize Euclidean distance after per-axis min-max normalization over the frozen matrix",
+      "break remaining ties by lexicographically ascending scientific_row_id"
+    ],
+    "ranking_tuple": [
+      "negative_shared_axis_count",
+      "normalized_distance",
+      "scientific_row_id"
+    ],
+    "status": "CORRECTED_ALL_PASSING_NON_R13_UNIVERSE_EXACT_SELECTION_DEFERRED_TO_FREEZE",
+    "unique_top_candidate": true,
+    "zero_shared_axis_candidate_count": 2,
+    "zero_shared_axis_candidates_retained": [
+      "R06_THETA_TRIVIAL",
+      "R07_THETA_PARTNER"
+    ]
+  },
+  "mechanism_observable_registry": [
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_FIELD_LONGITUDINAL_RAW",
+      "semantic_requirement": "field-sector longitudinal exchange before cancellation",
+      "shape_class": "space_time_and_registered_spatial_integral",
+      "unit_requirement": "native canonical code-energy-rate unit, frozen explicitly"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_MATTER_LONGITUDINAL_RAW",
+      "semantic_requirement": "matter-sector longitudinal exchange before cancellation",
+      "shape_class": "space_time_and_registered_spatial_integral",
+      "unit_requirement": "same registered unit and sign convention as field exchange"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_LONGITUDINAL_REMAINDER_RAW",
+      "semantic_requirement": "field plus matter exchange computed from preserved raw terms",
+      "shape_class": "space_time_and_registered_spatial_integral",
+      "unit_requirement": "same registered unit as each exchange term"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING"
+      ],
+      "observable_id": "EXCHANGE_CANCELLATION_KAPPA",
+      "semantic_requirement": "(|X_field| + |X_matter|) / (|X_field + X_matter| + epsilon_exchange)",
+      "shape_class": "per_time_and_frozen_summary_aggregates",
+      "unit_requirement": "dimensionless; epsilon_exchange has exchange-remainder units"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_BLOCK_RESIDUAL_RAW",
+      "semantic_requirement": "actual implemented residual before cross-block normalization",
+      "shape_class": "time_iteration_equation_block_and_optional_space",
+      "unit_requirement": "native block unit registered separately for every block"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_BLOCK_RESIDUAL_NORMALIZED",
+      "semantic_requirement": "raw block residual norm divided by an independently frozen block scale and floor",
+      "shape_class": "time_iteration_equation_block",
+      "unit_requirement": "dimensionless"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_BLOCK_DOMINANCE_FRACTION",
+      "semantic_requirement": "normalized block magnitude divided by sum of normalized block magnitudes plus epsilon_dominance",
+      "shape_class": "time_iteration_equation_block",
+      "unit_requirement": "dimensionless"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE"
+      ],
+      "observable_id": "SOLVER_ITERATION_METADATA",
+      "semantic_requirement": "requested tolerance, terminal residual, stopping reason, step acceptance, iteration count, damping or line search if applicable, and conditioning data if available",
+      "shape_class": "time_iteration",
+      "unit_requirement": "field-specific registered units or dimensionless metadata"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "GAUSS_RESIDUAL_FIELD",
+      "semantic_requirement": "actual discrete Gauss residual field",
+      "shape_class": "space_time",
+      "unit_requirement": "canonical equation-residual unit"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "CONTINUITY_RESIDUAL_FIELD",
+      "semantic_requirement": "actual discrete continuity residual field",
+      "shape_class": "space_time",
+      "unit_requirement": "canonical equation-residual unit"
+    },
+    {
+      "mechanism_ids": [
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "LONGITUDINAL_MAXWELL_RESIDUAL_COMPONENTS",
+      "semantic_requirement": "component residuals from the implemented Maxwell equation",
+      "shape_class": "component_space_time",
+      "unit_requirement": "canonical equation-residual unit by component"
+    },
+    {
+      "mechanism_ids": [
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "DISCRETE_OPERATOR_OUTPUTS",
+      "semantic_requirement": "outputs of the exact time and space operators, gauge-link transport, Wilson terms, boundary handling, and staggering used by evolution",
+      "shape_class": "operator_component_space_time",
+      "unit_requirement": "operator-output units registered per component"
+    },
+    {
+      "mechanism_ids": [
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "MAXWELL_TO_CONTINUITY_CLOSURE_RESIDUAL",
+      "semantic_requirement": "scheme-derived closure expression using actual discrete operators minus the implemented continuity residual",
+      "shape_class": "space_time_and_frozen_summary_aggregates",
+      "unit_requirement": "frozen closure-residual unit"
+    },
+    {
+      "mechanism_ids": [
+        "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING",
+        "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+        "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE"
+      ],
+      "observable_id": "INSTRUMENTATION_TRAJECTORY_IDENTITY",
+      "semantic_requirement": "hashes and, if needed, frozen equivalence residuals",
+      "shape_class": "paired_run_physical_trajectory",
+      "unit_requirement": "hash identity or dimensionless frozen equivalence metric"
+    }
+  ],
+  "nonclaims": [
+    "no corrected design independently accepted",
+    "no numerical freeze packet prepared or accepted",
+    "no exact run count, run matrix, tolerance, duration, or neighbor frozen",
+    "no exact output schema, floor, threshold, contrast, association, or classifier hash frozen",
+    "no new output root or simulation",
+    "no canonical output mutation or rerun",
+    "no root mechanism identified",
+    "no physical instability or model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar, seam, C_k, CCFT, or master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "output_separation_and_custody_design": {
+    "canonical_digest_required_before_and_after_every_future_stage": true,
+    "canonical_output_root_write_allowed": false,
+    "new_mechanism_output_created_now": false,
+    "new_output_family_required": true,
+    "new_output_root_created_now": false,
+    "output_volume_contract": [
+      "estimate worst-case record and family size before freeze",
+      "fixed logging cadence only; no value-dependent adaptive logging",
+      "chunking and compression may occur only after immutable capture",
+      "no dropped samples or silent truncation",
+      "disk or serialization failure is B-BLOCKED",
+      "diagnostic writer may not reuse mutable solver storage"
+    ],
+    "payload_identity_fields_required": [
+      "experiment_id",
+      "run_id",
+      "parent_canonical_row_id",
+      "mechanism_role",
+      "solver_tolerance",
+      "duration",
+      "instrumentation_state",
+      "model_hash",
+      "implementation_hash",
+      "discrete_operator_hash",
+      "output_schema_version",
+      "input_hash",
+      "payload_hash"
+    ],
+    "proposed_namespace_not_created_or_frozen": "formal/output/experiments/dirac_maxwell_instrumented_r13_mechanism_v0/"
+  },
+  "passed_decision_count": 31,
+  "permanent_regression_controls": {
+    "adversarial_controls": [
+      {
+        "control_id": "N_NEIGHBOR_CANDIDATE_UNIVERSE_MISMATCH",
+        "expected_diagnostic": "NEIGHBOR_CANDIDATE_UNIVERSE_MISMATCH",
+        "mutation": "declare thirteen passing non-R13 candidates but audit only eleven axis-sharing rows"
+      },
+      {
+        "control_id": "N_MULTIPLE_MECHANISM_IDENTITY_SET_MISSING",
+        "expected_diagnostic": "MULTIPLE_MECHANISM_IDENTITY_SET_MISSING",
+        "fixture": [
+          "H_A_CANCELLATION_CONDITIONING",
+          "H_C_DISCRETE_CLOSURE_MISMATCH"
+        ],
+        "mutation": "emit MULTIPLE_SUPPORTED_MECHANISMS without supported_mechanism_ids"
+      },
+      {
+        "control_id": "N_INCOMPLETE_EVIDENCE_MISCLASSIFIED_AS_UNRESOLVED",
+        "expected_diagnostic": "INCOMPLETE_EVIDENCE_MISCLASSIFIED_AS_UNRESOLVED",
+        "mutation": "remove required discrete closure output and mark H_E SUPPORTED"
+      }
+    ],
+    "positive_controls": [
+      {
+        "control_id": "P_ALL_THIRTEEN_NEIGHBOR_CANDIDATES_AUDITED",
+        "expected": "thirteen unique non-R13 row IDs and no exclusions"
+      },
+      {
+        "control_id": "P_R10_REMAINS_UNIQUE_TOP_CANDIDATE",
+        "expected": "R10_MU_HIGH"
+      },
+      {
+        "control_id": "P_MULTIPLE_IDENTITIES_RETAINED_EXACTLY",
+        "expected": "MULTIPLE_SUPPORTED_MECHANISMS with the same ordered two-ID set",
+        "fixture": [
+          "H_A_CANCELLATION_CONDITIONING",
+          "H_C_DISCRETE_CLOSURE_MISMATCH"
+        ]
+      },
+      {
+        "control_id": "P_COMPLETE_NONDISTINGUISHING_EVIDENCE_SUPPORTS_H_E",
+        "expected": "MECHANISM_UNRESOLVED_COMPLETE_EVIDENCE"
+      },
+      {
+        "control_id": "P_MISSING_EVIDENCE_BLOCKS_BEFORE_HYPOTHESES",
+        "expected": "BLOCKED_REQUIRED_EVIDENCE_INCOMPLETE and all hypotheses NOT_EVALUATED"
+      }
+    ],
+    "status": "DESIGN_REGRESSIONS_DEFINED_THRESHOLDS_AND_IMPLEMENTATION_DEFERRED_TO_FREEZE"
+  },
+  "required_run_classes": [
+    {
+      "instrumented": true,
+      "purpose": "reproduce and explain the accepted numerical block",
+      "required": true,
+      "role_class": "CORE_R13_LOOSE_MECHANISM",
+      "scientific_row_rule": "exact historical R13_CORNER_STRONG_LOW parameters",
+      "solver_tolerance_rule": "anchor to historically failing SOLVER_TOL1eM08 (1e-8)"
+    },
+    {
+      "instrumented": true,
+      "purpose": "identify internal structures suppressed by a tighter solve",
+      "required": true,
+      "role_class": "CORE_R13_TIGHT_REFERENCE",
+      "scientific_row_rule": "configuration-identical R13_CORNER_STRONG_LOW parameters",
+      "solver_tolerance_rule": "future freeze selects at least one historically passing canonical reference from 1e-10 and 1e-12 by a predeclared rule"
+    },
+    {
+      "instrumented": true,
+      "purpose": "contrast R13 with the closest canonically admissible parameter row",
+      "required": true,
+      "role_class": "CORE_MATCHED_PASSING_NEIGHBOR_LOOSE",
+      "scientific_row_rule": "future freeze applies the deterministic neighbor rule",
+      "solver_tolerance_rule": "historical loose-solver role at 1e-8"
+    },
+    {
+      "instrumented": false,
+      "purpose": "prove diagnostics do not change registered physical trajectories",
+      "required": true,
+      "role_class": "INSTRUMENTATION_NONPERTURBATION_REFERENCE",
+      "scientific_row_rule": "paired configuration for every distinct core instrumented physical role",
+      "solver_tolerance_rule": "identical to its paired instrumented role"
+    }
+  ],
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_DESIGN_PACKET_v1",
+  "scientific_questions": [
+    {
+      "mechanism_id": "FIELD_MATTER_EXCHANGE_CANCELLATION_CONDITIONING",
+      "question": "Is the longitudinal exchange residual amplified by subtraction of large, nearly cancelling field and matter transfers?",
+      "question_id": "Q_A_EXCHANGE_CANCELLATION"
+    },
+    {
+      "mechanism_id": "NONLINEAR_EQUATION_BLOCK_DOMINANCE",
+      "question": "Which implemented equation block first carries, dominates, or amplifies the loose-tolerance solver error?",
+      "question_id": "Q_B_EQUATION_BLOCK"
+    },
+    {
+      "mechanism_id": "DISCRETE_MAXWELL_TO_CONTINUITY_CLOSURE",
+      "question": "Does the actual discrete longitudinal Maxwell equation account for the observed continuity residual within its frozen truncation remainder?",
+      "question_id": "Q_C_DISCRETE_CLOSURE"
+    }
+  ],
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1_result",
+  "selected_next_target_kind": "INDEPENDENT_CORRECTED_DESIGN_REVIEW_ONLY",
+  "supporting_modules": [
+    {
+      "freeze_requirements_if_included": [
+        "exact tolerance values and role identities",
+        "fit formula, points, weights, floors, and minimum count",
+        "whether the fit is descriptive or decision-bearing",
+        "failure and missing-point behavior"
+      ],
+      "module_id": "SUPPORT_B_EXPANDED_TOLERANCE_LADDER",
+      "purpose": "test stability of the descriptive tolerance response",
+      "status": "SECONDARY_OPTION_FOR_FUTURE_FREEZE_NOT_REQUIRED_FOR_CORE_DESIGN"
+    },
+    {
+      "freeze_requirements_if_included": [
+        "exact durations or checkpoint times",
+        "independent-run versus single-run-checkpoint construction",
+        "prefix identity rule for checkpoints",
+        "time-fit formulas, points, weights, and claim ceiling"
+      ],
+      "module_id": "SUPPORT_C_DURATION_SCALING",
+      "purpose": "test linear-like structural and quadratic-like exchange growth",
+      "status": "SECONDARY_OPTION_FOR_FUTURE_FREEZE_NOT_REQUIRED_FOR_CORE_DESIGN"
+    }
+  ],
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_design_packet_v1",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

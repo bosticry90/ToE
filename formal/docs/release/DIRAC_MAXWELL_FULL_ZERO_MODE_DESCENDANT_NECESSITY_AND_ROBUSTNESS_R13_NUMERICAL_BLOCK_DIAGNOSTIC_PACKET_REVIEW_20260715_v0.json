@@ -1,0 +1,1407 @@
+{
+  "accepted": true,
+  "accepted_claim_label": "B-BLOCKED_DIAGNOSTIC",
+  "authority_rotation": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "diagnostic_pattern_accepted": true,
+    "exact_root_mechanism_identified": false,
+    "loose_solver_role_removal_authorized": false,
+    "master_action_promotion_authorized": false,
+    "materiality_classification_authorized": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "robustness_reclassification_authorized": false,
+    "route_selection_packet_authorized": true,
+    "row_exclusion_authorized": false,
+    "threshold_or_fit_change_authorized": false
+  },
+  "blocked_role": "SOLVER_TOL1eM08",
+  "blocked_row": "R13_CORNER_STRONG_LOW",
+  "canonical_robustness_status": "NUMERICALLY_BLOCKED",
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "decision_count": 25,
+  "decisions": [
+    {
+      "decision_id": "live_authority_selects_exact_independent_diagnostic_review",
+      "passed": true
+    },
+    {
+      "decision_id": "diagnostic_packet_manifest_report_and_generator_hashes_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "diagnostic_artifact_cross_bindings_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_bound_canonical_source_hashes_are_exact",
+      "passed": true
+    },
+    {
+      "decision_id": "all_203_canonical_outputs_and_root_digest_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "no_new_simulation_or_canonical_output_mutation_occurred",
+      "passed": true
+    },
+    {
+      "decision_id": "four_timelines_crossing_times_and_source_values_reproduce_exactly",
+      "passed": true
+    },
+    {
+      "decision_id": "all_four_start_admissible_grow_monotonically_and_peak_at_final_time",
+      "passed": true
+    },
+    {
+      "decision_id": "timing_correlations_reproduce_while_causal_hierarchy_is_withheld",
+      "passed": true
+    },
+    {
+      "decision_id": "three_tolerance_roles_are_comparable_except_tolerance_and_identity_fields",
+      "passed": true
+    },
+    {
+      "decision_id": "all_and_only_three_preregistered_tolerance_roles_enter_the_fit",
+      "passed": true
+    },
+    {
+      "decision_id": "four_tolerance_maxima_and_exponents_reproduce_exactly",
+      "passed": true
+    },
+    {
+      "decision_id": "tolerance_exponent_is_accepted_as_descriptive_not_physical_or_asymptotic",
+      "passed": true
+    },
+    {
+      "decision_id": "solver_iterations_are_constant_after_initialization",
+      "passed": true
+    },
+    {
+      "decision_id": "scalar_solver_residuals_show_no_late_growth",
+      "passed": true
+    },
+    {
+      "decision_id": "all_eleven_axis_sharing_neighbors_and_pass_statuses_reproduce",
+      "passed": true
+    },
+    {
+      "decision_id": "no_individual_axis_sufficiency_or_unique_interaction_order_is_claimed",
+      "passed": true
+    },
+    {
+      "decision_id": "exact_field_matter_cancellation_kappa_is_not_derivable",
+      "passed": true
+    },
+    {
+      "decision_id": "equation_block_solver_dominance_is_not_derivable",
+      "passed": true
+    },
+    {
+      "decision_id": "discrete_Maxwell_to_continuity_closure_is_not_derivable",
+      "passed": true
+    },
+    {
+      "decision_id": "higher_precision_contribution_is_not_testable",
+      "passed": true
+    },
+    {
+      "decision_id": "time_growth_fits_remain_descriptive_without_duration_extrapolation",
+      "passed": true
+    },
+    {
+      "decision_id": "packet_preserves_claim_ceiling_without_physical_or_robustness_overinterpretation",
+      "passed": true
+    },
+    {
+      "decision_id": "accepted_diagnostic_does_not_change_canonical_numerical_block_or_materiality",
+      "passed": true
+    },
+    {
+      "decision_id": "next_authority_is_route_selection_only_without_experiment_authorization",
+      "passed": true
+    }
+  ],
+  "descendant_materiality_status": "NOT_EVALUATED_NUMERICAL_BLOCK",
+  "diagnostic_pattern_status": "ACCEPTED_TOLERANCE_DEPENDENT_LONGITUDINAL_PATTERN",
+  "failed_decision_ids": [],
+  "independent_failure_timeline_reconstruction": {
+    "all_absolute_magnitudes_monotone_nondecreasing": true,
+    "all_initial_values_pass": true,
+    "all_maxima_at_final_time": true,
+    "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+    "sample_count": 17,
+    "threshold_crossing_order": [
+      {
+        "threshold_ids": [
+          "maximum_continuity_residual",
+          "maximum_longitudinal_Maxwell_residual"
+        ],
+        "time": 0.0125
+      },
+      {
+        "threshold_ids": [
+          "maximum_exchange_longitudinal_residual"
+        ],
+        "time": 0.03125
+      },
+      {
+        "threshold_ids": [
+          "maximum_Gauss_residual"
+        ],
+        "time": 0.043750000000000004
+      }
+    ],
+    "timelines": [
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          2.168404344971009e-19,
+          3.656741252006987e-15,
+          7.323029449420815e-15,
+          1.0993522720741942e-14,
+          1.466260489872368e-14,
+          1.8325384071590156e-14,
+          2.19765942566014e-14,
+          2.5611449802494834e-14,
+          2.9225115718235307e-14,
+          3.2812899016951374e-14,
+          3.6370719880907345e-14,
+          3.9894092254042534e-14,
+          4.337910674016131e-14,
+          4.68222477290161e-14,
+          5.0219545685072015e-14,
+          5.3567865737736905e-14,
+          5.68643754154526e-14
+        ],
+        "first_threshold_crossing_time": 0.043750000000000004,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.00625,
+          "50_percent_of_maximum": 0.025,
+          "90_percent_of_maximum": 0.046875
+        },
+        "frozen_ceiling": 5e-14,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -32.636433721790986,
+            "r_squared_in_log_space": 0.8733513678889189,
+            "rate": 49.115827351809415
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": 4.684613583070377e-16,
+            "r_squared": 0.9997451105508546,
+            "slope": 1.1393174421088062e-12
+          },
+          "linear_in_time_squared": {
+            "intercept": 1.2295032627436134e-14,
+            "r_squared": 0.9377201380774457,
+            "slope": 2.019147106499608e-11
+          },
+          "power_law_log_log": {
+            "exponent": 0.9908052067824813,
+            "log_coefficient": -27.515876999158905,
+            "r_squared_in_log_space": 0.9999184126799008
+          }
+        },
+        "initial_magnitude": 2.168404344971009e-19,
+        "maximum_ceiling_ratio": 1.137287508309052,
+        "maximum_magnitude": 5.68643754154526e-14,
+        "maximum_time": 0.05,
+        "raw_series_key": "gauss_residual",
+        "residual_over_frozen_ceiling": [
+          4.336808689942018e-06,
+          0.07313482504013974,
+          0.1464605889884163,
+          0.21987045441483882,
+          0.29325209797447355,
+          0.3665076814318031,
+          0.439531885132028,
+          0.5122289960498967,
+          0.5845023143647061,
+          0.6562579803390275,
+          0.7274143976181469,
+          0.7978818450808507,
+          0.8675821348032262,
+          0.936444954580322,
+          1.0043909137014402,
+          1.0713573147547382,
+          1.137287508309052
+        ],
+        "residual_over_own_maximum": [
+          3.8132914133472683e-06,
+          0.06430636449078603,
+          0.12878061872514332,
+          0.19332882213904543,
+          0.2578522104850059,
+          0.3222647560569236,
+          0.38647385284793573,
+          0.450395341817736,
+          0.5139441962514466,
+          0.5770378866771944,
+          0.6396046666332291,
+          0.7015656456713938,
+          0.7628520743124748,
+          0.8234021280798663,
+          0.8831459999018141,
+          0.9420285608760968,
+          1.0
+        ],
+        "threshold_id": "maximum_Gauss_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional equation-residual unit"
+      },
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          0.0,
+          3.777697321695234e-11,
+          3.877393961188979e-11,
+          3.976562417025431e-11,
+          4.0746928048470896e-11,
+          4.171407387261808e-11,
+          4.2662268140945814e-11,
+          4.358459150229435e-11,
+          4.447806565329587e-11,
+          4.5336664977746466e-11,
+          4.6154024937843097e-11,
+          4.692639050778158e-11,
+          4.764772745195073e-11,
+          4.831108017973318e-11,
+          4.8915285775878725e-11,
+          4.9452256092180624e-11,
+          4.991664308458266e-11
+        ],
+        "first_threshold_crossing_time": 0.0125,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.003125,
+          "50_percent_of_maximum": 0.003125,
+          "90_percent_of_maximum": 0.028125
+        },
+        "frozen_ceiling": 4e-11,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -23.99845076324254,
+            "r_squared_in_log_space": 0.9830896074396823,
+            "rate": 6.000441125525402
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": 3.7496909881250293e-11,
+            "r_squared": 0.9909427982529369,
+            "slope": 2.640281861750913e-10
+          },
+          "linear_in_time_squared": {
+            "intercept": 4.031872258089014e-11,
+            "r_squared": 0.8945155504173019,
+            "slope": 4.5904069085896055e-09
+          },
+          "power_law_log_log": {
+            "exponent": 0.11055885233622369,
+            "log_coefficient": -23.413265449915464,
+            "r_squared_in_log_space": 0.9389786540648031
+          }
+        },
+        "initial_magnitude": 0.0,
+        "maximum_ceiling_ratio": 1.2479160771145665,
+        "maximum_magnitude": 4.991664308458266e-11,
+        "maximum_time": 0.05,
+        "raw_series_key": "continuity_residual",
+        "residual_over_frozen_ceiling": [
+          0.0,
+          0.9444243304238085,
+          0.9693484902972448,
+          0.9941406042563579,
+          1.0186732012117725,
+          1.042851846815452,
+          1.0665567035236454,
+          1.0896147875573587,
+          1.1119516413323969,
+          1.1334166244436616,
+          1.1538506234460775,
+          1.1731597626945396,
+          1.1911931862987684,
+          1.2077770044933296,
+          1.2228821443969682,
+          1.2363064023045156,
+          1.2479160771145665
+        ],
+        "residual_over_own_maximum": [
+          0.0,
+          0.756801156538914,
+          0.7767737815659639,
+          0.7966405934564216,
+          0.8162994450453352,
+          0.8356746626958567,
+          0.8546702162774755,
+          0.8731474876714208,
+          0.891046811339632,
+          0.9082474737118136,
+          0.9246219714662325,
+          0.9400950786747787,
+          0.9545459090911361,
+          0.9678351185970401,
+          0.9799394100479242,
+          0.9906967503480725,
+          1.0
+        ],
+        "threshold_id": "maximum_continuity_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional equation-residual unit"
+      },
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          0.0,
+          1.5664474166631365e-23,
+          9.532851800689853e-23,
+          2.9436450891047373e-22,
+          6.588646260054843e-22,
+          1.2364230192592595e-21,
+          2.075469270101964e-21,
+          3.224481166390864e-21,
+          4.7310760622211115e-21,
+          6.6410123242826736e-21,
+          8.997107205997138e-21,
+          1.1838101115006136e-20,
+          1.519750225222272e-20,
+          1.9102446781187387e-20,
+          2.3572561318252875e-20,
+          2.8618942608845305e-20,
+          3.4243223273183233e-20
+        ],
+        "first_threshold_crossing_time": 0.03125,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.025,
+          "50_percent_of_maximum": 0.040625,
+          "90_percent_of_maximum": 0.05
+        },
+        "frozen_ceiling": 8e-21,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -50.96311371601635,
+            "r_squared_in_log_space": 0.8881562455375757,
+            "rate": 140.09807553946249
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": -8.366605688518709e-21,
+            "r_squared": 0.8675131971509947,
+            "slope": 6.927253165655046e-19
+          },
+          "linear_in_time_squared": {
+            "intercept": -2.269884339469555e-21,
+            "r_squared": 0.980271442043097,
+            "slope": 1.3474958234390794e-17
+          },
+          "power_law_log_log": {
+            "exponent": 2.8022308098937163,
+            "log_coefficient": -36.449443730354844,
+            "r_squared_in_log_space": 0.9997116911040587
+          }
+        },
+        "initial_magnitude": 0.0,
+        "maximum_ceiling_ratio": 4.280402909147905,
+        "maximum_magnitude": 3.4243223273183233e-20,
+        "maximum_time": 0.05,
+        "raw_series_key": "exchange_longitudinal_residual",
+        "residual_over_frozen_ceiling": [
+          0.0,
+          0.0019580592708289208,
+          0.011916064750862317,
+          0.03679556361380922,
+          0.08235807825068554,
+          0.15455287740740745,
+          0.25943365876274554,
+          0.403060145798858,
+          0.591384507777639,
+          0.8301265405353343,
+          1.1246384007496424,
+          1.4797626393757672,
+          1.8996877815278403,
+          2.3878058476484236,
+          2.9465701647816096,
+          3.5773678261056636,
+          4.280402909147905
+        ],
+        "residual_over_own_maximum": [
+          0.0,
+          0.00045744742081270796,
+          0.002783865211706072,
+          0.008596285068204963,
+          0.019240730370188558,
+          0.036107086339256356,
+          0.060609635183710014,
+          0.09416406687731525,
+          0.1381609442685304,
+          0.19393654245987482,
+          0.26274124763958795,
+          0.34570639044592694,
+          0.4438105061249968,
+          0.5578460482178678,
+          0.6883861700225272,
+          0.8357549282242233,
+          1.0
+        ],
+        "threshold_id": "maximum_exchange_longitudinal_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional code-energy-rate unit"
+      },
+      {
+        "absolute_magnitude_monotone_nondecreasing": true,
+        "absolute_residual": [
+          0.0,
+          5.502502208216964e-15,
+          5.6698179180081805e-15,
+          5.845497697004217e-15,
+          6.028505073292636e-15,
+          6.2177189353268714e-15,
+          6.411940731363774e-15,
+          6.6098835219866975e-15,
+          6.8102104985849805e-15,
+          7.0115273178647455e-15,
+          7.212390932124723e-15,
+          7.411331739821812e-15,
+          7.606843714307844e-15,
+          7.797411855679363e-15,
+          7.981520734726176e-15,
+          8.157660813832005e-15,
+          8.324331825593695e-15
+        ],
+        "first_threshold_crossing_time": 0.0125,
+        "fractional_onset_times": {
+          "10_percent_of_maximum": 0.003125,
+          "50_percent_of_maximum": 0.003125,
+          "90_percent_of_maximum": 0.037500000000000006
+        },
+        "frozen_ceiling": 6.0000000000000005e-15,
+        "growth_fits": {
+          "exponential_log_linear": {
+            "log_intercept": -32.85264588079597,
+            "r_squared_in_log_space": 0.9967970687255288,
+            "rate": 8.99169948919054
+          },
+          "fit_point_count": 16,
+          "interpretation_boundary": "These fits are descriptive over seventeen stored time samples. R-squared values from transformed and untransformed fits are not used to select a causal law.",
+          "linear_in_time": {
+            "intercept": 5.277249921012997e-15,
+            "r_squared": 0.999602088183762,
+            "slope": 6.156022772123934e-14
+          },
+          "linear_in_time_squared": {
+            "intercept": 5.912249902380498e-15,
+            "r_squared": 0.9451680871577836,
+            "slope": 1.0953991583929302e-12
+          },
+          "power_law_log_log": {
+            "exponent": 0.1614397936917074,
+            "log_coefficient": -31.992045984585012,
+            "r_squared_in_log_space": 0.9040371983968276
+          }
+        },
+        "initial_magnitude": 0.0,
+        "maximum_ceiling_ratio": 1.387388637598949,
+        "maximum_magnitude": 8.324331825593695e-15,
+        "maximum_time": 0.05,
+        "raw_series_key": "longitudinal_Maxwell_residual",
+        "residual_over_frozen_ceiling": [
+          0.0,
+          0.9170837013694939,
+          0.9449696530013634,
+          0.9742496161673694,
+          1.0047508455487726,
+          1.0362864892211452,
+          1.0686567885606288,
+          1.1016472536644495,
+          1.1350350830974967,
+          1.1685878863107908,
+          1.2020651553541204,
+          1.2352219566369687,
+          1.2678072857179739,
+          1.299568642613227,
+          1.330253455787696,
+          1.3596101356386674,
+          1.387388637598949
+        ],
+        "residual_over_own_maximum": [
+          0.0,
+          0.6610142800049328,
+          0.6811138763805594,
+          0.7022182463980902,
+          0.7242028789334909,
+          0.7469330951236343,
+          0.7702649132330175,
+          0.7940437335359679,
+          0.8181089655324105,
+          0.842293107094476,
+          0.8664228052454327,
+          0.8903215171018526,
+          0.9138083240411095,
+          0.9367012294855567,
+          0.958818185285031,
+          0.9799778510451435,
+          1.0
+        ],
+        "threshold_id": "maximum_longitudinal_Maxwell_residual",
+        "time": [
+          0.0,
+          0.003125,
+          0.00625,
+          0.009375000000000001,
+          0.0125,
+          0.015625,
+          0.018750000000000003,
+          0.021875000000000002,
+          0.025,
+          0.028125,
+          0.03125,
+          0.034375,
+          0.037500000000000006,
+          0.040625,
+          0.043750000000000004,
+          0.046875,
+          0.05
+        ],
+        "units": "canonical nondimensional equation-residual unit"
+      }
+    ]
+  },
+  "independent_mechanism_data_availability_audit": {
+    "discrete_Maxwell_to_continuity_closure": {
+      "checked_across_canonical_record_count": 203,
+      "missing_fields": [
+        "continuity_residual_components",
+        "longitudinal_Maxwell_residual_components",
+        "spatial_divergence_operator_output"
+      ],
+      "present_fields": [],
+      "required_fields": [
+        "continuity_residual_components",
+        "longitudinal_Maxwell_residual_components",
+        "spatial_divergence_operator_output"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    },
+    "equation_block_solver_dominance": {
+      "checked_across_canonical_record_count": 203,
+      "missing_fields": [
+        "solver_residual_by_equation_block"
+      ],
+      "present_fields": [],
+      "required_fields": [
+        "solver_residual_by_equation_block"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    },
+    "exact_field_matter_cancellation_kappa": {
+      "checked_across_canonical_record_count": 203,
+      "missing_fields": [
+        "longitudinal_field_sector_transfer",
+        "longitudinal_matter_sector_transfer"
+      ],
+      "present_fields": [],
+      "required_fields": [
+        "longitudinal_field_sector_transfer",
+        "longitudinal_matter_sector_transfer"
+      ],
+      "status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS"
+    },
+    "higher_precision_arithmetic_contribution": {
+      "checked_across_canonical_record_count": 203,
+      "missing_fields": [
+        "independent_higher_precision_output"
+      ],
+      "present_fields": [],
+      "required_fields": [
+        "independent_higher_precision_output"
+      ],
+      "status": "NOT_TESTABLE_WITH_EXISTING_DOUBLE_PRECISION_OUTPUTS_ONLY"
+    },
+    "registered_recursive_key_count": 137,
+    "root_numerical_mechanism_identified": false
+  },
+  "independent_neighbor_reconstruction": {
+    "all_axis_sharing_neighbors_pass": true,
+    "all_five_individual_axis_values_have_at_least_one_passing_non_R13_match": true,
+    "axis_sharing_neighbor_count": 11,
+    "axis_sharing_neighbors": [
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.06105959498187456,
+          "exchange_longitudinal_residual": 0.013445575369452218,
+          "gauss_residual": 0.06912849628700965,
+          "longitudinal_Maxwell_residual": 0.08303823576140847
+        },
+        "maximum_ceiling_ratio": 0.08303823576140847,
+        "run_id": "R00_CANONICAL:SOLVER_TOL1eM08",
+        "scientific_row_id": "R00_CANONICAL",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.015264482386423419,
+          "exchange_longitudinal_residual": 0.0008396834046253437,
+          "gauss_residual": 0.017281309854611022,
+          "longitudinal_Maxwell_residual": 0.022711000594795347
+        },
+        "maximum_ceiling_ratio": 0.022711000594795347,
+        "run_id": "R01_ETA_WEAK:SOLVER_TOL1eM08",
+        "scientific_row_id": "R01_ETA_WEAK",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.24427238016881422,
+          "exchange_longitudinal_residual": 0.21546844528833403,
+          "gauss_residual": 0.27653432950631185,
+          "longitudinal_Maxwell_residual": 0.3295695173808123
+        },
+        "maximum_ceiling_ratio": 0.3295695173808123,
+        "run_id": "R02_ETA_STRONG:SOLVER_TOL1eM08",
+        "scientific_row_id": "R02_ETA_STRONG",
+        "shared_axes": [
+          "ETA_Q",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 1.6357900277375048e-05,
+          "exchange_longitudinal_residual": 4.448439609076043e-09,
+          "gauss_residual": 5.482976616071198e-06,
+          "longitudinal_Maxwell_residual": 0.0011490137697415805
+        },
+        "maximum_ceiling_ratio": 0.0011490137697415805,
+        "run_id": "R03_F_ZERO:SOLVER_TOL1eM08",
+        "scientific_row_id": "R03_F_ZERO",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.03053312827859577,
+          "exchange_longitudinal_residual": 0.003366700808576804,
+          "gauss_residual": 0.03456633169979847,
+          "longitudinal_Maxwell_residual": 0.041442437129223894
+        },
+        "maximum_ceiling_ratio": 0.041442437129223894,
+        "run_id": "R04_F_LOW:SOLVER_TOL1eM08",
+        "scientific_row_id": "R04_F_LOW",
+        "shared_axes": [
+          "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.12210883346130964,
+          "exchange_longitudinal_residual": 0.05373980677343978,
+          "gauss_residual": 0.13825236552833195,
+          "longitudinal_Maxwell_residual": 0.1646153306494586
+        },
+        "maximum_ceiling_ratio": 0.1646153306494586,
+        "run_id": "R05_F_HIGH:SOLVER_TOL1eM08",
+        "scientific_row_id": "R05_F_HIGH",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.1013927833294799,
+          "exchange_longitudinal_residual": 0.0311474753971668,
+          "gauss_residual": 0.08795499600537549,
+          "longitudinal_Maxwell_residual": 0.11326931147188503
+        },
+        "maximum_ceiling_ratio": 0.11326931147188503,
+        "run_id": "R08_PHASE_POSITIVE:SOLVER_TOL1eM08",
+        "scientific_row_id": "R08_PHASE_POSITIVE",
+        "shared_axes": [
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.10138483816043466,
+          "exchange_longitudinal_residual": 0.03112682156420582,
+          "gauss_residual": 0.08796384583290535,
+          "longitudinal_Maxwell_residual": 0.11352359782125866
+        },
+        "maximum_ceiling_ratio": 0.11352359782125866,
+        "run_id": "R09_PHASE_NEGATIVE:SOLVER_TOL1eM08",
+        "scientific_row_id": "R09_PHASE_NEGATIVE",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.3807351311936776,
+          "exchange_longitudinal_residual": 0.4450925605197653,
+          "gauss_residual": 0.44023727306085214,
+          "longitudinal_Maxwell_residual": 0.4896889213723749
+        },
+        "maximum_ceiling_ratio": 0.4896889213723749,
+        "run_id": "R10_MU_HIGH:SOLVER_TOL1eM08",
+        "scientific_row_id": "R10_MU_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN",
+          "THETA_W"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 0.2812864700820102,
+          "exchange_longitudinal_residual": 0.22297695401466314,
+          "gauss_residual": 0.24886846358853237,
+          "longitudinal_Maxwell_residual": 0.31657838403834687
+        },
+        "maximum_ceiling_ratio": 0.31657838403834687,
+        "run_id": "R11_CORNER_WEAK_HIGH:SOLVER_TOL1eM08",
+        "scientific_row_id": "R11_CORNER_WEAK_HIGH",
+        "shared_axes": [
+          "MU_MASS_DOMAIN"
+        ]
+      },
+      {
+        "all_four_pass": true,
+        "ceiling_ratios": {
+          "continuity_residual": 9.384854005034526e-05,
+          "exchange_longitudinal_residual": 2.5558740807221183e-07,
+          "gauss_residual": 3.625152783321077e-05,
+          "longitudinal_Maxwell_residual": 0.0009939878696604643
+        },
+        "maximum_ceiling_ratio": 0.0009939878696604643,
+        "run_id": "R12_CORNER_STRONG_ZERO:SOLVER_TOL1eM08",
+        "scientific_row_id": "R12_CORNER_STRONG_ZERO",
+        "shared_axes": [
+          "DELTA_THETA_PSI",
+          "ETA_Q"
+        ]
+      }
+    ],
+    "individual_axis_value_sufficient_cause_supported": false,
+    "per_axis_checks": [
+      {
+        "R13_value": -1.5707963267948966,
+        "all_matching_rows_pass": true,
+        "axis": "DELTA_THETA_PSI",
+        "matching_non_R13_rows": [
+          "R09_PHASE_NEGATIVE",
+          "R12_CORNER_STRONG_ZERO"
+        ]
+      },
+      {
+        "R13_value": 0.4,
+        "all_matching_rows_pass": true,
+        "axis": "ETA_Q",
+        "matching_non_R13_rows": [
+          "R02_ETA_STRONG",
+          "R12_CORNER_STRONG_ZERO"
+        ]
+      },
+      {
+        "R13_value": 0.0634205964176414,
+        "all_matching_rows_pass": true,
+        "axis": "F_PERP_POSITIVE_LOADING_INITIAL_v1",
+        "matching_non_R13_rows": [
+          "R04_F_LOW"
+        ]
+      },
+      {
+        "R13_value": 2.0,
+        "all_matching_rows_pass": true,
+        "axis": "MU_MASS_DOMAIN",
+        "matching_non_R13_rows": [
+          "R10_MU_HIGH",
+          "R11_CORNER_WEAK_HIGH"
+        ]
+      },
+      {
+        "R13_value": 0.3,
+        "all_matching_rows_pass": true,
+        "axis": "THETA_W",
+        "matching_non_R13_rows": [
+          "R00_CANONICAL",
+          "R01_ETA_WEAK",
+          "R02_ETA_STRONG",
+          "R03_F_ZERO",
+          "R04_F_LOW",
+          "R05_F_HIGH",
+          "R08_PHASE_POSITIVE",
+          "R09_PHASE_NEGATIVE",
+          "R10_MU_HIGH"
+        ]
+      }
+    ],
+    "unique_interaction_order_identified": false
+  },
+  "independent_timing_and_time_law_audit": {
+    "bounded_interpretation": "The crossing order is consistent with a shared longitudinal source, but scalar norms cannot prove a Maxwell-to-continuity-to-exchange-to-Gauss causal hierarchy. Three ordinary-scale series are closer to linear in time and exchange is closer to linear in time squared; no common time law or longer-duration extrapolation is certified.",
+    "causal_hierarchy_certified": false,
+    "common_time_law_certified": false,
+    "linear_in_time_preferred_count": 3,
+    "linear_in_time_squared_preferred_count": 1,
+    "longer_duration_prediction_executed": false,
+    "minimum_pairwise_correlation": 0.8925903093329086,
+    "normalized_timeline_correlations": [
+      {
+        "left": "continuity_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.8925903093329086,
+        "right": "exchange_longitudinal_residual"
+      },
+      {
+        "left": "continuity_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9968529057398048,
+        "right": "gauss_residual"
+      },
+      {
+        "left": "continuity_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9955051363694426,
+        "right": "longitudinal_Maxwell_residual"
+      },
+      {
+        "left": "exchange_longitudinal_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9254944169999553,
+        "right": "gauss_residual"
+      },
+      {
+        "left": "exchange_longitudinal_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9306894564317807,
+        "right": "longitudinal_Maxwell_residual"
+      },
+      {
+        "left": "gauss_residual",
+        "pearson_correlation_of_normalized_absolute_timelines": 0.9997232969382142,
+        "right": "longitudinal_Maxwell_residual"
+      }
+    ],
+    "ordinary_scale_linear_vs_time_squared": [
+      {
+        "better_of_these_two_descriptive_coordinates": "LINEAR_IN_TIME",
+        "linear_in_time_R2": 0.9997451105508546,
+        "linear_in_time_squared_R2": 0.9377201380774457,
+        "threshold_id": "maximum_Gauss_residual"
+      },
+      {
+        "better_of_these_two_descriptive_coordinates": "LINEAR_IN_TIME",
+        "linear_in_time_R2": 0.9909427982529369,
+        "linear_in_time_squared_R2": 0.8945155504173019,
+        "threshold_id": "maximum_continuity_residual"
+      },
+      {
+        "better_of_these_two_descriptive_coordinates": "LINEAR_IN_TIME_SQUARED",
+        "linear_in_time_R2": 0.8675131971509947,
+        "linear_in_time_squared_R2": 0.980271442043097,
+        "threshold_id": "maximum_exchange_longitudinal_residual"
+      },
+      {
+        "better_of_these_two_descriptive_coordinates": "LINEAR_IN_TIME",
+        "linear_in_time_R2": 0.999602088183762,
+        "linear_in_time_squared_R2": 0.9451680871577836,
+        "threshold_id": "maximum_longitudinal_Maxwell_residual"
+      }
+    ],
+    "threshold_crossing_order": [
+      {
+        "threshold_ids": [
+          "maximum_continuity_residual",
+          "maximum_longitudinal_Maxwell_residual"
+        ],
+        "time": 0.0125
+      },
+      {
+        "threshold_ids": [
+          "maximum_exchange_longitudinal_residual"
+        ],
+        "time": 0.03125
+      },
+      {
+        "threshold_ids": [
+          "maximum_Gauss_residual"
+        ],
+        "time": 0.043750000000000004
+      }
+    ]
+  },
+  "independent_tolerance_response_reconstruction": {
+    "all_four_residual_maxima_strictly_decrease_with_tighter_tolerance": true,
+    "all_solver_iteration_histories_constant_after_initial_state": true,
+    "all_solver_residual_histories_nonincreasing_after_first_step": true,
+    "all_steps_converged": true,
+    "configurations_identical_except_tolerance_and_identity_fields": true,
+    "normalized_configuration_hashes": {
+      "1e-08": "6859df7bb9ea40e981dd7f48e355f2622e27c797457ff4eb1ffa661d1d1ed81e",
+      "1e-10": "6859df7bb9ea40e981dd7f48e355f2622e27c797457ff4eb1ffa661d1d1ed81e",
+      "1e-12": "6859df7bb9ea40e981dd7f48e355f2622e27c797457ff4eb1ffa661d1d1ed81e"
+    },
+    "overall_exponent_maximum": 0.7559176564888908,
+    "overall_exponent_median": 0.7486818198236936,
+    "overall_exponent_minimum": 0.7448900948221593,
+    "physical_or_asymptotic_exponent_claim_authorized": false,
+    "post_hoc_tolerance_point_selection_performed": false,
+    "registered_tolerance_run_ids": {
+      "1e-08": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+      "1e-10": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM10",
+      "1e-12": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12"
+    },
+    "registered_tolerances_used": [
+      1e-08,
+      1e-10,
+      1e-12
+    ],
+    "residual_tolerance_response": [
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 5.68643754154526e-14,
+          "1e-10": 2.214455871952e-16,
+          "1e-12": 5.384800865676891e-17
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7559176564888908,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 1.2047866214583918,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.3070486915193895,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "gauss_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      },
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 4.991664308458266e-11,
+          "1e-10": 7.214756576727228e-13,
+          "1e-12": 5.2322078961108964e-14
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7448900948221593,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 0.9200118442150322,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.5697683454292863,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "continuity_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      },
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 3.4243223273183233e-20,
+          "1e-10": 2.621184101835134e-22,
+          "1e-12": 3.510465738113332e-23
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7473024747085409,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 1.058038556180294,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.436566393236788,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "exchange_longitudinal_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      },
+      {
+        "maxima_by_solver_tolerance": {
+          "1e-08": 8.324331825593695e-15,
+          "1e-10": 2.066273129186935e-16,
+          "1e-12": 8.319643634715443e-18
+        },
+        "overall_1eM08_to_1eM12_exponent": 0.7500611649388463,
+        "pairwise_tolerance_exponents": [
+          {
+            "loose_tolerance": 1e-08,
+            "observed_exponent": 0.8025808279150828,
+            "tight_tolerance": 1e-10
+          },
+          {
+            "loose_tolerance": 1e-10,
+            "observed_exponent": 0.6975415019626098,
+            "tight_tolerance": 1e-12
+          }
+        ],
+        "raw_series_key": "longitudinal_Maxwell_residual",
+        "strictly_decreases_with_tighter_tolerance": true
+      }
+    ],
+    "solver_runs": [
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 2.4372612955625428e-09,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 3.0,
+        "maximum_solver_residual": 2.713377245111559e-09,
+        "maximum_solver_residual_over_requested_tolerance": 0.2713377245111559,
+        "residual_maxima": {
+          "continuity_residual": 4.991664308458266e-11,
+          "exchange_longitudinal_residual": 3.4243223273183233e-20,
+          "gauss_residual": 5.68643754154526e-14,
+          "longitudinal_Maxwell_residual": 8.324331825593695e-15
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM08",
+        "solver_iterations": [
+          0.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "solver_residual": [
+          0.0,
+          2.713377245111559e-09,
+          2.7114471778943994e-09,
+          2.707024021608717e-09,
+          2.7001148400485064e-09,
+          2.690729986043472e-09,
+          2.6788830528867713e-09,
+          2.6645908049460765e-09,
+          2.6478732192969368e-09,
+          2.628753402456052e-09,
+          2.6073269931981002e-09,
+          2.584669055172295e-09,
+          2.55969273554868e-09,
+          2.5324287458716732e-09,
+          2.5029107189600275e-09,
+          2.4711751325789955e-09,
+          2.4372612955625428e-09
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-08
+      },
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 3.021592351326596e-11,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 4.0,
+        "maximum_solver_residual": 3.411274106072948e-11,
+        "maximum_solver_residual_over_requested_tolerance": 0.3411274106072948,
+        "residual_maxima": {
+          "continuity_residual": 7.214756576727228e-13,
+          "exchange_longitudinal_residual": 2.621184101835134e-22,
+          "gauss_residual": 2.214455871952e-16,
+          "longitudinal_Maxwell_residual": 2.066273129186935e-16
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM10",
+        "solver_iterations": [
+          0.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "solver_residual": [
+          0.0,
+          3.411274106072948e-11,
+          3.407647124545332e-11,
+          3.40352767670693e-11,
+          3.3957080203261825e-11,
+          3.3841968290204694e-11,
+          3.369007850473338e-11,
+          3.350159906434502e-11,
+          3.3276773697688e-11,
+          3.3015899042476704e-11,
+          3.2719320308682853e-11,
+          3.238743648270592e-11,
+          3.2020698592649666e-11,
+          3.161960450415169e-11,
+          3.1184704124553875e-11,
+          3.071659940290239e-11,
+          3.021592351326596e-11
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-10
+      },
+      {
+        "all_steps_converged": true,
+        "final_solver_residual": 5.403663627667754e-13,
+        "iterations_constant_after_initial_state": true,
+        "late_iteration_increase": 0.0,
+        "maximum_iterations": 5.0,
+        "maximum_solver_residual": 6.255759799067562e-13,
+        "maximum_solver_residual_over_requested_tolerance": 0.6255759799067562,
+        "residual_maxima": {
+          "continuity_residual": 5.2322078961108964e-14,
+          "exchange_longitudinal_residual": 3.510465738113332e-23,
+          "gauss_residual": 5.384800865676891e-17,
+          "longitudinal_Maxwell_residual": 8.319643634715443e-18
+        },
+        "run_id": "R13_CORNER_STRONG_LOW:SOLVER_TOL1eM12",
+        "solver_iterations": [
+          0.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "solver_residual": [
+          0.0,
+          6.255759799067562e-13,
+          6.245143291394584e-13,
+          6.226338888914995e-13,
+          6.199415980567835e-13,
+          6.164443955292143e-13,
+          6.121492202026957e-13,
+          6.070560720772278e-13,
+          6.020114962090872e-13,
+          5.967379368421177e-13,
+          5.906872213579106e-13,
+          5.838593497564659e-13,
+          5.762612609316875e-13,
+          5.67920710459191e-13,
+          5.588376983389765e-13,
+          5.490330412527555e-13,
+          5.403663627667754e-13
+        ],
+        "solver_residual_nonincreasing_after_first_step": true,
+        "solver_tolerance": 1e-12
+      }
+    ]
+  },
+  "nonclaims": [
+    "no new simulation",
+    "no canonical output mutation",
+    "no causal Maxwell-to-continuity hierarchy proof",
+    "no exact exchange-cancellation mechanism",
+    "no equation-block dominance",
+    "no discrete identity closure",
+    "no certified common time-growth law",
+    "no longer-duration result",
+    "no physical instability",
+    "no model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no experiment route selected yet",
+    "no pillar or seam promotion",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "packet_parity_and_claim_audit": {
+    "causal_hierarchy_overclaim_detected": false,
+    "claim_ceiling_preserved": true,
+    "conditional_robustness_overclaim_detected": false,
+    "model_boundary_overclaim_detected": false,
+    "neighbor_reconstruction_exact": true,
+    "new_E_REPRO_overclaim_detected": false,
+    "packet_decisions_all_pass": true,
+    "packet_selects_exact_review_target": true,
+    "packet_target_exact": true,
+    "packet_verdict_pending_review": true,
+    "physical_instability_overclaim_detected": false,
+    "timeline_reconstruction_exact": true,
+    "timing_correlation_reconstruction_exact": true,
+    "tolerance_numeric_reconstruction_exact": true,
+    "unavailable_mechanism_statuses_match": true
+  },
+  "passed_decision_count": 25,
+  "review_completed": true,
+  "review_interpretation": {
+    "accepted_if_review_passes": "R13 exhibits a reproducible tolerance-dependent buildup of linked longitudinal residuals. The temporal order is consistent with a shared longitudinal source, but the preserved outputs do not identify a causal equation hierarchy or exact root numerical mechanism.",
+    "computational_stability_distinction": "Constant iteration counts and declining scalar solver residuals rule against an obvious late-time convergence crisis; they do not prove that the loose solve is accurate enough to preserve the four structural identities.",
+    "time_law_distinction": "Three series are closer to linear in time than linear in time squared on the ordinary scale, while longitudinal exchange is closer to time squared. No common growth law or longer-duration prediction is accepted."
+  },
+  "reviewer_sha256": "fcf173e2299edf93523cec588e5558d06b51baf4168cd77aef3e7d29f422615d",
+  "root_numerical_mechanism_status": "UNRESOLVED",
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_REVIEW_20260715_v0",
+  "selected_next_target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_route_selection_packet_v0",
+  "source_custody": {
+    "canonical_output_mutation_authorized": false,
+    "canonical_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+    "canonical_root_digest_exact": true,
+    "canonical_root_file_count": 205,
+    "canonical_run_output_count_checked": 203,
+    "canonical_run_output_hash_failures": [],
+    "diagnostic_generator_hash_bound_by_manifest": true,
+    "diagnostic_packet_hash_bound_by_manifest": true,
+    "diagnostic_report_hashes_match_packet_manifest_and_generator": true,
+    "execution_count_performed": 1,
+    "expected_source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_20260715_v0.json": "b065687a1904ad3e9d8f3c607d72272a19d4bc7cf41b8170f0c2cb980248b481",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-DIAGNOSTIC-MANIFEST-v0.json": "bf8ffa4e606229d0eb0a54a41bddf62fc02c15316cd41efc00eaa2d67f6d6aca",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-DIAGNOSTIC-PACKET-v0.json": "8edd51901d2999ea1781c5768a64aeabd7d5328dfda61f45e4a7853865937eed",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0.py": "e9a6aeb6e96244cb39aff93e61c80cbe19e238b5c23b7e29dd1f82cc484760eb"
+    },
+    "manifest_root_digest_exact": true,
+    "packet_root_digest_exact": true,
+    "passed": true,
+    "simulation_invocation_count_during_review": 0,
+    "source_artifact_hashes": {
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json": "cacbd77f3ef18a80d8d15686dd8f385f73a634038fddb5010058f2e144ef3c85",
+      "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_20260715_v0.json": "b065687a1904ad3e9d8f3c607d72272a19d4bc7cf41b8170f0c2cb980248b481",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v2.json": "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-MANIFEST-v2.json": "59ca16e4d16f2b96d87c77f1fb16a3c4270a3e29c8dbc097edb5700ed9da1338",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXECUTION-PACKET-v2.json": "9020fd19774a2c2ccff108fd7950945a076a459f185bed3b10480270499cf86a",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json": "9a87c0a1447d4c4462dbf8fc21ef4b8aeb87e62867c67d1db78ac25c2d8ad09e",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v2.json": "a906c7c11dee659a3f66739d7ee807523743ea8311283dc2e4d99e0f2c17bcb2",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-DIAGNOSTIC-MANIFEST-v0.json": "bf8ffa4e606229d0eb0a54a41bddf62fc02c15316cd41efc00eaa2d67f6d6aca",
+      "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-R13-NUMERICAL-BLOCK-DIAGNOSTIC-PACKET-v0.json": "8edd51901d2999ea1781c5768a64aeabd7d5328dfda61f45e4a7853865937eed",
+      "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0.py": "e9a6aeb6e96244cb39aff93e61c80cbe19e238b5c23b7e29dd1f82cc484760eb"
+    },
+    "source_artifact_hashes_exact": true
+  },
+  "target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0_result",
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 151,
+      "status": "PASSED"
+    },
+    "authority_surface_parity": "PASSED",
+    "canonical_output_mutation_count": 0,
+    "current_affected_descendant_robustness_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 233
+    },
+    "focused_independent_diagnostic_review_tests": {
+      "failed": 0,
+      "passed": 13
+    },
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    },
+    "simulation_invocation_count": 0
+  },
+  "verdict": "ACCEPT_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PATTERN_ROOT_MECHANISM_UNRESOLVED"
+}

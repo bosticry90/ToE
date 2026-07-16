@@ -1,6 +1,12 @@
 README.md
 A Formal Research Hypothesis Toward a Unified Physical Framework
 
+## Start here
+
+- Public introduction: [PUBLIC_OVERVIEW.md](PUBLIC_OVERVIEW.md)
+- Repository setup and architecture: [TECHNICAL_REPOSITORY_GUIDE.md](TECHNICAL_REPOSITORY_GUIDE.md)
+- Maxwell–Dirac result and robustness status: [MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md](MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md)
+
 Compact developer setup and validation: `DEVELOPMENT.md`.
 
 Latest nonauthoritative engineering audit:

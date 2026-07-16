@@ -1,0 +1,111 @@
+{
+  "all_axis_sharing_neighbors_pass": true,
+  "artifact_hashes": {
+    "generator_sha256": "e9a6aeb6e96244cb39aff93e61c80cbe19e238b5c23b7e29dd1f82cc484760eb",
+    "manifest_sha256": "bf8ffa4e606229d0eb0a54a41bddf62fc02c15316cd41efc00eaa2d67f6d6aca",
+    "packet_sha256": "8edd51901d2999ea1781c5768a64aeabd7d5328dfda61f45e4a7853865937eed"
+  },
+  "authority_boundary": {
+    "CCFT_promotion_authorized": false,
+    "C_k_dynamics_authorized": false,
+    "conditional_or_broad_robustness_authorized": false,
+    "fit_range_change_authorized": false,
+    "loose_solver_role_removal_authorized": false,
+    "master_action_promotion_authorized": false,
+    "materiality_assigned": false,
+    "model_domain_claim_authorized": false,
+    "new_E_REPRO_authorized": false,
+    "new_simulation_authorized": false,
+    "packet_independently_accepted": false,
+    "packet_prepared": true,
+    "pillar_or_seam_promotion_authorized": false,
+    "rerun_authorized": false,
+    "row_exclusion_authorized": false,
+    "threshold_change_authorized": false
+  },
+  "axis_sharing_neighbor_count": 11,
+  "bounded_diagnostic_conclusion": "The preserved arrays support a common tolerance-sensitive longitudinal numerical structure, not four independent physical failures. They do not contain enough component-level evidence to identify the causal equation block, exact cancellation mechanism, or discrete identity closure.",
+  "canonical_output_root_digest": "6d38108b9403d1a74fce9659e94dee9a89555870b5d8034ba221173ce1338f14",
+  "captured_at_utc": "2026-07-15T00:00:00Z",
+  "claim_ceiling": "Read-only diagnosis of the accepted R13 numerical block from preserved outputs only. The packet may report descriptive timing, tolerance response, solver histories, neighbor contrast, and explicit data-availability blockers; it cannot authorize a rerun, change a threshold, assign materiality, or reclassify robustness.",
+  "decision_count": 16,
+  "diagnostic_source_run_count": 15,
+  "discrete_identity_closure_status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS",
+  "equation_block_solver_history_status": "NOT_REGISTERED",
+  "exact_cancellation_kappa_status": "NOT_DERIVABLE_FROM_PRESERVED_OUTPUTS",
+  "failed_decision_ids": [],
+  "failure_timeline_count": 4,
+  "nonclaims": [
+    "no new R13 run",
+    "no solver-tolerance substitution",
+    "no threshold relaxation",
+    "no loose-role removal",
+    "no exact cancellation mechanism established",
+    "no discrete identity closure established",
+    "no model-domain boundary",
+    "no conditional or broad robustness",
+    "no descendant materiality",
+    "no new E-REPRO",
+    "no pillar or seam promotion",
+    "no C_k dynamics",
+    "no CCFT promotion",
+    "no master-action promotion",
+    "no repository-wide green claim"
+  ],
+  "passed_decision_count": 16,
+  "schema_id": "DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_R13_NUMERICAL_BLOCK_DIAGNOSTIC_PACKET_20260715_v0",
+  "selected_next_target": "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0_result",
+  "source_custody_passed": true,
+  "target": "prepare_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_r13_numerical_block_diagnostic_packet_v0",
+  "threshold_crossing_order": [
+    {
+      "threshold_ids": [
+        "maximum_continuity_residual",
+        "maximum_longitudinal_Maxwell_residual"
+      ],
+      "time": 0.0125
+    },
+    {
+      "threshold_ids": [
+        "maximum_exchange_longitudinal_residual"
+      ],
+      "time": 0.03125
+    },
+    {
+      "threshold_ids": [
+        "maximum_Gauss_residual"
+      ],
+      "time": 0.043750000000000004
+    }
+  ],
+  "tolerance_exponent_range": {
+    "maximum": 0.7559176564888908,
+    "median": 0.7486818198236936,
+    "minimum": 0.7448900948221593
+  },
+  "validation_status": {
+    "affected_Lean_build": {
+      "job_count": 150,
+      "status": "PASSED"
+    },
+    "authority_surface_parity": "PASSED",
+    "canonical_output_mutation_count": 0,
+    "canonical_simulation_invocation_count": 0,
+    "current_affected_descendant_robustness_chain": {
+      "failed": 0,
+      "historical_worktree_sensitive_deselections": 2,
+      "passed": 220
+    },
+    "focused_R13_diagnostic_packet_tests": {
+      "failed": 0,
+      "passed": 12
+    },
+    "historical_repository_wide_Lean": {
+      "completed_jobs": 8441,
+      "repository_wide_green_claim": false,
+      "status": "INCOMPLETE_TIMEOUT",
+      "total_jobs": 8507
+    }
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}
