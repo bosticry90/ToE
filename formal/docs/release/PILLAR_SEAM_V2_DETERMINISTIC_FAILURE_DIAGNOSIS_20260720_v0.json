@@ -1,0 +1,71 @@
+{
+  "schema_id": "PILLAR_SEAM_V2_DETERMINISTIC_FAILURE_DIAGNOSIS_20260720_v0",
+  "status": "DIAGNOSED_CANONICAL_TEXT_CUSTODY_FAILURE_NO_SCIENTIFIC_CHANGE",
+  "phase_a_evidence": {
+    "external_log": "C:/toe-custody-v0/baseline/v2_checks.log",
+    "external_log_sha256": "be35a64150f0f8ba9886c59ea4f21b4f1d044a33b7bc387f752b5fd32fa62ac0",
+    "external_log_bytes": 13356,
+    "passed": 2,
+    "failed": 8
+  },
+  "first_cause": {
+    "class": "NONCANONICAL_WORKTREE_LINE_ENDINGS",
+    "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json",
+    "expected_committed_lf_sha256": "268525f4646c60bab7077faa559907c581d08d08d1b2ae001c316581fd9b55f6",
+    "observed_crlf_worktree_sha256": "4dd95706cfe3abf97492978bb4d7ee0a6ed86b51a2daf635279517168867b42f",
+    "committed_bytes": 31336,
+    "observed_worktree_bytes": 32016,
+    "observed_crlf_pairs": 680,
+    "scientific_payload_difference": false
+  },
+  "failure_groups": [
+    {
+      "count": 6,
+      "module": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py",
+      "classification": "SECONDARY_CASCADE",
+      "first_exception": "input hash mismatch for PILLAR_SEAM_UNIT_MAPPING_LEDGER_RESULT_REVIEW_20260712_v0.json",
+      "repair": "enforce LF checkout for canonical release JSON"
+    },
+    {
+      "count": 1,
+      "module": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2_result_review.py",
+      "test": "test_v2_review_recomputes_authority_routes_and_eligibility",
+      "classification": "SECONDARY_CASCADE",
+      "false_checks": [
+        "strict_json_and_canonical_bytes_reproduce",
+        "source_locators_and_hashes_recomputed",
+        "dependency_closures_are_bounded_and_complete"
+      ],
+      "repair": "enforce LF checkout for canonical Python, output JSON, and release JSON"
+    },
+    {
+      "count": 1,
+      "module": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2_result_review.py",
+      "test": "test_v2_review_binds_immutable_preparation_and_prompt",
+      "classification": "SECONDARY_CASCADE",
+      "false_checks": [
+        "working_hashes_match"
+      ],
+      "commit_tree_hashes_match": true,
+      "repair": "enforce LF checkout so working bytes equal immutable preparation-commit bytes"
+    }
+  ],
+  "authorized_correction": {
+    "path": ".gitattributes",
+    "kind": "CUSTODY_CANONICALIZATION_PATH_INDEPENDENCE",
+    "zones": [
+      "formal/docs/release/*.json",
+      "formal/output/*.json",
+      "formal/output/**/*.json",
+      "formal/python/**/*.py"
+    ]
+  },
+  "scientific_boundaries": {
+    "v2_scientific_content_changed": false,
+    "v2_regenerated": false,
+    "v2_enrolled": false,
+    "scientific_registry_target_changed": false,
+    "unit_or_seam_resolution_claimed": false
+  },
+  "required_confirmation": "RUN_THE_TEN_FROZEN_V2_TESTS_IN_THE_SINGLE_AUTHORIZED_FRESH_LF_CLONE"
+}

@@ -60,7 +60,7 @@ Record (computed)
   ],
   "provenance": {
     "bands": {
-      "ovxd03_fingerprint": "e50a44d369d0ff9c4f56fc6756456df5ceaf9818a2632a6da56167ac551c674d",
+      "ovxd03_fingerprint": "a9ade38c949c955a9b0cae1912a389179deeaed8c59ca02718a6d5e3606a69fd",
       "ovxd03_schema": "OV-XD-03/v2",
       "source": "OV-XD-03"
     },
@@ -83,4 +83,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac`
+Record fingerprint: `e95e203290fe6c046ae6fe43377ca5925e9334c4512fcb92663b803d0dd7f17a`

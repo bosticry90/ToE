@@ -10,7 +10,7 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1",
+  "fingerprint": "c33a1ad86ab13ca03f4d06f63eff8971d4f1dcccb0870f3b5cba44fbe5527fbb",
   "inputs": {
     "condition_A": {
       "diagnostic": {
@@ -95,7 +95,7 @@ Record (computed)
     },
     "blocked": false,
     "debug": {
-      "manifest_input_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
+      "manifest_input_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
       "manifest_resolved_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
       "manifest_sha256": "2f9c1aa1dbcc30451ac0740cb09d85c1d12b6490efb02d449e453cc0de94c13f",
       "manifest_version": 5
@@ -110,4 +110,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1`
+Record fingerprint: `c33a1ad86ab13ca03f4d06f63eff8971d4f1dcccb0870f3b5cba44fbe5527fbb`

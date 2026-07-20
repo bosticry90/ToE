@@ -38,6 +38,11 @@ import re
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.tracked_output_write_guard import (
+    TRACKED_OUTPUT_WRITE_ENV_VALUE,
+    TRACKED_OUTPUT_WRITE_ENV_VAR,
+    tracked_output_writes_allowed,
+)
 from formal.python.toe.observables.ovbr02_regime_bridge_record import write_ovbr02_lock
 from formal.python.toe.observables.ovdq02_dq01_v2_threshold_update_record import write_ovdq02_lock
 from formal.python.toe.observables.ovdq03_dq01_active_policy_activation_record import write_ovdq03_lock
@@ -455,6 +460,13 @@ def main(argv: list[str] | None = None) -> int:
             for path in validated:
                 print(f"  - {path}")
         return 0
+
+    if not tracked_output_writes_allowed():
+        raise RuntimeError(
+            "Canonical lock regeneration is a source mutation and requires explicit "
+            f"{TRACKED_OUTPUT_WRITE_ENV_VAR}={TRACKED_OUTPUT_WRITE_ENV_VALUE}. "
+            "Validation must use --validate-only."
+        )
 
     written: list[str] = []
 

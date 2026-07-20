@@ -52,6 +52,9 @@ RECOVERY_TARGET = (
 RECOVERY_AUTHORITY = (
     "REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_PACKET_v0"
 )
+STABILIZATION_TARGET = (
+    "prepare_repository_clean_baseline_validation_stabilization_packet_v0"
+)
 
 
 class AuthorizationError(RuntimeError):
@@ -198,6 +201,7 @@ def build_maintenance_authority(packet: dict[str, Any]) -> dict[str, Any]:
     if previous.get("current_maintenance_target") not in {
         PREVIOUS_MAINTENANCE_TARGET,
         RECOVERY_TARGET,
+        STABILIZATION_TARGET,
     }:
         raise AuthorizationError("unexpected prior maintenance target")
     historical_snapshot = previous.get(

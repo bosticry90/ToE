@@ -60,7 +60,15 @@ def test_regen_bragg_only_override_is_stable_and_unblocked_for_key_records() -> 
         REPO_ROOT / "formal" / "markdown" / "locks" / "observables" / "OV-FN-02_weighted_residual_audit_OVERRIDE.md",
     ]
 
-    rc = regen_main(["--bragg-only", "--admissibility-manifest", str(override), "--report"])
+    rc = regen_main(
+        [
+            "--bragg-only",
+            "--admissibility-manifest",
+            str(override),
+            "--validate-only",
+            "--report",
+        ]
+    )
     assert rc == 0
 
     after_1_keys: list[str] = []
@@ -68,9 +76,16 @@ def test_regen_bragg_only_override_is_stable_and_unblocked_for_key_records() -> 
         locked = _extract_json_block(p.read_text(encoding="utf-8"))
         after_1_keys.append(_semantic_stability_key(locked))
 
-    # Run twice: the first run may normalize legacy lock state; the second run
-    # must be a fixed point.
-    rc = regen_main(["--bragg-only", "--admissibility-manifest", str(override), "--report"])
+    # Run twice: read-only validation must be a stable fixed point.
+    rc = regen_main(
+        [
+            "--bragg-only",
+            "--admissibility-manifest",
+            str(override),
+            "--validate-only",
+            "--report",
+        ]
+    )
     assert rc == 0
 
     after_2_keys: list[str] = []
