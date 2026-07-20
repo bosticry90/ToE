@@ -1,27 +1,51 @@
 {
   "boundary": {
-    "maintenance_target_inserted_into_scientific_workstreams": false,
-    "migration_execution_authorized": false,
-    "next_maintenance_target_selected": false,
+    "first_unit_selector_execution_authorized": false,
+    "phase_b_authorized": false,
+    "phase_c_authorized": false,
+    "registry_sharding_migration_authorized": false,
+    "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
-    "scientific_target_rotated": false
+    "scientific_target_rotated": false,
+    "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-11T00:00:00Z",
-  "current_maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0.json",
-  "current_maintenance_target_evidence_sha256": "7371ff496fc8fd948e892e0136d380991c6f87128201d12fe7ff6f5df9ffa764",
-  "current_maintenance_target_kind": "registry_sharding_guardrail_preparation",
-  "current_maintenance_target_status": "PREPARED_CONTRACT_CURRENT_NO_EXECUTION_SUCCESSOR_SELECTED",
-  "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
-  "maintenance_consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
-  "maintenance_program_source": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
-  "maintenance_program_source_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
-  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
-  "scientific_authority": {
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "current_maintenance_target": "prepare_repository_authority_custody_and_reproducibility_recovery_packet_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_PACKET_20260719_v0.json",
+  "current_maintenance_target_evidence_sha256": "40a679242878094a260e25da13fb9d6dedd0547dc22f34a44a003e482ed15c86",
+  "current_maintenance_target_kind": "repository_authority_custody_recovery",
+  "current_maintenance_target_status": "AUTHORIZED_PHASE_A_ONLY",
+  "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
     "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
-  "status": "ACTIVE_OPERATIONAL_NONSCIENTIFIC_MAINTENANCE_GUARDRAIL_ONLY"
+  "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
+  "maintenance_consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
+  "maintenance_program_source": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+  "maintenance_program_source_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
+  "previous_maintenance_lane_disposition": "DEFERRED_NOT_RETIRED",
+  "previous_maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
+  "previous_maintenance_target_evidence": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0.json",
+  "previous_maintenance_target_evidence_sha256": "7371ff496fc8fd948e892e0136d380991c6f87128201d12fe7ff6f5df9ffa764",
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
+    "current_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
+    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+    "current_target_strict_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "status": "ACTIVE_OPERATIONAL_NONSCIENTIFIC_RECOVERY_AUTHORITY"
 }
