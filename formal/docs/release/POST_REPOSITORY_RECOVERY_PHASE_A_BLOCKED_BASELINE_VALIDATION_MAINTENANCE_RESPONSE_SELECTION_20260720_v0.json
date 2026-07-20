@@ -1,41 +1,23 @@
 {
-  "boundary": {
-    "baseline_stabilization_authorized": true,
+  "baseline_disposition": "RED_REPAIR_REQUIRED",
+  "boundaries": {
     "first_unit_selector_execution_authorized": false,
-    "fresh_clone_validation_cycles_remaining": 1,
+    "maxwell_dirac_execution_authorized": false,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
-    "registry_sharding_migration_authorized": false,
-    "scientific_execution_authorized": false,
-    "scientific_target_displaced": false,
-    "scientific_target_rotated": false,
-    "stabilization_implementation_cycles_remaining": 1,
+    "scalar_yukawa_execution_authorized": false,
+    "scientific_execution_frozen": true,
+    "scientific_registry_mutation_authorized": false,
+    "scientific_target_unchanged": true,
     "v2_enrollment_authorized": false,
-    "v2_regeneration_authorized": false
+    "v2_scientific_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-20T00:00:00Z",
-  "current_maintenance_target": "prepare_repository_clean_baseline_validation_stabilization_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_20260720_v0.json",
-  "current_maintenance_target_evidence_sha256": "7bbd587ea5fc085d6e86cb3579faf13aec41d23efe982432be8ae6699ba020c1",
-  "current_maintenance_target_kind": "committed_source_reproducibility_stabilization",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_IMPLEMENTATION_AND_VALIDATION_CYCLE",
-  "historical_scientific_snapshot": {
-    "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
-    "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
-    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
-    "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
-  },
-  "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
-  "maintenance_consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
-  "maintenance_program_source": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
-  "maintenance_program_source_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
   "phase_a_preservation": {
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
   "previous_maintenance_target": "prepare_repository_authority_custody_and_reproducibility_recovery_packet_v0",
-  "previous_maintenance_target_status": "EVIDENCE_BLOCKED_BASELINE_VALIDATION",
-  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
+  "schema_id": "POST_REPOSITORY_RECOVERY_PHASE_A_BLOCKED_BASELINE_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0",
   "scientific_authority": {
     "blocked_seams": 5,
     "blocked_unit_seam_rows": 12,
@@ -53,5 +35,12 @@
     "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
-  "status": "ACTIVE_BOUNDED_BASELINE_STABILIZATION_AUTHORITY"
+  "selected_maintenance_target": "prepare_repository_clean_baseline_validation_stabilization_packet_v0",
+  "selected_route": "PRESERVE_PHASE_A_RESULT_AND_AUTHORIZE_BOUNDED_BASELINE_STABILIZATION",
+  "selector": "select_post_repository_recovery_phase_a_blocked_baseline_validation_maintenance_response_v0",
+  "status": "SELECTED_PENDING_INDEPENDENT_STABILIZATION_REVIEW",
+  "substantive_choices": [
+    "PRESERVE_PHASE_A_RESULT_AND_AUTHORIZE_BOUNDED_BASELINE_STABILIZATION",
+    "PRESERVE_PHASE_A_RESULT_AND_DEFER_REPOSITORY_RECOVERY"
+  ]
 }

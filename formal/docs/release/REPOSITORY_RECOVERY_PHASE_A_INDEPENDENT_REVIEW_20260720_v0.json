@@ -1,0 +1,24 @@
+{
+  "accepted_for_phase_b": false,
+  "checks": {
+    "all_baseline_failures_classified": false,
+    "all_custody_objects_verified": true,
+    "audited_counts_exact": true,
+    "baseline_suite_completed": false,
+    "baseline_validation_was_read_only": false,
+    "commit_lineage_complete": true,
+    "failure_population_complete": false,
+    "manifest_root_hash_valid": true,
+    "maxwell_dirac_not_registry_enrolled": true,
+    "mirror_conflict_recorded": true,
+    "original_worktree_unchanged": true,
+    "scalar_lane_noncurrent": true,
+    "scientific_posture_preserved": true,
+    "transition_ledger_nonempty": true,
+    "v2_not_registry_enrolled": true
+  },
+  "outcome": "EVIDENCE_BLOCKED_BASELINE_VALIDATION",
+  "schema_id": "REPOSITORY_RECOVERY_PHASE_A_INDEPENDENT_REVIEW_20260719_v0",
+  "scientific_execution_authorized": false,
+  "scientific_status_changed": false
+}
