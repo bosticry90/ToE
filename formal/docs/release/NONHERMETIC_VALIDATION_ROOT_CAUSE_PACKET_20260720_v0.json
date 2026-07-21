@@ -1,0 +1,131 @@
+{
+  "acceptance_criteria": [
+    "EXACT_FIVE_FILE_MUTATOR_CALL_CHAIN_IDENTIFIED",
+    "PATH_AND_ENVIRONMENT_CANONICALIZATION_DEPENDENCIES_RECOMPUTED",
+    "REMAINING_PYTHON_FAILURES_CLUSTERED_BY_PRIMARY_FIRST_CAUSE_AND_SECONDARY_CASCADE",
+    "LEAN_COLD_BUILD_TIMEOUT_SEPARATED_FROM_SOURCE_OR_BUILD_FAILURE",
+    "V2_COMMITTED_WORKING_AND_CUSTODY_BYTE_IDENTITIES_RECONCILED_DIAGNOSTICALLY",
+    "TRACKED_SOURCE_DIFF_EMPTY_AFTER_EVERY_DIAGNOSTIC_COMMAND",
+    "NO_SCIENTIFIC_OR_AUTHORITY_STATE_CHANGE"
+  ],
+  "authorized_diagnostic_work": {
+    "lean": [
+      "RECOMPUTE_COLD_BUILD_STAGE_TIMINGS_FROM_PRESERVED_LOG",
+      "CLASSIFY_TIMEOUT_SEPARATELY_FROM_SOURCE_FAILURE",
+      "IDENTIFY_PROCESS_DESCENDANT_CLEANUP_DEFECT_WITHOUT_TOOL_REPAIR"
+    ],
+    "nonhermetic_mutator": {
+      "call": "qm_gr_criteria_hash_refresh.apply_updates(repo_root=tool.REPO_ROOT)",
+      "expected_mutated_paths": [
+        "State_of_the_Theory.md",
+        "formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md",
+        "formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md",
+        "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+        "formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md"
+      ],
+      "test": "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_write_is_idempotent_on_pinned_repo_state",
+      "tool": "formal/python/tools/qm_gr_criteria_hash_refresh.py"
+    },
+    "python_failure_clustering": [
+      "CLUSTER_459_FAILURES_AND_57_ERRORS_FROM_PRESERVED_LOG",
+      "SEPARATE_PRIMARY_COMMITTED_DEFECTS_FROM_SECONDARY_CASCADES",
+      "IDENTIFY_ORDER_DEPENDENT_AND_ENVIRONMENT_DEPENDENT_CLUSTERS",
+      "DO_NOT_MODIFY_TESTS_OR_EXPECTATIONS"
+    ],
+    "v2_byte_identity": [
+      "COMPARE_COMMITTED_BLOB_WORKING_TREE_AND_CUSTODY_BYTES",
+      "EXPLAIN_MIXED_LINE_ENDING_DEPENDENCY",
+      "DO_NOT_REGENERATE_OR_ENROLL_V2"
+    ]
+  },
+  "cycle_limit": {
+    "automatic_repair_after_failure_authorized": false,
+    "diagnostic_execution_cycles": 1,
+    "independent_result_reviews": 1,
+    "repair_implementation_cycles": 0,
+    "scientific_execution_cycles": 0
+  },
+  "diagnostic_output_boundary": {
+    "allowed_root": "C:/Users/psboy/Documents/ToE/.toe-recovery/custody-v0/nonhermetic-root-cause-v0",
+    "tracked_repository_output_authorized": false,
+    "working_clone": "CONTAINED_DISPOSABLE_WORKSPACE_ONLY"
+  },
+  "evidence": {
+    "lean_clean_bootstrap_result": {
+      "path": ".toe-recovery/custody-v0/stabilization/lean_clean_bootstrap_result.json",
+      "sha256": "2d360765f49beb25707113ff9bff86ff8ab179bd13bbaea286de92859d434866"
+    },
+    "nonlean_inventory_log": {
+      "path": ".toe-recovery/custody-v0/stabilization/nonlean_inventory_pytest.log",
+      "sha256": "a8d1d15a92adbd4124c1384fc5c785c788b84947f733a4a5f29a429be8e52ae2"
+    },
+    "nonlean_mutation_manifest": {
+      "path": ".toe-recovery/custody-v0/stabilization/nonlean_mutation/CLEAN_BASELINE_POST_VALIDATION_MUTATION_MANIFEST_v0.json",
+      "sha256": "c79aff62bef6f4e493f0616200752f430d3e7a282187d1eb32b8a6475fbf2873"
+    },
+    "nonlean_mutation_patch": {
+      "path": ".toe-recovery/custody-v0/stabilization/nonlean_mutation/CLEAN_BASELINE_POST_VALIDATION_MUTATIONS_v0.patch",
+      "sha256": "64240db865ef202b6ddee4e6400d9890b9ccdc6cb7c7df48a02797b18bc477f5"
+    },
+    "v2_checks_log": {
+      "path": ".toe-recovery/custody-v0/stabilization/v2_checks.log",
+      "sha256": "95ee33aba0ec84fecc05e66556e33d413350cc246f7284b8edcb01ed723f5b78"
+    }
+  },
+  "known_failure_state": {
+    "lean_failure_class": "LEAN_BUILD_TIMEOUT",
+    "lean_last_observed_job": "8345/8507",
+    "nonlean_errors": 57,
+    "nonlean_failed": 459,
+    "nonlean_passed": 12635,
+    "nonlean_skipped": 598,
+    "tracked_validation_mutations": 5,
+    "v2_failed": 7,
+    "v2_passed": 3
+  },
+  "maintenance_target": "prepare_nonhermetic_validation_root_cause_packet_v0",
+  "prior_failure": {
+    "outcome": "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION",
+    "result_path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json",
+    "result_sha256": "d2db8ace01049ccc05234f54f830df4af9040a0c5eaf8c776946bd07c51d888b"
+  },
+  "prohibited_work": [
+    "NO_BASELINE_REPAIR",
+    "NO_TEST_MODIFICATION",
+    "NO_TRACKED_SOURCE_REGENERATION",
+    "NO_SCIENTIFIC_REGISTRY_ROTATION",
+    "NO_V2_ENROLLMENT_OR_REGENERATION",
+    "NO_SCALAR_YUKAWA_OR_MAXWELL_DIRAC_RESUMPTION",
+    "NO_UNIT_OR_SEAM_RESOLUTION",
+    "NO_MASTER_ACTION_PROMOTION",
+    "NO_PHASE_B_OR_PHASE_C_ACTIVITY",
+    "NO_BRANCH_CHECKOUT_IN_DIRTY_MAIN"
+  ],
+  "schema_id": "NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET_20260720_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "selector": {
+    "path": "formal/docs/release/POST_BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0.json",
+    "sha256": "b0e6bb5eef49b76509db1ea53f7d82c754cbd869df740e07b6b6517e9a0eaa1f"
+  },
+  "source_cleanliness_invariant": {
+    "after_every_diagnostic_command": "TRACKED_SOURCE_DIFF_EMPTY",
+    "failure_outcome_if_violated": "NONHERMETIC_ROOT_CAUSE_PACKET_BLOCKED_SOURCE_MUTATION",
+    "mutation_capture_before_cleanup_required": true
+  },
+  "status": "PREPARED_PENDING_INDEPENDENT_AUTHORIZATION_REVIEW",
+  "terminal_outcomes": [
+    "NONHERMETIC_ROOT_CAUSE_PACKET_READY_FOR_INDEPENDENT_RESULT_REVIEW",
+    "NONHERMETIC_ROOT_CAUSE_PACKET_BLOCKED_SOURCE_MUTATION",
+    "NONHERMETIC_ROOT_CAUSE_PACKET_BLOCKED_INSUFFICIENT_EVIDENCE",
+    "NONHERMETIC_ROOT_CAUSE_PACKET_BLOCKED_AUTHORITY_IDENTITY"
+  ]
+}
