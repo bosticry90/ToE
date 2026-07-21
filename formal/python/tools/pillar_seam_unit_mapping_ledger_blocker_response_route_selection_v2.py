@@ -11,6 +11,7 @@ import subprocess
 import sys
 import unicodedata
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Callable
 
@@ -326,6 +327,7 @@ def sha256_path(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 
 
+@lru_cache(maxsize=1)
 def _frozen_commit() -> str:
     record_path = REPO_ROOT / FROZEN_COMMIT_RECORD_RELATIVE_PATH
     payload = json.loads(record_path.read_text(encoding="utf-8"))
@@ -340,6 +342,7 @@ def _frozen_commit() -> str:
     return commit
 
 
+@lru_cache(maxsize=None)
 def _git_blob_bytes(relative_path: str, *, commit: str | None = None) -> bytes:
     frozen_commit = commit or _frozen_commit()
     result = subprocess.run(
@@ -355,6 +358,7 @@ def _git_blob_bytes(relative_path: str, *, commit: str | None = None) -> bytes:
     return result.stdout
 
 
+@lru_cache(maxsize=None)
 def _git_blob_oid(relative_path: str, *, commit: str | None = None) -> str:
     frozen_commit = commit or _frozen_commit()
     result = subprocess.run(
