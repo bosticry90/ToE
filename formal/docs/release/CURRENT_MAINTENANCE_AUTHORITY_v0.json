@@ -5,34 +5,35 @@
     "bounded_hash_identity_repair_authorized": false,
     "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "independent_result_reviews_remaining": 0,
+    "independent_result_reviews_remaining": 1,
+    "line_ending_identity_and_mapping_tuple_repair_authorized": true,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 0,
+    "repair_implementation_cycles_remaining": 1,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": false,
-    "tracked_source_mutation_authorized": false,
+    "test_modification_authorized": true,
+    "tracked_source_mutation_authorized": true,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-21T23:39:56Z",
+  "captured_at_utc": "2026-07-21T23:51:28Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_post_identity_baseline_reassessment_failed_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_20260721_v0.json",
-  "current_maintenance_target_evidence_sha256": "bdb06f9583728ac14e79b3e14f214ae8259c6a602e2786eadf2c8327776d870f",
-  "current_maintenance_target_kind": "failed_terminal_post_identity_baseline_reassessment_preservation",
-  "current_maintenance_target_status": "FAILED_TERMINAL_RESULT_PRESERVED_NO_AUTO_REPAIR",
+  "current_maintenance_target": "prepare_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_packet_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_20260721_v0.json",
+  "current_maintenance_target_evidence_sha256": "d07cdda749f3fa8787c0f5a7819826cd89be5caf94f6ccc17cedb586d26d8ebc",
+  "current_maintenance_target_kind": "bounded_line_ending_identity_and_mapping_tuple_nonhermetic_repair",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_NARROW_REPAIR_IMPLEMENTATION_AND_ONE_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -40,8 +41,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_PACKET_REVIEW_20260721_v0.json",
-    "sha256": "60b2acf321eb841f29f343db04b325b6010f47fe2b10a9dee67ed97dbdb39843",
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_REVIEW_20260721_v0.json",
+    "sha256": "8e64c98b7c0f527ce34112f3797a09b28a7ecf8bc7a422ca566eb64793aba09b",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -72,8 +73,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "execute_bounded_post_identity_baseline_reassessment_v0",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_NONMUTATING_REASSESSMENT_CYCLE",
+  "previous_maintenance_target": "preserve_post_identity_baseline_reassessment_failed_result_v0",
+  "previous_maintenance_target_status": "FAILED_TERMINAL_RESULT_PRESERVED_NO_AUTO_REPAIR",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -96,8 +97,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_HASH_IDENTITY_REPAIR_MAINTENANCE_SELECTION_20260721_v0.json",
-    "sha256": "7d6b79ab537cd141e6f306e38956fdefb1a565f11002c0e40ff623a9c61e74d7"
+    "path": "formal/docs/release/POST_REASSESSMENT_MAINTENANCE_SELECTION_20260721_v0.json",
+    "sha256": "48347269631945ff62c1eb036bd7e52d20f283ce0c1bf09208c3b2e46b5fd704"
   },
-  "status": "PRESERVED_FAILED_POST_IDENTITY_BASELINE_REASSESSMENT_NO_SCIENTIFIC_AUTHORITY"
+  "status": "ACTIVE_BOUNDED_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_REPAIR_NO_SCIENTIFIC_AUTHORITY"
 }

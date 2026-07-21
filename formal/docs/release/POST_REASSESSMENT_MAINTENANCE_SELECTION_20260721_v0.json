@@ -1,0 +1,21 @@
+{
+  "captured_at_utc": "2026-07-21T23:51:28Z",
+  "input_result": {
+    "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_20260721_v0.json",
+    "sha256": "bdb06f9583728ac14e79b3e14f214ae8259c6a602e2786eadf2c8327776d870f",
+    "outcome": "POST_IDENTITY_BASELINE_REASSESSMENT_BLOCKED"
+  },
+  "input_review": {
+    "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_REVIEW_20260721_v0.json",
+    "sha256": "664dedf2da8603f026b2ebb5379ac99fddea4107a7f6d791f424a281ca0345c5",
+    "verdict": "ACCEPTED_FAILED_TERMINAL_GOVERNANCE_RESULT"
+  },
+  "options": [
+    "AUTHORIZE_BOUNDED_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR",
+    "PRESERVE_REASSESSMENT_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "schema_id": "POST_REASSESSMENT_MAINTENANCE_SELECTION_20260721_v0",
+  "scientific_posture": "B-BLOCKED",
+  "selected": "AUTHORIZE_BOUNDED_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR",
+  "target": "prepare_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_packet_v0"
+}
