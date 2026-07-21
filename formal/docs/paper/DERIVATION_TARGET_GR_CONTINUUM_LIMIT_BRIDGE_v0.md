@@ -64,7 +64,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: aefe5054b14554a3e3ec1607f27558002e2faab8a6e0b06bd13b90329ecf83e8`
+- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3194a26af1303fe260c23b01d4cf4d6ab226de31abe30ac4cc556ff288d7cb97`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`

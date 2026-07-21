@@ -33,7 +33,7 @@ Integrated discharge criteria rows (cycle-010 pinned):
 
 Integrated criteria evidence artifact token:
 - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
-- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
+- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 7e3cdb5b36164c7394fffdb4ed7081c4a192c5f1e852278a0d4c1f58e82f5a45`
 
 Integrated criteria evidence artifact pointer:
 - `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`

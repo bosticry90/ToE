@@ -11879,7 +11879,7 @@ Exit-row promotion token:
 
 Criteria evidence artifact token:
 - `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_full_derivation_discharge_criteria_cycle10_v0`
-- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1`
+- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3dddcb3e5928507fe04bb7427d39838af8363395a9d9a8f2a52480d8c031f13a`
 
 Criteria evidence artifact pointer:
 - `formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json`
@@ -12036,7 +12036,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: aefe5054b14554a3e3ec1607f27558002e2faab8a6e0b06bd13b90329ecf83e8`
+- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3194a26af1303fe260c23b01d4cf4d6ab226de31abe30ac4cc556ff288d7cb97`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
@@ -12147,7 +12147,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00`
+- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: c22c204617236a3a68ef852e13a9daac0f471061d68582835ba4c995e5d9bf71`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
@@ -12247,7 +12247,7 @@ Integrated discharge criteria rows (cycle-010 pinned):
 
 Integrated criteria evidence artifact token:
 - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
-- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
+- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 7e3cdb5b36164c7394fffdb4ed7081c4a192c5f1e852278a0d4c1f58e82f5a45`
 
 Integrated criteria evidence artifact pointer:
 - `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`

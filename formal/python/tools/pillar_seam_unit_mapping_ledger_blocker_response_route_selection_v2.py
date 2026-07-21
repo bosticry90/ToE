@@ -46,6 +46,9 @@ V1_REVIEW_RELATIVE_PATH = (
     "ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json"
 )
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+FROZEN_COMMIT_RECORD_RELATIVE_PATH = (
+    "formal/docs/release/V2_TRACKED_BLOB_IDENTITY_FREEZE_20260721_v0.json"
+)
 
 PACKET_PATH = REPO_ROOT / PACKET_RELATIVE_PATH
 MANIFEST_PATH = REPO_ROOT / MANIFEST_RELATIVE_PATH
@@ -180,6 +183,9 @@ RECORD_REQUIRED_FIELDS = {
     "source_id",
     "source_path",
     "source_hash",
+    "source_identity_type",
+    "source_frozen_commit",
+    "source_git_blob_oid",
     "source_locator",
     "proposition_extraction_method",
     "source_declared_claim_label",
@@ -320,6 +326,95 @@ def sha256_path(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 
 
+def _frozen_commit() -> str:
+    record_path = REPO_ROOT / FROZEN_COMMIT_RECORD_RELATIVE_PATH
+    payload = json.loads(record_path.read_text(encoding="utf-8"))
+    commit = payload.get("frozen_commit")
+    if (
+        payload.get("schema_id")
+        != "V2_TRACKED_BLOB_IDENTITY_FREEZE_20260721_v0"
+        or not isinstance(commit, str)
+        or not re.fullmatch(r"[0-9a-f]{40}", commit)
+    ):
+        raise ValueError("invalid V2 tracked-blob identity freeze record")
+    return commit
+
+
+def _git_blob_bytes(relative_path: str, *, commit: str | None = None) -> bytes:
+    frozen_commit = commit or _frozen_commit()
+    result = subprocess.run(
+        ["git", "cat-file", "blob", f"{frozen_commit}:{relative_path}"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise ValueError(
+            f"missing frozen Git blob: {frozen_commit}:{relative_path}"
+        )
+    return result.stdout
+
+
+def _git_blob_oid(relative_path: str, *, commit: str | None = None) -> str:
+    frozen_commit = commit or _frozen_commit()
+    result = subprocess.run(
+        ["git", "rev-parse", f"{frozen_commit}:{relative_path}"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=False,
+        text=True,
+    )
+    oid = result.stdout.strip()
+    if result.returncode != 0 or not re.fullmatch(r"[0-9a-f]{40,64}", oid):
+        raise ValueError(
+            f"missing frozen Git blob identity: {frozen_commit}:{relative_path}"
+        )
+    return oid
+
+
+def _identity_type(relative_path: str) -> str:
+    if relative_path.startswith("formal/output/") or (
+        relative_path.startswith("formal/docs/release/")
+        and relative_path.endswith((".json", ".patch"))
+    ):
+        return "CANONICAL_ARTIFACT_SHA256"
+    return "GIT_BLOB_SHA256"
+
+
+def _frozen_identity(relative_path: str) -> dict[str, str]:
+    commit = _frozen_commit()
+    raw = _git_blob_bytes(relative_path, commit=commit)
+    return {
+        "path": relative_path,
+        "identity_type": _identity_type(relative_path),
+        "frozen_commit": commit,
+        "git_blob_oid": _git_blob_oid(relative_path, commit=commit),
+        "sha256": sha256_bytes(raw),
+    }
+
+
+def _identity_matches(binding: dict[str, Any]) -> bool:
+    path = binding.get("path")
+    if not isinstance(path, str):
+        return False
+    try:
+        expected = _frozen_identity(path)
+    except (OSError, ValueError, json.JSONDecodeError):
+        return False
+    return all(binding.get(key) == expected[key] for key in expected)
+
+
+def _frozen_text(relative_path: str) -> str:
+    return _git_blob_bytes(relative_path).decode("utf-8")
+
+
+def _frozen_json(relative_path: str) -> dict[str, Any]:
+    payload = json.loads(_git_blob_bytes(relative_path))
+    if not isinstance(payload, dict):
+        raise ValueError(f"frozen input root is not an object: {relative_path}")
+    return payload
+
+
 def _git_config(name: str) -> str:
     result = subprocess.run(
         ["git", "config", "--get", name],
@@ -331,14 +426,14 @@ def _git_config(name: str) -> str:
     return result.stdout.strip() if result.returncode == 0 else "UNSET"
 
 
-def _declared_label(path: Path) -> str:
-    text = path.read_text(encoding="utf-8")
+def _declared_label(relative_path: str) -> str:
+    text = _frozen_text(relative_path)
     match = re.search(r"Classification:\s*\r?\n-\s*`([^`]+)`", text)
     return match.group(1) if match else "SOURCE_UNDECLARED"
 
 
 def _markdown_locator(relative_path: str, anchors: list[str], *, whole_file: bool = False) -> dict[str, Any]:
-    lines = (REPO_ROOT / relative_path).read_text(encoding="utf-8").splitlines()
+    lines = _frozen_text(relative_path).splitlines()
     if whole_file:
         return {
             "locator_type": "MARKDOWN_HEADING_LINE_RANGE",
@@ -448,7 +543,7 @@ def _authority_fields(source_id: str, path: str) -> dict[str, str]:
         context = "RELEASE_FACING_CURRENT"
     else:
         context = "SOURCE_UNDECLARED"
-    if declared != "SOURCE_UNDECLARED" and _declared_label(REPO_ROOT / path) != declared:
+    if declared != "SOURCE_UNDECLARED" and _declared_label(path) != declared:
         raise ValueError(f"source-declared label changed: {path}")
     return {
         "source_declared_claim_label": declared,
@@ -468,6 +563,7 @@ def _record(
 ) -> dict[str, Any]:
     source_id = binding["source_id"]
     path = binding["path"]
+    identity = _frozen_identity(path)
     authority = _authority_fields(source_id, path)
     classification = proposition.get("classification")
     anchors = proposition.get("required_substrings", [])
@@ -518,7 +614,10 @@ def _record(
         "proposition_id": proposition["proposition_id"],
         "source_id": source_id,
         "source_path": path,
-        "source_hash": binding["sha256"],
+        "source_hash": identity["sha256"],
+        "source_identity_type": identity["identity_type"],
+        "source_frozen_commit": identity["frozen_commit"],
+        "source_git_blob_oid": identity["git_blob_oid"],
         "source_locator": locator,
         "proposition_extraction_method": extraction,
         **authority,
@@ -606,9 +705,7 @@ def _implementation_closure() -> dict[str, Any]:
         "formal.python.tools",
     }
     return {
-        "artifacts": [
-            {"path": path, "sha256": sha256_path(REPO_ROOT / path)} for path in paths
-        ],
+        "artifacts": [_frozen_identity(path) for path in paths],
         "project_local_import_scan": {
             "observed_modules": imported_project_modules,
             "expected_modules": sorted(expected_modules),
@@ -642,32 +739,31 @@ def _environment_closure() -> dict[str, Any]:
         "unicode_normalization": "UTF-8 NFC",
         "number_serialization": "finite integers or explicit decimal strings; JSON nonfinite values rejected",
         "bound_environment_files": [
-            {"path": path, "sha256": sha256_path(REPO_ROOT / path)}
+            _frozen_identity(path)
             for path in lock_paths
-            if (REPO_ROOT / path).is_file()
         ],
         "installed_package_sources_hashed_individually": False,
     }
 
 
 def _scientific_input_closure() -> list[dict[str, str]]:
-    bindings: dict[str, dict[str, str]] = {}
+    paths: set[str] = set()
     for binding in v1.SOURCES.values():
-        bindings[binding["path"]] = {
-            "path": binding["path"],
-            "sha256": binding["sha256"],
-        }
-    for path, digest in V1_EXPECTED_HASHES.items():
-        bindings[path] = {"path": path, "sha256": digest}
-    return [bindings[path] for path in sorted(bindings)]
+        paths.add(binding["path"])
+    paths.update(V1_EXPECTED_HASHES)
+    return [_frozen_identity(path) for path in sorted(paths)]
 
 
 def _load_inputs() -> tuple[dict[str, Any], dict[str, Any]]:
-    ledger, _ = v1.load_inputs()
-    for path, expected in V1_EXPECTED_HASHES.items():
-        if sha256_path(REPO_ROOT / path) != expected:
-            raise ValueError(f"immutable v1 input mismatch: {path}")
-    review = json.loads((REPO_ROOT / V1_REVIEW_RELATIVE_PATH).read_text(encoding="utf-8"))
+    all_paths = {
+        binding["path"] for binding in v1.SOURCES.values()
+    } | set(V1_EXPECTED_HASHES)
+    for path in sorted(all_paths):
+        identity = _frozen_identity(path)
+        if not _identity_matches(identity):
+            raise ValueError(f"frozen input identity mismatch: {path}")
+    ledger = _frozen_json(v0.LEDGER_RELATIVE_PATH)
+    review = _frozen_json(V1_REVIEW_RELATIVE_PATH)
     if not (
         review.get("accepted") is False
         and review.get("verdict") == "B-BLOCKED"
@@ -821,7 +917,9 @@ def build_packet(ledger: dict[str, Any] | None = None) -> dict[str, Any]:
             "timezone_frozen_by_review": True,
             "pythonhashseed_frozen_by_review": True,
             "python_and_dependency_versions_bound": True,
-            "git_and_os_line_endings_bound": True,
+            "tracked_input_identity": "GIT_BLOB_SHA256_FROM_RECORDED_FROZEN_COMMIT",
+            "checkout_bytes_authoritative": False,
+            "line_ending_dependence": "NONE",
             "filesystem_traversal_order": "lexicographic UTF-8 NFC",
             "unicode_normalization": "UTF-8 NFC",
             "canonical_json": "sorted keys, indent 2, LF, trailing newline, finite numbers only",
@@ -848,8 +946,8 @@ def build_packet(ledger: dict[str, Any] | None = None) -> dict[str, Any]:
             "sole_failed_v1_decision": "supporting_sources_have_authorized_bounded_class",
         },
         "prompt_protection": {
-            "path": PROMPT_RELATIVE_PATH,
-            "pre_tranche_sha256": PROMPT_BASELINE_SHA256,
+            **_frozen_identity(PROMPT_RELATIVE_PATH),
+            "pre_tranche_sha256": _frozen_identity(PROMPT_RELATIVE_PATH)["sha256"],
             "excluded_from_scientific_inputs": True,
             "excluded_from_staging_pathspecs": True,
         },
@@ -867,9 +965,16 @@ def _record_map(packet: dict[str, Any]) -> dict[str, dict[str, Any]]:
 
 
 def _extract_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
-    path = REPO_ROOT / record["source_path"]
-    if not path.is_file() or sha256_path(path) != record["source_hash"]:
+    identity = {
+        "path": record["source_path"],
+        "sha256": record["source_hash"],
+        "identity_type": record["source_identity_type"],
+        "frozen_commit": record["source_frozen_commit"],
+        "git_blob_oid": record["source_git_blob_oid"],
+    }
+    if not _identity_matches(identity):
         return False
+    raw = _git_blob_bytes(record["source_path"])
     locator = record["source_locator"]
     locator_type = locator.get("locator_type")
     if locator_type not in SOURCE_LOCATOR_TYPES:
@@ -884,7 +989,7 @@ def _extract_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
         rows = ledger.get(collection, [])
         return int(index) < len(rows) and rows[int(index)]["row_id"] in record["row_ids_supported"]
     if locator_type == "ARTIFACT_FIELD_PATH":
-        value = json.loads(path.read_text(encoding="utf-8"))
+        value = json.loads(raw)
         for part in locator.get("field_path", "").strip("/").split("/"):
             if not part:
                 continue
@@ -893,7 +998,7 @@ def _extract_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
             value = value[part]
         return value is True
     if locator_type == "MARKDOWN_HEADING_LINE_RANGE":
-        lines = path.read_text(encoding="utf-8").splitlines()
+        lines = raw.decode("utf-8").splitlines()
         start = locator.get("start_line")
         end = locator.get("end_line")
         if not isinstance(start, int) or not isinstance(end, int) or not (1 <= start <= end <= len(lines)):
@@ -1097,16 +1202,29 @@ def packet_validation_failures(packet: dict[str, Any], ledger: dict[str, Any]) -
     implementation = closure.get("implementation_closure", {})
     environment = closure.get("environment_closure", {})
     if not scientific or any(
-        not (REPO_ROOT / item.get("path", "")).is_file()
-        or sha256_path(REPO_ROOT / item["path"]) != item.get("sha256")
+        not _identity_matches(item)
         for item in scientific
     ):
         failures.append("V2_SCIENTIFIC_INPUT_CLOSURE_INCOMPLETE")
-    if not implementation.get("project_local_import_scan", {}).get("complete"):
+    if (
+        not implementation.get("project_local_import_scan", {}).get("complete")
+        or not implementation.get("artifacts")
+        or any(not _identity_matches(item) for item in implementation["artifacts"])
+    ):
         failures.append("V2_IMPLEMENTATION_CLOSURE_INCOMPLETE")
-    if not environment.get("bound_environment_files"):
+    if (
+        not environment.get("bound_environment_files")
+        or any(
+            not _identity_matches(item)
+            for item in environment["bound_environment_files"]
+        )
+    ):
         failures.append("V2_ENVIRONMENT_CLOSURE_INCOMPLETE")
-    if packet.get("prompt_protection", {}).get("pre_tranche_sha256") != PROMPT_BASELINE_SHA256:
+    prompt = packet.get("prompt_protection", {})
+    if (
+        prompt.get("pre_tranche_sha256") != _frozen_identity(PROMPT_RELATIVE_PATH)["sha256"]
+        or not _identity_matches(prompt)
+    ):
         failures.append("V2_PROMPT_PROTECTION_MISMATCH")
     return list(dict.fromkeys(failures))
 
@@ -1287,7 +1405,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         "schema_id": MANIFEST_SCHEMA_ID,
         "captured_at_utc": CAPTURED_AT_UTC,
         "canonicalization": "UTF-8 NFC JSON, sorted keys, indent=2, LF, trailing newline, finite numbers only",
-        "generator": {"path": SCRIPT_RELATIVE_PATH, "sha256": sha256_path(SCRIPT_PATH)},
+        "generator": _frozen_identity(SCRIPT_RELATIVE_PATH),
         "packet": {"path": PACKET_RELATIVE_PATH, "schema_id": PACKET_SCHEMA_ID, "sha256": sha256_bytes(packet_raw)},
         "scientific_input_closure": packet["dependency_closures"]["scientific_input_closure"],
         "implementation_closure": packet["dependency_closures"]["implementation_closure"],
@@ -1320,7 +1438,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         "prerequisite_route_counts": packet["prerequisite_route_counts"],
         "source_authority_repair": packet["source_authority_repair"],
         "artifact_hashes": {
-            "generator_sha256": sha256_path(SCRIPT_PATH),
+            "generator_sha256": _frozen_identity(SCRIPT_RELATIVE_PATH)["sha256"],
             "packet_sha256": sha256_bytes(packet_raw),
             "manifest_sha256": sha256_bytes(manifest_raw),
         },
