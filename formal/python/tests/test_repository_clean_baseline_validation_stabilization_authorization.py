@@ -66,3 +66,17 @@ def test_maintenance_authority_does_not_authorize_phase_b_c_or_science() -> None
     assert boundary["phase_b_authorized"] is False
     assert boundary["phase_c_authorized"] is False
     assert boundary["v2_enrollment_authorized"] is False
+
+
+def test_terminal_failure_consumes_cycle_and_requires_fresh_selector() -> None:
+    result, review = auth._terminal_inputs()
+    authority = auth.build_terminal_maintenance_authority(result, review)
+    boundary = authority["boundary"]
+    assert authority["current_maintenance_target_status"] == (
+        "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION"
+    )
+    assert boundary["baseline_stabilization_authorized"] is False
+    assert boundary["stabilization_implementation_cycles_remaining"] == 0
+    assert boundary["fresh_clone_validation_cycles_remaining"] == 0
+    assert boundary["fresh_maintenance_selector_required"] is True
+    assert boundary["next_maintenance_target_authorized"] is False

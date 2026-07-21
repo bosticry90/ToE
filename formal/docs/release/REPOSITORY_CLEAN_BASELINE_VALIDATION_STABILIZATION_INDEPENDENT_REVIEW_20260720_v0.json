@@ -1,0 +1,74 @@
+{
+  "accepted_for_phase_b": false,
+  "checks": {
+    "all_custody_hashes_recomputed": true,
+    "authority_identity_preserved": true,
+    "bounded_cycle_limit_observed": true,
+    "failed_result_auto_repair_authorized": false,
+    "focused_stabilization_controls_green": true,
+    "fresh_clone_started_at_implementation_commit": true,
+    "full_bounded_nonlean_inventory_green": false,
+    "lean_failure_class_frozen_and_evidence_bound": true,
+    "loop_control_registry_hash_exact": true,
+    "nonhermetic_mutator_isolated": true,
+    "original_audited_worktree_unchanged": true,
+    "phase_a_blocked_result_preserved": true,
+    "post_validation_tracked_source_diff_empty": false,
+    "scientific_posture_preserved": true,
+    "terminal_outcome_matches_packet_vocabulary": true,
+    "v2_deterministic_checks_green": false,
+    "validation_clone_clean_after_evidence_capture_and_lane_isolation": true
+  },
+  "conclusion": {
+    "baseline_stabilization_accepted": false,
+    "failed_governance_result_accepted": true,
+    "next_action": "PRESERVE_RESULT_AND_REQUIRE_FRESH_MAINTENANCE_SELECTOR",
+    "second_repair_or_validation_cycle_authorized": false
+  },
+  "evidence_recomputation": {
+    "custody_artifact_mismatches": 0,
+    "custody_artifacts_recomputed": 11,
+    "fresh_clone_final_head": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+    "fresh_clone_final_tracked_status_entries": 0,
+    "fresh_clone_final_untracked_status_entries": 0,
+    "loop_control_registry_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506",
+    "original_audited_worktree_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "original_audited_worktree_total_status_entries": 629,
+    "original_audited_worktree_tracked_status_entries": 7,
+    "original_audited_worktree_untracked_status_entries": 622
+  },
+  "failure_findings": {
+    "lean": {
+      "classification": "LEAN_BUILD_TIMEOUT",
+      "downstream_stages": "NOT_RUN_SECONDARY_CASCADE",
+      "orphan_descendant_cleanup_defect_recorded": true,
+      "semantic_build_error_observed": false
+    },
+    "nonhermetic_validation": {
+      "classification": "VALIDATION_COMMAND_MUTATED_BASELINE_CLONE",
+      "exact_mutator": "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_write_is_idempotent_on_pinned_repo_state",
+      "mutation_count": 5,
+      "mutation_evidence_preserved_before_cleanup": true
+    },
+    "v2": {
+      "classification": "DEEPER_NONHERMETIC_BYTE_IDENTITY",
+      "failed": 7,
+      "passed": 3,
+      "scientific_regeneration_performed": false
+    }
+  },
+  "implementation_commit": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+  "outcome": "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION",
+  "phase_b_authorized": false,
+  "phase_c_authorized": false,
+  "result": {
+    "bytes": 9072,
+    "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json",
+    "sha256": "d2db8ace01049ccc05234f54f830df4af9040a0c5eaf8c776946bd07c51d888b"
+  },
+  "review_basis": "FRESH_CLONE_AND_EXTERNAL_CUSTODY_RECOMPUTATION",
+  "schema_id": "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_INDEPENDENT_REVIEW_20260720_v0",
+  "scientific_execution_authorized": false,
+  "scientific_status_changed": false,
+  "status": "ACCEPTED_FAILED_TERMINAL_GOVERNANCE_RESULT"
+}

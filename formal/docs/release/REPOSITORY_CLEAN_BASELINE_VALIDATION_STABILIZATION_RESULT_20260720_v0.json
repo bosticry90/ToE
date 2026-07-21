@@ -1,0 +1,234 @@
+{
+  "accepted_for_phase_b": false,
+  "authority": {
+    "maintenance_response_selection": {
+      "path": "formal/docs/release/POST_REPOSITORY_RECOVERY_PHASE_A_BLOCKED_BASELINE_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0.json",
+      "sha256": "7d7fc03e6f7a378b27db216dc202805b206fe9710515aa972e3fdbb0f94e62d2"
+    },
+    "stabilization_packet": {
+      "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_20260720_v0.json",
+      "sha256": "7bbd587ea5fc085d6e86cb3579faf13aec41d23efe982432be8ae6699ba020c1"
+    }
+  },
+  "bounded_cycle": {
+    "failed_result_auto_repair_authorized": false,
+    "fresh_clone_validation_cycles_authorized": 1,
+    "fresh_clone_validation_cycles_consumed": 1,
+    "implementation_cycles_authorized": 1,
+    "implementation_cycles_consumed": 1,
+    "second_fresh_clone_validation_authorized": false
+  },
+  "checks": {
+    "authority_identity_preserved": true,
+    "conftest_implementation_reconciled": true,
+    "focused_stabilization_suite_passed": true,
+    "fresh_clone_identity_verified": true,
+    "full_bounded_nonlean_inventory_green": false,
+    "lean_clean_bootstrap_passed": false,
+    "loop_control_registry_unchanged": true,
+    "original_audited_worktree_unchanged": true,
+    "post_validation_tracked_source_diff_empty": false,
+    "scientific_boundary_preserved": true,
+    "v2_deterministic_checks_green": false
+  },
+  "external_custody": {
+    "artifacts": {
+      "focused_stabilization_tests.log": {
+        "bytes": 4489,
+        "sha256": "b6c8fd603dd1881c2639ba54993d6bfcdd0949e0c7bbc424bf43cd8153d8adbf"
+      },
+      "focused_stabilization_tests.status.txt": {
+        "bytes": 13,
+        "sha256": "a9f58776a09b5dac438049683f24bf85764e0ff8e7455952456165c68c158627"
+      },
+      "lean_clean_bootstrap.log": {
+        "bytes": 7674,
+        "sha256": "236dcdbf9ac041b473bd4c597c74f0ee691a0c7bf131e7366df24428c4b73617"
+      },
+      "lean_clean_bootstrap.status.txt": {
+        "bytes": 14,
+        "sha256": "901c2ec44421715690252d14765de9b3d000059fdc4d255d73c1ad02479f1a75"
+      },
+      "lean_clean_bootstrap_result.json": {
+        "bytes": 7694,
+        "sha256": "2d360765f49beb25707113ff9bff86ff8ab179bd13bbaea286de92859d434866"
+      },
+      "nonlean_inventory_pytest.log": {
+        "bytes": 3457237,
+        "sha256": "a8d1d15a92adbd4124c1384fc5c785c788b84947f733a4a5f29a429be8e52ae2"
+      },
+      "nonlean_inventory_pytest.status.txt": {
+        "bytes": 127,
+        "sha256": "90ecb44603c602b615916c9e17ccee7e97c9289811753f1b44eb9536a2a5ada3"
+      },
+      "nonlean_mutation/CLEAN_BASELINE_POST_VALIDATION_MUTATION_MANIFEST_v0.json": {
+        "bytes": 2528,
+        "sha256": "c79aff62bef6f4e493f0616200752f430d3e7a282187d1eb32b8a6475fbf2873"
+      },
+      "nonlean_mutation/CLEAN_BASELINE_POST_VALIDATION_MUTATIONS_v0.patch": {
+        "bytes": 6051,
+        "sha256": "64240db865ef202b6ddee4e6400d9890b9ccdc6cb7c7df48a02797b18bc477f5"
+      },
+      "v2_checks.log": {
+        "bytes": 11004,
+        "sha256": "95ee33aba0ec84fecc05e66556e33d413350cc246f7284b8edcb01ed723f5b78"
+      },
+      "v2_checks.status.txt": {
+        "bytes": 13,
+        "sha256": "4fa76b808b0441857562232acabf29490555d9e389f4509f2b240b0a5b5e3812"
+      }
+    },
+    "location_identifier": "C:/toe-custody-v0/stabilization"
+  },
+  "focused_stabilization_validation": {
+    "exit_code": 0,
+    "passed": 51,
+    "status": "PASSED",
+    "warnings": 14
+  },
+  "implementation_commit": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+  "lean_clean_bootstrap": {
+    "committed_aggregate_module_count": 1127,
+    "dependency_environment": "PASSED",
+    "failure_class": "LEAN_BUILD_TIMEOUT",
+    "frozen_sequence": true,
+    "lean_pytest_harness": "NOT_RUN_SECONDARY_CASCADE",
+    "mathlib_cache_bootstrap": {
+      "cached_files": 7728,
+      "downloaded_files": 0,
+      "status": "PASSED"
+    },
+    "orphan_process_cleanup": {
+      "automatic_descendant_cleanup_succeeded": false,
+      "exact_allowed_process_names": [
+        "elan-init.exe",
+        "lake.exe",
+        "lean.exe"
+      ],
+      "exact_process_tree_root_pid": 4020,
+      "manual_cleanup_required": true,
+      "scope_verified_to_validation_clone": "C:/toe-sv0",
+      "tool_repair_performed": false
+    },
+    "status": "FAILED",
+    "toe_formal_all_build": "NOT_RUN_SECONDARY_CASCADE",
+    "toe_formal_build": {
+      "last_observed_job": 8345,
+      "semantic_error_observed": false,
+      "timeout_seconds": 10800,
+      "total_jobs": 8507
+    },
+    "toolchain": {
+      "lake": "5.0.0-src+2fcce72",
+      "lean": "4.27.0-rc1",
+      "status": "PASSED"
+    }
+  },
+  "nonhermetic_validation_first_cause": {
+    "classification": "VALIDATION_COMMAND_MUTATED_BASELINE_CLONE",
+    "exact_mutator": {
+      "call": "qm_gr_criteria_hash_refresh.apply_updates(repo_root=tool.REPO_ROOT)",
+      "test": "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_write_is_idempotent_on_pinned_repo_state"
+    },
+    "mutated_paths": [
+      "State_of_the_Theory.md",
+      "formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md"
+    ],
+    "tracked_mutation_count": 5,
+    "validation_cleanup": {
+      "evidence_captured_before_cleanup": true,
+      "paths_restored_to_source_commit_for_independent_lean_lane": true,
+      "repair_classified": false,
+      "validation_clone_clean_at_cycle_end": true
+    }
+  },
+  "observed_baseline_comparison": {
+    "bounded_nonlean_phase_a": {
+      "errors": 139,
+      "failed": 690,
+      "passed": 12285,
+      "skipped": 598,
+      "tracked_post_validation_mutations": 23
+    },
+    "bounded_nonlean_stabilization": {
+      "errors": 57,
+      "excluded_lean_build_tests": 9,
+      "failed": 459,
+      "passed": 12635,
+      "pytest_exit_code_before_cleanliness_gate": 1,
+      "skipped": 598,
+      "tracked_post_validation_mutations": 5,
+      "wrapper_exit_code": 97
+    },
+    "delta": {
+      "errors": -82,
+      "failed": -231,
+      "passed": 350,
+      "tracked_post_validation_mutations": -18
+    }
+  },
+  "original_audited_worktree": {
+    "head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "total_status_entries": 629,
+    "tracked_status_entries": 7,
+    "unchanged_by_recovery_execution": true,
+    "untracked_status_entries": 622
+  },
+  "outcome": "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION",
+  "phase_a_result_preserved": true,
+  "phase_b_authorized": false,
+  "phase_c_authorized": false,
+  "schema_id": "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "scientific_boundaries": {
+    "master_action_promotion_performed": false,
+    "registry_rotation_performed": false,
+    "scientific_content_changed": false,
+    "unit_or_seam_resolution_performed": false,
+    "v2_enrollment_performed": false,
+    "v2_scientific_regeneration_performed": false
+  },
+  "scientific_status_changed": false,
+  "status": "FAILED_TERMINAL_RESULT_PRESERVED_NO_AUTO_REPAIR",
+  "v2_deterministic_validation": {
+    "failed": 7,
+    "first_phase_a_byte_mismatch_repaired": true,
+    "fresh_clone_tracked_source_diff_empty": true,
+    "masked_first_cause_exposed": "route evidence hash mismatch: formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "mixed_byte_identity_evidence": {
+      "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md": {
+        "audited_worktree_bytes": 92151,
+        "audited_worktree_crlf_pairs": 1,
+        "audited_worktree_sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+        "fresh_clone_bytes": 93628,
+        "fresh_clone_crlf_pairs": 1478,
+        "fresh_clone_sha256": "4e8ef8441c7102f9d943c6e634a3011eb775506207cb276c1f0dbabc4c84c44e"
+      },
+      "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json": {
+        "audited_worktree_bytes": 13165,
+        "audited_worktree_crlf_pairs": 219,
+        "audited_worktree_sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+        "fresh_clone_bytes": 12946,
+        "fresh_clone_crlf_pairs": 0,
+        "fresh_clone_sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544"
+      }
+    },
+    "passed": 3,
+    "pytest_exit_code": 1,
+    "status": "FAILED_DEEPER_NONHERMETIC_BYTE_IDENTITY"
+  }
+}

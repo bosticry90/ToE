@@ -1,24 +1,30 @@
 {
+  "authorization_packet": {
+    "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_20260720_v0.json",
+    "sha256": "7bbd587ea5fc085d6e86cb3579faf13aec41d23efe982432be8ae6699ba020c1"
+  },
   "boundary": {
-    "baseline_stabilization_authorized": true,
+    "baseline_stabilization_authorized": false,
     "first_unit_selector_execution_authorized": false,
-    "fresh_clone_validation_cycles_remaining": 1,
+    "fresh_clone_validation_cycles_remaining": 0,
+    "fresh_maintenance_selector_required": true,
+    "next_maintenance_target_authorized": false,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "stabilization_implementation_cycles_remaining": 1,
+    "stabilization_implementation_cycles_remaining": 0,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
   "captured_at_utc": "2026-07-20T00:00:00Z",
   "current_maintenance_target": "prepare_repository_clean_baseline_validation_stabilization_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_20260720_v0.json",
-  "current_maintenance_target_evidence_sha256": "7bbd587ea5fc085d6e86cb3579faf13aec41d23efe982432be8ae6699ba020c1",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json",
+  "current_maintenance_target_evidence_sha256": "d2db8ace01049ccc05234f54f830df4af9040a0c5eaf8c776946bd07c51d888b",
   "current_maintenance_target_kind": "committed_source_reproducibility_stabilization",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_IMPLEMENTATION_AND_VALIDATION_CYCLE",
+  "current_maintenance_target_status": "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -35,16 +41,12 @@
   },
   "previous_maintenance_target": "prepare_repository_authority_custody_and_reproducibility_recovery_packet_v0",
   "previous_maintenance_target_status": "EVIDENCE_BLOCKED_BASELINE_VALIDATION",
+  "review_status": "ACCEPTED_FAILED_TERMINAL_GOVERNANCE_RESULT",
   "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
   "scientific_authority": {
     "blocked_seams": 5,
     "blocked_unit_seam_rows": 12,
     "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
-    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
-    "current_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
-    "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
-    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
-    "current_target_strict_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
     "empirical_validation_established": false,
     "master_action_promoted": false,
     "phase_2_authorized": false,
@@ -53,5 +55,9 @@
     "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
-  "status": "ACTIVE_BOUNDED_BASELINE_STABILIZATION_AUTHORITY"
+  "status": "TERMINAL_FAILED_BASELINE_STABILIZATION_AUTHORITY",
+  "terminal_independent_review": {
+    "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_INDEPENDENT_REVIEW_20260720_v0.json",
+    "sha256": "5b4650229e1a4f2eec03c7505ae362851645fc742ce618ac202d0d556958e095"
+  }
 }

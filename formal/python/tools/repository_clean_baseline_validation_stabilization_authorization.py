@@ -30,6 +30,13 @@ REVIEW_PATH = RELEASE_DIR / (
     "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_"
     "INDEPENDENT_REVIEW_20260720_v0.json"
 )
+RESULT_PATH = RELEASE_DIR / (
+    "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json"
+)
+RESULT_REVIEW_PATH = RELEASE_DIR / (
+    "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_"
+    "INDEPENDENT_REVIEW_20260720_v0.json"
+)
 MUTATION_PATCH_PATH = RELEASE_DIR / (
     "CLEAN_BASELINE_POST_VALIDATION_MUTATIONS_20260720_v0.patch"
 )
@@ -479,6 +486,95 @@ def build_maintenance_authority(packet: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _terminal_inputs() -> tuple[dict[str, Any], dict[str, Any]]:
+    if not RESULT_PATH.is_file() or not RESULT_REVIEW_PATH.is_file():
+        raise StabilizationAuthorizationError("terminal result or review is missing")
+    result = _read(RESULT_PATH)
+    review_result = _read(RESULT_REVIEW_PATH)
+    outcome = "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION"
+    if result.get("outcome") != outcome or review_result.get("outcome") != outcome:
+        raise StabilizationAuthorizationError("terminal outcome mismatch")
+    if result.get("status") != "FAILED_TERMINAL_RESULT_PRESERVED_NO_AUTO_REPAIR":
+        raise StabilizationAuthorizationError("terminal result is not fail closed")
+    if result.get("bounded_cycle", {}).get("failed_result_auto_repair_authorized"):
+        raise StabilizationAuthorizationError("failed result authorizes automatic repair")
+    if review_result.get("conclusion", {}).get(
+        "second_repair_or_validation_cycle_authorized"
+    ):
+        raise StabilizationAuthorizationError("review authorizes a second bounded cycle")
+    result_binding = review_result.get("result", {})
+    if (
+        result_binding.get("path") != _repo_path(RESULT_PATH)
+        or result_binding.get("sha256") != _sha(RESULT_PATH)
+        or result_binding.get("bytes") != RESULT_PATH.stat().st_size
+    ):
+        raise StabilizationAuthorizationError("terminal review result binding mismatch")
+    packet = _read(PACKET_PATH)
+    if outcome not in packet.get("terminal_outcomes", []):
+        raise StabilizationAuthorizationError("outcome is absent from packet vocabulary")
+    return result, review_result
+
+
+def build_terminal_maintenance_authority(
+    result: dict[str, Any], review_result: dict[str, Any]
+) -> dict[str, Any]:
+    previous = _read(MAINTENANCE_PATH)
+    if previous.get("current_maintenance_target") != STABILIZATION_TARGET:
+        raise StabilizationAuthorizationError("unexpected maintenance target at closure")
+    return {
+        "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
+        "status": "TERMINAL_FAILED_BASELINE_STABILIZATION_AUTHORITY",
+        "captured_at_utc": "2026-07-20T00:00:00Z",
+        "current_maintenance_target": STABILIZATION_TARGET,
+        "current_maintenance_target_kind": "committed_source_reproducibility_stabilization",
+        "current_maintenance_target_status": result["outcome"],
+        "current_maintenance_target_evidence": _repo_path(RESULT_PATH),
+        "current_maintenance_target_evidence_sha256": _sha(RESULT_PATH),
+        "authorization_packet": {
+            "path": _repo_path(PACKET_PATH),
+            "sha256": _sha(PACKET_PATH),
+        },
+        "terminal_independent_review": {
+            "path": _repo_path(RESULT_REVIEW_PATH),
+            "sha256": _sha(RESULT_REVIEW_PATH),
+        },
+        "previous_maintenance_target": previous["previous_maintenance_target"],
+        "previous_maintenance_target_status": previous[
+            "previous_maintenance_target_status"
+        ],
+        "phase_a_preservation": previous["phase_a_preservation"],
+        "maintenance_program_source": previous["maintenance_program_source"],
+        "maintenance_program_source_sha256": previous[
+            "maintenance_program_source_sha256"
+        ],
+        "maintenance_consumer_inventory_path": previous[
+            "maintenance_consumer_inventory_path"
+        ],
+        "maintenance_consumer_inventory_sha256": previous[
+            "maintenance_consumer_inventory_sha256"
+        ],
+        "historical_scientific_snapshot": previous["historical_scientific_snapshot"],
+        "scientific_authority": result["scientific_authority"],
+        "boundary": {
+            "baseline_stabilization_authorized": False,
+            "stabilization_implementation_cycles_remaining": 0,
+            "fresh_clone_validation_cycles_remaining": 0,
+            "fresh_maintenance_selector_required": True,
+            "next_maintenance_target_authorized": False,
+            "scientific_target_displaced": False,
+            "scientific_target_rotated": False,
+            "scientific_execution_authorized": False,
+            "phase_b_authorized": False,
+            "phase_c_authorized": False,
+            "registry_sharding_migration_authorized": False,
+            "v2_enrollment_authorized": False,
+            "v2_regeneration_authorized": False,
+            "first_unit_selector_execution_authorized": False,
+        },
+        "review_status": review_result["status"],
+    }
+
+
 def _write(path: Path, value: Any) -> None:
     path.write_bytes(_canonical(value))
 
@@ -512,6 +608,10 @@ def review(*, write: bool) -> None:
 
 
 def activate() -> None:
+    if RESULT_PATH.exists():
+        raise StabilizationAuthorizationError(
+            "terminal stabilization result exists; authority cannot be reactivated"
+        )
     prepare(write=False)
     review(write=False)
     packet = _read(PACKET_PATH)
@@ -519,12 +619,31 @@ def activate() -> None:
 
 
 def check_activated() -> None:
+    if RESULT_PATH.exists():
+        raise StabilizationAuthorizationError(
+            "terminal stabilization result exists; active authority is invalid"
+        )
     prepare(write=False)
     review(write=False)
     packet = _read(PACKET_PATH)
     expected = _canonical(build_maintenance_authority(packet))
     if MAINTENANCE_PATH.read_bytes() != expected:
         raise StabilizationAuthorizationError("stabilization authority is not active")
+
+
+def close_terminal() -> None:
+    result, review_result = _terminal_inputs()
+    _write(
+        MAINTENANCE_PATH,
+        build_terminal_maintenance_authority(result, review_result),
+    )
+
+
+def check_terminal_closed() -> None:
+    result, review_result = _terminal_inputs()
+    expected = _canonical(build_terminal_maintenance_authority(result, review_result))
+    if MAINTENANCE_PATH.read_bytes() != expected:
+        raise StabilizationAuthorizationError("terminal authority closure is stale")
 
 
 def main() -> int:
@@ -534,6 +653,8 @@ def main() -> int:
     mode.add_argument("--write-review", action="store_true")
     mode.add_argument("--activate", action="store_true")
     mode.add_argument("--check", action="store_true")
+    mode.add_argument("--close-terminal", action="store_true")
+    mode.add_argument("--check-terminal", action="store_true")
     args = parser.parse_args()
     if args.write:
         prepare(write=True)
@@ -542,6 +663,10 @@ def main() -> int:
         review(write=True)
     elif args.activate:
         activate()
+    elif args.close_terminal:
+        close_terminal()
+    elif args.check_terminal:
+        check_terminal_closed()
     else:
         check_activated()
     return 0
