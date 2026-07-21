@@ -1,0 +1,70 @@
+{
+  "acceptance_questions": [
+    "which failures disappear after the hash and identity repair",
+    "what primary failure clusters remain",
+    "whether all validation phases leave tracked source byte-identical",
+    "whether the full V2 deterministic test pair passes",
+    "whether Lean completes under the revised two-job cold-build procedure"
+  ],
+  "authorized_cycle": {
+    "automatic_repair": false,
+    "fresh_validation_worktrees": 1,
+    "result_reviews": 1,
+    "validation_cycles": 1
+  },
+  "captured_at_utc": "2026-07-21T22:37:45Z",
+  "lean_procedure": {
+    "bootstrap_timeout_seconds": 900,
+    "build_jobs": 2,
+    "build_timeout_seconds": 14400,
+    "cache_bootstrap": true,
+    "harness_timeout_seconds": 1800,
+    "sequence": [
+      "toolchain_identity",
+      "dependency_environment",
+      "mathlib_cache_bootstrap",
+      "committed_module_aggregate",
+      "toe_formal_build",
+      "toe_formal_all_build",
+      "lean_pytest_harness"
+    ]
+  },
+  "nonlean_inventory": {
+    "excluded_for_separate_lean_lane": [
+      "formal/python/tests/test_lean_build_gate_qft_evol_object_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py",
+      "formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py",
+      "formal/python/tests/test_lean_fn01_rep32_build_guard.py",
+      "formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py",
+      "formal/python/tests/test_lean_fn01_rep64_build_guard.py",
+      "formal/python/tests/test_lean_variational_core_build_guard.py"
+    ],
+    "scope": "formal/python/tests",
+    "source_mutation_guard": "TRACKED_SOURCE_SNAPSHOT_AND_STATUS_EQUALITY"
+  },
+  "prohibited_actions": [
+    "V2 enrollment",
+    "registry rotation",
+    "first-unit selector execution",
+    "scalar-Yukawa work",
+    "Maxwell-Dirac work",
+    "scientific execution",
+    "automatic repair after failure"
+  ],
+  "repair_result": {
+    "commit": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+    "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_20260721_v0.json",
+    "sha256": "f18c8efc0a65270891957481552c0b62ace72be6d373f776a3960b6693549967"
+  },
+  "schema_id": "POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_20260721_v0",
+  "scientific_posture": "B-BLOCKED",
+  "status": "AUTHORIZED_ONE_NONMUTATING_REASSESSMENT_CYCLE",
+  "target": "execute_bounded_post_identity_baseline_reassessment_v0",
+  "v2_scope": {
+    "deterministic_checks_only": true,
+    "enrollment_authorized": false,
+    "regeneration_authorized": false
+  }
+}

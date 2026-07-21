@@ -1,0 +1,11 @@
+{
+  "authority_source": "USER_REQUEST_20260721_CONTROLLING_MAINTENANCE_RESULT",
+  "captured_at_utc": "2026-07-21T22:37:45Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_POST_IDENTITY_BASELINE_REASSESSMENT",
+    "PRESERVE_REPAIR_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "schema_id": "POST_HASH_IDENTITY_REPAIR_MAINTENANCE_SELECTION_20260721_v0",
+  "selected": "AUTHORIZE_BOUNDED_POST_IDENTITY_BASELINE_REASSESSMENT",
+  "successor_target": "execute_bounded_post_identity_baseline_reassessment_v0"
+}

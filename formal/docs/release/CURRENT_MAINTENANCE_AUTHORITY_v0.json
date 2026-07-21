@@ -7,10 +7,13 @@
     "first_unit_selector_execution_authorized": false,
     "independent_result_reviews_remaining": 0,
     "nonhermetic_root_cause_packet_authorized": false,
+    "post_identity_baseline_reassessment_authorized": true,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
+    "reassessment_result_reviews_remaining": 1,
+    "reassessment_validation_cycles_remaining": 1,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
@@ -19,17 +22,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-21T21:37:34Z",
+  "captured_at_utc": "2026-07-21T22:37:45Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "prepare_repository_hash_refresh_and_tracked_blob_identity_repair_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_20260721_v0.json",
-  "current_maintenance_target_evidence_sha256": "f18c8efc0a65270891957481552c0b62ace72be6d373f776a3960b6693549967",
-  "current_maintenance_target_kind": "bounded_hash_refresh_and_tracked_blob_identity_repair_result",
-  "current_maintenance_target_status": "COMPLETE_ACCEPTED_NO_AUTOMATIC_SUCCESSOR",
+  "current_maintenance_target": "execute_bounded_post_identity_baseline_reassessment_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_20260721_v0.json",
+  "current_maintenance_target_evidence_sha256": "ec7c379a5e7c7a948293bb6533fecdce361535859ed667363679fb3024406641",
+  "current_maintenance_target_kind": "bounded_post_identity_baseline_reassessment",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_NONMUTATING_REASSESSMENT_CYCLE",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -44,6 +47,11 @@
   "independent_result_review": {
     "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json",
     "sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4",
+    "verdict": "ACCEPT"
+  },
+  "post_identity_reassessment_authorization_review": {
+    "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_REVIEW_20260721_v0.json",
+    "sha256": "9992f7fd9f328c26c26ce3d10e91d823ca2a9dbde575057325362da9d1b8d2a8",
     "verdict": "ACCEPT"
   },
   "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
@@ -78,8 +86,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_NONHERMETIC_DIAGNOSTIC_MAINTENANCE_SELECTION_20260721_v0.json",
-    "sha256": "774d6a3959bea8ef10dac2d95156e17e06b42e4dc56270188150968f5b71e3dc"
+    "path": "formal/docs/release/POST_HASH_IDENTITY_REPAIR_MAINTENANCE_SELECTION_20260721_v0.json",
+    "sha256": "7d6b79ab537cd141e6f306e38956fdefb1a565f11002c0e40ff623a9c61e74d7"
   },
-  "status": "BOUNDED_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_COMPLETE_NO_AUTOMATIC_SUCCESSOR"
+  "status": "ACTIVE_BOUNDED_POST_IDENTITY_BASELINE_REASSESSMENT_NO_SCIENTIFIC_AUTHORITY"
 }
