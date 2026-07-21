@@ -32,7 +32,32 @@ def test_v2_review_binds_immutable_preparation_and_prompt() -> None:
     assert custody["passed"] is True
     assert all(custody["working_hash_comparisons"].values())
     assert all(custody["commit_hash_comparisons"].values())
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_BASELINE_SHA256
+    packet = review.load_json(review.PACKET_PATH)
+    prompt = packet["prompt_protection"]
+    assert prompt == {
+        "excluded_from_scientific_inputs": True,
+        "excluded_from_staging_pathspecs": True,
+        "frozen_commit": review._frozen_commit(),
+        "git_blob_oid": review._git_blob_oid(
+            review.PROMPT_RELATIVE_PATH,
+            review._frozen_commit(),
+        ),
+        "identity_type": "GIT_BLOB_SHA256",
+        "path": review.PROMPT_RELATIVE_PATH,
+        "pre_tranche_sha256": review.sha256_bytes(
+            review._git_blob_bytes(
+                review.PROMPT_RELATIVE_PATH,
+                review._frozen_commit(),
+            )
+        ),
+        "sha256": review.sha256_bytes(
+            review._git_blob_bytes(
+                review.PROMPT_RELATIVE_PATH,
+                review._frozen_commit(),
+            )
+        ),
+    }
+    assert review._identity_matches(prompt)
 
 
 def test_v2_review_independence_and_detached_regenerations_are_recorded() -> None:
