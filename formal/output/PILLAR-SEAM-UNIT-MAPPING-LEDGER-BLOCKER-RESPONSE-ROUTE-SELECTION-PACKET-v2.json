@@ -5121,32 +5121,53 @@
     "environment_closure": {
       "bound_environment_files": [
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "ccae5044059a1a5607fd8e7760092a1a72873c9d",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "requirements.active.lock",
-          "sha256": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d"
+          "sha256": "eefb37359a4d4fcbe1df8f87c6ee786974f27d8d338dd59b413d418948d7ab9a"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "bcc393883b90739408ed14d53d57dd0b42d0c2bd",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "requirements.ci.lock",
           "sha256": "79c5d6ca6995338c20fdf4c7bdb2748746cbef0e226de1c55489ddb25658b47b"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "bd19bde0ce12df3a11c3f4fd0b7513c30693d72c",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/toe_formal/lean-toolchain",
-          "sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+          "sha256": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "e90c7d8e2adffdc5772a0e21ac104966ac3238f4",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/toe_formal/lake-manifest.json",
-          "sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+          "sha256": "19e09b5f13d32af5353532484e6b3040d4cccdd2c8b5961ec5663d7de8b2d36b"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "edb1bdb8b256b7135b0d360f88768bec19e8199f",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/toe_formal/lakefile.toml",
-          "sha256": "e856dee62dc2c0b0d8b9ed38af34e7c04f2895076b9147ebad6136a26ed6362c"
+          "sha256": "023862d49b5bc03eb4812586ded7181f03a1dbbab243d6492f30d268060bd562"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "57f8d45edaf2bb1280db5b226ad7680ca817f5dd",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": ".gitattributes",
-          "sha256": "8f1e4dfa773e52d1cc34d8c3f0798411dd3d60111c99746e883ed42e9f4f4f76"
+          "sha256": "0d5f1f320c2ebbdc7a1918f6656e2d4df55528d61a0ef8101045f125d3627dfc"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "e4382c43cde787ebe58dba71516994cd0d0059a6",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "pytest.ini",
-          "sha256": "0494b8b448f48862a153002d07e8ca2f6e6507a44e56cf7baedb0074eb468297"
+          "sha256": "979bc88f08c52387992972ea40120ab6c8adaca65cfe837646888be478ff551a"
         }
       ],
       "filesystem_traversal_order": "lexicographic UTF-8 NFC relative paths",
@@ -5166,18 +5187,30 @@
     "implementation_closure": {
       "artifacts": [
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "b8c7778dd8496f06c77a895cbffc4fc108b7eb76",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py",
-          "sha256": "08c21d5e8163e5657c8b61daa2a04de94aef2157e913a8bb219c951f43e4178d"
+          "sha256": "fbd9e0f6a504ff645137d80157efc19956d84c4f2c69fdfc13d41caa385c19d8"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "96eca2025b5ede2724aec0fcaa3a1d7664d2bc64",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/python/meta/repo_environment.py",
-          "sha256": "5032f93d2480fb464f7b6056b867216d6ea57270b5c824894b714362352ff6b5"
+          "sha256": "8857f4f35dff87b9bab9bb8aead1ab75fdeb31780f0ba2110ad15d9a83a40f35"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "2edf61181178c8629980e51b52f61aaaef628b1a",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
           "sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c"
         },
         {
+          "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "git_blob_oid": "d51c99a2a2ed984253a03852d8419f80d247cce2",
+          "identity_type": "GIT_BLOB_SHA256",
           "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py",
           "sha256": "bb42efb91530da6134a5f41661b23736afa663171935140616066f6503257da4"
         }
@@ -5197,62 +5230,107 @@
     },
     "scientific_input_closure": [
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "358e9dcf626fba06bd1b2e7d22bf0a340eeaff66",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
-        "sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00"
+        "sha256": "1a7d657e0434957c146caaf27f1f8f9759eaf4081ec6f12c9103c6af1b08b804"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
-        "sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9"
+        "sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "049e855ea2bf8e5b660964992cc60a9f6f6c5400",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
-        "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+        "sha256": "a3b068a09cb55022a75c0c709cfa7e34b84e61aa744c42d0c35453e8f8a87e5c"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "fa8e2fc10feb1709682512ec8deee30012a6a4a0",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
-        "sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc"
+        "sha256": "964d863ce9b6e3c912aa85d4b05c4c7c313a92eb1d4d50b07df7a90d9778ec4d"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "24691f951d142512c8b4267af0b3598dc5a29d3c",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
-        "sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc"
+        "sha256": "0898e05d18821d2901390dffc42b959bcdbf83964c49eecae598191316576c4a"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "3878eb2e6c7bdb2e44ff2038675b7ec8ea929afb",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
-        "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206"
+        "sha256": "21cf0d71a6e6e3bcfdd9c1bac5c9dd334193e5a506ef161b2a584bd1772ec72b"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "1d846f8be72b1b8fb46e531eaf9eb5d38de8a33d",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
-        "sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77"
+        "sha256": "9384b90b87a97ec8b2a3ac427f203792b8bdcb3e9cec04ea4fffe3b61816e341"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
         "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "11042d41e1bbcfc7ab36503e21d389ea60659ecc",
+        "identity_type": "CANONICAL_ARTIFACT_SHA256",
         "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260712_v1.json",
         "sha256": "bbf299f594970641d437ff502767d7d175923219664f92bf59f415f6c3f20a06"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "94102d4bf42e5a58f773254ef3b79bd7da104393",
+        "identity_type": "CANONICAL_ARTIFACT_SHA256",
         "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
         "sha256": "aa2ee087a167a75a0ab144d034fe6a9e27c521f37cec792ea51adc5ced6c01a9"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "bde76bc1b6e3ef27e74971a7a16e781dfa9034cf",
+        "identity_type": "CANONICAL_ARTIFACT_SHA256",
         "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
-        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+        "sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "b96c47b8993f425d6870552246b0401c1eea2c2f",
+        "identity_type": "CANONICAL_ARTIFACT_SHA256",
         "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v1.json",
         "sha256": "03130e8ddd32ee70c66af042a130494f659b13a50285cacbf0f9c13968e1ff73"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "6d3a35e371b515030692a4eee75403da7273d914",
+        "identity_type": "CANONICAL_ARTIFACT_SHA256",
         "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v1.json",
         "sha256": "8c0de083b4f3bd94eb2bb1bc6fa963e1a4024a2d42169eef0e05e297400fdb70"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
+        "identity_type": "CANONICAL_ARTIFACT_SHA256",
         "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json",
         "sha256": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0"
       },
       {
+        "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "git_blob_oid": "d51c99a2a2ed984253a03852d8419f80d247cce2",
+        "identity_type": "GIT_BLOB_SHA256",
         "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py",
         "sha256": "bb42efb91530da6134a5f41661b23736afa663171935140616066f6503257da4"
       }
@@ -5260,13 +5338,15 @@
   },
   "determinism_contract": {
     "canonical_json": "sorted keys, indent 2, LF, trailing newline, finite numbers only",
+    "checkout_bytes_authoritative": false,
     "filesystem_traversal_order": "lexicographic UTF-8 NFC",
-    "git_and_os_line_endings_bound": true,
+    "line_ending_dependence": "NONE",
     "locale_frozen_by_review": true,
     "python_and_dependency_versions_bound": true,
     "pythonhashseed_frozen_by_review": true,
     "score_serialization": "integers or explicit decimal strings only",
     "timezone_frozen_by_review": true,
+    "tracked_input_identity": "GIT_BLOB_SHA256_FROM_RECORDED_FROZEN_COMMIT",
     "unicode_normalization": "UTF-8 NFC"
   },
   "expected_route_stored_in_source_specification": false,
@@ -5310,8 +5390,12 @@
   "prompt_protection": {
     "excluded_from_scientific_inputs": true,
     "excluded_from_staging_pathspecs": true,
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "git_blob_oid": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "identity_type": "GIT_BLOB_SHA256",
     "path": "Prompt.txt",
-    "pre_tranche_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+    "pre_tranche_sha256": "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5",
+    "sha256": "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5"
   },
   "proposition_extraction_methods": [
     "EXACT_FIELD_READ",
@@ -5343,8 +5427,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/0"
@@ -5371,8 +5458,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "fa8e2fc10feb1709682512ec8deee30012a6a4a0",
+          "source_hash": "964d863ce9b6e3c912aa85d4b05c4c7c313a92eb1d4d50b07df7a90d9778ec4d",
           "source_id": "qft_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 377,
             "heading": "## ASSUMPTION_FREEZE section",
@@ -5404,8 +5494,11 @@
           ],
           "scope_ceiling": "HISTORICAL_CONTEXT",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
-          "source_hash": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "bde76bc1b6e3ef27e74971a7a16e781dfa9034cf",
+          "source_hash": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544",
           "source_id": "accepted_scalar_sandbox_review",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "field_path": "/accepted",
             "locator_type": "ARTIFACT_FIELD_PATH"
@@ -5432,8 +5525,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "fa8e2fc10feb1709682512ec8deee30012a6a4a0",
+          "source_hash": "964d863ce9b6e3c912aa85d4b05c4c7c313a92eb1d4d50b07df7a90d9778ec4d",
           "source_id": "qft_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 1099,
             "heading": "<entire document>",
@@ -5500,8 +5596,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/1"
@@ -5528,8 +5627,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "T-PROVED",
-          "source_hash": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "049e855ea2bf8e5b660964992cc60a9f6f6c5400",
+          "source_hash": "a3b068a09cb55022a75c0c709cfa7e34b84e61aa744c42d0c35453e8f8a87e5c",
           "source_id": "gr_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 84,
             "heading": "# Derivation Target: GR01 Full Derivation Discharge v0",
@@ -5597,8 +5699,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/2"
@@ -5625,8 +5730,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "24691f951d142512c8b4267af0b3598dc5a29d3c",
+          "source_hash": "0898e05d18821d2901390dffc42b959bcdbf83964c49eecae598191316576c4a",
           "source_id": "qm_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 378,
             "heading": "## ADJUDICATION_SYNC section",
@@ -5658,8 +5766,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "24691f951d142512c8b4267af0b3598dc5a29d3c",
+          "source_hash": "0898e05d18821d2901390dffc42b959bcdbf83964c49eecae598191316576c4a",
           "source_id": "qm_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 429,
             "heading": "<entire document>",
@@ -5726,8 +5837,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/3"
@@ -5754,8 +5868,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "1d846f8be72b1b8fb46e531eaf9eb5d38de8a33d",
+          "source_hash": "9384b90b87a97ec8b2a3ac427f203792b8bdcb3e9cec04ea4fffe3b61816e341",
           "source_id": "stat_planning_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 108,
             "heading": "# Derivation Target: STAT Entropy Plan v0",
@@ -5785,8 +5902,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "1d846f8be72b1b8fb46e531eaf9eb5d38de8a33d",
+          "source_hash": "9384b90b87a97ec8b2a3ac427f203792b8bdcb3e9cec04ea4fffe3b61816e341",
           "source_id": "stat_planning_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 1771,
             "heading": "<entire document>",
@@ -5817,8 +5937,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "1d846f8be72b1b8fb46e531eaf9eb5d38de8a33d",
+          "source_hash": "9384b90b87a97ec8b2a3ac427f203792b8bdcb3e9cec04ea4fffe3b61816e341",
           "source_id": "stat_planning_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 1771,
             "heading": "<entire document>",
@@ -5885,8 +6008,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/4"
@@ -5913,8 +6039,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+          "source_hash": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c",
           "source_id": "em_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 334,
             "heading": "## ADJUDICATION_SYNC section",
@@ -5982,8 +6111,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/5"
@@ -6010,8 +6142,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "3878eb2e6c7bdb2e44ff2038675b7ec8ea929afb",
+          "source_hash": "21cf0d71a6e6e3bcfdd9c1bac5c9dd334193e5a506ef161b2a584bd1772ec72b",
           "source_id": "sr_bounded_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 285,
             "heading": "# Derivation Target: SR Full-Derivation Enforcement Roadmap v0",
@@ -6079,8 +6214,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/pillar_rows/6"
@@ -6107,8 +6245,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
-          "source_hash": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "358e9dcf626fba06bd1b2e7d22bf0a340eeaff66",
+          "source_hash": "1a7d657e0434957c146caaf27f1f8f9759eaf4081ec6f12c9103c6af1b08b804",
           "source_id": "cosmo_planning_surface",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 300,
             "heading": "# Derivation Target: Cosmology Background Object v0",
@@ -6176,8 +6317,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/0"
@@ -6204,8 +6348,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/0"
@@ -6232,8 +6379,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
           "source_hash": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
           "source_id": "pillar_target_map",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 100,
             "heading": "## Target Rows",
@@ -6315,8 +6465,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/1"
@@ -6343,8 +6496,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/1"
@@ -6371,8 +6527,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
           "source_hash": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
           "source_id": "pillar_target_map",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 101,
             "heading": "## Target Rows",
@@ -6454,8 +6613,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/2"
@@ -6482,8 +6644,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/2"
@@ -6510,8 +6675,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
           "source_hash": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
           "source_id": "pillar_target_map",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 95,
             "heading": "## Target Rows",
@@ -6593,8 +6761,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/3"
@@ -6621,8 +6792,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/3"
@@ -6649,8 +6823,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
           "source_hash": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
           "source_id": "pillar_target_map",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 103,
             "heading": "## Target Rows",
@@ -6732,8 +6909,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/4"
@@ -6760,8 +6940,11 @@
           ],
           "scope_ceiling": "BLOCKER_IDENTIFICATION",
           "source_declared_claim_label": "SOURCE_UNDECLARED",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "97f0ab8b089944d127f5f3c91e4802abe4a9d550",
           "source_hash": "a441b4764c9a27ba66df1eb9b94789b135db35d29aed5151b7bd4bc29c2de9b0",
           "source_id": "accepted_unit_ledger",
+          "source_identity_type": "CANONICAL_ARTIFACT_SHA256",
           "source_locator": {
             "locator_type": "JSON_POINTER",
             "pointer": "/seam_rows/4"
@@ -6788,8 +6971,11 @@
           ],
           "scope_ceiling": "PLANNING_ROUTE_SELECTION",
           "source_declared_claim_label": "P-POLICY",
+          "source_frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "source_git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
           "source_hash": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
           "source_id": "pillar_target_map",
+          "source_identity_type": "GIT_BLOB_SHA256",
           "source_locator": {
             "end_line": 104,
             "heading": "## Target Rows",
