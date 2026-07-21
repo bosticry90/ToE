@@ -1,0 +1,17 @@
+{
+  "captured_at_utc": "2026-07-21T21:37:34Z",
+  "checks": {
+    "acceptance_criteria_complete": true,
+    "all_eight_tokens_have_individual_provenance": true,
+    "diagnostic_evidence_and_both_review_records_preserved": true,
+    "identity_domains_not_interchanged": true,
+    "no_scientific_execution_authorized": true,
+    "one_implementation_cycle_and_one_result_review_only": true,
+    "scope_excludes_bulk_failures_lean_and_scientific_lanes": true,
+    "v2_enrollment_registry_rotation_and_selector_execution_forbidden": true,
+    "write_test_requires_temporary_tree": true
+  },
+  "review_basis": "SEPARATE_DETERMINISTIC_CONTRACT_RECOMPUTATION",
+  "schema_id": "REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_PACKET_REVIEW_20260721_v0",
+  "verdict": "ACCEPT"
+}
