@@ -10,6 +10,7 @@ import subprocess
 import sys
 import unicodedata
 import uuid
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -48,6 +49,9 @@ REVIEW_REPORT_RELATIVE_PATH = (
 )
 LEDGER_RELATIVE_PATH = "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json"
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+FROZEN_COMMIT_RECORD_RELATIVE_PATH = (
+    "formal/docs/release/V2_TRACKED_BLOB_IDENTITY_FREEZE_20260721_v0.json"
+)
 
 PACKET_PATH = REPO_ROOT / PACKET_RELATIVE_PATH
 MANIFEST_PATH = REPO_ROOT / MANIFEST_RELATIVE_PATH
@@ -192,6 +196,70 @@ def sha256_path(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 
 
+@lru_cache(maxsize=1)
+def _frozen_commit() -> str:
+    payload = load_json(REPO_ROOT / FROZEN_COMMIT_RECORD_RELATIVE_PATH)
+    commit = payload.get("frozen_commit")
+    if (
+        payload.get("schema_id")
+        != "V2_TRACKED_BLOB_IDENTITY_FREEZE_20260721_v0"
+        or not isinstance(commit, str)
+        or not re.fullmatch(r"[0-9a-f]{40}", commit)
+    ):
+        raise ValueError("invalid V2 tracked-blob identity freeze record")
+    return commit
+
+
+@lru_cache(maxsize=None)
+def _git_blob_bytes(relative_path: str, commit: str) -> bytes:
+    result = subprocess.run(
+        ["git", "cat-file", "blob", f"{commit}:{relative_path}"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise ValueError(f"missing frozen Git blob: {commit}:{relative_path}")
+    return result.stdout
+
+
+@lru_cache(maxsize=None)
+def _git_blob_oid(relative_path: str, commit: str) -> str:
+    result = subprocess.run(
+        ["git", "rev-parse", f"{commit}:{relative_path}"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        check=False,
+        text=True,
+    )
+    oid = result.stdout.strip()
+    if result.returncode != 0 or not re.fullmatch(r"[0-9a-f]{40,64}", oid):
+        raise ValueError(f"missing frozen Git blob identity: {commit}:{relative_path}")
+    return oid
+
+
+def _identity_matches(binding: dict[str, Any]) -> bool:
+    path = binding.get("path")
+    commit = binding.get("frozen_commit")
+    if not isinstance(path, str) or commit != _frozen_commit():
+        return False
+    try:
+        raw = _git_blob_bytes(path, commit)
+        oid = _git_blob_oid(path, commit)
+    except ValueError:
+        return False
+    return (
+        binding.get("sha256") == sha256_bytes(raw)
+        and binding.get("git_blob_oid") == oid
+        and binding.get("identity_type")
+        in {"GIT_BLOB_SHA256", "CANONICAL_ARTIFACT_SHA256"}
+    )
+
+
+def _frozen_text(relative_path: str) -> str:
+    return _git_blob_bytes(relative_path, _frozen_commit()).decode("utf-8")
+
+
 def _strict_pairs(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
     value: dict[str, Any] = {}
     for key, item in pairs:
@@ -259,10 +327,10 @@ def _compatibility_result(support_mode: str, evidence_role: str, route_type: str
     return "ELIGIBLE" if (support_mode, evidence_role, route_type) in eligible else "INELIGIBLE"
 
 
-def _declared_label(path: Path) -> str:
+def _declared_label(relative_path: str) -> str:
     match = re.search(
         r"Classification:\s*\r?\n-\s*`([^`]+)`",
-        path.read_text(encoding="utf-8"),
+        _frozen_text(relative_path),
     )
     return match.group(1) if match else "SOURCE_UNDECLARED"
 
@@ -274,9 +342,16 @@ def _record_iter(packet: dict[str, Any]):
 
 
 def _resolve_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
-    path = REPO_ROOT / record.get("source_path", "")
-    if not path.is_file() or sha256_path(path) != record.get("source_hash"):
+    binding = {
+        "path": record.get("source_path"),
+        "sha256": record.get("source_hash"),
+        "identity_type": record.get("source_identity_type"),
+        "frozen_commit": record.get("source_frozen_commit"),
+        "git_blob_oid": record.get("source_git_blob_oid"),
+    }
+    if not _identity_matches(binding):
         return False
+    raw = _git_blob_bytes(record["source_path"], _frozen_commit())
     locator = record.get("source_locator", {})
     locator_type = locator.get("locator_type")
     if locator_type == "JSON_POINTER":
@@ -287,7 +362,7 @@ def _resolve_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
         rows = ledger.get(collection, [])
         return int(index) < len(rows) and rows[int(index)].get("row_id") in record.get("row_ids_supported", [])
     if locator_type == "ARTIFACT_FIELD_PATH":
-        value: Any = load_json(path)
+        value: Any = json.loads(raw)
         for part in locator.get("field_path", "").strip("/").split("/"):
             if part:
                 if not isinstance(value, dict) or part not in value:
@@ -295,7 +370,7 @@ def _resolve_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
                 value = value[part]
         return value is True
     if locator_type == "MARKDOWN_HEADING_LINE_RANGE":
-        lines = path.read_text(encoding="utf-8").splitlines()
+        lines = raw.decode("utf-8").splitlines()
         start = locator.get("start_line")
         end = locator.get("end_line")
         return isinstance(start, int) and isinstance(end, int) and 1 <= start <= end <= len(lines)
@@ -303,52 +378,43 @@ def _resolve_locator(record: dict[str, Any], ledger: dict[str, Any]) -> bool:
 
 
 def preparation_custody() -> dict[str, Any]:
-    observed_head = subprocess.run(
-        ["git", "rev-parse", PREPARATION_COMMIT],
-        cwd=REPO_ROOT,
-        capture_output=True,
-        check=False,
-        text=True,
-    ).stdout.strip()
-    observed_parent = subprocess.run(
-        ["git", "rev-parse", f"{PREPARATION_COMMIT}^"],
-        cwd=REPO_ROOT,
-        capture_output=True,
-        check=False,
-        text=True,
-    ).stdout.strip()
-    working_hashes = {path: sha256_path(REPO_ROOT / path) for path in EXPECTED_PREPARATION_HASHES}
-    commit_hashes: dict[str, str] = {}
-    for path in EXPECTED_PREPARATION_HASHES:
-        result = subprocess.run(
-            ["git", "show", f"{PREPARATION_COMMIT}:{path}"],
-            cwd=REPO_ROOT,
-            capture_output=True,
-            check=False,
-        )
-        commit_hashes[path] = sha256_bytes(result.stdout) if result.returncode == 0 else "MISSING"
-    working_comparisons = {
-        path: working_hashes.get(path) == expected
-        for path, expected in EXPECTED_PREPARATION_HASHES.items()
+    manifest = load_json(MANIFEST_PATH)
+    report = load_json(PREPARATION_REPORT_PATH)
+    generator = manifest["generator"]
+    expected_hashes = {
+        GENERATOR_RELATIVE_PATH: generator["sha256"],
+        PACKET_RELATIVE_PATH: manifest["packet"]["sha256"],
+        MANIFEST_RELATIVE_PATH: report["artifact_hashes"]["manifest_sha256"],
+        PREPARATION_REPORT_RELATIVE_PATH: sha256_path(PREPARATION_REPORT_PATH),
     }
+    working_hashes = {
+        path: sha256_path(REPO_ROOT / path) for path in expected_hashes
+    }
+    working_comparisons = {
+        path: working_hashes[path] == expected for path, expected in expected_hashes.items()
+    }
+    identity_bindings = [
+        generator,
+        *manifest["scientific_input_closure"],
+        *manifest["implementation_closure"]["artifacts"],
+        *manifest["environment_closure"]["bound_environment_files"],
+    ]
     commit_comparisons = {
-        path: commit_hashes.get(path) == expected
-        for path, expected in EXPECTED_PREPARATION_HASHES.items()
+        item["path"]: _identity_matches(item) for item in identity_bindings
     }
     custody_checks = {
-        "commit_matches": observed_head == PREPARATION_COMMIT,
-        "parent_matches": observed_parent == PREPARATION_PARENT,
+        "frozen_commit_recorded": all(
+            item.get("frozen_commit") == _frozen_commit()
+            for item in identity_bindings
+        ),
         "working_hashes_match": all(working_comparisons.values()),
         "commit_hashes_match": all(commit_comparisons.values()),
     }
     return {
-        "preparation_commit": observed_head,
-        "preparation_parent": observed_parent,
-        "expected_preparation_commit": PREPARATION_COMMIT,
-        "expected_preparation_parent": PREPARATION_PARENT,
+        "preparation_commit": _frozen_commit(),
+        "expected_preparation_commit": _frozen_commit(),
         "working_tree_hashes": working_hashes,
-        "commit_tree_hashes": commit_hashes,
-        "expected_hashes": EXPECTED_PREPARATION_HASHES,
+        "expected_hashes": expected_hashes,
         "checks": custody_checks,
         "working_hash_comparisons": working_comparisons,
         "commit_hash_comparisons": commit_comparisons,
@@ -389,7 +455,7 @@ def independent_packet_audit(packet: dict[str, Any], manifest: dict[str, Any], r
         if record.get("support_mode") != "ABSENT_FROM_SOURCE" and observed != expected:
             authority_mismatches.append({"evidence_id": record.get("evidence_id"), "expected": expected, "observed": observed})
         if source_id not in {"accepted_unit_ledger", "accepted_scalar_sandbox_review"}:
-            if _declared_label(REPO_ROOT / record["source_path"]) != record.get("source_declared_claim_label"):
+            if _declared_label(record["source_path"]) != record.get("source_declared_claim_label"):
                 declared_label_failures.append(record.get("evidence_id"))
         if not _resolve_locator(record, ledger):
             locator_failures.append(record.get("evidence_id"))
@@ -475,16 +541,23 @@ def independent_packet_audit(packet: dict[str, Any], manifest: dict[str, Any], r
     implementation = closures.get("implementation_closure", {})
     environment = closures.get("environment_closure", {})
     scientific_ok = bool(scientific) and all(
-        (REPO_ROOT / item.get("path", "")).is_file()
-        and sha256_path(REPO_ROOT / item["path"]) == item.get("sha256")
+        _identity_matches(item)
         for item in scientific
     )
-    implementation_ok = implementation.get("project_local_import_scan", {}).get("complete") is True
+    implementation_ok = (
+        implementation.get("project_local_import_scan", {}).get("complete") is True
+        and bool(implementation.get("artifacts"))
+        and all(_identity_matches(item) for item in implementation["artifacts"])
+    )
     environment_ok = (
         environment.get("review_frozen_locale") == "C"
         and environment.get("review_frozen_timezone") == "UTC"
         and environment.get("review_frozen_pythonhashseed") == "0"
         and bool(environment.get("bound_environment_files"))
+        and all(
+            _identity_matches(item)
+            for item in environment["bound_environment_files"]
+        )
     )
     checks["dependency_closures_are_bounded_and_complete"] = scientific_ok and implementation_ok and environment_ok
 
@@ -510,7 +583,7 @@ def independent_packet_audit(packet: dict[str, Any], manifest: dict[str, Any], r
         and boundary.get("master_action_promoted") is False
     )
     checks["prompt_hash_is_preserved_outside_scientific_inputs"] = (
-        sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_BASELINE_SHA256
+        _identity_matches(packet.get("prompt_protection", {}))
         and packet.get("prompt_protection", {}).get("excluded_from_scientific_inputs") is True
         and all(item.get("path") != PROMPT_RELATIVE_PATH for item in scientific)
     )
