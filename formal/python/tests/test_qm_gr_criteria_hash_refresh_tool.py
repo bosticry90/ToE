@@ -94,6 +94,7 @@ def test_hash_refresh_write_is_idempotent_in_temporary_tree_only(tmp_path: Path)
     } == repository_before
 
 
-def test_apply_updates_refuses_implicit_repository_root_write() -> None:
-    with pytest.raises(PermissionError, match="explicit maintenance CLI"):
-        tool.apply_updates(repo_root=tool.REPO_ROOT)
+def test_cli_refuses_repository_write_without_explicit_authorization() -> None:
+    with pytest.raises(SystemExit) as exc_info:
+        tool.main(["--mode", "write"])
+    assert exc_info.value.code == 2
