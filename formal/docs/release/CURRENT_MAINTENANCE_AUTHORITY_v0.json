@@ -8,6 +8,7 @@
     "first_unit_selector_execution_authorized": false,
     "independent_result_reviews_remaining": 0,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
+    "missing_artifact_expectation_adjudication_authorized": true,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
     "post_prompt_decoupling_baseline_reassessment_authorized": false,
@@ -26,17 +27,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T04:50:27Z",
+  "captured_at_utc": "2026-07-22T22:06:47Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_repository_post_prompt_decoupling_baseline_reassessment_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_REVIEW_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "24b599794874616e17fe49fc77818b530222c68855f4423a6e4364f88432cbb4",
-  "current_maintenance_target_kind": "accepted_post_prompt_decoupling_baseline_reassessment_result_preservation",
-  "current_maintenance_target_status": "ACCEPTED_REASSESSMENT_RESULT_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY",
+  "current_maintenance_target": "execute_bounded_missing_artifact_expectation_adjudication_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_PACKET_REVIEW_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "1417b4f3beb43864466c1c938f2fdd2f5b22c49cc3cf9ed2e320715dd419fa10",
+  "current_maintenance_target_kind": "bounded_read_only_missing_artifact_expectation_adjudication",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_EXPECTATION_LEVEL_ADJUDICATION_NO_REPAIR",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -44,8 +45,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0.json",
-    "sha256": "de02eb8ec43de59caf9cf6979fb422055d7ee513c00018defc3dce8f0a438bd0",
+    "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_PACKET_REVIEW_20260722_v0.json",
+    "sha256": "1417b4f3beb43864466c1c938f2fdd2f5b22c49cc3cf9ed2e320715dd419fa10",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -86,8 +87,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "review_repository_post_prompt_decoupling_baseline_reassessment_result_v0",
-  "previous_maintenance_target_status": "INDEPENDENT_REVIEW_ACCEPTED_REASSESSMENT_STILL_BLOCKED",
+  "previous_maintenance_target": "preserve_repository_post_prompt_decoupling_baseline_reassessment_result_v0",
+  "previous_maintenance_target_status": "ACCEPTED_REASSESSMENT_RESULT_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -110,8 +111,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_SELECTION_20260722_v0.json",
-    "sha256": "43fafbf4d60c9652c7f8d57b9116dfbe3deb8539cbe353e8df45bf6dd3fc8a25"
+    "path": "formal/docs/release/MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_SELECTION_20260722_v0.json",
+    "sha256": "dac468c493eb2c8f9d5beb9b12574b4cf0d7059b80b95df6fb2d8e50d7090377"
   },
   "prompt_dependency_role_adjudication_and_decoupling_result": {
     "outcome": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_ACCEPTED_STILL_BLOCKED",
@@ -128,5 +129,5 @@
     "sha256": "24b599794874616e17fe49fc77818b530222c68855f4423a6e4364f88432cbb4",
     "verdict": "ACCEPT_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_STILL_BLOCKED"
   },
-  "status": "POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY"
+  "status": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_AUTHORIZED_DIAGNOSTIC_ONLY"
 }

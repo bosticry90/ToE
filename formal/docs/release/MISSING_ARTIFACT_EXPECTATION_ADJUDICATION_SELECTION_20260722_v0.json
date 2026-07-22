@@ -1,0 +1,17 @@
+{
+  "schema_id": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_SELECTION_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:06:47Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION",
+    "PRESERVE_ACCEPTED_REASSESSMENT_AND_DEFER_ADJUDICATION"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION",
+  "target": "prepare_repository_missing_artifact_expectation_adjudication_packet_v0",
+  "selection_basis": "The accepted post-Prompt reassessment isolates 222 outcomes in the highest-leverage family. Evidence indicates that the family is dominated by ignored, never-tracked report expectations that are absent in a clean checkout but present only in the preserved dirty workspace. Role adjudication and latent-dependency decomposition must precede any repair, generation, restoration, or promotion.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "24b599794874616e17fe49fc77818b530222c68855f4423a6e4364f88432cbb4",
+    "commit": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd"
+  },
+  "scientific_posture": "B-BLOCKED"
+}
