@@ -1,0 +1,91 @@
+{
+  "schema_id": "REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_REVIEW_20260722_v0",
+  "verdict": "ACCEPT_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_STILL_BLOCKED",
+  "reviewed_branch": "codex/post-prompt-decoupling-baseline-reassessment-v0",
+  "reviewed_commit": "6e6953a62cd585a38ffde7da34c7ddc670d46b6c",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_20260722_v0.json",
+    "sha256": "d24cb811c307826a4585bbaa474377778c3df9f752ac7cb0f21cb086a29f1dd4",
+    "outcome": "POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "independence": {
+    "review_worktree": ".toe-recovery/disposable-workspaces/post-prompt-decoupling-baseline-reassessment-review-v0",
+    "detached_clean_checkout": true,
+    "broad_suite_rerun": false,
+    "recomputation_method": "Independent JUnit parsing, exact frozen-ID reconstruction, evidence-hash validation, family-sum validation, preservation checks, and dirty-main custody verification without importing the implementation analysis builder.",
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/post-prompt-decoupling-baseline-reassessment-v0/INDEPENDENT_REVIEW_RECOMPUTATION_v0.json",
+      "sha256": "1c26c10cd07b73bfb23a13d48c477e32883b34bac5c314ceee93e8e13eb3581f"
+    },
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/post-prompt-decoupling-baseline-reassessment-v0/independent_review_post_prompt_reassessment_v0.py",
+      "sha256": "62f626b39a3c54968103086c00c653dfe2e793f0c8ae824f3a723780982e7b65"
+    }
+  },
+  "recomputed_execution": {
+    "frozen_inventory_count": 13756,
+    "frozen_inventory_sha256": "9fb439dcb59609622b7151355461b3fccb21600e53d48d5f963db89a5e8df139",
+    "frozen_inventory_order_exact": true,
+    "passed": 12628,
+    "skipped": 598,
+    "failed": 473,
+    "errors": 57,
+    "nonpassing": 530,
+    "tracked_status_after": "EMPTY",
+    "unexpected_untracked_source": "NONE"
+  },
+  "recomputed_prompt_family": {
+    "prior_count": 206,
+    "recovered_and_still_passing": 195,
+    "reclassified_and_confirmed": 11,
+    "prompt_identity_roots_remaining": 0
+  },
+  "recomputed_first_cause_families": {
+    "missing_artifacts": 222,
+    "qft_route_hash": 67,
+    "other_packet_contract": 65,
+    "pillar_ledger_staging_selector": 58,
+    "other_artifact_currency": 50,
+    "equation_compendium_hash": 50,
+    "authority_expectations": 8,
+    "environment_or_path_identity": 6,
+    "other_committed_assertions": 4,
+    "sum": 530,
+    "unclassified": 0
+  },
+  "new_source_custody_root_review": {
+    "root_id": "POST_DECOUPLING_SOURCE_CUSTODY_DRIFT",
+    "affected_outcomes": 13,
+    "assessment": "CONFIRMED_SINGLE_STALE_ARTIFACT_CURRENCY_ROOT_WITH_TWELVE_CASCADES",
+    "scientific_effect": "NONE"
+  },
+  "preservation": {
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "prompt_git_blob_oid": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "formal_output_tree": "77550eeadf24bd0930fd6c853c0031f7c9d66bbf",
+    "toe_formal_tree": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "primary_worktree_clean": true,
+    "review_worktree_clean": true
+  },
+  "decision": {
+    "baseline_result_accepted": true,
+    "repository_recovery_complete": false,
+    "next_highest_leverage_family": "missing_artifacts",
+    "next_highest_leverage_family_outcomes": 222,
+    "next_repair_authorized": false,
+    "automatic_successor_authorized": false,
+    "v2_enrollment_authorized": false,
+    "registry_rotation_authorized": false,
+    "first_unit_selector_execution_authorized": false,
+    "lean_activity_authorized": false,
+    "scientific_execution_authorized": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "broad_python_baseline": "REPRODUCIBLY_RED_AND_EXHAUSTIVELY_RECLUSTERED",
+  "lean_status": "LEAN_DEPENDENCY_BOOTSTRAP_TIMEOUT_UNCHANGED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_REASSESSMENT_RESULT_AND_STOP_FOR_FRESH_SELECTOR"
+}
