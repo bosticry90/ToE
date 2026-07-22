@@ -6,7 +6,7 @@
     "broad_python_first_cause_clustering_authorized": false,
     "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "independent_result_reviews_remaining": 1,
+    "independent_result_reviews_remaining": 0,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "missing_artifact_expectation_adjudication_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
@@ -27,17 +27,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T22:15:57Z",
+  "captured_at_utc": "2026-07-22T22:20:47Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "review_repository_missing_artifact_expectation_adjudication_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "c2de1f02bf33a02a15b67d4a897958a131e5e9c88902d4dcbfc01a4547e384d8",
-  "current_maintenance_target_kind": "independent_missing_artifact_expectation_adjudication_result_review",
-  "current_maintenance_target_status": "ADJUDICATION_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "current_maintenance_target": "preserve_repository_missing_artifact_expectation_adjudication_result_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4",
+  "current_maintenance_target_kind": "accepted_missing_artifact_expectation_adjudication_result_preservation",
+  "current_maintenance_target_status": "ACCEPTED_ADJUDICATION_RESULT_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -87,8 +87,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "execute_bounded_missing_artifact_expectation_adjudication_v0",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_EXPECTATION_LEVEL_ADJUDICATION_NO_REPAIR",
+  "previous_maintenance_target": "review_repository_missing_artifact_expectation_adjudication_result_v0",
+  "previous_maintenance_target_status": "INDEPENDENT_REVIEW_ACCEPTED_ADJUDICATION_STILL_BLOCKED",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -134,5 +134,10 @@
     "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_20260722_v0.json",
     "sha256": "c2de1f02bf33a02a15b67d4a897958a131e5e9c88902d4dcbfc01a4547e384d8"
   },
-  "status": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW"
+  "missing_artifact_expectation_adjudication_result_review": {
+    "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4",
+    "verdict": "ACCEPT_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_STILL_BLOCKED"
+  },
+  "status": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_ACCEPTED_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY"
 }
