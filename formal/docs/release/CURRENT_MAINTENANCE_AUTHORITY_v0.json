@@ -3,10 +3,10 @@
     "automatic_successor_authorized": false,
     "baseline_repair_authorized": false,
     "bounded_hash_identity_repair_authorized": false,
-    "broad_python_first_cause_clustering_authorized": true,
-    "diagnostic_execution_cycles_remaining": 1,
+    "broad_python_first_cause_clustering_authorized": false,
+    "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "independent_result_reviews_remaining": 1,
+    "independent_result_reviews_remaining": 0,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
@@ -24,17 +24,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T00:32:04Z",
+  "captured_at_utc": "2026-07-22T01:27:31Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "prepare_repository_broad_python_first_cause_cluster_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "34d47e81094bc1300795b499d6d2e88c0bc8c4b73ef587b8af049625d61b5384",
-  "current_maintenance_target_kind": "bounded_broad_python_first_cause_clustering",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_DIAGNOSTIC_NONLEAN_INVENTORY_AND_ONE_REVIEW",
+  "current_maintenance_target": "preserve_repository_broad_python_first_cause_cluster_result_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55",
+  "current_maintenance_target_kind": "accepted_broad_python_first_cause_cluster_result_preservation",
+  "current_maintenance_target_status": "ACCEPTED_DIAGNOSTIC_CLUSTERING_RESULT_NO_REPAIR_OR_SCIENTIFIC_AUTHORITY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -51,10 +51,15 @@
     "sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4",
     "verdict": "ACCEPT"
   },
+  "broad_python_first_cause_cluster_result": {
+    "outcome": "BROAD_PYTHON_FIRST_CAUSE_CLUSTERING_COMPLETE_STILL_BLOCKED",
+    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_20260722_v0.json",
+    "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
+  },
   "independent_result_review": {
-    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_REVIEW_20260721_v0.json",
-    "sha256": "beaa10e0e11e805638f1c67a81fec7a89343b5bf0aaa562110392ad06d6e6773",
-    "verdict": "ACCEPTED_NARROW_REPAIR_RESULT_NO_BROAD_RECOVERY_AUTHORITY"
+    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "ae4f4f7346a0656509e01d4271950e8d0d966800acfa4ee05333584d66c1b3a1",
+    "verdict": "ACCEPTED_DIAGNOSTIC_RESULT_STILL_BLOCKED_NO_REPAIR_AUTHORITY"
   },
   "line_ending_identity_and_mapping_tuple_repair_result": {
     "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
@@ -79,8 +84,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_result_v0",
-  "previous_maintenance_target_status": "ACCEPTED_NARROW_MAINTENANCE_REPAIR_NO_RECOVERY_OR_SCIENTIFIC_AUTHORITY",
+  "previous_maintenance_target": "prepare_repository_broad_python_first_cause_cluster_packet_v0",
+  "previous_maintenance_target_status": "AUTHORIZED_ONE_DIAGNOSTIC_NONLEAN_INVENTORY_AND_ONE_REVIEW",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -106,5 +111,5 @@
     "path": "formal/docs/release/POST_LINE_ENDING_REPAIR_MAINTENANCE_SELECTION_20260722_v0.json",
     "sha256": "ad4336633c2562863ac8152bc31e8888da4a8c952f4afd95d012a0dc5c7f79ea"
   },
-  "status": "ACTIVE_BOUNDED_BROAD_PYTHON_FIRST_CAUSE_CLUSTERING_NO_SCIENTIFIC_AUTHORITY"
+  "status": "PRESERVED_BROAD_PYTHON_FIRST_CAUSE_CLUSTERING_RESULT_B_BLOCKED"
 }
