@@ -4,9 +4,9 @@
     "baseline_repair_authorized": false,
     "bounded_hash_identity_repair_authorized": false,
     "broad_python_first_cause_clustering_authorized": false,
-    "diagnostic_execution_cycles_remaining": 1,
+    "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "historical_report_aggregate_contract_decomposition_authorized": true,
+    "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_fixture_conversion_pilot_authorized": false,
     "independent_result_reviews_remaining": 1,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
@@ -29,17 +29,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T23:19:24Z",
+  "captured_at_utc": "2026-07-22T23:26:48Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "execute_historical_report_aggregate_contract_decomposition_and_retirement_review_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_PACKET_REVIEW_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "e543d6d77ba63a20a2dd36e34aedf00aecc57bc563cf1c12d7f2845217e72272",
-  "current_maintenance_target_kind": "diagnostic_historical_report_aggregate_contract_decomposition",
-  "current_maintenance_target_status": "AUTHORIZED_DIAGNOSTIC_ONLY_NO_FIXTURE_NO_TEST_REPAIR",
+  "current_maintenance_target": "review_repository_historical_report_aggregate_contract_decomposition_result_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "3c9ecf198c3fd0df5a6be8d7d0da8cf41bd4c628e32acd2bc5e45215d158dcdd",
+  "current_maintenance_target_kind": "independent_historical_report_aggregate_contract_decomposition_result_review",
+  "current_maintenance_target_status": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -89,8 +89,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_repository_historical_report_fixture_conversion_pilot_result_v0",
-  "previous_maintenance_target_status": "ACCEPTED_ONE_IDENTITY_FIXTURE_PILOT_STILL_BLOCKED_NO_SCALE_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "execute_historical_report_aggregate_contract_decomposition_and_retirement_review_v0",
+  "previous_maintenance_target_status": "AUTHORIZED_DIAGNOSTIC_ONLY_NO_FIXTURE_NO_TEST_REPAIR",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -151,5 +151,10 @@
     "sha256": "cd323104d3c6c0da2f61fd2ac3305eaae2e7f8c2398fcbffcf7107f38612784b",
     "verdict": "ACCEPT_ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_NO_SCALE"
   },
-  "status": "HISTORICAL_REPORT_FIXTURE_PILOT_ACCEPTED_STILL_BLOCKED_NO_SCALE_NO_SUCCESSOR_AUTHORITY"
+  "historical_report_aggregate_contract_decomposition_result": {
+    "outcome": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_20260722_v0.json",
+    "sha256": "3c9ecf198c3fd0df5a6be8d7d0da8cf41bd4c628e32acd2bc5e45215d158dcdd"
+  },
+  "status": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
 }

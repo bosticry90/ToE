@@ -1,0 +1,129 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:26:48Z",
+  "result": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/historical-aggregate-contract-decomposition-v0",
+  "accepted_base_commit": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+  "authorization_commit": "8135468d1af9da39af55373ff24ea64a64c3f6d3",
+  "scope": {
+    "aggregate_test_files_inspected": 1,
+    "aggregate_outcomes_classified": 2,
+    "dependency_identities_classified": 19,
+    "historical_report_or_fixture_artifacts_created": 0,
+    "dirty_main_report_content_reads": 0,
+    "test_files_modified": 0,
+    "generator_files_modified": 0,
+    "scientific_content_changes": 0,
+    "registry_rotations": 0,
+    "v2_enrollment": false,
+    "lean_activity": false,
+    "scale_action": false,
+    "automatic_successor": false
+  },
+  "aggregate_contract_binding": {
+    "path": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+    "git_blob_oid": "14ade32d677b2416c5eb09d5575b1ab513b0a72c",
+    "sha256": "8dbe535e50a125e0df84ee9d98cf7bff63fc0872f10e969866776649f58c7654",
+    "ordered_dependency_identities": 19,
+    "selected_outcomes": [
+      "test_all_remediation_reports_exist",
+      "test_all_report_controls_preserve_invariance"
+    ]
+  },
+  "identity_classification": {
+    "retention_expired": 19,
+    "historical_noncurrent": 19,
+    "current_critical": 0,
+    "absent_ignored_never_tracked": 15,
+    "tracked_present_historical_records": 4,
+    "fixture_convertible_proven": 1,
+    "provenance_blocked": 14,
+    "fixture_not_required_because_committed": 4,
+    "aggregate_membership_safe_to_retire_or_split": 19,
+    "identity_local_semantic_obligations_authorized_for_retirement": 0
+  },
+  "generator_adjudication": {
+    "complete_output_generators_established": 1,
+    "complete_generator_identity": "formal/output/reports/physics_math_throughput_baseline_20260407_v0.json",
+    "in_place_refreshers_not_counted_as_generators": 1,
+    "in_place_refresher_identity": "formal/output/reports/physics_math_throughput_phase6_t12_live_authorization_decision_packet_20260407_v0.json",
+    "in_place_refresher_blocker": "It reads the target report before writing it and also requires the absent baseline, T08, and T09 reports.",
+    "consumer_and_metrics_references_not_counted_as_generators": true,
+    "interpretation": "The accepted adjudication's generator references were reference candidates. This decomposition establishes actual producer roles and reduces the safe fixture-convertible aggregate subset to the one already proven baseline identity."
+  },
+  "aggregate_outcome_dispositions": [
+    {
+      "expectation_id": "MAEA-0064",
+      "test": "test_all_remediation_reports_exist",
+      "recommended_disposition": "RETIRE_RETENTION_EXPIRED_EXPECTATION",
+      "basis": "The loop imposes a clean-checkout live-path requirement across fifteen unavailable ignored historical reports and four committed historical records, with zero current-critical dependencies.",
+      "identity_local_obligations_preserved": true
+    },
+    {
+      "expectation_id": "MAEA-0065",
+      "test": "test_all_report_controls_preserve_invariance",
+      "recommended_disposition": "SPLIT_FROM_AGGREGATE_CONTRACT",
+      "basis": "The cross-identity loop duplicates historical control checks while failing before it can adjudicate heterogeneous lifecycle states. Every identity has at least one separate identity-local test file.",
+      "routing": {
+        "accepted_temporary_fixture_pattern": 1,
+        "block_for_generator_provenance": 14,
+        "committed_historical_record_validation": 4
+      }
+    }
+  ],
+  "monolith_decision": {
+    "retain_as_one_current_blocking_aggregate": false,
+    "decision": "DECOMPOSE_AND_RETIRE_MONOLITHIC_CURRENT_BLOCKING_ROLE",
+    "implementation_authorized": false,
+    "reason": "The contract combines heterogeneous artifact lifecycles, producer maturity, and checkout states. Test-count aggregation hides rather than preserves those distinctions."
+  },
+  "focused_diagnostic_validation": {
+    "tests_collected": 2,
+    "passed": 0,
+    "failed": 2,
+    "first_missing_path": "formal/output/reports/physics_math_throughput_baseline_20260407_v0.json",
+    "interpretation": "Expected diagnostic reproduction; no repair was authorized or attempted.",
+    "checkout_status_after": "CLEAN",
+    "broad_baseline_rerun": false
+  },
+  "external_evidence": {
+    "ledger": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_LEDGER_20260722_v0.json",
+      "sha256": "134c6baecb2baf99be4f4390e2a4851c92d656ce299792a1d57d0e1f3690e933"
+    },
+    "analyzer": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0/analyze_historical_report_aggregate_contract_v0.py",
+      "sha256": "d53e9289c6849f839be2cc31aafb923b40b6a8c0517265256c296ea5fdf5859e"
+    },
+    "focused_junit": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0/AGGREGATE_DIAGNOSTIC_JUNIT_v0.xml",
+      "sha256": "16e7bb8dc3478a804a81bbfa56a7ad2b70b47913632febceaa3b08fe1a5b045f"
+    }
+  },
+  "preservation": {
+    "tests_tree_before": "5c2ed42b6476086f5ed6ce61b95c520fe0d2f426",
+    "tests_tree_after": "5c2ed42b6476086f5ed6ce61b95c520fe0d2f426",
+    "loop_control_registry_git_blob_before": "fd7b1ff5f1f3e35f46b2599243e97e0f2d501a94",
+    "loop_control_registry_git_blob_after": "fd7b1ff5f1f3e35f46b2599243e97e0f2d501a94",
+    "toe_formal_tree_before": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "toe_formal_tree_after": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "state_of_the_theory_git_blob_before": "8172968020a2a9953b62ec55d34c4eedc04b19bc",
+    "state_of_the_theory_git_blob_after": "8172968020a2a9953b62ec55d34c4eedc04b19bc",
+    "scientific_and_authority_fields_changed": false
+  },
+  "decision": {
+    "diagnostic_packet_complete": true,
+    "aggregate_presence_contract_recommended_for_retirement": true,
+    "aggregate_invariance_contract_recommended_for_decomposition": true,
+    "fixture_scale_authorized": false,
+    "aggregate_test_repair_authorized": false,
+    "provenance_blocked_identity_repair_authorized": false,
+    "next_action_authorized": false,
+    "independent_review_required": true
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_DIAGNOSTIC_RESULT_ONLY"
+}
