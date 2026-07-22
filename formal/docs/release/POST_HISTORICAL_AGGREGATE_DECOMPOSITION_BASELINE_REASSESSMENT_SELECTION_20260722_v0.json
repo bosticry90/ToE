@@ -1,0 +1,18 @@
+{
+  "schema_id": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_SELECTION_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:54:37Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_POST_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT",
+    "AUTHORIZE_FOURTEEN_IDENTITY_GENERATOR_PROVENANCE_REVIEW",
+    "PRESERVE_ACCEPTED_IMPLEMENTATION_AND_DEFER_REASSESSMENT"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_POST_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT",
+  "target": "prepare_repository_post_historical_aggregate_decomposition_baseline_reassessment_packet_v0",
+  "selection_basis": "The accepted aggregate implementation removed two invalid blocking contracts and the earlier fixture pilot repaired two dependency-local outcomes, but neither cycle reran the frozen broad inventory. Measurement must precede any additional repair or scale decision.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "03f15009105afb50173c303cc72c3519311b1f164fcb97e8f02e4d2054d7ed3b",
+    "commit": "b9779540452294216b3dd1850f2f698e9dca4ca1"
+  },
+  "scientific_posture": "B-BLOCKED"
+}
