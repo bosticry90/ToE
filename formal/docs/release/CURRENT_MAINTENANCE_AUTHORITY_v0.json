@@ -6,8 +6,8 @@
     "broad_python_first_cause_clustering_authorized": false,
     "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "historical_report_fixture_conversion_pilot_authorized": true,
-    "independent_result_reviews_remaining": 0,
+    "historical_report_fixture_conversion_pilot_authorized": false,
+    "independent_result_reviews_remaining": 1,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "missing_artifact_expectation_adjudication_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
@@ -17,28 +17,28 @@
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 1,
+    "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": true,
+    "test_modification_authorized": false,
     "tracked_source_mutation_authorized": false,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T22:50:36Z",
+  "captured_at_utc": "2026-07-22T23:01:31Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "execute_one_generator_one_identity_historical_report_fixture_pilot_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_PACKET_REVIEW_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "97b3a217585138b1c3b26fc9e7c62f03f1d21683f4a56f74b8a85660c86c97bb",
-  "current_maintenance_target_kind": "one_generator_one_identity_historical_report_temporary_fixture_pilot",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_TEMPORARY_FIXTURE_REPAIR_NO_SCALE",
+  "current_maintenance_target": "review_repository_historical_report_fixture_conversion_pilot_result_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "4297e065f3fd0a262f0827b15d384a0ec32b37ceb441d0a00f7ef3f47983c683",
+  "current_maintenance_target_kind": "independent_historical_report_fixture_pilot_result_review",
+  "current_maintenance_target_status": "PILOT_COMPLETE_AWAITING_INDEPENDENT_REVIEW_NO_SCALE",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -88,8 +88,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_repository_missing_artifact_expectation_adjudication_result_v0",
-  "previous_maintenance_target_status": "ACCEPTED_ADJUDICATION_RESULT_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "execute_one_generator_one_identity_historical_report_fixture_pilot_v0",
+  "previous_maintenance_target_status": "AUTHORIZED_ONE_TEMPORARY_FIXTURE_REPAIR_NO_SCALE",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -140,5 +140,10 @@
     "sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4",
     "verdict": "ACCEPT_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_STILL_BLOCKED"
   },
-  "status": "HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_AUTHORIZED_NO_SCALE"
+  "historical_report_fixture_conversion_pilot_result": {
+    "outcome": "ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0.json",
+    "sha256": "4297e065f3fd0a262f0827b15d384a0ec32b37ceb441d0a00f7ef3f47983c683"
+  },
+  "status": "HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_COMPLETE_AWAITING_INDEPENDENT_REVIEW_NO_SCALE"
 }
