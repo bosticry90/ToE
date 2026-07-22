@@ -3,9 +3,10 @@
     "automatic_successor_authorized": false,
     "baseline_repair_authorized": false,
     "bounded_hash_identity_repair_authorized": false,
-    "diagnostic_execution_cycles_remaining": 0,
+    "broad_python_first_cause_clustering_authorized": true,
+    "diagnostic_execution_cycles_remaining": 1,
     "first_unit_selector_execution_authorized": false,
-    "independent_result_reviews_remaining": 0,
+    "independent_result_reviews_remaining": 1,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
@@ -23,17 +24,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T00:17:01Z",
+  "captured_at_utc": "2026-07-22T00:32:04Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
-  "current_maintenance_target_evidence_sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28",
-  "current_maintenance_target_kind": "accepted_narrow_line_ending_identity_and_mapping_tuple_repair_preservation",
-  "current_maintenance_target_status": "ACCEPTED_NARROW_MAINTENANCE_REPAIR_NO_RECOVERY_OR_SCIENTIFIC_AUTHORITY",
+  "current_maintenance_target": "prepare_repository_broad_python_first_cause_cluster_packet_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "34d47e81094bc1300795b499d6d2e88c0bc8c4b73ef587b8af049625d61b5384",
+  "current_maintenance_target_kind": "bounded_broad_python_first_cause_clustering",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_DIAGNOSTIC_NONLEAN_INVENTORY_AND_ONE_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -41,8 +42,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_REVIEW_20260721_v0.json",
-    "sha256": "8e64c98b7c0f527ce34112f3797a09b28a7ecf8bc7a422ca566eb64793aba09b",
+    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_REVIEW_20260722_v0.json",
+    "sha256": "6122d43684c0471c1a2aa18fc6953cdd16d3dab6e1edc8da3717d4291d897d3b",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -78,8 +79,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "prepare_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_packet_v0",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_NARROW_REPAIR_IMPLEMENTATION_AND_ONE_REVIEW",
+  "previous_maintenance_target": "preserve_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_result_v0",
+  "previous_maintenance_target_status": "ACCEPTED_NARROW_MAINTENANCE_REPAIR_NO_RECOVERY_OR_SCIENTIFIC_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -102,8 +103,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_REASSESSMENT_MAINTENANCE_SELECTION_20260721_v0.json",
-    "sha256": "48347269631945ff62c1eb036bd7e52d20f283ce0c1bf09208c3b2e46b5fd704"
+    "path": "formal/docs/release/POST_LINE_ENDING_REPAIR_MAINTENANCE_SELECTION_20260722_v0.json",
+    "sha256": "ad4336633c2562863ac8152bc31e8888da4a8c952f4afd95d012a0dc5c7f79ea"
   },
-  "status": "PRESERVED_ACCEPTED_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_REPAIR_NO_SCIENTIFIC_AUTHORITY"
+  "status": "ACTIVE_BOUNDED_BROAD_PYTHON_FIRST_CAUSE_CLUSTERING_NO_SCIENTIFIC_AUTHORITY"
 }

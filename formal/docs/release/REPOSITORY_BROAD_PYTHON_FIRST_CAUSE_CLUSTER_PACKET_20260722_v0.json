@@ -1,0 +1,78 @@
+{
+  "authorized_cycle": {
+    "full_nonlean_inventory_runs": 1,
+    "independent_reviews": 1,
+    "repairs": 0,
+    "source_or_test_modifications": 0
+  },
+  "captured_at_utc": "2026-07-22T00:27:54Z",
+  "classification_vocabulary": [
+    "PRIMARY_COMMITTED_DEFECT",
+    "SECONDARY_CASCADE",
+    "STALE_AUTHORITY_EXPECTATION",
+    "STALE_ARTIFACT_EXPECTATION",
+    "ENVIRONMENT_IDENTITY_DEFECT",
+    "PACKET_CONTRACT_DRIFT",
+    "ORDER_DEPENDENT_FAILURE",
+    "UNRESOLVED"
+  ],
+  "comparability": {
+    "common_test_id_count": 13747,
+    "record_path": "formal/docs/release/POST_IDENTITY_BASELINE_TEST_ID_COMPARABILITY_20260721_v0.json",
+    "record_sha256": "560832f0c53dcfebadbfb33289d6249b2a9f3f265529a713f9eda133e82bf39d",
+    "require_added_removed_common_comparison": true,
+    "require_common_test_outcome_transitions": true
+  },
+  "execution_contract": {
+    "collection_preflight_required": true,
+    "contained_checkout_source_commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+    "full_run_timeout_seconds": 7200,
+    "nonlean_scope": "formal/python/tests",
+    "preserve_exact_command_environment_order_and_first_exceptions": true,
+    "tracked_source_cleanliness_guard": "REQUIRED",
+    "excluded_lean_build_modules": [
+      "formal/python/tests/test_lean_build_gate_qft_evol_object_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py",
+      "formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py",
+      "formal/python/tests/test_lean_fn01_rep32_build_guard.py",
+      "formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py",
+      "formal/python/tests/test_lean_fn01_rep64_build_guard.py",
+      "formal/python/tests/test_lean_variational_core_build_guard.py"
+    ]
+  },
+  "output_requirements": {
+    "group_failures_and_errors_by_shared_first_cause": true,
+    "identify_smallest_high_leverage_repair_candidates": true,
+    "primary_and_cascade_distinction_required": true,
+    "raw_log_and_exact_node_ids_preserved": true,
+    "stop_for_independent_review": true
+  },
+  "prohibited_scope": [
+    "test modification",
+    "implementation or scientific source modification",
+    "broad repair",
+    "Lean dependency bootstrap or compilation",
+    "thin-authority repair",
+    "V2 enrollment or registry rotation",
+    "Maxwell-Dirac or scalar-Yukawa work",
+    "unit or seam resolution",
+    "scientific execution",
+    "automatic successor cycle"
+  ],
+  "repair_custody": {
+    "branch": "codex/line-ending-identity-mapping-repair-v0",
+    "bundle_path": ".toe-recovery/bundles/line-ending-identity-mapping-repair-v0.bundle",
+    "bundle_sha256": "862567f5989651b53b231749e8d78579540aff15f1ac157b512f6ec0085d6134",
+    "commit": "2849adfec947bb76a86debfc4ef0f7311cb91251"
+  },
+  "schema_id": "REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_20260722_v0",
+  "scientific_posture": "B-BLOCKED",
+  "selector": {
+    "path": "formal/docs/release/POST_LINE_ENDING_REPAIR_MAINTENANCE_SELECTION_20260722_v0.json",
+    "sha256": "ad4336633c2562863ac8152bc31e8888da4a8c952f4afd95d012a0dc5c7f79ea"
+  },
+  "status": "AUTHORIZED_ONE_DIAGNOSTIC_NONLEAN_INVENTORY_AND_ONE_REVIEW",
+  "target": "prepare_repository_broad_python_first_cause_cluster_packet_v0"
+}
