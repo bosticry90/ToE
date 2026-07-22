@@ -1,0 +1,127 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_PACKET_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:50:36Z",
+  "target": "execute_one_generator_one_identity_historical_report_fixture_pilot_v0",
+  "status": "AUTHORIZED_ONE_GENERATOR_ONE_IDENTITY_TEMPORARY_FIXTURE_REPAIR",
+  "accepted_lineage": {
+    "adjudication_commit": "2736090e3240ac6ef2c9e2d74382c6c346653cec",
+    "adjudication_review": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0.json",
+    "adjudication_review_sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4"
+  },
+  "selected_identity": {
+    "path": "formal/output/reports/physics_math_throughput_baseline_20260407_v0.json",
+    "classification": "HISTORICAL_REPORT_BEYOND_RETENTION",
+    "current_decision_bearing": false,
+    "dirty_main_presence_is_nonauthoritative": true,
+    "git_history": "NEVER_TRACKED",
+    "git_policy": "IGNORED",
+    "retention_status": "AT_OR_BEYOND_90_DAY_RETENTION",
+    "pilot_identity_count": 1
+  },
+  "frozen_generator": {
+    "path": "formal/python/tools/physics_math_throughput_baseline_snapshot.py",
+    "git_blob_oid": "851cf79df4182143f8bfe28b2dc90bcc087609b7",
+    "sha256": "97e0b216db96b17587c638a52527addd12ee28ef05a690958b5e9ac0942ddc55",
+    "modification_authorized": false,
+    "explicit_output_path_supported": true,
+    "explicit_timestamp_supported": true
+  },
+  "frozen_input_contract": {
+    "tests_tree_at_authorization": {
+      "path": "formal/python/tests",
+      "git_tree_oid": "6b08d9fbd8a9791be18183bc95db9a4753c81218"
+    },
+    "governance_manifest": {
+      "path": "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json",
+      "git_blob_oid": "43bb88d97b2370759d518bf355a3f3a96dd38900",
+      "sha256": "6c947fa9f81133ab0e352b562a0c196933905bc40dcc9795e9bdedc52be97b58"
+    },
+    "implementation_rule": "The result must bind the exact post-repair tests-tree identity; only the selected gate may change within that tree.",
+    "generated_at_utc": "2026-04-07T00:00:00Z"
+  },
+  "selected_gate": {
+    "path": "formal/python/tests/test_physics_math_throughput_baseline_snapshot_gate.py",
+    "git_blob_oid_before": "e75abe3af070f10d97df3e67c3e6619d8164f7a6",
+    "sha256_before": "39b04658ef0a9ac60862357629520f8ed67cc3adf72e27363ccd01deaa328138",
+    "authorized_modification_count": 1,
+    "selected_dependency_local_tests": [
+      "test_phase0_baseline_files_exist",
+      "test_phase0_baseline_artifact_schema"
+    ],
+    "required_new_guard": "test_phase0_historical_fixture_is_byte_deterministic_and_live_path_absent"
+  },
+  "known_cross_identity_cascades": {
+    "test_file": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+    "attributed_outcomes": 2,
+    "treatment": "MEASURE_ONLY_NOT_MODIFY",
+    "reason": "These aggregate loops depend on nineteen historical report identities. Converting them would violate the one-identity boundary; after the selected first path is bypassed they are expected to expose the next absent historical identity rather than pass."
+  },
+  "authorized_implementation": [
+    "Use pytest temporary-directory facilities to create two outputs with the selected historical filename.",
+    "Call the frozen tracked generator with the fixed captured timestamp.",
+    "Require byte-identical repeated output and schema/semantic validation.",
+    "Require the ignored live report path to remain absent and unread.",
+    "Redirect only the selected dependency-local tests to the temporary fixture.",
+    "Run the complete selected gate in fresh LF and CRLF checkouts.",
+    "Measure the two aggregate cascades without modifying their test file."
+  ],
+  "authorized_cycle": {
+    "repair_implementation_cycles": 1,
+    "test_files_modified": 1,
+    "generator_files_modified": 0,
+    "dependency_identities_converted": 1,
+    "independent_result_reviews": 1,
+    "broad_scale_actions": 0,
+    "scientific_actions": 0,
+    "lean_actions": 0
+  },
+  "external_comparator_intake": {
+    "path": ".toe-recovery/custody-v0/historical-report-fixture-pilot-v0/EXTERNAL_QUANTUM_REFERENCE_FRAME_AND_QUANTUM_GRAVITY_EVIDENCE_COMPARATOR_20260722_v0.json",
+    "sha256": "97828b953fd1ec34fda9f8f81c89b074bff06f9e2935fc5c8c855de23404a978",
+    "classification": "NONAUTHORITATIVE_NONCLAIM_DEFERRED_SCIENTIFIC_ASSESSMENT",
+    "canonical_repository_enrollment": false,
+    "authority_effect": "NONE",
+    "calculation_lane_authorized": false
+  },
+  "output_containment": {
+    "maintenance_root": ".toe-recovery/custody-v0/historical-report-fixture-pilot-v0",
+    "test_fixture_root": "PYTEST_OWNED_SYSTEM_TEMPORARY_DIRECTORY",
+    "dirty_main": "READ_ONLY_NO_REPORT_ACCESS",
+    "formal_output_reports": "WRITE_PROHIBITED",
+    "canonical_fixture_commit": "PROHIBITED"
+  },
+  "acceptance_requirements": {
+    "selected_dependency_identity": 1,
+    "tracked_generator_frozen": true,
+    "dirty_main_report_access": 0,
+    "temporary_fixture_generation": "PASS",
+    "second_generation": "BYTE_IDENTICAL_OR_CANONICALLY_IDENTICAL",
+    "selected_gate": "PASS",
+    "lf_checkout": "CLEAN_PASS",
+    "crlf_checkout": "CLEAN_PASS",
+    "live_report_path_absent_after": true,
+    "scientific_authority_fields_unchanged": true,
+    "registry_unchanged": true,
+    "v2_unchanged": true,
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "reading or copying the ignored dirty-main report",
+    "writing under formal/output/reports",
+    "committing a generated fixture",
+    "modifying the selected generator",
+    "modifying any test other than the selected gate",
+    "repairing the two aggregate cross-identity cascades",
+    "scaling to another historical report identity",
+    "addressing any provenance-blocked expectation",
+    "changing scientific content or authority",
+    "registry rotation",
+    "V2 enrollment",
+    "Lean activity",
+    "scientific calculation",
+    "automatic successor cycle"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
