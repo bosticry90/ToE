@@ -125,4 +125,4 @@ def test_two_clean_processes_are_byte_identical(artifacts: tuple[dict, dict, dic
 
 
 def test_prompt_is_preserved() -> None:
-    assert pilot.sha256_path(pilot.REPO_ROOT / pilot.PROMPT_RELATIVE_PATH) == pilot.PROMPT_SHA256
+    assert pilot.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

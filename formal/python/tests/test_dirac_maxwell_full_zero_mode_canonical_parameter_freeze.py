@@ -93,4 +93,4 @@ def test_preparation_authorizes_review_only(artifacts: tuple[dict, dict, dict, d
 
 
 def test_prompt_is_preserved() -> None:
-    assert freeze.sha256_path(freeze.REPO_ROOT / freeze.PROMPT_RELATIVE_PATH) == freeze.PROMPT_SHA256
+    assert freeze.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

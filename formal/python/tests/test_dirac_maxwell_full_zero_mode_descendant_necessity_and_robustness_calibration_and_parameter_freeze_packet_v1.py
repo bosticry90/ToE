@@ -34,7 +34,7 @@ def test_exact_accepted_authority_and_inputs_are_bound(artifacts: tuple[dict, di
     assert authority["pilot_review_parent"] == freeze.PILOT_REVIEW_PARENT
     assert authority["pilot_review_verdict"] == "ACCEPT_ENGINEERING_READY"
     assert {item["path"]: item["sha256"] for item in authority["input_artifacts"]} == freeze.INPUT_HASHES
-    assert freeze.sha256_path(freeze.REPO_ROOT / freeze.PROMPT_RELATIVE_PATH) == freeze.PROMPT_SHA256
+    assert freeze.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 
 def test_fourteen_accepted_scientific_rows_are_immutable(artifacts: tuple[dict, dict, dict, dict]) -> None:

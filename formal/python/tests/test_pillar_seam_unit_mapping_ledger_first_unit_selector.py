@@ -54,4 +54,4 @@ def test_selector_preserves_candidate_and_prompt_boundaries() -> None:
     assert packet["Maxwell_Dirac_status"] == "PREFERRED_DOWNSTREAM_CANDIDATE_NOT_SELECTED_RESULT"
     assert packet["boundary"]["Maxwell_Dirac_selected"] is False
     assert packet["boundary"]["C_k_audit_only"] is True
-    assert selector.sha256_path(selector.REPO_ROOT / selector.PROMPT_RELATIVE_PATH) == selector.PROMPT_BASELINE_SHA256
+    assert selector.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

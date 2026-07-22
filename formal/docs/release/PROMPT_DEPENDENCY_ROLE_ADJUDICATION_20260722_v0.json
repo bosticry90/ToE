@@ -1,0 +1,941 @@
+{
+  "schema_id": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_20260722_v0",
+  "selected_action": "AUTHORIZE_BOUNDED_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING",
+  "base_commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+  "prompt": {
+    "path": "Prompt.txt",
+    "role": "NONAUTHORITATIVE_WORKFLOW_INPUT",
+    "scientific_role": "NONSCIENTIFIC",
+    "authority_effect": "NONE",
+    "decision_effect": "NONE",
+    "substantive_content_changed": false,
+    "frozen_v2_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "frozen_v2_git_blob_oid": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "frozen_v2_blob_sha256": "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5",
+    "legacy_crlf_checkout_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
+  },
+  "disposition_counts": {
+    "REMOVE_DEPENDENCY": 0,
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE": 41,
+    "RETAIN_AS_REPRODUCIBILITY_BLOB_IDENTITY": 2,
+    "RETAIN_AS_EXPLICIT_CANONICAL_EXPORT_IDENTITY": 0
+  },
+  "consumer_count": 43,
+  "blind_global_hash_replacement_performed": false,
+  "modified_test_obligation_source_identities": [
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_3p1_to_1p1_reduction_consistency.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_3p1_to_1p1_reduction_consistency_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_non_authoritative_pilot_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_pilot_implementation_repair.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_pilot_implementation_repair_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_maxwell_dirac_unit_object_foundation.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_maxwell_dirac_unit_object_foundation_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_post_dirac_maxwell_reduction_blocked_route_decision.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    },
+    {
+      "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "path": "formal/python/tests/test_post_dirac_maxwell_reduction_blocked_route_decision_result_review.py",
+      "retired_obligation": "CHECKOUT_RAW_BYTE_SHA256_EQUALS_LEGACY_CRLF_HASH",
+      "replacement_obligation": "PROMPT_DEPENDENCY_ROLE_IS_NONBLOCKING_PROVENANCE",
+      "scientific_content_effect": "NONE"
+    }
+  ],
+  "consumers": [
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_3p1_to_1p1_reduction_consistency_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_3p1_to_1p1_reduction_consistency; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_3p1_to_1p1_reduction_consistency.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_parameter_freeze.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_canonical_parameter_freeze; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_parameter_freeze.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_canonical_simulation_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_canonical_simulation; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_canonical_simulation.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_axis_normalization_repair.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v3.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_execution_v2.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy frozen-input custody guard; Prompt.txt is not consumed by the numerical execution.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_execution_v2.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail_v1.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_guardrail.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_non_authoritative_pilot_v1.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_discrete_numerical_guardrail; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_discrete_numerical_guardrail.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_non_authoritative_pilot_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot_v1.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_non_authoritative_pilot; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_non_authoritative_pilot.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_pilot_implementation_repair_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_pilot_implementation_repair; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_pilot_implementation_repair.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in dirac_maxwell_full_zero_mode_reduction_with_transverse_fields; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/dirac_maxwell_full_zero_mode_reduction_with_transverse_fields.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/maxwell_dirac_unit_object_foundation_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review maxwell_dirac_unit_object_foundation_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/maxwell_dirac_unit_object_foundation_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/maxwell_dirac_unit_object_foundation.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in maxwell_dirac_unit_object_foundation; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/maxwell_dirac_unit_object_foundation.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Deterministic V2 tracked-source provenance already bound to the reviewed frozen Git blob.",
+      "disposition": "RETAIN_AS_REPRODUCIBILITY_BLOB_IDENTITY",
+      "expected_identity_domain": "FROZEN_GIT_BLOB_SHA256",
+      "proposed_replacement": "Retain the existing frozen-commit plus tracked-path Git-blob identity; do not read checkout bytes.",
+      "blocking_validation_effect_after": true,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": null
+    },
+    {
+      "consumer_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Deterministic V2 tracked-source provenance already bound to the reviewed frozen Git blob.",
+      "disposition": "RETAIN_AS_REPRODUCIBILITY_BLOB_IDENTITY",
+      "expected_identity_domain": "FROZEN_GIT_BLOB_SHA256",
+      "proposed_replacement": "Retain the existing frozen-commit plus tracked-path Git-blob identity; do not read checkout bytes.",
+      "blocking_validation_effect_after": true,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": null
+    },
+    {
+      "consumer_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review pillar_seam_unit_mapping_ledger_first_unit_selector_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in pillar_seam_unit_mapping_ledger_first_unit_selector; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_first_unit_selector.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in post_dirac_maxwell_full_zero_mode_canonical_result_route_decision; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision_result_review.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance and nonpromotion guard in the independent review post_dirac_maxwell_reduction_blocked_route_decision_result_review.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision_result_review.py"
+      }
+    },
+    {
+      "consumer_path": "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision.py",
+      "referenced_prompt_path": "Prompt.txt",
+      "current_pinned_hash": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "comparison_purpose": "Legacy prompt provenance/nonmutation guard in post_dirac_maxwell_reduction_blocked_route_decision; Prompt.txt is excluded from scientific inputs.",
+      "disposition": "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+      "expected_identity_domain": "NONBLOCKING_HISTORICAL_PROVENANCE",
+      "proposed_replacement": "Retain the historical hash only as nonblocking provenance metadata and remove working-tree byte comparisons from validation.",
+      "blocking_validation_effect_after": false,
+      "scientific_content_effect": "NONE",
+      "frozen_semantic_source_identity": {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/python/tools/post_dirac_maxwell_reduction_blocked_route_decision.py"
+      }
+    }
+  ]
+}

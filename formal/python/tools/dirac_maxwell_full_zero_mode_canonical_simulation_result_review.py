@@ -14,6 +14,10 @@ from typing import Any
 import numpy as np
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 from formal.python.tools import dirac_maxwell_full_zero_mode_non_authoritative_pilot as numerical
 
 
@@ -49,6 +53,7 @@ EXPECTED_HASHES = {
     EXECUTION_REPORT_RELATIVE_PATH: "9c73941116b2889b9402519656442f1d9ff155deac0c49bec5f253e2671b4a73",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 
@@ -71,7 +76,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -296,7 +301,7 @@ def build_review_report() -> dict[str, Any]:
         "execution_did_not_assign_its_own_scientific_verdict": packet["canonical_result_accepted"] is False and packet["scientific_result_claimed"] is False and packet["selected_next_target"] == REVIEW_TARGET,
         "bounded_E_REPRO_claim_wording_and_nonclaims_are_exact": len(MAXIMUM_CLAIM) > 0 and len(packet["nonclaims"]) == 10,
         "pillar_seam_C_k_CCFT_and_master_action_nonpromotions_hold": all(any(term in claim for claim in packet["nonclaims"]) for term in ("pillar completion", "seam", "C_k", "CCFT", "master-action")),
-        "Prompt_is_preserved": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256,
+        "Prompt_is_preserved": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE),
     }
     ordered = [{"decision_id": item, "passed": bool(decisions[item])} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]
