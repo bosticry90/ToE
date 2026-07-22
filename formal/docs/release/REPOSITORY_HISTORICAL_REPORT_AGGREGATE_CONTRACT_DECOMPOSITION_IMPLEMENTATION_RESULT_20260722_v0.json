@@ -1,0 +1,126 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:43:13Z",
+  "result": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/historical-aggregate-contract-decomposition-implementation-v0",
+  "accepted_base_commit": "a619ce52e62cb6806e9861df8367c6a8dd0f5c0f",
+  "authorization_commit": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+  "implementation_commit": "a4e1ba9ccc26e5afb305416755b6a3555abc6901",
+  "scope": {
+    "modified_test_files": 1,
+    "replaced_aggregate_nodes": 2,
+    "modified_identity_local_gate_files": 0,
+    "modified_generator_files": 0,
+    "historical_reports_created_or_modified": 0,
+    "fixtures_created": 0,
+    "dirty_main_report_content_reads": 0,
+    "scientific_content_changes": 0,
+    "registry_rotations": 0,
+    "v2_enrollment": false,
+    "lean_activity": false,
+    "broader_cohort_repairs": 0,
+    "automatic_successor": false
+  },
+  "selected_gate_change": {
+    "path": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+    "git_blob_oid_before": "14ade32d677b2416c5eb09d5575b1ab513b0a72c",
+    "git_blob_oid_after": "c8824c9a1d1ab2d624061696e4284d87c6fe72f3",
+    "sha256_before": "8dbe535e50a125e0df84ee9d98cf7bff63fc0872f10e969866776649f58c7654",
+    "sha256_after": "dc05e02edfc935a13af049bfd221d6e2f50f9f7507d3e0c5b2925f3b86215a74",
+    "old_nodes_removed": [
+      "test_all_remediation_reports_exist",
+      "test_all_report_controls_preserve_invariance"
+    ],
+    "replacement_nodes": [
+      "test_aggregate_report_existence_expectation_is_formally_retired",
+      "test_aggregate_control_invariance_is_decomposed_to_identity_local_routes"
+    ],
+    "nonselected_function_ast_preserved": "16_OF_16"
+  },
+  "aggregate_existence_retirement": {
+    "status": "RETIRED_WITH_REVIEWED_RATIONALE",
+    "accepted_disposition": "RETIRE_RETENTION_EXPIRED_EXPECTATION",
+    "identity_count": 19,
+    "retention_expired": 19,
+    "current_critical": 0,
+    "ignored_historical_paths": 15,
+    "committed_historical_records": 4,
+    "identity_local_semantic_controls_retired": false,
+    "live_report_presence_required": false
+  },
+  "aggregate_invariance_decomposition": {
+    "status": "DECOMPOSED_TO_IDENTITY_LOCAL_ROUTES",
+    "accepted_disposition": "SPLIT_FROM_AGGREGATE_CONTRACT",
+    "distinct_identity_routes": 19,
+    "distinct_local_gate_files": 19,
+    "route_files_exist": "19_OF_19",
+    "route_files_name_selected_identity": "19_OF_19",
+    "historical_report_payloads_read_by_replacement": 0,
+    "committed_t15_t18_presence_preserved": "4_OF_4"
+  },
+  "identity_local_preservation": {
+    "all_routed_identity_local_gate_files_byte_unchanged": true,
+    "accepted_baseline_fixture_pilot_gate_unchanged": true,
+    "fourteen_generator_provenance_blocked_identities_repaired": 0,
+    "fourteen_generator_provenance_blocked_identities_status": "STILL_BLOCKED",
+    "identity_dispositions_changed": 0
+  },
+  "focused_validation": {
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "replacement_nodes": "2_OF_2_PASS",
+    "accepted_baseline_fixture_gate": "4_OF_4_PASS",
+    "committed_t15_t18_identity_local_gates": "12_OF_12_PASS",
+    "ignored_reports_absent_after": "15_OF_15",
+    "checkout_status_after": "CLEAN",
+    "unexpected_untracked_source": 0,
+    "broad_baseline_rerun": false
+  },
+  "outcome_treatment": {
+    "selected_aggregate_outcomes_recovered_or_formally_retired": 2,
+    "global_nonpassing_delta_claimed": false,
+    "interpretation": "The two selected aggregate blockers no longer impose invalid live-path or cross-identity coupling. No claim is made about the broader frozen suite or the remaining identity-local failures."
+  },
+  "external_evidence": {
+    "implementation_verification": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0/HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_VERIFICATION_20260722_v0.json",
+      "sha256": "0ba51f6868786bc53b58e477817be2027d721f3ee9fc9fc3a389a50bb9e6fb98"
+    },
+    "verification_script": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0/verify_historical_report_aggregate_contract_decomposition_implementation_v0.py",
+      "sha256": "aea96980be51050528d2d586f0d54be144aa96869daddfaf4d39e21aa9252a91"
+    },
+    "focused_junit": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0/IMPLEMENTATION_FOCUSED_JUNIT_v0.xml",
+      "sha256": "a64f92d93d1dda3ed258214230133c8eab62c035f6ed0c9211cf8f2a00bf2193"
+    }
+  },
+  "preservation": {
+    "tests_tree_before": "5c2ed42b6476086f5ed6ce61b95c520fe0d2f426",
+    "tests_tree_after": "8d3d5bdfeaf2ae73699efed5b743849579aaf4db",
+    "only_test_path_changed": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+    "loop_control_registry_git_blob_before": "fd7b1ff5f1f3e35f46b2599243e97e0f2d501a94",
+    "loop_control_registry_git_blob_after": "fd7b1ff5f1f3e35f46b2599243e97e0f2d501a94",
+    "toe_formal_tree_before": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "toe_formal_tree_after": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "state_of_the_theory_git_blob_before": "8172968020a2a9953b62ec55d34c4eedc04b19bc",
+    "state_of_the_theory_git_blob_after": "8172968020a2a9953b62ec55d34c4eedc04b19bc",
+    "scientific_authority_fields_changed": false
+  },
+  "decision": {
+    "bounded_implementation_complete": true,
+    "aggregate_existence_expectation_retired": true,
+    "aggregate_invariance_coupling_decomposed": true,
+    "identity_local_semantic_controls_preserved": true,
+    "fixture_scale_performed": false,
+    "provenance_blocked_identity_repair_performed": false,
+    "next_action_authorized": false,
+    "independent_review_required": true
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_BOUNDED_IMPLEMENTATION_ONLY"
+}
