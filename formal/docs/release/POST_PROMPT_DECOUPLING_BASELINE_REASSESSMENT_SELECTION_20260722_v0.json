@@ -1,0 +1,17 @@
+{
+  "schema_id": "POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_SELECTION_20260722_v0",
+  "captured_at_utc": "2026-07-22T02:53:39Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_POST_DECOUPLING_BASELINE_REASSESSMENT",
+    "PRESERVE_DECOUPLING_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_POST_DECOUPLING_BASELINE_REASSESSMENT",
+  "target": "prepare_repository_post_prompt_decoupling_baseline_reassessment_packet_v0",
+  "selection_basis": "The accepted Prompt decoupling recovered 195 of 206 attributed outcomes and reclassified 11. One exact-ID, nonmutating baseline measurement is required to establish the remaining totals and first-cause families.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "71a66686e2b6c58b29e00fad6ba642070378c8733a4772eaaab5a0bac2307ac6",
+    "commit": "71027f124d1724c6c0b9f7d7842e5968f300b063"
+  },
+  "scientific_posture": "B-BLOCKED"
+}

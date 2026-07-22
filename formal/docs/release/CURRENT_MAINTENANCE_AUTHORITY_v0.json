@@ -4,19 +4,20 @@
     "baseline_repair_authorized": false,
     "bounded_hash_identity_repair_authorized": false,
     "broad_python_first_cause_clustering_authorized": false,
-    "diagnostic_execution_cycles_remaining": 0,
+    "diagnostic_execution_cycles_remaining": 1,
     "first_unit_selector_execution_authorized": false,
     "independent_result_reviews_remaining": 0,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
+    "post_prompt_decoupling_baseline_reassessment_authorized": true,
     "prompt_dependency_role_adjudication_and_decoupling_authorized": false,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
-    "reassessment_result_reviews_remaining": 0,
-    "reassessment_validation_cycles_remaining": 0,
+    "reassessment_result_reviews_remaining": 1,
+    "reassessment_validation_cycles_remaining": 1,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
@@ -25,17 +26,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T02:44:34Z",
+  "captured_at_utc": "2026-07-22T02:53:39Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_repository_prompt_dependency_role_adjudication_and_decoupling_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "71a66686e2b6c58b29e00fad6ba642070378c8733a4772eaaab5a0bac2307ac6",
-  "current_maintenance_target_kind": "preserved_prompt_dependency_role_adjudication_and_decoupling_result",
-  "current_maintenance_target_status": "ACCEPTED_BOUNDED_DECOUPLING_RESULT_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY",
+  "current_maintenance_target": "execute_bounded_post_prompt_decoupling_baseline_reassessment_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "30f9b2e50a2b2d30a23403944305da705003a0fcccfd05b610c0fac0c580f6e5",
+  "current_maintenance_target_kind": "bounded_post_prompt_decoupling_baseline_reassessment",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_EXACT_ID_NONMUTATING_REASSESSMENT_AND_ONE_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -43,8 +44,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_REVIEW_20260722_v0.json",
-    "sha256": "2afff30dc79555fba4fb18f0d2ad3cc046e9d58661efc533f8d887058d0d7313",
+    "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0.json",
+    "sha256": "de02eb8ec43de59caf9cf6979fb422055d7ee513c00018defc3dce8f0a438bd0",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -85,8 +86,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "prepare_repository_prompt_dependency_role_adjudication_and_decoupling_packet_v0",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_IMPLEMENTATION_AND_ONE_INDEPENDENT_REVIEW",
+  "previous_maintenance_target": "preserve_repository_prompt_dependency_role_adjudication_and_decoupling_result_v0",
+  "previous_maintenance_target_status": "ACCEPTED_BOUNDED_DECOUPLING_RESULT_STILL_BLOCKED_NO_SUCCESSOR_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -109,13 +110,13 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_BROAD_PYTHON_CLUSTERING_MAINTENANCE_SELECTION_20260722_v0.json",
-    "sha256": "c4bcaab608ef5c2d39d7a3a3f8a03fb3e5a5d87f3b84f523526cfed6ffed2bd0"
+    "path": "formal/docs/release/POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_SELECTION_20260722_v0.json",
+    "sha256": "43fafbf4d60c9652c7f8d57b9116dfbe3deb8539cbe353e8df45bf6dd3fc8a25"
   },
   "prompt_dependency_role_adjudication_and_decoupling_result": {
     "outcome": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_ACCEPTED_STILL_BLOCKED",
     "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_20260722_v0.json",
     "sha256": "88a9007e0891d9222a29fd5d598cf5f4eb1021219f4c117577273d6748ec7182"
   },
-  "status": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_ACCEPTED_STILL_B_BLOCKED_NO_SUCCESSOR_AUTHORITY"
+  "status": "ACTIVE_BOUNDED_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_NO_REPAIR_OR_SCIENTIFIC_AUTHORITY"
 }
