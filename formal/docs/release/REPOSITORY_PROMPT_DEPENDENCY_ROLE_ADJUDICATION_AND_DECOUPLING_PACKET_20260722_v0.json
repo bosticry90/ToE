@@ -1,0 +1,81 @@
+{
+  "acceptance_criteria": {
+    "all_43_consumers_role_adjudicated": true,
+    "all_206_outcomes": "PASS_OR_EXPLICITLY_RECLASSIFIED_WITH_EVIDENCE_OR_RETIRED_BY_REVIEWED_TEST_OBLIGATION_DECISION",
+    "blind_global_hash_replacement": "PROHIBITED",
+    "crlf_focused_fresh_checkout": "PASS",
+    "lf_focused_fresh_checkout": "PASS",
+    "prompt_substantive_content": "UNCHANGED",
+    "registry_target": "UNCHANGED",
+    "scientific_and_governance_artifacts": "UNCHANGED_EXCEPT_THIS_MAINTENANCE_PACKET_RESULT_REVIEW_AND_AUTHORITY",
+    "tracked_status_after_validation": "EMPTY",
+    "unexpected_untracked_source": "NONE",
+    "v2_enrollment": "NOT_AUTHORIZED"
+  },
+  "authorized_cycle": {
+    "automatic_successor_cycles": 0,
+    "implementation_cycles": 1,
+    "independent_result_reviews": 1
+  },
+  "captured_at_utc": "2026-07-22T01:52:45Z",
+  "consumer_adjudication_fields": [
+    "test_or_tool_path",
+    "referenced_prompt_path",
+    "current_pinned_hash",
+    "expected_identity_domain",
+    "comparison_purpose",
+    "disposition",
+    "proposed_replacement",
+    "scientific_content_effect"
+  ],
+  "consumer_dispositions": [
+    "REMOVE_DEPENDENCY",
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+    "RETAIN_AS_REPRODUCIBILITY_BLOB_IDENTITY",
+    "RETAIN_AS_EXPLICIT_CANONICAL_EXPORT_IDENTITY"
+  ],
+  "custody": {
+    "dirty_main_reverification_path": "formal/docs/release/DIRTY_MAIN_CUSTODY_COUNT_REVERIFICATION_20260722_v0.json",
+    "dirty_main_reverification_sha256": "7893622be169df9dd4bffef245142845bdb827508492a01dafaf6dc8ba8e02c8",
+    "maintenance_base_commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+    "required_ancestor_commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+    "required_ancestor_verified": true
+  },
+  "implementation_contract": {
+    "canonical_export_identity_is_exceptional": true,
+    "one_shared_frozen_blob_identity_implementation_for_retained_reproducibility_consumers": true,
+    "prompt_default_role": "NONAUTHORITATIVE_WORKFLOW_INPUT",
+    "prompt_default_scientific_effect": "NONE",
+    "prompt_default_authority_effect": "NONE",
+    "raw_checkout_byte_hash_for_tracked_prompt_prohibited_without_explicit_export_contract": true,
+    "retained_blob_identity": "FROZEN_COMMIT_PLUS_TRACKED_PATH_TO_GIT_BLOB_BYTES_TO_SHA256",
+    "retired_tests_require_explicit_obligation_decision": true
+  },
+  "permitted_changes": [
+    "Prompt dependency inventory and adjudication records",
+    "shared stable tracked-blob identity helper or reuse of an already reviewed helper",
+    "the 43 adjudicated Python consumer implementations",
+    "tests directly necessary to enforce the adjudicated Prompt dependency roles",
+    "bounded maintenance selector, packet, result, reviews, and current maintenance authority"
+  ],
+  "prohibited_changes": [
+    "Prompt.txt substantive or byte content",
+    "V2 packet or review scientific/governance content",
+    "scientific formulas or numerical artifacts",
+    "authority selections or registry state",
+    "pillar/seam rows",
+    "Maxwell-Dirac or scalar-Yukawa scientific artifacts",
+    "Lean dependency bootstrap or compilation",
+    "other broad failure-family repair",
+    "scientific execution",
+    "automatic successor authorization"
+  ],
+  "schema_id": "REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_20260722_v0",
+  "scientific_posture": "B-BLOCKED",
+  "selector": {
+    "path": "formal/docs/release/POST_BROAD_PYTHON_CLUSTERING_MAINTENANCE_SELECTION_20260722_v0.json",
+    "sha256": "c4bcaab608ef5c2d39d7a3a3f8a03fb3e5a5d87f3b84f523526cfed6ffed2bd0"
+  },
+  "status": "AUTHORIZED_ONE_BOUNDED_IMPLEMENTATION_AND_ONE_INDEPENDENT_REVIEW",
+  "target": "prepare_repository_prompt_dependency_role_adjudication_and_decoupling_packet_v0"
+}

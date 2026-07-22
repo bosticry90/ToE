@@ -6,35 +6,36 @@
     "broad_python_first_cause_clustering_authorized": false,
     "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "independent_result_reviews_remaining": 0,
+    "independent_result_reviews_remaining": 1,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
+    "prompt_dependency_role_adjudication_and_decoupling_authorized": true,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 0,
+    "repair_implementation_cycles_remaining": 1,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": false,
-    "tracked_source_mutation_authorized": false,
+    "test_modification_authorized": true,
+    "tracked_source_mutation_authorized": true,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-22T01:27:31Z",
+  "captured_at_utc": "2026-07-22T01:52:45Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_repository_broad_python_first_cause_cluster_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_20260722_v0.json",
-  "current_maintenance_target_evidence_sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55",
-  "current_maintenance_target_kind": "accepted_broad_python_first_cause_cluster_result_preservation",
-  "current_maintenance_target_status": "ACCEPTED_DIAGNOSTIC_CLUSTERING_RESULT_NO_REPAIR_OR_SCIENTIFIC_AUTHORITY",
+  "current_maintenance_target": "prepare_repository_prompt_dependency_role_adjudication_and_decoupling_packet_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_20260722_v0.json",
+  "current_maintenance_target_evidence_sha256": "a877d83bbfc8e1bb0bc92a513d06b25f4de0f4fd4140b8a7b7c937dec60d6614",
+  "current_maintenance_target_kind": "bounded_prompt_dependency_role_adjudication_and_decoupling",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_IMPLEMENTATION_AND_ONE_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -42,8 +43,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_REVIEW_20260722_v0.json",
-    "sha256": "6122d43684c0471c1a2aa18fc6953cdd16d3dab6e1edc8da3717d4291d897d3b",
+    "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_REVIEW_20260722_v0.json",
+    "sha256": "2afff30dc79555fba4fb18f0d2ad3cc046e9d58661efc533f8d887058d0d7313",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -84,8 +85,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "prepare_repository_broad_python_first_cause_cluster_packet_v0",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_DIAGNOSTIC_NONLEAN_INVENTORY_AND_ONE_REVIEW",
+  "previous_maintenance_target": "preserve_repository_broad_python_first_cause_cluster_result_v0",
+  "previous_maintenance_target_status": "ACCEPTED_DIAGNOSTIC_CLUSTERING_RESULT_NO_REPAIR_OR_SCIENTIFIC_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -108,8 +109,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_LINE_ENDING_REPAIR_MAINTENANCE_SELECTION_20260722_v0.json",
-    "sha256": "ad4336633c2562863ac8152bc31e8888da4a8c952f4afd95d012a0dc5c7f79ea"
+    "path": "formal/docs/release/POST_BROAD_PYTHON_CLUSTERING_MAINTENANCE_SELECTION_20260722_v0.json",
+    "sha256": "c4bcaab608ef5c2d39d7a3a3f8a03fb3e5a5d87f3b84f523526cfed6ffed2bd0"
   },
-  "status": "PRESERVED_BROAD_PYTHON_FIRST_CAUSE_CLUSTERING_RESULT_B_BLOCKED"
+  "status": "ACTIVE_BOUNDED_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_NO_SCIENTIFIC_AUTHORITY"
 }
