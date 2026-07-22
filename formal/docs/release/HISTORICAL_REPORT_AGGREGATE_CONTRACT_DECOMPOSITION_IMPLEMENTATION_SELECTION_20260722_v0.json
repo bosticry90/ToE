@@ -1,0 +1,18 @@
+{
+  "schema_id": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_SELECTION_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:37:33Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_HISTORICAL_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION",
+    "AUTHORIZE_FOURTEEN_IDENTITY_GENERATOR_PROVENANCE_REVIEW",
+    "PRESERVE_ACCEPTED_DECOMPOSITION_AND_DEFER_REPORT_CONTRACT_REPAIR"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_HISTORICAL_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION",
+  "target": "implement_repository_historical_report_aggregate_contract_decomposition_v0_once",
+  "selection_basis": "The accepted diagnostic and independent review establish that the two aggregate nodes are retention-expired historical contract debt with zero current-critical identities. The implementation may retire the all-live-path expectation and replace the cross-identity report reader with an explicit identity-local routing contract while preserving all nineteen local semantic obligations.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "536c47e804b8be6adde729d72c5bba4fb498d8f75472c3e1c3de3670561a354e",
+    "commit": "a619ce52e62cb6806e9861df8367c6a8dd0f5c0f"
+  },
+  "scientific_posture": "B-BLOCKED"
+}

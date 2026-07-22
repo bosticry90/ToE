@@ -1,0 +1,26 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_PACKET_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:37:33Z",
+  "review_basis": "INDEPENDENT_ACCEPTED_DISPOSITION_TEST_NODE_ROUTE_PRESERVATION_AND_CONTAINMENT_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_PACKET_20260722_v0.json",
+    "sha256": "022f90009f66144c849b382c003be0642a065f0f4ffb4a0e4b32da725406fdab"
+  },
+  "checks": {
+    "accepted_diagnostic_result_review_and_commit_bound": true,
+    "exactly_one_test_file_modification_authorized": true,
+    "exactly_two_aggregate_nodes_selected": true,
+    "all_nineteen_route_identities_required": true,
+    "existence_node_retirement_requires_explicit_marker": true,
+    "invariance_node_replacement_forbids_report_reads": true,
+    "all_identity_local_semantic_controls_preserved": true,
+    "t15_through_t18_committed_record_gates_required_green": true,
+    "fifteen_ignored_reports_required_absent_in_clean_validation": true,
+    "baseline_fixture_pattern_preserved_without_scale": true,
+    "fourteen_provenance_blocked_identities_remain_blocked": true,
+    "report_fixture_generator_scientific_registry_v2_and_lean_actions_forbidden": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}
