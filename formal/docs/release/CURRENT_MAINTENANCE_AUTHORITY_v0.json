@@ -5,35 +5,35 @@
     "bounded_hash_identity_repair_authorized": false,
     "diagnostic_execution_cycles_remaining": 0,
     "first_unit_selector_execution_authorized": false,
-    "independent_result_reviews_remaining": 1,
-    "line_ending_identity_and_mapping_tuple_repair_authorized": true,
+    "independent_result_reviews_remaining": 0,
+    "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 1,
+    "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": true,
-    "tracked_source_mutation_authorized": true,
+    "test_modification_authorized": false,
+    "tracked_source_mutation_authorized": false,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-21T23:51:28Z",
+  "captured_at_utc": "2026-07-22T00:17:01Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "prepare_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_20260721_v0.json",
-  "current_maintenance_target_evidence_sha256": "d07cdda749f3fa8787c0f5a7819826cd89be5caf94f6ccc17cedb586d26d8ebc",
-  "current_maintenance_target_kind": "bounded_line_ending_identity_and_mapping_tuple_nonhermetic_repair",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_NARROW_REPAIR_IMPLEMENTATION_AND_ONE_REVIEW",
+  "current_maintenance_target": "preserve_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_result_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
+  "current_maintenance_target_evidence_sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28",
+  "current_maintenance_target_kind": "accepted_narrow_line_ending_identity_and_mapping_tuple_repair_preservation",
+  "current_maintenance_target_status": "ACCEPTED_NARROW_MAINTENANCE_REPAIR_NO_RECOVERY_OR_SCIENTIFIC_AUTHORITY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -51,9 +51,14 @@
     "verdict": "ACCEPT"
   },
   "independent_result_review": {
-    "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_REVIEW_20260721_v0.json",
-    "sha256": "664dedf2da8603f026b2ebb5379ac99fddea4107a7f6d791f424a281ca0345c5",
-    "verdict": "ACCEPTED_FAILED_TERMINAL_GOVERNANCE_RESULT"
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_REVIEW_20260721_v0.json",
+    "sha256": "beaa10e0e11e805638f1c67a81fec7a89343b5bf0aaa562110392ad06d6e6773",
+    "verdict": "ACCEPTED_NARROW_REPAIR_RESULT_NO_BROAD_RECOVERY_AUTHORITY"
+  },
+  "line_ending_identity_and_mapping_tuple_repair_result": {
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
+    "sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28",
+    "outcome": "LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_ACCEPTED"
   },
   "post_identity_reassessment_authorization_review": {
     "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_REVIEW_20260721_v0.json",
@@ -73,8 +78,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_post_identity_baseline_reassessment_failed_result_v0",
-  "previous_maintenance_target_status": "FAILED_TERMINAL_RESULT_PRESERVED_NO_AUTO_REPAIR",
+  "previous_maintenance_target": "prepare_repository_line_ending_identity_and_mapping_tuple_nonhermetic_repair_packet_v0",
+  "previous_maintenance_target_status": "AUTHORIZED_ONE_NARROW_REPAIR_IMPLEMENTATION_AND_ONE_REVIEW",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -100,5 +105,5 @@
     "path": "formal/docs/release/POST_REASSESSMENT_MAINTENANCE_SELECTION_20260721_v0.json",
     "sha256": "48347269631945ff62c1eb036bd7e52d20f283ce0c1bf09208c3b2e46b5fd704"
   },
-  "status": "ACTIVE_BOUNDED_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_REPAIR_NO_SCIENTIFIC_AUTHORITY"
+  "status": "PRESERVED_ACCEPTED_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_REPAIR_NO_SCIENTIFIC_AUTHORITY"
 }

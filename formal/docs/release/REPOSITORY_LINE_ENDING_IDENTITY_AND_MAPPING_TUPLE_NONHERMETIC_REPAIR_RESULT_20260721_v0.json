@@ -1,0 +1,161 @@
+{
+  "accepted_for_broad_recovery": false,
+  "acceptance_checks": {
+    "crlf_fresh_checkout_passed": true,
+    "lf_fresh_checkout_passed": true,
+    "mapping_tuples_repository_check_read_only": true,
+    "mapping_tuples_temporary_tree_write_idempotent": true,
+    "remaining_v2_pair_11_of_11_passed": true,
+    "scientific_fields_changed": false,
+    "tracked_diff_after_focused_validation_empty": true,
+    "unexpected_untracked_source_none": true,
+    "v2_enrollment_authorized": false
+  },
+  "authority": {
+    "authorization_commit": "154dd5db",
+    "implementation_commit": "0b5bd6677cf8a4d1c8859cce2d970c70bfcee98f",
+    "packet": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_20260721_v0.json",
+    "packet_review": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_REVIEW_20260721_v0.json"
+  },
+  "bounded_cycle": {
+    "automatic_successor_performed": false,
+    "independent_reviews_authorized": 1,
+    "repair_implementations_authorized": 1,
+    "repair_implementations_consumed": 1
+  },
+  "broad_baseline_boundary": {
+    "broad_suite_rerun": false,
+    "failures_preserved": 593,
+    "errors_preserved": 120,
+    "repair_attempted": false,
+    "status": "STILL_SEVERELY_RED"
+  },
+  "captured_at_utc": "2026-07-22T00:17:01Z",
+  "comparability_record": {
+    "path": "formal/docs/release/POST_IDENTITY_BASELINE_TEST_ID_COMPARABILITY_20260721_v0.json",
+    "sha256": "560832f0c53dcfebadbfb33289d6249b2a9f3f265529a713f9eda133e82bf39d",
+    "counts": {
+      "added": 8,
+      "common": 13747,
+      "previous": 13749,
+      "reassessment": 13755,
+      "removed": 2
+    },
+    "interpretation": "The six-test net collection increase does not explain the 197-outcome nonpassing increase, and no repair-caused 197-test regression is established."
+  },
+  "external_custody": {
+    "location_identifier": "C:/Users/psboy/Documents/ToE/.toe-recovery/custody-v0/line-ending-identity-mapping-repair-v0",
+    "artifacts": {
+      "checkout_identity_and_cleanliness_evidence.json": {
+        "bytes": 1970,
+        "sha256": "0058ec61b7744e53f4e054e236e3c47e12c26a73e857fc78b4dab1e1d247cf37"
+      },
+      "comparability_added_test_ids.txt": {
+        "bytes": 1121,
+        "sha256": "85961429b24db9a95ea36b1c1c4138edabb3da7811bedffc4f22852fb178d58b"
+      },
+      "comparability_common_test_ids.txt": {
+        "bytes": 2298361,
+        "sha256": "187b221b50e1499664baf1713e7857db9f4dd05480d6582262e148858a88ffb3"
+      },
+      "comparability_outcome_transitions.json": {
+        "bytes": 9127,
+        "sha256": "b8a7ce4c29d9484a3c98b6cdba5be1281ab3dfac16fe47cf8a7df0b967c7dfac"
+      },
+      "comparability_previous_collect.log": {
+        "bytes": 2312924,
+        "sha256": "1edcbe42ffd736008a522d09f8fb9aa72748d90341ad13adf52c8a1258268864"
+      },
+      "comparability_previous_test_ids.txt": {
+        "bytes": 2298606,
+        "sha256": "c7d6d06fb9f2ecef96dbe7e75ee560efdb67ddedc835b14fea581d8026edd5da"
+      },
+      "comparability_reassessment_collect.log": {
+        "bytes": 2313810,
+        "sha256": "5fc60d8a067d270eb95b3be2aafa128cf5442bbba835b3f475daf65fa941b2e5"
+      },
+      "comparability_reassessment_test_ids.txt": {
+        "bytes": 2299482,
+        "sha256": "ac2ef36017d44e8a2e2ad8c15a1b137dd4168e2b3b820e9faa5429fdf8dd0753"
+      },
+      "comparability_removed_test_ids.txt": {
+        "bytes": 245,
+        "sha256": "e8909620a652359c3205d1e6b5284cc08df25bda415d07c8b82007e5d4c49d7c"
+      },
+      "crlf_fresh_checkout.log": {
+        "bytes": 113,
+        "sha256": "50698d705a7a866e21f5d3d77acad04db85778bd77004a15f0d382632d719343"
+      },
+      "focused_validation.log": {
+        "bytes": 113,
+        "sha256": "705610f135d64e23b49ece1da42ba965a93b5df4e02bf0e1966e446425f29b6d"
+      },
+      "lf_fresh_checkout.log": {
+        "bytes": 113,
+        "sha256": "75af6820c20ee499762aef054ffe732762b9a2ad2b9fe3e00866ac67491f1d27"
+      }
+    }
+  },
+  "focused_validation": {
+    "committed_repair_worktree": {
+      "passed": 19,
+      "cleanliness_wrapper_exit": 0,
+      "post_status": "EMPTY"
+    },
+    "crlf_fresh_checkout": {
+      "mapping_working_sha256": "106283a096042fe03333da1240c9ff40ec25dbc9f9688da3bed1748547c1d98b",
+      "passed": 13,
+      "prompt_working_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "cleanliness_wrapper_exit": 0,
+      "post_status": "EMPTY"
+    },
+    "lf_fresh_checkout": {
+      "mapping_working_sha256": "180cc4fb37b868740b71d2f33c6dec81dc326e3f5fd873c877ab96522e1a101a",
+      "passed": 13,
+      "prompt_working_sha256": "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5",
+      "cleanliness_wrapper_exit": 0,
+      "post_status": "EMPTY"
+    }
+  },
+  "lean_classification_preserved": {
+    "current_cycle_lean_execution": "NOT_IN_SCOPE_AND_NOT_RUN",
+    "prior_reassessment_classification": "LEAN_DEPENDENCY_BOOTSTRAP_TIMEOUT",
+    "mathlib4_dependency_retrieval": "TIMEOUT_AFTER_900_SECONDS",
+    "toeformal_compilation": "NOT_STARTED",
+    "source_or_type_error": "NOT_OBSERVED",
+    "clean_lean_pass_established": false
+  },
+  "mapping_tuple_repair": {
+    "canonical_mapping_content_changed": false,
+    "exact_test": "formal/python/tests/test_ov_br_snd03_blocked_ignores_pairing_mapping_when_gates_disabled.py::test_ov_br_snd03_blocked_ignores_pairing_mapping_changes_when_gates_disabled",
+    "repository_facing_lint": "READ_ONLY_AND_PASS",
+    "temporary_writer_runs": 2,
+    "temporary_writer_second_run_idempotent": true,
+    "temporary_restore_exact_bytes": true,
+    "validation_boundary": "MAY_INSPECT_MUST_NOT_REWRITE_TRACKED_SOURCE"
+  },
+  "outcome": "LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_ACCEPTED",
+  "scientific_boundaries": {
+    "first_unit_selector_executed": false,
+    "lean_source_changed": false,
+    "maxwell_dirac_work_performed": false,
+    "registry_rotation_performed": false,
+    "scalar_yukawa_work_performed": false,
+    "scientific_execution_performed": false,
+    "unit_or_seam_resolution_performed": false,
+    "v2_enrollment_performed": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "schema_id": "REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0",
+  "status": "ACCEPTED_NARROW_MAINTENANCE_REPAIR_NO_RECOVERY_OR_SCIENTIFIC_AUTHORITY",
+  "v2_identity_repair": {
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "git_blob_oid": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "identity_type": "FROZEN_GIT_BLOB_SHA256",
+    "path": "Prompt.txt",
+    "sha256": "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5",
+    "scientific_and_governance_artifacts_changed": false,
+    "v2_enrollment_authorized": false
+  },
+  "next_action": "PRESERVE_RESULT_AND_REQUIRE_FRESH_MAINTENANCE_SELECTOR"
+}

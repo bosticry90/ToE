@@ -1,0 +1,93 @@
+{
+  "captured_at_utc": "2026-07-22T00:17:01Z",
+  "category_findings": {
+    "ENVIRONMENTAL_VARIANCE": {
+      "new_common_nonpassing_cohort": 202,
+      "basis": "The cohort is confined to Prompt-sensitive Dirac-Maxwell, first-unit, and V2-review modules in the LF reassessment checkout. The pinned CRLF Prompt hash differs from the LF checkout hash."
+    },
+    "NEWLY_COLLECTED_TEST": {
+      "added": 8,
+      "added_nonpassing": 2,
+      "removed": 2,
+      "finding": "Collection changed by six net tests and therefore does not explain the 197-outcome nonpassing increase."
+    },
+    "NEW_PRIMARY_FAILURE": {
+      "direct_environment_identity_signatures": 173,
+      "new_common_repository_state_signatures": 2,
+      "repair_caused_regressions_proven": 0
+    },
+    "NEW_SECONDARY_CASCADE": {
+      "environment_cohort_without_direct_prompt_signature": 29,
+      "finding": "These outcomes occur in the same Prompt-sensitive module cohort but lack the direct preserved Prompt mismatch line."
+    },
+    "PREEXISTING_FAILURE_WITH_DIFFERENT_SIGNATURE": {
+      "count": 4,
+      "transition": "FAILED_TO_ERROR"
+    }
+  },
+  "collection": {
+    "command_policy": "pytest --collect-only -q formal/python/tests with the same nine Lean-building modules excluded",
+    "common_relative_order_identical": true,
+    "environment": {
+      "python": "3.10.11",
+      "pytest": "8.4.2",
+      "same_canonical_virtual_environment": true
+    },
+    "previous": {
+      "commit": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+      "count": 13749,
+      "log_sha256": "1edcbe42ffd736008a522d09f8fb9aa72748d90341ad13adf52c8a1258268864",
+      "test_id_inventory_sha256": "c7d6d06fb9f2ecef96dbe7e75ee560efdb67ddedc835b14fea581d8026edd5da",
+      "wrapper_exit": 0
+    },
+    "reassessment": {
+      "commit": "dbcb09b0ca3d99d7116eda11cff6960339140778",
+      "count": 13755,
+      "log_sha256": "5fc60d8a067d270eb95b3be2aafa128cf5442bbba835b3f475daf65fa941b2e5",
+      "test_id_inventory_sha256": "ac2ef36017d44e8a2e2ad8c15a1b137dd4168e2b3b820e9faa5429fdf8dd0753",
+      "wrapper_exit": 0
+    },
+    "tracked_source_mutations": 0
+  },
+  "exact_inventory_comparison": {
+    "added": 8,
+    "added_test_ids": [
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2.py::test_v2_tracked_inputs_use_frozen_blob_identities",
+      "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_cli_refuses_repository_write_without_explicit_authorization",
+      "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_check_is_read_only_on_pinned_repo_state",
+      "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_write_is_idempotent_in_temporary_tree_only",
+      "formal/python/tests/test_repository_clean_baseline_validation_stabilization_authorization.py::test_terminal_failure_consumes_cycle_and_requires_fresh_selector",
+      "formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py::test_eight_adjudicated_tokens_match_canonical_artifacts",
+      "formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py::test_repair_result_and_review_are_bound_and_terminal",
+      "formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py::test_v2_reconstructs_only_from_recorded_identity_domains"
+    ],
+    "common": 13747,
+    "common_inventory_sha256": "187b221b50e1499664baf1713e7857db9f4dd05480d6582262e148858a88ffb3",
+    "removed": 2,
+    "removed_test_ids": [
+      "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_check_reports_no_drift_on_pinned_repo_state",
+      "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py::test_hash_refresh_write_is_idempotent_on_pinned_repo_state"
+    ]
+  },
+  "full_run_context_comparison": {
+    "artifact_state_at_start_identical": false,
+    "collection_and_exclusion_policy_identical": true,
+    "execution_environment_versions_identical": true,
+    "full_run_timeout_observed": false,
+    "test_ordering_for_common_ids_identical": true,
+    "interpretation": "The source commits and checkout-byte state differed. Raw aggregate outcomes are not evidence of 197 repair-caused regressions."
+  },
+  "outcome_transitions_for_common_ids": {
+    "nonpass_in_both": 507,
+    "nonpass_kind_changed": 4,
+    "previous_nonpass_now_pass_or_skip": 7,
+    "previous_pass_or_skip_now_nonpass": 204
+  },
+  "preserved_external_evidence": {
+    "added_test_ids_sha256": "85961429b24db9a95ea36b1c1c4138edabb3da7811bedffc4f22852fb178d58b",
+    "outcome_transitions_sha256": "b8a7ce4c29d9484a3c98b6cdba5be1281ab3dfac16fe47cf8a7df0b967c7dfac",
+    "removed_test_ids_sha256": "e8909620a652359c3205d1e6b5284cc08df25bda415d07c8b82007e5d4c49d7c"
+  },
+  "schema_id": "POST_IDENTITY_BASELINE_TEST_ID_COMPARABILITY_20260721_v0",
+  "scope_limit": "The categories are diagnostic lenses and are not additive. No broad failure repair or per-test causal execution was performed."
+}
