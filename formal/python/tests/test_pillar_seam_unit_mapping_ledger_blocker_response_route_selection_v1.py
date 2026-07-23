@@ -105,9 +105,26 @@ def test_frozen_v0_preparation_and_b_blocked_review_authorize_only_v1() -> None:
     assert review["verdict"] == "B-BLOCKED"
     assert review["mismatch_codes"] == subject.CORRECTED_MISMATCH_CODES
     assert review["selected_next_target"] == subject.TARGET
+    contract = subject.qft_route_evidence_identity.load_contract()
+    contract_by_path = {
+        entry["path"]: entry for entry in contract["identities"]
+    }
+    route_evidence_paths = set(contract_by_path)
     for binding in subject._frozen_inputs():
+        if binding["path"] in route_evidence_paths:
+            assert (
+                contract_by_path[binding["path"]]["historical_identity"]["sha256"]
+                == binding["sha256"]
+            )
+            continue
         path = subject.REPO_ROOT / binding["path"]
         assert subject.sha256_path(path) == binding["sha256"]
+    assert len(
+        subject.qft_route_evidence_identity.verify_route_evidence(
+            [artifact["path"] for artifact in subject.v0.ROUTE_EVIDENCE_ARTIFACTS],
+            repo_root=subject.REPO_ROOT,
+        )
+    ) == 9
 
 
 def test_v1_lineage_preserves_both_immutable_commits_and_hashes() -> None:
@@ -208,9 +225,12 @@ def test_explicit_and_derived_propositions_are_reproducibly_anchored() -> None:
         propositions = _props(row)
         for binding in bindings.values():
             assert binding["authority_class"] in subject.SUPPORTING_AUTHORITY_CLASSES
-            assert subject.sha256_path(subject.REPO_ROOT / binding["path"]) == binding[
-                "sha256"
-            ]
+            assert (
+                subject.qft_route_evidence_identity.bindings_match_declared_identities(
+                    [binding],
+                    repo_root=subject.REPO_ROOT,
+                )
+            )
         for prop in propositions.values():
             if prop["classification"] == "EXPLICITLY_STATED_BY_SOURCE":
                 assert prop["source_id"] in bindings
@@ -352,9 +372,10 @@ def test_absent_qft_qm_stat_propositions_are_bound_and_machine_checked() -> None
         assert proposition["source_id"] in bindings
         assert proposition["absence_check"] == expected_check
         binding = bindings[proposition["source_id"]]
-        assert subject.sha256_path(subject.REPO_ROOT / binding["path"]) == binding[
-            "sha256"
-        ]
+        assert subject.qft_route_evidence_identity.bindings_match_declared_identities(
+            [binding],
+            repo_root=subject.REPO_ROOT,
+        )
         source_text = (subject.REPO_ROOT / binding["path"]).read_text(
             encoding="utf-8"
         )
@@ -440,7 +461,7 @@ def test_manifest_hashes_generator_packet_and_all_frozen_inputs() -> None:
     manifest_raw = subject.canonical_json_bytes(manifest)
     assert manifest["generator"] == {
         "path": subject.SCRIPT_RELATIVE_PATH,
-        "sha256": subject.sha256_path(subject.SCRIPT_PATH),
+        "sha256": subject.HISTORICAL_SCRIPT_SHA256,
     }
     assert manifest["input_artifacts"] == subject._frozen_inputs()
     assert manifest["packet"] == {

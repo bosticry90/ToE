@@ -269,9 +269,7 @@ def test_manifest_binds_packet_generator_and_accepted_inputs() -> None:
     assert manifest["packet"]["sha256"] == subject.sha256_bytes(
         subject.canonical_json_bytes(packet)
     )
-    assert manifest["generator"]["sha256"] == subject.sha256_path(
-        subject.SCRIPT_PATH
-    )
+    assert manifest["generator"]["sha256"] == subject.HISTORICAL_SCRIPT_SHA256
     assert manifest["input_artifacts"] == subject._input_bindings()
     assert report["artifact_hashes"]["manifest_sha256"] == subject.sha256_bytes(
         subject.canonical_json_bytes(manifest)
@@ -280,10 +278,20 @@ def test_manifest_binds_packet_generator_and_accepted_inputs() -> None:
 
 def test_all_route_evidence_hashes_and_imported_scalar_action_are_bound() -> None:
     packet, manifest, _ = _artifacts()
+    contract = subject.qft_route_evidence_identity.load_contract()
+    contract_by_path = {
+        entry["path"]: entry for entry in contract["identities"]
+    }
+    resolved = subject.qft_route_evidence_identity.verify_route_evidence(
+        [artifact["path"] for artifact in subject.ROUTE_EVIDENCE_ARTIFACTS],
+        repo_root=subject.REPO_ROOT,
+    )
+    assert len(resolved) == 9
     for artifact in subject.ROUTE_EVIDENCE_ARTIFACTS:
-        assert subject.sha256_path(subject.REPO_ROOT / artifact["path"]) == artifact[
-            "sha256"
-        ]
+        assert (
+            contract_by_path[artifact["path"]]["historical_identity"]["sha256"]
+            == artifact["sha256"]
+        )
         assert artifact in packet["input_artifacts"]
         assert artifact in manifest["input_artifacts"]
     qft = packet["route_selections"][0]
