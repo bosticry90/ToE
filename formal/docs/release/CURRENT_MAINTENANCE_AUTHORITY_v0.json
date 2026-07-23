@@ -7,7 +7,7 @@
     "diagnostic_execution_cycles_remaining": 0,
     "em_route_source_pin_provenance_and_authority_review_authorized": false,
     "em_route_source_pin_provenance_review_cycles_remaining": 0,
-    "em_route_source_pin_provenance_result_reviews_remaining": 1,
+    "em_route_source_pin_provenance_result_reviews_remaining": 0,
     "first_unit_selector_execution_authorized": false,
     "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
@@ -37,17 +37,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-23T03:37:22Z",
+  "captured_at_utc": "2026-07-23T03:44:04Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "review_repository_em_route_source_pin_provenance_and_authority_review_result_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0.json",
-  "current_maintenance_target_evidence_sha256": "4b1a6683819eb22a98b4f6deb0e04df8036119b088662c3c696f489076353b55",
-  "current_maintenance_target_kind": "independent_em_route_source_pin_provenance_and_authority_result_review",
-  "current_maintenance_target_status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "current_maintenance_target": "preserve_accepted_em_route_source_pin_provenance_and_authority_review_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0.json",
+  "current_maintenance_target_evidence_sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8",
+  "current_maintenance_target_kind": "accepted_em_route_source_pin_rebinding_justification_preservation",
+  "current_maintenance_target_status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_ACCEPTED_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -70,9 +70,9 @@
     "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
   },
   "independent_result_review": {
-    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0.json",
-    "sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568",
-    "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PROVENANCE_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8",
+    "verdict": "ACCEPT_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
   "line_ending_identity_and_mapping_tuple_repair_result": {
     "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
@@ -97,8 +97,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "execute_repository_em_route_source_pin_provenance_and_authority_review_v0_once",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_READ_ONLY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW",
+  "previous_maintenance_target": "review_repository_em_route_source_pin_provenance_and_authority_review_result_v0",
+  "previous_maintenance_target_status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -199,5 +199,16 @@
     "sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568",
     "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PROVENANCE_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW"
+  "em_route_source_pin_provenance_and_authority_review_result": {
+    "outcome": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+    "terminal_outcome": "EM_SOURCE_PIN_REBINDING_JUSTIFIED",
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0.json",
+    "sha256": "4b1a6683819eb22a98b4f6deb0e04df8036119b088662c3c696f489076353b55"
+  },
+  "em_route_source_pin_provenance_and_authority_review_result_review": {
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8",
+    "verdict": "ACCEPT_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_ACCEPTED_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
 }
