@@ -45,7 +45,7 @@
   },
   "current_maintenance_target": "review_repository_em_route_source_pin_provenance_and_authority_review_result_v0",
   "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0.json",
-  "current_maintenance_target_evidence_sha256": "cc320740fa5a399691fd2ccf9cca177bf134be784ba84fc29d752c75a65a53a5",
+  "current_maintenance_target_evidence_sha256": "4b1a6683819eb22a98b4f6deb0e04df8036119b088662c3c696f489076353b55",
   "current_maintenance_target_kind": "independent_em_route_source_pin_provenance_and_authority_result_review",
   "current_maintenance_target_status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {

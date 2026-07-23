@@ -67,7 +67,7 @@
   },
   "occurrence_and_consumer_mapping": {
     "tracked_pin_paths_at_authorization_commit": 12,
-    "tracked_pin_occurrences_at_authorization_commit": 18,
+    "tracked_pin_occurrences_at_authorization_commit": 17,
     "first_appearance_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
     "direct_test_pin_occurrences": 0,
     "transitive_v0_test_outcomes": 28,
@@ -132,7 +132,7 @@
   },
   "external_evidence": {
     "path": ".toe-recovery/custody-v0/em-route-source-pin-provenance-authority-review-v0/EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_LEDGER_20260723_v0.json",
-    "sha256": "9c386f3d82a7cfc3e2631c897a595e144d98fa8a559700dbec42c884bb6be46b"
+    "sha256": "eae43b9a5b0848326b19358e005525530a96d787a3cede8b351e2ebf44db9641"
   },
   "future_boundary": {
     "automatic_route_table_change": false,
