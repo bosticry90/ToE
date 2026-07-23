@@ -1,0 +1,115 @@
+{
+  "accepted_base_commit": "693760bf39910e054e22a22d69ef12206f0abbe0",
+  "authorization_commit": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+  "branch": "codex/qft-route-evidence-identity-domain-repair-v0",
+  "captured_at_utc": "2026-07-23T21:58:54Z",
+  "decision": {
+    "automatic_successor_authorized": false,
+    "bounded_implementation_complete": true,
+    "independent_review_required": true,
+    "qft_gr_seam_closed": false,
+    "registry_rotation_authorized": false,
+    "route_map_accepted": false,
+    "scientific_execution_authorized": false,
+    "v2_enrollment_authorized": false
+  },
+  "external_evidence": {
+    "implementation_verification": {
+      "path": ".toe-recovery/custody-v0/qft-route-evidence-identity-domain-repair-v0/QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_IMPLEMENTATION_VERIFICATION_20260723_v0.json",
+      "sha256": "8a9c345f782279e512746ad673f314fae25ab6772f8eaf2031cd53242ee1dbad"
+    }
+  },
+  "historical_preservation": {
+    "historical_output_tree_unchanged": true,
+    "historical_release_packets_modified": 0,
+    "route_v0_generator_identity_preserved": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+    "route_v0_pins_preserved": "9_OF_9",
+    "route_v1_generator_identity_preserved": "bb42efb91530da6134a5f41661b23736afa663171935140616066f6503257da4",
+    "route_v1_pins_preserved": "9_OF_9"
+  },
+  "identity_contract": {
+    "canonical_artifact_identities": 1,
+    "checkout_bytes_authoritative": false,
+    "contract_path": "formal/docs/release/QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_CONTRACT_20260723_v0.json",
+    "contract_sha256": "8625c8f69c97ef138fb7bd0146b245421aff254dcdb89ab4fc4143ec55f4af10",
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "frozen_git_blob_identities": 8,
+    "identity_count": 9,
+    "resolver_path": "formal/python/tools/qft_route_evidence_identity.py"
+  },
+  "implementation_commit": "d2b7d0c16e9e0f04e57a09119fd8ae53e57c8c03",
+  "outcome_treatment": {
+    "baseline_nonpassing": 526,
+    "global_baseline_rerun": false,
+    "global_nonpassing_delta_claimed": false,
+    "original_consumer_outcomes_recovered": 67,
+    "preexisting_passing_consumer_outcomes_preserved": 1,
+    "route_family_outcomes_after": 0
+  },
+  "preservation": {
+    "dirty_main_custody_rows_byte_verified": 629,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "formal_output_tree_unchanged": true,
+    "lean_activity": false,
+    "loop_control_registry_unchanged": true,
+    "nine_underlying_source_or_artifact_blobs_modified": 0,
+    "registry_rotations": 0,
+    "scientific_content_changes": 0,
+    "toe_formal_tree_unchanged": true,
+    "v2_enrollment": false
+  },
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_BOUNDED_IMPLEMENTATION_ONLY",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "result": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "scope": {
+    "consumer_test_files_modified": 2,
+    "current_typed_contracts_added": 1,
+    "historical_pin_modifications": 0,
+    "identity_resolvers_added": 1,
+    "lean_actions": 0,
+    "registry_or_v2_actions": 0,
+    "route_loader_files_modified": 2,
+    "scientific_modifications": 0,
+    "underlying_source_or_artifact_modifications": 0,
+    "unrelated_baseline_actions": 0
+  },
+  "typed_identities": {
+    "em_current_identity": {
+      "domain": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+      "sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c"
+    },
+    "scalar_result_review_domain": "CANONICAL_ARTIFACT_SHA256"
+  },
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "validation": {
+    "crlf_checkout": {
+      "actual_crlf_route_sources_confirmed": true,
+      "checkout_clean_after": true,
+      "failed": 0,
+      "passed": 76,
+      "tests": 76,
+      "unexpected_untracked_source": 0
+    },
+    "focused_implementation_checkout": {
+      "checkout_clean_after": true,
+      "failed": 0,
+      "passed": 76,
+      "tests": 76,
+      "unexpected_untracked_source": 0
+    },
+    "lf_checkout": {
+      "actual_lf_route_sources_confirmed": true,
+      "checkout_clean_after": true,
+      "failed": 0,
+      "passed": 76,
+      "tests": 76,
+      "unexpected_untracked_source": 0
+    }
+  }
+}

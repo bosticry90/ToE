@@ -21,36 +21,36 @@
     "post_prompt_decoupling_baseline_reassessment_authorized": false,
     "prompt_dependency_role_adjudication_and_decoupling_authorized": false,
     "qft_route_evidence_hash_identity_domain_adjudication_authorized": false,
-    "qft_route_evidence_identity_domain_repair_authorized": true,
-    "qft_route_evidence_identity_domain_repair_cycles_remaining": 1,
+    "qft_route_evidence_identity_domain_repair_authorized": false,
+    "qft_route_evidence_identity_domain_repair_cycles_remaining": 0,
     "qft_route_evidence_identity_domain_repair_result_reviews_remaining": 1,
     "qft_route_identity_adjudication_cycles_remaining": 0,
     "qft_route_identity_adjudication_result_reviews_remaining": 0,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 1,
+    "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": true,
-    "tracked_source_mutation_authorized": true,
+    "test_modification_authorized": false,
+    "tracked_source_mutation_authorized": false,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-23T21:36:45Z",
+  "captured_at_utc": "2026-07-23T21:58:54Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "implement_repository_qft_route_evidence_identity_domain_repair_v0_once",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_REVIEW_20260723_v0.json",
-  "current_maintenance_target_evidence_sha256": "b048228d759fda14973d8fc3776a8d1007c0fed51d8414af28f1facb36a21405",
-  "current_maintenance_target_kind": "authorized_bounded_qft_route_evidence_identity_domain_repair",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR",
+  "current_maintenance_target": "independent_review_repository_qft_route_evidence_identity_domain_repair_result_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+  "current_maintenance_target_evidence_sha256": "bf73766313d6b7d5e001306d264430e0aa5cf4edd88e484a4cb1fca55731df2a",
+  "current_maintenance_target_kind": "bounded_qft_route_evidence_identity_domain_repair_result_review",
+  "current_maintenance_target_status": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -100,8 +100,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_accepted_em_route_source_pin_provenance_and_authority_review_v0",
-  "previous_maintenance_target_status": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_ACCEPTED_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "implement_repository_qft_route_evidence_identity_domain_repair_v0_once",
+  "previous_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -213,5 +213,10 @@
     "sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8",
     "verdict": "ACCEPT_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "AUTHORIZED_ONE_BOUNDED_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR"
+  "qft_route_evidence_identity_domain_repair_result": {
+    "outcome": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+    "sha256": "bf73766313d6b7d5e001306d264430e0aa5cf4edd88e484a4cb1fca55731df2a"
+  },
+  "status": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
 }
