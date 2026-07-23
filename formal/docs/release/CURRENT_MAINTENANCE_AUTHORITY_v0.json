@@ -17,6 +17,9 @@
     "post_historical_aggregate_decomposition_baseline_reassessment_authorized": false,
     "post_prompt_decoupling_baseline_reassessment_authorized": false,
     "prompt_dependency_role_adjudication_and_decoupling_authorized": false,
+    "qft_route_evidence_hash_identity_domain_adjudication_authorized": true,
+    "qft_route_identity_adjudication_cycles_remaining": 1,
+    "qft_route_identity_adjudication_result_reviews_remaining": 1,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
@@ -31,17 +34,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-23T02:38:46Z",
+  "captured_at_utc": "2026-07-23T02:48:20Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_accepted_post_historical_aggregate_decomposition_baseline_reassessment_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_REVIEW_20260723_v0.json",
-  "current_maintenance_target_evidence_sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2",
-  "current_maintenance_target_kind": "accepted_reassessment_result_preservation",
-  "current_maintenance_target_status": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "current_maintenance_target": "execute_repository_qft_route_evidence_hash_identity_domain_adjudication_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260723_v0.json",
+  "current_maintenance_target_evidence_sha256": "e2027be25441f64fa0674546553b6f702931731476032631a72098b51dcdfee8",
+  "current_maintenance_target_kind": "read_only_qft_route_evidence_hash_identity_domain_adjudication",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_READ_ONLY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -49,8 +52,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0.json",
-    "sha256": "7d082a7ac476a2ca9c33a368ed170f9e61ea99e8370f325e49a86692b68b0378",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260723_v0.json",
+    "sha256": "e2027be25441f64fa0674546553b6f702931731476032631a72098b51dcdfee8",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -91,8 +94,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "review_repository_post_historical_aggregate_decomposition_baseline_reassessment_result_v0",
-  "previous_maintenance_target_status": "ACCEPT_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "preserve_accepted_post_historical_aggregate_decomposition_baseline_reassessment_v0",
+  "previous_maintenance_target_status": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -115,8 +118,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_SELECTION_20260722_v0.json",
-    "sha256": "8bde2161d4dac31e56b0822e92c9385975b30ffe02da97764691c5f173b7aa5e"
+    "path": "formal/docs/release/QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260723_v0.json",
+    "sha256": "4c04a45df07f3d74bd2bc8859149d1dee95e9266aaa1f104b99d4e8bc9af8b5d"
   },
   "prompt_dependency_role_adjudication_and_decoupling_result": {
     "outcome": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_ACCEPTED_STILL_BLOCKED",
@@ -183,5 +186,5 @@
     "sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2",
     "verdict": "ACCEPT_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  "status": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_AUTHORIZED"
 }
