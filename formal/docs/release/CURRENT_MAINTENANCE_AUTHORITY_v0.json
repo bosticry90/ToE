@@ -17,8 +17,8 @@
     "post_historical_aggregate_decomposition_baseline_reassessment_authorized": false,
     "post_prompt_decoupling_baseline_reassessment_authorized": false,
     "prompt_dependency_role_adjudication_and_decoupling_authorized": false,
-    "qft_route_evidence_hash_identity_domain_adjudication_authorized": true,
-    "qft_route_identity_adjudication_cycles_remaining": 1,
+    "qft_route_evidence_hash_identity_domain_adjudication_authorized": false,
+    "qft_route_identity_adjudication_cycles_remaining": 0,
     "qft_route_identity_adjudication_result_reviews_remaining": 1,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
@@ -34,17 +34,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-23T02:48:20Z",
+  "captured_at_utc": "2026-07-23T03:00:00Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "execute_repository_qft_route_evidence_hash_identity_domain_adjudication_v0_once",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260723_v0.json",
-  "current_maintenance_target_evidence_sha256": "e2027be25441f64fa0674546553b6f702931731476032631a72098b51dcdfee8",
-  "current_maintenance_target_kind": "read_only_qft_route_evidence_hash_identity_domain_adjudication",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_READ_ONLY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+  "current_maintenance_target": "review_repository_qft_route_evidence_hash_identity_domain_adjudication_result_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0.json",
+  "current_maintenance_target_evidence_sha256": "1b76ceae7eb8e8af1f0f80963fc5c020ecd0bda421654db2bb1519a91b61ea2e",
+  "current_maintenance_target_kind": "independent_qft_route_identity_adjudication_result_review",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_INDEPENDENT_QFT_ROUTE_IDENTITY_ADJUDICATION_RESULT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -94,8 +94,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_accepted_post_historical_aggregate_decomposition_baseline_reassessment_v0",
-  "previous_maintenance_target_status": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "execute_repository_qft_route_evidence_hash_identity_domain_adjudication_v0_once",
+  "previous_maintenance_target_status": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_PROVENANCE_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -186,5 +186,10 @@
     "sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2",
     "verdict": "ACCEPT_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_AUTHORIZED"
+  "qft_route_evidence_hash_identity_domain_adjudication_result": {
+    "outcome": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_PROVENANCE_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0.json",
+    "sha256": "1b76ceae7eb8e8af1f0f80963fc5c020ecd0bda421654db2bb1519a91b61ea2e"
+  },
+  "status": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_PROVENANCE_BLOCKED_AWAITING_INDEPENDENT_REVIEW"
 }
