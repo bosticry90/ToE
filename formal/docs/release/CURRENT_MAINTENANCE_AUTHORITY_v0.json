@@ -36,8 +36,8 @@
     "qft_route_identity_adjudication_result_reviews_remaining": 0,
     "phase_b_authorized": false,
     "phase_c_authorized": false,
-    "pillar_artifact_currency_identity_domain_adjudication_authorized": true,
-    "pillar_artifact_currency_identity_domain_adjudication_cycles_remaining": 1,
+    "pillar_artifact_currency_identity_domain_adjudication_authorized": false,
+    "pillar_artifact_currency_identity_domain_adjudication_cycles_remaining": 0,
     "pillar_artifact_currency_identity_domain_adjudication_result_reviews_remaining": 1,
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
@@ -51,17 +51,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T22:13:51Z",
+  "captured_at_utc": "2026-07-24T22:25:18Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "execute_repository_pillar_artifact_currency_identity_domain_adjudication_v0_once",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "4056119cac0be337b4dadc6486ac8472b22a503e45131994bbd0737174b54252",
-  "current_maintenance_target_kind": "bounded_pillar_artifact_currency_identity_domain_adjudication",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_READ_ONLY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_AND_ONE_INDEPENDENT_RESULT_REVIEW_ONLY",
+  "current_maintenance_target": "independent_review_repository_pillar_artifact_currency_identity_domain_adjudication_result_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "23a85fa5d93f999da9801917a173d89e252faaacc33c3d262cd6f24f822bee41",
+  "current_maintenance_target_kind": "pillar_artifact_currency_identity_domain_adjudication_result_review",
+  "current_maintenance_target_status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_ROLE_SEPARATION_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -285,5 +285,10 @@
     "path": "formal/docs/release/PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0.json",
     "sha256": "154dc98bab655951cd922658c2560b53bd0358e535699192179d2d5d4601e47c"
   },
-  "status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_AUTHORIZED_ONE_READ_ONLY_CYCLE_AND_ONE_INDEPENDENT_RESULT_REVIEW_ONLY"
+  "pillar_artifact_currency_identity_domain_adjudication_result": {
+    "outcome": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_ROLE_SEPARATION_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "sha256": "23a85fa5d93f999da9801917a173d89e252faaacc33c3d262cd6f24f822bee41"
+  },
+  "status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_ROLE_SEPARATION_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW"
 }
