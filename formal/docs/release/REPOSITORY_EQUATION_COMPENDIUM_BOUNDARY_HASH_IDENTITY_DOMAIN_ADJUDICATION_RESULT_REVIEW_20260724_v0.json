@@ -1,0 +1,96 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:31:18Z",
+  "verdict": "ACCEPT_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "sha256": "ae399826839ca92174b13777909d131f9a52ae8daf2c2e4e75d8698c598cb16e",
+    "commit": "cae2e9eec35635efbde1345eae42b939361dd25c"
+  },
+  "review_checkout": {
+    "path": ".toe-recovery/disposable-workspaces/equation-compendium-boundary-hash-identity-domain-adjudication-review-v0",
+    "commit": "cae2e9eec35635efbde1345eae42b939361dd25c",
+    "clean_before": true,
+    "clean_after": true
+  },
+  "independent_checks": {
+    "exact_50_outcome_cohort_reextracted": true,
+    "consumer_file_split_27_15_6_2_confirmed": true,
+    "all_50_expectation_rows_present_and_unique": true,
+    "required_ledger_fields_present": true,
+    "one_primary_identity_root_confirmed": true,
+    "two_current_executable_binding_sites_confirmed": true,
+    "masked_additional_identity_roots": 0,
+    "historical_pin_exactly_matches_preserved_dirty_main_mixed_eol_bytes": true,
+    "historical_mixed_eol_bytes_normalize_to_current_git_blob": true,
+    "git_blob_stable_at_both_contract_capture_commits": true,
+    "fresh_lf_and_crlf_raw_identities_differ": true,
+    "fresh_lf_and_crlf_checkouts_clean": true,
+    "related_pin_inventory_23_occurrences_15_files_confirmed": true,
+    "all_external_evidence_hashes_verified": true,
+    "independent_read_only_substitution_50_of_50_pass": true,
+    "tests_tools_compendium_artifacts_and_scientific_content_unchanged": true,
+    "dirty_main_629_path_status_set_and_bytes_exact": true,
+    "repair_not_performed": true,
+    "successor_not_authorized": true
+  },
+  "independent_identity_result": {
+    "historical_generator_pin": {
+      "domain": "MIXED_EOL_RAW_WORKTREE_BYTES_SHA256",
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "disposition": "RETAIN_AS_HISTORICAL_GENERATOR_PIN"
+    },
+    "current_reproducible_identity": {
+      "domain": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+      "sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae",
+      "disposition": "RETAIN_AS_GIT_BLOB_IDENTITY"
+    },
+    "consumer_dispositions": {
+      "RETAIN_AS_GIT_BLOB_IDENTITY": 50
+    },
+    "scientific_content_discrepancy": "NONE_ESTABLISHED",
+    "overall_disposition": "RETAIN_AS_GIT_BLOB_IDENTITY_WITH_HISTORICAL_GENERATOR_PIN_PRESERVED"
+  },
+  "focused_evidence": {
+    "unmodified": {
+      "tests": 50,
+      "failed": 12,
+      "errors": 38
+    },
+    "read_only_identity_substitution": {
+      "current_checkout_passed": 50,
+      "fresh_lf_checkout_passed": 50,
+      "fresh_crlf_checkout_passed": 50,
+      "independent_review_checkout_passed": 50
+    },
+    "independent_review_junit_external_path": "equation_compendium_50_independent_review_substitution_v0.xml",
+    "independent_review_junit_sha256": "b017cab03d19246a1b78afacfc06d481b550423cfecaeffeb58722bb339dee5e"
+  },
+  "external_independent_review": {
+    "path": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_INDEPENDENT_REVIEW_v0.json",
+    "sha256": "cf07af856915312dfc613ecd4e043e9cb05066668f49efee1ad16fc5358be5c6"
+  },
+  "accepted_future_option": {
+    "selector": "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR",
+    "target": "implement_repository_equation_compendium_git_blob_identity_contract_repair_v0_once",
+    "status": "RECOMMENDED_NOT_AUTHORIZED"
+  },
+  "scope": {
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "compendium_content_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "four_historical_packet_review_assertions_repaired": 0
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "successor_authority": "NONE"
+}
