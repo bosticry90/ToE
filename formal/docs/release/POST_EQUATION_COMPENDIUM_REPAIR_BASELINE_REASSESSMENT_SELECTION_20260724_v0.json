@@ -1,0 +1,19 @@
+{
+  "schema_id": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0",
+  "captured_at_utc": "2026-07-24T02:14:12Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT",
+    "PRESERVE_REPAIR_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT",
+  "target": "prepare_repository_post_equation_compendium_repair_baseline_reassessment_packet_v0",
+  "selection_basis": "The accepted repair makes all 50 focused equation-compendium outcomes pass, but the projected 412 nonpassing count is not a measured repository baseline. Exact frozen-inventory measurement is required before any further repair selector.",
+  "controlling_result": {
+    "commit": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "4c997137581b23266076528583853ba1002bbb8cae86e93269f8d8f77d656998"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
