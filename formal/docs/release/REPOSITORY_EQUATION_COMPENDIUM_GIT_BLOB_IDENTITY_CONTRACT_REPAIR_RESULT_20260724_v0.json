@@ -1,0 +1,114 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_20260724_v0",
+  "captured_at_utc": "2026-07-24T02:02:50Z",
+  "result": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/equation-compendium-git-blob-identity-contract-repair-v0",
+  "accepted_base_commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+  "authorization_commit": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+  "implementation_commit": "2197e387d019b9a71bcb7ff5f38c582cec8a35c2",
+  "identity_contract": {
+    "path": "formal/docs/release/EQUATION_COMPENDIUM_IDENTITY_DOMAIN_CONTRACT_20260724_v0.json",
+    "sha256": "81f2c67a6068242ac85db6a0c92cdb911c1ce3efa6d2d4c0b3060b6ff369e1b1",
+    "identity_count": 1,
+    "historical_identity": {
+      "domain": "HISTORICAL_MIXED_EOL_WORKING_TREE_SHA256",
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "disposition": "PRESERVED"
+    },
+    "current_identity": {
+      "domain": "FROZEN_GIT_BLOB_SHA256",
+      "frozen_commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+      "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+      "git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+      "sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae"
+    },
+    "raw_checkout_bytes_authoritative": false
+  },
+  "implementation": {
+    "shared_resolver": {
+      "path": "formal/python/tools/equation_compendium_identity.py",
+      "sha256": "48f728347ae95a077d6be0d6b7d7c3f9dfb4b8161ca6849e7f8daf26400b12ca"
+    },
+    "current_executable_binding_paths": [
+      "formal/python/tools/scalar_multi_background_robustness_reports.py",
+      "formal/python/tools/pillar_seam_unit_mapping_ledger_reports.py"
+    ],
+    "supporting_current_consumer": "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness.py",
+    "historical_payload_pin_values_changed": 0,
+    "historical_execution_artifacts_regenerated": 0,
+    "equation_compendium_content_changed": 0
+  },
+  "focused_validation": {
+    "mapped_outcomes": 50,
+    "implementation_commit": {
+      "passed": 50,
+      "failed": 0,
+      "errors": 0,
+      "checkout_clean": true
+    },
+    "fresh_lf": {
+      "passed": 50,
+      "failed": 0,
+      "errors": 0,
+      "checkout_clean": true
+    },
+    "fresh_actual_crlf": {
+      "passed": 50,
+      "failed": 0,
+      "errors": 0,
+      "checkout_clean": true
+    },
+    "identity_contract_tests": {
+      "implementation_commit": "6_OF_6_PASS",
+      "fresh_lf": "6_OF_6_PASS",
+      "fresh_actual_crlf": "6_OF_6_PASS"
+    },
+    "official_baseline_nonpassing": 462,
+    "official_baseline_changed_by_this_cycle": false,
+    "baseline_reassessment_required_before_count_change": true
+  },
+  "historical_preservation": {
+    "adjudicated_occurrences": 23,
+    "adjudicated_files": 15,
+    "all_occurrences_preserved": true,
+    "historical_packets_reviews_generator_records_and_lean_surfaces_modified": false,
+    "compendium_git_blob_before": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+    "compendium_git_blob_after": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb"
+  },
+  "external_evidence": {
+    "path": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_EXECUTION_MANIFEST_v0.json",
+    "root": ".toe-recovery/custody-v0/equation-compendium-git-blob-identity-contract-repair-v0",
+    "sha256": "1917a3a541fb52396240bf961738e7fb7d2071c7537396a2f04d8d1d8c01b21b"
+  },
+  "custody": {
+    "implementation_checkout_clean": true,
+    "fresh_lf_checkout_clean": true,
+    "fresh_actual_crlf_checkout_clean": true,
+    "unexpected_untracked_source": 0,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_dirty": 7,
+    "dirty_main_untracked": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_path_status_set_exact": true,
+    "dirty_main_existing_regular_file_bytes_unchanged": true
+  },
+  "scope": {
+    "repair_only": true,
+    "four_historical_qft_packet_review_assertions_repaired": 0,
+    "missing_artifact_outcomes_repaired": 0,
+    "other_packet_contract_outcomes_repaired": 0,
+    "other_pillar_selector_or_currency_outcomes_repaired": 0,
+    "lean_activity": false,
+    "scientific_content_changed": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "scientific_execution_resumed": false,
+    "automatic_successor": false
+  },
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REPAIR_RESULT_ONLY",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
