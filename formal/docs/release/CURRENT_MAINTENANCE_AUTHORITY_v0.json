@@ -39,32 +39,32 @@
     "pillar_artifact_currency_identity_domain_adjudication_authorized": false,
     "pillar_artifact_currency_identity_domain_adjudication_cycles_remaining": 0,
     "pillar_artifact_currency_identity_domain_adjudication_result_reviews_remaining": 0,
-    "pillar_historical_artifact_currency_role_separation_repair_authorized": true,
-    "pillar_historical_artifact_currency_role_separation_repair_cycles_remaining": 1,
+    "pillar_historical_artifact_currency_role_separation_repair_authorized": false,
+    "pillar_historical_artifact_currency_role_separation_repair_cycles_remaining": 0,
     "pillar_historical_artifact_currency_role_separation_repair_result_reviews_remaining": 1,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 1,
+    "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": true,
-    "tracked_source_mutation_authorized": true,
+    "test_modification_authorized": false,
+    "tracked_source_mutation_authorized": false,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T22:54:52Z",
+  "captured_at_utc": "2026-07-24T23:11:53Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "implement_repository_pillar_historical_artifact_currency_role_separation_repair_v0_once",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "ca2e568604561248b38744d6de0e1caeb2f63041670147ff5b92107c2fa6c5f8",
-  "current_maintenance_target_kind": "pillar_historical_artifact_currency_role_separation_repair",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+  "current_maintenance_target": "independent_review_repository_pillar_historical_artifact_currency_role_separation_repair_result_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5",
+  "current_maintenance_target_kind": "pillar_historical_artifact_currency_role_separation_repair_result_review",
+  "current_maintenance_target_status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -306,5 +306,10 @@
     "selector": "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0.json",
     "selector_sha256": "64ad0ee632dd5f4efb9463f10a4848ced1f3ab158a07b62f36296228db4f4b8e"
   },
-  "status": "AUTHORIZED_ONE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR"
+  "pillar_historical_artifact_currency_role_separation_repair_result": {
+    "outcome": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+    "sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5"
+  },
+  "status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
 }
