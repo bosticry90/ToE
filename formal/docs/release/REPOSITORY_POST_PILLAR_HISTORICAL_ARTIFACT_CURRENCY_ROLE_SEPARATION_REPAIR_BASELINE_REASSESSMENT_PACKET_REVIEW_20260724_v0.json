@@ -1,0 +1,24 @@
+{
+  "schema_id": "REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T23:25:24Z",
+  "review_basis": "INDEPENDENT_LINEAGE_FROZEN_INVENTORY_PRIOR_LEDGER_MEASUREMENT_SCOPE_CONTAINMENT_AND_NONMUTATION_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_20260724_v0.json",
+    "sha256": "6e1da2421556ccf6d9c0233ff2dd3810823be897bf4d2b1178b931cb625c6bbc"
+  },
+  "checks": {
+    "accepted_role_separation_repair_lineage_and_exact_commit_bound": true,
+    "exact_frozen_inventory_count_13756": true,
+    "exact_frozen_inventory_sha256_verified": true,
+    "accepted_390_outcome_prior_ledger_bound": true,
+    "current_collection_comparison_required": true,
+    "all_16_repaired_outcomes_must_be_reported": true,
+    "newly_exposed_outcomes_and_status_transitions_must_be_reported": true,
+    "exhaustive_first_cause_reclassification_required": true,
+    "read_only_checkout_and_dirty_main_custody_required": true,
+    "repair_test_source_generator_report_fixture_lean_registry_v2_and_scientific_actions_forbidden": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT"
+}
