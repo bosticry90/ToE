@@ -2,9 +2,9 @@
   "boundary": {
     "automatic_successor_authorized": false,
     "baseline_repair_authorized": false,
-    "bounded_hash_identity_repair_authorized": true,
+    "bounded_hash_identity_repair_authorized": false,
     "broad_python_first_cause_clustering_authorized": false,
-    "diagnostic_execution_cycles_remaining": 0,
+    "diagnostic_execution_cycles_remaining": 1,
     "em_route_source_pin_provenance_and_authority_review_authorized": false,
     "em_route_source_pin_provenance_review_cycles_remaining": 0,
     "em_route_source_pin_provenance_result_reviews_remaining": 0,
@@ -12,7 +12,10 @@
     "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
     "historical_report_fixture_conversion_pilot_authorized": false,
-    "independent_result_reviews_remaining": 0,
+    "independent_result_reviews_remaining": 1,
+    "equation_compendium_boundary_hash_identity_domain_adjudication_authorized": true,
+    "equation_compendium_boundary_hash_identity_domain_adjudication_cycles_remaining": 1,
+    "equation_compendium_boundary_hash_identity_domain_adjudication_result_reviews_remaining": 1,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "missing_artifact_expectation_adjudication_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
@@ -41,17 +44,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T00:54:16Z",
+  "captured_at_utc": "2026-07-24T01:04:17Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_accepted_post_qft_route_identity_repair_baseline_reassessment_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
-  "current_maintenance_target_kind": "accepted_post_qft_route_identity_repair_baseline_reassessment_terminal_preservation",
-  "current_maintenance_target_status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "current_maintenance_target": "execute_repository_equation_compendium_boundary_hash_identity_domain_adjudication_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "075b82ce0fe15434f1ec727f04d7f523a2583bf69b4196f06ac35a1927608204",
+  "current_maintenance_target_kind": "bounded_read_only_equation_compendium_boundary_hash_identity_domain_adjudication",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_READ_ONLY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -59,8 +62,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260723_v0.json",
-    "sha256": "09bda76af61bce075b2fad86fe34f1d958564ffa99a7b3c45390e29ebbb2259a",
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
+    "sha256": "075b82ce0fe15434f1ec727f04d7f523a2583bf69b4196f06ac35a1927608204",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -101,8 +104,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "independent_review_repository_post_qft_route_identity_repair_baseline_reassessment_result_v0_once",
-  "previous_maintenance_target_status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "previous_maintenance_target": "preserve_accepted_post_qft_route_identity_repair_baseline_reassessment_v0",
+  "previous_maintenance_target_status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -125,8 +128,15 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260723_v0.json",
-    "sha256": "f9bfd6509efd432a909c29fc650e882b07b62e3f061b9e7e56b54231e62d84f2"
+    "path": "formal/docs/release/EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0.json",
+    "sha256": "10165b888a10b35c99d0fdefc8cafaabbf16888d358e05d1f01f53df60582569"
+  },
+  "external_ai_assisted_mathematical_discovery_milestone": {
+    "path": "formal/docs/release/EXTERNAL_AI_ASSISTED_MATHEMATICAL_DISCOVERY_MILESTONE_20260724_v0.json",
+    "sha256": "f64f98f83e4c67644ace4fdf1ed4af38dd8608128f0b1d23b8f7dac128ce7fd4",
+    "direct_authority_effect": "NONE",
+    "direct_support_for_ToE": "NONE",
+    "scientific_lane_created": false
   },
   "prompt_dependency_role_adjudication_and_decoupling_result": {
     "outcome": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_ACCEPTED_STILL_BLOCKED",
@@ -234,5 +244,5 @@
     "sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
     "verdict": "ACCEPT_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  "status": "AUTHORIZED_ONE_READ_ONLY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION"
 }

@@ -1,0 +1,109 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:04:17Z",
+  "target": "execute_repository_equation_compendium_boundary_hash_identity_domain_adjudication_v0_once",
+  "status": "AUTHORIZED_ONE_READ_ONLY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+  "accepted_lineage": {
+    "commit": "ed1c78734bc0a58a432b55a5fd3b0b9ccb66bd6d",
+    "reassessment_result_review": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "reassessment_result_review_sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04"
+  },
+  "bound_baseline_evidence": {
+    "outcome_entries_external_path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_OUTCOME_ENTRIES_v0.json",
+    "outcome_entries_sha256": "eca51c9e15c909b165efa2bff2e78cb7086a5b454b973a4a1b58364adf71d795",
+    "first_cause_clusters_external_path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_FIRST_CAUSE_CLUSTERS_v0.json",
+    "first_cause_clusters_sha256": "69a1c483973554b8c7c4e883cdfb1f9457df0402ef3063f0f5c5b3b52a94cefe",
+    "baseline_nonpassing": 462,
+    "target_root_id": "EQUATION_COMPENDIUM_BOUNDARY_HASH_DRIFT",
+    "target_root_family": "equation_compendium_hash",
+    "target_outcomes": 50
+  },
+  "required_expectation_ledger_fields": [
+    "expectation_id",
+    "consumer_nodeid",
+    "consumer_file",
+    "consumer_role",
+    "referenced_path_or_boundary",
+    "pinned_hash_value",
+    "current_git_blob_oid",
+    "current_git_blob_sha256",
+    "current_checkout_byte_sha256",
+    "current_canonical_artifact_sha256",
+    "identity_comparison_domain_used_by_consumer",
+    "originating_commit_and_path",
+    "producing_tool_or_manual_provenance",
+    "line_ending_or_path_normalization_effect",
+    "substantive_or_representational_change",
+    "current_critical_historical_or_provenance_role",
+    "primary_or_cascade_relationship",
+    "recommended_disposition",
+    "disposition_rationale"
+  ],
+  "allowed_dispositions": [
+    "RETAIN_AS_GIT_BLOB_IDENTITY",
+    "RETAIN_AS_CANONICAL_ARTIFACT_IDENTITY",
+    "RETAIN_AS_HISTORICAL_GENERATOR_PIN",
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+    "REMOVE_OBSOLETE_DEPENDENCY",
+    "BLOCK_FOR_PROVENANCE_OR_AUTHORITY_REVIEW"
+  ],
+  "required_questions": [
+    "Which exact compendium files and semantic boundaries are hashed?",
+    "Do the pins represent Git blobs, canonical artifacts, generated extracts, or checkout bytes?",
+    "At which commits and paths did each pin originate?",
+    "Do line-ending or path-normalization differences affect the observed identities?",
+    "Did the compendium change substantively or only representationally?",
+    "Do all 50 consumers share one root after masked identities are exposed?",
+    "Is each dependency current-critical, historical custody, or nonblocking provenance?"
+  ],
+  "authorized_cycle": {
+    "diagnostic_adjudication_executions": 1,
+    "independent_result_reviews": 1,
+    "hash_modifications": 0,
+    "test_modifications": 0,
+    "compendium_modifications": 0,
+    "artifact_regenerations": 0,
+    "source_or_scientific_modifications": 0,
+    "registry_or_v2_actions": 0,
+    "lean_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "acceptance_requirements": {
+    "all_50_outcomes_individually_mapped": true,
+    "all_masked_identity_roots_identified": true,
+    "consumer_dispositions_restricted_to_allowed_values": true,
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "compendium_content_modified": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "validation_checkout": "CLEAN",
+    "dirty_main": "BYTE_UNCHANGED",
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "refreshing any equation-compendium pin",
+    "modifying any consumer test, source, generator, compendium, or artifact",
+    "repairing any of the 50 outcomes",
+    "repairing the four newly exposed historical packet-review assertions",
+    "broad missing-artifact fixture scaling",
+    "registry rotation",
+    "V2 enrollment",
+    "Lean work",
+    "unit or seam resolution",
+    "scalar-Yukawa or Maxwell-Dirac resumption",
+    "scientific calculation",
+    "automatic successor cycle"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/equation-compendium-boundary-hash-identity-domain-adjudication-v0",
+    "canonical_worktree_writes": "AUTHORITY_COMPARATOR_AND_RESULT_RECORDS_ONLY",
+    "test_source_generator_compendium_artifact_and_report_writes": "PROHIBITED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

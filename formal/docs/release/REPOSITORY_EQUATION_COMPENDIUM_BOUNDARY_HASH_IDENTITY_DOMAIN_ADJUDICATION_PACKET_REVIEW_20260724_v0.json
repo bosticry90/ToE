@@ -1,0 +1,24 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:04:17Z",
+  "review_basis": "INDEPENDENT_LINEAGE_ROOT_CARDINALITY_IDENTITY_DOMAIN_SCOPE_CONTAINMENT_AND_NONMUTATION_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260724_v0.json",
+    "sha256": "f6d64790bdcdfb43fe215516fa5d8c8dc6d5dac39410f5294b6e25cfc9ff6647"
+  },
+  "checks": {
+    "accepted_462_outcome_reassessment_and_commit_bound": true,
+    "exact_50_outcome_equation_compendium_root_bound": true,
+    "all_50_consumer_rows_required": true,
+    "git_blob_canonical_artifact_generated_extract_and_checkout_identity_domains_distinguished": true,
+    "historical_generator_current_validation_and_nonblocking_provenance_roles_distinguished": true,
+    "line_ending_path_normalization_and_substantive_change_analysis_required": true,
+    "allowed_dispositions_exhaustively_enumerated": true,
+    "hash_test_source_generator_compendium_artifact_scientific_registry_v2_and_lean_mutations_forbidden": true,
+    "four_new_historical_packet_assertion_repairs_forbidden": true,
+    "outputs_contained_under_toe_recovery": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}
