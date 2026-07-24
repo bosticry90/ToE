@@ -2,7 +2,7 @@
   "boundary": {
     "automatic_successor_authorized": false,
     "baseline_repair_authorized": false,
-    "bounded_hash_identity_repair_authorized": false,
+    "bounded_hash_identity_repair_authorized": true,
     "broad_python_first_cause_clustering_authorized": false,
     "diagnostic_execution_cycles_remaining": 0,
     "em_route_source_pin_provenance_and_authority_review_authorized": false,
@@ -12,10 +12,13 @@
     "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
     "historical_report_fixture_conversion_pilot_authorized": false,
-    "independent_result_reviews_remaining": 0,
+    "independent_result_reviews_remaining": 1,
     "equation_compendium_boundary_hash_identity_domain_adjudication_authorized": false,
     "equation_compendium_boundary_hash_identity_domain_adjudication_cycles_remaining": 0,
     "equation_compendium_boundary_hash_identity_domain_adjudication_result_reviews_remaining": 0,
+    "equation_compendium_git_blob_identity_contract_repair_authorized": true,
+    "equation_compendium_git_blob_identity_contract_repair_cycles_remaining": 1,
+    "equation_compendium_git_blob_identity_contract_repair_result_reviews_remaining": 1,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "missing_artifact_expectation_adjudication_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
@@ -33,28 +36,28 @@
     "phase_b_authorized": false,
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 0,
+    "repair_implementation_cycles_remaining": 1,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": false,
-    "tracked_source_mutation_authorized": false,
+    "test_modification_authorized": true,
+    "tracked_source_mutation_authorized": true,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T01:31:18Z",
+  "captured_at_utc": "2026-07-24T01:46:15Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_accepted_equation_compendium_boundary_hash_identity_domain_adjudication_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "b48e48ef0d1a0ff8f9b40902fa95cc1f52cbbc3dd2a0f97bf8f17b6265816591",
-  "current_maintenance_target_kind": "accepted_equation_compendium_identity_adjudication_terminal_preservation",
-  "current_maintenance_target_status": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "current_maintenance_target": "implement_repository_equation_compendium_git_blob_identity_contract_repair_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_REVIEW_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "0c6adddcaa401c8bf43320cd2f02cd418fb16c403f48bd06829602389db93c6b",
+  "current_maintenance_target_kind": "bounded_equation_compendium_git_blob_identity_contract_repair",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_AND_ONE_INDEPENDENT_RESULT_REVIEW_ONLY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -62,8 +65,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
-    "sha256": "075b82ce0fe15434f1ec727f04d7f523a2583bf69b4196f06ac35a1927608204",
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_REVIEW_20260724_v0.json",
+    "sha256": "0c6adddcaa401c8bf43320cd2f02cd418fb16c403f48bd06829602389db93c6b",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -104,8 +107,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "independent_review_repository_equation_compendium_boundary_hash_identity_domain_adjudication_result_v0_once",
-  "previous_maintenance_target_status": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "previous_maintenance_target": "preserve_accepted_equation_compendium_boundary_hash_identity_domain_adjudication_v0",
+  "previous_maintenance_target_status": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -128,8 +131,8 @@
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
   "selector": {
-    "path": "formal/docs/release/EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0.json",
-    "sha256": "10165b888a10b35c99d0fdefc8cafaabbf16888d358e05d1f01f53df60582569"
+    "path": "formal/docs/release/EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_SELECTION_20260724_v0.json",
+    "sha256": "5f5330f0b91b117613e7ba34cf23929d366dcc02468b1b62179b1b213efc65ab"
   },
   "external_ai_assisted_mathematical_discovery_milestone": {
     "path": "formal/docs/release/EXTERNAL_AI_ASSISTED_MATHEMATICAL_DISCOVERY_MILESTONE_20260724_v0.json",
@@ -254,5 +257,5 @@
     "sha256": "b48e48ef0d1a0ff8f9b40902fa95cc1f52cbbc3dd2a0f97bf8f17b6265816591",
     "verdict": "ACCEPT_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  "status": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_AUTHORIZED_ONE_IMPLEMENTATION_AND_ONE_INDEPENDENT_RESULT_REVIEW_ONLY"
 }
