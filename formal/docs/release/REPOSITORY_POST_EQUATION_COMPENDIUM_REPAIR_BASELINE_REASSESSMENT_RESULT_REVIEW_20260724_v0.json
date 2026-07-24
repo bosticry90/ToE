@@ -1,0 +1,132 @@
+{
+  "acceptance_review": {
+    "all_50_equation_compendium_outcomes_recovered": true,
+    "current_nonpassing": 390,
+    "family_accounting": "390_OF_390_EXHAUSTIVELY_CLASSIFIED",
+    "frozen_execution_ids": "13756_OF_13756_EXACT_AND_ORDERED",
+    "newly_nonpassing": 1,
+    "newly_nonpassing_classification": "UNRELATED_EXTERNAL_TEMP_ATOMIC_REPLACE_PERMISSION_EVENT",
+    "prior_nonpassing": 462,
+    "recovered": 73,
+    "status_transitions_among_persistent_outcomes": 0
+  },
+  "captured_at_utc": "2026-07-24T04:57:11Z",
+  "decision": {
+    "automatic_successor_authorized": false,
+    "baseline_reassessment_accepted": true,
+    "fresh_selector_options": [
+      "AUTHORIZE_BOUNDED_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION",
+      "PRESERVE_ACCEPTED_POST_EQUATION_COMPENDIUM_BASELINE_REASSESSMENT_AND_DEFER_RECOVERY"
+    ],
+    "lean_activity_authorized": false,
+    "next_repair_authorized": false,
+    "registry_rotation_authorized": false,
+    "scientific_execution_authorized": false,
+    "v2_enrollment_authorized": false
+  },
+  "independence": {
+    "detached_clean_checkout": true,
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_INDEPENDENT_RESULT_REVIEW_v0.json",
+      "sha256": "a7412e63bb2f0a8b6e32d2402323821267cfae5c16582ec37fd349472ff5a9ac"
+    },
+    "recomputation_method": "Independent JUnit identity and outcome reconstruction, prior-outcome set and status comparison, recovered-root and remaining-family accounting verification, evidence-hash verification, clean detached-checkout audit, and 629-row dirty-main custody rehash.",
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/independent_review_post_equation_compendium_reassessment_v0.py",
+      "sha256": "20cf6b88f7ee8646399505709ec962665de73284b5f15d50ed1f7e9b438b4541"
+    },
+    "review_worktree": ".toe-recovery/disposable-workspaces/post-equation-compendium-repair-baseline-reassessment-review-v0"
+  },
+  "interaction_review": {
+    "beneficial_pillar_interactions": {
+      "PILLAR_ARTIFACT_CURRENCY_DRIFT": 1,
+      "PILLAR_LEDGER_INPUT_HASH_CHAIN_DRIFT": 22
+    },
+    "new_environment_outcome": {
+      "caused_by_equation_compendium_repair": false,
+      "count": 1,
+      "nodeid": "formal/python/tests/test_loop_control_registry_envelope_integrity_gate.py::test_atomic_registry_writer_validates_before_replace",
+      "root_id": "ATOMIC_REGISTRY_REPLACE_PERMISSION_DENIED"
+    }
+  },
+  "preservation": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_manifest_mismatches": 0,
+    "dirty_main_manifest_rows_byte_verified": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "lean_activity": false,
+    "registry_rotated": false,
+    "repair_performed": false,
+    "scientific_authority_fields_unchanged": true,
+    "scientific_content_changed": false,
+    "source_tree_validation_mutations": 0,
+    "v2_enrolled": false
+  },
+  "remaining_baseline": {
+    "families": [
+      {
+        "family": "missing_artifacts",
+        "outcomes": 218
+      },
+      {
+        "family": "other_packet_contract",
+        "outcomes": 65
+      },
+      {
+        "family": "other_artifact_currency",
+        "outcomes": 50
+      },
+      {
+        "family": "pillar_ledger_staging_selector",
+        "outcomes": 38
+      },
+      {
+        "family": "authority_expectations",
+        "outcomes": 8
+      },
+      {
+        "family": "environment_or_path_identity",
+        "outcomes": 7
+      },
+      {
+        "family": "other_committed_assertions",
+        "outcomes": 4
+      }
+    ],
+    "first_cause_clusters": 312,
+    "highest_concentrated_root": {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 16,
+      "root_id": "PILLAR_ARTIFACT_CURRENCY_DRIFT"
+    },
+    "largest_family": {
+      "family": "missing_artifacts",
+      "outcomes": 218
+    }
+  },
+  "resolved_unit_seam_rows": "0_OF_12",
+  "reviewed_branch": "codex/post-equation-compendium-repair-baseline-reassessment-v0",
+  "reviewed_commit": "a3b341bc42a0586a856de536075056feb1a1a6dc",
+  "reviewed_result": {
+    "outcome": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "7d102927802c4334e2071aeb89c1b05ee885a4dfc86513347ad21a72d44c1445"
+  },
+  "schema_id": "REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_AND_STOP_FOR_FRESH_SELECTOR",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "validation": {
+    "errors": 19,
+    "failed": 371,
+    "nonpassing": 390,
+    "passed": 12768,
+    "pytest_exit_code": 1,
+    "skipped": 598,
+    "tests": 13756,
+    "validation_checkout_clean": true
+  },
+  "verdict": "ACCEPT_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+}
