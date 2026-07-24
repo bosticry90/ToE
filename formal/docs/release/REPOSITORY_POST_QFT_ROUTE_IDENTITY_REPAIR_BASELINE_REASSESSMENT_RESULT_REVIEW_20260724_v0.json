@@ -1,0 +1,124 @@
+{
+  "acceptance_review": {
+    "all_67_qft_route_outcomes_recovered": true,
+    "current_nonpassing": 462,
+    "family_accounting": "462_OF_462_EXHAUSTIVELY_CLASSIFIED",
+    "frozen_execution_ids": "13756_OF_13756_EXACT_AND_ORDERED",
+    "newly_nonpassing": 4,
+    "newly_nonpassing_classification": "PILLAR_ARTIFACT_CURRENCY_DRIFT_DOWNSTREAM_HISTORICAL_REVIEW_CONTRACT",
+    "prior_nonpassing": 526,
+    "recovered": 68,
+    "status_transitions_among_persistent_outcomes": 0
+  },
+  "captured_at_utc": "2026-07-24T00:54:16Z",
+  "decision": {
+    "automatic_successor_authorized": false,
+    "baseline_reassessment_accepted": true,
+    "fresh_selector_options": [
+      "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+      "PRESERVE_ACCEPTED_POST_QFT_BASELINE_REASSESSMENT_AND_DEFER_RECOVERY"
+    ],
+    "lean_activity_authorized": false,
+    "next_repair_authorized": false,
+    "registry_rotation_authorized": false,
+    "scientific_execution_authorized": false,
+    "v2_enrollment_authorized": false
+  },
+  "independence": {
+    "detached_clean_checkout": true,
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_INDEPENDENT_RESULT_REVIEW_v0.json",
+      "sha256": "213a220574cae7da5260876efb607ac36d9499e2e27c90fac2e25b98a80e737a"
+    },
+    "recomputation_method": "Independent JUnit identity and outcome reconstruction, prior-outcome set comparison, family and root accounting verification, evidence-hash verification, clean detached-checkout audit, and 629-row dirty-main custody rehash.",
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/independent_review_post_qft_route_reassessment_v0.py",
+      "sha256": "cb760b942b8dc5f6544f79b74e7521ebd031530ed8f5fcd350d1fa1e2a775c1e"
+    },
+    "review_worktree": ".toe-recovery/disposable-workspaces/post-qft-route-identity-repair-baseline-reassessment-review-v0"
+  },
+  "preservation": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_manifest_mismatches": 0,
+    "dirty_main_manifest_rows_byte_verified": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "lean_activity": false,
+    "registry_rotated": false,
+    "repair_performed": false,
+    "scientific_authority_fields_unchanged": true,
+    "scientific_content_changed": false,
+    "source_tree_validation_mutations": 0,
+    "v2_enrolled": false
+  },
+  "remaining_baseline": {
+    "families": [
+      {
+        "family": "missing_artifacts",
+        "outcomes": 218
+      },
+      {
+        "family": "other_packet_contract",
+        "outcomes": 65
+      },
+      {
+        "family": "pillar_ledger_staging_selector",
+        "outcomes": 61
+      },
+      {
+        "family": "other_artifact_currency",
+        "outcomes": 50
+      },
+      {
+        "family": "equation_compendium_hash",
+        "outcomes": 50
+      },
+      {
+        "family": "authority_expectations",
+        "outcomes": 8
+      },
+      {
+        "family": "environment_or_path_identity",
+        "outcomes": 6
+      },
+      {
+        "family": "other_committed_assertions",
+        "outcomes": 4
+      }
+    ],
+    "first_cause_clusters": 313,
+    "highest_concentrated_root": {
+      "family": "equation_compendium_hash",
+      "outcomes": 50,
+      "root_id": "EQUATION_COMPENDIUM_BOUNDARY_HASH_DRIFT"
+    },
+    "largest_family": {
+      "family": "missing_artifacts",
+      "outcomes": 218
+    }
+  },
+  "resolved_unit_seam_rows": "0_OF_12",
+  "reviewed_branch": "codex/post-qft-route-identity-repair-baseline-reassessment-v0",
+  "reviewed_commit": "db843284eb11365a1768ee97fad3a966f96a0327",
+  "reviewed_result": {
+    "outcome": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "ea320e60d86d3856e9780ccf62e4608904555001a331c5eb6063d7ee6ae3e931"
+  },
+  "schema_id": "REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_AND_STOP_FOR_FRESH_SELECTOR",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "validation": {
+    "errors": 57,
+    "failed": 405,
+    "nonpassing": 462,
+    "passed": 12696,
+    "pytest_exit_code": 1,
+    "skipped": 598,
+    "tests": 13756,
+    "validation_checkout_clean": true
+  },
+  "verdict": "ACCEPT_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+}

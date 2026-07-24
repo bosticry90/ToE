@@ -12,7 +12,7 @@
     "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
     "historical_report_fixture_conversion_pilot_authorized": false,
-    "independent_result_reviews_remaining": 1,
+    "independent_result_reviews_remaining": 0,
     "line_ending_identity_and_mapping_tuple_repair_authorized": false,
     "missing_artifact_expectation_adjudication_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
@@ -31,7 +31,7 @@
     "phase_c_authorized": false,
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
-    "reassessment_result_reviews_remaining": 1,
+    "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
@@ -41,17 +41,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T00:49:41Z",
+  "captured_at_utc": "2026-07-24T00:54:16Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "independent_review_repository_post_qft_route_identity_repair_baseline_reassessment_result_v0_once",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "ea320e60d86d3856e9780ccf62e4608904555001a331c5eb6063d7ee6ae3e931",
-  "current_maintenance_target_kind": "post_qft_route_identity_repair_baseline_reassessment_result_review",
-  "current_maintenance_target_status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "current_maintenance_target": "preserve_accepted_post_qft_route_identity_repair_baseline_reassessment_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
+  "current_maintenance_target_kind": "accepted_post_qft_route_identity_repair_baseline_reassessment_terminal_preservation",
+  "current_maintenance_target_status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -74,9 +74,9 @@
     "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
   },
   "independent_result_review": {
-    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0.json",
-    "sha256": "111092bd73ecb218b561cc0cfe3ece415d08a380375c4965a0433a30cdbfa78b",
-    "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
+    "verdict": "ACCEPT_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
   "line_ending_identity_and_mapping_tuple_repair_result": {
     "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
@@ -101,8 +101,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "execute_bounded_post_qft_route_identity_repair_baseline_reassessment_v0",
-  "previous_maintenance_target_status": "AUTHORIZED_ONE_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT",
+  "previous_maintenance_target": "independent_review_repository_post_qft_route_identity_repair_baseline_reassessment_result_v0_once",
+  "previous_maintenance_target_status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -229,5 +229,10 @@
     "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
     "sha256": "ea320e60d86d3856e9780ccf62e4608904555001a331c5eb6063d7ee6ae3e931"
   },
-  "status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW"
+  "post_qft_route_identity_repair_baseline_reassessment_result_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
+    "verdict": "ACCEPT_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "status": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
 }
