@@ -1,0 +1,124 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_20260724_v0",
+  "captured_at_utc": "2026-07-24T22:54:52Z",
+  "target": "implement_repository_pillar_historical_artifact_currency_role_separation_repair_v0_once",
+  "status": "AUTHORIZED_ONE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+  "accepted_lineage": {
+    "commit": "3dab04288d861758d3d3fe06d1a664b055cf079a",
+    "adjudication_result": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "adjudication_result_sha256": "23a85fa5d93f999da9801917a173d89e252faaacc33c3d262cd6f24f822bee41",
+    "adjudication_result_review": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+    "adjudication_result_review_sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4"
+  },
+  "bound_family": {
+    "official_baseline_nonpassing": 390,
+    "target_outcomes": 16,
+    "identity_role_bindings": 17,
+    "consumer_files": 3,
+    "true_identity_role_roots": 4
+  },
+  "required_role_contract": {
+    "binding_roles": [
+      "HISTORICAL_GENERATOR_PIN",
+      "HISTORICAL_SOURCE_BLOB",
+      "CURRENT_CANONICAL_IDENTITY",
+      "REVIEW_TIME_AUTHORITY",
+      "CURRENT_LIVE_AUTHORITY"
+    ],
+    "historical_registry_commit": "310b9dd426e3eea4585226467c4361f09104e6c8",
+    "historical_registry_git_blob_oid": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+    "historical_registry_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+    "historical_blocker_generator_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+    "historical_blocker_generator_git_blob_oid": "2edf61181178c8629980e51b52f61aaaef628b1a",
+    "historical_blocker_generator_sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+    "historical_compendium_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+    "current_compendium_git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+    "current_compendium_sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae",
+    "review_time_authority_commit": "2d2617950437b7465e6f322b89463d6417d8cf35",
+    "review_time_authority_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+    "review_time_and_current_live_authority_equality_required": false
+  },
+  "permitted_implementation": [
+    "add one versioned 17-binding historical-artifact currency role contract",
+    "add one reviewed fail-closed resolver for historical Git blobs, historical compendium pins, review-time authority, and current canonical identity",
+    "route the historical registry assertion through its frozen Git blob",
+    "route the five blocker-route review outcomes through the review-time generator identity",
+    "route the ten ledger-review outcomes through the preserved historical compendium pin and current canonical compendium identity",
+    "remove the live-authority equality dependency while retaining review-time authority verification",
+    "add narrowly scoped contract and resolver tests",
+    "validate the exact 16 outcomes in current, fresh LF, fresh actual-CRLF, and detached independent-review checkouts",
+    "write implementation, validation, result, and independent-review governance records"
+  ],
+  "permitted_tracked_implementation_paths": [
+    "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_CONTRACT_20260724_v0.json",
+    "formal/python/tools/historical_artifact_currency_identity.py",
+    "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py",
+    "formal/python/tools/pillar_seam_unit_mapping_ledger_result_review.py",
+    "formal/python/tests/test_historical_artifact_currency_role_contract.py",
+    "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py",
+    "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py",
+    "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py",
+    "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+    "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json"
+  ],
+  "historical_preservation": {
+    "all_17_adjudicated_pins_and_roles_preserved": true,
+    "historical_packets_reviews_generators_and_artifacts_preserved": true,
+    "historical_hash_refresh_authorized": false,
+    "registry_modification_authorized": false,
+    "scientific_artifact_modification_authorized": false
+  },
+  "authorized_cycle": {
+    "repair_implementations": 1,
+    "independent_result_reviews": 1,
+    "typed_contract_additions": 1,
+    "identity_resolver_additions": 1,
+    "historical_pin_modifications": 0,
+    "historical_packet_or_review_modifications": 0,
+    "scientific_modifications": 0,
+    "registry_or_v2_actions": 0,
+    "lean_actions": 0,
+    "baseline_reassessments": 0,
+    "automatic_successor_actions": 0
+  },
+  "acceptance_requirements": {
+    "all_17_bindings": "EXPLICITLY_ROLE_TYPED",
+    "historical_pins_preserved": true,
+    "historical_registry_identity": "FROZEN_GIT_BLOB",
+    "review_time_live_authority_equality_dependency": "REMOVED",
+    "focused_16_outcomes": "PASS_OR_EXPLICITLY_RECLASSIFIED",
+    "fresh_lf_checkout": "PASS_AND_CLEAN",
+    "fresh_actual_crlf_checkout": "PASS_AND_CLEAN",
+    "detached_independent_review": "PASS_AND_CLEAN",
+    "tracked_validation_mutations": 0,
+    "scientific_or_authority_state_changes": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false
+  },
+  "prohibited_actions": [
+    "refreshing any historical hash to a current value",
+    "modifying historical packet or review outcomes",
+    "changing the registry, pillar states, seam states, scientific artifacts, formulas, or outputs",
+    "repairing unrelated packet-contract, missing-artifact, authority, path, or assertion families",
+    "running a broad baseline reassessment",
+    "performing Lean validation",
+    "enrolling V2 or rotating the registry",
+    "performing scientific calculations or resuming scientific execution",
+    "automatic successor cycle"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/pillar-historical-artifact-currency-role-separation-repair-v0",
+    "canonical_worktree_writes": "EXACT_PERMITTED_PATHS_ONLY",
+    "dirty_main_reads": "CUSTODY_VERIFICATION_ONLY",
+    "dirty_main_writes": "PROHIBITED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -12,7 +12,7 @@
     "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
     "historical_report_fixture_conversion_pilot_authorized": false,
-    "independent_result_reviews_remaining": 0,
+    "independent_result_reviews_remaining": 1,
     "equation_compendium_boundary_hash_identity_domain_adjudication_authorized": false,
     "equation_compendium_boundary_hash_identity_domain_adjudication_cycles_remaining": 0,
     "equation_compendium_boundary_hash_identity_domain_adjudication_result_reviews_remaining": 0,
@@ -39,29 +39,32 @@
     "pillar_artifact_currency_identity_domain_adjudication_authorized": false,
     "pillar_artifact_currency_identity_domain_adjudication_cycles_remaining": 0,
     "pillar_artifact_currency_identity_domain_adjudication_result_reviews_remaining": 0,
+    "pillar_historical_artifact_currency_role_separation_repair_authorized": true,
+    "pillar_historical_artifact_currency_role_separation_repair_cycles_remaining": 1,
+    "pillar_historical_artifact_currency_role_separation_repair_result_reviews_remaining": 1,
     "registry_sharding_migration_authorized": false,
-    "repair_implementation_cycles_remaining": 0,
+    "repair_implementation_cycles_remaining": 1,
     "reassessment_result_reviews_remaining": 0,
     "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
-    "test_modification_authorized": false,
-    "tracked_source_mutation_authorized": false,
+    "test_modification_authorized": true,
+    "tracked_source_mutation_authorized": true,
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T22:30:21Z",
+  "captured_at_utc": "2026-07-24T22:54:52Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "preserve_accepted_pillar_artifact_currency_identity_domain_adjudication_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4",
-  "current_maintenance_target_kind": "accepted_pillar_artifact_currency_identity_domain_adjudication_preservation",
-  "current_maintenance_target_status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "current_maintenance_target": "implement_repository_pillar_historical_artifact_currency_role_separation_repair_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "ca2e568604561248b38744d6de0e1caeb2f63041670147ff5b92107c2fa6c5f8",
+  "current_maintenance_target_kind": "pillar_historical_artifact_currency_role_separation_repair",
+  "current_maintenance_target_status": "AUTHORIZED_ONE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -69,8 +72,8 @@
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
   "independent_authorization_review": {
-    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
-    "sha256": "4056119cac0be337b4dadc6486ac8472b22a503e45131994bbd0737174b54252",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
+    "sha256": "ca2e568604561248b38744d6de0e1caeb2f63041670147ff5b92107c2fa6c5f8",
     "verdict": "ACCEPT"
   },
   "hash_identity_repair_result_review": {
@@ -111,8 +114,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_accepted_equation_compendium_git_blob_identity_contract_repair_v0",
-  "previous_maintenance_target_status": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_ACCEPTED_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "preserve_accepted_pillar_artifact_currency_identity_domain_adjudication_v0",
+  "previous_maintenance_target_status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -282,8 +285,8 @@
     "verdict": "ACCEPT_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
   "selector": {
-    "path": "formal/docs/release/PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0.json",
-    "sha256": "154dc98bab655951cd922658c2560b53bd0358e535699192179d2d5d4601e47c"
+    "path": "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0.json",
+    "sha256": "64ad0ee632dd5f4efb9463f10a4848ced1f3ab158a07b62f36296228db4f4b8e"
   },
   "pillar_artifact_currency_identity_domain_adjudication_result": {
     "outcome": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_ROLE_SEPARATION_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
@@ -295,5 +298,13 @@
     "sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4",
     "verdict": "ACCEPT_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  "pillar_historical_artifact_currency_role_separation_repair_authorization": {
+    "packet": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_20260724_v0.json",
+    "packet_sha256": "d08e87cbfe9a67ab18aa0bddd141b0bf09282b185f23fe7c6bba0800b4b810eb",
+    "packet_review": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
+    "packet_review_sha256": "ca2e568604561248b38744d6de0e1caeb2f63041670147ff5b92107c2fa6c5f8",
+    "selector": "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0.json",
+    "selector_sha256": "64ad0ee632dd5f4efb9463f10a4848ced1f3ab158a07b62f36296228db4f4b8e"
+  },
+  "status": "AUTHORIZED_ONE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR"
 }
