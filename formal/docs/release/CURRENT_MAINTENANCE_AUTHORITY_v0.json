@@ -12,7 +12,7 @@
     "historical_report_aggregate_contract_decomposition_authorized": false,
     "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
     "historical_report_fixture_conversion_pilot_authorized": false,
-    "independent_result_reviews_remaining": 1,
+    "independent_result_reviews_remaining": 0,
     "equation_compendium_boundary_hash_identity_domain_adjudication_authorized": false,
     "equation_compendium_boundary_hash_identity_domain_adjudication_cycles_remaining": 0,
     "equation_compendium_boundary_hash_identity_domain_adjudication_result_reviews_remaining": 0,
@@ -41,7 +41,7 @@
     "pillar_artifact_currency_identity_domain_adjudication_result_reviews_remaining": 0,
     "pillar_historical_artifact_currency_role_separation_repair_authorized": false,
     "pillar_historical_artifact_currency_role_separation_repair_cycles_remaining": 0,
-    "pillar_historical_artifact_currency_role_separation_repair_result_reviews_remaining": 1,
+    "pillar_historical_artifact_currency_role_separation_repair_result_reviews_remaining": 0,
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 0,
@@ -54,17 +54,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T23:11:53Z",
+  "captured_at_utc": "2026-07-24T23:16:01Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "independent_review_repository_pillar_historical_artifact_currency_role_separation_repair_result_v0_once",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5",
-  "current_maintenance_target_kind": "pillar_historical_artifact_currency_role_separation_repair_result_review",
-  "current_maintenance_target_status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "current_maintenance_target": "preserve_accepted_pillar_historical_artifact_currency_role_separation_repair_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2",
+  "current_maintenance_target_kind": "accepted_pillar_historical_artifact_currency_role_separation_repair_preservation",
+  "current_maintenance_target_status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_ACCEPTED_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -87,9 +87,9 @@
     "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
   },
   "independent_result_review": {
-    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
-    "sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4",
-    "verdict": "ACCEPT_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2",
+    "verdict": "ACCEPT_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
   },
   "line_ending_identity_and_mapping_tuple_repair_result": {
     "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
@@ -114,8 +114,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_accepted_pillar_artifact_currency_identity_domain_adjudication_v0",
-  "previous_maintenance_target_status": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ACCEPTED_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "independent_review_repository_pillar_historical_artifact_currency_role_separation_repair_result_v0_once",
+  "previous_maintenance_target_status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -311,5 +311,10 @@
     "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
     "sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5"
   },
-  "status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
+  "pillar_historical_artifact_currency_role_separation_repair_result_review": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2",
+    "verdict": "ACCEPT_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+  },
+  "status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_ACCEPTED_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
 }
