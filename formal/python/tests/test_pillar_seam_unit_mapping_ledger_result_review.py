@@ -571,6 +571,10 @@ def test_execution_time_registry_and_maintenance_custody_are_unchanged() -> None
     assert custody["registry_unchanged_from_parent"] is True
     assert custody["maintenance_authority_unchanged_from_parent"] is True
     assert custody["maintenance_v2_review_unchanged_from_parent"] is True
+    authority_binding = review.review_time_authority_binding()
+    assert authority_binding["role"] == "REVIEW_TIME_AUTHORITY"
+    assert authority_binding["current_successor_role"] == "CURRENT_LIVE_AUTHORITY"
+    assert authority_binding["equality_with_current_live_authority_required"] is False
     assert custody["registry_sha256"] == (
         EXPECTED_EXECUTION_CUSTODY_HASHES["registry_sha256"]
     )
