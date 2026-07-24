@@ -1,0 +1,116 @@
+{
+  "acceptance_requirements": {
+    "all_16_outcomes_individually_mapped": true,
+    "all_masked_identity_roots_identified": true,
+    "artifacts_regenerated": 0,
+    "consumer_dispositions_restricted_to_allowed_values": true,
+    "dirty_main": "BYTE_UNCHANGED",
+    "hashes_modified": 0,
+    "registry_rotated": false,
+    "scientific_content_changed": 0,
+    "tests_modified": 0,
+    "v2_enrolled": false,
+    "validation_checkout": "CLEAN"
+  },
+  "accepted_lineage": {
+    "commit": "59ba7728ea3814e973973d39249f5c95e3ee39a5",
+    "reassessment_result_review": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "reassessment_result_review_sha256": "f90470efb0f7a705fbe2bf9eaa09f8dacb04bc59aa2eebe8ec6c569de32f7152"
+  },
+  "allowed_dispositions": [
+    "RETAIN_AS_CANONICAL_CURRENT_ARTIFACT_IDENTITY",
+    "RETAIN_AS_FROZEN_GIT_BLOB_IDENTITY",
+    "RETAIN_AS_HISTORICAL_GENERATOR_PIN",
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+    "REMOVE_STALE_CURRENCY_DEPENDENCY",
+    "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW"
+  ],
+  "authorized_cycle": {
+    "artifact_regenerations": 0,
+    "automatic_successor_actions": 0,
+    "diagnostic_adjudication_executions": 1,
+    "hash_modifications": 0,
+    "independent_result_reviews": 1,
+    "lean_actions": 0,
+    "registry_or_v2_actions": 0,
+    "source_or_scientific_modifications": 0,
+    "test_modifications": 0
+  },
+  "bound_baseline_evidence": {
+    "baseline_nonpassing": 390,
+    "collection_comparability_external_path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_CURRENT_COLLECTION_COMPARABILITY_v0.json",
+    "collection_comparability_sha256": "be2d6c6e5bd30a2c8b2fd55e5d5cb3a5747a7429ae6ea230bfe4ffa2e444b63d",
+    "first_cause_clusters_external_path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_FIRST_CAUSE_CLUSTERS_v0.json",
+    "first_cause_clusters_sha256": "97350f2fd49f53b663280c1d2dd0e555bdac736fb4bfad92e1f3a491b19301f8",
+    "inventory_reconciliation": {
+      "current_collection": 13779,
+      "current_only_total": 23,
+      "frozen_inventory": 13756,
+      "new_equation_compendium_guards": 6,
+      "previously_accepted_guards": 17
+    },
+    "outcome_entries_external_path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_OUTCOME_ENTRIES_v0.json",
+    "outcome_entries_sha256": "cbf2546a5e0f1dd90c1376dd9943d341533baf31f68744df164f8bcbab6f7376",
+    "target_outcomes": 16,
+    "target_root_family": "pillar_ledger_staging_selector",
+    "target_root_id": "PILLAR_ARTIFACT_CURRENCY_DRIFT"
+  },
+  "captured_at_utc": "2026-07-24T22:13:51Z",
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0",
+    "canonical_worktree_writes": "AUTHORITY_COMPARATOR_AND_RESULT_RECORDS_ONLY",
+    "test_source_generator_artifact_and_report_writes": "PROHIBITED"
+  },
+  "prohibited_actions": [
+    "copying any currently observed hash into a consumer",
+    "modifying any consumer test, source, generator, packet, review, or artifact",
+    "regenerating any referenced artifact",
+    "repairing any of the 16 outcomes",
+    "repairing the unrelated atomic-registry WinError outcome",
+    "broad missing-artifact fixture scaling",
+    "registry rotation",
+    "V2 enrollment",
+    "Lean work",
+    "unit or seam resolution",
+    "scalar-Yukawa or Maxwell-Dirac resumption",
+    "scientific calculation",
+    "automatic successor cycle"
+  ],
+  "qft_gr_seam": "OPEN",
+  "required_expectation_ledger_fields": [
+    "expectation_id",
+    "consumer_nodeid",
+    "consumer_file",
+    "assertion_or_binding_site",
+    "referenced_artifact",
+    "producing_generator",
+    "frozen_packet_or_review",
+    "pinned_identity",
+    "current_observed_identity",
+    "first_commit_containing_binding",
+    "first_commit_containing_artifact",
+    "artifact_role",
+    "identity_comparison_domain",
+    "substantive_or_representational_mismatch",
+    "primary_or_cascade_relationship",
+    "masked_secondary_root",
+    "recommended_disposition",
+    "disposition_rationale"
+  ],
+  "required_questions": [
+    "Which exact artifact and assertion does each of the 16 outcomes evaluate?",
+    "Which tracked generator, packet, or review produced or froze each identity?",
+    "Does each pin represent current artifact currency, historical custody, Git-blob identity, or nonblocking provenance?",
+    "At which commit and path did each binding and artifact first appear?",
+    "Is each mismatch substantive or representational?",
+    "Do all 16 outcomes share one primary root after downstream assertions are bypassed in memory?",
+    "Would changing the dependency alter current authority or rewrite historical custody?"
+  ],
+  "resolved_unit_seam_rows": "0/12",
+  "schema_id": "REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "status": "AUTHORIZED_ONE_READ_ONLY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION",
+  "target": "execute_repository_pillar_artifact_currency_identity_domain_adjudication_v0_once",
+  "v2_enrollment": "NOT_AUTHORIZED"
+}
