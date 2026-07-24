@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import equation_compendium_identity
 from formal.python.tools import scalar_multi_background_robustness_reports as contract
 
 
@@ -433,13 +434,20 @@ def preflight_source_family(
         )
 
     compendium_contract = guardrail["equation_compendium_boundary"]
-    compendium_path = root / compendium_contract["path"]
-    _require(
-        compendium_path.is_file()
-        and sha256_file(compendium_path) == compendium_contract["sha256"],
-        "equation_compendium_hash_mismatch",
-        "equation compendium boundary hash mismatch",
-    )
+    try:
+        equation_compendium_identity.verify_equation_compendium(
+            expected_path=compendium_contract["path"],
+            expected_historical_sha256=compendium_contract["sha256"],
+            repo_root=root,
+            contract_path=(
+                root / equation_compendium_identity.CONTRACT_RELATIVE_PATH
+            ),
+        )
+    except equation_compendium_identity.IdentityContractError as exc:
+        raise _preflight_error(
+            "equation_compendium_identity_mismatch",
+            f"equation compendium boundary identity mismatch: {exc}",
+        ) from exc
     return {
         "repo_root": root,
         "guardrail": guardrail,

@@ -1,0 +1,28 @@
+{
+  "contract_id": "EQUATION_COMPENDIUM_IDENTITY_DOMAIN_CONTRACT_20260724_v0",
+  "current_authority_effect": "NONE",
+  "frozen_commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+  "identity": {
+    "artifact_id": "TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0",
+    "current_identity": {
+      "bytes": 13658,
+      "domain": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+      "sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae"
+    },
+    "historical_identity": {
+      "bytes": 13743,
+      "carriage_returns": 85,
+      "domain": "HISTORICAL_MIXED_EOL_WORKING_TREE_SHA256",
+      "line_feeds": 113,
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e"
+    },
+    "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md"
+  },
+  "identity_count": 1,
+  "registry_rotated": false,
+  "schema_id": "toe.equation_compendium_identity_domain_contract.v0",
+  "scientific_content_changed": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment_authorized": false
+}
