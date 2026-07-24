@@ -23,7 +23,7 @@
     "missing_artifact_expectation_adjudication_authorized": false,
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
-    "post_equation_compendium_repair_baseline_reassessment_authorized": true,
+    "post_equation_compendium_repair_baseline_reassessment_authorized": false,
     "post_historical_aggregate_decomposition_baseline_reassessment_authorized": false,
     "post_prompt_decoupling_baseline_reassessment_authorized": false,
     "post_qft_route_identity_repair_baseline_reassessment_authorized": false,
@@ -39,7 +39,7 @@
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 1,
-    "reassessment_validation_cycles_remaining": 1,
+    "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
@@ -48,17 +48,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T02:14:12Z",
+  "captured_at_utc": "2026-07-24T04:53:32Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "execute_bounded_post_equation_compendium_repair_baseline_reassessment_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "c048221e548fa3b13d8ddd9e603de73719c516f6f15dfaf3a5152dc21d81286a",
-  "current_maintenance_target_kind": "bounded_post_equation_compendium_repair_baseline_reassessment",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT_AND_ONE_INDEPENDENT_RESULT_REVIEW_ONLY",
+  "current_maintenance_target": "independent_review_repository_post_equation_compendium_repair_baseline_reassessment_result_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "7d102927802c4334e2071aeb89c1b05ee885a4dfc86513347ad21a72d44c1445",
+  "current_maintenance_target_kind": "post_equation_compendium_repair_baseline_reassessment_result_review",
+  "current_maintenance_target_status": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -268,5 +268,10 @@
     "sha256": "4c997137581b23266076528583853ba1002bbb8cae86e93269f8d8f77d656998",
     "verdict": "ACCEPT_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
   },
-  "status": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_AUTHORIZED_ONE_MEASUREMENT_AND_ONE_INDEPENDENT_RESULT_REVIEW_ONLY"
+  "post_equation_compendium_repair_baseline_reassessment_result": {
+    "outcome": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "7d102927802c4334e2071aeb89c1b05ee885a4dfc86513347ad21a72d44c1445"
+  },
+  "status": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW"
 }
