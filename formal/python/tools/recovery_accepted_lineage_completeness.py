@@ -16,12 +16,19 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[3]
-DEFAULT_CONTRACT = (
+BASE_CONTRACT = (
     ROOT
     / "formal"
     / "docs"
     / "release"
     / "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v0.json"
+)
+DEFAULT_CONTRACT = (
+    ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1.json"
 )
 
 
@@ -63,9 +70,10 @@ def _git(*args: str, repo_root: Path = ROOT, check: bool = True) -> str:
 
 def load_contract(path: Path = DEFAULT_CONTRACT) -> dict[str, Any]:
     payload = json.loads(path.read_text(encoding="utf-8"))
-    if payload.get("schema_id") != (
-        "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v0"
-    ):
+    if payload.get("schema_id") not in {
+        "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v0",
+        "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1",
+    }:
         raise LineageError("unexpected protected-invariant contract schema")
     if not payload.get("accepted_repairs"):
         raise LineageError("protected-invariant contract has no accepted repairs")
@@ -264,17 +272,28 @@ def _verify_cycle(
     review_commit = _first_add_commit(review_path, head, repo_root)
     result_blob = _blob_at(result_commit, result_path, repo_root)
     review_blob = _blob_at(review_commit, review_path, repo_root)
+    result_sha = sha256_bytes(result_blob)
+    review_sha = sha256_bytes(review_blob)
+    if cycle.get("result_sha256", result_sha) != result_sha:
+        raise LineageError(f"{cycle['cycle_id']}: frozen result SHA-256 drift")
+    if cycle.get("review_sha256", review_sha) != review_sha:
+        raise LineageError(f"{cycle['cycle_id']}: frozen review SHA-256 drift")
     result_payload = json.loads(result_blob.decode("utf-8"))
     review_payload = json.loads(review_blob.decode("utf-8"))
     result_strings = set(_all_strings(result_payload))
-    for item in cycle["implementation_commits"]:
-        if item["commit"] not in result_strings:
-            raise LineageError(
-                f"{cycle['cycle_id']}: result does not bind implementation "
-                f"{item['commit']}"
-            )
+    binding_mode = cycle.get("result_binding_mode", "ORIGINAL_RESULT_EXPLICIT")
+    if binding_mode == "ORIGINAL_RESULT_EXPLICIT":
+        for item in cycle["implementation_commits"]:
+            if item["commit"] not in result_strings:
+                raise LineageError(
+                    f"{cycle['cycle_id']}: result does not bind implementation "
+                    f"{item['commit']}"
+                )
+    elif binding_mode != "SUPPLEMENTAL_MANIFEST_BINDS_IMPLEMENTATION":
+        raise LineageError(
+            f"{cycle['cycle_id']}: unsupported result binding mode {binding_mode}"
+        )
     review_strings = set(_all_strings(review_payload))
-    result_sha = sha256_bytes(result_blob)
     if result_sha not in review_strings:
         raise LineageError(
             f"{cycle['cycle_id']}: review does not bind result SHA-256 {result_sha}"
@@ -334,6 +353,7 @@ def _verify_cycle(
             "binds_result_commit_explicitly": review_commit_binding,
             "binds_result_sha256": True,
         },
+        "result_binding_mode": binding_mode,
     }
 
 
@@ -343,6 +363,22 @@ def build_manifest(
     contract_path: Path = DEFAULT_CONTRACT,
 ) -> dict[str, Any]:
     contract = load_contract(contract_path)
+    if contract["schema_id"].endswith("_v1"):
+        base_reference = contract["base_contract"]
+        base_path = repo_root / base_reference["path"]
+        if sha256_path(base_path) != base_reference["sha256"]:
+            raise LineageError("accepted v0 protected-invariant contract drift")
+        base_contract = load_contract(base_path)
+        if len(base_contract["accepted_repairs"]) != base_reference[
+            "accepted_repair_count"
+        ]:
+            raise LineageError("accepted v0 repair-count binding drift")
+        accepted_repairs = [
+            *base_contract["accepted_repairs"],
+            *contract["accepted_repairs"],
+        ]
+    else:
+        accepted_repairs = contract["accepted_repairs"]
     start = contract["recovery_start_commit"]
     head = contract["proposed_base"]["commit"]
     if _tree(head, repo_root) != contract["proposed_base"]["tree"]:
@@ -353,7 +389,7 @@ def build_manifest(
     commit_rows = _commit_inventory(start, head, repo_root)
     cycles = [
         _verify_cycle(cycle, head, repo_root)
-        for cycle in contract["accepted_repairs"]
+        for cycle in accepted_repairs
     ]
 
     unexpected_accepts = _git(
@@ -385,7 +421,11 @@ def build_manifest(
     result_rows = evidence["results"]
     review_rows = evidence["reviews"]
     return {
-        "schema_id": "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v0",
+        "schema_id": (
+            "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v1"
+            if contract["schema_id"].endswith("_v1")
+            else "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v0"
+        ),
         "status": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE",
         "recovery_start_commit": start,
         "proposed_base_identity": {

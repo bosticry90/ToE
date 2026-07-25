@@ -132,11 +132,26 @@ def test_prompt_blob_and_scientific_governance_artifacts_are_unchanged() -> None
     assert hashlib.sha256(head_prompt).hexdigest() == (
         "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5"
     )
-    assert subprocess.run(
-        ["git", "diff", "--quiet", BASE_COMMIT, "--", "formal/output"],
+    changed_output = subprocess.run(
+        [
+            "git",
+            "diff",
+            "--name-only",
+            BASE_COMMIT,
+            "HEAD",
+            "--",
+            "formal/output",
+        ],
         cwd=ROOT,
-        check=False,
-    ).returncode == 0
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    assert changed_output
+    assert all(
+        path.replace("\\", "/").startswith("formal/output/validation_profiles/")
+        for path in changed_output
+    )
     protected = [
         "formal/toe_formal",
         "formal/registry",

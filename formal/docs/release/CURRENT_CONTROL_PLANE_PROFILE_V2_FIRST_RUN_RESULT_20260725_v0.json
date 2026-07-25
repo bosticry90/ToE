@@ -1,0 +1,62 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V2_FIRST_RUN_RESULT_20260725_v0",
+  "status": "CURRENT_CONTROL_PLANE_PROFILE_V2_BLOCKED_EIGHT_OUTCOMES",
+  "executed_commit": "5b3557b0aa6894d7e4e768f861a070228a8b98bd",
+  "executed_tree": "bc5504da7de35f55c63386b2c304d5c90b0c83d5",
+  "profile": {
+    "path": "formal/output/validation_profiles/CURRENT_CONTROL_PLANE_PROFILE_20260725_v2.json",
+    "sha256": "49a35ab0c4f298b0afa09dd28822f32d041b72613c1fce644996073654427c05",
+    "nodeids": 3626,
+    "profile_state_unchanged": true
+  },
+  "outcomes": {
+    "passed": 3261,
+    "skipped": 357,
+    "failed": 5,
+    "errors": 3,
+    "nonpassing": 8,
+    "duration_seconds": 1767.93
+  },
+  "evidence": {
+    "junit": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/current_control_plane_v2_run2.junit.xml",
+      "sha256": "ec520309d1bb19d9cead4ca7dd95d0b18dc609424df66e973af192ca6aa5a81d",
+      "size_bytes": 1017714
+    },
+    "stdout": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/current_profile_run2.stdout.log",
+      "sha256": "1cc30c6f38cc0c3854f09c60757e0a0deb4eff23847c53818ffc45be9bcc920b",
+      "size_bytes": 102692
+    }
+  },
+  "causal_roots": [
+    {
+      "outcomes": 3,
+      "root": "ACCEPTED_LINEAGE_FIXED_BASE_NOT_VERSIONED_THROUGH_ACCEPTED_SUCCESSORS",
+      "disposition": "PENDING_VERSIONED_LINEAGE_REPAIR"
+    },
+    {
+      "outcomes": 1,
+      "root": "PROMPT_REPAIR_BROAD_FORMAL_OUTPUT_SNAPSHOT_SUPERSEDED_BY_VALIDATION_PROFILE_ARTIFACTS",
+      "disposition": "PENDING_MIXED_ROLE_GUARD_SPLIT"
+    },
+    {
+      "outcomes": 4,
+      "root": "LEAN_DEPENDENCY_CHECKOUT_CORRUPTED_BY_OVERLAPPING_VALIDATION_LAUNCHES",
+      "disposition": "RETRY_IN_ONE_CLEAN_ISOLATED_CHECKOUT",
+      "source_or_type_error_observed": false
+    }
+  ],
+  "validation_mutation": {
+    "tracked_source": 0,
+    "profile_hash_drift": 0,
+    "ignored_lean_dependency_checkout_became_incomplete": true
+  },
+  "scientific_state": {
+    "scientific_posture": "B-BLOCKED",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_resumption": "NOT_AUTHORIZED",
+    "scientific_content_changed": false
+  },
+  "automatic_successor_authority": "NONE"
+}

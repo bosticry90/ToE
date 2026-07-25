@@ -26,28 +26,38 @@ def test_proposed_recovery_base_has_complete_linear_accepted_lineage(
 ) -> None:
     assert manifest["status"] == "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE"
     assert manifest["lineage"]["linear"] is True
-    assert manifest["lineage"]["commit_count"] == 80
+    assert manifest["lineage"]["commit_count"] == 110
     assert manifest["external_or_sibling_accepted_commits"] == []
     identity = manifest["proposed_base_identity"]
-    assert identity["commit"] == "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85"
-    assert identity["tree"] == "a04c1c6dda56b25d3b4308841cf71ea3edf642eb"
+    assert identity["commit"] == "f74ce9ce93f96fb3077acfddd2839f7a41bf12a9"
+    assert identity["tree"] == "a1d00b390bb73a61a802ab1bf71765ef7603ef21"
     for key in (
         "accepted_result_manifest_root",
         "accepted_review_manifest_root",
         "protected_invariant_manifest_root",
     ):
         assert len(identity[key]) == 64
+    versioned = (
+        ROOT
+        / "formal/docs/release/"
+        "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v1.json"
+    )
+    assert json.loads(versioned.read_text(encoding="utf-8")) == manifest
 
 
 def test_every_accepted_repair_binds_result_review_and_current_guard(
     manifest: dict,
 ) -> None:
-    assert len(manifest["accepted_repairs"]) == 8
+    assert len(manifest["accepted_repairs"]) == 17
     for cycle in manifest["accepted_repairs"]:
         assert cycle["current_enforcing_guards"]
         assert len(cycle["result"]["sha256"]) == 64
         assert len(cycle["review"]["sha256"]) == 64
         assert cycle["protected_invariant"]
+        assert cycle["result_binding_mode"] in {
+            "ORIGINAL_RESULT_EXPLICIT",
+            "SUPPLEMENTAL_MANIFEST_BINDS_IMPLEMENTATION",
+        }
 
 
 def test_guard_classes_are_explicit_and_supersession_has_evidence(
