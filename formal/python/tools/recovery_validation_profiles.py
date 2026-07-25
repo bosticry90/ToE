@@ -34,6 +34,7 @@ CURRENT_SCIENTIFIC_PATTERNS = (
     "packet_v2",
 )
 CURRENT_REPRODUCIBILITY_PATTERNS = (
+    "test_admissibility_manifest.py",
     "governance_json",
     "recovery_validation_profiles",
     "CURRENT_ACCEPTANCE_INVENTORY",
@@ -167,10 +168,9 @@ def _nonpassing_rows(
 
 def _adjudication_by_obligation_id(
     adjudication_ledger: dict[str, Any] | None,
+    correction_ledger: dict[str, Any] | None = None,
 ) -> dict[str, dict[str, Any]]:
-    if adjudication_ledger is None:
-        return {}
-    rows = adjudication_ledger.get("rows", [])
+    rows = [] if adjudication_ledger is None else adjudication_ledger.get("rows", [])
     mapped = {
         row["obligation_id"]: row
         for row in rows
@@ -178,10 +178,29 @@ def _adjudication_by_obligation_id(
     }
     if len(mapped) != len(rows):
         raise ProfileError("reachability adjudication contains duplicate obligation IDs")
-    if adjudication_ledger.get("counts", {}).get(
-        "unknown_current_reachability_after"
-    ) != 0:
+    if (
+        adjudication_ledger is not None
+        and adjudication_ledger.get("counts", {}).get(
+            "unknown_current_reachability_after"
+        )
+        != 0
+    ):
         raise ProfileError("reachability adjudication has unresolved current reachability")
+    if correction_ledger is not None:
+        corrections = correction_ledger.get("corrections", [])
+        for correction in corrections:
+            obligation_id = correction.get("obligation_id")
+            if not isinstance(obligation_id, str) or obligation_id not in mapped:
+                raise ProfileError(
+                    f"reachability correction has unknown obligation: {obligation_id}"
+                )
+            if correction.get("test_id") != mapped[obligation_id].get("test_id"):
+                raise ProfileError(
+                    f"reachability correction node ID mismatch for {obligation_id}"
+                )
+            mapped[obligation_id] = correction
+        if correction_ledger.get("unknown_current_reachability_after") != 0:
+            raise ProfileError("reachability correction leaves unresolved reachability")
     return mapped
 
 
@@ -299,6 +318,7 @@ def build_profiles(
     cluster_ledger: dict[str, Any],
     relative_to_commit: str,
     adjudication_ledger: dict[str, Any] | None = None,
+    correction_ledger: dict[str, Any] | None = None,
     recovered_root_ids: set[str] | None = None,
     expected_nonpassing: int = 370,
     schema_version: str = SCHEMA_VERSION,
@@ -315,7 +335,10 @@ def build_profiles(
         recovered_root_ids=recovered_root_ids,
         expected_count=expected_nonpassing,
     )
-    adjudication = _adjudication_by_obligation_id(adjudication_ledger)
+    adjudication = _adjudication_by_obligation_id(
+        adjudication_ledger,
+        correction_ledger,
+    )
     nonpassing_by_nodeid = {row["nodeid"]: row for row in nonpassing}
     if len(nonpassing_by_nodeid) != len(nonpassing):
         raise ProfileError("adjusted nonpassing inventory contains duplicate node IDs")
@@ -549,6 +572,7 @@ def main() -> int:
     parser.add_argument("--relative-to-commit", required=True)
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--adjudication-ledger", type=Path)
+    parser.add_argument("--correction-ledger", type=Path)
     parser.add_argument("--expected-nonpassing", type=int, default=370)
     parser.add_argument("--schema-version", default=SCHEMA_VERSION)
     parser.add_argument(
@@ -568,6 +592,11 @@ def main() -> int:
         adjudication_ledger=(
             load_json(args.adjudication_ledger)
             if args.adjudication_ledger is not None
+            else None
+        ),
+        correction_ledger=(
+            load_json(args.correction_ledger)
+            if args.correction_ledger is not None
             else None
         ),
         recovered_root_ids=set(args.recovered_root_id),

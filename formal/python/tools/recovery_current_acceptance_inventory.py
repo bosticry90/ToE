@@ -78,6 +78,7 @@ def build_manifest(
     frozen_nodeids: list[str],
     current_relative_to_commit: str,
     custody_path: str,
+    schema_version: str = "v2",
 ) -> tuple[dict[str, Any], bytes]:
     raw = ("\n".join(nodeids) + "\n").encode("utf-8")
     current = set(nodeids)
@@ -88,7 +89,7 @@ def build_manifest(
             f"frozen comparability inventory is not a subset; missing={missing[:10]}"
         )
     manifest = {
-        "schema_id": "CURRENT_ACCEPTANCE_INVENTORY_20260725_v2",
+        "schema_id": f"CURRENT_ACCEPTANCE_INVENTORY_20260725_{schema_version}",
         "purpose": "COMPLETE_CURRENT_NON_LEAN_ACCEPTANCE_UNIVERSE",
         "current_relative_to_commit": current_relative_to_commit,
         "inventory_kind": "NON_LEAN_PYTEST_NODE_IDS",
@@ -125,6 +126,7 @@ def main() -> int:
     parser.add_argument("--manifest-output", type=Path, required=True)
     parser.add_argument("--custody-path", required=True)
     parser.add_argument("--current-relative-to-commit", required=True)
+    parser.add_argument("--schema-version", default="v2")
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     nodeids = collect_nodeids()
@@ -134,6 +136,7 @@ def main() -> int:
         frozen_nodeids=frozen,
         current_relative_to_commit=args.current_relative_to_commit,
         custody_path=args.custody_path,
+        schema_version=args.schema_version,
     )
     manifest_raw = canonical_json_bytes(manifest)
     custody_output = args.custody_output.resolve()
