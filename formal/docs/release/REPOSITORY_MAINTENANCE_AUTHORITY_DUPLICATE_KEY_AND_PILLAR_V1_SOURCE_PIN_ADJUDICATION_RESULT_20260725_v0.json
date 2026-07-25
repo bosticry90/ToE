@@ -1,0 +1,177 @@
+{
+  "accepted_lineage": {
+    "base_commit": "9d35a57c727c87fb00de862d826524824ab21558",
+    "base_result_review": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "base_result_review_sha256": "69acee3c804913fc71c65ce5c098bee45435e52d5402d3f5efec4ad8d77e72f1",
+    "user_issued_authorization_commit": "f1e59d4937929a7c170075fe9a03a04d2903eb20"
+  },
+  "adjudication_summary": {
+    "masked_secondary_roots": 0,
+    "repair_performed": false,
+    "root_a": {
+      "recommended_later_disposition": "REMOVE_DUPLICATE_PRESERVE_AUTHORIZED_VALUE",
+      "root_id": "CURRENT_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY",
+      "terminal_outcome": "DUPLICATE_KEY_AUTHORIZED_VALUE_IDENTIFIED"
+    },
+    "root_b": {
+      "dispositions": [
+        "RETAIN_AS_HISTORICAL_REVIEW_SOURCE_PIN",
+        "RETAIN_AS_CURRENT_GIT_BLOB_IDENTITY",
+        "REMOVE_STALE_HISTORICAL_TO_LIVE_EQUALITY_REQUIREMENT"
+      ],
+      "outcomes": 39,
+      "root_id": "PILLAR_V1_FROZEN_REVIEW_SOURCE_PIN_DRIFT",
+      "terminal_outcome": "ROLE_SEPARATION_REPAIR_JUSTIFIED"
+    },
+    "successor_authority": "NONE"
+  },
+  "authorization": {
+    "current_maintenance_authority_document_used_as_cycle_authority": false,
+    "packet": {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_PACKET_20260724_v0.json",
+      "sha256": "914203227014693657eab2af1adbd247070cf7974e234b67117598f2e8fb01fa"
+    },
+    "packet_review": {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
+      "sha256": "16ab17dcdab8550100ddfb3deee5cde116fad191d117a6eb68c477b803dfad0b",
+      "verdict": "ACCEPT"
+    },
+    "selector": {
+      "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_SELECTION_20260724_v0.json",
+      "selected": "AUTHORIZE_BOUNDED_CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION",
+      "sha256": "6e0ed74903e00668f8d2364a167a1c12b88ce01c5ddfdd716d3532efbdd8ea92"
+    },
+    "source": "USER_ISSUED_FRESH_SELECTOR"
+  },
+  "baseline_status": {
+    "baseline_reassessment_performed": false,
+    "measured_nonpassing": 410,
+    "projected_recovery_claimed": false
+  },
+  "captured_at_utc": "2026-07-25T01:59:19Z",
+  "current_maintenance_authority_duplicate_key": {
+    "authorized_serialized_value": {
+      "path": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+      "sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+    },
+    "consumer_semantics": {
+      "executable_consumer_rows": 23,
+      "literal_path_consumers": 22,
+      "selector_field_accesses": 0,
+      "strict_capability_or_rejection_rows": 12,
+      "summary": "No executable consumer reads selector semantically; ordinary JSON loaders retain the second value while strict loaders reject the document."
+    },
+    "document": {
+      "bytes": 25798,
+      "carriage_returns": 0,
+      "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+      "sha256_before_and_after": "51a884e65da1aa4aa477b9d0f11671f704c799318513eae7c985de0020eccf81",
+      "top_level_selector_keys": 2
+    },
+    "first_occurrence": {
+      "entry_byte_start": 9609,
+      "key_byte_start": 9611,
+      "key_column": 3,
+      "line": 143,
+      "path": "formal/docs/release/POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+      "role": "STALE_HISTORICAL_SELECTOR",
+      "sha256": "3ad34e4a9ea76bbfaf8f8bd305ef14f2fdd45bef6c65e2dbfe75f9edb57bbd49"
+    },
+    "introduction": {
+      "commit": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+      "parent": "59ba7728ea3814e973973d39249f5c95e3ee39a5",
+      "process": "DIRECT_COMMITTED_JSON_EDIT_WITH_NO_TRACKED_DETERMINISTIC_GENERATOR_OR_SERIALIZER_REFERENCE"
+    },
+    "second_occurrence": {
+      "entry_byte_start": 21022,
+      "key_byte_start": 21024,
+      "key_column": 3,
+      "line": 290,
+      "path": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+      "role": "LATEST_AUTHORIZED_SERIALIZED_SELECTOR",
+      "sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+    },
+    "terminal_outcome": "DUPLICATE_KEY_AUTHORIZED_VALUE_IDENTIFIED"
+  },
+  "dirty_main_custody": {
+    "byte_identities_verified": 629,
+    "head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "manifest_mismatches": 0,
+    "status_counts": {
+      "total": 629,
+      "tracked_dirty": 7,
+      "untracked": 622
+    }
+  },
+  "evidence": {
+    "authority_ledger": {
+      "external_path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-key-and-pillar-v1-source-pin-adjudication-v0/MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_ADJUDICATION_LEDGER_20260725_v0.json",
+      "sha256": "c6de30b5dc73575868b5abb88e10de8601500d1cc67cb179b5d5717c83142d4c"
+    },
+    "execution_manifest": {
+      "external_path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-key-and-pillar-v1-source-pin-adjudication-v0/MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_EXECUTION_MANIFEST_v0.json",
+      "sha256": "78a5c82b96ee2e1f42cc23dbdf7282b2c7a82f546c7ee0f586f9405582cddc42"
+    },
+    "pillar_v1_ledger": {
+      "external_path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-key-and-pillar-v1-source-pin-adjudication-v0/PILLAR_V1_FROZEN_REVIEW_SOURCE_PIN_ADJUDICATION_LEDGER_20260725_v0.json",
+      "sha256": "c92bf9eb409f099c3dff43f5c753cdeed6fdaa6fecae8d8a21623c24756110bc"
+    },
+    "probe_junit": {
+      "external_path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-key-and-pillar-v1-source-pin-adjudication-v0/PILLAR_V1_ROLE_AWARE_IN_MEMORY_PROBE_v0.xml",
+      "sha256": "5eb09fd8505d49e76e43cdfb5f7b7f1e261996dd5c1e6e944bd1fa224994e527"
+    },
+    "unmodified_behavior_junit": {
+      "external_path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-key-and-pillar-v1-source-pin-adjudication-v0/PILLAR_V1_CURRENT_BEHAVIOR_v0.xml",
+      "sha256": "7f45691821bac174eb014f9047db597c504dffa177efc566ee0f69acaa961ded"
+    }
+  },
+  "independent_result_review": {
+    "required": true,
+    "remaining": 1,
+    "status": "PENDING"
+  },
+  "pillar_v1_frozen_review_source_pin": {
+    "current_source": {
+      "bytes": 28765,
+      "commit": "9d35a57c727c87fb00de862d826524824ab21558",
+      "git_blob_oid": "ec1dca5f8b1c2bfe53d286acd7fff88d0944a46b",
+      "sha256": "9cd5d3b78e6eee0fb4d50315ed38223a1f9580320e8c0432dd0e0264ed4a8c31"
+    },
+    "historical_review_source": {
+      "bytes": 28377,
+      "commit": "145c30255ff90ca2df97f8526a98c6923e5db2bf",
+      "git_blob_oid": "d83a2542c92f675332f2a0f22f86a098b9c0db7b",
+      "sha256": "da7766b4e51a3b11b6d823aa6833ba3f90b0b79e36b9c56786054197478e0f80"
+    },
+    "identity_roles": {
+      "current": "CURRENT_GIT_BLOB_IDENTITY",
+      "historical": "V1_FROZEN_REVIEW_SOURCE_PIN"
+    },
+    "in_memory_probe": {
+      "current_behavior": "0_PASS_39_FAIL",
+      "role_aware_frozen_blob_resolution": "39_PASS_0_FAIL",
+      "source_tree_modified": false
+    },
+    "source_transition": {
+      "commit": "30d79212c005a0c9aad7a1e987d0752cb731f9c9",
+      "line_ending_only": false,
+      "scientific_content_change": false,
+      "type": "SUBSTANTIVE_GOVERNANCE_VALIDATION_ROLE_IMPLEMENTATION_CHANGE"
+    },
+    "terminal_outcome": "ROLE_SEPARATION_REPAIR_JUSTIFIED",
+    "v1_review_valid_under_frozen_contract": true
+  },
+  "recommended_fresh_selectors": [
+    "AUTHORIZE_BOUNDED_CURRENT_MAINTENANCE_AUTHORITY_SINGLE_KEY_SCHEMA_REPAIR",
+    "AUTHORIZE_BOUNDED_PILLAR_V1_FROZEN_REVIEW_SOURCE_PIN_ROLE_SEPARATION_REPAIR",
+    "PRESERVE_ACCEPTED_ADJUDICATION_AND_DEFER_RECOVERY"
+  ],
+  "resolved_unit_seam_rows": "0/12",
+  "schema_id": "REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_20260725_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "staging_outcomes_13": "NOT_IN_SCOPE_UNCHANGED",
+  "status": "CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_COMPLETE_REPAIRS_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "validation_checkout": "CLEAN"
+}
