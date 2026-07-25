@@ -27,6 +27,7 @@ CURRENT_AUTHORITY_PATTERNS = (
     "PACKET_RESULT_REVIEW_20260712_v1",
 )
 CURRENT_SCIENTIFIC_PATTERNS = (
+    "test_formal_docs_paper_cross_reference_integrity_gate.py",
     "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_"
     "PACKET_RESULT_REVIEW_20260712_v1",
     "PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview",

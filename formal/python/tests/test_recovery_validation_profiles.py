@@ -157,6 +157,59 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert review_v1["findings"]["unknown_current_reachability"] == 0
     assert review_v1["findings"]["historical_isolation_still_unproven"] is True
     assert review_v1["successor_authority"] == "NONE"
+    registry_v2 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "RECOVERY_OBLIGATION_REGISTRY_20260725_v2.json"
+    )
+    current_v2 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "CURRENT_CONTROL_PLANE_PROFILE_20260725_v2.json"
+    )
+    historical_v2 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "HISTORICAL_DEBT_PROFILE_20260725_v2.json"
+    )
+    reconciliation_v2 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "VALIDATION_PROFILE_RECONCILIATION_20260725_v2.json"
+    )
+    nonpassing_v2 = [
+        row
+        for row in registry_v2["obligations"]
+        if row["obligation_id"].startswith("NONPASSING-")
+    ]
+    assert len(nonpassing_v2) == 354
+    assert current_v2["known_nonpassing_count"] == 0
+    assert historical_v2["known_nonpassing_count"] == 354
+    assert reconciliation_v2["unknown_current_reachability_obligations"] == 0
+    assert reconciliation_v2["exact_partition"] is True
+    assert current_v2["nodeid_count"] + historical_v2["nodeid_count"] == 13838
+    repaired_current = {
+        (
+            "formal/python/tests/test_admissibility_manifest.py::"
+            "test_admissibility_manifest_exists_and_matches_current"
+        ),
+        (
+            "formal/python/tests/test_admissibility_manifest.py::"
+            "test_admissibility_manifest_tracks_lean_gate_stubs_deterministically"
+        ),
+        (
+            "formal/python/tests/"
+            "test_formal_docs_paper_cross_reference_integrity_gate.py::"
+            "test_formal_docs_paper_and_state_cross_references_resolve"
+        ),
+    }
+    historical_eol = (
+        "formal/python/tests/test_repository_canonical_text_integrity_gate.py::"
+        "test_eol_policy_does_not_glob_hash_bound_historical_trees"
+    )
+    assert repaired_current <= set(current_v2["nodeids"])
+    assert historical_eol in set(historical_v2["nodeids"])
+    assert historical_eol not in set(current_v2["nodeids"])
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:
