@@ -1,0 +1,111 @@
+{
+  "schema_id": "ADMISSIBILITY_MANIFEST_CURRENT_IDENTITY_CONTRACT_20260725_v0",
+  "contract_version": "v0",
+  "current_relative_to_commit": "380db2de3aca8c19fdf1ab9c43d0e6629d232009",
+  "identity_algorithm": "SHA256(GIT_BLOB_CONTENTS)",
+  "legacy_manifest": {
+    "path": "formal/markdown locks/gates/admissibility_manifest.json",
+    "role": "HISTORICAL_SNAPSHOT",
+    "rewritten": false
+  },
+  "gate_enabled_state": {
+    "CAUS01": false,
+    "CT01": false,
+    "SYM01": false
+  },
+  "bindings": [
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CAUS01_CausalityCore.lean",
+      "git_blob": "ecb58c60870846f4868498eee9e4baf3f14cd4de",
+      "sha256": "1b6889ab40bb8445d8d5f87cd14af423002f23dca0138f15c7bd44424b61dc79",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CAUS01_CausalityGate.lean",
+      "git_blob": "6a395900ce7fc3126df0a3af1819742eebfd4296",
+      "sha256": "39ff27272a2ba5e646811407fc285b7f100cd930444bc2ae86611443dd343d31",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_Abstract.lean",
+      "git_blob": "e8c31beff1b5898fa8bf302f29dd317801e1d692",
+      "sha256": "e065622292cf4c83a6feef0de2a7393abaa3f96ac6dc70aaa89c5143ac73f963",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_CPNLSE2D_Instance.lean",
+      "git_blob": "51bde40ad865f5e5bcf3e5e4fbeb0cb968fde0c5",
+      "sha256": "d614bfbd7e63de3a9ccb4f7e367e408c37c31e4fe51d6a2b4ee8640281b2af60",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_ImportCheck.lean",
+      "git_blob": "3c36e3f899b18d0f0195c24c9d9c74886120f94a",
+      "sha256": "964d13edc4b403bab42e76fce7693de805ad94b12e4c5aa276bb9bffad2e9988",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_ImportCheck_aristotle.lean",
+      "git_blob": "db4eff809082954acd88258f15edd343e602d286",
+      "sha256": "42bdf4c6d8955578315434ff79bb7209d5d9f63e9bf85729440843177fc77b03",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationAt0.lean",
+      "git_blob": "7e0c71d0e4c9d9d9229f6e197fc275b52a084b5c",
+      "sha256": "3e42418eccf9d9a3c82e92c31167da49393a04445aba83bc543956aa6247a3bf",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationInterface.lean",
+      "git_blob": "c362ecdaf4340814042dfc60e7c622f1e6f437b0",
+      "sha256": "4388721ba2646f160bbc73c0c94eaf78e78f14961ca251d22724b7e751e39bef",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationInterfaceProbe.lean",
+      "git_blob": "7aa65102b15d29de454bf206925a63f6ba342b95",
+      "sha256": "c433b18df4a9c89109803196713980180777baece04620262639f739b521eda5",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_Target.lean",
+      "git_blob": "1762d3de12595b761b3fc77f8a4c0f84a4a9b861",
+      "sha256": "241e018496953f8422f34a118be4e8521fe743f5b184f7935f084638fad982c7",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/CT01_Target_aristotle.lean",
+      "git_blob": "a4a194368683d6c59c425493b67d637af77196c8",
+      "sha256": "b7fd5e89c19758f1076d09f5ff5194f7f18188dcfe17eb0315c731c29d49e643",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean",
+      "git_blob": "d9155522d459934b89a035d22172b8f0a7a04747",
+      "sha256": "06d5f1b69c93a9d0af35ddbece0d8d69ca1b02f9eba9625f1158492862a5c77c",
+      "role": "CURRENT_CONSTRAINT_SOURCE"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Gates/CAUS01.lean",
+      "git_blob": "58f6b8e45029897966bf869ddaa3f9cf3905c8da",
+      "sha256": "196f7126dda7efd84739e9ad406b804088dd6e3d8a2edb9e836a1e3437f5d76b",
+      "role": "CURRENT_GATE_STUB"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Gates/CT01.lean",
+      "git_blob": "312f3ec0021d60108acdf62c87a2a905717097a6",
+      "sha256": "59d57924b5516614bdfcaa26cc49f408c758c8f541527a94e71998273af5080b",
+      "role": "CURRENT_GATE_STUB"
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Gates/SYM01.lean",
+      "git_blob": "53be24f73e484f81e4a2a092462ec54b18796839",
+      "sha256": "9469766ada9015372e9a54c566983a45bceea98aa2d7c23be701c853c6d5ceac",
+      "role": "CURRENT_GATE_STUB"
+    }
+  ],
+  "scientific_content_changed": false,
+  "gate_enabled_state_changed": false,
+  "v2_enrollment": "NOT_AUTHORIZED"
+}

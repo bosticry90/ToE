@@ -1,0 +1,2020 @@
+{
+  "current_reference_missing": [],
+  "current_reference_missing_count": 0,
+  "current_relative_to_commit": "380db2de3aca8c19fdf1ab9c43d0e6629d232009",
+  "current_verdict_affected": false,
+  "disposition": "HISTORICAL_QUARANTINED_VISIBLE",
+  "historical_missing": [
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_attack_class_packet_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/authority_coupling_review_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/authority_promotion_registration_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/bounded_measurement_regime_pilot_ruling_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/bridge_external_validation_policy_standard_formalization_20260413_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/checkpoint_ladder_acceptance_summary_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/cosmo_sr_bounded_activation_authorization_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/cosmo_sr_discovery_review_hold_resolution_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/cosmo_sr_seam_authorization_activation_decision_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/coupling_refinement_ruling_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/deeper_blocker_definition_review_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/derivation_chain_transport_standardization_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/discovery_queue_rescoring_pass_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/discovery_queue_review_pass_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/discovery_queue_transition_decision_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/dual_track_cutover_report_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/dual_track_hardening_closeout_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/em_u1_micro27_authorization_decision_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/external_physics_benchmark_registry_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/final_nonclaim_integration_promotion_gate_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_artifact_growth_baseline_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_artifact_growth_snapshot_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_audit_packet_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_freshness_snapshot_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_invalidation_telemetry_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_operational_refinement_closeout_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_parallel_capability_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_promotion_readiness_action_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_promotion_readiness_score_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_runtime_baseline_20260410_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/governance_scale_observability_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/gr_discovery_discriminator_tranche_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/gr_discovery_ruling_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/gr_row_001_comparator_specification_20260413_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/gr_row_001_new_structure_concept_packet_20260413_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/gr_row_001_shared_interface_declaration_20260413_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/packet41_successor_decision_enforcement_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/physics_progress_ledger_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_measurement_regime_pilot_decision_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_authority_coupling_review_path_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_bounded_blocker_definition_test_packet_chain_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_bounded_coupling_refinement_packet_chain_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_bounded_continuation_family_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_execution_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_family_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_cosmo_theorem_gap_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_final_integration_review_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_gr_dormant_new_structure_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_master_action_reevaluation_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_ordered_theorem_gap_continuation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_post_cascade_successor_family_eligibility_review_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_qft_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_recompute_monitoring_path_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_remaining_physics_execution_order_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_seam_reroute_reassessment_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_reranking_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_cosmo_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_em_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_gr_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_qft_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_qm_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_sr_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_stat_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_posture_review_program_mode_transition_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/post_recompute_observation_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/probe_readiness_standard_candidate_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/probe_readiness_standard_formalization_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/program_posture_review_packet_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/program_state_conversion_review_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qft_gr_discovery_discriminator_tranche_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qft_gr_discovery_interpretation_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qft_gr_discovery_post_cycle_decision_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qft_gr_discovery_ruling_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qft_gr_sliceb_increment_family_registry_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qft_gr_sliceb_increment_family_summary_views_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_blocker_moving_tranche_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_cycle11_explicit_downstream_authorization_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_cycle11_pre_screening_step_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_cycle12_continuation_execution_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_derivation_probe_ruling_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_discriminator_tranche_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_interpretation_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_next_route_decision_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_numerical_probe_execution_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_numerical_probe_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_discovery_ruling_report_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_reentry_downstream_governed_review_execution_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_reentry_downstream_governed_review_packet_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_reentry_explicit_downstream_governance_authorization_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_decision_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_01_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_closeout_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_approval_eligible_policy_review_outcome_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_bounded_check_family_standard_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_comparator_repeatability_confirmation_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_cross_probe_consistency_confirmation_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_named_repeatability_check_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_reconciliation_review_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_uplift_evidence_object_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_uplift_gate_artifact_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_uplift_gate_execution_packet_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_uplift_gate_single_run_execution_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_characterization_packet_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_mapping_normalization_review_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v1.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v2.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_material_repeatability_admissibility_criteria_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_minimum_second_cycle_evidence_object_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_criteria_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_record_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_record_surface_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recording_procedure_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_post_acceptance_uplift_surface_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_post_hardening_probe_execution_refresh_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_significance_adjudication_20260422_v1.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_sigma_db_repeatability_window_check_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_hardening_cycle_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_hardening_slice_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_limitation_acceptance_review_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_limitation_acceptance_review_20260422_v1.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_significance_inputs_refresh_20260422_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_transport_residual_packet_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/r0_r6_objective_quality_closeout_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/recompute_dry_run_execution_inspection_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/recompute_live_writeback_baseline_approval_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/recompute_live_writeback_contract_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/recompute_observation_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/repo_recovery_baseline_20260423_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_harder_qm_stat_target_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_pilot_pack_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_governed_review_wrapper_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_live_authority_evidence_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_post_review_adjudication_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_downstream_intake_decision_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_post_review_adjudication_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_packet_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_queue_packet_20260420_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_support_artifact_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_governed_intake_execution_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_review_execution_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_review_execution_packet_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_sandbox_candidacy_review_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/research_mode_step14_acceptance_review_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/revised_signal_diagnostic_registration_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/runtime_measurement_integrity_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/sandbox_promotion_boundary_enforcement_family_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/sandbox_promotion_cosmo_sr_cycle07_payload_record_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/sandbox_promotion_governed_review_wrapper_cosmo_sr_cycle07_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/sandbox_promotion_migration_phase0_baseline_dossier_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/sandbox_promotion_post_pilot_decision_cosmo_sr_cycle07_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/scalar_qft_phase0_baseline_acceptance_contract_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_closed_lane_reopen_eligibility_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_common_failure_modes_synthesis_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_global_completion_baseline_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_governance_budget_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_maturity_contradiction_report_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_next_attack_class_selection_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_a_canonical_freeze_integrity_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_d_untouched_lane_first_test_packet_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_d_untouched_lane_selection_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_e_untouched_lane_post_first_test_decision_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_f_untouched_lane_attack_class_reselection_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_g_untouched_lane_interface_alignment_packet_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_h_untouched_lane_post_packet_decision_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_i_untouched_lane_signal_refinement_packet_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_j_untouched_lane_post_refinement_decision_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_k_new_lane_design_criteria_synthesis_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_l_higher_level_selection_policy_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_m_selection_policy_activation_criteria_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_n_future_lane_candidate_screen_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_p_authorized_candidate_specification_refinement_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_q_candidate_discriminative_signal_definition_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_r_signal_produced_threshold_closure_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_s_authorization_readiness_closure_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_t_residual_authorization_field_closure_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_u_execution_guard_authorization_ready_closure_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_phase_v_execution_guard_binding_closure_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_post_architecture_alignment_decision_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_restart_anti_alias_proof_declaration_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/science_restart_mode_selection_20260412_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/theorem_gap_execution_linkage_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/theorem_gap_qm_rework_tranche_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/theorem_gap_qm_subtarget_tranche_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/theorem_gap_reduction_wave_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/theorem_gap_single_row_execution_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/toe_enforced_execution_closeout_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/toe_enforced_execution_program_20260411_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/ws10_maintenance_reduction_rollup_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/ws10_operator_truth_pack_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/ws10_t49_post_maintenance_handoff_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/ws10_t50_post_plan_phase3_to_phase6_alignment_20260418_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/ws10_t51_post_plan_authority_source_cutover_20260419_v0.json"
+    },
+    {
+      "source": "State_of_the_Theory.md",
+      "target": "formal/output/reports/ws10_t52_whole_program_acceptance_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_decision_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_decision_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_closeout_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_closeout_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_decision_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_closeout_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_attack_class_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/authority_coupling_review_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/authority_promotion_registration_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/bounded_measurement_regime_pilot_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/checkpoint_ladder_acceptance_summary_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/cosmo_sr_bounded_activation_authorization_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/cosmo_sr_discovery_review_hold_resolution_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/cosmo_sr_seam_authorization_activation_decision_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/coupling_refinement_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/deeper_blocker_definition_review_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/derivation_chain_transport_standardization_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/dual_track_cutover_report_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/em_u1_micro27_authorization_decision_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/final_nonclaim_integration_promotion_gate_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_measurement_regime_pilot_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_authority_coupling_review_path_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_bounded_blocker_definition_test_packet_chain_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_bounded_coupling_refinement_packet_chain_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_bounded_continuation_family_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_family_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_theorem_gap_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_final_integration_review_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_gr_dormant_new_structure_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_master_action_reevaluation_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_ordered_theorem_gap_continuation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_post_cascade_successor_family_eligibility_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_qft_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_recompute_monitoring_path_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_remaining_physics_execution_order_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_seam_reroute_reassessment_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_reranking_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_posture_review_program_mode_transition_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/post_recompute_observation_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/program_posture_review_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/program_state_conversion_review_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qft_gr_sliceb_increment_family_registry_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qft_gr_sliceb_increment_family_summary_views_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_blocker_moving_tranche_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_cycle12_continuation_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_reentry_downstream_governed_review_execution_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_reentry_downstream_governed_review_packet_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_reentry_explicit_downstream_governance_authorization_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_transport_residual_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/recompute_dry_run_execution_inspection_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/recompute_live_writeback_baseline_approval_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/recompute_live_writeback_contract_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/recompute_observation_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/repo_recovery_baseline_20260423_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_harder_qm_stat_target_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_pilot_pack_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_governed_review_wrapper_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_live_authority_evidence_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_post_review_adjudication_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_downstream_intake_decision_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_post_review_adjudication_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_packet_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_review_queue_packet_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_reentry_support_artifact_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_governed_intake_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_review_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_qm_stat_sandbox_review_execution_packet_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_sandbox_candidacy_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/research_mode_step14_acceptance_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/revised_signal_diagnostic_registration_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/sandbox_promotion_boundary_enforcement_family_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/sandbox_promotion_cosmo_sr_cycle07_payload_record_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/sandbox_promotion_governed_review_wrapper_cosmo_sr_cycle07_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/sandbox_promotion_migration_phase0_baseline_dossier_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/sandbox_promotion_post_pilot_decision_cosmo_sr_cycle07_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/scalar_qft_phase0_baseline_acceptance_contract_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/science_governance_budget_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/science_maturity_contradiction_report_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/science_next_attack_class_selection_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/science_post_architecture_alignment_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/science_restart_anti_alias_proof_declaration_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/ws10_maintenance_reduction_rollup_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/ws10_operator_truth_pack_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/ws10_t49_post_maintenance_handoff_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/ws10_t50_post_plan_phase3_to_phase6_alignment_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/ws10_t51_post_plan_authority_source_cutover_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "target": "formal/output/reports/ws10_t52_whole_program_acceptance_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_01_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_closeout_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_v0.md",
+      "target": "formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_SUMMARY_20260419_v0.md",
+      "target": "formal/output/reports/science_phase_n_future_lane_candidate_screen_20260412_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_SUMMARY_20260419_v0.md",
+      "target": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_SUMMARY_20260419_v0.md",
+      "target": "formal/output/reports/science_phase_p_authorized_candidate_specification_refinement_20260412_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md",
+      "target": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_attack_class_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/authority_coupling_review_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/authority_promotion_registration_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/bounded_measurement_regime_pilot_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/cosmo_sr_bounded_activation_authorization_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/cosmo_sr_discovery_review_hold_resolution_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/cosmo_sr_seam_authorization_activation_decision_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/coupling_refinement_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/deeper_blocker_definition_review_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/derivation_chain_transport_standardization_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/external_physics_benchmark_registry_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/final_nonclaim_integration_promotion_gate_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_measurement_regime_pilot_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_authority_coupling_review_path_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_bounded_blocker_definition_test_packet_chain_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_bounded_coupling_refinement_packet_chain_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_bounded_continuation_family_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_family_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_cosmo_theorem_gap_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_final_integration_review_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_gr_dormant_new_structure_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_master_action_reevaluation_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_ordered_theorem_gap_continuation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_post_cascade_successor_family_eligibility_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_qft_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_recompute_monitoring_path_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_remaining_physics_execution_order_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_seam_reroute_reassessment_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_reranking_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_stat_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_posture_review_program_mode_transition_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/post_recompute_observation_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/program_posture_review_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/program_state_conversion_review_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/qm_blocker_moving_tranche_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/qm_stat_transport_residual_packet_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/recompute_dry_run_execution_inspection_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/recompute_live_writeback_baseline_approval_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/recompute_live_writeback_contract_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/recompute_observation_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/revised_signal_diagnostic_registration_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/scalar_qft_phase0_baseline_acceptance_contract_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/science_governance_budget_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/science_maturity_contradiction_report_20260416_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/science_next_attack_class_selection_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/science_post_architecture_alignment_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json"
+    },
+    {
+      "source": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+      "target": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json"
+    }
+  ],
+  "historical_missing_by_source": {
+    "State_of_the_Theory.md": 250,
+    "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md": 2,
+    "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md": 4,
+    "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md": 2,
+    "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md": 4,
+    "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md": 3,
+    "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md": 4,
+    "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md": 2,
+    "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md": 4,
+    "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md": 1,
+    "formal/docs/paper/PHYSICS_ROADMAP_v0.md": 129,
+    "formal/docs/paper/QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md": 2,
+    "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_v0.md": 1,
+    "formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_SUMMARY_20260419_v0.md": 3,
+    "formal/docs/paper/TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md": 2,
+    "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md": 84
+  },
+  "historical_missing_count": 497,
+  "historical_reports_restored": 0,
+  "historical_source_count": 16,
+  "schema_id": "HISTORICAL_CROSS_REFERENCE_DEBT_20260725_v0",
+  "scientific_posture": "B-BLOCKED"
+}

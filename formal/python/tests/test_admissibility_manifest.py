@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 from typing import Dict, List
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import admissibility_manifest_current_identity as identity
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -80,23 +81,20 @@ def test_admissibility_manifest_exists_and_matches_current():
     )
 
     manifest = load_manifest()
-    tracked: Dict[str, str] = manifest.get("tracked", {})
-    current = compute_current_hashes()
-
-    missing_in_manifest = sorted([k for k in current.keys() if k not in tracked])
-    extra_in_manifest = sorted([k for k in tracked.keys() if k not in current])
-    differing = sorted([k for k in current.keys() if k in tracked and current[k] != tracked[k]])
-
-    assert tracked == current, (
-        "Admissibility-gate drift detected.\n\n"
-        "Your current ToeFormal gate files do NOT match the manifest.\n"
-        "To resolve (intentionally):\n"
-        "  1) Run: python formal\\python\\tests\\tools\\update_admissibility_manifest.py\n\n"
-        "Mismatch details:\n"
-        f"  Missing in manifest: {missing_in_manifest}\n"
-        f"  Extra in manifest:   {extra_in_manifest}\n"
-        f"  Differing hashes:    {differing}\n"
-    )
+    resolved = identity.validate_contract()
+    current_paths = set(compute_current_hashes())
+    contract_paths = {
+        path
+        for path, binding in resolved.items()
+        if binding["role"] == "CURRENT_CONSTRAINT_SOURCE"
+    }
+    assert contract_paths == current_paths
+    assert identity.load_contract()["legacy_manifest"] == {
+        "path": "formal/markdown locks/gates/admissibility_manifest.json",
+        "role": "HISTORICAL_SNAPSHOT",
+        "rewritten": False,
+    }
+    assert manifest["version"] == 1
 
 
 def test_admissibility_manifest_origin_matches_lean_literal():
@@ -120,20 +118,19 @@ def test_admissibility_manifest_origin_matches_lean_literal():
 def test_admissibility_manifest_tracks_lean_gate_stubs_deterministically() -> None:
     manifest = load_manifest()
     gates = manifest.get("gates", {})
+    resolved = identity.validate_contract()
 
     for gate_id in ["CT01", "SYM01", "CAUS01"]:
         entry = gates.get(gate_id, {})
         assert isinstance(entry, dict)
 
         relpath = entry.get("lean_relpath")
-        sha = entry.get("lean_sha256")
-
         assert isinstance(relpath, str) and relpath
-        assert isinstance(sha, str) and len(sha) == 64
-
         p = REPO_ROOT / relpath
         assert p.exists(), f"Lean gate stub missing on disk: {relpath}"
-        assert sha256_file(p) == sha
+        assert resolved[relpath]["role"] == "CURRENT_GATE_STUB"
+        assert len(resolved[relpath]["git_blob"]) == 40
+        assert len(resolved[relpath]["sha256"]) == 64
 
 
 def test_lean_gate_stubs_do_not_imply_enabled_by_default() -> None:
