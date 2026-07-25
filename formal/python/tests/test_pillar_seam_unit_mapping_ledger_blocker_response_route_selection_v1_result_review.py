@@ -413,6 +413,21 @@ def test_isolated_regeneration_is_byte_identical_and_nonmutating(
     assert repair_result["scope"]["dirty_main_reads"] == 0
     assert repair_result["scope"]["historical_pins_refreshed"] == 0
     assert repair_result["scientific_posture"] == "B-BLOCKED"
+    repair_review = subject.load_json(
+        Path(
+            "formal/docs/release/"
+            "REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json"
+        )
+    )
+    assert repair_review["accepted"] is True
+    assert repair_review["reviewed_result"]["sha256"] == (
+        "0c258dafef9ec86681a0d27479a7b989bb9636f934acd37daa6de63ad2483f32"
+    )
+    assert repair_review["independent_detached_review"][
+        "checkout_after"
+    ] == "CLEAN"
+    assert repair_review["findings"]["affected_outcomes"] == "13 / 13 PASS"
+    assert repair_review["successor_authority"] == "NONE"
 
 
 def test_only_versioned_v2_correction_is_authorized(
