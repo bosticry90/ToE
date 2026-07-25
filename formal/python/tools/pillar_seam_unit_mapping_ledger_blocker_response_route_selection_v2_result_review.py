@@ -390,8 +390,15 @@ def preparation_custody() -> dict[str, Any]:
     working_hashes = {
         path: sha256_path(REPO_ROOT / path) for path in expected_hashes
     }
+    current_artifact_paths = {
+        PACKET_RELATIVE_PATH,
+        MANIFEST_RELATIVE_PATH,
+        PREPARATION_REPORT_RELATIVE_PATH,
+    }
     working_comparisons = {
-        path: working_hashes[path] == expected for path, expected in expected_hashes.items()
+        path: working_hashes[path] == expected
+        for path, expected in expected_hashes.items()
+        if path in current_artifact_paths
     }
     identity_bindings = [
         generator,
@@ -408,6 +415,9 @@ def preparation_custody() -> dict[str, Any]:
             for item in identity_bindings
         ),
         "working_hashes_match": all(working_comparisons.values()),
+        "historical_generator_pin_matches": commit_comparisons[
+            GENERATOR_RELATIVE_PATH
+        ],
         "commit_hashes_match": all(commit_comparisons.values()),
     }
     return {
@@ -415,6 +425,9 @@ def preparation_custody() -> dict[str, Any]:
         "expected_preparation_commit": _frozen_commit(),
         "working_tree_hashes": working_hashes,
         "expected_hashes": expected_hashes,
+        "generator_identity_role": "HISTORICAL_GENERATOR_PIN",
+        "historical_generator_sha256": expected_hashes[GENERATOR_RELATIVE_PATH],
+        "current_generator_sha256": working_hashes[GENERATOR_RELATIVE_PATH],
         "checks": custody_checks,
         "working_hash_comparisons": working_comparisons,
         "commit_hash_comparisons": commit_comparisons,

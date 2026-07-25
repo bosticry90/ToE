@@ -31,6 +31,15 @@ def test_v2_review_binds_immutable_preparation_and_prompt() -> None:
     custody = review.preparation_custody()
     assert custody["passed"] is True
     assert all(custody["working_hash_comparisons"].values())
+    assert (
+        review.GENERATOR_RELATIVE_PATH
+        not in custody["working_hash_comparisons"]
+    )
+    assert custody["generator_identity_role"] == "HISTORICAL_GENERATOR_PIN"
+    assert custody["checks"]["historical_generator_pin_matches"] is True
+    assert custody["historical_generator_sha256"] != (
+        custody["current_generator_sha256"]
+    )
     assert all(custody["commit_hash_comparisons"].values())
     packet = review.load_json(review.PACKET_PATH)
     prompt = packet["prompt_protection"]
