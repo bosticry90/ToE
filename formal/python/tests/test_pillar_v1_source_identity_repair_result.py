@@ -15,6 +15,11 @@ RESULT_PATH = REPO_ROOT / (
     "REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_"
     "REPAIR_RESULT_20260725_v0.json"
 )
+REVIEW_PATH = REPO_ROOT / (
+    "formal/docs/release/"
+    "REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_"
+    "REPAIR_RESULT_REVIEW_20260725_v0.json"
+)
 
 
 def _sha256(path: Path) -> str:
@@ -80,3 +85,15 @@ def test_result_reports_exact_recovery_and_no_successor_authority() -> None:
     assert result["authorization"]["successor_authority"] == "NONE"
     assert result["scope"]["staging_identity_repair_performed"] is False
     assert result["scope"]["automatic_successor"] is False
+
+
+def test_independent_review_accepts_only_the_bounded_repair() -> None:
+    review = json.loads(REVIEW_PATH.read_bytes())
+    assert review["accepted"] is True
+    assert review["terminal_result"] == (
+        "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_ACCEPTED"
+    )
+    assert review["reviewed_result"]["sha256"] == _sha256(RESULT_PATH)
+    assert review["findings"]["affected_outcomes"] == "39 / 39 PASS"
+    assert review["successor_authority"] == "NONE"
+    assert review["scientific_posture"] == "B-BLOCKED"
