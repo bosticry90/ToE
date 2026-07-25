@@ -24,9 +24,9 @@
     "nonhermetic_root_cause_packet_authorized": false,
     "post_identity_baseline_reassessment_authorized": false,
     "post_equation_compendium_repair_baseline_reassessment_authorized": false,
-    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_authorized": true,
+    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_authorized": false,
     "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result_reviews_remaining": 1,
-    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_validation_cycles_remaining": 1,
+    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_validation_cycles_remaining": 0,
     "post_historical_aggregate_decomposition_baseline_reassessment_authorized": false,
     "post_prompt_decoupling_baseline_reassessment_authorized": false,
     "post_qft_route_identity_repair_baseline_reassessment_authorized": false,
@@ -48,7 +48,7 @@
     "registry_sharding_migration_authorized": false,
     "repair_implementation_cycles_remaining": 0,
     "reassessment_result_reviews_remaining": 1,
-    "reassessment_validation_cycles_remaining": 1,
+    "reassessment_validation_cycles_remaining": 0,
     "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
     "scientific_target_rotated": false,
@@ -57,17 +57,17 @@
     "v2_enrollment_authorized": false,
     "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-24T23:25:24Z",
+  "captured_at_utc": "2026-07-25T01:23:10Z",
   "containment": {
     "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
     "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
     "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
   },
-  "current_maintenance_target": "execute_bounded_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0.json",
-  "current_maintenance_target_evidence_sha256": "7ae43ebbb5c18487d133c0f2064042a0dcda00ceae78b49dca5e15564ee1f632",
-  "current_maintenance_target_kind": "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment",
-  "current_maintenance_target_status": "AUTHORIZED_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT",
+  "current_maintenance_target": "independent_review_repository_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result_v0_once",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "db680730839960d97ef571073e7250e71926dd623de5c589e151695a0d226a5a",
+  "current_maintenance_target_kind": "independent_post_pillar_role_separation_baseline_reassessment_result_review",
+  "current_maintenance_target_status": "POST_PILLAR_ROLE_SEPARATION_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW",
   "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
@@ -117,8 +117,8 @@
     "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
     "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
   },
-  "previous_maintenance_target": "preserve_accepted_pillar_historical_artifact_currency_role_separation_repair_v0",
-  "previous_maintenance_target_status": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_ACCEPTED_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY",
+  "previous_maintenance_target": "execute_bounded_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_v0",
+  "previous_maintenance_target_status": "AUTHORIZED_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT",
   "preserved_diagnostic_result": {
     "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
     "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
@@ -327,5 +327,10 @@
     "selector": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
     "selector_sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
   },
-  "status": "AUTHORIZED_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT"
+  "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result": {
+    "outcome": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "db680730839960d97ef571073e7250e71926dd623de5c589e151695a0d226a5a"
+  },
+  "status": "POST_PILLAR_ROLE_SEPARATION_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW"
 }
