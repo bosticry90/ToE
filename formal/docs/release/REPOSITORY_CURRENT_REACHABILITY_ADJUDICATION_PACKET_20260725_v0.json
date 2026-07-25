@@ -1,0 +1,40 @@
+{
+  "schema_id": "REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_PACKET_20260725_v0",
+  "scope": {
+    "unknown_current_reachability_obligations": 102,
+    "previously_heuristic_current_nonpassing_after_staging_repair": 24,
+    "total_obligations_to_adjudicate": 126,
+    "classification_level": "OBLIGATION",
+    "identity_relative_to_commit": "43ce70246dea33ae691b7f1506e1d10af963e3e3"
+  },
+  "authority_ownership": {
+    "scientific_state_owner": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0",
+    "maintenance_state_owner": "STRICT_CURRENT_AUTHORITY_PARSE(formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json)",
+    "scientific_execution_permission_owner": "EXPLICIT_SCIENTIFIC_SELECTOR_ONLY"
+  },
+  "required_dispositions": [
+    "CURRENT_REPAIR_REQUIRED",
+    "HISTORICAL_QUARANTINE_CANDIDATE",
+    "UNRATIFIED_POST_REGISTRY_QUARANTINE_CANDIDATE"
+  ],
+  "requirements": {
+    "every_candidate_individually_mapped": true,
+    "current_criticality_may_be_combined": true,
+    "noncurrent_requires_no_current_role": true,
+    "provenance_axis_preserved_independently": true,
+    "unknown_current_reachability_after": 0,
+    "profile_membership_change_deferred": true,
+    "independent_review_required": true
+  },
+  "prohibited": {
+    "test_modification": true,
+    "profile_rewrite": true,
+    "hash_refresh": true,
+    "artifact_regeneration": true,
+    "historical_quarantine_execution": true,
+    "registry_or_v2_change": true,
+    "scientific_content_change": true,
+    "lean_activity": true,
+    "automatic_successor": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_id": "CURRENT_RECOVERY_CURRENT_REACHABILITY_ADJUDICATION_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_staging_repair": {
+    "commit": "43ce70246dea33ae691b7f1506e1d10af963e3e3",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_CURRENT_REACHABILITY_ADJUDICATION",
+  "target": "adjudicate_all_conservatively_current_remaining_nonpassing_obligations_v0",
+  "execution_count_authorized": 1,
+  "profile_rewrite_authorized": false,
+  "root_repair_authorized": false,
+  "historical_quarantine_execution_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
