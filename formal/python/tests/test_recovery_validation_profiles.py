@@ -90,6 +90,17 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert result["classification"]["unknown_current_reachability_obligations"] == 102
     assert result["terminal_outcome"] == "RECOVERY_BLOCKED_CURRENT_PROFILE_COVERAGE"
     assert result["authorization"]["successor_authority"] == "NONE"
+    review = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/docs/release/"
+        "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_REVIEW_20260725_v0.json"
+    )
+    assert review["accepted"] is True
+    assert review["findings"]["exact_profile_partition"] is True
+    assert review["accepted_terminal_outcome"] == (
+        "RECOVERY_BLOCKED_CURRENT_PROFILE_COVERAGE"
+    )
+    assert review["successor_authority"] == "NONE"
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:
