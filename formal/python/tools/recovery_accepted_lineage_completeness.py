@@ -28,7 +28,7 @@ DEFAULT_CONTRACT = (
     / "formal"
     / "docs"
     / "release"
-    / "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1.json"
+    / "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v2.json"
 )
 
 
@@ -73,11 +73,41 @@ def load_contract(path: Path = DEFAULT_CONTRACT) -> dict[str, Any]:
     if payload.get("schema_id") not in {
         "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v0",
         "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1",
+        "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v2",
     }:
         raise LineageError("unexpected protected-invariant contract schema")
     if not payload.get("accepted_repairs"):
         raise LineageError("protected-invariant contract has no accepted repairs")
     return payload
+
+
+def _contract_chain(
+    contract: dict[str, Any],
+    *,
+    contract_path: Path,
+    repo_root: Path,
+) -> list[dict[str, Any]]:
+    """Return the oldest-to-newest frozen contract chain."""
+
+    chain = [contract]
+    active = contract
+    active_path = contract_path
+    seen = {active_path.resolve()}
+    while "base_contract" in active:
+        reference = active["base_contract"]
+        base_path = (repo_root / reference["path"]).resolve()
+        if base_path in seen:
+            raise LineageError("protected-invariant contract chain contains a cycle")
+        seen.add(base_path)
+        if sha256_path(base_path) != reference["sha256"]:
+            raise LineageError("accepted protected-invariant base contract drift")
+        base = load_contract(base_path)
+        if len(base["accepted_repairs"]) != reference["accepted_repair_count"]:
+            raise LineageError("accepted base-contract repair-count binding drift")
+        chain.append(base)
+        active = base
+        active_path = base_path
+    return list(reversed(chain))
 
 
 def _is_ancestor(ancestor: str, descendant: str, repo_root: Path) -> bool:
@@ -363,22 +393,16 @@ def build_manifest(
     contract_path: Path = DEFAULT_CONTRACT,
 ) -> dict[str, Any]:
     contract = load_contract(contract_path)
-    if contract["schema_id"].endswith("_v1"):
-        base_reference = contract["base_contract"]
-        base_path = repo_root / base_reference["path"]
-        if sha256_path(base_path) != base_reference["sha256"]:
-            raise LineageError("accepted v0 protected-invariant contract drift")
-        base_contract = load_contract(base_path)
-        if len(base_contract["accepted_repairs"]) != base_reference[
-            "accepted_repair_count"
-        ]:
-            raise LineageError("accepted v0 repair-count binding drift")
-        accepted_repairs = [
-            *base_contract["accepted_repairs"],
-            *contract["accepted_repairs"],
-        ]
-    else:
-        accepted_repairs = contract["accepted_repairs"]
+    chain = _contract_chain(
+        contract,
+        contract_path=contract_path,
+        repo_root=repo_root,
+    )
+    accepted_repairs = [
+        repair
+        for version in chain
+        for repair in version["accepted_repairs"]
+    ]
     start = contract["recovery_start_commit"]
     head = contract["proposed_base"]["commit"]
     if _tree(head, repo_root) != contract["proposed_base"]["tree"]:
@@ -421,10 +445,9 @@ def build_manifest(
     result_rows = evidence["results"]
     review_rows = evidence["reviews"]
     return {
-        "schema_id": (
-            "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v1"
-            if contract["schema_id"].endswith("_v1")
-            else "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v0"
+        "schema_id": contract["schema_id"].replace(
+            "PROTECTED_INVARIANTS",
+            "COMPLETENESS_MANIFEST",
         ),
         "status": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE",
         "recovery_start_commit": start,
