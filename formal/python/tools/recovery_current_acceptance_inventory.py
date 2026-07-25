@@ -104,7 +104,8 @@ def build_manifest(
             "removed_from_frozen_comparability": 0,
             "excluded_current_critical_guards": 0,
         },
-        "lean_build_gate_files_excluded_for_separate_lean_profile": 9,
+        "lean_build_gate_nodeids_included": 9,
+        "separate_complete_lean_graph_still_required": True,
         "profile_status": "FROZEN_INPUT_TO_OBLIGATION_AND_EXECUTION_PROFILES",
         "acceptance_boundary": {
             "new_current_critical_guards_included": True,

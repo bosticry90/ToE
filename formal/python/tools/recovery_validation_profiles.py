@@ -143,17 +143,46 @@ def _unratified_nodeids(cluster_ledger: dict[str, Any]) -> set[str]:
     return set(custody.get("nodeids", []))
 
 
-def _nonpassing_rows(outcomes: dict[str, Any]) -> list[dict[str, Any]]:
+def _nonpassing_rows(
+    outcomes: dict[str, Any],
+    *,
+    recovered_root_ids: set[str] | None = None,
+    expected_count: int = 370,
+) -> list[dict[str, Any]]:
+    recovered = (
+        RECOVERED_ROOT_IDS if recovered_root_ids is None else recovered_root_ids
+    )
     rows = [
         row
         for row in outcomes.get("entries", [])
-        if isinstance(row, dict) and row.get("root_id") not in RECOVERED_ROOT_IDS
+        if isinstance(row, dict) and row.get("root_id") not in recovered
     ]
-    if len(rows) != 370:
+    if len(rows) != expected_count:
         raise ProfileError(
-            f"adjusted accepted nonpassing inventory must contain 370 outcomes, got {len(rows)}"
+            "adjusted accepted nonpassing inventory must contain "
+            f"{expected_count} outcomes, got {len(rows)}"
         )
     return rows
+
+
+def _adjudication_by_obligation_id(
+    adjudication_ledger: dict[str, Any] | None,
+) -> dict[str, dict[str, Any]]:
+    if adjudication_ledger is None:
+        return {}
+    rows = adjudication_ledger.get("rows", [])
+    mapped = {
+        row["obligation_id"]: row
+        for row in rows
+        if isinstance(row, dict) and isinstance(row.get("obligation_id"), str)
+    }
+    if len(mapped) != len(rows):
+        raise ProfileError("reachability adjudication contains duplicate obligation IDs")
+    if adjudication_ledger.get("counts", {}).get(
+        "unknown_current_reachability_after"
+    ) != 0:
+        raise ProfileError("reachability adjudication has unresolved current reachability")
+    return mapped
 
 
 def _nonpassing_axes(
@@ -269,6 +298,10 @@ def build_profiles(
     missing_ledger: dict[str, Any],
     cluster_ledger: dict[str, Any],
     relative_to_commit: str,
+    adjudication_ledger: dict[str, Any] | None = None,
+    recovered_root_ids: set[str] | None = None,
+    expected_nonpassing: int = 370,
+    schema_version: str = SCHEMA_VERSION,
 ) -> dict[str, Any]:
     current_set = set(current_nodeids)
     frozen_set = set(frozen_nodeids)
@@ -277,7 +310,12 @@ def build_profiles(
     added_over_frozen = current_set - frozen_set
     missing = _missing_by_nodeid(missing_ledger)
     unratified = _unratified_nodeids(cluster_ledger)
-    nonpassing = _nonpassing_rows(outcome_ledger)
+    nonpassing = _nonpassing_rows(
+        outcome_ledger,
+        recovered_root_ids=recovered_root_ids,
+        expected_count=expected_nonpassing,
+    )
+    adjudication = _adjudication_by_obligation_id(adjudication_ledger)
     nonpassing_by_nodeid = {row["nodeid"]: row for row in nonpassing}
     if len(nonpassing_by_nodeid) != len(nonpassing):
         raise ProfileError("adjusted nonpassing inventory contains duplicate node IDs")
@@ -312,23 +350,43 @@ def build_profiles(
             )
         if nodeid in nonpassing_by_nodeid:
             row = nonpassing_by_nodeid[nodeid]
-            axes = _nonpassing_axes(
-                row,
-                reachable_criticality=criticality,
-                reachability_evidence=evidence,
-                missing_row=missing.get(nodeid),
-                unratified=nodeid in unratified,
-            )
+            obligation_id = f"NONPASSING-{row['order_index']:05d}"
+            accepted_axes = adjudication.get(obligation_id)
+            if accepted_axes is None:
+                axes = _nonpassing_axes(
+                    row,
+                    reachable_criticality=criticality,
+                    reachability_evidence=evidence,
+                    missing_row=missing.get(nodeid),
+                    unratified=nodeid in unratified,
+                )
+            else:
+                if accepted_axes["test_id"] != nodeid:
+                    raise ProfileError(
+                        f"adjudication node ID mismatch for {obligation_id}"
+                    )
+                axes = {
+                    "criticality": accepted_axes["criticality"],
+                    "temporal_role": accepted_axes["temporal_role"],
+                    "provenance": accepted_axes["provenance"],
+                    "disposition": accepted_axes["disposition"],
+                    "current_reachability_unknown": False,
+                    "reachability_evidence": accepted_axes[
+                        "reachability_evidence"
+                    ],
+                }
             obligations.append(
                 {
-                    "obligation_id": f"NONPASSING-{row['order_index']:05d}",
+                    "obligation_id": obligation_id,
                     "test_id": nodeid,
                     "causal_root": row["root_id"],
                     "dependency": row.get("first_exception", ""),
                     **axes,
                 }
             )
-            if axes["criticality"] != ["NONCURRENT"]:
+            if accepted_axes is not None and axes["criticality"] == ["NONCURRENT"]:
+                criticality = []
+            elif axes["criticality"] != ["NONCURRENT"]:
                 criticality = sorted(
                     set(criticality) | set(axes["criticality"])
                 )
@@ -363,7 +421,7 @@ def build_profiles(
         if profile_by_nodeid[row["nodeid"]] == "historical_debt"
     ]
     registry = {
-        "schema_id": f"RECOVERY_OBLIGATION_REGISTRY_20260725_{SCHEMA_VERSION}",
+        "schema_id": f"RECOVERY_OBLIGATION_REGISTRY_20260725_{schema_version}",
         "current_relative_to_commit": relative_to_commit,
         "classification_universe": {
             "current_authority_reachable": sum(
@@ -410,7 +468,7 @@ def build_profiles(
         "tests_may_modify_membership": False,
     }
     current_manifest = {
-        "schema_id": f"CURRENT_CONTROL_PLANE_PROFILE_20260725_{SCHEMA_VERSION}",
+        "schema_id": f"CURRENT_CONTROL_PLANE_PROFILE_20260725_{schema_version}",
         **profile_common,
         "profile": "current_control_plane",
         "nodeid_count": len(current_profile),
@@ -420,7 +478,7 @@ def build_profiles(
         "required_verdict": "PASS",
     }
     historical_manifest = {
-        "schema_id": f"HISTORICAL_DEBT_PROFILE_20260725_{SCHEMA_VERSION}",
+        "schema_id": f"HISTORICAL_DEBT_PROFILE_20260725_{schema_version}",
         **profile_common,
         "profile": "historical_debt",
         "nodeid_count": len(historical_profile),
@@ -434,7 +492,7 @@ def build_profiles(
         for obligation in obligations
     )
     reconciliation = {
-        "schema_id": f"VALIDATION_PROFILE_RECONCILIATION_20260725_{SCHEMA_VERSION}",
+        "schema_id": f"VALIDATION_PROFILE_RECONCILIATION_20260725_{schema_version}",
         **profile_common,
         "collected_count": len(current_nodeids),
         "current_control_plane_count": len(current_profile),
@@ -457,13 +515,20 @@ def build_profiles(
     }
 
 
-def write_profiles(output_root: Path, profiles: dict[str, Any]) -> dict[str, str]:
+def write_profiles(
+    output_root: Path,
+    profiles: dict[str, Any],
+    *,
+    schema_version: str = SCHEMA_VERSION,
+) -> dict[str, str]:
     output_root.mkdir(parents=True, exist_ok=True)
     filenames = {
-        "registry": "RECOVERY_OBLIGATION_REGISTRY_20260725_v0.json",
-        "current": "CURRENT_CONTROL_PLANE_PROFILE_20260725_v0.json",
-        "historical": "HISTORICAL_DEBT_PROFILE_20260725_v0.json",
-        "reconciliation": "VALIDATION_PROFILE_RECONCILIATION_20260725_v0.json",
+        "registry": f"RECOVERY_OBLIGATION_REGISTRY_20260725_{schema_version}.json",
+        "current": f"CURRENT_CONTROL_PLANE_PROFILE_20260725_{schema_version}.json",
+        "historical": f"HISTORICAL_DEBT_PROFILE_20260725_{schema_version}.json",
+        "reconciliation": (
+            f"VALIDATION_PROFILE_RECONCILIATION_20260725_{schema_version}.json"
+        ),
     }
     hashes: dict[str, str] = {}
     for key, filename in filenames.items():
@@ -483,6 +548,14 @@ def main() -> int:
     parser.add_argument("--cluster-ledger", type=Path, required=True)
     parser.add_argument("--relative-to-commit", required=True)
     parser.add_argument("--output-root", type=Path, required=True)
+    parser.add_argument("--adjudication-ledger", type=Path)
+    parser.add_argument("--expected-nonpassing", type=int, default=370)
+    parser.add_argument("--schema-version", default=SCHEMA_VERSION)
+    parser.add_argument(
+        "--recovered-root-id",
+        action="append",
+        default=sorted(RECOVERED_ROOT_IDS),
+    )
     args = parser.parse_args()
     profiles = build_profiles(
         repo_root=REPO_ROOT,
@@ -492,8 +565,20 @@ def main() -> int:
         missing_ledger=load_json(args.missing_ledger),
         cluster_ledger=load_json(args.cluster_ledger),
         relative_to_commit=args.relative_to_commit,
+        adjudication_ledger=(
+            load_json(args.adjudication_ledger)
+            if args.adjudication_ledger is not None
+            else None
+        ),
+        recovered_root_ids=set(args.recovered_root_id),
+        expected_nonpassing=args.expected_nonpassing,
+        schema_version=args.schema_version,
     )
-    hashes = write_profiles(args.output_root, profiles)
+    hashes = write_profiles(
+        args.output_root,
+        profiles,
+        schema_version=args.schema_version,
+    )
     sys.stdout.buffer.write(
         canonical_json_bytes(
             {
