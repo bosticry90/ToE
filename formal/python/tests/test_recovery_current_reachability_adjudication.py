@@ -76,3 +76,17 @@ def test_only_four_current_nonpassing_obligations_remain_after_adjudication() ->
     assert result["terminal_outcome"] == (
         "CURRENT_REACHABILITY_ADJUDICATION_COMPLETE_FOUR_CURRENT_REPAIRS_REQUIRED"
     )
+    review = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/docs/release/"
+        "REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+    )
+    assert review["accepted"] is True
+    assert review["reviewed_result"]["sha256"] == (
+        "4159a696cc564787a4c6fc84eab19b5a6a199b163a74ee089d9ef2062c97a00a"
+    )
+    assert review["findings"]["unknown_current_reachability_after"] == 0
+    assert review["accepted_current_repair_obligations"] == sorted(
+        subject.CURRENT_OBLIGATION_AXES
+    )
+    assert review["successor_authority"] == "NONE"
