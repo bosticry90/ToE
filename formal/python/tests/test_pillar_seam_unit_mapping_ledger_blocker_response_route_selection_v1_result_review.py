@@ -226,7 +226,8 @@ def test_requirements_one_and_two_bind_exact_rows_and_frozen_inputs(
     assert custody["all_transitive_runtime_dependencies_bound_to_preparation_commit"] is True
     assert all(
         item["commit_blob_matches_expected"]
-        and item["working_tree_matches_commit_blob"]
+        and item["historical_blob_selected_for_validation"]
+        and item["current_working_tree_equality_required"] is False
         for item in custody["artifacts"].values()
     )
 
