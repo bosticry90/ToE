@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from formal.python.tools import recovery_profile_runner
 from formal.python.tools import recovery_validation_profiles as subject
 
@@ -308,7 +310,7 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert historical_v5["known_nonpassing_count"] == 354
     assert reconciliation_v5["unknown_current_reachability_obligations"] == 0
     assert reconciliation_v5["exact_partition"] is True
-    assert current_v5["nodeid_count"] + historical_v5["nodeid_count"] == 13855
+    assert current_v5["nodeid_count"] + historical_v5["nodeid_count"] == 13856
     dirty_custody_guards = {
         nodeid
         for nodeid in current_v5["nodeids"]
@@ -360,3 +362,30 @@ def test_unknown_nonpassing_reachability_fails_closed_into_current_profile() -> 
     assert axes["criticality"] == ["CURRENT_REPRODUCIBILITY"]
     assert axes["disposition"] == "BLOCKING"
     assert axes["current_reachability_unknown"] is True
+
+
+def test_historical_junit_accepts_only_recorded_nonpassing(tmp_path: Path) -> None:
+    nodeid = "formal/python/tests/test_old.py::TestOld::test_recorded"
+    junit = tmp_path / "historical.xml"
+    junit.write_text(
+        '<testsuites><testsuite tests="1" failures="1" errors="0">'
+        '<testcase classname="formal.python.tests.test_old.TestOld" '
+        'name="test_recorded"><failure>expected</failure></testcase>'
+        "</testsuite></testsuites>",
+        encoding="utf-8",
+    )
+    result = recovery_profile_runner.reconcile_historical_junit(
+        profile={
+            "profile": "historical_debt",
+            "nodeid_count": 1,
+            "nodeids": [nodeid],
+            "known_nonpassing_nodeids": [nodeid],
+        },
+        junit_path=junit,
+        pytest_exit_code=1,
+    )
+    assert result["accepted"] is True
+    assert result["unexpected_nonpassing"] == []
+    assert result["verdict"] == (
+        "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES"
+    )

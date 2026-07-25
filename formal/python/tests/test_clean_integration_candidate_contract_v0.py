@@ -82,6 +82,6 @@ def test_integration_profiles_exactly_partition_current_inventory() -> None:
         ).read_bytes()
     )
     assert set(current["nodeids"]).isdisjoint(historical["nodeids"])
-    assert current["nodeid_count"] + historical["nodeid_count"] == 13855
+    assert current["nodeid_count"] + historical["nodeid_count"] == 13856
     assert reconciliation["exact_partition"] is True
     assert reconciliation["unknown_current_reachability_obligations"] == 0
