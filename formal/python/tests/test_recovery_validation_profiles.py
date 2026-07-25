@@ -323,6 +323,34 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert repaired_current <= set(current_v5["nodeids"])
     assert historical_eol in set(historical_v5["nodeids"])
     assert historical_eol not in set(current_v5["nodeids"])
+    registry_v6 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "RECOVERY_OBLIGATION_REGISTRY_20260725_v6.json"
+    )
+    current_v6 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "CURRENT_CONTROL_PLANE_PROFILE_20260725_v6.json"
+    )
+    historical_v6 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "HISTORICAL_DEBT_PROFILE_20260725_v6.json"
+    )
+    reconciliation_v6 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "VALIDATION_PROFILE_RECONCILIATION_20260725_v6.json"
+    )
+    assert current_v6["nodeids"] == current_v5["nodeids"]
+    assert historical_v6["nodeids"] == historical_v5["nodeids"]
+    assert registry_v6["obligations"] == registry_v5["obligations"]
+    assert reconciliation_v6["exact_partition"] is True
+    assert reconciliation_v6["unknown_current_reachability_obligations"] == 0
+    assert current_v6["current_relative_to_commit"] == (
+        "e7060d3625d11eaa274afa36a1b285410f8f5619"
+    )
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:
