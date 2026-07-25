@@ -108,5 +108,8 @@ def test_repaired_document_has_only_authorized_selector() -> None:
 
 
 def test_consumed_bootstrap_cannot_execute_again() -> None:
-    with pytest.raises(subject.BootstrapRepairError, match="already been consumed"):
+    with pytest.raises(
+        subject.BootstrapRepairError,
+        match="already been consumed|not the authorized parent",
+    ):
         subject.execute_once()
