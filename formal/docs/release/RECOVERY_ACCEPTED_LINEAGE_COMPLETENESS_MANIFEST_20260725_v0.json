@@ -1,0 +1,1576 @@
+{
+  "accepted_repairs": [
+    {
+      "accepted_commit": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+      "accepted_commit_tree": "cc8479aae0d200f38dfd89cd6aa1691f76eb98ab",
+      "authorization_commit": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "36c18d30e7f9cef936992898f62f7616a5fe43af",
+          "path": "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py",
+          "selectors": [],
+          "sha256": "ea481fa157cb0455e2406d68df1bc4d0fd7c56c23947b02369e7142329cfb520"
+        }
+      ],
+      "cycle_id": "HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR",
+      "historical_snapshot_guards": [
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py"
+        }
+      ],
+      "implementation_commits": [
+        {
+          "commit": "efd6fc3b88ffa233e35b7a3aa3d4f3839ef2627b",
+          "tree": "6204b2ff4099d6fac5193e3db789fee9044a5a37"
+        },
+        {
+          "commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+          "tree": "75caae7883578bbe137fbbf516f887698865fd7a"
+        },
+        {
+          "commit": "fcedde3bbc2b591eb48c41d54561235ef61c0fad",
+          "tree": "2586977a2923b4d37d123a0e3d4939c3d339f840"
+        },
+        {
+          "commit": "b804dbd2f758319f664942d05b5695ae403ecd47",
+          "tree": "60782e2da1480c7b15f8d0160390399004cb61f7"
+        }
+      ],
+      "protected_invariant": "Tracked-source evidence identities resolve from frozen Git blobs and validation does not use mutable checkout representation as the authoritative identity.",
+      "result": {
+        "commit": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+        "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_20260721_v0.json",
+        "sha256": "f18c8efc0a65270891957481552c0b62ace72be6d373f776a3960b6693549967"
+      },
+      "review": {
+        "binds_result_commit_explicitly": false,
+        "binds_result_sha256": true,
+        "commit": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+        "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json",
+        "sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4"
+      },
+      "superseded_guards": [
+        {
+          "accepted_supersession_evidence": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0.json",
+          "class": "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT",
+          "guard": "V2 raw checkout Prompt identity assertions",
+          "replacement": "formal/python/tests/test_prompt_dependency_role_adjudication_and_decoupling.py"
+        }
+      ]
+    },
+    {
+      "accepted_commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+      "accepted_commit_tree": "ecbcb1b14fe932ca833efe830e1cc5037d0db44d",
+      "authorization_commit": "154dd5db14ace80ccc8b136fce5594c9e7205f60",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "7d29044d9633a45891579e0172721793979d96a9",
+          "path": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2_result_review.py",
+          "selectors": [],
+          "sha256": "75e02e24c3a6f3ac78ee678e0b460c249e463aeb043c72ac42e1ed8c783eac7b"
+        },
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "90d2d62a42637681cb5c2ed82ad23ad2f9db1588",
+          "path": "formal/python/tests/test_ov_br_snd03_blocked_ignores_pairing_mapping_when_gates_disabled.py",
+          "selectors": [],
+          "sha256": "000b3e3d9748c47a29bd2b015968f99ccf2a141c282594df655d2b85b3307503"
+        }
+      ],
+      "cycle_id": "LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR",
+      "historical_snapshot_guards": [],
+      "implementation_commits": [
+        {
+          "commit": "0b5bd6677cf8a4d1c8859cce2d970c70bfcee98f",
+          "tree": "a404505babefd05aabd36521cfa534b7187cab4f"
+        }
+      ],
+      "protected_invariant": "Frozen source identity is independent of LF or CRLF checkout bytes and mapping validation writes only to pytest-owned temporary paths.",
+      "result": {
+        "commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+        "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
+        "sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28"
+      },
+      "review": {
+        "binds_result_commit_explicitly": false,
+        "binds_result_sha256": true,
+        "commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+        "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_REVIEW_20260721_v0.json",
+        "sha256": "beaa10e0e11e805638f1c67a81fec7a89343b5bf0aaa562110392ad06d6e6773"
+      },
+      "superseded_guards": []
+    },
+    {
+      "accepted_commit": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+      "accepted_commit_tree": "f9b2a458104bb8eec592a8185189ff9cbda9dff1",
+      "authorization_commit": "686ff35cfacd45a40d94459871b9debf63510ef3",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "2baba631433bff796f1eaf4a6f6c0245114652d3",
+          "path": "formal/python/tests/test_prompt_dependency_role_adjudication_and_decoupling.py",
+          "selectors": [],
+          "sha256": "7a9fcc559dd777b557d0bf2027f4a487ba84dda96e8e60d67db45031e77d4b44"
+        }
+      ],
+      "cycle_id": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING",
+      "historical_snapshot_guards": [],
+      "implementation_commits": [
+        {
+          "commit": "422a0e6f799239a5545dda15697cec2efa14325d",
+          "tree": "bb2639fb8ec502338e9bb119e51c777c9f129209"
+        }
+      ],
+      "protected_invariant": "Prompt.txt is nonauthoritative workflow metadata and cannot determine scientific, governance, or historical-evidence validity.",
+      "result": {
+        "commit": "a5ceca5f6ac47ef0f7beacda0b0d17aae97217d8",
+        "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_20260722_v0.json",
+        "sha256": "88a9007e0891d9222a29fd5d598cf5f4eb1021219f4c117577273d6748ec7182"
+      },
+      "review": {
+        "binds_result_commit_explicitly": true,
+        "binds_result_sha256": true,
+        "commit": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+        "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "71a66686e2b6c58b29e00fad6ba642070378c8733a4772eaaab5a0bac2307ac6"
+      },
+      "superseded_guards": []
+    },
+    {
+      "accepted_commit": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+      "accepted_commit_tree": "39fbd3e5ad7ae2ae346168dbea3e727445fb5dc8",
+      "authorization_commit": "20690e029035a64d95f9678d3940f4648983b6e8",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "01472adc0ac58cd212656c7214544cad6bb01065",
+          "path": "formal/python/tests/test_physics_math_throughput_baseline_snapshot_gate.py",
+          "selectors": [
+            "test_phase0_baseline_files_exist",
+            "test_phase0_baseline_artifact_schema",
+            "test_phase0_historical_fixture_is_byte_deterministic_and_live_path_absent"
+          ],
+          "sha256": "e4bcb6e377b6b26dc1ff2f3ecc33f441abd5bcd6d1ef72fb67fc724795f93576"
+        }
+      ],
+      "cycle_id": "HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT",
+      "historical_snapshot_guards": [],
+      "implementation_commits": [
+        {
+          "commit": "8e6b078e20554193bf7fcc1994d7c20fb6e4520f",
+          "tree": "98feb7d0e88710265721d0a07b99b0e021e9a7a6"
+        }
+      ],
+      "protected_invariant": "The selected historical report is generated deterministically in a pytest-owned temporary directory while its ignored live path remains absent.",
+      "result": {
+        "commit": "e95c8e8e4ec58756f5f3ddb7bf53adcce43bce91",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0.json",
+        "sha256": "4297e065f3fd0a262f0827b15d384a0ec32b37ceb441d0a00f7ef3f47983c683"
+      },
+      "review": {
+        "binds_result_commit_explicitly": true,
+        "binds_result_sha256": true,
+        "commit": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "cd323104d3c6c0da2f61fd2ac3305eaae2e7f8c2398fcbffcf7107f38612784b"
+      },
+      "superseded_guards": []
+    },
+    {
+      "accepted_commit": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+      "accepted_commit_tree": "0667e691f5fa0e609bdbfd65f9041f2ef4faf43e",
+      "authorization_commit": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "c8824c9a1d1ab2d624061696e4284d87c6fe72f3",
+          "path": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+          "selectors": [
+            "test_aggregate_report_existence_expectation_is_formally_retired",
+            "test_aggregate_control_invariance_is_decomposed_to_identity_local_routes"
+          ],
+          "sha256": "dc05e02edfc935a13af049bfd221d6e2f50f9f7507d3e0c5b2925f3b86215a74"
+        }
+      ],
+      "cycle_id": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION",
+      "historical_snapshot_guards": [
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "test_all_remediation_reports_exist"
+        },
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "test_all_report_controls_preserve_invariance"
+        }
+      ],
+      "implementation_commits": [
+        {
+          "commit": "a4e1ba9ccc26e5afb305416755b6a3555abc6901",
+          "tree": "de1bd9365630a690c87af290513c2d56c5c11537"
+        }
+      ],
+      "protected_invariant": "Retention-expired report existence is retired as a current aggregate requirement while identity-local semantic controls remain independently routed.",
+      "result": {
+        "commit": "1832efd1588613e2183f485b562475bb24274aa9",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_20260722_v0.json",
+        "sha256": "78c2e6f5283184dfa4b91210c1b43d953050515e8e9bb110941755c3a90df077"
+      },
+      "review": {
+        "binds_result_commit_explicitly": true,
+        "binds_result_sha256": true,
+        "commit": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "03f15009105afb50173c303cc72c3519311b1f164fcb97e8f02e4d2054d7ed3b"
+      },
+      "superseded_guards": [
+        {
+          "accepted_supersession_evidence": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+          "class": "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT",
+          "guard": "test_all_remediation_reports_exist",
+          "replacement": "test_aggregate_report_existence_expectation_is_formally_retired"
+        },
+        {
+          "accepted_supersession_evidence": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+          "class": "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT",
+          "guard": "test_all_report_controls_preserve_invariance",
+          "replacement": "test_aggregate_control_invariance_is_decomposed_to_identity_local_routes"
+        }
+      ]
+    },
+    {
+      "accepted_commit": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+      "accepted_commit_tree": "98fe56c87b7152913ee35dd067548bf10eef30c1",
+      "authorization_commit": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "aacc3b122f2ec9a6f62cc4ff9c5ea86bc4b8941c",
+          "path": "formal/python/tests/test_qft_route_evidence_identity_domain_contract.py",
+          "selectors": [],
+          "sha256": "b370be61667bcfbd5a02981551b36116195acc90eab5b6f3682d1906276bfd20"
+        }
+      ],
+      "cycle_id": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR",
+      "historical_snapshot_guards": [
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "historical v0/v1 raw route pins"
+        }
+      ],
+      "implementation_commits": [
+        {
+          "commit": "d2b7d0c16e9e0f04e57a09119fd8ae53e57c8c03",
+          "tree": "8d2134ed17db62b4510f703cebf26bf8aeecd3e8"
+        }
+      ],
+      "protected_invariant": "Eight tracked route sources use frozen Git-blob identities and one generated review uses canonical-artifact identity while historical raw pins remain unchanged.",
+      "result": {
+        "commit": "eaebceeeed873369fe0385d7c90ec3cc284e937e",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+        "sha256": "bf73766313d6b7d5e001306d264430e0aa5cf4edd88e484a4cb1fca55731df2a"
+      },
+      "review": {
+        "binds_result_commit_explicitly": true,
+        "binds_result_sha256": true,
+        "commit": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0.json",
+        "sha256": "111092bd73ecb218b561cc0cfe3ece415d08a380375c4965a0433a30cdbfa78b"
+      },
+      "superseded_guards": []
+    },
+    {
+      "accepted_commit": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+      "accepted_commit_tree": "e7397f4760ffe2da6eea197a014e4e56226f9f4b",
+      "authorization_commit": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "b4d2842090eb8897b5ef7d18eec49f47fd6af58c",
+          "path": "formal/python/tests/test_equation_compendium_identity_domain_contract.py",
+          "selectors": [],
+          "sha256": "dadc665cf2ebf3f69e67033e43a4a78b8cf8c3efcb0a0136b574761770d93833"
+        }
+      ],
+      "cycle_id": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR",
+      "historical_snapshot_guards": [
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "23 historical mixed-EOL compendium pin occurrences"
+        }
+      ],
+      "implementation_commits": [
+        {
+          "commit": "2197e387d019b9a71bcb7ff5f38c582cec8a35c2",
+          "tree": "6638b326a7421ecbbcd170a6465abb4f5eaf4fe3"
+        }
+      ],
+      "protected_invariant": "Current executable compendium bindings use the frozen Git blob while all historical mixed-EOL pins and compendium content remain unchanged.",
+      "result": {
+        "commit": "5c93dbbd4d9c03a0808478965f0553fdec75122d",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_20260724_v0.json",
+        "sha256": "54dde09f3b62417f8b7e1103888490cae63c7809918ac8e7ab9fc0c450805c78"
+      },
+      "review": {
+        "binds_result_commit_explicitly": true,
+        "binds_result_sha256": true,
+        "commit": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "4c997137581b23266076528583853ba1002bbb8cae86e93269f8d8f77d656998"
+      },
+      "superseded_guards": []
+    },
+    {
+      "accepted_commit": "4603c611260fcece6613f0f515641082928b9802",
+      "accepted_commit_tree": "45ea70cb7620e3567dca1dab320f368d2191d5ce",
+      "authorization_commit": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+      "current_enforcing_guards": [
+        {
+          "class": "PROTECTED_INVARIANT_GUARD",
+          "git_blob": "6ac0dac1127f8d9f642c3246a198e30ae23484de",
+          "path": "formal/python/tests/test_historical_artifact_currency_role_contract.py",
+          "selectors": [],
+          "sha256": "ceadb92639a077e8cc34ae8e104b099f337c2caf0b3eb3e0400efb46deba6a44"
+        }
+      ],
+      "cycle_id": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+      "historical_snapshot_guards": [
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "historical-to-live authority equality"
+        },
+        {
+          "class": "HISTORICAL_SNAPSHOT_GUARD",
+          "guard": "historical generator-to-current generator equality"
+        }
+      ],
+      "implementation_commits": [
+        {
+          "commit": "30d79212c005a0c9aad7a1e987d0752cb731f9c9",
+          "tree": "9c7f7d4b38bee2f0b1f798c759d817a760642551"
+        }
+      ],
+      "protected_invariant": "Historical source, generator, and review-time authority identities remain immutable and are validated separately from current successors.",
+      "result": {
+        "commit": "78d1cd177d1fe77128bf84e660af332a3c16ae30",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+        "sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5"
+      },
+      "review": {
+        "binds_result_commit_explicitly": true,
+        "binds_result_sha256": true,
+        "commit": "4603c611260fcece6613f0f515641082928b9802",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2"
+      },
+      "superseded_guards": [
+        {
+          "accepted_supersession_evidence": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+          "class": "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT",
+          "guard": "historical-to-live authority equality",
+          "replacement": "formal/python/tests/test_historical_artifact_currency_role_contract.py"
+        }
+      ]
+    }
+  ],
+  "evidence_inventory": {
+    "packets": [
+      {
+        "introduced_by": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+        "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET_20260720_v0.json",
+        "sha256": "22bd7c67bfcdf4fd0b90dfe4fe24eca1544a12446bb46d632226b26268f1797b"
+      },
+      {
+        "introduced_by": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+        "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET_INDEPENDENT_REVIEW_20260720_v0.json",
+        "sha256": "e3accb2cd144bdf7b2c6444c38cf37dd8b05a35e41fa1a52d86ca28340a06f85"
+      },
+      {
+        "introduced_by": "b7496f52714f9558b65e78b620c4ddcc9fbaa5fa",
+        "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_20260721_v0.json",
+        "sha256": "ec7c379a5e7c7a948293bb6533fecdce361535859ed667363679fb3024406641"
+      },
+      {
+        "introduced_by": "1ae0790a35c55f8f3546f86a4442b7cde91ab07e",
+        "path": "formal/docs/release/REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_PACKET_20260719_v0.json",
+        "sha256": "40a679242878094a260e25da13fb9d6dedd0547dc22f34a44a003e482ed15c86"
+      },
+      {
+        "introduced_by": "148db2ec4e0134d54024a9b3e4b62af01680f998",
+        "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_20260722_v0.json",
+        "sha256": "34d47e81094bc1300795b499d6d2e88c0bc8c4b73ef587b8af049625d61b5384"
+      },
+      {
+        "introduced_by": "e871d6074bc73f4ca4b5304f16a153dcf4222694",
+        "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_20260720_v0.json",
+        "sha256": "7bbd587ea5fc085d6e86cb3579faf13aec41d23efe982432be8ae6699ba020c1"
+      },
+      {
+        "introduced_by": "e871d6074bc73f4ca4b5304f16a153dcf4222694",
+        "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_INDEPENDENT_REVIEW_20260720_v0.json",
+        "sha256": "2d8d9646a19fcc0aee4e26e110963af7b8c38396bfd45b93bad0c9db40f25e7e"
+      },
+      {
+        "introduced_by": "94b23772151662398651d1748f5c65702832f924",
+        "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_PACKET_20260723_v0.json",
+        "sha256": "2b570f2c6d741be60ad341a92b2ce869e1b1760fa9544931f86ae024ec8a5537"
+      },
+      {
+        "introduced_by": "7022a7d040e5d5a82ca5bb60590c10620f40add9",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260724_v0.json",
+        "sha256": "f6d64790bdcdfb43fe215516fa5d8c8dc6d5dac39410f5294b6e25cfc9ff6647"
+      },
+      {
+        "introduced_by": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_20260724_v0.json",
+        "sha256": "bae523decc1ea5e37ddee6ee4ac9133583f7007fdc9fa69a0fcd079fed7ecfab"
+      },
+      {
+        "introduced_by": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+        "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_PACKET_20260721_v0.json",
+        "sha256": "6ec0fb78e8e422897b22cf58748b77f46405c4588199cf4130c81a3be673f2cd"
+      },
+      {
+        "introduced_by": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_PACKET_20260722_v0.json",
+        "sha256": "022f90009f66144c849b382c003be0642a065f0f4ffb4a0e4b32da725406fdab"
+      },
+      {
+        "introduced_by": "8135468d1af9da39af55373ff24ea64a64c3f6d3",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_PACKET_20260722_v0.json",
+        "sha256": "cd0feb3dc2f4078114cbce0a2625bb51ec73e3a026f7919f164c3defdd6e65d9"
+      },
+      {
+        "introduced_by": "20690e029035a64d95f9678d3940f4648983b6e8",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_PACKET_20260722_v0.json",
+        "sha256": "75685ac86c37d89a151fe70c3081b2bb584340cf86c4f977f3cb447b20edd4b8"
+      },
+      {
+        "introduced_by": "154dd5db14ace80ccc8b136fce5594c9e7205f60",
+        "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_20260721_v0.json",
+        "sha256": "d07cdda749f3fa8787c0f5a7819826cd89be5caf94f6ccc17cedb586d26d8ebc"
+      },
+      {
+        "introduced_by": "f1e59d4937929a7c170075fe9a03a04d2903eb20",
+        "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_PACKET_20260724_v0.json",
+        "sha256": "914203227014693657eab2af1adbd247070cf7974e234b67117598f2e8fb01fa"
+      },
+      {
+        "introduced_by": "df3c4c926a08fb80423ab90036769ca0a236e90a",
+        "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_PACKET_20260722_v0.json",
+        "sha256": "6747a2d8ca9e1b88ff8200ae17e73d7a20e31dd834f7a72a64a57f2b32215d38"
+      },
+      {
+        "introduced_by": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260724_v0.json",
+        "sha256": "b57ecf8e4b87e4b2c192d6f5998fd10dc02adf2951011f61eae2b0b7eea4d549"
+      },
+      {
+        "introduced_by": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_20260724_v0.json",
+        "sha256": "d08e87cbfe9a67ab18aa0bddd141b0bf09282b185f23fe7c6bba0800b4b810eb"
+      },
+      {
+        "introduced_by": "ee45baa4731c27b68180ab783dddb4a559baeecc",
+        "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_PACKET_20260724_v0.json",
+        "sha256": "981a29a6e253844a69c1d97da9d433a293eef97bdd694706b7d882efbacaa9b0"
+      },
+      {
+        "introduced_by": "d2a285ae673db4784b908131a2480ffc5b756dbc",
+        "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_PACKET_20260722_v0.json",
+        "sha256": "5c1264a245886f10f0df83ee3d1130f75a6d260f447cee0aefe5000628391671"
+      },
+      {
+        "introduced_by": "b6e6d6f3d64776a6e50eeb1039987b5de2dcd951",
+        "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_20260724_v0.json",
+        "sha256": "6e1da2421556ccf6d9c0233ff2dd3810823be897bf4d2b1178b931cb625c6bbc"
+      },
+      {
+        "introduced_by": "f692cbde771f5b411ec9deddac5cd6acf7c5457f",
+        "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_20260722_v0.json",
+        "sha256": "30f9b2e50a2b2d30a23403944305da705003a0fcccfd05b610c0fac0c580f6e5"
+      },
+      {
+        "introduced_by": "eba8a7eb3d99340a2425e8ff5bfe73c959a6760a",
+        "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_PACKET_20260723_v0.json",
+        "sha256": "869edc4cf81bc437d7b62071fc54eb447ef9ff0d4801efc1d01fdc56110454bd"
+      },
+      {
+        "introduced_by": "686ff35cfacd45a40d94459871b9debf63510ef3",
+        "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_20260722_v0.json",
+        "sha256": "a877d83bbfc8e1bb0bc92a513d06b25f4de0f4fd4140b8a7b7c937dec60d6614"
+      },
+      {
+        "introduced_by": "f1662b782cab709c548d7c9b23ae9ec0307c6a25",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260723_v0.json",
+        "sha256": "0ee97cc0b0e79cd81beb5bdcd818ff03024561914888def4733d8142be7bb4af"
+      },
+      {
+        "introduced_by": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_20260723_v0.json",
+        "sha256": "129d76912662442c2d494bb9670a1cebaaf6168515cb3f3d7bd29169f034e55a"
+      }
+    ],
+    "results": [
+      {
+        "introduced_by": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+        "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
+        "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
+      },
+      {
+        "introduced_by": "dbcb09b0ca3d99d7116eda11cff6960339140778",
+        "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_20260721_v0.json",
+        "sha256": "bdb06f9583728ac14e79b3e14f214ae8259c6a602e2786eadf2c8327776d870f"
+      },
+      {
+        "introduced_by": "ab74e977f403857db149e51ebd9d2060396e77c2",
+        "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_20260722_v0.json",
+        "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
+      },
+      {
+        "introduced_by": "291010c22bf6db3869c16898e04038ccbd3a15e9",
+        "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json",
+        "sha256": "d2db8ace01049ccc05234f54f830df4af9040a0c5eaf8c776946bd07c51d888b"
+      },
+      {
+        "introduced_by": "169e850bd560ef5732931e99f2275a23bca207c6",
+        "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0.json",
+        "sha256": "4b1a6683819eb22a98b4f6deb0e04df8036119b088662c3c696f489076353b55"
+      },
+      {
+        "introduced_by": "cae2e9eec35635efbde1345eae42b939361dd25c",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+        "sha256": "ae399826839ca92174b13777909d131f9a52ae8daf2c2e4e75d8698c598cb16e"
+      },
+      {
+        "introduced_by": "5c93dbbd4d9c03a0808478965f0553fdec75122d",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_20260724_v0.json",
+        "sha256": "54dde09f3b62417f8b7e1103888490cae63c7809918ac8e7ab9fc0c450805c78"
+      },
+      {
+        "introduced_by": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+        "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_20260721_v0.json",
+        "sha256": "f18c8efc0a65270891957481552c0b62ace72be6d373f776a3960b6693549967"
+      },
+      {
+        "introduced_by": "1832efd1588613e2183f485b562475bb24274aa9",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_20260722_v0.json",
+        "sha256": "78c2e6f5283184dfa4b91210c1b43d953050515e8e9bb110941755c3a90df077"
+      },
+      {
+        "introduced_by": "42c4934a1336a4067359d67ca2898bb9dda7bac1",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_20260722_v0.json",
+        "sha256": "3c9ecf198c3fd0df5a6be8d7d0da8cf41bd4c628e32acd2bc5e45215d158dcdd"
+      },
+      {
+        "introduced_by": "e95c8e8e4ec58756f5f3ddb7bf53adcce43bce91",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0.json",
+        "sha256": "4297e065f3fd0a262f0827b15d384a0ec32b37ceb441d0a00f7ef3f47983c683"
+      },
+      {
+        "introduced_by": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+        "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
+        "sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28"
+      },
+      {
+        "introduced_by": "83e989cc5058fb46b30b08e9e9cb27e357a55c78",
+        "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_20260725_v0.json",
+        "sha256": "83c0ad99c98b0f84fe8975f43ffa0551fc829f5d95ef611cff88263b66bef70f"
+      },
+      {
+        "introduced_by": "fc0ce0b30bd38258fb570220927dfa5793390c5e",
+        "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_20260722_v0.json",
+        "sha256": "c2de1f02bf33a02a15b67d4a897958a131e5e9c88902d4dcbfc01a4547e384d8"
+      },
+      {
+        "introduced_by": "cdecd84851904c445c6a08e5c02e3961293c6e4f",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+        "sha256": "23a85fa5d93f999da9801917a173d89e252faaacc33c3d262cd6f24f822bee41"
+      },
+      {
+        "introduced_by": "78d1cd177d1fe77128bf84e660af332a3c16ae30",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+        "sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5"
+      },
+      {
+        "introduced_by": "a3b341bc42a0586a856de536075056feb1a1a6dc",
+        "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+        "sha256": "7d102927802c4334e2071aeb89c1b05ee885a4dfc86513347ad21a72d44c1445"
+      },
+      {
+        "introduced_by": "28bb0de520615c89262577c15ff5cbc3f6fc5d88",
+        "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_20260723_v0.json",
+        "sha256": "e8360dff6805e618a530d9d9af15ba2de9eed95906b854990679fac607616b19"
+      },
+      {
+        "introduced_by": "a68ca00f038831a5c1458cb48210ad877f159fc5",
+        "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+        "sha256": "db680730839960d97ef571073e7250e71926dd623de5c589e151695a0d226a5a"
+      },
+      {
+        "introduced_by": "6e6953a62cd585a38ffde7da34c7ddc670d46b6c",
+        "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_20260722_v0.json",
+        "sha256": "d24cb811c307826a4585bbaa474377778c3df9f752ac7cb0f21cb086a29f1dd4"
+      },
+      {
+        "introduced_by": "db843284eb11365a1768ee97fad3a966f96a0327",
+        "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+        "sha256": "ea320e60d86d3856e9780ccf62e4608904555001a331c5eb6063d7ee6ae3e931"
+      },
+      {
+        "introduced_by": "a5ceca5f6ac47ef0f7beacda0b0d17aae97217d8",
+        "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_20260722_v0.json",
+        "sha256": "88a9007e0891d9222a29fd5d598cf5f4eb1021219f4c117577273d6748ec7182"
+      },
+      {
+        "introduced_by": "96b6e27eb998ae58c35f2b2558932b64693b1a1b",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0.json",
+        "sha256": "1b76ceae7eb8e8af1f0f80963fc5c020ecd0bda421654db2bb1519a91b61ea2e"
+      },
+      {
+        "introduced_by": "eaebceeeed873369fe0385d7c90ec3cc284e937e",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+        "sha256": "bf73766313d6b7d5e001306d264430e0aa5cf4edd88e484a4cb1fca55731df2a"
+      },
+      {
+        "introduced_by": "e871d6074bc73f4ca4b5304f16a153dcf4222694",
+        "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
+        "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
+      }
+    ],
+    "reviews": [
+      {
+        "introduced_by": "b7496f52714f9558b65e78b620c4ddcc9fbaa5fa",
+        "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_REVIEW_20260721_v0.json",
+        "sha256": "9992f7fd9f328c26c26ce3d10e91d823ca2a9dbde575057325362da9d1b8d2a8"
+      },
+      {
+        "introduced_by": "dbcb09b0ca3d99d7116eda11cff6960339140778",
+        "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_REVIEW_20260721_v0.json",
+        "sha256": "664dedf2da8603f026b2ebb5379ac99fddea4107a7f6d791f424a281ca0345c5"
+      },
+      {
+        "introduced_by": "148db2ec4e0134d54024a9b3e4b62af01680f998",
+        "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "6122d43684c0471c1a2aa18fc6953cdd16d3dab6e1edc8da3717d4291d897d3b"
+      },
+      {
+        "introduced_by": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "ae4f4f7346a0656509e01d4271950e8d0d966800acfa4ee05333584d66c1b3a1"
+      },
+      {
+        "introduced_by": "94b23772151662398651d1748f5c65702832f924",
+        "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_PACKET_REVIEW_20260723_v0.json",
+        "sha256": "93545016deefe29e1982e78c4f959ef2a5b86a618b147388227d7c4d30fbad84"
+      },
+      {
+        "introduced_by": "693760bf39910e054e22a22d69ef12206f0abbe0",
+        "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0.json",
+        "sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8"
+      },
+      {
+        "introduced_by": "7022a7d040e5d5a82ca5bb60590c10620f40add9",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "075b82ce0fe15434f1ec727f04d7f523a2583bf69b4196f06ac35a1927608204"
+      },
+      {
+        "introduced_by": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "b48e48ef0d1a0ff8f9b40902fa95cc1f52cbbc3dd2a0f97bf8f17b6265816591"
+      },
+      {
+        "introduced_by": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "0c6adddcaa401c8bf43320cd2f02cd418fb16c403f48bd06829602389db93c6b"
+      },
+      {
+        "introduced_by": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+        "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "4c997137581b23266076528583853ba1002bbb8cae86e93269f8d8f77d656998"
+      },
+      {
+        "introduced_by": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+        "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_PACKET_REVIEW_20260721_v0.json",
+        "sha256": "60b2acf321eb841f29f343db04b325b6010f47fe2b10a9dee67ed97dbdb39843"
+      },
+      {
+        "introduced_by": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+        "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json",
+        "sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4"
+      },
+      {
+        "introduced_by": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "b46ad01e49d39b24016da0304df270206477e935d35ac523ec370624665d1c56"
+      },
+      {
+        "introduced_by": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "03f15009105afb50173c303cc72c3519311b1f164fcb97e8f02e4d2054d7ed3b"
+      },
+      {
+        "introduced_by": "8135468d1af9da39af55373ff24ea64a64c3f6d3",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "e543d6d77ba63a20a2dd36e34aedf00aecc57bc563cf1c12d7f2845217e72272"
+      },
+      {
+        "introduced_by": "a619ce52e62cb6806e9861df8367c6a8dd0f5c0f",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "536c47e804b8be6adde729d72c5bba4fb498d8f75472c3e1c3de3670561a354e"
+      },
+      {
+        "introduced_by": "20690e029035a64d95f9678d3940f4648983b6e8",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "97b3a217585138b1c3b26fc9e7c62f03f1d21683f4a56f74b8a85660c86c97bb"
+      },
+      {
+        "introduced_by": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+        "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "cd323104d3c6c0da2f61fd2ac3305eaae2e7f8c2398fcbffcf7107f38612784b"
+      },
+      {
+        "introduced_by": "154dd5db14ace80ccc8b136fce5594c9e7205f60",
+        "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_REVIEW_20260721_v0.json",
+        "sha256": "8e64c98b7c0f527ce34112f3797a09b28a7ecf8bc7a422ca566eb64793aba09b"
+      },
+      {
+        "introduced_by": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+        "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_REVIEW_20260721_v0.json",
+        "sha256": "beaa10e0e11e805638f1c67a81fec7a89343b5bf0aaa562110392ad06d6e6773"
+      },
+      {
+        "introduced_by": "f1e59d4937929a7c170075fe9a03a04d2903eb20",
+        "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "16ab17dcdab8550100ddfb3deee5cde116fad191d117a6eb68c477b803dfad0b"
+      },
+      {
+        "introduced_by": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+        "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_REVIEW_20260725_v0.json",
+        "sha256": "9b5c8fd1d32d58c215d6cebe9bd2518daa4dacbd44234bbe4a8ff8118d3864e6"
+      },
+      {
+        "introduced_by": "df3c4c926a08fb80423ab90036769ca0a236e90a",
+        "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "1417b4f3beb43864466c1c938f2fdd2f5b22c49cc3cf9ed2e320715dd419fa10"
+      },
+      {
+        "introduced_by": "2736090e3240ac6ef2c9e2d74382c6c346653cec",
+        "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4"
+      },
+      {
+        "introduced_by": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "4056119cac0be337b4dadc6486ac8472b22a503e45131994bbd0737174b54252"
+      },
+      {
+        "introduced_by": "3dab04288d861758d3d3fe06d1a664b055cf079a",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4"
+      },
+      {
+        "introduced_by": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "ca2e568604561248b38744d6de0e1caeb2f63041670147ff5b92107c2fa6c5f8"
+      },
+      {
+        "introduced_by": "4603c611260fcece6613f0f515641082928b9802",
+        "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2"
+      },
+      {
+        "introduced_by": "ee45baa4731c27b68180ab783dddb4a559baeecc",
+        "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "c048221e548fa3b13d8ddd9e603de73719c516f6f15dfaf3a5152dc21d81286a"
+      },
+      {
+        "introduced_by": "59ba7728ea3814e973973d39249f5c95e3ee39a5",
+        "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "f90470efb0f7a705fbe2bf9eaa09f8dacb04bc59aa2eebe8ec6c569de32f7152"
+      },
+      {
+        "introduced_by": "d2a285ae673db4784b908131a2480ffc5b756dbc",
+        "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "7d082a7ac476a2ca9c33a368ed170f9e61ea99e8370f325e49a86692b68b0378"
+      },
+      {
+        "introduced_by": "9aae6deb5778c3618b21647941d38dac9f06ac7c",
+        "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_REVIEW_20260723_v0.json",
+        "sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2"
+      },
+      {
+        "introduced_by": "b6e6d6f3d64776a6e50eeb1039987b5de2dcd951",
+        "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0.json",
+        "sha256": "7ae43ebbb5c18487d133c0f2064042a0dcda00ceae78b49dca5e15564ee1f632"
+      },
+      {
+        "introduced_by": "9d35a57c727c87fb00de862d826524824ab21558",
+        "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "69acee3c804913fc71c65ce5c098bee45435e52d5402d3f5efec4ad8d77e72f1"
+      },
+      {
+        "introduced_by": "f692cbde771f5b411ec9deddac5cd6acf7c5457f",
+        "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "de02eb8ec43de59caf9cf6979fb422055d7ee513c00018defc3dce8f0a438bd0"
+      },
+      {
+        "introduced_by": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd",
+        "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "24b599794874616e17fe49fc77818b530222c68855f4423a6e4364f88432cbb4"
+      },
+      {
+        "introduced_by": "eba8a7eb3d99340a2425e8ff5bfe73c959a6760a",
+        "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260723_v0.json",
+        "sha256": "09bda76af61bce075b2fad86fe34f1d958564ffa99a7b3c45390e29ebbb2259a"
+      },
+      {
+        "introduced_by": "ed1c78734bc0a58a432b55a5fd3b0b9ccb66bd6d",
+        "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+        "sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04"
+      },
+      {
+        "introduced_by": "686ff35cfacd45a40d94459871b9debf63510ef3",
+        "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_REVIEW_20260722_v0.json",
+        "sha256": "2afff30dc79555fba4fb18f0d2ad3cc046e9d58661efc533f8d887058d0d7313"
+      },
+      {
+        "introduced_by": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+        "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0.json",
+        "sha256": "71a66686e2b6c58b29e00fad6ba642070378c8733a4772eaaab5a0bac2307ac6"
+      },
+      {
+        "introduced_by": "f1662b782cab709c548d7c9b23ae9ec0307c6a25",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260723_v0.json",
+        "sha256": "e2027be25441f64fa0674546553b6f702931731476032631a72098b51dcdfee8"
+      },
+      {
+        "introduced_by": "e1219237d083bdd6fe1805a3b36c853814b73725",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0.json",
+        "sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568"
+      },
+      {
+        "introduced_by": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_REVIEW_20260723_v0.json",
+        "sha256": "b048228d759fda14973d8fc3776a8d1007c0fed51d8414af28f1facb36a21405"
+      },
+      {
+        "introduced_by": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+        "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0.json",
+        "sha256": "111092bd73ecb218b561cc0cfe3ece415d08a380375c4965a0433a30cdbfa78b"
+      }
+    ],
+    "roots": {
+      "packets": "81864d73ba6dc20aa7e4c8c2149040fbf05a90615d2d18d4ee3f817e6c091a91",
+      "results": "b54209b3676646a594c3fa358696790060e6dee58aab5dcbd2eb3df485fafce6",
+      "reviews": "baedcb06d4e8a8d991a6cf2d8c2acc98410c504972bf10576e34833fa523c613",
+      "selectors": "92962344a2627d104238b3d0aba6c5e5b843b8f8bbef453fd712bb4c7bbaee9a"
+    },
+    "selectors": [
+      {
+        "introduced_by": "f1e59d4937929a7c170075fe9a03a04d2903eb20",
+        "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_SELECTION_20260724_v0.json",
+        "sha256": "6e0ed74903e00668f8d2364a167a1c12b88ce01c5ddfdd716d3532efbdd8ea92"
+      },
+      {
+        "introduced_by": "94b23772151662398651d1748f5c65702832f924",
+        "path": "formal/docs/release/EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_SELECTION_20260723_v0.json",
+        "sha256": "ed4d29fb68131a41c0048434666bd979afd4a4d2144d523a79e6c123083318ee"
+      },
+      {
+        "introduced_by": "7022a7d040e5d5a82ca5bb60590c10620f40add9",
+        "path": "formal/docs/release/EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0.json",
+        "sha256": "10165b888a10b35c99d0fdefc8cafaabbf16888d358e05d1f01f53df60582569"
+      },
+      {
+        "introduced_by": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+        "path": "formal/docs/release/EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_SELECTION_20260724_v0.json",
+        "sha256": "5f5330f0b91b117613e7ba34cf23929d366dcc02468b1b62179b1b213efc65ab"
+      },
+      {
+        "introduced_by": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+        "path": "formal/docs/release/HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_SELECTION_20260722_v0.json",
+        "sha256": "da6913613b0a991346630e33185830d66a70f416901695079ef234039a867ec4"
+      },
+      {
+        "introduced_by": "8135468d1af9da39af55373ff24ea64a64c3f6d3",
+        "path": "formal/docs/release/HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_SELECTION_20260722_v0.json",
+        "sha256": "9c1f1f463ee6b78f1d828de3f6a250c42f7ea3d139100eb53bc354094a62992c"
+      },
+      {
+        "introduced_by": "20690e029035a64d95f9678d3940f4648983b6e8",
+        "path": "formal/docs/release/HISTORICAL_REPORT_FIXTURE_PILOT_SELECTION_20260722_v0.json",
+        "sha256": "1fe25e2933e3c3ee6ccd4fae43ec9443753a469bd5d8664bfb6280b11e6a2d94"
+      },
+      {
+        "introduced_by": "df3c4c926a08fb80423ab90036769ca0a236e90a",
+        "path": "formal/docs/release/MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_SELECTION_20260722_v0.json",
+        "sha256": "dac468c493eb2c8f9d5beb9b12574b4cf0d7059b80b95df6fb2d8e50d7090377"
+      },
+      {
+        "introduced_by": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+        "path": "formal/docs/release/PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0.json",
+        "sha256": "154dc98bab655951cd922658c2560b53bd0358e535699192179d2d5d4601e47c"
+      },
+      {
+        "introduced_by": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+        "path": "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0.json",
+        "sha256": "64ad0ee632dd5f4efb9463f10a4848ced1f3ab158a07b62f36296228db4f4b8e"
+      },
+      {
+        "introduced_by": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+        "path": "formal/docs/release/POST_BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0.json",
+        "sha256": "b0e6bb5eef49b76509db1ea53f7d82c754cbd869df740e07b6b6517e9a0eaa1f"
+      },
+      {
+        "introduced_by": "686ff35cfacd45a40d94459871b9debf63510ef3",
+        "path": "formal/docs/release/POST_BROAD_PYTHON_CLUSTERING_MAINTENANCE_SELECTION_20260722_v0.json",
+        "sha256": "c4bcaab608ef5c2d39d7a3a3f8a03fb3e5a5d87f3b84f523526cfed6ffed2bd0"
+      },
+      {
+        "introduced_by": "ee45baa4731c27b68180ab783dddb4a559baeecc",
+        "path": "formal/docs/release/POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+        "sha256": "3ad34e4a9ea76bbfaf8f8bd305ef14f2fdd45bef6c65e2dbfe75f9edb57bbd49"
+      },
+      {
+        "introduced_by": "b7496f52714f9558b65e78b620c4ddcc9fbaa5fa",
+        "path": "formal/docs/release/POST_HASH_IDENTITY_REPAIR_MAINTENANCE_SELECTION_20260721_v0.json",
+        "sha256": "7d6b79ab537cd141e6f306e38956fdefb1a565f11002c0e40ff623a9c61e74d7"
+      },
+      {
+        "introduced_by": "d2a285ae673db4784b908131a2480ffc5b756dbc",
+        "path": "formal/docs/release/POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_SELECTION_20260722_v0.json",
+        "sha256": "8bde2161d4dac31e56b0822e92c9385975b30ffe02da97764691c5f173b7aa5e"
+      },
+      {
+        "introduced_by": "148db2ec4e0134d54024a9b3e4b62af01680f998",
+        "path": "formal/docs/release/POST_LINE_ENDING_REPAIR_MAINTENANCE_SELECTION_20260722_v0.json",
+        "sha256": "ad4336633c2562863ac8152bc31e8888da4a8c952f4afd95d012a0dc5c7f79ea"
+      },
+      {
+        "introduced_by": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+        "path": "formal/docs/release/POST_NONHERMETIC_DIAGNOSTIC_MAINTENANCE_SELECTION_20260721_v0.json",
+        "sha256": "774d6a3959bea8ef10dac2d95156e17e06b42e4dc56270188150968f5b71e3dc"
+      },
+      {
+        "introduced_by": "b6e6d6f3d64776a6e50eeb1039987b5de2dcd951",
+        "path": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+        "sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+      },
+      {
+        "introduced_by": "f692cbde771f5b411ec9deddac5cd6acf7c5457f",
+        "path": "formal/docs/release/POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_SELECTION_20260722_v0.json",
+        "sha256": "43fafbf4d60c9652c7f8d57b9116dfbe3deb8539cbe353e8df45bf6dd3fc8a25"
+      },
+      {
+        "introduced_by": "eba8a7eb3d99340a2425e8ff5bfe73c959a6760a",
+        "path": "formal/docs/release/POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260723_v0.json",
+        "sha256": "f9bfd6509efd432a909c29fc650e882b07b62e3f061b9e7e56b54231e62d84f2"
+      },
+      {
+        "introduced_by": "154dd5db14ace80ccc8b136fce5594c9e7205f60",
+        "path": "formal/docs/release/POST_REASSESSMENT_MAINTENANCE_SELECTION_20260721_v0.json",
+        "sha256": "48347269631945ff62c1eb036bd7e52d20f283ce0c1bf09208c3b2e46b5fd704"
+      },
+      {
+        "introduced_by": "e871d6074bc73f4ca4b5304f16a153dcf4222694",
+        "path": "formal/docs/release/POST_REPOSITORY_RECOVERY_PHASE_A_BLOCKED_BASELINE_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0.json",
+        "sha256": "7d7fc03e6f7a378b27db216dc202805b206fe9710515aa972e3fdbb0f94e62d2"
+      },
+      {
+        "introduced_by": "f1662b782cab709c548d7c9b23ae9ec0307c6a25",
+        "path": "formal/docs/release/QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260723_v0.json",
+        "sha256": "4c04a45df07f3d74bd2bc8859149d1dee95e9266aaa1f104b99d4e8bc9af8b5d"
+      },
+      {
+        "introduced_by": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+        "path": "formal/docs/release/QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_SELECTION_20260723_v0.json",
+        "sha256": "947b82bb682bf6e41dafe7f577e22d016e610dcf14b88b562a505ef90187f9ad"
+      },
+      {
+        "introduced_by": "1ae0790a35c55f8f3546f86a4442b7cde91ab07e",
+        "path": "formal/docs/release/REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_AUTHORIZATION_INDEPENDENT_REVIEW_20260719_v0.json",
+        "sha256": "189c6cc95e2959f7764dae17a990c0ca90ab65d4fd11db92b9f728b3e3bbae32"
+      },
+      {
+        "introduced_by": "1ae0790a35c55f8f3546f86a4442b7cde91ab07e",
+        "path": "formal/docs/release/REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_MAINTENANCE_ROUTE_SELECTION_20260719_v0.json",
+        "sha256": "86559f62112166fd12941793beae5fad24783155fa6edd0b89ff87e64c2f39d0"
+      }
+    ]
+  },
+  "external_or_sibling_accepted_commits": [],
+  "guard_execution_required": [
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "36c18d30e7f9cef936992898f62f7616a5fe43af",
+      "path": "formal/python/tests/test_qm_gr_criteria_hash_refresh_tool.py",
+      "selectors": [],
+      "sha256": "ea481fa157cb0455e2406d68df1bc4d0fd7c56c23947b02369e7142329cfb520"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "7d29044d9633a45891579e0172721793979d96a9",
+      "path": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2_result_review.py",
+      "selectors": [],
+      "sha256": "75e02e24c3a6f3ac78ee678e0b460c249e463aeb043c72ac42e1ed8c783eac7b"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "90d2d62a42637681cb5c2ed82ad23ad2f9db1588",
+      "path": "formal/python/tests/test_ov_br_snd03_blocked_ignores_pairing_mapping_when_gates_disabled.py",
+      "selectors": [],
+      "sha256": "000b3e3d9748c47a29bd2b015968f99ccf2a141c282594df655d2b85b3307503"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "2baba631433bff796f1eaf4a6f6c0245114652d3",
+      "path": "formal/python/tests/test_prompt_dependency_role_adjudication_and_decoupling.py",
+      "selectors": [],
+      "sha256": "7a9fcc559dd777b557d0bf2027f4a487ba84dda96e8e60d67db45031e77d4b44"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "01472adc0ac58cd212656c7214544cad6bb01065",
+      "path": "formal/python/tests/test_physics_math_throughput_baseline_snapshot_gate.py",
+      "selectors": [
+        "test_phase0_baseline_files_exist",
+        "test_phase0_baseline_artifact_schema",
+        "test_phase0_historical_fixture_is_byte_deterministic_and_live_path_absent"
+      ],
+      "sha256": "e4bcb6e377b6b26dc1ff2f3ecc33f441abd5bcd6d1ef72fb67fc724795f93576"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "c8824c9a1d1ab2d624061696e4284d87c6fe72f3",
+      "path": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+      "selectors": [
+        "test_aggregate_report_existence_expectation_is_formally_retired",
+        "test_aggregate_control_invariance_is_decomposed_to_identity_local_routes"
+      ],
+      "sha256": "dc05e02edfc935a13af049bfd221d6e2f50f9f7507d3e0c5b2925f3b86215a74"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "aacc3b122f2ec9a6f62cc4ff9c5ea86bc4b8941c",
+      "path": "formal/python/tests/test_qft_route_evidence_identity_domain_contract.py",
+      "selectors": [],
+      "sha256": "b370be61667bcfbd5a02981551b36116195acc90eab5b6f3682d1906276bfd20"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "b4d2842090eb8897b5ef7d18eec49f47fd6af58c",
+      "path": "formal/python/tests/test_equation_compendium_identity_domain_contract.py",
+      "selectors": [],
+      "sha256": "dadc665cf2ebf3f69e67033e43a4a78b8cf8c3efcb0a0136b574761770d93833"
+    },
+    {
+      "class": "PROTECTED_INVARIANT_GUARD",
+      "git_blob": "6ac0dac1127f8d9f642c3246a198e30ae23484de",
+      "path": "formal/python/tests/test_historical_artifact_currency_role_contract.py",
+      "selectors": [],
+      "sha256": "ceadb92639a077e8cc34ae8e104b099f337c2caf0b3eb3e0400efb46deba6a44"
+    }
+  ],
+  "lineage": {
+    "commit_count": 80,
+    "commits": [
+      {
+        "commit": "1ae0790a35c55f8f3546f86a4442b7cde91ab07e",
+        "parent": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+        "subject": "Authorize repository authority custody recovery",
+        "tree": "e5eef8b7417b026fdb42a41257eb3947c6f62793"
+      },
+      {
+        "commit": "e871d6074bc73f4ca4b5304f16a153dcf4222694",
+        "parent": "1ae0790a35c55f8f3546f86a4442b7cde91ab07e",
+        "subject": "Authorize bounded clean-baseline stabilization",
+        "tree": "6d56c635ee184e0fd6fa310fa40331b9d1d1fb61"
+      },
+      {
+        "commit": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+        "parent": "e871d6074bc73f4ca4b5304f16a153dcf4222694",
+        "subject": "Stabilize clean baseline validation",
+        "tree": "e4645574b3df0ce2fc2fe6a06476781cd4ee52fb"
+      },
+      {
+        "commit": "291010c22bf6db3869c16898e04038ccbd3a15e9",
+        "parent": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+        "subject": "Record failed clean-baseline stabilization result",
+        "tree": "cd74a6ebb059171c7acd88ca637fa42dfd45a4bf"
+      },
+      {
+        "commit": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+        "parent": "291010c22bf6db3869c16898e04038ccbd3a15e9",
+        "subject": "Authorize nonhermetic validation root-cause packet",
+        "tree": "1559ac6d8ee1c26fad273aff9fedf5354b298861"
+      },
+      {
+        "commit": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+        "parent": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+        "subject": "Authorize bounded hash identity repair",
+        "tree": "a85b976e88e3cecf8287b4c6c63543dd5ed454bc"
+      },
+      {
+        "commit": "efd6fc3b88ffa233e35b7a3aa3d4f3839ef2627b",
+        "parent": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+        "subject": "Repair hash refresh and V2 blob identity",
+        "tree": "6204b2ff4099d6fac5193e3db789fee9044a5a37"
+      },
+      {
+        "commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "parent": "efd6fc3b88ffa233e35b7a3aa3d4f3839ef2627b",
+        "subject": "Cache frozen V2 blob reads",
+        "tree": "75caae7883578bbe137fbbf516f887698865fd7a"
+      },
+      {
+        "commit": "fcedde3bbc2b591eb48c41d54561235ef61c0fad",
+        "parent": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+        "subject": "Freeze V2 identities to implementation blobs",
+        "tree": "2586977a2923b4d37d123a0e3d4939c3d339f840"
+      },
+      {
+        "commit": "b804dbd2f758319f664942d05b5695ae403ecd47",
+        "parent": "fcedde3bbc2b591eb48c41d54561235ef61c0fad",
+        "subject": "Regenerate V2 with frozen blob identities",
+        "tree": "60782e2da1480c7b15f8d0160390399004cb61f7"
+      },
+      {
+        "commit": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+        "parent": "b804dbd2f758319f664942d05b5695ae403ecd47",
+        "subject": "Accept bounded hash identity repair result",
+        "tree": "cc8479aae0d200f38dfd89cd6aa1691f76eb98ab"
+      },
+      {
+        "commit": "b7496f52714f9558b65e78b620c4ddcc9fbaa5fa",
+        "parent": "654ee628096bdb4b1fb98999a3a23a11c2871c18",
+        "subject": "Authorize post-identity baseline reassessment",
+        "tree": "9fabdb6e7f1a8c42237374fee3731bf8dc1f5254"
+      },
+      {
+        "commit": "dbcb09b0ca3d99d7116eda11cff6960339140778",
+        "parent": "b7496f52714f9558b65e78b620c4ddcc9fbaa5fa",
+        "subject": "Record blocked post-identity baseline reassessment",
+        "tree": "34b626925fdffe6b3262419fb4d55765eb77f737"
+      },
+      {
+        "commit": "154dd5db14ace80ccc8b136fce5594c9e7205f60",
+        "parent": "dbcb09b0ca3d99d7116eda11cff6960339140778",
+        "subject": "Authorize bounded line ending identity repair",
+        "tree": "dbe30cab8412e7e0ee35f906f64180b0d404db9c"
+      },
+      {
+        "commit": "0b5bd6677cf8a4d1c8859cce2d970c70bfcee98f",
+        "parent": "154dd5db14ace80ccc8b136fce5594c9e7205f60",
+        "subject": "Repair V2 prompt identity and isolate mapping writes",
+        "tree": "a404505babefd05aabd36521cfa534b7187cab4f"
+      },
+      {
+        "commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+        "parent": "0b5bd6677cf8a4d1c8859cce2d970c70bfcee98f",
+        "subject": "Accept bounded line ending identity repair",
+        "tree": "ecbcb1b14fe932ca833efe830e1cc5037d0db44d"
+      },
+      {
+        "commit": "148db2ec4e0134d54024a9b3e4b62af01680f998",
+        "parent": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+        "subject": "Authorize broad Python first-cause clustering",
+        "tree": "1c57ec83676965d46ef35ff7f864029e30f3b305"
+      },
+      {
+        "commit": "ab74e977f403857db149e51ebd9d2060396e77c2",
+        "parent": "148db2ec4e0134d54024a9b3e4b62af01680f998",
+        "subject": "Record broad Python first-cause clusters",
+        "tree": "f094c333c6e9f6d9e9bef908aba93afba2e3bbfe"
+      },
+      {
+        "commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "parent": "ab74e977f403857db149e51ebd9d2060396e77c2",
+        "subject": "Accept Python first-cause clustering result",
+        "tree": "0650cd9d89552faf8556cf0b741c0aa167c1d65a"
+      },
+      {
+        "commit": "686ff35cfacd45a40d94459871b9debf63510ef3",
+        "parent": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+        "subject": "Authorize Prompt dependency decoupling",
+        "tree": "068abbf26c5ca924544392b9491eb7e8e17eb467"
+      },
+      {
+        "commit": "422a0e6f799239a5545dda15697cec2efa14325d",
+        "parent": "686ff35cfacd45a40d94459871b9debf63510ef3",
+        "subject": "Decouple nonauthoritative Prompt dependencies",
+        "tree": "bb2639fb8ec502338e9bb119e51c777c9f129209"
+      },
+      {
+        "commit": "a5ceca5f6ac47ef0f7beacda0b0d17aae97217d8",
+        "parent": "422a0e6f799239a5545dda15697cec2efa14325d",
+        "subject": "Record Prompt dependency decoupling result",
+        "tree": "8d22048246686a524fd290e008e73f80f84749c3"
+      },
+      {
+        "commit": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+        "parent": "a5ceca5f6ac47ef0f7beacda0b0d17aae97217d8",
+        "subject": "Accept Prompt dependency decoupling result",
+        "tree": "f9b2a458104bb8eec592a8185189ff9cbda9dff1"
+      },
+      {
+        "commit": "f692cbde771f5b411ec9deddac5cd6acf7c5457f",
+        "parent": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+        "subject": "Authorize post-Prompt baseline reassessment",
+        "tree": "c997c4133ef5a3a35b782038460ef3e094458698"
+      },
+      {
+        "commit": "6e6953a62cd585a38ffde7da34c7ddc670d46b6c",
+        "parent": "f692cbde771f5b411ec9deddac5cd6acf7c5457f",
+        "subject": "Record post-Prompt baseline reassessment",
+        "tree": "0a5c461aaf978c3499a23a89e8e7ddac283b88e5"
+      },
+      {
+        "commit": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd",
+        "parent": "6e6953a62cd585a38ffde7da34c7ddc670d46b6c",
+        "subject": "Accept post-Prompt baseline reassessment",
+        "tree": "b0df613a02523a6ba940bd77bd1c097ecfbfc51c"
+      },
+      {
+        "commit": "df3c4c926a08fb80423ab90036769ca0a236e90a",
+        "parent": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd",
+        "subject": "Authorize missing-artifact expectation adjudication",
+        "tree": "30c39efbd988e91939fcddb001fde0438ac171ca"
+      },
+      {
+        "commit": "fc0ce0b30bd38258fb570220927dfa5793390c5e",
+        "parent": "df3c4c926a08fb80423ab90036769ca0a236e90a",
+        "subject": "Record missing-artifact expectation adjudication",
+        "tree": "6dad6104eda16dae1a28dacbfd93a831562cb75a"
+      },
+      {
+        "commit": "2736090e3240ac6ef2c9e2d74382c6c346653cec",
+        "parent": "fc0ce0b30bd38258fb570220927dfa5793390c5e",
+        "subject": "Accept missing-artifact expectation adjudication",
+        "tree": "90b5a63e438c0ae0230455a3d791f0d46cad505d"
+      },
+      {
+        "commit": "20690e029035a64d95f9678d3940f4648983b6e8",
+        "parent": "2736090e3240ac6ef2c9e2d74382c6c346653cec",
+        "subject": "Authorize historical report fixture pilot",
+        "tree": "75d2750c22f12dd12fa7d25519f7cf531ab9d39d"
+      },
+      {
+        "commit": "8e6b078e20554193bf7fcc1994d7c20fb6e4520f",
+        "parent": "20690e029035a64d95f9678d3940f4648983b6e8",
+        "subject": "Pilot temporary fixture for historical throughput report",
+        "tree": "98feb7d0e88710265721d0a07b99b0e021e9a7a6"
+      },
+      {
+        "commit": "e95c8e8e4ec58756f5f3ddb7bf53adcce43bce91",
+        "parent": "8e6b078e20554193bf7fcc1994d7c20fb6e4520f",
+        "subject": "Record historical report fixture pilot",
+        "tree": "9e84b32e5b38b61d981f178d496d6c75dde4c0ca"
+      },
+      {
+        "commit": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+        "parent": "e95c8e8e4ec58756f5f3ddb7bf53adcce43bce91",
+        "subject": "Accept historical report fixture pilot",
+        "tree": "39fbd3e5ad7ae2ae346168dbea3e727445fb5dc8"
+      },
+      {
+        "commit": "8135468d1af9da39af55373ff24ea64a64c3f6d3",
+        "parent": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+        "subject": "Authorize historical aggregate contract decomposition",
+        "tree": "d0fdb9d2162c1ab27347f3aaa0d152b1af6b5344"
+      },
+      {
+        "commit": "42c4934a1336a4067359d67ca2898bb9dda7bac1",
+        "parent": "8135468d1af9da39af55373ff24ea64a64c3f6d3",
+        "subject": "Record historical aggregate contract decomposition",
+        "tree": "7492978d72dff0c9ab1d39d23c5394730d1ff424"
+      },
+      {
+        "commit": "a619ce52e62cb6806e9861df8367c6a8dd0f5c0f",
+        "parent": "42c4934a1336a4067359d67ca2898bb9dda7bac1",
+        "subject": "Accept historical aggregate contract decomposition",
+        "tree": "1cfa7813d694d7c983bb245e08b9ea4cb65016e0"
+      },
+      {
+        "commit": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+        "parent": "a619ce52e62cb6806e9861df8367c6a8dd0f5c0f",
+        "subject": "Authorize aggregate contract decomposition implementation",
+        "tree": "c91a850836276654faca5c47e83185d1ddf00ac9"
+      },
+      {
+        "commit": "a4e1ba9ccc26e5afb305416755b6a3555abc6901",
+        "parent": "4fc32730d2321be15e7cda4402e221a1130fcd06",
+        "subject": "Decompose historical aggregate report contracts",
+        "tree": "de1bd9365630a690c87af290513c2d56c5c11537"
+      },
+      {
+        "commit": "1832efd1588613e2183f485b562475bb24274aa9",
+        "parent": "a4e1ba9ccc26e5afb305416755b6a3555abc6901",
+        "subject": "Record aggregate contract decomposition implementation",
+        "tree": "4a203245816463bbe045ff5d431d4c2fdc9c53c8"
+      },
+      {
+        "commit": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+        "parent": "1832efd1588613e2183f485b562475bb24274aa9",
+        "subject": "Accept aggregate contract decomposition implementation",
+        "tree": "0667e691f5fa0e609bdbfd65f9041f2ef4faf43e"
+      },
+      {
+        "commit": "d2a285ae673db4784b908131a2480ffc5b756dbc",
+        "parent": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+        "subject": "Authorize post-aggregate baseline reassessment",
+        "tree": "9717001b821286fd9e9fd60ac0f9b8b030be52b6"
+      },
+      {
+        "commit": "28bb0de520615c89262577c15ff5cbc3f6fc5d88",
+        "parent": "d2a285ae673db4784b908131a2480ffc5b756dbc",
+        "subject": "Record post-aggregate baseline reassessment",
+        "tree": "ed0a4530ba63c398f1af41bd8dabfa6409102c5f"
+      },
+      {
+        "commit": "9aae6deb5778c3618b21647941d38dac9f06ac7c",
+        "parent": "28bb0de520615c89262577c15ff5cbc3f6fc5d88",
+        "subject": "Accept post-aggregate baseline reassessment",
+        "tree": "e9782c995487d3735e46df8940fd9b717979f35c"
+      },
+      {
+        "commit": "f1662b782cab709c548d7c9b23ae9ec0307c6a25",
+        "parent": "9aae6deb5778c3618b21647941d38dac9f06ac7c",
+        "subject": "Authorize QFT route identity adjudication",
+        "tree": "5df3d0b2107b171f6c99a693b805b69678dfe041"
+      },
+      {
+        "commit": "96b6e27eb998ae58c35f2b2558932b64693b1a1b",
+        "parent": "f1662b782cab709c548d7c9b23ae9ec0307c6a25",
+        "subject": "Record QFT route identity adjudication",
+        "tree": "057ebcd1b79ec1b23f24dcde8c42e6f7b6984948"
+      },
+      {
+        "commit": "e1219237d083bdd6fe1805a3b36c853814b73725",
+        "parent": "96b6e27eb998ae58c35f2b2558932b64693b1a1b",
+        "subject": "Accept QFT route identity adjudication",
+        "tree": "9f33c65f73542ba440ad7b19a8049dd0ca503f3a"
+      },
+      {
+        "commit": "94b23772151662398651d1748f5c65702832f924",
+        "parent": "e1219237d083bdd6fe1805a3b36c853814b73725",
+        "subject": "Authorize EM route source pin provenance review",
+        "tree": "8fc8f2e81f9affc05b5281f50f5449b2b8f2e89a"
+      },
+      {
+        "commit": "169e850bd560ef5732931e99f2275a23bca207c6",
+        "parent": "94b23772151662398651d1748f5c65702832f924",
+        "subject": "Record EM route source pin provenance result",
+        "tree": "9d1f3717942d41c21f697788876c94c818f2b2de"
+      },
+      {
+        "commit": "caabb2b59a75e4d0a4f5682f5dea4c3f2bdc1c57",
+        "parent": "169e850bd560ef5732931e99f2275a23bca207c6",
+        "subject": "Correct EM pin occurrence accounting",
+        "tree": "e4e6f543140b7e2728f4c529364ad48850f61b84"
+      },
+      {
+        "commit": "693760bf39910e054e22a22d69ef12206f0abbe0",
+        "parent": "caabb2b59a75e4d0a4f5682f5dea4c3f2bdc1c57",
+        "subject": "Accept EM route source pin provenance review",
+        "tree": "43da577f63c991b3d7ff3cb67b9e9379486420d8"
+      },
+      {
+        "commit": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+        "parent": "693760bf39910e054e22a22d69ef12206f0abbe0",
+        "subject": "Authorize QFT route identity-domain repair",
+        "tree": "f0692eb82209fe8cd333432b0a6417be6750605d"
+      },
+      {
+        "commit": "d2b7d0c16e9e0f04e57a09119fd8ae53e57c8c03",
+        "parent": "1b364fafe2bde97d564f248b7d83defe569e1efe",
+        "subject": "Repair QFT route evidence identity domains",
+        "tree": "8d2134ed17db62b4510f703cebf26bf8aeecd3e8"
+      },
+      {
+        "commit": "eaebceeeed873369fe0385d7c90ec3cc284e937e",
+        "parent": "d2b7d0c16e9e0f04e57a09119fd8ae53e57c8c03",
+        "subject": "Record QFT route identity repair result",
+        "tree": "04190be90abc7ce149802b1b91c692c6901c1881"
+      },
+      {
+        "commit": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+        "parent": "eaebceeeed873369fe0385d7c90ec3cc284e937e",
+        "subject": "Accept QFT route identity domain repair",
+        "tree": "98fe56c87b7152913ee35dd067548bf10eef30c1"
+      },
+      {
+        "commit": "eba8a7eb3d99340a2425e8ff5bfe73c959a6760a",
+        "parent": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+        "subject": "Authorize post-QFT route baseline reassessment",
+        "tree": "7727bf164d8c589ab6b844c5dd40a254657491b8"
+      },
+      {
+        "commit": "db843284eb11365a1768ee97fad3a966f96a0327",
+        "parent": "eba8a7eb3d99340a2425e8ff5bfe73c959a6760a",
+        "subject": "Record post-QFT route baseline reassessment",
+        "tree": "ad55a97d3b89212952a1047f51ca78a5692de22d"
+      },
+      {
+        "commit": "ed1c78734bc0a58a432b55a5fd3b0b9ccb66bd6d",
+        "parent": "db843284eb11365a1768ee97fad3a966f96a0327",
+        "subject": "Accept post-QFT route baseline reassessment",
+        "tree": "2ba1ab62402eecacd868852de96dfc215cdb0396"
+      },
+      {
+        "commit": "7022a7d040e5d5a82ca5bb60590c10620f40add9",
+        "parent": "ed1c78734bc0a58a432b55a5fd3b0b9ccb66bd6d",
+        "subject": "Authorize equation compendium identity adjudication",
+        "tree": "4ad077fd3939d9fb79c05f68c6e54dac751251a8"
+      },
+      {
+        "commit": "cae2e9eec35635efbde1345eae42b939361dd25c",
+        "parent": "7022a7d040e5d5a82ca5bb60590c10620f40add9",
+        "subject": "Record equation compendium identity adjudication",
+        "tree": "66547bfbf046e2c1225a75a7451c0705aa3b7dc8"
+      },
+      {
+        "commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+        "parent": "cae2e9eec35635efbde1345eae42b939361dd25c",
+        "subject": "Accept equation compendium identity adjudication",
+        "tree": "f0f314a49b7050efc38c1224122e4b2c773f9bd6"
+      },
+      {
+        "commit": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+        "parent": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+        "subject": "Authorize equation compendium identity contract repair",
+        "tree": "c4e561105ef347662db30edc4563ce5387dbd60b"
+      },
+      {
+        "commit": "2197e387d019b9a71bcb7ff5f38c582cec8a35c2",
+        "parent": "30acd6dd4f206a9fa2d32f7fa2e40512af6e3c9e",
+        "subject": "Repair equation compendium identity contract",
+        "tree": "6638b326a7421ecbbcd170a6465abb4f5eaf4fe3"
+      },
+      {
+        "commit": "5c93dbbd4d9c03a0808478965f0553fdec75122d",
+        "parent": "2197e387d019b9a71bcb7ff5f38c582cec8a35c2",
+        "subject": "Record equation compendium identity repair result",
+        "tree": "757d05536a94be41170a6795cd774bbfe3780480"
+      },
+      {
+        "commit": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+        "parent": "5c93dbbd4d9c03a0808478965f0553fdec75122d",
+        "subject": "Accept equation compendium identity contract repair",
+        "tree": "e7397f4760ffe2da6eea197a014e4e56226f9f4b"
+      },
+      {
+        "commit": "ee45baa4731c27b68180ab783dddb4a559baeecc",
+        "parent": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+        "subject": "Authorize post-compendium baseline reassessment",
+        "tree": "6f1c87fc983b1d5e70cdfec7aa95e1a3e99c88ff"
+      },
+      {
+        "commit": "a3b341bc42a0586a856de536075056feb1a1a6dc",
+        "parent": "ee45baa4731c27b68180ab783dddb4a559baeecc",
+        "subject": "Record post-compendium baseline reassessment",
+        "tree": "7f56dbd67ec3d2239c2c8d0b9fd720dc3636b669"
+      },
+      {
+        "commit": "59ba7728ea3814e973973d39249f5c95e3ee39a5",
+        "parent": "a3b341bc42a0586a856de536075056feb1a1a6dc",
+        "subject": "Accept post-compendium baseline reassessment",
+        "tree": "d9d90edc08752ca7f7dae2795cf0654eab782d74"
+      },
+      {
+        "commit": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+        "parent": "59ba7728ea3814e973973d39249f5c95e3ee39a5",
+        "subject": "Authorize pillar artifact currency adjudication",
+        "tree": "471ae68b00539b0d4067ab54960f9565b5c036a9"
+      },
+      {
+        "commit": "cdecd84851904c445c6a08e5c02e3961293c6e4f",
+        "parent": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+        "subject": "Record pillar artifact currency adjudication",
+        "tree": "bda7e7490319b0d9f408c90c86df4481bb537dc4"
+      },
+      {
+        "commit": "3dab04288d861758d3d3fe06d1a664b055cf079a",
+        "parent": "cdecd84851904c445c6a08e5c02e3961293c6e4f",
+        "subject": "Accept pillar artifact currency adjudication",
+        "tree": "10d8afe30e12a7b0b3d528379b42608f9ba6b63a"
+      },
+      {
+        "commit": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+        "parent": "3dab04288d861758d3d3fe06d1a664b055cf079a",
+        "subject": "Authorize pillar artifact role separation repair",
+        "tree": "a8a3b9179e8bc4f33d78333e967f2cef6064af73"
+      },
+      {
+        "commit": "30d79212c005a0c9aad7a1e987d0752cb731f9c9",
+        "parent": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+        "subject": "Separate historical pillar artifact identity roles",
+        "tree": "9c7f7d4b38bee2f0b1f798c759d817a760642551"
+      },
+      {
+        "commit": "78d1cd177d1fe77128bf84e660af332a3c16ae30",
+        "parent": "30d79212c005a0c9aad7a1e987d0752cb731f9c9",
+        "subject": "Record pillar artifact role separation result",
+        "tree": "837b513c1fe027d190e0f2c39786e4f19f30120d"
+      },
+      {
+        "commit": "4603c611260fcece6613f0f515641082928b9802",
+        "parent": "78d1cd177d1fe77128bf84e660af332a3c16ae30",
+        "subject": "Accept pillar artifact role separation repair",
+        "tree": "45ea70cb7620e3567dca1dab320f368d2191d5ce"
+      },
+      {
+        "commit": "b6e6d6f3d64776a6e50eeb1039987b5de2dcd951",
+        "parent": "4603c611260fcece6613f0f515641082928b9802",
+        "subject": "Authorize post pillar role separation baseline reassessment",
+        "tree": "2033812e811a2451585292a1d94e53ba47c15d6b"
+      },
+      {
+        "commit": "a68ca00f038831a5c1458cb48210ad877f159fc5",
+        "parent": "b6e6d6f3d64776a6e50eeb1039987b5de2dcd951",
+        "subject": "Record post pillar role separation baseline reassessment",
+        "tree": "b0e773d161f90e40a08c003d2eda7c02249f9e59"
+      },
+      {
+        "commit": "9d35a57c727c87fb00de862d826524824ab21558",
+        "parent": "a68ca00f038831a5c1458cb48210ad877f159fc5",
+        "subject": "Accept post pillar role separation baseline reassessment",
+        "tree": "2e7facf2e73460c0a49d33dba66de9b22c410c0d"
+      },
+      {
+        "commit": "f1e59d4937929a7c170075fe9a03a04d2903eb20",
+        "parent": "9d35a57c727c87fb00de862d826524824ab21558",
+        "subject": "Authorize maintenance authority and pillar v1 pin adjudication",
+        "tree": "c688c85f7110dca114506a979a18cd990efcb7b3"
+      },
+      {
+        "commit": "83e989cc5058fb46b30b08e9e9cb27e357a55c78",
+        "parent": "f1e59d4937929a7c170075fe9a03a04d2903eb20",
+        "subject": "Record maintenance authority and pillar v1 pin adjudication",
+        "tree": "c37a3f51de00a824a03c8e13354b55053467d7ef"
+      },
+      {
+        "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+        "parent": "83e989cc5058fb46b30b08e9e9cb27e357a55c78",
+        "subject": "Accept maintenance authority and pillar v1 pin adjudication",
+        "tree": "a04c1c6dda56b25d3b4308841cf71ea3edf642eb"
+      }
+    ],
+    "linear": true
+  },
+  "proposed_base_identity": {
+    "accepted_result_manifest_root": "b54209b3676646a594c3fa358696790060e6dee58aab5dcbd2eb3df485fafce6",
+    "accepted_review_manifest_root": "baedcb06d4e8a8d991a6cf2d8c2acc98410c504972bf10576e34833fa523c613",
+    "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+    "protected_invariant_manifest_root": "1cf1cb7094af4d849d5e83490a510acb93c9f9ccbfbabe1dd56b517a2473f026",
+    "tree": "a04c1c6dda56b25d3b4308841cf71ea3edf642eb"
+  },
+  "recovery_start_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+  "schema_id": "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "status": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE",
+  "v2_enrollment": "NOT_AUTHORIZED"
+}
