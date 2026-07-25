@@ -1,0 +1,26 @@
+{
+  "captured_at_utc": "2026-07-25T01:41:32Z",
+  "controlling_result": {
+    "commit": "9d35a57c727c87fb00de862d826524824ab21558",
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "69acee3c804913fc71c65ce5c098bee45435e52d5402d3f5efec4ad8d77e72f1"
+  },
+  "current_maintenance_authority_handling": {
+    "authority_for_this_cycle": "USER_ISSUED_FRESH_SELECTOR",
+    "document_path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+    "document_sha256": "51a884e65da1aa4aa477b9d0f11671f704c799318513eae7c985de0020eccf81",
+    "document_use_as_authority_input": "PROHIBITED_PENDING_DUPLICATE_KEY_ADJUDICATION",
+    "document_write": "PROHIBITED"
+  },
+  "options": [
+    "AUTHORIZE_BOUNDED_CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION",
+    "PRESERVE_ACCEPTED_POST_PILLAR_ROLE_SEPARATION_BASELINE_REASSESSMENT_AND_DEFER_RECOVERY"
+  ],
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_SELECTION_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "selected": "AUTHORIZE_BOUNDED_CURRENT_MAINTENANCE_AUTHORITY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION",
+  "selection_basis": "The accepted 410-outcome baseline exposes one semantically critical duplicate selector key in the current maintenance-authority JSON and one concentrated 39-outcome pillar-v1 frozen review-source pin root. Both require separate read-only adjudication before any repair.",
+  "target": "prepare_repository_maintenance_authority_duplicate_key_and_pillar_v1_source_pin_adjudication_packet_v0",
+  "v2_enrollment": "NOT_AUTHORIZED"
+}
