@@ -20,6 +20,19 @@ def test_contract_is_canonical_and_all_three_commit_relative_identities_resolve(
     assert by_role[subject.FROZEN_REVIEW_ROLE]["temporal_role"] == "HISTORICAL"
     assert by_role[subject.CURRENT_SOURCE_ROLE]["temporal_role"] == "CURRENT"
     assert by_role[subject.CURRENT_GENERATOR_ROLE]["temporal_role"] == "CURRENT"
+    assert contract["contract_version"] == "v1"
+
+
+def test_previous_current_contract_remains_immutable_and_resolvable() -> None:
+    previous = subject.load_contract(subject.PREVIOUS_CONTRACT_PATH)
+    previous_by_role = subject.verify_contract(
+        contract_path=subject.PREVIOUS_CONTRACT_PATH
+    )
+    assert previous["contract_version"] == "v0"
+    assert (
+        previous_by_role[subject.CURRENT_GENERATOR_ROLE]["git_blob"]
+        != subject.verify_contract()[subject.CURRENT_GENERATOR_ROLE]["git_blob"]
+    )
 
 
 def test_historical_review_pin_is_preserved_without_live_byte_equality() -> None:

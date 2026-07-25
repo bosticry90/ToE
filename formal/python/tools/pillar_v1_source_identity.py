@@ -14,10 +14,18 @@ from formal.python.tools import qft_route_evidence_identity
 REPO_ROOT = find_repo_root(Path(__file__))
 CONTRACT_RELATIVE_PATH = (
     "formal/docs/release/"
-    "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_IDENTITY_CONTRACT_20260725_v0.json"
+    "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_IDENTITY_CONTRACT_20260725_v1.json"
 )
 CONTRACT_PATH = REPO_ROOT / CONTRACT_RELATIVE_PATH
-CONTRACT_SCHEMA_ID = "toe.pillar_v1_historical_current_source_identity_contract.v0"
+PREVIOUS_CONTRACT_PATH = REPO_ROOT / (
+    "formal/docs/release/"
+    "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_IDENTITY_CONTRACT_20260725_v0.json"
+)
+CONTRACT_SCHEMA_ID = "toe.pillar_v1_historical_current_source_identity_contract.v1"
+CONTRACT_SCHEMA_BY_VERSION = {
+    "v0": "toe.pillar_v1_historical_current_source_identity_contract.v0",
+    "v1": CONTRACT_SCHEMA_ID,
+}
 IDENTITY_ALGORITHM = "SHA-256_OF_GIT_BLOB_BYTES"
 IDENTITY_ALGORITHM_VERSION = "v1"
 FROZEN_REVIEW_ROLE = "V1_FROZEN_REVIEW_SOURCE_PIN"
@@ -84,8 +92,9 @@ def load_contract(contract_path: Path = CONTRACT_PATH) -> dict[str, Any]:
     _require(raw == canonical_json_bytes(contract), "identity contract is not canonical JSON")
     _require(isinstance(contract, dict), "identity contract root is not an object")
     _require(
-        contract.get("schema_id") == CONTRACT_SCHEMA_ID,
-        "identity contract schema is not recognized",
+        contract.get("schema_id")
+        == CONTRACT_SCHEMA_BY_VERSION.get(contract.get("contract_version")),
+        "identity contract schema or version is not recognized",
     )
     _require(
         contract.get("identity_count") == 3,
