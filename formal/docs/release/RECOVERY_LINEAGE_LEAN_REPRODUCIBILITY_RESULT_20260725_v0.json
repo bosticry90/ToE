@@ -1,0 +1,174 @@
+{
+  "schema_id": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_RESULT_20260725_v0",
+  "status": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_PASS_AWAITING_INDEPENDENT_REVIEW",
+  "selected_recovery_state": {
+    "commit": "9cb4de883f55ad15be20ea107bb96f1c9123250e",
+    "tree": "1b725c7f28521fa1c9e0f24fa8b7557f226f8860",
+    "checkout": "C:/toe-lean-rv0",
+    "checkout_role": "independent_short_path_detached_validation_checkout",
+    "selection_record": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_SELECTION_20260725_v0.json",
+    "selection_sha256": "986f800b4843632cebb3e2efd995a64b3cdc21965ad176d569fe91ce353948ea"
+  },
+  "toolchain_retrieval": {
+    "status": "COMPLETE",
+    "descriptor": "leanprover/lean4:v4.27.0-rc1",
+    "lean_version": "4.27.0-rc1",
+    "lean_commit": "2fcce7258eeb6e324366bc25f9058293b04b7547",
+    "lake_version": "5.0.0-src+2fcce72",
+    "lean_toolchain_sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+  },
+  "dependency_retrieval": {
+    "status": "COMPLETE",
+    "manifest_sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c",
+    "mathlib_commit": "32d24245c7a12ded17325299fd41d412022cd3fe",
+    "locked_cache_artifacts": 7728,
+    "cache_replay": "7728 / 7728",
+    "confirmed_log": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/dependency_cache_get_confirmed.log",
+      "sha256": "f2d2fd2bbfbe552366ee1b729821d94007b9f2e493caa72088ae08f99b2a0134",
+      "size_bytes": 183
+    }
+  },
+  "dependency_build": {
+    "status": "CACHE_SATISFIED_AND_COMPLETE_GRAPH_VERIFIED",
+    "mathlib_olean_count": 7378,
+    "dependency_mode": "locked_mathlib_binary_cache_followed_by_complete_lake_graph_resolution",
+    "dependency_source_failure_observed": false
+  },
+  "frozen_committed_source_graph": {
+    "module_count": 1127,
+    "aggregate_declared_module_count": 1127,
+    "module_inventory": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/committed_lean_module_inventory_v0.json",
+      "sha256": "b58ed97becb38b0b007b2074bc60a7519c48d39b332b181411a6c86a7e7e5561",
+      "module_rows_sha256": "fa4267b6865d1a5a244085d602ebca92893703712fde6843042600e9d46147f5"
+    },
+    "current_complete_graph_job_count": 8874,
+    "prior_partial_graph_job_count": 8507,
+    "job_count_delta": 367,
+    "hard_coded_prior_count_used_as_acceptance": false,
+    "post_build_graph_verdict": "All targets up-to-date (8874 jobs).",
+    "post_build_graph_log": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/complete_graph_plan_verbose.log",
+      "sha256": "820f14fe44c3b342f554c177ca6882b349c498390e66b059f096ab57c16e4667",
+      "size_bytes": 645875
+    }
+  },
+  "toe_formal_build": {
+    "status": "PASS",
+    "jobs": 1,
+    "exit_code": 0,
+    "duration_seconds": 13221.728,
+    "compiled_module_artifacts_after": 762,
+    "aggregate_root_present": true,
+    "result": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/toe_formal_build.result.json",
+      "sha256": "65d392953cc0ae145f980b440714d94982689396fcd2a48e8e074ace53f30279"
+    },
+    "stdout": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/toe_formal_build.stdout.log",
+      "sha256": "343b3c6a19ec68c4e0678005f19c5efe54b02ba794dec8758fa1c7924a98fde2",
+      "size_bytes": 56649
+    },
+    "stderr": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/toe_formal_build.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "toe_formal_all_build": {
+    "status": "PASS",
+    "jobs": 1,
+    "exit_code": 0,
+    "duration_seconds": 3546.572,
+    "compiled_committed_modules_after": 1127,
+    "ToeFormal_root_present": true,
+    "ToeFormalAll_root_present": true,
+    "result": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/toe_formal_all_build.result.json",
+      "sha256": "7aa86f0929eedb80afdd2dd5123cd5add9755c768c3041bcea2ffe827be610fc"
+    },
+    "stdout": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/toe_formal_all_build.stdout.log",
+      "sha256": "cbd7c4098448ae5577eb8a19e20fedaadfe1c0439ab3277069288eae23d6f43b",
+      "size_bytes": 599931
+    },
+    "stderr": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/toe_formal_all_build.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "module_coverage": {
+    "expected_modules": 1127,
+    "compiled_modules": 1127,
+    "missing_modules": 0,
+    "ToeFormal_root_present": true,
+    "ToeFormalAll_root_present": true,
+    "evidence": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/module_coverage_result_v0.json",
+      "sha256": "62d79a7d42e14c2a1870093ef2fc2640eee373e8c80f30c6e9076fd74e33cd02",
+      "size_bytes": 438007
+    }
+  },
+  "axiom_and_declaration_inventory": {
+    "declared_axioms": 59,
+    "axiom_files": 14,
+    "opaque_definitions": 46,
+    "opaque_files": 14,
+    "unexpected_sorry_or_admit": 0,
+    "post_build_axiom_inventory_exact_match": true,
+    "post_build_sorry_inventory_exact_match": true,
+    "axioms_discharged_by_this_gate": 0,
+    "evidence": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/lean_declaration_debt_inventory_v0.json",
+      "sha256": "343b4de2fb375092c0947c7de07c037b72fff7f393dbb6304e11b47dce40b909",
+      "size_bytes": 14037
+    }
+  },
+  "warning_and_error_classification": {
+    "source_or_type_errors": 0,
+    "declaration_uses_sorry_warnings": 0,
+    "ToeFormal_warning_lines": 245,
+    "ToeFormalAll_warning_lines": 2724,
+    "warning_roles": [
+      "long_line_linter",
+      "duplicated_namespace_linter",
+      "unused_variable_linter",
+      "source_whitespace_linter",
+      "simp_style_linter"
+    ],
+    "warning_effect_on_build_verdict": "NONFATAL_VISIBLE_TECHNICAL_DEBT"
+  },
+  "post_build_harness": {
+    "status": "13 / 13 PASS",
+    "scope": [
+      "four Lean-backed Python build gates",
+      "committed aggregate coverage gate",
+      "axiom ledger and no-sorry/admit gates"
+    ],
+    "junit": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/recovery_lineage_lean_python_harness.junit.xml",
+      "sha256": "0eaf97212324504f89baaf5c6f9b6451577c7bc4e215e3c295ea65c64fe7b6b2",
+      "size_bytes": 2346
+    },
+    "log_sha256": "76b5c9c447eff885fb9442ae07170e35a91d17d6f2b924e825f21056774f2859"
+  },
+  "mutation_checks": {
+    "validation_checkout": "CLEAN",
+    "active_recovery_checkout": "CLEAN_BEFORE_RESULT_RECORD",
+    "unexpected_untracked_source": 0,
+    "dirty_main_tracked_changes": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_manifest_sha256": "4b4e5ebe0874287e7ea753bb64c2174b845bec4f5225a54d4ab962e83d5a2224",
+    "dirty_main_byte_preserved": true
+  },
+  "acceptance_candidate": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_PASS",
+  "next_required_gate_after_independent_review": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITIONS",
+  "recovery_control_plane_complete": false,
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_or_seam_rows": "0 / 12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
