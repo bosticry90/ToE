@@ -1,0 +1,84 @@
+{
+  "schema_id": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T06:20:00Z",
+  "status": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTED_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base": {
+    "commit": "399321320f35df521e0dad73b0d2f64664cd0a52",
+    "reachability_review": "formal/docs/release/REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "implementation": {
+    "machinery_commit": "a209450dc8d4b3573ffdc4a1ead4562d2ad88a6b",
+    "machinery_tree": "7faa76a9e67328f29c7762de2f017fef04d44d90",
+    "profile_artifact_commit": "2196923c56066ef6875bcb680e230eddcca2dda5",
+    "profile_artifact_tree": "192ac269dccc0d727eb1d1debe78775bdef1b357"
+  },
+  "current_acceptance_inventory": {
+    "path": "formal/docs/release/CURRENT_ACCEPTANCE_INVENTORY_20260725_v2.json",
+    "sha256": "824d950e88d502ab728e5fd6c81d52c004a01d27197dc9d103eb78936dc2ce1b",
+    "count": 13838,
+    "nodeid_sha256": "6f4872f4dfdc8c8e0aba64b742c278c6ded0dc4ca886a6bcc685a0ef0fdd1566",
+    "frozen_comparability_common": 13756,
+    "added_over_frozen": 82,
+    "lean_pytest_build_guards_included": 9,
+    "excluded_current_critical_guards": 0
+  },
+  "profile_artifacts": {
+    "obligation_registry": {
+      "path": "formal/output/validation_profiles/RECOVERY_OBLIGATION_REGISTRY_20260725_v1.json",
+      "sha256": "e6b26c4abc34afb8b3ac2ce6a6c5c37815919a3ff2cf1cafeab3bfc8dce3ba2d",
+      "adjusted_nonpassing": 357
+    },
+    "current_control_plane": {
+      "path": "formal/output/validation_profiles/CURRENT_CONTROL_PLANE_PROFILE_20260725_v1.json",
+      "sha256": "ac10f146630f5bf0a5659ea89cdc2cb2bea6fdc23395538ce5cc57b05b33e6ba",
+      "nodeids": 3625,
+      "known_nonpassing": 4,
+      "required_verdict": "PASS"
+    },
+    "historical_debt": {
+      "path": "formal/output/validation_profiles/HISTORICAL_DEBT_PROFILE_20260725_v1.json",
+      "sha256": "f2af5c4d275a146287175f5dfe1ad3d1e4376651d4b3b92f458530db16c55523",
+      "nodeids": 10213,
+      "known_nonpassing": 353,
+      "permitted_verdict": "COMPLETE_WITH_RECORDED_FAILURES"
+    },
+    "reconciliation": {
+      "path": "formal/output/validation_profiles/VALIDATION_PROFILE_RECONCILIATION_20260725_v1.json",
+      "sha256": "244a9f679421250fd9497dc62668114d439524e3e0550d2f403be7ad4cacd1cd",
+      "intersection": 0,
+      "unassigned": 0,
+      "excluded": 0,
+      "unknown_current_reachability": 0,
+      "exact_partition": true
+    }
+  },
+  "machinery": {
+    "inventory_collector_sha256": "594dfa75b301bbe3899b75df9399a4e0604f2d18c8b7569c394ac5dbffbb77b8",
+    "profile_generator_sha256": "59ef4b5bc3b09f820f48048100526da276260402f76bfe07d50c795e6d0c99e1",
+    "immutable_runner_sha256": "873480811a914b3079083766155c2f44cb2697de113359be8648ae5c66f708ce",
+    "profile_generated_before_execution": true,
+    "profile_membership_hash_pinned": true,
+    "tests_may_modify_profile": false,
+    "failure_may_demote_profile": false
+  },
+  "validation": {
+    "implementation_tests": "6 / 6 PASS",
+    "detached_checkout": "validation-profile-v1-review-v0",
+    "detached_tests": "6 / 6 PASS",
+    "detached_checkout_after": "CLEAN"
+  },
+  "terminal_outcome": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTED_FOUR_CURRENT_REPAIRS_REMAIN",
+  "boundaries": {
+    "root_repair_performed": false,
+    "historical_execution_performed": false,
+    "historical_isolation_proven": false,
+    "lean_activity": false,
+    "registry_or_v2_changed": false,
+    "scientific_content_changed": false,
+    "automatic_successor": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_PROFILE_V1_MEMBERSHIP_AND_MACHINERY"
+}

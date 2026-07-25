@@ -132,6 +132,21 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert reconciliation_v1["unknown_current_reachability_obligations"] == 0
     assert reconciliation_v1["exact_partition"] is True
     assert current_v1["nodeid_count"] + historical_v1["nodeid_count"] == 13838
+    result_v1 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/docs/release/"
+        "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_20260725_v0.json"
+    )
+    assert result_v1["profile_artifacts"]["current_control_plane"][
+        "known_nonpassing"
+    ] == 4
+    assert result_v1["profile_artifacts"]["historical_debt"][
+        "known_nonpassing"
+    ] == 353
+    assert result_v1["current_acceptance_inventory"]["count"] == 13838
+    assert result_v1["terminal_outcome"] == (
+        "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTED_FOUR_CURRENT_REPAIRS_REMAIN"
+    )
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:
