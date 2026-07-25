@@ -56,3 +56,23 @@ def test_only_four_current_nonpassing_obligations_remain_after_adjudication() ->
     assert all(row["disposition"] == "PENDING_REPAIR" for row in current)
     assert ledger["scientific_posture"] == "B-BLOCKED"
     assert ledger["v2_enrollment"] == "NOT_AUTHORIZED"
+    result = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/docs/release/"
+        "REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_20260725_v0.json"
+    )
+    assert result["implementation"] == {
+        "commit": "12ef90d238ef11be04774c2b22619ac33b1e1aef",
+        "tree": "02c3dacff6a4eed2a0953a8df2c5eaa8acced09a",
+        "tool": {
+            "path": "formal/python/tools/recovery_current_reachability_adjudication.py",
+            "sha256": (
+                "760d2a3c7aa6351c4ede95210ff7b52d22d4d4d13f1b8bca2f3629c20b8264aa"
+            ),
+        },
+    }
+    assert result["adjudication"]["unknown_current_reachability_after"] == 0
+    assert result["boundaries"]["profile_membership_changed"] is False
+    assert result["terminal_outcome"] == (
+        "CURRENT_REACHABILITY_ADJUDICATION_COMPLETE_FOUR_CURRENT_REPAIRS_REQUIRED"
+    )
