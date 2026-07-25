@@ -15,6 +15,77 @@ env:
   GIT_CONFIG_VALUE_0: "true"
 
 jobs:
+  linux-portability-diagnostics:
+    name: Linux Portability Diagnostics
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install frozen Python dependencies
+        run: |
+          python -m pip install --upgrade pip==26.0
+          python -m pip install -r requirements.ci.lock
+
+      - name: Capture cross-platform reconstruction evidence
+        run: |
+          mkdir -p formal/output/reports
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from formal.python.tools import (
+              pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v2 as v2,
+              scalar_curved_background_retest_reports as conformal,
+              scalar_stress_energy_minkowski_reports as minkowski,
+          )
+
+          root = Path("formal/output/reports")
+          packet, manifest, report = v2.build_artifacts()
+          (root / "linux_v2_reconstructed_packet.json").write_bytes(
+              v2.canonical_json_bytes(packet)
+          )
+          (root / "linux_v2_reconstructed_manifest.json").write_bytes(
+              v2.canonical_json_bytes(manifest)
+          )
+          (root / "linux_v2_reconstructed_report.json").write_bytes(
+              v2.canonical_json_bytes(report)
+          )
+          diagnostics = {
+              "conformal": conformal.verify_calculation_result(),
+              "minkowski": minkowski.verify_calculation_result(),
+          }
+          (root / "linux_scalar_reconstruction_diagnostics.json").write_text(
+              json.dumps(diagnostics, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Run focused non-Lean portability guards
+        run: |
+          python -m pytest -q \
+            formal/python/tests/test_recovery_accepted_lineage_completeness.py \
+            formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py::test_v2_reconstructs_only_from_recorded_identity_domains \
+            formal/python/tests/test_scalar_stress_energy_conformal_background_result_review.py \
+            formal/python/tests/test_scalar_stress_energy_minkowski_result_review.py
+
+      - name: Upload portability diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-portability-diagnostics
+          path: |
+            formal/output/reports/linux_v2_reconstructed_packet.json
+            formal/output/reports/linux_v2_reconstructed_manifest.json
+            formal/output/reports/linux_v2_reconstructed_report.json
+            formal/output/reports/linux_scalar_reconstruction_diagnostics.json
+
   linux-current-control-and-lean:
     name: Linux Current Control + Complete Lean
     runs-on: ubuntu-latest

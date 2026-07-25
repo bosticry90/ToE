@@ -409,6 +409,11 @@ def build_manifest(
         raise LineageError("proposed-base tree does not match the frozen contract")
     if not _is_ancestor(start, head, repo_root):
         raise LineageError("recovery start is not an ancestor of proposed base")
+    validation_head = _git("rev-parse", "HEAD", repo_root=repo_root)
+    if not _is_ancestor(head, validation_head, repo_root):
+        raise LineageError(
+            "frozen accepted recovery base is not an ancestor of validation HEAD"
+        )
 
     commit_rows = _commit_inventory(start, head, repo_root)
     cycles = [
@@ -420,7 +425,7 @@ def build_manifest(
         "log",
         "--all",
         "--not",
-        head,
+        validation_head,
         "--format=%H%x1f%s",
         "--grep=^Accept",
         repo_root=repo_root,

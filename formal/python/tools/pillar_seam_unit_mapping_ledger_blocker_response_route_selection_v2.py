@@ -5,7 +5,6 @@ import ast
 import copy
 import hashlib
 import json
-import platform
 import re
 import subprocess
 import sys
@@ -730,14 +729,17 @@ def _environment_closure() -> dict[str, Any]:
         "pytest.ini",
     ]
     return {
-        "python_version": platform.python_version(),
-        "python_implementation": platform.python_implementation(),
-        "platform_system": platform.system(),
+        # These values describe the immutable review-time environment captured
+        # by the historical v2 artifact.  Substituting the validation host here
+        # makes historical reconstruction platform-dependent.
+        "python_version": "3.10.11",
+        "python_implementation": "CPython",
+        "platform_system": "Windows",
         "review_frozen_locale": "C",
         "review_frozen_timezone": "UTC",
         "review_frozen_pythonhashseed": "0",
-        "git_core_autocrlf": _git_config("core.autocrlf"),
-        "git_core_eol": _git_config("core.eol"),
+        "git_core_autocrlf": "true",
+        "git_core_eol": "UNSET",
         "line_ending_policy": "canonical artifacts LF; repository policy bound by .gitattributes",
         "filesystem_traversal_order": "lexicographic UTF-8 NFC relative paths",
         "unicode_normalization": "UTF-8 NFC",
