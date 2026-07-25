@@ -47,6 +47,46 @@ jobs:
           )
 
           root = Path("formal/output/reports")
+          def differences(left, right, path="$", rows=None):
+              rows = [] if rows is None else rows
+              if type(left) is not type(right):
+                  rows.append(
+                      {"path": path, "left": repr(left), "right": repr(right)}
+                  )
+              elif isinstance(left, dict):
+                  for key in sorted(set(left) | set(right)):
+                      if key not in left or key not in right:
+                          rows.append(
+                              {
+                                  "path": f"{path}.{key}",
+                                  "left": repr(left.get(key, "<MISSING>")),
+                                  "right": repr(right.get(key, "<MISSING>")),
+                              }
+                          )
+                      else:
+                          differences(left[key], right[key], f"{path}.{key}", rows)
+              elif isinstance(left, list):
+                  if len(left) != len(right):
+                      rows.append(
+                          {
+                              "path": f"{path}.length",
+                              "left": repr(len(left)),
+                              "right": repr(len(right)),
+                          }
+                      )
+                  for index, (left_item, right_item) in enumerate(zip(left, right)):
+                      differences(
+                          left_item,
+                          right_item,
+                          f"{path}[{index}]",
+                          rows,
+                      )
+              elif left != right:
+                  rows.append(
+                      {"path": path, "left": repr(left), "right": repr(right)}
+                  )
+              return rows
+
           packet, manifest, report = v2.build_artifacts()
           (root / "linux_v2_reconstructed_packet.json").write_bytes(
               v2.canonical_json_bytes(packet)
@@ -57,9 +97,35 @@ jobs:
           (root / "linux_v2_reconstructed_report.json").write_bytes(
               v2.canonical_json_bytes(report)
           )
+          conformal_fresh = conformal.rebuild_calculation_result()
+          minkowski_fresh = minkowski.rebuild_calculation_result()
+          (root / "linux_scalar_conformal_reconstructed_result.json").write_bytes(
+              conformal.calculation_canonical_json_bytes(conformal_fresh)
+          )
+          (root / "linux_scalar_minkowski_reconstructed_result.json").write_bytes(
+              minkowski.calculation_canonical_json_bytes(minkowski_fresh)
+          )
+          conformal_recorded = json.loads(
+              conformal.CALCULATION_OUTPUT_PATH.read_text(encoding="utf-8")
+          )
+          minkowski_recorded = json.loads(
+              minkowski.CALCULATION_OUTPUT_PATH.read_text(encoding="utf-8")
+          )
           diagnostics = {
-              "conformal": conformal.verify_calculation_result(),
-              "minkowski": minkowski.verify_calculation_result(),
+              "conformal": {
+                  "verification": conformal.verify_calculation_result(),
+                  "differences": differences(
+                      conformal_recorded,
+                      conformal_fresh,
+                  ),
+              },
+              "minkowski": {
+                  "verification": minkowski.verify_calculation_result(),
+                  "differences": differences(
+                      minkowski_recorded,
+                      minkowski_fresh,
+                  ),
+              },
           }
           (root / "linux_scalar_reconstruction_diagnostics.json").write_text(
               json.dumps(diagnostics, indent=2) + "\n",
@@ -85,6 +151,8 @@ jobs:
             formal/output/reports/linux_v2_reconstructed_manifest.json
             formal/output/reports/linux_v2_reconstructed_report.json
             formal/output/reports/linux_scalar_reconstruction_diagnostics.json
+            formal/output/reports/linux_scalar_conformal_reconstructed_result.json
+            formal/output/reports/linux_scalar_minkowski_reconstructed_result.json
 
   linux-current-control-and-lean:
     name: Linux Current Control + Complete Lean
