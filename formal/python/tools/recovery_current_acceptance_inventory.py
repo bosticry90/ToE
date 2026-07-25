@@ -51,11 +51,13 @@ def collect_nodeids() -> list[str]:
             + completed.stdout[-4000:]
             + completed.stderr[-4000:]
         )
-    nodeids = [
-        line.strip().replace("\\", "/")
-        for line in completed.stdout.splitlines()
-        if line.strip().startswith("formal/python/tests/") and "::" in line
-    ]
+    nodeids: list[str] = []
+    for raw_line in completed.stdout.splitlines():
+        line = raw_line.strip()
+        if not line.startswith("formal/python/tests/") or "::" not in line:
+            continue
+        test_path, selector = line.split("::", 1)
+        nodeids.append(test_path.replace("\\", "/") + "::" + selector)
     if not nodeids:
         raise InventoryError("pytest collection returned no node IDs")
     if len(nodeids) != len(set(nodeids)):
