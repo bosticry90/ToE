@@ -244,6 +244,40 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert repaired_current <= set(current_v3["nodeids"])
     assert historical_eol in set(historical_v3["nodeids"])
     assert historical_eol not in set(current_v3["nodeids"])
+    registry_v4 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "RECOVERY_OBLIGATION_REGISTRY_20260725_v4.json"
+    )
+    current_v4 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "CURRENT_CONTROL_PLANE_PROFILE_20260725_v4.json"
+    )
+    historical_v4 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "HISTORICAL_DEBT_PROFILE_20260725_v4.json"
+    )
+    reconciliation_v4 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/output/validation_profiles/"
+        "VALIDATION_PROFILE_RECONCILIATION_20260725_v4.json"
+    )
+    nonpassing_v4 = [
+        row
+        for row in registry_v4["obligations"]
+        if row["obligation_id"].startswith("NONPASSING-")
+    ]
+    assert len(nonpassing_v4) == 354
+    assert current_v4["known_nonpassing_count"] == 0
+    assert historical_v4["known_nonpassing_count"] == 354
+    assert reconciliation_v4["unknown_current_reachability_obligations"] == 0
+    assert reconciliation_v4["exact_partition"] is True
+    assert current_v4["nodeid_count"] + historical_v4["nodeid_count"] == 13838
+    assert repaired_current <= set(current_v4["nodeids"])
+    assert historical_eol in set(historical_v4["nodeids"])
+    assert historical_eol not in set(current_v4["nodeids"])
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:

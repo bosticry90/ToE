@@ -1,0 +1,28 @@
+{
+  "acceptance_boundary": {
+    "dynamic_demotion_permitted": false,
+    "every_exclusion_requires_review": true,
+    "membership_frozen_before_execution": true,
+    "new_current_critical_guards_included": true,
+    "test_failure_may_change_profile": false
+  },
+  "collection": {
+    "added_over_frozen_comparability": 82,
+    "complete": true,
+    "duplicate_node_ids": 0,
+    "excluded_current_critical_guards": 0,
+    "exit_code": 0,
+    "frozen_comparability_common": 13756,
+    "removed_from_frozen_comparability": 0
+  },
+  "count": 13838,
+  "current_relative_to_commit": "89d272e25886c63549dbb3b7d765750716bc9f4c",
+  "custody_path": ".toe-recovery/custody-v0/recovery-validation-profile-v4/current_collected_node_ids_v4.txt",
+  "inventory_kind": "NON_LEAN_PYTEST_NODE_IDS",
+  "lean_build_gate_nodeids_included": 9,
+  "profile_status": "FROZEN_INPUT_TO_OBLIGATION_AND_EXECUTION_PROFILES",
+  "purpose": "COMPLETE_CURRENT_NON_LEAN_ACCEPTANCE_UNIVERSE",
+  "schema_id": "CURRENT_ACCEPTANCE_INVENTORY_20260725_v5",
+  "separate_complete_lean_graph_still_required": true,
+  "sha256": "6f4872f4dfdc8c8e0aba64b742c278c6ded0dc4ca886a6bcc685a0ef0fdd1566"
+}
