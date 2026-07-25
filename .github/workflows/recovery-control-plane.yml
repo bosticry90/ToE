@@ -1,0 +1,97 @@
+name: Recovery Control Plane
+
+on:
+  push:
+    branches:
+      - codex/clean-integration-candidate-v0
+  workflow_dispatch:
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  linux-current-control-and-lean:
+    name: Linux Current Control + Complete Lean
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install frozen Python dependencies
+        run: |
+          python -m pip install --upgrade pip==26.0
+          python -m pip install -r requirements.ci.lock
+
+      - name: Build complete frozen Lean graph
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal/toe_formal
+          build: true
+          build-args: "ToeFormal ToeFormalAll"
+          test: false
+          lint: false
+          use-mathlib-cache: true
+
+      - name: Execute immutable current-control profile
+        run: |
+          python -m formal.python.tools.recovery_profile_runner \
+            --profile current_control_plane \
+            --collect-current-inventory \
+            --junit formal/output/reports/current_control_plane_linux_v5.junit.xml \
+            --basetemp "${RUNNER_TEMP}/toe-current-control-v5" \
+            --report formal/output/reports/current_control_plane_linux_v5.json
+
+      - name: Upload current-control evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-current-control-evidence
+          path: |
+            formal/output/reports/current_control_plane_linux_v5.junit.xml
+            formal/output/reports/current_control_plane_linux_v5.json
+
+  historical-debt-reporting:
+    name: Historical Debt Complete Reporting
+    runs-on: windows-latest
+    steps:
+      - name: Checkout complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install frozen Python dependencies
+        run: |
+          python -m pip install --upgrade pip==26.0
+          python -m pip install -r requirements.ci.lock
+
+      - name: Execute isolated historical profile with recorded-failure semantics
+        shell: pwsh
+        run: |
+          python -m formal.python.tools.recovery_profile_runner `
+            --profile historical_debt `
+            --collect-current-inventory `
+            --junit formal/output/reports/historical_debt_windows_v5.junit.xml `
+            --basetemp "$env:RUNNER_TEMP/toe-historical-v5" `
+            --allow-recorded-historical-failures `
+            --report formal/output/reports/historical_debt_windows_v5.json
+
+      - name: Upload visible historical-debt evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-debt-evidence
+          path: |
+            formal/output/reports/historical_debt_windows_v5.junit.xml
+            formal/output/reports/historical_debt_windows_v5.json
