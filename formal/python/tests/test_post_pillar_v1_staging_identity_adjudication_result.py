@@ -13,6 +13,11 @@ RESULT_PATH = REPO_ROOT / (
     "REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_"
     "RESULT_20260725_v0.json"
 )
+REVIEW_PATH = REPO_ROOT / (
+    "formal/docs/release/"
+    "REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_"
+    "RESULT_REVIEW_20260725_v0.json"
+)
 
 
 def _load(path: str) -> dict:
@@ -66,3 +71,13 @@ def test_machine_ledger_reproduces_the_same_exhaustive_counts() -> None:
     assert adjudication["representation_counts"] == result["adjudication"][
         "representation_counts"
     ]
+
+
+def test_independent_review_accepts_adjudication_without_successor_authority() -> None:
+    review = json.loads(REVIEW_PATH.read_bytes())
+    assert review["accepted"] is True
+    assert review["findings"]["all_dependencies_mapped"] is True
+    assert review["findings"]["repair_justified"] is True
+    assert review["scope"]["repair_performed"] is False
+    assert review["successor_authority"] == "NONE"
+    assert review["scientific_posture"] == "B-BLOCKED"
