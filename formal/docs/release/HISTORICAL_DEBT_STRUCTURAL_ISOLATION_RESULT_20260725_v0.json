@@ -1,0 +1,96 @@
+{
+  "schema_id": "HISTORICAL_DEBT_STRUCTURAL_ISOLATION_RESULT_20260725_v0",
+  "status": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_current_control_precondition": {
+    "review": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V4_RESULT_REVIEW_20260725_v0.json",
+    "verdict": "CURRENT_CONTROL_PLANE_PROFILE_V4_PASS_ACCEPTED",
+    "current_profile_nodeids": 3626,
+    "current_profile_failures": 0
+  },
+  "execution": {
+    "checkout": "C:/toe-lean-rv0",
+    "checkout_commit": "06b895a7cf9edb5fb918c9cc8fec958415ca6b0f",
+    "checkout_tree": "9df86aa046d447ceba416e55544d46da84cd9d73",
+    "profile": "historical_debt",
+    "profile_nodeids": 10212,
+    "passed": 9618,
+    "skipped": 241,
+    "failed": 347,
+    "errors": 6,
+    "warnings": 14,
+    "recorded_nonpassing": 353,
+    "duration_seconds": 3847.77,
+    "pytest_exit_code": 1,
+    "reporting_completed": true,
+    "fallback_used": false
+  },
+  "outcome_reconciliation": {
+    "frozen_known_nonpassing": 354,
+    "observed_nonpassing": 353,
+    "unexpected_nonpassing": 0,
+    "recovered_nodeids": [
+      "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_identity_closes_across_matrix_manifest_path_and_payload_contract"
+    ]
+  },
+  "process_isolation": {
+    "separate_process": true,
+    "overlapping_current_control_process": false,
+    "isolated_temp": ".toe-recovery/custody-v0/historical-isolation-v0/temp",
+    "isolated_cache": ".toe-recovery/custody-v0/historical-isolation-v0/cache",
+    "isolated_pytest_basetemp": ".toe-recovery/custody-v0/historical-isolation-v0/pytest-basetemp",
+    "isolated_output": ".toe-recovery/custody-v0/historical-isolation-v0/output",
+    "home_directory_overridden": false
+  },
+  "partition_isolation": {
+    "complete_inventory": 13838,
+    "current_profile": 3626,
+    "historical_profile": 10212,
+    "intersection": 0,
+    "unassigned": 0,
+    "current_equals_inventory_minus_historical": true,
+    "historical_equals_inventory_minus_current": true
+  },
+  "current_state_before_and_after": {
+    "current_profile_sha256": "2f3f48c8c81db66c8efe4e1f17bdd06b2f3271667c37f1e2ac4dec640a9034f1",
+    "historical_profile_sha256": "2c2fc35258f95006a2a34783227db7d0c437bc27c8b4d17f259252c1f4beef43",
+    "obligation_registry_sha256": "f3a6a5e24b6f443c940d71f21b4e3f119c1bd13d173d8bb8bd3bca0dc9e7dcd5",
+    "profile_reconciliation_sha256": "031fbcc3b83dc0eb5a7bfe3ad744213ac490b5680d21c1a5a37d872c2fdbadc8",
+    "current_result_sha256": "330ecd406db3d6f048e222a21de84073d7a927e085cf74f876d956b9640d25f7",
+    "current_review_sha256": "d9aa6a059f172945262e75e0792fef9ca2f2681c9b47fa7e55f8980b1ac769b7",
+    "current_junit_sha256": "588c9503cc52f83f4a112504980c1e27e28ae5400bec5e3178e4e6602ee47f02",
+    "current_inventory_sha256": "6f4872f4dfdc8c8e0aba64b742c278c6ded0dc4ca886a6bcc685a0ef0fdd1566",
+    "all_equal_before_and_after": true
+  },
+  "evidence": {
+    "junit": {
+      "path": ".toe-recovery/custody-v0/historical-isolation-v0/output/historical_debt_v4.junit.xml",
+      "sha256": "9da21ac9f853aca4ebec275e09e3a45a2a9788da97abf668f82d4266d2874b6e",
+      "size_bytes": 5130454
+    },
+    "stdout": {
+      "path": ".toe-recovery/custody-v0/historical-isolation-v0/output/historical_debt_v4.stdout.log",
+      "sha256": "9500a5c975303703402e6cd6fce361cfa45239a106e5a0073b237d75bf0e91e8",
+      "size_bytes": 2973406
+    },
+    "stderr": {
+      "path": ".toe-recovery/custody-v0/historical-isolation-v0/output/historical_debt_v4.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "mutation_checks": {
+    "profile_state_unchanged": true,
+    "tracked_checkout_after": "CLEAN",
+    "unexpected_untracked_source": 0,
+    "current_verdict_changed": false,
+    "dirty_main_tracked_changes": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_byte_preserved": true
+  },
+  "terminal_candidate": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES",
+  "next_required_gate": "RECOVERY_LINEAGE_COMPLETE_LEAN_GRAPH",
+  "recovery_control_plane_complete": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
