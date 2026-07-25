@@ -1,0 +1,21 @@
+{
+  "adjusted_nonpassing_count": 354,
+  "collected_count": 13855,
+  "current_control_plane_count": 3643,
+  "current_control_plane_known_nonpassing": 0,
+  "current_relative_to_commit": "9f8a06e185c9084fdc720d3efa5f9719ee64298c",
+  "exact_partition": true,
+  "excluded_count": 0,
+  "historical_debt_count": 10212,
+  "historical_debt_known_nonpassing": 354,
+  "intersection_count": 0,
+  "inventory_count": 13855,
+  "inventory_sha256": "756ecb93b5ec0d409910d590333822e86d76da6581f2921d713afa6db8be531a",
+  "membership_basis": "AUTHORITY_AND_EVIDENCE_REACHABILITY_NOT_TEST_OUTCOME",
+  "membership_change_requires_independent_review": true,
+  "profile_machinery_current_critical": true,
+  "schema_id": "VALIDATION_PROFILE_RECONCILIATION_20260725_v5",
+  "tests_may_modify_membership": false,
+  "unassigned_count": 0,
+  "unknown_current_reachability_obligations": 0
+}
