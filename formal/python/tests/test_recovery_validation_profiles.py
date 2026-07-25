@@ -147,6 +147,16 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert result_v1["terminal_outcome"] == (
         "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTED_FOUR_CURRENT_REPAIRS_REMAIN"
     )
+    review_v1 = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/docs/release/"
+        "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_REVIEW_20260725_v0.json"
+    )
+    assert review_v1["accepted"] is True
+    assert review_v1["findings"]["current_known_nonpassing"] == 4
+    assert review_v1["findings"]["unknown_current_reachability"] == 0
+    assert review_v1["findings"]["historical_isolation_still_unproven"] is True
+    assert review_v1["successor_authority"] == "NONE"
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:
