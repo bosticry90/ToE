@@ -1,0 +1,231 @@
+{
+  "schema_id": "CLEAN_INTEGRATION_CANDIDATE_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T23:43:42Z",
+  "status": "CLEAN_INTEGRATION_CANDIDATE_VALIDATION_COMPLETE_AWAITING_INDEPENDENT_RESULT_REVIEW",
+  "authority": {
+    "source": "USER_ISSUED_CONTROLLING_TOE_REPOSITORY_RECOVERY_SPECIFICATION",
+    "selection_path": "formal/docs/release/CLEAN_INTEGRATION_CANDIDATE_SELECTION_20260725_v0.json",
+    "selection_sha256": "bcc0591bbd6f7f768d4fb05af8ce95c0b7af6392c28182911fa352df6d3faf41",
+    "automatic_successor_authority": "NONE"
+  },
+  "validated_source_candidate": {
+    "branch": "codex/clean-integration-candidate-v0",
+    "commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+    "tree": "54b3bf6cb91613722f2ea6dd54f8a10284abc92c",
+    "integration_base": "ACCEPTED_RECOVERY_LINEAGE_ONLY",
+    "dirty_main_objects_imported": 0,
+    "dirty_main_wholesale_merge": false
+  },
+  "accepted_prerequisites": {
+    "recovery_lineage_lean_review": {
+      "path": "formal/docs/release/RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_RESULT_REVIEW_20260725_v0.json",
+      "sha256": "78a5dc13f514c77de81188bf8b35f7b34338a10f35af7ddf95d9ebfa1d54fd08",
+      "verdict": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_PASS_ACCEPTED"
+    },
+    "dirty_main_custody_review": {
+      "path": "formal/docs/release/DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_RESULT_REVIEW_20260725_v0.json",
+      "sha256": "2eee1f0408369b89d5bb6ad2b9f7ccdc821401437cab4a0fc52840d1282d523a",
+      "verdict": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITIONS_ACCEPTED"
+    },
+    "historical_isolation_review": {
+      "path": "formal/docs/release/HISTORICAL_DEBT_STRUCTURAL_ISOLATION_RESULT_REVIEW_20260725_v0.json",
+      "verdict": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES_ACCEPTED"
+    }
+  },
+  "acceptance_inventory": {
+    "path": "formal/docs/release/CURRENT_ACCEPTANCE_INVENTORY_20260725_v10.json",
+    "file_sha256": "35a8a4d8360cf9ad9f5830d61a2d73b43be4fa6a48fedd904b62796952b35c45",
+    "nodeid_sha256": "3b4a6751d6ebc037b88b06864483759d991b1af3575209cc17518959d21afb08",
+    "collected": 13856,
+    "current_control_plane": 3644,
+    "historical_debt": 10212,
+    "frozen_comparability": 13756,
+    "added_current_guards": 100,
+    "duplicate_nodeids": 0,
+    "unreconciled_nodeids": 0
+  },
+  "immutable_profile_contract": {
+    "current_control_plane": {
+      "path": "formal/output/validation_profiles/CURRENT_CONTROL_PLANE_PROFILE_20260725_v9.json",
+      "sha256": "b063e79835f400c37b546e69f9b2576094921bcee360c6bfb335302eb1d3f8ce"
+    },
+    "historical_debt": {
+      "path": "formal/output/validation_profiles/HISTORICAL_DEBT_PROFILE_20260725_v9.json",
+      "sha256": "2a43fd4e2dbc1202dd822640694a27acbe9cec69a01a4b06d32d21bb5c525ed1"
+    },
+    "obligation_registry": {
+      "path": "formal/output/validation_profiles/RECOVERY_OBLIGATION_REGISTRY_20260725_v9.json",
+      "sha256": "cd07478beb909fef6f46f0a18c1b2963f92d8a07bf553bd15be811827b25cd4c"
+    },
+    "reconciliation": {
+      "path": "formal/output/validation_profiles/VALIDATION_PROFILE_RECONCILIATION_20260725_v9.json",
+      "sha256": "23816578289ce660a4b3eb2ab40bbe9b1dc033440d10f9f95783e38ca315eceb"
+    },
+    "state_unchanged_in_every_profile_run": true
+  },
+  "current_control_validation": {
+    "windows_lf": {
+      "checkout": "C:/toe-integration-lf-v7",
+      "commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+      "actual_line_endings": "LF",
+      "tests": 3644,
+      "passed": 3287,
+      "skipped": 357,
+      "failed": 0,
+      "errors": 0,
+      "report_path": ".toe-recovery/custody-v0/clean-integration-candidate-v0/final-validation/current_control_plane_windows_lf_v9.json",
+      "report_sha256": "c0a62e9cfe1103d5fde2d35dae1f21706c9d1e3733cd78441889c905de9aec78",
+      "junit_sha256": "d806aa9e953d26e139772569e7789bdf01c2cbe4d50245ee62b0365ab69f32f0",
+      "checkout_after": "CLEAN"
+    },
+    "windows_crlf": {
+      "checkout": "C:/toe-integration-crlf-v7",
+      "commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+      "actual_line_endings": "CRLF",
+      "line_feed_count_in_build_wrapper": 163,
+      "carriage_return_count_in_build_wrapper": 163,
+      "tests": 3644,
+      "passed": 3287,
+      "skipped": 357,
+      "failed": 0,
+      "errors": 0,
+      "report_path": ".toe-recovery/custody-v0/clean-integration-candidate-v0/final-validation/current_control_plane_windows_crlf_v9.json",
+      "report_sha256": "a41aa3dd6565a8ce17a9c3069e6c6fec40735b5bc629c977caf5b8927cd24e21",
+      "junit_sha256": "740be522d31f4a075e6c8fafee62509b8627e9cd55e3584bcaec85fd5cf14e2d",
+      "checkout_after": "CLEAN"
+    },
+    "detached_review": {
+      "checkout": "C:/toe-integration-review-v7",
+      "commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+      "head_state": "DETACHED",
+      "actual_line_endings": "LF",
+      "tests": 3644,
+      "passed": 3287,
+      "skipped": 357,
+      "failed": 0,
+      "errors": 0,
+      "report_path": ".toe-recovery/custody-v0/clean-integration-candidate-v0/final-validation/current_control_plane_detached_review_v9.json",
+      "report_sha256": "fbe6e6d9d866875bdfb7cf11892fb41d4496dd4ba4924b545d60d18b5ff60df7",
+      "junit_sha256": "b654f327b9922baccf6a9a28be326ec052815a1bb7be54e78f5fd41ff3cc6b4c",
+      "checkout_after": "CLEAN"
+    },
+    "linux_ci": {
+      "workflow": "Recovery Control Plane",
+      "run_id": 30176312021,
+      "url": "https://github.com/bosticry90/ToE/actions/runs/30176312021",
+      "head_sha": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+      "job_id": 89725548499,
+      "job_conclusion": "success",
+      "tests": 3644,
+      "passed": 3287,
+      "skipped": 357,
+      "failed": 0,
+      "errors": 0,
+      "artifact_id": 8624391984,
+      "artifact_zip_sha256": "f8c736a450de94e61132d807c43647fcfbfc3ee968b8c023345fb7232487e3e8",
+      "report_sha256": "bac2a032809bb54097be1f5038298afb2a6b4ffb415afc715111dd37a4488f4a",
+      "junit_sha256": "718e6cc2d1b8c11e3f4192a94fbffc347c39e625f7d9faa298d15a9cf067e32b"
+    }
+  },
+  "historical_debt_reporting": {
+    "workflow_run_id": 30176312021,
+    "job_id": 89725548513,
+    "job_conclusion": "success",
+    "verdict": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES",
+    "reporting_completed": true,
+    "tests": 10212,
+    "passed": 9618,
+    "skipped": 241,
+    "failed": 347,
+    "errors": 6,
+    "observed_nonpassing": 353,
+    "known_nonpassing": 354,
+    "unexpected_nonpassing": 0,
+    "unmapped_nonpassing": 0,
+    "recovered_nodeids": 1,
+    "fallback_used": false,
+    "artifact_id": 8624714697,
+    "artifact_zip_sha256": "f704c4f4cd65154023d30ae07fe8cc5847a80a59bb0df5426d9cd2494f94b207",
+    "report_sha256": "8b569d2793cda97db8b67e69110dd1dbb4c905e13909686236ea0319ff1abffd",
+    "junit_sha256": "6018f27395a33f37693ff7c9ea968e687bd2c09f2d7ed3640a7259b10861813e",
+    "current_verdict_influence": "NONE"
+  },
+  "lean_reproducibility": {
+    "recovery_lineage_gate": {
+      "jobs": 8874,
+      "committed_modules": 1127,
+      "ToeFormal": "PASS",
+      "ToeFormalAll": "PASS",
+      "declared_axioms": 59,
+      "unexpected_sorry_or_admit": 0
+    },
+    "integration_candidate_gate": {
+      "platform": "ubuntu-latest",
+      "workflow_run_id": 30176312021,
+      "job_id": 89725548499,
+      "jobs_executed": 8874,
+      "jobs_total": 8874,
+      "graph_count_difference_from_recovery_lineage": 0,
+      "ToeFormal": "PASS",
+      "ToeFormalAll": "PASS",
+      "conclusion": "success"
+    },
+    "axioms_discharged_by_recovery": 0,
+    "physical_truth_established": false
+  },
+  "clean_clone_regeneration_and_portability": {
+    "workflow_run_id": 30176312021,
+    "job_id": 89725548507,
+    "job_conclusion": "success",
+    "artifact_id": 8624318544,
+    "artifact_zip_sha256": "38a4f40bcc434e2190b85f55d7dfbf82ebf2ecf1aeeae88f0703f53fabd6486",
+    "v2_packet_reconstructed_sha256": "da576a72df5831c27053fbbd0f28d80e20aea975ad66b5fc936ff704c889c42a",
+    "v2_manifest_reconstructed_sha256": "4905ce51104ccc6fc4d80a941d255dc032ca80b3f83b001caccce2175ee1c9ee",
+    "v2_report_reconstructed_sha256": "bbdfbf182283330d119cbea9c8342ccbd72f78e18fbf739ce83c0710c0a14da5",
+    "required_uncommitted_current_artifacts": 0
+  },
+  "authority_and_custody": {
+    "strict_current_authority_only": true,
+    "maintenance_authority_sha256": "1d6604e25da32a886d1431c6eb3a92c16e4082d8b9ac5cda8bc16a469e99d224",
+    "registry_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506",
+    "authority_ownership_contract_sha256": "714830845fd97f6f6850aa3bf27152e809d4a2b8c9ca6d257f9714d48ba2d3a1",
+    "current_dependencies_committed_or_canonical": "ALL",
+    "ignored_or_workstation_local_current_dependencies": 0,
+    "current_surfaces_mapped_to_blocking_obligations": "ALL",
+    "unknown_current_reachability": 0,
+    "approved_dirty_main_items": 0,
+    "approved_items_unaccounted_for": 0,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_manifest_entries": 629,
+    "dirty_main_manifest_sha256": "4b4e5ebe0874287e7ea753bb64c2174b845bec4f5225a54d4ab962e83d5a2224",
+    "dirty_main_status": {
+      "tracked": 7,
+      "untracked": 622
+    },
+    "dirty_main_byte_preserved": true
+  },
+  "acceptance_checks": {
+    "current_control_plane_green": true,
+    "historical_debt_isolated_visible_and_complete": true,
+    "blocked_provenance_in_current_reachability": 0,
+    "recovery_lineage_lean_pass": true,
+    "dirty_main_terminal_dispositions_complete": true,
+    "integration_candidate_python_and_lean_pass": true,
+    "tracked_validation_mutations": 0,
+    "unexpected_untracked_source": 0
+  },
+  "result": {
+    "candidate_validation": "PASS",
+    "independent_result_review_required": true,
+    "recovery_control_plane_complete": false,
+    "ready_for_v2_decision": false
+  },
+  "scientific_boundary": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_or_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_resumption": "NOT_AUTHORIZED",
+    "scientific_content_changed": false
+  }
+}
