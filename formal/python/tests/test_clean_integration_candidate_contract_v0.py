@@ -71,14 +71,14 @@ def test_scientific_state_remains_blocked_and_unenrolled() -> None:
 
 def test_integration_profiles_exactly_partition_current_inventory() -> None:
     current = json.loads(
-        (PROFILES / "CURRENT_CONTROL_PLANE_PROFILE_20260725_v6.json").read_bytes()
+        (PROFILES / "CURRENT_CONTROL_PLANE_PROFILE_20260725_v7.json").read_bytes()
     )
     historical = json.loads(
-        (PROFILES / "HISTORICAL_DEBT_PROFILE_20260725_v6.json").read_bytes()
+        (PROFILES / "HISTORICAL_DEBT_PROFILE_20260725_v7.json").read_bytes()
     )
     reconciliation = json.loads(
         (
-            PROFILES / "VALIDATION_PROFILE_RECONCILIATION_20260725_v6.json"
+            PROFILES / "VALIDATION_PROFILE_RECONCILIATION_20260725_v7.json"
         ).read_bytes()
     )
     assert set(current["nodeids"]).isdisjoint(historical["nodeids"])
@@ -86,14 +86,14 @@ def test_integration_profiles_exactly_partition_current_inventory() -> None:
     assert reconciliation["exact_partition"] is True
     assert reconciliation["unknown_current_reachability_obligations"] == 0
     assert current["current_relative_to_commit"] == (
-        "e7060d3625d11eaa274afa36a1b285410f8f5619"
+        "4a6ced68cda4a05da69099df6c0b774d6b93475c"
     )
     inventory = strict_current_authority_parse(
-        RELEASE / "CURRENT_ACCEPTANCE_INVENTORY_20260725_v7.json"
+        RELEASE / "CURRENT_ACCEPTANCE_INVENTORY_20260725_v8.json"
     )
     assert inventory["count"] == 13856
     assert inventory["current_relative_to_commit"] == (
-        "e7060d3625d11eaa274afa36a1b285410f8f5619"
+        "4a6ced68cda4a05da69099df6c0b774d6b93475c"
     )
     assert inventory["sha256"] == (
         "3b4a6751d6ebc037b88b06864483759d991b1af3575209cc17518959d21afb08"
