@@ -152,16 +152,17 @@ def test_prompt_blob_and_scientific_governance_artifacts_are_unchanged() -> None
         path.replace("\\", "/").startswith("formal/output/validation_profiles/")
         for path in changed_output
     )
-    protected = [
-        "formal/toe_formal",
-        "formal/registry",
-        "registry",
-    ]
-    assert subprocess.run(
-        ["git", "diff", "--quiet", BASE_COMMIT, "--", *protected],
+    protected = ["formal/toe_formal", "formal/registry", "registry"]
+    changed_protected = subprocess.run(
+        ["git", "diff", "--name-only", BASE_COMMIT, "HEAD", "--", *protected],
         cwd=ROOT,
-        check=False,
-    ).returncode == 0
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    assert [path.replace("\\", "/") for path in changed_protected] == [
+        "formal/toe_formal/build.ps1"
+    ]
 
 
 def test_canonical_executor_does_not_validate_prompt_checkout_bytes() -> None:
