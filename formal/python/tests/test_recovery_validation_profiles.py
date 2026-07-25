@@ -326,22 +326,22 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     registry_v6 = subject.load_json(
         subject.REPO_ROOT
         / "formal/output/validation_profiles/"
-        "RECOVERY_OBLIGATION_REGISTRY_20260725_v7.json"
+        "RECOVERY_OBLIGATION_REGISTRY_20260725_v8.json"
     )
     current_v6 = subject.load_json(
         subject.REPO_ROOT
         / "formal/output/validation_profiles/"
-        "CURRENT_CONTROL_PLANE_PROFILE_20260725_v7.json"
+        "CURRENT_CONTROL_PLANE_PROFILE_20260725_v8.json"
     )
     historical_v6 = subject.load_json(
         subject.REPO_ROOT
         / "formal/output/validation_profiles/"
-        "HISTORICAL_DEBT_PROFILE_20260725_v7.json"
+        "HISTORICAL_DEBT_PROFILE_20260725_v8.json"
     )
     reconciliation_v6 = subject.load_json(
         subject.REPO_ROOT
         / "formal/output/validation_profiles/"
-        "VALIDATION_PROFILE_RECONCILIATION_20260725_v7.json"
+        "VALIDATION_PROFILE_RECONCILIATION_20260725_v8.json"
     )
     assert current_v6["nodeids"] == current_v5["nodeids"]
     assert historical_v6["nodeids"] == historical_v5["nodeids"]
@@ -349,7 +349,7 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     assert reconciliation_v6["exact_partition"] is True
     assert reconciliation_v6["unknown_current_reachability_obligations"] == 0
     assert current_v6["current_relative_to_commit"] == (
-        "4a6ced68cda4a05da69099df6c0b774d6b93475c"
+        "981cf61d0a663d791e6714d98b81db3cccdf1a8d"
     )
 
 

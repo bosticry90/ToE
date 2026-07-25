@@ -188,9 +188,9 @@ jobs:
           python -m formal.python.tools.recovery_profile_runner \
             --profile current_control_plane \
             --collect-current-inventory \
-            --junit formal/output/reports/current_control_plane_linux_v7.junit.xml \
-            --basetemp "${RUNNER_TEMP}/toe-current-control-v7" \
-            --report formal/output/reports/current_control_plane_linux_v7.json
+            --junit formal/output/reports/current_control_plane_linux_v8.junit.xml \
+            --basetemp "${RUNNER_TEMP}/toe-current-control-v8" \
+            --report formal/output/reports/current_control_plane_linux_v8.json
 
       - name: Upload current-control evidence
         if: always()
@@ -198,8 +198,8 @@ jobs:
         with:
           name: linux-current-control-evidence
           path: |
-            formal/output/reports/current_control_plane_linux_v7.junit.xml
-            formal/output/reports/current_control_plane_linux_v7.json
+            formal/output/reports/current_control_plane_linux_v8.junit.xml
+            formal/output/reports/current_control_plane_linux_v8.json
 
   historical-debt-reporting:
     name: Historical Debt Complete Reporting
@@ -226,10 +226,10 @@ jobs:
           python -m formal.python.tools.recovery_profile_runner `
             --profile historical_debt `
             --collect-current-inventory `
-            --junit formal/output/reports/historical_debt_windows_v7.junit.xml `
-            --basetemp "$env:RUNNER_TEMP/toe-historical-v7" `
+            --junit formal/output/reports/historical_debt_windows_v8.junit.xml `
+            --basetemp "$env:RUNNER_TEMP/toe-historical-v8" `
             --allow-recorded-historical-failures `
-            --report formal/output/reports/historical_debt_windows_v7.json
+            --report formal/output/reports/historical_debt_windows_v8.json
 
       - name: Upload visible historical-debt evidence
         if: always()
@@ -237,5 +237,5 @@ jobs:
         with:
           name: historical-debt-evidence
           path: |
-            formal/output/reports/historical_debt_windows_v7.junit.xml
-            formal/output/reports/historical_debt_windows_v7.json
+            formal/output/reports/historical_debt_windows_v8.junit.xml
+            formal/output/reports/historical_debt_windows_v8.json
