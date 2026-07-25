@@ -1,0 +1,43 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_RESULT_REVIEW_20260725_v0",
+  "verdict": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_RESULT_20260725_v0.json",
+    "sha256": "e8df3350b3e03ffff2d6f9162baa2f362e9d092962e7fcce8be5342f166772b8",
+    "commit": "a5599b8e398fd0e91e007394ad48f0113fedd172",
+    "tree": "c55ddc62c2c19c5dc3123f82d408f44b6f5d02bb"
+  },
+  "review_findings": {
+    "bounded_scope_respected": true,
+    "three_current_obligations_recovered": true,
+    "one_superseded_historical_obligation_reclassified": true,
+    "unknown_current_reachability_created": 0,
+    "legacy_admissibility_manifest_preserved": true,
+    "lean_sources_preserved": true,
+    "historical_reports_restored": 0,
+    "historical_cross_reference_debt_visible": true,
+    "gitattributes_preserved": true,
+    "historical_eol_assertion_preserved": true,
+    "scientific_or_authority_state_changed": false
+  },
+  "detached_review": {
+    "checkout_commit": "a5599b8e398fd0e91e007394ad48f0113fedd172",
+    "focused_current_guards": "6/6 PASS",
+    "historical_debt_report_check": "PASS",
+    "historical_eol_snapshot": "1/1 EXPECTED FAIL FOR ACCEPTED BROAD LF RULES",
+    "strict_result_json_parse": "PASS",
+    "checkout_clean": true
+  },
+  "accepted_dispositions": {
+    "NONPASSING-00145": "REPAIRED_CURRENT_REPRODUCIBILITY_CONTRACT",
+    "NONPASSING-00147": "REPAIRED_CURRENT_REPRODUCIBILITY_CONTRACT",
+    "NONPASSING-02535": "REPAIRED_CURRENT_AUTHORITY_REFERENCE_CONTRACT",
+    "NONPASSING-09138": "QUARANTINED_SUPERSEDED_HISTORICAL_SNAPSHOT"
+  },
+  "next_required_action": "REGENERATE_AND_VALIDATE_CURRENT_ACCEPTANCE_PROFILE",
+  "automatic_baseline_claim": false,
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}
