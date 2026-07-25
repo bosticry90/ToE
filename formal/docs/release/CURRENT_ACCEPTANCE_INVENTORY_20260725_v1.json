@@ -1,0 +1,27 @@
+{
+  "schema_id": "CURRENT_ACCEPTANCE_INVENTORY_20260725_v1",
+  "purpose": "COMPLETE_CURRENT_NON_LEAN_ACCEPTANCE_UNIVERSE",
+  "current_relative_to_commit": "bdf9a46692faa0423259eab004948dd225f3f017",
+  "inventory_kind": "NON_LEAN_PYTEST_NODE_IDS",
+  "count": 13826,
+  "sha256": "dd796f71a319becc838a625faa6ec26e96a37389dece4b714801b7aae3a6667b",
+  "custody_path": ".toe-recovery/custody-v0/recovery-obligation-profiles-v0/current_collected_node_ids_v0.txt",
+  "collection": {
+    "complete": true,
+    "exit_code": 0,
+    "duplicate_node_ids": 0,
+    "frozen_comparability_common": 13756,
+    "added_over_frozen_comparability": 70,
+    "removed_from_frozen_comparability": 0,
+    "excluded_current_critical_guards": 0
+  },
+  "lean_build_gate_files_excluded_for_separate_lean_profile": 9,
+  "profile_status": "FROZEN_INPUT_TO_OBLIGATION_AND_EXECUTION_PROFILES",
+  "acceptance_boundary": {
+    "new_current_critical_guards_included": true,
+    "membership_frozen_before_execution": true,
+    "dynamic_demotion_permitted": false,
+    "test_failure_may_change_profile": false,
+    "every_exclusion_requires_review": true
+  }
+}

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from formal.python.tools import recovery_profile_runner
 from formal.python.tools import recovery_validation_profiles as subject
 
 
@@ -66,6 +67,29 @@ def test_profiles_partition_collection_and_never_demote_a_current_test() -> None
     )
     assert current[0] in current_ids
     assert profiles["reconciliation"]["exact_partition"] is True
+    generated = recovery_profile_runner.freeze_profile_state()
+    assert len(generated) == 4
+    assert all(len(value) == 64 for value in generated.values())
+    current_generated = recovery_profile_runner.load_profile(
+        "current_control_plane"
+    )
+    historical_generated = recovery_profile_runner.load_profile("historical_debt")
+    assert set(current_generated["nodeids"]).isdisjoint(
+        historical_generated["nodeids"]
+    )
+    assert current_generated["nodeid_count"] + historical_generated[
+        "nodeid_count"
+    ] == current_generated["inventory_count"]
+    result = subject.load_json(
+        subject.REPO_ROOT
+        / "formal/docs/release/"
+        "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_20260725_v0.json"
+    )
+    assert result["artifacts"]["current_control_plane"]["nodeids"] == 3748
+    assert result["artifacts"]["historical_debt"]["nodeids"] == 10078
+    assert result["classification"]["unknown_current_reachability_obligations"] == 102
+    assert result["terminal_outcome"] == "RECOVERY_BLOCKED_CURRENT_PROFILE_COVERAGE"
+    assert result["authorization"]["successor_authority"] == "NONE"
 
 
 def test_missing_provenance_block_can_be_quarantined_only_when_noncurrent() -> None:
