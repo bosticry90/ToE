@@ -1,0 +1,106 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T05:28:00Z",
+  "status": "PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base": {
+    "commit": "093b03bfb83b950fe774f7cf664fb7967a02bd0c",
+    "tree": "8f19436f9395eccd99080cda2dbe7fb723c9f10f",
+    "obligation_profile_review": "formal/docs/release/RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "implementation": {
+    "commit": "09c7080c759f0314b79413c614f251a5ebf15842",
+    "tree": "57bdbb1c1c9dd3ddd6b0028ccd7350b6daf0de28",
+    "shared_identity_resolver": "formal/python/tools/pillar_v1_staging_identity.py",
+    "consumer": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1_result_review.py"
+  },
+  "authorization": {
+    "selection": {
+      "path": "formal/docs/release/CURRENT_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_SELECTION_20260725_v0.json",
+      "sha256": "2cfc548c92ad83fa71340c530c86fedbaf147a68ffcb466b1b92e14de42555ab"
+    },
+    "packet": {
+      "path": "formal/docs/release/REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_PACKET_20260725_v0.json",
+      "sha256": "330cdd13a3e17dfe619bb6e0d99ec67d8c23439a5ef224a9f95d46a718fa2f4b"
+    },
+    "execution_count_authorized": 1,
+    "execution_count_consumed": 1,
+    "successor_authority": "NONE"
+  },
+  "role_contract": {
+    "staged_dependencies": 23,
+    "canonical_artifact_identities": 8,
+    "historical_source_pins": 15,
+    "representations": {
+      "ACCEPTED_MIXED_EOL_RECONSTRUCTION": 1,
+      "CRLF_FROM_FROZEN_GIT_BLOB": 7,
+      "GIT_BLOB_EXACT": 15
+    },
+    "historical_generator_pin_preserved": true,
+    "historical_packet_bytes_preserved": true,
+    "live_byte_equality_removed": true,
+    "runtime_custody_relative_to_preparation_commit": true
+  },
+  "validation": {
+    "implementation_checkout": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "errors": 0,
+      "status_after": "CLEAN"
+    },
+    "affected_outcomes": {
+      "expected": 13,
+      "recovered": 13,
+      "masked_secondary_roots": 0
+    },
+    "isolated_regeneration": {
+      "runs": 2,
+      "outputs_byte_identical": true,
+      "historical_decisions_reproduced": 25,
+      "historical_decisions_total": 26,
+      "sole_failed_decision": "supporting_sources_have_authorized_bounded_class",
+      "packet_sha256": "8c0de083b4f3bd94eb2bb1bc6fa963e1a4024a2d42169eef0e05e297400fdb70",
+      "manifest_sha256": "03130e8ddd32ee70c66af042a130494f659b13a50285cacbf0f9c13968e1ff73",
+      "release_packet_sha256": "bbf299f594970641d437ff502767d7d175923219664f92bf59f415f6c3f20a06"
+    },
+    "fresh_lf_checkout": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "errors": 0,
+      "status_after": "CLEAN"
+    },
+    "actual_crlf_working_bytes": {
+      "converted_paths": 2,
+      "consumer_carriage_returns": 1381,
+      "identity_resolver_carriage_returns": 153,
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "errors": 0,
+      "restored_status_after": "CLEAN"
+    }
+  },
+  "scope": {
+    "dirty_main_reads": 0,
+    "dirty_main_bytes_copied": 0,
+    "historical_pins_refreshed": 0,
+    "historical_outputs_rewritten": 0,
+    "original_authority_class_mismatch_repaired": false,
+    "scientific_content_changed": 0,
+    "registry_or_v2_changed": 0,
+    "lean_activity": 0,
+    "automatic_successor": false
+  },
+  "custody": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_paths": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_mutated": false
+  },
+  "terminal_outcome": "PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_STAGING_IDENTITY_REPAIR_ONLY"
+}
