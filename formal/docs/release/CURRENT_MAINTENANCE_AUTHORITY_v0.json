@@ -140,10 +140,6 @@
     "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
     "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
   },
-  "selector": {
-    "path": "formal/docs/release/POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
-    "sha256": "3ad34e4a9ea76bbfaf8f8bd305ef14f2fdd45bef6c65e2dbfe75f9edb57bbd49"
-  },
   "external_ai_assisted_mathematical_discovery_milestone": {
     "path": "formal/docs/release/EXTERNAL_AI_ASSISTED_MATHEMATICAL_DISCOVERY_MILESTONE_20260724_v0.json",
     "sha256": "f64f98f83e4c67644ace4fdf1ed4af38dd8608128f0b1d23b8f7dac128ce7fd4",
