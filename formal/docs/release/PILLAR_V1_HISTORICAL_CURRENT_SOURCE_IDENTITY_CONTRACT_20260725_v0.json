@@ -1,0 +1,38 @@
+{
+  "contract_version": "v0",
+  "current_relative_to_commit": "cbed4a31e66509797e6712d53f3d3993eb9a7cff",
+  "identities": [
+    {
+      "git_blob": "d83a2542c92f675332f2a0f22f86a098b9c0db7b",
+      "identity_algorithm": "SHA-256_OF_GIT_BLOB_BYTES",
+      "identity_algorithm_version": "v1",
+      "identity_role": "V1_FROZEN_REVIEW_SOURCE_PIN",
+      "relative_to_commit": "145c30255ff90ca2df97f8526a98c6923e5db2bf",
+      "sha256": "da7766b4e51a3b11b6d823aa6833ba3f90b0b79e36b9c56786054197478e0f80",
+      "temporal_role": "HISTORICAL",
+      "tracked_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py"
+    },
+    {
+      "git_blob": "ec1dca5f8b1c2bfe53d286acd7fff88d0944a46b",
+      "identity_algorithm": "SHA-256_OF_GIT_BLOB_BYTES",
+      "identity_algorithm_version": "v1",
+      "identity_role": "CURRENT_SOURCE_BLOB_IDENTITY",
+      "relative_to_commit": "cbed4a31e66509797e6712d53f3d3993eb9a7cff",
+      "sha256": "9cd5d3b78e6eee0fb4d50315ed38223a1f9580320e8c0432dd0e0264ed4a8c31",
+      "temporal_role": "CURRENT",
+      "tracked_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py"
+    },
+    {
+      "git_blob": "80542b6fa0e12a6bcfd396ccf2722a902671354f",
+      "identity_algorithm": "SHA-256_OF_GIT_BLOB_BYTES",
+      "identity_algorithm_version": "v1",
+      "identity_role": "CURRENT_GENERATOR_IDENTITY",
+      "relative_to_commit": "cbed4a31e66509797e6712d53f3d3993eb9a7cff",
+      "sha256": "ed9ccd59b2a8f3ddf9daa7dd7ea389b9ea79cffdcd24ab08d0483b9e09d79159",
+      "temporal_role": "CURRENT",
+      "tracked_path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py"
+    }
+  ],
+  "identity_count": 3,
+  "schema_id": "toe.pillar_v1_historical_current_source_identity_contract.v0"
+}

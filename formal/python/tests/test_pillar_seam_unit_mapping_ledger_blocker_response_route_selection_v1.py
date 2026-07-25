@@ -110,12 +110,19 @@ def test_frozen_v0_preparation_and_b_blocked_review_authorize_only_v1() -> None:
         entry["path"]: entry for entry in contract["identities"]
     }
     route_evidence_paths = set(contract_by_path)
+    source_contract = subject.pillar_v1_source_identity.verify_contract()
+    historical_review_source = source_contract[
+        subject.pillar_v1_source_identity.FROZEN_REVIEW_ROLE
+    ]
     for binding in subject._frozen_inputs():
         if binding["path"] in route_evidence_paths:
             assert (
                 contract_by_path[binding["path"]]["historical_identity"]["sha256"]
                 == binding["sha256"]
             )
+            continue
+        if binding["path"] == historical_review_source["tracked_path"]:
+            assert binding["sha256"] == historical_review_source["sha256"]
             continue
         path = subject.REPO_ROOT / binding["path"]
         assert subject.sha256_path(path) == binding["sha256"]

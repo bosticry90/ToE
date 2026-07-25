@@ -13,6 +13,7 @@ from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tools import (
     pillar_seam_unit_mapping_ledger_blocker_response_route_selection as v0,
 )
+from formal.python.tools import pillar_v1_source_identity
 from formal.python.tools import qft_route_evidence_identity
 
 
@@ -487,20 +488,11 @@ def _frozen_inputs() -> list[dict[str, str]]:
 
 def load_inputs() -> tuple[dict[str, Any], dict[str, Any]]:
     ledger, _ = v0.load_inputs()
-    route_evidence_paths = {
-        artifact["path"] for artifact in v0.ROUTE_EVIDENCE_ARTIFACTS
-    }
-    for binding in _frozen_inputs():
-        if binding["path"] in route_evidence_paths:
-            continue
-        path = REPO_ROOT / binding["path"]
-        if not path.is_file() or sha256_path(path) != binding["sha256"]:
-            raise ValueError(f"frozen input mismatch: {binding['path']}")
-    qft_route_evidence_identity.verify_route_evidence(
-        [artifact["path"] for artifact in v0.ROUTE_EVIDENCE_ARTIFACTS],
-        expected_historical_sha_by_path=v0.ROUTE_EVIDENCE_SHA_BY_PATH,
+    if not pillar_v1_source_identity.bindings_match_declared_identities(
+        _frozen_inputs(),
         repo_root=REPO_ROOT,
-    )
+    ):
+        raise ValueError("frozen input identity-domain mismatch")
     review = json.loads((REPO_ROOT / V0_REVIEW_RELATIVE_PATH).read_bytes())
     if not (
         review.get("accepted") is False
@@ -623,7 +615,7 @@ def packet_validation_failures(packet: dict[str, Any], ledger: dict[str, Any]) -
     row_map = _ledger_row_map(ledger)
     by_id = {row.get("row_id"): row for row in rows if isinstance(row, dict)}
     frozen_ok = packet.get("input_artifacts") == _frozen_inputs() and (
-        qft_route_evidence_identity.bindings_match_declared_identities(
+        pillar_v1_source_identity.bindings_match_declared_identities(
             _frozen_inputs(),
             repo_root=REPO_ROOT,
         )
@@ -707,7 +699,7 @@ def packet_validation_failures(packet: dict[str, Any], ledger: dict[str, Any]) -
         bindings = {item.get("source_id"): item for item in matrix.get("source_bindings", []) if isinstance(item, dict)}
         propositions = {item.get("proposition_id"): item for item in matrix.get("propositions", []) if isinstance(item, dict)}
         hash_ok = hash_ok and (
-            qft_route_evidence_identity.bindings_match_declared_identities(
+            pillar_v1_source_identity.bindings_match_declared_identities(
                 bindings.values(),
                 repo_root=REPO_ROOT,
             )
