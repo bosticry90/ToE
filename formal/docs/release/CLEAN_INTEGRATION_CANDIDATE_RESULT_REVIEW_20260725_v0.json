@@ -1,0 +1,97 @@
+{
+  "schema_id": "CLEAN_INTEGRATION_CANDIDATE_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T23:48:00Z",
+  "verdict": "RECOVERY_CONTROL_PLANE_COMPLETE_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/CLEAN_INTEGRATION_CANDIDATE_RESULT_20260725_v0.json",
+    "sha256": "decee9f486d58589cb0f04363aae80f0ca3fa1dce4ebaae4dafcdf8644e61698",
+    "commit": "cd2da28351c0dae61870ad987ba9bad0bdcb43ea",
+    "tree": "eb419d4181d636b70886f43b40b7619da1442662",
+    "parent_validated_source_commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+    "result_commit_is_evidence_only": true
+  },
+  "independent_review": {
+    "checkout": "C:/toe-integration-review-v7",
+    "checkout_state": "DETACHED",
+    "checkout_commit": "cd2da28351c0dae61870ad987ba9bad0bdcb43ea",
+    "validated_source_commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+    "validated_source_tree": "54b3bf6cb91613722f2ea6dd54f8a10284abc92c",
+    "recomputation": {
+      "path": ".toe-recovery/custody-v0/clean-integration-candidate-v0/CLEAN_INTEGRATION_CANDIDATE_INDEPENDENT_RECOMPUTATION_20260725_v0.json",
+      "sha256": "7d335713891d3bd1f82398dd5a258e4c6ffae7b2d54588368c8379db8bb56b14",
+      "size_bytes": 1494,
+      "checks": "26 / 26 PASS"
+    },
+    "checkout_after": "CLEAN"
+  },
+  "accepted_findings": {
+    "accepted_lineage_protected_invariants": "PRESERVED",
+    "strict_current_authority_interpretation": "EXCLUSIVE",
+    "historical_and_commit_relative_current_identities": "SEPARATED",
+    "profile_machinery_current_critical_and_execution_immutable": true,
+    "current_control_plane": {
+      "nodeids": 3644,
+      "windows_lf": "PASS",
+      "windows_crlf": "PASS",
+      "detached_review": "PASS",
+      "linux": "PASS",
+      "failures": 0,
+      "errors": 0
+    },
+    "historical_debt": {
+      "state": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES",
+      "nodeids": 10212,
+      "observed_nonpassing": 353,
+      "unexpected_nonpassing": 0,
+      "unmapped_nonpassing": 0,
+      "current_verdict_influence": "NONE"
+    },
+    "blocked_provenance_in_current_reachability": 0,
+    "recovery_lineage_lean": {
+      "jobs": "8874 / 8874",
+      "modules": "1127 / 1127",
+      "ToeFormal": "PASS",
+      "ToeFormalAll": "PASS",
+      "declared_axioms": 59,
+      "unexpected_sorry_or_admit": 0
+    },
+    "integration_candidate_lean": {
+      "jobs": "8874 / 8874",
+      "graph_difference": 0,
+      "ToeFormal": "PASS",
+      "ToeFormalAll": "PASS"
+    },
+    "dirty_main": {
+      "manifest_entries": 629,
+      "terminal_dispositions": 629,
+      "manual_review_required": 0,
+      "approved_for_clean_integration": 0,
+      "approved_items_unaccounted_for": 0,
+      "byte_preserved": true
+    },
+    "current_dependencies_committed_or_canonical": "ALL",
+    "ignored_or_workstation_local_current_dependencies": 0,
+    "required_generated_artifacts_reproducible": "ALL",
+    "tracked_validation_mutations": 0,
+    "unexpected_untracked_source": 0
+  },
+  "terminal_states": [
+    "RECOVERY_CONTROL_PLANE_COMPLETE",
+    "RECOVERY_READY_FOR_V2_DECISION"
+  ],
+  "completion_boundary": {
+    "repository_recovery": "COMPLETE",
+    "v2_decision": "REQUIRED_SEPARATELY",
+    "scientific_target_selection": "NOT_PERFORMED",
+    "scientific_execution": "NOT_AUTHORIZED"
+  },
+  "automatic_successor_authority": "NONE",
+  "scientific_boundary": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_or_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_resumption": "NOT_AUTHORIZED",
+    "scientific_content_changed": false
+  }
+}
