@@ -28,7 +28,7 @@ def test_clean_candidate_imports_no_unapproved_dirty_main_path() -> None:
 
 def test_authority_fields_have_exactly_one_owner() -> None:
     contract = strict_current_authority_parse(
-        RELEASE / "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v0.json"
+        RELEASE / "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v1.json"
     )
     fields = [row["field"] for row in contract["owners"]]
     assert len(fields) == len(set(fields)) == 8
@@ -39,7 +39,7 @@ def test_authority_fields_have_exactly_one_owner() -> None:
 
 def test_current_authority_uses_only_the_strict_interpreter() -> None:
     contract = strict_current_authority_parse(
-        RELEASE / "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v0.json"
+        RELEASE / "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v1.json"
     )
     authority = strict_current_authority_parse(
         RELEASE / "CURRENT_MAINTENANCE_AUTHORITY_v0.json"
@@ -57,28 +57,31 @@ def test_current_authority_uses_only_the_strict_interpreter() -> None:
 
 def test_scientific_state_remains_blocked_and_unenrolled() -> None:
     contract = strict_current_authority_parse(
-        RELEASE / "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v0.json"
+        RELEASE / "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v1.json"
     )
     state = contract["current_state_boundary"]
     assert state == {
         "scientific_posture": "B-BLOCKED",
         "resolved_unit_or_seam_rows": "0 / 12",
         "qft_gr_seam": "OPEN",
-        "v2_enrollment": "NOT_AUTHORIZED",
+        "v2_enrollment": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED",
+        "v2_preparation_target": "CLOSED_WITHOUT_ACCEPTANCE",
+        "current_executable_scientific_target": "NONE",
+        "next_scientific_action": "REQUIRES_FRESH_RESPONSE_SELECTOR",
         "scientific_execution_permission": "NONE",
     }
 
 
 def test_integration_profiles_exactly_partition_current_inventory() -> None:
     current = json.loads(
-        (PROFILES / "CURRENT_CONTROL_PLANE_PROFILE_20260725_v9.json").read_bytes()
+        (PROFILES / "CURRENT_CONTROL_PLANE_PROFILE_20260725_v10.json").read_bytes()
     )
     historical = json.loads(
-        (PROFILES / "HISTORICAL_DEBT_PROFILE_20260725_v9.json").read_bytes()
+        (PROFILES / "HISTORICAL_DEBT_PROFILE_20260725_v10.json").read_bytes()
     )
     reconciliation = json.loads(
         (
-            PROFILES / "VALIDATION_PROFILE_RECONCILIATION_20260725_v9.json"
+            PROFILES / "VALIDATION_PROFILE_RECONCILIATION_20260725_v10.json"
         ).read_bytes()
     )
     assert set(current["nodeids"]).isdisjoint(historical["nodeids"])
@@ -86,14 +89,14 @@ def test_integration_profiles_exactly_partition_current_inventory() -> None:
     assert reconciliation["exact_partition"] is True
     assert reconciliation["unknown_current_reachability_obligations"] == 0
     assert current["current_relative_to_commit"] == (
-        "51130543f26c5e4ccdcd72598fd2c750d4f326ee"
+        "997f1b40f1e5334599e2e719affd899eb16add7a"
     )
     inventory = strict_current_authority_parse(
-        RELEASE / "CURRENT_ACCEPTANCE_INVENTORY_20260725_v10.json"
+        RELEASE / "CURRENT_ACCEPTANCE_INVENTORY_20260725_v11.json"
     )
     assert inventory["count"] == 13856
     assert inventory["current_relative_to_commit"] == (
-        "51130543f26c5e4ccdcd72598fd2c750d4f326ee"
+        "997f1b40f1e5334599e2e719affd899eb16add7a"
     )
     assert inventory["sha256"] == (
         "3b4a6751d6ebc037b88b06864483759d991b1af3575209cc17518959d21afb08"
