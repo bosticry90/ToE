@@ -89,14 +89,14 @@ def test_integration_profiles_exactly_partition_current_inventory() -> None:
     assert reconciliation["exact_partition"] is True
     assert reconciliation["unknown_current_reachability_obligations"] == 0
     assert current["current_relative_to_commit"] == (
-        "997f1b40f1e5334599e2e719affd899eb16add7a"
+        "7149fcbf43662f5e2e26e0db44903aa193368f1d"
     )
     inventory = strict_current_authority_parse(
         RELEASE / "CURRENT_ACCEPTANCE_INVENTORY_20260725_v11.json"
     )
     assert inventory["count"] == 13856
     assert inventory["current_relative_to_commit"] == (
-        "997f1b40f1e5334599e2e719affd899eb16add7a"
+        "7149fcbf43662f5e2e26e0db44903aa193368f1d"
     )
     assert inventory["sha256"] == (
         "3b4a6751d6ebc037b88b06864483759d991b1af3575209cc17518959d21afb08"

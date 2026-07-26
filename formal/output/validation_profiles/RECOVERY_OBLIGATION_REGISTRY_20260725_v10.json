@@ -31,7 +31,7 @@
     "current_scientific_evidence_reachable": 182,
     "obligations": 4010
   },
-  "current_relative_to_commit": "997f1b40f1e5334599e2e719affd899eb16add7a",
+  "current_relative_to_commit": "7149fcbf43662f5e2e26e0db44903aa193368f1d",
   "obligations": [
     {
       "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/calculations/test_calc_ccft_scqed_literature_applicability_matrix.py",

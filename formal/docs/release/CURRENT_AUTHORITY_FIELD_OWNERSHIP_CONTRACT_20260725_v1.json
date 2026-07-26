@@ -1,7 +1,7 @@
 {
   "schema_id": "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v1",
   "contract_version": "v1",
-  "current_relative_to_commit": "997f1b40f1e5334599e2e719affd899eb16add7a",
+  "current_relative_to_commit": "7149fcbf43662f5e2e26e0db44903aa193368f1d",
   "strict_current_authority_interpretation": "STRICT_CURRENT_AUTHORITY_PARSE_ONLY",
   "owners": [
     {
