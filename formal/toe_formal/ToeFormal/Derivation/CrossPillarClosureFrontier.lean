@@ -436,7 +436,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+        "await_fresh_response_selector_after_v2_nonenrollment_v0"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -464,7 +464,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+        "await_fresh_response_selector_after_v2_nonenrollment_v0"
       status := .retained }
   ]
 
@@ -482,33 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the completed independent v1 result review. -/
+/-- Previous V2 preparation target closed without enrollment. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result"
-
-/-- Current live target after the B-BLOCKED v1 result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
 
-/-- Evidence certificate for the independent v1 result review. -/
+/-- Nonexecuting boundary requiring a fresh response selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "await_fresh_response_selector_after_v2_nonenrollment_v0"
+
+/-- Evidence for reproducible V2 non-enrollment and preparation closeout. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean"
+  "formal/docs/release/V2_ENROLLMENT_DECISION_20260725_v0.json"
 
-/-- Immutable v1 result-review report supporting the versioned v2 correction target. -/
+/-- Current nonexecuting decision report. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json"
+  "formal/docs/release/V2_ENROLLMENT_DECISION_20260725_v0.json"
 
-/-- B-BLOCKED authority-class attribution outcome supporting the v2 target. -/
+/-- V2 is reproducible but not enrolled. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.reviewOutcome
+  "V2_REPRODUCIBLE_BUT_NOT_ENROLLED_PREPARATION_TARGET_CLOSED_WITHOUT_ACCEPTANCE"
 
-/-- Strict claim-ceiling outcome supporting the current target. -/
+/-- Strict nonexecution boundary. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.strictReviewOutcome
+  "B_BLOCKED_NO_V2_ENROLLMENT_NO_EXECUTABLE_SCIENTIFIC_TARGET_FRESH_RESPONSE_SELECTOR_REQUIRED_NO_SCIENTIFIC_EXECUTION"
 
-/-- Kind of the selected current target. -/
+/-- Kind of the nonexecuting current boundary. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.selectedNextTargetKind
+  "nonexecuting_scientific_target_selection_boundary"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+    "await_fresh_response_selector_after_v2_nonenrollment_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

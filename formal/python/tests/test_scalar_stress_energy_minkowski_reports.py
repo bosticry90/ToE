@@ -102,16 +102,16 @@ def test_guardrail_and_execution_are_preserved_after_result_review() -> None:
         "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
     )
     assert state["live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+        "await_fresh_response_selector_after_v2_nonenrollment_v0"
     )
     assert state["previous_live_next_target"] == (
-        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result"
+        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
     )
     assert active["workstream_id"] == state["live_next_target"]
     assert active["authorized_next_strict_target"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
     assert active["claim_status"] == (
-        "versioned_authority_class_attribution_correction_v2_required"
+        "recovery_complete_v2_reproducible_not_enrolled"
     )
 
 

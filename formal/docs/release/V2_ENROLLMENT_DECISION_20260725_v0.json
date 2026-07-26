@@ -1,0 +1,64 @@
+{
+  "schema_id": "V2_ENROLLMENT_DECISION_20260725_v0",
+  "captured_at_utc": "2026-07-25T23:52:00Z",
+  "authority": {
+    "selection_path": "formal/docs/release/V2_ENROLLMENT_DECISION_SELECTION_20260725_v0.json",
+    "selection_sha256": "895c619a114516b319d5f4219d38e6b416fbb2b280dc44c2f994770fa2060f6d",
+    "accepted_recovery_path": "formal/docs/release/CLEAN_INTEGRATION_CANDIDATE_RESULT_REVIEW_20260725_v0.json",
+    "accepted_recovery_sha256": "6afb06593bc9dd68104aeeeba4d4111600f845104fa370ed667650ea504d3e6ff",
+    "automatic_successor_authority": "NONE"
+  },
+  "v2_reproducibility_evidence": {
+    "preparation_packet": {
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+      "sha256": "da576a72df5831c27053fbbd0f28d80e20aea975ad66b5fc936ff704c889c42a"
+    },
+    "preparation_manifest": {
+      "path": "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-MANIFEST-v2.json",
+      "sha256": "4905ce51104ccc6fc4d80a941d255dc032ca80b3f83b001caccce2175ee1c9ee"
+    },
+    "preparation_report": {
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json",
+      "sha256": "bbdfbf182283330d119cbea9c8342ccbd72f78e18fbf739ce83c0710c0a14da5"
+    },
+    "historical_result_review": {
+      "path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260713_v2.json",
+      "sha256": "6dac3d95a29e7ab0d29a99d5903b682bf235b92e025b044890a2e927d8b6f875",
+      "custody_role": "HISTORICAL_REVIEW_RECORD_NOT_SELF_ENROLLING"
+    },
+    "linux_clean_reconstruction": {
+      "workflow_run_id": 30176312021,
+      "job_id": 89725548507,
+      "conclusion": "success",
+      "packet_sha256": "da576a72df5831c27053fbbd0f28d80e20aea975ad66b5fc936ff704c889c42a",
+      "manifest_sha256": "4905ce51104ccc6fc4d80a941d255dc032ca80b3f83b001caccce2175ee1c9ee",
+      "report_sha256": "bbdfbf182283330d119cbea9c8342ccbd72f78e18fbf739ce83c0710c0a14da5"
+    }
+  },
+  "decision": {
+    "state": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED",
+    "v2_artifact_reproducible": true,
+    "v2_enrolled": false,
+    "historical_review_rewritten": false,
+    "prior_proposed_successor_selected": false,
+    "preparation_target": "CLOSED_WITHOUT_ACCEPTANCE",
+    "current_executable_scientific_target": "NONE",
+    "next_scientific_action": "REQUIRES_FRESH_RESPONSE_SELECTOR",
+    "scientific_execution": "NOT_AUTHORIZED"
+  },
+  "current_nonexecuting_boundary": {
+    "target_id": "await_fresh_response_selector_after_v2_nonenrollment_v0",
+    "target_kind": "nonexecuting_scientific_target_selection_boundary",
+    "outcome": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED_PREPARATION_TARGET_CLOSED_WITHOUT_ACCEPTANCE",
+    "strict_outcome": "B_BLOCKED_NO_V2_ENROLLMENT_NO_EXECUTABLE_SCIENTIFIC_TARGET_FRESH_RESPONSE_SELECTOR_REQUIRED_NO_SCIENTIFIC_EXECUTION"
+  },
+  "terminal_state": "RECOVERY_READY_FOR_SCIENTIFIC_TARGET_SELECTION",
+  "scientific_boundary": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_or_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "scientific_target_selected": false,
+    "scientific_resumption": "NOT_AUTHORIZED",
+    "scientific_content_changed": false
+  }
+}

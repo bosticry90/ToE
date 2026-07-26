@@ -1,0 +1,24 @@
+{
+  "schema_id": "V2_ENROLLMENT_DECISION_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_TOE_REPOSITORY_RECOVERY_SPECIFICATION",
+  "accepted_recovery": {
+    "path": "formal/docs/release/CLEAN_INTEGRATION_CANDIDATE_RESULT_REVIEW_20260725_v0.json",
+    "sha256": "6afb06593bc9dd68104aeeba4d4111600f845104fa370ed667650ea504d3e6ff",
+    "commit": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3",
+    "verdict": "RECOVERY_CONTROL_PLANE_COMPLETE_ACCEPTED"
+  },
+  "selected": "RECORD_V2_REPRODUCIBLE_BUT_NOT_ENROLLED_AND_CLOSE_PREPARATION_TARGET",
+  "execution_count_authorized": 1,
+  "permitted_state": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED",
+  "required_boundary": {
+    "v2_preparation_target": "CLOSED_WITHOUT_ACCEPTANCE",
+    "current_executable_scientific_target": "NONE",
+    "next_scientific_action": "REQUIRES_FRESH_RESPONSE_SELECTOR",
+    "scientific_execution": "NOT_AUTHORIZED"
+  },
+  "v2_enrollment_authorized": false,
+  "scientific_target_selection_authorized": false,
+  "scientific_execution_authorized": false,
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED"
+}
