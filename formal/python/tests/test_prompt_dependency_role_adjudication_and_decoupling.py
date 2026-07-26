@@ -162,6 +162,8 @@ def test_prompt_blob_and_scientific_governance_artifacts_are_unchanged() -> None
     ).stdout.splitlines()
     assert [path.replace("\\", "/") for path in changed_protected] == [
         "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+        "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+        "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
         "formal/toe_formal/build.ps1",
     ]
 

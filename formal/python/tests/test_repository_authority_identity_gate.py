@@ -51,7 +51,11 @@ def test_thin_mirrors_are_derived_from_registry_target_and_evidence() -> None:
 
     current_target = CURRENT_TARGET_PATH.read_text(encoding="utf-8")
     current_authority = CURRENT_AUTHORITY_PATH.read_text(encoding="utf-8")
-    assert f"import {evidence_module}" in current_target
+    if evidence.startswith("formal/toe_formal/") and evidence.endswith(".lean"):
+        assert f"import {evidence_module}" in current_target
+    else:
+        assert "import ToeFormal.Derivation.CrossPillarClosureFrontier" in current_target
+        assert f'"{evidence}"' in current_target
     assert f'"{target}"' in current_target
     assert f'"{target}"' in current_authority
     assert _tracked(evidence)

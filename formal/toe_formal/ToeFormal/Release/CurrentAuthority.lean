@@ -20,8 +20,13 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2" := by
+      "await_fresh_response_selector_after_v2_nonenrollment_v0" := by
   native_decide
+
+theorem current_authority_has_no_executable_scientific_target :
+    currentTarget =
+      "await_fresh_response_selector_after_v2_nonenrollment_v0" := by
+  rfl
 
 end CurrentAuthority
 end Release

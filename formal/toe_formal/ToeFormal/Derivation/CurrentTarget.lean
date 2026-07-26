@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview
+import ToeFormal.Derivation.CrossPillarClosureFrontier
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,19 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.selectedNextTarget
+  currentLiveNextStrictTargetV0
 
 def currentEvidencePacketId : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.reviewId
+  currentLiveNextStrictTargetEvidenceV0
 
-theorem current_target_is_registry_derived_blocker_response_v2_preparation :
+theorem current_target_is_nonexecuting_after_v2_nonenrollment :
     currentLiveTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2" := by
+      "await_fresh_response_selector_after_v2_nonenrollment_v0" := by
+  rfl
+
+theorem current_evidence_is_v2_nonenrollment_decision :
+    currentEvidencePacketId =
+      "formal/docs/release/V2_ENROLLMENT_DECISION_20260725_v0.json" := by
   rfl
 
 end CurrentTarget
