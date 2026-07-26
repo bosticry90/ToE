@@ -13,10 +13,10 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  currentLiveNextStrictTargetV0
+  CrossPillarClosureFrontier.currentLiveNextStrictTargetV0
 
 def currentEvidencePacketId : String :=
-  currentLiveNextStrictTargetEvidenceV0
+  CrossPillarClosureFrontier.currentLiveNextStrictTargetEvidenceV0
 
 theorem current_target_is_nonexecuting_after_v2_nonenrollment :
     currentLiveTarget =
