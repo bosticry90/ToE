@@ -646,18 +646,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The B-BLOCKED v1 review supports only the versioned v2 correction. -/
+/-- The V2 non-enrollment decision leaves only a nonexecuting selection boundary. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean" ∧
+        "formal/docs/release/V2_ENROLLMENT_DECISION_20260725_v0.json" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json" ∧
+        "formal/docs/release/V2_ENROLLMENT_DECISION_20260725_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH" ∧
+        "V2_REPRODUCIBLE_BUT_NOT_ENROLLED_PREPARATION_TARGET_CLOSED_WITHOUT_ACCEPTANCE" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION" ∧
+        "B_BLOCKED_NO_V2_ENROLLMENT_NO_EXECUTABLE_SCIENTIFIC_TARGET_FRESH_RESPONSE_SELECTOR_REQUIRED_NO_SCIENTIFIC_EXECUTION" ∧
       currentLiveNextStrictTargetKindV0 =
-        "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2" := by
+        "nonexecuting_scientific_target_selection_boundary" := by
   constructor
   · rfl
   constructor
