@@ -1,0 +1,144 @@
+{
+  "schema_id": "V2_ENROLLMENT_DECISION_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-26T04:00:34Z",
+  "status": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED_DECISION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "authority": {
+    "source": "USER_ISSUED_CONTROLLING_TOE_REPOSITORY_RECOVERY_SPECIFICATION",
+    "selection_path": "formal/docs/release/V2_ENROLLMENT_DECISION_SELECTION_20260725_v0.json",
+    "selection_sha256": "895c619a114516b319d5f4219d38e6b416fbb2b280dc44c2f994770fa2060f6d",
+    "decision_path": "formal/docs/release/V2_ENROLLMENT_DECISION_20260725_v0.json",
+    "decision_sha256": "5f294a4c28902b11ba8ad6e0fc82866205298cb65c468691a3aaaaf43e4b5f63",
+    "automatic_successor_authority": "NONE"
+  },
+  "accepted_recovery_prerequisite": {
+    "source_commit": "a901fe6fd36829e3395ce213ab54b1fdfc63c8c4",
+    "result_commit": "cd2da28351c0dae61870ad987ba9bad0bdcb43ea",
+    "accepted_review_commit": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3",
+    "review_path": "formal/docs/release/CLEAN_INTEGRATION_CANDIDATE_RESULT_REVIEW_20260725_v0.json",
+    "review_sha256": "6afb06593bc9dd68104aeeba4d4111600f845104fa370ed667650ea504d3e6ff",
+    "verdict": "RECOVERY_CONTROL_PLANE_COMPLETE_ACCEPTED"
+  },
+  "validated_decision_source": {
+    "branch": "codex/v2-reproducible-nonenrollment-decision-v0",
+    "commit": "7d82ebfe2665aa6532f4246df37c67da03d98665",
+    "tree": "f7f2dc39cb9cecd14f8f5b7e1546b2693f8074bf",
+    "registry_transition_commit": "dac66bf0a7b7b52355ee18a35ff1af684d706acc",
+    "registry_transition_tree": "137edf67f417e4da8f2ea16c7ddad15f1c809ba7",
+    "dirty_main_merged": false,
+    "scientific_content_changed": false
+  },
+  "v2_decision": {
+    "state": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED",
+    "v2_reproducibility": "PRESERVED_FROM_ACCEPTED_CLEAN_INTEGRATION_RESULT",
+    "v2_enrolled": false,
+    "scientific_authority_rotated_to_v2": false,
+    "previous_preparation_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "previous_preparation_target_disposition": "CLOSED_WITHOUT_ACCEPTANCE",
+    "current_scientific_boundary": "await_fresh_response_selector_after_v2_nonenrollment_v0",
+    "current_boundary_kind": "nonexecuting_scientific_target_selection_boundary",
+    "current_executable_scientific_target": "NONE",
+    "next_scientific_action": "REQUIRES_FRESH_RESPONSE_SELECTOR"
+  },
+  "current_control_validation": {
+    "profile": "formal/output/validation_profiles/CURRENT_CONTROL_PLANE_PROFILE_20260725_v10.json",
+    "profile_sha256": "9f19ea83c8dabe31fd58114607bbf1e4c97e292290bd1012af6cadf9958fc13a",
+    "inventory_count": 13856,
+    "profile_count": 3644,
+    "passed": 3287,
+    "skipped": 357,
+    "failed": 0,
+    "errors": 0,
+    "pytest_exit_code": 0,
+    "profile_state_unchanged": true,
+    "custody_report": ".toe-recovery/custody-v0/v2-reproducible-nonenrollment-decision-v0/v2_current_control_plane_v11.report.json",
+    "report_sha256": "4a38648918f9cbc44088c972279383315df7e54d77b7914fbd5e744b40577fe5",
+    "junit_sha256": "f1752042be3f62008bbdb583be21de535fa8577eb0606c408694066e65cdaeb1",
+    "verdict": "PASS"
+  },
+  "historical_debt_reporting": {
+    "profile": "formal/output/validation_profiles/HISTORICAL_DEBT_PROFILE_20260725_v10.json",
+    "profile_sha256": "ddfd51603292386daf9016f38b34e1d34900dd98ca6944ff6341aafd2e069b28",
+    "tests": 10212,
+    "passed": 9619,
+    "skipped": 241,
+    "failed": 346,
+    "errors": 6,
+    "observed_nonpassing": 352,
+    "reporting_completed": true,
+    "fallback_used": false,
+    "raw_profile_verdict": "HISTORICAL_REPORTING_BLOCKED_PENDING_DELTA_ADJUDICATION",
+    "delta_adjudication": "formal/docs/release/V2_HISTORICAL_DEBT_PROFILE_DELTA_ADJUDICATION_20260725_v0.json",
+    "delta_adjudication_sha256": "c65e6c8543f790835e2e8bc4ffc13e80d5ab27da7648ecd26de8ba80311959e7",
+    "unexpected_nonpassing_after_adjudication": 0,
+    "adjusted_verdict_candidate": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES",
+    "current_verdict_influence": "NONE",
+    "custody_report_sha256": "5e554a0b42e034df1166c266547f7d9c2871deb38f7e6bda75be0d2656974b2a",
+    "junit_sha256": "c2251a21f443024df9947086d9b2475c6393722e30b1f72ddd1f2b3f8936abd9"
+  },
+  "lean_validation": {
+    "recovery_lineage_gate": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_PASS_ACCEPTED",
+    "clean_integration_gate": "PASS_ACCEPTED",
+    "v2_decision_transition_gate": {
+      "source_commit": "7d82ebfe2665aa6532f4246df37c67da03d98665",
+      "source_tree": "f7f2dc39cb9cecd14f8f5b7e1546b2693f8074bf",
+      "jobs_executed": 8874,
+      "jobs_total": 8874,
+      "ToeFormal": "PASS",
+      "ToeFormalAll": "PASS",
+      "stdout_sha256": "88e972b1d453b70521e43098ceb8483579ef6d5ab456c56d2fc8750affcabb8c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unexpected_sorry_or_admit_added": 0,
+      "declared_axiom_count": 59,
+      "axioms_discharged_by_decision": 0
+    },
+    "physical_truth_established": false
+  },
+  "impact_and_regression_evidence": {
+    "thin_mirror_impact_tests": 1008,
+    "thin_mirror_impact_passed": 897,
+    "thin_mirror_impact_skipped": 111,
+    "thin_mirror_impact_failed": 0,
+    "thin_mirror_impact_errors": 0,
+    "thin_mirror_impact_junit_sha256": "974391da4e8f8a038844ecf39a89b5124786059fe7fe31a1af5b7319f08d6d40",
+    "profile_inventory_sha256": "3b4a6751d6ebc037b88b06864483759d991b1af3575209cc17518959d21afb08",
+    "unknown_current_reachability": 0
+  },
+  "authority_and_custody": {
+    "strict_current_authority_parse_only": true,
+    "profile_state_immutable_during_execution": true,
+    "current_dependencies_committed_or_canonical": "ALL",
+    "ignored_or_workstation_local_current_dependencies": 0,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_manifest_entries": 629,
+    "dirty_main_manifest_sha256": "4b4e5ebe0874287e7ea753bb64c2174b845bec4f5225a54d4ab962e83d5a2224",
+    "dirty_main_status": {
+      "tracked": 7,
+      "untracked": 622
+    },
+    "dirty_main_byte_preserved": true,
+    "approved_dirty_main_items": 0,
+    "approved_items_unaccounted_for": 0,
+    "validation_checkout": "CLEAN"
+  },
+  "terminal_state_candidate": {
+    "recovery_control_plane": "RECOVERY_CONTROL_PLANE_COMPLETE",
+    "v2_decision": "V2_REPRODUCIBLE_BUT_NOT_ENROLLED",
+    "recovery_next_state": "RECOVERY_READY_FOR_SCIENTIFIC_TARGET_SELECTION",
+    "scientific_target_selected": false,
+    "scientific_execution_authorized": false,
+    "scientific_resumption_authorized": false,
+    "independent_result_review_required": true
+  },
+  "scientific_boundary": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_or_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "v2_enrollment": "NOT_ENROLLED",
+    "scalar_yukawa": "NONCURRENT",
+    "later_maxwell_dirac": "NONCURRENT",
+    "native_unified_dynamics": "NOT_ESTABLISHED",
+    "distinctive_prediction": "ABSENT",
+    "empirical_confirmation": "ABSENT",
+    "scientific_content_changed": false
+  }
+}

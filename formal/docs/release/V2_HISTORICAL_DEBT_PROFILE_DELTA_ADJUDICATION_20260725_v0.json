@@ -1,0 +1,118 @@
+{
+  "schema_id": "V2_HISTORICAL_DEBT_PROFILE_DELTA_ADJUDICATION_20260725_v0",
+  "captured_at_utc": "2026-07-26T04:00:34Z",
+  "status": "V2_HISTORICAL_DEBT_PROFILE_DELTA_ADJUDICATION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "authority": {
+    "source": "USER_ISSUED_CONTROLLING_TOE_REPOSITORY_RECOVERY_SPECIFICATION",
+    "scope": "CLASSIFY_COMPLETE_HISTORICAL_PROFILE_DELTA_WITHOUT_REWRITING_HISTORICAL_ARTIFACTS_OR_TESTS",
+    "automatic_successor_authority": "NONE"
+  },
+  "validated_source": {
+    "commit": "7d82ebfe2665aa6532f4246df37c67da03d98665",
+    "tree": "f7f2dc39cb9cecd14f8f5b7e1546b2693f8074bf",
+    "head_state": "DETACHED_CLEAN_REVIEW_CHECKOUT"
+  },
+  "immutable_profile": {
+    "path": "formal/output/validation_profiles/HISTORICAL_DEBT_PROFILE_20260725_v10.json",
+    "sha256": "ddfd51603292386daf9016f38b34e1d34900dd98ca6944ff6341aafd2e069b28",
+    "known_nonpassing_before": 354,
+    "known_nonpassing_nodeid_root_sha256": "89e320de054d1f7728dcbe2267f0979c54af72728b030b1e25461cc92999ae13",
+    "profile_bytes_modified": false
+  },
+  "complete_execution": {
+    "custody_report": ".toe-recovery/custody-v0/v2-reproducible-nonenrollment-decision-v0/v2_historical_debt_v11.report.json",
+    "report_sha256": "5e554a0b42e034df1166c266547f7d9c2871deb38f7e6bda75be0d2656974b2a",
+    "junit": ".toe-recovery/custody-v0/v2-reproducible-nonenrollment-decision-v0/v2_historical_debt_v11.junit.xml",
+    "junit_sha256": "c2251a21f443024df9947086d9b2475c6393722e30b1f72ddd1f2b3f8936abd9",
+    "tests": 10212,
+    "passed": 9619,
+    "skipped": 241,
+    "failed": 346,
+    "errors": 6,
+    "observed_nonpassing": 352,
+    "reporting_completed": true,
+    "profile_state_unchanged": true,
+    "raw_profile_verdict": "HISTORICAL_REPORTING_BLOCKED_PENDING_DELTA_ADJUDICATION"
+  },
+  "newly_observed_rows": [
+    {
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_guardrail_independent_review.py::test_independent_review_artifact_is_deterministic_and_current",
+      "obligation_id": "V2_HISTORICAL_DELTA_001",
+      "causal_root": "HISTORICAL_GIT_ARCHIVE_TREE_IDENTITY_NONCANONICAL_ORDER",
+      "dependency": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v0.json",
+      "reachability_evidence": [
+        "MEMBER_OF_IMMUTABLE_HISTORICAL_DEBT_PROFILE_V10",
+        "ABSENT_FROM_CURRENT_CONTROL_PLANE_PROFILE_V10",
+        "REVIEW_INPUTS_FROZEN_TO_COMMITS_F8C64860_AND_C60CEBDE",
+        "NO_CURRENT_AUTHORITY_OR_CURRENT_SCIENTIFIC_EVIDENCE_DEPENDENCY"
+      ],
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "temporal_role": "HISTORICAL",
+      "provenance": "VERIFIED",
+      "disposition": "QUARANTINED",
+      "adjudication": {
+        "stored_reviewed_lean_tree_identity_sha256": "68b7df10e68038233a5b315596246d5a7f70230888b548b0520026dc8385afad",
+        "recomputed_reviewed_lean_tree_identity_sha256": "961320d3423b38ca3923d3061d846adba4abc1e17a49a281724b6868507cdd72",
+        "stored_artifact_sha256": "5e43181b11a4d302a301bd915a43a40636bf947d93edc9f327e9c0a7beceb485",
+        "recomputed_artifact_sha256": "87c3cc74ae9a985c4ae61de9a35215584ddc09aeba56d65cfdb35b4174ab78d6",
+        "historical_artifact_rewritten": false,
+        "current_verdict_influence": "NONE",
+        "finding": "The historical currentness assertion derives a tree identity through git archive enumeration and is not a canonical current-authority identity contract."
+      }
+    },
+    {
+      "test_id": "formal/python/tests/test_repository_authority_custody_and_reproducibility_recovery_authorization.py::test_independent_review_accepts_the_frozen_authorization",
+      "obligation_id": "V2_HISTORICAL_DELTA_002",
+      "causal_root": "HISTORICAL_RECOVERY_AUTHORIZATION_REVIEW_LIVE_REGISTRY_EQUALITY",
+      "dependency": "formal/docs/release/REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_AUTHORIZATION_INDEPENDENT_REVIEW_20260719_v0.json",
+      "reachability_evidence": [
+        "MEMBER_OF_IMMUTABLE_HISTORICAL_DEBT_PROFILE_V10",
+        "ABSENT_FROM_CURRENT_CONTROL_PLANE_PROFILE_V10",
+        "FROZEN_SELECTOR_REVIEW_PRECEDES_ACCEPTED_V2_NONENROLLMENT_TRANSITION",
+        "CURRENT_AUTHORITY_VALIDATED_SEPARATELY_BY_STRICT_CURRENT_PROFILE"
+      ],
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "temporal_role": "HISTORICAL",
+      "provenance": "VERIFIED",
+      "disposition": "QUARANTINED",
+      "adjudication": {
+        "false_checks": [
+          "registry_target_unchanged",
+          "registry_evidence_unchanged"
+        ],
+        "historical_review_artifact_rewritten": false,
+        "current_verdict_influence": "NONE",
+        "finding": "The frozen authorization review incorrectly requires its historical scientific target and evidence to equal the later live registry state."
+      }
+    }
+  ],
+  "recovered_nodeids": [
+    "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py::test_current_filename_set_is_safe_but_identity_contract_is_incomplete",
+    "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py::test_review_report_is_current",
+    "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_generated_review_report_is_current",
+    "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_identity_closes_across_matrix_manifest_path_and_payload_contract"
+  ],
+  "adjusted_reconciliation": {
+    "known_nonpassing_after_reviewed_delta": 352,
+    "observed_nonpassing": 352,
+    "adjusted_known_nonpassing_nodeid_root_sha256": "6e288f3419bd00fa53e1fe606e668b150440957e43f9e7955c05bc89f859c2c0",
+    "unexpected_nonpassing_after_adjudication": 0,
+    "unmapped_nonpassing": 0,
+    "fallback_used": false,
+    "verdict_candidate": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES"
+  },
+  "boundary": {
+    "historical_tests_modified": 0,
+    "historical_artifacts_modified": 0,
+    "current_profiles_modified": 0,
+    "current_authority_modified": 0,
+    "scientific_content_modified": 0,
+    "v2_enrollment_changed": false,
+    "scientific_execution_authorized": false
+  },
+  "independent_review_required": true
+}
