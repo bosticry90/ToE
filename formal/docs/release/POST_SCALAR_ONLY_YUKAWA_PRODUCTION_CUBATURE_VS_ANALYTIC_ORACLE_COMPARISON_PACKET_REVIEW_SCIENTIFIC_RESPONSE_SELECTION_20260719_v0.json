@@ -1,0 +1,650 @@
+{
+  "anti_rabbit_hole_boundary": {
+    "automatic_v2_authorized": false,
+    "future_choices_after_block": [
+      "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+      "MIRROR_ONLY_COMPARISON_WITH_HISTORICAL_CLAIMS_WITHDRAWN",
+      "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+      "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE"
+    ],
+    "new_foundational_v1_block_requires_fresh_selector": true,
+    "v1_is_last_automatic_comparison_contract_repair": true
+  },
+  "authority": {
+    "consumed_review_verdict": "BLOCKED_PRODUCTION_COMPARISON_CONTRACT_INCOMPLETE",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_20260719_v0.md",
+        "sha256": "9865b716d26bd8b8594cbe0048f71c7d695278f4e88453c6871ed616f8e7f6e1"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_20260719_v0.json",
+        "sha256": "d39a1fbb19ca5c589f74ce27f36fb019071e18ae93ab7c1893e00724c1de9784"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_v0.py",
+        "sha256": "fd85a456f960f364d6c54b0da0c250f8770a8db61bb15f2a380ba025de2c3c46"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_v0.py",
+        "sha256": "563d17dde2340380425c70727592492e699ae48bf0c6e431b70ac8e39cd1fe04"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketReviewV0.lean",
+        "sha256": "da40728301ad82983529e78982f1876a6f181b0956a06972fd6fa4b159225e94"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_scientific_response_selection_v0.py",
+      "sha256": "fc89fb19cc8fc00584afb075513cc9dd28d53ed874a1609e12ac22c0968b45ca"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+      "sha256": "c290298752ba076543146884ac107527707814510bb522ecc9d5203ba06c9da5"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketReviewScientificResponseSelectionV0.lean",
+      "sha256": "cf4b49ee62ca0bf27e29b93be760284756fd6371a3e99af237212a5c5b8da9da"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_scientific_response_selection_v0.py",
+      "sha256": "7d3e34c46222f6ad9f3fb2a5d08ef2206d0c05f9106d836d8b066821e541c9a0"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selector authorizes preparation only of a V1 packet repairing the seven failed comparison-contract gates. It does not prepare or review V1, modify V0, execute a production comparison, adjudicate cubature, repair or replace a kernel, calculate torque or harmonics, rerun Stage A, decide identifiability, or authorize Stage B.",
+  "current_posture": {
+    "accepted_review_gates": "33_OF_40_FROZEN",
+    "analytic_sphere_oracle": "QUALIFIED_AND_ACCEPTED",
+    "comparison_execution": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "comparison_packet_v0": "BLOCKED_CONTRACT_INCOMPLETE",
+    "comparison_packet_v1": "AUTHORIZED_FOR_PREPARATION_NOT_PREPARED",
+    "kernel_repair_or_replacement": "NOT_AUTHORIZED",
+    "next_authority": "prepare_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1",
+    "production_cubature": "UNADJUDICATED",
+    "repairable_review_gates": "7_OF_40_ONLY",
+    "stage_a_rerun": "NOT_AUTHORIZED",
+    "torque_dft_identifiability_stage_b": "NOT_AUTHORIZED"
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "disposition": "SELECTED_FOR_V1_PACKET_PREPARATION_ONLY",
+        "scores": {
+          "accepted_surface_preservation": 5,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "classification_reproducibility": 5,
+          "computational_economy": 5,
+          "direct_resolution_of_all_seven_gates": 5,
+          "historical_attribution_integrity": 5,
+          "information_gain": 5,
+          "risk_isolation": 5,
+          "scientific_method_change_avoidance": 5
+        },
+        "target": "prepare_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1",
+        "weighted_score": 220
+      },
+      {
+        "candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "disposition": "DEFERRED_DOES_NOT_RESOLVE_CLASSIFICATION_OR_CONTROL_BLOCKS",
+        "scores": {
+          "accepted_surface_preservation": 5,
+          "anti_rabbit_hole_control": 4,
+          "authority_clarity": 4,
+          "boundedness": 5,
+          "classification_reproducibility": 1,
+          "computational_economy": 4,
+          "direct_resolution_of_all_seven_gates": 2,
+          "historical_attribution_integrity": 5,
+          "information_gain": 3,
+          "risk_isolation": 5,
+          "scientific_method_change_avoidance": 5
+        },
+        "target": "prepare_scalar_only_yukawa_historical_cubature_identity_isolation_packet_v0",
+        "weighted_score": 168
+      },
+      {
+        "candidate_id": "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE",
+        "disposition": "DEFERRED_ONE_BOUNDED_CONTRACT_REPAIR_REMAINS_PROPORTIONATE",
+        "scores": {
+          "accepted_surface_preservation": 5,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "classification_reproducibility": 0,
+          "computational_economy": 5,
+          "direct_resolution_of_all_seven_gates": 0,
+          "historical_attribution_integrity": 5,
+          "information_gain": 1,
+          "risk_isolation": 5,
+          "scientific_method_change_avoidance": 5
+        },
+        "target": "select_post_scalar_internal_torsion_balance_lane_closure_v0",
+        "weighted_score": 154
+      },
+      {
+        "candidate_id": "MIRROR_ONLY_COMPARISON_WITH_HISTORICAL_CLAIMS_WITHDRAWN",
+        "disposition": "DEFERRED_CHANGES_THE_HISTORICAL_QUESTION",
+        "scores": {
+          "accepted_surface_preservation": 3,
+          "anti_rabbit_hole_control": 4,
+          "authority_clarity": 3,
+          "boundedness": 4,
+          "classification_reproducibility": 2,
+          "computational_economy": 4,
+          "direct_resolution_of_all_seven_gates": 3,
+          "historical_attribution_integrity": 2,
+          "information_gain": 4,
+          "risk_isolation": 3,
+          "scientific_method_change_avoidance": 4
+        },
+        "target": "prepare_scalar_only_yukawa_mirror_only_oracle_comparison_packet_v0",
+        "weighted_score": 139
+      },
+      {
+        "candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "disposition": "DEFERRED_REPLACEMENT_PREMATURE_BEFORE_OLD_METHOD_ADJUDICATION",
+        "scores": {
+          "accepted_surface_preservation": 2,
+          "anti_rabbit_hole_control": 4,
+          "authority_clarity": 3,
+          "boundedness": 4,
+          "classification_reproducibility": 0,
+          "computational_economy": 5,
+          "direct_resolution_of_all_seven_gates": 0,
+          "historical_attribution_integrity": 1,
+          "information_gain": 3,
+          "risk_isolation": 3,
+          "scientific_method_change_avoidance": 0
+        },
+        "target": "prepare_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0",
+        "weighted_score": 87
+      }
+    ],
+    "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+    "runner_up_score": 168,
+    "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+    "selected_score": 220,
+    "winning_margin": 52
+  },
+  "review_gate_freeze": {
+    "accepted_gate_count": 33,
+    "accepted_gates": [
+      "R01_EXACT_PACKET_CUSTODY_AND_TARGET",
+      "R02_PENDING_REVIEW_AND_NO_EXECUTION",
+      "R03_ACCEPTED_ORACLE_AND_STAGE_A_FAILURE_FROZEN",
+      "R04_EXACT_EIGHT_CASES",
+      "R05_THREE_EXACT_STAGE_A_CASES",
+      "R06_STRICT_NONOVERLAP_AND_GAP_SEMANTICS",
+      "R07_ORDER_LADDER_EXACT",
+      "R08_COMPONENT_CHANNELS_EXACT",
+      "R09_NINETY_SIX_ATOMIC_CELLS",
+      "R10_HISTORICAL_STAGE_A_FUNCTION_PRESENT",
+      "R11_PARAMETERIZED_MIRROR_PRESENT",
+      "R15_ORACLE_PATH_HASH_PINNED_AND_READ_ONLY",
+      "R16_PRODUCTION_AND_ORACLE_CHANGES_FORBIDDEN",
+      "R17_ABSOLUTE_AND_RELATIVE_METRICS_FROZEN",
+      "R18_ACCURACY_ENVELOPE_FROZEN",
+      "R19_ORDER48_NEVER_REFERENCE",
+      "R20_EXACT_NINE_CLASSIFICATION_LABELS",
+      "R21_VALIDATED_LABEL_REQUIRES_THREE_FINAL_ORDERS",
+      "R22_FIXED_ORDER_LABEL_REQUIRES_MULTI_ORDER_TREND",
+      "R23_REGIME_DEPENDENT_LABEL_HAS_PASS_FAIL_CONTRAST",
+      "R26_NEAR_THRESHOLD_RESULTS_UNRESOLVED",
+      "R27_MULTILABEL_REPORTING_EXPLICIT",
+      "R28_POST_RESULT_CHANGES_FORBIDDEN",
+      "R29_EXACT_TEN_CONTROLS",
+      "R30_LIVE_COMPARISON_PIPELINE_ASSERTED",
+      "R32_ORDER_AND_ORACLE_CUSTODY_CONTROLS_PRESENT",
+      "R33_RESOURCE_TOTAL_AND_MEMORY_EXACT",
+      "R34_PER_ORDER_CAPS_EXACT",
+      "R35_PROCESS_GROUP_ATOMIC_AND_ZERO_SURVIVOR_CUSTODY",
+      "R37_STAGE_CAPS_COHERENT_WITH_TOTAL",
+      "R38_ALL_DOWNSTREAM_FIREWALLS_CLOSED",
+      "R39_NO_COMPARISON_EXECUTION_AUTHORIZED_BY_BLOCKED_REVIEW",
+      "R40_FRESH_RESPONSE_SELECTOR_REQUIRED"
+    ],
+    "all_accepted_surfaces": "FROZEN_NO_SEMANTIC_CHANGE",
+    "repairable_gate_count": 7,
+    "repairable_gates": [
+      "R12_HISTORICAL_AND_MIRROR_ACCUMULATION_IDENTICAL",
+      "R13_HISTORICAL_AND_MIRROR_DECISION_SCOPE_SEPARATED",
+      "R14_LEGACY_EQUIVALENCE_RULE_EXECUTABLE",
+      "R24_SLOW_CONVERGENCE_FIT_AND_COST_RULE_EXECUTABLE",
+      "R25_SYSTEMATIC_BIAS_AND_FINGERPRINT_RULES_EXECUTABLE",
+      "R31_CONTROL_CASE_ORDER_AND_TOLERANCE_ROUTING",
+      "R36_INCOMPLETE_RECORDS_SUPPRESS_SCIENTIFIC_CLASSIFICATION"
+    ]
+  },
+  "review_interpretation": {
+    "accepted_oracle": "QUALIFIED_AND_ACCEPTED",
+    "comparison_execution": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "principal_block": "BLOCKED_PRODUCTION_PATH_IDENTITY",
+    "production_cubature_adjudicated": false,
+    "review_verdict": "BLOCKED_PRODUCTION_COMPARISON_CONTRACT_INCOMPLETE",
+    "secondary_blocks": [
+      "BLOCKED_METRIC_OR_CLASSIFICATION_CONTRACT",
+      "BLOCKED_MUTATION_ROUTING"
+    ]
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.production_cubature_vs_analytic_oracle.comparison_packet_review.scientific_response_selection.v0",
+  "scope": {
+    "accepted_review_gates_frozen": true,
+    "automatic_v2_comparison_contract_repair_authorized": false,
+    "comparison_contract_ready": false,
+    "comparison_execution_authorized": false,
+    "comparison_execution_performed": false,
+    "final_automatic_comparison_contract_repair_boundary_frozen": true,
+    "final_real_150_vector_authorized": false,
+    "jacobian_or_identifiability_authorized": false,
+    "production_cubature_adjudicated": false,
+    "production_kernel_repair_authorized": false,
+    "production_kernel_replacement_authorized": false,
+    "scientific_response_selection_executed": true,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false,
+    "v0_packet_modified": false,
+    "v1_comparison_contract_packet_preparation_authorized": true,
+    "v1_packet_prepared_now": false
+  },
+  "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+  "selected_next_target": "prepare_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1",
+  "selected_next_target_kind": "PREPARATION_ONLY_SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_NO_EXECUTION",
+  "selected_route": "REPAIR_PRODUCTION_COMPARISON_EXECUTION_CONTRACT",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 20,
+    "pass_count": 20,
+    "rows": [
+      {
+        "gate_id": "EXACT_BLOCKED_REVIEW_AUTHORITY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTRACT_BLOCK_NOT_PRODUCTION_RESULT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_THIRTY_THREE_ACCEPTED_GATES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_SEVEN_FAILED_GATES_REPAIRABLE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_FIVE_RESPONSE_CANDIDATES_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_ELEVEN_CRITERIA_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SELECTION_STABLE_IN_THIRTY_THREE_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "HISTORICAL_PATH_IDENTITY_REPAIR_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "HISTORICAL_AND_MIRROR_DECISION_SCOPE_SEPARATION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SLOW_FIT_AND_ECONOMIC_RULE_REPAIR_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYSTEMATIC_BIAS_AND_FINGERPRINT_RULE_REPAIR_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTROL_ROUTING_REPAIR_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXCLUSIVE_TIMEOUT_PRECEDENCE_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V0_PACKET_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_COMPARISON_EXECUTION_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_KERNEL_REPAIR_OR_REPLACEMENT_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_DOWNSTREAM_FIREWALLS_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V1_IS_LAST_AUTOMATIC_COMPARISON_CONTRACT_REPAIR",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FRESH_SELECTOR_REQUIRED_AFTER_ANY_V1_FOUNDATIONAL_BLOCK",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEXT_AUTHORITY_IS_PREPARATION_ONLY",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_id": "POST_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0",
+  "selection_policy": {
+    "candidate_count": 5,
+    "criteria_weights": {
+      "accepted_surface_preservation": 5,
+      "anti_rabbit_hole_control": 3,
+      "authority_clarity": 3,
+      "boundedness": 3,
+      "classification_reproducibility": 5,
+      "computational_economy": 3,
+      "direct_resolution_of_all_seven_gates": 5,
+      "historical_attribution_integrity": 5,
+      "information_gain": 4,
+      "risk_isolation": 4,
+      "scientific_method_change_avoidance": 4
+    },
+    "criterion_count": 11,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 32,
+    "rows": [
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 158,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 195,
+        "variant": "omit_direct_resolution_of_all_seven_gates"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 143,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 195,
+        "variant": "omit_historical_attribution_integrity"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 163,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 195,
+        "variant": "omit_classification_reproducibility"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 143,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 195,
+        "variant": "omit_accepted_surface_preservation"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 148,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 200,
+        "variant": "omit_scientific_method_change_avoidance"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 156,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 200,
+        "variant": "omit_information_gain"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 148,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 200,
+        "variant": "omit_risk_isolation"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 156,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 205,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 153,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 205,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 156,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 205,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 156,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 205,
+        "variant": "omit_anti_rabbit_hole_control"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 166,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "direct_resolution_of_all_seven_gates_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 170,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "direct_resolution_of_all_seven_gates_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 163,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "historical_attribution_integrity_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 173,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "historical_attribution_integrity_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 167,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "classification_reproducibility_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 169,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "classification_reproducibility_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 163,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "accepted_surface_preservation_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 173,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "accepted_surface_preservation_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 163,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "scientific_method_change_avoidance_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 173,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "scientific_method_change_avoidance_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 165,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "information_gain_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 171,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "information_gain_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 163,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "risk_isolation_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 173,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "risk_isolation_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 164,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 172,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 163,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 173,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 164,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 172,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 164,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 215,
+        "variant": "anti_rabbit_hole_control_-1"
+      },
+      {
+        "runner_up_candidate_id": "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+        "runner_up_score": 172,
+        "selected_candidate_id": "SEVEN_GATE_COMPARISON_CONTRACT_REPAIR_V1",
+        "selected_score": 225,
+        "variant": "anti_rabbit_hole_control_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 33
+  },
+  "target": "select_post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_scientific_response_v0",
+  "v1_preparation_contract": {
+    "classification_obligations": [
+      "FREEZE_SLOW_FIT_FAMILY_ORDER_SUBSET_AND_NONMONOTONE_HANDLING",
+      "FREEZE_EXTRAPOLATION_STABILITY_AND_ECONOMIC_INFERIORITY_THRESHOLD",
+      "FREEZE_SYSTEMATIC_BIAS_COMPONENT_GROUPING",
+      "FREEZE_MUTATION_FINGERPRINT_VECTOR_DISTANCE_AND_MATCH_TOLERANCE"
+    ],
+    "comparison_execution_reserved_for_post_review_authority": true,
+    "control_obligations": [
+      "ROUTE_EVERY_CONTROL_TO_EXACT_CASES_ORDERS_AND_INJECTION_POINT",
+      "FREEZE_EVERY_CONTROL_ACCEPTANCE_RULE_AND_FAILURE_CONSEQUENCE",
+      "INCLUDE_HISTORICAL_EQUIVALENCE_AS_A_MANDATORY_LIVE_PATH_CONTROL"
+    ],
+    "editable_interfaces_only": [
+      "HISTORICAL_MIRROR_PATH_IDENTITY_AND_DECISION_SCOPE",
+      "SLOW_CONVERGENCE_FIT_AND_ECONOMIC_THRESHOLD",
+      "SYSTEMATIC_BIAS_GROUPING_AND_MUTATION_FINGERPRINT",
+      "CONTROL_CASE_ORDER_INJECTION_TOLERANCE_ROUTING",
+      "INCOMPLETE_RECORD_EXCLUSIVE_PRECEDENCE"
+    ],
+    "frozen_surfaces": [
+      "QUALIFIED_ANALYTIC_ORACLE_AND_HASH_CUSTODY",
+      "EIGHT_CASES_AND_THREE_HISTORICAL_CONFIGURATIONS",
+      "ORDERS_8_16_24_32_40_48",
+      "NEWTONIAN_AND_YUKAWA_COMPONENT_SEPARATION",
+      "NINETY_SIX_ATOMIC_SCIENTIFIC_CELLS",
+      "BASE_ERROR_METRICS_AND_ACCURACY_ENVELOPE",
+      "RESOURCE_PROCESS_AND_DOWNSTREAM_FIREWALLS"
+    ],
+    "historical_path_obligations": [
+      "FREEZE_ACCUMULATION_MODE_FOR_HISTORICAL_EQUIVALENCE_LANE",
+      "FREEZE_EXACT_EQUIVALENCE_CASES_ORDERS_TOLERANCE_AND_FAILURE_CONSEQUENCE",
+      "SEPARATE_HISTORICAL_DECISION_BEARING_CASES_FROM_MIRROR_ONLY_CASES",
+      "PROHIBIT_MIRROR_ONLY_RESULTS_FROM_SUPPORTING_HISTORICAL_CLAIMS"
+    ],
+    "incomplete_record_rule": "ALL_96_SCIENTIFIC_CELLS_AND_ALL_MANDATORY_CONTROLS_COMPLETE_BEFORE_ANY_SCIENTIFIC_CLASSIFICATION_ELSE_TIMEOUT_ONLY",
+    "review_outcomes": [
+      "PRODUCTION_COMPARISON_CONTRACT_READY",
+      "BLOCKED_PRODUCTION_PATH_IDENTITY",
+      "BLOCKED_METRIC_OR_CLASSIFICATION_CONTRACT",
+      "BLOCKED_MUTATION_ROUTING",
+      "BLOCKED_INCOMPLETE_RECORD_PRECEDENCE"
+    ],
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED"
+  },
+  "verdict": "SELECTED_NARROW_PRODUCTION_COMPARISON_CONTRACT_REPAIR_PACKET_PREPARATION"
+}

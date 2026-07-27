@@ -1,0 +1,397 @@
+{
+  "accepted_surfaces": {
+    "atomic_record_count": "ACCEPTED_96",
+    "case_grid": "ACCEPTED_8_CASES",
+    "component_separation": "ACCEPTED",
+    "oracle_custody": "ACCEPTED",
+    "order_ladder": "ACCEPTED_6_ORDERS",
+    "packet_custody": "ACCEPTED",
+    "production_comparison_contract": "NOT_READY",
+    "resource_envelope": "ACCEPTED"
+  },
+  "authority": {
+    "authorized_comparison_execution_count": 0,
+    "consumed_packet_verdict": "PREPARED_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_V0",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v0.md",
+        "sha256": "255208335825d75616f27cd76df09f7743092ffc2b8a766e484d041c89acea1c"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v0.json",
+        "sha256": "e8a3a610b60749386758c7b666cd20f3f80dd96fb3571a99250055fedb7062a7"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0.py",
+        "sha256": "87313c439a7841af21828b26483a74daa00d25e4487c4c9765de7c58aed09193"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0.py",
+        "sha256": "52558c1d185698800260f45e2401342763872da36bd9807621faf5242a65ef29"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketV0.lean",
+        "sha256": "67a5ae19cc0c300bd6d47546f14f073f514962147cd96cd010fb46b10acf11a8"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_v0.py",
+      "sha256": "fd85a456f960f364d6c54b0da0c250f8770a8db61bb15f2a380ba025de2c3c46"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_20260719_v0.md",
+      "sha256": "9865b716d26bd8b8594cbe0048f71c7d695278f4e88453c6871ed616f8e7f6e1"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketReviewV0.lean",
+      "sha256": "da40728301ad82983529e78982f1876a6f181b0956a06972fd6fa4b159225e94"
+    },
+    "performed_comparison_execution_count": 0,
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_v0.py",
+      "sha256": "563d17dde2340380425c70727592492e699ae48bf0c6e431b70ac8e39cd1fe04"
+    }
+  },
+  "bounded_repair_burden_for_fresh_selector": {
+    "automatic_repair": "NOT_AUTHORIZED",
+    "classification": "Freeze the slow-convergence fit, economic extrapolation, per-component systematic-bias grouping, and mutation-fingerprint distance/tolerance.",
+    "controls": "Assign every control exact cases, orders, injection point, acceptance rule, and failure consequence through the future production comparison runner.",
+    "historical_path": "Freeze ORDINARY sequential accumulation for the exact Stage A equivalence lane, define its cases/orders/tolerance, and separate mirror-only unequal-radius diagnostics from claims about historical production.",
+    "incomplete_records": "Make PRODUCTION_COMPARISON_TIMEOUT exclusive and suppress all scientific classifications unless all 96 required cells and mandatory controls complete."
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review establishes only that the V0 comparison contract is not yet reproducibly executable. It does not judge production cubature, rerun the oracle, repair or replace a kernel, compute torque or harmonics, decide identifiability, rerun Stage A, or authorize Stage B.",
+  "diagnostics": [
+    "MIRROR_ACCUMULATION_DIFFERS_FROM_HISTORICAL_STAGE_A",
+    "UNEQUAL_RADIUS_MIRROR_SCOPE_NOT_SEPARATED_FROM_HISTORICAL_ADJUDICATION",
+    "LEGACY_EQUIVALENCE_TOLERANCE_AND_FAILURE_BEHAVIOR_NOT_FROZEN",
+    "SLOW_CONVERGENCE_FIT_AND_ECONOMIC_PREDICATE_UNDEFINED",
+    "MUTATION_FINGERPRINT_MATCH_RULE_UNDEFINED",
+    "CONTROL_CASE_ORDER_AND_TOLERANCE_ROUTING_UNFROZEN",
+    "INCOMPLETE_RECORD_CLASSIFICATION_PRECEDENCE_UNFROZEN"
+  ],
+  "independent_case_and_accounting_audit": {
+    "atomic_cell_count_reproduced": 96,
+    "case_count": 8,
+    "case_ids_exact": true,
+    "components_exact": true,
+    "gap_reconstruction_max_error_m": 1.3877787807814457e-17,
+    "legacy_case_count": 3,
+    "orders_exact": true,
+    "strict_nonoverlap": true
+  },
+  "independent_classification_audit": {
+    "accuracy_rule_complete": true,
+    "economic_projection_rule_frozen": false,
+    "fixed_order_predicate_multi_order": true,
+    "multilabel_permitted": true,
+    "mutation_fingerprint_distance_and_tolerance_frozen": false,
+    "near_threshold_unresolved": true,
+    "order48_not_reference": true,
+    "post_result_changes_forbidden": true,
+    "predicate_count": 9,
+    "slow_fit_method_frozen": false,
+    "systematic_bias_component_grouping_frozen": false,
+    "timeout_suppresses_partial_scientific_labels": false,
+    "validated_predicate_multi_order": true
+  },
+  "independent_control_routing_audit": {
+    "acceptance_tolerances_frozen_per_control": false,
+    "case_ids_frozen_per_control": false,
+    "control_count": 10,
+    "finding": "The mutations name expected effects, but do not freeze their case IDs, orders, numerical acceptance rules, or exact legacy-equivalence routing.",
+    "ids_unique": true,
+    "legacy_equivalence_control_is_one_of_ten": false,
+    "live_pipeline_asserted": true,
+    "metadata_and_oracle_firewalls_present": true,
+    "orders_frozen_per_control": false
+  },
+  "independent_production_path_identity_audit": {
+    "accumulation_algorithm_identical_as_frozen": false,
+    "finding": "The historical Stage A function performs sequential outer accumulation on fixed equal radii. The mirror defaults to block-list NumPy pairwise summation and parameterizes unequal radii. A legacy-equivalence control is named but has no frozen tolerance, cases/orders, or failure consequence.",
+    "historical": {
+      "function_sha256": "0866374f7262745218ae9a1453a1e8d940081dfc749ba64c252032b2033a028f",
+      "uses_fixed_equal_radius_constants": true,
+      "uses_one_order_for_all_dimensions": true,
+      "uses_sequential_outer_accumulation": true
+    },
+    "historical_decision_bearing_cases_separated_from_mirror_only_cases": false,
+    "legacy_equivalence_failure_behavior_present": false,
+    "legacy_equivalence_tolerance_present": false,
+    "mirror": {
+      "function_sha256": "b33271558e1594db6f27b985f45d9799bff5bda4c0c6c3e3961a22da4e165422",
+      "mixed_dimension_mutation_exists": true,
+      "ordinary_mode_exists": true,
+      "pairwise_is_default": true,
+      "parameterizes_unequal_radii": true,
+      "uses_block_list_accumulation": true
+    },
+    "packet_declares_legacy_equivalence_control": true,
+    "physical_input_domain_identical_as_frozen": false
+  },
+  "independent_resource_and_custody_audit": {
+    "atomic_records_required": true,
+    "fails_closed": true,
+    "full_record_set_required_for_scientific_classification": false,
+    "memory_mib": 4096,
+    "per_order_cap_keys": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48
+    ],
+    "process_group_required": true,
+    "stage_cap_sum_seconds": 1120,
+    "stage_count": 6,
+    "total_seconds": 1200,
+    "zero_survivors_required": true
+  },
+  "principal_review_outcome": "BLOCKED_PRODUCTION_PATH_IDENTITY",
+  "review_gates": {
+    "failed_gate_ids": [
+      "R12_HISTORICAL_AND_MIRROR_ACCUMULATION_IDENTICAL",
+      "R13_HISTORICAL_AND_MIRROR_DECISION_SCOPE_SEPARATED",
+      "R14_LEGACY_EQUIVALENCE_RULE_EXECUTABLE",
+      "R24_SLOW_CONVERGENCE_FIT_AND_COST_RULE_EXECUTABLE",
+      "R25_SYSTEMATIC_BIAS_AND_FINGERPRINT_RULES_EXECUTABLE",
+      "R31_CONTROL_CASE_ORDER_AND_TOLERANCE_ROUTING",
+      "R36_INCOMPLETE_RECORDS_SUPPRESS_SCIENTIFIC_CLASSIFICATION"
+    ],
+    "failure_count": 7,
+    "gate_count": 40,
+    "pass_count": 33,
+    "rows": [
+      {
+        "finding": "five packet surfaces hash-verified",
+        "gate_id": "R01_EXACT_PACKET_CUSTODY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "finding": "packet preparation generated no cubature values",
+        "gate_id": "R02_PENDING_REVIEW_AND_NO_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "accepted inputs preserved",
+        "gate_id": "R03_ACCEPTED_ORACLE_AND_STAGE_A_FAILURE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "accepted oracle case order exact",
+        "gate_id": "R04_EXACT_EIGHT_CASES",
+        "status": "PASS"
+      },
+      {
+        "finding": "three historical configurations retained",
+        "gate_id": "R05_THREE_EXACT_STAGE_A_CASES",
+        "status": "PASS"
+      },
+      {
+        "finding": "D=R1+R2+g reproduced",
+        "gate_id": "R06_STRICT_NONOVERLAP_AND_GAP_SEMANTICS",
+        "status": "PASS"
+      },
+      {
+        "finding": "orders 8,16,24,32,40,48",
+        "gate_id": "R07_ORDER_LADDER_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Newtonian and Yukawa separate",
+        "gate_id": "R08_COMPONENT_CHANNELS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "8*6*2 exact",
+        "gate_id": "R09_NINETY_SIX_ATOMIC_CELLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "exact Stage A Yukawa function located",
+        "gate_id": "R10_HISTORICAL_STAGE_A_FUNCTION_PRESENT",
+        "status": "PASS"
+      },
+      {
+        "finding": "generalized fixed-tensor path located",
+        "gate_id": "R11_PARAMETERIZED_MIRROR_PRESENT",
+        "status": "PASS"
+      },
+      {
+        "finding": "The historical Stage A function performs sequential outer accumulation on fixed equal radii. The mirror defaults to block-list NumPy pairwise summation and parameterizes unequal radii. A legacy-equivalence control is named but has no frozen tolerance, cases/orders, or failure consequence.",
+        "gate_id": "R12_HISTORICAL_AND_MIRROR_ACCUMULATION_IDENTICAL",
+        "status": "FAIL"
+      },
+      {
+        "finding": "unequal-radius mirror results are not separately bounded from historical adjudication",
+        "gate_id": "R13_HISTORICAL_AND_MIRROR_DECISION_SCOPE_SEPARATED",
+        "status": "FAIL"
+      },
+      {
+        "finding": "control is named but tolerance and consequence are absent",
+        "gate_id": "R14_LEGACY_EQUIVALENCE_RULE_EXECUTABLE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "accepted reference immutability explicit",
+        "gate_id": "R15_ORACLE_PATH_HASH_PINNED_AND_READ_ONLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "no tuning or repair during comparison",
+        "gate_id": "R16_PRODUCTION_AND_ORACLE_CHANGES_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "component metrics explicit",
+        "gate_id": "R17_ABSOLUTE_AND_RELATIVE_METRICS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "absolute_error_J<=1e-36+1e-6*abs(U_oracle)",
+        "gate_id": "R18_ACCURACY_ENVELOPE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "oracle remains analytic",
+        "gate_id": "R19_ORDER48_NEVER_REFERENCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "registered label set exact",
+        "gate_id": "R20_EXACT_NINE_CLASSIFICATION_LABELS",
+        "status": "PASS"
+      },
+      {
+        "finding": "single favorable order insufficient",
+        "gate_id": "R21_VALIDATED_LABEL_REQUIRES_THREE_FINAL_ORDERS",
+        "status": "PASS"
+      },
+      {
+        "finding": "orders 24 through 48 used",
+        "gate_id": "R22_FIXED_ORDER_LABEL_REQUIRES_MULTI_ORDER_TREND",
+        "status": "PASS"
+      },
+      {
+        "finding": "component-specific regime contrast",
+        "gate_id": "R23_REGIME_DEPENDENT_LABEL_HAS_PASS_FAIL_CONTRAST",
+        "status": "PASS"
+      },
+      {
+        "finding": "fit family, data subset, extrapolation, and cost threshold are unspecified",
+        "gate_id": "R24_SLOW_CONVERGENCE_FIT_AND_COST_RULE_EXECUTABLE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "component grouping and mutation-fingerprint matching are unspecified",
+        "gate_id": "R25_SYSTEMATIC_BIAS_AND_FINGERPRINT_RULES_EXECUTABLE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "no favorable rounding",
+        "gate_id": "R26_NEAR_THRESHOLD_RESULTS_UNRESOLVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "compatible root causes may coexist",
+        "gate_id": "R27_MULTILABEL_REPORTING_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "visual classification prohibited",
+        "gate_id": "R28_POST_RESULT_CHANGES_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "frozen mutation identities exact",
+        "gate_id": "R29_EXACT_TEN_CONTROLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "substitute path disallowed by packet intent",
+        "gate_id": "R30_LIVE_COMPARISON_PIPELINE_ASSERTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The mutations name expected effects, but do not freeze their case IDs, orders, numerical acceptance rules, or exact legacy-equivalence routing.",
+        "gate_id": "R31_CONTROL_CASE_ORDER_AND_TOLERANCE_ROUTING",
+        "status": "FAIL"
+      },
+      {
+        "finding": "metadata overclaim and oracle overwrite named",
+        "gate_id": "R32_ORDER_AND_ORACLE_CUSTODY_CONTROLS_PRESENT",
+        "status": "PASS"
+      },
+      {
+        "finding": "bounded envelope exact",
+        "gate_id": "R33_RESOURCE_TOTAL_AND_MEMORY_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "all order cells bounded",
+        "gate_id": "R34_PER_ORDER_CAPS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "launcher custody complete",
+        "gate_id": "R35_PROCESS_GROUP_ATOMIC_AND_ZERO_SURVIVOR_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "timeout is named but exclusive precedence over partial labels is not frozen",
+        "gate_id": "R36_INCOMPLETE_RECORDS_SUPPRESS_SCIENTIFIC_CLASSIFICATION",
+        "status": "FAIL"
+      },
+      {
+        "finding": "six stages fit total cap",
+        "gate_id": "R37_STAGE_CAPS_COHERENT_WITH_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "finding": "no downstream work performed",
+        "gate_id": "R38_ALL_DOWNSTREAM_FIREWALLS_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "review failure consumes no execution authority",
+        "gate_id": "R39_NO_COMPARISON_EXECUTION_AUTHORIZED_BY_BLOCKED_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "finding": "review cannot repair its own packet",
+        "gate_id": "R40_FRESH_RESPONSE_SELECTOR_REQUIRED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_20260719_v0",
+  "schema_id": "toe.scalar_only_yukawa.production_cubature_vs_analytic_oracle.comparison_packet_review.v0",
+  "scope": {
+    "blocked_contract_result_issued": true,
+    "comparison_contract_ready": false,
+    "comparison_execution_authorized": false,
+    "comparison_execution_performed": false,
+    "final_real_150_vector_authorized": false,
+    "fresh_scientific_response_selector_authorized": true,
+    "independent_packet_review_performed": true,
+    "jacobian_or_identifiability_authorized": false,
+    "packet_custody_verified": true,
+    "packet_repair_authorized": false,
+    "production_kernel_repair_authorized": false,
+    "production_kernel_replacement_authorized": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible": false,
+    "torque_or_dft_authorized": false
+  },
+  "secondary_review_outcomes": [
+    "BLOCKED_METRIC_OR_CLASSIFICATION_CONTRACT",
+    "BLOCKED_MUTATION_ROUTING"
+  ],
+  "selected_next_target": "select_post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_PACKET_REPAIR_OR_COMPARISON_EXECUTION",
+  "status": "INDEPENDENT_PACKET_REVIEW_COMPLETE_BLOCKED",
+  "target": "review_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0_result",
+  "verdict": "BLOCKED_PRODUCTION_COMPARISON_CONTRACT_INCOMPLETE"
+}
