@@ -1,0 +1,474 @@
+{
+  "authority": {
+    "consumed_packet_review_verdict": "BLOCKED_SYNTHETIC_NOISE_OR_NUISANCE_CONTRACT",
+    "frozen_packet_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "c1dc928e468148c503876ee0bf09b797691706ab78ca8c7491451ddd5cb81049"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST_PACKET_REVIEW_20260718_v0.json",
+        "sha256": "2e025a2d0eeef555a104f92bbdf867bd934c8e9ed07cf5be53ea6bf331516d9c"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_v0.py",
+        "sha256": "b235150168a89d3c989e3e71a3431562f951cb357c384f14f2471fd5138ebab6"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_v0.py",
+        "sha256": "1b5d5cff300aac724aacfb5cf99a247710954aebf5d8d6a2d43670c6b22dcd9c"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSyntheticForwardModelAndSensitivityForecastPacketReviewV0.lean",
+        "sha256": "24bf788986e8972d9916ffd176d13324227d20835e69f310e0d1ed8732706234"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_synthetic_forecast_packet_review_scientific_response_selection_v0.py",
+      "sha256": "bc363ac1d787de31af27b056d71f8631f092603297b44a86952a554e83f0daf9"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_SYNTHETIC_FORECAST_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+      "sha256": "eecfa86d0c73cbf5e6e4630cba7c4833b0393267fd187124c56b2f0b5b57d174"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaSyntheticForecastPacketReviewScientificResponseSelectionV0.lean",
+      "sha256": "d88726bf3cfc83878a638283fa8e23bcac8a09daafa1034bfa3245ff2d757964"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_synthetic_forecast_packet_review_scientific_response_selection_v0.py",
+      "sha256": "0d0be28092a3ff0c65ccf6158ab32dde11fb36a1c415c7a2bbd40773320dac9b"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selection authorizes preparation only of a deterministic torsion-balance forward-model validation packet. It does not prepare that packet, repair or execute the stochastic forecast, generate synthetic data, compute harmonics or bounds, or adopt any scalar branch, native principle, bridge, or gravitational action.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "deterministic_execution": "NOT_AUTHORIZED",
+    "deterministic_packet": "NOT_YET_PREPARED",
+    "empirical_constraint": "NONE",
+    "next_authority": "prepare_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0",
+    "scalar_branch": "NOT_ADOPTED",
+    "selected_response": "DETERMINISTIC_FORWARD_MODEL_VALIDATION_FIRST",
+    "stochastic_forecast": "DEFERRED_NOT_AUTHORIZED",
+    "synthetic_observations": "NONE"
+  },
+  "deferred_stage_b": {
+    "eligibility_condition": "INDEPENDENTLY_ACCEPTED_STAGE_A_RESULT",
+    "future_scope": "COVARIANCE_NUISANCE_OPTIMIZER_FAILURE_RESOURCE_NULL_INJECTION_BOUNDARY_AND_FORECAST_CONTRACT",
+    "future_target": "prepare_scalar_only_yukawa_stochastic_sensitivity_forecast_packet_v0",
+    "status": "DEFERRED_NOT_AUTHORIZED"
+  },
+  "packet_id": "POST_SCALAR_ONLY_YUKAWA_SYNTHETIC_FORECAST_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0",
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "disposition": "SELECTED_FOR_PACKET_PREPARATION_ONLY",
+        "kind": "DETERMINISTIC_FORWARD_MODEL_PACKET_PREPARATION",
+        "scientific_endpoint": "Validate deterministic Newtonian/Yukawa transport, harmonics, convergence, mutations, and identifiability before stochastic work.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "direct_repair_of_reviewed_block": 5,
+          "downstream_stochastic_readiness": 5,
+          "internal_only_policy_compliance": 5,
+          "physics_first_information_gain": 5,
+          "risk_isolation": 5
+        },
+        "target": "prepare_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0",
+        "weighted_score": 145
+      },
+      {
+        "candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "disposition": "DEFERRED_UNTIL_DETERMINISTIC_COMPLEXITY_IS_JUSTIFIED",
+        "kind": "REDUCED_STOCHASTIC_FORECAST",
+        "scientific_endpoint": "Reduce gaps and nuisances only after deterministic evidence identifies necessary complexity.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "direct_repair_of_reviewed_block": 2,
+          "downstream_stochastic_readiness": 2,
+          "internal_only_policy_compliance": 5,
+          "physics_first_information_gain": 3,
+          "risk_isolation": 3
+        },
+        "target": "prepare_simplified_scalar_only_yukawa_synthetic_forecast_packet_v0",
+        "weighted_score": 103
+      },
+      {
+        "candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "disposition": "DEFERRED_TOO_MANY_INTERFACES_AT_ONCE",
+        "kind": "COMBINED_PHYSICAL_AND_STOCHASTIC_REPAIR",
+        "scientific_endpoint": "Repair all seven defects in one packet only if the staged route later proves unsuitable.",
+        "scores": {
+          "authority_clarity": 4,
+          "boundedness": 3,
+          "computational_economy": 2,
+          "direct_repair_of_reviewed_block": 5,
+          "downstream_stochastic_readiness": 5,
+          "internal_only_policy_compliance": 5,
+          "physics_first_information_gain": 3,
+          "risk_isolation": 2
+        },
+        "target": "prepare_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v1",
+        "weighted_score": 102
+      },
+      {
+        "candidate_id": "CLOSE_SYNTHETIC_FORECAST_LANE",
+        "disposition": "DEFERRED_PREMATURE_BEFORE_DETERMINISTIC_TEST",
+        "kind": "INTERNAL_FORECAST_LANE_CLOSURE",
+        "scientific_endpoint": "Return to gravitational-principle work only after deciding whether deterministic transport is useful.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "direct_repair_of_reviewed_block": 0,
+          "downstream_stochastic_readiness": 0,
+          "internal_only_policy_compliance": 5,
+          "physics_first_information_gain": 1,
+          "risk_isolation": 5
+        },
+        "target": "select_post_scalar_internal_forecast_closure_scientific_priority_v0",
+        "weighted_score": 85
+      }
+    ],
+    "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+    "runner_up_score": 103,
+    "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+    "selected_score": 145,
+    "winning_margin": 42
+  },
+  "retained_posture": {
+    "alpha": "NOT_SELECTED",
+    "blocked_packet_review_verdict": "BLOCKED_SYNTHETIC_NOISE_OR_NUISANCE_CONTRACT",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "outbound_contact": "PROHIBITED_UNTIL_EXPLICITLY_REOPENED",
+    "private_data_dependence": "PROHIBITED",
+    "real_empirical_evidence": "NONE",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_forecast": "NONE",
+    "synthetic_data": "NONE_GENERATED"
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.synthetic_forecast_packet_review.scientific_response_selection.v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "deterministic_execution_authorized": false,
+    "deterministic_execution_performed": false,
+    "deterministic_packet_preparation_authorized": true,
+    "deterministic_packet_prepared_now": false,
+    "empirical_constraint_claimed": false,
+    "forecast_output_produced": false,
+    "gravitational_action_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "outbound_contact_authorized": false,
+    "private_data_dependency_created": false,
+    "scalar_branch_adopted": false,
+    "scientific_response_selection_executed": true,
+    "stochastic_forecast_authorized": false,
+    "stochastic_forecast_performed": false,
+    "stochastic_packet_preparation_authorized": false,
+    "synthetic_dataset_generated": false
+  },
+  "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+  "selected_next_target": "prepare_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_DETERMINISTIC_FORWARD_MODEL_NO_SIMULATION_OR_STOCHASTIC_FORECAST",
+  "selected_stage_a_contract": {
+    "gaussian_noise": "NONE",
+    "maximum_future_claim": "REPRODUCIBLE_CONVERGENT_DETERMINISTIC_NEWTONIAN_YUKAWA_TORQUE_MODEL_WITH_DEFINED_HARMONICS_AND_CHARACTERIZED_DEGENERACIES",
+    "monte_carlo_trials": "NONE",
+    "obligation_count": 10,
+    "obligations": [
+      "freeze exact real-150 harmonic normalization DFT sign phase origin and alias rules",
+      "freeze one shared Newtonian and Yukawa production kernel",
+      "derive torque from the same interaction energy through one derivative path",
+      "route four analytic benchmarks through production code",
+      "verify nonzero n=2,4,6 harmonics and nominal structural-zero channels",
+      "freeze phase reversal sign reversal and deliberate sign-normalization mutations",
+      "freeze geometry cubature differentiation and harmonic convergence",
+      "freeze deterministic geometry and calibration parameter maps and valid domains",
+      "perform Jacobian or equivalent identifiability analysis against lambda0",
+      "produce one stable reproducible real-150 deterministic forward vector"
+    ],
+    "profile_optimizer": "NONE",
+    "sensitivity_forecast": "NONE",
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED"
+  },
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 18,
+    "pass_count": 18,
+    "rows": [
+      {
+        "gate_id": "EXACT_PACKET_REVIEW_AUTHORITY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "REVIEWED_SEVEN_BLOCKERS_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_FOUR_RESPONSES_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_EIGHT_CRITERIA_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DETERMINISTIC_PHYSICS_PRECEDES_STOCHASTIC_INFERENCE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_STAGE_A_OBLIGATIONS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "REAL_150_VECTOR_IS_STAGE_A_ENDPOINT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "COMMON_KERNEL_AND_TORQUE_ROUTING_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_MUTATION_SIGN_AND_PHASE_CONTROLS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "GEOMETRY_AND_HARMONIC_CONVERGENCE_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "JACOBIAN_IDENTIFIABILITY_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_NOISE_MONTE_CARLO_OR_PROFILE_LIKELIHOOD_IN_STAGE_A",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "STAGE_B_DEFERRED_UNTIL_ACCEPTED_STAGE_A",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "STANDING_INTERNAL_ONLY_POLICY_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SELECTION_STABLE_IN_24_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PACKET_REPAIR_OR_DETERMINISTIC_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_SYNTHETIC_EMPIRICAL_OR_PARAMETER_RESULT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_SCALAR_BRANCH_NATIVE_BRIDGE_OR_ACTION_ADOPTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criteria_weights": {
+      "authority_clarity": 3,
+      "boundedness": 3,
+      "computational_economy": 4,
+      "direct_repair_of_reviewed_block": 5,
+      "downstream_stochastic_readiness": 3,
+      "internal_only_policy_compliance": 2,
+      "physics_first_information_gain": 5,
+      "risk_isolation": 4
+    },
+    "criterion_count": 8,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 27,
+    "rows": [
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 88,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 120,
+        "variant": "omit_physics_first_information_gain"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 93,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 120,
+        "variant": "omit_direct_repair_of_reviewed_block"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 125,
+        "variant": "omit_risk_isolation"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 125,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 93,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 130,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 90,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 130,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 97,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 130,
+        "variant": "omit_downstream_stochastic_readiness"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 93,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 135,
+        "variant": "omit_internal_only_policy_compliance"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 100,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "physics_first_information_gain_-1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 106,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "physics_first_information_gain_+1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 101,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "direct_repair_of_reviewed_block_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 107,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "direct_repair_of_reviewed_block_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 100,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "risk_isolation_-1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 106,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "risk_isolation_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 100,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 108,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 99,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 108,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 98,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 108,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 101,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "downstream_stochastic_readiness_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULL_SYNTHETIC_FORECAST_CONTRACT_V1_REPAIR",
+        "runner_up_score": 107,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "downstream_stochastic_readiness_+1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 98,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 140,
+        "variant": "internal_only_policy_compliance_-1"
+      },
+      {
+        "runner_up_candidate_id": "SIMPLIFIED_SYNTHETIC_FORECAST",
+        "runner_up_score": 108,
+        "selected_candidate_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION",
+        "selected_score": 150,
+        "variant": "internal_only_policy_compliance_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_post_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_scientific_response_v0",
+  "verdict": "SELECTED_DETERMINISTIC_FORWARD_MODEL_VALIDATION_PACKET_PREPARATION"
+}
