@@ -1,0 +1,352 @@
+{
+  "adversarial_no_bypass_probes": {
+    "pass_count": 8,
+    "probe_count": 8,
+    "rows": [
+      {
+        "attempt": "treat the paper's supplement citation as if its numerical bytes were frozen",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "SUPPLEMENT_EXISTENCE_IS_NOT_CUSTODY"
+      },
+      {
+        "attempt": "digitize plotted torque points and call them the primary 95x3 vector",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "PLOT_DIGITIZATION_BYPASS"
+      },
+      {
+        "attempt": "read or rescale the published gravitational-strength curve at A_Y=1/3",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "GENERIC_EXCLUSION_CURVE_BYPASS"
+      },
+      {
+        "attempt": "substitute the methods dissertation for the missing calibrated vector and likelihood inputs",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "DISSERTATION_SUBSTITUTION_BYPASS"
+      },
+      {
+        "attempt": "treat every torque as independent using only visible error bars",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "DIAGONAL_ERROR_GUESS"
+      },
+      {
+        "attempt": "replace the five numerical experiment priors with analyst-selected widths",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "REASONABLE_NUISANCE_PRIOR_GUESS"
+      },
+      {
+        "attempt": "apply the point-mass Yukawa formula directly at micrometre separations",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "POINT_SOURCE_GEOMETRY_BYPASS"
+      },
+      {
+        "attempt": "issue a one-sided 95 percent bound from an uncalibrated textbook Delta-chi-square threshold",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "passed": true,
+        "probe_id": "ASYMPTOTIC_THRESHOLD_BYPASS"
+      }
+    ]
+  },
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifact_count": 5,
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_20260718_v0.md",
+        "sha256": "eae347960a516ea714b35566c94488f1966b50d86fe9db57e28d31eb64544b78"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_20260718_v0.json",
+        "sha256": "c88204a2ddd51bcc31bb506b575860dd2995f798fc4abef5226ea11b147bea27"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0.py",
+        "sha256": "0772e935328fc24339f4328f8234a344d9faae403d68a0ba1e39488e397075c9"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0.py",
+        "sha256": "1b766102369f7c2ce7ebf99bdd25e7cd7010b29953efb64d07c424e23baf81a7"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyQuadraticGravityRangeAndWeakFieldConstraintPacketV0.lean",
+        "sha256": "fa1eeaa5de63be5d65813bc2a26ad7f55714068e27345a047ba9052378bb0a8f"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "The selected Eot-Wash experiment is scientifically suitable for a fixed A_Y=1/3 scalar-range comparison, but the project lacks the complete machine-readable observation vector, numerical uncertainty and nuisance contract, verified extended-source torque implementation, and calibrated boundary-coverage rule required for an independent likelihood. The packet is blocked. No numerical range or alpha bound, scalar-branch adoption, native scalar bridge, native gravitational principle, gravitational action, orbital result, frame-dragging result, or master-action change is computed, selected, claimed, or authorized.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "covariance_and_nuisance_contract": "INCOMPLETE",
+    "coverage_calibration": "NOT_AVAILABLE",
+    "extended_source_torque_model": "NOT_EXECUTABLE",
+    "gravitational_action": "NOT_SELECTED",
+    "likelihood": "NOT_EXECUTED",
+    "model_signal": "FIXED_A_Y_ONE_THIRD",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "select_post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_v0",
+    "primary_data_custody": "INCOMPLETE",
+    "principal_block": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_bound": "NONE",
+    "selected_experiment": "2020_EOTWASH_TORSION_BALANCE",
+    "weak_field_phenomenology_packet_review": "BLOCKED"
+  },
+  "decision_bearing_dependency_map": {
+    "row_count": 5,
+    "rows": [
+      {
+        "failure_if_guessed": "the fitted data and row-to-geometry mapping would be invented",
+        "missing_item": "COMPLETE_95_BY_3_TORQUE_VECTOR_AND_DISPLACEMENTS",
+        "required_operation": "construct the 285-component residual vector at every lambda0"
+      },
+      {
+        "failure_if_guessed": "independence assumptions could overstate exclusion power",
+        "missing_item": "NUMERICAL_UNCERTAINTY_AND_CORRELATION_MODEL",
+        "required_operation": "weight residuals and determine the effective information content"
+      },
+      {
+        "failure_if_guessed": "the scalar template could be absorbed or exposed by invented priors",
+        "missing_item": "FIVE_NUMERICAL_NUISANCE_PRIORS",
+        "required_operation": "profile calibration, centering, separation, and roughness at every lambda0"
+      },
+      {
+        "failure_if_guessed": "a point-source or approximate-geometry response would not be the experiment",
+        "missing_item": "VERIFIED_EXTENDED_SOURCE_TORQUE_IMPLEMENTATION",
+        "required_operation": "map fixed A_Y=1/3 through detector-attractor geometry into three torque harmonics"
+      },
+      {
+        "failure_if_guessed": "a textbook threshold could have incorrect coverage",
+        "missing_item": "BOUNDARY_AWARE_COVERAGE_CALIBRATION",
+        "required_operation": "assign a valid 95 percent exclusion rule with lambda0=0 at the null boundary"
+      }
+    ]
+  },
+  "diagnostics": {
+    "principal": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+    "subordinate": [
+      "OBSERVATION_VECTOR_CUSTODY_INCOMPLETE",
+      "UNCERTAINTY_OR_COVARIANCE_CONTRACT_INCOMPLETE",
+      "NUISANCE_PRIOR_CONTRACT_INCOMPLETE",
+      "EXTENDED_SOURCE_FORWARD_MODEL_ABSENT",
+      "BOUNDARY_COVERAGE_PROCEDURE_UNCALIBRATED"
+    ],
+    "subordinate_count": 5
+  },
+  "execution_block": {
+    "binding_unblock_requirements": [
+      "freeze the complete 95x3 numerical torque vector and displacement metadata",
+      "freeze the complete numerical uncertainty model and five nuisance priors",
+      "freeze or independently reproduce a verified extended-source torque model",
+      "reproduce the published Newtonian baseline before exposing A_Y=1/3",
+      "pass null and signal-injection coverage controls under the frozen scan rule"
+    ],
+    "constraint_execution_authorized": false,
+    "likelihood_evaluated": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "real_data_analysis_executed": false,
+    "satisfied_unblock_requirement_count": 0,
+    "unblock_requirement_count": 5
+  },
+  "future_response_selection": {
+    "automatic_successor_authorized": false,
+    "candidate_responses": [
+      "bounded acquisition and custody of exact supplementary materials",
+      "direct legitimate request for primary numerical inputs",
+      "select another experiment with complete data, covariance, and geometry",
+      "prepare a publication-level supplied-constraint reinterpretation without claiming an independent fit"
+    ],
+    "selected_response_now": null,
+    "selection_only": true
+  },
+  "independent_primary_source_reproduction": {
+    "experimental_parameter_count": 17,
+    "fixed_one_third_limit_reproduced": false,
+    "harmonic_count": 3,
+    "harmonics": [
+      "18 omega",
+      "54 omega",
+      "120 omega"
+    ],
+    "independent_likelihood_executed": false,
+    "measurement_count": 285,
+    "measurement_setting_count": 95,
+    "primary_source": "https://arxiv.org/abs/2002.11761",
+    "profiled_nuisance_count": 5,
+    "profiled_nuisances": [
+      "x0 horizontal offset",
+      "y0 horizontal offset",
+      "s0 separation offset",
+      "surface roughness correction",
+      "autocollimator torque-scale gamma"
+    ],
+    "published_generic_limit": "gravitational-strength Yukawa range below 38.6 micrometres at 95 percent confidence",
+    "published_newtonian_baseline": "chi_squared=275.0 for nu=285, P=0.654",
+    "published_penalized_fit_structure": "sum over 95 settings and 3 torques with torque variance, propagated separation error, and five Gaussian nuisance penalties",
+    "separation_domain": "52 micrometres to 3.0 millimetres",
+    "supplement_statement": "numerical gravitational torques and details of the Yukawa constraint analysis are assigned to Supplemental Material"
+  },
+  "principal_packet_review_outcome": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 18,
+    "pass_count": 18,
+    "rows": [
+      {
+        "finding": "Five packet artifacts match frozen SHA-256 values and rotate to this review.",
+        "gate_id": "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The fixed-amplitude signal remains a supplied comparison; beta=0, alpha, and the branch remain unadopted.",
+        "gate_id": "G2_COMPARISON_ONLY_PROVENANCE_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The 52 micrometre to 3 millimetre extended-source torsion balance is scientifically matched to the fixed A_Y=1/3 range test.",
+        "gate_id": "G3_SELECTED_EXPERIMENT_SUITABLE_FOR_FIXED_ONE_THIRD_SIGNAL",
+        "status": "PASS"
+      },
+      {
+        "finding": "The paper independently reproduces 95 settings, three harmonics, 285 torques, 17 parameters, and five profiled nuisances.",
+        "gate_id": "G4_PRIMARY_PAPER_DIMENSIONS_AND_FIT_STRUCTURE_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Without the complete vector and displacement metadata, no residual vector or likelihood can be constructed.",
+        "gate_id": "G5_OBSERVATION_VECTOR_CUSTODY_IS_DECISION_BEARING",
+        "status": "PASS"
+      },
+      {
+        "finding": "Visible error bars or an assumed diagonal covariance cannot replace the numerical uncertainty contract.",
+        "gate_id": "G6_UNCERTAINTY_AND_CORRELATION_CONTRACT_INCOMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The five priors are decision-bearing because they control how geometry and calibration absorb a Yukawa-like signal.",
+        "gate_id": "G7_FIVE_NUISANCE_PRIORS_CANNOT_BE_GUESSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The density geometry is described but no verified executable three-harmonic torque model with complete inputs is frozen.",
+        "gate_id": "G8_EXTENDED_SOURCE_FORWARD_MODEL_NOT_EXECUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Micrometre-scale patterned sources require the extended density/torque transport or a quantified negligible form-factor error.",
+        "gate_id": "G9_POINT_SOURCE_APPROXIMATION_REMAINS_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "The dissertation can explain methods but cannot supply missing calibrated numerical evidence by substitution.",
+        "gate_id": "G10_DISSERTATION_REMAINS_SUPPORTING_METHODS_ONLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Plot digitization and approximate geometry are explicitly rejected as independent-fit inputs.",
+        "gate_id": "G11_PLOTS_SECONDARY_SUMMARIES_AND_APPROXIMATE_GEOMETRY_CANNOT_BYPASS",
+        "status": "PASS"
+      },
+      {
+        "finding": "The published 38.6 micrometre generic gravitational-strength limit is retained only as a future reproduction oracle.",
+        "gate_id": "G12_PUBLISHED_GENERIC_LIMIT_IS_ORACLE_NOT_PACKET_RESULT",
+        "status": "PASS"
+      },
+      {
+        "finding": "The lambda0-to-zero null is a boundary; no uncalibrated asymptotic threshold may issue a bound.",
+        "gate_id": "G13_BOUNDARY_COVERAGE_REMAINS_UNCALIBRATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Newtonian reproduction, null coverage, and fixed-amplitude injection recovery have not run.",
+        "gate_id": "G14_BASELINE_AND_INJECTION_CONTROLS_REMAIN_UNEXECUTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The experiment is scientifically suitable, while the independent project fit is not executable.",
+        "gate_id": "G15_SCIENTIFIC_SUITABILITY_AND_PROJECT_EXECUTABILITY_SEPARATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The earliest principal block is missing primary numerical custody; forward-model and coverage failures remain subordinate diagnostics.",
+        "gate_id": "G16_PRINCIPAL_BLOCK_AND_SUBORDINATE_DIAGNOSTICS_EXCLUSIVE",
+        "status": "PASS"
+      },
+      {
+        "finding": "No real-data fit, scalar-range bound, alpha bound, branch, principle, or action is issued.",
+        "gate_id": "G17_NO_LIKELIHOOD_BOUND_OR_THEORY_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "The blocked review authorizes only a later response-selection step, not data acquisition, reinterpretation, or fitting.",
+        "gate_id": "G18_ROTATION_ONLY_TO_SCIENTIFIC_RESPONSE_SELECTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "toe.scalar_only_quadratic_gravity_range_and_weak_field_constraint.packet_review.v0",
+  "scientific_sources": [
+    {
+      "role": "SELECTED_PRIMARY_SHORT_RANGE_EXPERIMENT",
+      "source": "https://arxiv.org/abs/2002.11761"
+    },
+    {
+      "role": "SUPPORTING_PRIMARY_METHODS_DISSERTATION_ONLY",
+      "source": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315/full"
+    }
+  ],
+  "scientific_suitability": {
+    "experiment": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "experiment_scientifically_suitable": true,
+    "fixed_model_signal": "A_Y=1/3",
+    "independent_project_fit_executable": false,
+    "observable_class": "SHORT_RANGE_INVERSE_SQUARE_LAW_TORSION_BALANCE",
+    "published_result_rejected": false,
+    "theory_to_observable_transport_structurally_defined": true
+  },
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "alternate_experiment_selected": false,
+    "author_contact_authorized": false,
+    "beta_zero_adopted": false,
+    "constraint_execution_authorized": false,
+    "experiment_invalidated": false,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": true,
+    "likelihood_evaluated": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "orbital_or_light_propagation_analysis_executed": false,
+    "packet_block_confirmed": true,
+    "publication_level_reinterpretation_authorized": false,
+    "published_constraint_denied": false,
+    "published_limit_imported_as_packet_result": false,
+    "real_data_analysis_executed": false,
+    "scalar_branch_adopted": false,
+    "supplement_acquisition_authorized": false
+  },
+  "selected_next_target": "select_post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_DATA_ACQUISITION_FIT_OR_BRANCH_ADOPTION",
+  "target": "review_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0_result",
+  "verdict": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE"
+}
