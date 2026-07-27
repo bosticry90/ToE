@@ -1,0 +1,232 @@
+{
+  "alternative_surface_audit": {
+    "authorized_project_derived_continuum_tensor_surface_found": false,
+    "full_gr_target_map": {
+      "current_local_result": "GR01 weak-field / Poisson target",
+      "full_target": "Einstein-equation derivation from action variation",
+      "retained_blocker": "gr01_continuum_limit_source_identification_retained",
+      "status": "LOCAL_DONE_PILLAR_TARGET_OPEN"
+    },
+    "provisional_einstein_scalar_route": {
+      "classification": "SUPPLIED_STANDARD_GR_PROVISIONAL_CLASSICAL_SANDBOX",
+      "coupled_solution_constructed": false,
+      "eligible_to_discharge_gate": false,
+      "equation_recorded": true,
+      "toe_native_gravitational_equation_derived": false
+    }
+  },
+  "authority": {
+    "consumed_packet_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_20260717_v0",
+    "consumed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_20260717_v0.json",
+        "sha256": "3a6a1f848241f4a467c17000e6a27a44922bc7636ec7be412eafbddc65d2fe9a"
+      },
+      {
+        "relative_path": "formal/docs/lanes/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_20260717_v0.md",
+        "sha256": "0e206867019c2c8b66431a6bc3ca161ab6f0b8fae1fa9cdd08f83830cc38c92e"
+      },
+      {
+        "relative_path": "formal/python/tools/gr_weak_rotating_source_gravitomagnetic_recovery_packet_v0.py",
+        "sha256": "ae28f62716b24548b093690bba954613ba95f9a95b7c08b5cb7995841c508f7f"
+      },
+      {
+        "relative_path": "formal/python/tests/test_gr_weak_rotating_source_gravitomagnetic_recovery_packet_v0.py",
+        "sha256": "f9614f56cd822e3e5023632cf42923855fe1f297175a412ab9293f87c9c72321"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/GRWeakRotatingSourceGravitomagneticRecoveryPacketV0.lean",
+        "sha256": "70d0791b408c71fa17ba2912364b37fc673f14a7567f9aa610135bc164a4400a"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean",
+        "sha256": "da375e85850deb5d32da8a60c24d2fd7021c95143f8da036973d9575bd398458"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/FirstVariationRep32Def.lean",
+        "sha256": "8c7a6a3f3aa74f240945e3d2ac23a05c6e5fa6fa310977ba9c03db89f456d920"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+        "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean",
+        "sha256": "162cdd0d9596566457ae40c340329b15064e4d0ed17d20deadc48fc2fc431384"
+      },
+      {
+        "relative_path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+        "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+      },
+      {
+        "relative_path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+        "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.lean",
+        "sha256": "b88b8941eca415530dcb3082299b56e8c26c6036a0950776f7358c4e00ee7653"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.lean",
+        "sha256": "a9844fb6aa637395ba867d95ffb1315e8c64ec2f8f61ec01b6b695ed5cd2d32d"
+      },
+      {
+        "relative_path": "formal/docs/lanes/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.md",
+        "sha256": "f682ef0aeaa16d544a99ecc856a50f7fc8f9fd4407aadf63ee906848c2be1665"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/gr_weak_rotating_source_gravitomagnetic_recovery_packet_review_v0.py",
+      "sha256": "0514b45679d72c2855490c46691bae068f5e93ad8ca7be79d7cae8490ecd2aec"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_gr_weak_rotating_source_gravitomagnetic_recovery_packet_review_v0.py",
+      "sha256": "7ed18a0b5c6d10b8db3d88e8095e6a65992ae0ace0a7007237a9e30eb611479b"
+    }
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Independent review establishes only FIELD_EQUATION_SURFACE_FAILURE: the currently authorized project GR surface does not derive the continuum tensor equation required to start the rotating-source recovery. No standard-GR refutation, calculation, recovery, empirical claim, pillar completion, seam closure, or master-action promotion follows.",
+  "exact_binding_review": [
+    {
+      "binding_id": "GR_PROJECT_ACTION_REP32_SCAFFOLD",
+      "binding_reproduced": true,
+      "continuum_metric_tensor_equation_derived": false,
+      "finding": "analytic first variation from the action remains open",
+      "observed_type": "FieldRep32 structural action scaffold with assigned P_rep32 EL"
+    },
+    {
+      "binding_id": "GR_PROJECT_BOUNDED_DISCRETE_WEAK_FIELD_POISSON",
+      "binding_reproduced": true,
+      "continuum_metric_tensor_equation_derived": false,
+      "finding": "no tensor completion, 0i component, or continuum limit",
+      "observed_type": "scalar lattice Poisson residual in 1D/3D"
+    },
+    {
+      "binding_id": "GR_PROJECT_DISCHARGE_BOUNDARY",
+      "binding_reproduced": true,
+      "continuum_metric_tensor_equation_derived": false,
+      "finding": "scaffold, action-variation, bridge, and remainder blockers remain",
+      "observed_type": "bounded/discrete weak-field v0 discharge under explicit bridges"
+    }
+  ],
+  "fail_fast_gate": {
+    "answer": false,
+    "derivation_authorized": false,
+    "diagnostic": "FIELD_EQUATION_SURFACE_FAILURE",
+    "fail_fast_applied": true,
+    "question": "Does an authorized project route derive a continuum tensor metric field equation with an independently normalized 0i component from the current GR surface?",
+    "required_object_present": false
+  },
+  "future_options_requiring_fresh_priority_selection": [
+    {
+      "authorized_now": false,
+      "meaning": "derive a continuum tensor weak-field equation from an explicitly authorized gravitational action or theorem surface",
+      "route_id": "PROJECT_GR_TENSOR_SURFACE_ROUTE"
+    },
+    {
+      "authorized_now": false,
+      "meaning": "supply standard linearized Einstein gravity explicitly and perform only a comparator calculation with no ToE derivation claim",
+      "route_id": "STANDARD_GR_COMPARATOR_ROUTE"
+    }
+  ],
+  "primary_diagnostic": "FIELD_EQUATION_SURFACE_FAILURE",
+  "retained_packet_policy_without_execution": {
+    "coefficient_fitting_remains_forbidden": true,
+    "controls_adjudicated": false,
+    "controls_executed": 0,
+    "coordinate_signature_si_policy_reproduced": true,
+    "downstream_sign_coefficient_and_orbital_checks_adjudicated": false,
+    "planned_control_count": 8,
+    "source_gauge_boundary_contract_reproduced": true,
+    "standard_gr_oracles_remain_comparison_only": true
+  },
+  "schema_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0",
+  "scientific_interpretation": {
+    "finding": "The current project GR authority does not provide the continuum tensor field equation required to start the gravitomagnetic recovery.",
+    "project_GR_recovery_established": false,
+    "standard_GR_refuted": false,
+    "standard_Lense_Thirring_result_refuted": false
+  },
+  "scope": {
+    "GR_pillar_completed": false,
+    "R13_reopened": false,
+    "SR_tooling_reopened": false,
+    "authoritative_physics_equations_modified": false,
+    "automation_created": false,
+    "coefficient_fitting_executed": false,
+    "controls_executed": false,
+    "empirical_analysis_executed": false,
+    "external_comparator_activated": false,
+    "g_0i_calculated": false,
+    "independent_packet_review_executed": true,
+    "master_action_promoted": false,
+    "new_action_or_tensor_bridge_created": false,
+    "new_symbolic_tool_created": false,
+    "nodal_precession_calculated": false,
+    "oracle_comparison_executed": false,
+    "seam_closed": false,
+    "seven_stage_derivation_executed": false,
+    "simulation_executed": false
+  },
+  "selected_next_target": "select_response_to_gr_field_equation_surface_failure_from_full_toe_priority_map",
+  "selected_next_target_kind": "FULL_PRIORITY_RESPONSE_SELECTION_ONLY",
+  "stage_adjudication": {
+    "failed_count": 1,
+    "not_evaluated_count": 6,
+    "rows": [
+      {
+        "diagnostic": "FIELD_EQUATION_SURFACE_FAILURE",
+        "required_output": "project-authorized continuum tensor metric field equation",
+        "stage": 1,
+        "stage_id": "PROJECT_SURFACE_TO_CONTINUUM_TENSOR_AUTHORITY",
+        "status": "FAILED"
+      },
+      {
+        "diagnostic": "UPSTREAM_FAIL_FAST",
+        "required_output": "linearized trace-reversed tensor equation",
+        "stage": 2,
+        "stage_id": "LINEARIZE_AND_TRACE_REVERSE",
+        "status": "NOT_EVALUATED"
+      },
+      {
+        "diagnostic": "UPSTREAM_FAIL_FAST",
+        "required_output": "stationary 0i source equation",
+        "stage": 3,
+        "stage_id": "STATIONARY_0I_REDUCTION",
+        "status": "NOT_EVALUATED"
+      },
+      {
+        "diagnostic": "UPSTREAM_FAIL_FAST",
+        "required_output": "boundary-fixed current-dipole solution",
+        "stage": 4,
+        "stage_id": "GREEN_AND_CURRENT_MULTIPOLE",
+        "status": "NOT_EVALUATED"
+      },
+      {
+        "diagnostic": "UPSTREAM_FAIL_FAST",
+        "required_output": "computed exterior g_0i coefficient",
+        "stage": 5,
+        "stage_id": "EXTERIOR_G0I_EXTRACTION",
+        "status": "NOT_EVALUATED"
+      },
+      {
+        "diagnostic": "UPSTREAM_FAIL_FAST",
+        "required_output": "computed secular nodal coefficient",
+        "stage": 6,
+        "stage_id": "METRIC_TO_ORBIT_TRANSPORT",
+        "status": "NOT_EVALUATED"
+      },
+      {
+        "diagnostic": "UPSTREAM_FAIL_FAST",
+        "required_output": "metric and nodal oracle comparisons",
+        "stage": 7,
+        "stage_id": "POSTCOMPUTATION_ORACLE_COMPARISON",
+        "status": "NOT_EVALUATED"
+      }
+    ],
+    "stage_count": 7
+  },
+  "target": "review_gr_weak_rotating_source_gravitomagnetic_recovery_packet_v0_result",
+  "verdict": "BLOCKED_FIELD_EQUATION_SURFACE_FAILURE"
+}
