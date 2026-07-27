@@ -1,0 +1,487 @@
+{
+  "authority": {
+    "bound_sources": [
+      {
+        "relative_path": "formal/docs/release/POST_R13_FULL_TOE_PRIORITY_RETURN_SELECTION_20260717_v0.json",
+        "sha256": "bfabe6d69a5bf046683948e21e78e1952e518fdfb94fde5c56369c784a2f1a4f"
+      },
+      {
+        "relative_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260713_v2.json",
+        "sha256": "6dac3d95a29e7ab0d29a99d5903b682bf235b92e025b044890a2e927d8b6f875"
+      },
+      {
+        "relative_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json",
+        "sha256": "e84d7a00a29a21dae59a8d3fb26f56a6a97cf3b6021766a6b176fde81a3d610d"
+      },
+      {
+        "relative_path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+        "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+      },
+      {
+        "relative_path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+        "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206"
+      },
+      {
+        "relative_path": "formal/output/sr_covariance_science_increment_20260325_v0.json",
+        "sha256": "48758450fdd246698adcbe16a390151553d07eccbaec97040ca2f8056e04093c"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+        "sha256": "c20a3f407ca9f7ab80889692a7a3a075b421f0f48b4f7b5405e650146e7b342c"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_20260621_v0.json",
+        "sha256": "0c8dcd2ab7becdb7f1a33a4b079472acd936ecd0fad82133009cbe9fc3ee6f91"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+        "sha256": "ce76ca985cfbbc7624b3cbb8cfe19a5396719203933b79a42c076b195949c93a"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_20260625_v0.json",
+        "sha256": "4828f1b901f62d2d253e2c1a1b5543c197a979f851aaa394ff0481ca7716aec6"
+      }
+    ],
+    "consumed_target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet",
+    "generator": {
+      "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_v0.py",
+      "sha256": "2f6aa787eca902ae9401799e2d4bb70380703913104fa2674d1c2614ebf2c5fb"
+    },
+    "selected_pillar_code": "SR",
+    "selected_route": "CONVENTION_AND_CONSTANT_RESTORATION",
+    "selected_weighted_score": 51
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Convention-lock and restoration-map preparation only. No equation surface is migrated or rewritten; no SR recovery, Lorentz invariance of the master action, pillar completion, seam closure, empirical adequacy, prediction, new physics, R13 reopening, or external-comparator activation follows.",
+  "component_definitions": {
+    "four_current": "J^mu_SI = (c rho, j)",
+    "four_momentum": "p^mu = m u^mu = (E/c, p)",
+    "four_potential": "A^mu_SI = (phi/c, A)",
+    "four_velocity": "u^mu = dx^mu/d tau = gamma(c, v)",
+    "stress_energy_components": "T^00 is energy density; T^0i is energy flux divided by c under x^0=ct"
+  },
+  "dimension_table": {
+    "c": [
+      0,
+      1,
+      -1,
+      0
+    ],
+    "charge_density_rho": [
+      0,
+      -3,
+      0,
+      1
+    ],
+    "coordinate_derivative_partial_mu": [
+      0,
+      -1,
+      0,
+      0
+    ],
+    "coordinate_x_mu": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "current_density_j": [
+      0,
+      -2,
+      -1,
+      1
+    ],
+    "dimensionless": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "energy_E": [
+      1,
+      2,
+      -2,
+      0
+    ],
+    "epsilon_0": [
+      -1,
+      -3,
+      2,
+      2
+    ],
+    "field_tensor_F_mu_nu_SI": [
+      1,
+      0,
+      -1,
+      -1
+    ],
+    "four_current_J_mu": [
+      0,
+      -2,
+      -1,
+      1
+    ],
+    "four_momentum_p_mu": [
+      1,
+      1,
+      -1,
+      0
+    ],
+    "four_potential_A_mu_SI": [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "four_velocity_u_mu": [
+      0,
+      1,
+      -1,
+      0
+    ],
+    "hbar": [
+      1,
+      2,
+      -1,
+      0
+    ],
+    "mass_m": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "mu_0": [
+      1,
+      1,
+      0,
+      -2
+    ],
+    "proper_time_tau": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "stress_energy_T_mu_nu": [
+      1,
+      -1,
+      -2,
+      0
+    ]
+  },
+  "hard_stop": {
+    "independent_packet_review_required": true,
+    "migration_authorized_now": false,
+    "packet_version": 0,
+    "repository_wide_rewrite_authorized": false,
+    "representative_equation_application_authorized_now": false,
+    "successor_if_accepted": "prepare_bounded_sr_convention_restoration_application_to_selected_authoritative_equations",
+    "successor_if_blocked": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1_only_if_independent_review_identifies_a_bounded_contract_defect"
+  },
+  "independent_review_requirements": [
+    "verify every authority source hash and upstream verdict",
+    "verify x^0=ct makes all coordinate components length-valued",
+    "verify (+,-,-,-) matches the selected ToE-native phi and A policies",
+    "verify all dimension vectors in the M,L,T,Q basis",
+    "verify partial_0 and J^0 reproduce the ordinary continuity equation",
+    "verify the mass-shell restoration and p^0=E/c convention",
+    "verify the electromagnetic field/current normalization is invertible",
+    "verify sourced Maxwell restores exactly one mu_0 factor in SI",
+    "verify the matter exchange product is normalization-invariant",
+    "verify the gauge stress tensor restores mu_0^-1",
+    "verify every negative control is explicit and diagnostic",
+    "verify no historical artifact, R13 evidence, or external comparator was modified or activated"
+  ],
+  "migration_inventory": [
+    {
+      "finding": "uses c=1 and writes t and x with equal dimensions",
+      "later_action": "bind t_N=ct and re-express interval/boost components",
+      "surface": "SR covariance science increment"
+    },
+    {
+      "finding": "already selects (+,-,-,-); field and coupling dimensions remain incomplete",
+      "later_action": "preserve signature and audit hbar/c restoration separately",
+      "surface": "ToE-native phi policy"
+    },
+    {
+      "finding": "already selects (+,-,-,-) and natural gauge normalization",
+      "later_action": "apply F_N=F_SI/sqrt(mu_0) and restore mu_0^-1",
+      "surface": "ToE-native A stress-energy route"
+    },
+    {
+      "finding": "records partial/nabla F=J and FJ exchange in suppressed normalization",
+      "later_action": "apply the selected current/field normalization and component map",
+      "surface": "psi-A sourced Maxwell and exchange routes"
+    },
+    {
+      "finding": "cosmic/conformal-time and lapse conventions require a separate adapter",
+      "later_action": "do not migrate until the SR convention packet is accepted",
+      "surface": "cosmology background surfaces"
+    },
+    {
+      "finding": "use local (-,+) or (-,+,+) test conventions",
+      "later_action": "retain immutable artifacts; define explicit signature adapters only if compared",
+      "surface": "fixed-background scalar numerical sandboxes"
+    }
+  ],
+  "negative_controls": [
+    "REJECT_x0_EQUALS_t_WHILE_ALL_COORDINATES_ARE_DECLARED_LENGTH",
+    "REJECT_SIGNATURE_FLIP_WITHOUT_CONTRACTION_AND_STRESS_SIGN_REAUDIT",
+    "REJECT_partial0_EQUALS_partial_t_UNDER_x0_EQUALS_ct",
+    "REJECT_J0_EQUALS_rho_UNDER_x0_EQUALS_ct",
+    "REJECT_SOURCED_MAXWELL_EQUALITY_WITHOUT_mu0_AS_SI",
+    "REJECT_GAUGE_STRESS_ENERGY_WITHOUT_mu0_INVERSE_AS_SI",
+    "REJECT_CONSTANT_INSERTION_WITHOUT_AN_OBJECT_NORMALIZATION_MAP",
+    "REJECT_HISTORICAL_ARTIFACT_REWRITE_DURING_PACKET_PREPARATION"
+  ],
+  "representative_equations": [
+    {
+      "application_status": "FROZEN_FOR_LATER_BOUNDED_APPLICATION",
+      "equation_id": "SR_INTERVAL",
+      "map": "t_N = c t",
+      "natural_form": "ds^2 = dt_N^2 - dx^2 - dy^2 - dz^2",
+      "restored_SI_form": "ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2"
+    },
+    {
+      "application_status": "FROZEN_FOR_LATER_BOUNDED_APPLICATION",
+      "equation_id": "SR_MASS_SHELL",
+      "map": "m_N = m c",
+      "natural_form": "p_mu p^mu = m_N^2",
+      "restored_SI_form": "p_mu p^mu = m^2 c^2, with p^mu=(E/c,p)"
+    },
+    {
+      "application_status": "FROZEN_FOR_LATER_BOUNDED_APPLICATION",
+      "equation_id": "CURRENT_CONSERVATION",
+      "map": "partial_0=c^-1 partial_t and J_SI^0=c rho",
+      "natural_form": "partial_mu J_N^mu = 0",
+      "restored_SI_form": "partial_mu J_SI^mu = partial_t rho + div(j) = 0"
+    },
+    {
+      "application_status": "FROZEN_FOR_LATER_BOUNDED_APPLICATION",
+      "equation_id": "SOURCED_MAXWELL",
+      "map": "F_N=F_SI/sqrt(mu_0); J_N=sqrt(mu_0)J_SI",
+      "natural_form": "partial_mu F_N^{mu nu} = J_N^nu",
+      "restored_SI_form": "partial_mu F_SI^{mu nu} = mu_0 J_SI^nu"
+    },
+    {
+      "application_status": "FROZEN_FOR_LATER_BOUNDED_APPLICATION",
+      "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+      "map": "F_N J_N = F_SI J_SI under the selected electromagnetic normalization",
+      "natural_form": "partial_mu T_matter^{mu nu} = F_N^nu{}_alpha J_N^alpha",
+      "restored_SI_form": "partial_mu T_matter^{mu nu} = F_SI^nu{}_alpha J_SI^alpha"
+    },
+    {
+      "application_status": "FROZEN_FOR_LATER_BOUNDED_APPLICATION",
+      "equation_id": "GAUGE_STRESS_ENERGY_NORMALIZATION",
+      "map": "F_N=F_SI/sqrt(mu_0)",
+      "natural_form": "T_A,N^{mu nu} = -F_N^{mu}{}_alpha F_N^{nu alpha} + (1/4) eta^{mu nu} F_N^2",
+      "restored_SI_form": "T_A,SI^{mu nu} = mu_0^-1[-F_SI^{mu}{}_alpha F_SI^{nu alpha} + (1/4) eta^{mu nu} F_SI^2]"
+    }
+  ],
+  "reversibility_cross_checks": {
+    "algebraic_maps_declared_invertible": true,
+    "checks": [
+      {
+        "check_id": "INTERVAL_TERMS_HAVE_LENGTH_SQUARED",
+        "expected": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "left": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "passed": true,
+        "right": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "check_id": "MASS_SHELL_TERMS_MATCH",
+        "expected": [
+          2,
+          2,
+          -2,
+          0
+        ],
+        "left": [
+          2,
+          2,
+          -2,
+          0
+        ],
+        "passed": true,
+        "right": [
+          2,
+          2,
+          -2,
+          0
+        ]
+      },
+      {
+        "check_id": "CONTINUITY_TERMS_MATCH",
+        "expected": [
+          0,
+          -3,
+          -1,
+          1
+        ],
+        "left": [
+          0,
+          -3,
+          -1,
+          1
+        ],
+        "passed": true,
+        "right": [
+          0,
+          -3,
+          -1,
+          1
+        ]
+      },
+      {
+        "check_id": "SOURCED_MAXWELL_SI_TERMS_MATCH",
+        "expected": [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "left": [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "passed": true,
+        "right": [
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "check_id": "STRESS_EXCHANGE_SI_TERMS_MATCH",
+        "expected": [
+          1,
+          -2,
+          -2,
+          0
+        ],
+        "left": [
+          1,
+          -2,
+          -2,
+          0
+        ],
+        "passed": true,
+        "right": [
+          1,
+          -2,
+          -2,
+          0
+        ]
+      },
+      {
+        "check_id": "VACUUM_CONSTANT_IDENTITY_IS_DIMENSIONLESS",
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "left": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "passed": true,
+        "right": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "dimension_check_count": 6,
+    "forward_suppression_backward_restoration_rule": "Apply the declared object map before setting constants to one; invert the same object map before interpreting SI components.",
+    "passed_dimension_check_count": 6
+  },
+  "schema_id": "SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_20260717_v0",
+  "scope": {
+    "external_comparator_activated": false,
+    "historical_artifacts_modified": false,
+    "multiple_metric_conventions_supported": false,
+    "multiple_restoration_unit_systems_supported": false,
+    "packet_preparation_only": true,
+    "r13_reopened": false,
+    "repository_wide_rewrite_authorized": false,
+    "representative_equation_application_executed": false,
+    "symbolic_units_engine_authorized": false
+  },
+  "selected_conventions": {
+    "contravariant_derivative_components": "partial^mu = (c^-1 partial_t, -nabla)",
+    "coordinate_definition": "x^mu = (c t, x, y, z)",
+    "coordinate_dimension": "L for every component",
+    "coordinate_order": [
+      "x^0",
+      "x^1",
+      "x^2",
+      "x^3"
+    ],
+    "covariant_derivative_components": "partial_mu = (c^-1 partial_t, nabla)",
+    "flat_metric": "eta_mu_nu = diag(+1,-1,-1,-1)",
+    "index_range": "mu,nu,alpha in {0,1,2,3}",
+    "index_rule": "raise and lower only with eta_mu_nu or its explicitly selected curved extension",
+    "interval": "ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2",
+    "metric_signature": "(+,-,-,-)",
+    "proper_time": "ds^2 = c^2 d tau^2 for timelike paths",
+    "representative_domain": "flat inertial SR-facing equation surfaces",
+    "spacetime_dimension": "3+1",
+    "speed_of_light": "c = 299792458 m s^-1 exactly",
+    "temporal_coordinate": "x^0 = c t"
+  },
+  "selected_next_target": "review_sr_pillar_coordinate_convention_and_constant_restoration_packet_v0_result",
+  "target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet",
+  "unit_policy": {
+    "dimension_vector_basis": [
+      "M",
+      "L",
+      "T",
+      "Q"
+    ],
+    "electromagnetic_normalization": {
+      "A_N": "A_SI / sqrt(mu_0)",
+      "F_N": "F_SI / sqrt(mu_0)",
+      "J_N": "sqrt(mu_0) J_SI",
+      "inverse_map": "A_SI=sqrt(mu_0)A_N; F_SI=sqrt(mu_0)F_N; J_SI=J_N/sqrt(mu_0)"
+    },
+    "recorded_but_not_applied_in_v0": [
+      "hbar",
+      "G",
+      "k_B"
+    ],
+    "restored_target_system": "SI",
+    "source_working_form": "rationalized natural-unit notation with c=1 and electromagnetic normalization suppressed",
+    "source_working_form_status": "BOUNDED_PACKET_CLASSIFICATION_PENDING_INDEPENDENT_REVIEW",
+    "suppressed_constants_in_scope": [
+      "c",
+      "mu_0",
+      "epsilon_0"
+    ],
+    "vacuum_identity": "epsilon_0 mu_0 c^2 = 1"
+  },
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

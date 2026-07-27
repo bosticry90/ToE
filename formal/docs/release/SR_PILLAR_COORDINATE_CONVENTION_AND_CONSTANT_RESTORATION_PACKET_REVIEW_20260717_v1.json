@@ -1,0 +1,267 @@
+{
+  "blocking_findings": {
+    "all_confirmed": true,
+    "count": 4,
+    "findings": [
+      {
+        "confirmed": true,
+        "evidence": "The 6/6 result proves reciprocal table pairing after exact input guards; it does not prove that the declared physical object maps derive the paired ASTs.",
+        "finding_id": "RESTORATION_FUNCTIONS_DO_NOT_APPLY_DECLARED_OBJECT_MAPS",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "The reported quantum round trip self-assigns the frozen natural and SI ASTs and hardcodes pass=true; the physically coherent normalization is not exercised by a production transformation.",
+        "finding_id": "QUANTUM_ROUND_TRIP_IS_SELF_ASSIGNMENT_WITH_HARDCODED_PASS",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "The exact bound source uses T_psi, while the canonical round-trip AST uses T_matter and declares no T_psi-to-T_matter adapter.",
+        "finding_id": "MATTER_EXCHANGE_ROUND_TRIP_AST_NOT_EXACT_BOUND_SOURCE",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "The eight mutations produce exact diagnostics in their standalone validator, but restore_equation and suppress_equation do not consume a convention state or require first_diagnostic(state)=PASS.",
+        "finding_id": "NEGATIVE_CONTROL_PREFLIGHT_NOT_ENFORCED_BY_RESTORATION_ENTRY_POINTS",
+        "materiality": "BLOCKING"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Independent v1 packet review only. It retains the internally coherent physical convention and exact content bindings, but blocks acceptance because the reported reversibility is reciprocal table identity rather than execution of the declared restoration maps. No restoration, migration, SR recovery, pillar completion, seam closure, empirical claim, prediction, master-action promotion, R13 change, or comparator adoption follows.",
+  "first_diagnostic": "RESTORATION_FUNCTIONS_DO_NOT_APPLY_DECLARED_OBJECT_MAPS",
+  "hard_stop": {
+    "migration_authorized": false,
+    "next_action": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v2",
+    "packet_accepted": false,
+    "restoration_authorized": false,
+    "review_complete": true,
+    "successor_scope": "ONE_BOUNDED_v2_PRODUCTION_CONTRACT_REPAIR_ONLY"
+  },
+  "independent_positive_findings": {
+    "bounded_assessment": "The selected physical convention is internally coherent on the audited tensor, dual, Maxwell, gauge-sign, stress-component, derivative-domain, and exact source-content surfaces. These findings are retained for v2.",
+    "coordinate_signature_foundation_retained": true,
+    "electromagnetic_audit": {
+      "checks": {
+        "component_definition_passed": true,
+        "dual_components_passed": true,
+        "homogeneous_vector_maxwell_passed": true,
+        "levi_civita_orientation_passed": true,
+        "metric_lowering_passed": true,
+        "sourced_vector_maxwell_passed": true,
+        "upper_matrix_passed": true
+      },
+      "derived_lower_matrix_rows": [
+        [
+          "0",
+          "+E_x/c",
+          "+E_y/c",
+          "+E_z/c"
+        ],
+        [
+          "-E_x/c",
+          "0",
+          "-B_z",
+          "+B_y"
+        ],
+        [
+          "-E_y/c",
+          "+B_z",
+          "0",
+          "-B_x"
+        ],
+        [
+          "-E_z/c",
+          "-B_y",
+          "+B_x",
+          "0"
+        ]
+      ],
+      "method": "independent component derivation from A^mu, partial^mu, E, B, eta, and the selected orientation",
+      "passed": true,
+      "passed_count": 7,
+      "required_count": 7
+    },
+    "exact_source_content_bindings_audit": {
+      "passed": true,
+      "passed_count": 6,
+      "required_count": 6,
+      "rows": [
+        {
+          "artifact_hash_matches": true,
+          "corroborating_matches": true,
+          "equation_id": "SR_INTERVAL_INVARIANCE",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "original_claim_class_preserved": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "corroborating_matches": true,
+          "equation_id": "SR_MASS_SHELL",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "original_claim_class_preserved": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "corroborating_matches": true,
+          "equation_id": "CURRENT_CONSERVATION",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "original_claim_class_preserved": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "corroborating_matches": true,
+          "equation_id": "SOURCED_MAXWELL",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "original_claim_class_preserved": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "corroborating_matches": true,
+          "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "original_claim_class_preserved": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "corroborating_matches": true,
+          "equation_id": "GAUGE_STRESS_ENERGY_NORMALIZATION",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "original_claim_class_preserved": true,
+          "passed": true
+        }
+      ]
+    },
+    "negative_controls_standalone_result": "8/8 exact independently observed in the frozen packet",
+    "quantum_gauge_sign_and_units_audit": {
+      "checks": {
+        "current_normalization_records_c": true,
+        "gauge_phase_derivative_cancels_potential_shift": true,
+        "gauge_transform_sign_recorded": true,
+        "phase_identity_recorded": true,
+        "plus_sign_derivative_recorded": true,
+        "qA_coefficient_identity_recorded": true,
+        "signed_charge_recorded": true
+      },
+      "gauge_covariance_derivation": "partial_mu exp(-i q chi/hbar) contributes -i q partial_mu chi/hbar; the shifted +i q(A_mu+partial_mu chi)/hbar term contributes the opposite phase-gradient term, so D'_mu psi'=exp(-i q chi/hbar)D_mu psi",
+      "method": "independent sign cancellation and normalization-identity audit",
+      "passed": true,
+      "passed_count": 7,
+      "required_count": 7
+    },
+    "stress_energy_and_derivative_adapter_audit": {
+      "checks": {
+        "T00_energy_density": true,
+        "T0i_energy_flux_over_c": true,
+        "Ti0_symmetry_scoped": true,
+        "Tij_stress": true,
+        "arbitrary_canonical_tensor_excluded": true,
+        "curved_tensor_connection_scoped": true,
+        "flat_limit_adapter_explicit": true,
+        "flat_partial_scoped": true,
+        "spin_connection_scoped": true,
+        "tetrad_derivation_not_claimed": true
+      },
+      "method": "independent component-meaning and derivative-domain comparison",
+      "passed": true,
+      "passed_count": 10,
+      "required_count": 10
+    }
+  },
+  "production_contract_audit": {
+    "bound_source_ast_alignment": {
+      "bound_source_tensor": "T_psi",
+      "declared_object_maps": [
+        "F_N=F_SI/sqrt(mu_0)",
+        "J_N=sqrt(mu_0) J_SI"
+      ],
+      "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+      "exact_bound_source_ast_alignment_passed": false,
+      "explicit_T_psi_to_T_matter_adapter_present": false,
+      "round_trip_source_tensor": "T_matter"
+    },
+    "quantum_probe": {
+      "bounded_conclusion": "The reported quantum round trip self-assigns the frozen natural and SI ASTs and hardcodes pass=true; the physically coherent normalization is not exercised by a production transformation.",
+      "passed_is_hardcoded_true": true,
+      "restored_assignment": "si",
+      "semantic_transform_function_called": false,
+      "suppressed_assignment": "natural"
+    },
+    "six_equation_probe": {
+      "actual_production_functions_called": [
+        "restore_equation",
+        "suppress_equation",
+        "_round_trip_results"
+      ],
+      "bounded_conclusion": "The 6/6 result proves reciprocal table pairing after exact input guards; it does not prove that the declared physical object maps derive the paired ASTs.",
+      "declared_object_map_used_by_restore": false,
+      "declared_object_map_used_by_suppress": false,
+      "deliberately_wrong_si_target_still_reports_round_trip_pass": true,
+      "invalid_object_map_mutation_ignored": true,
+      "negative_control_preflight_used_by_restore": false,
+      "negative_control_preflight_used_by_suppress": false,
+      "restore_signature": "(equation_id: 'str', natural_ast: 'Ast') -> 'Ast'",
+      "suppress_signature": "(equation_id: 'str', si_ast: 'Ast') -> 'Ast'"
+    }
+  },
+  "review_authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_20260717_v1.json",
+        "sha256": "2185ef29df93a403595bc2540b5a6543ba34a8842fb7e92ab3218bd5efdc2e0a"
+      },
+      {
+        "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_v1.py",
+        "sha256": "0794941ffe14b7e1c250a6763f1f82f6c876bece486d8d52bd9a57ce2582f8e5"
+      },
+      {
+        "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1.py",
+        "sha256": "4d8760dc8a8d78296effc77b69d8c3f9cdb5a2fc473221813dd9db32ebe18882"
+      }
+    ],
+    "review_test": {
+      "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v1.py",
+      "sha256": "bc2cac94581b0d6f806d50b01351a634f4a0ea6017cc9dbd419056e8a658dfea"
+    },
+    "reviewer": {
+      "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v1.py",
+      "sha256": "8b51a4d97d2973af743c0968f19f76daa26a9130412b575a909d5c24d8c5644e"
+    }
+  },
+  "schema_id": "SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v1",
+  "scope_and_authorization": {
+    "authoritative_equation_restoration_executed": false,
+    "automation_created": false,
+    "bounded_six_surface_restoration_authorized": false,
+    "external_comparator_activated": false,
+    "historical_artifacts_modified": false,
+    "only_bounded_v2_packet_preparation_authorized": true,
+    "packet_v1_accepted": false,
+    "r13_reopened": false,
+    "repository_wide_migration_authorized": false,
+    "scientific_equation_migration_executed": false
+  },
+  "selected_next_target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v2",
+  "target": "review_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1_result",
+  "v2_contract": [
+    "replace reciprocal AST lookup with six bounded structural restoration/suppression transforms that actually consume the frozen object maps and derive canonical targets",
+    "implement quantum SI-to-natural and natural-to-SI production transforms; remove self-assignment and hardcoded pass=true",
+    "make the matter-exchange canonical source AST use exact T_psi or declare and execute one explicit T_psi-to-T_matter semantic adapter",
+    "provide one validate-then-restore and validate-then-suppress entry path that requires the negative-control convention preflight to return PASS before transformation",
+    "re-run the same six bindings, six semantic round trips, and eight atomic diagnostics without adding equations, conventions, unit systems, migration, or adjacent work"
+  ],
+  "verdict": "BLOCKED_SEMANTIC_ROUND_TRIP_PRODUCTION_CONTRACT_INCOMPLETE"
+}
