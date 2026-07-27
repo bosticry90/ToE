@@ -1,0 +1,1448 @@
+{
+  "authority": {
+    "consumed_selector_route": "REPAIR_DETERMINISTIC_IDENTIFIABILITY_EXECUTION_CONTRACT",
+    "consumed_selector_verdict": "SELECTED_FINAL_DETERMINISTIC_IDENTIFIABILITY_CONTRACT_REPAIR_PACKET_PREPARATION",
+    "consumed_v0_review_verdict": "BLOCKED_PARAMETER_IDENTIFIABILITY",
+    "frozen_selector_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_DETERMINISTIC_FORWARD_MODEL_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+        "sha256": "310a517c9348e5872c8ec2bbd89b1d065c38d07804ec2ba122dc61ec221e2451"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_YUKAWA_DETERMINISTIC_FORWARD_MODEL_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.json",
+        "sha256": "4c9771c89037a194ea123195d48102b738a85f05ab71bcf0d1905e4deec41bff"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_yukawa_deterministic_forward_model_packet_review_scientific_response_selection_v0.py",
+        "sha256": "0771dd9130a16d69627b184f472745c2aad6972750a09eed2b8f2e1ea3f2198e"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_deterministic_forward_model_packet_review_scientific_response_selection_v0.py",
+        "sha256": "976ecae7f25c54fdb2e826be5a409a9a9f7840ea81fa5ad507784bdd6c238c4c"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaDeterministicForwardModelPacketReviewScientificResponseSelectionV0.lean",
+        "sha256": "8a32fd9a4ab48ed256348f342b2be6eabeaaebd3395d760e9bb11abecac5b475"
+      }
+    ],
+    "frozen_v0_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260718_v0.md",
+        "sha256": "29b6051dc6a0f880eab0bc4734e304f896b45d82aecd4aeda9e3246af05aabab"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260718_v0.json",
+        "sha256": "ab5e555f857d883aa12346411d294f411b5228193f103d7dd91c4392fc66790e"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0.py",
+        "sha256": "ef7da3401505dc92072a6bdabbc6a52173d03f18a903c3d2c558e1a9f0d75f96"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0.py",
+        "sha256": "31bfb665c9004ea4de3ff5aeeb5eb3da98c1568fe6b9c5923b511fa6cdcf29f4"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketV0.lean",
+        "sha256": "d63ac40f4aadf54e7703ae09143fa4a060b352fa4370a2030008622be9f603f7"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1.py",
+      "sha256": "3b0ce5be2bd5b0d85e53bc02dc9b938ec4e872d81d210ca9748cb2bd586381d6"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260719_v1.md",
+      "sha256": "35533fb024b9034dbe0dadd903003d51e2e28cc96ab4e8825f889397a563c2d1"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketV1.lean",
+      "sha256": "550f0c58eb25b89c7348a09ceaeb6083dfd26f621b4adcdab4d15f69e0b1d59c"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1.py",
+      "sha256": "527b8e21b7971d18a46b31db787545f43eb686e94ba0670cca9590c0061c0abf"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This artifact prepares the final four-interface deterministic identifiability contract repair and rotates only to independent packet review. It preserves the twenty accepted v0 gates and calculates no forward vector, Jacobian, singular value, correlation, projector, eta, identifiability result, bound, forecast, empirical claim, parameter choice, scalar-branch adoption, native bridge, principle, or action.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "automatic_v2": "NOT_AUTHORIZED",
+    "deterministic_execution": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "empirical_evidence": "NONE",
+    "forward_vector": "NOT_PRODUCED",
+    "jacobian": "NOT_COMPUTED",
+    "next_authority": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1_result",
+    "physical_identifiability": "NOT_EVALUATED",
+    "scalar_branch": "NOT_ADOPTED",
+    "stage_b": "DEFERRED_NOT_AUTHORIZED",
+    "synthetic_forecast": "NONE",
+    "v0_accepted_gates": "20_OF_24_FROZEN",
+    "v0_packet_review": "BLOCKED_PARAMETER_IDENTIFIABILITY_CONTRACT_INCOMPLETE",
+    "v1_editable_gates": "G18_G20_G21_G22_ONLY",
+    "v1_packet": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "frozen_v0_contract": {
+    "retained_jacobian_fields": {
+      "column_count": 17,
+      "column_standardization": "FROZEN_TEST_SCALE",
+      "exact_projection_residual_threshold": 1e-10,
+      "expected_exact_amplitude_degeneracy": [
+        "TORQUE_CALIBRATION",
+        "SOURCE_DENSITY_SCALE",
+        "DETECTOR_DENSITY_SCALE"
+      ],
+      "failure_outcome": "BLOCKED_PARAMETER_IDENTIFIABILITY",
+      "global_output_scale": "MAX_ABS_NEWTONIAN_COMPONENT_WITH_1E-30_N_M_FAIL_FLOOR",
+      "identifiable_eta_threshold": 0.001,
+      "indistinguishable_eta_threshold": 1e-06,
+      "minimum_contiguous_identifiable_lambda_points": 5,
+      "near_degenerate_absolute_correlation_threshold": 0.999,
+      "parameter_order": [
+        "LOG_LAMBDA",
+        "TORQUE_CALIBRATION",
+        "SOURCE_DENSITY_SCALE",
+        "DETECTOR_DENSITY_SCALE",
+        "DETECTOR_LEVER_OFFSET",
+        "ATTRACTOR_LEVER_OFFSET",
+        "GAP_OFFSET",
+        "ATTRACTOR_AXIS_X_OFFSET",
+        "ATTRACTOR_AXIS_Y_OFFSET",
+        "ANGULAR_ZERO_OFFSET",
+        "HARMONIC_LEAKAGE",
+        "BACKGROUND_2RE",
+        "BACKGROUND_2IM",
+        "BACKGROUND_4RE",
+        "BACKGROUND_4IM",
+        "BACKGROUND_6RE",
+        "BACKGROUND_6IM"
+      ],
+      "rank_relative_singular_value_threshold": 1e-10,
+      "row_count": 150
+    },
+    "retained_jacobian_fields_canonical_sha256": "f1fd08045a559a30a3e33227e72d92ea4bec61d6a3083e671e8509b80448cf7f",
+    "surface_count": 13,
+    "surface_rows": [
+      {
+        "canonical_sha256": "2a4f98f770d96847d1de59fad3403bfc1ed9085196e83b257bf59eb87cbec212",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "comparison_and_geometry"
+      },
+      {
+        "canonical_sha256": "f7db37433aa10a20d8de932d0829f4cfb3ab1dda28d0b22f15278fac59e1de6f",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "harmonic_contract"
+      },
+      {
+        "canonical_sha256": "a8a17d754cb75e588c843d6f04c7954e8bf5dbe5064753db43819d8a3be8c0d9",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "production_path"
+      },
+      {
+        "canonical_sha256": "44d187759905d50295c2dc844bce0e97ba50bc623dc30d0a090b5b58e46b87c1",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "analytic_benchmarks"
+      },
+      {
+        "canonical_sha256": "f59c8eabbb786cffdac20f9ea14efd2297b3ea5f5fe4fc6da3219339efc537a0",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "deliberate_mutations"
+      },
+      {
+        "canonical_sha256": "170fcc29b5ded010dbf701e56b2d602f47b75031cac794026e9e6b262f5f00b1",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "symmetry_phase_controls"
+      },
+      {
+        "canonical_sha256": "640dc518d3530fd7b76dc7dcb86462e60f8af499bae415e1f8e38eb6cfd2687c",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "convergence_contract"
+      },
+      {
+        "canonical_sha256": "3b2c7b376c3164b38ba17ec54954845e5c9086072a0b96bcb581912d6131ef1f",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "deterministic_perturbations"
+      },
+      {
+        "canonical_sha256": "038a15f26857f85c427eb5b75120a6d4b391b372f902374ee14c3edd91b7aa27",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "canonical_serialization"
+      },
+      {
+        "canonical_sha256": "8f6e35d4bb2b35468e6340e70b3ad526f00e88621243d4423500c9651eeca79c",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "stage_a_boundary"
+      },
+      {
+        "canonical_sha256": "800f1f350a63fb91a50b4535169910d8ac71f08cadd386baa8a8c68635aedbd5",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "work_packages"
+      },
+      {
+        "canonical_sha256": "283908158d14dfd0a04161b78f7f67b4f1c640e94bf289f580c79d2a19f34862",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "execution_controls"
+      },
+      {
+        "canonical_sha256": "0ed64b4f5578fd36236bcb373ffe95888a4be07ebe4ca64bf74acc210f65ef69",
+        "semantic_status": "FROZEN_FROM_V0_WITHOUT_CHANGE",
+        "surface_id": "canonical_output_classes"
+      }
+    ],
+    "surfaces": {
+      "analytic_benchmarks": [
+        {
+          "benchmark_id": "POINT_NEWTONIAN",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "benchmark_id": "POINT_YUKAWA",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "benchmark_id": "UNIFORM_SPHERE_FORM_FACTOR",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "benchmark_id": "APPARATUS_TORQUE_AND_SYMMETRY",
+          "status": "NOT_EXECUTED"
+        }
+      ],
+      "canonical_output_classes": [
+        {
+          "item_id": "NEWTONIAN_REAL_150_VECTOR",
+          "status": "NOT_PRODUCED"
+        },
+        {
+          "item_id": "TWENTY_FIVE_YUKAWA_REAL_150_VECTORS",
+          "status": "NOT_PRODUCED"
+        },
+        {
+          "item_id": "REFERENCE_TOTAL_REAL_150_VECTOR",
+          "status": "NOT_PRODUCED"
+        },
+        {
+          "item_id": "DETERMINISTIC_PERTURBATION_RESPONSE_VECTORS",
+          "status": "NOT_PRODUCED"
+        },
+        {
+          "item_id": "JACOBIAN_SVD_RANK_CORRELATION_AND_ETA_TABLES",
+          "status": "NOT_PRODUCED"
+        }
+      ],
+      "canonical_serialization": {
+        "float_format": "SIGNED_SCIENTIFIC_17_DIGITS_AFTER_DECIMAL",
+        "hash": "SHA256",
+        "manifest": "SORTED_KEY_UTF8_JSON",
+        "ordering": "GAP_MAJOR",
+        "repeat_requirement": "BYTE_IDENTICAL",
+        "table_encoding": "UTF8_LF_CSV"
+      },
+      "comparison_and_geometry": {
+        "G_SI": 6.6743e-11,
+        "all_pairs_nonoverlapping": true,
+        "attractor_lever_m": 0.03,
+        "attractor_radius_m": 0.005,
+        "density_kg_m3": 19250.0,
+        "detector_lever_m": 0.03,
+        "detector_radius_m": 0.005,
+        "fixed_A_Y": "1/3",
+        "gap_count": 25,
+        "gap_grid": "LOGSPACE_1E-4_TO_1E-2_M",
+        "lambda_grid": "LOGSPACE_1E-5_TO_1E-1_M",
+        "lambda_reference_m": 0.001,
+        "not_eotwash_reconstruction": true,
+        "positive_lambda_count": 25
+      },
+      "convergence_contract": {
+        "angular_relative_tolerance": 1e-08,
+        "angular_samples": [
+          128,
+          256,
+          512
+        ],
+        "canonical_repeat_bytes_identical": true,
+        "density_cubature_orders": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "density_relative_tolerance": 1e-06,
+        "energy_derivative_relative_tolerance": 1e-08,
+        "energy_derivative_steps_rad": [
+          0.001,
+          0.0005,
+          0.00025,
+          0.000125
+        ],
+        "error_definition": "abs(y-y_ref)/max(abs(y_ref),1e-22_N_m)",
+        "fail_closed": true,
+        "force_lever_relative_tolerance": 1e-10,
+        "torque_floor_N_m": 1e-22
+      },
+      "deliberate_mutations": [
+        {
+          "expected_result": "DESIGNATED_CONTROL_FAILS",
+          "mutation_id": "FLIP_YUKAWA_ENERGY_SIGN"
+        },
+        {
+          "expected_result": "DESIGNATED_CONTROL_FAILS",
+          "mutation_id": "REPLACE_ONE_THIRD_BY_ONE"
+        },
+        {
+          "expected_result": "DESIGNATED_CONTROL_FAILS",
+          "mutation_id": "REMOVE_ONE_SPHERE_FORM_FACTOR"
+        },
+        {
+          "expected_result": "DESIGNATED_CONTROL_FAILS",
+          "mutation_id": "FLIP_NEGATIVE_ENERGY_DERIVATIVE_TORQUE_SIGN"
+        },
+        {
+          "expected_result": "DESIGNATED_CONTROL_FAILS",
+          "mutation_id": "DOUBLE_DFT_NORMALIZATION"
+        }
+      ],
+      "deterministic_perturbations": {
+        "count": 16,
+        "rows": [
+          {
+            "exact_map": "multiply final torque by 1+k_tau",
+            "nominal": 0.0,
+            "perturbation_id": "TORQUE_CALIBRATION",
+            "test_range": [
+              -0.02,
+              0.02
+            ],
+            "unit": "fraction"
+          },
+          {
+            "exact_map": "rho_A -> rho_A*(1+k_A)",
+            "nominal": 0.0,
+            "perturbation_id": "SOURCE_DENSITY_SCALE",
+            "test_range": [
+              -0.01,
+              0.01
+            ],
+            "unit": "fraction"
+          },
+          {
+            "exact_map": "rho_D -> rho_D*(1+k_D)",
+            "nominal": 0.0,
+            "perturbation_id": "DETECTOR_DENSITY_SCALE",
+            "test_range": [
+              -0.01,
+              0.01
+            ],
+            "unit": "fraction"
+          },
+          {
+            "exact_map": "L_D -> L_D+dL_D",
+            "nominal": 0.0,
+            "perturbation_id": "DETECTOR_LEVER_OFFSET",
+            "test_range": [
+              -0.0001,
+              0.0001
+            ],
+            "unit": "m"
+          },
+          {
+            "exact_map": "L_A -> L_A+dL_A",
+            "nominal": 0.0,
+            "perturbation_id": "ATTRACTOR_LEVER_OFFSET",
+            "test_range": [
+              -0.0001,
+              0.0001
+            ],
+            "unit": "m"
+          },
+          {
+            "exact_map": "d_j -> d_j+dd with positive-gap guard",
+            "nominal": 0.0,
+            "perturbation_id": "GAP_OFFSET",
+            "test_range": [
+              -1e-05,
+              1e-05
+            ],
+            "unit": "m"
+          },
+          {
+            "exact_map": "add dx to every attractor center x",
+            "nominal": 0.0,
+            "perturbation_id": "ATTRACTOR_AXIS_X_OFFSET",
+            "test_range": [
+              -0.0001,
+              0.0001
+            ],
+            "unit": "m"
+          },
+          {
+            "exact_map": "add dy to every attractor center y",
+            "nominal": 0.0,
+            "perturbation_id": "ATTRACTOR_AXIS_Y_OFFSET",
+            "test_range": [
+              -0.0001,
+              0.0001
+            ],
+            "unit": "m"
+          },
+          {
+            "exact_map": "evaluate geometry at theta-dtheta",
+            "nominal": 0.0,
+            "perturbation_id": "ANGULAR_ZERO_OFFSET",
+            "test_range": [
+              -0.001,
+              0.001
+            ],
+            "unit": "rad"
+          },
+          {
+            "exact_map": "z -> (I+ell*L_adjacent)*z",
+            "nominal": 0.0,
+            "perturbation_id": "HARMONIC_LEAKAGE",
+            "test_range": [
+              -0.002,
+              0.002
+            ],
+            "unit": "fraction"
+          },
+          {
+            "exact_map": "add constant to 2RE at every gap",
+            "nominal": 0.0,
+            "perturbation_id": "BACKGROUND_2RE",
+            "test_range": [
+              -1e-17,
+              1e-17
+            ],
+            "unit": "N_m"
+          },
+          {
+            "exact_map": "add constant to 2IM at every gap",
+            "nominal": 0.0,
+            "perturbation_id": "BACKGROUND_2IM",
+            "test_range": [
+              -1e-17,
+              1e-17
+            ],
+            "unit": "N_m"
+          },
+          {
+            "exact_map": "add constant to 4RE at every gap",
+            "nominal": 0.0,
+            "perturbation_id": "BACKGROUND_4RE",
+            "test_range": [
+              -1e-17,
+              1e-17
+            ],
+            "unit": "N_m"
+          },
+          {
+            "exact_map": "add constant to 4IM at every gap",
+            "nominal": 0.0,
+            "perturbation_id": "BACKGROUND_4IM",
+            "test_range": [
+              -1e-17,
+              1e-17
+            ],
+            "unit": "N_m"
+          },
+          {
+            "exact_map": "add constant to 6RE at every gap",
+            "nominal": 0.0,
+            "perturbation_id": "BACKGROUND_6RE",
+            "test_range": [
+              -1e-17,
+              1e-17
+            ],
+            "unit": "N_m"
+          },
+          {
+            "exact_map": "add constant to 6IM at every gap",
+            "nominal": 0.0,
+            "perturbation_id": "BACKGROUND_6IM",
+            "test_range": [
+              -1e-17,
+              1e-17
+            ],
+            "unit": "N_m"
+          }
+        ],
+        "stochastic_priors": "NONE",
+        "transformation_order": "GEOMETRY_DENSITY_ENERGY_TORQUE_HARMONICS_CALIBRATION_LEAKAGE_BACKGROUND"
+      },
+      "execution_controls": [
+        {
+          "item_id": "POINT_NEWTONIAN_BENCHMARK",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "POINT_YUKAWA_BENCHMARK",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "UNIFORM_SPHERE_FORM_FACTOR_BENCHMARK",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "APPARATUS_TORQUE_SYMMETRY_BENCHMARK",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "MUTATE_YUKAWA_SIGN",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "MUTATE_FIXED_AMPLITUDE",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "MUTATE_SPHERE_FORM_FACTOR",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "MUTATE_TORQUE_SIGN",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "MUTATE_DFT_NORMALIZATION",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "ODD_AND_COSINE_SYMMETRY_ZEROS",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "PHASE_AND_ANGLE_REVERSAL",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "FORCE_LEVER_TORQUE_CROSS_CHECK",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "ENERGY_FINITE_DIFFERENCE_TORQUE_CROSS_CHECK",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "REFINEMENT_AND_REPEATED_SERIALIZATION",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "JACOBIAN_RANK_AND_SCALAR_SHAPE_IDENTIFIABILITY",
+          "status": "NOT_EXECUTED"
+        }
+      ],
+      "harmonic_contract": {
+        "a_n_relation": "a_n=2*Re(c_n)",
+        "b_n_relation": "b_n=-2*Im(c_n)",
+        "coefficient": "c_n=(1/(2*pi))*integral(tau*exp(-i*n*theta),theta=0..2*pi)",
+        "discrete_coefficient": "c_n=(1/N)*sum_k(tau_k*exp(-i*n*2*pi*k/N))",
+        "ordering": "GAP_MAJOR_2RE_2IM_4RE_4IM_6RE_6IM",
+        "positive_angle": "COUNTERCLOCKWISE_ABOUT_PLUS_Z_VIEWED_FROM_PLUS_Z",
+        "positive_torque": "ABOUT_PLUS_Z",
+        "production_sample_count": 256,
+        "real_vector_length": 150,
+        "retained_harmonics": [
+          2,
+          4,
+          6
+        ],
+        "unit": "N_m",
+        "zero_angle": "ATTRACTOR_AND_DETECTOR_AXES_ALONG_PLUS_X"
+      },
+      "production_path": {
+        "benchmark_only_kernel_allowed": false,
+        "cross_checks": [
+          "DIRECT_PAIR_FORCE_LEVER_ARM",
+          "FIVE_POINT_CENTRAL_ENERGY_DERIVATIVE"
+        ],
+        "production_torque": "ANALYTIC_NEGATIVE_ENERGY_DERIVATIVE",
+        "scaled_form_factor": "H(x)=exp(-x)*F(x)=3*((x-1)+(x+1)*exp(-2*x))/(2*x^3)",
+        "shared_function_count": 6,
+        "shared_functions": [
+          "pair_distance",
+          "pair_energy_and_radial_derivative",
+          "apparatus_energy",
+          "analytic_energy_derivative_torque",
+          "discrete_harmonic_transform",
+          "real_150_vector"
+        ],
+        "small_x_series_threshold": 0.001,
+        "uniform_sphere_form_factor": "F(x)=3*(x*cosh(x)-sinh(x))/x^3"
+      },
+      "stage_a_boundary": {
+        "covariance": "NONE",
+        "execution": "NOT_AUTHORIZED",
+        "gaussian_noise": "NONE",
+        "monte_carlo_trials": "NONE",
+        "profile_likelihood": "NONE",
+        "result_type": "DETERMINISTIC_FORWARD_MODEL_VALIDATION_CONTRACT",
+        "sensitivity_forecast": "NONE"
+      },
+      "symmetry_phase_controls": [
+        "ODD_HARMONICS_1_3_5_ZERO",
+        "NOMINAL_EVEN_COSINE_QUADRATURES_ZERO",
+        "EVEN_SINE_2_4_6_NONZERO_WHEN_IDENTIFIABLE",
+        "TORQUE_ZERO_AT_FOUR_SYMMETRY_ANGLES",
+        "ANGLE_REVERSAL_CONJUGATES_COEFFICIENTS",
+        "RIGID_PI_OVER_16_ROTATION_PHASE_LAW",
+        "NEWTONIAN_AND_YUKAWA_DISTANCE_SCALING"
+      ],
+      "work_packages": [
+        {
+          "item_id": "EXACT_HARMONIC_CONVENTION",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "SHARED_PRODUCTION_KERNEL",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "ENERGY_TO_TORQUE_CROSS_VALIDATION",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "FOUR_ANALYTIC_BENCHMARKS",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "APPARATUS_HARMONIC_AND_SYMMETRY_VALIDATION",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "MUTATION_AND_PHASE_SIGN_CONTROLS",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "NUMERICAL_CONVERGENCE",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "DETERMINISTIC_PERTURBATION_MAPS",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "JACOBIAN_IDENTIFIABILITY",
+          "status": "NOT_EXECUTED"
+        },
+        {
+          "item_id": "CANONICAL_REAL_150_OUTPUT",
+          "status": "NOT_EXECUTED"
+        }
+      ]
+    }
+  },
+  "future_single_execution_contract": {
+    "constraint": "NONE",
+    "forecast": "NONE",
+    "likelihood": "NONE",
+    "maximum_execution_count_after_ready_review": 1,
+    "monte_carlo": "NONE",
+    "noise": "NONE",
+    "result_classes": [
+      "DETERMINISTIC_FORWARD_MODEL_VALIDATED",
+      "BLOCKED_PARAMETER_IDENTIFIABILITY",
+      "IDENTIFIABILITY_CLASSIFICATION_UNRESOLVED",
+      "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+      "BLOCKED_NUISANCE_PROJECTOR_UNSTABLE",
+      "BLOCKED_IDENTIFIABILITY_REFINEMENT_STABILITY"
+    ],
+    "scientific_question": "DOES_SCALAR_RANGE_CHANGE_REAL_150_SHAPE_OUTSIDE_SPAN_OF_SIXTEEN_DETERMINISTIC_APPARATUS_PERTURBATIONS",
+    "stage_b": "NOT_AUTHORIZED",
+    "status": "NOT_AUTHORIZED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "identifiability_repair_contract": {
+    "g18_finite_difference": {
+      "adaptive_step_selection": "FORBIDDEN",
+      "dimensionless_step_ladder": [
+        0.01,
+        0.003,
+        0.001
+      ],
+      "exact_linear_columns": [
+        "TORQUE_CALIBRATION",
+        "SOURCE_DENSITY_SCALE",
+        "DETECTOR_DENSITY_SCALE",
+        "HARMONIC_LEAKAGE",
+        "BACKGROUND_2RE",
+        "BACKGROUND_2IM",
+        "BACKGROUND_4RE",
+        "BACKGROUND_4IM",
+        "BACKGROUND_6RE",
+        "BACKGROUND_6IM"
+      ],
+      "extrapolation": "NONE",
+      "failed_evaluation_outcome": "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+      "failed_plateau_outcome": "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+      "fallback_step": "NONE",
+      "finite_difference_columns": [
+        "LOG_LAMBDA",
+        "DETECTOR_LEVER_OFFSET",
+        "ATTRACTOR_LEVER_OFFSET",
+        "GAP_OFFSET",
+        "ATTRACTOR_AXIS_X_OFFSET",
+        "ATTRACTOR_AXIS_Y_OFFSET",
+        "ANGULAR_ZERO_OFFSET"
+      ],
+      "interior_formula": "(f(q+h)-f(q-h))/(2h)",
+      "lower_boundary_formula": "(-3f(q)+4f(q+h)-f(q+2h))/(2h)",
+      "plateau_absolute_tolerance": 1e-10,
+      "plateau_acceptance": "RMS(D_3e-3-D_1e-3)<=1e-10+5e-3*RMS(D_1e-3)",
+      "plateau_norm": "RMS_AFTER_ACCEPTED_V0_GLOBAL_OUTPUT_SCALING",
+      "plateau_relative_tolerance": 0.005,
+      "plateau_steps": [
+        0.003,
+        0.001
+      ],
+      "required_evaluation_order": "GAP_MAJOR_2RE_2IM_4RE_4IM_6RE_6IM",
+      "required_evaluation_shape": [
+        150
+      ],
+      "required_evaluation_values": "FINITE_REAL",
+      "stencil_selection": "CENTERED_IF_VALID_ELSE_SECOND_ORDER_ONE_SIDED_IF_ALL_THREE_POINTS_VALID_ELSE_BLOCK",
+      "upper_boundary_formula": "(3f(q)-4f(q-h)+f(q-2h))/(2h)"
+    },
+    "g20_rank_deficient_projector": {
+      "all_nuisance_columns_zero_behavior": "USE_EMPTY_U_R_RANK_0_ZERO_PSEUDOINVERSE_AND_P_PERP_IDENTITY",
+      "central_relative_rank_threshold": 1e-10,
+      "eta_lambda": "norm2(P_perp*j_lambda)/norm2(j_lambda)",
+      "exact_duplicate_behavior": "REDUCE_RANK_WITHOUT_EXCEPTION",
+      "factorization": "THIN_SVD_N_TILDE=U_SIGMA_VT",
+      "identifiable_point_rule": "eta_lambda>=1e-3",
+      "indistinguishable_point_rule": "eta_lambda<=1e-6",
+      "input": "DIMENSIONLESS_PARAMETER_DERIVATIVES_DIVIDED_BY_ACCEPTED_V0_Y_STAR",
+      "intermediate_point_rule": "IDENTIFIABILITY_CLASSIFICATION_UNRESOLVED",
+      "near_degeneracy_triggers": [
+        "ANY_PAIRWISE_ABSOLUTE_CORRELATION_GE_0.999",
+        "RETAINED_CONDITION_NUMBER_GE_1E8",
+        "THRESHOLD_PROBE_RANK_DISAGREEMENT"
+      ],
+      "nonzero_nuisance_column_scaling": "UNIT_EUCLIDEAN_NORM",
+      "normal_equation_projector": "FORBIDDEN",
+      "orthonormality_residual": "norm2(U_r^T*U_r-I)",
+      "orthonormality_tolerance": 1e-12,
+      "probe_relative_rank_thresholds": [
+        1e-09,
+        1e-11
+      ],
+      "projector": "P_perp=I-U_r*U_r^T",
+      "pseudoinverse": "V_r*diag(1/sigma_i)*U_r^T",
+      "rank_or_projector_failure_outcome": "BLOCKED_NUISANCE_PROJECTOR_UNSTABLE",
+      "reconstruction_residual": "normF(N_tilde-U_r*U_r^T*N_tilde)/max(normF(N_tilde),1e-30)",
+      "reconstruction_tolerance": 1e-09,
+      "retained_index_rule": "sigma_i/sigma_1>threshold",
+      "scalar_zero_norm_behavior": "IDENTIFIABILITY_CLASSIFICATION_UNRESOLVED",
+      "zero_column_norm_threshold": "sqrt(150)*1e-12",
+      "zero_nuisance_column_behavior": "REPORT_AND_EXCLUDE_FROM_UNIT_NORMALIZATION"
+    },
+    "g21_transition_domain": {
+      "domain_classification_prerequisite": "ALL_NUMERICAL_STABILITY_RULES_PASS",
+      "identifiable_domain_outcome": "DETERMINISTIC_PARAMETER_IDENTIFIABLE",
+      "identifiable_domain_rule": "AT_LEAST_5_CONTIGUOUS_DECISION_POINTS_WITH_ETA_LAMBDA_GE_1E-3",
+      "otherwise": "IDENTIFIABILITY_CLASSIFICATION_UNRESOLVED",
+      "post_result_selection_or_reordering": "BLOCKED_TRANSITION_DOMAIN_CONTRACT",
+      "registration": {
+        "d_max_m": 0.01,
+        "d_min_m": 0.0001,
+        "decision_indices_zero_based": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "decision_predicate": "d_min/3<=lambda_i<=3*d_max",
+        "decision_values_m": [
+          4.641588833612782e-05,
+          6.812920690579608e-05,
+          0.0001,
+          0.00014677992676220705,
+          0.00021544346900318823,
+          0.00031622776601683794,
+          0.0004641588833612782,
+          0.0006812920690579609,
+          0.001,
+          0.0014677992676220691,
+          0.0021544346900318843,
+          0.0031622776601683794,
+          0.004641588833612777,
+          0.006812920690579615,
+          0.01,
+          0.01467799267622069,
+          0.021544346900318846
+        ],
+        "lambda_grid_formula": "lambda_i=10^(-5+i/6)_m_for_i=0..24",
+        "sentinel_formula": [
+          "d_min/3",
+          "d_min",
+          "sqrt(d_min*d_max)",
+          "d_max",
+          "3*d_max"
+        ],
+        "sentinel_values_m": [
+          3.3333333333333335e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.03
+        ]
+      },
+      "registration_canonical_sha256": "5977b7fd5758b33d4a906dae1e02512099b427bebed540a4df010a1d0de1cba6",
+      "registration_time": "PACKET_PREPARATION_BEFORE_SCIENTIFIC_OUTPUT",
+      "required_metrics_at_all_decision_and_sentinel_points": [
+        "RETAINED_RANK",
+        "SINGULAR_VALUE_SPECTRUM",
+        "MAXIMUM_SCALAR_NUISANCE_ABSOLUTE_CORRELATION",
+        "NUISANCE_PROJECTOR",
+        "ETA_LAMBDA",
+        "EXACT_AND_NEAR_DEGENERACY",
+        "REFINEMENT_STABILITY"
+      ],
+      "sentinel_role": "MANDATORY_REGIME_DIAGNOSTIC_NOT_CONTIGUITY_SUBSTITUTE",
+      "unidentifiable_domain_outcome": "BLOCKED_PARAMETER_IDENTIFIABILITY",
+      "unidentifiable_domain_rule": "ALL_17_DECISION_POINTS_WITH_ETA_LAMBDA_LE_1E-6"
+    },
+    "g22_refinement_stability": {
+      "decision_bearing_log10_singular_value_change_decades_max": 0.05,
+      "decision_bearing_singular_values": "RETAINED_AT_CENTRAL_THRESHOLD_IN_BOTH_LEVELS",
+      "energy_step_role": "INDEPENDENT_ACCEPTED_CROSS_CHECK_ONLY",
+      "eta_absolute_change_max": 0.02,
+      "eta_relative_change_condition": "max(abs(eta_medium),abs(eta_fine))>1e-6",
+      "eta_relative_change_max": 0.05,
+      "exact_and_near_degeneracy_labels": "IDENTICAL",
+      "forward_vector_convergence_override": "FORBIDDEN",
+      "largest_principal_angle_definition": "acos(sigma_min(U_medium^T*U_fine))_after_equal_rank_check",
+      "largest_principal_angle_degrees_max": 1.0,
+      "levels": [
+        {
+          "angular_samples": 256,
+          "density_cubature_order": 16,
+          "energy_derivative_check_step_rad": 0.00025,
+          "refinement_id": "IDENT_R_MEDIUM"
+        },
+        {
+          "angular_samples": 512,
+          "density_cubature_order": 24,
+          "energy_derivative_check_step_rad": 0.000125,
+          "refinement_id": "IDENT_R_FINE"
+        }
+      ],
+      "maximum_scalar_nuisance_correlation_absolute_change_max": 0.02,
+      "other_failure_outcome": "BLOCKED_IDENTIFIABILITY_REFINEMENT_STABILITY",
+      "point_classification": "IDENTICAL",
+      "production_torque": "UNCHANGED_ANALYTIC_NEGATIVE_ENERGY_DERIVATIVE",
+      "projector_failure_outcome": "BLOCKED_NUISANCE_PROJECTOR_UNSTABLE",
+      "retained_rank": "IDENTICAL",
+      "threshold_probe_classification": "IDENTICAL",
+      "threshold_probe_eta_spread_max": 0.02,
+      "threshold_probe_rank": "IDENTICAL"
+    },
+    "parameterization": {
+      "lambda_coordinate": "q_lambda=log(lambda/1e-3_m)",
+      "lambda_reference_m": 0.001,
+      "nuisance_coordinate": "q_j=(p_j-p_j0)/s_j",
+      "nuisance_nominal_q": 0.0,
+      "nuisance_scales": [
+        {
+          "parameter_id": "TORQUE_CALIBRATION",
+          "scale": 0.02,
+          "unit": "fraction"
+        },
+        {
+          "parameter_id": "SOURCE_DENSITY_SCALE",
+          "scale": 0.01,
+          "unit": "fraction"
+        },
+        {
+          "parameter_id": "DETECTOR_DENSITY_SCALE",
+          "scale": 0.01,
+          "unit": "fraction"
+        },
+        {
+          "parameter_id": "DETECTOR_LEVER_OFFSET",
+          "scale": 0.0001,
+          "unit": "m"
+        },
+        {
+          "parameter_id": "ATTRACTOR_LEVER_OFFSET",
+          "scale": 0.0001,
+          "unit": "m"
+        },
+        {
+          "parameter_id": "GAP_OFFSET",
+          "scale": 1e-05,
+          "unit": "m"
+        },
+        {
+          "parameter_id": "ATTRACTOR_AXIS_X_OFFSET",
+          "scale": 0.0001,
+          "unit": "m"
+        },
+        {
+          "parameter_id": "ATTRACTOR_AXIS_Y_OFFSET",
+          "scale": 0.0001,
+          "unit": "m"
+        },
+        {
+          "parameter_id": "ANGULAR_ZERO_OFFSET",
+          "scale": 0.001,
+          "unit": "rad"
+        },
+        {
+          "parameter_id": "HARMONIC_LEAKAGE",
+          "scale": 0.002,
+          "unit": "fraction"
+        },
+        {
+          "parameter_id": "BACKGROUND_2RE",
+          "scale": 1e-17,
+          "unit": "N_m"
+        },
+        {
+          "parameter_id": "BACKGROUND_2IM",
+          "scale": 1e-17,
+          "unit": "N_m"
+        },
+        {
+          "parameter_id": "BACKGROUND_4RE",
+          "scale": 1e-17,
+          "unit": "N_m"
+        },
+        {
+          "parameter_id": "BACKGROUND_4IM",
+          "scale": 1e-17,
+          "unit": "N_m"
+        },
+        {
+          "parameter_id": "BACKGROUND_6RE",
+          "scale": 1e-17,
+          "unit": "N_m"
+        },
+        {
+          "parameter_id": "BACKGROUND_6IM",
+          "scale": 1e-17,
+          "unit": "N_m"
+        }
+      ],
+      "nuisance_valid_q_range": [
+        -1.0,
+        1.0
+      ],
+      "result_dependent_scaling": "FORBIDDEN",
+      "scale_source": "POSITIVE_HALF_WIDTH_OF_ACCEPTED_V0_TEST_RANGE"
+    }
+  },
+  "independent_review_contract": {
+    "blocked_outcome_authority": "select_post_scalar_only_yukawa_deterministic_identifiability_contract_v1_review_scientific_response_v0",
+    "blocked_outcome_automatic_v2": "FORBIDDEN",
+    "outcome_count": 5,
+    "outcomes": [
+      "DETERMINISTIC_IDENTIFIABILITY_CONTRACT_READY",
+      "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+      "BLOCKED_NUISANCE_PROJECTOR_UNSTABLE",
+      "BLOCKED_TRANSITION_DOMAIN_CONTRACT",
+      "BLOCKED_IDENTIFIABILITY_REFINEMENT_STABILITY"
+    ],
+    "ready_authority": "execute_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_once",
+    "ready_execution_limit": 1,
+    "ready_outcome": "DETERMINISTIC_IDENTIFIABILITY_CONTRACT_READY",
+    "review_burden": [
+      "TWENTY_FROZEN_GATES_BYTE_IDENTICAL_OR_SEMANTICALLY_UNCHANGED",
+      "FOUR_REPAIRS_EXECUTABLE_NOT_DESCRIPTIVE",
+      "ALL_THRESHOLDS_PRECEDE_SCIENTIFIC_OUTPUTS",
+      "DIMENSIONLESS_SCALING_PREVENTS_UNIT_CONTROL_OF_SINGULAR_VALUES",
+      "RANK_DEFICIENT_CASES_FAIL_SAFELY",
+      "NEAR_THRESHOLD_FINDINGS_REMAIN_UNRESOLVED",
+      "TEN_CONTROLS_TRAVERSE_PRODUCTION_IMPLEMENTATION",
+      "PREPARATION_CALCULATED_NO_FORWARD_VECTOR_JACOBIAN_OR_RESULT",
+      "SUCCESS_AUTHORIZES_EXACTLY_ONE_DETERMINISTIC_STAGE_A_EXECUTION",
+      "NEW_FOUNDATIONAL_BLOCK_CANNOT_AUTOMATICALLY_CREATE_V2"
+    ],
+    "review_burden_count": 10,
+    "review_itself_may_execute": false
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260719_v1",
+  "preparation_gates": {
+    "failure_count": 0,
+    "gate_count": 26,
+    "pass_count": 26,
+    "rows": [
+      {
+        "gate_id": "EXACT_SELECTOR_AUTHORITY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V0_PACKET_AND_REVIEW_CUSTODY_VERIFIED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TWENTY_ACCEPTED_GATES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ONLY_G18_G20_G21_G22_REPAIRABLE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THIRTEEN_ACCEPTED_SURFACES_EMBEDDED_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V0_JACOBIAN_ORDER_SCALE_AND_DECISION_BANDS_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DIMENSIONLESS_PARAMETERIZATION_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SEVEN_FINITE_DIFFERENCE_COLUMNS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_EXACT_LINEAR_COLUMNS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FINITE_DIFFERENCE_STENCILS_AND_LADDER_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PLATEAU_AND_FAILURE_RULES_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THIN_SVD_PSEUDOINVERSE_AND_PROJECTOR_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ZERO_EXACT_NEAR_AND_THRESHOLD_RULES_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ETA_DEFINITION_AND_POINT_BANDS_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SEVENTEEN_TRANSITION_INDICES_REGISTERED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FIVE_REGIME_SENTINELS_REGISTERED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_POST_RESULT_POINT_SELECTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TWO_REFINEMENT_LEVELS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIX_REFINEMENT_STABILITY_CLASSES_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_PRODUCTION_PATH_CONTROLS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_ITEM_INDEPENDENT_REVIEW_BURDEN_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FIVE_REVIEW_OUTCOMES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "READY_AUTHORIZES_EXACTLY_ONE_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "AUTOMATIC_V2_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_FORWARD_MODEL_VECTOR_JACOBIAN_OR_RESULT_CALCULATED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "STAGE_B_EMPIRICAL_AND_THEORY_FIREWALL_RETAINED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "production_path_controls": {
+    "control_count": 10,
+    "declared_mutation_boundary": "INPUTS_OR_RETURNED_ARRAYS_ONLY",
+    "production_component_count": 5,
+    "production_components": [
+      "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+      "V1_JACOBIAN_BUILDER",
+      "V1_DIMENSIONLESS_SCALER",
+      "V1_THIN_SVD_PROJECTOR",
+      "V1_REFINEMENT_ADJUDICATOR"
+    ],
+    "rows": [
+      {
+        "control_id": "OVERSIZED_DERIVATIVE_STEP",
+        "mutation_or_probe": "replace_ladder_with_[1.0,0.6,0.3]_at_frozen_mid_domain_fixture",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "UNDERSIZED_NOISE_DOMINATED_STEP",
+        "mutation_or_probe": "replace_ladder_with_[1e-7,3e-8,1e-8]_and_add_sign_keyed_1e-11_times_Y_star_output_mutation",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "EXACT_DUPLICATE_NUISANCE_COLUMN",
+        "mutation_or_probe": "replace_one_post_builder_nuisance_column_with_exact_copy_of_another",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "RANK_REDUCED_WITHOUT_CRASH",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "NEAR_DUPLICATE_NUISANCE_COLUMN",
+        "mutation_or_probe": "replace_one_post_builder_column_by_unit_normalized_1_minus_1e-6_duplicate_plus_1e-6_orthogonal_mixture",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "NEAR_DEGENERACY_REPORTED",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "SVD_THRESHOLD_STABILITY",
+        "mutation_or_probe": "adjudicate_same_production_jacobian_at_[1e-9,1e-10,1e-11]",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "RANK_AND_CLASSIFICATION_IDENTICAL_ETA_SPREAD_LE_0.02",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "SCALAR_EQUALS_CALIBRATION",
+        "mutation_or_probe": "replace_actual_scalar_column_with_actual_torque_calibration_column_after_builder",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "ABS_ETA_LAMBDA_LE_1E-12",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "SCALAR_ORTHOGONAL_TO_NUISANCES",
+        "mutation_or_probe": "inject_lexicographically_first_normalized_coordinate_basis_residual_orthogonal_to_actual_U_r",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "ABS_ETA_LAMBDA_MINUS_1_LE_1E-12",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "POST_RESULT_TRANSITION_POINT_TAMPER",
+        "mutation_or_probe": "attempt_to_replace_registered_transition_indices_after_production_metrics_exist",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "BLOCKED_TRANSITION_DOMAIN_CONTRACT",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "FORWARD_CONVERGED_JACOBIAN_UNSTABLE",
+        "mutation_or_probe": "retain_forward_vectors_and_rotate_one_fine_nuisance_column_by_2_degrees",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "BLOCKED_IDENTIFIABILITY_REFINEMENT_STABILITY",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      },
+      {
+        "control_id": "PRODUCTION_COMPONENT_PROVENANCE",
+        "mutation_or_probe": "verify_component_identity_and_sha256_at_each_control_boundary",
+        "production_components": [
+          "FROZEN_V0_PRODUCTION_FORWARD_MODEL",
+          "V1_JACOBIAN_BUILDER",
+          "V1_DIMENSIONLESS_SCALER",
+          "V1_THIN_SVD_PROJECTOR",
+          "V1_REFINEMENT_ADJUDICATOR"
+        ],
+        "required_outcome": "ANY_TEST_SUBSTITUTE_FAILS_PROVENANCE",
+        "status": "NOT_EXECUTED",
+        "test_double_policy": "FORBIDDEN_FOR_PRODUCTION_COMPONENTS"
+      }
+    ],
+    "test_doubles_for_production_components": "FORBIDDEN"
+  },
+  "repair_authority": {
+    "accepted_gate_evidence": [
+      {
+        "frozen_evidence": [
+          "V0_PACKET_CUSTODY_SHA256"
+        ],
+        "gate_id": "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY"
+      },
+      {
+        "frozen_evidence": [
+          "V0_REVIEW_AND_SCOPE_CUSTODY_SHA256"
+        ],
+        "gate_id": "G2_PENDING_REVIEW_STATUS_AND_NO_EXECUTION"
+      },
+      {
+        "frozen_evidence": [
+          "stage_a_boundary"
+        ],
+        "gate_id": "G3_STAGE_A_ONLY_SCOPE"
+      },
+      {
+        "frozen_evidence": [
+          "comparison_and_geometry"
+        ],
+        "gate_id": "G4_FIXED_COMPARISON_AND_APPARATUS_GEOMETRY"
+      },
+      {
+        "frozen_evidence": [
+          "harmonic_contract"
+        ],
+        "gate_id": "G5_HARMONIC_NORMALIZATION_PHASE_AND_SIGN"
+      },
+      {
+        "frozen_evidence": [
+          "harmonic_contract"
+        ],
+        "gate_id": "G6_REAL_150_VECTOR_ORDER_AND_UNITS"
+      },
+      {
+        "frozen_evidence": [
+          "production_path"
+        ],
+        "gate_id": "G7_ONE_SHARED_PRODUCTION_FUNCTION_CHAIN"
+      },
+      {
+        "frozen_evidence": [
+          "production_path"
+        ],
+        "gate_id": "G8_UNIFORM_SPHERE_KERNEL_AND_STABLE_FORM_FACTOR"
+      },
+      {
+        "frozen_evidence": [
+          "production_path"
+        ],
+        "gate_id": "G9_ANALYTIC_ENERGY_DERIVATIVE_TORQUE"
+      },
+      {
+        "frozen_evidence": [
+          "production_path"
+        ],
+        "gate_id": "G10_TWO_GENUINELY_INDEPENDENT_TORQUE_CHECKS"
+      },
+      {
+        "frozen_evidence": [
+          "analytic_benchmarks"
+        ],
+        "gate_id": "G11_FOUR_BENCHMARKS_HAVE_EXACT_TARGETS"
+      },
+      {
+        "frozen_evidence": [
+          "deliberate_mutations"
+        ],
+        "gate_id": "G12_FIVE_SCIENTIFIC_MUTATIONS_ROUTE_TO_CONTROLS"
+      },
+      {
+        "frozen_evidence": [
+          "symmetry_phase_controls"
+        ],
+        "gate_id": "G13_SYMMETRY_PHASE_SWAP_AND_ZERO_CONTROLS"
+      },
+      {
+        "frozen_evidence": [
+          "symmetry_phase_controls",
+          "convergence_contract"
+        ],
+        "gate_id": "G14_NEAR_ZERO_ABSOLUTE_FLOOR"
+      },
+      {
+        "frozen_evidence": [
+          "deterministic_perturbations"
+        ],
+        "gate_id": "G15_SIXTEEN_PERTURBATION_MAPS_AND_ORDER"
+      },
+      {
+        "frozen_evidence": [
+          "deterministic_perturbations",
+          "retained_jacobian_fields"
+        ],
+        "gate_id": "G16_EXPECTED_AMPLITUDE_DEGENERACY_DISCLOSED"
+      },
+      {
+        "frozen_evidence": [
+          "retained_jacobian_fields"
+        ],
+        "gate_id": "G17_JACOBIAN_DIMENSIONS_AND_PARAMETER_ORDER"
+      },
+      {
+        "frozen_evidence": [
+          "retained_jacobian_fields"
+        ],
+        "gate_id": "G19_DIMENSIONLESS_SVD_THRESHOLDS"
+      },
+      {
+        "frozen_evidence": [
+          "canonical_serialization"
+        ],
+        "gate_id": "G23_CANONICAL_SERIALIZATION_AND_DETERMINISM"
+      },
+      {
+        "frozen_evidence": [
+          "stage_a_boundary"
+        ],
+        "gate_id": "G24_STAGE_B_EMPIRICAL_AND_THEORY_FIREWALL"
+      }
+    ],
+    "accepted_v0_gate_count": 20,
+    "accepted_v0_gates": [
+      "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+      "G2_PENDING_REVIEW_STATUS_AND_NO_EXECUTION",
+      "G3_STAGE_A_ONLY_SCOPE",
+      "G4_FIXED_COMPARISON_AND_APPARATUS_GEOMETRY",
+      "G5_HARMONIC_NORMALIZATION_PHASE_AND_SIGN",
+      "G6_REAL_150_VECTOR_ORDER_AND_UNITS",
+      "G7_ONE_SHARED_PRODUCTION_FUNCTION_CHAIN",
+      "G8_UNIFORM_SPHERE_KERNEL_AND_STABLE_FORM_FACTOR",
+      "G9_ANALYTIC_ENERGY_DERIVATIVE_TORQUE",
+      "G10_TWO_GENUINELY_INDEPENDENT_TORQUE_CHECKS",
+      "G11_FOUR_BENCHMARKS_HAVE_EXACT_TARGETS",
+      "G12_FIVE_SCIENTIFIC_MUTATIONS_ROUTE_TO_CONTROLS",
+      "G13_SYMMETRY_PHASE_SWAP_AND_ZERO_CONTROLS",
+      "G14_NEAR_ZERO_ABSOLUTE_FLOOR",
+      "G15_SIXTEEN_PERTURBATION_MAPS_AND_ORDER",
+      "G16_EXPECTED_AMPLITUDE_DEGENERACY_DISCLOSED",
+      "G17_JACOBIAN_DIMENSIONS_AND_PARAMETER_ORDER",
+      "G19_DIMENSIONLESS_SVD_THRESHOLDS",
+      "G23_CANONICAL_SERIALIZATION_AND_DETERMINISM",
+      "G24_STAGE_B_EMPIRICAL_AND_THEORY_FIREWALL"
+    ],
+    "all_other_gates": "FROZEN_NO_SEMANTIC_CHANGE",
+    "automatic_v2": "NOT_AUTHORIZED",
+    "repairable_gate_count": 4,
+    "repairable_gates": [
+      "G18_JACOBIAN_FINITE_DIFFERENCE_STEPS",
+      "G20_RANK_DEFICIENT_NUISANCE_PROJECTOR",
+      "G21_TRANSITION_DOMAIN_EXACTNESS",
+      "G22_IDENTIFIABILITY_REFINEMENT_STABILITY"
+    ]
+  },
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.packet.v1",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "automatic_v2_repair_authorized": false,
+    "benchmark_executed": false,
+    "covariance_used": false,
+    "deterministic_execution_authorized": false,
+    "deterministic_execution_performed": false,
+    "deterministic_vector_produced": false,
+    "empirical_constraint_claimed": false,
+    "eta_lambda_computed": false,
+    "final_attempt_boundary_frozen": true,
+    "finite_difference_contract_frozen": true,
+    "forward_model_called_during_preparation": false,
+    "gaussian_noise_used": false,
+    "gravitational_action_selected": false,
+    "identifiability_refinement_contract_frozen": true,
+    "independent_packet_review_executed": false,
+    "jacobian_computed": false,
+    "measured_evidence_used": false,
+    "monte_carlo_executed": false,
+    "mutation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "outbound_contact_authorized": false,
+    "packet_preparation_executed": true,
+    "physical_identifiability_evaluated": false,
+    "physical_unidentifiability_established": false,
+    "private_data_dependency_created": false,
+    "profile_likelihood_executed": false,
+    "rank_deficient_projector_contract_frozen": true,
+    "scalar_branch_adopted": false,
+    "sensitivity_forecast_produced": false,
+    "singular_values_computed": false,
+    "stochastic_packet_preparation_authorized": false,
+    "synthetic_dataset_generated": false,
+    "ten_production_control_contract_frozen": true,
+    "transition_domain_contract_frozen": true,
+    "v0_frozen_surfaces_embedded": true
+  },
+  "selected_next_target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1_result",
+  "selected_next_target_kind": "INDEPENDENT_REVIEW_ONLY_NO_DETERMINISTIC_OR_STOCHASTIC_EXECUTION",
+  "target": "prepare_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1",
+  "verdict": "PREPARED_FINAL_DETERMINISTIC_IDENTIFIABILITY_CONTRACT_REPAIR_PENDING_INDEPENDENT_REVIEW"
+}

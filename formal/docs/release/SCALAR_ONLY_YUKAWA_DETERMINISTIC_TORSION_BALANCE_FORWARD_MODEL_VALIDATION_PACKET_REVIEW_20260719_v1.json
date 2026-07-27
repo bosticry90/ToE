@@ -1,0 +1,402 @@
+{
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_FINAL_DETERMINISTIC_IDENTIFIABILITY_CONTRACT_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260719_v1.md",
+        "sha256": "35533fb024b9034dbe0dadd903003d51e2e28cc96ab4e8825f889397a563c2d1"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260719_v1.json",
+        "sha256": "9566d6bef8208627bca59bbcdc61ca4d3fb1b5d6bb87859749f323d4dbacaeb6"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1.py",
+        "sha256": "3b0ce5be2bd5b0d85e53bc02dc9b938ec4e872d81d210ca9748cb2bd586381d6"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1.py",
+        "sha256": "527b8e21b7971d18a46b31db787545f43eb686e94ba0670cca9590c0061c0abf"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketV1.lean",
+        "sha256": "550f0c58eb25b89c7348a09ceaeb6083dfd26f621b4adcdab4d15f69e0b1d59c"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_review_v1.py",
+      "sha256": "73967ee60e41ad6e1a3c0d16b45eb91b538371b355ef855ce8ac240d28126eaf"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_REVIEW_20260719_v1.md",
+      "sha256": "d5454c879532ad26afbc07b882cca12aa0bcf3b8f69196f46c1d3011b7f50c82"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketReviewV1.lean",
+      "sha256": "3a1f0d1fc9b7088bd7d419f553c15acb7388da7907257a7b8c7826decc6cecb5"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_review_v1.py",
+      "sha256": "25175b4256cd53405ff23018771a4d0ef387958b22454c498495421b18bb8f77"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This independent review accepts the reproducibility of the final deterministic identifiability contract and authorizes exactly one Stage A execution. It performs no forward calculation or control, produces no vector, Jacobian, SVD, eta, physical identifiability result, bound, forecast, empirical claim, parameter choice, branch adoption, native bridge, principle, or action, and authorizes neither Stage B nor an automatic v2.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "automatic_v2": "NOT_AUTHORIZED",
+    "deterministic_executions_authorized": 1,
+    "deterministic_executions_performed": 0,
+    "forward_vector": "NOT_PRODUCED",
+    "jacobian_svd_eta": "NOT_COMPUTED",
+    "next_authority": "execute_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_once",
+    "physical_identifiability": "NOT_DETERMINED",
+    "scalar_branch": "NOT_ADOPTED",
+    "stage_b": "DEFERRED_NOT_AUTHORIZED",
+    "synthetic_or_empirical_constraint": "NONE",
+    "v1_packet_review": "DETERMINISTIC_IDENTIFIABILITY_CONTRACT_READY"
+  },
+  "diagnostics": [],
+  "execution_authorization": {
+    "automatic_v2_authorized": false,
+    "execution_count_authorized": 1,
+    "execution_count_performed": 0,
+    "execution_target": "execute_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_once",
+    "required_post_execution_target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result",
+    "result_classes": [
+      "DETERMINISTIC_FORWARD_MODEL_VALIDATED",
+      "BLOCKED_PARAMETER_IDENTIFIABILITY",
+      "IDENTIFIABILITY_CLASSIFICATION_UNRESOLVED",
+      "BLOCKED_FINITE_DIFFERENCE_PLATEAU",
+      "BLOCKED_NUISANCE_PROJECTOR_UNSTABLE",
+      "BLOCKED_IDENTIFIABILITY_REFINEMENT_STABILITY"
+    ],
+    "stage_b_authorized": false,
+    "stage_b_eligibility_on_validated_result": "FRESH_SCIENTIFIC_DECISION_REQUIRED",
+    "status": "AUTHORIZED_NOT_STARTED"
+  },
+  "finite_difference_review": {
+    "adaptive_selection_forbidden": true,
+    "column_partition_complete": true,
+    "complete": true,
+    "dimensionless_scales_reproduced": true,
+    "exact_linear_column_count": 10,
+    "finite_difference_column_count": 7,
+    "log_lambda_centered_stencil_valid_at_all_registered_points": true,
+    "nuisance_centered_stencil_valid_at_nominal": true,
+    "nuisance_scale_count": 16,
+    "parameter_count": 17,
+    "production_step_ladder": [
+      0.01,
+      0.003,
+      0.001
+    ]
+  },
+  "frozen_surface_review": {
+    "accepted_gate_count": 20,
+    "accepted_gate_evidence_count": 20,
+    "accepted_gate_ids": [
+      "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+      "G2_PENDING_REVIEW_STATUS_AND_NO_EXECUTION",
+      "G3_STAGE_A_ONLY_SCOPE",
+      "G4_FIXED_COMPARISON_AND_APPARATUS_GEOMETRY",
+      "G5_HARMONIC_NORMALIZATION_PHASE_AND_SIGN",
+      "G6_REAL_150_VECTOR_ORDER_AND_UNITS",
+      "G7_ONE_SHARED_PRODUCTION_FUNCTION_CHAIN",
+      "G8_UNIFORM_SPHERE_KERNEL_AND_STABLE_FORM_FACTOR",
+      "G9_ANALYTIC_ENERGY_DERIVATIVE_TORQUE",
+      "G10_TWO_GENUINELY_INDEPENDENT_TORQUE_CHECKS",
+      "G11_FOUR_BENCHMARKS_HAVE_EXACT_TARGETS",
+      "G12_FIVE_SCIENTIFIC_MUTATIONS_ROUTE_TO_CONTROLS",
+      "G13_SYMMETRY_PHASE_SWAP_AND_ZERO_CONTROLS",
+      "G14_NEAR_ZERO_ABSOLUTE_FLOOR",
+      "G15_SIXTEEN_PERTURBATION_MAPS_AND_ORDER",
+      "G16_EXPECTED_AMPLITUDE_DEGENERACY_DISCLOSED",
+      "G17_JACOBIAN_DIMENSIONS_AND_PARAMETER_ORDER",
+      "G19_DIMENSIONLESS_SVD_THRESHOLDS",
+      "G23_CANONICAL_SERIALIZATION_AND_DETERMINISM",
+      "G24_STAGE_B_EMPIRICAL_AND_THEORY_FIREWALL"
+    ],
+    "canonical_hash_reproduction_count": 13,
+    "complete": true,
+    "forbidden_surface_drift_detected": false,
+    "repairable_gates": [
+      "G18_JACOBIAN_FINITE_DIFFERENCE_STEPS",
+      "G20_RANK_DEFICIENT_NUISANCE_PROJECTOR",
+      "G21_TRANSITION_DOMAIN_EXACTNESS",
+      "G22_IDENTIFIABILITY_REFINEMENT_STABILITY"
+    ],
+    "semantic_equality_count": 13,
+    "surface_count": 13
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_REVIEW_20260719_v1",
+  "principal_packet_review_outcome": "DETERMINISTIC_IDENTIFIABILITY_CONTRACT_READY",
+  "production_control_review": {
+    "all_controls_use_same_production_components": true,
+    "complete": true,
+    "control_count": 10,
+    "controls_executed_during_review": 0,
+    "production_component_count": 5,
+    "production_test_doubles_forbidden": true
+  },
+  "rank_deficient_projector_review": {
+    "all_zero_behavior_complete": true,
+    "central_rank_threshold": 1e-10,
+    "complete": true,
+    "duplicate_behavior_complete": true,
+    "eta_path_unique": true,
+    "near_degeneracy_behavior_complete": true,
+    "near_threshold_unresolved": true,
+    "orthogonal_projector_complete": true,
+    "probe_rank_thresholds": [
+      1e-09,
+      1e-11
+    ],
+    "pseudoinverse_complete": true,
+    "thin_svd_only": true,
+    "zero_column_behavior_complete": true
+  },
+  "refinement_stability_review": {
+    "complete": true,
+    "correlation_rule_complete": true,
+    "degeneracy_and_classification_rules_complete": true,
+    "eta_rule_complete": true,
+    "forward_convergence_override_forbidden": true,
+    "level_count": 2,
+    "levels_use_accepted_v0_values": true,
+    "principal_angle_rule_complete": true,
+    "retained_rank_rule_complete": true,
+    "singular_value_rule_complete": true,
+    "threshold_probe_rule_complete": true
+  },
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 30,
+    "pass_count": 30,
+    "rows": [
+      {
+        "finding": "Five v1 artifacts match frozen SHA-256 values.",
+        "gate_id": "R1_EXACT_V1_PACKET_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The selector authorizes only v1 preparation and four repairs.",
+        "gate_id": "R2_EXACT_SELECTOR_TARGET_AND_REPAIR_BOUNDARY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The evidence map covers exactly the selector's twenty accepted gates.",
+        "gate_id": "R3_TWENTY_ACCEPTED_GATE_IDENTITIES_COVERED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Embedded decision-bearing v0 surfaces equal canonical values.",
+        "gate_id": "R4_THIRTEEN_V0_SURFACES_COMPARE_EQUAL",
+        "status": "PASS"
+      },
+      {
+        "finding": "Every embedded v0 surface hash independently reproduces.",
+        "gate_id": "R5_THIRTEEN_FRAGMENT_HASHES_RECOMPUTE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Dimensions, order, scaling, thresholds, and eta bands remain frozen.",
+        "gate_id": "R6_RETAINED_JACOBIAN_FIELDS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "finding": "All sixteen scales equal accepted test-range half-widths.",
+        "gate_id": "R7_DIMENSIONLESS_NUISANCE_SCALES_REPRODUCE_V0",
+        "status": "PASS"
+      },
+      {
+        "finding": "q_lambda and the accepted 1e-3 m reference are exact.",
+        "gate_id": "R8_LAMBDA_COORDINATE_AND_REFERENCE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Seven finite-difference and ten exact-linear columns partition all seventeen.",
+        "gate_id": "R9_DERIVATIVE_COLUMN_PARTITION_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Centered and second-order boundary formulas are explicit.",
+        "gate_id": "R10_FINITE_DIFFERENCE_STENCILS_EXECUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The ladder, plateau tolerance, and failure outcome are numeric.",
+        "gate_id": "R11_STEP_LADDER_PLATEAU_AND_FAILURE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Every registered decision point supports the production centered stencil.",
+        "gate_id": "R12_LOG_LAMBDA_CENTERED_STENCILS_VALID",
+        "status": "PASS"
+      },
+      {
+        "finding": "Adaptation, fallback, and extrapolation are forbidden.",
+        "gate_id": "R13_NO_ADAPTIVE_POST_RESULT_STEPS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Unit-norm columns and the central/probe thresholds are exact.",
+        "gate_id": "R14_THIN_SVD_SCALING_AND_RANK_RULE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Rank-deficient branches have explicit non-crashing behavior.",
+        "gate_id": "R15_ZERO_DUPLICATE_AND_ALL_ZERO_CASES_SAFE",
+        "status": "PASS"
+      },
+      {
+        "finding": "One truncated-SVD path and residual tolerances are frozen.",
+        "gate_id": "R16_PSEUDOINVERSE_PROJECTOR_AND_RESIDUALS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Near-threshold results remain unresolved.",
+        "gate_id": "R17_NEAR_DEGENERACY_AND_ETA_FAIL_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The gap-domain predicate gives exactly indices 4 through 20.",
+        "gate_id": "R18_TRANSITION_INDICES_INDEPENDENTLY_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Five sentinels and the preregistration hash independently match.",
+        "gate_id": "R19_SENTINELS_AND_REGISTRATION_HASH_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Selection or reordering after metrics blocks classification.",
+        "gate_id": "R20_POST_RESULT_POINT_SELECTION_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "Both synchronized levels use accepted v0 refinement values.",
+        "gate_id": "R21_REFINEMENT_LEVELS_RETAIN_ACCEPTED_V0_VALUES",
+        "status": "PASS"
+      },
+      {
+        "finding": "Rank, spectrum, angle, correlation, eta, and labels have exact limits.",
+        "gate_id": "R22_REFINEMENT_DECISION_TOLERANCES_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "finding": "Forward convergence cannot substitute for identifiability stability.",
+        "gate_id": "R23_FORWARD_CONVERGENCE_HAS_NO_OVERRIDE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Every control lists the same five production components.",
+        "gate_id": "R24_TEN_CONTROLS_HAVE_ONE_PRODUCTION_ROUTE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Mutations cannot replace production components.",
+        "gate_id": "R25_PRODUCTION_TEST_DOUBLES_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "The independent review burden is complete.",
+        "gate_id": "R26_TEN_REVIEW_OBLIGATIONS_SATISFIED",
+        "status": "PASS"
+      },
+      {
+        "finding": "No forward call, vector, Jacobian, SVD, eta, or result exists.",
+        "gate_id": "R27_NO_SCIENTIFIC_OUTPUT_DURING_PREPARATION_OR_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "finding": "The ready route has a hard execution limit of one.",
+        "gate_id": "R28_READY_AUTHORIZES_EXACTLY_ONE_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "The future run has a frozen result-review handoff.",
+        "gate_id": "R29_EXECUTION_MUST_STOP_FOR_RESULT_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "finding": "No stochastic work or automatic repair successor is authorized.",
+        "gate_id": "R30_STAGE_B_AND_AUTOMATIC_V2_REMAIN_FORBIDDEN",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.packet_review.v1",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "authorized_execution_count": 1,
+    "automatic_v2_repair_authorized": false,
+    "benchmark_executed": false,
+    "covariance_used": false,
+    "deterministic_execution_authorized": true,
+    "deterministic_execution_performed": false,
+    "deterministic_identifiability_contract_ready": true,
+    "deterministic_vector_produced": false,
+    "empirical_constraint_claimed": false,
+    "eta_lambda_computed": false,
+    "forward_model_called_during_review": false,
+    "four_identifiability_repairs_verified_executable": true,
+    "gaussian_noise_used": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": true,
+    "jacobian_computed": false,
+    "measured_evidence_used": false,
+    "monte_carlo_executed": false,
+    "mutation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "one_deterministic_execution_authorized": true,
+    "outbound_contact_authorized": false,
+    "physical_identifiability_evaluated": false,
+    "physical_unidentifiability_established": false,
+    "private_data_dependency_created": false,
+    "profile_likelihood_executed": false,
+    "scalar_branch_adopted": false,
+    "sensitivity_forecast_produced": false,
+    "singular_values_computed": false,
+    "stage_b_authorized": false,
+    "stochastic_packet_preparation_authorized": false,
+    "synthetic_dataset_generated": false,
+    "ten_production_control_routes_verified": true,
+    "thirteen_v0_surfaces_verified_unchanged": true,
+    "twenty_accepted_gate_evidence_coverage_verified": true,
+    "v0_custody_verified": true
+  },
+  "selected_next_target": "execute_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_once",
+  "selected_next_target_kind": "ONE_DETERMINISTIC_STAGE_A_EXECUTION_ONLY_NO_STAGE_B",
+  "target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v1_result",
+  "transition_domain_review": {
+    "complete": true,
+    "decision_index_count": 17,
+    "decision_indices_zero_based": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "post_result_selection_forbidden": true,
+    "registration_sha256_reproduced": true,
+    "sentinel_count": 5
+  },
+  "verdict": "DETERMINISTIC_IDENTIFIABILITY_CONTRACT_READY"
+}
