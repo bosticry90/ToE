@@ -1,0 +1,1702 @@
+{
+  "acceptance_boundary": {
+    "acceptance_authorizes_V2_repair_or_V3": false,
+    "acceptance_authorizes_action_or_postulate": false,
+    "acceptance_authorizes_authoritative_matrix": false,
+    "acceptance_authorizes_family_envelope_expansion": false,
+    "acceptance_authorizes_frame_dragging": false,
+    "acceptance_authorizes_manual_exploratory_survey_only": true,
+    "acceptance_authorizes_metric_variation": false,
+    "acceptance_authorizes_scientific_outcome": false,
+    "acceptance_authorizes_survivor_set": false
+  },
+  "authority": {
+    "automated_action_selection_tooling_lane": "CLOSED",
+    "consumed_v2_review_verdict": "BLOCKED_CLOSE_AUTOMATED_ACTION_SELECTION_TOOLING_LANE",
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.md",
+        "sha256": "f72b793eadd4db520e30d3af5d0f22a5735d3451639ea092740a97eae3cb5b31"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.json",
+        "sha256": "1faacbd470ef5feed6aebb4dfad34e2e5a9214fa2e31a79d57c375a08f4d9051"
+      },
+      {
+        "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_review_v2.py",
+        "sha256": "28638172711ecb90528db51682a80f0fe5bee388d7c2b9e385e6590b0985b2f6"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_review_v2.py",
+        "sha256": "2ee4d32f6f96b7a90720bb5efa2fb2c0e86fd935744aad189ab3b1adbd6e2ea5"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeGravitationalPrincipleRequirementsAndActionSelectionPacketReviewV2.lean",
+        "sha256": "52b1147a6d5c5cd5a1f3d470df04aa7d1d7eaafb474366ca961cb80479adba22"
+      },
+      {
+        "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_20260718_v0.md",
+        "sha256": "47956a32c8f833277c6a7d004900e7af63a2e3674a3585aca0351311047c52a5"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_packet_v0.py",
+      "sha256": "d2e403aae4c2047a9816a28dc797a04b3a0997775a2d56b7f8e2a41e2ecdc305"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_packet_v0.py",
+      "sha256": "49494d1829544aa73d0c277f729050b21a0151915bfa5550b27510ed226d1a15"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "current_posture": {
+    "automated_action_selection_tooling": "CLOSED",
+    "automatic_V3": "NOT_AUTHORIZED",
+    "exploratory_survey_packet_V0": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "frame_dragging": "BLOCKED_UPSTREAM",
+    "gravitational_action": "NOT_SELECTED",
+    "metric_variation": "NOT_EXECUTED",
+    "minimal_gravitational_sector_contract": "ACCEPTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "provisional_survey_classifications": 0,
+    "real_family_judgments": "NONE",
+    "real_scientific_matrix": "0_OF_70",
+    "requirements_action_selection_V2": "BLOCKED_PROJECT_EVIDENCE_SEMANTICS_UNSOUND",
+    "survey_forms": "70_BLANK"
+  },
+  "decision_critical_question_register": {
+    "answered_question_count": 0,
+    "question_count": 8,
+    "rows": [
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "Does R4_DIFF_COVARIANCE discriminate among F_EH, F_FR, and F_QUADRATIC, or impose only a symmetry common to them?",
+        "question_id": "DQ1_DIFF_COVARIANCE_DISCRIMINATION",
+        "requirement_ids": [
+          "R4_DIFF_COVARIANCE"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "Does R5_CK_FIREWALL constrain gravitational action form or only the project architecture surrounding an action?",
+        "question_id": "DQ2_CK_FIREWALL_ACTION_RELEVANCE",
+        "requirement_ids": [
+          "R5_CK_FIREWALL"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "Does R7_SOURCE_COMPATIBILITY distinguish primary metric families after coupling, conservation, and field-equation order are explicit?",
+        "question_id": "DQ3_SOURCE_COMPATIBILITY_DISCRIMINATION",
+        "requirement_ids": [
+          "R7_SOURCE_COMPATIBILITY"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "Can R8_NEWTON_POISSON distinguish nonlinear or quadratic curvature families from F_EH without tuning a special parameter limit?",
+        "question_id": "DQ4_NEWTONIAN_RECOVERY_DISCRIMINATION",
+        "requirement_ids": [
+          "R8_NEWTON_POISSON"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "Does R9_MOMENTUM_CURRENT add a discriminator independent of R8, and which linearized derivations would establish that?",
+        "question_id": "DQ5_MOMENTUM_CURRENT_INDEPENDENCE",
+        "requirement_ids": [
+          "R8_NEWTON_POISSON",
+          "R9_MOMENTUM_CURRENT"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "What R10_STABILITY_NO_FIT calculation would materially distinguish F_FR and F_QUADRATIC from F_EH?",
+        "question_id": "DQ6_STABILITY_NO_FIT_DISCRIMINATION",
+        "requirement_ids": [
+          "R10_STABILITY_NO_FIT"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EH",
+          "F_FR",
+          "F_QUADRATIC"
+        ],
+        "priority_rank": null,
+        "question": "Does any accepted ToE-specific seam or admissibility principle constrain the gravitational Lagrangian rather than its evaluation?",
+        "question_id": "DQ7_NATIVE_SEAM_LAGRANGIAN_CONSTRAINT",
+        "requirement_ids": [
+          "R5_CK_FIREWALL",
+          "R7_SOURCE_COMPATIBILITY"
+        ],
+        "resolving_work_ids": []
+      },
+      {
+        "answered": false,
+        "exploratory_answer": null,
+        "family_ids": [
+          "F_EQUIVALENCE_PROBE"
+        ],
+        "priority_rank": null,
+        "question": "For F_EQUIVALENCE_PROBE, which exact properties survive each boundary, algebraic, or topological equivalence?",
+        "question_id": "DQ8_PROPERTY_SCOPED_EQUIVALENCE",
+        "requirement_ids": [
+          "R1_DIMENSION",
+          "R2_METRIC_ONLY",
+          "R3_LOCALITY",
+          "R4_DIFF_COVARIANCE",
+          "R5_CK_FIREWALL",
+          "R6_LOCAL_VARIATION",
+          "R7_SOURCE_COMPATIBILITY",
+          "R8_NEWTON_POISSON",
+          "R9_MOMENTUM_CURRENT",
+          "R10_STABILITY_NO_FIT"
+        ],
+        "resolving_work_ids": []
+      }
+    ],
+    "supplied_no_extra_mode_is_native_discriminator": false,
+    "supplied_second_order_is_native_discriminator": false
+  },
+  "execution_protocol_after_acceptance": {
+    "all_seventy_cells_required_for_success": false,
+    "decision_critical_questions_first": true,
+    "execution_count_authorized_by_future_acceptance": 1,
+    "manufactured_completeness_prohibited": true,
+    "required_outputs": [
+      "human-readable table of surveyed entries",
+      "explicit NOT_SURVEYED inventory",
+      "requirement-dependency and redundancy hypotheses",
+      "family-difference map without asserted merges",
+      "ranked decision-critical calculations or theorems",
+      "literature-dispute and domain-restriction notes",
+      "exploratory statement on whether a native discriminator was found",
+      "nonclaims and stopping boundary"
+    ],
+    "stop_for_independent_result_review": true,
+    "unworked_cells_remain_NOT_SURVEYED": true
+  },
+  "frozen_family_catalog": {
+    "expanded_for_survey": false,
+    "family_count": 7,
+    "family_ids": [
+      "F_EH",
+      "F_FR",
+      "F_QUADRATIC",
+      "F_EXTRA_FIELD",
+      "F_NONLOCAL",
+      "F_CONNECTION_TORSION",
+      "F_EQUIVALENCE_PROBE"
+    ],
+    "rows": [
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+        "family_id": "F_EH",
+        "structural_class": "local metric action linear in curvature with optional cosmological term"
+      },
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+        "family_id": "F_FR",
+        "structural_class": "local metric f(R) excluding the purely linear representative"
+      },
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+        "family_id": "F_QUADRATIC",
+        "structural_class": "local metric independent quadratic Ricci or Riemann invariants"
+      },
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+        "family_id": "F_EXTRA_FIELD",
+        "structural_class": "metric plus additional fundamental scalar vector or tensor"
+      },
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+        "family_id": "F_NONLOCAL",
+        "structural_class": "explicitly nonlocal metric action"
+      },
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+        "family_id": "F_CONNECTION_TORSION",
+        "structural_class": "independent connection Palatini or torsion family"
+      },
+      {
+        "catalog_role": "FROZEN_SEVEN_FAMILY_ENVELOPE",
+        "comparison_only": true,
+        "envelope_status": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "structural_class": "boundary algebraic or four-dimensional topological variants"
+      }
+    ]
+  },
+  "frozen_requirement_catalog": {
+    "requirement_count": 10,
+    "requirement_ids": [
+      "R1_DIMENSION",
+      "R2_METRIC_ONLY",
+      "R3_LOCALITY",
+      "R4_DIFF_COVARIANCE",
+      "R5_CK_FIREWALL",
+      "R6_LOCAL_VARIATION",
+      "R7_SOURCE_COMPATIBILITY",
+      "R8_NEWTON_POISSON",
+      "R9_MOMENTUM_CURRENT",
+      "R10_STABILITY_NO_FIT"
+    ],
+    "rows": [
+      {
+        "authority_subtype": "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "DEPENDENCE_UNRESOLVED"
+        ],
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "property_key": "SPACETIME_DIMENSION",
+        "requirement_id": "R1_DIMENSION",
+        "requirement_types": [
+          "FIELD_CONTENT_CONSTRAINT"
+        ],
+        "scope": "dim(M)=4",
+        "source_identities": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "FROZEN_MINIMAL_SCOPE_ASSUMPTION",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "DEPENDENCE_UNRESOLVED"
+        ],
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "property_key": "GRAVITATIONAL_FIELD_CONTENT",
+        "requirement_id": "R2_METRIC_ONLY",
+        "requirement_types": [
+          "FIELD_CONTENT_CONSTRAINT"
+        ],
+        "scope": "gravitational field g_mu_nu only",
+        "source_identities": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "FROZEN_MINIMAL_SCOPE_ASSUMPTION",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "DEPENDENCE_UNRESOLVED"
+        ],
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "property_key": "ACTION_LOCALITY",
+        "requirement_id": "R3_LOCALITY",
+        "requirement_types": [
+          "ACTION_FORM_CONSTRAINT"
+        ],
+        "scope": "local scalar density on M",
+        "source_identities": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "ACCEPTED_EVALUATION_REQUIREMENT",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "DEPENDENCE_WITH_R7_MUST_BE_DERIVED"
+        ],
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "property_key": "DIFFEOMORPHISM_COVARIANCE",
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "requirement_types": [
+          "SYMMETRY_CONSTRAINT"
+        ],
+        "scope": "coordinate-independent scalar action",
+        "source_identities": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "ACCEPTED_GLOBAL_PROJECT_POLICY",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "ARCHITECTURE_FILTER_NOT_FIELD_EQUATION"
+        ],
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "property_key": "CK_EXTERNALITY",
+        "requirement_id": "R5_CK_FIREWALL",
+        "requirement_types": [
+          "EXTERNAL_ADMISSIBILITY_CONSTRAINT"
+        ],
+        "scope": "no C_k embedding multiplier penalty or variation",
+        "source_identities": [
+          "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "ACCEPTED_LOCAL_BULK_REVIEW_CONTRACT",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "SCOPE_ONLY_NO_BULK_SELECTION_WEIGHT"
+        ],
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "property_key": "LOCAL_BULK_VARIATION_DOMAIN",
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "requirement_types": [
+          "VARIATIONAL_CONSTRAINT"
+        ],
+        "scope": "delta g compactly supported in Omega compactly contained in M",
+        "source_identities": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "ACCEPTED_CANDIDATE_EVALUATION_REQUIREMENT",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "DEPENDENCE_WITH_R4_MUST_BE_DERIVED"
+        ],
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "property_key": "SOURCE_COUPLING_AND_CONSERVATION",
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "requirement_types": [
+          "SOURCE_COUPLING_CONSTRAINT"
+        ],
+        "scope": "T_mu_nu=-(2/sqrt(-g))*delta S_m/delta g^mu_nu",
+        "source_identities": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+          "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+          "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "RETAINED_RECOVERY_OBLIGATION",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "INDEPENDENT_FROM_R9_UNLESS_DERIVED"
+        ],
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "property_key": "NEWTON_POISSON_RECOVERY",
+        "requirement_id": "R8_NEWTON_POISSON",
+        "requirement_types": [
+          "RECOVERY_CONSTRAINT"
+        ],
+        "scope": "stationary weak-field 00 limit",
+        "source_identities": [
+          "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "RETAINED_DOWNSTREAM_RECOVERY_OBLIGATION",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "INDEPENDENT_FROM_R8_UNLESS_DERIVED"
+        ],
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "property_key": "MOMENTUM_CURRENT_RESPONSE",
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "requirement_types": [
+          "SOURCE_COUPLING_CONSTRAINT",
+          "RECOVERY_CONSTRAINT"
+        ],
+        "scope": "stationary momentum-current source sector",
+        "source_identities": [
+          "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_subtype": "SELECTED_EVALUATION_OBLIGATION",
+        "catalog_role": "FROZEN_PROJECT_REQUIREMENT",
+        "dependency_information": [
+          "DEPENDENCE_UNRESOLVED"
+        ],
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "property_key": "STABILITY_AND_NO_FIT_RECOVERY",
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "requirement_types": [
+          "STABILITY_CONSTRAINT",
+          "OBSERVATIONAL_CONSTRAINT"
+        ],
+        "scope": "candidate weak-field and recovery comparison",
+        "source_identities": [
+          "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json"
+        ],
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      }
+    ]
+  },
+  "mode": "NONAUTHORITATIVE_MANUALLY_ADJUDICATED_EXPLORATION",
+  "mode_contract": {
+    "automated_scientific_adjudication": false,
+    "automatic_V3_authorized": false,
+    "equivalence_reducer_present": false,
+    "exploratory": true,
+    "hypothesis_generating": true,
+    "manually_adjudicated": true,
+    "nonauthoritative": true,
+    "survey_labels_are_V2_statuses": false,
+    "survey_results_may_populate_V2_matrix": false,
+    "survivor_reducer_present": false,
+    "terminal_classifier_present": false
+  },
+  "preparation_controls": {
+    "control_count": 8,
+    "control_pass_count": 8,
+    "rows": [
+      {
+        "control_id": "CTRL_EXACT_FROZEN_REQUIREMENT_INVENTORY",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_EXACT_FROZEN_FAMILY_INVENTORY",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_EXACT_SEVENTY_BLANK_FORMS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_ZERO_PROVISIONAL_CLASSIFICATIONS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_ZERO_SCIENTIFIC_CONTENT_IN_FORMS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_EXACT_SIX_PROVISIONAL_LABELS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_EIGHT_DECISION_QUESTIONS_UNANSWERED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_NO_V2_MATRIX_OR_TERMINAL_FIELDS",
+        "passed": true
+      }
+    ]
+  },
+  "schema_id": "EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_20260718_v0",
+  "scope": {
+    "automated_action_selection_tooling_lane_reopened": false,
+    "automatic_V3_authorized": false,
+    "automation_created": false,
+    "blank_survey_forms_prepared": 70,
+    "decision_critical_questions_answered": 0,
+    "exploratory_survey_packet_prepared": true,
+    "family_envelope_expanded": false,
+    "gravitational_action_proposed_or_selected": false,
+    "gravitomagnetic_route_reopened": false,
+    "independent_packet_review_executed": false,
+    "manual_exploratory_survey_executed": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "provisional_survey_classifications_made": 0,
+    "real_equivalence_class_established": false,
+    "real_family_judgment_made": false,
+    "real_matrix_cells_computed": 0,
+    "real_scientific_outcome_selected": false,
+    "real_survivor_matrix_computed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "survey_rationales_authored": 0,
+    "tensor_field_equation_derived": false
+  },
+  "selected_next_target": "review_exploratory_native_gravitational_requirements_family_survey_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_NONAUTHORITATIVE_SURVEY_PREPARATION_REVIEW_ONLY",
+  "source_and_derivation_policy": {
+    "clearly_label_prefers_primary_source_theorem_or_derivation": true,
+    "every_surveyed_cell_requires_pointer_or_explicit_absence": true,
+    "likely_label_requires_named_gap": true,
+    "permitted_pointer_roles": [
+      "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+      "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+      "DIRECT_DERIVATION",
+      "REVIEW_OR_ORIENTATION_SOURCE",
+      "SUPPLIED_STANDARD_PHYSICS_COMPARATOR_ONLY",
+      "NO_SOURCE_POINTER_IDENTIFIED"
+    ],
+    "recovery_limit_may_stand_for_whole_family": false,
+    "self_certification_creates_authoritative_evidence": false,
+    "source_custody_is_scientific_relevance": false,
+    "special_case_may_stand_for_whole_family": false,
+    "unresolved_label_requires_named_resolving_work": true
+  },
+  "survey_form_contract": {
+    "blank_form_count": 70,
+    "cell_field_order": [
+      "cell_id",
+      "requirement_id",
+      "family_id",
+      "workflow_state",
+      "provisional_classification",
+      "concise_rationale",
+      "assumptions_and_domain",
+      "source_or_derivation_pointers",
+      "main_uncertainty",
+      "resolving_calculation_or_theorem",
+      "priority_role",
+      "manual_adjudicator_id",
+      "manual_review_status"
+    ],
+    "forms": [
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      }
+    ],
+    "manual_adjudicator_count": 0,
+    "provisional_classification_count": 0,
+    "rationale_count": 0,
+    "source_or_derivation_pointer_count": 0
+  },
+  "survey_vocabulary": {
+    "V2_status_aliasing_prohibited": true,
+    "permitted_provisional_classification_count": 6,
+    "permitted_provisional_classifications": [
+      "CLEARLY COMPATIBLE",
+      "LIKELY COMPATIBLE",
+      "LIKELY INCOMPATIBLE",
+      "CLEARLY INCOMPATIBLE",
+      "UNRESOLVED",
+      "OUTSIDE FROZEN SCOPE"
+    ],
+    "priority_roles": [
+      "DECISION_CRITICAL",
+      "CONTEXTUAL",
+      "DEFERRED",
+      "UNASSIGNED"
+    ],
+    "workflow_sentinel": "NOT_SURVEYED"
+  },
+  "target": "prepare_exploratory_native_gravitational_requirements_family_survey_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

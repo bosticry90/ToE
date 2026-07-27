@@ -1,0 +1,409 @@
+{
+  "authority": {
+    "consumed_survey_verdict": "COMPLETED_NONAUTHORITATIVE_OPPORTUNITY_MAP_PENDING_INDEPENDENT_REVIEW",
+    "frozen_survey_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_20260718_v0.md",
+        "sha256": "4cea838ee30866cfa6926bb26c199f62c6591d8f5c9543dbfb391280f7dddc3b"
+      },
+      {
+        "relative_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_20260718_v0.json",
+        "sha256": "f597596e5c33179be7a199c73ec2ea7441cba03d1784961a9a09926bf8002dcb"
+      },
+      {
+        "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_v0.py",
+        "sha256": "7e7769baf18121172efed51e5f4b354d45834a1f0a7edb3964163e40aaf0b3ab"
+      },
+      {
+        "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_v0.py",
+        "sha256": "3f457c7ee20466bcf2c862197f6752d1e07581a58f1d4a0e00bdfe2c71d3702c"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ExploratoryNativeGravitationalRequirementsFamilySurveyV0.lean",
+        "sha256": "7719ce2d14f67063e3ed595769f1f757f8c3a597fe664700e7400f189991db65"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_result_review_v0.py",
+      "sha256": "2ed3f9b6d0d3ba75282f9683a0c42411e364dc5c1389c99784ee2aee7412a29f"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.md",
+      "sha256": "55dcef7184fdcde3b379b1f1abfb53b6ca0cbd137ec83750e7ab53d4694396d4"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_result_review_v0.py",
+      "sha256": "a14826867e084f2d303ff93fb834fd9ea317e3ee297bbb670c41435b4f29dc42"
+    }
+  },
+  "authorization_boundary": {
+    "Green_function_calculation_authorized": false,
+    "authoritative_V2_population_authorized": false,
+    "automated_action_selection_lane_reopening_authorized": false,
+    "coefficient_fitting_authorized": false,
+    "comparison_family_adoption_authorized": false,
+    "comparison_packet_execution_authorized": false,
+    "comparison_packet_preparation_authorized": true,
+    "frame_dragging_authorized": false,
+    "linearized_field_equation_derivation_authorized": false,
+    "master_action_mutation_authorized": false,
+    "matter_action_selection_authorized": false,
+    "metric_variation_authorized": false,
+    "native_principle_or_postulate_authorized": false,
+    "orbital_precession_authorized": false,
+    "propagator_or_mode_calculation_authorized": false
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "current_posture": {
+    "authoritative_V2_matrix": "0_OF_70",
+    "automated_action_selection_tooling": "CLOSED",
+    "decision_critical_questions": "8_OF_8_PROVISIONALLY_ANSWERED",
+    "exploratory_survey": "ACCEPTED",
+    "frame_dragging": "NOT_RESUMED",
+    "gravitational_action": "NOT_SELECTED",
+    "metric_variation": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "prepare_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0",
+    "remaining_cells": "48_OF_70_NOT_SURVEYED",
+    "surveyed_provisional_cells": "22_OF_70"
+  },
+  "next_packet_preparation_contract": {
+    "comparison_execution_authorized": false,
+    "independent_packet_review_required": true,
+    "obligation_count": 10,
+    "packet_preparation_only": true,
+    "rows": [
+      {
+        "obligation_id": "O1_COMPARISON_STATUS_AND_PROVENANCE",
+        "required": [
+          "COMPARISON ACTION FAMILY",
+          "NOT A TOE CANDIDATE",
+          "NOT A SUCCESSOR MASTER ACTION",
+          "NOT A NATIVE POSTULATE",
+          "term-by-term comparator provenance"
+        ]
+      },
+      {
+        "obligation_id": "O2_FOUR_DIMENSIONAL_QUADRATIC_BASIS",
+        "required": [
+          "Riemann-squared included before basis reduction",
+          "four-dimensional Gauss-Bonnet identity",
+          "compact-support local-bulk equivalence domain",
+          "no transport to boundary observables topology or global charges"
+        ]
+      },
+      {
+        "obligation_id": "O3_EXTERNAL_CONSERVED_COMPARISON_SOURCE",
+        "required": [
+          "externally supplied T_mn",
+          "partial_mu T^mu_nu = 0",
+          "S_m notation does not select a ToE matter action"
+        ]
+      },
+      {
+        "obligation_id": "O4_BACKGROUND_COORDINATES_SIGNATURE_UNITS",
+        "required": [
+          "g_mn = eta_mn + h_mn",
+          "linear-order truncation",
+          "x^0 = c t",
+          "signature (+,-,-,-)",
+          "SI or explicit unit-restoration map"
+        ]
+      },
+      {
+        "obligation_id": "O5_NORMALIZATION_AND_ANALYTIC_CONVENTIONS",
+        "required": [
+          "Einstein-Hilbert normalization",
+          "dimensions and signs of alpha beta",
+          "curvature conventions",
+          "Fourier convention",
+          "Green-function normalization",
+          "pole prescription",
+          "gauge fixing",
+          "source normalization"
+        ]
+      },
+      {
+        "obligation_id": "O6_LINEARIZED_EQUATION_DERIVATION",
+        "required": [
+          "line-by-line metric variation",
+          "boundary handling",
+          "linearization",
+          "conserved-source field equation",
+          "preparation does not execute the derivation"
+        ]
+      },
+      {
+        "obligation_id": "O7_MODES_POLES_RESIDUES",
+        "required": [
+          "massless spin-2",
+          "massive scalar",
+          "generic massive spin-2",
+          "pole locations",
+          "residue signs",
+          "tachyon conditions",
+          "degenerate and infinite-mass limits",
+          "trace and transverse source couplings",
+          "ghost tachyon runaway matter-instability and decoupling distinguished"
+        ]
+      },
+      {
+        "obligation_id": "O8_SOURCE_CHANNEL_GREEN_FUNCTIONS",
+        "required": [
+          "stationary h_00 for mass density",
+          "stationary h_0i for conserved current",
+          "long-range terms",
+          "Yukawa terms",
+          "tensor projectors",
+          "parameter dependence",
+          "exact GR limit"
+        ]
+      },
+      {
+        "obligation_id": "O9_SHARED_PATH_CONTROLS",
+        "required": [
+          "alpha=beta=0 Einstein control",
+          "beta=0 no generic massive spin-2 correction",
+          "T_0i=0 no current-sourced stationary h_0i",
+          "T_0i sign reversal implies h_0i sign reversal",
+          "controls traverse production derivation path",
+          "no coefficient fitting"
+        ]
+      },
+      {
+        "obligation_id": "O10_STOP_BOUNDARY",
+        "required": [
+          "no packet-time calculation execution",
+          "independent packet review",
+          "no numerical fitting",
+          "no orbital precession",
+          "no frame dragging",
+          "no action adoption",
+          "no native-principle claim",
+          "no master-action mutation",
+          "at most one bounded execution after later acceptance"
+        ]
+      }
+    ]
+  },
+  "review_gates": {
+    "contextual_scope_cell_ids": [
+      "EXP_R2_METRIC_ONLY__F_CONNECTION_TORSION",
+      "EXP_R2_METRIC_ONLY__F_EXTRA_FIELD",
+      "EXP_R3_LOCALITY__F_NONLOCAL"
+    ],
+    "failure_count": 0,
+    "gate_count": 12,
+    "pass_count": 12,
+    "question_support_cell_ids": [
+      "EXP_R10_STABILITY_NO_FIT__F_EH",
+      "EXP_R10_STABILITY_NO_FIT__F_FR",
+      "EXP_R10_STABILITY_NO_FIT__F_QUADRATIC",
+      "EXP_R4_DIFF_COVARIANCE__F_EH",
+      "EXP_R4_DIFF_COVARIANCE__F_FR",
+      "EXP_R4_DIFF_COVARIANCE__F_QUADRATIC",
+      "EXP_R5_CK_FIREWALL__F_EH",
+      "EXP_R5_CK_FIREWALL__F_FR",
+      "EXP_R5_CK_FIREWALL__F_QUADRATIC",
+      "EXP_R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_EH",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_FR",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_QUADRATIC",
+      "EXP_R8_NEWTON_POISSON__F_EH",
+      "EXP_R8_NEWTON_POISSON__F_FR",
+      "EXP_R8_NEWTON_POISSON__F_QUADRATIC",
+      "EXP_R9_MOMENTUM_CURRENT__F_EH",
+      "EXP_R9_MOMENTUM_CURRENT__F_FR",
+      "EXP_R9_MOMENTUM_CURRENT__F_QUADRATIC"
+    ],
+    "rows": [
+      {
+        "gate": 1,
+        "gate_id": "EXACT_AUTHORITY_AND_CUSTODY",
+        "passed": true
+      },
+      {
+        "gate": 2,
+        "gate_id": "EIGHT_COMPLETE_PROVISIONAL_QUESTIONS",
+        "passed": true
+      },
+      {
+        "gate": 3,
+        "gate_id": "TWENTY_TWO_COMPLETE_SUPPORTING_CELLS",
+        "passed": true
+      },
+      {
+        "gate": 4,
+        "gate_id": "FORTY_EIGHT_GENUINE_NONCRITICAL_BLANKS",
+        "passed": true
+      },
+      {
+        "gate": 5,
+        "gate_id": "COVARIANCE_AND_SOURCE_SCOPE_HONEST",
+        "passed": true
+      },
+      {
+        "gate": 6,
+        "gate_id": "CK_ARCHITECTURAL_NOT_DYNAMICAL",
+        "passed": true
+      },
+      {
+        "gate": 7,
+        "gate_id": "FR_SCOPE_MODEL_DEPENDENT",
+        "passed": true
+      },
+      {
+        "gate": 8,
+        "gate_id": "GENERIC_QUADRATIC_WARNING_QUALIFIED",
+        "passed": true
+      },
+      {
+        "gate": 9,
+        "gate_id": "LOVELOCK_ASSUMPTIONS_REMAIN_SUPPLIED",
+        "passed": true
+      },
+      {
+        "gate": 10,
+        "gate_id": "NO_SELECTOR_MERGE_OR_PROMOTION",
+        "passed": true
+      },
+      {
+        "gate": 11,
+        "gate_id": "RECOMMENDATION_TRACED_TO_DQ4_DQ5_DQ6",
+        "passed": true
+      },
+      {
+        "gate": 12,
+        "gate_id": "PREPARATION_ONLY_STOP_BOUNDARY",
+        "passed": true
+      }
+    ],
+    "structural_disposition_tally": {
+      "INCOMPLETE_SURVEY_ENTRY": 0,
+      "VALID_NOT_SURVEYED": 48,
+      "VALID_PROVISIONAL_ENTRY": 22
+    },
+    "surveyed_cell_ids": [
+      "EXP_R10_STABILITY_NO_FIT__F_EH",
+      "EXP_R10_STABILITY_NO_FIT__F_FR",
+      "EXP_R10_STABILITY_NO_FIT__F_QUADRATIC",
+      "EXP_R2_METRIC_ONLY__F_CONNECTION_TORSION",
+      "EXP_R2_METRIC_ONLY__F_EXTRA_FIELD",
+      "EXP_R3_LOCALITY__F_NONLOCAL",
+      "EXP_R4_DIFF_COVARIANCE__F_EH",
+      "EXP_R4_DIFF_COVARIANCE__F_FR",
+      "EXP_R4_DIFF_COVARIANCE__F_QUADRATIC",
+      "EXP_R5_CK_FIREWALL__F_EH",
+      "EXP_R5_CK_FIREWALL__F_FR",
+      "EXP_R5_CK_FIREWALL__F_QUADRATIC",
+      "EXP_R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_EH",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_FR",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_QUADRATIC",
+      "EXP_R8_NEWTON_POISSON__F_EH",
+      "EXP_R8_NEWTON_POISSON__F_FR",
+      "EXP_R8_NEWTON_POISSON__F_QUADRATIC",
+      "EXP_R9_MOMENTUM_CURRENT__F_EH",
+      "EXP_R9_MOMENTUM_CURRENT__F_FR",
+      "EXP_R9_MOMENTUM_CURRENT__F_QUADRATIC"
+    ]
+  },
+  "schema_id": "EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0",
+  "scientific_source_spot_checks": {
+    "all_supported_in_limited_scope": true,
+    "check_count": 8,
+    "custody_substitutes_for_scientific_relevance": false,
+    "family_scope_generalization_permitted": false,
+    "rows": [
+      {
+        "check_id": "SRC_DIFF_COVARIANCE_GENERALITY",
+        "finding": "SUPPORTED_IN_STATED_SCOPE",
+        "reference": "https://arxiv.org/abs/gr-qc/9403028",
+        "reviewed_claim": "The diffeomorphism/Noether framework applies to general covariant gravity with arbitrary matter and is not EH-specific.",
+        "scope_limit": "Does not by itself prove source conservation for arbitrary off-shell or partial-system sources."
+      },
+      {
+        "check_id": "SRC_ANALYTIC_FR_EXTRA_SCALAR",
+        "finding": "SUPPORTED_FOR_ANALYTIC_REPRESENTATIVES",
+        "reference": "https://arxiv.org/abs/1104.0819",
+        "reviewed_claim": "Analytic metric f(R) about R=0 has an extra Ricci-scalar mode and modified weak-field metrics.",
+        "scope_limit": "Not a theorem covering every f(R) function, background, or screening regime."
+      },
+      {
+        "check_id": "SRC_FR_NEWTONIAN_CORRECTIONS",
+        "finding": "SUPPORTED_FOR_STATED_ANALYTIC_EXPANSION",
+        "reference": "https://arxiv.org/abs/0708.0723",
+        "reviewed_claim": "Analytic f(R) Newtonian potentials receive curvature-dependent corrections and massive solutions.",
+        "scope_limit": "Does not establish a family-wide empirical verdict."
+      },
+      {
+        "check_id": "SRC_QUADRATIC_MODE_CONTENT",
+        "finding": "SUPPORTED_IN_GENERIC_LOCAL_METRIC_FLAT_SPACE_SCOPE",
+        "reference": "https://arxiv.org/abs/hep-th/9509142",
+        "reviewed_claim": "Quadratic gravity admits massless gravity plus massive scalar and massive spin-2 fields, with the flat-space spin-2 field ghost-like in the stated canonical treatment.",
+        "scope_limit": "Does not cover nonlocal, torsionful, independent-connection, degenerate, or alternative-quantization theories."
+      },
+      {
+        "check_id": "SRC_FR_STABILITY_CONDITION",
+        "finding": "SUPPORTED_IN_STATED_METRIC_FR_SCOPE",
+        "reference": "https://arxiv.org/abs/astro-ph/0610734",
+        "reviewed_claim": "Metric f(R) matter stability is condition- and model-dependent.",
+        "scope_limit": "Matter instability is not identical to ghost, tachyon, or nonlinear background instability."
+      },
+      {
+        "check_id": "SRC_EH_MINKOWSKI_STABILITY",
+        "finding": "SUPPORTED_IN_SMALL_DATA_DOMAIN",
+        "reference": "https://arxiv.org/abs/math/0411109",
+        "reviewed_claim": "Einstein vacuum and Einstein-scalar small asymptotically flat data have global near-Minkowski stability in the theorem's domain.",
+        "scope_limit": "Not a universal stability result for all backgrounds, cosmological terms, or matter sectors."
+      },
+      {
+        "check_id": "SRC_GAUSS_BONNET_QUADRATIC_BASIS",
+        "finding": "SUPPORTED_FOR_STATED_FOURTH_ORDER_NEWTONIAN_ANALYSIS",
+        "reference": "https://arxiv.org/abs/1007.1917",
+        "reviewed_claim": "The four-dimensional Gauss-Bonnet relation removes a third independent weak-field characteristic scale associated with Riemann-squared.",
+        "scope_limit": "The future packet must separately freeze local-bulk and boundary/topological scope."
+      },
+      {
+        "check_id": "SRC_LOVELOCK_CONDITIONALITY",
+        "finding": "SUPPORTED_AS_CONDITIONAL_THEOREM",
+        "reference": "https://doi.org/10.1063/1.1665613",
+        "reviewed_claim": "Einstein uniqueness follows only under Lovelock's dimensional, naturality, divergence, and differential-order assumptions.",
+        "scope_limit": "The theorem does not establish that the ToE natively selected those assumptions."
+      }
+    ]
+  },
+  "scope": {
+    "authoritative_V2_matrix_cells_computed": 0,
+    "automated_action_selection_lane_reopened": false,
+    "coefficient_fitting_executed": false,
+    "comparison_executed": false,
+    "comparison_packet_prepared": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected_or_proposed": false,
+    "independent_survey_result_review_executed": true,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "orbital_observable_computed": false,
+    "propagator_or_Green_function_derived": false,
+    "survey_accepted": true,
+    "tensor_field_equation_derived": false
+  },
+  "selected_next_target": "prepare_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_INDEPENDENT_PACKET_REVIEW_REQUIRED",
+  "survey_result": {
+    "NOT_SURVEYED_cells": 48,
+    "authoritative_V2_matrix_cells": 0,
+    "decision_critical_questions_answered": 8,
+    "incomplete_entries": 0,
+    "native_discriminator_found": false,
+    "opportunity_map_accepted": true,
+    "recommendation_authority": "EXPLORATORY_ONLY",
+    "recommended_investigation": "SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON",
+    "surveyed_provisional_cells": 22
+  },
+  "target": "review_exploratory_native_gravitational_requirements_family_survey_v0_result",
+  "verdict": "ACCEPTED_AUTHORIZE_SHARED_LINEARIZED_QUADRATIC_GRAVITY_COMPARISON_PACKET_PREPARATION_ONLY"
+}
