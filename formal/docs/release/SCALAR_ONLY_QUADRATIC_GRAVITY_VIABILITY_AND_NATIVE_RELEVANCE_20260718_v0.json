@@ -1,0 +1,563 @@
+{
+  "authority": {
+    "authorized_execution_count": 1,
+    "consumed_execution_count": 1,
+    "consumed_review_outcome": "SCALAR_ONLY_VIABILITY_CONTRACT_READY",
+    "consumed_review_verdict": "ACCEPTED_SCALAR_ONLY_VIABILITY_CONTRACT_READY_FOR_ONE_BOUNDED_EXECUTION",
+    "frozen_review_artifact_count": 5,
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "437ca6283ab7dc11affa06d155b1fd2f0616e253bfe26849697b8d8251e879e3"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_REVIEW_20260718_v0.json",
+        "sha256": "8fbcff521ac8d4d6fc9ee67d1b6788e3175c06af2c08a77a6ccf92f904119116"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_viability_and_native_relevance_packet_review_v0.py",
+        "sha256": "8fda9b4d3f5dc81f7f983047a5ff6627acb3958ace85c0168ccbde7e00a9e4bb"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_review_v0.py",
+        "sha256": "97d02645b17585eb5c4a6474b8f2ddedbccb2785f7f66d2f5128854ee8cfa6cd"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyQuadraticGravityViabilityAndNativeRelevancePacketReviewV0.lean",
+        "sha256": "26914600c90266443565bb2e94c72bd1c6f7689f52d550ffa1a2116f7a3edf58"
+      }
+    ]
+  },
+  "backgrounds": {
+    "analyzed_count": 3,
+    "arbitrary_background_stability_claimed": false,
+    "background_count": 3,
+    "rows": [
+      {
+        "Phi0": "1",
+        "background_id": "MINKOWSKI_CONTROL",
+        "curvature": "R0=0",
+        "kinetic_or_residue": "POSITIVE_RELATIVE_ISOLATED_SCALAR_CHANNEL",
+        "scalar_mass_squared": "-1/(6 alpha)>0 for alpha<0",
+        "source": "T_mu_nu=0",
+        "status": "PASSED",
+        "tadpole": "NONE"
+      },
+      {
+        "background_id": "CONSTANT_CURVATURE_VACUUM",
+        "curvature": "R0=0 ONLY",
+        "nonzero_de_Sitter_or_anti_de_Sitter": "NOT_ADMITTED",
+        "source": "T_mu_nu=0",
+        "stability_claim": "NO_NONZERO_BACKGROUND_TO_TEST",
+        "status": "PASSED_EXISTENCE_NEGATIVE_CONTROL"
+      },
+      {
+        "Phi0": "1-8 kappa alpha rho_Lambda",
+        "Ricci": "R_mu_nu=(R0/4)g_mu_nu",
+        "background_id": "SUPPLIED_VACUUM_ENERGY_BACKGROUND",
+        "conservation": "nabla_mu T^mu_nu=0 for constant rho_Lambda",
+        "curvature": "R0=-4 kappa rho_Lambda",
+        "qualification": "supplied nondynamical vacuum-energy comparator; not ToE matter or arbitrary-background stability",
+        "scalar_mass_squared": "m0^2=-1/(6 alpha)>0",
+        "scalar_perturbation": "(Box_bar+m0^2)delta R=0",
+        "source": "T_mu_nu=rho_Lambda g_mu_nu",
+        "source_action": "S_rho=(1/c) integral sqrt(-g) rho_Lambda",
+        "status": "PASSED_BOUNDED_LINEAR_SCALAR_TEST",
+        "tested_domain": "alpha<0 and rho_Lambda>=0 implies Phi0>0",
+        "trace": "T=4 rho_Lambda"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Within the supplied local metric R+alpha R^2 comparison, alpha<0 and Phi>0 support the derived scalar-tensor representation and bounded linear scalar viability on Minkowski and one explicitly supplied vacuum-energy background. The exact trace sector provides finite-mass suppression but no intrinsic environmental screening in the tested external-source domain. No ToE-native scalar bridge is identified. No beta or alpha condition, scalar branch, gravitational principle, action, matter sector, empirical constraint, orbital result, frame-dragging result, or master-action change is adopted or established.",
+  "comparison_classification": {
+    "alpha_selected": false,
+    "beta_zero": "CONSUMED_AS_COMPARISON_RESTRICTION_NOT_ADOPTED",
+    "branch": "R+alpha R^2 WITH beta=0",
+    "candidate_action": false,
+    "status": "SUPPLIED_COMPARISON_SUBFAMILY",
+    "toe_native": false
+  },
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "backgrounds": "3_OF_3_ANALYZED_WITH_ONE_VACUUM_NEGATIVE_CONTROL",
+    "beta_zero": "NOT_ADOPTED",
+    "controls": "12_OF_12_PASSED",
+    "decision_questions": "8_OF_8_ANSWERED",
+    "execution": "COMPLETED_ONCE_PENDING_INDEPENDENT_REVIEW",
+    "gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "native_scalar_bridges": 0,
+    "next_authority": "review_scalar_only_quadratic_gravity_viability_and_native_relevance_v0_result",
+    "principal_outcome": "SCALAR_BRANCH_COMPARISON_VIABLE_NATIVE_RELEVANCE_UNESTABLISHED",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_tensor_obligations": "8_OF_8_DERIVED",
+    "work_packages": "6_OF_6_COMPLETED"
+  },
+  "decision_questions": {
+    "answered_count": 8,
+    "question_count": 8,
+    "rows": [
+      {
+        "answer": "SUPPORTED_BOUNDED_DOMAIN",
+        "basis": "alpha<0 with Phi>0 gives an isolated non-tachyonic positive-relative-residue scalar",
+        "question_id": "DQ1",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "SUPPORTED_ONE_SUPPLIED_NON_MINKOWSKI_BACKGROUND",
+        "basis": "constant vacuum energy gives R0=-4 kappa rho_Lambda and the same positive m0^2 in the tested domain",
+        "question_id": "DQ2",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "DERIVED",
+        "basis": "the exact trace T sources R; classically traceless T=0 has no direct linear scalar source",
+        "question_id": "DQ3",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "FINITE_MASS_SUPPRESSION_ONLY",
+        "basis": "the exact trace operator has constant mass and fixed coupling in the supplied-source domain",
+        "question_id": "DQ4",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "RANGE_AND_TRACE_FORCE_LIMIT_IS_DECISIVE",
+        "basis": "future static trace-sensitive tests can bound m0^-1 but no data or alpha value is used here",
+        "question_id": "DQ5",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "NO_NATIVE_OBJECT_IDENTIFIED",
+        "basis": "all three project surfaces fail the seven-field bridge contract",
+        "question_id": "DQ6",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "NO_TOE_SPECIFIC_EXPLANATORY_VALUE_IDENTIFIED",
+        "basis": "the branch reproduces supplied metric f(R) scalar physics without a project-specific mechanism",
+        "question_id": "DQ7",
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "NO_AUTOMATIC_MINIMAL_MODE_PRIORITY",
+        "basis": "bounded scalar viability is not obstructed, while native relevance remains absent",
+        "question_id": "DQ8",
+        "status": "ANSWERED"
+      }
+    ]
+  },
+  "derivation_stages": {
+    "completed_stage_count": 10,
+    "rows": [
+      {
+        "result": "f_R R_mu_nu-(1/2)f g_mu_nu+(g_mu_nu Box-nabla_mu nabla_nu)f_R=kappa T_mu_nu",
+        "stage_id": "D1_METRIC_FIELD_EQUATION",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "-R+6 alpha Box R=kappa T",
+        "stage_id": "D2_EXACT_TRACE_EQUATION",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "Phi=1+2 alpha chi; 2 alpha(R-chi)=0; chi=(Phi-1)/(2 alpha)",
+        "stage_id": "D3_AUXILIARY_AND_LEGENDRE_MAP",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "S=(1/(2 kappa c)) integral sqrt(-g)[Phi R-U(Phi)]+S_m; U=(Phi-1)^2/(4 alpha)",
+        "stage_id": "D4_JORDAN_FRAME",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "gE_mu_nu=Phi g_mu_nu; varphi=sqrt(3/(2 kappa)) ln Phi; S_m[Phi^-1 gE,Psi]",
+        "stage_id": "D5_EINSTEIN_FRAME",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "R0=0; Phi0=1; m0^2=-1/(6 alpha); accepted 00 Yukawa and scalar-zero stationary 0i",
+        "stage_id": "D6_MINKOWSKI_CONTROL",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "f_R R0-2f=-R0=0; no nonzero pure-vacuum root",
+        "stage_id": "D7_VACUUM_CONSTANT_CURVATURE_CONTROL",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "T_mu_nu=rho_Lambda g_mu_nu; R0=-4 kappa rho_Lambda; Phi0=1-8 kappa alpha rho_Lambda",
+        "stage_id": "D8_SUPPLIED_MATTER_SUPPORTED_BACKGROUND",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "(Box+m0^2)delta R=(kappa/(6 alpha))delta T; constant mass and coupling; finite-range suppression only",
+        "stage_id": "D9_TRACE_MATTER_STABILITY_AND_SCREENING",
+        "status": "COMPLETED"
+      },
+      {
+        "result": "three project scalar surfaces tested against seven fields; zero bridges identified",
+        "stage_id": "D10_NATIVE_RELEVANCE_AUDIT",
+        "status": "COMPLETED"
+      }
+    ],
+    "stage_count": 10
+  },
+  "field_equation_result": {
+    "divergence_compatibility": "LEFT_SIDE_COVARIANTLY_CONSERVED_REQUIRES_SUPPLIED_SOURCE_CONSERVATION",
+    "imported_from_literature": false,
+    "metric_equation": "(1+2 alpha R)R_mu_nu-(1/2)(R+alpha R^2)g_mu_nu+2 alpha(g_mu_nu Box-nabla_mu nabla_nu)R=kappa T_mu_nu",
+    "trace_equation": "-R+6 alpha Box R=kappa T"
+  },
+  "matter_trace_result": {
+    "Einstein_frame_trace_relation": "T_E=Phi^-2 T_J",
+    "classically_traceless_source": "NO_DIRECT_LINEAR_SCALAR_SOURCE",
+    "exact_trace_equation": "(Box+m0^2)R=(kappa/(6 alpha))T",
+    "linear_perturbation_equation": "(Box_bar+m0^2)delta R=(kappa/(6 alpha))delta T",
+    "on_shell_or_off_shell": "EXTERNAL_SOURCE_CONSERVATION_SUPPLIED; NO_NATIVE_MATTER_EOM",
+    "source_status": "SUPPLIED_COMPARISON_SOURCE_NOT_TOE_MATTER",
+    "traceful_nonrelativistic_source": "DIRECT_SCALAR_SOURCE"
+  },
+  "native_relevance_result": {
+    "bridge_identified_count": 0,
+    "candidate_count": 3,
+    "principal_finding": "NATIVE_RELEVANCE_NOT_IDENTIFIED",
+    "required_field_count": 7,
+    "rows": [
+      {
+        "bridge_status": "NOT_IDENTIFIED",
+        "candidate_id": "NATIVE_PHI_ALIGNMENT_WITNESS",
+        "failed_fields": [
+          "FIELD_DEFINITION",
+          "TRANSFORMATION_LAW",
+          "DIMENSIONS",
+          "COUPLINGS",
+          "EQUATION_OF_MOTION",
+          "DOMAIN",
+          "OBSERVABLE_ROLE"
+        ],
+        "finding": "alignment witness supplies no map to Phi=f_R and native generation remains blocked",
+        "matched_fields": [],
+        "required_fields": [
+          "FIELD_DEFINITION",
+          "TRANSFORMATION_LAW",
+          "DIMENSIONS",
+          "COUPLINGS",
+          "EQUATION_OF_MOTION",
+          "DOMAIN",
+          "OBSERVABLE_ROLE"
+        ]
+      },
+      {
+        "bridge_status": "NOT_IDENTIFIED",
+        "candidate_id": "PROVISIONAL_CLASSICAL_SCALAR_SOURCE_SANDBOX",
+        "failed_fields": [
+          "FIELD_DEFINITION",
+          "TRANSFORMATION_LAW",
+          "DIMENSIONS",
+          "COUPLINGS",
+          "EQUATION_OF_MOTION",
+          "DOMAIN",
+          "OBSERVABLE_ROLE"
+        ],
+        "finding": "supplied on-shell scalar source is not a native matter field or scalaron map",
+        "matched_fields": [],
+        "required_fields": [
+          "FIELD_DEFINITION",
+          "TRANSFORMATION_LAW",
+          "DIMENSIONS",
+          "COUPLINGS",
+          "EQUATION_OF_MOTION",
+          "DOMAIN",
+          "OBSERVABLE_ROLE"
+        ]
+      },
+      {
+        "bridge_status": "NOT_IDENTIFIED",
+        "candidate_id": "PHI_CK_ADMISSIBILITY_RULE_FAMILY",
+        "failed_fields": [
+          "FIELD_DEFINITION",
+          "TRANSFORMATION_LAW",
+          "DIMENSIONS",
+          "COUPLINGS",
+          "EQUATION_OF_MOTION",
+          "DOMAIN",
+          "OBSERVABLE_ROLE"
+        ],
+        "finding": "admissibility rules are nondynamical and derive neither Phi nor its equation",
+        "matched_fields": [],
+        "required_fields": [
+          "FIELD_DEFINITION",
+          "TRANSFORMATION_LAW",
+          "DIMENSIONS",
+          "COUPLINGS",
+          "EQUATION_OF_MOTION",
+          "DOMAIN",
+          "OBSERVABLE_ROLE"
+        ]
+      }
+    ],
+    "separate_seam_packet_triggered": false
+  },
+  "observable_channel_result": {
+    "empirical_fit_executed": false,
+    "nonlinear_rotating_system_claim": false,
+    "orbital_transport_executed": false,
+    "point_mass_h00": "-2GM/(c^2 r)[1+(1/3)exp(-m0 r)]",
+    "scalar_stationary_0i_direct_contribution": 0,
+    "stationary_conserved_h0i": "EINSTEIN_MASSLESS_CURRENT_RESPONSE_WITH_ZERO_DIRECT_SCALAR_PROJECTOR_TERM"
+  },
+  "parameter_results": {
+    "alpha_negative": "NON_TACHYONIC_SCALAR_IN_TESTED_DOMAIN_SUBJECT_TO_Phi_POSITIVE",
+    "alpha_positive": "TACHYONIC_SCALAR_ON_MINKOWSKI",
+    "alpha_to_zero_negative": "m0_squared_to_positive_infinity_SCALAR_DECOUPLES_AT_FIXED_DISTANCE",
+    "alpha_zero": "EINSTEIN_COMPARISON_LIMIT_SCALAR_MAP_NONINVERTIBLE",
+    "massless_or_singular_limit": "NOT_TRANSPORTED_REQUIRES_FRESH_DOMAIN",
+    "selected_alpha": null,
+    "very_light_finite_scalar": "LONG_RANGE_TRACE_FORCE_POSSIBLE_NO_BOUND_OR_VALUE_SELECTED"
+  },
+  "principal_outcome": "SCALAR_BRANCH_COMPARISON_VIABLE_NATIVE_RELEVANCE_UNESTABLISHED",
+  "scalar_tensor_obligations": {
+    "derived_count": 8,
+    "obligation_count": 8,
+    "rows": [
+      {
+        "obligation_id": "AUXILIARY_FIELD_INTRODUCTION",
+        "result": "f(chi)+f_chi(chi)(R-chi)",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "AUXILIARY_EQUATION_AND_EQUIVALENCE_DOMAIN",
+        "result": "2 alpha(R-chi)=0; equivalence for alpha!=0",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "LEGENDRE_VARIABLE_AND_INVERTIBILITY",
+        "result": "Phi=1+2 alpha chi; chi=(Phi-1)/(2 alpha)",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "JORDAN_FRAME_ACTION_AND_POTENTIAL",
+        "result": "Phi R-U(Phi); U=(Phi-1)^2/(4 alpha)",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "CONFORMAL_MAP_AND_DOMAIN",
+        "result": "gE=Phi g; domain Phi>0",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "CANONICAL_SCALAR_NORMALIZATION",
+        "result": "varphi=sqrt(3/(2 kappa)) ln Phi",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "EINSTEIN_FRAME_POTENTIAL",
+        "result": "V_packet=U/(2 kappa Phi^2); translated physical V=-U/(2 kappa Phi^2)",
+        "status": "DERIVED"
+      },
+      {
+        "obligation_id": "MATTER_TRANSFORMATION_AND_OBSERVABLE_CAVEAT",
+        "result": "S_m[Phi^-1 gE,Psi]; A(varphi)=Phi^-1/2; measurement conventions still required",
+        "status": "DERIVED"
+      }
+    ]
+  },
+  "scalar_tensor_result": {
+    "Jordan_action": "(1/(2 kappa c)) integral sqrt(-g)[Phi R-U(Phi)]+S_m",
+    "Phi": "1+2 alpha chi",
+    "U": "(Phi-1)^2/(4 alpha)",
+    "alpha_zero_map_status": "NONINVERTIBLE_EINSTEIN_LIMIT",
+    "auxiliary_action": "(1/(2 kappa c)) integral sqrt(-g)[f(chi)+f_chi(chi)(R-chi)]+S_m",
+    "auxiliary_equation": "2 alpha(R-chi)=0",
+    "canonical_scalar": "varphi=sqrt(3/(2 kappa)) ln Phi",
+    "conformal_domain": "Phi>0",
+    "conformal_map": "gE_mu_nu=Phi g_mu_nu",
+    "equivalence_domain": "alpha!=0",
+    "frame_observable_equivalence_claimed_without_measurement_map": false,
+    "inverse": "chi=(Phi-1)/(2 alpha)",
+    "kinetic_sign_interpretation": "USE_BOUND_WHOLE_ACTION_CONVENTION_MAP_AND_SOURCE_SATURATED_RESIDUE_NOT_AN_ISOLATED_PRINTED_SIGN",
+    "matter_coupling_derivative": "d ln A/dvarphi=-sqrt(kappa/6)",
+    "matter_coupling_function": "A(varphi)=Phi^-1/2=exp(-sqrt(kappa/6)varphi)",
+    "matter_metric": "g_matter=Phi^-1 gE",
+    "packet_Einstein_frame_potential": "V_packet=U/(2 kappa Phi^2)",
+    "translated_physical_potential": "V_physical=-U/(2 kappa Phi^2)=[1/(8 kappa(-alpha))](1-exp(-sqrt(2 kappa/3)varphi))^2",
+    "translated_potential_minimum": "varphi=0; Phi=1; d2V/dvarphi2=-1/(6 alpha)>0 for alpha<0"
+  },
+  "schema_id": "toe.scalar_only_quadratic_gravity_viability_and_native_relevance.execution.v0",
+  "scope": {
+    "Minkowski_control_reproduced": true,
+    "alpha_sign_or_value_adopted": false,
+    "authorized_execution_consumed": 1,
+    "beta_zero_adopted": false,
+    "comparison_execution_completed": true,
+    "decision_questions_answered": true,
+    "empirical_constraint_computed": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "independent_result_review_required": true,
+    "master_action_mutation_authorized": false,
+    "matter_sector_selected": false,
+    "matter_trace_coupling_derived": true,
+    "metric_field_equation_derived": true,
+    "native_bridge_audit_executed": true,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "non_Minkowski_background_test_executed": true,
+    "orbital_transport_executed": false,
+    "scalar_branch_adopted": false,
+    "scalar_tensor_map_derived": true,
+    "screening_assessment_executed": true,
+    "work_packages_completed": true
+  },
+  "screening_result": {
+    "coupling_environment_dependence": "NONE_DERIVED",
+    "intrinsic_chameleon_or_Vainshtein_mechanism_identified": false,
+    "mass_environment_dependence": "NONE_IN_EXACT_FIXED_SOURCE_TRACE_OPERATOR",
+    "principal_finding": "FINITE_MASS_SUPPRESSION_ONLY",
+    "qualification": "bounded external-source and tested-background result; nonlinear matter backreaction not established",
+    "static_kernel": "exp(-m0 r)/(4 pi r)"
+  },
+  "selected_next_target": "review_scalar_only_quadratic_gravity_viability_and_native_relevance_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_SCALAR_ONLY_COMPARISON_RESULT_REVIEW_ONLY",
+  "shared_path_controls": {
+    "control_count": 12,
+    "failure_count": 0,
+    "pass_count": 12,
+    "rows": [
+      {
+        "control_id": "C1_AUTHORITY_EXACTLY_ONE_EXECUTION",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C2_SYMBOLIC_AUXILIARY_AND_LEGENDRE_ALGEBRA",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C3_ALPHA_ZERO_MAP_FAILS_CLOSED",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C4_CONFORMAL_FACTOR_DOMAIN",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C5_MINKOWSKI_SHARED_PATH",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C6_NO_NONZERO_PURE_VACUUM_ROOT",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C7_SUPPLIED_BACKGROUND_SOLVES_FIELD_EQUATION",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C8_TRACELESS_SOURCE_DIRECT_DECOUPLING",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C9_POTENTIAL_AND_TRACE_MASS_AGREE",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C10_INFINITE_MASS_DECOUPLING",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C11_FINITE_MASS_NOT_SCREENING",
+        "status": "PASSED"
+      },
+      {
+        "control_id": "C12_ZERO_NATIVE_BRIDGES_AND_NO_ADOPTION",
+        "status": "PASSED"
+      }
+    ]
+  },
+  "stability_result": {
+    "background_existence": "PASSED_FOR_MINKOWSKI_AND_ONE_SUPPLIED_VACUUM_ENERGY_BACKGROUND",
+    "matter_stability": "NO_DOLGOV_KAWASAKI_TACHYON_IN_FIXED_EXTERNAL_TRACE_DOMAIN_FOR_ALPHA_NEGATIVE",
+    "no_rapid_runaway": "PASSED_LINEAR_HOMOGENEOUS_SCALAR_TEST_IN_TESTED_BACKGROUNDS",
+    "no_tachyonic_linear_mode": "PASSED_FOR_ALPHA_NEGATIVE",
+    "nonlinear_or_arbitrary_background_stability": "NOT_ESTABLISHED",
+    "positive_kinetic_or_residue": "PASSED_RELATIVE_ISOLATED_SCALAR_CHANNEL_WHEN_Phi0_POSITIVE"
+  },
+  "status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+  "symbolic_audit": {
+    "Jordan_potential_U": "(Phi - 1)**2/(4*alpha)",
+    "Legendre_variable": "Phi=1+2 alpha chi",
+    "auxiliary_equation": "2*alpha*(R - chi)",
+    "auxiliary_equation_expected": "2*alpha*(R-chi)",
+    "auxiliary_lagrangian": "2*R*alpha*chi + R - alpha*chi**2",
+    "checks": {
+      "Jordan_potential_exact": true,
+      "Legendre_inverse_exact": true,
+      "auxiliary_action_reduces_to_Phi_R_minus_U": true,
+      "auxiliary_equation_exact": true,
+      "potential_mass_matches_trace_mass": true,
+      "supplied_background_exact": true,
+      "vacuum_constant_curvature_only_zero": true
+    },
+    "constant_curvature_lhs": "-R0",
+    "f": "R+alpha R^2",
+    "f_R": "2*R*alpha + 1",
+    "f_RR": "2*alpha",
+    "inverse_map": "chi=(Phi-1)/(2 alpha)",
+    "maximally_symmetric_field_equation_lhs_coefficient": "-R0/4",
+    "scalar_mass_squared": "-1/(6*alpha)",
+    "supplied_background_Phi0": "-8*alpha*kappa*rho + 1",
+    "supplied_background_solution": "R0=-4 kappa rho_Lambda",
+    "translated_physical_potential_mass_squared_at_minimum": "-1/(6*alpha)"
+  },
+  "target": "execute_scalar_only_quadratic_gravity_viability_and_native_relevance_v0",
+  "two_axis_result": {
+    "branch_adopted": false,
+    "comparison_viability": "SUPPORTED_IN_BOUNDED_LINEAR_AND_ONE_SUPPLIED_NON_MINKOWSKI_DOMAIN",
+    "native_relevance": "NOT_IDENTIFIED"
+  },
+  "verdict": "COMPLETE_BOUNDED_SCALAR_ONLY_COMPARISON_PENDING_INDEPENDENT_REVIEW",
+  "work_packages": {
+    "completed_count": 6,
+    "rows": [
+      {
+        "qualification": "alpha=0 and Phi<=0 are excluded transformation surfaces",
+        "result": "LOCAL_EQUIVALENCE_DERIVED_FOR_ALPHA_NONZERO_AND_PHI_POSITIVE",
+        "status": "COMPLETED",
+        "work_package_id": "WP_SCALAR_TENSOR_EQUIVALENCE"
+      },
+      {
+        "qualification": "no arbitrary-background or nonlinear stability claim",
+        "result": "MINKOWSKI_AND_SUPPLIED_VACUUM_ENERGY_BACKGROUND_LINEAR_SCALAR_STABLE_FOR_ALPHA_NEGATIVE_AND_PHI0_POSITIVE",
+        "status": "COMPLETED_BOUNDED_DOMAIN",
+        "work_package_id": "WP_BACKGROUND_STABILITY"
+      },
+      {
+        "qualification": "source is supplied and does not define ToE matter",
+        "result": "TRACEFUL_SOURCE_EXCITES_SCALAR_CLASSICALLY_TRACELESS_SOURCE_HAS_NO_DIRECT_LINEAR_EXCITATION",
+        "status": "COMPLETED",
+        "work_package_id": "WP_TRACE_COUPLING"
+      },
+      {
+        "qualification": "no intrinsic environment-dependent screening mechanism identified",
+        "result": "FINITE_MASS_SUPPRESSION_ONLY",
+        "status": "COMPLETED_BOUNDED_EXTERNAL_SOURCE_DOMAIN",
+        "work_package_id": "WP_SCREENING_AND_NONLINEAR_RELEVANCE"
+      },
+      {
+        "qualification": "no orbital or empirical transport",
+        "result": "SCALAR_MODIFIES_00_TRACE_CHANNEL_NOT_DIRECT_STATIONARY_CONSERVED_0I_AT_ACCEPTED_LINEAR_ORDER",
+        "status": "COMPLETED_RETAINED_SCOPE",
+        "work_package_id": "WP_OBSERVABLE_CHANNEL_MAP"
+      },
+      {
+        "qualification": "all three candidates fail at least one mandatory bridge field",
+        "result": "NO_NATIVE_SCALAR_BRIDGE_IDENTIFIED",
+        "status": "COMPLETED",
+        "work_package_id": "WP_NATIVE_BRIDGE_AUDIT"
+      }
+    ],
+    "work_package_count": 6
+  }
+}
