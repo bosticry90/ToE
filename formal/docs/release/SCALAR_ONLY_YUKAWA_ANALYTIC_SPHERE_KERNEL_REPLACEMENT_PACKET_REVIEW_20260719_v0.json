@@ -1,0 +1,476 @@
+{
+  "accepted_surfaces": {
+    "accepted_oracle_and_historical_source_custody": "ACCEPTED",
+    "downstream_firewall": "ACCEPTED",
+    "live_entrypoint_vs_cubature_helper_distinction": "ACCEPTED",
+    "newtonian_and_yukawa_formulas": "ACCEPTED_AS_ALGEBRAICALLY_COMPLETE",
+    "overall_replacement_contract": "NOT_READY",
+    "shadow_adoption_and_rollback_phase_separation": "ACCEPTED",
+    "stable_x_regimes_and_overlap_contract": "ACCEPTED",
+    "strict_nonoverlap_and_machine_gap_guard": "ACCEPTED"
+  },
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V0",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_20260719_v0.md",
+        "sha256": "ca67c420ebed4032d0556d88759e8f48b7d72188cf4810b132bd23fbf1bd57fb"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_20260719_v0.json",
+        "sha256": "3b05386c4b386595d41a283c8b665386fc55abc81f865218a3eff1395755bcec"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0.py",
+        "sha256": "cda104a3546fad24d74166d0d880b0e9ee6dfdbea4a6f34bfa0cb3697cbbf124"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0.py",
+        "sha256": "e44a2fe8b3cb3e0902ad57e7c4004e07bb577c7c30419e90778a96ba9e92b1e0"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelReplacementPacketV0.lean",
+        "sha256": "21096d6a5fe86ca912798dc7f7d92941f2aac389f5743dbf4167c031c87117a0"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_review_v0.py",
+      "sha256": "ff47312ebe199ae8f033b96389885fa3acdba5843943ad55bfcaa079620da505"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_REVIEW_20260719_v0.md",
+      "sha256": "b3157203008109bbf7945f0bc5a03cafcb28b13c95128f5d3559b8abf65a1553"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelReplacementPacketReviewV0.lean",
+      "sha256": "c1a30c10822caaffd036f06a7a5cfe92b4f53ac1d13296314acdcbc4103e52bd"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_review_v0.py",
+      "sha256": "81b3a3b289a27ddf6d162c86b1d042d24eb1f9cd1c49a0fad504b36b6030cf2e"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review accepts the packet's formulas, stable evaluator regimes, source custody, architecture distinction, and firewalls, but finds the interface and future validation contract non-executable in eleven decision-bearing places. It does not repair the packet, create or execute a candidate, call or adjudicate cubature, change production code, compute torque, DFT, vector, Jacobian, SVD, identifiability, rerun Stage A, or authorize Stage B.",
+  "independent_domain_and_regression_audit": {
+    "canonical_serialization_schema_exact": false,
+    "finding": "The eight output references are pinned, but their executable geometry and range inputs are absent. Limit, boundary, and runtime probes do not freeze exact input rows, and deterministic serialization is not canonically specified.",
+    "limit_and_boundary_probe_rows_present": false,
+    "limit_and_boundary_probes_numeric": false,
+    "regression_case_count": 8,
+    "regression_inputs_complete": false,
+    "regression_observed_common_keys": [
+      "accepted_binary64_yukawa_J",
+      "accepted_regime_1",
+      "accepted_regime_2",
+      "case_id",
+      "newtonian_reference_J_decimal",
+      "reference_precision_decimal_digits",
+      "yukawa_reference_J_decimal"
+    ],
+    "regression_reference_values_present": true,
+    "regression_required_input_keys": [
+      "center_distance_m",
+      "lambda_m",
+      "mass_1_kg",
+      "mass_2_kg",
+      "radius_1_m",
+      "radius_2_m",
+      "surface_gap_m",
+      "yukawa_amplitude"
+    ],
+    "runtime_probe_inputs_exact": false
+  },
+  "independent_interface_audit": {
+    "array_invalid_element_behavior_complete": false,
+    "finding": "The public function name and output surface are frozen, but the packet does not bind the exact internal functions and dispatch seam to replace, fully map current versus proposed lambda/component behavior, specify atomic array failure, or enforce validation-only mutation hooks.",
+    "internal_replacement_targets_exact": false,
+    "lambda_component_compatibility_matrix_complete": false,
+    "public_entrypoint": "pair_energy_and_radial_derivative",
+    "validation_hook_authorization_mechanism_complete": false
+  },
+  "independent_validation_audit": {
+    "candidate_cubature_import_forbidden": true,
+    "candidate_oracle_import_forbidden": true,
+    "energy_references_complete": true,
+    "finding": "The packet proposes replacing both energy and dU/dD, but freezes independent references only for energy. The twelve mutation rows name defects without binding cases, components, injection points, execution order, tolerances or required exceptions, so their future outcomes are not reproducible.",
+    "mutation_count": 12,
+    "mutation_detection_predicates_numeric": false,
+    "mutation_routes_complete": false,
+    "radial_derivative_references_complete": false
+  },
+  "principal_review_outcome": "BLOCKED_REPLACEMENT_VALIDATION_INDEPENDENCE",
+  "required_next_action": {
+    "automatic_packet_v1": "PROHIBITED",
+    "bounded_selector_options": [
+      "ONE_NARROW_PRE_IMPLEMENTATION_CONTRACT_REPAIR_IF_FRESHLY_SELECTED",
+      "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+      "DEFER_OR_CLOSE_SYNTHETIC_TORSION_BALANCE_LANE"
+    ],
+    "fresh_selector_required": true,
+    "shadow_implementation": "NOT_AUTHORIZED",
+    "silent_packet_repair": "PROHIBITED"
+  },
+  "review_gates": {
+    "failed_gate_ids": [
+      "R32_INTERNAL_REPLACEMENT_TARGETS_EXACT",
+      "R33_LAMBDA_COMPONENT_COMPATIBILITY_MATRIX_COMPLETE",
+      "R34_ARRAY_DOMAIN_FAILURE_SEMANTICS_COMPLETE",
+      "R35_VALIDATION_ONLY_HOOK_ENFORCEMENT_EXECUTABLE",
+      "R37_EIGHT_REGRESSION_INPUT_RECORDS_COMPLETE",
+      "R40_INDEPENDENT_RADIAL_DERIVATIVE_REFERENCE_COMPLETE",
+      "R41_LIMIT_AND_BOUNDARY_PROBES_NUMERIC",
+      "R43_MUTATION_ROUTES_COMPLETE",
+      "R44_MUTATION_DETECTION_PREDICATES_NUMERIC",
+      "R50_RUNTIME_PROBE_INPUTS_EXACT",
+      "R52_CANONICAL_SERIALIZATION_SCHEMA_EXACT"
+    ],
+    "failure_count": 11,
+    "gate_count": 62,
+    "pass_count": 51,
+    "rows": [
+      {
+        "finding": "five packet artifacts hash-verified",
+        "gate_id": "R01_EXACT_PACKET_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "selector custody retained",
+        "gate_id": "R02_SELECTOR_AUTHORITY_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "accepted execution and review evidence pinned",
+        "gate_id": "R03_ACCEPTED_ORACLE_CUSTODY_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Stage A interface sources pinned",
+        "gate_id": "R04_HISTORICAL_INTERFACE_CUSTODY_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "pre-implementation status exact",
+        "gate_id": "R05_PREPARED_STATUS_NO_IMPLEMENTATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "no candidate or production change",
+        "gate_id": "R06_SCOPE_FIREWALL_NO_KERNEL_CREATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "retirement created no scientific verdict",
+        "gate_id": "R07_OLD_CUBATURE_UNADJUDICATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "live entry point is not relabeled as cubature helper",
+        "gate_id": "R08_LIVE_ENTRYPOINT_AND_HELPER_DISTINCT",
+        "status": "PASS"
+      },
+      {
+        "finding": "formula exact",
+        "gate_id": "R09_NEWTONIAN_ENERGY_FORMULA",
+        "status": "PASS"
+      },
+      {
+        "finding": "derivative sign and power exact",
+        "gate_id": "R10_NEWTONIAN_DERIVATIVE_FORMULA",
+        "status": "PASS"
+      },
+      {
+        "finding": "two factors and center exponent present",
+        "gate_id": "R11_YUKAWA_TWO_FACTOR_ENERGY_FORMULA",
+        "status": "PASS"
+      },
+      {
+        "finding": "analytic dU/dD exact",
+        "gate_id": "R12_YUKAWA_RADIAL_DERIVATIVE_FORMULA",
+        "status": "PASS"
+      },
+      {
+        "finding": "A_Y, J, and signs frozen",
+        "gate_id": "R13_AMPLITUDE_UNITS_AND_SIGNS",
+        "status": "PASS"
+      },
+      {
+        "finding": "same formula for both radius classes",
+        "gate_id": "R14_EXCHANGE_AND_RADIUS_SYMMETRY",
+        "status": "PASS"
+      },
+      {
+        "finding": "stable identity exact",
+        "gate_id": "R15_SCALED_SURFACE_GAP_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "series boundary fixed",
+        "gate_id": "R16_SMALL_X_BRANCH",
+        "status": "PASS"
+      },
+      {
+        "finding": "direct branch bounded",
+        "gate_id": "R17_MODERATE_X_BRANCH",
+        "status": "PASS"
+      },
+      {
+        "finding": "scaled branch required",
+        "gate_id": "R18_LARGE_X_BRANCH",
+        "status": "PASS"
+      },
+      {
+        "finding": "qualified endpoint exact",
+        "gate_id": "R19_X1000_AND_OUT_OF_DOMAIN_BEHAVIOR",
+        "status": "PASS"
+      },
+      {
+        "finding": "both overlap grids retained",
+        "gate_id": "R20_SIX_OVERLAP_PROBES",
+        "status": "PASS"
+      },
+      {
+        "finding": "decision-bearing scalars finite",
+        "gate_id": "R21_FINITE_INPUT_GUARDS",
+        "status": "PASS"
+      },
+      {
+        "finding": "strict nonoverlap exact",
+        "gate_id": "R22_STRICT_NONOVERLAP_DOMAIN",
+        "status": "PASS"
+      },
+      {
+        "finding": "binary64 gap margin fixed",
+        "gate_id": "R23_MACHINE_RESOLVABLE_GAP",
+        "status": "PASS"
+      },
+      {
+        "finding": "domain fails closed",
+        "gate_id": "R24_TOUCHING_AND_OVERLAP_REJECTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "zero-radius limit explicit",
+        "gate_id": "R25_POINT_PARTICLE_COMPATIBILITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "finite analytic limit stated",
+        "gate_id": "R26_NEAR_CONTACT_LIMIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "both asymptotic claims stated",
+        "gate_id": "R27_LARGE_SEPARATION_AND_LONG_RANGE_LIMITS",
+        "status": "PASS"
+      },
+      {
+        "finding": "zero and linear limits stated",
+        "gate_id": "R28_SMALL_COUPLING_LIMIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "caller name frozen",
+        "gate_id": "R29_PUBLIC_ENTRYPOINT_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "public return surface frozen",
+        "gate_id": "R30_OUTPUT_SHAPE_DTYPE_AND_COMPONENTS",
+        "status": "PASS"
+      },
+      {
+        "finding": "nonproduction arguments named",
+        "gate_id": "R31_MUTATION_HOOKS_IDENTIFIED",
+        "status": "PASS"
+      },
+      {
+        "finding": "missing exact internal function replacement list, dispatch symbol, and unchanged caller list",
+        "gate_id": "R32_INTERNAL_REPLACEMENT_TARGETS_EXACT",
+        "status": "FAIL"
+      },
+      {
+        "finding": "no complete current-versus-proposed matrix for lambda<=0 across all components",
+        "gate_id": "R33_LAMBDA_COMPONENT_COMPATIBILITY_MATRIX_COMPLETE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "array call behavior with one invalid element is unspecified",
+        "gate_id": "R34_ARRAY_DOMAIN_FAILURE_SEMANTICS_COMPLETE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "hooks are labeled validation-only but no enforceable authorization route is frozen",
+        "gate_id": "R35_VALIDATION_ONLY_HOOK_ENFORCEMENT_EXECUTABLE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "case IDs and order exact",
+        "gate_id": "R36_EIGHT_REGRESSION_CASE_IDENTITIES",
+        "status": "PASS"
+      },
+      {
+        "finding": "rows freeze outputs but omit radii, masses, gap, distance, lambda, and amplitude",
+        "gate_id": "R37_EIGHT_REGRESSION_INPUT_RECORDS_COMPLETE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "energy references present",
+        "gate_id": "R38_ACCEPTED_REFERENCE_VALUES_PINNED",
+        "status": "PASS"
+      },
+      {
+        "finding": "energy tolerance envelope numeric",
+        "gate_id": "R39_ENERGY_AGREEMENT_TOLERANCES",
+        "status": "PASS"
+      },
+      {
+        "finding": "dU/dD is decision-bearing but has no independent values or tolerance",
+        "gate_id": "R40_INDEPENDENT_RADIAL_DERIVATIVE_REFERENCE_COMPLETE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "limits are named but exact cases, ladders, expected values, and tolerances are absent",
+        "gate_id": "R41_LIMIT_AND_BOUNDARY_PROBES_NUMERIC",
+        "status": "FAIL"
+      },
+      {
+        "finding": "twelve mutation IDs exact",
+        "gate_id": "R42_TWELVE_MUTATION_IDENTITIES",
+        "status": "PASS"
+      },
+      {
+        "finding": "mutation rows omit cases, components, injection points, sequence, and failure consequence",
+        "gate_id": "R43_MUTATION_ROUTES_COMPLETE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "required result text does not define numeric or exception predicates",
+        "gate_id": "R44_MUTATION_DETECTION_PREDICATES_NUMERIC",
+        "status": "FAIL"
+      },
+      {
+        "finding": "candidate/reference separation declared",
+        "gate_id": "R45_ORACLE_AND_CUBATURE_IMPORT_BANS",
+        "status": "PASS"
+      },
+      {
+        "finding": "reference path read-only",
+        "gate_id": "R46_REFERENCE_PARSER_DOES_NOT_RECOMPUTE",
+        "status": "PASS"
+      },
+      {
+        "finding": "shadow run cannot alter production",
+        "gate_id": "R47_SHADOW_MODULE_ISOLATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "resource envelope exact",
+        "gate_id": "R48_TOTAL_RUNTIME_AND_MEMORY_BOUNDS",
+        "status": "PASS"
+      },
+      {
+        "finding": "five stage caps exact",
+        "gate_id": "R49_STAGE_BUDGETS_SUM_TO_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "finding": "ten-thousand-call workload lacks exact input vector and component order",
+        "gate_id": "R50_RUNTIME_PROBE_INPUTS_EXACT",
+        "status": "FAIL"
+      },
+      {
+        "finding": "three provenance fields required",
+        "gate_id": "R51_OUTPUT_KERNEL_IDENTITY_FIELDS",
+        "status": "PASS"
+      },
+      {
+        "finding": "no canonical object schema, float encoding, key order, or failure rule",
+        "gate_id": "R52_CANONICAL_SERIALIZATION_SCHEMA_EXACT",
+        "status": "FAIL"
+      },
+      {
+        "finding": "future custody bounded",
+        "gate_id": "R53_PROCESS_AND_ATOMIC_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "derivation, shadow, review, selection, adoption separated",
+        "gate_id": "R54_FIVE_PHASE_SEPARATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "historical source retained",
+        "gate_id": "R55_NO_IN_PLACE_HISTORICAL_OVERWRITE",
+        "status": "PASS"
+      },
+      {
+        "finding": "fresh selector and adoption packet required",
+        "gate_id": "R56_ADOPTION_PRECONDITIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "rollback claim ceiling correct",
+        "gate_id": "R57_ROLLBACK_NOT_SCIENTIFIC_VALIDATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "kernel identity cannot be mixed",
+        "gate_id": "R58_NO_MIXED_KERNEL_OUTPUTS",
+        "status": "PASS"
+      },
+      {
+        "finding": "all downstream work closed",
+        "gate_id": "R59_DOWNSTREAM_FIREWALLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "review namespace exact",
+        "gate_id": "R60_FIVE_REVIEW_OUTCOMES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "ready cannot adopt",
+        "gate_id": "R61_READY_REVIEW_ONLY_SHADOW_QUALIFICATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "no automatic continuation",
+        "gate_id": "R62_BLOCK_REQUIRES_FRESH_SELECTOR_NO_AUTOMATIC_REPAIR",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_REVIEW_20260719_v0",
+  "schema_id": "toe.scalar_only_yukawa.analytic_sphere_kernel.replacement_packet_review.v0",
+  "scope": {
+    "accepted_formula_and_evaluator_surfaces_preserved": true,
+    "architecture_distinction_preserved": true,
+    "automatic_packet_repair_authorized": false,
+    "blocked_contract_result_issued": true,
+    "comparison_v2_authorized": false,
+    "fresh_scientific_response_selector_authorized": true,
+    "independent_packet_review_performed": true,
+    "jacobian_or_identifiability_authorized": false,
+    "old_cubature_adjudicated": false,
+    "old_cubature_called": false,
+    "packet_custody_verified": true,
+    "production_kernel_replacement_authorized": false,
+    "production_kernel_replacement_performed": false,
+    "replacement_contract_ready": false,
+    "shadow_kernel_implementation_authorized": false,
+    "shadow_kernel_implementation_performed": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false
+  },
+  "secondary_review_outcomes": [
+    "BLOCKED_REPLACEMENT_INTERFACE_IDENTITY",
+    "BLOCKED_REPLACEMENT_DOMAIN_COVERAGE"
+  ],
+  "selected_next_target": "select_post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0_review_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_AUTOMATIC_PACKET_REPAIR_OR_KERNEL_IMPLEMENTATION",
+  "status": "INDEPENDENT_PRE_IMPLEMENTATION_PACKET_REVIEW_COMPLETE_BLOCKED",
+  "target": "review_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0_result",
+  "verdict": "BLOCKED_ANALYTIC_KERNEL_REPLACEMENT_CONTRACT_INCOMPLETE"
+}
