@@ -1,0 +1,64 @@
+{
+  "authority_boundary": {
+    "july_16_19_scientific_chain_adopted": false,
+    "maintenance_only": true,
+    "new_physics_authorized": false,
+    "scientific_target_rotated": false,
+    "yukawa_execution_or_rerun_authorized": false
+  },
+  "custody": {
+    "archive_filename": "toe_deleted_tracked_base_files.zip",
+    "archive_location": "EXTERNAL_CUSTODY_NOT_REPOSITORY_RELATIVE",
+    "archive_sha256": "efd53a7cf7f6d84095e4bb5931c65bb16bc3aca4c03ca250a5d8a936b0a03e58",
+    "base_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "preservation_timestamp_utc": "2026-07-27T22:02:05Z"
+  },
+  "dispositions": [
+    {
+      "disposition": "CONSOLIDATE_AND_REDIRECT",
+      "path": "PUBLIC_OVERVIEW.md",
+      "reason": "The deleted document is a dated 2026-07-16 snapshot and links to two other deleted snapshots. Its durable orientation and nonclaim material is consolidated into PROJECT_ENTRY_GUIDE.md, while the time-indexed public scientific boundary remains separately linked.",
+      "replacement_paths": [
+        "PROJECT_ENTRY_GUIDE.md",
+        "formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md"
+      ],
+      "source_git_blob_oid": "628fbd3c9d910cdbc8522650c5b4a84babe81523"
+    },
+    {
+      "disposition": "CONSOLIDATE_AND_REDIRECT",
+      "path": "TECHNICAL_REPOSITORY_GUIDE.md",
+      "reason": "The deleted snapshot hard-codes the superseded v0 maintenance authority. Setup remains in DEVELOPMENT.md and current two-lane navigation is consolidated into PROJECT_ENTRY_GUIDE.md.",
+      "replacement_paths": [
+        "PROJECT_ENTRY_GUIDE.md",
+        "DEVELOPMENT.md"
+      ],
+      "source_git_blob_oid": "823bb670730d2bc268fcf7deaa6b910de68a9d38"
+    },
+    {
+      "disposition": "REPLACE_WITH_SUCCESSOR",
+      "path": "MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md",
+      "reason": "The deleted explanatory snapshot stops at an intermediate July 16 preparation state. The README now points to the accepted historical canonical robustness result review; later preserved tranche artifacts are not presented as adopted scientific status.",
+      "replacement_paths": [
+        "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json"
+      ],
+      "source_git_blob_oid": "36ac253ec26f4055a646cb9312f1c971725ef4ca"
+    },
+    {
+      "disposition": "CONSOLIDATE_AND_REDIRECT",
+      "path": "TOE_PUBLIC_RECAP_UNDER_5000_CHARS.md",
+      "reason": "The dirty README referenced a path that never existed in the checkout. Its intended role is covered by the current entry guide and time-indexed plain-language scientific boundary.",
+      "replacement_paths": [
+        "PROJECT_ENTRY_GUIDE.md",
+        "formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md"
+      ],
+      "source_git_blob_oid": null
+    }
+  ],
+  "recorded_at_utc": "2026-07-27T00:00:00Z",
+  "schema_id": "REPOSITORY_FRONT_DOOR_LINK_DISPOSITION_v0",
+  "scientific_authority": {
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+  },
+  "status": "MAINTENANCE_INTEGRATED"
+}

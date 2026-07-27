@@ -10,6 +10,14 @@ Purpose:
 - Provide a human-facing index for the current live authority chain.
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
+Current two-lane correction (2026-07-27):
+- Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
+- The exact scientific target is `prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2`.
+- `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
+- Resolve current non-scientific maintenance authority through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to the active versioned authority surface.
+- The July 16–19 tranche is preserved but not scientifically adopted. Maintenance integration does not rotate scientific authority, authorize new physics, authorize a Yukawa rerun, or make preserved sandbox observations decision-bearing.
+- Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
+
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
 - The candidate, readiness, and downstream external-package checkpoints remain byte-preserved. Their missing contribution-classification dependency is not treated as complete, and no submission or publication authorization follows from those historical readiness tokens.

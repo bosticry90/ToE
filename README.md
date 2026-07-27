@@ -3,9 +3,10 @@ A Formal Research Hypothesis Toward a Unified Physical Framework
 
 ## Start here
 
-- Public introduction: [PUBLIC_OVERVIEW.md](PUBLIC_OVERVIEW.md)
-- Repository setup and architecture: [TECHNICAL_REPOSITORY_GUIDE.md](TECHNICAL_REPOSITORY_GUIDE.md)
-- Maxwell–Dirac result and robustness status: [MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md](MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md)
+- Project orientation and authority map: [PROJECT_ENTRY_GUIDE.md](PROJECT_ENTRY_GUIDE.md)
+- Plain-language scientific-status boundary: [formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md](formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md)
+- Repository setup and validation: [DEVELOPMENT.md](DEVELOPMENT.md)
+- Accepted historical Maxwell–Dirac robustness review: [formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json](formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json)
 
 Compact developer setup and validation: `DEVELOPMENT.md`.
 
@@ -16,7 +17,7 @@ CURRENT-AUTHORITY NOTE
 The dated status narratives below are append-only checkpoint history. For the live target and release/blocker posture, read `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` (`current_projection_v0` and the uppercase `CURRENT_LIVE_*` authority tokens) together with `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`. The large `current_target_state` object is a compatibility container; only the keys named by `current_target_state_authority_contract_v0` are authoritative. Historical prose and other flattened fields do not override the current projection.
 
 CURRENT-MAINTENANCE NOTE
-Operational maintenance is separate from scientific authority. Its bounded current surface is `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`; the current maintenance target is `prepare_loop_control_registry_sharding_and_current_projection_packet_v0`, while the scientific target is `prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2`. The registry-sharding packet is a preparation contract only: no production projection, index, shard, consumer migration, or monolith retirement is authorized or executed.
+Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it currently selects `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v1.json` and target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target remains `prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2`. Maintenance integration does not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.
 
 INDEPENDENT REGISTRY-GUARDRAIL REVIEW
 The independent review in `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v0.json` accepts the frozen debt counts and identity sets, subject to versioned source-hash and statement-line-hash corrections, and accepts the v0 packet only as preparation evidence. It rejects migration-execution readiness because byte-identical JSONL reconstruction and fail-closed external authority/history binding were not demonstrated. The versioned v1 corrective guardrail is recommended but not selected; both current targets remain unchanged and registry migration remains unauthorized.
