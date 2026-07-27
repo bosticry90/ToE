@@ -1,0 +1,388 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v1.md",
+        "sha256": "4ed85fe1318a9923d55aa9c657a875336ebc78298cb9384659cf860fcfa48363"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v1.json",
+        "sha256": "4121be7c310fde29a6a34e11b07817d410c7bfb0ae1a5a9996cb288efedc3ba1"
+      },
+      {
+        "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_v1.py",
+        "sha256": "fffd0f6bfd38b57d913bb2f4aa13a402bd22495c47b27c03312e1be137d6b06e"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_v1.py",
+        "sha256": "1acbc061344e1c7a78c14ef1af9ca1e2e6a82400ed6f8907534fe2f334f7ad96"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeGravitationalPrincipleRequirementsAndActionSelectionPacketV1.lean",
+        "sha256": "9e2a5fe395f4154a5e132f703273fe90235147362f8245fb9339c638fc19f45d"
+      },
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v1.md",
+        "sha256": "66322dff48e73303dbcdd803cd50519efb9ccf667870721e8d10bfac2cb795aa"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_review_v1.py",
+      "sha256": "6cf9f7ab46c75ab56a68106fdb951c952fef958a0d7ca09fdc92ef5e870adf6d"
+    },
+    "reviewed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "test": {
+      "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_review_v1.py",
+      "sha256": "da31a981f35d51f4d1db5e5c005adacee2a40e6c8ac2f56c5f95493bbbd7eace"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Independent v1 production-semantics review only. The ten static requirement rows, seven families, cell vocabulary, eight controls, two boundary probes, and direct standard-GR isolation are retained. Five blocking adversarial defect classes are reproduced. The real matrix remains 0/70; no family judgment, principle, postulate, action, matter sector, variation, GR result, general tooling lane, or automation is created.",
+  "equivalence_policy_audit": {
+    "diagnostic": "EQUIVALENCE_PROOF_POLICY_NOT_ENFORCED",
+    "expected": "PRECHECK_FAILURE_BEFORE_EQUIVALENCE_REDUCTION",
+    "member": "F_FR",
+    "observed_affirmative_classes": [
+      "F_EH"
+    ],
+    "observed_diagnostic": null,
+    "observed_scientific_outcome": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+    "observed_status": "SCIENTIFIC_OUTCOME_COMPUTED",
+    "probe_id": "REVIEW_FORBIDDEN_EQUIVALENCE_PROOF_CLASS",
+    "representative": "F_EH",
+    "status": "FAIL",
+    "submitted_proof_class": "FORBIDDEN_DIFFERENT_PROPAGATING_MODES"
+  },
+  "findings": {
+    "blocking_count": 5,
+    "finding_count": 5,
+    "rows": [
+      {
+        "diagnostic": "STATEMENT_CLASS_AUTHORITY_BINDING_NOT_ENFORCED",
+        "finding": "The production preflight compares two caller-supplied class fields rather than a frozen canonical authority record, so relabeling both fields changes native-selection behavior without a pre-matrix failure.",
+        "order": 1,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "MATRIX_CELL_EVIDENCE_BINDING_NOT_ENFORCED",
+        "finding": "Affirmative and local-bulk-equivalence cell strings count as satisfaction without a typed evidence record, proof identity, or source binding.",
+        "order": 2,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "EQUIVALENCE_PROOF_POLICY_NOT_ENFORCED",
+        "finding": "The equivalence preflight checks only member/representative pair presence; an unknown proof class can merge F_FR into F_EH and manufacture standard-GR collapse.",
+        "order": 3,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "UNDECIDABLE_EQUIVALENCE_CLASS_ERASED",
+        "finding": "The reducer subtracts an unresolved representative whenever the same representative is affirmative elsewhere, allowing a class with an unresolved member to be classified as uniquely complete.",
+        "order": 4,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "VIABLE_DISTINCTIVENESS_NO_GO_BRANCH_UNREACHABLE",
+        "finding": "The distinctiveness-no-go flag is inspected only for an empty possible set, so viable gravity with proved impossibility of distinctiveness returns underdetermination instead of the frozen no-go outcome.",
+        "order": 5,
+        "severity": "BLOCKING"
+      }
+    ]
+  },
+  "matrix_cell_evidence_audit": {
+    "affirmative_observed_outcome": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+    "affirmative_observed_status": "SCIENTIFIC_OUTCOME_COMPUTED",
+    "diagnostic": "MATRIX_CELL_EVIDENCE_BINDING_NOT_ENFORCED",
+    "equivalence_observed_outcome": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+    "equivalence_observed_status": "SCIENTIFIC_OUTCOME_COMPUTED",
+    "expected": "BOTH_CELLS_REJECTED_WITHOUT_BOUND_EVIDENCE",
+    "probe_id": "REVIEW_UNBOUND_COMPLETED_CELL_EVIDENCE",
+    "status": "FAIL"
+  },
+  "primary_diagnostic": "STATEMENT_CLASS_AUTHORITY_BINDING_NOT_ENFORCED",
+  "production_statement_class_enforcement_audit": {
+    "canonical_requirement_id": "R4_DIFF_COVARIANCE",
+    "control_reference_affirmative_token": "AFFIRMATIVELY_SATISFIES_REQUIREMENT",
+    "diagnostic": "STATEMENT_CLASS_AUTHORITY_BINDING_NOT_ENFORCED",
+    "expected": "PRECHECK_FAILURE_BEFORE_MATRIX_EVALUATION",
+    "observed_diagnostic": null,
+    "observed_scientific_outcome": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+    "observed_status": "SCIENTIFIC_OUTCOME_COMPUTED",
+    "observed_supplied_exclusion_trace": [
+      {
+        "family_id": "F_EH",
+        "requirement_id": "R4_DIFF_COVARIANCE"
+      }
+    ],
+    "probe_id": "REVIEW_SOURCE_CLASS_DOUBLE_FIELD_RELABEL",
+    "status": "FAIL"
+  },
+  "required_v2_repairs": [
+    "bind production rows to a closed frozen authority registry by canonical identity",
+    "require typed bound evidence for every completed cell disposition",
+    "validate equivalence edges and cells against allowed and forbidden local-bulk rules",
+    "make unresolved status dominate class reduction absent an exact transfer proof",
+    "implement and validate all six terminal domains including viable-gravity no-go",
+    "add atomic adversarial controls while retaining one shared production entry point"
+  ],
+  "retained_results": {
+    "comparison_family_envelope": "7_OF_7_RETAINED",
+    "direct_standard_GR_isolation": "RETAINED",
+    "matrix_cell_vocabulary": "7_STATES_RETAINED",
+    "minimal_gravitational_contract": "ACCEPTED",
+    "native_candidate_readiness": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "real_matrix_cells": "0_OF_70",
+    "requirement_source_bindings": "10_OF_10_STATIC_ROWS_RETAINED",
+    "shared_boundary_probes": "2_OF_2_PASSED",
+    "shared_production_controls": "8_OF_8_PASSED"
+  },
+  "review_answer": "V1's static inventory and shared-path baseline controls reproduce, but the real analysis is not authorized. Production permits caller-spoofed class authority, unbound affirmative and equivalence cells, unvalidated physical equivalence, erasure of unresolved class members, and no reachable viable-gravity distinctiveness no-go branch.",
+  "review_gates": {
+    "failure_count": 5,
+    "gate_count": 11,
+    "pass_count": 6,
+    "rows": [
+      {
+        "gate": "custody and deterministic reproduction",
+        "order": 1,
+        "status": "PASS"
+      },
+      {
+        "gate": "static ten-row statement-class inventory",
+        "order": 2,
+        "status": "PASS"
+      },
+      {
+        "gate": "production source/class authority enforcement",
+        "order": 3,
+        "status": "FAIL"
+      },
+      {
+        "gate": "supplied-assumption native-pass isolation",
+        "order": 4,
+        "status": "PASS"
+      },
+      {
+        "gate": "matrix epistemic-state vocabulary",
+        "order": 5,
+        "status": "PASS"
+      },
+      {
+        "gate": "completed-cell evidence custody",
+        "order": 6,
+        "status": "FAIL"
+      },
+      {
+        "gate": "local-bulk equivalence proof policy",
+        "order": 7,
+        "status": "FAIL"
+      },
+      {
+        "gate": "conservative undecidable class reduction",
+        "order": 8,
+        "status": "FAIL"
+      },
+      {
+        "gate": "complete six-outcome terminal partition",
+        "order": 9,
+        "status": "FAIL"
+      },
+      {
+        "gate": "shared production-path controls",
+        "order": 10,
+        "status": "PASS"
+      },
+      {
+        "gate": "direct standard-GR oracle isolation",
+        "order": 11,
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v1",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "GR_pillar_completed": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "general_symbolic_or_theory_enumeration_tooling_created": false,
+    "gravitational_action_proposed_or_selected": false,
+    "gravitomagnetic_route_reopened": false,
+    "independent_v1_review_executed": true,
+    "master_action_promoted": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "real_action_family_eliminated_or_adopted": false,
+    "real_matrix_cells_computed": 0,
+    "real_requirements_family_analysis_executed": false,
+    "real_scientific_outcome_selected": false,
+    "real_survivor_matrix_computed": false,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "tensor_field_equation_derived": false,
+    "v1_block_recorded": true,
+    "v2_packet_prepared_now": false
+  },
+  "selected_next_target": "prepare_native_gravitational_principle_requirements_and_action_selection_packet_v2",
+  "selected_next_target_kind": "PREPARATION_ONLY_REQUIREMENTS_ACTION_SELECTION_PACKET_V2_REPAIR",
+  "shared_path_control_audit": {
+    "all_used_shared_entry_point": true,
+    "boundary_probe_count": 2,
+    "boundary_probe_pass_count": 2,
+    "boundary_probes": [
+      {
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "ACTION_FAMILY_UNDERDETERMINED",
+        "observed": "ACTION_FAMILY_UNDERDETERMINED",
+        "passed": true,
+        "probe_id": "PROBE_UNDERDETERMINED_WITHOUT_EXHAUSTION"
+      },
+      {
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED",
+        "observed": "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED",
+        "passed": true,
+        "probe_id": "PROBE_POSTULATE_REQUIRED_AFTER_EXHAUSTION"
+      }
+    ],
+    "control_count": 8,
+    "control_pass_count": 8,
+    "production_entry_point_id": "evaluate_analysis_v1",
+    "rows": [
+      {
+        "control_id": "CTRL_SUPPLIED_SECOND_ORDER_NOT_NATIVE",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "ACTION_FAMILY_UNDERDETERMINED",
+        "mutation_count": 1,
+        "observed": "ACTION_FAMILY_UNDERDETERMINED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_MISSING_STATEMENT_CLASS",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "MISSING_STATEMENT_CLASS",
+        "mutation_count": 1,
+        "observed": "MISSING_STATEMENT_CLASS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_DUPLICATE_REQUIREMENT",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "DUPLICATE_CANONICAL_REQUIREMENT",
+        "mutation_count": 1,
+        "observed": "DUPLICATE_CANONICAL_REQUIREMENT",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_SHARED_NEWTONIAN_LIMIT",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "ACTION_FAMILY_UNDERDETERMINED",
+        "mutation_count": 1,
+        "observed": "ACTION_FAMILY_UNDERDETERMINED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNDECIDABLE_CELL",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "F_FR_UNRESOLVED_NOT_AFFIRMATIVE",
+        "mutation_count": 1,
+        "observed": {
+          "affirmative": [
+            "F_EH"
+          ],
+          "unresolved": [
+            "F_FR"
+          ]
+        },
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_BOUNDARY_EQUIVALENCE",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "mutation_count": 1,
+        "observed": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNIQUE_NONDISTINCTIVE_EH",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "mutation_count": 1,
+        "observed": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNIQUE_NATIVE_DISTINCTIVE",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+        "mutation_count": 1,
+        "observed": "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+        "passed": true
+      }
+    ],
+    "status": "PASS"
+  },
+  "standard_GR_isolation_audit": {
+    "Einstein_Hilbert_role": "COMPARISON_ORACLE_ONLY",
+    "blocking_dependencies": [
+      "EQUIVALENCE_PROOF_POLICY_NOT_ENFORCED",
+      "UNDECIDABLE_EQUIVALENCE_CLASS_ERASED"
+    ],
+    "direct_Einstein_properties_used_to_populate_native_cells": false,
+    "direct_isolation_status": "PASS",
+    "post_reduction_comparator_safe": false,
+    "supplied_assumption_changes_native_sets": false
+  },
+  "static_statement_class_audit": {
+    "exact_static_class_count": 10,
+    "requirement_count": 10,
+    "requirement_ids": [
+      "R1_DIMENSION",
+      "R2_METRIC_ONLY",
+      "R3_LOCALITY",
+      "R4_DIFF_COVARIANCE",
+      "R5_CK_FIREWALL",
+      "R6_LOCAL_VARIATION",
+      "R7_SOURCE_COMPATIBILITY",
+      "R8_NEWTON_POISSON",
+      "R9_MOMENTUM_CURRENT",
+      "R10_STABILITY_NO_FIT"
+    ],
+    "status": "PASS"
+  },
+  "target": "review_native_gravitational_principle_requirements_and_action_selection_packet_v1_result",
+  "terminal_no_go_audit": {
+    "diagnostic": "VIABLE_DISTINCTIVENESS_NO_GO_BRANCH_UNREACHABLE",
+    "expected_scientific_outcome": "NO_GO_UNDER_MINIMAL_METRIC_LOCAL_ASSUMPTIONS",
+    "observed_scientific_outcome": "ACTION_FAMILY_UNDERDETERMINED",
+    "possible_equivalence_classes": [
+      "F_FR"
+    ],
+    "probe_id": "REVIEW_VIABLE_GRAVITY_DISTINCTIVENESS_NO_GO",
+    "status": "FAIL",
+    "submitted_distinctiveness_no_go_proved": true
+  },
+  "undecidable_propagation_audit": {
+    "diagnostic": "UNDECIDABLE_EQUIVALENCE_CLASS_ERASED",
+    "expected_scientific_outcome": "ACTION_FAMILY_UNDERDETERMINED",
+    "expected_unresolved_equivalence_classes": [
+      "F_EH"
+    ],
+    "expected_unresolved_family_ids": [
+      "F_FR"
+    ],
+    "observed_scientific_outcome": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+    "observed_unresolved_equivalence_classes": [],
+    "observed_unresolved_family_ids": [
+      "F_FR"
+    ],
+    "probe_id": "REVIEW_UNDECIDABLE_MEMBER_SHARED_REPRESENTATIVE",
+    "status": "FAIL"
+  },
+  "verdict": "BLOCKED_REQUIREMENTS_ACTION_SELECTION_PRODUCTION_SEMANTICS_INCOMPLETE"
+}

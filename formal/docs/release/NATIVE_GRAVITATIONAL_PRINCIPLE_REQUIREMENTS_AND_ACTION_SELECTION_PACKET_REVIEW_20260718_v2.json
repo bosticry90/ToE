@@ -1,0 +1,263 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v2.md",
+        "sha256": "65b0c97de4da870a2bcf0cc91229f3d738a99b6140f19eb2e96cde61b50f5b1b"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v2.json",
+        "sha256": "ae072cee52afca2e05f765d4aa4fe25939416b689284bf1ddb18ff9cad0cb0b6"
+      },
+      {
+        "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_v2.py",
+        "sha256": "6e3da8eef3692b3730b53930c618cae0d0a99522b8ba3c9aaf0361b8b0e6a251"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_v2.py",
+        "sha256": "16e79a452b684cee91bcd549ca57ffc5dda8b6d069abb6a586aa1f313fbd4973"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeGravitationalPrincipleRequirementsAndActionSelectionPacketV2.lean",
+        "sha256": "96caa7e6aced4c535bf0803eb20d1f8dcb35e20914aff5b54dae019a47e2d328"
+      },
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.md",
+        "sha256": "f72b793eadd4db520e30d3af5d0f22a5735d3451639ea092740a97eae3cb5b31"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_review_v2.py",
+      "sha256": "28638172711ecb90528db51682a80f0fe5bee388d7c2b9e385e6590b0985b2f6"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_review_v2.py",
+      "sha256": "2ee4d32f6f96b7a90720bb5efa2fb2c0e86fd935744aad189ab3b1adbd6e2ea5"
+    },
+    "v2_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "authority_object_audit": {
+    "frozen_field_mutation_rejected": true,
+    "probe_id": "REVIEW_AUTHORITY_OBJECT_FORGERY_AND_MUTATION",
+    "raw_decision_object_observed_diagnostic": "CALLER_DECISION_BEARING_OBJECT_REJECTED",
+    "raw_decision_object_rejected": true,
+    "status": "PASS"
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "counterfeit_project_provider_audit": {
+    "construction_kind": "TEMPORARY_PROJECT_PROFILE_ADVERSARIAL_FIXTURE",
+    "counterfeit_cell_count": 70,
+    "counterfeit_cells_are_real_scientific_judgments": false,
+    "counterfeit_cells_persisted": false,
+    "diagnostic": "PROJECT_EVIDENCE_PROVIDER_SELF_ATTESTATION_ACCEPTED",
+    "expected": "PROJECT_EVIDENCE_SCIENTIFIC_RELEVANCE_NOT_ESTABLISHED",
+    "observed_diagnostic": null,
+    "observed_matching_scientific_outcome_count": 1,
+    "observed_scientific_outcome": "ACTION_FAMILY_UNDERDETERMINED",
+    "observed_status": "SCIENTIFIC_OUTCOME_COMPUTED",
+    "probe_id": "REVIEW_COUNTERFEIT_SELF_ATTESTED_PROJECT_PROVIDER",
+    "source_scientific_content": "NONE",
+    "source_text_sha256": "fe323ffe875379230dda03339fca2eeda681bdc0e6082a606552feb98e96c84e",
+    "status": "FAIL"
+  },
+  "exploratory_boundary": {
+    "manually_adjudicated": true,
+    "nonauthoritative": true,
+    "permitted_labels": [
+      "CLEARLY COMPATIBLE",
+      "CLEARLY INCOMPATIBLE",
+      "LIKELY COMPATIBLE",
+      "LIKELY INCOMPATIBLE",
+      "UNRESOLVED",
+      "OUTSIDE SCOPE"
+    ],
+    "purpose": "prepare a transparent human-readable provisional survey before any future claim promotion",
+    "real_matrix_population_authorized": false,
+    "survivor_or_action_selection_authorized": false
+  },
+  "findings": {
+    "finding_count": 4,
+    "foundational_blocking_count": 4,
+    "rows": [
+      {
+        "diagnostic": "PROJECT_EVIDENCE_PROVIDER_SELF_ATTESTATION_ACCEPTED",
+        "finding": "One caller can author the evidence claim, accepted validator label, attestation, custody manifest, and every binding hash; the project provider accepts that circular bundle as independently validated.",
+        "order": 1,
+        "severity": "FOUNDATIONAL_BLOCKING"
+      },
+      {
+        "diagnostic": "SCIENTIFIC_RELEVANCE_VALIDATOR_NOT_EXECUTED",
+        "finding": "The project path verifies schema and byte custody but dispatches no scientific assessor capable of deciding whether the source supports the exact requirement, family, status, and domain.",
+        "order": 2,
+        "severity": "FOUNDATIONAL_BLOCKING"
+      },
+      {
+        "diagnostic": "SYNTHETIC_CONTROLS_BYPASS_PROJECT_PROVIDER_VALIDATION",
+        "finding": "Controls share the top-level evaluator and reduction logic but use an exact-match in-memory provider branch that bypasses project manifests, attestations, validator bindings, and evidence-source checks.",
+        "order": 3,
+        "severity": "FOUNDATIONAL_BLOCKING"
+      },
+      {
+        "diagnostic": "PRODUCTION_AUTHORITY_CUSTODY_NOT_REVALIDATED",
+        "finding": "Authority hashes are checked while generating V2, not at each evaluate_analysis call; the scientific entry point trusts module-global catalog bindings without a current custody precondition.",
+        "order": 4,
+        "severity": "FOUNDATIONAL_BLOCKING"
+      }
+    ]
+  },
+  "lane_closure": {
+    "automated_action_selection_tooling_lane_closed": true,
+    "automatic_v3_authorized": false,
+    "exploratory_results_may_populate_v2_matrix": false,
+    "next_lane_is_authoritative": false,
+    "next_lane_is_exploratory": true,
+    "project_evidence_provider_authorized": false,
+    "real_matrix_execution_authorized": false,
+    "v2_was_final_automatically_authorized_repair_attempt": true,
+    "v3_created": false
+  },
+  "missing_project_evidence_audit": {
+    "expected": "PROJECT_EVIDENCE_PROVIDER_REQUIRED_BEFORE_MATRIX",
+    "matrix_evaluated": false,
+    "observed_diagnostic": "PROJECT_EVIDENCE_PROVIDER_REQUIRED",
+    "observed_scientific_outcome": null,
+    "observed_status": "PRECHECK_FAILURE",
+    "probe_id": "REVIEW_MISSING_PROJECT_EVIDENCE_PROVIDER",
+    "status": "PASS"
+  },
+  "primary_diagnostic": "PROJECT_EVIDENCE_PROVIDER_SELF_ATTESTATION_ACCEPTED",
+  "production_authority_custody_audit": {
+    "diagnostic": "PRODUCTION_AUTHORITY_CUSTODY_NOT_REVALIDATED",
+    "evaluate_analysis_calls_authority_hash_validator": false,
+    "evaluate_analysis_reads_module_global_bound_family_catalog": true,
+    "evaluate_analysis_reads_module_global_bound_requirement_catalog": true,
+    "packet_build_performs_authority_hash_validation": true,
+    "probe_id": "REVIEW_PRODUCTION_ENTRY_AUTHORITY_CUSTODY",
+    "status": "FAIL"
+  },
+  "retained_contract_audit": {
+    "boundary_probe_count": 2,
+    "boundary_probe_pass_count": 2,
+    "checks": {
+      "affirmative_without_evidence_rejected": "PASS",
+      "authority_derived_requirement_input": "PASS",
+      "equivalence_without_proof_rejected": "PASS",
+      "invalid_fR_EH_merge_rejected": "PASS",
+      "missing_project_evidence_fails_closed": "PASS",
+      "six_terminal_outcomes_reachable_and_exclusive": "PASS",
+      "standard_GR_oracle_native_evidence_rejected": "PASS",
+      "uncertainty_preserved_without_property_transport": "PASS"
+    },
+    "outcome_control_count": 6,
+    "outcome_control_pass_count": 6,
+    "retained_control_count": 8,
+    "retained_control_pass_count": 8,
+    "status": "PASS",
+    "v2_adversarial_control_count": 6,
+    "v2_adversarial_control_pass_count": 6
+  },
+  "retained_results": {
+    "gravitational_action": "NOT_PROPOSED",
+    "minimal_gravitational_sector_contract": "ACCEPTED",
+    "native_candidate_readiness": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "native_principle": "NOT_IDENTIFIED",
+    "new_postulate": "NOT_AUTHORIZED",
+    "real_evidence_provider": "NOT_SUPPLIED",
+    "real_family_judgments": "NONE",
+    "real_matrix_cells": "0_OF_70",
+    "real_survivor_set": "NOT_COMPUTED",
+    "requirements_action_selection_v0": "BLOCKED_INCOMPLETE_CONTRACT",
+    "requirements_action_selection_v1": "BLOCKED_UNSOUND_PRODUCTION_CONTRACT",
+    "requirements_action_selection_v2": "BLOCKED_PROJECT_EVIDENCE_SEMANTICS_UNSOUND"
+  },
+  "review_gates": {
+    "failure_count": 4,
+    "gate_count": 7,
+    "pass_count": 3,
+    "rows": [
+      {
+        "gate": "authority objects reject normal forgery and mutation",
+        "status": "PASS"
+      },
+      {
+        "gate": "missing project evidence fails closed",
+        "status": "PASS"
+      },
+      {
+        "gate": "retained evidence, equivalence, uncertainty, oracle, and terminal controls",
+        "status": "PASS"
+      },
+      {
+        "gate": "project evidence cannot self-attest",
+        "status": "FAIL"
+      },
+      {
+        "gate": "scientific relevance validator is independently executed",
+        "status": "FAIL"
+      },
+      {
+        "gate": "controls traverse the future project-provider path",
+        "status": "FAIL"
+      },
+      {
+        "gate": "production entry revalidates authority custody",
+        "status": "FAIL"
+      }
+    ]
+  },
+  "schema_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+  "scientific_validator_dispatch_audit": {
+    "allowed_validator_ids_are_strings_only": true,
+    "callable_scientific_validator_registry_present": false,
+    "diagnostic": "SCIENTIFIC_RELEVANCE_VALIDATOR_NOT_EXECUTED",
+    "expected": "INDEPENDENT_SCIENTIFIC_ASSESSOR_EXECUTED",
+    "probe_id": "REVIEW_PROJECT_SCIENTIFIC_VALIDATOR_DISPATCH",
+    "scientific_relevance_dispatch_present": false,
+    "status": "FAIL"
+  },
+  "scope": {
+    "automated_action_selection_tooling_lane_closed": true,
+    "automatic_v3_authorized": false,
+    "automation_created": false,
+    "counterfeit_probe_artifacts_persisted": false,
+    "counterfeit_probe_cells_are_real_matrix_cells": false,
+    "counterfeit_temporary_probe_cells_executed": 70,
+    "family_envelope_expanded": false,
+    "gravitational_action_proposed_or_selected": false,
+    "gravitomagnetic_route_reopened": false,
+    "independent_v2_review_executed": true,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "real_equivalence_class_established": false,
+    "real_family_judgment_made": false,
+    "real_matrix_cells_computed": 0,
+    "real_requirements_family_analysis_executed": false,
+    "real_scientific_outcome_selected": false,
+    "real_survivor_matrix_computed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "tensor_field_equation_derived": false,
+    "v2_block_recorded": true,
+    "v3_created": false
+  },
+  "selected_next_target": "prepare_exploratory_native_gravitational_requirements_family_survey_v0",
+  "selected_next_target_kind": "NONAUTHORITATIVE_MANUALLY_ADJUDICATED_EXPLORATORY_SURVEY_ONLY",
+  "shared_path_control_audit": {
+    "all_controls_use_shared_entry_point_id": true,
+    "complete_future_project_path_shared": false,
+    "control_evidence_record_count": 272,
+    "control_provider_id": "INTERNAL_SYNTHETIC_CONTROL_PROVIDER_V2",
+    "control_provider_profile": "SYNTHETIC_CONTROL_REQUIREMENTS_ACTION_ANALYSIS_V2",
+    "control_provider_validation_status": "INTERNAL_SYNTHETIC_PROVIDER",
+    "control_records_with_project_attestation_hash_and_validator": 0,
+    "diagnostic": "SYNTHETIC_CONTROLS_BYPASS_PROJECT_PROVIDER_VALIDATION",
+    "probe_id": "REVIEW_CONTROL_AND_PROJECT_PROVIDER_PATH_INTEGRITY",
+    "production_entry_point_id": "evaluate_analysis_v2",
+    "project_provider_branch_exercised_by_controls": false,
+    "status": "FAIL"
+  },
+  "target": "review_native_gravitational_principle_requirements_and_action_selection_packet_v2_result",
+  "verdict": "BLOCKED_CLOSE_AUTOMATED_ACTION_SELECTION_TOOLING_LANE"
+}
