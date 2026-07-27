@@ -21,10 +21,42 @@ WITNESS_PATH = "ToeFormal/Release/CurrentScientificAuthorityWitness.lean"
 TARGET_PREFIX = "TOE_CURRENT_TARGET="
 AUTHORITY_PREFIX = "TOE_CURRENT_AUTHORITY="
 TARGET_GRAMMAR = re.compile(r"[a-z][a-z0-9_]*\Z")
+SCIENTIFIC_TARGET_VERBS = frozenset(
+    {
+        "analyze",
+        "authorize",
+        "calculate",
+        "claim",
+        "close",
+        "conduct",
+        "construct",
+        "derive",
+        "execute",
+        "prepare",
+        "prove",
+        "return",
+        "review",
+        "select",
+    }
+)
 
 
 class AuthorityConsistencyError(RuntimeError):
     pass
+
+
+def _validate_target_identifier(value: str, *, surface: str) -> None:
+    if not value:
+        raise AuthorityConsistencyError(f"{surface} target is empty")
+    if TARGET_GRAMMAR.fullmatch(value) is None:
+        raise AuthorityConsistencyError(
+            f"{surface} target violates target grammar: {value!r}"
+        )
+    verb = value.split("_", 1)[0]
+    if verb not in SCIENTIFIC_TARGET_VERBS:
+        raise AuthorityConsistencyError(
+            f"{surface} target has unknown target grammar verb: {verb!r}"
+        )
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -47,10 +79,7 @@ def _exact_prefixed_value(output: str, prefix: str) -> str:
     value = values[0]
     if not value:
         raise AuthorityConsistencyError(f"empty evaluated Lean value: {prefix}")
-    if TARGET_GRAMMAR.fullmatch(value) is None:
-        raise AuthorityConsistencyError(
-            f"evaluated Lean value violates target grammar: {value!r}"
-        )
+    _validate_target_identifier(value, surface="evaluated Lean")
     return value
 
 
@@ -107,8 +136,7 @@ def build_report(*, witness: dict[str, str] | None = None) -> dict[str, Any]:
     registry_kind = projection.get("current_target_kind")
     if not isinstance(registry_target, str) or not registry_target:
         raise AuthorityConsistencyError("registry target missing or empty")
-    if TARGET_GRAMMAR.fullmatch(registry_target) is None:
-        raise AuthorityConsistencyError("registry target violates target grammar")
+    _validate_target_identifier(registry_target, surface="registry")
     if not isinstance(registry_kind, str) or not registry_kind:
         raise AuthorityConsistencyError("registry target kind missing or empty")
 
@@ -117,6 +145,8 @@ def build_report(*, witness: dict[str, str] | None = None) -> dict[str, Any]:
     lean_authority = observed.get("lean_current_authority")
     if not isinstance(lean_target, str) or not isinstance(lean_authority, str):
         raise AuthorityConsistencyError("evaluated Lean witness is incomplete")
+    _validate_target_identifier(lean_target, surface="CurrentTarget")
+    _validate_target_identifier(lean_authority, surface="CurrentAuthority")
 
     maintenance_target = pointer.get("current_maintenance_target")
     if not isinstance(maintenance_target, str) or not maintenance_target:
