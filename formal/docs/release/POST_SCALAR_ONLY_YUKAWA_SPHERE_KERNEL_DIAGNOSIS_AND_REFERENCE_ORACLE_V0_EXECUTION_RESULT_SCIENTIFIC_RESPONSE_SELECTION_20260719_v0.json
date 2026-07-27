@@ -1,0 +1,629 @@
+{
+  "accepted_result_interpretation": {
+    "analytic_sphere_oracle": "NOT_QUALIFIED_OR_REFUTED",
+    "cause_of_original_kernel_failure": "UNRESOLVED",
+    "dft_root_cause": "UNKNOWN",
+    "diagnosis_rerun": "NOT_AUTHORIZED",
+    "physical_identifiability": "NOT_TESTED",
+    "principal_result": "REFERENCE_ORACLE_INADEQUATE_WITHIN_FROZEN_BUDGET",
+    "production_cubature": "UNADJUDICATED",
+    "stage_b": "NOT_AUTHORIZED"
+  },
+  "analytic_oracle_packet_preparation_requirements": {
+    "case_grid": {
+      "maximum_case_count": 9,
+      "minimum_case_count": 6,
+      "post_result_case_selection_forbidden": true,
+      "required_roles": [
+        "SMALL_R_OVER_LAMBDA",
+        "MODERATE_R_OVER_LAMBDA",
+        "LARGE_R_OVER_LAMBDA",
+        "WIDE_SEPARATION",
+        "SMALL_POSITIVE_GAP",
+        "EQUAL_RADII",
+        "UNEQUAL_RADII",
+        "ONE_FAILED_STAGE_A_CONFIGURATION"
+      ]
+    },
+    "execution_custody": {
+      "child_termination_timestamps_preserved": true,
+      "completed_stage_values_decision_bearing_only_if_preregistered": true,
+      "orphan_child_survival_is_execution_failure": true,
+      "process_group_termination_mandatory": true,
+      "raw_launcher_log_preserved": true,
+      "stage_level_atomic_status_preserved": true,
+      "timeout_initiation_timestamp_preserved": true
+    },
+    "forbidden_work": [
+      "FULL_39_CASE_DIAGNOSIS",
+      "OLD_PRODUCTION_CUBATURE_ORDERS_8_TO_48",
+      "FULL_NEAR_CONTACT_PROFILE",
+      "TORQUE",
+      "ANGULAR_DFT",
+      "APPARATUS_HARMONICS",
+      "FINAL_REAL_150_VECTOR",
+      "JACOBIAN",
+      "IDENTIFIABILITY",
+      "STAGE_B"
+    ],
+    "formula_contract": {
+      "candidate_yukawa": "U_Y=-A_Y*G*M1*M2*F(R1/lambda)*F(R2/lambda)*exp(-D/lambda)/D",
+      "independent_derivation_required": true,
+      "mass": "M_i=(4*pi/3)*rho_i*R_i^3",
+      "newtonian": "U_N=-G*M1*M2/D",
+      "sphere_form_factor": "F(x)=3*(x*cosh(x)-sinh(x))/x^3",
+      "surface_gap": "g=D-R1-R2>0",
+      "units_sign_coefficients_and_domain_required": true,
+      "yukawa_amplitude": "A_Y=1/3"
+    },
+    "independent_cross_check": {
+      "all_39_cases_forbidden": true,
+      "cross_agreement_required": true,
+      "path_count": 1,
+      "permitted_form": "ONE_LOW_DIMENSIONAL_HIGH_PRECISION_REDUCED_INTEGRAL",
+      "production_cubature_import_forbidden": true,
+      "self_convergence_required": true
+    },
+    "legitimate_outcomes": [
+      "ANALYTIC_SPHERE_ORACLE_QUALIFIED",
+      "ANALYTIC_FORMULA_DERIVED_BUT_NUMERICAL_EVALUATOR_UNSTABLE",
+      "ANALYTIC_ORACLE_CROSS_CHECK_FAILED",
+      "ANALYTIC_ORACLE_QUALIFICATION_TIMEOUT",
+      "SPHERE_ORACLE_NOT_VALID_OVER_REQUIRED_DOMAIN"
+    ],
+    "only_success_eligibility": "Only ANALYTIC_SPHERE_ORACLE_QUALIFIED may make a later production-method comparison eligible for a fresh selector.",
+    "resource_envelope_to_freeze": {
+      "budget_exhaustion_fails_closed": true,
+      "per_stage_wall_clock_caps_required": true,
+      "result_dependent_budget_change_forbidden": true,
+      "target_memory_mib_max": 2048,
+      "target_total_wall_clock_seconds_max": 600
+    },
+    "scientific_objective": "Determine whether exact Newtonian and homogeneous-sphere Yukawa formulas, with stable numerical evaluation and one independent low-dimensional check, form an efficient reference oracle under project conventions.",
+    "stable_evaluator": {
+      "large_x_scaled_or_log_regime_required": true,
+      "moderate_x_direct_regime_required": true,
+      "overflow_and_cancellation_mutations_required": true,
+      "overlap_continuity_tests_required": true,
+      "regime_boundaries_frozen_before_execution": true,
+      "small_x_series_required": true
+    },
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED"
+  },
+  "authority": {
+    "consumed_result_review_verdict": "ACCEPTED_REFERENCE_ORACLE_INADEQUATE_WITHIN_FROZEN_BUDGET",
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_RESULT_REVIEW_20260719_v0.md",
+        "sha256": "1d562a65092b1b914b002f5715667af1b9a0613b800c768413841c0ccbb2b234"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_RESULT_REVIEW_20260719_v0.json",
+        "sha256": "b09bc2c9955dff735d760e30b5a52d3edeebbe9513290ad44446a97751664e80"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_execution_result_review_v0.py",
+        "sha256": "c9554f9a4d35d590f5513894463e1c2348bc138fb0fe2fb96f1b75ed2a326526"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_execution_result_review_v0.py",
+        "sha256": "bd554cb7c08a82968608c06c5b0b5ce6011c03c21898bf0b4a39bb2903343e72"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOracleExecutionResultReviewV0.lean",
+        "sha256": "56eb14eb4172530e4e9e138b2aae79ba1370e2b5d02e38e43b694fd8697f895e"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result_scientific_response_selection_v0.py",
+      "sha256": "96229baacd0a05b97b7caaddfee85158fde939e561feb0e8c4363676e6309bda"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_V0_EXECUTION_RESULT_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+      "sha256": "ae3d4a16fbe4859dfb432c9533ab16dc3bad90271e027330ae8a4edf2f5241f2"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOracleV0ExecutionResultScientificResponseSelectionV0.lean",
+      "sha256": "f58b52e14d34979e07f2926f337d02a8ee46df2dab1fc3e3debff94f727e5d5b"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result_scientific_response_selection_v0.py",
+      "sha256": "d7ac6251f86ed96ebb97e87230667e721a4046f0e20e334180507a95d0cd8520"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selector authorizes preparation of one small analytic homogeneous-sphere Yukawa oracle qualification packet only. It derives or computes no oracle now, compares no production method, reruns no diagnosis or Stage A, and authorizes no torque, DFT, vector, Jacobian, identifiability, or Stage B work.",
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "disposition": "SELECTED_FOR_SMALL_ANALYTIC_ORACLE_PACKET_PREPARATION",
+        "route": "QUALIFY_ANALYTIC_HOMOGENEOUS_SPHERE_YUKAWA_ORACLE",
+        "scores": {
+          "anti_rabbit_hole_clarity": 5,
+          "computational_economy": 5,
+          "direct_alignment_with_accepted_block": 5,
+          "downstream_validation_leverage": 5,
+          "future_custody_engineering_fit": 5,
+          "independent_reference_value": 5,
+          "preserves_unadjudicated_production": 5,
+          "scientific_information_gain": 5,
+          "scope_reversibility": 5,
+          "staged_bounded_executability": 5
+        },
+        "target": "prepare_scalar_only_yukawa_analytic_sphere_oracle_qualification_packet_v0",
+        "weighted_score": 220
+      },
+      {
+        "candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "disposition": "DEFERRED_RUNTIME_LOCALIZATION_DOES_NOT_QUALIFY_A_SCIENTIFIC_ORACLE",
+        "route": "PERFORMANCE_ONLY_DIAGNOSIS_OF_FAILED_FOUR_PATH_EXECUTION",
+        "scores": {
+          "anti_rabbit_hole_clarity": 4,
+          "computational_economy": 3,
+          "direct_alignment_with_accepted_block": 4,
+          "downstream_validation_leverage": 2,
+          "future_custody_engineering_fit": 5,
+          "independent_reference_value": 1,
+          "preserves_unadjudicated_production": 5,
+          "scientific_information_gain": 3,
+          "scope_reversibility": 4,
+          "staged_bounded_executability": 4
+        },
+        "target": "prepare_scalar_only_yukawa_failed_oracle_execution_performance_diagnosis_packet_v0",
+        "weighted_score": 153
+      },
+      {
+        "candidate_id": "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE",
+        "disposition": "DEFERRED_UNTIL_ONE_SMALL_ANALYTIC_ORACLE_QUALIFICATION_IS_CONSIDERED",
+        "route": "CLOSE_INTERNAL_SYNTHETIC_TORSION_BALANCE_LANE",
+        "scores": {
+          "anti_rabbit_hole_clarity": 5,
+          "computational_economy": 5,
+          "direct_alignment_with_accepted_block": 1,
+          "downstream_validation_leverage": 0,
+          "future_custody_engineering_fit": 5,
+          "independent_reference_value": 0,
+          "preserves_unadjudicated_production": 5,
+          "scientific_information_gain": 0,
+          "scope_reversibility": 1,
+          "staged_bounded_executability": 5
+        },
+        "target": "select_post_scalar_internal_torsion_balance_lane_closure_v0",
+        "weighted_score": 123
+      },
+      {
+        "candidate_id": "APPARATUS_REDESIGN",
+        "disposition": "DEFERRED_PREMATURE_BEFORE_SMALL_ANALYTIC_ORACLE_TEST",
+        "route": "REDESIGN_AROUND_SIMPLER_ANALYTIC_GEOMETRIES",
+        "scores": {
+          "anti_rabbit_hole_clarity": 3,
+          "computational_economy": 2,
+          "direct_alignment_with_accepted_block": 2,
+          "downstream_validation_leverage": 3,
+          "future_custody_engineering_fit": 3,
+          "independent_reference_value": 2,
+          "preserves_unadjudicated_production": 4,
+          "scientific_information_gain": 2,
+          "scope_reversibility": 2,
+          "staged_bounded_executability": 3
+        },
+        "target": "prepare_redesigned_scalar_only_yukawa_internal_apparatus_packet_v0",
+        "weighted_score": 115
+      },
+      {
+        "candidate_id": "DIRECT_INTEGRATION_METHOD_REPLACEMENT",
+        "disposition": "DEFERRED_NO_ACCEPTED_REFERENCE_FOR_REPLACEMENT_VALIDATION",
+        "route": "REPLACE_PRODUCTION_INTEGRATION_BEFORE_ORACLE_QUALIFICATION",
+        "scores": {
+          "anti_rabbit_hole_clarity": 2,
+          "computational_economy": 2,
+          "direct_alignment_with_accepted_block": 3,
+          "downstream_validation_leverage": 3,
+          "future_custody_engineering_fit": 3,
+          "independent_reference_value": 1,
+          "preserves_unadjudicated_production": 2,
+          "scientific_information_gain": 3,
+          "scope_reversibility": 2,
+          "staged_bounded_executability": 2
+        },
+        "target": "prepare_scalar_only_yukawa_replacement_extended_body_kernel_packet_v0",
+        "weighted_score": 100
+      }
+    ],
+    "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+    "runner_up_score": 153,
+    "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+    "selected_score": 220,
+    "winning_margin": 67
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.sphere_kernel_diagnosis.execution_result.scientific_response_selection.v0",
+  "scope": {
+    "accepted_diagnosis_result_frozen": true,
+    "analytic_oracle_packet_preparation_authorized": true,
+    "analytic_oracle_packet_prepared_now": false,
+    "analytic_oracle_qualification_executed": false,
+    "apparatus_redesign_authorized": false,
+    "candidate_count": 5,
+    "diagnosis_rerun_authorized": false,
+    "final_real_150_vector_authorized": false,
+    "jacobian_or_identifiability_authorized": false,
+    "lane_closure_authorized": false,
+    "performance_diagnosis_authorized": false,
+    "production_cubature_comparison_authorized": false,
+    "production_method_replacement_authorized": false,
+    "scientific_response_selector_executed": true,
+    "stage_a_reopened": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false
+  },
+  "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+  "selected_next_target": "prepare_scalar_only_yukawa_analytic_sphere_oracle_qualification_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_SMALL_ANALYTIC_SPHERE_ORACLE_PACKET_NO_EXECUTION_NO_PRODUCTION_COMPARISON",
+  "selected_route": "QUALIFY_ANALYTIC_HOMOGENEOUS_SPHERE_YUKAWA_ORACLE",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 30,
+    "pass_count": 30,
+    "rows": [
+      {
+        "gate_id": "AUTHORITY_HASHES_MATCH",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ACCEPTED_TIMEOUT_RESULT_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_ORACLE_NOT_QUALIFIED_OR_REFUTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRODUCTION_REMAINS_UNADJUDICATED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CAUSE_OF_STAGE_A_FAILURE_UNRESOLVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RERUN_REMAINS_UNAUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FIVE_BOUNDED_OPTIONS_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DIRECT_METHOD_REPLACEMENT_EXPLICITLY_RANKED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_ROUTE_UNIQUE_BASELINE_WINNER",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THIRTY_SENSITIVITY_VARIANTS_EXECUTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_ROUTE_WINS_ALL_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SMALL_SIX_TO_NINE_CASE_GRID_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEWTONIAN_DERIVATION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "YUKAWA_FORM_FACTOR_DERIVATION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SMALL_MODERATE_LARGE_X_REGIMES_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "REGIME_OVERLAP_TESTS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ONE_LOW_DIMENSIONAL_CROSS_CHECK_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRODUCTION_CUBATURE_EXCLUDED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PROCESS_GROUP_TERMINATION_MANDATORY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RAW_LAUNCHER_LOG_MANDATORY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TIMEOUT_AND_CHILD_TERMINATION_TIMESTAMPS_MANDATORY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "STAGE_LEVEL_ATOMIC_STATUS_MANDATORY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_MINUTE_TARGET_BUDGET_CEILING",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PACKET_PREPARED_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_ORACLE_EXECUTION_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_COMPARISON_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_TORQUE_OR_DFT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_VECTOR_JACOBIAN_OR_IDENTIFIABILITY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FRESH_REVIEW_REQUIRED_BEFORE_EXECUTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_id": "POST_SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_V0_EXECUTION_RESULT_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0",
+  "selection_policy": {
+    "candidate_count": 5,
+    "criteria_weights": {
+      "anti_rabbit_hole_clarity": 4,
+      "computational_economy": 5,
+      "direct_alignment_with_accepted_block": 5,
+      "downstream_validation_leverage": 4,
+      "future_custody_engineering_fit": 4,
+      "independent_reference_value": 5,
+      "preserves_unadjudicated_production": 5,
+      "scientific_information_gain": 4,
+      "scope_reversibility": 3,
+      "staged_bounded_executability": 5
+    },
+    "criterion_count": 10,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 47,
+    "rows": [
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 133,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 195,
+        "variant": "omit_direct_alignment_with_accepted_block"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 148,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 195,
+        "variant": "omit_independent_reference_value"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 133,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 195,
+        "variant": "omit_staged_bounded_executability"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 141,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 200,
+        "variant": "omit_scientific_information_gain"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 138,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 195,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 128,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 195,
+        "variant": "omit_preserves_unadjudicated_production"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 133,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 200,
+        "variant": "omit_future_custody_engineering_fit"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 145,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 200,
+        "variant": "omit_downstream_validation_leverage"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 137,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 200,
+        "variant": "omit_anti_rabbit_hole_clarity"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 141,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 205,
+        "variant": "omit_scope_reversibility"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 149,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "direct_alignment_with_accepted_block_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 157,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "direct_alignment_with_accepted_block_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 152,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "independent_reference_value_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 154,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "independent_reference_value_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 149,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "staged_bounded_executability_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 157,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "staged_bounded_executability_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 150,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "scientific_information_gain_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 156,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "scientific_information_gain_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 150,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 156,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 148,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "preserves_unadjudicated_production_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 158,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "preserves_unadjudicated_production_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 148,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "future_custody_engineering_fit_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 158,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "future_custody_engineering_fit_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 151,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "downstream_validation_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 155,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "downstream_validation_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 149,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "anti_rabbit_hole_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 157,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "anti_rabbit_hole_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 149,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 215,
+        "variant": "scope_reversibility_-1"
+      },
+      {
+        "runner_up_candidate_id": "FAILED_EXECUTION_PERFORMANCE_DIAGNOSIS",
+        "runner_up_score": 157,
+        "selected_candidate_id": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION",
+        "selected_score": 225,
+        "variant": "scope_reversibility_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 30
+  },
+  "target": "select_post_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result_scientific_response_v0",
+  "verdict": "SELECTED_ANALYTIC_HOMOGENEOUS_SPHERE_YUKAWA_ORACLE_QUALIFICATION_PACKET_PREPARATION"
+}

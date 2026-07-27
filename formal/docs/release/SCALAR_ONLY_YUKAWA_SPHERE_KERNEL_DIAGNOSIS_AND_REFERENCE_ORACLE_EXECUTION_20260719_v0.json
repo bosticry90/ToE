@@ -1,0 +1,119 @@
+{
+  "artifact_manifest": {
+    "artifact_count": 1,
+    "rows": [
+      {
+        "byte_count": 747,
+        "relative_path": "formal/output/scalar_only_yukawa_sphere_kernel_diagnosis_v0/launcher_timeout_evidence.json",
+        "sha256": "e33d1ae2831212128bc40c7de5877e9cd54e090eb620aacad9b118d18ac6466b"
+      }
+    ]
+  },
+  "authority": {
+    "authorized_diagnosis_execution_count": 1,
+    "consumed_diagnosis_execution_count": 1,
+    "consumed_review_verdict": "KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_CONTRACT_READY",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_REVIEW_20260719_v0.md",
+        "sha256": "aadba4fbfd969462a3b5394cba2e42848ba94126b6a438c9803e244775d5ff44"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_REVIEW_20260719_v0.json",
+        "sha256": "d3936adb0c7ba047141d9d4e964ba4a6873dee19b4a769f4d5cc9b4f4cebf1fd"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_review_v0.py",
+        "sha256": "478c7b3039322e9fc6d7ecbb591c9f98c05f2ef6801b6c9f9c20ac550a76ed82"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_review_v0.py",
+        "sha256": "6c16c0c8f4ffd71de5a18f15fe16e5c7390b860cd3c58ec31a829bf2111a7d7b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOraclePacketReviewV0.lean",
+        "sha256": "4c0a0efe439cc7329dfc16d6830e910c07503969836badf29715a7bee653a35c"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "The one bounded diagnosis exhausted its frozen total wall-clock budget before the required reference-oracle plateau and cross-oracle acceptance were serialized. The run is consumed and fails closed as REFERENCE_ORACLE_INADEQUATE. This record does not identify a production implementation defect, judge fixed-order cubature, replace a method, rerun Stage A, test identifiability, or authorize Stage B.",
+  "current_posture": {
+    "authorized_diagnosis_executions": 1,
+    "consumed_diagnosis_executions": 1,
+    "jacobian_or_identifiability": "NOT_AUTHORIZED",
+    "next_authority": "review_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result",
+    "production_method_root_cause": "NOT_ADJUDICATED",
+    "production_repair": "NOT_AUTHORIZED",
+    "reference_oracle": "NOT_VALIDATED_WITHIN_FROZEN_WORK_CAP",
+    "stage_a_rerun": "NOT_AUTHORIZED",
+    "stage_b": "NOT_AUTHORIZED"
+  },
+  "execution_id": "SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_20260719_v0",
+  "execution_summary": {
+    "cross_oracle_acceptance_established": false,
+    "oracle_contract_pass": false,
+    "production_path_judged_against_accepted_oracle": false,
+    "reference_plateau_established": false,
+    "root_cause": {
+      "estimated_cost": {
+        "frozen_budget_seconds": 3600,
+        "observed_lower_bound_seconds": 3604.1,
+        "reference_contract_completed_within_budget": false
+      },
+      "oracle_availability_outcome": "ANALYTIC_OR_REDUCED_SPHERE_ORACLE_NOT_VALIDATED",
+      "predicate_evidence": {
+        "atomic_partial_results_recoverable": false,
+        "authorized_command": ".\\py.ps1 -m formal.python.tools.scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0 --execute",
+        "canonical_output_directory_existed_at_timeout": false,
+        "canonical_report_existed_at_timeout": false,
+        "cap_excess_seconds": 4.1,
+        "contract_rule_applied": "FAIL_CLOSED_REFERENCE_ORACLE_INADEQUATE",
+        "frozen_total_wall_clock_cap_seconds": 3600,
+        "launcher_exit_code": 124,
+        "launcher_reported_wall_time_seconds": 3604.1,
+        "post_timeout_scientific_calculation_performed": false,
+        "scientific_rerun_performed": false,
+        "surviving_matching_python_process_count_after_enforcement": 0,
+        "surviving_matching_python_process_count_before_enforcement": 2
+      },
+      "principal_labels": [
+        "REFERENCE_ORACLE_INADEQUATE"
+      ],
+      "principal_outcome": "REFERENCE_ORACLE_INADEQUATE",
+      "recommended_numerical_remedy": "STOP_FOR_INDEPENDENT_RESULT_REVIEW_AND_FRESH_SELECTOR"
+    },
+    "work_packages_completed_before_timeout": "NOT_RECOVERABLE_FROM_ATOMIC_EXECUTOR"
+  },
+  "oracle_availability_outcome": "ANALYTIC_OR_REDUCED_SPHERE_ORACLE_NOT_VALIDATED",
+  "principal_labels": [
+    "REFERENCE_ORACLE_INADEQUATE"
+  ],
+  "principal_outcome": "REFERENCE_ORACLE_INADEQUATE",
+  "schema_id": "toe.scalar_only_yukawa.sphere_kernel_diagnosis.execution.v0",
+  "scope": {
+    "automatic_repair_authorized": false,
+    "bounded_diagnosis_execution_performed": true,
+    "eta_lambda_computed": false,
+    "fail_closed_total_work_cap_applied": true,
+    "final_real_150_vector_produced": false,
+    "integration_method_replaced": false,
+    "jacobian_computed": false,
+    "physical_identifiability_evaluated": false,
+    "post_diagnosis_independent_result_review_required": true,
+    "post_review_fresh_selector_required": true,
+    "production_kernel_changed": false,
+    "scalar_range_or_alpha_conclusion_issued": false,
+    "scientific_rerun_performed": false,
+    "sensitivity_forecast_produced": false,
+    "single_execution_authority_consumed": true,
+    "singular_values_computed": false,
+    "stage_a_rerun_performed": false,
+    "stage_b_authorized": false,
+    "synthetic_noise_used": false
+  },
+  "selected_next_target": "review_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result",
+  "selected_next_target_kind": "INDEPENDENT_BOUNDED_KERNEL_DIAGNOSIS_RESULT_REVIEW_ONLY",
+  "status": "COMPLETED_ONCE_FAIL_CLOSED_TOTAL_WORK_CAP_PENDING_INDEPENDENT_RESULT_REVIEW",
+  "target": "execute_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_once"
+}
