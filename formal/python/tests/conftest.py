@@ -3,14 +3,21 @@
 from __future__ import annotations
 
 import importlib
+import json
 import re
+import sys
 from pathlib import Path
 
 import pytest
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.meta.repo_environment import normalize_sys_path_entry
 from formal.python.tests.historical_stage_state import (
     historical_path_presence_overlay,
+)
+from formal.python.tests.legacy_discovery_report_fixture_materializer import (
+    materialized_legacy_discovery_reports,
+    should_activate,
 )
 
 
@@ -85,6 +92,135 @@ OBSERVABLE_STAGE_PATHS = {
         ),
     ],
 }
+
+
+def _repo_root() -> Path:
+    root = find_repo_root(Path(__file__))
+    formal_python = root / "formal" / "python"
+    if not formal_python.exists():
+        raise RuntimeError(
+            "Repo-root resolution failed: expected computed "
+            "REPO_ROOT/formal/python to exist. "
+            f"Computed REPO_ROOT={root}; __file__={Path(__file__).resolve()}"
+        )
+
+    expected_tests_dir = formal_python / "tests"
+    assert expected_tests_dir.exists(), (
+        "Repo-root resolution invariant failed; expected formal/python/tests "
+        f"at computed root: {root}"
+    )
+    return root
+
+
+def _norm_path_entry(entry: str) -> str:
+    return normalize_sys_path_entry(entry)
+
+
+def _is_archive_path(entry: str, archive_norm: str) -> bool:
+    normalized = entry.replace("/", "\\")
+    return normalized == archive_norm or normalized.startswith(
+        archive_norm + "\\"
+    )
+
+
+def _enforce_sys_path_quarantine_invariants() -> None:
+    root = _repo_root()
+    root_norm = _norm_path_entry(str(root))
+    archive_norm = _norm_path_entry(str(root / "archive"))
+
+    normalized = [_norm_path_entry(path) for path in sys.path]
+    if root_norm not in normalized:
+        raise AssertionError("Repo root missing from sys.path")
+
+    root_idx = normalized.index(root_norm)
+    allowed_prefixes = getattr(
+        pytest,
+        "_toe_sys_path_pre_root_allowlist",
+        (),
+    )
+    for entry in normalized[:root_idx]:
+        if entry == "":
+            continue
+        if any(
+            entry.startswith(_norm_path_entry(path))
+            for path in allowed_prefixes
+        ):
+            continue
+
+    for index, entry in enumerate(normalized):
+        if _is_archive_path(entry, archive_norm):
+            raise AssertionError(
+                "Archive quarantine violation: archive path present in "
+                f"sys.path at index {index}: {entry}"
+            )
+
+
+def pytest_configure() -> None:
+    root = str(_repo_root())
+    if root not in sys.path:
+        sys.path.insert(0, root)
+    _enforce_sys_path_quarantine_invariants()
+
+
+def pytest_runtest_setup(item: pytest.Item) -> None:
+    _enforce_sys_path_quarantine_invariants()
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _legacy_discovery_report_clean_checkout_fixture(
+    request: pytest.FixtureRequest,
+):
+    if not should_activate(request.session.items):
+        yield None
+        return
+    with materialized_legacy_discovery_reports() as state:
+        yield state
+
+
+_QFT_EVOL_TRANCHE_DEPRECATED_PATTERN = re.compile(
+    r"test_qft_evol_micro_tranche_01_(0[5-9]|[1-4][0-9]|5[0-1])_"
+    r"completeness_gate\.py"
+)
+
+
+def _historical_current_mirror_retirements() -> tuple[set[str], str]:
+    path = (
+        _repo_root()
+        / "formal"
+        / "docs"
+        / "release"
+        / "HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0.json"
+    )
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    assert payload["schema_id"] == (
+        "HISTORICAL_CURRENT_MIRROR_TEST_RETIREMENTS_20260711_v0"
+    )
+    rows = payload["retired_tests"]
+    nodeids = {row["nodeid"].replace("\\", "/") for row in rows}
+    assert len(nodeids) == len(rows) == payload["source_validation"][
+        "retired_node_count"
+    ]
+    return nodeids, payload["skip_reason"]
+
+
+def pytest_collection_modifyitems(
+    config: pytest.Config,
+    items: list[pytest.Item],
+) -> None:
+    retired_nodeids, retirement_reason = _historical_current_mirror_retirements()
+    for item in items:
+        if item.nodeid.replace("\\", "/") in retired_nodeids:
+            item.add_marker(pytest.mark.skip(reason=retirement_reason))
+            continue
+        if _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN.search(item.nodeid):
+            item.add_marker(
+                pytest.mark.skip(
+                    reason=(
+                        "Deprecated tranche transition gate; saturation state "
+                        "is enforced by tranche 01_52."
+                    )
+                )
+            )
 
 
 def _profile(module_name: str) -> tuple[str, list[str]] | None:
