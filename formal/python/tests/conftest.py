@@ -15,6 +15,21 @@ from formal.python.tests.historical_stage_state import (
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
+EOTWASH_EXTERNAL_CUSTODY_ROOT = (
+    REPO_ROOT / "formal/data/eotwash_2020_primary_evidence_acquisition_v0"
+)
+EOTWASH_REPLAY_ONLY_TESTS = {
+    (
+        "test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0.py::"
+        "test_execution_regenerates_exactly_and_freezes_authority_and_"
+        "acquired_objects"
+    ),
+    (
+        "test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_"
+        "result_review_v0.py::"
+        "test_review_regenerates_and_freezes_execution_and_raw_custody"
+    ),
+}
 MECHANISM_OUTPUT_ROOT = (
     "formal/output/dirac_maxwell_instrumented_r13_mechanism_v0"
 )
@@ -104,6 +119,20 @@ def _profile(module_name: str) -> tuple[str, list[str]] | None:
             OBSERVABLE_STAGE_PATHS[version],
         )
     return None
+
+
+@pytest.fixture(autouse=True)
+def _external_custody_replay_boundary(request: pytest.FixtureRequest):
+    node_tail = request.node.nodeid.replace("\\", "/").rsplit("/", 1)[-1]
+    if (
+        node_tail in EOTWASH_REPLAY_ONLY_TESTS
+        and not EOTWASH_EXTERNAL_CUSTODY_ROOT.is_dir()
+    ):
+        pytest.skip(
+            "historical stage-state replay requires externally custodied "
+            "Eot-Wash acquisition bytes; committed archive-integrity gates "
+            "remain active"
+        )
 
 
 @pytest.fixture(scope="module", autouse=True)
