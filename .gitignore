@@ -9,3 +9,9 @@ formal/output/reports/toe_orchestration_report_v0.json
 formal/output/reports/toe_integrity_snapshot_report_v0.json
 formal/output/reports/toe_integrity_snapshot_v0.sqlite3
 formal/rust/**/target/
+
+# July 18 external evidence acquisition is retained in immutable custody only.
+# Redistribution, privacy, and passive-content security review remain unresolved.
+# Hashes and path-level dispositions are recorded in the July 16--19 tranche
+# classification release record.
+formal/data/eotwash_2020_primary_evidence_acquisition_v0/
