@@ -596,6 +596,8 @@ import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityAdmissibleSourceAndFrozen
 import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityAdmissibleSourceAndFrozenTheoryPacketV0
 import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionV0
+import ToeFormal.Derivation.QFTGRQuadraticPhysicalSpin2PrincipalBlockResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticPhysicalSpin2PrincipalBlockV0
 import ToeFormal.Derivation.QFTGRScalarSandbox
 import ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource
 import ToeFormal.Derivation.QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket
@@ -1255,6 +1257,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1248
+def committedModuleCount : Nat := 1250
 
 end ToeFormalAll
