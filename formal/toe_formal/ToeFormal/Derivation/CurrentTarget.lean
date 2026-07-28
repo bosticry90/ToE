@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityAdmissibleSourceAndFrozenTheoryPacketResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0.selectedNextTarget
+  QFTGRQuadraticHyperbolicityAdmissibleSourceAndFrozenTheoryPacketResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0.reviewId
+  QFTGRQuadraticHyperbolicityAdmissibleSourceAndFrozenTheoryPacketResultReviewV0.reviewId
 
-theorem current_target_is_fresh_quadratic_hyperbolicity_source_packet :
+theorem current_target_is_quadratic_physical_spin2_principal_block :
     currentLiveTarget =
-      "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0" := by
+      "derive_qft_gr_quadratic_physical_spin2_principal_block_v0" := by
   rfl
 
 end CurrentTarget

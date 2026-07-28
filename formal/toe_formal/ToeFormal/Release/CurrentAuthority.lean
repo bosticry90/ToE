@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0" := by
+      "derive_qft_gr_quadratic_physical_spin2_principal_block_v0" := by
   native_decide
 
 end CurrentAuthority
