@@ -19,21 +19,22 @@ The dated status narratives below are append-only checkpoint history. For the li
 CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)
 - Route: `BOUNDED_RECONCILIATION_OR_REPLAY`; no preserved July 13–19 or post-recovery descendant was automatically adopted.
 - Accepted result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED` for the generic physical spin-2 block of the frozen vacuum quadratic action.
-- Exact live target: `derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean`.
-- Report: `formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json`.
-- Boundary: derive the exact vacuum generalized-harmonic auxiliary system only. An adapted-norm local well-posedness theorem, source extension, Maxwell–Dirac execution, preserved-descendant adoption, and Yukawa work are not authorized by this transition.
+- Accepted reduced system: `U=(g_mn,R,r_a,c_mna,S_mn)` with exact wave equations and algebraic equivalence to the fourth-order metric equation only on the full constraint surface.
+- Exact live target: `derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean`.
+- Report: `formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json`.
+- Boundary: derive homogeneous propagation for the complete gauge and auxiliary constraint set only. A reduced principal-symbol result, adapted-norm local well-posedness theorem, source extension, Maxwell–Dirac execution, preserved-descendant adoption, and Yukawa work are not authorized by this transition.
 
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: EXACT_REDUCED_SYSTEM_ACCEPTED_CONSTRAINT_PROPAGATION_AND_WELL_POSEDNESS_NOT_ESTABLISHED
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_derivation
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

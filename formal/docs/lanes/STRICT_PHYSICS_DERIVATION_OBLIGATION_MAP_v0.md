@@ -13,16 +13,17 @@ Non-claim boundary:
 - This document is a strict physics work map, not a release-governance expansion surface.
 
 Current strict QFT–GR obligation (2026-07-28):
-- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0`
-- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_ACCEPTED`
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
-- Required derivation: obtain the exact generalized-harmonic vacuum wave system for `R`, trace-free `S_mn`, and `g_mn`; enumerate every lower-order term; and prove homogeneous propagation for every frozen constraint.
+- Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
+- Required derivation: prove homogeneous propagation for the complete gauge, definition, integrability, trace, divergence, Hamiltonian, and momentum constraint set.
 - No adapted-norm local well-posedness result is claimed. The one-derivative-loss grading is a candidate to test, not an accepted theorem.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
 

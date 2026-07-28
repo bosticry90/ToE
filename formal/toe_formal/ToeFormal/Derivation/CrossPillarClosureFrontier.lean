@@ -197,7 +197,7 @@ def currentLiveNextStrictTargetV0 : String :=
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
-import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -464,7 +464,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
+        "derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0"
       status := .retained }
   ]
 
@@ -482,33 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the accepted Phase B packet review. -/
+/-- Previous live target consumed by the accepted reduced-system review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0"
-
-/-- Current live target after the accepted Phase B packet review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
 
-/-- Evidence certificate for the Phase B packet review. -/
+/-- Current live target after the accepted reduced-system result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0"
+
+/-- Evidence certificate for the reduced-system result review. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean"
+  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean"
 
-/-- Result-review report supporting the reduced-system derivation target. -/
+/-- Result-review report supporting the constraint-propagation target. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json"
+  "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json"
 
-/-- Accepted Phase B packet outcome supporting the reduced-system target. -/
+/-- Accepted reduced-system outcome supporting constraint propagation. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED"
+  "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_ACCEPTED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION"
+  "EXACT_REDUCED_SYSTEM_ACCEPTED_CONSTRAINT_PROPAGATION_AND_WELL_POSEDNESS_NOT_ESTABLISHED"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation"
+  "qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_derivation"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
+    "derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -646,18 +646,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The accepted Phase B packet review supports only reduced-system derivation. -/
+/-- The accepted reduced-system review supports constraint propagation only. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json" ∧
+        "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED" ∧
+        "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_ACCEPTED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION" ∧
+        "EXACT_REDUCED_SYSTEM_ACCEPTED_CONSTRAINT_PROPAGATION_AND_WELL_POSEDNESS_NOT_ESTABLISHED" ∧
       currentLiveNextStrictTargetKindV0 =
-        "qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation" := by
+        "qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_derivation" := by
   constructor
   · rfl
   constructor

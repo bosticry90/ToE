@@ -12,25 +12,27 @@ Purpose:
 
 Current scientific checkpoint (2026-07-28):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`.
+- The exact scientific target is `derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0`.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
-- The active target is limited to deriving the exact vacuum generalized-harmonic auxiliary system. No adapted-norm theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows from this transition.
+- The exact vacuum generalized-harmonic system has now been derived for `U=(g_mn,R,r_a,c_mna,S_mn)`, with `r_a=partial_a R` and `c_mna=partial_a g_mn`. Its trace/trace-free kinetic map has determinant `2 beta (3 alpha + beta)`, so the reduction is invertible exactly in the frozen generic principal sector.
+- Algebraic equivalence to the fourth-order metric equation is accepted only on the complete gauge, definition, trace, divergence, integrability, Hamiltonian, and momentum constraint surface. An arbitrary auxiliary solution is not an original metric solution.
+- The active target is limited to deriving a closed homogeneous propagation system for those constraints. No reduced-system principal-symbol result, adapted-norm theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows from this transition.
 - Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v2. Its scientific-target field is a closeout-time snapshot, not a live mirror.
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: EXACT_REDUCED_SYSTEM_ACCEPTED_CONSTRAINT_PROPAGATION_AND_WELL_POSEDNESS_NOT_ESTABLISHED
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_derivation
 
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
