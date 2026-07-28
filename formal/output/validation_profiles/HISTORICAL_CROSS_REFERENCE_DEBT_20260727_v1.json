@@ -1,0 +1,17 @@
+{
+  "current_reference_missing": [],
+  "current_reference_missing_count": 0,
+  "current_verdict_affected": false,
+  "disposition": "HISTORICAL_REFERENCES_RESOLVE_WITH_PRESERVED_NOT_ADOPTED_TRANCHE",
+  "historical_missing": [],
+  "historical_missing_by_source": {},
+  "historical_missing_count": 0,
+  "historical_reports_restored": 0,
+  "historical_source_count": 0,
+  "preserved_source_tip": "5aeb74ae46db2c397da40be0286287a5a63d5642",
+  "preserved_tranche_scientifically_adopted": false,
+  "restructured_baseline_commit": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3",
+  "schema_id": "HISTORICAL_CROSS_REFERENCE_DEBT_20260727_v1",
+  "scientific_adoption_inferred": false,
+  "scientific_posture": "B-BLOCKED"
+}

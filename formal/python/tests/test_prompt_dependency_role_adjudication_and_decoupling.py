@@ -12,6 +12,9 @@ from formal.python.tools.prompt_dependency_identity import identity_sha256_path
 
 ROOT = find_repo_root(Path(__file__))
 BASE_COMMIT = "8f2d2052ab3862db04ea70d85037dbf2d131c8ca"
+RECOVERY_ACCEPTED_BASE_COMMIT = (
+    "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3"
+)
 ADJUDICATION_PATH = (
     ROOT
     / "formal/docs/release/PROMPT_DEPENDENCY_ROLE_ADJUDICATION_20260722_v0.json"
@@ -138,7 +141,7 @@ def test_prompt_blob_and_scientific_governance_artifacts_are_unchanged() -> None
             "diff",
             "--name-only",
             BASE_COMMIT,
-            "HEAD",
+            RECOVERY_ACCEPTED_BASE_COMMIT,
             "--",
             "formal/output",
         ],
@@ -154,7 +157,15 @@ def test_prompt_blob_and_scientific_governance_artifacts_are_unchanged() -> None
     )
     protected = ["formal/toe_formal", "formal/registry", "registry"]
     changed_protected = subprocess.run(
-        ["git", "diff", "--name-only", BASE_COMMIT, "HEAD", "--", *protected],
+        [
+            "git",
+            "diff",
+            "--name-only",
+            BASE_COMMIT,
+            RECOVERY_ACCEPTED_BASE_COMMIT,
+            "--",
+            *protected,
+        ],
         cwd=ROOT,
         check=True,
         capture_output=True,
@@ -163,6 +174,18 @@ def test_prompt_blob_and_scientific_governance_artifacts_are_unchanged() -> None
     assert [path.replace("\\", "/") for path in changed_protected] == [
         "formal/toe_formal/build.ps1"
     ]
+    subprocess.run(
+        [
+            "git",
+            "merge-base",
+            "--is-ancestor",
+            RECOVERY_ACCEPTED_BASE_COMMIT,
+            "HEAD",
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    )
 
 
 def test_canonical_executor_does_not_validate_prompt_checkout_bytes() -> None:

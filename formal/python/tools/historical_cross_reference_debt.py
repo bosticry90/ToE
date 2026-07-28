@@ -16,7 +16,7 @@ STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 REPORT_PATH = (
     REPO_ROOT
     / "formal/output/validation_profiles/"
-    "HISTORICAL_CROSS_REFERENCE_DEBT_20260725_v0.json"
+    "HISTORICAL_CROSS_REFERENCE_DEBT_20260727_v1.json"
 )
 CURRENT_AUTHORITY = REPO_ROOT / "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json"
 CURRENT_ROOTS = (
@@ -153,17 +153,29 @@ def build_report() -> dict[str, Any]:
     source_counts: dict[str, int] = {}
     for row in historical_missing:
         source_counts[row["source"]] = source_counts.get(row["source"], 0) + 1
+    disposition = (
+        "HISTORICAL_REFERENCES_RESOLVE_WITH_PRESERVED_NOT_ADOPTED_TRANCHE"
+        if not historical_missing
+        else "HISTORICAL_QUARANTINED_VISIBLE"
+    )
     return {
-        "schema_id": "HISTORICAL_CROSS_REFERENCE_DEBT_20260725_v0",
-        "current_relative_to_commit": "380db2de3aca8c19fdf1ab9c43d0e6629d232009",
+        "schema_id": "HISTORICAL_CROSS_REFERENCE_DEBT_20260727_v1",
+        "restructured_baseline_commit": (
+            "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3"
+        ),
+        "preserved_source_tip": (
+            "5aeb74ae46db2c397da40be0286287a5a63d5642"
+        ),
         "current_reference_missing_count": len(current_missing),
         "current_reference_missing": current_missing,
         "historical_missing_count": len(historical_missing),
         "historical_source_count": len(source_counts),
         "historical_missing_by_source": dict(sorted(source_counts.items())),
         "historical_missing": historical_missing,
-        "disposition": "HISTORICAL_QUARANTINED_VISIBLE",
+        "disposition": disposition,
         "historical_reports_restored": 0,
+        "preserved_tranche_scientifically_adopted": False,
+        "scientific_adoption_inferred": False,
         "current_verdict_affected": False,
         "scientific_posture": "B-BLOCKED"
     }

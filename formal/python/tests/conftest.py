@@ -224,6 +224,18 @@ def pytest_collection_modifyitems(
 
 
 def _profile(module_name: str) -> tuple[str, list[str]] | None:
+    if module_name.endswith(
+        "test_physics_math_throughput_baseline_snapshot_gate"
+    ):
+        return (
+            "PHYSICS_MATH_THROUGHPUT_BASELINE_HISTORICAL_STAGE",
+            [
+                (
+                    "formal/output/reports/"
+                    "physics_math_throughput_baseline_20260407_v0.json"
+                )
+            ],
+        )
     freeze_review = re.search(
         r"mechanism_experiment_numerical_freeze_packet_review_v([0-3])$",
         module_name,

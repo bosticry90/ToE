@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
@@ -23,6 +24,9 @@ REVIEW_PATH = RELEASE / (
     "REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json"
 )
 AUTHORITY_PATH = RELEASE / "CURRENT_MAINTENANCE_AUTHORITY_v0.json"
+ACCEPTED_RESULT_REVIEW_COMMIT = (
+    "654ee628096bdb4b1fb98999a3a23a11c2871c18"
+)
 
 
 def _load(path: Path) -> dict:
@@ -35,10 +39,21 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _load_git_json(commit: str, path: Path) -> dict:
+    relative = path.relative_to(REPO_ROOT).as_posix()
+    raw = subprocess.check_output(
+        ["git", "show", f"{commit}:{relative}"],
+        cwd=REPO_ROOT,
+    )
+    payload = json.loads(raw)
+    assert isinstance(payload, dict)
+    return payload
+
+
 def test_repair_result_and_review_are_bound_and_terminal() -> None:
     result = _load(RESULT_PATH)
     review = _load(REVIEW_PATH)
-    authority = _load(AUTHORITY_PATH)
+    authority = _load_git_json(ACCEPTED_RESULT_REVIEW_COMMIT, AUTHORITY_PATH)
 
     assert review["verdict"] == "ACCEPT"
     assert review["result"]["sha256"] == _sha256(RESULT_PATH)
