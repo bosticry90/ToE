@@ -1,0 +1,106 @@
+{
+  "schema_id": "toe.maintenance.july_16_19_restructured_reconciliation.divergent_lineage_inventory.v0",
+  "captured_at_utc": "2026-07-27T00:00:00Z",
+  "reconciliation_branch": "codex/july-16-19-restructured-reconciliation",
+  "protected_lineages": [
+    {
+      "role": "RESTRUCTURED_ACCEPTED_REPLAY_BASELINE",
+      "commit": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3",
+      "tag": "preservation/restructured-baseline-a099c686",
+      "status": "AUTHORITATIVE_MAINTENANCE_REPLAY_BASE"
+    },
+    {
+      "role": "JULY_16_19_SOURCE_INTEGRATION_LINEAGE",
+      "commit": "5aeb74ae46db2c397da40be0286287a5a63d5642",
+      "tag": "preservation/july-16-19-source-5aeb74ae",
+      "status": "PRESERVED_SOURCE_NOT_FUTURE_TRUNK_NOT_SCIENTIFICALLY_ADOPTED"
+    },
+    {
+      "role": "POST_RECOVERY_SCIENTIFIC_DESCENDANT_LINEAGE",
+      "commit": "e785b98d8aa9bc7c755e5b6767706bcd29d285a6",
+      "tree": "5c3634697fc48291d4e75421874b68f5109b7d92",
+      "tag": "preservation/post-recovery-scientific-lineage-e785b98d",
+      "branch": "codex/post-full-higher-derivative-constraint-set-qft-gr-scientific-target-selection-v0",
+      "status": "PRESERVED_SEPARATE_PENDING_SCIENTIFIC_AUTHORITY_ADJUDICATION"
+    }
+  ],
+  "post_recovery_scientific_descendant_relationship": {
+    "merge_base": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3",
+    "commits_after_restructured_baseline": 104,
+    "restructured_baseline_is_ancestor": true,
+    "blind_merge_authorized": false,
+    "maintenance_replay_adopts_this_lineage": false,
+    "maintenance_replay_rejects_this_lineage": false,
+    "separate_scientific_reconciliation_required": true,
+    "tip_local_registry_target": "derive_qft_gr_full_higher_derivative_local_well_posedness_principal_domain_v0",
+    "tip_local_registry_target_is_current_reconciliation_authority": false
+  },
+  "case_insensitive_acceptance_named_commits": [
+    {
+      "commit": "9c979656b8105d49845add5e242f0cb4fd23c208",
+      "subject": "accept V2 reproducible non-enrollment decision"
+    },
+    {
+      "commit": "198d98d49d1f6c70e546e378cd680ce9f305711a",
+      "subject": "Accept post-recovery scientific target selection"
+    },
+    {
+      "commit": "f41c85dc294a0e7053aa9bff4d6507f18c0b3b4e",
+      "subject": "accept low-regularity target selection review"
+    },
+    {
+      "commit": "26e3f8442c075071d0fe89f23a3d8d37578c95fe",
+      "subject": "accept bounded low-regularity Ward result"
+    },
+    {
+      "commit": "690e838e5e043554124e5e3efc369914bb72fde9",
+      "subject": "accept post low-regularity target selection"
+    },
+    {
+      "commit": "df53ff561f64f8ea4f597eef1d17cdca81696177",
+      "subject": "Accept bounded renormalized source Ward result"
+    },
+    {
+      "commit": "96bbd2d8fd9cd0121c702b13ebfdbc6c0abc93ba",
+      "subject": "Accept counterterm target selection"
+    },
+    {
+      "commit": "093204c995fcd6bb726079a0aaa34769018313ed",
+      "subject": "Accept counterterm absorption result"
+    },
+    {
+      "commit": "78098f46a40cb3280b112c85ff345c0d5e653758",
+      "subject": "Accept scale flow target selection"
+    },
+    {
+      "commit": "a02428adf458881f0538cfe374367156a058d90a",
+      "subject": "Accept bounded scale flow consistency result"
+    },
+    {
+      "commit": "c0f7a59e44aab33c4b513030a21c87862d9e7235",
+      "subject": "Accept trace Ward target selection"
+    },
+    {
+      "commit": "ae13a45fcd381355f42b49be0aad6475da8ba3b3",
+      "subject": "Accept trace anomaly Ward scale bounded result"
+    },
+    {
+      "commit": "c56586b83d3b342dee99cb0753a02b82d90efd0f",
+      "subject": "accept higher-derivative constraint result"
+    },
+    {
+      "commit": "e785b98d8aa9bc7c755e5b6767706bcd29d285a6",
+      "subject": "Accept well-posedness target selection"
+    }
+  ],
+  "current_reconciliation_scientific_firewall": {
+    "canonical_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "scientific_target_rotated": false,
+    "july_16_19_chain_adopted": false,
+    "post_recovery_scientific_descendant_adopted": false,
+    "new_physics_authorized": false,
+    "yukawa_execution_or_rerun_authorized": false,
+    "preserved_observations_validation_use_authorized": false
+  },
+  "disposition": "ALL_DISCOVERED_TIPS_PROTECTED_DIVERGENT_SCIENTIFIC_DESCENDANT_EXPLICITLY_NONCURRENT_PENDING_SEPARATE_DECISION"
+}

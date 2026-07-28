@@ -421,7 +421,7 @@ def build_manifest(
         for cycle in accepted_repairs
     ]
 
-    unexpected_accepts = _git(
+    outside_validation_head_accepts = _git(
         "log",
         "--all",
         "--not",
@@ -430,10 +430,19 @@ def build_manifest(
         "--grep=^Accept",
         repo_root=repo_root,
     ).splitlines()
-    if unexpected_accepts:
+    external_or_sibling_accepts: list[str] = []
+    for row in outside_validation_head_accepts:
+        commit = row.split("\x1f", 1)[0]
+        # Later work may live on another branch while still descending from the
+        # frozen recovery base.  Such a commit cannot demonstrate that the
+        # accepted recovery lineage omitted a repair.  Commits that do not
+        # descend from the frozen base remain a fail-closed ambiguity.
+        if not _is_ancestor(head, commit, repo_root):
+            external_or_sibling_accepts.append(row)
+    if external_or_sibling_accepts:
         raise LineageError(
             "accepted commits exist outside the proposed base: "
-            + "; ".join(unexpected_accepts)
+            + "; ".join(external_or_sibling_accepts)
         )
 
     evidence = _evidence_inventory(start, head, repo_root)
