@@ -1,0 +1,79 @@
+{
+  "admissible_preserved_inputs": [
+    {
+      "input_class": "PRESERVED_REPOSITORY_EQUATIONS_AND_CONVENTIONS",
+      "use": "CANDIDATE_INPUT_REQUIRING_INDEPENDENT_REBINDING"
+    },
+    {
+      "input_class": "PRESERVED_LITERATURE_LOCATORS",
+      "use": "SOURCE_DISCOVERY_ONLY_REQUIRING_PRIMARY_SOURCE_VERIFICATION"
+    },
+    {
+      "input_class": "PRESERVED_TEST_EXPECTATIONS",
+      "use": "NEGATIVE_CONTROL_DESIGN_ONLY_NOT_RESULT_ORACLE"
+    }
+  ],
+  "authority_before_selection": {
+    "registry_commit": "e6bac5e96f3b7ae1f3522ae57280fef18be28e50",
+    "scientific_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+  },
+  "boundary": {
+    "new_physics_result_claimed": false,
+    "preserved_scientific_descendant_adopted": false,
+    "preserved_scientific_descendant_rejected": false,
+    "quadratic_hyperbolicity_result_claimed": false,
+    "source_packet_preparation_authorized_after_review": true,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "computations_prohibited": [
+    "Yukawa sandbox rerun.",
+    "Yukawa pipe repair followed by rerun.",
+    "Automatic replay of preserved scientific executors.",
+    "Order reduction presented as the unmodified theory.",
+    "Regularizer or fiducial mode presented as an original physical mode."
+  ],
+  "consumed_handoff": {
+    "decision_status": "PENDING_SEPARATE_SCIENTIFIC_AUTHORITY",
+    "path": "formal/docs/release/JULY_16_19_POST_MAINTENANCE_SCIENTIFIC_ADOPTION_OR_BOUNDED_REPLAY_DECISION_HANDOFF_20260727_v0.json",
+    "sha256": "c04d912dfb6185347c3f78130b0c253bc2ed12f97b9ff3881025b6120be34f44"
+  },
+  "decisions_to_regenerate": [
+    "Exact admissible primary-source set.",
+    "Frozen action, coefficient strata, and conventions.",
+    "Physical spin-2 principal-block derivation.",
+    "Algebraic and geometric multiplicities.",
+    "Standard-norm and adapted-norm claim boundaries."
+  ],
+  "fresh_authority_path": [
+    "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0",
+    "review_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0_result",
+    "derive_qft_gr_quadratic_physical_spin2_principal_block_v0",
+    "review_qft_gr_quadratic_physical_spin2_principal_block_v0_result",
+    "prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0"
+  ],
+  "historical_non_authoritative_inputs": [
+    "Every post-registry July 13-19 scientific selection, execution, and review.",
+    "Every post-recovery QFT-GR selection, execution, and review through e785b98d.",
+    "The consumed Yukawa sandbox observations."
+  ],
+  "ordered_adoption_selected": false,
+  "preserved_observations": {
+    "archival_context_use_authorized": true,
+    "decision_bearing_use_authorized": false,
+    "validation_use_authorized": false
+  },
+  "record_kind": "SCIENTIFIC_RECONCILIATION_ROUTE_SELECTION",
+  "schema_id": "QFT_GR_QUADRATIC_HYPERBOLICITY_BOUNDED_RECONCILIATION_SELECTION_20260728_v0",
+  "selected_next_target": "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0",
+  "selected_next_target_kind": "qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_preparation",
+  "selected_route": "BOUNDED_RECONCILIATION_OR_REPLAY",
+  "selection_reasons": [
+    "The July 16-19 and post-recovery scientific descendants diverge from the frozen authority point.",
+    "Committed or reproducible bytes do not confer scientific adoption.",
+    "The July 2026 physical-spin-2 principal-symbol result materially changes the quadratic-gravity question.",
+    "A prospective minimal dependency chain avoids retroactive circularity."
+  ],
+  "selection_target": "select_post_maintenance_scientific_reconciliation_route_v0",
+  "verdict": "SELECT_BOUNDED_RECONCILIATION_OR_REPLAY_NO_RETROACTIVE_ADOPTION"
+}

@@ -592,6 +592,8 @@ import ToeFormal.Derivation.QFTGRMinimalWorkingModelRefinementPacketResultReview
 import ToeFormal.Derivation.QFTGRPostBudgetCrossPillarReview
 import ToeFormal.Derivation.QFTGRPostMRMaturationExecution
 import ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout
+import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionV0
 import ToeFormal.Derivation.QFTGRScalarSandbox
 import ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource
 import ToeFormal.Derivation.QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket
@@ -1251,6 +1253,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1244
+def committedModuleCount : Nat := 1246
 
 end ToeFormalAll

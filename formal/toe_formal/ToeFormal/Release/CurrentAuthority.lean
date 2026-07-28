@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2" := by
+      "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0" := by
   native_decide
 
 end CurrentAuthority

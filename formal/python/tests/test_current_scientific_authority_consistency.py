@@ -8,8 +8,8 @@ from formal.python.tools import current_scientific_authority_consistency as auth
 
 
 TARGET = (
-    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_"
-    "route_selection_packet_v2"
+    "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_"
+    "and_frozen_theory_packet_v0"
 )
 JULY_19_SELECT_TARGET = (
     "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_"

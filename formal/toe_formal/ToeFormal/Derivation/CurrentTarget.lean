@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview
+import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.selectedNextTarget
+  QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.reviewId
+  QFTGRQuadraticHyperbolicityBoundedReconciliationSelectionResultReviewV0.reviewId
 
-theorem current_target_is_registry_derived_blocker_response_v2_preparation :
+theorem current_target_is_fresh_quadratic_hyperbolicity_source_packet :
     currentLiveTarget =
-      "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2" := by
+      "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0" := by
   rfl
 
 end CurrentTarget
