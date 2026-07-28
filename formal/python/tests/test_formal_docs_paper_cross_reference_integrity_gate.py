@@ -70,10 +70,9 @@ def test_formal_docs_paper_and_state_cross_references_resolve() -> None:
     report = debt.load_json(debt.REPORT_PATH)
     assert report == debt.build_report()
     assert report["current_reference_missing_count"] == 0
-    assert report["historical_missing_count"] == 0
-    assert report["disposition"] == (
-        "HISTORICAL_REFERENCES_RESOLVE_WITH_PRESERVED_NOT_ADOPTED_TRANCHE"
-    )
+    assert report["historical_missing_count"] > 0
+    assert report["reference_resolution_domain"] == "COMMITTED_GIT_PATHS_ONLY"
+    assert report["disposition"] == "HISTORICAL_QUARANTINED_VISIBLE"
     assert report["historical_reports_restored"] == 0
     assert report["preserved_tranche_scientifically_adopted"] is False
     assert report["scientific_adoption_inferred"] is False

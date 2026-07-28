@@ -4,6 +4,8 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -93,11 +95,37 @@ def _resolve(ref: str, source: Path) -> Path:
     return (REPO_ROOT / cleaned).resolve()
 
 
+@lru_cache(maxsize=1)
+def _tracked_repository_paths() -> frozenset[str]:
+    completed = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+    )
+    return frozenset(
+        path
+        for path in completed.stdout.decode("utf-8").split("\0")
+        if path
+    )
+
+
+def _resolves_in_committed_repository(ref: str, source: Path) -> bool:
+    resolved = _resolve(ref, source)
+    try:
+        relative = resolved.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return resolved.exists()
+    return relative in _tracked_repository_paths()
+
+
 def missing_references(sources: Iterable[tuple[str, Path, str]]) -> list[dict[str, str]]:
     missing: list[dict[str, str]] = []
     for label, source, text in sources:
         for ref in sorted(_extract_references(text)):
-            if _is_candidate(ref) and not _resolve(ref, source).exists():
+            if _is_candidate(ref) and not _resolves_in_committed_repository(
+                ref, source
+            ):
                 missing.append({"source": label, "target": ref})
     return sorted(missing, key=lambda row: (row["source"], row["target"]))
 
@@ -172,6 +200,7 @@ def build_report() -> dict[str, Any]:
         "historical_source_count": len(source_counts),
         "historical_missing_by_source": dict(sorted(source_counts.items())),
         "historical_missing": historical_missing,
+        "reference_resolution_domain": "COMMITTED_GIT_PATHS_ONLY",
         "disposition": disposition,
         "historical_reports_restored": 0,
         "preserved_tranche_scientifically_adopted": False,
