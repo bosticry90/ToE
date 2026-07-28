@@ -23,10 +23,10 @@
     "yukawa_rerun_authorized": false
   },
   "disposition_counts": {
-    "SEMANTICALLY_REPLAYED": 39,
+    "SEMANTICALLY_REPLAYED": 40,
     "REGENERATED_WITH_RESTRUCTURED_TOOLING": 1,
     "SUPERSEDED_BY_RESTRUCTURED_IDENTITY_CONTRACT": 2,
-    "NOOP_ALREADY_SATISFIED_BY_RESTRUCTURED_BASELINE": 2
+    "NOOP_ALREADY_SATISFIED_BY_RESTRUCTURED_BASELINE": 1
   },
   "source_commit_dispositions": [
     {"index": 1, "source": "ddd7ea9719e52465c93b0b3ea9ab91415c1e03b9", "disposition": "SEMANTICALLY_REPLAYED", "result": "fd77dd9259fb3f81fc1fa7b5f7e11fad544ab0d2"},
@@ -71,7 +71,7 @@
     {"index": 40, "source": "bcf67ac8b9429fabcfd42059313b373b689b42f4", "disposition": "SEMANTICALLY_REPLAYED", "result": "82e4a1cb15816893914b527188bb7d22681e1c0f"},
     {"index": 41, "source": "150b851657563fd61929b509bd17921f31dba3cf", "disposition": "SEMANTICALLY_REPLAYED", "result": "d51b4f5d4a2807024f7494edddff13570bcc2cd8"},
     {"index": 42, "source": "c9e842eb04ac09944d21a9a28105347d877d970d", "disposition": "SUPERSEDED_BY_RESTRUCTURED_IDENTITY_CONTRACT", "result": "2197e387d019b9a71bcb7ff5f38c582cec8a35c2", "note": "The recovered equation-compendium identity contract separates current Git bytes from historical mixed-byte identity; the old -text workaround is not restored."},
-    {"index": 43, "source": "8d33e79cfece42dabcfa054c44fc9d6556f44195", "disposition": "NOOP_ALREADY_SATISFIED_BY_RESTRUCTURED_BASELINE", "result": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3", "note": "The recovered conftest retains the required historical isolation, archive quarantine, and module-isolation architecture; only the portable stage and external-custody additions were replayed separately."},
+    {"index": 43, "source": "8d33e79cfece42dabcfa054c44fc9d6556f44195", "disposition": "SEMANTICALLY_REPLAYED", "result": "6407dfa6efec540f74233e7352f6d1ee6fbbe055", "note": "The conftest merge restores the recovered archive quarantine, 197-node historical-current-mirror retirement manifest, deprecated-tranche skips, and legacy materializer while retaining the new stage-state and external-custody fixtures."},
     {"index": 44, "source": "5aeb74ae46db2c397da40be0286287a5a63d5642", "disposition": "SUPERSEDED_BY_RESTRUCTURED_IDENTITY_CONTRACT", "result": "76dd14cf2a85277d528cdcdc756e1875081655d4", "note": "The recovered admissibility current-identity contract supersedes the old mixed-byte CT01 workaround; current LF Git identity remains authoritative."}
   ],
   "result_boundary": {
