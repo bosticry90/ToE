@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "derive_qft_gr_quadratic_gauge_and_auxiliary_"
-    "constraint_propagation_system_v0"
+    "compute_qft_gr_quadratic_full_reduced_system_"
+    "principal_structure_v0"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1348,7 +1348,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
+    "derive_qft_gr_quadratic_gauge_and_auxiliary_"
+    "constraint_propagation_system_v0"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1695,8 +1696,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "derive_qft_gr_quadratic_gauge_and_auxiliary_"
-    "constraint_propagation_system_v0"
+    "compute_qft_gr_quadratic_full_reduced_system_"
+    "principal_structure_v0"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1791,11 +1792,11 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0.lean"
+    / "QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0.lean"
 )
 LIVE_TARGET_REPORT = (
-    "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_"
-    "REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json"
+    "formal/docs/release/QFT_GR_QUADRATIC_GAUGE_AND_AUXILIARY_"
+    "CONSTRAINT_PROPAGATION_SYSTEM_RESULT_REVIEW_20260728_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1927,7 +1928,7 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_ACCEPTED"
+    "QFT_GR_QUADRATIC_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_ACCEPTED"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2057,8 +2058,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "EXACT_REDUCED_SYSTEM_ACCEPTED_CONSTRAINT_PROPAGATION_"
-    "AND_WELL_POSEDNESS_NOT_ESTABLISHED"
+    "CONSTRAINT_SYSTEM_CLOSED_WITH_DERIVATIVE_LOSS_NO_PHYSICAL_"
+    "HYPERBOLICITY_REPAIR_OR_LOCAL_WELL_POSEDNESS"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2169,8 +2170,8 @@ SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
     "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 LIVE_TARGET_KIND = (
-    "qft_gr_quadratic_gauge_and_auxiliary_"
-    "constraint_propagation_system_derivation"
+    "qft_gr_quadratic_full_reduced_system_"
+    "principal_structure_calculation"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"

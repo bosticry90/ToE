@@ -1,0 +1,63 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "OFF_CONSTRAINT_EXTENSION_FROZEN_WITH_ZERO_ADDITIONS",
+    "QUADRATIC_CONSTRAINT_PROPAGATION_SYSTEM_CLOSED_WITH_DERIVATIVE_LOSS",
+    "CONSTRAINT_SYSTEM_STRONGLY_HYPERBOLIC",
+    "AUXILIARY_EQUIVALENCE_CONDITIONALLY_PRESERVED_ON_ZERO_CONSTRAINT_DATA"
+  ],
+  "authority_rotation": {
+    "adapted_energy_estimate_authorized": false,
+    "constraint_propagation_result_accepted": true,
+    "full_reduced_principal_structure_authorized": true,
+    "ghost_analysis_authorized": false,
+    "local_existence_theorem_authorized": false,
+    "phenomenology_authorized": false,
+    "source_extension_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "all_named_remainders_are_exact_operator_definitions": true,
+    "authority_and_predecessor_are_exactly_bound": true,
+    "conditional_equivalence_claim_has_required_hypotheses": true,
+    "constraint_independence_classification_is_complete": true,
+    "definition_and_integrability_constraints_propagate_exactly": true,
+    "finite_independent_wave_vector_closes": true,
+    "hamiltonian_momentum_argument_is_noncircular": true,
+    "off_constraint_extension_is_frozen_without_additions": true,
+    "physical_and_theorem_claim_ceilings_are_preserved": true,
+    "regularity_loss_is_bounded_but_not_overclaimed": true,
+    "subsidiary_pencil_is_independently_reproduced": true,
+    "terminal_outcome_is_narrow_and_exact": true,
+    "total_gauge_and_metric_definition_defects_are_separated": true,
+    "trace_and_bianchi_reconstruction_are_exact_and_homogeneous": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "ORDINARY_METRIC_STRONG_HYPERBOLICITY",
+    "FULL_REDUCED_SYSTEM_PRINCIPAL_CLASSIFICATION",
+    "OPTIMAL_MINIMUM_REGULARITY",
+    "LOSS_NONACCUMULATION",
+    "LINEAR_ADAPTED_NORM_ENERGY_ESTIMATE",
+    "PICARD_OR_NASH_MOSER_CLOSURE",
+    "LOCAL_WELL_POSEDNESS",
+    "SOURCE_EXTENSION_ADMISSIBILITY"
+  ],
+  "review_target": "review_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0_result",
+  "reviewed_calculation": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-GAUGE-AUXILIARY-CONSTRAINT-PROPAGATION-SYSTEM-v0.json",
+    "sha256": "ed7510bcd115e8bf9ef4dcd48ef8552135a825e242d51bd6c7ef751f18324c60"
+  },
+  "reviewer_independence": {
+    "audits_exact_defect_identities": true,
+    "audits_initial_constraint_independence": true,
+    "audits_regularities_and_claim_ceiling": true,
+    "imports_calculation_module": false,
+    "reconstructs_component_counts": true,
+    "reconstructs_pencil_determinant": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_GAUGE_AND_AUXILIARY_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0",
+  "verdict": "ACCEPT_CLOSED_HOMOGENEOUS_CONSTRAINT_PROPAGATION_WITH_ONE_DERIVATIVE_EQUIVALENCE_LOSS_AUTHORIZE_FULL_REDUCED_PRINCIPAL_STRUCTURE_ONLY"
+}

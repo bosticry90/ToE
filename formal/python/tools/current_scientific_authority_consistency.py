@@ -28,6 +28,7 @@ SCIENTIFIC_TARGET_VERBS = frozenset(
         "calculate",
         "claim",
         "close",
+        "compute",
         "conduct",
         "construct",
         "derive",
