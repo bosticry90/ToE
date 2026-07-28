@@ -49,13 +49,18 @@ def test_v2_preserves_v1_result_review_and_handoff_custody() -> None:
         assert _sha256(ROOT / record["path"]) == record["sha256"]
 
 
-def test_v2_preserves_current_scientific_target_without_selecting_a_route() -> None:
+def test_v2_preserves_closeout_scientific_snapshot_without_overriding_live_authority() -> None:
     authority = _read(AUTHORITY_PATH)
     pointer = _read(POINTER_PATH)
     registry = _read(REGISTRY_PATH)
-    target = registry["current_projection_v0"]["current_target"]
-    assert authority["scientific_authority"]["current_target"] == target
-    assert pointer["scientific_target"] == target
+    closeout_target = authority["scientific_authority"]["current_target"]
+    live_target = registry["current_projection_v0"]["current_target"]
+    assert closeout_target == (
+        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_"
+        "route_selection_packet_v2"
+    )
+    assert pointer["scientific_target"] == closeout_target
+    assert live_target != closeout_target
     assert authority["scientific_authority"]["target_rotated"] is False
     assert authority["post_maintenance_handoff"]["selected_route"] is None
     assert authority["successor"]["automatic_maintenance_successor"] is None

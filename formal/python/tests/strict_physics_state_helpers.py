@@ -52,6 +52,25 @@ STRICT_CURRENT_TOKEN_SURFACES = (
     STRICT_MAP_PATH,
 )
 
+LATEST_CURRENT_BLOCK_MARKERS = {
+    README_PATH: (
+        "CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)",
+        "CURRENT-MAINTENANCE NOTE",
+    ),
+    STATE_PATH: (
+        "## CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)",
+        "## AUTHORITY_SURFACE_v2",
+    ),
+    ROADMAP_PATH: (
+        "Current QFT–GR lead calculation (2026-07-28):",
+        "POST_MR_MATURATION_EXECUTION_STATUS_v0:",
+    ),
+    STRICT_MAP_PATH: (
+        "Current strict QFT–GR obligation (2026-07-28):",
+        "POST_MR_MATURATION_EXECUTION_STATUS_v0:",
+    ),
+}
+
 
 def repo_root() -> Path:
     return REPO_ROOT
@@ -214,6 +233,11 @@ def assert_public_surfaces_match_registry(
             marker = "Current live control state:"
             assert marker in text, f"{path} missing {marker}"
             text_to_check = text.split(marker, 1)[1].split("\n\n", 1)[0]
+        elif path in STRICT_CURRENT_TOKEN_SURFACES:
+            start_marker, end_marker = LATEST_CURRENT_BLOCK_MARKERS[path]
+            assert start_marker in text, f"{path} missing {start_marker}"
+            assert end_marker in text, f"{path} missing {end_marker}"
+            text_to_check = text.split(start_marker, 1)[1].split(end_marker, 1)[0]
 
         for label, value in expected_tokens.items():
             pattern = rf"(?m)^(?:- `)?{re.escape(label)}:\s*([^`\r\n]+)`?\s*$"
@@ -228,7 +252,7 @@ def assert_public_surfaces_match_registry(
 
         current_citation_targets = re.findall(
             r"MASTER_ACTION_CURRENT_CITATION_TARGET_v0:\s*([A-Za-z0-9_]+)",
-            text,
+            text_to_check,
         )
         assert all(
             target == live_target for target in current_citation_targets

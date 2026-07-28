@@ -12,6 +12,20 @@ Non-claim boundary:
 - This document does not claim physics completion, canonical master-action promotion, global seam closure, Standard Model recovery, interacting-QFT completion, or empirical validation.
 - This document is a strict physics work map, not a release-governance expansion surface.
 
+Current strict QFT–GR obligation (2026-07-28):
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
+- `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
+- `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED`
+- Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
+- Required derivation: obtain the exact generalized-harmonic vacuum wave system for `R`, trace-free `S_mn`, and `g_mn`; enumerate every lower-order term; and prove homogeneous propagation for every frozen constraint.
+- No adapted-norm local well-posedness result is claimed. The one-derivative-loss grading is a candidate to test, not an accepted theorem.
+- No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
+
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
 POST_TRANSLATION_SELECTION_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
 POST_TRANSLATION_SELECTION_CATEGORY_v0: post_translation_next_target_selected

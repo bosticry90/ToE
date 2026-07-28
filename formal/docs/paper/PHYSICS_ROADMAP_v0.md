@@ -18,6 +18,20 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
+Current QFT–GR lead calculation (2026-07-28):
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`
+- `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
+- `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED`
+- Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
+- Derive next: exact vacuum generalized-harmonic equations for `g_mn`, `R`, and trace-free `S_mn`, including all definition, gauge, divergence, trace, Hamiltonian, and momentum constraint propagation.
+- Later decision: prove or refute the candidate adapted-norm estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
+- Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
+
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
 POST_TRANSLATION_SELECTION_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
 POST_TRANSLATION_SELECTION_CATEGORY_v0: post_translation_next_target_selected

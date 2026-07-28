@@ -92,8 +92,12 @@ def rotate(
         "master_action_promoted": "no",
     }
     registry["workstreams"].append(new_row)
+    coverage = registry.setdefault("next_strict_target_coverage", [])
+    if target not in coverage:
+        coverage.append(target)
     state.update(
         {
+            "active_lane": target,
             "live_next_target": target,
             "previous_live_next_target": expected_current,
             "live_next_target_kind": target_kind,

@@ -360,14 +360,9 @@ def test_execution_and_review_are_preserved_after_review_rotation() -> None:
         "execute_calc_scalar_stress_energy_covariant_divergence_identity_"
         "higher_dimensional_curved_background_v0"
     )
-    assert state["previous_live_next_target"] == (
-        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result"
-    )
-    assert state["live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
-    )
+    projection = registry["current_projection_v0"]
+    assert state["previous_live_next_target"] == projection["previous_target"]
+    assert state["live_next_target"] == projection["current_target"]
     assert active["workstream_id"] == state["live_next_target"]
-    assert active["claim_status"] == (
-        "versioned_authority_class_attribution_correction_v2_required"
-    )
+    assert active["packet_result"] == projection["current_target_outcome"]
     assert active["report"] == state["live_next_target_report"]

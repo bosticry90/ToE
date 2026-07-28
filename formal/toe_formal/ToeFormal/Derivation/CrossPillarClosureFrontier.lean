@@ -197,7 +197,7 @@ def currentLiveNextStrictTargetV0 : String :=
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
-import ToeFormal.Derivation.PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview
+import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -464,7 +464,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+        "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
       status := .retained }
   ]
 
@@ -482,33 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the completed independent v1 result review. -/
+/-- Previous live target consumed by the accepted Phase B packet review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result"
+  "prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0"
 
-/-- Current live target after the B-BLOCKED v1 result review. -/
+/-- Current live target after the accepted Phase B packet review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+  "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
 
-/-- Evidence certificate for the independent v1 result review. -/
+/-- Evidence certificate for the Phase B packet review. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean"
+  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean"
 
-/-- Immutable v1 result-review report supporting the versioned v2 correction target. -/
+/-- Result-review report supporting the reduced-system derivation target. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json"
+  "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json"
 
-/-- B-BLOCKED authority-class attribution outcome supporting the v2 target. -/
+/-- Accepted Phase B packet outcome supporting the reduced-system target. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.reviewOutcome
+  "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.strictReviewOutcome
+  "REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.selectedNextTargetKind
+  "qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
+    "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -646,18 +646,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The B-BLOCKED v1 review supports only the versioned v2 correction. -/
+/-- The accepted Phase B packet review supports only reduced-system derivation. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json" ∧
+        "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH" ∧
+        "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION" ∧
+        "REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION" ∧
       currentLiveNextStrictTargetKindV0 =
-        "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2" := by
+        "qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation" := by
   constructor
   · rfl
   constructor

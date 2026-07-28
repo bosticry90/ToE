@@ -1,3 +1,30 @@
+## CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)
+
+Scientific authority selected bounded reconciliation/replay without automatically
+adopting preserved descendants. The frozen vacuum quadratic action has now passed
+an independent Phase A result review: its physical spin-2 principal pencil is
+`-beta (lambda^2 - 1)^2 I_2`, with algebraic multiplicity four and geometric
+multiplicity two at each light-cone root. Generic strong and symmetric
+hyperbolicity are therefore refuted in the tested physical block.
+
+The exact live target is
+`derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0`. It authorizes
+term-by-term derivation and constraint propagation for the vacuum
+generalized-harmonic auxiliary system only. Adapted-norm local well-posedness,
+source extensions, preserved-descendant adoption, Maxwell–Dirac execution, and
+Yukawa work remain unestablished or unauthorized.
+
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0
+CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_PACKET_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: REDUCED_SYSTEM_DERIVATION_ONLY_NO_ADAPTED_NORM_THEOREM_NO_SOURCE_EXTENSION
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_auxiliary_harmonic_reduced_system_derivation
+
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 
 Project posture:

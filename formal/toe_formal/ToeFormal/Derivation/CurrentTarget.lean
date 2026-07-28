@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticPhysicalSpin2PrincipalBlockResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticPhysicalSpin2PrincipalBlockResultReviewV0.selectedNextTarget
+  QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticPhysicalSpin2PrincipalBlockResultReviewV0.reviewId
+  QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0.reviewId
 
-theorem current_target_is_quadratic_auxiliary_harmonic_adapted_norm_packet :
+theorem current_target_is_quadratic_auxiliary_harmonic_reduced_system :
     currentLiveTarget =
-      "prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0" := by
+      "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0" := by
   rfl
 
 end CurrentTarget
