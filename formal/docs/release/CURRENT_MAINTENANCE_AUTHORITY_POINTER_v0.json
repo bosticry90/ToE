@@ -1,9 +1,9 @@
 {
   "authority_rule": "Resolve the current operational maintenance authority through this pointer. Historical versioned authority files remain immutable and do not override the pointed current authority.",
   "captured_at_utc": "2026-07-27T00:00:00Z",
-  "current_authority_path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v1.json",
-  "current_authority_schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v1",
-  "current_authority_sha256": "92cba51d7af551823f38b1edab6149747d8b9347def4fa668cf727396a3d2ff2",
+  "current_authority_path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json",
+  "current_authority_schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v2",
+  "current_authority_sha256": "05a74c18a5a13d6661e6de13fa14951837a8ca9ac40a9ca107f8a1de8d10e9aa",
   "current_maintenance_target": "execute_july_16_19_repository_integration_and_live_authority_repair_v0",
   "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0",
   "scientific_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"

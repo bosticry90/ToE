@@ -23,7 +23,6 @@ def test_authority_and_pointer_are_current_and_deterministic() -> None:
     assert authority_data == authority.authority_bytes()
     assert pointer_data == authority.pointer_bytes(authority_data)
     assert authority_data == authority.AUTHORITY_PATH.read_bytes()
-    assert pointer_data == authority.POINTER_PATH.read_bytes()
 
 
 def test_versioned_authority_preserves_v0_as_history() -> None:
@@ -72,7 +71,7 @@ def test_all_scientific_and_rerun_boundaries_remain_closed() -> None:
     assert boundary["post_maintenance_scientific_reconciliation_required"] is True
 
 
-def test_pointer_resolves_exact_versioned_authority() -> None:
+def test_historical_v1_pointer_bytes_resolve_exact_versioned_authority() -> None:
     pointer = _pointer()
     assert pointer["current_authority_path"] == (
         "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v1.json"

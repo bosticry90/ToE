@@ -983,7 +983,10 @@ import ToeFormal.QM.QMFullDerivationScaffold
 import ToeFormal.QM.SymmetryContract
 import ToeFormal.Release.CurrentAuthority
 import ToeFormal.Release.CurrentMaintenanceAuthorityV1
+import ToeFormal.Release.CurrentMaintenanceAuthorityV2
 import ToeFormal.Release.CurrentScientificAuthorityWitness
+import ToeFormal.Release.July1619PostMaintenanceScientificAdoptionOrBoundedReplayDecisionHandoffV0
+import ToeFormal.Release.July1619RepositoryIntegrationAndLiveAuthorityRepairExecutionResultReviewV0
 import ToeFormal.Release.July1619RepositoryIntegrationAndLiveAuthorityRepairMaintenancePacketReviewV0
 import ToeFormal.Release.July1619RepositoryIntegrationAndLiveAuthorityRepairMaintenancePacketV0
 import ToeFormal.Release.LegacyDiscoveryReportFixturePacket
@@ -1248,6 +1251,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1241
+def committedModuleCount : Nat := 1244
 
 end ToeFormalAll

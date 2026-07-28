@@ -1,0 +1,86 @@
+{
+  "schema_id": "JULY_16_19_POST_MAINTENANCE_SCIENTIFIC_ADOPTION_OR_BOUNDED_REPLAY_DECISION_HANDOFF_20260727_v0",
+  "captured_at_utc": "2026-07-27T00:00:00Z",
+  "record_kind": "NONEXECUTING_SCIENTIFIC_GOVERNANCE_HANDOFF",
+  "consumed_maintenance_result_review": {
+    "path": "formal/docs/release/JULY_16_19_REPOSITORY_INTEGRATION_AND_LIVE_AUTHORITY_REPAIR_EXECUTION_RESULT_REVIEW_20260727_v0.json",
+    "sha256": "79a68a13b6d1d58115ad6c723e1e2cb39a3e3c6956ea34f858ed0f4a399bb8ff",
+    "verdict": "ACCEPTED_MAINTENANCE_INTEGRATION_COMPLETE_SCIENTIFIC_RECONCILIATION_PENDING"
+  },
+  "scientific_authority": {
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "target_rotated_by_this_handoff": false,
+    "authority_required_to_select_a_route": "SEPARATE_EXPLICIT_SCIENTIFIC_AUTHORITY"
+  },
+  "decision": {
+    "status": "PENDING_SEPARATE_SCIENTIFIC_AUTHORITY",
+    "selected_route": null,
+    "route_count": 2,
+    "automatic_selection_permitted": false
+  },
+  "routes": [
+    {
+      "route_id": "ORDERED_ADOPTION",
+      "selection_condition": "Select only if every listed proof obligation is discharged without retroactive circularity.",
+      "required_proofs": [
+        "Every intervening packet was produced from its authorized predecessor.",
+        "Every required review exists.",
+        "All scientific inputs and outputs are byte-identifiable.",
+        "No stage depended on later mutable-checkout conditions.",
+        "Validation results are reproducible or properly frozen as historical evidence.",
+        "No maintenance modification changed scientific meaning.",
+        "The sequence contains no unauthorized target jump.",
+        "Each transition can be adopted in order without retroactive circularity."
+      ],
+      "authority_progression_rule": "Advance through each accepted transition in required predecessor order; do not jump directly to the July 19 selector.",
+      "scientific_effect_before_selection": "NONE"
+    },
+    {
+      "route_id": "BOUNDED_RECONCILIATION_OR_REPLAY",
+      "selection_condition": "Select when the preserved historical chain cannot be adopted exactly.",
+      "required_decisions": [
+        "Identify the preserved artifacts admissible as inputs.",
+        "Identify the artifacts retained as historical but non-authoritative.",
+        "Identify the decisions that must be regenerated.",
+        "Identify the computations that may not be rerun.",
+        "State whether preserved observations may be used and the exact non-decision-bearing purpose.",
+        "Define the exact new authority path from the July 12 scientific target.",
+        "Explain why the route does not retroactively legitimize unauthorized work."
+      ],
+      "authority_progression_rule": "Create a bounded prospective authority chain from the frozen July 12 target; preservation alone confers no scientific adoption.",
+      "scientific_effect_before_selection": "NONE"
+    }
+  ],
+  "preserved_conditional_terminal_selector": {
+    "identifier": "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1_execution_result_review_scientific_response_v0",
+    "currently_authorized": false,
+    "rename_authorized": false,
+    "reachability_condition": "May be reached only after a separately authorized route validly reconciles or adopts every required predecessor transition."
+  },
+  "preserved_terminal_recommendation": {
+    "value": "DEFER_CURRENT_KERNEL_PATH",
+    "currently_executable": false,
+    "meaning_if_later_authorized": [
+      "The analytic production kernel remains neither qualified nor refuted.",
+      "Validation infrastructure remains unqualified.",
+      "The consumed sandbox execution cannot be rerun automatically.",
+      "Direct pipe repair followed by rerun remains prohibited.",
+      "Preserved observations remain non-decision-bearing.",
+      "No production, validation, or scientific-success claim follows.",
+      "Reopening requires new authority and a specifically named permissible consumer.",
+      "Without such a consumer, the path remains indefinitely deferred."
+    ]
+  },
+  "firewall": {
+    "maintenance_activity_selects_route": false,
+    "maintenance_activity_rotates_scientific_authority": false,
+    "july_16_19_bytes_are_scientifically_adopted": false,
+    "post_recovery_scientific_lineage_is_adopted": false,
+    "post_recovery_scientific_lineage_is_rejected": false,
+    "new_physics_authorized": false,
+    "yukawa_execution_or_rerun_authorized": false,
+    "pipe_repair_and_rerun_authorized": false,
+    "preserved_observations_validation_use_authorized": false,
+    "terminal_response_selection_authorized": false
+  }
+}

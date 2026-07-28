@@ -190,17 +190,32 @@ def main() -> int:
         if current_authority != expected_authority:
             AUTHORITY_PATH.write_bytes(expected_authority)
             print(f"wrote {AUTHORITY_PATH.relative_to(REPO_ROOT).as_posix()}")
-        if current_pointer != expected_pointer:
+        pointer = _read_json(POINTER_PATH) if current_pointer is not None else None
+        if (
+            pointer is not None
+            and pointer.get("current_authority_schema_id")
+            == "CURRENT_MAINTENANCE_AUTHORITY_v1"
+            and current_pointer != expected_pointer
+        ):
             POINTER_PATH.write_bytes(expected_pointer)
             print(f"wrote {POINTER_PATH.relative_to(REPO_ROOT).as_posix()}")
         return 0
     if current_authority != expected_authority:
         print("current maintenance authority v1 drift")
         return 1
-    if current_pointer != expected_pointer:
+    pointer = _read_json(POINTER_PATH) if current_pointer is not None else None
+    if (
+        pointer is not None
+        and pointer.get("current_authority_schema_id")
+        == "CURRENT_MAINTENANCE_AUTHORITY_v1"
+        and current_pointer != expected_pointer
+    ):
         print("current maintenance authority pointer drift")
         return 1
-    print(f"current maintenance authority v1 OK target={MAINTENANCE_TARGET}")
+    print(
+        "current maintenance authority v1 immutable history OK "
+        f"target={MAINTENANCE_TARGET}"
+    )
     return 0
 
 
