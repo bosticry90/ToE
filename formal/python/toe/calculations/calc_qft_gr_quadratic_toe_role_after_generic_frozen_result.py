@@ -16,6 +16,9 @@ EXECUTION_TARGET = (
 )
 SELECTED_NEXT_TARGET = "authorize_toe_native_surrogate_v0_bounded_program"
 NATIVE_STAGE_1_TARGET = "select_toe_native_coherence_representation_v0"
+NATIVE_V0_CLOSE_TARGET = (
+    "close_toe_native_surrogate_v0_after_bounded_result_v0"
+)
 REGISTRY_PATH = REPO_ROOT / "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
 STAGE_3_RESULT_PATH = REPO_ROOT / (
     "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-"
@@ -49,6 +52,7 @@ def build_calculation() -> dict:
         EXECUTION_TARGET,
         SELECTED_NEXT_TARGET,
         NATIVE_STAGE_1_TARGET,
+        NATIVE_V0_CLOSE_TARGET,
     }:
         raise QuadraticHyperbolicityError(
             "quadratic role gate is neither authoritative nor the accepted predecessor"

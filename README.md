@@ -31,22 +31,22 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Accepted bounded Stage 3: `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. The component artifact does not determine a unique generic off-constraint 128-state wave-slot map, and every trace chart retains dependent spin-component jets. The zero-repair rule prohibits Stages 4–5 and requires the role gate.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY`; its mathematical `control_result` is independently `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal.
 - Program N authorization accepted: five semantic stages, zero repairs, and no subsidiary scientific targets.
-- Native Stage 1 is `OPEN` under immutable attempt 1; no scientific output or result is present in the opening commit.
-- Exact live target: `select_toe_native_coherence_representation_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean`.
-- Report: `formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json`.
-- Boundary: the OPEN event consumes attempt 1 but makes no representation, symmetry, action, or physics finding.
+- Native Stage 1 is closed `BLOCKED`: no accepted CCFT-to-relativistic-real-scalar map exists, and neither required independent `Z2` gate is justified.
+- Exact live target: `close_toe_native_surrogate_v0_after_bounded_result_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean`.
+- Report: `formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: Program N v0 must close without repair; Stages 2–5 and the portal action are prohibited. The v0 discriminator result is `NO_UNIQUE_TOE_DISCRIMINATOR_V0`.
 
-CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
-ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0
+CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
+ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_representation_selection_v0
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: NATIVE_SURROGATE_V0_BLOCKED_AT_STAGE_1_NO_REPAIR_STAGES_2_TO_5_PROHIBITED_NO_UNIQUE_TOE_DISCRIMINATOR_V0
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_mandatory_bounded_closeout
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

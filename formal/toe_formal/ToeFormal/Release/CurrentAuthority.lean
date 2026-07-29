@@ -31,7 +31,7 @@ def boundedAttemptNumber : Nat :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "select_toe_native_coherence_representation_v0" := by
+      "close_toe_native_surrogate_v0_after_bounded_result_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -46,9 +46,9 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem bounded_native_program_stage_one_is_open_without_result :
+theorem bounded_native_program_stage_one_is_closed_and_blocked :
     boundedProgramId = "TOE_NATIVE_SURROGATE_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     boundedAttemptNumber = 1 := by
   native_decide
 

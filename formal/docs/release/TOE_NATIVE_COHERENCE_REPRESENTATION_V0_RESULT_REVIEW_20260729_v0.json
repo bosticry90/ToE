@@ -1,0 +1,32 @@
+{
+  "accepted": true,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "all_evidence_checks_pass": true,
+    "amplitude_surrogate_not_manufactured": true,
+    "candidate_layer_not_promoted": true,
+    "chi_semantics_unresolved": true,
+    "failed_closed_without_CCFT_rejection": true,
+    "no_action_or_portal_authorized": true,
+    "open_event_bound": true,
+    "phi_Z2_unjustified": true,
+    "v0_discriminator_closes_negative": true
+  },
+  "chi_symmetry_status": "BLOCKED_COHERENCE_Z2_UNJUSTIFIED",
+  "failed_checks": [],
+  "mandatory_exit_target": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+  "phi_symmetry_status": "BLOCKED_TEST_MATTER_SYMMETRY_UNJUSTIFIED",
+  "program_v0_closes": true,
+  "repair_authorized": false,
+  "representation_outcome": "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED",
+  "reviewed_result": {
+    "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-REPRESENTATION-v0.json",
+    "sha256": "722d51d76792769e2fea7191eb31b1e7e7f944534a4deedeae5892b5256646db"
+  },
+  "schema_id": "TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0",
+  "stage_2_authorized": false,
+  "terminal_outcome": "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED",
+  "terminal_result": "BLOCKED",
+  "v0_discriminator_result": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+  "verdict": "ACCEPT_BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED_CLOSE_NATIVE_SURROGATE_V0_WITH_NO_UNIQUE_DISCRIMINATOR"
+}

@@ -64,26 +64,28 @@ separate, and the typed rewrite system is terminating and confluent. The
 accepted Minkowski 128-state/224-entry control is reproduced.
 
 The exact live target is
-`select_toe_native_coherence_representation_v0`.
+`close_toe_native_surrogate_v0_after_bounded_result_v0`.
 The mandatory role gate records quadratic gravity as `REFERENCE_CONTROL_ONLY`
 with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal. Program N is
 authorized with five stages, zero repairs, and no subsidiary targets. Its first
-scientific stage is open under immutable attempt 1, with no scientific result
-yet present.
+scientific stage closed blocked: the repository contains no accepted
+CCFT-to-relativistic-real-scalar crosswalk, and the required independent
+`Z2` symmetries are unjustified. V0 therefore closes without a unique
+discriminator and without advancing to its action stage.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
-ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0
+CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
+ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_representation_selection_v0
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: NATIVE_SURROGATE_V0_BLOCKED_AT_STAGE_1_NO_REPAIR_STAGES_2_TO_5_PROHIBITED_NO_UNIQUE_TOE_DISCRIMINATOR_V0
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_mandatory_bounded_closeout
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

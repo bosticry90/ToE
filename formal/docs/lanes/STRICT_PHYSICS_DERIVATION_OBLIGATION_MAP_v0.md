@@ -13,14 +13,14 @@ Non-claim boundary:
 - This document is a strict physics work map, not a release-governance expansion surface.
 
 Current strict QFT–GR obligation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program`
-- `ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0`
+- `ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED`
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.
@@ -33,7 +33,7 @@ Current strict QFT–GR obligation (2026-07-29):
 - Accepted bounded Stage 2: a closed 3,950-node strict-harmonic component graph yields 64 independently inventoried equations per trace chart and exactly reproduces the accepted Minkowski 128-state/224-entry control.
 - Accepted bounded Stage 3: the generic 128-state operator is not closed because the component artifact does not fix a unique off-constraint wave-slot map and its trace charts retain dependent jets.
 - Accepted role gate: `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal.
-- Program N is authorized under a five-stage, zero-repair contract. Stage 1 attempt 1 is open; its opening record contains no scientific output.
+- Program N Stage 1 closed blocked. The missing real-scalar continuum crosswalk and unjustified `phi`/`chi` `Z2` gates prohibit Stage 2 and require v0 closeout with `NO_UNIQUE_TOE_DISCRIMINATOR_V0`.
 - No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
 

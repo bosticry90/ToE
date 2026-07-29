@@ -203,6 +203,7 @@ import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAnd
 import ToeFormal.Derivation.QFTGRQuadraticToeRoleAfterGenericFrozenResultV0
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
+import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0ResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -469,7 +470,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_toe_native_coherence_representation_v0"
+        "close_toe_native_surrogate_v0_after_bounded_result_v0"
       status := .retained }
   ]
 
@@ -489,31 +490,31 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the blocked bounded Stage 3 result. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "authorize_toe_native_surrogate_v0_bounded_program"
+  "select_toe_native_coherence_representation_v0"
 
 /-- Native Stage 1 target selected by the separate bounded-program authorization. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "select_toe_native_coherence_representation_v0"
+  "close_toe_native_surrogate_v0_after_bounded_result_v0"
 
 /-- Evidence certificate for the bounded native-program authorization. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean"
 
 /-- Review accepting Program N as unopened and selecting Stage 1 only. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json"
+  "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json"
 
 /-- Accepted governance-only Program N authorization outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN"
+  "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT"
+  "NATIVE_SURROGATE_V0_BLOCKED_AT_STAGE_1_NO_REPAIR_STAGES_2_TO_5_PROHIBITED_NO_UNIQUE_TOE_DISCRIMINATOR_V0"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "toe_native_coherence_representation_selection_v0"
+  "toe_native_surrogate_v0_mandatory_bounded_closeout"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -526,7 +527,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "select_toe_native_coherence_representation_v0"
+    "close_toe_native_surrogate_v0_after_bounded_result_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -654,15 +655,15 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
 /-- The accepted review supports only the mandatory role gate. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json" ∧
+        "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN" ∧
+        "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT" ∧
+        "NATIVE_SURROGATE_V0_BLOCKED_AT_STAGE_1_NO_REPAIR_STAGES_2_TO_5_PROHIBITED_NO_UNIQUE_TOE_DISCRIMINATOR_V0" ∧
       currentLiveNextStrictTargetKindV0 =
-        "toe_native_coherence_representation_selection_v0" := by
+        "toe_native_surrogate_v0_mandatory_bounded_closeout" := by
   constructor
   · rfl
   constructor

@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "select_toe_native_coherence_representation_v0"
+    "close_toe_native_surrogate_v0_after_bounded_result_v0"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1347,7 +1347,7 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "authorize_toe_native_surrogate_v0_bounded_program"
+    "select_toe_native_coherence_representation_v0"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1694,7 +1694,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "select_toe_native_coherence_representation_v0"
+    "close_toe_native_surrogate_v0_after_bounded_result_v0"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1789,11 +1789,11 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeCoherenceRepresentationV0AttemptOpen.lean"
+    / "ToeNativeCoherenceRepresentationV0ResultReview.lean"
 )
 LIVE_TARGET_REPORT = (
-    "formal/docs/release/bounded_program_events/"
-    "TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json"
+    "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_"
+    "RESULT_REVIEW_20260729_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1925,7 +1925,7 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN"
+    "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2055,7 +2055,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT"
+    "NATIVE_SURROGATE_V0_BLOCKED_AT_STAGE_1_NO_REPAIR_STAGES_2_TO_5_"
+    "PROHIBITED_NO_UNIQUE_TOE_DISCRIMINATOR_V0"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2166,7 +2167,7 @@ SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
     "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 LIVE_TARGET_KIND = (
-    "toe_native_coherence_representation_selection_v0"
+    "toe_native_surrogate_v0_mandatory_bounded_closeout"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"

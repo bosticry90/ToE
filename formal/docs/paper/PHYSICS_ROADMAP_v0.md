@@ -19,14 +19,14 @@ Non-claim boundary:
 - no external truth claim.
 
 Current QFT–GR lead calculation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program`
-- `ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0`
+- `ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
@@ -39,7 +39,7 @@ Current QFT–GR lead calculation (2026-07-29):
 - Accepted bounded Stage 2: the complete strict-harmonic component graph has 3,950 closed nodes, 64 independently inventoried equations per trace chart, and exact Minkowski 128-state/224-entry regression.
 - Accepted bounded Stage 3: the exact generic companion is not closed because no unique off-constraint 128-state wave-slot map or closed nine-variable trace chart is supplied.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, quotient, or propagator stage follows.
-- Current native step: Stage 1 attempt 1 is open with no result; only the bounded coherence-representation and symmetry adjudication may run.
+- Current native step: accept the failed-closed Stage 1 result and close v0. No minimal action, viability, seam, or observable stage is authorized.
 - Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 
