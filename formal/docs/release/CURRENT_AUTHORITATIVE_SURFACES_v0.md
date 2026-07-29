@@ -12,7 +12,7 @@ Purpose:
 
 Current scientific checkpoint (2026-07-28):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0`.
+- The exact scientific target is `prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -23,21 +23,22 @@ Current scientific checkpoint (2026-07-28):
 - The accepted energy preparation ledgers every chain. The 14 missing eigenvectors split into 2 physical TT, 8 length-three reconstruction, and 4 non-TT length-two deficiencies. The equivalence-map shift is one derivative, but the frozen propagator loss remains unresolved between one and two.
 - The accepted pure-principal 128-state companion gives zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth away from `2alpha+beta=0`, and linear-frequency physical TT growth. Its block-order graph has no positive return cycle, but that screen is not the exact generic background-jet subprincipal operator.
 - The exact-operator attempt supplies a complete placeholder-free Minkowski control matrix with 224 nonzero entries. It does not close the generic operator: `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet remain unexpanded.
-- The complete generic frozen metric minimum and the constraint-restricted minimum remain blocked. The active target is limited to component expansion and a nonredundant background/gauge-jet freeze. No generic spectral calculation, constraint-tangent projection, variable-coefficient estimate, loss-nonaccumulation claim, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows.
+- The component-linearization execution fails closed: the accepted metric-dependent `H(x,g)` source is only `C2`, but the differentiated metric block needs a third `H` jet; the generic rank-nine trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen. The Minkowski control remains preserved but was not rederived from a generic form.
+- The complete generic frozen metric minimum and the constraint-restricted minimum remain blocked. The active target is limited to freezing the missing gauge, trace-projector, background-jet, substitution-order, and identity-check contracts. No component-expansion retry, generic companion, spectral calculation, constraint-tangent projection, variable-coefficient estimate, loss-nonaccumulation claim, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows.
 - Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v2. Its scientific-target field is a closeout-time snapshot, not a live mirror.
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
+ACTIVE_LANE_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: MINKOWSKI_FROZEN_COMPANION_EXACT_GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED_SUBPRINCIPAL_SPECTRUM_AND_CONSTRAINT_PROJECTION_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_component_expanded_generic_background_linearization_derivation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: GENERIC_COMPONENT_LINEARIZATION_BLOCKED_BY_GAUGE_C3_TRACEFREE_TANGENT_AND_ON_SHELL_JET_CONTRACT_MINKOWSKI_CONTROL_PRESERVED_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_preparation
 
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`

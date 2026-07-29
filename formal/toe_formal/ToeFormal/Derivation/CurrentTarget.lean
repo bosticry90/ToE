@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.selectedNextTarget
+  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.reviewId
+  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.reviewId
 
-theorem current_target_is_quadratic_component_expanded_background :
+theorem current_target_is_quadratic_background_gauge_and_jet_contract :
     currentLiveTarget =
-      "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0" := by
+      "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   rfl
 
 end CurrentTarget

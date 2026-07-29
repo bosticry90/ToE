@@ -47,25 +47,36 @@ still names `Q^H`, the tensor-box remainder, and differentiated right-hand
 sides without component expansion, and it does not freeze the independent
 prescribed-gauge or on-shell background jet needed for their Jacobians.
 
+The component-linearization execution has now failed closed at a sharper
+boundary. The accepted metric-dependent `H(x,g)` family is only `C2`, while
+linearizing the differentiated metric block requires a third gauge-source
+jet. The predecessor also has no generic rank-nine trace-free tangent chart
+and no nonredundant on-shell background substitution order. Selecting a
+field-independent gauge branch, reusing the flat trace chart, or choosing an
+on-shell chart silently would change the subprincipal coefficients being
+tested. None was manufactured. The Minkowski control remains preserved.
+
 The exact live target is
-`derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0`.
-It authorizes only the missing component expansion and background/gauge-jet
-freeze. Generic spectral asymptotics and the constraint-tangent projection are
-not yet authorized by this checkpoint.
+`prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`.
+It authorizes only a corrective contract that freezes the gauge branch and
+regularity, generic trace-free tangent projector, independent off-shell and
+on-shell background jets, substitution order, and component-identity checks.
+The component expansion retry, generic companion, spectral asymptotics, and
+constraint-tangent projection are not authorized by this checkpoint.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
+ACTIVE_LANE_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: MINKOWSKI_FROZEN_COMPANION_EXACT_GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED_SUBPRINCIPAL_SPECTRUM_AND_CONSTRAINT_PROJECTION_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_component_expanded_generic_background_linearization_derivation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: GENERIC_COMPONENT_LINEARIZATION_BLOCKED_BY_GAUGE_C3_TRACEFREE_TANGENT_AND_ON_SHELL_JET_CONTRACT_MINKOWSKI_CONTROL_PRESERVED_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_preparation
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

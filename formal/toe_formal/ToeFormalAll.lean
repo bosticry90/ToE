@@ -598,6 +598,8 @@ import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosedn
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicReducedSystemV0
+import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV0
 import ToeFormal.Derivation.QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticExactGenericFrozenCompanionOperatorV0
 import ToeFormal.Derivation.QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0
@@ -1271,6 +1273,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1264
+def committedModuleCount : Nat := 1266
 
 end ToeFormalAll
