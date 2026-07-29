@@ -1,0 +1,50 @@
+{
+  "accepted_blocked_result": {
+    "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-REPRESENTATION-v0.json",
+    "review_path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+    "review_sha256": "4d6271e5688352a96ce9b7ab1abadd669e167394d337f1b5db37d5dd3934ec38",
+    "sha256": "722d51d76792769e2fea7191eb31b1e7e7f944534a4deedeae5892b5256646db",
+    "terminal_outcome": "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED"
+  },
+  "calculation_id": "CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "event_chain": {
+    "close_event_hash": "da7b0f1b5c9fbcb2779c15c8c1e857934907c08269269c6d210e69c597590b95",
+    "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_CLOSE_v0.json",
+    "close_event_sha256": "94f99670fad67ee62359f3b550d9dcd8efc988ed23158b29138592240dfc21de",
+    "open_event_hash": "dc3749545909da0f587e0931632d472ec518eb1cb2e2652b0fcd1a3cbf6e4429",
+    "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json",
+    "open_event_sha256": "a72077d4a4b15af7736378c5cb8c2315f0bd2806c62c2b8d3715c269a1c56972"
+  },
+  "execution_target": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+  "program_closeout": {
+    "attempted_stage_count": 1,
+    "attempted_stage_ids": [
+      "COHERENCE_REPRESENTATION"
+    ],
+    "authorized_stage_count": 5,
+    "blocked_stage_id": "COHERENCE_REPRESENTATION",
+    "repair_attempt_count": 0,
+    "subsidiary_scientific_targets_created": 0,
+    "unattempted_stage_ids": [
+      "MINIMAL_ACTION_SELECTION",
+      "INTERNAL_VIABILITY",
+      "SEAM_AUDIT",
+      "OBSERVABLE_AND_UNIQUENESS"
+    ]
+  },
+  "program_id": "TOE_NATIVE_SURROGATE_V0",
+  "schema_id": "CALC_TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_v0",
+  "terminal_boundaries": {
+    "ccft_rejected": false,
+    "ccft_validated": false,
+    "classical_native_sandbox_constructed": false,
+    "new_representation_or_action_requires_separate_v1": true,
+    "portal_action_selected": false,
+    "program_v0_closed": true,
+    "repair_authorized": false,
+    "stage_2_through_5_authorized": false
+  },
+  "terminal_outcome": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+  "verdict": "TOE_NATIVE_SURROGATE_V0_CLOSED_AFTER_STAGE_1_BLOCK_NO_REPAIR_NO_UNIQUE_TOE_DISCRIMINATOR_V0"
+}

@@ -24,9 +24,9 @@ Current QFT–GR lead calculation (2026-07-29):
 - `ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: NO_UNIQUE_TOE_DISCRIMINATOR_V0`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.

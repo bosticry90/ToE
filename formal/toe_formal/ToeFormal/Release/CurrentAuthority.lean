@@ -46,9 +46,9 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem bounded_native_program_stage_one_is_closed_and_blocked :
+theorem bounded_native_program_is_terminal_after_stage_one_block :
     boundedProgramId = "TOE_NATIVE_SURROGATE_V0" ∧
-    boundedProgramState = "CLOSED" ∧
+    boundedProgramState = "TERMINAL" ∧
     boundedAttemptNumber = 1 := by
   native_decide
 

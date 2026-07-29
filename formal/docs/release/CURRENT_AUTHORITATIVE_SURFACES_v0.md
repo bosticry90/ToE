@@ -18,6 +18,7 @@ Current scientific checkpoint (2026-07-29):
 - Attempt 3 is `CLOSED/BLOCKED` on semantic stage `EXACT_FROZEN_COMPANION_OPERATOR`. Its immutable result proves that the Stage 2 leaves do not determine a unique generic off-constraint 128-state wave-slot map and that all ten trace charts retain dependent spin jets. The zero-repair rule prohibits Stages 4–5 and makes the role gate mandatory.
 - The mandatory role gate is accepted: `toe_role=REFERENCE_CONTROL_ONLY` and `control_result=UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal and no further quadratic target is authorized.
 - Program N Stage 1 attempt 1 is `CLOSED/BLOCKED`. No accepted CCFT-to-relativistic-real-scalar map exists; the `phi` and `chi` independent `Z2` gates are also unjustified. Zero repair requires immediate v0 closeout and prohibits Stages 2–5.
+- Program N v0 is now terminal after its mandatory closeout: one stage was attempted, four were never opened, no portal action or sandbox was constructed, and no automatic v1 is authorized.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -41,13 +42,13 @@ PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
 ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0ResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: NATIVE_SURROGATE_V0_BLOCKED_AT_STAGE_1_NO_REPAIR_STAGES_2_TO_5_PROHIBITED_NO_UNIQUE_TOE_DISCRIMINATOR_V0
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_mandatory_bounded_closeout
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: NO_UNIQUE_TOE_DISCRIMINATOR_V0
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: NATIVE_SURROGATE_V0_TERMINAL_AFTER_STAGE_1_BLOCK_NO_REPAIR_NO_ACTION_NO_AUTOMATIC_V1
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_terminal_closeout
 CURRENT_BOUNDED_PROGRAM_ID_v0: TOE_NATIVE_SURROGATE_V0
-CURRENT_BOUNDED_PROGRAM_STATE_v0: CLOSED
+CURRENT_BOUNDED_PROGRAM_STATE_v0: TERMINAL
 CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 1
 LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: COHERENCE_REPRESENTATION
 LAST_BOUNDED_TERMINAL_RESULT_v0: BLOCKED

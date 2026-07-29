@@ -885,6 +885,7 @@ import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyDefinitionPolicyPacket
 import ToeFormal.Derivation.ToeNativePsiAU1StressEnergyDefinitionPolicyResultReview
 import ToeFormal.Derivation.ToeNativePsiAU1TotalStressEnergyConservationRoutePacket
 import ToeFormal.Derivation.ToeNativePsiAU1TotalStressEnergyConservationRouteResultReview
+import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedCloseout
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollment
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollmentResultReview
@@ -1287,6 +1288,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1280
+def committedModuleCount : Nat := 1281
 
 end ToeFormalAll

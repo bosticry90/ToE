@@ -1,0 +1,26 @@
+{
+  "accepted": true,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "ccft_neither_validated_nor_rejected": true,
+    "event_chain_closed": true,
+    "four_stages_unattempted": true,
+    "no_action_or_sandbox_constructed": true,
+    "no_unique_discriminator": true,
+    "one_attempt_consumed": true,
+    "program_v0_closed": true,
+    "separate_v1_required": true,
+    "zero_repair": true
+  },
+  "failed_checks": [],
+  "next_scientific_target_selected": false,
+  "program_terminal": true,
+  "reviewed_result": {
+    "path": "formal/output/CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0.json",
+    "sha256": "ec270a6e7f23f06dd66162c5f4deee4e654e931bf158fde4db1444e4a578f3e9"
+  },
+  "schema_id": "TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0",
+  "scientific_success_claimed": false,
+  "terminal_outcome": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+  "verdict": "ACCEPT_NATIVE_SURROGATE_V0_TERMINAL_CLOSEOUT_NO_UNIQUE_TOE_DISCRIMINATOR_AND_NO_AUTOMATIC_V1"
+}
