@@ -1,0 +1,99 @@
+{
+  "aggregate_generation": {
+    "command": "python -m formal.python.tools.generate_lean_all_modules_aggregate --write",
+    "covered_module_count_after_stage_1_enrollment": 1272,
+    "result": "PASS"
+  },
+  "bounded_program": {
+    "attempt_sequence_number": 1,
+    "close_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_CLOSE_v0.json",
+    "open_commit": "5043513c39e0e20bce4b4b08e085378b6c76654e",
+    "open_event_hash": "40acd16a141189d7542fd78cd5cceb9fb0a5e2fd6250f699ae393394bbd469c0",
+    "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_OPEN_v0.json",
+    "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "semantic_stage_id": "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+    "substantive_stage_output_predated_open_commit": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checkout_boundary": {
+    "allowed_root": "C:/Users/psboy/Documents/ToE",
+    "new_artifact_outside_allowed_root": false,
+    "tracked_index_and_worktree_expected_clean_after_commit": true,
+    "untracked_reddit_directory_status": "PRESENT_UNTOUCHED_OUTSIDE_STAGE_1"
+  },
+  "commands": [
+    {
+      "command": "python -m formal.python.toe.calculations.calc_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_result_review --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m pytest formal/python/tests/calculations/test_calc_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract.py formal/python/tests/test_current_scientific_authority_consistency.py formal/python/tests/test_current_authoritative_surfaces_gate.py formal/python/tests/test_current_target_freshness_gate.py -q",
+      "passed": 23,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m pytest formal/python/tests/test_bounded_program_governance.py formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py formal/python/tests/test_authority_surface_parity_tool_gate.py formal/python/tests/test_repository_front_door_links.py formal/python/tests/test_lean_all_modules_aggregate_coverage_gate.py formal/python/tests/test_repository_canonical_text_integrity_gate.py -q",
+      "passed": 30,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.loop_control_registry_integrity --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.current_scientific_authority_consistency",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractV0.lean",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormal/Derivation/CurrentTarget.lean",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormal/Release/CurrentAuthority.lean",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormalAll.lean",
+      "covered_module_count": 1272,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "historical_test_repair": {
+    "classification": "ARCHIVE_INTEGRITY_TEST",
+    "current_checkout_absence_or_live_target_assertion_removed": true,
+    "frozen_git_blob_binding": "PAC-001",
+    "historical_meaning_weakened": false,
+    "test_path": "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py"
+  },
+  "result": "STAGE_1_VALIDATION_PASSED",
+  "schema_id": "toe.qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_validation.v0",
+  "scientific_boundary": {
+    "companion_operator_claimed": false,
+    "nonlinear_estimate_claimed": false,
+    "spectral_result_claimed": false,
+    "stage_2_selected_but_opened": false,
+    "variable_coefficient_result_claimed": false
+  },
+  "stage_1_terminal_result": "PASSED",
+  "working_branch": "codex/quadratic-hyperbolicity-bounded-replay"
+}

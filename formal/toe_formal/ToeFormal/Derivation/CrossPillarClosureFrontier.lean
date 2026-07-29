@@ -198,6 +198,7 @@ def currentLiveNextStrictTargetV0 : String :=
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
 import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -464,7 +465,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0"
+        "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1"
       status := .retained }
   ]
 
@@ -482,33 +483,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the component-linearization review. -/
+/-- Previous live target consumed by the strict-harmonic contract review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0"
-
-/-- Current live target after the accepted fail-closed result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0"
 
-/-- Evidence certificate for the fail-closed component result review. -/
+/-- Current live target after the accepted bounded Stage 1 review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1"
+
+/-- Evidence certificate for the accepted strict-harmonic contract review. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean"
+  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean"
 
-/-- Result review supporting only the corrective gauge-and-jet packet. -/
+/-- Result review supporting bounded Stage 2 component expansion only. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json"
+  "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json"
 
-/-- Accepted fail-closed component-linearization outcome. -/
+/-- Accepted strict-harmonic contract outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED"
+  "QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_ACCEPTED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "GENERIC_COMPONENT_LINEARIZATION_BLOCKED_BY_GAUGE_C3_TRACEFREE_TANGENT_AND_ON_SHELL_JET_CONTRACT_MINKOWSKI_CONTROL_PRESERVED_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE"
+  "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_preparation"
+  "qft_gr_quadratic_component_expanded_generic_background_linearization_derivation_v1"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +522,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0"
+    "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -646,18 +647,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The accepted review supports the corrective contract packet only. -/
+/-- The accepted review supports bounded Stage 2 only. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json" ∧
+        "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED" ∧
+        "QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_ACCEPTED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "GENERIC_COMPONENT_LINEARIZATION_BLOCKED_BY_GAUGE_C3_TRACEFREE_TANGENT_AND_ON_SHELL_JET_CONTRACT_MINKOWSKI_CONTROL_PRESERVED_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE" ∧
+        "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT" ∧
       currentLiveNextStrictTargetKindV0 =
-        "qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_preparation" := by
+        "qft_gr_quadratic_component_expanded_generic_background_linearization_derivation_v1" := by
   constructor
   · rfl
   constructor

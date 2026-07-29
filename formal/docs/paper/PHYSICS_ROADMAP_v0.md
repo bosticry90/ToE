@@ -18,15 +18,15 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
-Current QFT–GR lead calculation (2026-07-28):
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0`
-- `ACTIVE_LANE_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`
+Current QFT–GR lead calculation (2026-07-29):
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_ACCEPTED`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
@@ -35,7 +35,8 @@ Current QFT–GR lead calculation (2026-07-28):
 - Accepted frozen growth: zero auxiliary loss and exact pure-principal quadratic-frequency metric-equivalence and linear-frequency physical TT growth. The block-order graph has no positive return cycle, but the complete generic frozen subprincipal matrix and both complete metric minima remain blocked.
 - Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic operator remains unclosed because component remainders and independent background/gauge jets are absent.
 - Accepted linearization boundary: the generic component expansion is incomplete because the accepted metric-dependent gauge family is only `C2` while the differentiated block needs an `H` third jet; the generic trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen.
-- Prepare next: choose and freeze the gauge branch and regularity, rank-nine trace-free projector, independent background jets, substitution order, and component-identity checks. Retry the expansion only after that packet is accepted; construct the generic companion and constraint-tangent projector later.
+- Accepted bounded Stage 1: strict harmonic gauge, the ten-chart trace-free atlas, compact regular strata, separate reduced/metric regularity ledgers, terminating confluent rewrites, and the Minkowski regression are frozen.
+- Selected next: component-expand the generic-background linearization under the single Stage 2 envelope after its immutable OPEN commit; construct the companion and quotient only in later stages.
 - Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 

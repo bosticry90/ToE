@@ -12,15 +12,15 @@ Non-claim boundary:
 - This document does not claim physics completion, canonical master-action promotion, global seam closure, Standard Model recovery, interacting-QFT completion, or empirical validation.
 - This document is a strict physics work map, not a release-governance expansion surface.
 
-Current strict QFT–GR obligation (2026-07-28):
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0`
-- `ACTIVE_LANE_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`
+Current strict QFT–GR obligation (2026-07-29):
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_ACCEPTED`
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.
@@ -29,7 +29,8 @@ Current strict QFT–GR obligation (2026-07-28):
 - Accepted frozen calculation: the pure-principal 128-state companion has zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth, and linear-frequency physical TT growth. The block-order screen has no positive return cycle, but the complete generic frozen subprincipal operator was not constructed.
 - Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic background operator is not closed.
 - Accepted fail-closed linearization result: metric-dependent `H(x,g)` needs an unfrozen third gauge-source jet in the differentiated metric block; the generic rank-nine trace-free tangent chart and on-shell substitution order are also absent. The Minkowski control remains preserved and was not called generic.
-- Required preparation: freeze either a field-independent `H(x)` branch or a `C3` metric-dependent gauge jet, a generic rank-nine trace-free projector and tangent map, independent background-jet coordinates, substitution order, and component-identity obligations. Retrying component expansion is not yet authorized.
+- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets, the regular trace-free atlas, separate regularity ledgers, and a terminating confluent rewrite contract now close the prior prerequisite.
+- Required Stage 2: derive all 64 component equations and reproduce the accepted Minkowski 128-state/224-entry control under a single immutable authority envelope. The stage remains unopened until its OPEN commit.
 - No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
 

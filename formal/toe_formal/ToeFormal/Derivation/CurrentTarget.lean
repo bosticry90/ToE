@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,29 +13,32 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.selectedNextTarget
+  QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.reviewId
+  QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.reviewId
 
 def currentBoundedProgramId : String :=
   "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0"
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentBoundedAttemptNumber : Nat := 1
 
-def currentBoundedSemanticStage : String :=
+def lastClosedBoundedSemanticStage : String :=
   "STRICT_HARMONIC_GAUGE_JET_CONTRACT"
 
-theorem current_target_is_quadratic_background_gauge_and_jet_contract :
+def lastBoundedTerminalResult : String := "PASSED"
+
+theorem current_target_is_bounded_quadratic_component_expansion_v1 :
     currentLiveTarget =
-      "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
+      "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1" := by
   rfl
 
-theorem first_bounded_quadratic_attempt_is_open :
-    currentBoundedProgramState = "OPEN" ∧
-    currentBoundedAttemptNumber = 1 := by
+theorem first_bounded_quadratic_attempt_is_closed_passed :
+    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedAttemptNumber = 1 ∧
+    lastBoundedTerminalResult = "PASSED" := by
   decide
 
 end CurrentTarget

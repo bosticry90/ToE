@@ -1,4 +1,4 @@
-## CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)
+## CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 
 Scientific authority selected bounded reconciliation/replay without automatically
 adopting preserved descendants. The frozen vacuum quadratic action has now passed
@@ -56,27 +56,33 @@ field-independent gauge branch, reusing the flat trace chart, or choosing an
 on-shell chart silently would change the subprincipal coefficients being
 tested. None was manufactured. The Minkowski control remains preserved.
 
+The bounded closeout's first semantic stage has now passed. Strict harmonic
+gauge fixes `H^mu=delta H^mu=0`, all required gauge-source jets vanish, no
+constraint addition is present, the ten-chart trace-free atlas covers the
+regular strata, the reduced and metric-equivalence regularity ledgers are
+separate, and the typed rewrite system is terminating and confluent. The
+accepted Minkowski 128-state/224-entry control is reproduced.
+
 The exact live target is
-`prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`.
-It authorizes only a corrective contract that freezes the gauge branch and
-regularity, generic trace-free tangent projector, independent off-shell and
-on-shell background jets, substitution order, and component-identity checks.
-The component expansion retry, generic companion, spectral asymptotics, and
-constraint-tangent projection are not authorized by this checkpoint.
+`derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`.
+Stage 1 is closed and passed. Stage 2 is selected but has not been opened, so
+its producer remains unauthorized until the immutable OPEN commit exists.
+The generic companion, spectral asymptotics, and constraint-tangent projection
+remain outside the Stage 2 envelope.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
-ACTIVE_LANE_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: GENERIC_COMPONENT_LINEARIZATION_BLOCKED_BY_GAUGE_C3_TRACEFREE_TANGENT_AND_ON_SHELL_JET_CONTRACT_MINKOWSKI_CONTROL_PRESERVED_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_preparation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_component_expanded_generic_background_linearization_derivation_v1
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

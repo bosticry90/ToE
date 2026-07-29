@@ -8,8 +8,8 @@ from formal.python.tools import current_scientific_authority_consistency as auth
 
 
 TARGET = (
-    "prepare_qft_gr_quadratic_generic_background_linearization_"
-    "gauge_and_jet_contract_v0"
+    "derive_qft_gr_quadratic_component_expanded_generic_background_"
+    "linearization_v1"
 )
 JULY_19_SELECT_TARGET = (
     "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_"

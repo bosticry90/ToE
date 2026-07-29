@@ -54,19 +54,19 @@ STRICT_CURRENT_TOKEN_SURFACES = (
 
 LATEST_CURRENT_BLOCK_MARKERS = {
     README_PATH: (
-        "CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)",
+        "CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)",
         "CURRENT-MAINTENANCE NOTE",
     ),
     STATE_PATH: (
-        "## CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)",
+        "## CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)",
         "## AUTHORITY_SURFACE_v2",
     ),
     ROADMAP_PATH: (
-        "Current QFT–GR lead calculation (2026-07-28):",
+        "Current QFT–GR lead calculation (2026-07-29):",
         "POST_MR_MATURATION_EXECUTION_STATUS_v0:",
     ),
     STRICT_MAP_PATH: (
-        "Current strict QFT–GR obligation (2026-07-28):",
+        "Current strict QFT–GR obligation (2026-07-29):",
         "POST_MR_MATURATION_EXECUTION_STATUS_v0:",
     ),
 }
