@@ -1008,6 +1008,7 @@ import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.CurrentAuthority
 import ToeFormal.Release.CurrentMaintenanceAuthorityV1
 import ToeFormal.Release.CurrentMaintenanceAuthorityV2
+import ToeFormal.Release.CurrentMaintenanceAuthorityV3
 import ToeFormal.Release.CurrentScientificAuthorityWitness
 import ToeFormal.Release.July1619PostMaintenanceScientificAdoptionOrBoundedReplayDecisionHandoffV0
 import ToeFormal.Release.July1619RepositoryIntegrationAndLiveAuthorityRepairExecutionResultReviewV0
@@ -1275,6 +1276,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1268
+def committedModuleCount : Nat := 1269
 
 end ToeFormalAll

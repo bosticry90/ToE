@@ -1,0 +1,16 @@
+{
+  "artifact_id": "CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORITY_PACKET_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumed_artifact": "CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORITY_PACKET_20260729_v0",
+  "decision": "CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORIZED",
+  "maintenance_target": "execute_canonical_text_attribute_policy_repair_v0",
+  "nonclaim_boundary": [
+    "Maintenance authority does not rotate scientific authority.",
+    "Changing future Git attribute behavior does not accept or rewrite historical scientific bytes.",
+    "Repository-wide renormalization remains prohibited."
+  ],
+  "required_result_review_target": "review_canonical_text_attribute_policy_repair_result_v0",
+  "schema_id": "toe.canonical_text_attribute_repair.maintenance_authority_review.v0",
+  "scientific_target_preserved": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "status": "ACCEPTED_MAINTENANCE_AUTHORIZATION_ONLY"
+}
