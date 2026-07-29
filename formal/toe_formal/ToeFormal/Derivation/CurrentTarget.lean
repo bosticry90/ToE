@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0.selectedNextTarget
+  QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0.reviewId
+  QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.reviewId
 
-theorem current_target_is_quadratic_full_reduced_principal_structure :
+theorem current_target_is_quadratic_adapted_energy_hierarchy_preparation :
     currentLiveTarget =
-      "compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0" := by
+      "prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0" := by
   rfl
 
 end CurrentTarget

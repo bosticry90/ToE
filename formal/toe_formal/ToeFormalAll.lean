@@ -596,6 +596,8 @@ import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosedn
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicReducedSystemV0
+import ToeFormal.Derivation.QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticFullReducedSystemPrincipalStructureV0
 import ToeFormal.Derivation.QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemV0
 import ToeFormal.Derivation.QFTGRQuadraticHyperbolicityAdmissibleSourceAndFrozenTheoryPacketResultReviewV0
@@ -1263,6 +1265,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1256
+def committedModuleCount : Nat := 1258
 
 end ToeFormalAll

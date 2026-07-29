@@ -21,21 +21,22 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)
 - Accepted result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED` for the generic physical spin-2 block of the frozen vacuum quadratic action.
 - Accepted reduced system: `U=(g_mn,R,r_a,c_mna,S_mn)` with exact wave equations and algebraic equivalence to the fourth-order metric equation only on the full constraint surface.
 - Accepted constraint result: the exact zero-addition off-constraint extension has a finite homogeneous subsidiary hierarchy; its normalized 69-component independent pencil is `(1-lambda^2) I_69`, while equivalence to the metric formulation carries one derivative of loss.
-- Exact live target: `compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0.lean`.
-- Report: `formal/docs/release/QFT_GR_QUADRATIC_GAUGE_AND_AUXILIARY_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_REVIEW_20260728_v0.json`.
-- Boundary: compute the full reduced-system principal structure and keep the healthy subsidiary block distinct from the defective physical spin-2 block. An adapted energy estimate, local well-posedness theorem, source extension, Maxwell–Dirac execution, preserved-descendant adoption, and Yukawa work are not authorized by this transition.
+- Accepted principal result: the equal-order and adapted auxiliary pencils normalize to `(1-lambda^2) I_64`, but the metric-equivalence grading is triangular and defective with one derivative of loss; its light-cone roots have algebraic multiplicity 64 and geometric multiplicity 50.
+- Exact live target: `prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.lean`.
+- Report: `formal/docs/release/QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_REVIEW_20260728_v0.json`.
+- Boundary: prepare the candidate derivative-loss energy hierarchy only. Executing an energy estimate, claiming loss nonaccumulation or local well-posedness, extending sources, Maxwell–Dirac execution, preserved-descendant adoption, and Yukawa work are not authorized by this transition.
 
-CURRENT_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0
-ACTIVE_LANE_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0
+ACTIVE_LANE_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_GAUGE_AND_AUXILIARY_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CONSTRAINT_SYSTEM_CLOSED_WITH_DERIVATIVE_LOSS_NO_PHYSICAL_HYPERBOLICITY_REPAIR_OR_LOCAL_WELL_POSEDNESS
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_full_reduced_system_principal_structure_calculation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: ADAPTED_AUXILIARY_SYMBOL_STRONGLY_HYPERBOLIC_METRIC_EQUIVALENCE_TRIANGULAR_WITH_FIXED_ONE_DERIVATIVE_LOSS_NO_ENERGY_OR_WELL_POSEDNESS
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_preparation
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

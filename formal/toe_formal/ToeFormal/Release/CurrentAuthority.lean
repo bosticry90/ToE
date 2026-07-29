@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0" := by
+      "prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0" := by
   native_decide
 
 end CurrentAuthority

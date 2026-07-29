@@ -19,19 +19,20 @@ Non-claim boundary:
 - no external truth claim.
 
 Current QFT–GR lead calculation (2026-07-28):
-- `CURRENT_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0`
-- `ACTIVE_LANE_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0`
+- `ACTIVE_LANE_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGaugeAndAuxiliaryConstraintPropagationSystemResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_GAUGE_AND_AUXILIARY_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_REVIEW_20260728_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_REVIEW_20260728_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_ACCEPTED`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
-- Compute next: the full reduced-system principal structure, retaining the healthy subsidiary and defective physical spin-2 blocks as distinct sectors.
-- Later decision: prove or refute the candidate adapted-norm estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
+- Accepted principal result: uniform auxiliary wave diagonalization in the adapted grading and a defective triangular metric-equivalence pencil with finite one-derivative loss.
+- Prepare next: the candidate derivative-loss energy hierarchy, with exact norms, commutators, source regularities, and closure obligations, but no estimate execution.
+- Later decision: prove or refute the prepared estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
