@@ -1283,6 +1283,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1275
+def committedModuleCount : Nat := 1276
 
 end ToeFormalAll
