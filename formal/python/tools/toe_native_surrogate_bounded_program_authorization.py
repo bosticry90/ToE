@@ -62,8 +62,10 @@ def build_authorization() -> dict:
         }
         for index, stage in enumerate(NATIVE_STAGE_DEFINITIONS, start=1)
     ]
-    if native["state"] != "UNOPENED" or native["events"]:
-        raise ValueError("authorization artifact applies only before Stage 1 OPEN")
+    if [row["semantic_stage_id"] for row in native["stage_definitions"]] != [
+        row["semantic_stage_id"] for row in NATIVE_STAGE_DEFINITIONS
+    ]:
+        raise ValueError("authorized native stage definitions changed")
     return {
         "schema_id": (
             "TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_20260729_v0"

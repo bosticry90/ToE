@@ -67,8 +67,9 @@ The exact live target is
 `select_toe_native_coherence_representation_v0`.
 The mandatory role gate records quadratic gravity as `REFERENCE_CONTROL_ONLY`
 with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal. Program N is
-authorized with five stages, zero repairs, and no subsidiary targets, but its
-first scientific stage is still unopened.
+authorized with five stages, zero repairs, and no subsidiary targets. Its first
+scientific stage is open under immutable attempt 1, with no scientific result
+yet present.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
@@ -78,10 +79,10 @@ PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
 ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: TOE_NATIVE_SURROGATE_PROGRAM_AUTHORIZED_GOVERNANCE_ONLY_COHERENCE_REPRESENTATION_STAGE_REQUIRES_SEPARATE_OPEN_COMMIT
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT
 CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_representation_selection_v0
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)

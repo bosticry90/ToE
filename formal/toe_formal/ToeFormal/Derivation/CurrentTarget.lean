@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
+import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -16,14 +16,14 @@ def currentLiveTarget : String :=
   "select_toe_native_coherence_representation_v0"
 
 def currentEvidencePacketId : String :=
-  ToeNativeSurrogateV0BoundedProgramAuthorization.authorizationId
+  ToeNativeCoherenceRepresentationV0AttemptOpen.openEventHash
 
 def currentBoundedProgramId : String :=
   "TOE_NATIVE_SURROGATE_V0"
 
-def currentBoundedProgramState : String := "UNOPENED"
+def currentBoundedProgramState : String := "OPEN"
 
-def currentBoundedAttemptNumber : Nat := 0
+def currentBoundedAttemptNumber : Nat := 1
 
 def lastClosedBoundedSemanticStage : String :=
   "NONE"
@@ -35,9 +35,9 @@ theorem current_target_selects_native_coherence_representation_stage :
       "select_toe_native_coherence_representation_v0" := by
   rfl
 
-theorem native_program_is_authorized_but_stage_one_is_unopened :
-    currentBoundedProgramState = "UNOPENED" ∧
-    currentBoundedAttemptNumber = 0 ∧
+theorem native_program_stage_one_is_open_without_result :
+    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedAttemptNumber = 1 ∧
     lastClosedBoundedSemanticStage = "NONE" ∧
     lastBoundedTerminalResult = "NONE" := by
   decide

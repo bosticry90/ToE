@@ -843,6 +843,7 @@ import ToeFormal.Derivation.ToeNativeAVacuumSourceAdmissibilityIdentityPacket
 import ToeFormal.Derivation.ToeNativeAVacuumSourceAdmissibilityIdentityResultReview
 import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket
 import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview
+import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview
@@ -1285,6 +1286,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1278
+def committedModuleCount : Nat := 1279
 
 end ToeFormalAll

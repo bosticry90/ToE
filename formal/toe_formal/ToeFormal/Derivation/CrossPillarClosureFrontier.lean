@@ -202,6 +202,7 @@ import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLine
 import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticToeRoleAfterGenericFrozenResultV0
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
+import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -496,19 +497,19 @@ def currentLiveNextStrictTargetV0 : String :=
 
 /-- Evidence certificate for the bounded native-program authorization. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean"
 
 /-- Review accepting Program N as unopened and selecting Stage 1 only. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json"
+  "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json"
 
 /-- Accepted governance-only Program N authorization outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED"
+  "TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "TOE_NATIVE_SURROGATE_PROGRAM_AUTHORIZED_GOVERNANCE_ONLY_COHERENCE_REPRESENTATION_STAGE_REQUIRES_SEPARATE_OPEN_COMMIT"
+  "COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
@@ -653,13 +654,13 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
 /-- The accepted review supports only the mandatory role gate. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationV0AttemptOpen.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED" ∧
+        "TOE_NATIVE_SURROGATE_V0_STAGE_1_ATTEMPT_OPEN" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "TOE_NATIVE_SURROGATE_PROGRAM_AUTHORIZED_GOVERNANCE_ONLY_COHERENCE_REPRESENTATION_STAGE_REQUIRES_SEPARATE_OPEN_COMMIT" ∧
+        "COHERENCE_REPRESENTATION_STAGE_OPEN_NO_SCIENTIFIC_OUTPUT_OR_RESULT" ∧
       currentLiveNextStrictTargetKindV0 =
         "toe_native_coherence_representation_selection_v0" := by
   constructor

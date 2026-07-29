@@ -46,10 +46,10 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem bounded_native_program_is_authorized_but_unopened :
+theorem bounded_native_program_stage_one_is_open_without_result :
     boundedProgramId = "TOE_NATIVE_SURROGATE_V0" ∧
-    boundedProgramState = "UNOPENED" ∧
-    boundedAttemptNumber = 0 := by
+    boundedProgramState = "OPEN" ∧
+    boundedAttemptNumber = 1 := by
   native_decide
 
 end CurrentAuthority
