@@ -200,7 +200,7 @@ import ToeFormal.Derivation.CrossPillarDerivationProtocol
 import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
-import ToeFormal.Derivation.QFTGRQuadraticExactGenericFrozenCompanionOperatorV1
+import ToeFormal.Derivation.QFTGRQuadraticToeRoleAfterGenericFrozenResultV0
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -467,7 +467,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0"
+        "authorize_toe_native_surrogate_v0_bounded_program"
       status := .retained }
   ]
 
@@ -487,31 +487,31 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the blocked bounded Stage 3 result. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1"
+  "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0"
 
 /-- Mandatory role gate after the accepted failed-closed Stage 3 result. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0"
+  "authorize_toe_native_surrogate_v0_bounded_program"
 
 /-- Evidence certificate for the accepted failed-closed Stage 3 result. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean"
+  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean"
 
 /-- Result review requiring the mandatory quadratic role gate. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json"
+  "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json"
 
 /-- Accepted failed-closed Stage 3 outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED"
+  "REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "STAGE_3_BLOCKED_NO_EXACT_GENERIC_COMPANION_NO_REPAIR_STAGE_4_AND_STAGE_5_PROHIBITED_MANDATORY_ROLE_GATE"
+  "QUADRATIC_PROGRAM_TERMINAL_REFERENCE_CONTROL_ONLY_NO_FURTHER_QUADRATIC_WORK_NATIVE_PROGRAM_REQUIRES_SEPARATE_AUTHORITY"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "qft_gr_quadratic_toe_role_selector_after_bounded_generic_frozen_result_v0"
+  "toe_native_surrogate_v0_bounded_program_authorization"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -524,7 +524,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0"
+    "authorize_toe_native_surrogate_v0_bounded_program"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -652,15 +652,15 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
 /-- The accepted review supports only the mandatory role gate. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED" ∧
+        "REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "STAGE_3_BLOCKED_NO_EXACT_GENERIC_COMPANION_NO_REPAIR_STAGE_4_AND_STAGE_5_PROHIBITED_MANDATORY_ROLE_GATE" ∧
+        "QUADRATIC_PROGRAM_TERMINAL_REFERENCE_CONTROL_ONLY_NO_FURTHER_QUADRATIC_WORK_NATIVE_PROGRAM_REQUIRES_SEPARATE_AUTHORITY" ∧
       currentLiveNextStrictTargetKindV0 =
-        "qft_gr_quadratic_toe_role_selector_after_bounded_generic_frozen_result_v0" := by
+        "toe_native_surrogate_v0_bounded_program_authorization" := by
   constructor
   · rfl
   constructor

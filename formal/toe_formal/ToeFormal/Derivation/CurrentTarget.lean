@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticExactGenericFrozenCompanionOperatorV1
+import ToeFormal.Derivation.QFTGRQuadraticToeRoleAfterGenericFrozenResultV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,15 +13,15 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0"
+  "authorize_toe_native_surrogate_v0_bounded_program"
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.calculationId
+  QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.calculationId
 
 def currentBoundedProgramId : String :=
   "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0"
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "TERMINAL"
 
 def currentBoundedAttemptNumber : Nat := 3
 
@@ -30,13 +30,13 @@ def lastClosedBoundedSemanticStage : String :=
 
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_is_mandatory_quadratic_role_gate :
+theorem current_target_authorizes_native_bounded_program_installation :
     currentLiveTarget =
-      "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0" := by
+      "authorize_toe_native_surrogate_v0_bounded_program" := by
   rfl
 
-theorem third_bounded_quadratic_attempt_closed_blocked_and_requires_exit :
-    currentBoundedProgramState = "CLOSED" ∧
+theorem quadratic_program_is_terminal_after_role_gate :
+    currentBoundedProgramState = "TERMINAL" ∧
     currentBoundedAttemptNumber = 3 ∧
     lastClosedBoundedSemanticStage = "EXACT_FROZEN_COMPANION_OPERATOR" ∧
     lastBoundedTerminalResult = "BLOCKED" := by
