@@ -49,13 +49,6 @@ README.md text eol=lf
 DEVELOPMENT.md text eol=lf
 State_of_the_Theory.md text eol=lf
 formal/aristotle/claim_registry.yaml text eol=lf
-formal/docs/release/*.json text eol=lf
-formal/docs/release/*.md text eol=lf
-formal/markdown/locks/**/*.md text eol=lf
-formal/output/*.json text eol=lf
-formal/output/**/*.json text eol=lf
-formal/python/**/*.py text eol=lf
-formal/toe_formal/**/*.lean text eol=lf
 formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md text eol=lf
 formal/docs/paper/PHYSICS_ROADMAP_v0.md text eol=lf
 formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md text eol=lf
@@ -110,6 +103,28 @@ formal/toe_formal/ToeFormal/Variational/FirstVariationRepresentationCore.lean te
 formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingGuardrailPacket.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingGuardrailIndependentReview.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/TechnicalDebtBaselineCorrectionV1.lean text eol=lf
+
+# Current bounded-governance and canonical-text maintenance surfaces. Immutable
+# event and custody records retain their exact produced bytes.
+formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_20260729_v0.json text eol=lf
+formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_RESULT_REVIEW_20260729_v0.json text eol=lf
+formal/docs/release/CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORITY_PACKET_20260729_v0.json text eol=lf
+formal/docs/release/CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORITY_PACKET_REVIEW_20260729_v0.json text eol=lf
+formal/docs/release/CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_RESULT_REVIEW_20260729_v0.json text eol=lf
+formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v3.json text eol=lf
+formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v4.json text eol=lf
+formal/docs/release/bounded_program_events/** -text
+formal/custody/canonical_text/** -text
+formal/python/tests/test_bounded_program_governance.py text eol=lf
+formal/python/tests/test_canonical_text_attribute_maintenance.py text eol=lf
+formal/python/tests/test_current_maintenance_authority_v3.py text eol=lf
+formal/python/tests/test_current_maintenance_authority_v4.py text eol=lf
+formal/python/tools/bounded_program_governance.py text eol=lf
+formal/python/tools/canonical_text_attribute_maintenance.py text eol=lf
+formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceControlInstallationV0.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceControlInstallationResultReviewV0.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV3.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV4.lean text eol=lf
 formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0.json text eol=lf
 formal/python/tests/test_legacy_discovery_report_fixture_packet.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_packet.py text eol=lf
