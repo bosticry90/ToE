@@ -125,6 +125,17 @@ formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceControlInstallationV
 formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceControlInstallationResultReviewV0.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV3.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV4.lean text eol=lf
+formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_ENFORCEMENT_COMPLETION_MAINTENANCE_PACKET_20260729_v0.json text eol=lf
+formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_ENFORCEMENT_COMPLETION_MAINTENANCE_PACKET_REVIEW_20260729_v0.json text eol=lf
+formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_ENFORCEMENT_COMPLETION_MAINTENANCE_RESULT_REVIEW_20260729_v0.json text eol=lf
+formal/docs/release/bounded_program_manifests/** -text
+formal/docs/release/bounded_program_attestations/** -text
+formal/python/tests/test_bounded_program_governance_enforcement_completion_authority.py text eol=lf
+formal/python/tests/test_bounded_program_governance_enforcement_adversarial.py text eol=lf
+formal/python/tools/bounded_program_governance_enforcement_completion.py text eol=lf
+formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionV0.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionResultReviewV0.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV5.lean text eol=lf
 formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0.json text eol=lf
 formal/python/tests/test_legacy_discovery_report_fixture_packet.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_packet.py text eol=lf
