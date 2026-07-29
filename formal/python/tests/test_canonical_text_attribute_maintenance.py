@@ -22,7 +22,13 @@ def test_removed_rules_are_the_historical_tree_globs() -> None:
 def test_prechange_inventory_covers_every_path_affected_by_removed_rules() -> None:
     report = json.loads(maintenance.PRECHANGE_PATH.read_text(encoding="utf-8"))
     paths = [row["path"] for row in report["paths"]]
-    assert paths == maintenance.affected_paths()
+    if maintenance.POSTCHANGE_PATH.exists():
+        postchange = json.loads(
+            maintenance.POSTCHANGE_PATH.read_text(encoding="utf-8")
+        )
+        assert paths == [row["path"] for row in postchange["comparisons"]]
+    else:
+        assert paths == maintenance.affected_paths()
     assert report["path_count"] == len(paths)
     assert report["boundary"]["bytes_rewritten"] is False
     assert report["boundary"]["index_renormalization_run"] is False

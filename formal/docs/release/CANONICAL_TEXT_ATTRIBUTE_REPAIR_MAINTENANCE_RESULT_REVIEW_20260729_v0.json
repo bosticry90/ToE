@@ -1,0 +1,31 @@
+{
+  "artifact_id": "CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_RESULT_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumed_authority": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v3.json",
+  "decision": "CANONICAL_TEXT_ATTRIBUTE_POLICY_REPAIR_ACCEPTED",
+  "evidence": {
+    "attribute_policy_commit": "f21faa9ff041677683b836f2cea47a65b160dbcf",
+    "changed_index_object_count": 0,
+    "changed_working_tree_byte_count": 0,
+    "forbidden_broad_rule_count": 0,
+    "path_count": 10395,
+    "postchange_verification_path": "formal/custody/canonical_text/CANONICAL_TEXT_ATTRIBUTE_REPAIR_POSTCHANGE_VERIFICATION_20260729_v0.json",
+    "postchange_verification_sha256": "44c91acec5e23dd8798f769a98b951f6a216783bdd28513a7fc6e223d64e823e",
+    "repository_wide_renormalization_run": false
+  },
+  "maintenance_target": "execute_canonical_text_attribute_policy_repair_v0",
+  "nonclaim_boundary": [
+    "The maintenance result does not rotate scientific authority.",
+    "The maintenance result does not accept or modify scientific artifacts.",
+    "The maintenance result changes future Git attribute behavior without rewriting historical index objects."
+  ],
+  "schema_id": "toe.canonical_text_attribute_repair.maintenance_result_review.v0",
+  "scientific_target_preserved": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "status": "ACCEPTED_MAINTENANCE_COMPLETE_NO_AUTOMATIC_SUCCESSOR",
+  "validation": {
+    "canonical_text_integrity_gate": "PASSED",
+    "prechange_custody_commit": "e8523ff9644689a8531d22bb475ef702c03b5e85",
+    "tracked_index_and_worktree": "CLEAN_AFTER_POLICY_COMMIT",
+    "untracked_reddit": "PRESENT_UNTOUCHED"
+  }
+}

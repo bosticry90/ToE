@@ -7,9 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 AUTHORITY_PATH = ROOT / "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v3.json"
-POINTER_PATH = (
-    ROOT / "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json"
-)
+V4_AUTHORITY_PATH = ROOT / "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v4.json"
 
 
 def _read(path: Path) -> dict[str, object]:
@@ -33,19 +31,14 @@ def test_v3_authorizes_only_canonical_text_attribute_repair() -> None:
     assert boundary["scientific_target_rotated"] is False
 
 
-def test_pointer_resolves_v3_bytes() -> None:
+def test_v4_preserves_v3_as_immutable_execution_history() -> None:
     authority_bytes = AUTHORITY_PATH.read_bytes()
-    pointer = _read(POINTER_PATH)
-    assert pointer["current_authority_path"] == (
+    successor = _read(V4_AUTHORITY_PATH)
+    previous = successor["previous_maintenance_authority"]
+    assert isinstance(previous, dict)
+    assert previous["path"] == (
         "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v3.json"
     )
-    assert pointer["current_authority_schema_id"] == (
-        "CURRENT_MAINTENANCE_AUTHORITY_v3"
-    )
-    assert pointer["current_authority_sha256"] == hashlib.sha256(
+    assert previous["sha256"] == hashlib.sha256(
         authority_bytes
     ).hexdigest()
-    assert pointer["scientific_target"] == (
-        "prepare_qft_gr_quadratic_generic_background_linearization_"
-        "gauge_and_jet_contract_v0"
-    )
