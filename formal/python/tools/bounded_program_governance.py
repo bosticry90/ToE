@@ -13,6 +13,7 @@ import argparse
 import hashlib
 import json
 import math
+import re
 import subprocess
 from pathlib import Path
 from typing import Any, Iterable
@@ -30,10 +31,33 @@ REGISTRY_PATH = (
 EVENT_ROOT = (
     REPO_ROOT / "formal" / "docs" / "release" / "bounded_program_events"
 )
+MANIFEST_ROOT = (
+    REPO_ROOT / "formal" / "docs" / "release" / "bounded_program_manifests"
+)
+ATTESTATION_ROOT = (
+    REPO_ROOT / "formal" / "docs" / "release" / "bounded_program_attestations"
+)
 
 GOVERNANCE_SCHEMA_ID = "TOE_BOUNDED_PROGRAM_GOVERNANCE_v1"
 REGISTRY_EXTENSION_KEY = "bounded_program_governance_v1"
 PROGRAMS_KEY = "bounded_programs_v1"
+ENFORCEMENT_SCHEMA_ID = "TOE_BOUNDED_PROGRAM_GOVERNANCE_ENFORCEMENT_v2"
+ENFORCEMENT_EXTENSION_KEY = "bounded_program_governance_enforcement_v2"
+FULL_COMMIT_ID_PATTERN = re.compile(r"^[0-9a-f]{40}$")
+PROGRAM_MANIFEST_PATHS = {
+    "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0": (
+        "formal/docs/release/bounded_program_manifests/"
+        "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_MANIFEST_v1.json"
+    ),
+    "TOE_NATIVE_SURROGATE_V0": (
+        "formal/docs/release/bounded_program_manifests/"
+        "TOE_NATIVE_SURROGATE_V0_MANIFEST_v1.json"
+    ),
+}
+LEGACY_ATTESTATION_PATH = (
+    "formal/docs/release/bounded_program_attestations/"
+    "BOUNDED_PROGRAM_LEGACY_EVENT_COMMIT_ID_ATTESTATION_20260729_v0.json"
+)
 
 SET_LIKE_ARRAY_FIELDS = (
     "authorized_inputs",
@@ -590,6 +614,142 @@ def _git_output(*args: str, cwd: Path = REPO_ROOT) -> str:
     ).stdout.strip()
 
 
+def _hashed_payload(value: dict[str, Any], hash_field: str) -> str:
+    payload = {key: item for key, item in value.items() if key != hash_field}
+    return sha256_bytes(jcs_bytes(payload))
+
+
+def _load_authoritative_manifest(
+    program_id: str, *, repo_root: Path = REPO_ROOT
+) -> tuple[str, dict[str, Any]]:
+    try:
+        relative_path = PROGRAM_MANIFEST_PATHS[program_id]
+    except KeyError as error:
+        raise BoundedProgramError(
+            f"bounded program is absent from immutable manifest index: {program_id}"
+        ) from error
+    path = repo_root / relative_path
+    if not path.is_file():
+        raise BoundedProgramError(
+            f"missing immutable program manifest: {relative_path}"
+        )
+    manifest = strict_json_load(path)
+    if manifest.get("schema_id") != "toe.bounded_program.immutable_manifest.v1":
+        raise BoundedProgramError(f"invalid program manifest schema: {program_id}")
+    if manifest.get("program_id") != program_id:
+        raise BoundedProgramError(f"program manifest identity mismatch: {program_id}")
+    if manifest.get("manifest_hash") != _hashed_payload(
+        manifest, "manifest_hash"
+    ):
+        raise BoundedProgramError(f"program manifest hash mismatch: {program_id}")
+    if manifest.get("status") != "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST":
+        raise BoundedProgramError(f"program manifest is not authoritative: {program_id}")
+    return relative_path, manifest
+
+
+def _load_legacy_attestation(
+    *, repo_root: Path = REPO_ROOT
+) -> tuple[str, dict[str, Any]]:
+    path = repo_root / LEGACY_ATTESTATION_PATH
+    if not path.is_file():
+        raise BoundedProgramError(
+            f"missing legacy event commit-ID attestation: {LEGACY_ATTESTATION_PATH}"
+        )
+    attestation = strict_json_load(path)
+    if attestation.get("schema_id") != (
+        "toe.bounded_program.legacy_event_commit_id_attestation.v0"
+    ):
+        raise BoundedProgramError("invalid legacy event attestation schema")
+    if attestation.get("attestation_hash") != _hashed_payload(
+        attestation, "attestation_hash"
+    ):
+        raise BoundedProgramError("legacy event attestation hash mismatch")
+    if attestation.get("status") != (
+        "IMMUTABLE_LEGACY_IDENTIFIER_CUSTODY_ATTESTATION"
+    ):
+        raise BoundedProgramError("legacy event attestation is not authoritative")
+    return LEGACY_ATTESTATION_PATH, attestation
+
+
+def _manifest_stage(
+    manifest: dict[str, Any], attempt_number: int
+) -> dict[str, Any]:
+    stages = manifest.get("stages")
+    if not isinstance(stages, list):
+        raise BoundedProgramError("manifest stages must be an array")
+    matches = [
+        stage
+        for stage in stages
+        if stage.get("stage_number") == attempt_number
+    ]
+    if len(matches) != 1:
+        raise BoundedProgramError(
+            f"manifest has no unique stage number {attempt_number}"
+        )
+    return matches[0]
+
+
+def _manifest_reference(
+    relative_path: str, payload: dict[str, Any]
+) -> dict[str, Any]:
+    return {
+        "path": relative_path,
+        "sha256": sha256_path(REPO_ROOT / relative_path),
+        "manifest_hash": payload["manifest_hash"],
+    }
+
+
+def enforcement_contract(*, repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+    manifests: dict[str, Any] = {}
+    for program_id in PROGRAM_MANIFEST_PATHS:
+        relative_path, manifest = _load_authoritative_manifest(
+            program_id, repo_root=repo_root
+        )
+        manifests[program_id] = {
+            "path": relative_path,
+            "sha256": sha256_path(repo_root / relative_path),
+            "manifest_hash": manifest["manifest_hash"],
+        }
+    attestation_path, attestation = _load_legacy_attestation(repo_root=repo_root)
+    return {
+        "schema_id": ENFORCEMENT_SCHEMA_ID,
+        "schema_version": 2,
+        "status": "ENFORCEMENT_COMPLETE_REGISTRY_IS_DERIVED_PROJECTION",
+        "authoritative_source": "IMMUTABLE_PROGRAM_MANIFESTS_AND_EVENT_CHAIN",
+        "program_manifests": manifests,
+        "legacy_event_commit_id_attestation": {
+            "path": attestation_path,
+            "sha256": sha256_path(repo_root / attestation_path),
+            "attestation_hash": attestation["attestation_hash"],
+        },
+        "future_event_commit_id_policy": (
+            "lowercase full 40-character commit IDs required"
+        ),
+        "registry_projection_policy": (
+            "reconstruct event-derived fields and require exact registry parity"
+        ),
+        "git_history_policy": (
+            "verify introduction commits, exact parents, registry snapshots, "
+            "artifact chronology, and exact lifecycle commit envelopes"
+        ),
+    }
+
+
+def install_enforcement_completion(registry: dict[str, Any]) -> dict[str, Any]:
+    if ENFORCEMENT_EXTENSION_KEY in registry:
+        raise BoundedProgramError("governance enforcement completion already installed")
+    migrated = json.loads(json.dumps(registry))
+    migrated["schema_version"] = 2
+    envelope = dict(migrated.get("registry_envelope_v0", {}))
+    envelope["schema_version"] = 2
+    migrated["registry_envelope_v0"] = envelope
+    migrated[ENFORCEMENT_EXTENSION_KEY] = enforcement_contract()
+    for program_id, program in migrated[PROGRAMS_KEY].items():
+        relative_path, manifest = _load_authoritative_manifest(program_id)
+        program["program_manifest"] = _manifest_reference(relative_path, manifest)
+    return migrated
+
+
 def git_blob_oid(path: Path) -> str:
     return _git_output("hash-object", str(path))
 
@@ -774,6 +934,10 @@ def open_attempt(
     target: str,
     opened_from_commit: str,
 ) -> tuple[dict[str, Any], str, dict[str, Any]]:
+    if not FULL_COMMIT_ID_PATTERN.fullmatch(opened_from_commit):
+        raise BoundedProgramError(
+            "new OPEN events require a lowercase full 40-character parent commit ID"
+        )
     program = _program(registry, program_id)
     if program["state"] == "OPEN":
         raise BoundedProgramError("cannot open a second attempt while one is open")
@@ -842,6 +1006,10 @@ def close_attempt(
     terminal_result: str,
     closed_from_commit: str,
 ) -> tuple[dict[str, Any], str, dict[str, Any]]:
+    if not FULL_COMMIT_ID_PATTERN.fullmatch(closed_from_commit):
+        raise BoundedProgramError(
+            "new CLOSE events require a lowercase full 40-character parent commit ID"
+        )
     if terminal_result not in TERMINAL_RESULTS:
         raise BoundedProgramError(f"invalid terminal result: {terminal_result}")
     program = _program(registry, program_id)
@@ -920,6 +1088,363 @@ def _validate_stage_definitions(program: dict[str, Any]) -> None:
             raise BoundedProgramError(f"scope hash mismatch for {semantic_id}")
 
 
+def _expected_stage_projection(manifest: dict[str, Any]) -> list[dict[str, Any]]:
+    expected: list[dict[str, Any]] = []
+    for manifest_stage in manifest["stages"]:
+        row = json.loads(json.dumps(manifest_stage["canonical_scope"]))
+        row["target"] = manifest_stage["canonical_target"]
+        row["stage_number"] = manifest_stage["stage_number"]
+        row["scope_hash"] = manifest_stage["canonical_scope_hash"]
+        expected.append(row)
+    return expected
+
+
+def _git_lines(repo_root: Path, *args: str) -> list[str]:
+    output = _git_output(*args, cwd=repo_root)
+    return output.splitlines() if output else []
+
+
+def _git_introduction_commit(repo_root: Path, relative_path: str) -> str:
+    commits = _git_lines(
+        repo_root,
+        "log",
+        "--diff-filter=A",
+        "--format=%H",
+        "--",
+        relative_path,
+    )
+    if len(commits) != 1:
+        raise BoundedProgramError(
+            f"expected exactly one introduction commit for {relative_path}, "
+            f"found {len(commits)}"
+        )
+    return commits[0]
+
+
+def _git_single_parent(repo_root: Path, commit: str) -> str:
+    row = _git_output("rev-list", "--parents", "-n", "1", commit, cwd=repo_root)
+    parts = row.split()
+    if len(parts) != 2 or parts[0] != commit:
+        raise BoundedProgramError(
+            f"event introduction commit must have exactly one parent: {commit}"
+        )
+    return parts[1]
+
+
+def _git_show_bytes(repo_root: Path, commit: str, relative_path: str) -> bytes:
+    result = subprocess.run(
+        ["git", "show", f"{commit}:{relative_path}"],
+        cwd=repo_root,
+        check=False,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        raise BoundedProgramError(
+            f"path is absent from committed tree {commit}: {relative_path}"
+        )
+    return result.stdout
+
+
+def _git_commit_path_set(repo_root: Path, commit: str) -> list[str]:
+    return sorted(
+        _git_lines(
+            repo_root,
+            "diff-tree",
+            "--no-commit-id",
+            "--name-only",
+            "-r",
+            commit,
+        )
+    )
+
+
+def _git_object_type(repo_root: Path, object_id: str) -> str | None:
+    result = subprocess.run(
+        ["git", "cat-file", "-t", object_id],
+        cwd=repo_root,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    return result.stdout.strip() if result.returncode == 0 else None
+
+
+def _verify_immutable_introduction(
+    repo_root: Path, relative_path: str, *, expected_commit: str | None = None
+) -> str:
+    introduction = _git_introduction_commit(repo_root, relative_path)
+    if expected_commit is not None and introduction != expected_commit:
+        raise BoundedProgramError(
+            f"unexpected introduction commit for {relative_path}: "
+            f"{introduction} != {expected_commit}"
+        )
+    current = (repo_root / relative_path).read_bytes()
+    introduced = _git_show_bytes(repo_root, introduction, relative_path)
+    if introduced != current:
+        raise BoundedProgramError(f"historical artifact bytes changed: {relative_path}")
+    return introduction
+
+
+def _resolve_event_parent_commit(
+    *,
+    repo_root: Path,
+    event_path: str,
+    field: str,
+    stored_value: Any,
+    attestation: dict[str, Any],
+) -> str:
+    if isinstance(stored_value, str) and FULL_COMMIT_ID_PATTERN.fullmatch(
+        stored_value
+    ):
+        resolved = stored_value
+    else:
+        matches = [
+            row
+            for row in attestation.get("entries", [])
+            if row.get("legacy_event_path") == event_path
+            and row.get("field") == field
+            and row.get("stored_abbreviated_id") == stored_value
+        ]
+        if len(matches) != 1:
+            raise BoundedProgramError(
+                f"legacy commit ID lacks a unique attestation: {event_path}:{field}"
+            )
+        row = matches[0]
+        resolved = row.get("resolved_full_commit_id")
+        if not isinstance(resolved, str) or not FULL_COMMIT_ID_PATTERN.fullmatch(
+            resolved
+        ):
+            raise BoundedProgramError("legacy attestation lacks a full commit ID")
+        candidates = sorted(
+            commit
+            for commit in _git_lines(repo_root, "rev-list", "--all")
+            if commit.startswith(str(stored_value))
+        )
+        if (
+            row.get("uniqueness_candidate_count") != 1
+            or row.get("uniqueness_candidates") != [resolved]
+            or candidates != [resolved]
+            or _git_object_type(repo_root, resolved) != "commit"
+            or row.get("git_object_type") != "commit"
+        ):
+            raise BoundedProgramError(
+                f"legacy commit ID attestation is not unique: {stored_value}"
+            )
+    if _git_object_type(repo_root, resolved) != "commit":
+        raise BoundedProgramError(f"event parent is not a commit: {resolved}")
+    return resolved
+
+
+def _compare_projection(
+    actual: dict[str, Any], expected: dict[str, Any], *, context: str
+) -> None:
+    for key, expected_value in expected.items():
+        if actual.get(key) != expected_value:
+            raise BoundedProgramError(
+                f"{context} projection mismatch for {key}: "
+                f"{actual.get(key)!r} != {expected_value!r}"
+            )
+
+
+def _validate_exit_assertions(
+    repo_root: Path, manifest: dict[str, Any]
+) -> None:
+    mandatory_exit = manifest["mandatory_exit"]
+    for kind in ("result", "review"):
+        relative_path = mandatory_exit[f"{kind}_artifact_path"]
+        document = strict_json_load(repo_root / relative_path)
+        assertions = mandatory_exit[f"{kind}_assertions"]
+        _compare_projection(
+            document,
+            assertions,
+            context=f"{manifest['program_id']} mandatory-exit {kind}",
+        )
+
+
+def _validate_history_envelope(
+    *,
+    registry: dict[str, Any],
+    program_id: str,
+    manifest: dict[str, Any],
+    event_rows: list[dict[str, Any]],
+    repo_root: Path,
+    attestation: dict[str, Any],
+) -> None:
+    manifest_path = PROGRAM_MANIFEST_PATHS[program_id]
+    _verify_immutable_introduction(repo_root, manifest_path)
+    _verify_immutable_introduction(repo_root, LEGACY_ATTESTATION_PATH)
+
+    lifecycle_commits: list[str] = []
+    reconstructed_prefix = {
+        "current_stage_number": 0,
+        "attempted_stage_ids": [],
+        "blocked_stage_id": None,
+        "repair_attempt_count": 0,
+        "event_chain_tip_hash": None,
+        "last_closed_attempt_number": 0,
+        "state": "UNOPENED",
+        "open_attempt_number": None,
+    }
+    for row in event_rows:
+        event = row["event"]
+        event_path = row["path"]
+        introduction = _verify_immutable_introduction(
+            repo_root, event_path, expected_commit=row["introduction_commit"]
+        )
+        lifecycle_commits.append(introduction)
+        parent = _git_single_parent(repo_root, introduction)
+        if event["event_type"] == "ATTEMPT_OPEN":
+            resolved_parent = _resolve_event_parent_commit(
+                repo_root=repo_root,
+                event_path=event_path,
+                field="opened_from_commit",
+                stored_value=event.get("opened_from_commit"),
+                attestation=attestation,
+            )
+            if parent != resolved_parent:
+                raise BoundedProgramError(
+                    f"OPEN parent mismatch for {event_path}: {parent}"
+                )
+            parent_registry = _git_show_bytes(
+                repo_root,
+                parent,
+                REGISTRY_PATH.relative_to(REPO_ROOT).as_posix(),
+            )
+            if sha256_bytes(parent_registry) != event.get("registry_snapshot_hash"):
+                raise BoundedProgramError(
+                    f"OPEN registry snapshot hash mismatch: {event_path}"
+                )
+            reconstructed_prefix["current_stage_number"] = event[
+                "attempt_sequence_number"
+            ]
+            reconstructed_prefix["attempted_stage_ids"].append(
+                event["semantic_stage_id"]
+            )
+            reconstructed_prefix["state"] = "OPEN"
+            reconstructed_prefix["open_attempt_number"] = event[
+                "attempt_sequence_number"
+            ]
+        else:
+            resolved_parent = _resolve_event_parent_commit(
+                repo_root=repo_root,
+                event_path=event_path,
+                field="closed_from_commit",
+                stored_value=event.get("closed_from_commit"),
+                attestation=attestation,
+            )
+            if parent != resolved_parent:
+                raise BoundedProgramError(
+                    f"CLOSE parent mismatch for {event_path}: {parent}"
+                )
+            for artifact_key in ("result_artifact_path", "review_artifact_path"):
+                artifact_path = event[artifact_key]
+                artifact_introduction = _verify_immutable_introduction(
+                    repo_root, artifact_path
+                )
+                if artifact_introduction != introduction:
+                    raise BoundedProgramError(
+                        f"CLOSE artifact was not introduced atomically: {artifact_path}"
+                    )
+            reconstructed_prefix["state"] = "CLOSED"
+            reconstructed_prefix["open_attempt_number"] = None
+            reconstructed_prefix["last_closed_attempt_number"] = event[
+                "attempt_sequence_number"
+            ]
+            if event["terminal_result"] in {"BLOCKED", "FAILED"}:
+                reconstructed_prefix["blocked_stage_id"] = (
+                    reconstructed_prefix["attempted_stage_ids"][-1]
+                )
+        reconstructed_prefix["event_chain_tip_hash"] = event["event_hash"]
+
+        commit_registry = strict_json_loads(
+            _git_show_bytes(
+                repo_root,
+                introduction,
+                REGISTRY_PATH.relative_to(REPO_ROOT).as_posix(),
+            ).decode("utf-8")
+        )
+        _compare_projection(
+            commit_registry[PROGRAMS_KEY][program_id],
+            reconstructed_prefix,
+            context=f"{program_id} committed event transition",
+        )
+
+    for stage in manifest["stages"]:
+        if not stage["attempted"]:
+            continue
+        envelope = stage["historical_envelope"]
+        for event_kind in ("open", "close"):
+            commit = envelope[f"{event_kind}_introduction_commit"]
+            if _git_commit_path_set(repo_root, commit) != envelope[
+                f"{event_kind}_commit_exact_path_set"
+            ]:
+                raise BoundedProgramError(
+                    f"{event_kind.upper()} commit escaped its manifest envelope: "
+                    f"{program_id} stage {stage['stage_number']}"
+                )
+
+    mandatory_exit = manifest["mandatory_exit"]
+    exit_commit = mandatory_exit["introduction_commit"]
+    if _git_commit_path_set(repo_root, exit_commit) != mandatory_exit[
+        "commit_exact_path_set"
+    ]:
+        raise BoundedProgramError(
+            f"mandatory-exit commit escaped its manifest envelope: {program_id}"
+        )
+    for path_key in ("result_artifact_path", "review_artifact_path"):
+        _verify_immutable_introduction(
+            repo_root,
+            mandatory_exit[path_key],
+            expected_commit=exit_commit,
+        )
+    _validate_exit_assertions(repo_root, manifest)
+
+    allowed_lifecycle_commits = list(lifecycle_commits)
+    for row in manifest.get("authorized_non_scientific_lifecycle_commits", []):
+        commit = row["commit"]
+        if row.get("scientific_target_created") is not False:
+            raise BoundedProgramError(
+                f"non-scientific lifecycle exception is not bounded: {commit}"
+            )
+        if _git_commit_path_set(repo_root, commit) != row["commit_exact_path_set"]:
+            raise BoundedProgramError(
+                f"non-scientific lifecycle commit path drift: {commit}"
+            )
+        allowed_lifecycle_commits.append(commit)
+    allowed_lifecycle_commits.append(exit_commit)
+    first_commit = lifecycle_commits[0]
+    actual_lifecycle = _git_lines(
+        repo_root,
+        "rev-list",
+        "--ancestry-path",
+        "--reverse",
+        f"{first_commit}^..{exit_commit}",
+    )
+    expected_lifecycle = sorted(
+        allowed_lifecycle_commits,
+        key=lambda commit: actual_lifecycle.index(commit)
+        if commit in actual_lifecycle
+        else len(actual_lifecycle),
+    )
+    if actual_lifecycle != expected_lifecycle:
+        raise BoundedProgramError(
+            f"unmanifested subsidiary lifecycle commit detected: {program_id}"
+        )
+
+    exit_registry = strict_json_loads(
+        _git_show_bytes(
+            repo_root,
+            exit_commit,
+            REGISTRY_PATH.relative_to(REPO_ROOT).as_posix(),
+        ).decode("utf-8")
+    )
+    _compare_projection(
+        exit_registry[PROGRAMS_KEY][program_id],
+        mandatory_exit["expected_terminal_projection"],
+        context=f"{program_id} mandatory-exit commit",
+    )
+
+
 def validate_event_chain(
     registry: dict[str, Any],
     *,
@@ -929,29 +1454,91 @@ def validate_event_chain(
     programs = registry.get(PROGRAMS_KEY)
     if not isinstance(programs, dict):
         raise BoundedProgramError("bounded programs are missing")
+    enforcement_enabled = ENFORCEMENT_EXTENSION_KEY in registry
+    attestation: dict[str, Any] | None = None
+    if enforcement_enabled:
+        _, attestation = _load_legacy_attestation(repo_root=repo_root)
+        if set(programs) != set(PROGRAM_MANIFEST_PATHS):
+            raise BoundedProgramError(
+                "registry bounded-program set differs from immutable manifest index"
+            )
+
     for program_id, program in programs.items():
         _validate_stage_definitions(program)
+        manifest: dict[str, Any] | None = None
+        if enforcement_enabled:
+            manifest_path, manifest = _load_authoritative_manifest(
+                program_id, repo_root=repo_root
+            )
+            expected_manifest_reference = {
+                "path": manifest_path,
+                "sha256": sha256_path(repo_root / manifest_path),
+                "manifest_hash": manifest["manifest_hash"],
+            }
+            if program.get("program_manifest") != expected_manifest_reference:
+                raise BoundedProgramError(
+                    f"registry manifest projection mismatch: {program_id}"
+                )
+            if program.get("stage_definitions") != _expected_stage_projection(
+                manifest
+            ):
+                raise BoundedProgramError(
+                    f"registry stage definitions drift from manifest: {program_id}"
+                )
+            if program.get("program_id") != program_id:
+                raise BoundedProgramError("program projection identity mismatch")
+            if program.get("authorized_stage_count") != manifest[
+                "authorized_stage_count"
+            ]:
+                raise BoundedProgramError(
+                    f"authorized stage count differs from manifest: {program_id}"
+                )
+            if (
+                program.get("mandatory_exit_target")
+                != manifest["mandatory_exit"]["target"]
+            ):
+                raise BoundedProgramError(
+                    f"mandatory exit target differs from manifest: {program_id}"
+                )
+            if program.get("no_subsidiary_scientific_targets") is not True:
+                raise BoundedProgramError(
+                    f"subsidiary scientific targets are not prohibited: {program_id}"
+                )
+
         events = program.get("events")
         if not isinstance(events, list):
             raise BoundedProgramError("events must be an array")
         previous_hash: str | None = None
         open_attempt: int | None = None
         closed_attempts = 0
-        attempted_stage_ids = program.get("attempted_stage_ids")
-        if not isinstance(attempted_stage_ids, list):
-            raise BoundedProgramError("attempted_stage_ids must be an array")
-        if len(attempted_stage_ids) != len(set(attempted_stage_ids)):
-            raise BoundedProgramError("attempted semantic stages are not unique")
+        attempted_stage_ids: list[str] = []
+        blocked_stage_id: str | None = None
+        current_stage_number = 0
+        event_rows: list[dict[str, Any]] = []
 
         for event_number, reference in enumerate(events, start=1):
             relative_path = reference.get("path")
+            if not isinstance(relative_path, str):
+                raise BoundedProgramError("event reference path must be a string")
             path = repo_root / relative_path
             if not path.is_file():
                 raise BoundedProgramError(f"missing event artifact: {relative_path}")
             raw = path.read_bytes()
-            if sha256_bytes(raw) != reference.get("sha256"):
+            raw_hash = sha256_bytes(raw)
+            if raw_hash != reference.get("sha256"):
                 raise BoundedProgramError(f"event byte hash mismatch: {relative_path}")
             event = strict_json_loads(raw.decode("utf-8"))
+            expected_reference = {
+                "event_type": event.get("event_type"),
+                "attempt_sequence_number": event.get("attempt_sequence_number"),
+                "path": relative_path,
+                "event_hash": event.get("event_hash"),
+                "sha256": raw_hash,
+            }
+            if reference != expected_reference:
+                raise BoundedProgramError(
+                    f"event registry reference is not an exact projection: {relative_path}"
+                )
             if event.get("event_sequence_number") != event_number:
                 raise BoundedProgramError("event sequence numbers are not contiguous")
             if event.get("previous_event_hash") != previous_hash:
@@ -967,8 +1554,51 @@ def validate_event_chain(
             if event.get("event_type") == "ATTEMPT_OPEN":
                 if open_attempt is not None:
                     raise BoundedProgramError("attempt opened before prior CLOSE")
+                if blocked_stage_id is not None:
+                    raise BoundedProgramError(
+                        "later scientific stage opened after blocked stage"
+                    )
                 if attempt_number != closed_attempts + 1:
                     raise BoundedProgramError("attempt numbers are not contiguous")
+                if manifest is not None:
+                    if attempt_number > manifest["authorized_stage_count"]:
+                        raise BoundedProgramError("authorized stage count exceeded")
+                    manifest_stage = _manifest_stage(manifest, attempt_number)
+                    if event.get("semantic_stage_id") != manifest_stage[
+                        "semantic_stage_id"
+                    ]:
+                        raise BoundedProgramError(
+                            "OPEN semantic stage differs from immutable manifest"
+                        )
+                    if event.get("target") != manifest_stage["canonical_target"]:
+                        raise BoundedProgramError(
+                            "OPEN target differs from immutable manifest"
+                        )
+                    if event.get("scope_hash") != manifest_stage[
+                        "canonical_scope_hash"
+                    ]:
+                        raise BoundedProgramError(
+                            "OPEN scope hash differs from immutable manifest"
+                        )
+                    envelope = manifest_stage.get("historical_envelope")
+                    if (
+                        not manifest_stage.get("attempted")
+                        or not isinstance(envelope, dict)
+                        or envelope.get("open_event_path") != relative_path
+                    ):
+                        raise BoundedProgramError(
+                            "OPEN event is absent from manifest stage envelope"
+                        )
+                semantic_stage_id = event.get("semantic_stage_id")
+                if (
+                    not isinstance(semantic_stage_id, str)
+                    or semantic_stage_id in attempted_stage_ids
+                ):
+                    raise BoundedProgramError(
+                        "attempted semantic stages are not unique"
+                    )
+                attempted_stage_ids.append(semantic_stage_id)
+                current_stage_number = attempt_number
                 open_attempt = attempt_number
             elif event.get("event_type") == "ATTEMPT_CLOSE":
                 if open_attempt != attempt_number:
@@ -977,6 +1607,20 @@ def validate_event_chain(
                     raise BoundedProgramError("CLOSE does not reference its OPEN event")
                 if event.get("terminal_result") not in TERMINAL_RESULTS:
                     raise BoundedProgramError("CLOSE has an invalid terminal result")
+                if manifest is not None:
+                    manifest_stage = _manifest_stage(manifest, attempt_number)
+                    envelope = manifest_stage.get("historical_envelope")
+                    if (
+                        not isinstance(envelope, dict)
+                        or envelope.get("close_event_path") != relative_path
+                        or envelope.get("result_artifact_path")
+                        != event.get("result_artifact_path")
+                        or envelope.get("review_artifact_path")
+                        != event.get("review_artifact_path")
+                    ):
+                        raise BoundedProgramError(
+                            "CLOSE artifacts escape the manifest stage envelope"
+                        )
                 for key in ("result_artifact_path", "review_artifact_path"):
                     artifact_path = repo_root / event[key]
                     if not artifact_path.is_file():
@@ -991,51 +1635,86 @@ def validate_event_chain(
                     raise BoundedProgramError("CLOSE review hash mismatch")
                 open_attempt = None
                 closed_attempts += 1
+                if event.get("terminal_result") in {"BLOCKED", "FAILED"}:
+                    blocked_stage_id = attempted_stage_ids[-1]
             else:
                 raise BoundedProgramError("unknown event type")
 
             if verify_git_history:
-                additions = _git_output(
-                    "log",
-                    "--diff-filter=A",
-                    "--format=%H",
-                    "--",
-                    relative_path,
-                    cwd=repo_root,
-                ).splitlines()
-                if additions:
-                    introduction = additions[-1]
-                    introduced_bytes = subprocess.run(
-                        ["git", "show", f"{introduction}:{relative_path}"],
-                        cwd=repo_root,
-                        check=True,
-                        capture_output=True,
-                    ).stdout
-                    if introduced_bytes != raw:
-                        raise BoundedProgramError(
-                            f"historical event bytes changed: {relative_path}"
-                        )
+                introduction = _git_introduction_commit(repo_root, relative_path)
+            else:
+                introduction = ""
+            event_rows.append(
+                {
+                    "path": relative_path,
+                    "event": event,
+                    "introduction_commit": introduction,
+                }
+            )
             previous_hash = event["event_hash"]
 
-        if program.get("event_chain_tip_hash") != previous_hash:
-            raise BoundedProgramError("program event-chain tip is stale")
         expected_state = "OPEN" if open_attempt is not None else (
             "CLOSED" if events else "UNOPENED"
         )
-        if program.get("state") != expected_state:
-            raise BoundedProgramError("program state does not match event history")
-        if program.get("last_closed_attempt_number") != closed_attempts:
-            raise BoundedProgramError("last closed attempt number is inconsistent")
-        if program.get("repair_attempt_count") != 0:
-            raise BoundedProgramError("repair attempts are prohibited")
+        reconstructed_projection = {
+            "current_stage_number": current_stage_number,
+            "attempted_stage_ids": attempted_stage_ids,
+            "blocked_stage_id": blocked_stage_id,
+            "repair_attempt_count": 0,
+            "event_chain_tip_hash": previous_hash,
+            "last_closed_attempt_number": closed_attempts,
+            "state": expected_state,
+            "open_attempt_number": open_attempt,
+        }
+        _compare_projection(
+            program,
+            reconstructed_projection,
+            context=f"{program_id} reconstructed event state",
+        )
+
+        if manifest is not None:
+            manifest_attempted = [
+                stage["semantic_stage_id"]
+                for stage in manifest["stages"]
+                if stage["attempted"]
+            ]
+            if attempted_stage_ids != manifest_attempted:
+                raise BoundedProgramError(
+                    f"event history differs from manifest attempt inventory: {program_id}"
+                )
+            if blocked_stage_id is not None:
+                _compare_projection(
+                    program,
+                    manifest["mandatory_exit"]["expected_terminal_projection"],
+                    context=f"{program_id} mandatory-exit completion",
+                )
+            if verify_git_history:
+                assert attestation is not None
+                _validate_history_envelope(
+                    registry=registry,
+                    program_id=program_id,
+                    manifest=manifest,
+                    event_rows=event_rows,
+                    repo_root=repo_root,
+                    attestation=attestation,
+                )
 
 
 def validate_registry_extension(registry: dict[str, Any]) -> None:
     contract = registry.get(REGISTRY_EXTENSION_KEY)
     if contract != governance_contract():
         raise BoundedProgramError("bounded-program governance contract drift")
-    if registry.get("schema_version") != 1:
-        raise BoundedProgramError("registry schema version is not 1")
+    enforcement = registry.get(ENFORCEMENT_EXTENSION_KEY)
+    if enforcement is None:
+        if registry.get("schema_version") != 1:
+            raise BoundedProgramError("legacy registry schema version is not 1")
+    else:
+        if enforcement != enforcement_contract():
+            raise BoundedProgramError(
+                "bounded-program enforcement contract drift"
+            )
+        if registry.get("schema_version") != 2:
+            raise BoundedProgramError("enforced registry schema version is not 2")
     validate_event_chain(registry)
 
 
@@ -1078,7 +1757,7 @@ def _command_reinstall_from_head(registry_path: Path) -> None:
 def _command_validate(registry_path: Path, verify_git_history: bool) -> None:
     _, registry = _load_registry_bytes(registry_path)
     validate_registry_extension(registry)
-    if verify_git_history:
+    if verify_git_history or ENFORCEMENT_EXTENSION_KEY in registry:
         validate_event_chain(registry, verify_git_history=True)
 
 
@@ -1089,11 +1768,24 @@ def _command_authorize_native(registry_path: Path) -> None:
     atomic_write_registry(registry_path, _registry_json_bytes(migrated))
 
 
+def _command_install_enforcement(registry_path: Path) -> None:
+    _, registry = _load_registry_bytes(registry_path)
+    migrated = install_enforcement_completion(registry)
+    validate_registry_extension(migrated)
+    atomic_write_registry(registry_path, _registry_json_bytes(migrated))
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "command",
-        choices=("install", "reinstall-from-head", "authorize-native", "validate"),
+        choices=(
+            "install",
+            "reinstall-from-head",
+            "authorize-native",
+            "install-enforcement",
+            "validate",
+        ),
     )
     parser.add_argument("--registry", type=Path, default=REGISTRY_PATH)
     parser.add_argument("--verify-git-history", action="store_true")
@@ -1104,6 +1796,8 @@ def main(argv: Iterable[str] | None = None) -> int:
         _command_reinstall_from_head(args.registry)
     elif args.command == "authorize-native":
         _command_authorize_native(args.registry)
+    elif args.command == "install-enforcement":
+        _command_install_enforcement(args.registry)
     else:
         _command_validate(args.registry, args.verify_git_history)
     return 0

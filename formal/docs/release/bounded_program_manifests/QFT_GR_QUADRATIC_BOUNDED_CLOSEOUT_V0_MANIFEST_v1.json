@@ -1,0 +1,396 @@
+{
+  "authorized_non_scientific_lifecycle_commits": [
+    {
+      "classification": "EXHAUSTIVE_LEAN_AGGREGATE_VALIDATION_REFRESH_ONLY",
+      "commit": "a479cde099aa722e32ef899d14f79e15ab7aaf87",
+      "commit_exact_path_set": [
+        "formal/toe_formal/ToeFormalAll.lean"
+      ],
+      "scientific_target_created": false
+    }
+  ],
+  "authorized_stage_count": 5,
+  "created_from_closed_baseline_commit": "a1b6ccbbdae8456aad4af7d355ecfc781fc227ce",
+  "mandatory_exit": {
+    "commit_exact_path_set": [
+      "README.md",
+      "State_of_the_Theory.md",
+      "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+      "formal/output/CALC-QFT-GR-QUADRATIC-TOE-ROLE-AFTER-GENERIC-FROZEN-RESULT-v0.json",
+      "formal/python/tests/calculations/test_calc_qft_gr_quadratic_toe_role_after_generic_frozen_result.py",
+      "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+      "formal/python/tests/test_current_scientific_authority_consistency.py",
+      "formal/python/tests/test_current_target_freshness_gate.py",
+      "formal/python/toe/calculations/calc_qft_gr_quadratic_toe_role_after_generic_frozen_result.py",
+      "formal/python/tools/qft_gr_quadratic_toe_role_after_generic_frozen_result_review.py",
+      "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+      "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "expected_terminal_projection": {
+      "control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+      "mandatory_exit_completed": true,
+      "program_terminal_status": "CLOSED_AFTER_MANDATORY_ROLE_GATE",
+      "toe_role": "REFERENCE_CONTROL_ONLY"
+    },
+    "introduction_commit": "35fe5240186f3ac4ea57b06c06fc8458645a7132",
+    "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-TOE-ROLE-AFTER-GENERIC-FROZEN-RESULT-v0.json",
+    "result_assertions": {
+      "terminal_outcome": "REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT"
+    },
+    "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+    "review_assertions": {
+      "control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+      "quadratic_program_terminal": true,
+      "toe_role": "REFERENCE_CONTROL_ONLY"
+    },
+    "target": "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0"
+  },
+  "manifest_hash": "7effe0013dbe5b99702e3f0357b7e9ef7189ccaec913889674a4bfda5f426fc5",
+  "no_subsidiary_scientific_targets": true,
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "repair_attempt_count": 0,
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "stages": [
+    {
+      "attempted": true,
+      "canonical_scope": {
+        "authorized_inputs": [
+          "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0",
+          "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_V0"
+        ],
+        "dependency_artifact_ids": [
+          "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0"
+        ],
+        "normalized_scientific_question": "Freeze the strict-harmonic generic-background gauge, trace atlas, finite-jet, regularity, and confluent-rewrite contract.",
+        "prohibited_claims": [
+          "generic_all_gauges_result",
+          "finite_loss_established",
+          "local_well_posedness",
+          "quadratic_gravity_native_toe_status"
+        ],
+        "required_outputs": [
+          "strict_harmonic_gauge_contract",
+          "tracefree_atlas_and_regular_strata",
+          "reduced_variable_regularity_ledger",
+          "original_metric_equivalence_regularity_ledger",
+          "rewrite_termination_and_confluence_certificate",
+          "Minkowski_regression"
+        ],
+        "semantic_stage_id": "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+        "terminal_outcome_vocabulary": [
+          "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE",
+          "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "a60e614e758e0d43b0a32ad4bcc58e3fb0510cf19d4a24b20c7cf32fc0fadcc8",
+      "canonical_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+      "historical_envelope": {
+        "close_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_VALIDATION_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/output/CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0.json",
+          "formal/python/tests/calculations/test_calc_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract.py",
+          "formal/python/tests/strict_physics_state_helpers.py",
+          "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+          "formal/python/tests/test_current_scientific_authority_consistency.py",
+          "formal/python/tests/test_current_target_freshness_gate.py",
+          "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py",
+          "formal/python/toe/calculations/calc_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract.py",
+          "formal/python/tools/qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_result_review.py",
+          "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean",
+          "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractV0.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_CLOSE_v0.json",
+        "close_introduction_commit": "c092a1bf2677d519055212a43ab160f835b54e2c",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_OPEN_v0.json",
+        "open_introduction_commit": "5043513c39e0e20bce4b4b08e085378b6c76654e",
+        "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0.json",
+        "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json"
+      },
+      "mandatory_terminal_outcomes": [
+        "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE",
+        "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_BLOCKED"
+      ],
+      "semantic_stage_id": "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+      "stage_number": 1
+    },
+    {
+      "attempted": true,
+      "canonical_scope": {
+        "authorized_inputs": [
+          "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+          "accepted_64_equation_reduced_system",
+          "accepted_Minkowski_128_state_224_entry_control"
+        ],
+        "dependency_artifact_ids": [
+          "STRICT_HARMONIC_GAUGE_JET_CONTRACT"
+        ],
+        "normalized_scientific_question": "Derive the complete strict-harmonic component-expanded generic-background linearization and independently verify its inventory.",
+        "prohibited_claims": [
+          "generic_frozen_spectrum",
+          "finite_loss_established",
+          "local_well_posedness"
+        ],
+        "required_outputs": [
+          "off_shell_component_form",
+          "on_shell_component_form",
+          "gauge_compatible_component_form",
+          "independent_equation_inventory",
+          "exact_Minkowski_specialization"
+        ],
+        "semantic_stage_id": "COMPONENT_EXPANDED_LINEARIZATION",
+        "terminal_outcome_vocabulary": [
+          "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE",
+          "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "aca1c71c2cfa81b7e6da772a0dcbdad149172b2b8960736fb47c19c13f92feda",
+      "canonical_target": "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1",
+      "historical_envelope": {
+        "close_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_VALIDATION_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v1.json",
+          "formal/python/tests/calculations/test_calc_qft_gr_quadratic_component_expanded_generic_background_linearization_v1.py",
+          "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+          "formal/python/tests/test_current_scientific_authority_consistency.py",
+          "formal/python/tests/test_current_target_freshness_gate.py",
+          "formal/python/toe/calculations/calc_qft_gr_quadratic_component_expanded_generic_background_linearization_v1.py",
+          "formal/python/tools/qft_gr_quadratic_component_expanded_generic_background_linearization_v1_result_review.py",
+          "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1.lean",
+          "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_02_CLOSE_v0.json",
+        "close_introduction_commit": "c9c301d183cab7ee0db995d3376651a86a2cf2cf",
+        "open_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_02_OPEN_v0.json",
+        "open_introduction_commit": "abe37346165f786885d440107bd5bf64b46ba3d4",
+        "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v1.json",
+        "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json"
+      },
+      "mandatory_terminal_outcomes": [
+        "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE",
+        "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_BLOCKED"
+      ],
+      "semantic_stage_id": "COMPONENT_EXPANDED_LINEARIZATION",
+      "stage_number": 2
+    },
+    {
+      "attempted": true,
+      "canonical_scope": {
+        "authorized_inputs": [
+          "COMPONENT_EXPANDED_LINEARIZATION"
+        ],
+        "dependency_artifact_ids": [
+          "COMPONENT_EXPANDED_LINEARIZATION"
+        ],
+        "normalized_scientific_question": "Construct the exact frozen first-order companion operator including principal, weighted-principal, and subprincipal entries.",
+        "prohibited_claims": [
+          "finite_loss_established",
+          "constraint_quotient_completed",
+          "local_well_posedness"
+        ],
+        "required_outputs": [
+          "exact_frozen_companion_matrix",
+          "background_stratum_contract",
+          "chart_transition_certificates",
+          "Minkowski_operator_regression"
+        ],
+        "semantic_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR",
+        "terminal_outcome_vocabulary": [
+          "GENERIC_FROZEN_COMPANION_OPERATOR_EXACTLY_DERIVED",
+          "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED"
+        ]
+      },
+      "canonical_scope_hash": "4be3cf0d115145eef2057e96c02ed9215908b2cc18f65a469308237e6c92775d",
+      "canonical_target": "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1",
+      "historical_envelope": {
+        "close_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_VALIDATION_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1.json",
+          "formal/python/tests/calculations/test_calc_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1.py",
+          "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+          "formal/python/tests/test_current_scientific_authority_consistency.py",
+          "formal/python/tests/test_current_target_freshness_gate.py",
+          "formal/python/toe/calculations/calc_qft_gr_quadratic_component_expanded_generic_background_linearization_v1.py",
+          "formal/python/toe/calculations/calc_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1.py",
+          "formal/python/toe/calculations/calc_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract.py",
+          "formal/python/tools/qft_gr_quadratic_exact_generic_frozen_companion_operator_v1_result_review.py",
+          "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_03_CLOSE_v0.json",
+        "close_introduction_commit": "3a40e2476763ad62aa80e737e608a1664c0f0653",
+        "open_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+          "formal/python/tests/test_current_scientific_authority_consistency.py",
+          "formal/python/tests/test_current_target_freshness_gate.py",
+          "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_03_OPEN_v0.json",
+        "open_introduction_commit": "5727a7ba3fc1ef1fd8c3c7f3715825db40366c04",
+        "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1.json",
+        "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json"
+      },
+      "mandatory_terminal_outcomes": [
+        "GENERIC_FROZEN_COMPANION_OPERATOR_EXACTLY_DERIVED",
+        "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED"
+      ],
+      "semantic_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR",
+      "stage_number": 3
+    },
+    {
+      "attempted": false,
+      "canonical_scope": {
+        "authorized_inputs": [
+          "EXACT_FROZEN_COMPANION_OPERATOR",
+          "accepted_constraint_propagation_system"
+        ],
+        "dependency_artifact_ids": [
+          "EXACT_FROZEN_COMPANION_OPERATOR"
+        ],
+        "normalized_scientific_question": "Construct the exact constraint tangent projector, residual-gauge quotient, and locally uniform quotient norm.",
+        "prohibited_claims": [
+          "positive_physical_energy",
+          "finite_loss_established",
+          "local_well_posedness"
+        ],
+        "required_outputs": [
+          "independent_constraint_row_basis",
+          "row_space_equivalence_witnesses",
+          "constraint_tangent_projector",
+          "strict_harmonic_residual_gauge_Cauchy_map",
+          "physical_quotient_norm",
+          "complement_independence_certificate",
+          "zero_frequency_control"
+        ],
+        "semantic_stage_id": "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT",
+        "terminal_outcome_vocabulary": [
+          "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT_COMPLETE",
+          "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "b15efec7a2ef3c287ab2fd05a9e6cad083fa699085e5929da023c65810f10e43",
+      "canonical_target": "derive_qft_gr_quadratic_constraint_tangent_and_physical_quotient_v0",
+      "mandatory_terminal_outcomes": [
+        "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT_COMPLETE",
+        "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT_BLOCKED"
+      ],
+      "semantic_stage_id": "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT",
+      "stage_number": 4
+    },
+    {
+      "attempted": false,
+      "canonical_scope": {
+        "authorized_inputs": [
+          "EXACT_FROZEN_COMPANION_OPERATOR",
+          "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT"
+        ],
+        "dependency_artifact_ids": [
+          "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT",
+          "EXACT_FROZEN_COMPANION_OPERATOR"
+        ],
+        "normalized_scientific_question": "Determine the exact locally uniform weighted propagator growth on unrestricted, constraint-tangent, and physical-quotient sectors.",
+        "prohibited_claims": [
+          "variable_coefficient_estimate",
+          "nonlinear_local_well_posedness",
+          "quadratic_gravity_native_toe_status"
+        ],
+        "required_outputs": [
+          "weighted_propagator_bounds",
+          "nonnormal_growth_analysis",
+          "directional_uniformity_certificate",
+          "saturating_lower_bound_data",
+          "sector_loss_classification"
+        ],
+        "semantic_stage_id": "SUBPRINCIPAL_PROPAGATOR_GROWTH",
+        "terminal_outcome_vocabulary": [
+          "FINITE_LOSS_ESTABLISHED_ON_REGULAR_STRATA",
+          "FINITE_LOSS_REFUTED",
+          "FINITE_LOSS_ONLY_ON_SPECIAL_BACKGROUNDS",
+          "UNRESOLVED_AFTER_BOUNDED_ATTEMPT"
+        ]
+      },
+      "canonical_scope_hash": "9c7baf7f99de7b892afaa7e4273929365887d4c0801dd0b76b19884f7911a10c",
+      "canonical_target": "compute_qft_gr_quadratic_subprincipal_weighted_propagator_growth_v0",
+      "mandatory_terminal_outcomes": [
+        "FINITE_LOSS_ESTABLISHED_ON_REGULAR_STRATA",
+        "FINITE_LOSS_REFUTED",
+        "FINITE_LOSS_ONLY_ON_SPECIAL_BACKGROUNDS",
+        "UNRESOLVED_AFTER_BOUNDED_ATTEMPT"
+      ],
+      "semantic_stage_id": "SUBPRINCIPAL_PROPAGATOR_GROWTH",
+      "stage_number": 5
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST"
+}

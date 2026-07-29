@@ -132,6 +132,7 @@ formal/docs/release/bounded_program_manifests/** -text
 formal/docs/release/bounded_program_attestations/** -text
 formal/python/tests/test_bounded_program_governance_enforcement_completion_authority.py text eol=lf
 formal/python/tests/test_bounded_program_governance_enforcement_adversarial.py text eol=lf
+formal/python/tests/test_loop_control_registry_v0_gate.py text eol=lf
 formal/python/tools/bounded_program_governance_enforcement_completion.py text eol=lf
 formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionV0.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionResultReviewV0.lean text eol=lf
