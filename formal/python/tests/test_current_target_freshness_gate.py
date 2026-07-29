@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "compute_qft_gr_quadratic_frozen_coefficient_"
-    "jordan_chain_frequency_growth_v0"
+    "derive_qft_gr_quadratic_exact_generic_frozen_"
+    "companion_operator_v0"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1348,8 +1348,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "review_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_specific_literature_applicability_crosswalk_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_quadratic_adapted_derivative_loss_"
-    "energy_hierarchy_v0"
+    "compute_qft_gr_quadratic_frozen_coefficient_"
+    "jordan_chain_frequency_growth_v0"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_RELEVANT_CANDIDATE_PLATFORM_SPECIFIC_LITERATURE_REVIEW_TARGET = (
     "prepare_selected_ccft_empirical_discriminator_baseline_component_equation_source_applicability_gap_resolution_open_system_decoherence_superconducting_circuit_qed_platform_relevant_candidate_platform_specific_literature_review_packet"
@@ -1696,8 +1696,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "compute_qft_gr_quadratic_frozen_coefficient_"
-    "jordan_chain_frequency_growth_v0"
+    "derive_qft_gr_quadratic_exact_generic_frozen_"
+    "companion_operator_v0"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1792,11 +1792,11 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean"
+    / "QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean"
 )
 LIVE_TARGET_REPORT = (
-    "formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_"
-    "ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json"
+    "formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_"
+    "FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1928,8 +1928,8 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "VALIDATION_OR_EQUATION_ADOPTION"
 )
 LIVE_TARGET_OUTCOME = (
-    "QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_"
-    "RESULT_ACCEPTED"
+    "QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_"
+    "GROWTH_RESULT_ACCEPTED"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2059,8 +2059,9 @@ SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK
     "BASELINE_COMPUTATION_NO_MASTER_ACTION_PROMOTION"
 )
 LIVE_TARGET_STRICT_OUTCOME = (
-    "ENERGY_HIERARCHY_READY_COMPLETE_FIFTY_CHAIN_LEDGER_ONE_OR_TWO_"
-    "DERIVATIVE_PROPAGATOR_LOSS_UNRESOLVED_NO_ENERGY_OR_WELL_POSEDNESS"
+    "AUXILIARY_ZERO_LOSS_PURE_PRINCIPAL_METRIC_TWO_DERIVATIVE_TT_ONE_"
+    "DERIVATIVE_COMPLETE_GENERIC_FROZEN_AND_CONSTRAINT_MINIMA_BLOCKED_NO_"
+    "VARIABLE_OR_NONLINEAR_ESTIMATE"
 )
 BASELINE_COMPONENT_EQUATION_SOURCE_APPLICABILITY_REVIEW_PACKET_STRICT_OUTCOME = (
     "SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_"
@@ -2171,8 +2172,8 @@ SCIENCE_FIRST_PILLAR_SEAM_DEPENDENCY_REBASE_PACKET_TARGET = (
     "prepare_science_first_pillar_seam_dependency_rebase_packet"
 )
 LIVE_TARGET_KIND = (
-    "qft_gr_quadratic_frozen_coefficient_jordan_chain_"
-    "frequency_growth_calculation"
+    "qft_gr_quadratic_exact_generic_frozen_companion_operator_"
+    "derivation"
 )
 SUPERCONDUCTING_CIRCUIT_QED_PLATFORM_SPECIFIC_LITERATURE_APPLICABILITY_CROSSWALK_KIND = (
     "selected_ccft_empirical_discriminator_baseline_component_equation_"

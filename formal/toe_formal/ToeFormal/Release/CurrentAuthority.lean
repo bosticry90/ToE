@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0" := by
+      "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0" := by
   native_decide
 
 end CurrentAuthority

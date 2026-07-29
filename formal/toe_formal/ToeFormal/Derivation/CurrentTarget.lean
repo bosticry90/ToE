@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.selectedNextTarget
+  QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.reviewId
+  QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.reviewId
 
-theorem current_target_is_quadratic_frozen_jordan_frequency_growth :
+theorem current_target_is_quadratic_exact_generic_frozen_companion :
     currentLiveTarget =
-      "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0" := by
+      "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0" := by
   rfl
 
 end CurrentTarget

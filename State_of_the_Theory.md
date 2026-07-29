@@ -29,26 +29,36 @@ The energy hierarchy and all 50 Jordan chains at each light-cone root are now
 frozen. The eigenvector deficit splits into two physical TT deficiencies,
 eight deficiencies from four length-three reconstruction chains, and four
 non-TT length-two deficiencies. The one-derivative equivalence-map shift is
-not yet a propagator theorem: the exact frozen loss remains one-or-two
-derivative unresolved.
+not a propagator theorem.
+
+The exact pure-principal 128-state frozen companion now gives zero loss in the
+auxiliary grading, quadratic-frequency growth in the unrestricted
+metric-equivalence grading away from the internal `2alpha+beta=0` control, and
+linear-frequency growth in the physical TT sector. The block-order graph has
+no positive-frequency return cycle, but it is not the complete generic
+background-jet subprincipal matrix. The complete generic frozen metric loss
+therefore remains blocked, as does the constraint-compatible minimum because
+no explicit 128-state tangent projector has yet been constructed.
 
 The exact live target is
-`compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`.
-It authorizes only the exact frozen companion and Fourier-growth calculation.
+`derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0`.
+It authorizes only derivation of the exact generic frozen companion, including
+all weighted subprincipal coefficients. The constraint-tangent projection is
+not yet authorized by this checkpoint.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0
-ACTIVE_LANE_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: ENERGY_HIERARCHY_READY_COMPLETE_FIFTY_CHAIN_LEDGER_ONE_OR_TWO_DERIVATIVE_PROPAGATOR_LOSS_UNRESOLVED_NO_ENERGY_OR_WELL_POSEDNESS
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_calculation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: AUXILIARY_ZERO_LOSS_PURE_PRINCIPAL_METRIC_TWO_DERIVATIVE_TT_ONE_DERIVATIVE_COMPLETE_GENERIC_FROZEN_AND_CONSTRAINT_MINIMA_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

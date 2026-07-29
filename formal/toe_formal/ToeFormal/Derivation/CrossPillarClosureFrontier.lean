@@ -197,7 +197,7 @@ def currentLiveNextStrictTargetV0 : String :=
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
-import ToeFormal.Derivation.QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -464,7 +464,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0"
+        "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0"
       status := .retained }
   ]
 
@@ -482,33 +482,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the accepted energy-hierarchy review. -/
+/-- Previous live target consumed by the frozen-growth result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0"
-
-/-- Current live target after the accepted energy-hierarchy result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0"
 
-/-- Evidence certificate for the energy-hierarchy result review. -/
+/-- Current live target after the accepted frozen-growth result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0"
+
+/-- Evidence certificate for the frozen-growth result review. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean"
+  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean"
 
-/-- Result review supporting the frozen frequency-growth target. -/
+/-- Result review supporting the exact generic frozen companion target. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json"
+  "formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json"
 
-/-- Accepted energy-hierarchy outcome supporting frozen frequency growth. -/
+/-- Accepted bounded frozen-growth outcome supporting the exact operator. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_ACCEPTED"
+  "QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_ACCEPTED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "ENERGY_HIERARCHY_READY_COMPLETE_FIFTY_CHAIN_LEDGER_ONE_OR_TWO_DERIVATIVE_PROPAGATOR_LOSS_UNRESOLVED_NO_ENERGY_OR_WELL_POSEDNESS"
+  "AUXILIARY_ZERO_LOSS_PURE_PRINCIPAL_METRIC_TWO_DERIVATIVE_TT_ONE_DERIVATIVE_COMPLETE_GENERIC_FROZEN_AND_CONSTRAINT_MINIMA_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_calculation"
+  "qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -521,7 +521,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0"
+    "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -646,18 +646,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The accepted energy review supports frozen frequency-growth work only. -/
+/-- The accepted frozen review supports exact generic frozen-operator work only. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json" ∧
+        "formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_ACCEPTED" ∧
+        "QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_ACCEPTED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "ENERGY_HIERARCHY_READY_COMPLETE_FIFTY_CHAIN_LEDGER_ONE_OR_TWO_DERIVATIVE_PROPAGATOR_LOSS_UNRESOLVED_NO_ENERGY_OR_WELL_POSEDNESS" ∧
+        "AUXILIARY_ZERO_LOSS_PURE_PRINCIPAL_METRIC_TWO_DERIVATIVE_TT_ONE_DERIVATIVE_COMPLETE_GENERIC_FROZEN_AND_CONSTRAINT_MINIMA_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE" ∧
       currentLiveNextStrictTargetKindV0 =
-        "qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_calculation" := by
+        "qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation" := by
   constructor
   · rfl
   constructor

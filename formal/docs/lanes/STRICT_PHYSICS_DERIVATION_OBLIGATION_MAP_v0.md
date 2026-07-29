@@ -13,20 +13,21 @@ Non-claim boundary:
 - This document is a strict physics work map, not a release-governance expansion surface.
 
 Current strict QFT–GR obligation (2026-07-28):
-- `CURRENT_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`
-- `ACTIVE_LANE_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_ACCEPTED`
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.
 - Accepted principal result: the adapted auxiliary pencil is uniformly wave-diagonal, while the metric-equivalence pencil has 64 algebraic and 50 geometric modes at each light-cone root and remains physically defective.
 - Accepted preparation: equal-order auxiliary, natural metric, adapted auxiliary, metric-equivalence, and constraint-compatible energies are frozen; every chain in `4J_3+6J_2+40J_1` is ledgered.
-- Required calculation: construct the exact frozen first-order companion, exponentiate it, and determine whether the net loss is one or two derivatives by chain and constraint sector.
+- Accepted frozen calculation: the pure-principal 128-state companion has zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth, and linear-frequency physical TT growth. The block-order screen has no positive return cycle, but the complete generic frozen subprincipal operator was not constructed.
+- Required derivation: construct the exact generic background-jet linearization and complete 128-state frozen companion, including every weighted subprincipal coefficient matrix. The constraint-tangent projector remains a later prerequisite.
 - No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
 
