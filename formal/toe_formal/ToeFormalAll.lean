@@ -1054,8 +1054,8 @@ import ToeFormal.Release.LoopControlRegistryShardingReadOnlyPrototypeExecutionPa
 import ToeFormal.Release.LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV2
 import ToeFormal.Release.LoopControlRegistryShardingReadOnlyPrototypeExecutionPacketV2IndependentReview
 import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionAuthorityV0
-import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionV0
 import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionResultReviewV0
+import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionV0
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
 import ToeFormal.Release.V01CriticizabilityReadinessAdjudicationResultReview
 import ToeFormal.Release.V01DependencyRemediationCloseoutAfterTranche004Movement
@@ -1295,6 +1295,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1287
+def committedModuleCount : Nat := 1288
 
 end ToeFormalAll
