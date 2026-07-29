@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.selectedNextTarget
+  QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.reviewId
+  QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.reviewId
 
-theorem current_target_is_quadratic_exact_generic_frozen_companion :
+theorem current_target_is_quadratic_component_expanded_background :
     currentLiveTarget =
-      "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0" := by
+      "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0" := by
   rfl
 
 end CurrentTarget

@@ -1,0 +1,1313 @@
+{
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v0",
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "claim_boundary": {
+    "constraint_restricted_minimum_loss_established": false,
+    "constraint_tangent_projector_constructed": false,
+    "exact_generic_background_operator_derived": false,
+    "exact_minkowski_control_operator_derived": true,
+    "generic_characteristic_asymptotics_derived": false,
+    "generic_finite_loss_established": false,
+    "generic_fractional_root_splitting_excluded": false,
+    "local_well_posedness_established": false,
+    "quasilinear_estimate_established": false,
+    "variable_coefficient_estimate_established": false
+  },
+  "consumed_authority": {
+    "accepted_results": [
+      "FROZEN_AUXILIARY_ZERO_LOSS_CONFIRMED",
+      "PURE_PRINCIPAL_METRIC_EQUIVALENCE_TWO_DERIVATIVE_GROWTH",
+      "PURE_PRINCIPAL_PHYSICAL_TT_ONE_DERIVATIVE_GROWTH",
+      "COMPLETE_GENERIC_FROZEN_METRIC_LOSS_BLOCKED_BY_MISSING_SUBPRINCIPAL_MATRIX",
+      "CONSTRAINT_RESTRICTED_LOSS_BLOCKED_BY_MISSING_TANGENT_PROJECTOR",
+      "BLOCK_ORDER_GRAPH_SCREEN_HAS_NO_POSITIVE_RETURN_CYCLE"
+    ],
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "2f5fdd944a921baf98438f39f2a910ca948d50f31c0ec00bf74bf7d8895cd7a3"
+  },
+  "consumed_constraint_system": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-GAUGE-AUXILIARY-CONSTRAINT-PROPAGATION-SYSTEM-v0.json",
+    "sha256": "ed7510bcd115e8bf9ef4dcd48ef8552135a825e242d51bd6c7ef751f18324c60"
+  },
+  "consumed_reduced_system": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-AUXILIARY-HARMONIC-REDUCED-SYSTEM-v0.json",
+    "sha256": "a0b1d73895ed9f9c92ea523117ecc17421b0b03b32736258f144cf23370f1390"
+  },
+  "exact_minkowski_control": {
+    "background_contract": {
+      "background_field_derivatives": "all zero",
+      "background_fields": "c=R=r=S=0",
+      "coefficient_domain": [
+        "beta != 0",
+        "gamma:=3alpha+beta != 0"
+      ],
+      "cosmological_coefficient": "c_Lambda=0",
+      "gauge_source": "H identically zero",
+      "metric": "eta=diag(-1,1,1,1)",
+      "not_generic": true
+    },
+    "classification": "MINKOWSKI_FROZEN_COMPANION_OPERATOR_EXACTLY_DERIVED_CONTROL_ONLY",
+    "first_order_form": "X=(U,V), partial_t X=A_Mink(k)X; A_Mink=[[0,I_64],[-rho^2 I_64-F_U,-F_V]]",
+    "generic_background_conclusion": false,
+    "matrix_shape": [
+      128,
+      128
+    ],
+    "nonzero_entry_count": 224,
+    "parameter_definitions": {
+      "a": "(2alpha+beta)/beta",
+      "m_R": "c_R/[2(3alpha+beta)]",
+      "m_S": "c_R/beta",
+      "rho_squared": "k1**2+k2**2+k3**2"
+    },
+    "placeholder_free": true,
+    "rhs_equations": [
+      "F_g_mn=-(1/2)eta_mn R-2S_mn",
+      "F_R=m_R R",
+      "F_r_a=m_R partial_a R",
+      "F_c_mna=-(1/2)eta_mn partial_a R-2 partial_a S_mn",
+      "F_S_mn=a[partial_m r_n-(1/4)eta_mn m_R R]-m_S S_mn"
+    ],
+    "sparse_entries": [
+      {
+        "column": 64,
+        "row": 0,
+        "value": "1"
+      },
+      {
+        "column": 65,
+        "row": 1,
+        "value": "1"
+      },
+      {
+        "column": 66,
+        "row": 2,
+        "value": "1"
+      },
+      {
+        "column": 67,
+        "row": 3,
+        "value": "1"
+      },
+      {
+        "column": 68,
+        "row": 4,
+        "value": "1"
+      },
+      {
+        "column": 69,
+        "row": 5,
+        "value": "1"
+      },
+      {
+        "column": 70,
+        "row": 6,
+        "value": "1"
+      },
+      {
+        "column": 71,
+        "row": 7,
+        "value": "1"
+      },
+      {
+        "column": 72,
+        "row": 8,
+        "value": "1"
+      },
+      {
+        "column": 73,
+        "row": 9,
+        "value": "1"
+      },
+      {
+        "column": 74,
+        "row": 10,
+        "value": "1"
+      },
+      {
+        "column": 75,
+        "row": 11,
+        "value": "1"
+      },
+      {
+        "column": 76,
+        "row": 12,
+        "value": "1"
+      },
+      {
+        "column": 77,
+        "row": 13,
+        "value": "1"
+      },
+      {
+        "column": 78,
+        "row": 14,
+        "value": "1"
+      },
+      {
+        "column": 79,
+        "row": 15,
+        "value": "1"
+      },
+      {
+        "column": 80,
+        "row": 16,
+        "value": "1"
+      },
+      {
+        "column": 81,
+        "row": 17,
+        "value": "1"
+      },
+      {
+        "column": 82,
+        "row": 18,
+        "value": "1"
+      },
+      {
+        "column": 83,
+        "row": 19,
+        "value": "1"
+      },
+      {
+        "column": 84,
+        "row": 20,
+        "value": "1"
+      },
+      {
+        "column": 85,
+        "row": 21,
+        "value": "1"
+      },
+      {
+        "column": 86,
+        "row": 22,
+        "value": "1"
+      },
+      {
+        "column": 87,
+        "row": 23,
+        "value": "1"
+      },
+      {
+        "column": 88,
+        "row": 24,
+        "value": "1"
+      },
+      {
+        "column": 89,
+        "row": 25,
+        "value": "1"
+      },
+      {
+        "column": 90,
+        "row": 26,
+        "value": "1"
+      },
+      {
+        "column": 91,
+        "row": 27,
+        "value": "1"
+      },
+      {
+        "column": 92,
+        "row": 28,
+        "value": "1"
+      },
+      {
+        "column": 93,
+        "row": 29,
+        "value": "1"
+      },
+      {
+        "column": 94,
+        "row": 30,
+        "value": "1"
+      },
+      {
+        "column": 95,
+        "row": 31,
+        "value": "1"
+      },
+      {
+        "column": 96,
+        "row": 32,
+        "value": "1"
+      },
+      {
+        "column": 97,
+        "row": 33,
+        "value": "1"
+      },
+      {
+        "column": 98,
+        "row": 34,
+        "value": "1"
+      },
+      {
+        "column": 99,
+        "row": 35,
+        "value": "1"
+      },
+      {
+        "column": 100,
+        "row": 36,
+        "value": "1"
+      },
+      {
+        "column": 101,
+        "row": 37,
+        "value": "1"
+      },
+      {
+        "column": 102,
+        "row": 38,
+        "value": "1"
+      },
+      {
+        "column": 103,
+        "row": 39,
+        "value": "1"
+      },
+      {
+        "column": 104,
+        "row": 40,
+        "value": "1"
+      },
+      {
+        "column": 105,
+        "row": 41,
+        "value": "1"
+      },
+      {
+        "column": 106,
+        "row": 42,
+        "value": "1"
+      },
+      {
+        "column": 107,
+        "row": 43,
+        "value": "1"
+      },
+      {
+        "column": 108,
+        "row": 44,
+        "value": "1"
+      },
+      {
+        "column": 109,
+        "row": 45,
+        "value": "1"
+      },
+      {
+        "column": 110,
+        "row": 46,
+        "value": "1"
+      },
+      {
+        "column": 111,
+        "row": 47,
+        "value": "1"
+      },
+      {
+        "column": 112,
+        "row": 48,
+        "value": "1"
+      },
+      {
+        "column": 113,
+        "row": 49,
+        "value": "1"
+      },
+      {
+        "column": 114,
+        "row": 50,
+        "value": "1"
+      },
+      {
+        "column": 115,
+        "row": 51,
+        "value": "1"
+      },
+      {
+        "column": 116,
+        "row": 52,
+        "value": "1"
+      },
+      {
+        "column": 117,
+        "row": 53,
+        "value": "1"
+      },
+      {
+        "column": 118,
+        "row": 54,
+        "value": "1"
+      },
+      {
+        "column": 119,
+        "row": 55,
+        "value": "1"
+      },
+      {
+        "column": 120,
+        "row": 56,
+        "value": "1"
+      },
+      {
+        "column": 121,
+        "row": 57,
+        "value": "1"
+      },
+      {
+        "column": 122,
+        "row": 58,
+        "value": "1"
+      },
+      {
+        "column": 123,
+        "row": 59,
+        "value": "1"
+      },
+      {
+        "column": 124,
+        "row": 60,
+        "value": "1"
+      },
+      {
+        "column": 125,
+        "row": 61,
+        "value": "1"
+      },
+      {
+        "column": 126,
+        "row": 62,
+        "value": "1"
+      },
+      {
+        "column": 127,
+        "row": 63,
+        "value": "1"
+      },
+      {
+        "column": 0,
+        "row": 64,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 64,
+        "value": "-1/2"
+      },
+      {
+        "column": 55,
+        "row": 64,
+        "value": "2"
+      },
+      {
+        "column": 1,
+        "row": 65,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 56,
+        "row": 65,
+        "value": "2"
+      },
+      {
+        "column": 2,
+        "row": 66,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 57,
+        "row": 66,
+        "value": "2"
+      },
+      {
+        "column": 3,
+        "row": 67,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 58,
+        "row": 67,
+        "value": "2"
+      },
+      {
+        "column": 4,
+        "row": 68,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 68,
+        "value": "1/2"
+      },
+      {
+        "column": 59,
+        "row": 68,
+        "value": "2"
+      },
+      {
+        "column": 5,
+        "row": 69,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 60,
+        "row": 69,
+        "value": "2"
+      },
+      {
+        "column": 6,
+        "row": 70,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 61,
+        "row": 70,
+        "value": "2"
+      },
+      {
+        "column": 7,
+        "row": 71,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 71,
+        "value": "1/2"
+      },
+      {
+        "column": 62,
+        "row": 71,
+        "value": "2"
+      },
+      {
+        "column": 8,
+        "row": 72,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 63,
+        "row": 72,
+        "value": "2"
+      },
+      {
+        "column": 9,
+        "row": 73,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 73,
+        "value": "1/2"
+      },
+      {
+        "column": 55,
+        "row": 73,
+        "value": "2"
+      },
+      {
+        "column": 59,
+        "row": 73,
+        "value": "-2"
+      },
+      {
+        "column": 62,
+        "row": 73,
+        "value": "-2"
+      },
+      {
+        "column": 10,
+        "row": 74,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 114,
+        "row": 74,
+        "value": "-1/2"
+      },
+      {
+        "column": 119,
+        "row": 74,
+        "value": "2"
+      },
+      {
+        "column": 11,
+        "row": 75,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 120,
+        "row": 75,
+        "value": "2"
+      },
+      {
+        "column": 12,
+        "row": 76,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 121,
+        "row": 76,
+        "value": "2"
+      },
+      {
+        "column": 13,
+        "row": 77,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 122,
+        "row": 77,
+        "value": "2"
+      },
+      {
+        "column": 14,
+        "row": 78,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 114,
+        "row": 78,
+        "value": "1/2"
+      },
+      {
+        "column": 123,
+        "row": 78,
+        "value": "2"
+      },
+      {
+        "column": 15,
+        "row": 79,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 124,
+        "row": 79,
+        "value": "2"
+      },
+      {
+        "column": 16,
+        "row": 80,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 125,
+        "row": 80,
+        "value": "2"
+      },
+      {
+        "column": 17,
+        "row": 81,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 114,
+        "row": 81,
+        "value": "1/2"
+      },
+      {
+        "column": 126,
+        "row": 81,
+        "value": "2"
+      },
+      {
+        "column": 18,
+        "row": 82,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 127,
+        "row": 82,
+        "value": "2"
+      },
+      {
+        "column": 19,
+        "row": 83,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 114,
+        "row": 83,
+        "value": "1/2"
+      },
+      {
+        "column": 119,
+        "row": 83,
+        "value": "2"
+      },
+      {
+        "column": 123,
+        "row": 83,
+        "value": "-2"
+      },
+      {
+        "column": 126,
+        "row": 83,
+        "value": "-2"
+      },
+      {
+        "column": 20,
+        "row": 84,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 84,
+        "value": "-I*k1/2"
+      },
+      {
+        "column": 55,
+        "row": 84,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 21,
+        "row": 85,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 56,
+        "row": 85,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 22,
+        "row": 86,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 57,
+        "row": 86,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 23,
+        "row": 87,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 58,
+        "row": 87,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 24,
+        "row": 88,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 88,
+        "value": "I*k1/2"
+      },
+      {
+        "column": 59,
+        "row": 88,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 25,
+        "row": 89,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 60,
+        "row": 89,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 26,
+        "row": 90,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 61,
+        "row": 90,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 27,
+        "row": 91,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 91,
+        "value": "I*k1/2"
+      },
+      {
+        "column": 62,
+        "row": 91,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 28,
+        "row": 92,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 63,
+        "row": 92,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 29,
+        "row": 93,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 93,
+        "value": "I*k1/2"
+      },
+      {
+        "column": 55,
+        "row": 93,
+        "value": "2*I*k1"
+      },
+      {
+        "column": 59,
+        "row": 93,
+        "value": "-2*I*k1"
+      },
+      {
+        "column": 62,
+        "row": 93,
+        "value": "-2*I*k1"
+      },
+      {
+        "column": 30,
+        "row": 94,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 94,
+        "value": "-I*k2/2"
+      },
+      {
+        "column": 55,
+        "row": 94,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 31,
+        "row": 95,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 56,
+        "row": 95,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 32,
+        "row": 96,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 57,
+        "row": 96,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 33,
+        "row": 97,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 58,
+        "row": 97,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 34,
+        "row": 98,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 98,
+        "value": "I*k2/2"
+      },
+      {
+        "column": 59,
+        "row": 98,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 35,
+        "row": 99,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 60,
+        "row": 99,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 36,
+        "row": 100,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 61,
+        "row": 100,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 37,
+        "row": 101,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 101,
+        "value": "I*k2/2"
+      },
+      {
+        "column": 62,
+        "row": 101,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 38,
+        "row": 102,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 63,
+        "row": 102,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 39,
+        "row": 103,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 103,
+        "value": "I*k2/2"
+      },
+      {
+        "column": 55,
+        "row": 103,
+        "value": "2*I*k2"
+      },
+      {
+        "column": 59,
+        "row": 103,
+        "value": "-2*I*k2"
+      },
+      {
+        "column": 62,
+        "row": 103,
+        "value": "-2*I*k2"
+      },
+      {
+        "column": 40,
+        "row": 104,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 104,
+        "value": "-I*k3/2"
+      },
+      {
+        "column": 55,
+        "row": 104,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 41,
+        "row": 105,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 56,
+        "row": 105,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 42,
+        "row": 106,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 57,
+        "row": 106,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 43,
+        "row": 107,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 58,
+        "row": 107,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 44,
+        "row": 108,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 108,
+        "value": "I*k3/2"
+      },
+      {
+        "column": 59,
+        "row": 108,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 45,
+        "row": 109,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 60,
+        "row": 109,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 46,
+        "row": 110,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 61,
+        "row": 110,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 47,
+        "row": 111,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 111,
+        "value": "I*k3/2"
+      },
+      {
+        "column": 62,
+        "row": 111,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 48,
+        "row": 112,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 63,
+        "row": 112,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 49,
+        "row": 113,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 113,
+        "value": "I*k3/2"
+      },
+      {
+        "column": 55,
+        "row": 113,
+        "value": "2*I*k3"
+      },
+      {
+        "column": 59,
+        "row": 113,
+        "value": "-2*I*k3"
+      },
+      {
+        "column": 62,
+        "row": 113,
+        "value": "-2*I*k3"
+      },
+      {
+        "column": 50,
+        "row": 114,
+        "value": "-k1**2 - k2**2 - k3**2 - m_R"
+      },
+      {
+        "column": 51,
+        "row": 115,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 114,
+        "row": 115,
+        "value": "-m_R"
+      },
+      {
+        "column": 50,
+        "row": 116,
+        "value": "-I*k1*m_R"
+      },
+      {
+        "column": 52,
+        "row": 116,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 117,
+        "value": "-I*k2*m_R"
+      },
+      {
+        "column": 53,
+        "row": 117,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 118,
+        "value": "-I*k3*m_R"
+      },
+      {
+        "column": 54,
+        "row": 118,
+        "value": "-k1**2 - k2**2 - k3**2"
+      },
+      {
+        "column": 50,
+        "row": 119,
+        "value": "-a*m_R/4"
+      },
+      {
+        "column": 55,
+        "row": 119,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 115,
+        "row": 119,
+        "value": "-a"
+      },
+      {
+        "column": 56,
+        "row": 120,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 116,
+        "row": 120,
+        "value": "-a"
+      },
+      {
+        "column": 57,
+        "row": 121,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 117,
+        "row": 121,
+        "value": "-a"
+      },
+      {
+        "column": 58,
+        "row": 122,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 118,
+        "row": 122,
+        "value": "-a"
+      },
+      {
+        "column": 50,
+        "row": 123,
+        "value": "a*m_R/4"
+      },
+      {
+        "column": 52,
+        "row": 123,
+        "value": "-I*a*k1"
+      },
+      {
+        "column": 59,
+        "row": 123,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 53,
+        "row": 124,
+        "value": "-I*a*k1"
+      },
+      {
+        "column": 60,
+        "row": 124,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 54,
+        "row": 125,
+        "value": "-I*a*k1"
+      },
+      {
+        "column": 61,
+        "row": 125,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 50,
+        "row": 126,
+        "value": "a*m_R/4"
+      },
+      {
+        "column": 53,
+        "row": 126,
+        "value": "-I*a*k2"
+      },
+      {
+        "column": 62,
+        "row": 126,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      },
+      {
+        "column": 54,
+        "row": 127,
+        "value": "-I*a*k2"
+      },
+      {
+        "column": 63,
+        "row": 127,
+        "value": "-k1**2 - k2**2 - k3**2 + m_S"
+      }
+    ],
+    "sparse_entry_sha256": "5e8607c78b5020a287bbfc5448bc5e42d945828e2b0d7b1d37594b8658d0fa8a",
+    "variable_order": [
+      "g_mn[10]",
+      "c_mna[40], derivative index a outermost",
+      "R[1]",
+      "r_a[4]",
+      "S_mn[9], S_33=S_00-S_11-S_22",
+      "partial_t of the preceding 64 variables"
+    ]
+  },
+  "execution_target": "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0",
+  "generic_operator_closure_audit": {
+    "answer": false,
+    "blocking_placeholders_found_in_predecessor": [
+      "Q^H_mn",
+      "Q_mn(g,c)",
+      "L^S_mn",
+      "partial_a F^R",
+      "partial_a F^g_mn"
+    ],
+    "closure_requirements": [
+      {
+        "evidence": "U=(g[10],c[40],R[1],r[4],S[9])",
+        "id": "EXACT_REDUCED_VARIABLE_ORDER",
+        "status": "PASS"
+      },
+      {
+        "evidence": "The accepted subsidiary packet freezes the literal zero-constraint-addition reduced equations.",
+        "id": "ZERO_ADDITION_OFF_CONSTRAINT_EXTENSION",
+        "status": "PASS"
+      },
+      {
+        "evidence": "Q_mn and Q^H_mn remain named remainders rather than component polynomials in g,c and the prescribed H jet.",
+        "id": "QH_COMPONENT_EXPANSION",
+        "status": "BLOCKED"
+      },
+      {
+        "evidence": "L^S_mn remains a named tensor-box remainder rather than a component polynomial in g,c,partial c,S,partial S.",
+        "id": "TENSOR_BOX_REMAINDER_COMPONENT_EXPANSION",
+        "status": "BLOCKED"
+      },
+      {
+        "evidence": "F_r and F_c still use partial_a F^R and partial_a F^g; their component Jacobians are absent.",
+        "id": "DERIVATIVE_EQUATION_EXPANSION",
+        "status": "BLOCKED"
+      },
+      {
+        "evidence": "H(x,g) is specified only as prescribed C^2. Its independent H_x,H_g,H_xx,H_xg,H_gg jet coordinates and admissibility identities are not frozen.",
+        "id": "PRESCRIBED_GAUGE_SOURCE_JET",
+        "status": "BLOCKED"
+      },
+      {
+        "evidence": "No nonredundant coordinate set for (Ubar,partial Ubar,partial^2 Ubar,Weylbar) modulo field equations, gauge, and definition constraints has been selected.",
+        "id": "INDEPENDENT_ON_SHELL_BACKGROUND_JET",
+        "status": "BLOCKED"
+      },
+      {
+        "evidence": "The exact dF/dU and dF/d(partial_a U) matrices and the coefficient-variation terms delta(g^ab) partial_a partial_b Ubar do not exist as accepted artifacts.",
+        "id": "GENERIC_128_STATE_COEFFICIENT_JACOBIANS",
+        "status": "BLOCKED"
+      },
+      {
+        "evidence": "Still required before a constraint-restricted spectral minimum can be calculated.",
+        "id": "FULL_CONSTRAINT_TANGENT_PROJECTOR",
+        "status": "DEFERRED_NOT_REQUIRED_FOR_UNRESTRICTED_OPERATOR"
+      }
+    ],
+    "off_constraint_extension": {
+      "blocking": false,
+      "constraint_addition_M_A_B": "identically zero",
+      "derivative_constraint_addition_N_A_B_mu": "identically zero",
+      "status": "FROZEN"
+    },
+    "required_background_contract_for_successor": {
+      "class": "vacuum on-shell, full-constraint-satisfying generic background two-jet in a foliation-adapted orthonormal frame at the frozen point",
+      "controls_not_generic": [
+        "Minkowski",
+        "constant-curvature Einstein",
+        "2alpha+beta=0"
+      ],
+      "must_name_independent_coordinates": [
+        "Ubar=(gbar,cbar,Rbar,rbar,Sbar)",
+        "partial Ubar",
+        "independent second derivatives of Ubar",
+        "background Weyl components not fixed by Rbar,Sbar",
+        "H_x,H_g,H_xx,H_xg,H_gg at (xbar,gbar)"
+      ],
+      "must_record_relations": [
+        "background reduced evolution equations",
+        "harmonic gauge and all auxiliary definition constraints",
+        "trace and divergence constraints",
+        "integrability constraints",
+        "Hamiltonian and momentum constraints"
+      ]
+    },
+    "target_question": "Can every entry of the generic background-dependent 128 by 128 frozen companion be generated from accepted predecessor artifacts without an unnamed remainder or unbound jet?",
+    "terminal_outcome": "GENERIC_BACKGROUND_OPERATOR_NOT_YET_CLOSED",
+    "why_order_graph_is_insufficient": "A block-level differential-order graph records possible frequency powers but not the coefficient products around Jordan return paths. It cannot decide cancellations, fractional root splitting, real parts, or background and direction uniformity."
+  },
+  "prohibitions_respected": {
+    "constraint_projection_inferred": false,
+    "ghost_analysis_executed": false,
+    "minkowski_control_called_generic": false,
+    "named_remainder_inserted_as_exact_matrix_entry": false,
+    "order_graph_called_spectral_proof": false,
+    "phenomenology_executed": false,
+    "quasilinear_or_local_theorem_claimed": false,
+    "source_extension_executed": false,
+    "variable_coefficient_estimate_claimed": false,
+    "yukawa_work_executed": false
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_v0",
+  "selected_next_target": "review_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0_result",
+  "terminal_outcomes": [
+    "MINKOWSKI_FROZEN_COMPANION_OPERATOR_EXACTLY_DERIVED_CONTROL_ONLY",
+    "GENERIC_BACKGROUND_OPERATOR_NOT_YET_CLOSED",
+    "GENERIC_SUBPRINCIPAL_SPECTRAL_CLASSIFICATION_NOT_AUTHORIZED",
+    "CONSTRAINT_TANGENT_PROJECTOR_REMAINS_BLOCKED"
+  ],
+  "verdict": "EXACT_MINKOWSKI_COMPANION_CONTROL_DERIVED_GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED_PENDING_COMPONENT_EXPANSION_GAUGE_JET_AND_ON_SHELL_BACKGROUND_JET_NO_GENERIC_SPECTRAL_VARIABLE_OR_NONLINEAR_CLAIM"
+}

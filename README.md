@@ -24,21 +24,22 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-28)
 - Accepted principal result: the equal-order and adapted auxiliary pencils normalize to `(1-lambda^2) I_64`, but the metric-equivalence grading is triangular and defective with one derivative of loss; its light-cone roots have algebraic multiplicity 64 and geometric multiplicity 50.
 - Accepted energy preparation: all 50 Jordan chains at each root are ledgered as `4J_3+6J_2+40J_1`; the one-derivative equivalence-map shift is established, but the actual frozen propagator loss remains unresolved between one and two derivatives.
 - Accepted frozen-growth result: the exact pure-principal 128-state chain companion gives zero auxiliary loss, quadratic-frequency growth in the unrestricted metric-equivalence grading when `2alpha+beta != 0`, and linear-frequency growth in the physical TT sector. The block-order graph has no positive return cycle, but it is not the complete background-jet subprincipal matrix; the generic frozen metric loss and the constraint-restricted minimum therefore remain blocked.
-- Exact live target: `derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean`.
-- Report: `formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json`.
-- Boundary: derive the exact generic background-jet linearization and complete 128-state frozen companion operator, including every weighted subprincipal coefficient. The constraint-tangent projector remains a later prerequisite. Variable-coefficient, quasilinear, nonaccumulation, local well-posedness, source-extension, Maxwell–Dirac, preserved-descendant, and Yukawa work are not authorized.
+- Accepted exact-operator closure result: the complete 128-state Minkowski control operator is explicit and placeholder-free with 224 nonzero entries. The generic background operator is not closed because the accepted predecessor leaves `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet unexpanded.
+- Exact live target: `derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.lean`.
+- Report: `formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_REVIEW_20260728_v0.json`.
+- Boundary: expand the generic background linearization component by component and freeze a nonredundant on-shell background and gauge jet. Generic spectral asymptotics, constraint projection, variable-coefficient, quasilinear, nonaccumulation, local well-posedness, source-extension, Maxwell–Dirac, preserved-descendant, and Yukawa work are not authorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFrozenCoefficientJordanChainFrequencyGrowthResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: AUXILIARY_ZERO_LOSS_PURE_PRINCIPAL_METRIC_TWO_DERIVATIVE_TT_ONE_DERIVATIVE_COMPLETE_GENERIC_FROZEN_AND_CONSTRAINT_MINIMA_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: MINKOWSKI_FROZEN_COMPANION_EXACT_GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED_SUBPRINCIPAL_SPECTRUM_AND_CONSTRAINT_PROJECTION_BLOCKED_NO_VARIABLE_OR_NONLINEAR_ESTIMATE
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_component_expanded_generic_background_linearization_derivation
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.
