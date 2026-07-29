@@ -31,7 +31,7 @@ def boundedAttemptNumber : Nat :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "close_toe_native_surrogate_v0_after_bounded_result_v0" := by
+      "select_next_native_toe_hypothesis_for_bounded_adjudication_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -46,10 +46,10 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem bounded_native_program_is_terminal_after_stage_one_block :
-    boundedProgramId = "TOE_NATIVE_SURROGATE_V0" ∧
-    boundedProgramState = "TERMINAL" ∧
-    boundedAttemptNumber = 1 := by
+theorem native_hypothesis_selector_has_not_installed_a_new_program :
+    boundedProgramId = "NONE_NEW_PROGRAM_INSTALLED" ∧
+    boundedProgramState = "SELECTION_ONLY" ∧
+    boundedAttemptNumber = 0 := by
   native_decide
 
 end CurrentAuthority

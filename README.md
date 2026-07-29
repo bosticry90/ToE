@@ -34,21 +34,22 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Program N authorization accepted: five semantic stages, zero repairs, and no subsidiary scientific targets.
 - Native Stage 1 is closed `BLOCKED`: no accepted CCFT-to-relativistic-real-scalar map exists, and neither required independent `Z2` gate is justified.
 - Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
-- Exact live target: `close_toe_native_surrogate_v0_after_bounded_result_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean`.
-- Report: `formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json`.
-- Boundary: Program N v0 is closed without repair; Stages 2–5 and the portal action remain prohibited. The terminal result is `NO_UNIQUE_TOE_DISCRIMINATOR_V0`.
+- New frontier decision: one selector may compare pillar recovery, native seams, CCFT/coherence ontology, and master-action reconciliation. It cannot reopen either closed program, install a successor program, select a field/action, or execute physics.
+- Exact live target: `select_next_native_toe_hypothesis_for_bounded_adjudication_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean`.
+- Report: `formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: the selector is one decision only. Program B and Program N remain closed, and a selected path still requires separate bounded-program authority.
 
-CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
-ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
+CURRENT_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: NO_UNIQUE_TOE_DISCRIMINATOR_V0
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: NATIVE_SURROGATE_V0_TERMINAL_AFTER_STAGE_1_BLOCK_NO_REPAIR_NO_ACTION_NO_AUTOMATIC_V1
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_terminal_closeout
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_hypothesis_frontier_selection
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

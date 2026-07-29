@@ -489,33 +489,33 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the bounded native Stage 1 result. -/
+/-- Previous terminal Program N target consumed by the selector authority. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_toe_native_coherence_representation_v0"
-
-/-- Terminal Program N closeout target after the accepted Stage 1 block. -/
-def currentLiveNextStrictTargetV0 : String :=
   "close_toe_native_surrogate_v0_after_bounded_result_v0"
 
-/-- Evidence certificate for the terminal Program N closeout. -/
+/-- One bounded decision selecting the next native-hypothesis frontier. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
+
+/-- Evidence certificate authorizing only the frontier selector. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean"
 
-/-- Review accepting Program N's terminal closeout without an automatic v1. -/
+/-- Review accepting the narrow selector authority. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json"
+  "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json"
 
-/-- Accepted bounded Program N terminal outcome. -/
+/-- Accepted selector-authority outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "NO_UNIQUE_TOE_DISCRIMINATOR_V0"
+  "ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "NATIVE_SURROGATE_V0_TERMINAL_AFTER_STAGE_1_BLOCK_NO_REPAIR_NO_ACTION_NO_AUTOMATIC_V1"
+  "SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "toe_native_surrogate_v0_terminal_closeout"
+  "toe_native_hypothesis_frontier_selection"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -527,8 +527,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice :=
-    "close_toe_native_surrogate_v0_after_bounded_result_v0"
+  next_strict_slice := "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -653,18 +652,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The accepted closeout records Program N's terminal bounded outcome. -/
+/-- The current authority permits only a native-hypothesis frontier selector. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "NO_UNIQUE_TOE_DISCRIMINATOR_V0" ∧
+        "ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "NATIVE_SURROGATE_V0_TERMINAL_AFTER_STAGE_1_BLOCK_NO_REPAIR_NO_ACTION_NO_AUTOMATIC_V1" ∧
+        "SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION" ∧
       currentLiveNextStrictTargetKindV0 =
-        "toe_native_surrogate_v0_terminal_closeout" := by
+        "toe_native_hypothesis_frontier_selection" := by
   constructor
   · rfl
   constructor

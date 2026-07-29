@@ -845,6 +845,7 @@ import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyP
 import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0ResultReview
+import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionAuthority
 import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview
@@ -1295,6 +1296,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1288
+def committedModuleCount : Nat := 1289
 
 end ToeFormalAll

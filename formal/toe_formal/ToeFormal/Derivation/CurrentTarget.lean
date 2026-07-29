@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedCloseout
+import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionAuthority
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,31 +13,32 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "close_toe_native_surrogate_v0_after_bounded_result_v0"
+  "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
 
 def currentEvidencePacketId : String :=
-  ToeNativeSurrogateV0BoundedCloseout.calculationId
+  ToeNativeHypothesisFrontierSelectionAuthority.packetId
 
 def currentBoundedProgramId : String :=
-  "TOE_NATIVE_SURROGATE_V0"
+  "NONE_NEW_PROGRAM_INSTALLED"
 
-def currentBoundedProgramState : String := "TERMINAL"
+def currentBoundedProgramState : String := "SELECTION_ONLY"
 
-def currentBoundedAttemptNumber : Nat := 1
+def currentBoundedAttemptNumber : Nat := 0
 
 def lastClosedBoundedSemanticStage : String :=
   "COHERENCE_REPRESENTATION"
 
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_selects_native_surrogate_mandatory_closeout :
+theorem current_target_selects_native_hypothesis_frontier_decision :
     currentLiveTarget =
-      "close_toe_native_surrogate_v0_after_bounded_result_v0" := by
+      "select_next_native_toe_hypothesis_for_bounded_adjudication_v0" := by
   rfl
 
-theorem native_program_is_terminal_after_stage_one_block :
-    currentBoundedProgramState = "TERMINAL" ∧
-    currentBoundedAttemptNumber = 1 ∧
+theorem selector_installs_no_new_bounded_program :
+    currentBoundedProgramId = "NONE_NEW_PROGRAM_INSTALLED" ∧
+    currentBoundedProgramState = "SELECTION_ONLY" ∧
+    currentBoundedAttemptNumber = 0 ∧
     lastClosedBoundedSemanticStage = "COHERENCE_REPRESENTATION" ∧
     lastBoundedTerminalResult = "BLOCKED" := by
   decide

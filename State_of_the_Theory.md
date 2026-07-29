@@ -64,7 +64,7 @@ separate, and the typed rewrite system is terminating and confluent. The
 accepted Minkowski 128-state/224-entry control is reproduced.
 
 The exact live target is
-`close_toe_native_surrogate_v0_after_bounded_result_v0`.
+`select_next_native_toe_hypothesis_for_bounded_adjudication_v0`.
 The mandatory role gate records quadratic gravity as `REFERENCE_CONTROL_ONLY`
 with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal. Program N is
 authorized with five stages, zero repairs, and no subsidiary targets. Its first
@@ -72,6 +72,10 @@ scientific stage closed blocked: the repository contains no accepted
 CCFT-to-relativistic-real-scalar crosswalk, and the required independent
 `Z2` symmetries are unjustified. V0 therefore closes without a unique
 discriminator and without advancing to its action stage.
+
+The live selector may compare four native-frontier paths and choose one future
+bounded-program proposal. It does not install that program, select a field or
+action, or reopen Programs B or N.
 
 A non-advancing custody correction now qualifies two intermediate quadratic
 certificates without reopening Program B. Stage 1 preserves its gauge, atlas,
@@ -85,16 +89,16 @@ Variable-coefficient estimates, loss nonaccumulation, local well-posedness, sour
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
-ACTIVE_LANE_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
+CURRENT_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedCloseout.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_CLOSEOUT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: NO_UNIQUE_TOE_DISCRIMINATOR_V0
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: NATIVE_SURROGATE_V0_TERMINAL_AFTER_STAGE_1_BLOCK_NO_REPAIR_NO_ACTION_NO_AUTOMATIC_V1
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_terminal_closeout
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_hypothesis_frontier_selection
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 
