@@ -1,0 +1,43 @@
+{
+  "accepted": true,
+  "artifact_id": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_RESULT_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumed_authority": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_REVIEW_20260729_v0",
+  "implementation_commit": "4c711ae784ceb4f8a58b1de1dc3235a39107b2d0",
+  "preservation": {
+    "bounded_program_b_reopened": false,
+    "missing_scientific_proofs_added": false,
+    "original_artifacts_hash_verified": 6,
+    "original_artifacts_rewritten": 0,
+    "scientific_target_rotated": false
+  },
+  "preserved_terminal_outcomes": {
+    "native_surrogate_v0": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+    "quadratic_control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "quadratic_toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "schema_id": "toe.qft_gr.quadratic.stage_1_2_certificate_status_correction.result_review.v0",
+  "stage_1": {
+    "addendum_path": "formal/docs/release/QFT_GR_QUADRATIC_STAGE_1_REWRITE_CERTIFICATE_STATUS_ADDENDUM_20260729_v0.json",
+    "addendum_sha256": "6f713263e3ebce3aaa8ba768e09fcc4b7cf2b6adcdd69e2667418d181c05c4bd",
+    "certificate_status": "REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED",
+    "contract_status": "GAUGE_ATLAS_AND_JET_CONTRACT_STRUCTURALLY_PRESERVED"
+  },
+  "stage_2": {
+    "addendum_path": "formal/docs/release/QFT_GR_QUADRATIC_STAGE_2_ALGEBRAIC_CERTIFICATE_STATUS_ADDENDUM_20260729_v0.json",
+    "addendum_sha256": "346cccf5146c1228f5604c04eeb819a5a2a9165f28e550338e0ad6267cb561f5",
+    "certificate_status": "ALGEBRAIC_CERTIFICATION_INCOMPLETE",
+    "structural_status": "GENERIC_COMPONENT_DAG_STRUCTURALLY_COMPLETE"
+  },
+  "status": "ACCEPTED_NONADVANCING_CERTIFICATE_STATUS_CORRECTION",
+  "validation": {
+    "bounded_governance_git_history_validation": "PASSED",
+    "focused_correction_and_governance_tests": "42 PASSED",
+    "full_lean_aggregate": "1287 MODULES PASSED",
+    "git_diff_check": "PASSED",
+    "registry_integrity": "PASSED",
+    "scientific_authority_parity": "PASSED",
+    "untracked_reddit": "PRESENT_UNTOUCHED"
+  },
+  "verdict": "STAGE_1_AND_STAGE_2_CERTIFICATION_QUALIFIED_WITHOUT_REOPENING_PROGRAM_B_OR_CHANGING_TERMINAL_OUTCOMES"
+}

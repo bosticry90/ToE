@@ -86,6 +86,7 @@ def test_dependency_index_and_registry_projection_match_addenda() -> None:
     )
     projection = registry["quadratic_stage_1_2_certificate_status_correction_v0"]
     assert _sha256(projection["status_index_path"]) == projection["status_index_sha256"]
+    assert _sha256(projection["result_review_path"]) == projection["result_review_sha256"]
     assert projection["bounded_program_reopened"] is False
     assert projection["scientific_target_rotated"] is False
     assert projection["missing_proofs_added"] is False
@@ -95,6 +96,29 @@ def test_dependency_index_and_registry_projection_match_addenda() -> None:
     )
     assert projection["native_surrogate_terminal_preserved"] == (
         "NO_UNIQUE_TOE_DISCRIMINATOR_V0"
+    )
+
+
+def test_correction_result_review_accepts_only_nonadvancing_qualification() -> None:
+    result = _read(
+        "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_RESULT_REVIEW_20260729_v0.json"
+    )
+    assert result["accepted"] is True
+    assert result["status"] == (
+        "ACCEPTED_NONADVANCING_CERTIFICATE_STATUS_CORRECTION"
+    )
+    assert result["preservation"] == {
+        "bounded_program_b_reopened": False,
+        "missing_scientific_proofs_added": False,
+        "original_artifacts_hash_verified": 6,
+        "original_artifacts_rewritten": 0,
+        "scientific_target_rotated": False,
+    }
+    assert result["stage_1"]["certificate_status"] == (
+        "REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED"
+    )
+    assert result["stage_2"]["certificate_status"] == (
+        "ALGEBRAIC_CERTIFICATION_INCOMPLETE"
     )
 
 
