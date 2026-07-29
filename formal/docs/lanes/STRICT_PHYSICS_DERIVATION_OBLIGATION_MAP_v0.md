@@ -33,6 +33,7 @@ Current strict QFT–GR obligation (2026-07-29):
 - Accepted bounded Stage 2: a closed 3,950-node strict-harmonic component graph yields 64 independently inventoried equations per trace chart and exactly reproduces the accepted Minkowski 128-state/224-entry control.
 - Accepted bounded Stage 3: the generic 128-state operator is not closed because the component artifact does not fix a unique off-constraint wave-slot map and its trace charts retain dependent jets.
 - Accepted role gate: `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal.
+- Non-advancing certificate qualification: the Stage 1 gauge/atlas/jet contract is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; the Stage 2 generic component DAG is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. No missing proof or Program B repair is authorized.
 - Program N Stage 1 closed blocked. The missing real-scalar continuum crosswalk and unjustified `phi`/`chi` `Z2` gates prohibit Stage 2 and require v0 closeout with `NO_UNIQUE_TOE_DISCRIMINATOR_V0`.
 - No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.

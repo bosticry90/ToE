@@ -72,6 +72,15 @@ scientific stage closed blocked: the repository contains no accepted
 CCFT-to-relativistic-real-scalar crosswalk, and the required independent
 `Z2` symmetries are unjustified. V0 therefore closes without a unique
 discriminator and without advancing to its action stage.
+
+A non-advancing custody correction now qualifies two intermediate quadratic
+certificates without reopening Program B. Stage 1 preserves its gauge, atlas,
+jet, and regularity contracts, but executable rewrite confluence has not been
+established. Stage 2 preserves a structurally closed generic component DAG and
+its equation inventory, but the generic tensor identities and entrywise
+generic-DAG-to-Minkowski specialization remain independently uncertified. The
+quadratic role and unresolved bounded result are unchanged.
+
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.

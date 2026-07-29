@@ -39,6 +39,7 @@ Current QFT–GR lead calculation (2026-07-29):
 - Accepted bounded Stage 2: the complete strict-harmonic component graph has 3,950 closed nodes, 64 independently inventoried equations per trace chart, and exact Minkowski 128-state/224-entry regression.
 - Accepted bounded Stage 3: the exact generic companion is not closed because no unique off-constraint 128-state wave-slot map or closed nine-variable trace chart is supplied.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, quotient, or propagator stage follows.
+- Certification correction: Stage 1 is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; Stage 2 is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. The correction supplies no missing proof, consumes no bounded stage, and leaves Program B closed.
 - Current native step: accept the failed-closed Stage 1 result and close v0. No minimal action, viability, seam, or observable stage is authorized.
 - Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.

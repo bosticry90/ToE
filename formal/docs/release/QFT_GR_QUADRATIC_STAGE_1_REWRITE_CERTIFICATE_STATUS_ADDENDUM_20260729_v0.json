@@ -1,0 +1,59 @@
+{
+  "addendum_id": "QFT_GR_QUADRATIC_STAGE_1_REWRITE_CERTIFICATE_STATUS_ADDENDUM_20260729_v0",
+  "authority": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "certificate_status": "REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED",
+  "contract_status": "GAUGE_ATLAS_AND_JET_CONTRACT_STRUCTURALLY_PRESERVED",
+  "downstream_consumption_rule": {
+    "allowed": [
+      "Consume the preserved strict-harmonic gauge and zero gauge-source-jet contract.",
+      "Consume the ten-chart trace-free atlas, finite-jet ledger, regular-stratum declaration, and separate regularity ledgers as recorded structural inputs.",
+      "Cite the declared rewrite inventory and rank-decrease check as structural metadata."
+    ],
+    "prohibited": [
+      "Do not cite Stage 1 as an executable proof of complete overlap enumeration.",
+      "Do not cite Stage 1 as an executable proof of critical-pair closure, local confluence, unique normal forms, or normalization idempotence.",
+      "Do not infer the missing rewrite proof from producer-authored boolean success labels."
+    ]
+  },
+  "not_executably_verified": [
+    "complete overlap enumeration",
+    "critical-pair reduction",
+    "local confluence",
+    "normal-form uniqueness",
+    "double-normalization idempotence"
+  ],
+  "original_artifacts_preserved": [
+    {
+      "path": "formal/output/CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0.json",
+      "sha256": "f3e73a52a9c8a311eb49675fdf6b786a5bce32bba3ffa58264c1e977837eaae2"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "f452a8ed7304c4afacee5a4bd092f6955f6246726eaf3c8548df66d5774383d0"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_VALIDATION_20260729_v0.json",
+      "sha256": "ac23e7f7145bc64313bcf5bde8ba2fddb6d94f96b01e2e89650a89c71628b2a8"
+    }
+  ],
+  "preserved_terminal_boundaries": {
+    "bounded_stage_reopened": false,
+    "control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "missing_proof_added": false,
+    "toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "schema_id": "toe.qft_gr.quadratic.stage_1_rewrite_certificate_status_addendum.v0",
+  "supersedes_only": [
+    "The historical review's interpretation of rewrite termination and confluence as structurally certified.",
+    "Any downstream interpretation that producer-authored confluence and idempotence booleans constitute an independent executable proof."
+  ],
+  "verified": [
+    "declared rewrite-rank decrease",
+    "stored rewrite-rule inventory",
+    "Minkowski contract data",
+    "basic dependency structure",
+    "strict-harmonic zero gauge-source-jet boundary",
+    "ten-chart trace-free atlas inventory"
+  ]
+}
