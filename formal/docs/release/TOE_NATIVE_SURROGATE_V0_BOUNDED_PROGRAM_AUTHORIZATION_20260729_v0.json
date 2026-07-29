@@ -1,0 +1,93 @@
+{
+  "authorization_target": "authorize_toe_native_surrogate_v0_bounded_program",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_boundary": {
+    "model_class": "CLASSICAL_LOCAL_CONTINUUM_NATIVE_SURROGATE",
+    "not_claimed": [
+      "CCFT_DERIVATION",
+      "FULL_TOE_UNIFICATION",
+      "MASTER_ACTION_DERIVATION",
+      "QFT_GR_CLOSURE",
+      "QUANTUM_GRAVITY",
+      "RENORMALIZED_QUANTUM_STRESS_ENERGY",
+      "SPACETIME_EMERGENCE",
+      "STANDARD_MODEL_UNIFICATION"
+    ],
+    "seam_class": [
+      "CLASSICAL_FIELD_TO_GRAVITY",
+      "CLASSICAL_COHERENCE_SURROGATE_TO_MATTER"
+    ]
+  },
+  "controls": {
+    "attempts_count_when_opened": true,
+    "authorized_stage_count": 5,
+    "blocked_stage_closes_v0": true,
+    "mandatory_exit_target": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+    "new_representation_or_action_requires_v1": true,
+    "no_subsidiary_scientific_targets": true,
+    "repair_attempt_count": 0
+  },
+  "program_id": "TOE_NATIVE_SURROGATE_V0",
+  "program_state_after_authorization": "UNOPENED",
+  "schema_id": "TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_20260729_v0",
+  "scientific_output_created": false,
+  "scientific_stage_attempted": false,
+  "selected_next_target": "select_toe_native_coherence_representation_v0",
+  "semantic_stages": [
+    {
+      "scope_hash": "2d1cd4f55cf02975a07075d09c0436044c3be85326f3d8c5861ed52b3d1b5520",
+      "semantic_stage_id": "COHERENCE_REPRESENTATION",
+      "stage_number": 1,
+      "target": "select_toe_native_coherence_representation_v0",
+      "terminal_outcome_vocabulary": [
+        "REAL_SCALAR_COHERENCE_SURROGATE_ACCEPTED_FOR_BOUNDED_V0",
+        "REAL_SCALAR_COHERENCE_REPRESENTATION_DERIVED",
+        "BLOCKED_COHERENCE_REPRESENTATION_INADEQUATE",
+        "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED"
+      ]
+    },
+    {
+      "scope_hash": "045ce4a5987bdf510bcffe7814f63ca5f1ac6c899ebfdd8bc9281af9e3bde306",
+      "semantic_stage_id": "MINIMAL_ACTION_SELECTION",
+      "stage_number": 2,
+      "target": "select_toe_native_surrogate_minimal_action_v0",
+      "terminal_outcome_vocabulary": [
+        "MINIMAL_TWO_SCALAR_NATIVE_SURROGATE_ACTION_SELECTED",
+        "BLOCKED_PORTAL_OPERATOR_BASIS_NOT_CLOSED",
+        "BLOCKED_NATIVE_INTERACTION_UNJUSTIFIED"
+      ]
+    },
+    {
+      "scope_hash": "42889663f61856a9ab810589216411e150aa78f276fd58da150cb1a4ac06c0b9",
+      "semantic_stage_id": "INTERNAL_VIABILITY",
+      "stage_number": 3,
+      "target": "derive_toe_native_surrogate_internal_viability_v0",
+      "terminal_outcome_vocabulary": [
+        "MATHEMATICALLY_VIABLE_NATIVE_SURROGATE_SANDBOX",
+        "NATIVE_SURROGATE_INTERNAL_VIABILITY_BLOCKED"
+      ]
+    },
+    {
+      "scope_hash": "78b2ae22ca647b767d61f8ef58c1adad84b9fc328ea97db642141d5ee08d2f3a",
+      "semantic_stage_id": "SEAM_AUDIT",
+      "stage_number": 4,
+      "target": "derive_toe_native_surrogate_classical_seam_audit_v0",
+      "terminal_outcome_vocabulary": [
+        "CLASSICAL_NATIVE_SURROGATE_SEAMS_AUDITED",
+        "CLASSICAL_NATIVE_SURROGATE_SEAM_AUDIT_BLOCKED"
+      ]
+    },
+    {
+      "scope_hash": "66da9d1510815a466240921208d8e51a4802de3802d24bb424e1617cb99c7878",
+      "semantic_stage_id": "OBSERVABLE_AND_UNIQUENESS",
+      "stage_number": 5,
+      "target": "derive_toe_native_surrogate_observable_and_uniqueness_v0",
+      "terminal_outcome_vocabulary": [
+        "UNIQUE_TOE_DISCRIMINATOR_V0_ESTABLISHED",
+        "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+        "BLOCKED_COHERENCE_STATE_NOT_ENDOGENOUS"
+      ]
+    }
+  ],
+  "verdict": "TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED"
+}

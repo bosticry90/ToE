@@ -19,14 +19,14 @@ Non-claim boundary:
 - no external truth claim.
 
 Current QFT–GR lead calculation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0`
-- `ACTIVE_LANE_v0: authorize_toe_native_surrogate_v0_bounded_program`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program`
+- `ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
@@ -39,7 +39,7 @@ Current QFT–GR lead calculation (2026-07-29):
 - Accepted bounded Stage 2: the complete strict-harmonic component graph has 3,950 closed nodes, 64 independently inventoried equations per trace chart, and exact Minkowski 128-state/224-entry regression.
 - Accepted bounded Stage 3: the exact generic companion is not closed because no unique off-constraint 128-state wave-slot map or closed nine-variable trace chart is supplied.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, quotient, or propagator stage follows.
-- Current governance-only step: install and authorize the five-attempt native-surrogate program before any coherence-representation science begins.
+- Current native step: Program N is installed but unopened; create the immutable Stage 1 OPEN commit before any coherence-representation producer runs.
 - Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 

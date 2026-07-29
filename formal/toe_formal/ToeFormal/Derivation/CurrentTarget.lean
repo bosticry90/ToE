@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticToeRoleAfterGenericFrozenResultV0
+import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,33 +13,33 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "authorize_toe_native_surrogate_v0_bounded_program"
+  "select_toe_native_coherence_representation_v0"
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.calculationId
+  ToeNativeSurrogateV0BoundedProgramAuthorization.authorizationId
 
 def currentBoundedProgramId : String :=
-  "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0"
+  "TOE_NATIVE_SURROGATE_V0"
 
-def currentBoundedProgramState : String := "TERMINAL"
+def currentBoundedProgramState : String := "UNOPENED"
 
-def currentBoundedAttemptNumber : Nat := 3
+def currentBoundedAttemptNumber : Nat := 0
 
 def lastClosedBoundedSemanticStage : String :=
-  "EXACT_FROZEN_COMPANION_OPERATOR"
+  "NONE"
 
-def lastBoundedTerminalResult : String := "BLOCKED"
+def lastBoundedTerminalResult : String := "NONE"
 
-theorem current_target_authorizes_native_bounded_program_installation :
+theorem current_target_selects_native_coherence_representation_stage :
     currentLiveTarget =
-      "authorize_toe_native_surrogate_v0_bounded_program" := by
+      "select_toe_native_coherence_representation_v0" := by
   rfl
 
-theorem quadratic_program_is_terminal_after_role_gate :
-    currentBoundedProgramState = "TERMINAL" ∧
-    currentBoundedAttemptNumber = 3 ∧
-    lastClosedBoundedSemanticStage = "EXACT_FROZEN_COMPANION_OPERATOR" ∧
-    lastBoundedTerminalResult = "BLOCKED" := by
+theorem native_program_is_authorized_but_stage_one_is_unopened :
+    currentBoundedProgramState = "UNOPENED" ∧
+    currentBoundedAttemptNumber = 0 ∧
+    lastClosedBoundedSemanticStage = "NONE" ∧
+    lastBoundedTerminalResult = "NONE" := by
   decide
 
 end CurrentTarget

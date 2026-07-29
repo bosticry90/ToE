@@ -240,8 +240,169 @@ QUADRATIC_STAGE_DEFINITIONS = (
     },
 )
 
+NATIVE_PROGRAM_AUTHORIZATION_TARGET = (
+    "authorize_toe_native_surrogate_v0_bounded_program"
+)
+NATIVE_PROGRAM_ID = "TOE_NATIVE_SURROGATE_V0"
+NATIVE_MANDATORY_EXIT = "close_toe_native_surrogate_v0_after_bounded_result_v0"
+NATIVE_STAGE_DEFINITIONS = (
+    {
+        "semantic_stage_id": "COHERENCE_REPRESENTATION",
+        "target": "select_toe_native_coherence_representation_v0",
+        "normalized_scientific_question": (
+            "Determine whether one real scalar is an admissible bounded surrogate "
+            "or a derived representation of one named preserved coherence feature, "
+            "and independently adjudicate the phi and chi Z2 symmetries."
+        ),
+        "authorized_inputs": [
+            "preserved_CCFT_and_ToE_coherence_claims",
+            "preserved_real_scalar_test_matter_sector",
+        ],
+        "required_outputs": [
+            "coherence_feature_crosswalk",
+            "chi_value_sign_zero_gradient_meaning",
+            "chi_Z2_meaning_and_status",
+            "phi_Z2_status",
+            "representation_or_surrogate_classification",
+        ],
+        "prohibited_claims": [
+            "CCFT_validation",
+            "coherence_is_fundamentally_scalar",
+            "native_action_selection",
+            "quantum_gravity",
+            "full_ToE_unification",
+        ],
+        "dependency_artifact_ids": [
+            "QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0",
+        ],
+        "terminal_outcome_vocabulary": [
+            "REAL_SCALAR_COHERENCE_SURROGATE_ACCEPTED_FOR_BOUNDED_V0",
+            "REAL_SCALAR_COHERENCE_REPRESENTATION_DERIVED",
+            "BLOCKED_COHERENCE_REPRESENTATION_INADEQUATE",
+            "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED",
+        ],
+    },
+    {
+        "semantic_stage_id": "MINIMAL_ACTION_SELECTION",
+        "target": "select_toe_native_surrogate_minimal_action_v0",
+        "normalized_scientific_question": (
+            "Select or block the bounded classical Einstein-two-scalar action "
+            "under the closed operator basis, independent Z2 gates, convention "
+            "audit, and native-interaction rationale."
+        ),
+        "authorized_inputs": ["COHERENCE_REPRESENTATION"],
+        "required_outputs": [
+            "bounded_operator_basis",
+            "independent_Z2_authorization",
+            "native_interaction_rationale",
+            "SI_and_natural_unit_convention_audit",
+            "minimal_action",
+        ],
+        "prohibited_claims": [
+            "quantum_or_renormalization_closure",
+            "unique_ToE_interaction",
+            "QFT_GR_closure",
+            "automatic_action_enlargement",
+        ],
+        "dependency_artifact_ids": ["COHERENCE_REPRESENTATION"],
+        "terminal_outcome_vocabulary": [
+            "MINIMAL_TWO_SCALAR_NATIVE_SURROGATE_ACTION_SELECTED",
+            "BLOCKED_PORTAL_OPERATOR_BASIS_NOT_CLOSED",
+            "BLOCKED_NATIVE_INTERACTION_UNJUSTIFIED",
+        ],
+    },
+    {
+        "semantic_stage_id": "INTERNAL_VIABILITY",
+        "target": "derive_toe_native_surrogate_internal_viability_v0",
+        "normalized_scientific_question": (
+            "Derive the classical field equations, constraints, fluctuation "
+            "operator, degrees of freedom, characteristics, and vacuum stability "
+            "of the selected bounded native-surrogate action."
+        ),
+        "authorized_inputs": ["MINIMAL_ACTION_SELECTION"],
+        "required_outputs": [
+            "field_equations",
+            "constraint_inventory",
+            "vacuum_classification",
+            "fluctuation_operator",
+            "degree_of_freedom_count",
+            "characteristic_and_stability_result",
+        ],
+        "prohibited_claims": [
+            "empirical_validation",
+            "quantum_stability",
+            "renormalization_closure",
+            "unique_ToE_discriminator",
+        ],
+        "dependency_artifact_ids": ["MINIMAL_ACTION_SELECTION"],
+        "terminal_outcome_vocabulary": [
+            "MATHEMATICALLY_VIABLE_NATIVE_SURROGATE_SANDBOX",
+            "NATIVE_SURROGATE_INTERNAL_VIABILITY_BLOCKED",
+        ],
+    },
+    {
+        "semantic_stage_id": "SEAM_AUDIT",
+        "target": "derive_toe_native_surrogate_classical_seam_audit_v0",
+        "normalized_scientific_question": (
+            "Audit the classical coherence-surrogate-to-gravity, coherence-"
+            "surrogate-to-matter, and composite seams with partition-independent "
+            "total stress-energy conservation."
+        ),
+        "authorized_inputs": ["INTERNAL_VIABILITY"],
+        "required_outputs": [
+            "inverse_metric_stress_variation",
+            "total_stress_tensor",
+            "partition_independent_conservation_law",
+            "coherence_to_gravity_seam_ledger",
+            "coherence_to_matter_seam_ledger",
+            "composite_classical_seam_ledger",
+        ],
+        "prohibited_claims": [
+            "QFT_GR_closure",
+            "renormalized_quantum_stress_energy",
+            "quantum_gravity",
+            "empirical_validation",
+        ],
+        "dependency_artifact_ids": ["INTERNAL_VIABILITY"],
+        "terminal_outcome_vocabulary": [
+            "CLASSICAL_NATIVE_SURROGATE_SEAMS_AUDITED",
+            "CLASSICAL_NATIVE_SURROGATE_SEAM_AUDIT_BLOCKED",
+        ],
+    },
+    {
+        "semantic_stage_id": "OBSERVABLE_AND_UNIQUENESS",
+        "target": "derive_toe_native_surrogate_observable_and_uniqueness_v0",
+        "normalized_scientific_question": (
+            "Derive or block an endogenous nonzero coherence-surrogate state, "
+            "observable map, identifiable quantitative prediction, and "
+            "inequivalence to a fitted generic Einstein-two-scalar portal model."
+        ),
+        "authorized_inputs": ["INTERNAL_VIABILITY", "SEAM_AUDIT"],
+        "required_outputs": [
+            "endogenous_nonzero_chi_state",
+            "observable_map",
+            "parameter_identifiability_audit",
+            "generic_portal_equivalence_audit",
+            "quantitative_residual_and_sensitivity",
+            "falsification_boundary",
+        ],
+        "prohibited_claims": [
+            "unique_discriminator_without_all_eight_conditions",
+            "externally_inserted_coherence_state",
+            "full_ToE_unification",
+            "CCFT_validation",
+        ],
+        "dependency_artifact_ids": ["INTERNAL_VIABILITY", "SEAM_AUDIT"],
+        "terminal_outcome_vocabulary": [
+            "UNIQUE_TOE_DISCRIMINATOR_V0_ESTABLISHED",
+            "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+            "BLOCKED_COHERENCE_STATE_NOT_ENDOGENOUS",
+        ],
+    },
+)
+
 NATIVE_PROGRAM_TEMPLATE = {
-    "program_id": "TOE_NATIVE_SURROGATE_V0",
+    "program_id": NATIVE_PROGRAM_ID,
     "authorized_stage_count": 5,
     "repair_attempt_count": 0,
     "no_subsidiary_scientific_targets": True,
@@ -458,6 +619,48 @@ def _quadratic_program_record() -> dict[str, Any]:
     }
 
 
+def _native_program_record() -> dict[str, Any]:
+    stages = []
+    for index, definition in enumerate(NATIVE_STAGE_DEFINITIONS, start=1):
+        stage = dict(definition)
+        stage["stage_number"] = index
+        stage["scope_hash"] = scope_hash(_stage_scope(stage))
+        stages.append(stage)
+    return {
+        "program_id": NATIVE_PROGRAM_ID,
+        "authorized_stage_count": 5,
+        "current_stage_number": 0,
+        "attempted_stage_ids": [],
+        "blocked_stage_id": None,
+        "repair_attempt_count": 0,
+        "mandatory_exit_target": NATIVE_MANDATORY_EXIT,
+        "no_subsidiary_scientific_targets": True,
+        "event_chain_tip_hash": None,
+        "last_closed_attempt_number": 0,
+        "state": "UNOPENED",
+        "open_attempt_number": None,
+        "events": [],
+        "stage_definitions": stages,
+        "claim_boundary": {
+            "model_class": "CLASSICAL_LOCAL_CONTINUUM_NATIVE_SURROGATE",
+            "seam_class": [
+                "CLASSICAL_FIELD_TO_GRAVITY",
+                "CLASSICAL_COHERENCE_SURROGATE_TO_MATTER",
+            ],
+            "not_claimed": [
+                "CCFT_DERIVATION",
+                "FULL_TOE_UNIFICATION",
+                "MASTER_ACTION_DERIVATION",
+                "QFT_GR_CLOSURE",
+                "QUANTUM_GRAVITY",
+                "RENORMALIZED_QUANTUM_STRESS_ENERGY",
+                "SPACETIME_EMERGENCE",
+                "STANDARD_MODEL_UNIFICATION",
+            ],
+        },
+    }
+
+
 def governance_contract() -> dict[str, Any]:
     return {
         "schema_id": GOVERNANCE_SCHEMA_ID,
@@ -497,6 +700,35 @@ def install_registry_extension(registry: dict[str, Any]) -> dict[str, Any]:
     migrated[PROGRAMS_KEY] = {
         QUADRATIC_PROGRAM_ID: _quadratic_program_record(),
     }
+    return migrated
+
+
+def authorize_native_program(registry: dict[str, Any]) -> dict[str, Any]:
+    projection = registry.get("current_projection_v0")
+    if not isinstance(projection, dict):
+        raise BoundedProgramError("canonical current projection is missing")
+    if projection.get("current_target") != NATIVE_PROGRAM_AUTHORIZATION_TARGET:
+        raise BoundedProgramError(
+            "native bounded program authorization target is not authoritative"
+        )
+    programs = registry.get(PROGRAMS_KEY)
+    if not isinstance(programs, dict):
+        raise BoundedProgramError("bounded-program registry extension is missing")
+    if NATIVE_PROGRAM_ID in programs:
+        raise BoundedProgramError("native bounded program is already authorized")
+    quadratic = programs.get(QUADRATIC_PROGRAM_ID)
+    if not isinstance(quadratic, dict) or not (
+        quadratic.get("state") == "CLOSED"
+        and quadratic.get("mandatory_exit_completed") is True
+        and quadratic.get("program_terminal_status")
+        == "CLOSED_AFTER_MANDATORY_ROLE_GATE"
+        and quadratic.get("toe_role") == "REFERENCE_CONTROL_ONLY"
+    ):
+        raise BoundedProgramError(
+            "quadratic program has not completed its mandatory role gate"
+        )
+    migrated = json.loads(json.dumps(registry))
+    migrated[PROGRAMS_KEY][NATIVE_PROGRAM_ID] = _native_program_record()
     return migrated
 
 
@@ -850,11 +1082,18 @@ def _command_validate(registry_path: Path, verify_git_history: bool) -> None:
         validate_event_chain(registry, verify_git_history=True)
 
 
+def _command_authorize_native(registry_path: Path) -> None:
+    _, registry = _load_registry_bytes(registry_path)
+    migrated = authorize_native_program(registry)
+    validate_registry_extension(migrated)
+    atomic_write_registry(registry_path, _registry_json_bytes(migrated))
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "command",
-        choices=("install", "reinstall-from-head", "validate"),
+        choices=("install", "reinstall-from-head", "authorize-native", "validate"),
     )
     parser.add_argument("--registry", type=Path, default=REGISTRY_PATH)
     parser.add_argument("--verify-git-history", action="store_true")
@@ -863,6 +1102,8 @@ def main(argv: Iterable[str] | None = None) -> int:
         _command_install(args.registry)
     elif args.command == "reinstall-from-head":
         _command_reinstall_from_head(args.registry)
+    elif args.command == "authorize-native":
+        _command_authorize_native(args.registry)
     else:
         _command_validate(args.registry, args.verify_git_history)
     return 0

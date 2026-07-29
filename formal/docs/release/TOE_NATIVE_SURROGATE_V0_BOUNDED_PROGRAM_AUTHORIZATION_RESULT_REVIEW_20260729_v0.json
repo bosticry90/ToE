@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "blocked_stage_closes_v0": true,
+    "five_semantic_stages": true,
+    "no_scientific_stage_attempted": true,
+    "no_subsidiary_targets": true,
+    "program_unopened": true,
+    "scope_hashes_present": true,
+    "stage_1_selected_only": true,
+    "stage_ids_unique": true,
+    "stage_numbers_contiguous": true,
+    "zero_repair": true
+  },
+  "failed_checks": [],
+  "program_authorized": true,
+  "program_state": "UNOPENED",
+  "reviewed_authorization": {
+    "path": "formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_20260729_v0.json",
+    "sha256": "41a169b3f245b3ac3bd8d2a96ccdae58495fdc336c0101c94915c83fb0640dc9"
+  },
+  "schema_id": "TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0",
+  "scientific_stage_attempted": false,
+  "selected_next_target": "select_toe_native_coherence_representation_v0",
+  "verdict": "TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_ACCEPTED_STAGE_1_REQUIRES_SEPARATE_OPEN_COMMIT"
+}

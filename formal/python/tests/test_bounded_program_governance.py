@@ -8,12 +8,16 @@ import pytest
 
 from formal.python.tools.bounded_program_governance import (
     BoundedProgramError,
+    NATIVE_MANDATORY_EXIT,
+    NATIVE_PROGRAM_ID,
+    NATIVE_STAGE_DEFINITIONS,
     ORDERED_ARRAY_FIELDS,
     QUADRATIC_MANDATORY_EXIT,
     QUADRATIC_PROGRAM_ID,
     QUADRATIC_STAGE_DEFINITIONS,
     REGISTRY_EXTENSION_KEY,
     SET_LIKE_ARRAY_FIELDS,
+    authorize_native_program,
     close_attempt,
     governance_contract,
     install_registry_extension,
@@ -126,6 +130,35 @@ def test_installation_preserves_target_and_installs_unopened_quadratic_program()
     assert program["mandatory_exit_target"] == QUADRATIC_MANDATORY_EXIT
     assert program["state"] == "UNOPENED"
     validate_registry_extension(migrated)
+
+
+def test_native_program_requires_separate_authority_and_terminal_quadratic_role() -> None:
+    registry = install_registry_extension(_base_registry())
+    with pytest.raises(BoundedProgramError, match="projection|authorization target"):
+        authorize_native_program(registry)
+
+    registry["current_projection_v0"] = {
+        "current_target": "authorize_toe_native_surrogate_v0_bounded_program"
+    }
+    quadratic = registry["bounded_programs_v1"][QUADRATIC_PROGRAM_ID]
+    quadratic.update(
+        {
+            "state": "CLOSED",
+            "mandatory_exit_completed": True,
+            "program_terminal_status": "CLOSED_AFTER_MANDATORY_ROLE_GATE",
+            "toe_role": "REFERENCE_CONTROL_ONLY",
+        }
+    )
+    authorized = authorize_native_program(registry)
+    native = authorized["bounded_programs_v1"][NATIVE_PROGRAM_ID]
+    assert native["authorized_stage_count"] == 5
+    assert native["repair_attempt_count"] == 0
+    assert native["mandatory_exit_target"] == NATIVE_MANDATORY_EXIT
+    assert native["no_subsidiary_scientific_targets"] is True
+    assert native["state"] == "UNOPENED"
+    assert [row["semantic_stage_id"] for row in native["stage_definitions"]] == [
+        row["semantic_stage_id"] for row in NATIVE_STAGE_DEFINITIONS
+    ]
 
 
 def test_open_close_chain_is_immutable_and_contiguous(

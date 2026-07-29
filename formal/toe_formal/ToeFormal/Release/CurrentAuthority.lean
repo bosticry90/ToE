@@ -31,7 +31,7 @@ def boundedAttemptNumber : Nat :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "authorize_toe_native_surrogate_v0_bounded_program" := by
+      "select_toe_native_coherence_representation_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -46,10 +46,10 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem bounded_quadratic_program_is_terminal_after_blocked_stage_three :
-    boundedProgramId = "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0" ∧
-    boundedProgramState = "TERMINAL" ∧
-    boundedAttemptNumber = 3 := by
+theorem bounded_native_program_is_authorized_but_unopened :
+    boundedProgramId = "TOE_NATIVE_SURROGATE_V0" ∧
+    boundedProgramState = "UNOPENED" ∧
+    boundedAttemptNumber = 0 := by
   native_decide
 
 end CurrentAuthority

@@ -30,21 +30,22 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Accepted bounded Stage 2: the strict-harmonic generic-background linearization is represented by a closed 3,950-node component graph; the independent inventory is 64 equations in every one of ten trace charts, and the accepted 128-state/224-entry Minkowski operator is reproduced exactly.
 - Accepted bounded Stage 3: `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. The component artifact does not determine a unique generic off-constraint 128-state wave-slot map, and every trace chart retains dependent spin-component jets. The zero-repair rule prohibits Stages 4–5 and requires the role gate.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY`; its mathematical `control_result` is independently `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal.
-- Exact live target: `authorize_toe_native_surrogate_v0_bounded_program`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean`.
-- Report: `formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json`.
-- Boundary: no further quadratic work is authorized. The current target may install Program N’s bounded governance only; it may not execute Native Stage 1 in the same authority step.
+- Program N authorization accepted: five semantic stages, zero repairs, no subsidiary scientific targets, and Stage 1 still `UNOPENED`.
+- Exact live target: `select_toe_native_coherence_representation_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean`.
+- Report: `formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: no Program N science has run. Native Stage 1 requires its immutable OPEN commit before any producer executes.
 
-CURRENT_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
-PREVIOUS_LIVE_NEXT_TARGET_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0
-ACTIVE_LANE_v0: authorize_toe_native_surrogate_v0_bounded_program
+CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
+ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: QUADRATIC_PROGRAM_TERMINAL_REFERENCE_CONTROL_ONLY_NO_FURTHER_QUADRATIC_WORK_NATIVE_PROGRAM_REQUIRES_SEPARATE_AUTHORITY
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_bounded_program_authorization
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: TOE_NATIVE_SURROGATE_PROGRAM_AUTHORIZED_GOVERNANCE_ONLY_COHERENCE_REPRESENTATION_STAGE_REQUIRES_SEPARATE_OPEN_COMMIT
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_representation_selection_v0
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

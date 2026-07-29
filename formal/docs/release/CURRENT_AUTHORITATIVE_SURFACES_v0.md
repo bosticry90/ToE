@@ -12,12 +12,12 @@ Purpose:
 
 Current scientific checkpoint (2026-07-29):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `authorize_toe_native_surrogate_v0_bounded_program`.
+- The exact scientific target is `select_toe_native_coherence_representation_v0`.
 - Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `CLOSED/PASSED` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`.
 - Attempt 2 is `CLOSED/PASSED` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN and CLOSE events bind the accepted component artifact and independent review.
 - Attempt 3 is `CLOSED/BLOCKED` on semantic stage `EXACT_FROZEN_COMPANION_OPERATOR`. Its immutable result proves that the Stage 2 leaves do not determine a unique generic off-constraint 128-state wave-slot map and that all ten trace charts retain dependent spin jets. The zero-repair rule prohibits Stages 4–5 and makes the role gate mandatory.
 - The mandatory role gate is accepted: `toe_role=REFERENCE_CONTROL_ONLY` and `control_result=UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal and no further quadratic target is authorized.
-- The current governance-only target may install Program N. It cannot execute Native Stage 1 in the same authority step.
+- Program N is authorized with five stages, zero repairs, and no subsidiary scientific targets. It is `UNOPENED`; Native Stage 1 cannot run before its immutable OPEN commit.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -36,21 +36,21 @@ Current scientific checkpoint (2026-07-29):
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
-PREVIOUS_LIVE_NEXT_TARGET_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0
-ACTIVE_LANE_v0: authorize_toe_native_surrogate_v0_bounded_program
+CURRENT_LIVE_NEXT_TARGET_v0: select_toe_native_coherence_representation_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: authorize_toe_native_surrogate_v0_bounded_program
+ACTIVE_LANE_v0: select_toe_native_coherence_representation_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticToeRoleAfterGenericFrozenResultV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: QUADRATIC_PROGRAM_TERMINAL_REFERENCE_CONTROL_ONLY_NO_FURTHER_QUADRATIC_WORK_NATIVE_PROGRAM_REQUIRES_SEPARATE_AUTHORITY
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_surrogate_v0_bounded_program_authorization
-CURRENT_BOUNDED_PROGRAM_ID_v0: QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0
-CURRENT_BOUNDED_PROGRAM_STATE_v0: TERMINAL
-CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 3
-LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: EXACT_FROZEN_COMPANION_OPERATOR
-LAST_BOUNDED_TERMINAL_RESULT_v0: BLOCKED
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeSurrogateV0BoundedProgramAuthorization.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_SURROGATE_V0_AUTHORIZED_AS_FIVE_ATTEMPT_ZERO_REPAIR_PROGRAM_STAGE_1_NOT_OPENED_OR_EXECUTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: TOE_NATIVE_SURROGATE_PROGRAM_AUTHORIZED_GOVERNANCE_ONLY_COHERENCE_REPRESENTATION_STAGE_REQUIRES_SEPARATE_OPEN_COMMIT
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_representation_selection_v0
+CURRENT_BOUNDED_PROGRAM_ID_v0: TOE_NATIVE_SURROGATE_V0
+CURRENT_BOUNDED_PROGRAM_STATE_v0: UNOPENED
+CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 0
+LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: NONE
+LAST_BOUNDED_TERMINAL_RESULT_v0: NONE
 
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
