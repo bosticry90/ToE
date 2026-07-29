@@ -17,6 +17,7 @@ DEFAULT_REGISTRY_PATH = (
 )
 
 REGISTRY_SCHEMA_ID = "LOOP_CONTROL_REGISTRY_v0"
+REGISTRY_SCHEMA_VERSION = 1
 REGISTRY_STATUS = "ACTIVE_NONLIVE_NONCLAIM"
 CURRENT_PROJECTION_SCHEMA_ID = "LOOP_CONTROL_CURRENT_PROJECTION_v0"
 CURRENT_STATE_AUTHORITY_CONTRACT_SCHEMA_ID = (
@@ -305,7 +306,7 @@ def repair_registry(registry: dict[str, Any]) -> dict[str, Any]:
     current = _current_workstream(repaired, target)
 
     repaired["schema_id"] = REGISTRY_SCHEMA_ID
-    repaired["schema_version"] = 0
+    repaired["schema_version"] = REGISTRY_SCHEMA_VERSION
     repaired["status"] = REGISTRY_STATUS
 
     repaired["ACTIVE_LANE_v0"] = target
@@ -361,7 +362,7 @@ def repair_registry(registry: dict[str, Any]) -> dict[str, Any]:
 
     repaired["registry_envelope_v0"] = {
         "schema_id": REGISTRY_SCHEMA_ID,
-        "schema_version": 0,
+        "schema_version": REGISTRY_SCHEMA_VERSION,
         "status": REGISTRY_STATUS,
         "authority_role": "nonclaim_loop_control_history_and_current_projection",
     }
@@ -447,13 +448,13 @@ def validate_registry(registry: dict[str, Any]) -> None:
     """Validate the current projection without rebuilding the full registry."""
     if registry.get("schema_id") != REGISTRY_SCHEMA_ID:
         raise RegistryIntegrityError("registry schema_id is not canonical")
-    if registry.get("schema_version") != 0:
+    if registry.get("schema_version") != REGISTRY_SCHEMA_VERSION:
         raise RegistryIntegrityError("registry schema_version is not canonical")
     if registry.get("status") != REGISTRY_STATUS:
         raise RegistryIntegrityError("registry status is not canonical")
     expected_envelope = {
         "schema_id": REGISTRY_SCHEMA_ID,
-        "schema_version": 0,
+        "schema_version": REGISTRY_SCHEMA_VERSION,
         "status": REGISTRY_STATUS,
         "authority_role": "nonclaim_loop_control_history_and_current_projection",
     }

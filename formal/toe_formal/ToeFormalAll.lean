@@ -1003,6 +1003,8 @@ import ToeFormal.QM.MeasurementSemantics
 import ToeFormal.QM.QMEvolutionAssumptionLedger
 import ToeFormal.QM.QMFullDerivationScaffold
 import ToeFormal.QM.SymmetryContract
+import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
+import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.CurrentAuthority
 import ToeFormal.Release.CurrentMaintenanceAuthorityV1
 import ToeFormal.Release.CurrentMaintenanceAuthorityV2
@@ -1273,6 +1275,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1266
+def committedModuleCount : Nat := 1268
 
 end ToeFormalAll
