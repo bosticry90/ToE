@@ -13,14 +13,14 @@ Non-claim boundary:
 - This document is a strict physics work map, not a release-governance expansion surface.
 
 Current strict QFT–GR obligation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1`
-- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`
+- `ACTIVE_LANE_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.
@@ -31,7 +31,8 @@ Current strict QFT–GR obligation (2026-07-29):
 - Accepted fail-closed linearization result: metric-dependent `H(x,g)` needs an unfrozen third gauge-source jet in the differentiated metric block; the generic rank-nine trace-free tangent chart and on-shell substitution order are also absent. The Minkowski control remains preserved and was not called generic.
 - Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets, the regular trace-free atlas, separate regularity ledgers, and a terminating confluent rewrite contract now close the prior prerequisite.
 - Accepted bounded Stage 2: a closed 3,950-node strict-harmonic component graph yields 64 independently inventoried equations per trace chart and exactly reproduces the accepted Minkowski 128-state/224-entry control.
-- Current Stage 3: construct the exact frozen companion matrix; no spectral, quotient, propagator, or later-stage conclusion is authorized.
+- Accepted bounded Stage 3: the generic 128-state operator is not closed because the component artifact does not fix a unique off-constraint wave-slot map and its trace charts retain dependent jets.
+- Current role gate: record `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, Stage 4, or Stage 5 is authorized.
 - No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
 

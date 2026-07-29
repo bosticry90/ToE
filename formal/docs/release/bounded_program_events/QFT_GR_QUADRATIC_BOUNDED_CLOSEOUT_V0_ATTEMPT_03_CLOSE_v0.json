@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 3,
+  "closed_from_commit": "5727a7ba3fc1ef1fd8c3c7f3715825db40366c04",
+  "event_hash": "0f85042c7a18624ee92d8149e24aa90d4cae7fdf23e7e5de5235bd68dfe9675c",
+  "event_sequence_number": 6,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "8d9e78caf322ecc6e17875099b92441d2c3752df9d0a21bc5c40d34270cb4c40",
+  "previous_event_hash": "8d9e78caf322ecc6e17875099b92441d2c3752df9d0a21bc5c40d34270cb4c40",
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "result_artifact_hash": "dc44607059d79fcfd54220a23c07f4bf1d9692119ec05e936dc9dcedc753c1ce",
+  "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1.json",
+  "review_artifact_hash": "fec0ef3d50d89a48231a798d4616ece36aafbb6bdcf8f4909497d1e95ef6abfa",
+  "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json",
+  "terminal_result": "BLOCKED"
+}

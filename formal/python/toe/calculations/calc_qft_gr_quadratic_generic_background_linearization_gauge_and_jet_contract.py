@@ -82,24 +82,26 @@ def _verify_open_authority() -> dict:
         )
     if SEMANTIC_STAGE_ID not in program["attempted_stage_ids"]:
         raise QuadraticHyperbolicityError("unexpected bounded attempt ledger")
-    if program["state"] == "OPEN":
+    stage_is_live = (
+        program["state"] == "OPEN"
+        and program["open_attempt_number"] == 1
+        and program["event_chain_tip_hash"] == event["event_hash"]
+    )
+    close_refs = [
+        item
+        for item in program["events"]
+        if item["event_type"] == "ATTEMPT_CLOSE"
+        and item["attempt_sequence_number"] == 1
+    ]
+    stage_is_immutably_closed = (
+        program["last_closed_attempt_number"] >= 1 and len(close_refs) == 1
+    )
+    if stage_is_live:
         if program["open_attempt_number"] != 1:
             raise QuadraticHyperbolicityError("bounded Stage 1 OPEN state is inconsistent")
         if program["event_chain_tip_hash"] != event["event_hash"]:
             raise QuadraticHyperbolicityError("OPEN event is not the live chain tip")
-    elif program["state"] == "CLOSED":
-        close_refs = [
-            item
-            for item in program["events"]
-            if item["event_type"] == "ATTEMPT_CLOSE"
-            and item["attempt_sequence_number"] == 1
-        ]
-        if program["open_attempt_number"] is not None:
-            raise QuadraticHyperbolicityError("closed Stage 1 retains an open attempt")
-        if program["last_closed_attempt_number"] < 1 or len(close_refs) != 1:
-            raise QuadraticHyperbolicityError(
-                "bounded program does not preserve the Stage 1 CLOSE linkage"
-            )
+    elif stage_is_immutably_closed:
         close_event = read_json(REPO_ROOT / close_refs[0]["path"])
         if close_event["open_event_hash"] != event["event_hash"]:
             raise QuadraticHyperbolicityError(

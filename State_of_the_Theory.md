@@ -64,27 +64,27 @@ separate, and the typed rewrite system is terminating and confluent. The
 accepted Minkowski 128-state/224-entry control is reproduced.
 
 The exact live target is
-`derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`.
-Stage 2 is closed and passed. Its 3,950-node finite component graph independently
-verifies 64 equations in every trace chart and exactly reproduces the
-128-state/224-entry Minkowski operator. Only bounded Stage 3 construction of the
-exact frozen companion operator is now authorized.
-Spectral asymptotics and constraint-tangent projection remain outside the
-Stage 3 envelope.
+`select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0`.
+Stage 3 is closed and blocked. Its exact audit finds that the component graph
+does not freeze one off-constraint 128-state wave-slot map and that the nine-field
+trace charts retain dependent spin jets. The zero-repair rule therefore closes
+the remaining quadratic stages and requires the role gate.
+Spectral asymptotics, constraint-tangent projection, and quadratic repairs are
+not authorized.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
+CURRENT_LIVE_NEXT_TARGET_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
+ACTIVE_LANE_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CANONICAL_STAGE_3_IDENTIFIER_RESTORED_BEFORE_SCIENTIFIC_PRODUCTION_NO_SCOPE_CHANGE_OR_REPAIR_ATTEMPT
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation_v1
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STAGE_3_BLOCKED_NO_EXACT_GENERIC_COMPANION_NO_REPAIR_STAGE_4_AND_STAGE_5_PROHIBITED_MANDATORY_ROLE_GATE
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_toe_role_selector_after_bounded_generic_frozen_result_v0
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

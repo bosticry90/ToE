@@ -1,0 +1,245 @@
+{
+  "Minkowski_regression": {
+    "classification": "MINKOWSKI_CONTROL_REPRODUCED",
+    "does_not_supply_generic_off_constraint_closure": true,
+    "matrix_shape": [
+      128,
+      128
+    ],
+    "nonzero_entry_count": 224,
+    "sparse_entry_sha256": "5e8607c78b5020a287bbfc5448bc5e42d945828e2b0d7b1d37594b8658d0fa8a"
+  },
+  "bounded_authority": {
+    "attempt_sequence_number": 3,
+    "open_event_hash": "8d9e78caf322ecc6e17875099b92441d2c3752df9d0a21bc5c40d34270cb4c40",
+    "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_03_OPEN_v0.json",
+    "opened_from_commit": "c9c301d183cab7ee0db995d3376651a86a2cf2cf",
+    "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "scope_hash": "4be3cf0d115145eef2057e96c02ed9215908b2cc18f65a469308237e6c92775d",
+    "semantic_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR"
+  },
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_boundary": {
+    "Minkowski_control_remains_exact": true,
+    "constraint_tangent_projector_constructed": false,
+    "exact_generic_frozen_companion_operator_derived": false,
+    "generic_finite_loss_established": false,
+    "local_well_posedness_established": false,
+    "quadratic_gravity_native_toe_status_claimed": false,
+    "subprincipal_propagator_growth_computed": false
+  },
+  "consumed_stage_1_contract": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0.json",
+    "sha256": "f3e73a52a9c8a311eb49675fdf6b786a5bce32bba3ffa58264c1e977837eaae2"
+  },
+  "consumed_stage_2_component_expansion": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v1.json",
+    "sha256": "18988cbd2708848fa50b08694bb2f46a7e17537e8b1d77b4275352c7568cd4ad"
+  },
+  "execution_target": "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1",
+  "generic_companion_closure_audit": {
+    "accepted_reduced_unknown_count": 64,
+    "answer": false,
+    "bounded_program_consequence": "Stage 3 is BLOCKED. The zero-repair bounded program must close this attempt and advance directly to its mandatory role gate.",
+    "metric_wave_slot_audit": {
+      "contains_independent_dh_or_d2h_slots": false,
+      "leaf_contract_contains_independent_dh_or_d2h_family": false,
+      "metric_rows": 10,
+      "status": "BLOCKED_OFF_CONSTRAINT_SLOT_AMBIGUITY",
+      "uses_dk_as_second_derivative_proxy": true
+    },
+    "nonunique_mappings": [
+      {
+        "description": "Interpret dk and du in the metric and scalar rows through c=partial g and r=partial R. This imposes definition constraints before the Stage 4 tangent-space construction.",
+        "id": "METRIC_EQUIVALENCE_MAPPING",
+        "not_authorized_here": true
+      },
+      {
+        "description": "Introduce independent dh,d2h,dq,d2q wave jets and retain c,r as separate equal-order variables. Those jet families are absent from the accepted Stage 2 contract.",
+        "id": "INDEPENDENT_EQUAL_ORDER_WAVE_MAPPING",
+        "not_available_from_inputs": true
+      }
+    ],
+    "question": "Does the accepted component expansion determine one exact generic off-constraint 128-state companion operator without importing the later constraint-tangent construction?",
+    "regular_stratum_contract_preserved": {
+      "compact_uniform_subset": [
+        "|det(gbar_mn)| >= determinant_epsilon > 0",
+        "|q_p| >= trace_epsilon > 0",
+        "||gbar||+||gbar_inverse|| <= metric_bound",
+        "||J^3 Ubar|| <= jet_bound"
+      ],
+      "excluded_controls": [
+        "rank-changing algebraic surfaces",
+        "trace-chart boundary q_p=0",
+        "beta=0",
+        "3*alpha+beta=0",
+        "Minkowski and constant-curvature special controls"
+      ],
+      "regular_open_stratum": [
+        "det(gbar_mn) != 0",
+        "beta != 0",
+        "3*alpha+beta != 0",
+        "q_p != 0 in the selected trace chart",
+        "component linearization Jacobian has locally constant rank"
+      ],
+      "uniformity_statement": "locally uniform on compact subsets of the regular stratum"
+    },
+    "required_but_prohibited_repair": [
+      "a new off-constraint wave-slot contract",
+      "independent metric/scalar wave-jet families or an early constraint projection",
+      "differentiated trace-chart reconstruction through required jet order"
+    ],
+    "scalar_wave_slot_audit": {
+      "contains_independent_dq_or_d2q_slots": false,
+      "leaf_contract_contains_independent_dq_or_d2q_family": false,
+      "scalar_rows": 1,
+      "status": "BLOCKED_OFF_CONSTRAINT_SLOT_AMBIGUITY",
+      "uses_du_as_second_derivative_proxy": true
+    },
+    "stage_1_atlas_formula_is_not_enough": "Stage 1 freezes an algebraic tangent trace reconstruction. The accepted Stage 2 chart equations still retain the dependent component and its differentiated leaves, and do not provide the differentiated substitution ledger needed for an exact chartwise companion matrix.",
+    "state_dimension_requested": 128,
+    "terminal_outcome": "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED",
+    "tracefree_chart_closure": {
+      "chart_count": 10,
+      "charts": [
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_00",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "00",
+          "dependent_tangent_leaves_retained": [
+            "ds_00_0",
+            "ds_00_1",
+            "ds_00_2",
+            "ds_00_3",
+            "s_00"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_01",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "01",
+          "dependent_tangent_leaves_retained": [
+            "ds_01_0",
+            "ds_01_1",
+            "ds_01_2",
+            "ds_01_3",
+            "s_01"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_02",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "02",
+          "dependent_tangent_leaves_retained": [
+            "ds_02_0",
+            "ds_02_1",
+            "ds_02_2",
+            "ds_02_3",
+            "s_02"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_03",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "03",
+          "dependent_tangent_leaves_retained": [
+            "ds_03_0",
+            "ds_03_1",
+            "ds_03_2",
+            "ds_03_3",
+            "s_03"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_11",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "11",
+          "dependent_tangent_leaves_retained": [
+            "ds_11_0",
+            "ds_11_1",
+            "ds_11_2",
+            "ds_11_3",
+            "s_11"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_12",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "12",
+          "dependent_tangent_leaves_retained": [
+            "ds_12_0",
+            "ds_12_1",
+            "ds_12_2",
+            "ds_12_3",
+            "s_12"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_13",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "13",
+          "dependent_tangent_leaves_retained": [
+            "ds_13_0",
+            "ds_13_1",
+            "ds_13_2",
+            "ds_13_3",
+            "s_13"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_22",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "22",
+          "dependent_tangent_leaves_retained": [
+            "ds_22_0",
+            "ds_22_1",
+            "ds_22_2",
+            "ds_22_3",
+            "s_22"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_23",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "23",
+          "dependent_tangent_leaves_retained": [
+            "ds_23_0",
+            "ds_23_1",
+            "ds_23_2",
+            "ds_23_3",
+            "s_23"
+          ]
+        },
+        {
+          "chart_id": "TRACEFREE_CHART_PIVOT_33",
+          "closed_in_its_nine_independent_spin_variables": false,
+          "dependent_component": "33",
+          "dependent_tangent_leaves_retained": [
+            "ds_33_0",
+            "ds_33_1",
+            "ds_33_2",
+            "ds_33_3",
+            "s_33"
+          ]
+        }
+      ],
+      "differentiated_dependent_component_substitution_present": false,
+      "status": "BLOCKED_DEPENDENT_TRACE_JETS_RETAINED"
+    },
+    "why_the_block_is_decisive": "The two mappings agree only on the definition-constraint surface but define different off-constraint companion systems. Stage 4, not Stage 3, is authorized to construct that tangent surface. Choosing either map here would import a later-stage conclusion or add unapproved state variables."
+  },
+  "mandatory_exit_target": "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0",
+  "prohibitions_respected": {
+    "constraint_surface_imposed_early": false,
+    "new_state_variables_invented": false,
+    "placeholder_matrix_called_exact": false,
+    "repair_target_created": false,
+    "spectral_result_claimed": false,
+    "subsidiary_scientific_target_created": false
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_v1",
+  "terminal_outcome": "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED",
+  "terminal_result": "BLOCKED",
+  "verdict": "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED_BECAUSE_THE_ACCEPTED_COMPONENT_EXPANSION_DOES_NOT_FIX_A_UNIQUE_OFF_CONSTRAINT_128_STATE_WAVE_SLOT_MAP_OR_CLOSE_THE_NINE_COMPONENT_TRACE_CHARTS_NO_REPAIR_TARGET_MANDATORY_ROLE_GATE"
+}

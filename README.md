@@ -28,21 +28,22 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Accepted component-linearization result: the generic expansion fails closed. Linearizing the differentiated metric block for the accepted metric-dependent `H(x,g)` gauge family requires a third gauge-source jet although only `C2` is frozen; the generic rank-nine trace-free tangent chart and the nonredundant on-shell substitution order are also absent. The 128-state/224-entry Minkowski control remains preserved but was not rederived from a nonexistent generic form.
 - Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets and constraint additions, the ten-chart trace-free atlas, compact regular strata, separate regularity ledgers, terminating confluent rewrites, and the Minkowski regression are frozen.
 - Accepted bounded Stage 2: the strict-harmonic generic-background linearization is represented by a closed 3,950-node component graph; the independent inventory is 64 equations in every one of ten trace charts, and the accepted 128-state/224-entry Minkowski operator is reproduced exactly.
-- Exact live target: `derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean`.
-- Report: `formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json`.
-- Boundary: Stage 2 is closed and passed. Only bounded Stage 3 may construct the exact frozen companion operator; quotient, propagator, variable-coefficient, nonlinear, source-extension, Maxwell–Dirac, preserved-descendant, and Yukawa work remain unauthorized.
+- Accepted bounded Stage 3: `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. The component artifact does not determine a unique generic off-constraint 128-state wave-slot map, and every trace chart retains dependent spin-component jets. The zero-repair rule prohibits Stages 4–5 and requires the role gate.
+- Exact live target: `select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean`.
+- Report: `formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: Stage 3 is closed and blocked. No quadratic repair, quotient, propagator, variable-coefficient, nonlinear, source-extension, Maxwell–Dirac, preserved-descendant, or Yukawa work is authorized; only the mandatory role classification follows.
 
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
+CURRENT_LIVE_NEXT_TARGET_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
+ACTIVE_LANE_v0: select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CANONICAL_STAGE_3_IDENTIFIER_RESTORED_BEFORE_SCIENTIFIC_PRODUCTION_NO_SCOPE_CHANGE_OR_REPAIR_ATTEMPT
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation_v1
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STAGE_3_BLOCKED_NO_EXACT_GENERIC_COMPANION_NO_REPAIR_STAGE_4_AND_STAGE_5_PROHIBITED_MANDATORY_ROLE_GATE
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_toe_role_selector_after_bounded_generic_frozen_result_v0
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

@@ -1964,8 +1964,7 @@ def _verify_open_authority() -> dict:
         and program["event_chain_tip_hash"] == event["event_hash"]
     )
     open_is_immutably_closed = (
-        program["state"] == "CLOSED"
-        and program["last_closed_attempt_number"] >= 2
+        program["last_closed_attempt_number"] >= 2
         and any(
             row["event_type"] == "ATTEMPT_OPEN"
             and row["attempt_sequence_number"] == 2
