@@ -8,7 +8,7 @@ from formal.python.tools import current_scientific_authority_consistency as auth
 
 
 TARGET = (
-    "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
+    "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
 )
 JULY_19_SELECT_TARGET = (
     "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_"

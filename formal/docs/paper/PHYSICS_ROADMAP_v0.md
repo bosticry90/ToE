@@ -18,16 +18,16 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
-Current QFT–GR lead calculation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
-- `ACTIVE_LANE_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
+Current native-hypothesis frontier (2026-07-29):
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
+- `ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED`
-- Selector boundary: compare pillar, seam, coherence-ontology, and master-action paths once; install no program and execute no field, action, seam, or pillar calculation.
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION`
+- Preparation boundary: prepare only the proposed five-stage, zero-repair ontology-and-representation program. Its installation contract must freeze exactly one preserved coherence claim with explicit support, disfavor, and block criteria or fail closed. Do not install or open it, select a field or action, execute a seam or native-theory pillar adjudication, or promote CCFT. Ordinary known-physics pillar baselines remain parallel controls. Generic prospective-program governance enablement is a separate maintenance prerequisite and is not scientific authorization to install or open this program.
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
@@ -36,13 +36,13 @@ Current QFT–GR lead calculation (2026-07-29):
 - Accepted frozen growth: zero auxiliary loss and exact pure-principal quadratic-frequency metric-equivalence and linear-frequency physical TT growth. The block-order graph has no positive return cycle, but the complete generic frozen subprincipal matrix and both complete metric minima remain blocked.
 - Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic operator remains unclosed because component remainders and independent background/gauge jets are absent.
 - Accepted linearization boundary: the generic component expansion is incomplete because the accepted metric-dependent gauge family is only `C2` while the differentiated block needs an `H` third jet; the generic trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen.
-- Accepted bounded Stage 1: strict harmonic gauge, the ten-chart trace-free atlas, compact regular strata, separate reduced/metric regularity ledgers, terminating confluent rewrites, and the Minkowski regression are frozen.
-- Accepted bounded Stage 2: the complete strict-harmonic component graph has 3,950 closed nodes, 64 independently inventoried equations per trace chart, and exact Minkowski 128-state/224-entry regression.
+- Accepted bounded Stage 1: strict harmonic gauge, the ten-chart trace-free atlas, compact regular strata, separate reduced/metric regularity ledgers, and a declared decreasing rewrite order are frozen; executable confluence, unique normalization, and idempotence remain uncertified.
+- Accepted bounded Stage 2: the strict-harmonic component graph is structurally complete with 3,950 closed nodes and 64 inventoried equations per trace chart. The stored Minkowski-control relation remains evidence, but entrywise generic-DAG specialization and generic tensor identities were not independently certified.
 - Accepted bounded Stage 3: the exact generic companion is not closed because no unique off-constraint 128-state wave-slot map or closed nine-variable trace chart is supplied.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, quotient, or propagator stage follows.
 - Certification correction: Stage 1 is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; Stage 2 is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. The correction supplies no missing proof, consumes no bounded stage, and leaves Program B closed.
-- Current native step: accept the failed-closed Stage 1 result and close v0. No minimal action, viability, seam, or observable stage is authorized.
-- Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
+- Current native step: prepare only the proposed bounded coherence ontology and representation program, including its five semantic stages, terminal outcomes, exact single-claim entry gate, and lifecycle-safe governance prerequisite. No representation, field, action, seam, native-theory pillar adjudication, or observable stage is authorized.
+- Quadratic continuation: none is authorized. Program B remains `REFERENCE_CONTROL_ONLY + UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; variable-coefficient estimates and other unfinished quadratic questions remain closed control-model work unless a separately authorized future program reopens them.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION

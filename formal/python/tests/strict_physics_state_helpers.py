@@ -62,11 +62,11 @@ LATEST_CURRENT_BLOCK_MARKERS = {
         "## AUTHORITY_SURFACE_v2",
     ),
     ROADMAP_PATH: (
-        "Current QFT–GR lead calculation (2026-07-29):",
+        "Current native-hypothesis frontier (2026-07-29):",
         "POST_MR_MATURATION_EXECUTION_STATUS_v0:",
     ),
     STRICT_MAP_PATH: (
-        "Current strict QFT–GR obligation (2026-07-29):",
+        "Current strict native-hypothesis obligation (2026-07-29):",
         "POST_MR_MATURATION_EXECUTION_STATUS_v0:",
     ),
 }
@@ -203,6 +203,16 @@ def assert_frontier_matches_registry() -> None:
     assert (
         f'next_strict_slice := "{live_target}"' in frontier_text
         or f'next_strict_slice :=\n        "{live_target}"' in frontier_text
+    )
+    assert (
+        "def masterActionFrontierNextStrictTargetV0 : String :=\n"
+        '  "close_toe_native_surrogate_v0_after_bounded_result_v0"'
+        in frontier_text
+    )
+    assert (
+        "next_strict_slice :=\n"
+        "        masterActionFrontierNextStrictTargetV0"
+        in frontier_text
     )
 
 

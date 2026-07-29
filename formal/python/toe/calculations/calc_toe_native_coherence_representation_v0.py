@@ -15,6 +15,16 @@ from formal.python.tools.qft_gr_quadratic_hyperbolicity_common import (
 
 CAPTURED_AT_UTC = "2026-07-29T00:00:00Z"
 EXECUTION_TARGET = "select_toe_native_coherence_representation_v0"
+NATIVE_V0_CLOSE_TARGET = (
+    "close_toe_native_surrogate_v0_after_bounded_result_v0"
+)
+NATIVE_HYPOTHESIS_SELECTOR_TARGET = (
+    "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
+)
+NATIVE_COHERENCE_PROGRAM_PREPARATION_TARGET = (
+    "prepare_toe_native_coherence_ontology_and_representation_"
+    "bounded_program_v0"
+)
 OPEN_EVENT_HASH = (
     "dc3749545909da0f587e0931632d472ec518eb1cb2e2652b0fcd1a3cbf6e4429"
 )
@@ -52,7 +62,9 @@ def build_calculation() -> dict:
     program = registry[PROGRAMS_KEY][NATIVE_PROGRAM_ID]
     if projection["current_target"] not in {
         EXECUTION_TARGET,
-        "close_toe_native_surrogate_v0_after_bounded_result_v0",
+        NATIVE_V0_CLOSE_TARGET,
+        NATIVE_HYPOTHESIS_SELECTOR_TARGET,
+        NATIVE_COHERENCE_PROGRAM_PREPARATION_TARGET,
     }:
         raise QuadraticHyperbolicityError(
             "native coherence representation stage is not authoritative"

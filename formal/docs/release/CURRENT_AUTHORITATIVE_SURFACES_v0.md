@@ -12,7 +12,7 @@ Purpose:
 
 Current scientific checkpoint (2026-07-29):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `close_toe_native_surrogate_v0_after_bounded_result_v0`.
+- The exact scientific target is `prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`.
 - Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `CLOSED/PASSED` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`.
 - Attempt 2 is `CLOSED/PASSED` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN and CLOSE events bind the accepted component artifact and independent review.
 - Attempt 3 is `CLOSED/BLOCKED` on semantic stage `EXACT_FROZEN_COMPANION_OPERATOR`. Its immutable result proves that the Stage 2 leaves do not determine a unique generic off-constraint 128-state wave-slot map and that all ten trace charts retain dependent spin jets. The zero-repair rule prohibits Stages 4–5 and makes the role gate mandatory.
@@ -31,25 +31,26 @@ Current scientific checkpoint (2026-07-29):
 - The accepted pure-principal 128-state companion gives zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth away from `2alpha+beta=0`, and linear-frequency physical TT growth. Its block-order graph has no positive return cycle, but that screen is not the exact generic background-jet subprincipal operator.
 - The exact-operator attempt supplies a complete placeholder-free Minkowski control matrix with 224 nonzero entries. It does not close the generic operator: `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet remain unexpanded.
 - The component-linearization execution fails closed: the accepted metric-dependent `H(x,g)` source is only `C2`, but the differentiated metric block needs a third `H` jet; the generic rank-nine trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen. The Minkowski control remains preserved but was not rederived from a generic form.
-- The strict-harmonic contract now freezes `H=delta H=0`, all gauge-source jets through order three to zero, a ten-chart conditioned trace-free atlas, separate reduced `C3` and sufficient metric-equivalence `C6` ledgers, and an acyclic confluent rewrite order. This authorizes only the single bounded Stage 2 component expansion; no generic companion, spectrum, constraint quotient, variable-coefficient estimate, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows.
-- The bounded Stage 2 result closes a 3,950-node component dependency graph, independently verifies `10+1+4+40+9=64` equations in every trace chart, separates off-shell/on-shell/strict-harmonic forms, and exactly reproduces the accepted 128-state/224-entry Minkowski operator.
+- The strict-harmonic contract freezes `H=delta H=0`, all gauge-source jets through order three to zero, a ten-chart conditioned trace-free atlas, separate reduced `C3` and sufficient metric-equivalence `C6` ledgers, and a declared acyclic decreasing rewrite order. Complete overlap enumeration, confluence, unique normalization, and idempotence are not executably established.
+- The bounded Stage 2 result structurally closes a 3,950-node component dependency graph and records the `10+1+4+40+9=64` equation inventory in every trace chart. Its stored Minkowski-control relation is preserved, but entrywise generic-DAG specialization and the generic Bianchi, trace, divergence, and integrability identities were not independently recomputed.
 - The bounded Stage 3 result is `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. It preserves the Minkowski control, claims no generic operator or spectrum, creates no repair target, and advances only to the mandatory quadratic role gate.
 - Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v4. Its scientific-target field confirms that the canonical-text maintenance cycle did not rotate scientific authority.
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
-ACTIVE_LANE_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
+ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_hypothesis_frontier_selection
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0
 CURRENT_BOUNDED_PROGRAM_ID_v0: NONE_NEW_PROGRAM_INSTALLED
-CURRENT_BOUNDED_PROGRAM_STATE_v0: SELECTION_ONLY
+CURRENT_BOUNDED_PROGRAM_STATE_v0: NONE_NEW_PROGRAM_INSTALLED
+CURRENT_TARGET_PHASE_v0: PROGRAM_PROPOSAL_PREPARATION_ONLY
 CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 0
 LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: COHERENCE_REPRESENTATION
 LAST_BOUNDED_TERMINAL_RESULT_v0: BLOCKED

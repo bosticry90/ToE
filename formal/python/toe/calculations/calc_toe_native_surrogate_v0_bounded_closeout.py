@@ -15,6 +15,13 @@ from formal.python.tools.qft_gr_quadratic_hyperbolicity_common import (
 
 CAPTURED_AT_UTC = "2026-07-29T00:00:00Z"
 EXECUTION_TARGET = "close_toe_native_surrogate_v0_after_bounded_result_v0"
+NATIVE_HYPOTHESIS_SELECTOR_TARGET = (
+    "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
+)
+NATIVE_COHERENCE_PROGRAM_PREPARATION_TARGET = (
+    "prepare_toe_native_coherence_ontology_and_representation_"
+    "bounded_program_v0"
+)
 REGISTRY_PATH = REPO_ROOT / "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json"
 RESULT_PATH = REPO_ROOT / (
     "formal/output/CALC-TOE-NATIVE-COHERENCE-REPRESENTATION-v0.json"
@@ -44,7 +51,11 @@ def build_calculation() -> dict:
     review = read_json(REVIEW_PATH)
     open_event = read_json(OPEN_EVENT_PATH)
     close_event = read_json(CLOSE_EVENT_PATH)
-    if projection["current_target"] != EXECUTION_TARGET:
+    if projection["current_target"] not in {
+        EXECUTION_TARGET,
+        NATIVE_HYPOTHESIS_SELECTOR_TARGET,
+        NATIVE_COHERENCE_PROGRAM_PREPARATION_TARGET,
+    }:
         raise QuadraticHyperbolicityError(
             "native-surrogate mandatory closeout is not authoritative"
         )

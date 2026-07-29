@@ -26,30 +26,30 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Accepted frozen-growth result: the exact pure-principal 128-state chain companion gives zero auxiliary loss, quadratic-frequency growth in the unrestricted metric-equivalence grading when `2alpha+beta != 0`, and linear-frequency growth in the physical TT sector. The block-order graph has no positive return cycle, but it is not the complete background-jet subprincipal matrix; the generic frozen metric loss and the constraint-restricted minimum therefore remain blocked.
 - Accepted exact-operator closure result: the complete 128-state Minkowski control operator is explicit and placeholder-free with 224 nonzero entries. The generic background operator is not closed because the accepted predecessor leaves `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet unexpanded.
 - Accepted component-linearization result: the generic expansion fails closed. Linearizing the differentiated metric block for the accepted metric-dependent `H(x,g)` gauge family requires a third gauge-source jet although only `C2` is frozen; the generic rank-nine trace-free tangent chart and the nonredundant on-shell substitution order are also absent. The 128-state/224-entry Minkowski control remains preserved but was not rederived from a nonexistent generic form.
-- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets and constraint additions, the ten-chart trace-free atlas, compact regular strata, separate regularity ledgers, terminating confluent rewrites, and the Minkowski regression are frozen.
-- Accepted bounded Stage 2: the strict-harmonic generic-background linearization is represented by a closed 3,950-node component graph; the independent inventory is 64 equations in every one of ten trace charts, and the accepted 128-state/224-entry Minkowski operator is reproduced exactly.
+- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets and constraint additions, the ten-chart trace-free atlas, compact regular strata, separate regularity ledgers, and a declared decreasing rewrite order are frozen. Complete overlap enumeration, confluence, unique normalization, and idempotence are not executably established.
+- Accepted bounded Stage 2: the strict-harmonic generic-background linearization is structurally represented by a closed 3,950-node component graph with 64 inventoried equations in each trace chart. The stored Minkowski-control relationship remains evidence, but entrywise generic-DAG specialization and the generic tensor identities were not independently recomputed.
 - Accepted bounded Stage 3: `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. The component artifact does not determine a unique generic off-constraint 128-state wave-slot map, and every trace chart retains dependent spin-component jets. The zero-repair rule prohibits Stages 4–5 and requires the role gate.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY`; its mathematical `control_result` is independently `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal.
 - Corrective certification boundary: Stage 1 remains structurally preserved, but rewrite confluence is not executably established. Stage 2's generic component DAG remains structurally complete, but its generic algebraic identities and generic-DAG-to-Minkowski specialization are not independently certified. These qualifications do not reopen Program B or change its terminal role/result.
 - Program N authorization accepted: five semantic stages, zero repairs, and no subsidiary scientific targets.
 - Native Stage 1 is closed `BLOCKED`: no accepted CCFT-to-relativistic-real-scalar map exists, and neither required independent `Z2` gate is justified.
 - Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
-- New frontier decision: one selector may compare pillar recovery, native seams, CCFT/coherence ontology, and master-action reconciliation. It cannot reopen either closed program, install a successor program, select a field/action, or execute physics.
-- Exact live target: `select_next_native_toe_hypothesis_for_bounded_adjudication_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean`.
-- Report: `formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json`.
-- Boundary: the selector is one decision only. Program B and Program N remain closed, and a selected path still requires separate bounded-program authority.
+- Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` is selected for bounded-program preparation because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
+- Exact live target: `prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean`.
+- Report: `formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: this is proposal preparation only. A future installation contract must freeze exactly one coherence claim with support, disfavor, and block criteria. No program is installed or opened, no real or complex field is selected, and lifecycle-safe prospective-program support requires separate maintenance authority; that maintenance alone would not authorize the scientific program or open a stage.
 
-CURRENT_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0
-ACTIVE_LANE_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
+ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_hypothesis_frontier_selection
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

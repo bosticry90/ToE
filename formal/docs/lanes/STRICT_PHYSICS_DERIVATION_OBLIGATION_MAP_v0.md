@@ -12,16 +12,16 @@ Non-claim boundary:
 - This document does not claim physics completion, canonical master-action promotion, global seam closure, Standard Model recovery, interacting-QFT completion, or empirical validation.
 - This document is a strict physics work map, not a release-governance expansion surface.
 
-Current strict QFT–GR obligation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_surrogate_v0_after_bounded_result_v0`
-- `ACTIVE_LANE_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
+Current strict native-hypothesis obligation (2026-07-29):
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
+- `ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED`
-- Current obligation: make one evidence-bound frontier selection. Do not reopen closed programs or execute the selected successor.
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION`
+- Current obligation: prepare one lifecycle-safe five-stage, zero-repair coherence ontology and representation program proposal. Its installation contract must freeze exactly one preserved coherence claim with explicit support, disfavor, and block criteria or fail closed. Do not install or open it, select a representation or action, or execute a seam or native-theory pillar adjudication. Ordinary known-physics pillar baselines remain parallel controls. Governance lifecycle enablement is necessary but is not scientific authorization for program installation.
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.
@@ -30,8 +30,8 @@ Current strict QFT–GR obligation (2026-07-29):
 - Accepted frozen calculation: the pure-principal 128-state companion has zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth, and linear-frequency physical TT growth. The block-order screen has no positive return cycle, but the complete generic frozen subprincipal operator was not constructed.
 - Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic background operator is not closed.
 - Accepted fail-closed linearization result: metric-dependent `H(x,g)` needs an unfrozen third gauge-source jet in the differentiated metric block; the generic rank-nine trace-free tangent chart and on-shell substitution order are also absent. The Minkowski control remains preserved and was not called generic.
-- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets, the regular trace-free atlas, separate regularity ledgers, and a terminating confluent rewrite contract now close the prior prerequisite.
-- Accepted bounded Stage 2: a closed 3,950-node strict-harmonic component graph yields 64 independently inventoried equations per trace chart and exactly reproduces the accepted Minkowski 128-state/224-entry control.
+- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets, the regular trace-free atlas, separate regularity ledgers, and a declared decreasing rewrite order structurally preserve the prior contract; executable confluence, unique normalization, and idempotence remain uncertified.
+- Accepted bounded Stage 2: a structurally closed 3,950-node strict-harmonic component graph records 64 equations per trace chart and a stored Minkowski-control relationship; entrywise generic-DAG specialization and generic tensor identities were not independently certified.
 - Accepted bounded Stage 3: the generic 128-state operator is not closed because the component artifact does not fix a unique off-constraint wave-slot map and its trace charts retain dependent jets.
 - Accepted role gate: `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal.
 - Non-advancing certificate qualification: the Stage 1 gauge/atlas/jet contract is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; the Stage 2 generic component DAG is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. No missing proof or Program B repair is authorized.

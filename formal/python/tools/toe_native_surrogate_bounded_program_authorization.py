@@ -21,6 +21,13 @@ from formal.python.tools.qft_gr_quadratic_hyperbolicity_common import (
 CAPTURED_AT_UTC = "2026-07-29T00:00:00Z"
 STAGE_1_TARGET = "select_toe_native_coherence_representation_v0"
 MANDATORY_CLOSE_TARGET = "close_toe_native_surrogate_v0_after_bounded_result_v0"
+NATIVE_HYPOTHESIS_SELECTOR_TARGET = (
+    "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
+)
+NATIVE_COHERENCE_PROGRAM_PREPARATION_TARGET = (
+    "prepare_toe_native_coherence_ontology_and_representation_"
+    "bounded_program_v0"
+)
 OUTPUT_PATH = REPO_ROOT / (
     "formal/docs/release/"
     "TOE_NATIVE_SURROGATE_V0_BOUNDED_PROGRAM_AUTHORIZATION_20260729_v0.json"
@@ -45,6 +52,8 @@ def build_authorization() -> dict:
         NATIVE_PROGRAM_AUTHORIZATION_TARGET,
         STAGE_1_TARGET,
         MANDATORY_CLOSE_TARGET,
+        NATIVE_HYPOTHESIS_SELECTOR_TARGET,
+        NATIVE_COHERENCE_PROGRAM_PREPARATION_TARGET,
     }:
         raise ValueError("native bounded-program authorization is not current")
     programs = registry[PROGRAMS_KEY]

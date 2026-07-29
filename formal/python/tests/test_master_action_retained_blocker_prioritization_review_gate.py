@@ -146,7 +146,6 @@ def test_frontier_and_aggregate_rotate_to_qm_stat_protocol_row_preparation() -> 
         in aggregate_text
     )
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "retainedBlockerPrioritizationReviewTargetId" in dependency_graph_text
 
 

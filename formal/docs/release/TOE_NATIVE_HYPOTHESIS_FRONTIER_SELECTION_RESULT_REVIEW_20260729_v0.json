@@ -1,0 +1,42 @@
+{
+  "accepted": true,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "all_evidence_paths_and_hashes_match": true,
+    "closed_programs_are_not_reopened": true,
+    "coherence_path_is_selected": true,
+    "current_target_is_selector_or_accepted_preparation": true,
+    "dependency_order_places_ontology_before_action_and_seams": true,
+    "exactly_one_path_selected": true,
+    "five_evidence_tensions_are_preserved": true,
+    "four_candidate_paths_compared": true,
+    "future_program_is_proposal_only": true,
+    "future_program_proposal_shape_is_complete": true,
+    "hypothesis_identifier_is_exact": true,
+    "independent_decision_evidence_checks_pass": true,
+    "master_action_deferral_is_evidence_bound": true,
+    "no_program_or_physics_execution_is_smuggled_in": true,
+    "producer_evidence_check_inventory_matches_independent_review": true,
+    "producer_reported_evidence_checks_all_true": true,
+    "prospective_governance_is_separate": true,
+    "prospective_governance_limitation_is_hash_bound": true,
+    "real_scalar_failure_is_not_reversed": true,
+    "seam_deferral_is_evidence_bound": true,
+    "selected_next_target_is_preparation_only": true,
+    "terminal_outcome_is_authorized": true
+  },
+  "claim_ceiling": "PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM",
+  "failed_checks": [],
+  "program_installation_authorized": false,
+  "reviewed_calculation": {
+    "path": "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+    "sha256": "83df6a3f5844d27702ee099830e8e64a29d3176c45e467a6ec73841a12aa9d1a"
+  },
+  "schema_id": "TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0",
+  "scientific_stage_open_authorized": false,
+  "selected_hypothesis_id": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "selected_next_target": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "selection_outcome": "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+  "terminal_outcome": "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+  "verdict": "NATIVE_HYPOTHESIS_FRONTIER_SELECTION_ACCEPTED_COHERENCE_ONTOLOGY_AND_REPRESENTATION_PROGRAM_PREPARATION_SELECTED"
+}

@@ -322,7 +322,7 @@ theorem qm_stat_entropy_log_domain_zero_handling_reduction_result_review_local_o
 theorem qm_stat_entropy_log_domain_zero_handling_reduction_result_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some currentLiveNextStrictTargetV0 := by
+      some masterActionFrontierNextStrictTargetV0 := by
   decide
 
 theorem qm_stat_entropy_log_domain_zero_handling_reduction_result_review_no_target_entropy_lean_backed_v0 :

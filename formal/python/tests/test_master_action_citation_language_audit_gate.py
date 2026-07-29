@@ -186,7 +186,6 @@ def test_frontier_aggregate_and_usage_surface_rotate_to_post_audit_review() -> N
     )
     assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "master_action_citation_usage_selected_next_target_v0" in usage_text
     assert "master_action_citation_usage_frontier_target_v0" in usage_text
     assert "master_action_dependency_graph_review_consumes_live_target_v0" in review_text

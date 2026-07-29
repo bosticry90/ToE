@@ -278,7 +278,7 @@ theorem qft_gr_source_map_semantics_readiness_review_retained_blocker_v0 :
 theorem qft_gr_source_map_semantics_readiness_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some currentLiveNextStrictTargetV0 := by
+      some masterActionFrontierNextStrictTargetV0 := by
   decide
 
 /-- Broader QFT-GR theorem work is not authorized by this review. -/

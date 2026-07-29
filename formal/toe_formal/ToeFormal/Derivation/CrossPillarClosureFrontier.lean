@@ -374,6 +374,13 @@ structure CrossPillarFrontierEntry where
   next_strict_slice : String
   status : DerivationStatus
 
+/--
+Stable next-slice identifier for the closed master-action physics frontier.
+This remains distinct from the release-track administrative current target.
+-/
+def masterActionFrontierNextStrictTargetV0 : String :=
+  "close_toe_native_surrogate_v0_after_bounded_result_v0"
+
 /-- Current all-pillar frontier map. -/
 def crossPillarClosureFrontierV0 :
     List CrossPillarFrontierEntry :=
@@ -471,7 +478,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "close_toe_native_surrogate_v0_after_bounded_result_v0"
+        masterActionFrontierNextStrictTargetV0
       status := .retained }
   ]
 
@@ -485,37 +492,47 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
     Option CrossPillarFrontierEntry :=
   crossPillarClosureFrontierV0.find? (fun entry => entry.row == row)
 
+/--
+The closed master-action physics row remains bound to its own successor rather
+than following the mutable release-track administrative target.
+-/
+theorem master_action_physics_frontier_next_target_is_stable_v0 :
+    Option.map (fun entry => entry.next_strict_slice)
+      (crossPillarFrontierEntryByRow? .masterAction) =
+      some masterActionFrontierNextStrictTargetV0 := by
+  decide
+
 /-- Surface id for the all-pillar frontier map. -/
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous terminal Program N target consumed by the selector authority. -/
+/-- Previous native-frontier selector consumed by the preparation target. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "close_toe_native_surrogate_v0_after_bounded_result_v0"
-
-/-- One bounded decision selecting the next native-hypothesis frontier. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
 
-/-- Evidence certificate authorizing only the frontier selector. -/
+/-- Prepare only the selected future bounded coherence-ontology program. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
+
+/-- Evidence certificate accepting the selector result without program installation. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean"
 
-/-- Review accepting the narrow selector authority. -/
+/-- Review accepting coherence ontology and representation program preparation. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json"
+  "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json"
 
-/-- Accepted selector-authority outcome. -/
+/-- Accepted evidence-bound frontier-selection outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED"
+  "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION"
+  "PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "toe_native_hypothesis_frontier_selection"
+  "toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -527,7 +544,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice := "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
+  next_strict_slice := "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -652,18 +669,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The current authority permits only a native-hypothesis frontier selector. -/
+/-- The current authority permits only bounded-program preparation. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionAuthority.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "ONE_NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORIZED" ∧
+        "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "SELECTOR_ONLY_CLOSED_PROGRAMS_PRESERVED_NO_NEW_PROGRAM_ACTION_SEAM_OR_PILLAR_EXECUTION" ∧
+        "PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM" ∧
       currentLiveNextStrictTargetKindV0 =
-        "toe_native_hypothesis_frontier_selection" := by
+        "toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0" := by
   constructor
   · rfl
   constructor
