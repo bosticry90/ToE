@@ -592,6 +592,8 @@ import ToeFormal.Derivation.QFTGRMinimalWorkingModelRefinementPacketResultReview
 import ToeFormal.Derivation.QFTGRPostBudgetCrossPillarReview
 import ToeFormal.Derivation.QFTGRPostMRMaturationExecution
 import ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout
+import ToeFormal.Derivation.QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicAdaptedNormWellPosednessPacketV0
 import ToeFormal.Derivation.QFTGRQuadraticAuxiliaryHarmonicReducedSystemResultReviewV0
@@ -1265,6 +1267,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1258
+def committedModuleCount : Nat := 1260
 
 end ToeFormalAll

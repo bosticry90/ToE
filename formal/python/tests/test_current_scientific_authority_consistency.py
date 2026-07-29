@@ -8,8 +8,8 @@ from formal.python.tools import current_scientific_authority_consistency as auth
 
 
 TARGET = (
-    "prepare_qft_gr_quadratic_adapted_derivative_loss_"
-    "energy_hierarchy_v0"
+    "compute_qft_gr_quadratic_frozen_coefficient_"
+    "jordan_chain_frequency_growth_v0"
 )
 JULY_19_SELECT_TARGET = (
     "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_"

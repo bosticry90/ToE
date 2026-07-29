@@ -12,7 +12,7 @@ Purpose:
 
 Current scientific checkpoint (2026-07-28):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`.
+- The exact scientific target is `compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -20,21 +20,22 @@ Current scientific checkpoint (2026-07-28):
 - Algebraic equivalence to the fourth-order metric equation is accepted only on the complete gauge, definition, trace, divergence, integrability, Hamiltonian, and momentum constraint surface. An arbitrary auxiliary solution is not an original metric solution.
 - The zero-addition off-constraint extension now has a finite homogeneous constraint hierarchy. Its normalized independent subsidiary pencil is `(1-lambda^2) I_69`, so that subsystem has a complete light-cone basis; translating its equality back to the metric formulation consumes one additional metric derivative.
 - The full adapted auxiliary pencil normalizes to `(1-lambda^2) I_64`, but the metric-equivalence grading is triangular and defective. At either light-cone root it has algebraic multiplicity 64, geometric multiplicity 50, and Jordan counts `(size 3,size 2,size 1)=(4,6,40)`. Eliminating the auxiliary spin-2 field recovers `-beta(1-lambda^2)^2 I_2`.
-- The active target is limited to preparing the candidate derivative-loss energy hierarchy. No energy-estimate execution, loss-nonaccumulation claim, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows from this transition.
+- The accepted energy preparation ledgers every chain. The 14 missing eigenvectors split into 2 physical TT, 8 length-three reconstruction, and 4 non-TT length-two deficiencies. The equivalence-map shift is one derivative, but the frozen propagator loss remains unresolved between one and two.
+- The active target is limited to constructing and exponentiating the exact frozen first-order companion and classifying its frequency growth. No variable-coefficient estimate, loss-nonaccumulation claim, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows.
 - Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v2. Its scientific-target field is a closeout-time snapshot, not a live mirror.
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0
-ACTIVE_LANE_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0
+CURRENT_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0
+ACTIVE_LANE_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_REVIEW_20260728_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: ADAPTED_AUXILIARY_SYMBOL_STRONGLY_HYPERBOLIC_METRIC_EQUIVALENCE_TRIANGULAR_WITH_FIXED_ONE_DERIVATIVE_LOSS_NO_ENERGY_OR_WELL_POSEDNESS
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_preparation
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: ENERGY_HIERARCHY_READY_COMPLETE_FIFTY_CHAIN_LEDGER_ONE_OR_TWO_DERIVATIVE_PROPAGATOR_LOSS_UNRESOLVED_NO_ENERGY_OR_WELL_POSEDNESS
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_calculation
 
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`

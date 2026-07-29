@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0" := by
+      "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0" := by
   native_decide
 
 end CurrentAuthority

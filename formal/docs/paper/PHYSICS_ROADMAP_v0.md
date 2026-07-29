@@ -19,20 +19,21 @@ Non-claim boundary:
 - no external truth claim.
 
 Current QFT–GR lead calculation (2026-07-28):
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0`
-- `ACTIVE_LANE_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0`
+- `ACTIVE_LANE_v0: compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticFullReducedSystemPrincipalStructureResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_REVIEW_20260728_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_RESULT_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticAdaptedDerivativeLossEnergyHierarchyResultReviewV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_ACCEPTED`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
 - Accepted principal result: uniform auxiliary wave diagonalization in the adapted grading and a defective triangular metric-equivalence pencil with finite one-derivative loss.
-- Prepare next: the candidate derivative-loss energy hierarchy, with exact norms, commutators, source regularities, and closure obligations, but no estimate execution.
-- Later decision: prove or refute the prepared estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
+- Accepted energy preparation: all energy families, weighted-principal couplings, four proof levels, and 50 chains per root are frozen; propagator loss remains one-or-two derivative unresolved.
+- Compute next: the exact frozen first-order companion exponential and minimum frequency-growth exponent by physical, auxiliary, definition, and constraint-tangent sector.
+- Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
