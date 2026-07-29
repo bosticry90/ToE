@@ -10,9 +10,10 @@ Purpose:
 - Provide a human-facing index for the current live authority chain.
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
-Current scientific checkpoint (2026-07-28):
+Current scientific checkpoint (2026-07-29):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
 - The exact scientific target is `prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0`.
+- Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `OPEN` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`; no substantive Stage 1 producer may predate its committed OPEN event.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -25,7 +26,7 @@ Current scientific checkpoint (2026-07-28):
 - The exact-operator attempt supplies a complete placeholder-free Minkowski control matrix with 224 nonzero entries. It does not close the generic operator: `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet remain unexpanded.
 - The component-linearization execution fails closed: the accepted metric-dependent `H(x,g)` source is only `C2`, but the differentiated metric block needs a third `H` jet; the generic rank-nine trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen. The Minkowski control remains preserved but was not rederived from a generic form.
 - The complete generic frozen metric minimum and the constraint-restricted minimum remain blocked. The active target is limited to freezing the missing gauge, trace-projector, background-jet, substitution-order, and identity-check contracts. No component-expansion retry, generic companion, spectral calculation, constraint-tangent projection, variable-coefficient estimate, loss-nonaccumulation claim, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows.
-- Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v2. Its scientific-target field is a closeout-time snapshot, not a live mirror.
+- Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v4. Its scientific-target field confirms that the canonical-text maintenance cycle did not rotate scientific authority.
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
@@ -39,6 +40,10 @@ CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EX
 CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_ACCEPTED
 CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: GENERIC_COMPONENT_LINEARIZATION_BLOCKED_BY_GAUGE_C3_TRACEFREE_TANGENT_AND_ON_SHELL_JET_CONTRACT_MINKOWSKI_CONTROL_PRESERVED_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE
 CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_preparation
+CURRENT_BOUNDED_PROGRAM_ID_v0: QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0
+CURRENT_BOUNDED_PROGRAM_STATE_v0: OPEN
+CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 1
+CURRENT_BOUNDED_SEMANTIC_STAGE_v0: STRICT_HARMONIC_GAUGE_JET_CONTRACT
 
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
