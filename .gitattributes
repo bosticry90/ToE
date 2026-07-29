@@ -137,6 +137,9 @@ formal/python/tools/bounded_program_governance_enforcement_completion.py text eo
 formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionV0.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionResultReviewV0.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV5.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionV0.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/BoundedProgramGovernanceEnforcementCompletionResultReviewV0.lean text eol=lf
+formal/toe_formal/ToeFormal/Release/CurrentMaintenanceAuthorityV6.lean text eol=lf
 formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_PACKET_20260711_v0.json text eol=lf
 formal/python/tests/test_legacy_discovery_report_fixture_packet.py text eol=lf
 formal/python/tools/legacy_discovery_report_fixture_packet.py text eol=lf

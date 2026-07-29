@@ -35,3 +35,21 @@ def test_governance_enforcement_completion_is_maintenance_only() -> None:
     assert "No scientific target rotation." in prohibitions
     assert "No reopening" in prohibitions
     assert "No original OPEN, CLOSE, calculation, or review artifact rewrite." in prohibitions
+
+
+def test_governance_enforcement_completion_result_preserves_outcomes() -> None:
+    result = _read(
+        "BOUNDED_PROGRAM_GOVERNANCE_ENFORCEMENT_COMPLETION_MAINTENANCE_RESULT_REVIEW_20260729_v0.json"
+    )
+    assert result["accepted"] is True
+    assert result["status"] == (
+        "ACCEPTED_GOVERNANCE_ENFORCEMENT_COMPLETE_NO_SCIENTIFIC_ROTATION"
+    )
+    assert result["implemented_controls"]["immutable_manifest_count"] == 2
+    assert result["implemented_controls"]["historical_event_bytes_verified_immutable"] == 8
+    assert result["implemented_controls"]["adversarial_mutations_fail_for_intended_reasons"] == 25
+    assert result["preserved_outcomes"] == {
+        "native_surrogate_terminal": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+        "quadratic_control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+        "quadratic_toe_role": "REFERENCE_CONTROL_ONLY",
+    }
