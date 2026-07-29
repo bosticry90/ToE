@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,17 +13,17 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.selectedNextTarget
+  QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.canonicalStageTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.reviewId
+  QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.correctionId
 
 def currentBoundedProgramId : String :=
   "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0"
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
-def currentBoundedAttemptNumber : Nat := 2
+def currentBoundedAttemptNumber : Nat := 3
 
 def lastClosedBoundedSemanticStage : String :=
   "COMPONENT_EXPANDED_LINEARIZATION"
@@ -32,12 +32,12 @@ def lastBoundedTerminalResult : String := "PASSED"
 
 theorem current_target_is_bounded_quadratic_exact_companion_v1 :
     currentLiveTarget =
-      "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1" := by
+      "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1" := by
   rfl
 
-theorem second_bounded_quadratic_attempt_is_closed_passed :
-    currentBoundedProgramState = "CLOSED" ∧
-    currentBoundedAttemptNumber = 2 ∧
+theorem third_bounded_quadratic_attempt_is_open_after_second_closed_passed :
+    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedAttemptNumber = 3 ∧
     lastClosedBoundedSemanticStage = "COMPONENT_EXPANDED_LINEARIZATION" ∧
     lastBoundedTerminalResult = "PASSED" := by
   decide

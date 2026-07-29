@@ -200,6 +200,7 @@ import ToeFormal.Derivation.CrossPillarDerivationProtocol
 import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityReviewPacketResultReview
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacket
 import ToeFormal.Derivation.SelectedCCFTEmpiricalDiscriminatorBaselineComponentEquationSourceApplicabilityGapClassificationPacketResultReview
@@ -466,7 +467,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1"
+        "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1"
       status := .retained }
   ]
 
@@ -486,27 +487,27 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the bounded Stage 2 review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1"
+  "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1"
 
 /-- Current live target after the accepted bounded Stage 2 review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1"
+  "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1"
 
 /-- Evidence certificate for the accepted component expansion review. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean"
+  "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean"
 
 /-- Result review supporting bounded Stage 3 companion construction only. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json"
+  "formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json"
 
 /-- Accepted component expansion outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_ACCEPTED"
+  "QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE_OFF_SHELL_ON_SHELL_AND_GAUGE_COMPATIBLE_FORMS_COMPLETE_MINKOWSKI_SPECIALIZATION_REPRODUCED_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT"
+  "CANONICAL_STAGE_3_IDENTIFIER_RESTORED_BEFORE_SCIENTIFIC_PRODUCTION_NO_SCOPE_CHANGE_OR_REPAIR_ATTEMPT"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
@@ -523,7 +524,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1"
+    "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -651,13 +652,13 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
 /-- The accepted review supports bounded Stage 3 only. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_ACCEPTED" ∧
+        "QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE_OFF_SHELL_ON_SHELL_AND_GAUGE_COMPATIBLE_FORMS_COMPLETE_MINKOWSKI_SPECIALIZATION_REPRODUCED_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT" ∧
+        "CANONICAL_STAGE_3_IDENTIFIER_RESTORED_BEFORE_SCIENTIFIC_PRODUCTION_NO_SCOPE_CHANGE_OR_REPAIR_ATTEMPT" ∧
       currentLiveNextStrictTargetKindV0 =
         "qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation_v1" := by
   constructor

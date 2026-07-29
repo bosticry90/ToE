@@ -8,7 +8,7 @@ from formal.python.tools import current_scientific_authority_consistency as auth
 
 
 TARGET = (
-    "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1"
+    "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1"
 )
 JULY_19_SELECT_TARGET = (
     "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_"

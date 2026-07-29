@@ -19,14 +19,14 @@ Non-claim boundary:
 - no external truth claim.
 
 Current QFT–GR lead calculation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`
-- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1`
+- `CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1`
+- `ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_ACCEPTED`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED`
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.

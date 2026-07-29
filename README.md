@@ -28,20 +28,20 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Accepted component-linearization result: the generic expansion fails closed. Linearizing the differentiated metric block for the accepted metric-dependent `H(x,g)` gauge family requires a third gauge-source jet although only `C2` is frozen; the generic rank-nine trace-free tangent chart and the nonredundant on-shell substitution order are also absent. The 128-state/224-entry Minkowski control remains preserved but was not rederived from a nonexistent generic form.
 - Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets and constraint additions, the ten-chart trace-free atlas, compact regular strata, separate regularity ledgers, terminating confluent rewrites, and the Minkowski regression are frozen.
 - Accepted bounded Stage 2: the strict-harmonic generic-background linearization is represented by a closed 3,950-node component graph; the independent inventory is 64 equations in every one of ten trace charts, and the accepted 128-state/224-entry Minkowski operator is reproduced exactly.
-- Exact live target: `derive_qft_gr_quadratic_exact_frozen_companion_operator_v1`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean`.
-- Report: `formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json`.
+- Exact live target: `derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean`.
+- Report: `formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json`.
 - Boundary: Stage 2 is closed and passed. Only bounded Stage 3 may construct the exact frozen companion operator; quotient, propagator, variable-coefficient, nonlinear, source-extension, Maxwell–Dirac, preserved-descendant, and Yukawa work remain unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
-PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE_OFF_SHELL_ON_SHELL_AND_GAUGE_COMPATIBLE_FORMS_COMPLETE_MINKOWSKI_SPECIALIZATION_REPRODUCED_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticStageThreeCanonicalTargetIdentifierCorrectionV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_RESTORED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CANONICAL_STAGE_3_IDENTIFIER_RESTORED_BEFORE_SCIENTIFIC_PRODUCTION_NO_SCOPE_CHANGE_OR_REPAIR_ATTEMPT
 CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation_v1
 
 CURRENT-MAINTENANCE NOTE
