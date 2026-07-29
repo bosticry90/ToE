@@ -65,8 +65,9 @@ accepted Minkowski 128-state/224-entry control is reproduced.
 
 The exact live target is
 `derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`.
-Stage 1 is closed and passed. Stage 2 is selected but has not been opened, so
-its producer remains unauthorized until the immutable OPEN commit exists.
+Stage 1 is closed and passed. Stage 2 attempt 2 is OPEN under its immutable
+authority event; only its component producer and independent review are now
+authorized.
 The generic companion, spectral asymptotics, and constraint-tangent projection
 remain outside the Stage 2 envelope.
 Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,

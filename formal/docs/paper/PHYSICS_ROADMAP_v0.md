@@ -36,7 +36,7 @@ Current QFT–GR lead calculation (2026-07-29):
 - Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic operator remains unclosed because component remainders and independent background/gauge jets are absent.
 - Accepted linearization boundary: the generic component expansion is incomplete because the accepted metric-dependent gauge family is only `C2` while the differentiated block needs an `H` third jet; the generic trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen.
 - Accepted bounded Stage 1: strict harmonic gauge, the ten-chart trace-free atlas, compact regular strata, separate reduced/metric regularity ledgers, terminating confluent rewrites, and the Minkowski regression are frozen.
-- Selected next: component-expand the generic-background linearization under the single Stage 2 envelope after its immutable OPEN commit; construct the companion and quotient only in later stages.
+- Open bounded Stage 2: component-expand the generic-background linearization under its single immutable attempt-2 envelope; construct the companion and quotient only in later stages.
 - Later decision: attempt the variable-coefficient estimate, minimum regularity, fixed versus accumulating derivative loss, Picard closure, uniqueness, and continuous dependence.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 

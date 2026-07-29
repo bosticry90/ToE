@@ -30,7 +30,7 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Exact live target: `derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`.
 - Evidence: `formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean`.
 - Report: `formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json`.
-- Boundary: Stage 1 is closed and passed. Stage 2 is selected but not open; no Stage 2 producer may run before its immutable OPEN commit. Generic companion, quotient, propagator, variable-coefficient, nonlinear, source-extension, Maxwell–Dirac, preserved-descendant, and Yukawa work remain unauthorized.
+- Boundary: Stage 1 is closed and passed. Stage 2 attempt 2 is OPEN under its immutable committed authority envelope; only the component expansion and its independent review are authorized. Generic companion, quotient, propagator, variable-coefficient, nonlinear, source-extension, Maxwell–Dirac, preserved-descendant, and Yukawa work remain unauthorized.
 
 CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
 PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0

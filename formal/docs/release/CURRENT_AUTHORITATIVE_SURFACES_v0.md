@@ -14,7 +14,7 @@ Current scientific checkpoint (2026-07-29):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
 - The exact scientific target is `derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`.
 - Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `CLOSED/PASSED` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`.
-- Stage 2 is selected but not yet OPEN; no component-expansion producer may run before its committed OPEN event.
+- Attempt 2 is `OPEN` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN event and authority mirrors are committed before any Stage 2 producer runs.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -42,8 +42,8 @@ CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATIO
 CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT
 CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_component_expanded_generic_background_linearization_derivation_v1
 CURRENT_BOUNDED_PROGRAM_ID_v0: QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0
-CURRENT_BOUNDED_PROGRAM_STATE_v0: CLOSED
-CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 1
+CURRENT_BOUNDED_PROGRAM_STATE_v0: OPEN
+CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 2
 LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: STRICT_HARMONIC_GAUGE_JET_CONTRACT
 LAST_BOUNDED_TERMINAL_RESULT_v0: PASSED
 

@@ -21,9 +21,9 @@ def currentEvidencePacketId : String :=
 def currentBoundedProgramId : String :=
   "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0"
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
-def currentBoundedAttemptNumber : Nat := 1
+def currentBoundedAttemptNumber : Nat := 2
 
 def lastClosedBoundedSemanticStage : String :=
   "STRICT_HARMONIC_GAUGE_JET_CONTRACT"
@@ -35,9 +35,9 @@ theorem current_target_is_bounded_quadratic_component_expansion_v1 :
       "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1" := by
   rfl
 
-theorem first_bounded_quadratic_attempt_is_closed_passed :
-    currentBoundedProgramState = "CLOSED" ∧
-    currentBoundedAttemptNumber = 1 ∧
+theorem second_bounded_quadratic_attempt_is_open_after_first_closed_passed :
+    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedAttemptNumber = 2 ∧
     lastBoundedTerminalResult = "PASSED" := by
   decide
 

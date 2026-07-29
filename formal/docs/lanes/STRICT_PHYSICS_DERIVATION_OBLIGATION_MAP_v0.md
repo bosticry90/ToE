@@ -30,7 +30,7 @@ Current strict QFT–GR obligation (2026-07-29):
 - Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic background operator is not closed.
 - Accepted fail-closed linearization result: metric-dependent `H(x,g)` needs an unfrozen third gauge-source jet in the differentiated metric block; the generic rank-nine trace-free tangent chart and on-shell substitution order are also absent. The Minkowski control remains preserved and was not called generic.
 - Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets, the regular trace-free atlas, separate regularity ledgers, and a terminating confluent rewrite contract now close the prior prerequisite.
-- Required Stage 2: derive all 64 component equations and reproduce the accepted Minkowski 128-state/224-entry control under a single immutable authority envelope. The stage remains unopened until its OPEN commit.
+- Open Stage 2: derive all 64 component equations and reproduce the accepted Minkowski 128-state/224-entry control under the single immutable attempt-2 authority envelope.
 - No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
 - No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
 
