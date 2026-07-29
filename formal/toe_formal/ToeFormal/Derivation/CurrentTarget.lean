@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
+import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,31 +13,32 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.selectedNextTarget
+  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.reviewId
+  QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.reviewId
 
 def currentBoundedProgramId : String :=
   "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0"
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentBoundedAttemptNumber : Nat := 2
 
 def lastClosedBoundedSemanticStage : String :=
-  "STRICT_HARMONIC_GAUGE_JET_CONTRACT"
+  "COMPONENT_EXPANDED_LINEARIZATION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_is_bounded_quadratic_component_expansion_v1 :
+theorem current_target_is_bounded_quadratic_exact_companion_v1 :
     currentLiveTarget =
-      "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1" := by
+      "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1" := by
   rfl
 
-theorem second_bounded_quadratic_attempt_is_open_after_first_closed_passed :
-    currentBoundedProgramState = "OPEN" ∧
+theorem second_bounded_quadratic_attempt_is_closed_passed :
+    currentBoundedProgramState = "CLOSED" ∧
     currentBoundedAttemptNumber = 2 ∧
+    lastClosedBoundedSemanticStage = "COMPONENT_EXPANDED_LINEARIZATION" ∧
     lastBoundedTerminalResult = "PASSED" := by
   decide
 

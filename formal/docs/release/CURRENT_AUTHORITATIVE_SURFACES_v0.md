@@ -12,9 +12,9 @@ Purpose:
 
 Current scientific checkpoint (2026-07-29):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1`.
+- The exact scientific target is `derive_qft_gr_quadratic_exact_frozen_companion_operator_v1`.
 - Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `CLOSED/PASSED` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`.
-- Attempt 2 is `OPEN` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN event and authority mirrors are committed before any Stage 2 producer runs.
+- Attempt 2 is `CLOSED/PASSED` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN and CLOSE events bind the accepted component artifact and independent review.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -27,24 +27,25 @@ Current scientific checkpoint (2026-07-29):
 - The exact-operator attempt supplies a complete placeholder-free Minkowski control matrix with 224 nonzero entries. It does not close the generic operator: `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet remain unexpanded.
 - The component-linearization execution fails closed: the accepted metric-dependent `H(x,g)` source is only `C2`, but the differentiated metric block needs a third `H` jet; the generic rank-nine trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen. The Minkowski control remains preserved but was not rederived from a generic form.
 - The strict-harmonic contract now freezes `H=delta H=0`, all gauge-source jets through order three to zero, a ten-chart conditioned trace-free atlas, separate reduced `C3` and sufficient metric-equivalence `C6` ledgers, and an acyclic confluent rewrite order. This authorizes only the single bounded Stage 2 component expansion; no generic companion, spectrum, constraint quotient, variable-coefficient estimate, local theorem, source extension, Maxwell–Dirac execution, or Yukawa work follows.
+- The bounded Stage 2 result closes a 3,950-node component dependency graph, independently verifies `10+1+4+40+9=64` equations in every trace chart, separates off-shell/on-shell/strict-harmonic forms, and exactly reproduces the accepted 128-state/224-entry Minkowski operator. Only bounded Stage 3 exact frozen companion construction now follows.
 - Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v4. Its scientific-target field confirms that the canonical-text maintenance cycle did not rotate scientific authority.
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0
-ACTIVE_LANE_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
+CURRENT_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
+PREVIOUS_LIVE_NEXT_TARGET_v0: derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1
+ACTIVE_LANE_v0: derive_qft_gr_quadratic_exact_frozen_companion_operator_v1
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_ACCEPTED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT
-CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_component_expanded_generic_background_linearization_derivation_v1
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticComponentExpandedGenericBackgroundLinearizationV1ResultReviewV0.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_ACCEPTED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE_OFF_SHELL_ON_SHELL_AND_GAUGE_COMPATIBLE_FORMS_COMPLETE_MINKOWSKI_SPECIALIZATION_REPRODUCED_NO_COMPANION_SPECTRAL_VARIABLE_OR_NONLINEAR_RESULT
+CURRENT_LIVE_TARGET_KIND_v0: qft_gr_quadratic_exact_generic_frozen_companion_operator_derivation_v1
 CURRENT_BOUNDED_PROGRAM_ID_v0: QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0
-CURRENT_BOUNDED_PROGRAM_STATE_v0: OPEN
+CURRENT_BOUNDED_PROGRAM_STATE_v0: CLOSED
 CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 2
-LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: STRICT_HARMONIC_GAUGE_JET_CONTRACT
+LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: COMPONENT_EXPANDED_LINEARIZATION
 LAST_BOUNDED_TERMINAL_RESULT_v0: PASSED
 
 Current integrity corrections:
