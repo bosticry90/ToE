@@ -103,6 +103,12 @@ variants, bridge conditions, gravity, matter, emergence, thermodynamics,
 predictions, and falsification across current and historical material. The
 program is not installed, authorized, or open. No archive material, scientific
 hypothesis, field, action, seam, or observable has been adopted or selected.
+The newly available `archive/ToE_Project` and
+`archive/ToE_Project_Starter_2025-09-24` trees are now explicit read-only
+inputs to the proposed first stage. They are not covered by the legacy
+7,331-file archive index, so a future authorized Stage 1 must canonically
+reindex them before assessment. Their scientific content remains
+unadjudicated and unadopted.
 
 Focused validation covers the proposal and current authority surfaces.
 Exhaustive Python passage is not established: the last reported exhaustive

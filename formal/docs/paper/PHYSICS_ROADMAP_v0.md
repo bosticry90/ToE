@@ -28,6 +28,7 @@ Current native-hypothesis frontier (2026-07-30):
 - `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json`
 - `CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED`
 - Stage boundary: the closed coherence result is unchanged and now qualified to its 13 authorized sources; archive-wide and repository-wide evidence sufficiency remain untested. The proposed five-stage census is not installed, authorized, or open and performs no archive adoption, claim promotion, representation, action, seam, or observable selection.
+- Supplemental archive boundary: `archive/ToE_Project` and `archive/ToE_Project_Starter_2025-09-24` are explicit read-only inputs to proposed Stage 1, are not covered by the legacy 7,331-file archive index, and must be canonically reindexed before any future scientific assessment. No claim from either tree is adjudicated or adopted here.
 - Validation boundary: exhaustive Python passage is not established; the last reported exhaustive result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending separate debt classification.
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.

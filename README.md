@@ -38,6 +38,7 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-30)
 - Installed bounded program: `TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0` has five semantic stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
 - Scope qualification: the closed coherence program tested 13 authorized sources only. Those sources were insufficient, but archive-wide and repository-wide evidence sufficiency remain `NOT_TESTED`; the closed result and event history are unchanged.
 - Prepared next program: a five-stage, zero-repair repository-wide native-hypothesis evidence census covering ontology, pillars, seams, master-action variants, bridge conditions, gravity, matter, emergence, thermodynamics, predictions, and falsification.
+- Supplemental archive scope: `archive/ToE_Project` and `archive/ToE_Project_Starter_2025-09-24` are explicit read-only Stage 1 inputs. They postdate the legacy 7,331-file archive index, require canonical reindexing if the program is installed, and remain scientifically unadjudicated and unadopted.
 - Exact live target: `prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`.
 - Stage state: Attempt 1 is `CLOSED/PASSED`; Attempt 2 is `CLOSED/BLOCKED` because `COH-CLAIM-001` lacks the bearer, scale, quantity, operation, bridge-input/output, dimensional, comparator, observable, and failure-boundary definitions required for an operational physical claim.
 - Program result: `EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; operational result: `COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL`.

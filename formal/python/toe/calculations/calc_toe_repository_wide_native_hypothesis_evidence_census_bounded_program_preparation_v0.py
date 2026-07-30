@@ -117,6 +117,19 @@ ARCHIVE_ASSESSMENT_OUTCOMES = [
     "NO_NEW_MATERIAL_EVIDENCE_FOUND",
 ]
 
+SUPPLEMENTAL_ARCHIVE_ROOTS = [
+    {
+        "path": "archive/ToE_Project",
+        "intake_status": "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX",
+        "scientific_status": "UNADJUDICATED",
+    },
+    {
+        "path": "archive/ToE_Project_Starter_2025-09-24",
+        "intake_status": "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX",
+        "scientific_status": "UNADJUDICATED",
+    },
+]
+
 PROGRAM_TERMINAL_OUTCOMES = [
     "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
     "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
@@ -156,6 +169,11 @@ def _stage(
     common_inputs = [
         "current_tracked_repository",
         "archive_tree_read_only",
+        "archive/ToE_Project_read_only_pending_canonical_reindex",
+        (
+            "archive/ToE_Project_Starter_2025-09-24_"
+            "read_only_pending_canonical_reindex"
+        ),
         "current_canonical_authority_surfaces",
         "formal_outputs_and_release_records",
         "calculation_and_validation_sources",
@@ -369,7 +387,13 @@ def build() -> dict:
             "repository_wide_evidence_sufficiency": scope_result[
                 "scope_qualification"
             ]["repository_wide_evidence_sufficiency"],
-            "archive_indexed_file_count": len(archive_index["files"]),
+            "legacy_archive_indexed_file_count_before_supplemental_roots": len(
+                archive_index["files"]
+            ),
+            "legacy_archive_index_is_complete_for_current_local_archive": False,
+            "supplemental_archive_roots": SUPPLEMENTAL_ARCHIVE_ROOTS,
+            "supplemental_archive_root_count": len(SUPPLEMENTAL_ARCHIVE_ROOTS),
+            "supplemental_archive_scientific_content_adjudicated": False,
             "closed_coherence_program_reopened": False,
         },
         "program_proposal": {
@@ -396,10 +420,16 @@ def build() -> dict:
                 "deep_review_requires_relevance_and_provenance_gate": True,
                 "deep_read_all_archive_files_required": False,
                 "binary_generated_cache_and_dependency_trees_excluded_by_rule": True,
+                "supplemental_archive_roots_require_stage_1_reindex": True,
+                "vendored_virtual_environments_are_not_scientific_evidence": True,
+                "generated_outputs_are_classified_before_evidence_use": True,
                 "keyword_only_discovery_is_sufficient": False,
             },
             "custody_contract": {
                 "archive_is_read_only": True,
+                "supplemental_archive_roots_are_read_only": True,
+                "supplemental_archive_roots_are_explicit_stage_1_inputs": True,
+                "supplemental_archive_roots_are_not_adopted_evidence": True,
                 "original_paths_and_hashes_preserved": True,
                 "provenance_and_licensing_recorded_where_available": True,
                 "source_documents_distinguished_from_generated_summaries": True,
@@ -432,6 +462,8 @@ def build() -> dict:
         "claim_boundary": {
             "coherence_closeout_scope_qualified": True,
             "repository_wide_census_performed": False,
+            "supplemental_archive_root_census_performed": False,
+            "supplemental_archive_root_claims_extracted": False,
             "archive_material_adopted": False,
             "canonical_evidence_promoted": False,
             "native_hypothesis_selected": False,
@@ -448,6 +480,7 @@ def build() -> dict:
             "repository-wide source exhaustion",
             "archive evidence adequacy",
             "archive material authority",
+            "supplemental archive root scientific adequacy",
             "CCFT validation or rejection",
             "native ontology selection",
             "master-action selection",

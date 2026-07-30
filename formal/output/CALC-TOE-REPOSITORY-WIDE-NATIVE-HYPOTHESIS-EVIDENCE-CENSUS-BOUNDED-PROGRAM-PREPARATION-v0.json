@@ -14,7 +14,9 @@
     "representation_selected": false,
     "scientific_claim_made": false,
     "seam_executed": false,
-    "stage_1_opened": false
+    "stage_1_opened": false,
+    "supplemental_archive_root_census_performed": false,
+    "supplemental_archive_root_claims_extracted": false
   },
   "evidence": {
     "archive_candidate_ranking": {
@@ -81,6 +83,9 @@
       "original_paths_and_hashes_preserved": true,
       "provenance_and_licensing_recorded_where_available": true,
       "source_documents_distinguished_from_generated_summaries": true,
+      "supplemental_archive_roots_are_explicit_stage_1_inputs": true,
+      "supplemental_archive_roots_are_not_adopted_evidence": true,
+      "supplemental_archive_roots_are_read_only": true,
       "whole_documents_not_promoted_automatically": true
     },
     "discovery_strategy": {
@@ -88,8 +93,11 @@
       "broad_automated_discovery_first": true,
       "deep_read_all_archive_files_required": false,
       "deep_review_requires_relevance_and_provenance_gate": true,
+      "generated_outputs_are_classified_before_evidence_use": true,
       "keyword_only_discovery_is_sufficient": false,
-      "metadata_and_hash_classification_before_deep_read": true
+      "metadata_and_hash_classification_before_deep_read": true,
+      "supplemental_archive_roots_require_stage_1_reindex": true,
+      "vendored_virtual_environments_are_not_scientific_evidence": true
     },
     "frontier_classifications": [
       "READY_FOR_BOUNDED_TEST",
@@ -141,6 +149,8 @@
           "authorized_inputs": [
             "current_tracked_repository",
             "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
             "current_canonical_authority_surfaces",
             "formal_outputs_and_release_records",
             "calculation_and_validation_sources",
@@ -181,7 +191,7 @@
             "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED"
           ]
         },
-        "canonical_scope_hash": "6fc7b5830b7f4b16d6a3c72ac7e2984b88b1d8fb2b8f89dd6bb588cf0a90c552",
+        "canonical_scope_hash": "3dc85fc3449b72cb73cf3a2e87b1078f61856279c5980ccc31601df1a8bd0bf9",
         "canonical_target": "inventory_toe_repository_wide_native_hypothesis_sources_v0",
         "proposed_close_event_scope": {
           "block_or_failure_requires_mandatory_exit": true,
@@ -218,6 +228,8 @@
           "authorized_inputs": [
             "current_tracked_repository",
             "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
             "current_canonical_authority_surfaces",
             "formal_outputs_and_release_records",
             "calculation_and_validation_sources",
@@ -258,7 +270,7 @@
             "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED"
           ]
         },
-        "canonical_scope_hash": "752984247a22899217471f4806379e0febef3657c41d2e31eab01016d0f9bb3f",
+        "canonical_scope_hash": "baa200c135af316f7fc7e84b47cd440ea0e27f895920932efb4197b9351f13e3",
         "canonical_target": "reconstruct_toe_native_hypothesis_source_lineages_v0",
         "proposed_close_event_scope": {
           "block_or_failure_requires_mandatory_exit": true,
@@ -295,6 +307,8 @@
           "authorized_inputs": [
             "current_tracked_repository",
             "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
             "current_canonical_authority_surfaces",
             "formal_outputs_and_release_records",
             "calculation_and_validation_sources",
@@ -336,7 +350,7 @@
             "NATIVE_CLAIM_EXTRACTION_BLOCKED"
           ]
         },
-        "canonical_scope_hash": "2ffd67c9ea82866c956dfd61a19861f6e29b2483052a6bff55721ebee574a673",
+        "canonical_scope_hash": "4491f7e07de8d12d0dfdc045ad71cbc8b4db30c75f997c096d6cff17849f7286",
         "canonical_target": "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0",
         "proposed_close_event_scope": {
           "block_or_failure_requires_mandatory_exit": true,
@@ -373,6 +387,8 @@
           "authorized_inputs": [
             "current_tracked_repository",
             "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
             "current_canonical_authority_surfaces",
             "formal_outputs_and_release_records",
             "calculation_and_validation_sources",
@@ -413,7 +429,7 @@
             "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED"
           ]
         },
-        "canonical_scope_hash": "e10ef6c2b8c82912d42d784e898fa76fb51d6a358e35248ae274cedfe0f6a8d7",
+        "canonical_scope_hash": "05037d1ba61fe8bb73f95c8962a43236dbfc4934ac2452aed5dcc99e252de787",
         "canonical_target": "reconcile_toe_current_native_hypothesis_evidence_v0",
         "proposed_close_event_scope": {
           "block_or_failure_requires_mandatory_exit": true,
@@ -450,6 +466,8 @@
           "authorized_inputs": [
             "current_tracked_repository",
             "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
             "current_canonical_authority_surfaces",
             "formal_outputs_and_release_records",
             "calculation_and_validation_sources",
@@ -491,7 +509,7 @@
             "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
           ]
         },
-        "canonical_scope_hash": "e23a9994fda59c1e2af41de46df014b3242c478878a9aeb85d2a265a0b568584",
+        "canonical_scope_hash": "c31b9b04f82ffb4958f05c933c89d8dd7225490a18a65e26e8f178b79989c555",
         "canonical_target": "select_toe_native_frontier_after_repository_wide_evidence_census_v0",
         "proposed_close_event_scope": {
           "block_or_failure_requires_mandatory_exit": true,
@@ -552,6 +570,7 @@
     "repository-wide source exhaustion",
     "archive evidence adequacy",
     "archive material authority",
+    "supplemental archive root scientific adequacy",
     "CCFT validation or rejection",
     "native ontology selection",
     "master-action selection",
@@ -563,10 +582,25 @@
   "strict_terminal_outcome": "PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR",
   "terminal_outcome": "REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED",
   "triggering_scope_result": {
-    "archive_indexed_file_count": 7331,
     "authorized_evidence_sufficiency": "FAILED",
     "closed_coherence_program_reopened": false,
-    "repository_wide_evidence_sufficiency": "NOT_TESTED"
+    "legacy_archive_index_is_complete_for_current_local_archive": false,
+    "legacy_archive_indexed_file_count_before_supplemental_roots": 7331,
+    "repository_wide_evidence_sufficiency": "NOT_TESTED",
+    "supplemental_archive_root_count": 2,
+    "supplemental_archive_roots": [
+      {
+        "intake_status": "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX",
+        "path": "archive/ToE_Project",
+        "scientific_status": "UNADJUDICATED"
+      },
+      {
+        "intake_status": "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX",
+        "path": "archive/ToE_Project_Starter_2025-09-24",
+        "scientific_status": "UNADJUDICATED"
+      }
+    ],
+    "supplemental_archive_scientific_content_adjudicated": false
   },
   "verdict": "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
 }

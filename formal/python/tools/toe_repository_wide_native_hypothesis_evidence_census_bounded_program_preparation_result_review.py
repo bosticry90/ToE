@@ -58,6 +58,35 @@ def build() -> dict:
             ]
             == "NOT_TESTED"
         ),
+        "supplemental_archive_roots_are_explicit_and_unadjudicated": (
+            calc["triggering_scope_result"]["supplemental_archive_root_count"] == 2
+            and [
+                item["path"]
+                for item in calc["triggering_scope_result"][
+                    "supplemental_archive_roots"
+                ]
+            ]
+            == [
+                "archive/ToE_Project",
+                "archive/ToE_Project_Starter_2025-09-24",
+            ]
+            and all(
+                item["intake_status"]
+                == "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX"
+                and item["scientific_status"] == "UNADJUDICATED"
+                for item in calc["triggering_scope_result"][
+                    "supplemental_archive_roots"
+                ]
+            )
+            and calc["triggering_scope_result"][
+                "legacy_archive_index_is_complete_for_current_local_archive"
+            ]
+            is False
+            and calc["triggering_scope_result"][
+                "supplemental_archive_scientific_content_adjudicated"
+            ]
+            is False
+        ),
         "proposal_is_not_installed_authorized_or_open": (
             proposal["proposal_only"] is True
             and proposal["installed"] is False
@@ -105,6 +134,18 @@ def build() -> dict:
         "archive_is_discovered_but_not_adopted": (
             proposal["custody_contract"]["archive_is_read_only"] is True
             and proposal["custody_contract"][
+                "supplemental_archive_roots_are_read_only"
+            ]
+            is True
+            and proposal["custody_contract"][
+                "supplemental_archive_roots_are_explicit_stage_1_inputs"
+            ]
+            is True
+            and proposal["custody_contract"][
+                "supplemental_archive_roots_are_not_adopted_evidence"
+            ]
+            is True
+            and proposal["custody_contract"][
                 "whole_documents_not_promoted_automatically"
             ]
             is True
@@ -121,6 +162,14 @@ def build() -> dict:
                 "deep_read_all_archive_files_required"
             ]
             is False
+            and proposal["discovery_strategy"][
+                "supplemental_archive_roots_require_stage_1_reindex"
+            ]
+            is True
+            and proposal["discovery_strategy"][
+                "vendored_virtual_environments_are_not_scientific_evidence"
+            ]
+            is True
         ),
         "source_authority_vocabulary_is_explicit": (
             len(proposal["source_authority_vocabulary"]) == 11
@@ -154,6 +203,8 @@ def build() -> dict:
             calc["claim_boundary"][key] is False
             for key in [
                 "repository_wide_census_performed",
+                "supplemental_archive_root_census_performed",
+                "supplemental_archive_root_claims_extracted",
                 "archive_material_adopted",
                 "canonical_evidence_promoted",
                 "native_hypothesis_selected",

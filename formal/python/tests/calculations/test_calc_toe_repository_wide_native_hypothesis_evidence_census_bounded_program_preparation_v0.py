@@ -39,6 +39,39 @@ def test_archive_discovery_is_not_archive_adoption() -> None:
     )
     assert boundary["archive_material_adopted"] is False
     assert boundary["repository_wide_census_performed"] is False
+    assert boundary["supplemental_archive_root_census_performed"] is False
+    assert boundary["supplemental_archive_root_claims_extracted"] is False
+
+
+def test_supplemental_archive_roots_are_bound_without_adoption() -> None:
+    result = build()
+    trigger = result["triggering_scope_result"]
+    proposal = result["program_proposal"]
+    roots = trigger["supplemental_archive_roots"]
+    assert trigger["supplemental_archive_root_count"] == 2
+    assert [root["path"] for root in roots] == [
+        "archive/ToE_Project",
+        "archive/ToE_Project_Starter_2025-09-24",
+    ]
+    assert all(
+        root["intake_status"] == "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX"
+        and root["scientific_status"] == "UNADJUDICATED"
+        for root in roots
+    )
+    assert trigger["legacy_archive_index_is_complete_for_current_local_archive"] is False
+    assert trigger["supplemental_archive_scientific_content_adjudicated"] is False
+    assert (
+        proposal["discovery_strategy"][
+            "supplemental_archive_roots_require_stage_1_reindex"
+        ]
+        is True
+    )
+    assert (
+        proposal["custody_contract"][
+            "supplemental_archive_roots_are_explicit_stage_1_inputs"
+        ]
+        is True
+    )
 
 
 def test_stage_5_selects_but_does_not_execute() -> None:

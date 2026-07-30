@@ -18,6 +18,9 @@ def programInstalled : Bool := false
 def programAuthorized : Bool := false
 def attemptOpened : Bool := false
 def archiveMaterialAdopted : Bool := false
+def supplementalArchiveRootCount : Nat := 2
+def supplementalArchiveRootsCanonicallyReindexed : Bool := false
+def supplementalArchiveClaimsAdjudicated : Bool := false
 def nativeHypothesisSelected : Bool := false
 def fieldSelected : Bool := false
 def actionSelected : Bool := false
@@ -44,6 +47,13 @@ theorem preparation_adopts_no_archive_or_physical_model :
     fieldSelected = false ∧
     actionSelected = false ∧
     automaticSuccessorSelected = false := by
+  decide
+
+theorem supplemental_archive_roots_are_bound_but_unadjudicated :
+    supplementalArchiveRootCount = 2 ∧
+    supplementalArchiveRootsCanonicallyReindexed = false ∧
+    supplementalArchiveClaimsAdjudicated = false ∧
+    archiveMaterialAdopted = false := by
   decide
 
 theorem preparation_preserves_the_scientific_target :
