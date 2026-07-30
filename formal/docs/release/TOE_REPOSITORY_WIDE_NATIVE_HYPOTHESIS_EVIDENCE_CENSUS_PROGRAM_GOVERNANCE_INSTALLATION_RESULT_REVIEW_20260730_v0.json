@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "archive_scientifically_traversed": false,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_20260730_v0",
+  "canonical_census_index_generated": false,
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "authorized_stage_count_is_five": true,
+    "canonical_stage_ids_and_targets_match_prepared_proposal": true,
+    "current_scientific_target_preserved": true,
+    "git_history_validates_manifest_introduction_parent": true,
+    "installation_commit_matches_exact_eight_path_envelope": true,
+    "mandatory_exit_target_preserved": true,
+    "manifest_hash_and_all_scope_hashes_reproduce": true,
+    "no_open_or_close_event_created": true,
+    "no_scientific_archive_traversal_or_index_generation": true,
+    "program_registry_projection_is_unopened": true,
+    "repair_attempt_count_is_zero": true,
+    "stage_one_has_no_attempt_or_output": true
+  },
+  "dependency_impact_assessment_status": "REQUIRED_BEFORE_STAGE_1_OPEN_NOT_YET_EXECUTED",
+  "exhaustive_python_passage_established": false,
+  "immutable_manifest_hash": "47a39af9e9a3864bc8c38a084e66a39778a109243215082ed72b42f592b3fb15",
+  "installation_commit": "50ad07cb4827ff2cf449019d33f4aa1b81164aaa",
+  "next_permitted_work": [
+    "separately_authorized_indexing_and_performance_maintenance",
+    "workflow_profile",
+    "incremental_indexer_and_hash_cache_validation_on_nonscientific_inputs",
+    "exhaustive_python_dependency_impact_assessment"
+  ],
+  "next_prohibited_work": [
+    "Stage_1_OPEN_without_separate_scientific_authority",
+    "archive_scientific_traversal",
+    "canonical_census_index_generation",
+    "scientific_source_classification",
+    "claim_extraction",
+    "evidence_promotion",
+    "native_frontier_selection"
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "program_state": "UNOPENED",
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census_program.governance_installation_review.v0",
+  "scientific_execution_authorized": false,
+  "stage_1_opened": false,
+  "stage_1_scientific_output_created": false,
+  "status": "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT",
+  "validation": {
+    "bounded_history_validation": "PASS",
+    "focused_python_governance": "16 passed before review extension",
+    "full_lean_aggregate": "1304 modules passed",
+    "git_diff_check": "PASS",
+    "tracked_archive_roots": "ignored by exact policy and untouched"
+  }
+}

@@ -84,3 +84,22 @@ def test_installation_preserves_science_and_does_not_open_stage_1() -> None:
     assert installation["canonical_census_index_generated"] is False
     assert installation["repair_attempt_count"] == 0
     assert installation["no_subsidiary_scientific_targets"] is True
+
+
+def test_installation_review_accepts_only_unopened_governance() -> None:
+    review = _read(
+        RELEASE_ROOT
+        / "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_20260730_v0.json"
+    )
+    assert review["accepted"] is True
+    assert review["program_state"] == "UNOPENED"
+    assert review["stage_1_opened"] is False
+    assert review["scientific_execution_authorized"] is False
+    assert review["stage_1_scientific_output_created"] is False
+    assert review["archive_scientifically_traversed"] is False
+    assert review["canonical_census_index_generated"] is False
+    assert review["dependency_impact_assessment_status"] == (
+        "REQUIRED_BEFORE_STAGE_1_OPEN_NOT_YET_EXECUTED"
+    )
+    assert review["exhaustive_python_passage_established"] is False
+    assert all(review["checks"].values())

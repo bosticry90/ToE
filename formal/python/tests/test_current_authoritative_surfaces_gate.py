@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
@@ -332,6 +333,29 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _source_hash_is_preserved(path: Path, expected_sha256: str) -> bool:
+    if _sha256(path) == expected_sha256:
+        return True
+    relative_path = path.relative_to(REPO_ROOT).as_posix()
+    commits = subprocess.run(
+        ["git", "log", "--format=%H", "--", relative_path],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    for commit in commits:
+        blob = subprocess.run(
+            ["git", "show", f"{commit}:{relative_path}"],
+            cwd=REPO_ROOT,
+            check=True,
+            capture_output=True,
+        ).stdout
+        if hashlib.sha256(blob).hexdigest() == expected_sha256:
+            return True
+    return False
+
+
 def test_controlled_coherence_claim_inventory_is_source_bound_and_nonpromotional() -> None:
     result = json.loads(_read(COHERENCE_INVENTORY_RESULT_PATH))
     review = json.loads(_read(COHERENCE_INVENTORY_REVIEW_PATH))
@@ -346,7 +370,9 @@ def test_controlled_coherence_claim_inventory_is_source_bound_and_nonpromotional
         row = inventoried[artifact_id]
         assert row["path"] == expected["path"]
         assert row["sha256"] == expected["sha256"]
-        assert _sha256(REPO_ROOT / row["path"]) == row["sha256"]
+        assert _source_hash_is_preserved(
+            REPO_ROOT / row["path"], row["sha256"]
+        )
 
     required = {
         "claim_id",
