@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,41 +13,45 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0"
+  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.target
 
 def currentEvidencePacketId : String :=
-  ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.calculationId
+  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.evidenceId
 
 def currentBoundedProgramId : String :=
-  "NONE_NEW_PROGRAM_INSTALLED"
+  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.programId
 
-def currentBoundedProgramState : String := "NONE_NEW_PROGRAM_INSTALLED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY"
+  "REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN"
 
-def currentBoundedAttemptNumber : Nat := 0
+def currentBoundedAttemptNumber : Nat :=
+  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
   "COHERENCE_OPERATIONAL_DEFINITION_TEST"
 
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_prepares_repository_wide_evidence_census :
+theorem current_target_opens_repository_wide_source_census :
     currentLiveTarget =
-      "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0" := by
+      "inventory_toe_repository_wide_native_hypothesis_sources_v0" := by
   rfl
 
-theorem prepared_census_proposal_installs_no_new_bounded_program :
+theorem repository_wide_source_census_is_open_without_scientific_output :
     currentBoundedProgramId =
-      "NONE_NEW_PROGRAM_INSTALLED" ∧
-    currentBoundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
+      "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 0 ∧
-    lastClosedBoundedSemanticStage =
-      "COHERENCE_OPERATIONAL_DEFINITION_TEST" ∧
-    lastBoundedTerminalResult = "BLOCKED" := by
+      "REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN" ∧
+    currentBoundedAttemptNumber = 1 ∧
+    ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.scientificOutputPresent =
+      false ∧
+    ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.archiveScientificallyTraversed =
+      false ∧
+    ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.authoritativeCensusIndexGenerated =
+      false := by
   decide
 
 end CurrentTarget

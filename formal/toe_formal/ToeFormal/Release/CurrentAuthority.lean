@@ -32,9 +32,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_census_program_preparation :
+theorem current_authority_tracks_open_repository_wide_source_census :
     currentTarget =
-      "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0" := by
+      "inventory_toe_repository_wide_native_hypothesis_sources_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -49,13 +49,15 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_preparation_has_not_installed_a_new_program :
+theorem census_program_stage_1_is_open_without_scientific_output :
     boundedProgramId =
-      "NONE_NEW_PROGRAM_INSTALLED" ∧
-    boundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
+      "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
+    boundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
-    boundedAttemptNumber = 0 := by
+      "REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN" ∧
+    boundedAttemptNumber = 1 ∧
+    Derivation.ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.scientificOutputPresent =
+      false := by
   native_decide
 
 end CurrentAuthority
