@@ -1,0 +1,35 @@
+{
+  "artifact_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_MAINTENANCE_PACKET_20260729_v0",
+  "authority_lane": "bounded_program_governance_maintenance_only",
+  "authorized_scope": {
+    "immutable_prospective_program_manifest_creation": true,
+    "prospective_unopened_program_history_validation": true,
+    "registration_of_five_canonical_stage_definitions": true,
+    "canonical_scope_hash_binding": true,
+    "stage_count_and_zero_repair_enforcement": true,
+    "mandatory_exit_target_binding": true,
+    "no_subsidiary_scientific_target_enforcement": true,
+    "registry_program_projection_installation": true,
+    "generated_and_lean_unopened_state_mirrors": true,
+    "installed_but_unopened_program_validation": true,
+    "narrow_attribute_allowlist_for_new_surfaces": true
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "maintenance_target": "install_toe_native_coherence_ontology_and_representation_bounded_program_governance_v0",
+  "preserved_scientific_target": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_installation_state_authorized": "UNOPENED",
+  "prohibitions": [
+    "No scientific target rotation.",
+    "No Stage 1 OPEN event.",
+    "No claim inventory or other substantive scientific output.",
+    "No representation, field, action, seam, pillar, observable, or empirical selection.",
+    "No reopening of QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0.",
+    "No reopening of TOE_NATIVE_SURROGATE_V0.",
+    "No rewrite of historical manifests, events, calculations, or reviews.",
+    "No modification of the untracked reddit/ directory."
+  ],
+  "required_result_review_target": "review_toe_native_coherence_ontology_program_governance_installation_result_v0",
+  "schema_id": "toe.native_coherence_ontology_program.governance_installation_maintenance_packet.v0",
+  "status": "AUTHORIZED_MAINTENANCE_INSTALLATION_ONLY_NO_SCIENTIFIC_OPEN"
+}
