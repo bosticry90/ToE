@@ -1,0 +1,74 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "authorized_claim_identity_preserved": true,
+    "bearer_failure_recomputed": true,
+    "bridge_input_output_failure_recomputed": true,
+    "candidate_status_not_promoted": true,
+    "comparator_failures_recomputed": true,
+    "failure_boundary_is_explicit": true,
+    "measurement_failure_recomputed": true,
+    "no_downstream_representation_or_action_selected": true,
+    "operations_failure_recomputed": true,
+    "scale_failure_recomputed": true,
+    "terminal_outcome_is_manifest_authorized": true,
+    "units_failure_recomputed": true,
+    "zero_and_change_failures_recomputed": true
+  },
+  "close_recommendation": {
+    "close_event_terminal_result": "BLOCKED",
+    "mandatory_exit_target": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+    "stage_3_open_permitted": false
+  },
+  "independent_recomputation": {
+    "accepted_operational_definition_found": false,
+    "comparator_rows_checked": 8,
+    "failed_definition_criterion_count": 9,
+    "operation_rows_checked": 5,
+    "passed_failure_boundary_count": 1,
+    "selected_claim_id": "COH-CLAIM-001",
+    "selected_claim_source_values": {
+      "bearer": "UNSPECIFIED_CCFT_MESOSCOPIC_SYSTEM_OR_CONFIGURATION",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure": "NONE_SELECTED",
+      "observable_or_operational_content": "NONE_SPECIFIED; only a bridge role and mesoscopic scale label are present.",
+      "scale": "MESOSCOPIC; intended ToE bridge context; numerical or physical scale bounds absent.",
+      "units": "UNSPECIFIED"
+    },
+    "source_dependencies_requiring_resolution": [
+      "A physical possessor of coherence must be identified.",
+      "The meaning of a coherence change and zero coherence must be defined.",
+      "The mesoscopic scale range must be made operational.",
+      "A measurement-sensitive distinction from standard quantities must be supplied."
+    ]
+  },
+  "independent_review_method": [
+    "Recomputed the Stage 1 inventory SHA-256 before reading the selected claim.",
+    "Read the COH-CLAIM-001 record and its preserved conflicts without importing meanings from other claim records.",
+    "Tested every manifest-required operational output independently of the producer's PASS or FAIL labels.",
+    "Checked that no missing definition was filled by symbolic similarity, historical complex-field language, chi, rho, C_k, or a proposed action.",
+    "Checked that the negative conclusion is limited to the preserved evidence and does not reject every future coherence definition."
+  ],
+  "inventory_dependency": {
+    "claim_id": "COH-CLAIM-001",
+    "path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+    "sha256": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b"
+  },
+  "nonclaim_boundary": [
+    "Review acceptance validates the bounded negative inference, not the existence or nonexistence of a coherence bridge in nature.",
+    "No mathematical representation, field content, action, seam dynamics, observable validation, or empirical claim is authorized.",
+    "The blocked result does not reopen the closed real-scalar surrogate route.",
+    "Stage 3 cannot consume this result as an accepted operational definition."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "result_artifact": {
+    "path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+    "sha256": "55127f74ef6794b76ec5044330eb667ef3e9a78c5660ca0bedd6ca7386322c41"
+  },
+  "review_outcome": "ACCEPTED_FAILED_CLOSED_OPERATIONAL_DEFINITION_RESULT",
+  "schema_id": "toe.native_coherence.operational_definition.result_review.v0",
+  "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+  "terminal_outcome": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED"
+}

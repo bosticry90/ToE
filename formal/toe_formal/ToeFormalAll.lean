@@ -845,6 +845,7 @@ import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyP
 import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview
 import ToeFormal.Derivation.ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeNativeCoherenceOperationalDefinitionAttemptOpen
+import ToeFormal.Derivation.ToeNativeCoherenceOperationalDefinitionResult
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0ResultReview
 import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryAttemptOpen
@@ -1305,6 +1306,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1298
+def committedModuleCount : Nat := 1299
 
 end ToeFormalAll

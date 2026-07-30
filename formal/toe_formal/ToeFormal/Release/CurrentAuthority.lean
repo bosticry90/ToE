@@ -32,9 +32,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_current_target :
+theorem current_authority_tracks_mandatory_exit_target :
     currentTarget =
-      "test_toe_native_coherence_claim_operational_definition_v0" := by
+      "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -49,12 +49,12 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem coherence_operational_definition_stage_is_open :
+theorem coherence_operational_definition_stage_is_closed_blocked :
     boundedProgramId =
       "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_2_OPEN_AWAITING_OPERATIONAL_DEFINITION_RESULT" ∧
+      "STAGE_2_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT" ∧
     boundedAttemptNumber = 2 := by
   native_decide
 
