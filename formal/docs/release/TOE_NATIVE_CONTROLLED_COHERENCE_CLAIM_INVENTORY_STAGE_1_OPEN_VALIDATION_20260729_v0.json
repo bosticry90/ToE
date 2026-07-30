@@ -1,0 +1,41 @@
+{
+  "artifact_id": "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_VALIDATION_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "dependency_validation": {
+    "dependency_facing_installation_baseline": "74 passed",
+    "known_exhaustive_python_record": "14739 passed, 147 failed, 10 errors, 598 skipped",
+    "known_exhaustive_python_rerun": false,
+    "known_failures_reach_stage_1_dependencies": false
+  },
+  "event": {
+    "attempt_sequence_number": 1,
+    "event_hash": "61c0032f2755ddec053607d8d1744473818da59c6bee346156aebdf947cdcd89",
+    "event_type": "ATTEMPT_OPEN",
+    "opened_from_commit": "6e793e2922dc4fa7e3ed561cf2669fade29c055f",
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json",
+    "registry_snapshot_hash": "9417077310e62e839bcfdd2a09a9f4716c66d360e2485c88a2960ce9f754c702",
+    "scope_hash": "1d0ca35f49260b8194c9a24f2ff8200af0b1c8fe1c043fa437407a6e71a13e0e"
+  },
+  "nonclaim_boundary": [
+    "The atomic commit opens Stage 1 but contains no substantive claim-inventory output.",
+    "No coherence representation, field, action, seam, pillar, observable, or empirical claim is selected.",
+    "Programs B and N remain closed.",
+    "The untracked reddit/ directory remains outside the checkpoint."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_state_after_open": {
+    "attempted_stage_ids": [
+      "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
+    ],
+    "current_stage_number": 1,
+    "last_closed_attempt_number": 0,
+    "open_attempt_number": 1,
+    "repair_attempt_count": 0,
+    "state": "OPEN"
+  },
+  "schema_id": "toe.native_coherence.controlled_claim_inventory.stage_1_open_validation.v0",
+  "scientific_output_present": false,
+  "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "inventory_toe_native_controlled_coherence_claims_v0"
+}

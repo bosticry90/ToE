@@ -507,33 +507,33 @@ theorem master_action_physics_frontier_next_target_is_stable_v0 :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous native-frontier selector consumed by the preparation target. -/
+/-- Previous bounded-program preparation target consumed by the Stage 1 OPEN. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_native_toe_hypothesis_for_bounded_adjudication_v0"
-
-/-- Prepare only the selected future bounded coherence-ontology program. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
 
-/-- Evidence certificate accepting the prepared proposal without installation. -/
+/-- Execute only the opened controlled coherence-claim inventory stage. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "inventory_toe_native_controlled_coherence_claims_v0"
+
+/-- Evidence certificate for the atomic Stage 1 OPEN without scientific output. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean"
 
-/-- Review accepting the bounded-program proposal without installation or OPEN. -/
+/-- Immutable OPEN event for the first bounded coherence-ontology stage. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json"
+  "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json"
 
-/-- Accepted evidence-bound program-preparation outcome. -/
+/-- Accepted evidence-bound Stage 1 OPEN outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN"
+  "CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM"
+  "STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0"
+  "toe_native_controlled_coherence_claim_inventory_stage_1_open_v0"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -545,7 +545,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice := "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
+  next_strict_slice := "inventory_toe_native_controlled_coherence_claims_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -670,18 +670,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The current authority permits only bounded-program preparation. -/
+/-- The current authority permits only the opened Stage 1 claim inventory. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN" ∧
+        "CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM" ∧
+        "STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM" ∧
       currentLiveNextStrictTargetKindV0 =
-        "toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0" := by
+        "toe_native_controlled_coherence_claim_inventory_stage_1_open_v0" := by
   constructor
   · rfl
   constructor

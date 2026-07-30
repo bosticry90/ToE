@@ -34,24 +34,25 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Program N authorization accepted: five semantic stages, zero repairs, and no subsidiary scientific targets.
 - Native Stage 1 is closed `BLOCKED`: no accepted CCFT-to-relativistic-real-scalar map exists, and neither required independent `Z2` gate is justified.
 - Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
-- Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` is selected for bounded-program preparation because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
-- Exact live target: `prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`.
-- Prepared proposal: five zero-repair semantic stages now cover controlled claim inventory, operational-definition testing, representation comparison, a representability decision, and only then a conditional minimal-field handoff.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean`.
-- Report: `formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json`.
-- Boundary: the proposal is complete, but the program is not installed, authorized, or opened. No representation, field, action, seam, pillar, observable, or empirical claim was selected. Separate maintenance authority is required for prospective lifecycle support, followed by a separate scientific-authority decision before installation or an OPEN event. There is no automatic successor.
+- Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` remains the selected native hypothesis because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
+- Installed bounded program: `TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0` has five semantic stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
+- Exact live target: `inventory_toe_native_controlled_coherence_claims_v0`.
+- Stage state: the separate scientific decision was accepted and the immutable Stage 1 `ATTEMPT_OPEN` event is recorded. Attempt 1 is open; no Stage 1 claim-inventory result or review exists yet.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean`.
+- Report: `formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json`.
+- Boundary: only the controlled claim-inventory producer may now run inside the installed Stage 1 envelope. No coherence claim has passed inventory, and no representation, field, action, seam, pillar, observable, or empirical claim has been selected.
 - Validation debt: exhaustive Python passage is not established; the last reported exhaustive run remains `14,739 passed, 147 failed, 10 errors, 598 skipped` and requires separate classification. This does not override the focused authority and preparation checks.
 
-CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
-ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
+CURRENT_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
+ACTIVE_LANE_v0: inventory_toe_native_controlled_coherence_claims_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_stage_1_open_v0
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

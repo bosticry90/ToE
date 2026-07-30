@@ -34,7 +34,7 @@ def boundedAttemptNumber : Nat :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0" := by
+      "inventory_toe_native_controlled_coherence_claims_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -49,12 +49,13 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem native_coherence_program_preparation_has_not_installed_a_new_program :
-    boundedProgramId = "NONE_NEW_PROGRAM_INSTALLED" ∧
-    boundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
+theorem controlled_coherence_claim_inventory_stage_is_open :
+    boundedProgramId =
+      "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
+    boundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
-    boundedAttemptNumber = 0 := by
+      "STAGE_1_OPEN_AWAITING_CONTROLLED_CLAIM_INVENTORY" ∧
+    boundedAttemptNumber = 1 := by
   native_decide
 
 end CurrentAuthority

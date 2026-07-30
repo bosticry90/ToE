@@ -13,15 +13,15 @@ Non-claim boundary:
 - This document is a strict physics work map, not a release-governance expansion surface.
 
 Current strict native-hypothesis obligation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0`
-- `ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
+- `CURRENT_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
+- `ACTIVE_LANE_v0: inventory_toe_native_controlled_coherence_claims_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN`
-- Current obligation status: one lifecycle-safe five-stage, zero-repair coherence ontology and representation program proposal is prepared. Its stages bind one source-controlled claim inventory, an operational-definition test, representation-family comparison, a bounded representability decision, and only a conditional minimal-field handoff. The program is not installed, authorized, or open; no representation, field, action, seam, pillar, observable, or empirical claim follows. Prospective lifecycle enablement requires separate maintenance authority, and later installation or OPEN requires a separate scientific-authority decision. Ordinary known-physics pillar baselines remain parallel controls.
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN`
+- Current obligation status: the lifecycle-safe five-stage, zero-repair coherence ontology and representation program is installed, and its separately authorized first attempt is OPEN at `CONTROLLED_COHERENCE_CLAIM_INVENTORY`. The OPEN commit contains no claim inventory. The exact source-bound inventory producer may now run inside the Stage 1 envelope; no representation, field, action, seam, pillar, observable, or empirical claim follows. Ordinary known-physics pillar baselines remain parallel controls.
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.

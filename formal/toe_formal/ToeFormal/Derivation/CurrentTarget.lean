@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryAttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,39 +13,42 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
+  "inventory_toe_native_controlled_coherence_claims_v0"
 
 def currentEvidencePacketId : String :=
-  ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.reviewId
+  ToeNativeControlledCoherenceClaimInventoryAttemptOpen.evidenceId
 
 def currentBoundedProgramId : String :=
-  "NONE_NEW_PROGRAM_INSTALLED"
+  "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0"
 
-def currentBoundedProgramState : String := "NONE_NEW_PROGRAM_INSTALLED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY"
+  "STAGE_1_OPEN_AWAITING_CONTROLLED_CLAIM_INVENTORY"
 
-def currentBoundedAttemptNumber : Nat := 0
+def currentBoundedAttemptNumber : Nat := 1
 
 def lastClosedBoundedSemanticStage : String :=
-  "COHERENCE_REPRESENTATION"
+  "NONE_IN_CURRENT_PROGRAM"
 
-def lastBoundedTerminalResult : String := "BLOCKED"
+def lastBoundedTerminalResult : String := "NONE_IN_CURRENT_PROGRAM"
 
-theorem current_target_prepares_native_coherence_ontology_program :
+theorem current_target_opens_controlled_coherence_claim_inventory :
     currentLiveTarget =
-      "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0" := by
+      "inventory_toe_native_controlled_coherence_claims_v0" := by
   rfl
 
-theorem prepared_program_proposal_installs_no_new_bounded_program :
-    currentBoundedProgramId = "NONE_NEW_PROGRAM_INSTALLED" ∧
-    currentBoundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
+theorem controlled_coherence_claim_inventory_is_open_without_stage_output :
+    currentBoundedProgramId =
+      "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 0 ∧
-    lastClosedBoundedSemanticStage = "COHERENCE_REPRESENTATION" ∧
-    lastBoundedTerminalResult = "BLOCKED" := by
+      "STAGE_1_OPEN_AWAITING_CONTROLLED_CLAIM_INVENTORY" ∧
+    currentBoundedAttemptNumber = 1 ∧
+    lastClosedBoundedSemanticStage = "NONE_IN_CURRENT_PROGRAM" ∧
+    lastBoundedTerminalResult = "NONE_IN_CURRENT_PROGRAM" ∧
+    ToeNativeControlledCoherenceClaimInventoryAttemptOpen.scientificOutputPresent =
+      false := by
   decide
 
 end CurrentTarget
