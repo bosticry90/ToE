@@ -1,0 +1,34 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "archive_is_discovered_but_not_adopted": true,
+    "broad_first_gated_deep_review_is_exact": true,
+    "close_scopes_bind_result_and_independent_review": true,
+    "current_target_is_preparation_only": true,
+    "evidence_hashes_recompute": true,
+    "five_stage_zero_repair_cap_is_exact": true,
+    "native_graph_has_complete_provenance_chain": true,
+    "no_scientific_model_or_claim_selected": true,
+    "open_scopes_precede_substantive_outputs": true,
+    "proposal_is_not_installed_authorized_or_open": true,
+    "scope_hashes_recompute": true,
+    "scope_qualification_is_dependency": true,
+    "semantic_stage_order_is_exact": true,
+    "source_authority_vocabulary_is_explicit": true,
+    "stage_5_selects_without_execution": true
+  },
+  "failed_checks": [],
+  "program_authorized": false,
+  "program_installed": false,
+  "proposal_only": true,
+  "reviewed_result": {
+    "path": "formal/output/CALC-TOE-REPOSITORY-WIDE-NATIVE-HYPOTHESIS-EVIDENCE-CENSUS-BOUNDED-PROGRAM-PREPARATION-v0.json",
+    "sha256": "5b9ace426ab4182319ddd68b718bfd7c11d1b80d4906260de93da9041d84d19c"
+  },
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census.bounded_program_preparation_review.v0",
+  "scientific_result_claimed": false,
+  "stage_1_opened": false,
+  "verdict": "ACCEPT_PROGRAM_PROPOSAL_AWAIT_SEPARATE_INSTALLATION_AUTHORITY"
+}

@@ -92,7 +92,17 @@ mandatory exit is complete with
 unattempted. No representation, calculation, native model, automatic
 successor, empirical claim, CCFT validation, or CCFT rejection has been
 selected. Any future coherence route requires a separately authorized program
-and new substantive input. Programs B and N remain closed.
+and new substantive input. Programs B and N remain closed. This closeout is
+now explicitly scope-qualified: it tested 13 authorized sources, not the
+entire archive or repository. Archive-wide and repository-wide evidence
+sufficiency remain untested, and the original result is unchanged.
+
+A separate five-stage, zero-repair repository-wide native-hypothesis evidence
+census is prepared. It would inventory ontology, pillars, seams, master-action
+variants, bridge conditions, gravity, matter, emergence, thermodynamics,
+predictions, and falsification across current and historical material. The
+program is not installed, authorized, or open. No archive material, scientific
+hypothesis, field, action, seam, or observable has been adopted or selected.
 
 Focused validation covers the proposal and current authority surfaces.
 Exhaustive Python passage is not established: the last reported exhaustive
@@ -111,16 +121,16 @@ Variable-coefficient estimates, loss nonaccumulation, local well-posedness, sour
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
-ACTIVE_LANE_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_AFTER_STAGE_2_BLOCK_NO_REPAIR_STAGES_3_TO_5_UNATTEMPTED_NO_REPRESENTATION_CALCULATION_NATIVE_MODEL_OR_AUTOMATIC_SUCCESSOR
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_v0_terminal_closeout
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

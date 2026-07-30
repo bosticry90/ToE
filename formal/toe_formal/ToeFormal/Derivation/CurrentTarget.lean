@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout
+import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,43 +13,41 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0"
+  "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0"
 
 def currentEvidencePacketId : String :=
-  ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.calculationId
+  ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.calculationId
 
 def currentBoundedProgramId : String :=
-  "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0"
+  "NONE_NEW_PROGRAM_INSTALLED"
 
-def currentBoundedProgramState : String := "TERMINAL"
+def currentBoundedProgramState : String := "NONE_NEW_PROGRAM_INSTALLED"
 
 def currentTargetPhase : String :=
-  "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT"
+  "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY"
 
-def currentBoundedAttemptNumber : Nat := 2
+def currentBoundedAttemptNumber : Nat := 0
 
 def lastClosedBoundedSemanticStage : String :=
   "COHERENCE_OPERATIONAL_DEFINITION_TEST"
 
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_records_completed_mandatory_bounded_exit :
+theorem current_target_prepares_repository_wide_evidence_census :
     currentLiveTarget =
-      "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0" := by
+      "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0" := by
   rfl
 
-theorem coherence_program_is_terminal_after_operational_definition_block :
+theorem prepared_census_proposal_installs_no_new_bounded_program :
     currentBoundedProgramId =
-      "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    currentBoundedProgramState = "TERMINAL" ∧
+      "NONE_NEW_PROGRAM_INSTALLED" ∧
+    currentBoundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
     currentTargetPhase =
-      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    currentBoundedAttemptNumber = 2 ∧
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
+    currentBoundedAttemptNumber = 0 ∧
     lastClosedBoundedSemanticStage =
       "COHERENCE_OPERATIONAL_DEFINITION_TEST" ∧
-    lastBoundedTerminalResult = "BLOCKED" ∧
-    ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.automaticSuccessorSelected =
-      false := by
+    lastBoundedTerminalResult = "BLOCKED" := by
   decide
 
 end CurrentTarget

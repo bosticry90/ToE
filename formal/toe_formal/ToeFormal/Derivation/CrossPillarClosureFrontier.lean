@@ -507,33 +507,33 @@ theorem master_action_physics_frontier_next_target_is_stable_v0 :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous Stage 2 target consumed by the blocked operational result. -/
+/-- Closed coherence-program target consumed by the census preparation. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "test_toe_native_coherence_claim_operational_definition_v0"
-
-/-- Mandatory bounded closeout after the blocked operational-definition test. -/
-def currentLiveNextStrictTargetV0 : String :=
   "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0"
 
-/-- Terminal bounded-program closeout evidence. -/
+/-- Preparation-only repository-wide native-hypothesis evidence census. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0"
+
+/-- Independent review evidence for the unopened program proposal. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean"
 
-/-- Independent review of the mandatory closeout. -/
+/-- Independent review of the census-program preparation. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json"
+  "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json"
 
-/-- Terminal program outcome after the Stage 2 block. -/
+/-- Preparation-only outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED"
+  "REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_AFTER_STAGE_2_BLOCK_NO_REPAIR_STAGES_3_TO_5_UNATTEMPTED_NO_REPRESENTATION_CALCULATION_NATIVE_MODEL_OR_AUTOMATIC_SUCCESSOR"
+  "PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "toe_native_coherence_ontology_and_representation_v0_terminal_closeout"
+  "toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -546,7 +546,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0"
+        "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -671,18 +671,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The current authority records the mandatory exit after the Stage 2 block. -/
+/-- The current authority records the unopened census-program proposal. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json" ∧
+        "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED" ∧
+        "REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_AFTER_STAGE_2_BLOCK_NO_REPAIR_STAGES_3_TO_5_UNATTEMPTED_NO_REPRESENTATION_CALCULATION_NATIVE_MODEL_OR_AUTOMATIC_SUCCESSOR" ∧
+        "PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR" ∧
       currentLiveNextStrictTargetKindV0 =
-        "toe_native_coherence_ontology_and_representation_v0_terminal_closeout" := by
+        "toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0" := by
   constructor
   · rfl
   constructor

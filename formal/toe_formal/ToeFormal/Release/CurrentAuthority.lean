@@ -32,9 +32,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_completed_mandatory_exit :
+theorem current_authority_tracks_census_program_preparation :
     currentTarget =
-      "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0" := by
+      "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -49,13 +49,13 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem coherence_program_mandatory_exit_is_terminal :
+theorem census_program_preparation_has_not_installed_a_new_program :
     boundedProgramId =
-      "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    boundedProgramState = "TERMINAL" ∧
+      "NONE_NEW_PROGRAM_INSTALLED" ∧
+    boundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
     currentTargetPhase =
-      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    boundedAttemptNumber = 2 := by
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
+    boundedAttemptNumber = 0 := by
   native_decide
 
 end CurrentAuthority

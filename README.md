@@ -36,24 +36,26 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-30)
 - Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
 - Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` remains the selected native hypothesis because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
 - Installed bounded program: `TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0` has five semantic stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
-- Exact live target: `close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`.
+- Scope qualification: the closed coherence program tested 13 authorized sources only. Those sources were insufficient, but archive-wide and repository-wide evidence sufficiency remain `NOT_TESTED`; the closed result and event history are unchanged.
+- Prepared next program: a five-stage, zero-repair repository-wide native-hypothesis evidence census covering ontology, pillars, seams, master-action variants, bridge conditions, gravity, matter, emergence, thermodynamics, predictions, and falsification.
+- Exact live target: `prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`.
 - Stage state: Attempt 1 is `CLOSED/PASSED`; Attempt 2 is `CLOSED/BLOCKED` because `COH-CLAIM-001` lacks the bearer, scale, quantity, operation, bridge-input/output, dimensional, comparator, observable, and failure-boundary definitions required for an operational physical claim.
 - Program result: `EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; operational result: `COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean`.
-- Report: `formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json`.
-- Boundary: the program is terminal after its mandatory exit. Stages 3–5 were never opened, zero repairs were attempted, and no representation, calculation, native model, automatic successor, empirical claim, or CCFT validation follows. A future coherence route requires a separately authorized program and new substantive input.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean`.
+- Report: `formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json`.
+- Boundary: the coherence program remains terminal after its mandatory exit. The new census is proposal-only: it is not installed, authorized, or open; no archive material is adopted, no current claim is promoted, and no representation, field, action, seam, observable, or automatic successor follows.
 - Validation debt: exhaustive Python passage is not established; the last reported exhaustive run remains `14,739 passed, 147 failed, 10 errors, 598 skipped` and requires separate classification. This does not override the focused authority and preparation checks.
 
-CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
-ACTIVE_LANE_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_AFTER_STAGE_2_BLOCK_NO_REPAIR_STAGES_3_TO_5_UNATTEMPTED_NO_REPRESENTATION_CALCULATION_NATIVE_MODEL_OR_AUTOMATIC_SUCCESSOR
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_v0_terminal_closeout
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.
