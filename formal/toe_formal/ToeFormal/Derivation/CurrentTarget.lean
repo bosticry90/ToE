@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeCoherenceOperationalDefinitionResult
+import ToeFormal.Derivation.ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,18 +13,18 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeCoherenceOperationalDefinitionResult.selectedNextTarget
+  "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0"
 
 def currentEvidencePacketId : String :=
-  ToeNativeCoherenceOperationalDefinitionResult.reviewId
+  ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.calculationId
 
 def currentBoundedProgramId : String :=
   "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0"
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "TERMINAL"
 
 def currentTargetPhase : String :=
-  "STAGE_2_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT"
+  "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT"
 
 def currentBoundedAttemptNumber : Nat := 2
 
@@ -33,22 +33,22 @@ def lastClosedBoundedSemanticStage : String :=
 
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_selects_mandatory_bounded_exit :
+theorem current_target_records_completed_mandatory_bounded_exit :
     currentLiveTarget =
       "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0" := by
   rfl
 
-theorem operational_definition_stage_is_closed_and_blocked :
+theorem coherence_program_is_terminal_after_operational_definition_block :
     currentBoundedProgramId =
       "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "TERMINAL" ∧
     currentTargetPhase =
-      "STAGE_2_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT" ∧
+      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
     currentBoundedAttemptNumber = 2 ∧
     lastClosedBoundedSemanticStage =
       "COHERENCE_OPERATIONAL_DEFINITION_TEST" ∧
     lastBoundedTerminalResult = "BLOCKED" ∧
-    ToeNativeCoherenceOperationalDefinitionResult.stageThreeMayOpen =
+    ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.automaticSuccessorSelected =
       false := by
   decide
 

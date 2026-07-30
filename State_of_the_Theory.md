@@ -1,4 +1,4 @@
-## CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
+## CURRENT SCIENTIFIC CHECKPOINT (2026-07-30)
 
 Scientific authority selected bounded reconciliation/replay without automatically
 adopting preserved descendants. The frozen vacuum quadratic action has now passed
@@ -68,7 +68,7 @@ stored Minkowski-control relationship, but no independent entrywise
 generic-DAG specialization or generic tensor-identity proof is certified.
 
 The exact live target is
-`test_toe_native_coherence_claim_operational_definition_v0`.
+`close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`.
 The mandatory role gate records quadratic gravity as `REFERENCE_CONTROL_ONLY`
 with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal. Program N is
 authorized with five stages, zero repairs, and no subsidiary targets. Its first
@@ -82,15 +82,17 @@ The selector compared four native-frontier paths and selected
 earliest unresolved dependency shared by native field-content, action, seam,
 native-theory pillar adjudication, and discriminator work; ordinary
 known-physics pillar baselines remain parallel controls. The five-stage,
-zero-repair program is now installed. A separate scientific-authority decision
-opened attempt 1, `CONTROLLED_COHERENCE_CLAIM_INVENTORY`, under its exact
-manifest scope. That attempt is now `CLOSED/PASSED`: 13 source-bound claim
-records preserve six conflict classes. Exactly one candidate claim,
-`COH-CLAIM-001` (“CCFT is a candidate mesoscopic coherence bridge layer for the
-ToE program”), is eligible for a separately opened operational-definition
-test. The claim is not accepted as true, Stage 2 is not OPEN, and no real or
-complex field, action, seam, pillar, observable, empirical claim, or CCFT
-validation has been selected. Programs B and N remain closed.
+zero-repair program was installed and attempted twice. Stage 1
+`CONTROLLED_COHERENCE_CLAIM_INVENTORY` is `CLOSED/PASSED`: 13 source-bound claim
+records preserve six conflict classes. Stage 2
+`COHERENCE_OPERATIONAL_DEFINITION_TEST` is `CLOSED/BLOCKED`: the sole eligible
+claim, `COH-CLAIM-001`, lacks all nine required operational elements. The
+mandatory exit is complete with
+`EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; Stages 3–5 remain
+unattempted. No representation, calculation, native model, automatic
+successor, empirical claim, CCFT validation, or CCFT rejection has been
+selected. Any future coherence route requires a separately authorized program
+and new substantive input. Programs B and N remain closed.
 
 Focused validation covers the proposal and current authority surfaces.
 Exhaustive Python passage is not established: the last reported exhaustive
@@ -109,16 +111,16 @@ Variable-coefficient estimates, loss nonaccumulation, local well-posedness, sour
 preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
 unestablished or unauthorized.
 
-CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0
-ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0
+CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
+ACTIVE_LANE_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_ONE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_result_v0
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_AFTER_STAGE_2_BLOCK_NO_REPAIR_STAGES_3_TO_5_UNATTEMPTED_NO_REPRESENTATION_CALCULATION_NATIVE_MODEL_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_v0_terminal_closeout
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 

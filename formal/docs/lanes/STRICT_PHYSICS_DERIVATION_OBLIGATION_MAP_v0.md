@@ -12,16 +12,16 @@ Non-claim boundary:
 - This document does not claim physics completion, canonical master-action promotion, global seam closure, Standard Model recovery, interacting-QFT completion, or empirical validation.
 - This document is a strict physics work map, not a release-governance expansion surface.
 
-Current strict native-hypothesis obligation (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0`
-- `ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0`
+Current strict native-hypothesis obligation (2026-07-30):
+- `CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0`
+- `ACTIVE_LANE_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE`
-- Current obligation status: Stage 1 is `CLOSED/PASSED` with 13 source-bound claim records and six preserved conflict classes. `COH-CLAIM-001`, the candidate mesoscopic coherence-bridge-layer claim, is selected only for a separately opened operational-definition test. Stage 2 remains unopened; no representation, field, action, seam, pillar, observable, empirical claim, or CCFT validation follows. Ordinary known-physics pillar baselines remain parallel controls.
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`
+- Current obligation status: Stage 1 is `CLOSED/PASSED`; Stage 2 is `CLOSED/BLOCKED` because `COH-CLAIM-001` lacks all nine required operational elements. The mandatory exit is complete, Stages 3–5 were not attempted, and no representation, calculation, native model, repair, substitute representation, automatic successor, empirical claim, CCFT validation, or CCFT rejection follows. A future coherence route requires a separately authorized program and new substantive input. Ordinary known-physics pillar baselines remain parallel controls.
 - Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
 - Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
 - Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.

@@ -33,11 +33,14 @@ SCIENTIFIC_TARGET_VERBS = frozenset(
         "construct",
         "derive",
         "execute",
+        "inventory",
         "prepare",
         "prove",
         "return",
         "review",
         "select",
+        "test",
+        "compare",
     }
 )
 

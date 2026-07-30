@@ -18,16 +18,16 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
-Current native-hypothesis frontier (2026-07-29):
-- `CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0`
-- `ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0`
+Current native-hypothesis frontier (2026-07-30):
+- `CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0`
+- `ACTIVE_LANE_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE`
-- Stage boundary: Stage 1 is `CLOSED/PASSED`; its 13 source-bound records preserve six conflicts and select only `COH-CLAIM-001` for a future operational-definition test. Stage 2 remains unopened. No representation, field, action, seam, native-theory pillar adjudication, observable, CCFT promotion, or empirical claim follows.
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`
+- Stage boundary: Stage 1 is `CLOSED/PASSED`; Stage 2 is `CLOSED/BLOCKED` because `COH-CLAIM-001` lacks all nine required operational elements. The mandatory exit is complete, Stages 3–5 were not attempted, and no representation, calculation, native model, repair, automatic successor, CCFT validation/rejection, or empirical claim follows.
 - Validation boundary: exhaustive Python passage is not established; the last reported exhaustive result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending separate debt classification.
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
@@ -42,7 +42,7 @@ Current native-hypothesis frontier (2026-07-29):
 - Accepted bounded Stage 3: the exact generic companion is not closed because no unique off-constraint 128-state wave-slot map or closed nine-variable trace chart is supplied.
 - Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, quotient, or propagator stage follows.
 - Certification correction: Stage 1 is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; Stage 2 is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. The correction supplies no missing proof, consumes no bounded stage, and leaves Program B closed.
-- Current native step: await a separate Stage 2 OPEN decision for `test_toe_native_coherence_claim_operational_definition_v0`. Stage 1 selected a claim to test, not a true ontology or mathematical representation.
+- Current native step: none is automatically selected. Any future coherence route requires a separately authorized program and new substantive input; another field proposal cannot repair the closed v0 route.
 - Quadratic continuation: none is authorized. Program B remains `REFERENCE_CONTROL_ONLY + UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; variable-coefficient estimates and other unfinished quadratic questions remain closed control-model work unless a separately authorized future program reopens them.
 - Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
 

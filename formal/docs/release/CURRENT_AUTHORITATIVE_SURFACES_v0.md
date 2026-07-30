@@ -10,9 +10,9 @@ Purpose:
 - Provide a human-facing index for the current live authority chain.
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
-Current scientific checkpoint (2026-07-29):
+Current scientific checkpoint (2026-07-30):
 - Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
-- The exact scientific target is `test_toe_native_coherence_claim_operational_definition_v0`.
+- The exact scientific target is `close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`.
 - Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `CLOSED/PASSED` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`.
 - Attempt 2 is `CLOSED/PASSED` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN and CLOSE events bind the accepted component artifact and independent review.
 - Attempt 3 is `CLOSED/BLOCKED` on semantic stage `EXACT_FROZEN_COMPANION_OPERATOR`. Its immutable result proves that the Stage 2 leaves do not determine a unique generic off-constraint 128-state wave-slot map and that all ten trace charts retain dependent spin jets. The zero-repair rule prohibits Stages 4–5 and makes the role gate mandatory.
@@ -22,8 +22,9 @@ Current scientific checkpoint (2026-07-29):
 - Program N v0 is now terminal after its mandatory closeout: one stage was attempted, four were never opened, no portal action or sandbox was constructed, and no automatic v1 is authorized.
 - The selected native-coherence program is installed with five stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
 - Its separately authorized Stage 1 attempt is `CLOSED/PASSED` at `CONTROLLED_COHERENCE_CLAIM_INVENTORY`. The accepted source-bound inventory has 13 claim records and six preserved conflict classes.
-- Exactly one claim, `COH-CLAIM-001` (“CCFT is a candidate mesoscopic coherence bridge layer for the ToE program”), is eligible for a separately opened operational-definition test. It is not accepted as physically true, and Stage 2 remains unopened.
-- No representation, field, action, seam, pillar, observable, empirical claim, or CCFT validation follows from the inventory.
+- Stage 2 is `CLOSED/BLOCKED` at `COHERENCE_OPERATIONAL_DEFINITION_TEST`. The sole eligible claim, `COH-CLAIM-001`, lacks all nine required operational elements and is classified `COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL`.
+- The mandatory exit is complete. The program result is `EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; Stages 3–5 remain unattempted; no repair, substitute representation, calculation, native model, or automatic successor is authorized.
+- No CCFT validation or rejection follows. Any future coherence route requires a separately authorized program and new substantive input.
 - Exhaustive Python passage remains unestablished. The last reported exhaustive result is `14,739 passed, 147 failed, 10 errors, 598 skipped`; focused validation covers the current preparation and authority surfaces without converting that debt into a pass.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
@@ -43,22 +44,22 @@ Current scientific checkpoint (2026-07-29):
 - Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
 
 Current live control state:
-CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0
-ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0
+CURRENT_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
+ACTIVE_LANE_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_ONE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_result_v0
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationV0BoundedCloseout.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_AFTER_STAGE_2_BLOCK_NO_REPAIR_STAGES_3_TO_5_UNATTEMPTED_NO_REPRESENTATION_CALCULATION_NATIVE_MODEL_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_v0_terminal_closeout
 CURRENT_BOUNDED_PROGRAM_ID_v0: TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0
-CURRENT_BOUNDED_PROGRAM_STATE_v0: CLOSED
-CURRENT_TARGET_PHASE_v0: STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN
-CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 1
-LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY
-LAST_BOUNDED_TERMINAL_RESULT_v0: PASSED
+CURRENT_BOUNDED_PROGRAM_STATE_v0: TERMINAL
+CURRENT_TARGET_PHASE_v0: PROGRAM_CLOSED_AFTER_MANDATORY_EXIT
+CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 2
+LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: COHERENCE_OPERATIONAL_DEFINITION_TEST
+LAST_BOUNDED_TERMINAL_RESULT_v0: BLOCKED
 
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
