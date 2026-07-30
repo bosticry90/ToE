@@ -1,0 +1,37 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_RESULT_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "dependency_impact_review_is_bounded_and_nonexhaustive": true,
+    "exhaustive_python_passage_not_claimed": true,
+    "index_schema_matches_frozen_preinstallation_contract": true,
+    "maintenance_cli_cannot_target_scientific_archive_roots": true,
+    "no_authoritative_index_or_cache_persisted": true,
+    "no_claim_classification_extraction_or_promotion": true,
+    "no_stage_1_open_event_or_attempt": true,
+    "passive_content_and_path_safety_tests_pass": true,
+    "performance_profile_uses_generated_nonauthoritative_content": true,
+    "program_registry_state_remains_unopened": true,
+    "synthetic_batch_coverage_is_complete": true
+  },
+  "consumed_artifacts": [
+    "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_RESULT_20260730_v0",
+    "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_STAGE_1_DEPENDENCY_IMPACT_CHECK_20260730_v0",
+    "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_SCHEMA_V1",
+    "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1_SYNTHETIC_PERFORMANCE_PROFILE_20260730_v0"
+  ],
+  "decision": "INDEXING_AND_PERFORMANCE_MAINTENANCE_ACCEPTED",
+  "next_decision": "SEPARATE_SCIENTIFIC_AUTHORITY_DECISION_FOR_REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1",
+  "nonclaim_boundary": [
+    "The scanner was tested only on synthetic or explicitly nonauthoritative inputs.",
+    "No repository-wide or archive-wide scientific census has begun.",
+    "The dependency-impact decision does not establish exhaustive Python passage.",
+    "This review does not authorize Stage 1, an OPEN event, archive claim extraction, evidence promotion, or native-frontier selection."
+  ],
+  "preserved_program_state": "INSTALLED_UNOPENED",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "schema_id": "toe.repository_wide_native_hypothesis_census.indexing_and_performance_maintenance_result_review.v0",
+  "stage_1_scientific_authority_granted": false,
+  "status": "MAINTENANCE_CLOSED_PROGRAM_REMAINS_SCIENTIFICALLY_UNOPENED"
+}

@@ -1030,6 +1030,7 @@ import ToeFormal.Release.BoundedProgramGovernanceEnforcementCompletionResultRevi
 import ToeFormal.Release.BoundedProgramGovernanceEnforcementCompletionV0
 import ToeFormal.Release.CurrentAuthority
 import ToeFormal.Release.CurrentMaintenanceAuthorityV1
+import ToeFormal.Release.CurrentMaintenanceAuthorityV10
 import ToeFormal.Release.CurrentMaintenanceAuthorityV2
 import ToeFormal.Release.CurrentMaintenanceAuthorityV3
 import ToeFormal.Release.CurrentMaintenanceAuthorityV4
@@ -1072,6 +1073,7 @@ import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionV0
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
 import ToeFormal.Release.ToeNativeCoherenceOntologyProgramGovernanceInstallationV0
 import ToeFormal.Release.ToeNativeControlledCoherenceClaimInventoryStage1OpenAuthorityV0
+import ToeFormal.Release.ToeRepositoryWideNativeHypothesisCensusIndexingAndPerformanceMaintenanceResultReviewV0
 import ToeFormal.Release.ToeRepositoryWideNativeHypothesisCensusIndexingAndPerformanceMaintenanceResultV0
 import ToeFormal.Release.ToeRepositoryWideNativeHypothesisEvidenceCensusProgramGovernanceInstallationResultReviewV0
 import ToeFormal.Release.ToeRepositoryWideNativeHypothesisEvidenceCensusProgramGovernanceInstallationV0
@@ -1313,6 +1315,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1306
+def committedModuleCount : Nat := 1308
 
 end ToeFormalAll

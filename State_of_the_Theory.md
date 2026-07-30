@@ -122,6 +122,16 @@ archive roots and future custody bundles from accidental staging. No census
 index, hash cache, source classification, claim extraction, or evidence
 promotion has been generated.
 
+The indexing/performance maintenance tranche is now complete on generated
+nonauthoritative inputs. It provides a versioned passive scanner, committed
+Git-blob and local SHA-256 identity rules, cache invalidation, initial/final
+snapshot comparison, hostile-path and active-content controls, deterministic
+eight-batch aggregation, and a synthetic performance profile. The bounded
+dependency-impact result is
+`KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES`; this is not an
+exhaustive Python pass. The census remains `INSTALLED_UNOPENED`, with zero
+attempts and no scientific archive traversal or authoritative index.
+
 Focused validation covers the proposal and current authority surfaces.
 Exhaustive Python passage is not established: the last reported exhaustive
 result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending a

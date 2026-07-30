@@ -46,6 +46,13 @@ RESULT_PATH = (
     / "release"
     / "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_RESULT_20260730_v0.json"
 )
+REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_RESULT_REVIEW_20260730_v0.json"
+)
 DEPENDENCY_PATH = (
     REPO_ROOT
     / "formal"
@@ -400,3 +407,15 @@ def test_dependency_impact_does_not_claim_exhaustive_python_passage() -> None:
     ] is False
     assert dependency["scoped_validation"]["passed"] == 88
     assert dependency["scoped_validation"]["failed"] == 0
+
+
+def test_independent_review_keeps_program_unopened() -> None:
+    review = json.loads(REVIEW_PATH.read_text(encoding="utf-8"))
+    assert review["accepted"] is True
+    assert review["preserved_program_state"] == "INSTALLED_UNOPENED"
+    assert review["stage_1_scientific_authority_granted"] is False
+    assert review["next_decision"] == (
+        "SEPARATE_SCIENTIFIC_AUTHORITY_DECISION_FOR_"
+        "REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1"
+    )
+    assert all(review["checks"].values())
