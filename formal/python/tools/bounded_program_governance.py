@@ -57,6 +57,10 @@ PROGRAM_MANIFEST_PATHS = {
         "formal/docs/release/bounded_program_manifests/"
         "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_MANIFEST_v1.json"
     ),
+    "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0": (
+        "formal/docs/release/bounded_program_manifests/"
+        "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_MANIFEST_v1.json"
+    ),
 }
 LEGACY_ATTESTATION_PATH = (
     "formal/docs/release/bounded_program_attestations/"
@@ -91,6 +95,7 @@ NATIVE_RELEVANCE_KINDS = (
     "CONTROL_MODEL_CRITERION",
     "GOVERNANCE_INFRASTRUCTURE",
     "MAINTENANCE_ONLY",
+    "ONE_PREREQUISITE_FROM_NATIVE_CALCULATION",
 )
 TERMINAL_RESULTS = ("PASSED", "BLOCKED", "FAILED")
 PROGRAM_STATES = ("UNOPENED", "OPEN", "CLOSED")
@@ -277,6 +282,13 @@ COHERENCE_ONTOLOGY_PROGRAM_ID = (
 )
 COHERENCE_ONTOLOGY_PREPARATION_TARGET = (
     "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
+)
+CENSUS_PROGRAM_ID = (
+    "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0"
+)
+CENSUS_PREPARATION_TARGET = (
+    "prepare_toe_repository_wide_native_hypothesis_evidence_census_"
+    "bounded_program_v0"
 )
 NATIVE_MANDATORY_EXIT = "close_toe_native_surrogate_v0_after_bounded_result_v0"
 NATIVE_STAGE_DEFINITIONS = (
@@ -885,6 +897,35 @@ def install_coherence_ontology_program(registry: dict[str, Any]) -> dict[str, An
     migrated[PROGRAMS_KEY][COHERENCE_ONTOLOGY_PROGRAM_ID] = (
         _prospective_program_record(relative_path, manifest)
     )
+    migrated[ENFORCEMENT_EXTENSION_KEY] = enforcement_contract()
+    return migrated
+
+
+def install_repository_wide_census_program(
+    registry: dict[str, Any],
+) -> dict[str, Any]:
+    projection = registry.get("current_projection_v0")
+    if not isinstance(projection, dict):
+        raise BoundedProgramError("canonical current projection is missing")
+    if projection.get("current_target") != CENSUS_PREPARATION_TARGET:
+        raise BoundedProgramError(
+            "repository-wide census program preparation target is not authoritative"
+        )
+    programs = registry.get(PROGRAMS_KEY)
+    if not isinstance(programs, dict):
+        raise BoundedProgramError("bounded-program registry extension is missing")
+    if CENSUS_PROGRAM_ID in programs:
+        raise BoundedProgramError(
+            "repository-wide census program is already installed"
+        )
+    if ENFORCEMENT_EXTENSION_KEY not in registry:
+        raise BoundedProgramError("bounded-program enforcement is not installed")
+    relative_path, manifest = _load_authoritative_manifest(CENSUS_PROGRAM_ID)
+    migrated = json.loads(json.dumps(registry))
+    migrated[PROGRAMS_KEY][CENSUS_PROGRAM_ID] = _prospective_program_record(
+        relative_path, manifest
+    )
+    migrated[REGISTRY_EXTENSION_KEY] = governance_contract()
     migrated[ENFORCEMENT_EXTENSION_KEY] = enforcement_contract()
     return migrated
 
@@ -2060,6 +2101,13 @@ def _command_install_coherence_ontology(registry_path: Path) -> None:
     atomic_write_registry(registry_path, _registry_json_bytes(migrated))
 
 
+def _command_install_repository_wide_census(registry_path: Path) -> None:
+    _, registry = _load_registry_bytes(registry_path)
+    migrated = install_repository_wide_census_program(registry)
+    validate_registry_extension(migrated)
+    atomic_write_registry(registry_path, _registry_json_bytes(migrated))
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -2070,6 +2118,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             "authorize-native",
             "install-enforcement",
             "install-coherence-ontology",
+            "install-repository-wide-census",
             "validate",
         ),
     )
@@ -2086,6 +2135,8 @@ def main(argv: Iterable[str] | None = None) -> int:
         _command_install_enforcement(args.registry)
     elif args.command == "install-coherence-ontology":
         _command_install_coherence_ontology(args.registry)
+    elif args.command == "install-repository-wide-census":
+        _command_install_repository_wide_census(args.registry)
     else:
         _command_validate(args.registry, args.verify_git_history)
     return 0
