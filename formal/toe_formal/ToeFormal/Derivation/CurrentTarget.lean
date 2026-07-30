@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryAttemptOpen
+import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryResult
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,41 +13,42 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  "inventory_toe_native_controlled_coherence_claims_v0"
+  ToeNativeControlledCoherenceClaimInventoryResult.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeControlledCoherenceClaimInventoryAttemptOpen.evidenceId
+  ToeNativeControlledCoherenceClaimInventoryResult.reviewId
 
 def currentBoundedProgramId : String :=
   "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0"
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentTargetPhase : String :=
-  "STAGE_1_OPEN_AWAITING_CONTROLLED_CLAIM_INVENTORY"
+  "STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN"
 
 def currentBoundedAttemptNumber : Nat := 1
 
 def lastClosedBoundedSemanticStage : String :=
-  "NONE_IN_CURRENT_PROGRAM"
+  "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
 
-def lastBoundedTerminalResult : String := "NONE_IN_CURRENT_PROGRAM"
+def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_opens_controlled_coherence_claim_inventory :
+theorem current_target_selects_unopened_operational_definition_stage :
     currentLiveTarget =
-      "inventory_toe_native_controlled_coherence_claims_v0" := by
+      "test_toe_native_coherence_claim_operational_definition_v0" := by
   rfl
 
-theorem controlled_coherence_claim_inventory_is_open_without_stage_output :
+theorem controlled_coherence_claim_inventory_is_closed_passed :
     currentBoundedProgramId =
       "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_1_OPEN_AWAITING_CONTROLLED_CLAIM_INVENTORY" ∧
+      "STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN" ∧
     currentBoundedAttemptNumber = 1 ∧
-    lastClosedBoundedSemanticStage = "NONE_IN_CURRENT_PROGRAM" ∧
-    lastBoundedTerminalResult = "NONE_IN_CURRENT_PROGRAM" ∧
-    ToeNativeControlledCoherenceClaimInventoryAttemptOpen.scientificOutputPresent =
+    lastClosedBoundedSemanticStage =
+      "CONTROLLED_COHERENCE_CLAIM_INVENTORY" ∧
+    lastBoundedTerminalResult = "PASSED" ∧
+    ToeNativeControlledCoherenceClaimInventoryResult.stageTwoOpened =
       false := by
   decide
 

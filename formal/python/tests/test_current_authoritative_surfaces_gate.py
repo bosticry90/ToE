@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import hashlib
+import json
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
@@ -17,6 +19,27 @@ INDEX_PATH = (
     / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+COHERENCE_INVENTORY_RESULT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json"
+)
+COHERENCE_INVENTORY_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json"
+)
+COHERENCE_INVENTORY_OPEN_AUTHORITY_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_AUTHORITY_20260729_v0.json"
+)
 FRONTIER_PATH = (
     REPO_ROOT
     / "formal"
@@ -305,22 +328,97 @@ def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def test_controlled_coherence_claim_inventory_is_source_bound_and_nonpromotional() -> None:
+    result = json.loads(_read(COHERENCE_INVENTORY_RESULT_PATH))
+    review = json.loads(_read(COHERENCE_INVENTORY_REVIEW_PATH))
+    authority = json.loads(_read(COHERENCE_INVENTORY_OPEN_AUTHORITY_PATH))
+
+    authorized = {row["artifact_id"]: row for row in authority["authorized_inputs"]}
+    inventoried = {
+        row["artifact_id"]: row for row in result["source_bound_claim_inventory"]
+    }
+    assert inventoried.keys() == authorized.keys()
+    for artifact_id, expected in authorized.items():
+        row = inventoried[artifact_id]
+        assert row["path"] == expected["path"]
+        assert row["sha256"] == expected["sha256"]
+        assert _sha256(REPO_ROOT / row["path"]) == row["sha256"]
+
+    required = {
+        "claim_id",
+        "exact_source_artifact",
+        "source_location",
+        "source_date",
+        "source_authority_status",
+        "original_wording_or_tightly_bounded_excerpt",
+        "controlled_paraphrase",
+        "original_project_terms",
+        "claim_class",
+        "claimed_coherence_bearer",
+        "scale_and_domain",
+        "local_or_relational_status",
+        "fundamental_emergent_or_effective_status",
+        "mathematical_structure_if_any",
+        "units_or_dimensional_status",
+        "observable_or_operational_content",
+        "dependencies",
+        "conflicts",
+        "supersession_status",
+        "eligibility_for_stage_2",
+    }
+    claims = result["claim_inventory"]
+    assert len(claims) == 13
+    assert len({claim["claim_id"] for claim in claims}) == len(claims)
+    assert all(required <= claim.keys() for claim in claims)
+
+    selected = result["exactly_one_claim_selected_for_stage_2_or_failed_closed"]
+    eligible = [
+        claim
+        for claim in claims
+        if claim["eligibility_for_stage_2"] == "ELIGIBLE_FOR_OPERATIONAL_TEST"
+    ]
+    assert [claim["claim_id"] for claim in eligible] == ["COH-CLAIM-001"]
+    assert selected["claim_id"] == "COH-CLAIM-001"
+    assert selected["claim_selected_as_true"] is False
+    assert selected["field_or_representation_selected"] is False
+    assert selected["stage_2_opened"] is False
+    assert result["terminal_outcome"] == (
+        "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE"
+    )
+    assert result["legacy_UEFM_context_admissibility_record"]["admissible_direct_claim_count"] == 0
+    assert result["symbolic_similarity_meaning_transport_firewall"][
+        "transported_equivalences_accepted_in_stage_1"
+    ] == []
+
+    assert review["accepted"] is True
+    assert not review["failed_checks"]
+    assert all(review["checks"].values())
+    assert review["reviewed_result"]["sha256"] == _sha256(
+        COHERENCE_INVENTORY_RESULT_PATH
+    )
+    assert review["stage_2_open_authorized_by_this_review"] is False
+
+
 def test_current_authoritative_surfaces_index_records_live_authority_chain() -> None:
     text = _read(INDEX_PATH)
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-            "CURRENT_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0",
-            "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
-            "ACTIVE_LANE_v0: inventory_toe_native_controlled_coherence_claims_v0",
-            "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean",
-            "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json",
-            "CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN",
-            "CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM",
-            "CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_stage_1_open_v0",
+            "CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0",
+            "PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0",
+            "ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0",
+            "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean",
+            "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json",
+            "CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE",
+            "CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_ONE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM",
+            "CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_result_v0",
             "CURRENT_BOUNDED_PROGRAM_ID_v0: TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
-            "CURRENT_BOUNDED_PROGRAM_STATE_v0: OPEN",
-            "CURRENT_TARGET_PHASE_v0: STAGE_1_OPEN_AWAITING_CONTROLLED_CLAIM_INVENTORY",
+            "CURRENT_BOUNDED_PROGRAM_STATE_v0: CLOSED",
+            "CURRENT_TARGET_PHASE_v0: STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN",
         "Higher-Dimensional Curved-Background Scalar Guardrail",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_CRITICIZABILITY_ONLY_PACKET_AND_AUTHORIZES_READINESS_ADJUDICATION_EXECUTION_ONLY",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTED_WITH_NO_RELEASE_ASSEMBLY_OR_PROMOTION",
@@ -409,13 +507,13 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_SOURCE_MAP_CLOSED_NONBLOCKING_STATUS_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARATION_ONLY",
         "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION",
         "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY",
-                "CURRENT_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0",
-                "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
-                "ACTIVE_LANE_v0: inventory_toe_native_controlled_coherence_claims_v0",
+                "CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0",
+                "PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0",
+                "ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-                "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean",
-                "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json",
+                "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean",
+                "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",

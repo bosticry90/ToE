@@ -1,0 +1,70 @@
+{
+  "artifact_id": "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_VALIDATION_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "close_event": {
+    "event_hash": "d2194a5765ec714e23d7764637747769af0971fc0b9dfc4160de0c7f4522e76b",
+    "event_type": "ATTEMPT_CLOSE",
+    "open_event_hash": "61c0032f2755ddec053607d8d1744473818da59c6bee346156aebdf947cdcd89",
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_CLOSE_v0.json",
+    "terminal_result": "PASSED"
+  },
+  "dependency_impact": {
+    "bounded_program_event_validation": "COVERED_BY_FOCUSED_ACCEPTANCE_SUITE",
+    "claim_provenance": "ALL_13_AUTHORIZED_SOURCE_HASHES_RECOMPUTED",
+    "independent_review_execution": "REVIEW_HASH_AND_RECOMPUTED_COUNTS_VERIFIED",
+    "known_exhaustive_python_record": "14739 passed, 147 failed, 10 errors, 598 skipped",
+    "known_exhaustive_python_rerun": false,
+    "known_failures_reach_stage_1_acceptance_dependencies": false,
+    "source_discovery": "EXACT_AUTHORIZED_INPUT_SET_USED",
+    "source_parsing": "ALL_AUTHORIZED_JSON_AND_MARKDOWN_SOURCES_READABLE"
+  },
+  "inventory_checks": {
+    "authorized_source_count": 13,
+    "claim_count": 13,
+    "conflict_class_count": 6,
+    "downstream_representation_selected": false,
+    "legacy_UEFM_direct_admissibility_count": 0,
+    "meaning_transport_firewall_present": true,
+    "result_artifact_hash": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b",
+    "review_artifact_hash": "a2e9603c35c4a32e4f2f83bdbd3e2c41959ec2489f4800744e82c9c7b8afe2ef",
+    "stage_2_eligible_claim_count": 1,
+    "stage_2_eligible_claim_id": "COH-CLAIM-001"
+  },
+  "nonclaim_boundary": [
+    "The inventory does not validate CCFT or establish coherence as fundamental.",
+    "The inventory does not select a scalar, field, representation, action, seam, pillar, observable, or empirical claim.",
+    "COH-CLAIM-001 is selected only for a separately authorized operational-definition test.",
+    "Stage 2 is selected as the next target but remains unopened.",
+    "The untracked reddit/ directory remains outside the checkpoint."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_state_after_close": {
+    "attempted_stage_ids": [
+      "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
+    ],
+    "current_stage_number": 1,
+    "event_chain_tip_hash": "d2194a5765ec714e23d7764637747769af0971fc0b9dfc4160de0c7f4522e76b",
+    "last_closed_attempt_number": 1,
+    "repair_attempt_count": 0,
+    "stage_2_open": false,
+    "state": "CLOSED"
+  },
+  "repository_checks": {
+    "aggregate_generation": "PASS_1297_MODULES",
+    "close_commit_exact_path_count": 17,
+    "diff_check": "PASS_PRECOMMIT",
+    "focused_python_and_governance": "89 PASSED",
+    "full_lean_aggregate": "PASS",
+    "git_history_chronology": "POST_COMMIT_GATE_REQUIRED",
+    "scoped_lean_authority_build": "PASS_8093_JOBS",
+    "tracked_checkout_after_commit": "POST_COMMIT_GATE_REQUIRED"
+  },
+  "result": {
+    "inventory_status": "CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS",
+    "terminal_outcome": "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE"
+  },
+  "schema_id": "toe.native_coherence.controlled_claim_inventory.validation.v0",
+  "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+  "status": "STAGE_1_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "target": "inventory_toe_native_controlled_coherence_claims_v0"
+}

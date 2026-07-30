@@ -36,23 +36,24 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
 - Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` remains the selected native hypothesis because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
 - Installed bounded program: `TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0` has five semantic stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
-- Exact live target: `inventory_toe_native_controlled_coherence_claims_v0`.
-- Stage state: the separate scientific decision was accepted and the immutable Stage 1 `ATTEMPT_OPEN` event is recorded. Attempt 1 is open; no Stage 1 claim-inventory result or review exists yet.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean`.
-- Report: `formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json`.
-- Boundary: only the controlled claim-inventory producer may now run inside the installed Stage 1 envelope. No coherence claim has passed inventory, and no representation, field, action, seam, pillar, observable, or empirical claim has been selected.
+- Exact live target: `test_toe_native_coherence_claim_operational_definition_v0`.
+- Stage state: Attempt 1 is `CLOSED/PASSED` with `CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE`. The inventory contains 13 source-bound claim records and preserves six conflict classes.
+- Selected claim: `COH-CLAIM-001`, “CCFT is a candidate mesoscopic coherence bridge layer for the ToE program,” is eligible for a separately opened operational test. It is not accepted as physically true.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean`.
+- Report: `formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: Stage 2 is selected but not OPEN. No representation, field, action, seam, pillar, observable, empirical claim, or CCFT validation follows from the inventory.
 - Validation debt: exhaustive Python passage is not established; the last reported exhaustive run remains `14,739 passed, 147 failed, 10 errors, 598 skipped` and requires separate classification. This does not override the focused authority and preparation checks.
 
-CURRENT_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
-ACTIVE_LANE_v0: inventory_toe_native_controlled_coherence_claims_v0
+CURRENT_LIVE_NEXT_TARGET_v0: test_toe_native_coherence_claim_operational_definition_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: inventory_toe_native_controlled_coherence_claims_v0
+ACTIVE_LANE_v0: test_toe_native_coherence_claim_operational_definition_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
-CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_stage_1_open_v0
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_ONE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_KIND_v0: toe_native_controlled_coherence_claim_inventory_result_v0
 
 CURRENT-MAINTENANCE NOTE
 Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.

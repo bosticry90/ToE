@@ -507,33 +507,33 @@ theorem master_action_physics_frontier_next_target_is_stable_v0 :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous bounded-program preparation target consumed by the Stage 1 OPEN. -/
+/-- Previous Stage 1 target consumed by the accepted inventory result. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
-
-/-- Execute only the opened controlled coherence-claim inventory stage. -/
-def currentLiveNextStrictTargetV0 : String :=
   "inventory_toe_native_controlled_coherence_claims_v0"
 
-/-- Evidence certificate for the atomic Stage 1 OPEN without scientific output. -/
+/-- The operational-definition target is selected but remains unopened. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "test_toe_native_coherence_claim_operational_definition_v0"
+
+/-- Accepted Stage 1 result and review certificate. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean"
 
-/-- Immutable OPEN event for the first bounded coherence-ontology stage. -/
+/-- Independent result review for the closed first stage. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json"
+  "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json"
 
-/-- Accepted evidence-bound Stage 1 OPEN outcome. -/
+/-- Accepted source-bound Stage 1 inventory outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN"
+  "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM"
+  "CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_ONE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
-  "toe_native_controlled_coherence_claim_inventory_stage_1_open_v0"
+  "toe_native_controlled_coherence_claim_inventory_result_v0"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -545,7 +545,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice := "inventory_toe_native_controlled_coherence_claims_v0"
+  next_strict_slice := "test_toe_native_coherence_claim_operational_definition_v0"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
@@ -670,18 +670,18 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
       previousLiveNextStrictTargetV0 := by
   rfl
 
-/-- The current authority permits only the opened Stage 1 claim inventory. -/
+/-- The current authority records Stage 1 closed and Stage 2 still unopened. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json" ∧
+        "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN" ∧
+        "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "STAGE_1_OPEN_NO_CLAIM_INVENTORY_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM" ∧
+        "CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_ONE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM" ∧
       currentLiveNextStrictTargetKindV0 =
-        "toe_native_controlled_coherence_claim_inventory_stage_1_open_v0" := by
+        "toe_native_controlled_coherence_claim_inventory_result_v0" := by
   constructor
   · rfl
   constructor
