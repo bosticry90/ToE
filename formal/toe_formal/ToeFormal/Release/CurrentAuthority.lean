@@ -49,13 +49,13 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem controlled_coherence_claim_inventory_stage_is_closed_passed :
+theorem coherence_operational_definition_stage_is_open :
     boundedProgramId =
       "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    boundedProgramState = "CLOSED" ∧
+    boundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN" ∧
-    boundedAttemptNumber = 1 := by
+      "STAGE_2_OPEN_AWAITING_OPERATIONAL_DEFINITION_RESULT" ∧
+    boundedAttemptNumber = 2 := by
   native_decide
 
 end CurrentAuthority

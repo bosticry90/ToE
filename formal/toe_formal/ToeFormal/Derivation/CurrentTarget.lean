@@ -1,3 +1,4 @@
+import ToeFormal.Derivation.ToeNativeCoherenceOperationalDefinitionAttemptOpen
 import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryResult
 
 /-
@@ -13,7 +14,7 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeControlledCoherenceClaimInventoryResult.selectedNextTarget
+  ToeNativeCoherenceOperationalDefinitionAttemptOpen.target
 
 def currentEvidencePacketId : String :=
   ToeNativeControlledCoherenceClaimInventoryResult.reviewId
@@ -21,34 +22,39 @@ def currentEvidencePacketId : String :=
 def currentBoundedProgramId : String :=
   "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0"
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN"
+  "STAGE_2_OPEN_AWAITING_OPERATIONAL_DEFINITION_RESULT"
 
-def currentBoundedAttemptNumber : Nat := 1
+def currentBoundedAttemptNumber : Nat := 2
+
+def currentBoundedSemanticStage : String :=
+  "COHERENCE_OPERATIONAL_DEFINITION_TEST"
 
 def lastClosedBoundedSemanticStage : String :=
   "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_unopened_operational_definition_stage :
+theorem current_target_opens_operational_definition_stage :
     currentLiveTarget =
       "test_toe_native_coherence_claim_operational_definition_v0" := by
   rfl
 
-theorem controlled_coherence_claim_inventory_is_closed_passed :
+theorem operational_definition_stage_is_open_after_inventory_close :
     currentBoundedProgramId =
       "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "STAGE_1_CLOSED_PASSED_AWAITING_STAGE_2_OPEN" ∧
-    currentBoundedAttemptNumber = 1 ∧
+      "STAGE_2_OPEN_AWAITING_OPERATIONAL_DEFINITION_RESULT" ∧
+    currentBoundedAttemptNumber = 2 ∧
+    currentBoundedSemanticStage =
+      "COHERENCE_OPERATIONAL_DEFINITION_TEST" ∧
     lastClosedBoundedSemanticStage =
       "CONTROLLED_COHERENCE_CLAIM_INVENTORY" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeNativeControlledCoherenceClaimInventoryResult.stageTwoOpened =
+    ToeNativeCoherenceOperationalDefinitionAttemptOpen.scientificOutputPresent =
       false := by
   decide
 
