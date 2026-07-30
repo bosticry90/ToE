@@ -1,0 +1,88 @@
+{
+  "aggregate_discovered_bytes": 2132217250,
+  "aggregate_hash": "a6cd29c2aa2bfff9d057819f55a4bcd2fe37a3e71d06a85a95b79f2e45cb7283",
+  "all_source_roots_stable": true,
+  "batch_count": 8,
+  "batch_manifests": [
+    {
+      "aggregate_bytes": 1203812055,
+      "batch_file_sha256": "66dd1ef36ae8a168939f2e691a5d38ce5047d0f7e81aac65b946261b1d90a725",
+      "batch_hash": "48d8067d611b650b45c5922c482dfb0001aa2ddf204a7c3332f3cd623b3d5674",
+      "batch_id": "batch_01",
+      "record_count": 1511,
+      "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER"
+    },
+    {
+      "aggregate_bytes": 163422228,
+      "batch_file_sha256": "434c5f0ca983c29cd0e88e18cf51132bd922be35ac81040c9a22e3991f7f4ca6",
+      "batch_hash": "0830e2954fb9cbcdd74b8c52e75753f5411962052831c63069b5787d9d4b09bf",
+      "batch_id": "batch_02",
+      "record_count": 4120,
+      "source_root_id": "FORMAL_OUTPUTS_AND_RELEASE_RECORDS"
+    },
+    {
+      "aggregate_bytes": 69825580,
+      "batch_file_sha256": "930c427576a10a20e5f0e4a4483815d771230e35768b06d0f0680f5bdd3003a0",
+      "batch_hash": "570dd2061bd53cd7ab92110ff3aa45f60963b0c9f921eda353b8c465208bbf1b",
+      "batch_id": "batch_03",
+      "record_count": 6430,
+      "source_root_id": "PYTHON_AND_LEAN_SCIENTIFIC_SOURCES"
+    },
+    {
+      "aggregate_bytes": 512313,
+      "batch_file_sha256": "67dfbba37dddd3d2bd6808bbe7d698aebdf474e2cc590a5c154f111e887ee548",
+      "batch_hash": "a7a3deda2ae6cc8c89bace0a0c0581355f63872d34551074928ff4bc91defd54",
+      "batch_id": "batch_04",
+      "record_count": 77,
+      "source_root_id": "QUARANTINE_DOSSIERS"
+    },
+    {
+      "aggregate_bytes": 104066080,
+      "batch_file_sha256": "accbbc3e9b71d235c85cf8d7ceb89be5aadafbce73661793ed9ef2f7c0c21025",
+      "batch_hash": "43721b7ce3efa244e7990add66347305356ddf68f5442199dcb58261b5df3a9e",
+      "batch_id": "batch_05",
+      "record_count": 198,
+      "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES"
+    },
+    {
+      "aggregate_bytes": 46705069,
+      "batch_file_sha256": "2f38f565f1b26996228dfa7eb1047ca2b7d0f7dbb1bc4e88d45842e9f61816f2",
+      "batch_hash": "ba85c52b3b02e352d940bcb58f5909a8ca95f2bcbb3bceb683f8e1cdb2b1f1e2",
+      "batch_id": "batch_06",
+      "record_count": 946,
+      "source_root_id": "LOCAL_ARCHIVE_TOE_PROJECT"
+    },
+    {
+      "aggregate_bytes": 506528257,
+      "batch_file_sha256": "e3b4ddc757ffe31206da106bb3c4a6edd02d896a0a861f3d236d075d29a1dafb",
+      "batch_hash": "b8b0ab244bdd31c68b6acb28afe446e4ba92bdc1e63885ee04ab235ff238a400",
+      "batch_id": "batch_07",
+      "record_count": 77,
+      "source_root_id": "LOCAL_ARCHIVE_TOE_PROJECT_STARTER_2025_09_24"
+    },
+    {
+      "aggregate_bytes": 37345668,
+      "batch_file_sha256": "4014fcfb9c566210a269f5c93600ffd092243f956d90e006399f688c0b35ce66",
+      "batch_hash": "fc21b39366a48075ceda69e55b902bcdb51b4ece7c7848d7b27f7fdfab7790f3",
+      "batch_id": "batch_08",
+      "record_count": 204,
+      "source_root_id": "EXTERNAL_EVIDENCE_AND_CUSTODY_REFERENCES"
+    }
+  ],
+  "claim_extraction_performed": false,
+  "coverage_inventory_hash": "f9d481a3ecc2c4a663ba9958059662bc79bc35552409ec44aa1895a724dd098d",
+  "coverage_without_overlap_or_omission": true,
+  "evidence_promotion_performed": false,
+  "exact_duplicate_group_count": 421,
+  "index_schema_and_tool_versions_sha256": "5b0873a90727d730741660321bac965178c50dd1f9a7df2c925a7e2d413f90f6",
+  "local_custody_source_root_count": 2,
+  "native_frontier_selection_performed": false,
+  "open_commit": "a064514aa1afbc894de9129affe3bf8c55cecf09",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "record_count": 13563,
+  "reddit_excluded": true,
+  "schema_id": "toe.native_hypothesis_census.stage_1_aggregate.v1",
+  "scientific_lineage_conclusions_performed": false,
+  "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+  "source_root_snapshot_records_sha256": "66e799e183036d68765a1015ae88a48aa88665548a398e941c3d212583f897c2"
+}

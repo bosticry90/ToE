@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen
+import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusResult
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,44 +13,46 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.target
+  ToeRepositoryWideNativeHypothesisSourceCensusResult.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.evidenceId
+  ToeRepositoryWideNativeHypothesisSourceCensusResult.reviewId
 
 def currentBoundedProgramId : String :=
-  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.programId
+  ToeRepositoryWideNativeHypothesisSourceCensusResult.programId
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentTargetPhase : String :=
-  "REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN"
+  "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.attemptSequenceNumber
+  ToeRepositoryWideNativeHypothesisSourceCensusResult.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
-  "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+  "REPOSITORY_WIDE_SOURCE_CENSUS"
 
-def lastBoundedTerminalResult : String := "BLOCKED"
+def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_opens_repository_wide_source_census :
+theorem current_target_selects_unopened_source_lineage_stage :
     currentLiveTarget =
-      "inventory_toe_repository_wide_native_hypothesis_sources_v0" := by
+      "reconstruct_toe_native_hypothesis_source_lineages_v0" := by
   rfl
 
-theorem repository_wide_source_census_is_open_without_scientific_output :
+theorem repository_wide_source_census_is_closed_passed :
     currentBoundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN" ∧
+      "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY" ∧
     currentBoundedAttemptNumber = 1 ∧
-    ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.scientificOutputPresent =
+    lastClosedBoundedSemanticStage = "REPOSITORY_WIDE_SOURCE_CENSUS" ∧
+    lastBoundedTerminalResult = "PASSED" ∧
+    ToeRepositoryWideNativeHypothesisSourceCensusResult.claimExtractionPerformed =
       false ∧
-    ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.archiveScientificallyTraversed =
+    ToeRepositoryWideNativeHypothesisSourceCensusResult.lineageConclusionProduced =
       false ∧
-    ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.authoritativeCensusIndexGenerated =
+    ToeRepositoryWideNativeHypothesisSourceCensusResult.stageTwoOpened =
       false := by
   decide
 

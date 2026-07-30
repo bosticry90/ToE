@@ -1,0 +1,32 @@
+{
+  "active_content_execution": "DENY",
+  "content_extraction_policy": "NO_CONTENT_EXTRACTION_METADATA_AND_HASHING_ONLY",
+  "exact_excluded_directory_names": [
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    "site-packages",
+    "venv"
+  ],
+  "excluded_subtree_policy": "NO_CONTENT_READ; METADATA_INVENTORY_COUNT_BYTES_AND_TUPLE_HASH_ONLY",
+  "index_id": "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1",
+  "index_schema_path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_SCHEMA_V1.json",
+  "index_schema_sha256": "d0aa73c9e2287356115bed179b53503072dd2dd4507dde248097b70f93b21664",
+  "index_schema_version": 1,
+  "network_policy": "DENY",
+  "parser_contract_version": "v1",
+  "pdf_and_office_policy": "CONTENT_NOT_EXTRACTED_METADATA_ONLY",
+  "recursive_archive_expansion": "DENY",
+  "scanner_path": "formal/python/tools/native_hypothesis_census_index_v1.py",
+  "scanner_sha256": "84503bafb33fd7450e2c42302d21be3303481f5eaab62c47c0b17f8d5530b133",
+  "schema_id": "toe.native_hypothesis_census.stage_1_versions.v1",
+  "stage_1_producer": "LOCAL_AUTHORITY_GATED_COMPOSITION_OF_REVIEWED_SCANNER_PRIMITIVES",
+  "stage_1_producer_committed": false
+}

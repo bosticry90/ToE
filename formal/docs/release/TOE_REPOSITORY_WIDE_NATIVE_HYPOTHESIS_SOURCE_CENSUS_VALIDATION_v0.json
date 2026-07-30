@@ -1,0 +1,85 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_VALIDATION_v0",
+  "atomic_close_commit_expected_path_count": 20,
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_CLOSE_v0.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/aggregate_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_01_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_02_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_03_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_04_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_05_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_06_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_07_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_08_manifest.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/index_schema_and_tool_versions.json",
+    "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/source_root_snapshot_records.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisSourceCensusResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-07-30T23:25:13Z",
+  "close_event": {
+    "event_hash": "4e7f92e9fba0a57bb007ff73dda9f9d8ec28371226476e403500d04bc688ad01",
+    "open_event_hash": "a48b6eb80d143cd6ca4e6133a6abdb03a8cc9a60b0e81abb40f773dad7bf746c",
+    "path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_CLOSE_v0.json",
+    "terminal_result": "PASSED"
+  },
+  "exhaustive_python": {
+    "historical_debt_remains_disclosed": true,
+    "passage_claimed": false,
+    "suite_rerun": false
+  },
+  "focused_python": {
+    "deselected_historical_state_assertions": 2,
+    "failed": 0,
+    "passed": 33,
+    "scope": "bounded governance primitives, census index infrastructure, and Stage 1 authority excluding obsolete UNOPENED assertions"
+  },
+  "formal_validation": {
+    "aggregate_generation_check": "PASSED",
+    "focused_authority_modules": "PASSED",
+    "full_lean_aggregate": "PASSED",
+    "full_lean_module_count": 1312
+  },
+  "independent_custody_review": {
+    "accepted": true,
+    "aggregate_and_batch_hashes_recomputed": true,
+    "duplicate_groups_recomputed": 421,
+    "excluded_subtree_metadata_rechecks": 44,
+    "fresh_git_blob_count": 12288,
+    "fresh_git_record_count": 12487,
+    "fresh_local_bytes_rehashed": 277253818,
+    "fresh_local_file_count": 1032,
+    "record_count": 13563,
+    "root_stability_recomputed": true
+  },
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "program_state_after_close": "CLOSED",
+  "schema_id": "toe.repository_wide_native_hypothesis_source_census.validation.v0",
+  "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+  "stage_2_state": "SELECTED_NOT_AUTHORIZED_NOT_OPENED",
+  "status": "STAGE_1_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "validation_checks": {
+    "all_source_roots_stable": true,
+    "authority_and_manifest_scope_preserved": true,
+    "batch_coverage_has_no_overlap_or_omission": true,
+    "close_event_links_the_stage_1_open_event": true,
+    "close_result_and_review_hashes_match_event": true,
+    "content_and_claim_extraction_absent": true,
+    "evidence_promotion_absent": true,
+    "exact_duplicate_groups_are_custody_only": true,
+    "full_lean_aggregate_passed": true,
+    "local_custody_limitations_disclosed": true,
+    "next_stage_not_opened": true,
+    "pdf_and_office_content_not_extracted": true,
+    "reddit_excluded_and_untouched": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "tracked_and_local_hashes_freshly_verified": true
+  }
+}
