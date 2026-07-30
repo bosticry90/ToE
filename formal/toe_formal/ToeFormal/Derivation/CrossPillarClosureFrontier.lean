@@ -202,6 +202,7 @@ import ToeFormal.Derivation.QFTGRQuadraticComponentExpandedGenericBackgroundLine
 import ToeFormal.Derivation.QFTGRQuadraticGenericBackgroundLinearizationGaugeAndJetContractResultReviewV0
 import ToeFormal.Derivation.QFTGRQuadraticToeRoleAfterGenericFrozenResultV0
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
+import ToeFormal.Derivation.ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0ResultReview
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedCloseout
@@ -514,21 +515,21 @@ def previousLiveNextStrictTargetV0 : String :=
 def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
 
-/-- Evidence certificate accepting the selector result without program installation. -/
+/-- Evidence certificate accepting the prepared proposal without installation. -/
 def currentLiveNextStrictTargetEvidenceV0 : String :=
-  "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean"
+  "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean"
 
-/-- Review accepting coherence ontology and representation program preparation. -/
+/-- Review accepting the bounded-program proposal without installation or OPEN. -/
 def currentLiveNextStrictTargetReportV0 : String :=
-  "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json"
+  "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json"
 
-/-- Accepted evidence-bound frontier-selection outcome. -/
+/-- Accepted evidence-bound program-preparation outcome. -/
 def currentLiveNextStrictTargetOutcomeV0 : String :=
-  "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION"
+  "COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN"
 
 /-- Strict claim-ceiling outcome supporting the current target. -/
 def currentLiveNextStrictTargetStrictOutcomeV0 : String :=
-  "PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM"
+  "PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM"
 
 /-- Kind of the selected current target. -/
 def currentLiveNextStrictTargetKindV0 : String :=
@@ -672,13 +673,13 @@ theorem cross_pillar_frontier_previous_live_target_v0 :
 /-- The current authority permits only bounded-program preparation. -/
 theorem cross_pillar_frontier_current_authority_metadata_v0 :
     currentLiveNextStrictTargetEvidenceV0 =
-        "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean" ∧
+        "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean" ∧
       currentLiveNextStrictTargetReportV0 =
-        "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json" ∧
+        "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json" ∧
       currentLiveNextStrictTargetOutcomeV0 =
-        "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION" ∧
+        "COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN" ∧
       currentLiveNextStrictTargetStrictOutcomeV0 =
-        "PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM" ∧
+        "PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM" ∧
       currentLiveNextStrictTargetKindV0 =
         "toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0" := by
   constructor

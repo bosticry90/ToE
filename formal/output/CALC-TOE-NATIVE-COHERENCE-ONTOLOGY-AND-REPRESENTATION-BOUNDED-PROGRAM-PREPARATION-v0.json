@@ -1,0 +1,549 @@
+{
+  "automatic_successor_selected": false,
+  "calculation_id": "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-BOUNDED-PROGRAM-PREPARATION-v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_boundary": {
+    "attempt_opened": false,
+    "closed_program_reopened": false,
+    "coherence_defined": false,
+    "coherence_field_selected": false,
+    "coherence_representation_selected": false,
+    "empirical_claim_made": false,
+    "native_action_selected": false,
+    "native_pillar_executed": false,
+    "native_seam_executed": false,
+    "observable_selected": false,
+    "program_authorized": false,
+    "program_installed": false
+  },
+  "evidence": {
+    "bounded_governance_validator": {
+      "path": "formal/python/tools/bounded_program_governance.py",
+      "sha256": "50574fd8d2c167011838906695f6cc1dc3f123f8076f4b0e9475c689fd47d120"
+    },
+    "candidate_master_action": {
+      "path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+    },
+    "ccft_discriminator_map": {
+      "path": "formal/docs/paper/CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0.md",
+      "sha256": "dc2d78bc9c663d5e4d87e3d3922798ec940849581f46a0ffc25712e91e44d2ac"
+    },
+    "ccft_to_toe_object_crosswalk": {
+      "path": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "sha256": "d833bbe2933de80effb2ee425e59d9c29078532c8f8ab65663327e5f0d9a96ce"
+    },
+    "ccft_variational_program": {
+      "path": "formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md",
+      "sha256": "1320659c003c12776ca0d650d39ff2c54043b4c6ba9438fbb7a6dda80216db52"
+    },
+    "closed_native_surrogate": {
+      "path": "formal/output/CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0.json",
+      "sha256": "ec270a6e7f23f06dd66162c5f4deee4e654e931bf158fde4db1444e4a578f3e9"
+    },
+    "closed_real_scalar_review": {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "4d6271e5688352a96ce9b7ab1abadd669e167394d337f1b5db37d5dd3934ec38"
+    },
+    "coherence_admissibility_hypothesis": {
+      "path": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "sha256": "1603011e475595cce40f6e36310198952aa48b2fe351cba129ff065caf05b5ec"
+    },
+    "frontier_selection": {
+      "path": "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+      "sha256": "83df6a3f5844d27702ee099830e8e64a29d3176c45e467a6ec73841a12aa9d1a"
+    },
+    "frontier_selection_review": {
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "2bcce2cbde4d0e94f47735e163482c1d05a1d0677ccfce29b89d1f72a6507cda"
+    },
+    "native_surrogate_closed_program_manifest": {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_SURROGATE_V0_MANIFEST_v1.json",
+      "sha256": "35eecf20a82ac68b4fcd59ddd41cc71df09fa0845b5d3eeced85ecef0d7ea3af"
+    },
+    "pillar_seam_readiness": {
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+    },
+    "quadratic_closed_program_manifest": {
+      "path": "formal/docs/release/bounded_program_manifests/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_MANIFEST_v1.json",
+      "sha256": "b4ea5f2ba014c47b4b66adb49ea70661c95a1a5915d1ebc428ee115588df4f54"
+    }
+  },
+  "evidence_checks": {
+    "closed_program_outcomes_are_preserved": true,
+    "current_validator_has_no_prospective_program_manifest": true,
+    "preparation_is_not_program_execution": true,
+    "real_scalar_route_remains_closed": true,
+    "selected_hypothesis_matches_authority": true
+  },
+  "execution_target": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "native_hypothesis_tested": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "preparation_question": "Can at least one preserved ToE or CCFT coherence claim be translated into an operational physical concept and a suitable mathematical representation without assuming the representation?",
+  "program_proposal": {
+    "attempt_count": 0,
+    "authorized": false,
+    "authorized_stage_count_proposed": 5,
+    "claim_classification_vocabulary": [
+      "PHYSICAL_ONTOLOGY_CLAIM",
+      "MATHEMATICAL_STRUCTURE_CLAIM",
+      "EFFECTIVE_MODEL_CLAIM",
+      "ANALOGY_OR_HEURISTIC",
+      "OBSERVATIONAL_CLAIM",
+      "UNRESOLVED_LANGUAGE"
+    ],
+    "installed": false,
+    "legacy_UEFM_boundary": "No UEFM artifact is named as an authorized input in this proposal. Any UEFM material may enter only after a separate provenance and admissibility record identifies a retained artifact; terminology alone is not evidence.",
+    "mandatory_exit_target_proposed": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+    "no_subsidiary_scientific_targets_proposed": true,
+    "not_claimed": [
+      "CCFT_VALIDATION",
+      "COHERENCE_IS_FUNDAMENTAL",
+      "COHERENCE_IS_A_FIELD",
+      "MASTER_ACTION_DERIVATION",
+      "QFT_GR_CLOSURE",
+      "UNIQUE_OBSERVABLE",
+      "EMPIRICAL_CONFIRMATION",
+      "FULL_TOE"
+    ],
+    "open_event_created": false,
+    "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+    "program_terminal_outcomes": [
+      "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+      "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+      "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+      "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+      "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+    ],
+    "proposal_only": true,
+    "repair_attempt_count_proposed": 0,
+    "representation_families_to_compare": [
+      "REAL_SCALAR",
+      "COMPLEX_ORDER_PARAMETER",
+      "PHASE_FIELD",
+      "DENSITY_AND_CURRENT",
+      "VECTOR_OR_TENSOR_ORDER_PARAMETER",
+      "ROTOR_OR_GEOMETRIC_ALGEBRA_OBJECT",
+      "STATISTICAL_FUNCTIONAL",
+      "NONLOCAL_RELATION",
+      "NO_INDEPENDENT_FIELD"
+    ],
+    "schema_id": "toe.bounded_program.proposal.v0",
+    "semantic_stages_proposed": [
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "frontier_selection",
+            "frontier_selection_review",
+            "coherence_admissibility_hypothesis",
+            "ccft_to_toe_object_crosswalk",
+            "candidate_master_action",
+            "ccft_variational_program",
+            "ccft_discriminator_map",
+            "pillar_seam_readiness",
+            "closed_real_scalar_review",
+            "closed_native_surrogate",
+            "bounded_governance_validator",
+            "quadratic_closed_program_manifest",
+            "native_surrogate_closed_program_manifest"
+          ],
+          "dependency_artifact_ids": [
+            "frontier_selection_review"
+          ],
+          "normalized_scientific_question": "Which preserved ToE and CCFT coherence statements are serious candidate claims, what do they mean in their own source, and which single claim—if any—may advance to operational testing?",
+          "prohibited_claims": [
+            "CCFT validation",
+            "coherence fundamentality",
+            "coherence field selection before Stage 4",
+            "master-action derivation",
+            "QFT-GR closure",
+            "unique observable",
+            "empirical confirmation",
+            "completed ToE",
+            "representation selection",
+            "symbolic similarity as evidence of physical identity"
+          ],
+          "required_outputs": [
+            "source_bound_claim_inventory",
+            "claim_classification_table",
+            "provenance_and_conflict_ledger",
+            "symbolic_similarity_meaning_transport_firewall",
+            "exactly_one_claim_selected_for_stage_2_or_failed_closed",
+            "legacy_UEFM_context_admissibility_record"
+          ],
+          "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+          "terminal_outcome_vocabulary": [
+            "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE",
+            "NO_SERIOUS_COHERENCE_CLAIM_SURVIVES_INVENTORY",
+            "COHERENCE_CLAIM_PROVENANCE_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "1d0ca35f49260b8194c9a24f2ff8200af0b1c8fe1c043fa437407a6e71a13e0e",
+        "canonical_target": "inventory_toe_native_controlled_coherence_claims_v0",
+        "conditional": false,
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE",
+            "NO_SERIOUS_COHERENCE_CLAIM_SURVIVES_INVENTORY",
+            "COHERENCE_CLAIM_PROVENANCE_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+        "stage_number": 1
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+            "exactly_one_selected_coherence_claim"
+          ],
+          "dependency_artifact_ids": [
+            "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
+          ],
+          "normalized_scientific_question": "Does the one Stage-1-selected claim define a possessor, change, zero, scale, preparation or destruction operation, units, and a measurement-sensitive distinction from standard correlation, order, entanglement, synchronization, entropy, phase alignment, and field amplitude?",
+          "prohibited_claims": [
+            "CCFT validation",
+            "coherence fundamentality",
+            "coherence field selection before Stage 4",
+            "master-action derivation",
+            "QFT-GR closure",
+            "unique observable",
+            "empirical confirmation",
+            "completed ToE",
+            "representation selection",
+            "observable validation"
+          ],
+          "required_outputs": [
+            "operational_definition_contract",
+            "physical_possessor_and_change_ledger",
+            "zero_and_scale_semantics",
+            "preparation_transport_destruction_operations",
+            "units_or_dimension_classification",
+            "standard_quantity_distinction_matrix",
+            "candidate_measurement_operation"
+          ],
+          "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+          "terminal_outcome_vocabulary": [
+            "COHERENCE_OPERATIONAL_DEFINITION_ACCEPTED",
+            "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+            "COHERENCE_OPERATIONAL_DEFINITION_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "03d471493a6d5ee6784a2b33e7b1101023f54ce721350faf69693af170232575",
+        "canonical_target": "test_toe_native_coherence_claim_operational_definition_v0",
+        "conditional": false,
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "COHERENCE_OPERATIONAL_DEFINITION_ACCEPTED",
+            "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+            "COHERENCE_OPERATIONAL_DEFINITION_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+        "stage_number": 2
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+            "REAL_SCALAR",
+            "COMPLEX_ORDER_PARAMETER",
+            "PHASE_FIELD",
+            "DENSITY_AND_CURRENT",
+            "VECTOR_OR_TENSOR_ORDER_PARAMETER",
+            "ROTOR_OR_GEOMETRIC_ALGEBRA_OBJECT",
+            "STATISTICAL_FUNCTIONAL",
+            "NONLOCAL_RELATION",
+            "NO_INDEPENDENT_FIELD"
+          ],
+          "dependency_artifact_ids": [
+            "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+          ],
+          "normalized_scientific_question": "Which candidate mathematical representation families preserve the accepted operational claim, and what meaning, symmetry, degree-of-freedom, locality, conservation, background, and information-loss costs does each impose?",
+          "prohibited_claims": [
+            "CCFT validation",
+            "coherence fundamentality",
+            "coherence field selection before Stage 4",
+            "master-action derivation",
+            "QFT-GR closure",
+            "unique observable",
+            "empirical confirmation",
+            "completed ToE",
+            "representation promotion before comparative review",
+            "field assumption from terminology alone"
+          ],
+          "required_outputs": [
+            "representation_family_comparison_matrix",
+            "component_meaning_and_units_ledger",
+            "symmetry_and_degree_of_freedom_ledger",
+            "locality_and_relativistic_transformation_ledger",
+            "conservation_exchange_and_background_requirements",
+            "CCFT_information_loss_ledger",
+            "standard_quantity_renaming_audit",
+            "mathematical_and_experimental_tractability_assessment"
+          ],
+          "semantic_stage_id": "COHERENCE_REPRESENTATION_COMPARISON",
+          "terminal_outcome_vocabulary": [
+            "COHERENCE_REPRESENTATION_COMPARISON_COMPLETE",
+            "NO_ADMISSIBLE_REPRESENTATION_FOUND",
+            "COHERENCE_REPRESENTATION_COMPARISON_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "7ab19595242ee4d45bf320d8124cfbcab223c9311ce031719fc7af3928441e94",
+        "canonical_target": "compare_toe_native_coherence_representation_families_v0",
+        "conditional": false,
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "COHERENCE_REPRESENTATION_COMPARISON_COMPLETE",
+            "NO_ADMISSIBLE_REPRESENTATION_FOUND",
+            "COHERENCE_REPRESENTATION_COMPARISON_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "COHERENCE_REPRESENTATION_COMPARISON",
+        "stage_number": 3
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "COHERENCE_REPRESENTATION_COMPARISON",
+            "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+          ],
+          "dependency_artifact_ids": [
+            "COHERENCE_REPRESENTATION_COMPARISON",
+            "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+          ],
+          "normalized_scientific_question": "Is the frozen operational coherence claim representable, only surrogately representable, better treated as a derived functional, insufficiently defined, or unsupported by every admissible representation?",
+          "prohibited_claims": [
+            "CCFT validation",
+            "coherence fundamentality",
+            "coherence field selection before Stage 4",
+            "master-action derivation",
+            "QFT-GR closure",
+            "unique observable",
+            "empirical confirmation",
+            "completed ToE",
+            "nature_contains_selected_object",
+            "automatic action or interaction authorization"
+          ],
+          "required_outputs": [
+            "exact_preserved_claim_represented_or_blocked",
+            "selected_mathematical_type_or_nonfield_classification",
+            "controlled_physical_meaning",
+            "omitted_structure_ledger",
+            "enabled_later_calculation",
+            "representation_adequacy_falsifier",
+            "terminal_representability_decision"
+          ],
+          "semantic_stage_id": "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+          "terminal_outcome_vocabulary": [
+            "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+            "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+            "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+            "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+            "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+          ]
+        },
+        "canonical_scope_hash": "d0dfc157e3d39dfa2de392dd4ecf7a67c196817fdd14d643537cc7a6e1b223b8",
+        "canonical_target": "select_toe_native_coherence_operational_representation_v0",
+        "conditional": false,
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+            "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+            "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+            "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+            "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+        "stage_number": 4
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+            "positive_stage_4_representation_result_only"
+          ],
+          "dependency_artifact_ids": [
+            "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION"
+          ],
+          "normalized_scientific_question": "After a positive Stage-4 representation result only, what minimal native field-content or nonfield-content decision may be prepared for a separately authorized future program?",
+          "prohibited_claims": [
+            "CCFT validation",
+            "coherence fundamentality",
+            "coherence field selection before Stage 4",
+            "master-action derivation",
+            "QFT-GR closure",
+            "unique observable",
+            "empirical confirmation",
+            "completed ToE",
+            "field content execution",
+            "action construction",
+            "interaction construction",
+            "seam calculation",
+            "pillar recovery"
+          ],
+          "required_outputs": [
+            "minimal_content_handoff_contract",
+            "representation_to_content_dependency_map",
+            "explicit_omission_and_nonclaim_boundary",
+            "separate_future_authority_requirement"
+          ],
+          "semantic_stage_id": "MINIMAL_NATIVE_FIELD_HANDOFF",
+          "terminal_outcome_vocabulary": [
+            "MINIMAL_NATIVE_CONTENT_HANDOFF_PREPARED",
+            "MINIMAL_NATIVE_CONTENT_HANDOFF_NOT_APPLICABLE",
+            "MINIMAL_NATIVE_CONTENT_HANDOFF_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "2cf4ca375edc955bb6cd06ded2724adc19ef24901ae6ce927ef67ba368a79437",
+        "canonical_target": "prepare_toe_native_minimal_field_content_after_coherence_representation_v0",
+        "conditional": true,
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "MINIMAL_NATIVE_CONTENT_HANDOFF_PREPARED",
+            "MINIMAL_NATIVE_CONTENT_HANDOFF_NOT_APPLICABLE",
+            "MINIMAL_NATIVE_CONTENT_HANDOFF_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "MINIMAL_NATIVE_FIELD_HANDOFF",
+        "stage_number": 5
+      }
+    ],
+    "stage_transition_rules": {
+      "any_block_or_failure_closes_without_repair": true,
+      "new_representation_requires_separately_authorized_v1": true,
+      "stage_1_selects_exactly_one_claim_or_closes": true,
+      "stage_2_requires_stage_1_selected_claim": true,
+      "stage_3_requires_accepted_operational_definition": true,
+      "stage_4_requires_completed_comparison": true,
+      "stage_5_is_optional_and_requires_positive_stage_4_result": true
+    }
+  },
+  "prospective_governance_prerequisite": {
+    "attempt_opened": false,
+    "authority_lane": "SEPARATE_MAINTENANCE_AUTHORITY",
+    "maintenance_enablement_is_scientific_authorization": false,
+    "program_manifest_installed": false,
+    "program_registry_record_created": false,
+    "scientific_authority_still_required_after_enablement": true,
+    "status": "BLOCKED_PENDING_LIFECYCLE_SAFE_GOVERNANCE_ENABLEMENT"
+  },
+  "schema_id": "toe.native_coherence_ontology_and_representation.bounded_program_preparation.v0",
+  "separate_authority_decision_required": true,
+  "strict_terminal_outcome": "PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM",
+  "terminal_outcome": "COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN",
+  "validation_debt_boundary": {
+    "classification": "DISCLOSED_VALIDATION_DEBT_REQUIRES_SEPARATE_MAINTENANCE_OR_VALIDATION_PACKET",
+    "coherence_program_displaced_by_debt": false,
+    "exception": "A failure directly undermining current authority, proposal inputs, custody, generation, or native-physics surfaces must block readiness.",
+    "exhaustive_python_passage_established": false,
+    "reported_pre_final_repair_counts": {
+      "errors": 10,
+      "failed": 147,
+      "passed": 14739,
+      "skipped": 598
+    }
+  },
+  "verdict": "BOUNDED_COHERENCE_ONTOLOGY_AND_REPRESENTATION_PROGRAM_PROPOSAL_PREPARED_NO_INSTALLATION_AUTHORIZATION_OR_EXECUTION"
+}

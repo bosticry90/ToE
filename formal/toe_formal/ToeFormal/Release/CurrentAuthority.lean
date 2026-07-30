@@ -52,7 +52,8 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
 theorem native_coherence_program_preparation_has_not_installed_a_new_program :
     boundedProgramId = "NONE_NEW_PROGRAM_INSTALLED" ∧
     boundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
-    currentTargetPhase = "PROGRAM_PROPOSAL_PREPARATION_ONLY" ∧
+    currentTargetPhase =
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
     boundedAttemptNumber = 0 := by
   native_decide
 

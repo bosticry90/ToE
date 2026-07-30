@@ -24,10 +24,11 @@ Current native-hypothesis frontier (2026-07-29):
 - `ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json`
-- `CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION`
-- Preparation boundary: prepare only the proposed five-stage, zero-repair ontology-and-representation program. Its installation contract must freeze exactly one preserved coherence claim with explicit support, disfavor, and block criteria or fail closed. Do not install or open it, select a field or action, execute a seam or native-theory pillar adjudication, or promote CCFT. Ordinary known-physics pillar baselines remain parallel controls. Generic prospective-program governance enablement is a separate maintenance prerequisite and is not scientific authorization to install or open this program.
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN`
+- Preparation boundary: the proposed five-stage, zero-repair ontology-and-representation program is now fully specified. It inventories one controlled claim, tests its operational meaning, compares admissible representation families without preselection, makes one bounded representability decision, and permits only a conditional minimal-field handoff. The program is not installed, authorized, or open; no field, action, seam, native-theory pillar adjudication, observable, or CCFT promotion follows. Prospective lifecycle enablement is a separate maintenance prerequisite, and a later separate scientific-authority decision is required before installation or OPEN. No automatic successor exists.
+- Validation boundary: exhaustive Python passage is not established; the last reported exhaustive result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending separate debt classification.
 - Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
 - Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
 - Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.

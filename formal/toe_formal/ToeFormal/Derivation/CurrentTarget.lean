@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionResultReview
+import ToeFormal.Derivation.ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -16,14 +16,15 @@ def currentLiveTarget : String :=
   "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0"
 
 def currentEvidencePacketId : String :=
-  ToeNativeHypothesisFrontierSelectionResultReview.reviewId
+  ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.reviewId
 
 def currentBoundedProgramId : String :=
   "NONE_NEW_PROGRAM_INSTALLED"
 
 def currentBoundedProgramState : String := "NONE_NEW_PROGRAM_INSTALLED"
 
-def currentTargetPhase : String := "PROGRAM_PROPOSAL_PREPARATION_ONLY"
+def currentTargetPhase : String :=
+  "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY"
 
 def currentBoundedAttemptNumber : Nat := 0
 
@@ -37,10 +38,11 @@ theorem current_target_prepares_native_coherence_ontology_program :
       "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0" := by
   rfl
 
-theorem program_preparation_installs_no_new_bounded_program :
+theorem prepared_program_proposal_installs_no_new_bounded_program :
     currentBoundedProgramId = "NONE_NEW_PROGRAM_INSTALLED" ∧
     currentBoundedProgramState = "NONE_NEW_PROGRAM_INSTALLED" ∧
-    currentTargetPhase = "PROGRAM_PROPOSAL_PREPARATION_ONLY" ∧
+    currentTargetPhase =
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY" ∧
     currentBoundedAttemptNumber = 0 ∧
     lastClosedBoundedSemanticStage = "COHERENCE_REPRESENTATION" ∧
     lastBoundedTerminalResult = "BLOCKED" := by

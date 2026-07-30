@@ -20,6 +20,9 @@ Current scientific checkpoint (2026-07-29):
 - The current dependency surface applies two non-advancing qualifications: Stage 1 is `GAUGE_ATLAS_AND_JET_CONTRACT_STRUCTURALLY_PRESERVED` with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; Stage 2 is `GENERIC_COMPONENT_DAG_STRUCTURALLY_COMPLETE` with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. Original bytes and terminal outcomes remain unchanged.
 - Program N Stage 1 attempt 1 is `CLOSED/BLOCKED`. No accepted CCFT-to-relativistic-real-scalar map exists; the `phi` and `chi` independent `Z2` gates are also unjustified. Zero repair requires immediate v0 closeout and prohibits Stages 2–5.
 - Program N v0 is now terminal after its mandatory closeout: one stage was attempted, four were never opened, no portal action or sandbox was constructed, and no automatic v1 is authorized.
+- The selected native-coherence preparation target has now produced a five-stage, zero-repair proposal covering claim inventory, operational definition, representation comparison, representability decision, and a conditional minimal-field handoff.
+- That proposal is not installed, authorized, or opened. It selects no representation, field, action, seam, pillar, observable, or empirical claim. Prospective lifecycle support and later scientific installation require separate authority decisions; no automatic successor exists.
+- Exhaustive Python passage remains unestablished. The last reported exhaustive result is `14,739 passed, 147 failed, 10 errors, 598 skipped`; focused validation covers the current preparation and authority surfaces without converting that debt into a pass.
 - `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
 - Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
 - Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
@@ -43,14 +46,14 @@ PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adju
 ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
 CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0
 CURRENT_BOUNDED_PROGRAM_ID_v0: NONE_NEW_PROGRAM_INSTALLED
 CURRENT_BOUNDED_PROGRAM_STATE_v0: NONE_NEW_PROGRAM_INSTALLED
-CURRENT_TARGET_PHASE_v0: PROGRAM_PROPOSAL_PREPARATION_ONLY
+CURRENT_TARGET_PHASE_v0: PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY
 CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 0
 LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: COHERENCE_REPRESENTATION
 LAST_BOUNDED_TERMINAL_RESULT_v0: BLOCKED

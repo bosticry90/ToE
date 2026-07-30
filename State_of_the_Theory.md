@@ -82,13 +82,20 @@ The selector compared four native-frontier paths and selected
 preparation. Coherence ontology is the earliest unresolved dependency shared
 by native field-content, action, seam, native-theory pillar adjudication, and
 discriminator work; ordinary known-physics pillar baselines remain parallel
-controls. The current target may prepare only a five-stage, zero-repair
-proposal whose installation contract freezes exactly one coherence claim with
-support, disfavor, and block criteria. It does
-not install or open that program, select a real or complex field, construct an
-action, or reopen Programs B or N. Lifecycle-safe prospective-program support
-requires separate maintenance authority before any scientific attempt, and
-that maintenance alone would not authorize the scientific program.
+controls. The five-stage, zero-repair proposal is now prepared. Its stages
+inventory one source-bound claim, test operational meaning, compare
+representation families without preselection, make a bounded representability
+decision, and allow only a conditional minimal-field handoff. The program is
+not installed, authorized, or open. It selects no real or complex field,
+action, seam, pillar, observable, or empirical claim and does not reopen
+Programs B or N. Lifecycle-safe prospective-program support requires separate
+maintenance authority, followed by a separate scientific-authority decision;
+there is no automatic successor.
+
+Focused validation covers the proposal and current authority surfaces.
+Exhaustive Python passage is not established: the last reported exhaustive
+result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending a
+separate validation-debt classification.
 
 A non-advancing custody correction now qualifies two intermediate quadratic
 certificates without reopening Program B. Stage 1 preserves its gauge, atlas,
@@ -107,10 +114,10 @@ PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adju
 ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
 CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0
 
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)

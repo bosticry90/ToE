@@ -36,19 +36,21 @@ CURRENT SCIENTIFIC CHECKPOINT (2026-07-29)
 - Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
 - Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` is selected for bounded-program preparation because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
 - Exact live target: `prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0`.
-- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean`.
-- Report: `formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json`.
-- Boundary: this is proposal preparation only. A future installation contract must freeze exactly one coherence claim with support, disfavor, and block criteria. No program is installed or opened, no real or complex field is selected, and lifecycle-safe prospective-program support requires separate maintenance authority; that maintenance alone would not authorize the scientific program or open a stage.
+- Prepared proposal: five zero-repair semantic stages now cover controlled claim inventory, operational-definition testing, representation comparison, a representability decision, and only then a conditional minimal-field handoff.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean`.
+- Report: `formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json`.
+- Boundary: the proposal is complete, but the program is not installed, authorized, or opened. No representation, field, action, seam, pillar, observable, or empirical claim was selected. Separate maintenance authority is required for prospective lifecycle support, followed by a separate scientific-authority decision before installation or an OPEN event. There is no automatic successor.
+- Validation debt: exhaustive Python passage is not established; the last reported exhaustive run remains `14,739 passed, 147 failed, 10 errors, 598 skipped` and requires separate classification. This does not override the focused authority and preparation checks.
 
 CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
 PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_native_toe_hypothesis_for_bounded_adjudication_v0
 ACTIVE_LANE_v0: prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisFrontierSelectionResultReview.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION
-CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_FIELD_ACTION_SEAM_PILLAR_OR_EMPIRICAL_CLAIM
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOntologyAndRepresentationBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260729_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: COHERENCE_ONTOLOGY_AND_REPRESENTATION_BOUNDED_PROGRAM_PREPARED_NOT_INSTALLED_OR_OPEN
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROGRAM_PROPOSAL_COMPLETE_NO_REPRESENTATION_FIELD_ACTION_SEAM_PILLAR_OBSERVABLE_OR_EMPIRICAL_CLAIM
 CURRENT_LIVE_TARGET_KIND_v0: toe_native_coherence_ontology_and_representation_bounded_program_preparation_v0
 
 CURRENT-MAINTENANCE NOTE
