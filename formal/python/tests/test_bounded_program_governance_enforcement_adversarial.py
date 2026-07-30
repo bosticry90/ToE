@@ -47,8 +47,11 @@ def _copy_validation_tree(tmp_path: Path, registry: dict) -> None:
                 paths.add(event["result_artifact_path"])
                 paths.add(event["review_artifact_path"])
         manifest = strict_json_load(REPO_ROOT / program["program_manifest"]["path"])
-        paths.add(manifest["mandatory_exit"]["result_artifact_path"])
-        paths.add(manifest["mandatory_exit"]["review_artifact_path"])
+        mandatory_exit = manifest["mandatory_exit"]
+        if "result_artifact_path" in mandatory_exit:
+            paths.add(mandatory_exit["result_artifact_path"])
+        if "review_artifact_path" in mandatory_exit:
+            paths.add(mandatory_exit["review_artifact_path"])
     for relative_path in paths:
         destination = tmp_path / relative_path
         destination.parent.mkdir(parents=True, exist_ok=True)

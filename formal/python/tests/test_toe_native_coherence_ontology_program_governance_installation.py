@@ -74,3 +74,21 @@ def test_installation_artifact_preserves_science_and_does_not_open_stage_1() -> 
     assert installation["scientific_execution_authorized"] is False
     assert installation["repair_attempt_count"] == 0
     assert installation["no_subsidiary_scientific_targets"] is True
+
+
+def test_installation_result_review_accepts_only_unopened_governance() -> None:
+    review = _read(
+        RELEASE_ROOT
+        / "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_20260729_v0.json"
+    )
+    dependency = _read(
+        RELEASE_ROOT
+        / "TOE_NATIVE_COHERENCE_STAGE_1_DEPENDENCY_IMPACT_CHECK_20260729_v0.json"
+    )
+    assert review["accepted"] is True
+    assert review["program_state"] == "UNOPENED"
+    assert review["stage_1_scientific_output_created"] is False
+    assert all(review["checks"].values())
+    assert dependency["stage_1_open_permitted_by_dependency_check"] is True
+    assert dependency["exhaustive_python_debt"]["exhaustive_passage_established"] is False
+    assert dependency["current_dependency_surface_checks"]["scoped_test_count"] == 74

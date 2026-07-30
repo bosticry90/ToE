@@ -1,0 +1,30 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "canonical_five_stage_manifest_is_immutable": true,
+    "closed_program_outcomes_are_unchanged": true,
+    "current_scientific_target_is_unchanged": true,
+    "full_git_history_validation_passes": true,
+    "program_event_chain_is_empty": true,
+    "program_is_installed_unopened": true,
+    "registry_is_a_derived_projection": true,
+    "repair_attempt_count_is_zero": true,
+    "stage_1_has_not_opened": true,
+    "subsidiary_scientific_targets_are_prohibited": true
+  },
+  "implemented_commit": "655f8265c4493dbbaa7d6d8d99734d1a9cb94509",
+  "maintenance_target": "review_toe_native_coherence_ontology_program_governance_installation_result_v0",
+  "preserved_outcomes": {
+    "native_surrogate_terminal": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+    "quadratic_control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "quadratic_toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_state": "UNOPENED",
+  "schema_id": "toe.native_coherence_ontology_program.governance_installation_result_review.v0",
+  "scientific_target": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "stage_1_scientific_output_created": false,
+  "status": "ACCEPTED_PROGRAM_GOVERNANCE_INSTALLED_UNOPENED_NO_SCIENTIFIC_ROTATION"
+}
