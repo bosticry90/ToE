@@ -98,18 +98,20 @@ entire archive or repository. Archive-wide and repository-wide evidence
 sufficiency remain untested, and the original result is unchanged.
 
 A separate five-stage, zero-repair repository-wide native-hypothesis evidence
-census is prepared. It would inventory ontology, pillars, seams, master-action
+census is now installed under bounded governance. If separately opened, it
+would inventory ontology, pillars, seams, master-action
 variants, bridge conditions, gravity, matter, emergence, thermodynamics,
 predictions, and falsification across current and historical material. The
-program is not installed, authorized, or open. No archive material, scientific
-hypothesis, field, action, seam, or observable has been adopted or selected.
+program is unopened, has zero attempts, and has no scientific execution
+authority. No archive material, scientific hypothesis, field, action, seam,
+or observable has been adopted or selected.
 The newly available `archive/ToE_Project` and
 `archive/ToE_Project_Starter_2025-09-24` trees are now explicit read-only
 inputs to the proposed first stage. They are not covered by the legacy
 7,331-file archive index, so a future authorized Stage 1 must canonically
 reindex them before assessment. Their scientific content remains
 unadjudicated and unadopted.
-The proposal now also binds pre-installation controls without installing or
+The immutable program manifest binds the pre-installation controls without
 opening the program. These retain the prepared semantic-stage identifiers and
 mandatory closeout target, impose a 640-file/1-GiB deep-review ceiling plus
 claim and parser budgets, require initial/final root snapshots, prohibit
