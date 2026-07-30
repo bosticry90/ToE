@@ -854,6 +854,7 @@ import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryAttemptOpe
 import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryResult
 import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionAuthority
 import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionResultReview
+import ToeFormal.Derivation.ToeNativeHypothesisSourceLineageReconstructionAttemptOpen
 import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview
@@ -1321,6 +1322,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1314
+def committedModuleCount : Nat := 1315
 
 end ToeFormalAll
