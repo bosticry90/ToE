@@ -10,6 +10,13 @@ formal/output/reports/toe_integrity_snapshot_report_v0.json
 formal/output/reports/toe_integrity_snapshot_v0.sqlite3
 formal/rust/**/target/
 
+# Local repository-wide census custody roots remain outside ordinary Git.
+# Curated evidence must be copied into a separately reviewed tracked dossier.
+/archive/ToE_Project/
+/archive/ToE_Project_Starter_2025-09-24/
+/archive/custody_bundles/
+/.toe_cache/native_hypothesis_census_v1.sqlite3
+
 # July 18 external evidence acquisition is retained in immutable custody only.
 # Redistribution, privacy, and passive-content security review remain unresolved.
 # Hashes and path-level dispositions are recorded in the July 16--19 tranche

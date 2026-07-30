@@ -18,6 +18,16 @@ def test_proposal_is_five_stage_zero_repair_and_unopened() -> None:
     assert proposal["repair_attempt_count_proposed"] == 0
     assert proposal["no_subsidiary_scientific_targets_proposed"] is True
     assert len(proposal["semantic_stages_proposed"]) == 5
+    assert (
+        result["preinstallation_control_contract"]["status"]
+        == "PREINSTALLATION_CONTROLS_FROZEN_NOT_EXECUTED"
+    )
+    assert (
+        result["preinstallation_control_contract"][
+            "canonical_identifiers_preserved"
+        ]
+        is True
+    )
 
 
 def test_all_proposed_stage_scope_hashes_recompute() -> None:
@@ -83,6 +93,37 @@ def test_stage_5_selects_but_does_not_execute() -> None:
         is True
     )
     assert proposal["transition_rules"]["no_automatic_successor"] is True
+
+
+def test_preinstallation_budgets_snapshot_and_close_contract_are_bound() -> None:
+    proposal = build()["program_proposal"]
+    assert proposal["workload_budgets"][
+        "maximum_eligible_deep_review_files"
+    ] == 640
+    assert proposal["completion_status_contract"]["claim_exhaustion_status"] == [
+        "REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED"
+    ]
+    assert (
+        proposal["source_root_snapshot_contract"][
+            "material_mutation_blocks_stage"
+        ]
+        is True
+    )
+    assert (
+        proposal["deep_review_selection_contract"]["manual_preference_permitted"]
+        is False
+    )
+    assert (
+        proposal["batch_and_atomic_close_contract"][
+            "intermediate_substantive_batch_commits_permitted"
+        ]
+        is False
+    )
+    assert proposal["promotion_contract"]["census_may_promote_claims"] is False
+    assert (
+        proposal["terminal_state_map"]["SOURCE_ROOT_MUTATED_DURING_CENSUS"]
+        == "BLOCKED"
+    )
 
 
 def test_independent_review_accepts_proposal_only() -> None:

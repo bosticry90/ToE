@@ -21,6 +21,13 @@ def archiveMaterialAdopted : Bool := false
 def supplementalArchiveRootCount : Nat := 2
 def supplementalArchiveRootsCanonicallyReindexed : Bool := false
 def supplementalArchiveClaimsAdjudicated : Bool := false
+def preinstallationControlsFrozen : Bool := true
+def maximumEligibleDeepReviewFiles : Nat := 640
+def sourceRootMutationBlocksStage : Bool := true
+def passiveParserExecutionPermitted : Bool := false
+def intermediateSubstantiveBatchCommitsPermitted : Bool := false
+def censusMayPromoteClaims : Bool := false
+def maintenanceIndexOrCacheGenerated : Bool := false
 def nativeHypothesisSelected : Bool := false
 def fieldSelected : Bool := false
 def actionSelected : Bool := false
@@ -54,6 +61,18 @@ theorem supplemental_archive_roots_are_bound_but_unadjudicated :
     supplementalArchiveRootsCanonicallyReindexed = false ∧
     supplementalArchiveClaimsAdjudicated = false ∧
     archiveMaterialAdopted = false := by
+  decide
+
+theorem preinstallation_controls_are_frozen_and_nonexecuting :
+    preinstallationControlsFrozen = true ∧
+    maximumEligibleDeepReviewFiles = 640 ∧
+    sourceRootMutationBlocksStage = true ∧
+    passiveParserExecutionPermitted = false ∧
+    intermediateSubstantiveBatchCommitsPermitted = false ∧
+    censusMayPromoteClaims = false ∧
+    maintenanceIndexOrCacheGenerated = false ∧
+    programInstalled = false ∧
+    attemptOpened = false := by
   decide
 
 theorem preparation_preserves_the_scientific_target :

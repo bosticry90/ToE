@@ -58,6 +58,39 @@ def build() -> dict:
             ]
             == "NOT_TESTED"
         ),
+        "preinstallation_controls_are_hash_bound_and_nonexecuting": (
+            "preinstallation_controls" in calc["evidence"]
+            and calc["preinstallation_control_contract"]["status"]
+            == "PREINSTALLATION_CONTROLS_FROZEN_NOT_EXECUTED"
+            and calc["preinstallation_control_contract"][
+                "canonical_identifiers_preserved"
+            ]
+            is True
+            and calc["preinstallation_control_contract"][
+                "workload_budgets_frozen"
+            ]
+            is True
+            and calc["preinstallation_control_contract"][
+                "two_pass_source_snapshot_frozen"
+            ]
+            is True
+            and calc["preinstallation_control_contract"][
+                "deterministic_deep_review_selection_frozen"
+            ]
+            is True
+            and calc["preinstallation_control_contract"][
+                "passive_parser_contract_frozen"
+            ]
+            is True
+            and calc["preinstallation_control_contract"][
+                "maintenance_infrastructure_executed"
+            ]
+            is False
+            and calc["preinstallation_control_contract"][
+                "scientific_census_executed"
+            ]
+            is False
+        ),
         "supplemental_archive_roots_are_explicit_and_unadjudicated": (
             calc["triggering_scope_result"]["supplemental_archive_root_count"] == 2
             and [
@@ -99,6 +132,24 @@ def build() -> dict:
             and proposal["repair_attempt_count_proposed"] == 0
             and proposal["no_subsidiary_scientific_targets_proposed"] is True
             and len(stages) == 5
+        ),
+        "workload_and_claim_exhaustion_boundaries_are_exact": (
+            proposal["workload_budgets"][
+                "maximum_eligible_deep_review_files"
+            ]
+            == 640
+            and proposal["workload_budgets"][
+                "maximum_eligible_deep_review_bytes"
+            ]
+            == 1_073_741_824
+            and proposal["workload_budgets"][
+                "overflow_is_not_repository_claim_exhaustion"
+            ]
+            is True
+            and proposal["completion_status_contract"][
+                "claim_exhaustion_status"
+            ]
+            == ["REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED"]
         ),
         "semantic_stage_order_is_exact": (
             [stage["semantic_stage_id"] for stage in stages]
@@ -150,6 +201,37 @@ def build() -> dict:
             ]
             is True
             and calc["claim_boundary"]["archive_material_adopted"] is False
+        ),
+        "snapshot_parser_identity_and_close_contracts_fail_closed": (
+            proposal["source_root_snapshot_contract"][
+                "material_mutation_blocks_stage"
+            ]
+            is True
+            and proposal["deep_review_selection_contract"][
+                "manual_preference_permitted"
+            ]
+            is False
+            and proposal["byte_identity_and_cache_contract"][
+                "tracked_primary_identity"
+            ]
+            == "COMMITTED_GIT_BLOB_BYTES"
+            and proposal["batch_and_atomic_close_contract"][
+                "intermediate_substantive_batch_commits_permitted"
+            ]
+            is False
+            and proposal["promotion_contract"]["census_may_promote_claims"]
+            is False
+            and proposal["terminal_state_map"][
+                "SOURCE_ROOT_MUTATED_DURING_CENSUS"
+            ]
+            == "BLOCKED"
+            and proposal["terminal_state_map"][
+                "DETERMINISTIC_INDEX_GENERATION_FAILED"
+            ]
+            == "FAILED"
+            and proposal["terminal_state_qualifiers"][
+                "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW"
+            ].endswith("REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED")
         ),
         "broad_first_gated_deep_review_is_exact": (
             proposal["discovery_strategy"]["broad_automated_discovery_first"]
@@ -216,6 +298,7 @@ def build() -> dict:
                 "program_installed",
                 "stage_1_opened",
                 "scientific_claim_made",
+                "maintenance_index_or_cache_generated",
             ]
         ),
     }

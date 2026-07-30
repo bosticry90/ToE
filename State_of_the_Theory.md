@@ -109,6 +109,16 @@ inputs to the proposed first stage. They are not covered by the legacy
 7,331-file archive index, so a future authorized Stage 1 must canonically
 reindex them before assessment. Their scientific content remains
 unadjudicated and unadopted.
+The proposal now also binds pre-installation controls without installing or
+opening the program. These retain the prepared semantic-stage identifiers and
+mandatory closeout target, impose a 640-file/1-GiB deep-review ceiling plus
+claim and parser budgets, require initial/final root snapshots, prohibit
+manual overflow selection and active archive content, distinguish committed
+Git blob identity from worktree and local bytes, and require atomic final
+batch custody at CLOSE. Exact tracked ignore rules protect the two local
+archive roots and future custody bundles from accidental staging. No census
+index, hash cache, source classification, claim extraction, or evidence
+promotion has been generated.
 
 Focused validation covers the proposal and current authority surfaces.
 Exhaustive Python passage is not established: the last reported exhaustive

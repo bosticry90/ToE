@@ -44,6 +44,11 @@ ARCHIVE_TOOL_PATH = REPO_ROOT / "formal/python/tools/archive_intake_index.py"
 ARCHIVE_POLICY_PATH = REPO_ROOT / (
     "formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md"
 )
+PREINSTALLATION_CONTROLS_PATH = REPO_ROOT / (
+    "formal/docs/release/"
+    "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_"
+    "PREINSTALLATION_CONTROLS_20260730_v0.json"
+)
 OUTPUT_PATH = REPO_ROOT / (
     "formal/output/"
     "CALC-TOE-REPOSITORY-WIDE-NATIVE-HYPOTHESIS-EVIDENCE-CENSUS-"
@@ -57,6 +62,7 @@ EVIDENCE_PATHS = {
     "archive_candidate_ranking": ARCHIVE_RANKING_PATH,
     "archive_intake_tool": ARCHIVE_TOOL_PATH,
     "archive_retention_policy": ARCHIVE_POLICY_PATH,
+    "preinstallation_controls": PREINSTALLATION_CONTROLS_PATH,
 }
 
 SOURCE_AUTHORITY_VOCABULARY = [
@@ -77,12 +83,16 @@ CLAIM_DOMAINS = [
     "ONTOLOGY",
     "PILLARS",
     "SEAMS",
+    "CCFT",
     "MASTER_ACTION",
     "BRIDGE_CONDITIONS",
     "GRAVITY",
     "MATTER",
+    "QUANTUM_STRUCTURE",
     "EMERGENCE",
     "THERMODYNAMICS",
+    "SCALE_HIERARCHY",
+    "OBSERVABLES",
     "PREDICTIONS",
     "FALSIFICATION",
 ]
@@ -175,6 +185,7 @@ def _stage(
             "read_only_pending_canonical_reindex"
         ),
         "current_canonical_authority_surfaces",
+        "preinstallation_controls_v0",
         "formal_outputs_and_release_records",
         "calculation_and_validation_sources",
         "Lean_modules",
@@ -253,7 +264,17 @@ def _stages() -> list[dict]:
             [
                 "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE",
                 "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS",
+                (
+                    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_"
+                    "LOCAL_CUSTODY_LIMITATIONS"
+                ),
+                "SOURCE_ROOT_SNAPSHOT_STABLE",
+                "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+                "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE",
+                "SOURCE_ROOT_UNAVAILABLE",
                 "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED",
+                "CUSTODY_OR_PROVENANCE_BLOCKED",
+                "DETERMINISTIC_INDEX_GENERATION_FAILED",
             ],
         ),
         _stage(
@@ -298,6 +319,7 @@ def _stages() -> list[dict]:
             [
                 "NATIVE_CLAIM_EXTRACTION_COMPLETE",
                 "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS",
+                "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
                 "NATIVE_CLAIM_EXTRACTION_BLOCKED",
             ],
         ),
@@ -348,6 +370,7 @@ def _stages() -> list[dict]:
 def build() -> dict:
     scope_result = read_json(SCOPE_RESULT_PATH)
     archive_index = read_json(ARCHIVE_INDEX_PATH)
+    controls = read_json(PREINSTALLATION_CONTROLS_PATH)
     if not isinstance(archive_index.get("files"), list):
         raise ValueError("archive intake index must contain a files array")
     evidence = {
@@ -358,6 +381,24 @@ def build() -> dict:
         for key, path in EVIDENCE_PATHS.items()
     }
     stages = _stages()
+    prepared_identifiers = [
+        {
+            "stage_number": stage["stage_number"],
+            "semantic_stage_id": stage["semantic_stage_id"],
+            "canonical_target": stage["canonical_target"],
+        }
+        for stage in stages
+    ]
+    if (
+        controls["canonical_identifier_contract"]["semantic_stages"]
+        != prepared_identifiers
+    ):
+        raise ValueError("preinstallation controls changed canonical stage identifiers")
+    if (
+        controls["canonical_identifier_contract"]["mandatory_exit_target"]
+        != MANDATORY_EXIT_TARGET
+    ):
+        raise ValueError("preinstallation controls changed mandatory exit target")
     return {
         "schema_id": (
             "toe.repository_wide_native_hypothesis_evidence_census."
@@ -396,6 +437,22 @@ def build() -> dict:
             "supplemental_archive_scientific_content_adjudicated": False,
             "closed_coherence_program_reopened": False,
         },
+        "preinstallation_control_contract": {
+            "artifact_id": controls["artifact_id"],
+            "status": controls["status"],
+            "canonical_identifiers_preserved": True,
+            "workload_budgets_frozen": True,
+            "completion_statuses_separated": True,
+            "two_pass_source_snapshot_frozen": True,
+            "deterministic_deep_review_selection_frozen": True,
+            "passive_parser_contract_frozen": True,
+            "byte_identity_and_cache_contract_frozen": True,
+            "atomic_close_batch_contract_frozen": True,
+            "terminal_state_map_frozen": True,
+            "promotion_remains_outside_program": True,
+            "maintenance_infrastructure_executed": False,
+            "scientific_census_executed": False,
+        },
         "program_proposal": {
             "program_id": PROGRAM_ID,
             "proposal_only": True,
@@ -414,6 +471,33 @@ def build() -> dict:
             "frontier_classifications": FRONTIER_CLASSES,
             "archive_assessment_outcomes": ARCHIVE_ASSESSMENT_OUTCOMES,
             "program_terminal_outcomes": PROGRAM_TERMINAL_OUTCOMES,
+            "workload_budgets": controls["workload_budgets"],
+            "completion_status_contract": controls[
+                "completion_status_contract"
+            ],
+            "source_root_snapshot_contract": controls[
+                "source_root_snapshot_contract"
+            ],
+            "deep_review_selection_contract": controls[
+                "deep_review_selection_contract"
+            ],
+            "parser_contract_artifact": controls["artifact_id"],
+            "byte_identity_and_cache_contract": controls[
+                "byte_identity_and_cache_contract"
+            ],
+            "index_schema": controls["index_schema"],
+            "batch_and_atomic_close_contract": controls[
+                "batch_and_atomic_close_contract"
+            ],
+            "duplicate_contract": controls["duplicate_contract"],
+            "promotion_contract": controls["promotion_contract"],
+            "terminal_state_map": controls["terminal_state_map"],
+            "terminal_state_qualifiers": controls[
+                "terminal_state_qualifiers"
+            ],
+            "repository_exclusion_contract": controls[
+                "repository_exclusion_contract"
+            ],
             "discovery_strategy": {
                 "broad_automated_discovery_first": True,
                 "metadata_and_hash_classification_before_deep_read": True,
@@ -475,6 +559,8 @@ def build() -> dict:
             "program_installed": False,
             "stage_1_opened": False,
             "scientific_claim_made": False,
+            "preinstallation_controls_frozen": True,
+            "maintenance_index_or_cache_generated": False,
         },
         "prohibited_claims": [
             "repository-wide source exhaustion",
