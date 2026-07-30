@@ -1,0 +1,23 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_AUTHORITY_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "dependency_impact_check_permits_open": true,
+    "exact_input_paths_and_hashes_are_bound": true,
+    "manifest_stage_identity_target_and_scope_match": true,
+    "program_is_installed_and_unopened": true,
+    "scientific_producer_is_prohibited_before_open_commit": true
+  },
+  "consumed_artifact": "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_AUTHORITY_20260729_v0",
+  "decision": "CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_ATOMIC_OPEN_AUTHORIZED",
+  "nonclaim_boundary": [
+    "This decision authorizes the atomic Stage 1 OPEN transition only.",
+    "It does not itself open the stage or produce the claim inventory.",
+    "It does not select a coherence representation or native model."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "schema_id": "toe.native_coherence.controlled_claim_inventory.stage_1_open_authority_review.v0",
+  "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+  "status": "ACCEPTED_SEPARATE_SCIENTIFIC_OPEN_AUTHORITY_NO_STAGE_OUTPUT"
+}
