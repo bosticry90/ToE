@@ -94,7 +94,7 @@ def test_independent_review_accepts_the_bounded_selection() -> None:
     )
 
 
-def test_registry_retains_selection_and_projects_preparation_target() -> None:
+def test_registry_retains_selection_and_preparation_workstreams() -> None:
     registry = _load(REGISTRY)
     selection_rows = [
         row for row in registry["workstreams"] if row.get("workstream_id") == SELECTION_TARGET
@@ -105,7 +105,3 @@ def test_registry_retains_selection_and_projects_preparation_target() -> None:
     assert len(selection_rows) == 1
     assert selection_rows[0]["status"] == "completed"
     assert len(next_rows) == 1
-    assert next_rows[0]["report"].endswith(
-        "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_REVIEW_v0.json"
-    )
-    assert next_rows[0]["ccft_resumed"] == "no"

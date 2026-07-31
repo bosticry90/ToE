@@ -1,34 +1,37 @@
-import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationAuthority
+import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationAuthority
+open ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := authorizedTarget
+def currentLiveTarget : String := executionTarget
 def currentEvidencePacketId : String := reviewId
-def currentBoundedProgramId : String := "NONE"
-def currentBoundedProgramState : String := "NOT_APPLICABLE"
-def currentTargetPhase : String := "CCFT_PROGRAM_PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED"
+def currentBoundedProgramId : String := proposedProgramId
+def currentBoundedProgramState : String := "PROPOSAL_PREPARED_UNINSTALLED"
+def currentTargetPhase : String := "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
 def currentBoundedAttemptNumber : Nat := 0
 def lastClosedBoundedSemanticStage : String := "NONE"
 def lastBoundedTerminalResult : String := "NONE"
 
-theorem current_target_records_authorized_ccft_program_preparation :
-    currentLiveTarget = authorizedTarget := by
+theorem current_target_records_prepared_ccft_program_proposal :
+    currentLiveTarget = executionTarget := by
   rfl
 
-theorem ccft_program_preparation_authority_is_nonexecuting :
-    currentBoundedProgramState = "NOT_APPLICABLE" ∧
-    currentTargetPhase = "CCFT_PROGRAM_PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
+theorem ccft_program_proposal_is_uninstalled_and_nonexecuting :
+    currentBoundedProgramState = "PROPOSAL_PREPARED_UNINSTALLED" ∧
+    currentTargetPhase =
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
     currentBoundedAttemptNumber = 0 ∧
-    proposalPreparationAuthorized = true ∧ programInstalled = false ∧
+    proposedStageCount = 5 ∧ repairAttemptCount = 0 ∧ programInstalled = false ∧
     scientificStageOpened = false ∧
-    ccftMathematicsRecoveredOrAdjudicated = false ∧
-    ccftRepresentationOrFieldSelected = false ∧ ccftActionConstructed = false ∧
-    ccftSeamOrObservableSelected = false ∧ evidencePromoted = false := by
+    ccftMathematicalCoreRecovered = false ∧
+    operationalCoherenceDefinitionEstablished = false ∧
+    ccftRepresentationFieldOrActionSelected = false ∧
+    ccftSeamObservableOrDiscriminatorSelected = false ∧
+    evidencePromoted = false := by
   decide
 
 end CurrentTarget

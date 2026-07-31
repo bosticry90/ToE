@@ -1,7 +1,7 @@
 {
   "accepted": true,
   "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_REVIEW_v0",
-  "captured_at_utc": "2026-07-31T21:30:00Z",
+  "captured_at_utc": "2026-07-31T21:19:27Z",
   "checks": {
     "frontier_selection_hashes_reproduce": true,
     "exact_selected_ccft_frontier_is_preserved": true,

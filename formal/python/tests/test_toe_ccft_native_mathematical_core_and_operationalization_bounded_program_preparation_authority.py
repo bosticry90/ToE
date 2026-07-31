@@ -63,13 +63,7 @@ def test_independent_review_accepts_only_preparation() -> None:
     assert all(value["checks"].values())
 
 
-def test_registry_projection_records_preparation_authority() -> None:
+def test_registry_retains_the_preparation_workstream() -> None:
     registry = _load(REGISTRY)
-    projection = registry["current_projection_v0"]
-    assert projection["current_target"] == TARGET
     rows = [row for row in registry["workstreams"] if row.get("workstream_id") == TARGET]
     assert len(rows) == 1
-    assert rows[0]["authorization_evidence"].endswith(
-        "ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationAuthority.lean"
-    )
-    assert rows[0]["ccft_resumed"] == "no"

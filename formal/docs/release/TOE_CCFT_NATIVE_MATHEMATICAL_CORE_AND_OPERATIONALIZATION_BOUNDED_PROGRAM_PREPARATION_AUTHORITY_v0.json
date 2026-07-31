@@ -2,7 +2,7 @@
   "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0",
   "authority_decision": "AUTHORIZE_PROPOSAL_PREPARATION_ONLY",
   "authorized_target": "prepare_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_v0",
-  "captured_at_utc": "2026-07-31T21:30:00Z",
+  "captured_at_utc": "2026-07-31T21:19:27Z",
   "consumed_frontier_checkpoint": {
     "selection_result_path": "formal/docs/release/TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0.json",
     "selection_result_sha256": "1d9f06a1e8d914d88603eff9b0539b78ef1f5141b327cc2f2255f0c1531b128b",
