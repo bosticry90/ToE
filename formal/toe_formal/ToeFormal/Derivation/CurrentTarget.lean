@@ -1,5 +1,6 @@
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeNativeGravitationalRequirementInventoryAttemptOpen
 import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0
 import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
@@ -19,60 +20,60 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
+open ToeNativeGravitationalRequirementInventoryAttemptOpen
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview.scientificTarget
+  ToeNativeGravitationalRequirementInventoryAttemptOpen.scientificTarget
 
 def currentEvidencePacketId : String :=
-  "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0"
+  ToeNativeGravitationalRequirementInventoryAttemptOpen.eventId
 
 def currentBoundedProgramId : String :=
   "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0"
 
-def currentBoundedProgramState : String := "UNOPENED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY"
+  "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN"
 
-def currentBoundedAttemptNumber : Nat := 0
+def currentBoundedAttemptNumber : Nat := 1
 
 def lastClosedBoundedSemanticStage : String :=
-  "NATIVE_FRONTIER_DECISION"
+  "NONE_IN_CURRENT_PROGRAM"
 
-def lastBoundedTerminalResult : String := "PASSED"
+def lastBoundedTerminalResult : String := "NONE"
 
-theorem current_target_records_prepared_gravitational_survey_program_proposal :
+theorem current_target_records_open_gravitational_requirement_inventory :
     currentLiveTarget =
-      "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0" := by
+      "inventory_toe_native_gravitational_requirements_v0" := by
   rfl
 
-theorem gravitational_survey_program_is_installed_but_unopened :
+theorem gravitational_requirement_inventory_is_open_without_result :
     currentBoundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "UNOPENED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 0 ∧
+      "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    currentBoundedAttemptNumber = 1 ∧
     lastClosedBoundedSemanticStage =
-      "NATIVE_FRONTIER_DECISION" ∧
-    lastBoundedTerminalResult = "PASSED" ∧
-    proposalPrepared = true ∧
-    independentReviewAccepted = true ∧
+      "NONE_IN_CURRENT_PROGRAM" ∧
+    lastBoundedTerminalResult = "NONE" ∧
     Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programInstalled =
       true ∧
-    Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened =
-      false ∧
+    Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened = false ∧
     Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0.installationAccepted =
       true ∧
-    scientificStageOpened = false ∧
-    compatibilitySurveyExecuted = false ∧
-    gravitationalActionSelected = false ∧
+    programOpen = true ∧
+    scientificResultCreated = false ∧
+    requirementRowsAdjudicated = 0 ∧
+    actionFamiliesCompared = false ∧
     evidencePromoted = false ∧
-    automaticSuccessorSelected = false ∧
-    closedV2MatrixPopulationPermitted = false ∧
+    gravitationalActionSelected = false ∧
+    nativeGravitationalPrincipleSelected = false ∧
+    gravitationalCalculationStarted = false ∧
+    stageTwoAuthorized = false ∧
     ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.mandatoryExitCompleted =
       true := by
   decide

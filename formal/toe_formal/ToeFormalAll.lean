@@ -854,6 +854,7 @@ import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0AttemptOpen
 import ToeFormal.Derivation.ToeNativeCoherenceRepresentationV0ResultReview
 import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryAttemptOpen
 import ToeFormal.Derivation.ToeNativeControlledCoherenceClaimInventoryResult
+import ToeFormal.Derivation.ToeNativeGravitationalRequirementInventoryAttemptOpen
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
 import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionAuthority
@@ -1342,6 +1343,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1335
+def committedModuleCount : Nat := 1336
 
 end ToeFormalAll

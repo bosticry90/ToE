@@ -14,7 +14,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
+open Derivation.ToeNativeGravitationalRequirementInventoryAttemptOpen
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -36,9 +36,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_prepared_gravitational_survey_program_proposal :
+theorem current_authority_tracks_open_gravitational_requirement_inventory :
     currentTarget =
-      "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0" := by
+      "inventory_toe_native_gravitational_requirements_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -53,27 +53,27 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem gravitational_survey_program_is_installed_and_remains_unopened :
+theorem gravitational_requirement_inventory_attempt_is_open_without_result :
     boundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    boundedProgramState = "UNOPENED" ∧
+    boundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
-    boundedAttemptNumber = 0 ∧
-    proposalPrepared = true ∧
-    independentReviewAccepted = true ∧
+      "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    boundedAttemptNumber = 1 ∧
     ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programInstalled =
       true ∧
-    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened =
-      false ∧
+    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened = false ∧
     ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0.installationAccepted =
       true ∧
-    scientificStageOpened = false ∧
-    compatibilitySurveyExecuted = false ∧
-    gravitationalActionSelected = false ∧
+    programOpen = true ∧
+    scientificResultCreated = false ∧
+    requirementRowsAdjudicated = 0 ∧
+    actionFamiliesCompared = false ∧
     evidencePromoted = false ∧
-    automaticSuccessorSelected = false ∧
-    closedV2MatrixPopulationPermitted = false := by
+    gravitationalActionSelected = false ∧
+    nativeGravitationalPrincipleSelected = false ∧
+    gravitationalCalculationStarted = false ∧
+    stageTwoAuthorized = false := by
   native_decide
 
 end CurrentAuthority
