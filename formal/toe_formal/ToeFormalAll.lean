@@ -1077,6 +1077,8 @@ import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionAuthori
 import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionResultReviewV0
 import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionV0
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
+import ToeFormal.Release.ToeCurrentNativeHypothesisEvidenceReconciliationStage4OpenAuthorityReviewV0
+import ToeFormal.Release.ToeCurrentNativeHypothesisEvidenceReconciliationStage4OpenAuthorityV0
 import ToeFormal.Release.ToeNativeCoherenceOntologyProgramGovernanceInstallationV0
 import ToeFormal.Release.ToeNativeControlledCoherenceClaimInventoryStage1OpenAuthorityV0
 import ToeFormal.Release.ToeNativeHypothesisSourceLineageReconstructionStage2OpenAuthorityReviewV0
@@ -1327,6 +1329,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1320
+def committedModuleCount : Nat := 1322
 
 end ToeFormalAll

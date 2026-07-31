@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_STAGE_4_OPEN_AUTHORITY_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-31T00:00:00Z",
+  "checks": {
+    "canonical_manifest_stage_4_binding_matches": true,
+    "candidate_graph_chain_and_edge_vocabulary_frozen": true,
+    "candidate_promotion_is_dossier_only": true,
+    "conflicts_and_semantic_duplicates_remain_unmerged": true,
+    "mandatory_exit_behavior_bound": true,
+    "no_truth_adjudication_or_evidence_promotion": true,
+    "repetition_does_not_increase_evidence_strength": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "stage_3_result_review_validation_and_close_hash_bound": true,
+    "stage_3_is_closed_passed_with_unreviewed_overflow": true,
+    "stage_5_automatic_open_prohibited": true,
+    "workload_limits_frozen": true
+  },
+  "consumed_authority": "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_STAGE_4_OPEN_AUTHORITY_20260730_v0",
+  "decision": "AUTHORIZE_STAGE_4_OPEN",
+  "nonclaim_boundary": "This authority permits bounded current-hypothesis reconciliation only. It does not adjudicate scientific truth, promote evidence, select a representation or native frontier, construct a field or action, close a pillar or seam, or open Stage 5.",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "review_status": "ACCEPTED_FOR_SEPARATE_ATOMIC_STAGE_4_OPEN",
+  "schema_id": "toe.current_native_hypothesis_evidence_reconciliation.stage_4_open_authority_review.v0"
+}
