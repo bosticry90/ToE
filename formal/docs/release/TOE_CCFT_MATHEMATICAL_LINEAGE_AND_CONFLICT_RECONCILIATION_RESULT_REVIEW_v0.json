@@ -1,0 +1,111 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T23:10:01Z",
+  "consumed_result": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+  "consumed_result_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0.json",
+  "consumed_result_sha256": "8cc3ed47abe59d11ec7ba39aa47c7a848800635e1f4ccc9e15e278c558d33bf1",
+  "independent_findings": [
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-001",
+      "statement": "All 33 Stage 1 mathematical entries are assigned exactly once across nine bounded lineage components.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-002",
+      "statement": "The nonlinear first-order CP-NLSE and the recorded linear second-order CE-NWE are not source-bound as exactly equivalent full equations.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-003",
+      "statement": "The CP-NLSE zero-coupling dispersion and the UCFF zero-coupling squared dispersion coincide after squaring and a common wavenumber convention; this does not establish full formulation equivalence.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-004",
+      "statement": "The recorded CE-NWE and UCFF lam=0 squared dispersions coincide only under the explicit conditional map g_eff=g*rho0, which the source set does not establish as a universal parameter identity.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-005",
+      "statement": "Writing q=g_eff*rho0, the reported additive nonzero-interaction omega formula differs from the squared expression by q^2 and therefore is not an equivalent convention as written.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-006",
+      "statement": "The two chi branches remain parallel and insufficiently defined because the full high-order equation, common coupling functional, and transformation or revision evidence are absent.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-007",
+      "statement": "The LCRD v3 lock supplies one explicit phenomenological R/K branch, but the source set supplies neither a variational derivation nor a reproducible LSDA coarse-graining map nor a complete alternative branch.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-008",
+      "statement": "No source-bound revised-descendant or supersession relation is established because the historical files share one archive-ingestion commit and only the review-to-monograph relationship is explicit in the source text.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-009",
+      "statement": "The result preserves the current crosswalk, admissibility, residual, and variational packets as planning surfaces rather than treating them as descendants of a selected historical formulation.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "CCFT-LINEAGE-REVIEW-FINDING-010",
+      "statement": "The stage result reconciles lineage and conflict status without selecting a formulation, assigning operational meaning, repairing equations, or constructing a core, action, seam, or observable.",
+      "status": "CONFIRMED"
+    }
+  ],
+  "independent_recomputation": {
+    "all_33_entry_ids_present_exactly_once": true,
+    "all_five_conflict_source_git_blobs_reverified": true,
+    "all_input_binding_hashes_match": true,
+    "all_relationship_evidence_uses_authorized_stage_1_entries": true,
+    "conflict_count": 4,
+    "documentary_relationship_count": 4,
+    "genuine_incompatibility_count": 2,
+    "lineage_component_count": 9,
+    "mathematical_entry_count": 33,
+    "mathematical_formulation_relationship_count": 12,
+    "revised_descendant_count": 0,
+    "source_bound_supersession_count": 0,
+    "symbol_and_convention_mapping_count": 7,
+    "transformation_check_count": 4,
+    "unresolved_relationship_count": 5,
+    "workload_caps_respected": true
+  },
+  "nonclaim_boundary": [
+    "The review accepts lineage and conflict classification, not scientific truth or physical validity.",
+    "No CP-NLSE, CE-NWE, UCFF, chi, or LCRD branch is preferred or promoted.",
+    "Limited dispersion equivalence is not generalized beyond the stated parameter and domain mappings.",
+    "Missing equations, definitions, coefficient provenance, and operational meanings remain missing.",
+    "No minimal core, representation, field, action, matter or gravity seam, observable, or empirical claim is produced.",
+    "Stage 3 remains selected but unauthorized and unopened."
+  ],
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "review_checks": {
+    "ccft_action_not_constructed": true,
+    "conflicts_not_silently_harmonized": true,
+    "documentary_chronology_not_inferred_from_archive_ingestion": true,
+    "evidence_not_promoted": true,
+    "full_cp_nlse_ce_nwe_equivalence_not_claimed": true,
+    "incomplete_chi_and_rotor_branches_not_repaired": true,
+    "limited_equivalence_scope_is_explicit": true,
+    "matter_or_gravity_seam_not_selected": true,
+    "minimal_core_not_selected": true,
+    "observable_not_defined": true,
+    "operational_interpretation_not_adjudicated": true,
+    "preferred_formulation_not_selected": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "result_bytes_hash_bound": true,
+    "source_hashes_recomputed": true,
+    "stage_3_not_authorized_or_opened": true
+  },
+  "review_result": "ACCEPT_CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS",
+  "schema_id": "toe.ccft.mathematical_lineage_and_conflict_reconciliation.result_review.v0",
+  "selected_next_target": "operationalize_toe_retained_ccft_mathematical_objects_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED_OR_OPENED",
+  "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+  "terminal_outcome": "CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS"
+}

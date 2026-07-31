@@ -1,0 +1,445 @@
+{
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+  "attempt_sequence_number": 2,
+  "captured_at_utc": "2026-07-31T23:10:01Z",
+  "chronology_boundary": {
+    "documentary_sequence_established": false,
+    "git_archive_ingestion_commit": "582addd8323aef8b5602004ae111b5f812dcae45",
+    "git_archive_ingestion_time": "2026-02-09T16:30:35Z",
+    "reason": "All five historical sources used for the conflict analysis entered tracked history in the same archive-ingestion commit. The action-plan text explicitly reviews monograph claims, but tracked Git chronology cannot establish the original creation order of the archived source bytes.",
+    "superseded_formulation_established": false
+  },
+  "conflict_reconciliation": [
+    {
+      "conflict_id": "CCFT-CONFLICT-CP-NLSE-CE-NWE",
+      "entry_ids": [
+        "CCFT-MATH-003",
+        "CCFT-MATH-021",
+        "CCFT-MATH-027"
+      ],
+      "primary_classification": "GENUINELY_INCOMPATIBLE",
+      "qualifiers": [
+        "EQUIVALENT_AFTER_CONVENTION_MAPPING_ONLY_IN_A_STATED_LINEAR_ZERO_COUPLING_DISPERSION_LIMIT",
+        "FULL_NONLINEAR_EQUIVALENCE_NOT_ESTABLISHED",
+        "SUPERSESSION_NOT_ESTABLISHED"
+      ],
+      "source_bound_analysis": {
+        "ce_nwe": "The review source records a linear second-order-in-time fourth-order-in-space equation.",
+        "cp_nlse": "The CP-NLSE lock records a nonlinear first-order-in-time complex evolution equation.",
+        "exact_equivalence_claim": "The monograph front matter asserts mathematical equivalence but supplies no bound derivation in the authorized source set.",
+        "result": "The two full equations cannot be treated as the same mathematical theory. Only limited dispersion-level relations are established below."
+      },
+      "status": "CONFLICT_PRESERVED_NO_PREFERRED_FORMULATION"
+    },
+    {
+      "conflict_id": "CCFT-CONFLICT-CHI-DYNAMICS",
+      "entry_ids": [
+        "CCFT-MATH-022",
+        "CCFT-MATH-023",
+        "CCFT-MATH-026"
+      ],
+      "primary_classification": "PARALLEL_ALTERNATIVE",
+      "qualifiers": [
+        "INSUFFICIENTLY_DEFINED",
+        "UNRESOLVED",
+        "NO_COMMON_COUPLING_FUNCTIONAL_RECOVERED"
+      ],
+      "source_bound_analysis": {
+        "branch_a": "The review source reports a high-spatial-derivative chi form using second, fourth, and sixth spatial derivatives, but does not bind its complete equation.",
+        "branch_b": "The same review source records a driven damped second-order wave equation for chi.",
+        "coupling": "The referenced L_couple is not explicitly bound to a functional that yields both phi and chi equations.",
+        "result": "No transformation, domain split, revision, or supersession relation is source-bound."
+      },
+      "status": "UNRESOLVED_PARALLEL_BRANCHES"
+    },
+    {
+      "conflict_id": "CCFT-CONFLICT-DISPERSION",
+      "entry_ids": [
+        "CCFT-MATH-005",
+        "CCFT-MATH-007",
+        "CCFT-MATH-008",
+        "CCFT-MATH-021",
+        "CCFT-MATH-027"
+      ],
+      "primary_classification": "MULTIPLE_DOMAIN_SPECIFIC_CCFT_FORMULATIONS_RETAINED",
+      "qualifiers": [
+        "ZERO_COUPLING_LIMIT_EQUIVALENCE_ESTABLISHED",
+        "CE_UCFF_COEFFICIENT_MAPPING_CONDITIONAL",
+        "ADDITIVE_OMEGA_FORM_GENUINELY_INCOMPATIBLE_FOR_NONZERO_INTERACTION",
+        "POSITIVE_FREQUENCY_BRANCH_NOT_SELECTED"
+      ],
+      "source_bound_analysis": {
+        "cp_nlse_linear_lock": "omega=(kx^2+ky^2)/2 in the two-dimensional g=0 limit.",
+        "ucff_direct_specification": "omega^2=k^4/4+(g*rho0)k^2+lam*k^4 in a first-order UCFF source.",
+        "ce_nwe_report": "omega^2=g_eff*k^2+k^4/4 follows from the recorded CE-NWE form, conditional on its coefficient notation.",
+        "reported_additive_form": "omega=k^2/2+g_eff*rho0 is not the same nonzero-interaction dispersion as the squared Bogoliubov/CE expression.",
+        "result": "The zero-coupling dispersion overlaps algebraically, while interacting branches remain conditional, domain-specific, or conflicting."
+      },
+      "status": "LIMITED_EQUIVALENCE_AND_GENUINE_CONFLICT_BOTH_PRESERVED"
+    },
+    {
+      "conflict_id": "CCFT-CONFLICT-ROTOR-DYNAMICS",
+      "entry_ids": [
+        "CCFT-MATH-009",
+        "CCFT-MATH-010",
+        "CCFT-MATH-013",
+        "CCFT-MATH-014",
+        "CCFT-MATH-024",
+        "CCFT-MATH-025",
+        "CCFT-MATH-026"
+      ],
+      "primary_classification": "UNRESOLVED",
+      "qualifiers": [
+        "ONE_EXPLICIT_PHENOMENOLOGICAL_BRANCH",
+        "ONE_OR_MORE_INSUFFICIENTLY_DEFINED_ALTERNATIVES",
+        "NO_VARIATIONAL_DERIVATION_ESTABLISHED",
+        "NO_LSDA_COARSE_GRAINING_MAP_RECOVERED",
+        "SUPERSESSION_NOT_ESTABLISHED"
+      ],
+      "source_bound_analysis": {
+        "explicit_branch": "The LCRD v3 lock defines first-order R and K evolution on a one-dimensional periodic domain and labels the equations authoritative within that historical lock.",
+        "reported_alternatives": "The review source reports different schematic R drivers but does not bind complete alternative systems.",
+        "functional": "The quadratic rotor energy functional does not source-bind a derivation of the locked R and K evolution equations.",
+        "result": "The explicit LCRD v3 equations are retained as one historical phenomenological branch, not selected as canonical CCFT dynamics."
+      },
+      "status": "EXPLICIT_BRANCH_RETAINED_ALTERNATIVES_UNRESOLVED"
+    }
+  ],
+  "documentary_relationships": [
+    {
+      "confidence": "HIGH",
+      "evidence": "The action-plan source explicitly states that it synthesizes feedback on monograph claims and then quotes the same CP-NLSE, CE-NWE, chi, and rotor subjects asserted in the front matter.",
+      "relationship_id": "CCFT-DOC-REL-001",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "source_path": "archive/field_theory/docs/dev_notes/action plan.txt",
+      "target_path": "archive/docs/Monograph/Part 0 - Front Matter.md"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence": "The lock and front matter use the CP-NLSE branch label, but neither source provides a source-to-source revision reference.",
+      "relationship_id": "CCFT-DOC-REL-002",
+      "relationship_type": "PARALLEL_DOMAIN_SPECIFICATION",
+      "source_path": "archive/docs/locks/LOCK_CP_NLSE_2D_DISPERSION.md",
+      "target_path": "archive/docs/Monograph/Part 0 - Front Matter.md"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence": "The direct UCFF dispersion source overlaps the review's squared dispersion, but supplies no documentary revision reference to the monograph.",
+      "relationship_id": "CCFT-DOC-REL-003",
+      "relationship_type": "PARALLEL_DOMAIN_SPECIFICATION",
+      "source_path": "archive/docs/locks/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+      "target_path": "archive/field_theory/docs/dev_notes/action plan.txt"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence": "The LCRD lock and front matter name the same R/K subsystem, but the source set contains no explicit revision or supersession reference between them.",
+      "relationship_id": "CCFT-DOC-REL-004",
+      "relationship_type": "PARALLEL_DOMAIN_SPECIFICATION",
+      "source_path": "archive/docs/locks/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "target_path": "archive/docs/Monograph/Part 0 - Front Matter.md"
+    }
+  ],
+  "input_bindings": {
+    "authority": {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_STAGE_2_OPEN_AUTHORITY_v0.json",
+      "sha256": "6aecd6f3f672138f3e238d1c22a4b327ce8be19fb9ff99b61d993ab92cc5f1e2"
+    },
+    "manifest": {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+      "sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be"
+    },
+    "open_event": {
+      "event_hash": "6765badd2ce94586a489dbe6a755fd2f57d0bb36114cfd0dc93bb976c0f2e943",
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_OPEN_v0.json",
+      "sha256": "237c3af042a312dd88178a025c97492968eca167f69c7e4dfedf9b1d1bbde77f"
+    },
+    "stage_1_result": {
+      "path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+      "sha256": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4"
+    },
+    "stage_1_review": {
+      "path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json",
+      "sha256": "8974b4908e4cf73f48117432dfa7a380d39e7eb07afabbb0d56367cbadf51787"
+    }
+  },
+  "lifecycle_result": "PASSED",
+  "lineage_components": [
+    {
+      "component_id": "CCFT-LINEAGE-CP-NLSE-2D",
+      "entry_ids": ["CCFT-MATH-001", "CCFT-MATH-002", "CCFT-MATH-003", "CCFT-MATH-004", "CCFT-MATH-005", "CCFT-MATH-006"],
+      "lineage_status": "DOMAIN_SPECIFIC_VARIANT",
+      "source_paths": ["archive/docs/locks/LOCK_CP_NLSE_2D_DISPERSION.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-UCFF-DISPERSION",
+      "entry_ids": ["CCFT-MATH-007", "CCFT-MATH-008"],
+      "lineage_status": "DOMAIN_SPECIFIC_VARIANT",
+      "source_paths": ["archive/docs/locks/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-LCRD-V3",
+      "entry_ids": ["CCFT-MATH-009", "CCFT-MATH-010", "CCFT-MATH-011", "CCFT-MATH-012", "CCFT-MATH-013", "CCFT-MATH-014", "CCFT-MATH-015", "CCFT-MATH-016"],
+      "lineage_status": "PARALLEL_ALTERNATIVE",
+      "source_paths": ["archive/docs/locks/LOCK_LCRD_V3_ROTOR_CURVATURE.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-DIAGNOSTICS",
+      "entry_ids": ["CCFT-MATH-017", "CCFT-MATH-018", "CCFT-MATH-019", "CCFT-MATH-020"],
+      "lineage_status": "CONTROL_OR_KNOWN_PHYSICS_IMPORT_NOT_DYNAMICAL_LINEAGE",
+      "source_paths": ["archive/docs/locks/LOCK_TURB_C12_C13_TURBULENCE_DIAGNOSTICS.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-HISTORICAL-CONFLICT-REVIEW",
+      "entry_ids": ["CCFT-MATH-021", "CCFT-MATH-022", "CCFT-MATH-023", "CCFT-MATH-024", "CCFT-MATH-025"],
+      "lineage_status": "RESULT_REVIEW_WITH_UNRESOLVED_CONFLICTS",
+      "source_paths": ["archive/field_theory/docs/dev_notes/action plan.txt"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-MONOGRAPH-UNIFICATION-ASSERTION",
+      "entry_ids": ["CCFT-MATH-026", "CCFT-MATH-027"],
+      "lineage_status": "HEURISTIC_SUMMARY_WITH_UNPROVEN_EQUIVALENCE",
+      "source_paths": ["archive/docs/Monograph/Part 0 - Front Matter.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-CURRENT-CROSSWALK-ADMISSIBILITY",
+      "entry_ids": ["CCFT-MATH-028", "CCFT-MATH-029", "CCFT-MATH-030"],
+      "lineage_status": "CURRENT_PLANNING_SURFACE_NOT_FORMULATION_DESCENDANT",
+      "source_paths": ["formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md", "formal/docs/paper/CCFT_CK_ADMISSIBILITY_OBLIGATION_INDEX_v0.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-CURRENT-EMPIRICAL-SCAFFOLD",
+      "entry_ids": ["CCFT-MATH-031", "CCFT-MATH-032"],
+      "lineage_status": "CURRENT_SCAFFOLD_WITH_MISSING_BASELINE",
+      "source_paths": ["formal/docs/paper/SELECTED_CCFT_EMPIRICAL_DISCRIMINATOR_BASELINE_COMPONENT_EQUATION_SCAFFOLD_PACKET_v0.md"]
+    },
+    {
+      "component_id": "CCFT-LINEAGE-CURRENT-VARIATIONAL-TARGET",
+      "entry_ids": ["CCFT-MATH-033"],
+      "lineage_status": "PLANNING_TARGET_ONLY_NO_ACTION_LINEAGE",
+      "source_paths": ["formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md"]
+    }
+  ],
+  "lineage_summary": {
+    "all_33_entries_assigned_exactly_once": true,
+    "documentary_relationship_count": 4,
+    "formulation_relationship_count": 12,
+    "genuine_incompatibility_count": 2,
+    "lineage_component_count": 9,
+    "preferred_formulation_selected": false,
+    "revised_descendant_count": 0,
+    "source_bound_supersession_count": 0,
+    "unresolved_relationship_count": 5
+  },
+  "mathematical_formulation_relationships": [
+    {
+      "entry_ids": ["CCFT-MATH-003", "CCFT-MATH-021", "CCFT-MATH-027"],
+      "evidence": "First-order nonlinear CP-NLSE and linear second-order CE-NWE differ in evolution order and nonlinear content; the asserted exact equivalence has no bound derivation.",
+      "relationship_id": "CCFT-MATH-REL-001",
+      "relationship_type": "GENUINELY_INCOMPATIBLE",
+      "scope": "FULL_EQUATION_LEVEL"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-005", "CCFT-MATH-007", "CCFT-MATH-008"],
+      "evidence": "Squaring omega=k^2/2 gives k^4/4, equal to the UCFF expression when g=0 and lam=0, with k interpreted in the relevant spatial domain.",
+      "relationship_id": "CCFT-MATH-REL-002",
+      "relationship_type": "EQUIVALENT_AFTER_CONVENTION_MAPPING",
+      "scope": "ZERO_COUPLING_LINEAR_DISPERSION_ONLY"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-007", "CCFT-MATH-021"],
+      "evidence": "The CE-NWE dispersion equals the UCFF lam=0 dispersion only under the conditional coefficient map g_eff=g*rho0.",
+      "relationship_id": "CCFT-MATH-REL-003",
+      "relationship_type": "EQUIVALENT_AFTER_CONVENTION_MAPPING",
+      "scope": "CONDITIONAL_DISPERSION_MAP_NOT_SOURCE_DEFINED"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-007", "CCFT-MATH-008"],
+      "evidence": "Setting lam=0 removes the additional lam*k^4 term and yields the recorded Bogoliubov limit.",
+      "relationship_id": "CCFT-MATH-REL-004",
+      "relationship_type": "APPROXIMATION_OR_LIMIT",
+      "scope": "UCFF_LAM_ZERO_LIMIT"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-005", "CCFT-MATH-021"],
+      "evidence": "Writing q=g_eff*rho0, the reported additive omega=k^2/2+q form has a square that differs from q*k^2+k^4/4 by q^2.",
+      "relationship_id": "CCFT-MATH-REL-005",
+      "relationship_type": "GENUINELY_INCOMPATIBLE",
+      "scope": "NONZERO_INTERACTION_DISPERSION_AS_WRITTEN"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-005", "CCFT-MATH-007", "CCFT-MATH-021"],
+      "evidence": "The CP-NLSE lock is two-dimensional and zero-coupling; the UCFF and reviewed CE-NWE expressions are one-dimensional interacting specifications.",
+      "relationship_id": "CCFT-MATH-REL-006",
+      "relationship_type": "DOMAIN_SPECIFIC_VARIANT",
+      "scope": "DIMENSION_AND_INTERACTION_REGIME"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-022"],
+      "evidence": "The two chi dynamics are reported together, but the full high-order branch and a transformation between branches are absent.",
+      "relationship_id": "CCFT-MATH-REL-007",
+      "relationship_type": "PARALLEL_ALTERNATIVE",
+      "scope": "CHI_DYNAMICS"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-022", "CCFT-MATH-023"],
+      "evidence": "No explicit common L_couple is bound to both phi and chi evolution equations.",
+      "relationship_id": "CCFT-MATH-REL-008",
+      "relationship_type": "INSUFFICIENTLY_DEFINED",
+      "scope": "PHI_CHI_COUPLING"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-013", "CCFT-MATH-014", "CCFT-MATH-024"],
+      "evidence": "One complete LCRD v3 branch is explicit, while other R drivers are reported only schematically and cannot be transformed or ordered from the selected evidence.",
+      "relationship_id": "CCFT-MATH-REL-009",
+      "relationship_type": "PARALLEL_ALTERNATIVE",
+      "scope": "ROTOR_CURVATURE_DYNAMICS"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-013", "CCFT-MATH-014", "CCFT-MATH-024"],
+      "evidence": "The quadratic rotor functional is explicit, but no source-bound variation or evolution principle yields the recorded R and K PDEs.",
+      "relationship_id": "CCFT-MATH-REL-010",
+      "relationship_type": "INSUFFICIENTLY_DEFINED",
+      "scope": "FUNCTIONAL_TO_DYNAMICS_MAP"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-024", "CCFT-MATH-025"],
+      "evidence": "No reproducible LSDA-to-(R,K) coarse-graining map is present, so microphysical descent is not established.",
+      "relationship_id": "CCFT-MATH-REL-011",
+      "relationship_type": "UNRESOLVED",
+      "scope": "LSDA_TO_LCRD_DESCENT"
+    },
+    {
+      "entry_ids": ["CCFT-MATH-028", "CCFT-MATH-029", "CCFT-MATH-030", "CCFT-MATH-031", "CCFT-MATH-032", "CCFT-MATH-033"],
+      "evidence": "The current tracked crosswalk, admissibility, residual, and variational surfaces label future objects and obligations but do not provide mathematical descent from one historical formulation.",
+      "relationship_id": "CCFT-MATH-REL-012",
+      "relationship_type": "UNRESOLVED",
+      "scope": "CURRENT_PLANNING_SURFACES_TO_HISTORICAL_FORMULATIONS"
+    }
+  ],
+  "next_stage": {
+    "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+    "status": "SELECTED_BUT_NOT_AUTHORIZED_OR_OPENED",
+    "target": "operationalize_toe_retained_ccft_mathematical_objects_v0"
+  },
+  "nonclaim_boundary": [
+    "No formulation is selected as canonical or preferred.",
+    "No missing equation, coefficient, coupling, symbol definition, or variational map is supplied.",
+    "No physical bearer or operational interpretation is assigned to psi, phi, chi, rho, R, K, or any other object.",
+    "No CCFT action, minimal core, matter or gravity seam, observable, validation, or empirical claim is produced.",
+    "No historical source or claim is promoted into canonical scientific evidence.",
+    "Repository-wide claim exhaustion remains unestablished."
+  ],
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "scientific_conclusion": "The authorized CCFT mathematics separates into nine source-bound components. Limited dispersion relations coincide in explicitly stated zero-coupling or conditional coefficient mappings, but the sources do not establish full CP-NLSE/CE-NWE equivalence, a unified chi dynamics, a variational rotor dynamics, or a documentary supersession chain. Multiple branches must remain distinct for Stage 3 operationalization.",
+  "scientific_target": "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0",
+  "scope_hash": "f2b412494409a17fa3527481c43a993a99f5e56b863b60c427a2746535c37902",
+  "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+  "source_reverification": [
+    {
+      "git_object_id": "6f0f1c4e1edd74ed359096d1800e78a97a68ba04",
+      "path": "archive/docs/locks/LOCK_CP_NLSE_2D_DISPERSION.md",
+      "sha256": "1a3faf7d048900f79fa1b09d6a241c4e4d254a009b54b27ccb3d7be7191b7d12",
+      "status": "REVERIFIED_COMMITTED_GIT_BLOB"
+    },
+    {
+      "git_object_id": "31d2b8e98f1fbd7e49bb0b913fd430380c311b20",
+      "path": "archive/docs/locks/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+      "sha256": "3ea712dab04bb790c63e64d826551a7637265530c09c5502a0c12df0881173de",
+      "status": "REVERIFIED_COMMITTED_GIT_BLOB"
+    },
+    {
+      "git_object_id": "2918a338afc26450816e814d528d0fe408e4dfe0",
+      "path": "archive/docs/locks/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26",
+      "status": "REVERIFIED_COMMITTED_GIT_BLOB"
+    },
+    {
+      "git_object_id": "6175e0959457110ff5e39cb25bda9b0823f20adf",
+      "path": "archive/field_theory/docs/dev_notes/action plan.txt",
+      "sha256": "11ea897b243bccf221fca20ad83f57adfdfdb1d0085fe5371676a7147caddbe9",
+      "status": "REVERIFIED_COMMITTED_GIT_BLOB"
+    },
+    {
+      "git_object_id": "bc5747e34c2cd82bbf2c9e401a58618e8320894c",
+      "path": "archive/docs/Monograph/Part 0 - Front Matter.md",
+      "sha256": "146a2eeda206a0ce38b820ba9f072958fd1ad8f318b2f2e4ad87269e128420ac",
+      "status": "REVERIFIED_COMMITTED_GIT_BLOB"
+    }
+  ],
+  "status": "STAGE_2_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS_STAGE_3_SELECTED_UNAUTHORIZED",
+  "symbol_and_convention_ledger": [
+    {
+      "mapping_id": "CCFT-SYMBOL-001",
+      "objects": ["psi", "phi"],
+      "status": "UNRESOLVED",
+      "statement": "The sources use both symbols for CP-NLSE-related fields, but no explicit invertible symbol map binds every occurrence."
+    },
+    {
+      "mapping_id": "CCFT-SYMBOL-002",
+      "objects": ["g", "g_eff", "g*rho0"],
+      "status": "CONDITIONAL_MAPPING_ONLY",
+      "statement": "The CE/UCFF dispersion expressions coincide when g_eff is identified with g*rho0; the authorized sources do not establish that identification as a universal parameter definition."
+    },
+    {
+      "mapping_id": "CCFT-SYMBOL-003",
+      "objects": ["rho=|psi|^2", "rho0", "LCRD rho"],
+      "status": "SEMANTICALLY_DISTINCT_UNLESS_DEMONSTRATED",
+      "statement": "The same rho vocabulary denotes a derived CP-NLSE density, a uniform background parameter, and an LCRD density-like state."
+    },
+    {
+      "mapping_id": "CCFT-SYMBOL-004",
+      "objects": ["omega", "omega^2"],
+      "status": "CONVENTION_MAPPING_REQUIRES_BRANCH_AND_DOMAIN",
+      "statement": "Squaring permits limited formula comparison but does not select a positive-frequency branch or establish full dynamical equivalence."
+    },
+    {
+      "mapping_id": "CCFT-SYMBOL-005",
+      "objects": ["lam", "lambda_coh"],
+      "status": "DISTINCT_PARAMETERS_NOT_MERGED",
+      "statement": "The UCFF lock includes lam*k^4 while explicitly stating that lambda_coh is absent at linear order."
+    },
+    {
+      "mapping_id": "CCFT-SYMBOL-006",
+      "objects": ["c1,c2 in LCRD velocity dynamics", "c1,c2 in the reported rotor energy functional"],
+      "status": "SYMBOL_REUSE_WITHOUT_SEMANTIC_EQUIVALENCE",
+      "statement": "The same labels multiply different mathematical structures; no unit or derivation map establishes identical coefficients."
+    },
+    {
+      "mapping_id": "CCFT-SYMBOL-007",
+      "objects": ["R", "K"],
+      "status": "DEFINED_IN_LCRD_BRANCH_OPERATIONAL_BEARER_UNRESOLVED",
+      "statement": "The LCRD lock defines their PDE roles, while the missing LSDA coarse-graining map prevents a source-bound microphysical lineage."
+    }
+  ],
+  "terminal_outcome": "CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS",
+  "transformation_checks": [
+    {
+      "check_id": "CCFT-ALGEBRA-001",
+      "expression": "(k^2/2)^2 - [k^4/4]",
+      "result": "0",
+      "status": "PASS",
+      "meaning": "CP-NLSE zero-coupling frequency squared matches the UCFF zero-coupling squared dispersion in a common one-dimensional wavenumber convention."
+    },
+    {
+      "check_id": "CCFT-ALGEBRA-002",
+      "expression": "[g_eff*k^2+k^4/4]_(g_eff=g*rho0) - [g*rho0*k^2+k^4/4]",
+      "result": "0",
+      "status": "PASS_CONDITIONAL",
+      "meaning": "CE-NWE and UCFF lam=0 dispersions agree only under an explicit coefficient map."
+    },
+    {
+      "check_id": "CCFT-ALGEBRA-003",
+      "expression": "(k^2/2+q)^2 - [q*k^2+k^4/4], where q=g_eff*rho0",
+      "result": "q^2",
+      "status": "NONZERO_IN_GENERAL",
+      "meaning": "The reported additive omega form is not the Bogoliubov/CE squared dispersion for nonzero interaction."
+    },
+    {
+      "check_id": "CCFT-ALGEBRA-004",
+      "expression": "[k^4/4+g*rho0*k^2+lam*k^4] - [k^4/4+g*rho0*k^2]",
+      "result": "lam*k^4",
+      "status": "PASS",
+      "meaning": "The UCFF general expression reduces to its recorded Bogoliubov limit only when lam=0."
+    }
+  ]
+}
