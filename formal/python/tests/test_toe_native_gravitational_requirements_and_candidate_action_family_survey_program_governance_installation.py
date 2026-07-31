@@ -25,6 +25,11 @@ INSTALLATION_PATH = (
     / "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_"
     "SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_v0.json"
 )
+REVIEW_PATH = (
+    RELEASE_ROOT
+    / "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_"
+    "SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json"
+)
 
 
 def _read(path: Path) -> dict:
@@ -124,3 +129,23 @@ def test_installation_is_governance_only_and_does_not_open_stage_one() -> None:
     assert installation["gravitational_action_selected"] is False
     assert installation["native_gravitational_principle_selected"] is False
     assert installation["gravitational_calculation_started"] is False
+
+
+def test_independent_review_accepts_only_the_unopened_installation() -> None:
+    review = _read(REVIEW_PATH)
+    assert review["accepted"] is True
+    assert review["status"] == (
+        "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+    )
+    assert review["program_state"] == "UNOPENED"
+    assert review["attempted_stage_count"] == 0
+    assert review["stage_1_opened"] is False
+    assert review["scientific_execution_authorized"] is False
+    assert review["scientific_output_created"] is False
+    assert review["compatibility_cells_created"] == 0
+    assert review["evidence_promoted"] is False
+    assert review["gravitational_action_selected"] is False
+    assert review["native_gravitational_principle_selected"] is False
+    assert review["gravitational_calculation_started"] is False
+    assert review["exhaustive_python_passage_established"] is False
+    assert all(review["checks"].values())

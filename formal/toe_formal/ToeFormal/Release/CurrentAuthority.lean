@@ -2,6 +2,7 @@ import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0
+import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0
 
 /-
 Release-facing current-authority aggregate for tiered validation. It is a small
@@ -65,6 +66,8 @@ theorem gravitational_survey_program_is_installed_and_remains_unopened :
       true ∧
     ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened =
       false ∧
+    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     scientificStageOpened = false ∧
     compatibilitySurveyExecuted = false ∧
     gravitationalActionSelected = false ∧

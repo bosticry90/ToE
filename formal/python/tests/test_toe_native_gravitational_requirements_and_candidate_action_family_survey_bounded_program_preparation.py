@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 
@@ -108,7 +109,7 @@ def test_proposal_and_review_claim_no_installation_or_action() -> None:
     assert review["reviewed_result"]["sha256"] == _sha256(RESULT_PATH)
 
 
-def test_registry_projects_prepared_but_uninstalled_program() -> None:
+def test_registry_records_preparation_before_later_installation() -> None:
     registry = _read(REGISTRY_PATH)
     projection = registry["current_projection_v0"]
     proposed_id = (
@@ -120,4 +121,20 @@ def test_registry_projects_prepared_but_uninstalled_program() -> None:
         "GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_"
         "BOUNDED_PROGRAM_PROPOSAL_PREPARED"
     )
-    assert proposed_id not in registry["bounded_programs_v1"]
+    prepared_registry = json.loads(
+        subprocess.run(
+            [
+                "git",
+                "show",
+                "f17c85820365dd67ccdde7a5ea53e4879df274b5:"
+                "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+            ],
+            cwd=REPO_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+    )
+    assert proposed_id not in prepared_registry["bounded_programs_v1"]
+    assert registry["bounded_programs_v1"][proposed_id]["state"] == "UNOPENED"
+    assert registry["bounded_programs_v1"][proposed_id]["events"] == []
