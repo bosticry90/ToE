@@ -1,34 +1,49 @@
-import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryResult
+import ToeFormal.Derivation.ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := ToeCCFTSourceBoundMathematicalInventoryResult.selectedNextTarget
-def currentEvidencePacketId : String := ToeCCFTSourceBoundMathematicalInventoryResult.reviewId
-def currentBoundedProgramId : String := ToeCCFTSourceBoundMathematicalInventoryResult.programId
-def currentBoundedProgramState : String := "CLOSED"
-def currentTargetPhase : String := "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY"
-def currentBoundedAttemptNumber : Nat := ToeCCFTSourceBoundMathematicalInventoryResult.attemptSequenceNumber
-def lastClosedBoundedSemanticStage : String := "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY"
+def currentLiveTarget : String :=
+  ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.target
+def currentEvidencePacketId : String :=
+  "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_OPEN_VALIDATION_v0"
+def currentBoundedProgramId : String :=
+  ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.programId
+def currentBoundedProgramState : String := "OPEN"
+def currentTargetPhase : String :=
+  "STAGE_2_OPEN_NO_SCIENTIFIC_RESULT"
+def currentBoundedAttemptNumber : Nat :=
+  ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.attemptSequenceNumber
+def currentBoundedSemanticStage : String :=
+  "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION"
+def lastClosedBoundedSemanticStage : String :=
+  "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY"
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_unopened_ccft_lineage_reconciliation :
-    currentLiveTarget = "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0" := by
+theorem current_target_is_open_ccft_lineage_reconciliation :
+    currentLiveTarget =
+      "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0" := by
   rfl
 
-theorem ccft_mathematical_inventory_is_closed_passed_with_overflow :
-    currentBoundedProgramId = "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
-    currentTargetPhase = "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 1 ∧ lastBoundedTerminalResult = "PASSED" ∧
-    ToeCCFTSourceBoundMathematicalInventoryResult.inventoryComplete = true ∧
-    ToeCCFTSourceBoundMathematicalInventoryResult.conflictsPreserved = true ∧
-    ToeCCFTSourceBoundMathematicalInventoryResult.repositoryClaimExhaustionEstablished = false ∧
-    ToeCCFTSourceBoundMathematicalInventoryResult.physicalInterpretationAdjudicated = false ∧
-    ToeCCFTSourceBoundMathematicalInventoryResult.stageTwoAuthorized = false ∧
-    ToeCCFTSourceBoundMathematicalInventoryResult.stageTwoOpened = false := by
+theorem ccft_lineage_stage_is_open_without_result :
+    currentBoundedProgramId =
+      "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
+    currentBoundedProgramState = "OPEN" ∧
+    currentTargetPhase = "STAGE_2_OPEN_NO_SCIENTIFIC_RESULT" ∧
+    currentBoundedAttemptNumber = 2 ∧
+    lastBoundedTerminalResult = "PASSED" ∧
+    ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.lineageRelationshipsEstablishedAtOpen =
+      0 ∧
+    ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.formulationConflictsResolvedAtOpen =
+      0 ∧
+    ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.preferredFormulationOrMinimalCoreSelected =
+      false ∧
+    ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.physicalInterpretationEstablished =
+      false ∧
+    ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.stageThreeAuthorized =
+      false := by
   decide
 
 end CurrentTarget
