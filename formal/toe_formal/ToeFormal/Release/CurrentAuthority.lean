@@ -1,6 +1,7 @@
 import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
+import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
 
 namespace ToeFormal
 namespace Release
@@ -17,7 +18,7 @@ def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_prepared_ccft_program_proposal :
+theorem current_authority_tracks_installed_ccft_core_program :
     currentTarget =
       "prepare_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_v0" := by
   native_decide
@@ -33,13 +34,16 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem ccft_program_proposal_awaits_separate_installation_authority :
+theorem ccft_core_program_is_installed_and_remains_unopened :
     boundedProgramId =
       "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    boundedProgramState = "PROPOSAL_PREPARED_UNINSTALLED" ∧
+    boundedProgramState = "UNOPENED" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
-    boundedAttemptNumber = 0 := by
+      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
+    boundedAttemptNumber = 0 ∧
+    ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
+    ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
+    ToeCCFTCoreProgramGovernanceInstallationV0.scientificOutputCreated = false := by
   native_decide
 
 end CurrentAuthority
