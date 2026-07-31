@@ -1,45 +1,34 @@
-import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
-import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
-import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0
+import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryResult
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
-
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := scientificTarget
-def currentEvidencePacketId : String := eventId
-def currentBoundedProgramId : String := programId
-def currentBoundedProgramState : String := "OPEN"
-def currentTargetPhase : String := "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN"
-def currentBoundedAttemptNumber : Nat := 1
-def lastClosedBoundedSemanticStage : String := "NONE_IN_CURRENT_PROGRAM"
-def lastBoundedTerminalResult : String := "NONE"
+def currentLiveTarget : String := ToeCCFTSourceBoundMathematicalInventoryResult.selectedNextTarget
+def currentEvidencePacketId : String := ToeCCFTSourceBoundMathematicalInventoryResult.reviewId
+def currentBoundedProgramId : String := ToeCCFTSourceBoundMathematicalInventoryResult.programId
+def currentBoundedProgramState : String := "CLOSED"
+def currentTargetPhase : String := "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY"
+def currentBoundedAttemptNumber : Nat := ToeCCFTSourceBoundMathematicalInventoryResult.attemptSequenceNumber
+def lastClosedBoundedSemanticStage : String := "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY"
+def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_records_open_ccft_mathematical_inventory :
-    currentLiveTarget =
-      "inventory_toe_source_bound_ccft_mathematical_structures_v0" := by
+theorem current_target_selects_unopened_ccft_lineage_reconciliation :
+    currentLiveTarget = "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0" := by
   rfl
 
-theorem ccft_mathematical_inventory_is_open_without_result :
-    currentBoundedProgramState = "OPEN" ∧
-    currentTargetPhase = "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
-    currentBoundedAttemptNumber = 1 ∧
-    lastClosedBoundedSemanticStage = "NONE_IN_CURRENT_PROGRAM" ∧
-    lastBoundedTerminalResult = "NONE" ∧
-    Release.ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
-    Release.ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
-    Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.installationAccepted =
-      true ∧
-    programOpen = true ∧ scientificResultCreated = false ∧
-    deepReviewSourcesSelected = 0 ∧ ccftMathematicalInventoryEntries = 0 ∧
-    operationalInterpretationEstablished = false ∧
-    minimalCCFTCoreSelected = false ∧
-    representationFieldActionSeamOrObservableSelected = false ∧
-    ccftModelOrPhysicalClaimEstablished = false ∧ evidencePromoted = false ∧
-    stageTwoAuthorized = false := by
+theorem ccft_mathematical_inventory_is_closed_passed_with_overflow :
+    currentBoundedProgramId = "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
+    currentBoundedProgramState = "CLOSED" ∧
+    currentTargetPhase = "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY" ∧
+    currentBoundedAttemptNumber = 1 ∧ lastBoundedTerminalResult = "PASSED" ∧
+    ToeCCFTSourceBoundMathematicalInventoryResult.inventoryComplete = true ∧
+    ToeCCFTSourceBoundMathematicalInventoryResult.conflictsPreserved = true ∧
+    ToeCCFTSourceBoundMathematicalInventoryResult.repositoryClaimExhaustionEstablished = false ∧
+    ToeCCFTSourceBoundMathematicalInventoryResult.physicalInterpretationAdjudicated = false ∧
+    ToeCCFTSourceBoundMathematicalInventoryResult.stageTwoAuthorized = false ∧
+    ToeCCFTSourceBoundMathematicalInventoryResult.stageTwoOpened = false := by
   decide
 
 end CurrentTarget

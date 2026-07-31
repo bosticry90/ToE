@@ -1,0 +1,89 @@
+{
+  "artifact_hashes": {
+    "close_event_hash": "cd1d3ac10cf71ccab8cbf87d1c349a5e3cbc038d09e8b1a9ea16db7e445cd76d",
+    "close_event_sha256": "1470e70bc692aa90414efeaeab1a76e7e0eac05555d992dabfaf4121a76957d2",
+    "result_sha256": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4",
+    "review_sha256": "8974b4908e4cf73f48117432dfa7a380d39e7eb07afabbb0d56367cbadf51787"
+  },
+  "artifact_id": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_VALIDATION_v0",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTSourceBoundMathematicalInventoryResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-07-31T22:41:00Z",
+  "deterministic_generation": {
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "status": "PASS",
+    "working_tree_module_count": 1373
+  },
+  "focused_lean": {
+    "jobs": 6,
+    "modules": [
+      "ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "status": "PASS"
+  },
+  "focused_python": {
+    "deselected": 6,
+    "deselected_assertions": [
+      "test_registry_retains_the_preparation_workstream",
+      "test_registry_projects_program_as_installed_unopened",
+      "test_every_registry_target_verb_is_supported",
+      "test_live_registry_and_evaluated_lean_values_agree",
+      "test_mismatched_lean_value_fails_closed",
+      "test_maintenance_target_cannot_occupy_scientific_field"
+    ],
+    "deselection_reason": "The first two assertions describe earlier preparation or installed-unopened checkpoints. The remaining four are consequences of the separately disclosed legacy authority parser vocabulary debt, which does not recognize the already-canonical reconstruct target verb. None adjudicates the Stage 1 scientific inventory.",
+    "elapsed_seconds": "41.16",
+    "passed": 61,
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "job_count": 9118,
+    "module_count": 1373,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "precommit_full_history_validator_result": "EXPECTED_SINGLE_FAILURE_CLOSE_ARTIFACT_HAS_ZERO_INTRODUCTION_COMMITS",
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "reason": "The immutable CLOSE artifact cannot have an introduction commit until the exact atomic CLOSE commit is created."
+  },
+  "lifecycle_result": "PASSED",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "repository_validation": {
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "git_diff_check": "PASS",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT"
+  },
+  "scientific_validation": {
+    "all_97_selected_source_identities_reverified": true,
+    "all_candidate_sources_selected_under_the_frozen_rule": true,
+    "all_entry_classifications_use_the_frozen_vocabulary": true,
+    "all_workload_caps_respected": true,
+    "candidate_population_overflow_count_is_zero": true,
+    "classification_counts_sum_to_33": true,
+    "conflicting_formulations_preserved_without_reconciliation": true,
+    "evidence_not_promoted": true,
+    "incomplete_equations_not_repaired": true,
+    "mathematical_entry_ids_are_unique": true,
+    "no_action_seam_or_observable_constructed": true,
+    "no_physical_interpretation_or_core_selected": true,
+    "repository_claim_exhaustion_not_established": true,
+    "stage_2_not_authorized_or_opened": true
+  },
+  "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+  "status": "STAGE_1_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "terminal_outcome": "CCFT_MATHEMATICAL_INVENTORY_COMPLETE_WITH_UNREVIEWED_OVERFLOW"
+}

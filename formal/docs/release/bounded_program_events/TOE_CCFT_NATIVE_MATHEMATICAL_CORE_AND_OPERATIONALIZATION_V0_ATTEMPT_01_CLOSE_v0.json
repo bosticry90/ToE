@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 1,
+  "closed_from_commit": "d25709909a6ed2b9a50ff2af83d0e0cbb1e852ab",
+  "event_hash": "cd1d3ac10cf71ccab8cbf87d1c349a5e3cbc038d09e8b1a9ea16db7e445cd76d",
+  "event_sequence_number": 2,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "272c3012dd05be6e385be91e1334f42186355154d746ec95e8dd89771a6c6104",
+  "previous_event_hash": "272c3012dd05be6e385be91e1334f42186355154d746ec95e8dd89771a6c6104",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "result_artifact_hash": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4",
+  "result_artifact_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+  "review_artifact_hash": "8974b4908e4cf73f48117432dfa7a380d39e7eb07afabbb0d56367cbadf51787",
+  "review_artifact_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

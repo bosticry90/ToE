@@ -1,29 +1,21 @@
 import ToeFormal.Derivation.CurrentTarget
-import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
-import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
-import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0
+import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
-
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 def currentTarget : String := Derivation.CurrentTarget.currentLiveTarget
-def currentEvidencePacketId : String :=
-  Derivation.CurrentTarget.currentEvidencePacketId
+def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidencePacketId
 def boundedProgramId : String := Derivation.CurrentTarget.currentBoundedProgramId
-def boundedProgramState : String :=
-  Derivation.CurrentTarget.currentBoundedProgramState
+def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
-def boundedAttemptNumber : Nat :=
-  Derivation.CurrentTarget.currentBoundedAttemptNumber
+def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_ccft_mathematical_inventory :
-    currentTarget =
-      "inventory_toe_source_bound_ccft_mathematical_structures_v0" := by
+theorem current_authority_tracks_selected_unopened_ccft_lineage_reconciliation :
+    currentTarget = "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -37,23 +29,16 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem ccft_mathematical_inventory_attempt_is_open_without_result :
-    boundedProgramId =
-      "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    boundedProgramState = "OPEN" ∧
-    currentTargetPhase = "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+theorem ccft_mathematical_inventory_stage_is_closed_passed :
+    boundedProgramId = "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
+    boundedProgramState = "CLOSED" ∧
+    currentTargetPhase = "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY" ∧
     boundedAttemptNumber = 1 ∧
-    ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
-    ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
-    ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.installationAccepted =
-      true ∧
-    programOpen = true ∧ scientificResultCreated = false ∧
-    deepReviewSourcesSelected = 0 ∧ ccftMathematicalInventoryEntries = 0 ∧
-    operationalInterpretationEstablished = false ∧
-    minimalCCFTCoreSelected = false ∧
-    representationFieldActionSeamOrObservableSelected = false ∧
-    ccftModelOrPhysicalClaimEstablished = false ∧ evidencePromoted = false ∧
-    stageTwoAuthorized = false := by
+    Derivation.ToeCCFTSourceBoundMathematicalInventoryResult.reviewAccepted = true ∧
+    Derivation.ToeCCFTSourceBoundMathematicalInventoryResult.physicalInterpretationAdjudicated = false ∧
+    Derivation.ToeCCFTSourceBoundMathematicalInventoryResult.ccftActionConstructed = false ∧
+    Derivation.ToeCCFTSourceBoundMathematicalInventoryResult.stageTwoAuthorized = false ∧
+    Derivation.ToeCCFTSourceBoundMathematicalInventoryResult.stageTwoOpened = false := by
   native_decide
 
 end CurrentAuthority
