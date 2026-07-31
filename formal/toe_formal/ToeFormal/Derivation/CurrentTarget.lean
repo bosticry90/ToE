@@ -1,39 +1,40 @@
-import ToeFormal.Derivation.ToePositiveGravitationalPrincipleSourceInventoryResult
+import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToePositiveGravitationalPrincipleSourceInventoryResult
+open ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := selectedNextTarget
+def currentLiveTarget : String := executionTarget
 def currentEvidencePacketId : String := reviewId
-def currentBoundedProgramId : String :=
-  "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0"
-def currentBoundedProgramState : String := "CLOSED"
-def currentTargetPhase : String :=
-  "STAGE_1_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT"
+def currentBoundedProgramId : String := programId
+def currentBoundedProgramState : String := "TERMINAL"
+def currentTargetPhase : String := "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT"
 def currentBoundedAttemptNumber : Nat := 1
 def lastClosedBoundedSemanticStage : String :=
   "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY"
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_selects_mandatory_positive_principle_program_exit :
+theorem current_target_records_completed_positive_principle_mandatory_exit :
     currentLiveTarget =
       "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0" := by
   rfl
 
-theorem positive_principle_source_inventory_is_closed_and_blocked :
-    currentBoundedProgramState = "CLOSED" ∧
-    currentTargetPhase =
-      "STAGE_1_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT" ∧
+theorem positive_principle_program_is_terminal_without_principle_action_or_successor :
+    currentBoundedProgramState = "TERMINAL" ∧
+    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
     currentBoundedAttemptNumber = 1 ∧
     lastClosedBoundedSemanticStage =
       "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY" ∧
     lastBoundedTerminalResult = "BLOCKED" ∧
-    stageBlocked = true ∧ mandatoryExitCompleted = false ∧
-    stageTwoAuthorized = false ∧ stageTwoOpened = false := by
+    mandatoryExitCompleted = true ∧
+    positiveNativeGravitationalPrincipleSelectedOrDerived = false ∧
+    permittedActionClassDerivedOrSelected = false ∧
+    nativeGravitationalActionConstructedSelectedOrAdopted = false ∧
+    futureRouteSelected = false ∧ successorProgramAuthorized = false ∧
+    successorProgramInstalled = false ∧ successorProgramOpened = false := by
   decide
 
 end CurrentTarget

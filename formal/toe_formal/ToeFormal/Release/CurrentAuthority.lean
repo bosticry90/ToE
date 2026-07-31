@@ -17,7 +17,7 @@ def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_positive_principle_mandatory_exit :
+theorem current_authority_tracks_terminal_positive_principle_closeout :
     currentTarget =
       "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0" := by
   native_decide
@@ -33,12 +33,11 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem positive_principle_inventory_stage_is_closed_blocked :
+theorem positive_principle_program_is_terminal_without_successor_authority :
     boundedProgramId =
       "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0" ∧
-    boundedProgramState = "CLOSED" ∧
-    currentTargetPhase =
-      "STAGE_1_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT" ∧
+    boundedProgramState = "TERMINAL" ∧
+    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
     boundedAttemptNumber = 1 := by
   native_decide
 
