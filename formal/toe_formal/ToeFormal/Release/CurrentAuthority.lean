@@ -32,9 +32,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_requirement_family_compatibility_survey :
+theorem current_authority_tracks_selected_unopened_eligibility_handoff :
     currentTarget =
-      "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0" := by
+      "select_toe_gravitational_action_family_eligibility_handoff_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -49,26 +49,28 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem requirement_family_compatibility_survey_stage_is_open_without_result :
+theorem compatibility_survey_is_closed_without_action_selection_or_stage_five_authority :
     boundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_4_SCIENTIFIC_ATTEMPT_OPEN" ∧
+      "STAGE_5_SELECTED_UNOPENED_AFTER_STAGE_4_PASS" ∧
     boundedAttemptNumber = 4 ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.programOpen =
-      true ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.scientificResultCreated =
-      false ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.compatibilityCellsPopulated =
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.compatibilityCellCount =
+      70 ∧
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.observedDefinedNativeActionFamilyCount =
       0 ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.familiesEligibleForNativeSelection =
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.gravitationalActionsSelected =
       0 ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.evidencePromoted =
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.nativeGravitationalPrinciplesDerivedOrPostulated =
+      0 ∧
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.newGravitationalCalculationsExecuted =
+      0 ∧
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.stageFiveEligibilityVerdictMade =
       false ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.gravitationalActionSelected =
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.stageFiveAuthorized =
       false ∧
-    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.stageFiveAuthorized =
+    Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.stageFiveOpened =
       false := by
   native_decide
 
