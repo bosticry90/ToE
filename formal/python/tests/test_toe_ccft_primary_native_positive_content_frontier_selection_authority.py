@@ -69,4 +69,3 @@ def test_registry_retains_the_authorized_workstream() -> None:
         "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_AUTHORITY_REVIEW_v0.json"
     )
     assert row["ccft_resumed"] == "no"
-

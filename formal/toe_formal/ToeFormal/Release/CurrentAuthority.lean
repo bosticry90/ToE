@@ -17,8 +17,9 @@ def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_ccft_frontier_selection :
-    currentTarget = "select_ccft_as_primary_native_positive_content_frontier_v0" := by
+theorem current_authority_tracks_selected_ccft_program_preparation :
+    currentTarget =
+      "prepare_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -32,10 +33,10 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem ccft_frontier_selection_is_authorized_without_program_execution :
+theorem ccft_program_preparation_is_selected_without_execution_authority :
     boundedProgramId = "NONE" ∧
     boundedProgramState = "NOT_APPLICABLE" ∧
-    currentTargetPhase = "CCFT_FRONTIER_SELECTION_AUTHORIZED_NOT_EXECUTED" ∧
+    currentTargetPhase = "CCFT_BOUNDED_PROGRAM_PREPARATION_SELECTED_NOT_EXECUTED" ∧
     boundedAttemptNumber = 0 := by
   native_decide
 
