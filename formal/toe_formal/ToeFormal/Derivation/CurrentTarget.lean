@@ -1,52 +1,39 @@
-import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout
-import ToeFormal.Derivation.ToePositiveGravitationalPrincipleSourceInventoryAttemptOpen
-import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0
-import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0
+import ToeFormal.Derivation.ToePositiveGravitationalPrincipleSourceInventoryResult
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToePositiveGravitationalPrincipleSourceInventoryAttemptOpen
+open ToePositiveGravitationalPrincipleSourceInventoryResult
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := scientificTarget
-def currentEvidencePacketId : String := eventId
+def currentLiveTarget : String := selectedNextTarget
+def currentEvidencePacketId : String := reviewId
 def currentBoundedProgramId : String :=
   "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0"
-def currentBoundedProgramState : String := "OPEN"
-def currentTargetPhase : String := "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN"
+def currentBoundedProgramState : String := "CLOSED"
+def currentTargetPhase : String :=
+  "STAGE_1_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT"
 def currentBoundedAttemptNumber : Nat := 1
-def lastClosedBoundedSemanticStage : String := "NONE_IN_CURRENT_PROGRAM"
-def lastBoundedTerminalResult : String := "NONE"
+def lastClosedBoundedSemanticStage : String :=
+  "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY"
+def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_records_open_positive_principle_source_inventory :
+theorem current_target_selects_mandatory_positive_principle_program_exit :
     currentLiveTarget =
-      "inventory_toe_positive_native_gravitational_principle_sources_v0" := by
+      "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0" := by
   rfl
 
-theorem positive_principle_source_inventory_is_open_without_result :
-    currentBoundedProgramState = "OPEN" ∧
-    currentTargetPhase = "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+theorem positive_principle_source_inventory_is_closed_and_blocked :
+    currentBoundedProgramState = "CLOSED" ∧
+    currentTargetPhase =
+      "STAGE_1_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT" ∧
     currentBoundedAttemptNumber = 1 ∧
-    lastClosedBoundedSemanticStage = "NONE_IN_CURRENT_PROGRAM" ∧
-    lastBoundedTerminalResult = "NONE" ∧
-    Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programInstalled =
-      true ∧
-    Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programOpened =
-      false ∧
-    Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0.installationAccepted =
-      true ∧
-    programOpen = true ∧ scientificResultCreated = false ∧
-    principleSourceStatementsInventoried = 0 ∧
-    principleSelectedOrDerived = false ∧
-    gravitationalVariablesSelected = false ∧
-    actionClassSelected = false ∧
-    gravitationalActionConstructedOrSelected = false ∧
-    gravitationalCalculationStarted = false ∧ evidencePromoted = false ∧
-    stageTwoAuthorized = false ∧
-    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout.mandatoryExitCompleted =
-      true := by
+    lastClosedBoundedSemanticStage =
+      "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY" ∧
+    lastBoundedTerminalResult = "BLOCKED" ∧
+    stageBlocked = true ∧ mandatoryExitCompleted = false ∧
+    stageTwoAuthorized = false ∧ stageTwoOpened = false := by
   decide
 
 end CurrentTarget
