@@ -2,6 +2,7 @@ import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
+import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Release
@@ -43,6 +44,8 @@ theorem ccft_core_program_is_installed_and_remains_unopened :
     boundedAttemptNumber = 0 ∧
     ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
     ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
+    ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     ToeCCFTCoreProgramGovernanceInstallationV0.scientificOutputCreated = false := by
   native_decide
 

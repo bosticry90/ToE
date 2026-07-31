@@ -1,5 +1,6 @@
 import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
 import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
+import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Derivation
@@ -10,7 +11,7 @@ open ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparation
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 def currentLiveTarget : String := executionTarget
 def currentEvidencePacketId : String :=
-  "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_v0"
+  "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0"
 def currentBoundedProgramId : String := proposedProgramId
 def currentBoundedProgramState : String := "UNOPENED"
 def currentTargetPhase : String :=
@@ -31,6 +32,8 @@ theorem ccft_core_program_is_installed_but_unopened :
     proposedStageCount = 5 ∧ repairAttemptCount = 0 ∧
     Release.ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
     Release.ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
+    Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     scientificStageOpened = false ∧
     ccftMathematicalCoreRecovered = false ∧
     operationalCoherenceDefinitionEstablished = false ∧

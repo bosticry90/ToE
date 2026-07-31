@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 from formal.python.tools.bounded_program_governance import (
@@ -24,6 +25,11 @@ INSTALLATION_PATH = (
     RELEASE_ROOT
     / "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_"
     "PROGRAM_GOVERNANCE_INSTALLATION_v0.json"
+)
+REVIEW_PATH = (
+    RELEASE_ROOT
+    / "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_"
+    "PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json"
 )
 
 
@@ -111,3 +117,48 @@ def test_installation_is_governance_only_and_opens_no_stage() -> None:
     assert installation["ccft_action_or_evolution_law_constructed"] is False
     assert installation["ccft_seam_observable_or_discriminator_selected"] is False
     assert installation["evidence_promoted"] is False
+
+
+def test_installation_commit_has_exact_envelope_and_parent() -> None:
+    installation = _read(INSTALLATION_PATH)
+    commit = "6b9b9b16418d5e709870d4079918abad53b8526a"
+    names = subprocess.run(
+        ["git", "show", "--format=", "--name-only", commit],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    assert sorted(path for path in names if path) == sorted(
+        INSTALLATION_COMMIT_EXACT_PATH_SET
+    )
+    parent = subprocess.run(
+        ["git", "rev-parse", f"{commit}^"],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    assert parent == installation["installed_from_commit"]
+
+
+def test_independent_review_accepts_only_the_unopened_installation() -> None:
+    review = _read(REVIEW_PATH)
+    assert review["accepted"] is True
+    assert review["status"] == (
+        "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+    )
+    assert review["program_state"] == "UNOPENED"
+    assert review["attempted_stage_count"] == 0
+    assert review["stage_1_opened"] is False
+    assert review["scientific_execution_authorized"] is False
+    assert review["scientific_output_created"] is False
+    assert review["ccft_model_or_physical_claim_established"] is False
+    assert review["ccft_mathematical_core_recovered"] is False
+    assert review["operational_coherence_definition_established"] is False
+    assert review["ccft_representation_or_field_selected"] is False
+    assert review["ccft_action_or_evolution_law_constructed"] is False
+    assert review["ccft_seam_observable_or_discriminator_selected"] is False
+    assert review["evidence_promoted"] is False
+    assert review["exhaustive_python_passage_established"] is False
+    assert all(review["checks"].values())
