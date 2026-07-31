@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult
+import ToeFormal.Derivation.ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,50 +13,50 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.selectedNextTarget
+  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.scientificTarget
 
 def currentEvidencePacketId : String :=
-  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.resultId
+  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.eventId
 
 def currentBoundedProgramId : String :=
-  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.programId
+  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.programId
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "STAGE_5_SELECTED_UNOPENED_AFTER_STAGE_4_PASS"
+  "STAGE_5_SCIENTIFIC_ATTEMPT_OPEN"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.attemptSequenceNumber
+  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
   "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_records_selected_unopened_eligibility_handoff :
+theorem current_target_records_open_eligibility_handoff :
     currentLiveTarget =
       "select_toe_gravitational_action_family_eligibility_handoff_v0" := by
   rfl
 
-theorem source_bound_requirement_family_compatibility_survey_closed_without_selection :
+theorem gravitational_action_family_eligibility_handoff_is_open_without_result :
     currentBoundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "STAGE_5_SELECTED_UNOPENED_AFTER_STAGE_4_PASS" ∧
-    currentBoundedAttemptNumber = 4 ∧
+      "STAGE_5_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    currentBoundedAttemptNumber = 5 ∧
     lastClosedBoundedSemanticStage =
       "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.compatibilityCellCount = 70 ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.observedDefinedNativeActionFamilyCount = 0 ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.gravitationalActionsSelected = 0 ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.nativeGravitationalPrinciplesDerivedOrPostulated = 0 ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.newGravitationalCalculationsExecuted = 0 ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.stageFiveEligibilityVerdictMade = false ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.stageFiveAuthorized = false ∧
-    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.stageFiveOpened = false := by
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.programOpen = true ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.scientificResultCreated = false ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.eligibilityClassificationsMade = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.routesSelected = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.gravitationalActionsSelected = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.nativeGravitationalPrinciplesSelected = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.successorProgramsAuthorized = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.evidencePromoted = false := by
   decide
 
 end CurrentTarget

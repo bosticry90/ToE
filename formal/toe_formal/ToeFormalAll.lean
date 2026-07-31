@@ -811,6 +811,7 @@ import ToeFormal.Derivation.ToeCandidateMasterActionCKFirewallAuthorityReconcili
 import ToeFormal.Derivation.ToeCandidateMasterActionCKFirewallResponseSelectionV0
 import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen
 import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
+import ToeFormal.Derivation.ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen
 import ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen
 import ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult
 import ToeFormal.Derivation.ToeNativeABridgeAdmissibilityCKAdmissibilityRuleCloseout
@@ -1358,6 +1359,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1351
+def committedModuleCount : Nat := 1352
 
 end ToeFormalAll
