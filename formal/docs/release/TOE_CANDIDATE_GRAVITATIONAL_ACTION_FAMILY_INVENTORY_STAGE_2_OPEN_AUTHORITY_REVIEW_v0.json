@@ -1,0 +1,24 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_STAGE_2_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T13:27:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_exactly_the_seven_prepared_family_ids": true,
+    "authority_consumes_the_closed_and_reviewed_stage_1_result": true,
+    "authority_does_not_compare_score_or_select_any_family": true,
+    "authority_does_not_invent_missing_action_content_or_coefficients": true,
+    "authority_preserves_evidence_promotion_as_prohibited": true,
+    "authority_preserves_new_calculations_as_prohibited": true,
+    "authority_preserves_stage_3_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "source_hashes_reproduce": true
+  },
+  "decision": "AUTHORIZE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_STAGE_2_OPEN",
+  "failed_checks": [],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "schema_id": "toe.candidate_gravitational_action_family_inventory.stage_2_open_authority_review.v0",
+  "stage_2_scientific_result_created": false,
+  "stage_3_authorized": false,
+  "status": "STAGE_2_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}
