@@ -17,9 +17,8 @@ def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_terminal_positive_principle_closeout :
-    currentTarget =
-      "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0" := by
+theorem current_authority_tracks_ccft_frontier_selection :
+    currentTarget = "select_ccft_as_primary_native_positive_content_frontier_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -33,12 +32,11 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem positive_principle_program_is_terminal_without_successor_authority :
-    boundedProgramId =
-      "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0" ∧
-    boundedProgramState = "TERMINAL" ∧
-    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    boundedAttemptNumber = 1 := by
+theorem ccft_frontier_selection_is_authorized_without_program_execution :
+    boundedProgramId = "NONE" ∧
+    boundedProgramState = "NOT_APPLICABLE" ∧
+    currentTargetPhase = "CCFT_FRONTIER_SELECTION_AUTHORIZED_NOT_EXECUTED" ∧
+    boundedAttemptNumber = 0 := by
   native_decide
 
 end CurrentAuthority

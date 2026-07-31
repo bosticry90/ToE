@@ -1361,6 +1361,7 @@ import ToeFormal.Variational.LinkToFN01
 import ToeFormal.Variational.LinkToSYM01
 import ToeFormal.Variational.Noether
 import ToeFormal.Variational.PairingConcreteGrid
+import ToeFormal.Derivation.ToeCCFTPrimaryNativePositiveContentFrontierSelectionAuthority
 import ToeFormal.Variational.PairingContract
 import ToeFormal.Variational.PerturbationAlgebraRep32
 import ToeFormal.Variational.Rep32CubicOperatorCore
@@ -1370,6 +1371,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def workingTreeModuleCount : Nat := 1363
+def workingTreeModuleCount : Nat := 1364
 
 end ToeFormalAll

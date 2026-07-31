@@ -1,0 +1,89 @@
+{
+  "authority_id": "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_AUTHORITY_v0",
+  "authorized_at_utc": "2026-07-31T20:57:04Z",
+  "authorized_target": "select_ccft_as_primary_native_positive_content_frontier_v0",
+  "authorization_status": "AUTHORIZED_NOT_EXECUTED",
+  "authority_basis": "USER_DIRECTED_CCFT_PIVOT_AFTER_TERMINAL_POSITIVE_GRAVITY_PRINCIPLE_BLOCK",
+  "parent_head": "7ac4e62c73ab16df2a22905f201254a88c4a9205",
+  "consumed_target": "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0",
+  "decision_question": "Should CCFT become the primary native positive-content development frontier, with pillars as benchmarks, seams as integration tests, the master action as a later embedding framework, and gravity as a provisional known-physics comparator?",
+  "authorized_candidate_lanes": [
+    "CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION",
+    "PILLAR_FIRST_NATIVE_DEVELOPMENT",
+    "SEAM_FIRST_NATIVE_DEVELOPMENT",
+    "MASTER_ACTION_FIRST_NATIVE_DEVELOPMENT",
+    "GRAVITY_FIRST_NATIVE_DEVELOPMENT"
+  ],
+  "authorized_inputs": [
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34",
+      "role": "BOUNDED_REPOSITORY_WIDE_EVIDENCE_CENSUS_CLOSEOUT"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "role": "BOUNDED_SOURCE_BOUND_CLAIM_INVENTORY"
+    },
+    {
+      "path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+      "sha256": "d887d34ae482e1e6427b0137b6d8aff691d6df27d8c2eb11c82c6138864a474d",
+      "role": "BOUNDED_CLAIM_CONFLICT_AND_READINESS_GRAPH"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+      "sha256": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b",
+      "role": "EARLIER_AUTHORIZED_COHERENCE_CLAIM_INVENTORY"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+      "sha256": "55127f74ef6794b76ec5044330eb667ef3e9a78c5660ca0bedd6ca7386322c41",
+      "role": "EARLIER_THIRTEEN_SOURCE_OPERATIONAL_BLOCK"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "4e065860ede6ac9955260fb223c802072ce4c8d9e6558890a673def13c7580b7",
+      "role": "ZERO_ELIGIBLE_PRESERVED_NATIVE_GRAVITY_ACTIONS"
+    },
+    {
+      "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "ab3abe7f701508e1ea772e8dc7234cd7ad342a96bde30ba40f7120f5878b5d21",
+      "role": "TERMINAL_POSITIVE_GRAVITY_PRINCIPLE_BLOCK"
+    }
+  ],
+  "mandatory_evidence_caveats": {
+    "repository_claim_exhaustion_established": false,
+    "bounded_deep_review_source_count": 640,
+    "custody_records_outside_bounded_deep_review": 12923,
+    "ccft_coherence_claim_count_in_reconciliation": 242,
+    "ccft_coherence_bounded_family_readiness": "BLOCKED_BY_MISSING_DEFINITION",
+    "ccft_currently_coherent_candidate_count": 0,
+    "ccft_supported_but_incomplete_count": 0,
+    "earlier_operational_block_scope": "AUTHORIZED_THIRTEEN_SOURCE_EVIDENCE_SET_ONLY"
+  },
+  "permitted_actions": [
+    "COMPARE_THE_FIVE_FROZEN_DEVELOPMENT_LANES",
+    "SELECT_EXACTLY_ONE_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_OR_SELECT_NONE",
+    "NAME_ONE_PREPARATION_TARGET_IF_A_FRONTIER_IS_SELECTED",
+    "RECORD_ROLES_FOR_PILLARS_SEAMS_MASTER_ACTION_AND_PROVISIONAL_GRAVITY",
+    "PRESERVE_ALL_PRIOR_BLOCKS_CONFLICTS_AND_SCOPE_LIMITATIONS"
+  ],
+  "prohibited_actions": [
+    "PREPARE_INSTALL_OR_OPEN_A_CCFT_BOUNDED_PROGRAM",
+    "SELECT_OR_ADOPT_A_CCFT_FIELD_REPRESENTATION_ACTION_SEAM_OR_OBSERVABLE",
+    "DECLARE_CCFT_VALIDATED_FUNDAMENTAL_OR_PHYSICALLY_REAL",
+    "PROMOTE_ARCHIVED_OR_NONCANONICAL_EVIDENCE",
+    "REOPEN_THE_CLOSED_COHERENCE_V0_OR_GRAVITY_PROGRAMS",
+    "ADOPT_EINSTEIN_HILBERT_AS_NATIVE_TOE_GRAVITY",
+    "IMPORT_C_K_AS_A_DYNAMICAL_ACTION_TERM",
+    "CLAIM_QFT_GR_CLOSURE_UNIQUE_DISCRIMINATION_OR_FULL_TOE",
+    "EXECUTE_A_NEW_SCIENTIFIC_CALCULATION"
+  ],
+  "allowed_terminal_outcomes": [
+    "CCFT_SELECTED_AS_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_AFTER_ONE_PREREQUISITE",
+    "ANOTHER_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTED",
+    "NO_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_READY",
+    "EVIDENCE_INSUFFICIENT_FOR_FRONTIER_SELECTION"
+  ],
+  "strict_boundary": "ONE_FRONTIER_SELECTION_DECISION_ONLY_NO_PROGRAM_PREPARATION_INSTALLATION_OPEN_FIELD_REPRESENTATION_ACTION_SEAM_OBSERVABLE_PROMOTION_OR_CALCULATION"
+}

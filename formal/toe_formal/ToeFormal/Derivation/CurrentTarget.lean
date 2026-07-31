@@ -1,40 +1,33 @@
-import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout
+import ToeFormal.Derivation.ToeCCFTPrimaryNativePositiveContentFrontierSelectionAuthority
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout
+open ToeCCFTPrimaryNativePositiveContentFrontierSelectionAuthority
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 def currentLiveTarget : String := executionTarget
 def currentEvidencePacketId : String := reviewId
-def currentBoundedProgramId : String := programId
-def currentBoundedProgramState : String := "TERMINAL"
-def currentTargetPhase : String := "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT"
-def currentBoundedAttemptNumber : Nat := 1
-def lastClosedBoundedSemanticStage : String :=
-  "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY"
-def lastBoundedTerminalResult : String := "BLOCKED"
+def currentBoundedProgramId : String := "NONE"
+def currentBoundedProgramState : String := "NOT_APPLICABLE"
+def currentTargetPhase : String := "CCFT_FRONTIER_SELECTION_AUTHORIZED_NOT_EXECUTED"
+def currentBoundedAttemptNumber : Nat := 0
+def lastClosedBoundedSemanticStage : String := "NONE"
+def lastBoundedTerminalResult : String := "NONE"
 
-theorem current_target_records_completed_positive_principle_mandatory_exit :
-    currentLiveTarget =
-      "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0" := by
+theorem current_target_records_ccft_frontier_selection_authority :
+    currentLiveTarget = "select_ccft_as_primary_native_positive_content_frontier_v0" := by
   rfl
 
-theorem positive_principle_program_is_terminal_without_principle_action_or_successor :
-    currentBoundedProgramState = "TERMINAL" ∧
-    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    currentBoundedAttemptNumber = 1 ∧
-    lastClosedBoundedSemanticStage =
-      "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY" ∧
-    lastBoundedTerminalResult = "BLOCKED" ∧
-    mandatoryExitCompleted = true ∧
-    positiveNativeGravitationalPrincipleSelectedOrDerived = false ∧
-    permittedActionClassDerivedOrSelected = false ∧
-    nativeGravitationalActionConstructedSelectedOrAdopted = false ∧
-    futureRouteSelected = false ∧ successorProgramAuthorized = false ∧
-    successorProgramInstalled = false ∧ successorProgramOpened = false := by
+theorem frontier_selection_authority_is_nonexecuting :
+    currentBoundedProgramState = "NOT_APPLICABLE" ∧
+    currentTargetPhase = "CCFT_FRONTIER_SELECTION_AUTHORIZED_NOT_EXECUTED" ∧
+    currentBoundedAttemptNumber = 0 ∧
+    ccftProgramPreparationAuthorized = false ∧
+    ccftProgramInstalled = false ∧ ccftProgramOpened = false ∧
+    scientificCalculationAuthorized = false ∧
+    evidencePromotionAuthorized = false := by
   decide
 
 end CurrentTarget
