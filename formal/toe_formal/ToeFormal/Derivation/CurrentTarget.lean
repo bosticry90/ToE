@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionResult
+import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
 import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult
@@ -15,71 +15,59 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToePostCensusNativeFrontierDecisionResult
+open ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToePostCensusNativeFrontierDecisionResult.selectedNextTarget
+  ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.executionTarget
 
 def currentEvidencePacketId : String :=
-  ToePostCensusNativeFrontierDecisionResult.resultId
+  ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.resultId
 
 def currentBoundedProgramId : String :=
-  ToePostCensusNativeFrontierDecisionResult.programId
+  ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.programId
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "TERMINAL"
 
 def currentTargetPhase : String :=
-  "STAGE_5_CLOSED_PASSED_FRONTIER_SELECTED_AFTER_ONE_PREREQUISITE_MANDATORY_EXIT_SELECTED_NOT_EXECUTED"
+  "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT"
 
-def currentBoundedAttemptNumber : Nat :=
-  ToePostCensusNativeFrontierDecisionResult.attemptSequenceNumber
-
-def currentBoundedSemanticStage : String :=
-  ToePostCensusNativeFrontierDecisionResult.semanticStageId
+def currentBoundedAttemptNumber : Nat := 5
 
 def lastClosedBoundedSemanticStage : String :=
   "NATIVE_FRONTIER_DECISION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_exact_census_mandatory_exit :
+theorem current_target_records_completed_census_mandatory_exit :
     currentLiveTarget =
       "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0" := by
   rfl
 
-theorem frontier_decision_stage_is_closed_without_successor_authority :
+theorem repository_wide_census_is_terminal_without_successor_authority :
     currentBoundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "TERMINAL" ∧
     currentTargetPhase =
-      "STAGE_5_CLOSED_PASSED_FRONTIER_SELECTED_AFTER_ONE_PREREQUISITE_MANDATORY_EXIT_SELECTED_NOT_EXECUTED" ∧
+      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
     currentBoundedAttemptNumber = 5 ∧
-    currentBoundedSemanticStage =
-      "NATIVE_FRONTIER_DECISION" ∧
     lastClosedBoundedSemanticStage =
       "NATIVE_FRONTIER_DECISION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeRepositoryWideNativeHypothesisClaimExtractionResult.sourceBoundClaimsExtracted =
-      true ∧
-    ToeCurrentNativeHypothesisEvidenceReconciliationResult.claimReconciliationComplete =
-      true ∧
-    ToeCurrentNativeHypothesisEvidenceReconciliationResult.nativeHypothesisGraphProduced =
-      true ∧
-    frontierRankingComplete = true ∧
-    nativeFrontierSelected = true ∧
-    selectedFamilyId = "GRAVITY_SECTOR" ∧
-    selectedFrontierIsResearchTargetOnly = true ∧
-    scientificClaimTruthAdjudicated = false ∧
-    canonicalEvidencePromoted = false ∧
-    fieldActionOrSeamSelected = false ∧
-    proposedFutureTargetAuthorized = false ∧
-    proposedFutureTargetOpened = false ∧
     mandatoryExitSelected = true ∧
-    mandatoryExitExecuted = false ∧
-    ToeNativeHypothesisSourceLineageReconstructionResult.documentaryLineageResultProduced =
-      true := by
+    mandatoryExitCompleted = true ∧
+    allAttemptsPassed = true ∧
+    boundedReviewStatus = "COMPLETE_FOR_THE_BOUNDED_REVIEW" ∧
+    repositoryClaimExhaustionEstablished = false ∧
+    canonicalEvidencePromoted = false ∧
+    candidateGravitationalActionSelected = false ∧
+    nativeGravitationalActionEstablished = false ∧
+    gravitationalSurveyAuthorized = false ∧
+    gravitationalSurveyOpened = false ∧
+    automaticSuccessorSelected = false ∧
+    successorProgramAuthorized = false ∧
+    successorProgramOpened = false := by
   decide
 
 end CurrentTarget

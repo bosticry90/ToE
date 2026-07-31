@@ -905,6 +905,7 @@ import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionAttemptOpen
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusResult
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollment
@@ -1335,6 +1336,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1328
+def committedModuleCount : Nat := 1329
 
 end ToeFormalAll

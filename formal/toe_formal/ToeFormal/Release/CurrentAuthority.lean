@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToePostCensusNativeFrontierDecisionResult
+open Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,7 +34,7 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_selected_census_mandatory_exit :
+theorem current_authority_tracks_completed_census_mandatory_exit :
     currentTarget =
       "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0" := by
   native_decide
@@ -51,30 +51,23 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_stage_5_is_closed_without_successor_authority :
+theorem census_program_mandatory_exit_is_terminal :
     boundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    boundedProgramState = "CLOSED" ∧
+    boundedProgramState = "TERMINAL" ∧
     currentTargetPhase =
-      "STAGE_5_CLOSED_PASSED_FRONTIER_SELECTED_AFTER_ONE_PREREQUISITE_MANDATORY_EXIT_SELECTED_NOT_EXECUTED" ∧
+      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
     boundedAttemptNumber = 5 ∧
-    Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult.sourceBoundClaimsExtracted =
-      true ∧
-    Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult.claimReconciliationComplete =
-      true ∧
-    Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult.nativeHypothesisGraphProduced =
-      true ∧
-    frontierRankingComplete = true ∧
-    nativeFrontierSelected = true ∧
-    selectedFamilyId = "GRAVITY_SECTOR" ∧
-    selectedFrontierIsResearchTargetOnly = true ∧
-    scientificClaimTruthAdjudicated = false ∧
-    canonicalEvidencePromoted = false ∧
-    fieldActionOrSeamSelected = false ∧
-    proposedFutureTargetAuthorized = false ∧
-    proposedFutureTargetOpened = false ∧
     mandatoryExitSelected = true ∧
-    mandatoryExitExecuted = false := by
+    mandatoryExitCompleted = true ∧
+    allAttemptsPassed = true ∧
+    repositoryClaimExhaustionEstablished = false ∧
+    canonicalEvidencePromoted = false ∧
+    nativeGravitationalActionEstablished = false ∧
+    gravitationalSurveyAuthorized = false ∧
+    gravitationalSurveyOpened = false ∧
+    successorProgramAuthorized = false ∧
+    successorProgramOpened = false := by
   native_decide
 
 end CurrentAuthority
