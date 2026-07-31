@@ -1,0 +1,30 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_STAGE_2_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T22:53:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_the_passed_stage_1_result_review_validation_and_close_event": true,
+    "authority_binds_all_33_entries_and_four_preserved_conflict_entries": true,
+    "authority_binds_source_hash_lineage_convention_domain_and_approximation_fields": true,
+    "authority_distinguishes_equivalence_limits_revisions_domain_variants_and_incompatibility": true,
+    "authority_preserves_unresolved_relationships_and_repository_nonexhaustion": true,
+    "authority_does_not_choose_repair_or_harmonize_a_formulation": true,
+    "authority_does_not_assign_operational_or_physical_meaning": true,
+    "authority_does_not_construct_a_core_field_action_seam_or_observable": true,
+    "authority_does_not_promote_evidence_or_validate_ccft": true,
+    "authority_preserves_stage_3_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "source_hashes_reproduce": true
+  },
+  "ccft_lineage_result_created": false,
+  "ccft_model_or_physical_claim_established": false,
+  "decision": "AUTHORIZE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_STAGE_2_OPEN",
+  "failed_checks": [],
+  "preferred_formulation_or_minimal_core_selected": false,
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "schema_id": "toe.ccft_mathematical_lineage_and_conflict_reconciliation.stage_2_open_authority_review.v0",
+  "stage_2_scientific_result_created": false,
+  "stage_3_authorized": false,
+  "status": "STAGE_2_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}
