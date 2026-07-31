@@ -1,9 +1,9 @@
-import ToeFormal.Derivation.ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen
+import ToeFormal.Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult
 
 /-
-Thin current-target aggregate for tiered validation. This target follows the
-live strict target and avoids requiring a full ToeFormal aggregate build for
-routine packet checks.
+Thin current-target aggregate for tiered validation. The five scientific
+attempts are closed; the bounded survey's mandatory exit is selected but has
+not yet been executed.
 -/
 
 namespace ToeFormal
@@ -13,50 +13,44 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.scientificTarget
+  ToeGravitationalActionFamilyEligibilityHandoffResult.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.eventId
+  ToeGravitationalActionFamilyEligibilityHandoffResult.resultId
 
 def currentBoundedProgramId : String :=
-  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.programId
+  ToeGravitationalActionFamilyEligibilityHandoffResult.programId
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentTargetPhase : String :=
-  "STAGE_5_SCIENTIFIC_ATTEMPT_OPEN"
+  "MANDATORY_EXIT_SELECTED_NOT_EXECUTED"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.attemptSequenceNumber
+  ToeGravitationalActionFamilyEligibilityHandoffResult.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
-  "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY"
+  ToeGravitationalActionFamilyEligibilityHandoffResult.semanticStageId
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_records_open_eligibility_handoff :
+theorem current_target_records_mandatory_survey_exit :
     currentLiveTarget =
-      "select_toe_gravitational_action_family_eligibility_handoff_v0" := by
+      "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0" := by
   rfl
 
-theorem gravitational_action_family_eligibility_handoff_is_open_without_result :
-    currentBoundedProgramId =
-      "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧
-    currentTargetPhase =
-      "STAGE_5_SCIENTIFIC_ATTEMPT_OPEN" ∧
+theorem survey_stage_five_is_closed_without_action_principle_or_successor_authority :
+    currentBoundedProgramState = "CLOSED" ∧
+    currentTargetPhase = "MANDATORY_EXIT_SELECTED_NOT_EXECUTED" ∧
     currentBoundedAttemptNumber = 5 ∧
-    lastClosedBoundedSemanticStage =
-      "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY" ∧
+    lastClosedBoundedSemanticStage = "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.programOpen = true ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.scientificResultCreated = false ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.eligibilityClassificationsMade = 0 ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.routesSelected = 0 ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.gravitationalActionsSelected = 0 ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.nativeGravitationalPrinciplesSelected = 0 ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.successorProgramsAuthorized = 0 ∧
-    ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.evidencePromoted = false := by
+    ToeGravitationalActionFamilyEligibilityHandoffResult.eligibleNativeActionFamilyCount = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffResult.gravitationalActionsSelected = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffResult.nativeGravitationalPrinciplesSelectedOrDerived = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffResult.successorProgramsAuthorizedInstalledOrOpened = 0 ∧
+    ToeGravitationalActionFamilyEligibilityHandoffResult.mandatoryExitSelected = true ∧
+    ToeGravitationalActionFamilyEligibilityHandoffResult.mandatoryExitCompleted = false := by
   decide
 
 end CurrentTarget

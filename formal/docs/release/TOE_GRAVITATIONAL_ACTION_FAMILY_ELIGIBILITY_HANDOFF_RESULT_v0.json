@@ -1,0 +1,279 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0",
+  "captured_at_utc": "2026-07-31T19:00:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+  "scientific_target": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+  "attempt_sequence_number": 5,
+  "scope_hash": "aec6355853132543dff1bf7c4aa90e65718ab1b192d56340efc9d5d584bd6dd8",
+  "open_event": {
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_OPEN_v0.json",
+    "sha256": "eb288de2dd8beb60c3aa8b1664f4dc6e00d97339b4d093e9cb5f8103af70896f",
+    "role": "immutable Stage 5 OPEN event",
+    "event_hash": "a79db55c2367fe8ecd9b984e0657b7431eb6d3d6419a453d079134c4da351b40"
+  },
+  "source_bindings": [
+    {
+      "path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN_AUTHORITY_v0.json",
+      "sha256": "d8e67f6d80fa39fef8501ca9316dba85bdf10b96fa3023d1a07eae78af54df4b",
+      "role": "frozen Stage 5 authority and route vocabulary"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+      "sha256": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058",
+      "role": "closed seventy-cell compatibility result"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0.json",
+      "sha256": "2dd8819c4733aaab749f64036e9e17af309db8ebdadb497a55b0090d7518f310",
+      "role": "independent compatibility review"
+    }
+  ],
+  "eligibility_vocabulary_matches_authority": true,
+  "family_eligibility_classifications": [
+    {
+      "family_id": "F_EH",
+      "classification": "PROVISIONAL_BASELINE_ONLY",
+      "preserved_role": "KNOWN_PHYSICS_BASELINE",
+      "decision": "Not eligible as native gravity because no preserved ToE principle derives or uniquely selects Einstein-Hilbert; separately authorized provisional use remains possible."
+    },
+    {
+      "family_id": "F_FR",
+      "classification": "BLOCKED_BY_MISSING_DEFINITION",
+      "preserved_role": "PARTIAL_NONNATIVE_COMPARISON_REPRESENTATIVE",
+      "decision": "The preserved R+alpha R^2 representative belongs to the nonnative quadratic comparison lineage and does not define a general native f(R) family."
+    },
+    {
+      "family_id": "F_QUADRATIC",
+      "classification": "REFERENCE_CONTROL_ONLY",
+      "preserved_role": "REFERENCE_CONTROL",
+      "decision": "The family remains REFERENCE_CONTROL_ONLY and retains its accepted negative limitation; it is not eligible for native-action selection."
+    },
+    {
+      "family_id": "F_EXTRA_FIELD",
+      "classification": "BLOCKED_BY_MISSING_DEFINITION",
+      "preserved_role": "VERBAL_DIRECTION_ONLY",
+      "decision": "No source-defined field, kinetic term, coupling, constraints, coefficients, or complete action is preserved."
+    },
+    {
+      "family_id": "F_NONLOCAL",
+      "classification": "BLOCKED_BY_MISSING_DEFINITION",
+      "preserved_role": "VERBAL_DIRECTION_ONLY",
+      "decision": "No source-defined kernel, form factor, causal prescription, boundary treatment, or complete action is preserved."
+    },
+    {
+      "family_id": "F_CONNECTION_TORSION",
+      "classification": "BLOCKED_BY_MISSING_DEFINITION",
+      "preserved_role": "VERBAL_DIRECTION_ONLY",
+      "decision": "No source-defined variables, gauge structure, invariant basis, matter coupling, or complete action is preserved."
+    },
+    {
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "classification": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "preserved_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "decision": "The equivalence probe audits consistency and has no standalone variational action."
+    }
+  ],
+  "eligibility_classification_counts": {
+    "ELIGIBLE_FOR_SEPARATE_ACTION_SELECTION": 0,
+    "PROVISIONAL_BASELINE_ONLY": 1,
+    "REFERENCE_CONTROL_ONLY": 1,
+    "NOT_APPLICABLE_NOT_AN_ACTION": 1,
+    "BLOCKED_BY_MISSING_DEFINITION": 4,
+    "BLOCKED_BY_MISSING_DERIVATION": 0,
+    "BLOCKED_BY_UNRESOLVED_CONFLICT": 0,
+    "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT": 0
+  },
+  "remaining_blocker_ledger": [
+    {
+      "blocker": "POSITIVE_NATIVE_GRAVITATIONAL_SELECTION_PRINCIPLE_MISSING",
+      "affects": [
+        "ALL_NATIVE_ACTION_SELECTION"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "blocker": "GENERAL_F_R_ACTION_FAMILY_DEFINITION_MISSING",
+      "affects": [
+        "F_FR"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "blocker": "EXTRA_FIELD_ACTION_DEFINITION_MISSING",
+      "affects": [
+        "F_EXTRA_FIELD"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "blocker": "NONLOCAL_ACTION_DEFINITION_MISSING",
+      "affects": [
+        "F_NONLOCAL"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "blocker": "CONNECTION_TORSION_ACTION_DEFINITION_MISSING",
+      "affects": [
+        "F_CONNECTION_TORSION"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "blocker": "ACCEPTED_QUADRATIC_NEGATIVE_LIMITATION_AND_REFERENCE_CONTROL_ROLE",
+      "affects": [
+        "F_QUADRATIC"
+      ],
+      "status": "PRESERVED"
+    },
+    {
+      "blocker": "NATIVE_MATTER_SOURCE_SCALE_AND_COEFFICIENT_INPUTS_NOT_SELECTED",
+      "affects": [
+        "REQUIREMENT_DEPENDENT_CELLS"
+      ],
+      "status": "DOWNSTREAM_INPUT_REQUIRED"
+    }
+  ],
+  "route_selection_method": {
+    "routes_compared": 5,
+    "criteria_compared": 9,
+    "decision_rule": "Select at most one route that directly addresses the empty native-candidate pool, has source-bound justification, can terminate in bounded pass/block/failure, and does not adopt an action or principle. Other utility does not override failure to address the native-selection gap.",
+    "frequency_or_compatibility_treated_as_native_endorsement": false,
+    "manual_action_or_principle_selection_performed": false
+  },
+  "route_comparison": [
+    {
+      "route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+      "selected": true,
+      "primary_route_eligible": true,
+      "criteria": {
+        "native_significance": "DIRECTLY_ADDRESSES_THE_MISSING_NATIVE_SELECTION_BASIS",
+        "source_bound_justification": "STRONG_FOUR_CLOSED_STAGES_ESTABLISH_THE_EXACT_GAP",
+        "missing_prerequisites": "ONE_BOUNDED_SOURCE_BOUND_PRINCIPLE_DERIVATION_PROGRAM",
+        "arbitrary_invention_risk": "LOW_IF_DERIVATION_AND_POSTULATE_ARE_KEPT_DISTINCT",
+        "bounded_result_capability": "HIGH",
+        "accepted_work_reuse": "HIGH_USES_REQUIREMENTS_LINEAGES_AND_COMPATIBILITY_MATRIX",
+        "later_seams_and_pillars_support": "HIGH_IF_A_PRINCIPLE_CONSTRAINS_THE_ACTION_BASIS",
+        "distance_to_calculable_model": "INDIRECT_ONE_DECISION_LAYER_BEFORE_ACTION_CONSTRUCTION",
+        "outcome_clarity": "CLEAR_PASS_BLOCK_FAILURE"
+      },
+      "reason": "It addresses the precise missing object: a positive ToE-native reason that can constrain or generate an action family without pretending that a preserved candidate already exists."
+    },
+    {
+      "route": "PREPARE_BOUNDED_NEW_ACTION_POSTULATE",
+      "selected": false,
+      "primary_route_eligible": false,
+      "criteria": {
+        "native_significance": "POTENTIALLY_HIGH_BUT_NOT_DERIVED",
+        "source_bound_justification": "WEAK_NO_PRESERVED_NATIVE_ACTION_BASIS",
+        "missing_prerequisites": "ACTION_CONTENT_AND_COEFFICIENT_RATIONALE",
+        "arbitrary_invention_risk": "HIGH",
+        "bounded_result_capability": "MODERATE",
+        "accepted_work_reuse": "MODERATE",
+        "later_seams_and_pillars_support": "POTENTIALLY_HIGH_IF_JUSTIFIED",
+        "distance_to_calculable_model": "SHORTER_BUT_PREMATURE",
+        "outcome_clarity": "CLEAR_ONLY_AFTER_A_POSTULATE_BASIS_IS_AUTHORIZED"
+      },
+      "reason_not_selected": "It would move directly to invented action content before testing whether accepted ToE architecture supplies a positive selection principle; retain only as a separately authorized fallback after a principled derivation blocks or fails."
+    },
+    {
+      "route": "USE_EINSTEIN_HILBERT_AS_PROVISIONAL_BASELINE",
+      "selected": false,
+      "primary_route_eligible": false,
+      "criteria": {
+        "native_significance": "LOW_FOR_NATIVE_ACTION_SELECTION",
+        "source_bound_justification": "STRONG_AS_KNOWN_PHYSICS_BASELINE_ONLY",
+        "missing_prerequisites": "NONE_FOR_BASELINE_USE_BUT_NATIVE_DERIVATION_REMAINS_MISSING",
+        "arbitrary_invention_risk": "LOW",
+        "bounded_result_capability": "HIGH_FOR_OTHER_WORK_NOT_FOR_NATIVE_SELECTION",
+        "accepted_work_reuse": "HIGH",
+        "later_seams_and_pillars_support": "HIGH_AS_A_WORKING_CONVENTION",
+        "distance_to_calculable_model": "IMMEDIATE_BASELINE",
+        "outcome_clarity": "CLEAR_PROVISIONAL_ONLY"
+      },
+      "reason_not_selected": "It can support separately authorized work but does not answer why Einstein-Hilbert is the ToE's native law and therefore cannot be the primary resolution of the empty native-candidate pool."
+    },
+    {
+      "route": "DEFER_NATIVE_GRAVITY_PENDING_REQUIRED_INPUTS",
+      "selected": false,
+      "primary_route_eligible": false,
+      "criteria": {
+        "native_significance": "PRESERVES_BOUNDARY_BUT_PRODUCES_NO_NATIVE_CONSTRAINT",
+        "source_bound_justification": "MODERATE",
+        "missing_prerequisites": "UNSPECIFIED_IF_USED_AS_PRIMARY_ROUTE",
+        "arbitrary_invention_risk": "LOW",
+        "bounded_result_capability": "LOW",
+        "accepted_work_reuse": "LOW",
+        "later_seams_and_pillars_support": "LOW_UNLESS_A_SPECIFIC_INPUT_PROGRAM_IS_NAMED",
+        "distance_to_calculable_model": "INDEFINITE",
+        "outcome_clarity": "WEAKER_THAN_THE_IDENTIFIED_PRINCIPLE_DERIVATION_ROUTE"
+      },
+      "reason_not_selected": "The survey identifies a specific bounded missing basis rather than only an undifferentiated dependency set, so indefinite deferral is not yet justified."
+    },
+    {
+      "route": "NO_GRAVITATIONAL_ACTION_SELECTION_ROUTE_READY",
+      "selected": false,
+      "primary_route_eligible": false,
+      "criteria": {
+        "native_significance": "NO_FORWARD_TEST",
+        "source_bound_justification": "NOT_SUPPORTED_BECAUSE_ONE_BOUNDED_ROUTE_IS_IDENTIFIED",
+        "missing_prerequisites": "NOT_APPLICABLE",
+        "arbitrary_invention_risk": "LOW",
+        "bounded_result_capability": "NONE",
+        "accepted_work_reuse": "NONE",
+        "later_seams_and_pillars_support": "NONE",
+        "distance_to_calculable_model": "UNDEFINED",
+        "outcome_clarity": "CLEAR_BUT_UNNECESSARY"
+      },
+      "reason_not_selected": "A source-justified positive-principle derivation route is ready to be proposed separately, so a no-route conclusion would discard a concrete bounded next question."
+    }
+  ],
+  "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+  "selected_route_count": 1,
+  "selected_route_status": "NONEXECUTING_HANDOFF_ONLY",
+  "selected_route_rationale": "The accepted survey shows a complete evaluation envelope but no positive native law and no eligible preserved action. A bounded attempt to derive a positive native gravitational principle is therefore the narrowest route that attacks the exact missing basis without postulating an action prematurely.",
+  "selected_route_remaining_prerequisites": [
+    "freeze the source-bound native ontology and architecture inputs permitted to support a positive principle",
+    "distinguish derivation from a new postulate and from known-physics recovery assumptions",
+    "define what action-basis restriction or selection power would count as nontrivial",
+    "freeze pass block and failure outcomes before executing any principle derivation"
+  ],
+  "selected_route_may_prepare": [
+    "a separately reviewed bounded-program proposal for positive native gravitational principle derivation",
+    "source and dependency inventories for that proposal",
+    "nontrivial selection-power and falsification criteria for that proposal"
+  ],
+  "selected_route_may_not_claim": [
+    "a native gravitational principle has been selected or derived",
+    "a gravitational action has been invented selected varied or adopted",
+    "Einstein-Hilbert is native ToE gravity",
+    "quadratic gravity is promoted beyond reference control",
+    "a successor program is authorized installed or opened",
+    "a gravitational calculation or empirical validation has occurred"
+  ],
+  "future_route_pass_block_failure_meaning": {
+    "pass": "A source-bound positive native principle is derived with explicit nontrivial constraints that reduce or select an admissible gravitational action basis and can support a separate action-construction handoff.",
+    "block": "The preserved native ontology and architecture do not contain enough physical content to formulate a positive gravitational principle without adding a new postulate.",
+    "fail": "The tested principle only restates generic consistency or known-physics recovery, conflicts with accepted project architecture, or provides no action-basis discrimination."
+  },
+  "proposed_successor_target": "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0",
+  "proposed_successor_status": "NAMED_NOT_AUTHORIZED_NOT_INSTALLED_NOT_OPENED",
+  "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+  "lifecycle_result": "PASSED",
+  "selected_next_target": "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0",
+  "selected_next_target_status": "MANDATORY_EXIT_SELECTED_NOT_EXECUTED",
+  "scientific_conclusion": "No preserved source-defined native gravitational action family is eligible for selection. The next justified research route is to prepare, under separate authority, a bounded derivation test for a positive native gravitational principle.",
+  "nonclaim_boundary": {
+    "native_gravitational_principle_selected_or_derived": false,
+    "native_gravitational_action_selected_or_adopted": false,
+    "Einstein_Hilbert_promoted_to_native": false,
+    "quadratic_gravity_promoted_or_reopened": false,
+    "undefined_action_family_completed": false,
+    "equivalence_probe_converted_to_action": false,
+    "canonical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "new_gravitational_calculation_executed": false,
+    "successor_program_authorized_installed_or_opened": false
+  }
+}

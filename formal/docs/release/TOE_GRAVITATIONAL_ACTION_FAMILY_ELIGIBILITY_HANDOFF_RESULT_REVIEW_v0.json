@@ -1,0 +1,76 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T19:00:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+  "consumed_result": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0",
+  "consumed_result_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+  "consumed_result_sha256": "8f29a6d5912478a2143f751fcbb9aa817a097acc79d274bd825865dfa2e43821",
+  "independent_recomputation": {
+    "expected_family_classifications": {
+      "F_EH": "PROVISIONAL_BASELINE_ONLY",
+      "F_FR": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_QUADRATIC": "REFERENCE_CONTROL_ONLY",
+      "F_EXTRA_FIELD": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_NONLOCAL": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_CONNECTION_TORSION": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_EQUIVALENCE_PROBE": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    "observed_family_classifications": {
+      "F_EH": "PROVISIONAL_BASELINE_ONLY",
+      "F_FR": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_QUADRATIC": "REFERENCE_CONTROL_ONLY",
+      "F_EXTRA_FIELD": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_NONLOCAL": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_CONNECTION_TORSION": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_EQUIVALENCE_PROBE": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    "all_seven_families_classified_once": true,
+    "eligible_native_action_family_count": 0,
+    "selected_route_count": 1,
+    "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS"
+  },
+  "review_checks": {
+    "Stage_4_result_and_review_hashes_match": true,
+    "family_roles_preserved": true,
+    "compatibility_not_treated_as_native_eligibility": true,
+    "Einstein_Hilbert_remains_provisional_baseline_only": true,
+    "quadratic_gravity_remains_reference_control_only": true,
+    "equivalence_probe_remains_nonaction": true,
+    "four_incomplete_families_remain_definition_blocked": true,
+    "empty_eligible_pool_preserved": true,
+    "all_five_routes_compared": true,
+    "selected_route_addresses_exact_positive_principle_gap": true,
+    "new_action_postulate_retained_as_unselected_fallback": true,
+    "Einstein_Hilbert_baseline_utility_not_misread_as_native_solution": true,
+    "exactly_one_manifest_terminal_outcome_emitted": true,
+    "mandatory_exit_selected": true,
+    "successor_named_without_authority": true,
+    "no_action_principle_promotion_calculation_or_successor_authority": true
+  },
+  "independent_findings": [
+    "The seven classifications follow from frozen family roles and the closed Stage 4 evidence; no native action-selection candidate survives.",
+    "The selected route directly addresses the absence of a positive native selection basis while postponing all action content.",
+    "Einstein-Hilbert may be useful under separate provisional-baseline authority but cannot resolve native derivation.",
+    "A new-action postulate remains a possible later fallback and is not authorized by this handoff."
+  ],
+  "review_result": "ACCEPTED",
+  "accepted": true,
+  "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+  "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+  "selected_next_target": "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0",
+  "selected_next_target_status": "MANDATORY_EXIT_SELECTED_NOT_EXECUTED",
+  "nonclaim_boundary": {
+    "native_gravitational_principle_selected_or_derived": false,
+    "native_gravitational_action_selected_or_adopted": false,
+    "Einstein_Hilbert_promoted_to_native": false,
+    "quadratic_gravity_promoted_or_reopened": false,
+    "undefined_action_family_completed": false,
+    "equivalence_probe_converted_to_action": false,
+    "canonical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "new_gravitational_calculation_executed": false,
+    "successor_program_authorized_installed_or_opened": false
+  }
+}
