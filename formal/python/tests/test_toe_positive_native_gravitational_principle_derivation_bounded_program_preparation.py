@@ -118,7 +118,8 @@ def test_registry_records_preparation_before_later_installation() -> None:
             [
                 "git",
                 "show",
-                "HEAD:formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+                "d33fd6f0940dd97f0212ec69a66b6f5bcf5f7e86:"
+                "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
             ],
             cwd=REPO_ROOT,
             check=True,
@@ -127,4 +128,5 @@ def test_registry_records_preparation_before_later_installation() -> None:
         ).stdout
     )
     assert proposed_id not in prepared_registry["bounded_programs_v1"]
-    assert proposed_id not in registry["bounded_programs_v1"]
+    assert registry["bounded_programs_v1"][proposed_id]["state"] == "UNOPENED"
+    assert registry["bounded_programs_v1"][proposed_id]["events"] == []

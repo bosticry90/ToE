@@ -2,6 +2,7 @@ import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0
+import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Release
@@ -43,6 +44,8 @@ theorem positive_principle_program_is_installed_and_remains_unopened :
       true ∧
     ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programOpened =
       false ∧
+    ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     scientificStageOpened = false ∧
     principleInventoryExecuted = false ∧
     nativeGravitationalPrincipleDerived = false ∧

@@ -2,6 +2,7 @@ import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateAction
 import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationAuthorityV0
 import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationResultReview
 import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0
+import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Derivation
@@ -12,7 +13,7 @@ open ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationR
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 def currentLiveTarget : String := scientificTarget
 def currentEvidencePacketId : String :=
-  "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_v0"
+  "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0"
 def currentBoundedProgramId : String :=
   "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0"
 def currentBoundedProgramState : String := "UNOPENED"
@@ -37,6 +38,8 @@ theorem positive_principle_program_is_installed_but_unopened :
       true ∧
     Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programOpened =
       false ∧
+    Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     scientificStageOpened = false ∧
     principleInventoryExecuted = false ∧
     nativeGravitationalPrincipleDerived = false ∧

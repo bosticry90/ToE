@@ -1,0 +1,61 @@
+{
+  "artifact_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0",
+  "atomic_review_commit_expected_path_count": 8,
+  "atomic_review_commit_expected_paths": [
+    "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_positive_native_gravitational_principle_derivation_bounded_program_preparation.py",
+    "formal/python/tests/test_toe_positive_gravitational_principle_program_governance_installation.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormal/Release/ToePositiveGravitationalPrincipleProgramGovernanceInstallationResultReviewV0.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-07-31T20:35:00Z",
+  "focused_python_validation": {
+    "passed": 53,
+    "status": "PASSED",
+    "suites": [
+      "test_toe_positive_native_gravitational_principle_derivation_bounded_program_preparation_authority.py",
+      "test_toe_positive_native_gravitational_principle_derivation_bounded_program_preparation.py",
+      "test_toe_positive_gravitational_principle_program_governance_installation.py",
+      "test_bounded_program_governance.py",
+      "test_bounded_program_governance_enforcement_completion_authority.py",
+      "test_bounded_program_governance_enforcement_adversarial.py"
+    ]
+  },
+  "full_lean_validation": {
+    "jobs": 9103,
+    "modules": 1358,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "governance_validation": {
+    "attempted_stage_count": 0,
+    "event_count": 0,
+    "program_state": "UNOPENED",
+    "scientific_event_created": false,
+    "status": "PASSED"
+  },
+  "installation_commit": "ca32fd309c36764dca53b1204ec7eacdc08b34cd",
+  "legacy_validation_debt": {
+    "broad_exhaustive_python_pass_claimed": false,
+    "legacy_authority_parser_and_freshness_debt_preserved": true
+  },
+  "manifest_path": "formal/docs/release/bounded_program_manifests/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_MANIFEST_v1.json",
+  "manifest_sha256": "817b745a5acb1408e334dd998a68d0adfbbd1de5150a026f2cb4659abafd1e1b",
+  "nonclaim_boundary": {
+    "action_class_selected": false,
+    "evidence_promoted": false,
+    "gravitational_action_constructed_or_selected": false,
+    "gravitational_calculation_executed": false,
+    "native_gravitational_principle_selected_or_derived": false,
+    "scientific_stage_opened": false,
+    "successor_authorized": false
+  },
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "schema_id": "toe.positive_native_gravitational_principle_derivation.program_governance_installation_validation.v0",
+  "status": "PROGRAM_INSTALLATION_REVIEWED_AND_VALIDATED_UNOPENED",
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true
+}
