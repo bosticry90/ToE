@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionAttemptOpen
+open Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,9 +34,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_claim_extraction_stage :
+theorem current_authority_tracks_selected_unopened_reconciliation_stage :
     currentTarget =
-      "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0" := by
+      "reconcile_toe_current_native_hypothesis_evidence_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -51,20 +51,19 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_stage_3_is_open :
+theorem census_program_stage_3_is_closed_and_stage_4_is_unopened :
     boundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_3_OPEN_AWAITING_NATIVE_CLAIM_EXTRACTION_RESULT" ∧
+      "STAGE_3_CLOSED_PASSED_STAGE_4_SELECTED_NOT_AUTHORIZED_NOT_OPENED" ∧
     boundedAttemptNumber = 3 ∧
-    scientificOutputPresent = false ∧
-    claimExtractionPerformed = false ∧
-    claimExtractionResultProduced = false ∧
-    scientificClaimAdjudicated = false ∧
+    sourceBoundClaimsExtracted = true ∧
+    scientificClaimsAdjudicated = false ∧
     evidencePromoted = false ∧
-    reconciliationPerformed = false ∧
+    repositoryClaimExhaustionEstablished = false ∧
     nativeFrontierSelected = false ∧
+    stageFourAuthorized = false ∧
     stageFourOpened = false := by
   native_decide
 
