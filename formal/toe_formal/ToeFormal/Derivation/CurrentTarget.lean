@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeGravitationalRequirementInventoryResult
+import ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryAttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,51 +13,48 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeGravitationalRequirementInventoryResult.selectedNextTarget
+  ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.scientificTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeGravitationalRequirementInventoryResult.reviewId
+  ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.eventId
 
 def currentBoundedProgramId : String :=
-  ToeNativeGravitationalRequirementInventoryResult.programId
+  ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.programId
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY"
+  "STAGE_2_SCIENTIFIC_ATTEMPT_OPEN"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeNativeGravitationalRequirementInventoryResult.attemptSequenceNumber
+  ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
   "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_unopened_candidate_action_family_inventory :
+theorem current_target_records_open_candidate_action_family_inventory :
     currentLiveTarget =
       "inventory_toe_candidate_gravitational_action_families_v0" := by
   rfl
 
-theorem gravitational_requirement_inventory_is_closed_passed_with_conflicts :
+theorem candidate_action_family_inventory_is_open_without_result :
     currentBoundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 1 ∧
+      "STAGE_2_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    currentBoundedAttemptNumber = 2 ∧
     lastClosedBoundedSemanticStage =
       "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeNativeGravitationalRequirementInventoryResult.requirementInventoryComplete =
-      true ∧
-    ToeNativeGravitationalRequirementInventoryResult.conflictsPreserved = true ∧
-    ToeNativeGravitationalRequirementInventoryResult.actionFamiliesCompared =
-      false ∧
-    ToeNativeGravitationalRequirementInventoryResult.gravitationalActionSelected =
-      false ∧
-    ToeNativeGravitationalRequirementInventoryResult.stageTwoAuthorized = false ∧
-    ToeNativeGravitationalRequirementInventoryResult.stageTwoOpened = false := by
+    ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.programOpen = true ∧
+    ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.scientificResultCreated = false ∧
+    ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.actionFamiliesInventoried = 0 ∧
+    ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.actionFamiliesCompared = false ∧
+    ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.gravitationalActionSelected = false ∧
+    ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.stageThreeAuthorized = false := by
   decide
 
 end CurrentTarget
