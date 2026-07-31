@@ -65,6 +65,10 @@ PROGRAM_MANIFEST_PATHS = {
         "formal/docs/release/bounded_program_manifests/"
         "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json"
     ),
+    "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0": (
+        "formal/docs/release/bounded_program_manifests/"
+        "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_MANIFEST_v1.json"
+    ),
 }
 LEGACY_ATTESTATION_PATH = (
     "formal/docs/release/bounded_program_attestations/"
@@ -300,6 +304,13 @@ GRAVITATIONAL_SURVEY_PROGRAM_ID = (
 GRAVITATIONAL_SURVEY_PREPARATION_TARGET = (
     "prepare_toe_native_gravitational_requirements_and_candidate_action_"
     "family_survey_bounded_program_v0"
+)
+POSITIVE_GRAVITATIONAL_PRINCIPLE_PROGRAM_ID = (
+    "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0"
+)
+POSITIVE_GRAVITATIONAL_PRINCIPLE_PREPARATION_TARGET = (
+    "prepare_toe_positive_native_gravitational_principle_derivation_"
+    "bounded_program_v0"
 )
 NATIVE_MANDATORY_EXIT = "close_toe_native_surrogate_v0_after_bounded_result_v0"
 NATIVE_STAGE_DEFINITIONS = (
@@ -965,6 +976,41 @@ def install_gravitational_survey_program(
     )
     migrated = json.loads(json.dumps(registry))
     migrated[PROGRAMS_KEY][GRAVITATIONAL_SURVEY_PROGRAM_ID] = (
+        _prospective_program_record(relative_path, manifest)
+    )
+    migrated[REGISTRY_EXTENSION_KEY] = governance_contract()
+    migrated[ENFORCEMENT_EXTENSION_KEY] = enforcement_contract()
+    return migrated
+
+
+def install_positive_gravitational_principle_program(
+    registry: dict[str, Any],
+) -> dict[str, Any]:
+    projection = registry.get("current_projection_v0")
+    if not isinstance(projection, dict):
+        raise BoundedProgramError("canonical current projection is missing")
+    if (
+        projection.get("current_target")
+        != POSITIVE_GRAVITATIONAL_PRINCIPLE_PREPARATION_TARGET
+    ):
+        raise BoundedProgramError(
+            "positive gravitational-principle program preparation target "
+            "is not authoritative"
+        )
+    programs = registry.get(PROGRAMS_KEY)
+    if not isinstance(programs, dict):
+        raise BoundedProgramError("bounded-program registry extension is missing")
+    if POSITIVE_GRAVITATIONAL_PRINCIPLE_PROGRAM_ID in programs:
+        raise BoundedProgramError(
+            "positive gravitational-principle program is already installed"
+        )
+    if ENFORCEMENT_EXTENSION_KEY not in registry:
+        raise BoundedProgramError("bounded-program enforcement is not installed")
+    relative_path, manifest = _load_authoritative_manifest(
+        POSITIVE_GRAVITATIONAL_PRINCIPLE_PROGRAM_ID
+    )
+    migrated = json.loads(json.dumps(registry))
+    migrated[PROGRAMS_KEY][POSITIVE_GRAVITATIONAL_PRINCIPLE_PROGRAM_ID] = (
         _prospective_program_record(relative_path, manifest)
     )
     migrated[REGISTRY_EXTENSION_KEY] = governance_contract()

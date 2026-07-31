@@ -1,6 +1,7 @@
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout
 import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationAuthorityV0
 import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationResultReview
+import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0
 
 namespace ToeFormal
 namespace Derivation
@@ -10,27 +11,33 @@ open ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationR
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 def currentLiveTarget : String := scientificTarget
-def currentEvidencePacketId : String := resultId
+def currentEvidencePacketId : String :=
+  "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_v0"
 def currentBoundedProgramId : String :=
   "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0"
-def currentBoundedProgramState : String := "UNINSTALLED"
-def currentTargetPhase : String := "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
+def currentBoundedProgramState : String := "UNOPENED"
+def currentTargetPhase : String :=
+  "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY"
 def currentBoundedAttemptNumber : Nat := 0
 def lastClosedBoundedSemanticStage : String := "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF"
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_records_reviewed_positive_principle_program_proposal :
+theorem current_target_records_installed_positive_principle_program :
     currentLiveTarget =
       "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0" := by
   rfl
 
-theorem reviewed_positive_principle_program_proposal_is_not_installed_or_opened :
-    currentBoundedProgramState = "UNINSTALLED" ∧
+theorem positive_principle_program_is_installed_but_unopened :
+    currentBoundedProgramState = "UNOPENED" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
+      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
     currentBoundedAttemptNumber = 0 ∧ proposalPrepared = true ∧
     independentReviewAccepted = true ∧
-    programInstalled = false ∧ scientificStageOpened = false ∧
+    Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programInstalled =
+      true ∧
+    Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programOpened =
+      false ∧
+    scientificStageOpened = false ∧
     principleInventoryExecuted = false ∧
     nativeGravitationalPrincipleDerived = false ∧
     gravitationalActionConstructedOrSelected = false ∧

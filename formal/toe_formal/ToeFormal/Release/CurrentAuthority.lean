@@ -1,6 +1,7 @@
 import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
+import ToeFormal.Release.ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0
 
 namespace ToeFormal
 namespace Release
@@ -16,7 +17,7 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_reviewed_positive_principle_program_proposal :
+theorem current_authority_tracks_installed_positive_principle_program :
     currentTarget =
       "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0" := by
   native_decide
@@ -32,13 +33,17 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem reviewed_positive_principle_proposal_has_no_scientific_execution_authority :
-    boundedProgramState = "UNINSTALLED" ∧
+theorem positive_principle_program_is_installed_and_remains_unopened :
+    boundedProgramState = "UNOPENED" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
+      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
     boundedAttemptNumber = 0 ∧ proposalPrepared = true ∧
     independentReviewAccepted = true ∧
-    programInstalled = false ∧ scientificStageOpened = false ∧
+    ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programInstalled =
+      true ∧
+    ToePositiveGravitationalPrincipleProgramGovernanceInstallationV0.programOpened =
+      false ∧
+    scientificStageOpened = false ∧
     principleInventoryExecuted = false ∧
     nativeGravitationalPrincipleDerived = false ∧
     gravitationalActionConstructedOrSelected = false ∧
