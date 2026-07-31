@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult
+import ToeFormal.Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,49 +13,49 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.selectedNextTarget
+  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.scientificTarget
 
 def currentEvidencePacketId : String :=
-  ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.reviewId
+  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.eventId
 
 def currentBoundedProgramId : String :=
-  ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.programId
+  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.programId
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "STAGE_3_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_4_AUTHORITY"
+  "STAGE_4_SCIENTIFIC_ATTEMPT_OPEN"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.attemptSequenceNumber
+  ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
   "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_unopened_requirement_family_compatibility_survey :
+theorem current_target_records_open_requirement_family_compatibility_survey :
     currentLiveTarget =
       "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0" := by
   rfl
 
-theorem gravitational_lineage_reconstruction_is_closed_passed_with_unresolved_relationships :
+theorem source_bound_requirement_family_compatibility_survey_is_open_without_result :
     currentBoundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "STAGE_3_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_4_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 3 ∧
+      "STAGE_4_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    currentBoundedAttemptNumber = 4 ∧
     lastClosedBoundedSemanticStage =
       "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.lineagesReconstructed = true ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.boundedUnresolvedRelationshipsPreserved = true ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.definedNativeActionFamilyCount = 0 ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.compatibilityJudgmentsMade = false ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.gravitationalActionSelected = false ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.stageFourAuthorized = false ∧
-    ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.stageFourOpened = false := by
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.programOpen = true ∧
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.scientificResultCreated = false ∧
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.compatibilityCellsPopulated = 0 ∧
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.familiesEligibleForNativeSelection = 0 ∧
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.evidencePromoted = false ∧
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.gravitationalActionSelected = false ∧
+    ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.stageFiveAuthorized = false := by
   decide
 
 end CurrentTarget
