@@ -1,0 +1,22 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T21:30:00Z",
+  "checks": {
+    "frontier_selection_hashes_reproduce": true,
+    "exact_selected_ccft_frontier_is_preserved": true,
+    "one_prerequisite_boundary_is_preserved": true,
+    "preparation_does_not_install_program": true,
+    "preparation_does_not_open_scientific_stage": true,
+    "preparation_does_not_recover_or_adjudicate_ccft_mathematics": true,
+    "preparation_does_not_select_representation_field_action_seam_or_observable": true,
+    "earlier_coherence_block_remains_binding": true,
+    "repository_claim_exhaustion_is_not_asserted": true,
+    "proposal_review_is_permitted": true
+  },
+  "decision": "ACCEPT_CCFT_PROGRAM_PROPOSAL_PREPARATION_AUTHORITY_ONLY",
+  "failed_checks": [],
+  "reviewed_authority": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0",
+  "schema_id": "toe.ccft_native_mathematical_core_and_operationalization.bounded_program_preparation_authority_review.v0",
+  "scientific_execution_authorized": false
+}
