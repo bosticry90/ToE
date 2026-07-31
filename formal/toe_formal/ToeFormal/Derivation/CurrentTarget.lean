@@ -1,3 +1,4 @@
+import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionResult
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
 import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult
@@ -14,51 +15,51 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToePostCensusNativeFrontierDecisionAttemptOpen
+open ToePostCensusNativeFrontierDecisionResult
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToePostCensusNativeFrontierDecisionAttemptOpen.target
+  ToePostCensusNativeFrontierDecisionResult.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToePostCensusNativeFrontierDecisionAttemptOpen.evidenceId
+  ToePostCensusNativeFrontierDecisionResult.resultId
 
 def currentBoundedProgramId : String :=
-  ToePostCensusNativeFrontierDecisionAttemptOpen.programId
+  ToePostCensusNativeFrontierDecisionResult.programId
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentTargetPhase : String :=
-  "STAGE_5_OPEN_AWAITING_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT"
+  "STAGE_5_CLOSED_PASSED_FRONTIER_SELECTED_AFTER_ONE_PREREQUISITE_MANDATORY_EXIT_SELECTED_NOT_EXECUTED"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToePostCensusNativeFrontierDecisionAttemptOpen.attemptSequenceNumber
+  ToePostCensusNativeFrontierDecisionResult.attemptSequenceNumber
 
 def currentBoundedSemanticStage : String :=
-  ToePostCensusNativeFrontierDecisionAttemptOpen.semanticStageId
+  ToePostCensusNativeFrontierDecisionResult.semanticStageId
 
 def lastClosedBoundedSemanticStage : String :=
-  "CURRENT_HYPOTHESIS_RECONCILIATION"
+  "NATIVE_FRONTIER_DECISION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_opens_bounded_frontier_decision :
+theorem current_target_selects_exact_census_mandatory_exit :
     currentLiveTarget =
-      "select_toe_native_frontier_after_repository_wide_evidence_census_v0" := by
+      "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0" := by
   rfl
 
-theorem frontier_decision_stage_is_open_after_reconciliation_close :
+theorem frontier_decision_stage_is_closed_without_successor_authority :
     currentBoundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_5_OPEN_AWAITING_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT" ∧
+      "STAGE_5_CLOSED_PASSED_FRONTIER_SELECTED_AFTER_ONE_PREREQUISITE_MANDATORY_EXIT_SELECTED_NOT_EXECUTED" ∧
     currentBoundedAttemptNumber = 5 ∧
     currentBoundedSemanticStage =
       "NATIVE_FRONTIER_DECISION" ∧
     lastClosedBoundedSemanticStage =
-      "CURRENT_HYPOTHESIS_RECONCILIATION" ∧
+      "NATIVE_FRONTIER_DECISION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
     ToeRepositoryWideNativeHypothesisClaimExtractionResult.sourceBoundClaimsExtracted =
       true ∧
@@ -66,13 +67,16 @@ theorem frontier_decision_stage_is_open_after_reconciliation_close :
       true ∧
     ToeCurrentNativeHypothesisEvidenceReconciliationResult.nativeHypothesisGraphProduced =
       true ∧
-    frontierRankingPerformed = false ∧
-    frontierRankingResultProduced = false ∧
-    nativeFrontierSelected = false ∧
-    scientificClaimAdjudicated = false ∧
+    frontierRankingComplete = true ∧
+    nativeFrontierSelected = true ∧
+    selectedFamilyId = "GRAVITY_SECTOR" ∧
+    selectedFrontierIsResearchTargetOnly = true ∧
+    scientificClaimTruthAdjudicated = false ∧
     canonicalEvidencePromoted = false ∧
-    representationActionOrSeamSelected = false ∧
-    successorProgramAuthorizedOrOpened = false ∧
+    fieldActionOrSeamSelected = false ∧
+    proposedFutureTargetAuthorized = false ∧
+    proposedFutureTargetOpened = false ∧
+    mandatoryExitSelected = true ∧
     mandatoryExitExecuted = false ∧
     ToeNativeHypothesisSourceLineageReconstructionResult.documentaryLineageResultProduced =
       true := by

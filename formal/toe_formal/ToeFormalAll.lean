@@ -901,6 +901,7 @@ import ToeFormal.Derivation.ToeNativePsiAU1TotalStressEnergyConservationRouteRes
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedCloseout
 import ToeFormal.Derivation.ToeNativeSurrogateV0BoundedProgramAuthorization
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
+import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionAttemptOpen
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview
@@ -1334,6 +1335,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1327
+def committedModuleCount : Nat := 1328
 
 end ToeFormalAll

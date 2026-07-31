@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
+open Derivation.ToePostCensusNativeFrontierDecisionResult
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,9 +34,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_frontier_decision_stage :
+theorem current_authority_tracks_selected_census_mandatory_exit :
     currentTarget =
-      "select_toe_native_frontier_after_repository_wide_evidence_census_v0" := by
+      "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -51,12 +51,12 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_stage_5_is_open_without_a_frontier_result :
+theorem census_program_stage_5_is_closed_without_successor_authority :
     boundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_5_OPEN_AWAITING_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT" ∧
+      "STAGE_5_CLOSED_PASSED_FRONTIER_SELECTED_AFTER_ONE_PREREQUISITE_MANDATORY_EXIT_SELECTED_NOT_EXECUTED" ∧
     boundedAttemptNumber = 5 ∧
     Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult.sourceBoundClaimsExtracted =
       true ∧
@@ -64,13 +64,16 @@ theorem census_program_stage_5_is_open_without_a_frontier_result :
       true ∧
     Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult.nativeHypothesisGraphProduced =
       true ∧
-    frontierRankingPerformed = false ∧
-    frontierRankingResultProduced = false ∧
-    nativeFrontierSelected = false ∧
-    scientificClaimAdjudicated = false ∧
+    frontierRankingComplete = true ∧
+    nativeFrontierSelected = true ∧
+    selectedFamilyId = "GRAVITY_SECTOR" ∧
+    selectedFrontierIsResearchTargetOnly = true ∧
+    scientificClaimTruthAdjudicated = false ∧
     canonicalEvidencePromoted = false ∧
-    representationActionOrSeamSelected = false ∧
-    successorProgramAuthorizedOrOpened = false ∧
+    fieldActionOrSeamSelected = false ∧
+    proposedFutureTargetAuthorized = false ∧
+    proposedFutureTargetOpened = false ∧
+    mandatoryExitSelected = true ∧
     mandatoryExitExecuted = false := by
   native_decide
 
