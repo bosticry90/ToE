@@ -1,0 +1,41 @@
+{
+  "artifact_id": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_STAGE_4_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T16:22:00Z",
+  "consumed_authority": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_STAGE_4_OPEN_AUTHORITY_v0",
+  "consumed_authority_path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_STAGE_4_OPEN_AUTHORITY_v0.json",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+  "accepted": true,
+  "review_result": "ACCEPT_STAGE_4_SOURCE_BOUND_COMPATIBILITY_SURVEY_OPEN_AUTHORITY",
+  "checks": {
+    "manifest_stage_number_target_and_scope_hash_match": true,
+    "ten_requirements_and_seven_families_bound_exactly": true,
+    "seventy_cell_product_frozen": true,
+    "typed_cell_vocabulary_is_closed": true,
+    "unknown_is_not_encoded_as_failure": true,
+    "formal_pass_is_separate_from_native_endorsement": true,
+    "defined_baselines_controls_representatives_verbal_directions_and_nonaction_probe_are_distinguished": true,
+    "every_non_missing_judgment_requires_source_and_domain_binding": true,
+    "R_plus_alpha_R_squared_remains_nonnative_comparison_representative": true,
+    "Einstein_Hilbert_and_quadratic_roles_remain_nonpromotional": true,
+    "undefined_actions_may_not_be_invented": true,
+    "compatibility_survey_does_not_select_an_action": true,
+    "no_new_calculation_or_master_action_is_authorized": true,
+    "Stage_5_remains_unauthorized": true
+  },
+  "independent_findings": [
+    "The authority permits a role-aware compatibility matrix rather than pretending all seven labels are equally testable actions.",
+    "The eight-state vocabulary distinguishes source-bound satisfaction and violation from missing definitions, missing downstream inputs, nonaction status, role exclusion, and accepted negative results.",
+    "The likely no-eligible-native-action conclusion is disclosed as nonbinding and must be derived from the actual seventy cells.",
+    "No scientific compatibility cell, survivor set, family selection, native principle, action, or Stage 5 authority is created by this review."
+  ],
+  "scientific_output_at_authority_checkpoint": {
+    "compatibility_cells_populated": 0,
+    "families_eligible_for_native_selection": 0,
+    "gravitational_actions_selected": 0,
+    "new_gravitational_calculations": 0,
+    "evidence_promoted": false
+  },
+  "stage_5_authorized": false,
+  "status": "INDEPENDENT_REVIEW_ACCEPTED_STAGE_4_AUTHORITY_WITHOUT_SCIENTIFIC_RESULT"
+}

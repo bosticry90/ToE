@@ -1,0 +1,136 @@
+{
+  "artifact_id": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_STAGE_4_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_STAGE_4_OPEN",
+  "captured_at_utc": "2026-07-31T16:20:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "authorized_stage": {
+    "stage_number": 4,
+    "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+    "canonical_target": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0",
+    "canonical_scope_hash": "e81613ed69adbe5c5586a2b9fcb22217f721923758f7af0d85a71cce84a51c51"
+  },
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+      "sha256": "a6062c810927fde39c4c54d5d22009ccd0f4d33d04fb7e001ffda01293fccf19",
+      "role": "immutable program and Stage 4 scope"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "role": "closed source-bound ten-requirement inventory"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+      "sha256": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c",
+      "role": "accepted independent Stage 1 review"
+    },
+    {
+      "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+      "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578",
+      "role": "closed source-bound seven-family inventory"
+    },
+    {
+      "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_REVIEW_v0.json",
+      "sha256": "511f66369a95cf7569adce004d6d0d5be64f4a892fc0c4329df1c220554c9a48",
+      "role": "accepted independent Stage 2 review"
+    },
+    {
+      "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+      "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5",
+      "role": "closed Stage 3 documentary lineage and definition recovery result"
+    },
+    {
+      "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json",
+      "sha256": "a65d14d5bfcb517b8dfb0be24197b4b12879e99cfcdbe605e587af295f0c50a2",
+      "role": "accepted independent Stage 3 review"
+    }
+  ],
+  "requirement_ids": [
+    "R1_DIMENSION",
+    "R2_METRIC_ONLY",
+    "R3_LOCALITY",
+    "R4_DIFF_COVARIANCE",
+    "R5_CK_FIREWALL",
+    "R6_LOCAL_VARIATION",
+    "R7_SOURCE_COMPATIBILITY",
+    "R8_NEWTON_POISSON",
+    "R9_MOMENTUM_CURRENT",
+    "R10_STABILITY_NO_FIT"
+  ],
+  "family_ids": [
+    "F_EH",
+    "F_FR",
+    "F_QUADRATIC",
+    "F_EXTRA_FIELD",
+    "F_NONLOCAL",
+    "F_CONNECTION_TORSION",
+    "F_EQUIVALENCE_PROBE"
+  ],
+  "compatibility_cell_count": 70,
+  "compatibility_state_vocabulary": [
+    "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+    "VIOLATED_BY_SOURCE_BOUND_EVIDENCE",
+    "PARTIALLY_SATISFIED",
+    "NOT_TESTABLE_MISSING_DEFINITION",
+    "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+    "NOT_APPLICABLE_NOT_AN_ACTION",
+    "OUTSIDE_NATIVE_ROLE",
+    "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT"
+  ],
+  "cell_contract": {
+    "exactly_one_state_per_cell": true,
+    "every_non_missing_state_requires_source_path_hash_excerpt_domain_and_independent_review": true,
+    "unknown_information_is_not_failure": true,
+    "formal_satisfaction_is_not_native_endorsement": true,
+    "scope_exclusion_is_not_universal_refutation": true,
+    "role_ineligibility_is_separate_from_mathematical_compatibility": true,
+    "representative_evidence_may_not_generalize_to_an_entire_family": true,
+    "accepted_negative_results_may_block_only_their_exact_claim_domain": true
+  },
+  "family_role_contract": {
+    "F_EH": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+    "F_FR": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+    "F_QUADRATIC": "DEFINED_REFERENCE_CONTROL_ONLY",
+    "F_EXTRA_FIELD": "VERBAL_DIRECTION_ONLY",
+    "F_NONLOCAL": "VERBAL_DIRECTION_ONLY",
+    "F_CONNECTION_TORSION": "VERBAL_DIRECTION_ONLY",
+    "F_EQUIVALENCE_PROBE": "NONACTION_DIAGNOSTIC_CONTROL"
+  },
+  "permitted_work": [
+    "populate exactly seventy source-bound requirement-family compatibility cells using the frozen vocabulary",
+    "mark undefined action-dependent cells NOT_TESTABLE_MISSING_DEFINITION instead of failure",
+    "mark cells blocked only by absent matter source seam coefficient or empirical contract NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+    "mark the equivalence probe NOT_APPLICABLE_NOT_AN_ACTION wherever an action property is required",
+    "isolate mathematical compatibility from native-role eligibility for every family",
+    "bind every non-missing judgment to exact source path hash bounded support and domain",
+    "retain the R+alpha R^2 representative inside the nonnative quadratic comparison lineage",
+    "independently review all cell states and uncertainty ledgers",
+    "produce one atomic Stage 4 CLOSE result"
+  ],
+  "prohibited_work": [
+    "invent an action field coefficient coupling kernel connection constraint or principle",
+    "treat all seven family labels as testable actions",
+    "generalize R+alpha R^2 evidence to arbitrary f(R)",
+    "treat R+alpha R^2 as a recovered native action",
+    "promote Einstein-Hilbert gravity because it is complete or compatible",
+    "promote quadratic gravity from REFERENCE_CONTROL_ONLY",
+    "convert the equivalence probe into a variational action",
+    "fill missing matter coefficient scale seam or observable inputs",
+    "reopen or extend quadratic-gravity calculations",
+    "perform a new gravitational calculation",
+    "select the final gravitational action",
+    "derive or postulate a new native gravitational principle",
+    "promote historical evidence or construct a master action",
+    "populate the closed v2 automated action-selection matrix",
+    "open Stage 5 automatically"
+  ],
+  "terminal_outcomes": [
+    "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE",
+    "COMPATIBILITY_SURVEY_COMPLETE_WITH_UNRESOLVED_CELLS",
+    "COMPATIBILITY_SURVEY_BLOCKED_BY_SOURCE_EVIDENCE"
+  ],
+  "likely_nonbinding_conclusion": "COMPATIBILITY_SURVEY_COMPLETE_WITH_UNTESTABLE_FAMILIES_AND_NO_SOURCE_DEFINED_NATIVE_ACTION_FAMILY_ELIGIBLE_FOR_SELECTION",
+  "likely_conclusion_is_not_prejudged_result": true,
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_4_OPEN_ONLY"
+}
