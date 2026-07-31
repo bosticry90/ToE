@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryResult
+import ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,49 +13,49 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeCandidateGravitationalActionFamilyInventoryResult.selectedNextTarget
+  ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.scientificTarget
 
 def currentEvidencePacketId : String :=
-  ToeCandidateGravitationalActionFamilyInventoryResult.reviewId
+  ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.eventId
 
 def currentBoundedProgramId : String :=
-  ToeCandidateGravitationalActionFamilyInventoryResult.programId
+  ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.programId
 
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 
 def currentTargetPhase : String :=
-  "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY"
+  "STAGE_3_SCIENTIFIC_ATTEMPT_OPEN"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeCandidateGravitationalActionFamilyInventoryResult.attemptSequenceNumber
+  ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.attemptSequenceNumber
 
 def lastClosedBoundedSemanticStage : String :=
   "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_unopened_gravitational_lineage_reconstruction :
+theorem current_target_records_open_gravitational_lineage_reconstruction :
     currentLiveTarget =
       "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0" := by
   rfl
 
-theorem candidate_action_family_inventory_is_closed_passed_with_unresolved_meanings :
+theorem gravitational_lineage_reconstruction_is_open_without_result :
     currentBoundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 2 ∧
+      "STAGE_3_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    currentBoundedAttemptNumber = 3 ∧
     lastClosedBoundedSemanticStage =
       "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.inventoryComplete = true ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.unresolvedMeaningsPreserved = true ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.familiesRankedOrScored = false ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.requirementCompatibilityJudgmentsMade = false ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.gravitationalActionSelected = false ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.stageThreeAuthorized = false ∧
-    ToeCandidateGravitationalActionFamilyInventoryResult.stageThreeOpened = false := by
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.programOpen = true ∧
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.scientificResultCreated = false ∧
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.documentaryRelationshipsReconstructed = 0 ∧
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.actionDefinitionsRecovered = 0 ∧
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.compatibilityJudgmentsMade = false ∧
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.gravitationalActionSelected = false ∧
+    ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.stageFourAuthorized = false := by
   decide
 
 end CurrentTarget
