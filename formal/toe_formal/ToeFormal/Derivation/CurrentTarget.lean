@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeCCFTMathematicalLineageAndConflictReconciliationResult
+import ToeFormal.Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
@@ -6,37 +6,39 @@ namespace CurrentTarget
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 def currentLiveTarget : String :=
-  ToeCCFTMathematicalLineageAndConflictReconciliationResult.selectedNextTarget
+  ToeCCFTMathematicalObjectOperationalizationAttemptOpen.target
 def currentEvidencePacketId : String :=
-  ToeCCFTMathematicalLineageAndConflictReconciliationResult.reviewId
+  "TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_OPEN_VALIDATION_v0"
 def currentBoundedProgramId : String :=
-  ToeCCFTMathematicalLineageAndConflictReconciliationResult.programId
-def currentBoundedProgramState : String := "CLOSED"
+  ToeCCFTMathematicalObjectOperationalizationAttemptOpen.programId
+def currentBoundedProgramState : String := "OPEN"
 def currentTargetPhase : String :=
-  "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY"
+  "STAGE_3_OPEN_NO_SCIENTIFIC_RESULT"
 def currentBoundedAttemptNumber : Nat :=
-  ToeCCFTMathematicalLineageAndConflictReconciliationResult.attemptSequenceNumber
+  ToeCCFTMathematicalObjectOperationalizationAttemptOpen.attemptSequenceNumber
+def currentBoundedSemanticStage : String :=
+  "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION"
 def lastClosedBoundedSemanticStage : String :=
   "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION"
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_selects_unopened_ccft_object_operationalization :
+theorem current_target_is_open_ccft_object_operationalization :
     currentLiveTarget = "operationalize_toe_retained_ccft_mathematical_objects_v0" := by
   rfl
 
-theorem ccft_lineage_stage_is_closed_passed_with_bounded_conflicts :
+theorem ccft_object_operationalization_stage_is_open_without_result :
     currentBoundedProgramId =
       "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
-    currentTargetPhase = "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 2 ∧
+    currentBoundedProgramState = "OPEN" ∧
+    currentTargetPhase = "STAGE_3_OPEN_NO_SCIENTIFIC_RESULT" ∧
+    currentBoundedAttemptNumber = 3 ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    ToeCCFTMathematicalLineageAndConflictReconciliationResult.lineagesReconciled = true ∧
-    ToeCCFTMathematicalLineageAndConflictReconciliationResult.boundedConflictsPreserved = true ∧
-    ToeCCFTMathematicalLineageAndConflictReconciliationResult.preferredFormulationSelected = false ∧
-    ToeCCFTMathematicalLineageAndConflictReconciliationResult.physicalInterpretationAdjudicated = false ∧
-    ToeCCFTMathematicalLineageAndConflictReconciliationResult.stageThreeAuthorized = false ∧
-    ToeCCFTMathematicalLineageAndConflictReconciliationResult.stageThreeOpened = false := by
+    ToeCCFTMathematicalObjectOperationalizationAttemptOpen.operationalRecordsCreatedAtOpen = 0 ∧
+    ToeCCFTMathematicalObjectOperationalizationAttemptOpen.objectsOperationallyDefinedAtOpen = 0 ∧
+    ToeCCFTMathematicalObjectOperationalizationAttemptOpen.boundedSurrogateInterpretationsAdoptedAtOpen = 0 ∧
+    ToeCCFTMathematicalObjectOperationalizationAttemptOpen.preferredFormulationOrMinimalCoreSelected = false ∧
+    ToeCCFTMathematicalObjectOperationalizationAttemptOpen.equationsOrDefinitionsRepaired = false ∧
+    ToeCCFTMathematicalObjectOperationalizationAttemptOpen.stageFourAuthorized = false := by
   decide
 
 end CurrentTarget
