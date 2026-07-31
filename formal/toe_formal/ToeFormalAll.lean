@@ -864,6 +864,7 @@ import ToeFormal.Derivation.ToeNativeGravitationalRequirementInventoryAttemptOpe
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementInventoryResult
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
+import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout
 import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionAuthority
 import ToeFormal.Derivation.ToeNativeHypothesisFrontierSelectionResultReview
 import ToeFormal.Derivation.ToeNativeHypothesisSourceLineageReconstructionAttemptOpen
@@ -1360,6 +1361,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1353
+def committedModuleCount : Nat := 1354
 
 end ToeFormalAll

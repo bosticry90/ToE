@@ -6,8 +6,9 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
+open Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout
 
+def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 def currentTarget : String := Derivation.CurrentTarget.currentLiveTarget
 def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidencePacketId
 def boundedProgramId : String := Derivation.CurrentTarget.currentBoundedProgramId
@@ -15,7 +16,7 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_selected_mandatory_exit :
+theorem current_authority_tracks_completed_gravitational_survey_mandatory_exit :
     currentTarget =
       "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0" := by
   native_decide
@@ -31,18 +32,15 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem eligibility_handoff_closed_with_nonexecuting_route_only :
-    boundedProgramId =
-      "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    boundedProgramState = "CLOSED" ∧
-    currentTargetPhase = "MANDATORY_EXIT_SELECTED_NOT_EXECUTED" ∧
-    boundedAttemptNumber = 5 ∧
-    Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult.eligibleNativeActionFamilyCount = 0 ∧
-    Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult.selectedRoute =
-      "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE" ∧
-    Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult.gravitationalActionsSelected = 0 ∧
-    Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult.nativeGravitationalPrinciplesSelectedOrDerived = 0 ∧
-    Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult.successorProgramsAuthorizedInstalledOrOpened = 0 := by
+theorem gravitational_survey_mandatory_exit_is_terminal :
+    boundedProgramState = "TERMINAL" ∧
+    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
+    boundedAttemptNumber = 5 ∧ mandatoryExitCompleted = true ∧
+    eligibleNativeActionFamilyCount = 0 ∧
+    positiveNativeGravitationalPrincipleSelectedOrDerived = false ∧
+    nativeGravitationalActionSelectedOrAdopted = false ∧
+    successorProgramAuthorized = false ∧ successorProgramInstalled = false ∧
+    successorProgramOpened = false := by
   native_decide
 
 end CurrentAuthority
