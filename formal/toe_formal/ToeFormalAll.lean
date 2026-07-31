@@ -1106,6 +1106,8 @@ import ToeFormal.Release.QFTGRQuadraticStage12CertificateStatusCorrectionV0
 import ToeFormal.Release.TechnicalDebtBaselineCorrectionV1
 import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0
 import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
+import ToeFormal.Release.ToeCCFTSourceBoundMathematicalInventoryStage1OpenAuthorityReviewV0
+import ToeFormal.Release.ToeCCFTSourceBoundMathematicalInventoryStage1OpenAuthorityV0
 import ToeFormal.Release.ToeCandidateGravitationalActionFamilyInventoryStage2OpenAuthorityReviewV0
 import ToeFormal.Release.ToeCandidateGravitationalActionFamilyInventoryStage2OpenAuthorityV0
 import ToeFormal.Release.ToeCurrentNativeHypothesisEvidenceReconciliationStage4OpenAuthorityReviewV0
@@ -1376,6 +1378,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1369
+def committedModuleCount : Nat := 1371
 
 end ToeFormalAll

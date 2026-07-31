@@ -1,0 +1,30 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_STAGE_1_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T22:25:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_exactly_the_ten_manifest_authorized_inputs": true,
+    "authority_binds_the_frozen_deterministic_selection_contract": true,
+    "authority_binds_the_160_source_ceiling_and_all_scientific_workload_caps": true,
+    "authority_binds_required_provenance_mathematical_and_custody_fields": true,
+    "authority_preserves_conflicts_undefined_notation_and_unreviewed_overflow": true,
+    "authority_does_not_interpret_or_harmonize_the_mathematics": true,
+    "authority_does_not_select_a_representation_field_action_seam_or_observable": true,
+    "authority_preserves_evidence_promotion_and_claim_exhaustion_as_prohibited": true,
+    "authority_preserves_stage_2_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "installation_is_reviewed_unopened_with_zero_attempts": true,
+    "source_hashes_reproduce": true
+  },
+  "ccft_mathematical_inventory_created": false,
+  "ccft_model_or_physical_claim_established": false,
+  "decision": "AUTHORIZE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_STAGE_1_OPEN",
+  "failed_checks": [],
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "representation_field_action_seam_or_observable_selected": false,
+  "schema_id": "toe.ccft_source_bound_mathematical_inventory.stage_1_open_authority_review.v0",
+  "stage_1_scientific_result_created": false,
+  "stage_2_authorized": false,
+  "status": "STAGE_1_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}
