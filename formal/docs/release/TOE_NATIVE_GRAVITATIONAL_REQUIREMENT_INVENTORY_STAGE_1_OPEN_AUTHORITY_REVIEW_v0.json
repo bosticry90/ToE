@@ -1,0 +1,23 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_STAGE_1_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T14:15:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_exactly_the_ten_prepared_requirement_ids": true,
+    "authority_does_not_adjudicate_any_requirement": true,
+    "authority_does_not_compare_or_select_any_action_family": true,
+    "authority_preserves_evidence_promotion_as_prohibited": true,
+    "authority_preserves_stage_2_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "installation_is_reviewed_unopened_with_zero_attempts": true,
+    "source_hashes_reproduce": true
+  },
+  "decision": "AUTHORIZE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_STAGE_1_OPEN",
+  "failed_checks": [],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "schema_id": "toe.native_gravitational_requirement_inventory.stage_1_open_authority_review.v0",
+  "stage_1_scientific_result_created": false,
+  "stage_2_authorized": false,
+  "status": "STAGE_1_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}
