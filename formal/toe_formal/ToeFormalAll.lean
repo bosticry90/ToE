@@ -805,6 +805,7 @@ import ToeFormal.Derivation.StatusSurfaceCanonicalizationPlan
 import ToeFormal.Derivation.StatusSurfaceCanonicalizationPlanResultReview
 import ToeFormal.Derivation.TOEPostWitnessMaturationArtifacts
 import ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryAttemptOpen
+import ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryResult
 import ToeFormal.Derivation.ToeCandidateMasterActionCKFirewallAuthorityReconciliationPacketReviewV0
 import ToeFormal.Derivation.ToeCandidateMasterActionCKFirewallAuthorityReconciliationPacketV0
 import ToeFormal.Derivation.ToeCandidateMasterActionCKFirewallResponseSelectionV0
@@ -1347,6 +1348,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1340
+def committedModuleCount : Nat := 1341
 
 end ToeFormalAll
