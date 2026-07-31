@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T18:02:00Z",
+  "checks": {
+    "all_seven_families_bound_exactly": true,
+    "compatibility_and_eligibility_are_separated": true,
+    "empty_eligible_pool_is_permitted": true,
+    "family_roles_remain_frozen": true,
+    "five_route_vocabulary_is_nonexecuting": true,
+    "manifest_stage_number_target_scope_and_terminal_vocabulary_match": true,
+    "no_action_or_principle_may_be_invented_or_adopted": true,
+    "no_calculation_master_action_promotion_or_empirical_claim_authorized": true,
+    "no_route_is_preselected": true,
+    "no_successor_authority_is_created": true,
+    "source_hashes_reproduce": true,
+    "Stage_4_empty_native_candidate_observation_is_preserved_without_prejudging_terminal_result": true
+  },
+  "consumed_authority": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN_AUTHORITY_v0",
+  "consumed_authority_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN_AUTHORITY_v0.json",
+  "independent_findings": [
+    "The authority permits a final eligibility and route handoff rather than another compatibility calculation.",
+    "A provisional Einstein-Hilbert baseline route remains distinct from any claim that the ToE derived Einstein-Hilbert gravity.",
+    "The five possible route tokens select only future preparation direction and cannot authorize or execute a successor.",
+    "The existing empty source-defined native-action observation is an authorized input, not a prewritten Stage 5 terminal verdict.",
+    "No family classification, route, action, principle, calculation, promotion, or successor exists at this checkpoint."
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "review_result": "ACCEPT_STAGE_5_ELIGIBILITY_HANDOFF_OPEN_AUTHORITY",
+  "scientific_output_at_authority_checkpoint": {
+    "eligibility_classifications_made": 0,
+    "gravitational_actions_selected": 0,
+    "native_gravitational_principles_selected": 0,
+    "post_eligibility_routes_selected": 0,
+    "successor_programs_authorized": 0
+  },
+  "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+  "status": "INDEPENDENT_REVIEW_ACCEPTED_STAGE_5_AUTHORITY_WITHOUT_SCIENTIFIC_RESULT"
+}
