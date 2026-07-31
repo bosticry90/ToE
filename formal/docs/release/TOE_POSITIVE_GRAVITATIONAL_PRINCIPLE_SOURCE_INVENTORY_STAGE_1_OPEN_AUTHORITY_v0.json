@@ -1,0 +1,144 @@
+{
+  "artifact_id": "TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_STAGE_1_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_STAGE_1_OPEN",
+  "authorized_source_set": [
+    {
+      "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+      "role": "prepared positive-principle program and source-domain contract",
+      "sha256": "bb5bf184bdddd796551010a25dc20e78a1b9630db6607a7a63dc26287054a0a5"
+    },
+    {
+      "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+      "role": "independent preparation review and anti-overclaim boundary",
+      "sha256": "968cf36b4026d07ef6cf479dd9b272f831f3a527c2ca869821135ae4c2f87e04"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "role": "closed gravitational survey and positive-principle route selection",
+      "sha256": "4e065860ede6ac9955260fb223c802072ce4c8d9e6558890a673def13c7580b7"
+    },
+    {
+      "path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+      "role": "empty preserved native-action candidate set and route rationale",
+      "sha256": "8f29a6d5912478a2143f751fcbb9aa817a097acc79d274bd825865dfa2e43821"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+      "role": "source-bound compatibility and eligibility constraints",
+      "sha256": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "role": "evaluation-requirement inventory to distinguish from positive principles",
+      "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+    },
+    {
+      "path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+      "role": "bounded reconciled native-hypothesis evidence graph",
+      "sha256": "d887d34ae482e1e6427b0137b6d8aff691d6df27d8c2eb11c82c6138864a474d"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "role": "bounded source-bound claim inventory",
+      "sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "role": "repository-wide bounded-census scope and nonexhaustion boundary",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+      "role": "prepared source-bound gravitational requirement baseline",
+      "sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "adec5050977697a470c1ef6afb4d136bc415f1a592008c9b7c2546a74f80ab90",
+    "canonical_target": "inventory_toe_positive_native_gravitational_principle_sources_v0",
+    "semantic_stage_id": "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY",
+    "stage_number": 1
+  },
+  "captured_at_utc": "2026-07-31T21:00:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 1 scope",
+      "sha256": "817b745a5acb1408e334dd998a68d0adfbbd1de5150a026f2cb4659abafd1e1b"
+    },
+    {
+      "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+      "role": "accepted unopened installation",
+      "sha256": "9d6d8acaf6901b1666450cf07ed02a17d1bcb8a8eb7984184cc7f94800351ce8"
+    }
+  ],
+  "inventory_limits": {
+    "maximum_candidate_principle_families": 16,
+    "maximum_conflicts": 64,
+    "maximum_extracted_principle_statements": 256,
+    "maximum_semantic_relationships": 128,
+    "maximum_source_artifacts_for_deep_review": 128,
+    "maximum_total_bounded_source_excerpt_words": 20000
+  },
+  "permitted_work": [
+    "inventory source-bound candidate principle statements only from the exact authorized source set",
+    "bind every inventoried statement to exact source path, SHA-256, location, authority, lineage, and supersession status",
+    "classify each statement using the frozen candidate-principle vocabulary without adopting it",
+    "distinguish positive or action-class-constraining principle candidates from evaluation requirements, known-physics baselines, architectural firewalls, and heuristics",
+    "preserve conflicts, missing ontology, missing seam inputs, bounded overflow, and repository nonexhaustion",
+    "produce an independent review and one atomic CLOSE result"
+  ],
+  "principle_source_domains": [
+    "NATIVE_ONTOLOGY",
+    "PILLAR_AND_SEAM_ARCHITECTURE",
+    "MASTER_ACTION_FRAMEWORK",
+    "EMERGENCE_AND_SCALE_HIERARCHY",
+    "SOURCE_AND_CONSERVATION_ARCHITECTURE",
+    "C_K_FIREWALL",
+    "MATTER_GEOMETRY_RESPONSE_CLAIMS"
+  ],
+  "principle_status_vocabulary": [
+    "POSITIVE_GENERATIVE_PRINCIPLE_CANDIDATE",
+    "ACTION_CLASS_CONSTRAINING_PRINCIPLE_CANDIDATE",
+    "EVALUATION_REQUIREMENT_ONLY",
+    "KNOWN_PHYSICS_BASELINE",
+    "ARCHITECTURAL_FIREWALL_ONLY",
+    "HEURISTIC_OR_ANALOGY_ONLY",
+    "BLOCKED_BY_MISSING_ONTOLOGY",
+    "BLOCKED_BY_MISSING_SEAM_INPUT",
+    "CONTRADICTED_OR_SUPERSEDED"
+  ],
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "prohibited_work": [
+    "adopt or derive a positive native gravitational principle",
+    "construct, select, vary, or calculate a gravitational action",
+    "select metric, connection, torsion, scalar, or other gravitational variables",
+    "promote Einstein-Hilbert gravity, quadratic gravity, a master-action term, or archived evidence",
+    "treat C_k as a physical action term",
+    "semantically merge source domains because they share terminology",
+    "open Stage 2 automatically"
+  ],
+  "provenance_fields": [
+    "source_path",
+    "source_sha256",
+    "source_location",
+    "source_authority_status",
+    "source_lineage",
+    "supersession_status",
+    "bounded_source_excerpt",
+    "controlled_paraphrase",
+    "original_vocabulary",
+    "principle_source_domain",
+    "principle_status",
+    "conflicts",
+    "custody_or_portability_limitation"
+  ],
+  "schema_id": "toe.positive_gravitational_principle_source_inventory.stage_1_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_1_OPEN_ONLY",
+  "terminal_outcomes": [
+    "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_COMPLETE",
+    "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_COMPLETE_WITH_CONFLICTS",
+    "NO_SOURCE_BOUND_POSITIVE_PRINCIPLE_CANDIDATE_FOUND",
+    "SOURCE_EVIDENCE_INSUFFICIENT"
+  ]
+}

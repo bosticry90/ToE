@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_STAGE_1_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T21:15:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_exactly_the_ten_manifest_authorized_sources": true,
+    "authority_binds_frozen_candidate_principle_classifications": true,
+    "authority_binds_inventory_limits_and_required_provenance_fields": true,
+    "authority_distinguishes_positive_principles_from_evaluation_requirements": true,
+    "authority_does_not_adopt_or_derive_a_principle": true,
+    "authority_does_not_construct_select_or_calculate_an_action": true,
+    "authority_preserves_evidence_promotion_as_prohibited": true,
+    "authority_preserves_stage_2_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "installation_is_reviewed_unopened_with_zero_attempts": true,
+    "source_hashes_reproduce": true
+  },
+  "decision": "AUTHORIZE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_STAGE_1_OPEN",
+  "failed_checks": [],
+  "gravitational_action_constructed_or_selected": false,
+  "gravitational_calculation_started": false,
+  "native_gravitational_principle_selected_or_derived": false,
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "schema_id": "toe.positive_gravitational_principle_source_inventory.stage_1_open_authority_review.v0",
+  "stage_1_scientific_result_created": false,
+  "stage_2_authorized": false,
+  "status": "STAGE_1_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}
