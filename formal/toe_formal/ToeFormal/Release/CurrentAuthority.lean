@@ -6,7 +6,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout
+open Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationAuthorityV0
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 def currentTarget : String := Derivation.CurrentTarget.currentLiveTarget
@@ -16,9 +16,9 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_completed_gravitational_survey_mandatory_exit :
+theorem current_authority_tracks_positive_principle_program_preparation :
     currentTarget =
-      "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0" := by
+      "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -32,15 +32,16 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem gravitational_survey_mandatory_exit_is_terminal :
-    boundedProgramState = "TERMINAL" ∧
-    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    boundedAttemptNumber = 5 ∧ mandatoryExitCompleted = true ∧
-    eligibleNativeActionFamilyCount = 0 ∧
-    positiveNativeGravitationalPrincipleSelectedOrDerived = false ∧
-    nativeGravitationalActionSelectedOrAdopted = false ∧
-    successorProgramAuthorized = false ∧ successorProgramInstalled = false ∧
-    successorProgramOpened = false := by
+theorem positive_principle_preparation_has_no_scientific_execution_authority :
+    boundedProgramState = "UNINSTALLED" ∧
+    currentTargetPhase = "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
+    boundedAttemptNumber = 0 ∧ proposalPreparationAuthorized = true ∧
+    programInstalled = false ∧ scientificStageOpened = false ∧
+    principleInventoryExecuted = false ∧
+    nativeGravitationalPrincipleSelectedOrDerived = false ∧
+    gravitationalActionSelectedConstructedOrVaried = false ∧
+    gravitationalCalculationExecuted = false ∧ evidencePromoted = false ∧
+    scientificSuccessorAuthorized = false := by
   native_decide
 
 end CurrentAuthority

@@ -1,0 +1,23 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T19:00:00Z",
+  "checks": {
+    "closed_gravitational_survey_checkpoint_is_hash_bound": true,
+    "proposal_preparation_is_the_only_authorized_work": true,
+    "program_installation_is_not_authorized": true,
+    "scientific_stage_open_is_not_authorized": true,
+    "principle_inventory_or_derivation_is_not_authorized": true,
+    "gravitational_action_construction_or_calculation_is_not_authorized": true,
+    "master_action_and_preserved_families_remain_unpromoted": true,
+    "successor_authority_is_not_created": true
+  },
+  "decision": "ACCEPT_PROPOSAL_PREPARATION_AUTHORITY_ONLY",
+  "failed_checks": [],
+  "reviewed_authority": {
+    "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0.json",
+    "sha256": "2d1b592558743096648226e140c37c239bc67299c8d9ac4b8c10a0625d7e8511"
+  },
+  "schema_id": "toe.positive_native_gravitational_principle_derivation.bounded_program_preparation_authority_review.v0",
+  "scientific_execution_authorized": false
+}
