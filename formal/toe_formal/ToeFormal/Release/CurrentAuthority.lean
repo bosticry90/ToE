@@ -8,6 +8,8 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
+open Derivation.ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
+
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 def currentTarget : String := Derivation.CurrentTarget.currentLiveTarget
 def currentEvidencePacketId : String :=
@@ -19,9 +21,9 @@ def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_installed_ccft_core_program :
+theorem current_authority_tracks_open_ccft_mathematical_inventory :
     currentTarget =
-      "prepare_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_v0" := by
+      "inventory_toe_source_bound_ccft_mathematical_structures_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -35,18 +37,23 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem ccft_core_program_is_installed_and_remains_unopened :
+theorem ccft_mathematical_inventory_attempt_is_open_without_result :
     boundedProgramId =
       "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    boundedProgramState = "UNOPENED" ∧
-    currentTargetPhase =
-      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
-    boundedAttemptNumber = 0 ∧
+    boundedProgramState = "OPEN" ∧
+    currentTargetPhase = "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    boundedAttemptNumber = 1 ∧
     ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
     ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
     ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.installationAccepted =
       true ∧
-    ToeCCFTCoreProgramGovernanceInstallationV0.scientificOutputCreated = false := by
+    programOpen = true ∧ scientificResultCreated = false ∧
+    deepReviewSourcesSelected = 0 ∧ ccftMathematicalInventoryEntries = 0 ∧
+    operationalInterpretationEstablished = false ∧
+    minimalCCFTCoreSelected = false ∧
+    representationFieldActionSeamOrObservableSelected = false ∧
+    ccftModelOrPhysicalClaimEstablished = false ∧ evidencePromoted = false ∧
+    stageTwoAuthorized = false := by
   native_decide
 
 end CurrentAuthority

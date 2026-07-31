@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
 import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationV0
 import ToeFormal.Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0
 
@@ -6,40 +6,40 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
+open ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := executionTarget
-def currentEvidencePacketId : String :=
-  "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0"
-def currentBoundedProgramId : String := proposedProgramId
-def currentBoundedProgramState : String := "UNOPENED"
-def currentTargetPhase : String :=
-  "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY"
-def currentBoundedAttemptNumber : Nat := 0
-def lastClosedBoundedSemanticStage : String := "NONE"
+def currentLiveTarget : String := scientificTarget
+def currentEvidencePacketId : String := eventId
+def currentBoundedProgramId : String := programId
+def currentBoundedProgramState : String := "OPEN"
+def currentTargetPhase : String := "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN"
+def currentBoundedAttemptNumber : Nat := 1
+def lastClosedBoundedSemanticStage : String := "NONE_IN_CURRENT_PROGRAM"
 def lastBoundedTerminalResult : String := "NONE"
 
-theorem current_target_records_installed_ccft_core_program :
-    currentLiveTarget = executionTarget := by
+theorem current_target_records_open_ccft_mathematical_inventory :
+    currentLiveTarget =
+      "inventory_toe_source_bound_ccft_mathematical_structures_v0" := by
   rfl
 
-theorem ccft_core_program_is_installed_but_unopened :
-    currentBoundedProgramState = "UNOPENED" ∧
-    currentTargetPhase =
-      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 0 ∧
-    proposedStageCount = 5 ∧ repairAttemptCount = 0 ∧
+theorem ccft_mathematical_inventory_is_open_without_result :
+    currentBoundedProgramState = "OPEN" ∧
+    currentTargetPhase = "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+    currentBoundedAttemptNumber = 1 ∧
+    lastClosedBoundedSemanticStage = "NONE_IN_CURRENT_PROGRAM" ∧
+    lastBoundedTerminalResult = "NONE" ∧
     Release.ToeCCFTCoreProgramGovernanceInstallationV0.programInstalled = true ∧
     Release.ToeCCFTCoreProgramGovernanceInstallationV0.programOpened = false ∧
     Release.ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.installationAccepted =
       true ∧
-    scientificStageOpened = false ∧
-    ccftMathematicalCoreRecovered = false ∧
-    operationalCoherenceDefinitionEstablished = false ∧
-    ccftRepresentationFieldOrActionSelected = false ∧
-    ccftSeamObservableOrDiscriminatorSelected = false ∧
-    evidencePromoted = false := by
+    programOpen = true ∧ scientificResultCreated = false ∧
+    deepReviewSourcesSelected = 0 ∧ ccftMathematicalInventoryEntries = 0 ∧
+    operationalInterpretationEstablished = false ∧
+    minimalCCFTCoreSelected = false ∧
+    representationFieldActionSeamOrObservableSelected = false ∧
+    ccftModelOrPhysicalClaimEstablished = false ∧ evidencePromoted = false ∧
+    stageTwoAuthorized = false := by
   decide
 
 end CurrentTarget
