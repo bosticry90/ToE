@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
+open Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,9 +34,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_completed_census_mandatory_exit :
+theorem current_authority_tracks_gravitational_survey_proposal_preparation :
     currentTarget =
-      "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0" := by
+      "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -51,23 +51,20 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_mandatory_exit_is_terminal :
+theorem gravitational_survey_preparation_has_no_scientific_execution_authority :
     boundedProgramId =
-      "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    boundedProgramState = "TERMINAL" ∧
+      "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
+    boundedProgramState = "UNINSTALLED" ∧
     currentTargetPhase =
-      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    boundedAttemptNumber = 5 ∧
-    mandatoryExitSelected = true ∧
-    mandatoryExitCompleted = true ∧
-    allAttemptsPassed = true ∧
-    repositoryClaimExhaustionEstablished = false ∧
-    canonicalEvidencePromoted = false ∧
-    nativeGravitationalActionEstablished = false ∧
-    gravitationalSurveyAuthorized = false ∧
-    gravitationalSurveyOpened = false ∧
-    successorProgramAuthorized = false ∧
-    successorProgramOpened = false := by
+      "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
+    boundedAttemptNumber = 0 ∧
+    proposalPreparationAuthorized = true ∧
+    programInstalled = false ∧
+    scientificStageOpened = false ∧
+    compatibilityCellsAdjudicated = false ∧
+    gravitationalActionSelected = false ∧
+    evidencePromoted = false ∧
+    scientificSuccessorAuthorized = false := by
   native_decide
 
 end CurrentAuthority

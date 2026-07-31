@@ -1,3 +1,4 @@
+import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
 import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
@@ -15,59 +16,55 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
+open ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.executionTarget
+  ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0.authorizedTarget
 
 def currentEvidencePacketId : String :=
-  ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.resultId
+  ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0.authorityId
 
 def currentBoundedProgramId : String :=
-  ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.programId
+  "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0"
 
-def currentBoundedProgramState : String := "TERMINAL"
+def currentBoundedProgramState : String := "UNINSTALLED"
 
 def currentTargetPhase : String :=
-  "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT"
+  "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED"
 
-def currentBoundedAttemptNumber : Nat := 5
+def currentBoundedAttemptNumber : Nat := 0
 
 def lastClosedBoundedSemanticStage : String :=
   "NATIVE_FRONTIER_DECISION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_records_completed_census_mandatory_exit :
+theorem current_target_authorizes_only_gravitational_survey_proposal_preparation :
     currentLiveTarget =
-      "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0" := by
+      "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0" := by
   rfl
 
-theorem repository_wide_census_is_terminal_without_successor_authority :
+theorem gravitational_survey_program_is_not_installed_or_opened :
     currentBoundedProgramId =
-      "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    currentBoundedProgramState = "TERMINAL" ∧
+      "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
+    currentBoundedProgramState = "UNINSTALLED" ∧
     currentTargetPhase =
-      "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    currentBoundedAttemptNumber = 5 ∧
+      "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
+    currentBoundedAttemptNumber = 0 ∧
     lastClosedBoundedSemanticStage =
       "NATIVE_FRONTIER_DECISION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    mandatoryExitSelected = true ∧
-    mandatoryExitCompleted = true ∧
-    allAttemptsPassed = true ∧
-    boundedReviewStatus = "COMPLETE_FOR_THE_BOUNDED_REVIEW" ∧
-    repositoryClaimExhaustionEstablished = false ∧
-    canonicalEvidencePromoted = false ∧
-    candidateGravitationalActionSelected = false ∧
-    nativeGravitationalActionEstablished = false ∧
-    gravitationalSurveyAuthorized = false ∧
-    gravitationalSurveyOpened = false ∧
-    automaticSuccessorSelected = false ∧
-    successorProgramAuthorized = false ∧
-    successorProgramOpened = false := by
+    proposalPreparationAuthorized = true ∧
+    programInstalled = false ∧
+    scientificStageOpened = false ∧
+    compatibilityCellsAdjudicated = false ∧
+    gravitationalActionSelected = false ∧
+    evidencePromoted = false ∧
+    scientificSuccessorAuthorized = false ∧
+    ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.mandatoryExitCompleted =
+      true := by
   decide
 
 end CurrentTarget
