@@ -1,5 +1,6 @@
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
 import ToeFormal.Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
+import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
 import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
@@ -25,15 +26,15 @@ def currentLiveTarget : String :=
   ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview.scientificTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview.resultId
+  "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_v0"
 
 def currentBoundedProgramId : String :=
   "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0"
 
-def currentBoundedProgramState : String := "UNINSTALLED"
+def currentBoundedProgramState : String := "UNOPENED"
 
 def currentTargetPhase : String :=
-  "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
+  "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY"
 
 def currentBoundedAttemptNumber : Nat := 0
 
@@ -47,19 +48,22 @@ theorem current_target_records_prepared_gravitational_survey_program_proposal :
       "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0" := by
   rfl
 
-theorem gravitational_survey_program_proposal_is_reviewed_but_uninstalled :
+theorem gravitational_survey_program_is_installed_but_unopened :
     currentBoundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    currentBoundedProgramState = "UNINSTALLED" ∧
+    currentBoundedProgramState = "UNOPENED" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
+      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
     currentBoundedAttemptNumber = 0 ∧
     lastClosedBoundedSemanticStage =
       "NATIVE_FRONTIER_DECISION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
     proposalPrepared = true ∧
     independentReviewAccepted = true ∧
-    programInstalled = false ∧
+    Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programInstalled =
+      true ∧
+    Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened =
+      false ∧
     scientificStageOpened = false ∧
     compatibilitySurveyExecuted = false ∧
     gravitationalActionSelected = false ∧

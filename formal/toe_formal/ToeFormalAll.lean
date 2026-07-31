@@ -1088,6 +1088,7 @@ import ToeFormal.Release.ToeCurrentNativeHypothesisEvidenceReconciliationStage4O
 import ToeFormal.Release.ToeCurrentNativeHypothesisEvidenceReconciliationStage4OpenAuthorityV0
 import ToeFormal.Release.ToeNativeCoherenceOntologyProgramGovernanceInstallationV0
 import ToeFormal.Release.ToeNativeControlledCoherenceClaimInventoryStage1OpenAuthorityV0
+import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0
 import ToeFormal.Release.ToeNativeHypothesisSourceLineageReconstructionStage2OpenAuthorityReviewV0
 import ToeFormal.Release.ToeNativeHypothesisSourceLineageReconstructionStage2OpenAuthorityV0
 import ToeFormal.Release.ToePostCensusNativeFrontierDecisionStage5OpenAuthorityReviewV0
@@ -1338,6 +1339,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1331
+def committedModuleCount : Nat := 1332
 
 end ToeFormalAll

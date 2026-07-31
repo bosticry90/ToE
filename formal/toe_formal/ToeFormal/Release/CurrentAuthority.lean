@@ -1,6 +1,7 @@
 import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
+import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0
 
 /-
 Release-facing current-authority aggregate for tiered validation. It is a small
@@ -51,16 +52,19 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem prepared_gravitational_survey_program_remains_uninstalled :
+theorem gravitational_survey_program_is_installed_and_remains_unopened :
     boundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    boundedProgramState = "UNINSTALLED" ∧
+    boundedProgramState = "UNOPENED" ∧
     currentTargetPhase =
-      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
+      "PROGRAM_INSTALLED_AWAITING_SEPARATE_STAGE_1_AUTHORITY" ∧
     boundedAttemptNumber = 0 ∧
     proposalPrepared = true ∧
     independentReviewAccepted = true ∧
-    programInstalled = false ∧
+    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programInstalled =
+      true ∧
+    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened =
+      false ∧
     scientificStageOpened = false ∧
     compatibilitySurveyExecuted = false ∧
     gravitationalActionSelected = false ∧
