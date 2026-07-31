@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen
+import ToeFormal.Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult
 import ToeFormal.Derivation.ToeNativeHypothesisSourceLineageReconstructionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusResult
@@ -13,60 +13,62 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen
+open ToeCurrentNativeHypothesisEvidenceReconciliationResult
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen.target
+  ToeCurrentNativeHypothesisEvidenceReconciliationResult.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen.evidenceId
+  ToeCurrentNativeHypothesisEvidenceReconciliationResult.resultId
 
 def currentBoundedProgramId : String :=
-  ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen.programId
+  ToeCurrentNativeHypothesisEvidenceReconciliationResult.programId
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentTargetPhase : String :=
-  "STAGE_4_OPEN_AWAITING_CURRENT_HYPOTHESIS_RECONCILIATION_RESULT"
+  "STAGE_4_CLOSED_PASSED_WITH_CONFLICTS_STAGE_5_SELECTED_NOT_AUTHORIZED_NOT_OPENED"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen.attemptSequenceNumber
+  ToeCurrentNativeHypothesisEvidenceReconciliationResult.attemptSequenceNumber
 
 def currentBoundedSemanticStage : String :=
-  ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen.semanticStageId
+  ToeCurrentNativeHypothesisEvidenceReconciliationResult.semanticStageId
 
 def lastClosedBoundedSemanticStage : String :=
-  "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION"
+  "CURRENT_HYPOTHESIS_RECONCILIATION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_is_open_reconciliation_stage :
+theorem current_target_selects_frontier_decision_without_opening_it :
     currentLiveTarget =
-      "reconcile_toe_current_native_hypothesis_evidence_v0" := by
+      "select_toe_native_frontier_after_repository_wide_evidence_census_v0" := by
   rfl
 
-theorem reconciliation_stage_is_open_after_claim_extraction_close :
+theorem reconciliation_stage_is_closed_after_bounded_result :
     currentBoundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_4_OPEN_AWAITING_CURRENT_HYPOTHESIS_RECONCILIATION_RESULT" ∧
+      "STAGE_4_CLOSED_PASSED_WITH_CONFLICTS_STAGE_5_SELECTED_NOT_AUTHORIZED_NOT_OPENED" ∧
     currentBoundedAttemptNumber = 4 ∧
     currentBoundedSemanticStage =
       "CURRENT_HYPOTHESIS_RECONCILIATION" ∧
     lastClosedBoundedSemanticStage =
-      "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION" ∧
+      "CURRENT_HYPOTHESIS_RECONCILIATION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
     ToeRepositoryWideNativeHypothesisClaimExtractionResult.sourceBoundClaimsExtracted =
       true ∧
-    reconciliationPerformed = false ∧
-    reconciliationResultProduced = false ∧
-    currentHypothesisGraphProduced = false ∧
-    scientificClaimAdjudicated = false ∧
+    claimReconciliationComplete = true ∧
+    nativeHypothesisGraphProduced = true ∧
+    conflictsPreserved = true ∧
+    scientificClaimsAdjudicated = false ∧
     canonicalEvidencePromoted = false ∧
     nativeFrontierSelected = false ∧
+    repositoryClaimExhaustionEstablished = false ∧
+    stageFiveAuthorized = false ∧
     stageFiveOpened = false ∧
     ToeNativeHypothesisSourceLineageReconstructionResult.documentaryLineageResultProduced =
       true := by

@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen
+open Derivation.ToeCurrentNativeHypothesisEvidenceReconciliationResult
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,9 +34,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_reconciliation_stage :
+theorem current_authority_tracks_selected_unopened_frontier_stage :
     currentTarget =
-      "reconcile_toe_current_native_hypothesis_evidence_v0" := by
+      "select_toe_native_frontier_after_repository_wide_evidence_census_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -51,21 +51,23 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_stage_4_is_open_without_reconciliation_result :
+theorem census_program_stage_4_is_closed_and_stage_5_is_unopened :
     boundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_4_OPEN_AWAITING_CURRENT_HYPOTHESIS_RECONCILIATION_RESULT" ∧
+      "STAGE_4_CLOSED_PASSED_WITH_CONFLICTS_STAGE_5_SELECTED_NOT_AUTHORIZED_NOT_OPENED" ∧
     boundedAttemptNumber = 4 ∧
     Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionResult.sourceBoundClaimsExtracted =
       true ∧
-    reconciliationPerformed = false ∧
-    reconciliationResultProduced = false ∧
-    currentHypothesisGraphProduced = false ∧
-    scientificClaimAdjudicated = false ∧
+    claimReconciliationComplete = true ∧
+    nativeHypothesisGraphProduced = true ∧
+    conflictsPreserved = true ∧
+    scientificClaimsAdjudicated = false ∧
     canonicalEvidencePromoted = false ∧
     nativeFrontierSelected = false ∧
+    repositoryClaimExhaustionEstablished = false ∧
+    stageFiveAuthorized = false ∧
     stageFiveOpened = false := by
   native_decide
 
