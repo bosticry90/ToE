@@ -32,9 +32,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_gravitational_lineage_reconstruction :
+theorem current_authority_tracks_selected_unopened_requirement_family_compatibility_survey :
     currentTarget =
-      "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0" := by
+      "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -49,24 +49,24 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem gravitational_lineage_reconstruction_stage_is_open_without_result :
+theorem gravitational_lineage_reconstruction_stage_is_closed_passed :
     boundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_3_SCIENTIFIC_ATTEMPT_OPEN" ∧
+      "STAGE_3_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_4_AUTHORITY" ∧
     boundedAttemptNumber = 3 ∧
-    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.programOpen =
+    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.lineagesReconstructed =
       true ∧
-    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.scientificResultCreated =
-      false ∧
-    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.actionDefinitionsRecovered =
+    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.boundedUnresolvedRelationshipsPreserved =
+      true ∧
+    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.definedNativeActionFamilyCount =
       0 ∧
-    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.compatibilityJudgmentsMade =
+    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.compatibilityJudgmentsMade =
       false ∧
-    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.gravitationalActionSelected =
+    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.gravitationalActionSelected =
       false ∧
-    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.stageFourAuthorized =
+    Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.stageFourAuthorized =
       false := by
   native_decide
 
