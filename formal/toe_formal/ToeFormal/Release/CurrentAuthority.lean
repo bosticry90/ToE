@@ -6,7 +6,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationAuthorityV0
+open Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationResultReview
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 def currentTarget : String := Derivation.CurrentTarget.currentLiveTarget
@@ -16,7 +16,7 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_positive_principle_program_preparation :
+theorem current_authority_tracks_reviewed_positive_principle_program_proposal :
     currentTarget =
       "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0" := by
   native_decide
@@ -32,16 +32,18 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem positive_principle_preparation_has_no_scientific_execution_authority :
+theorem reviewed_positive_principle_proposal_has_no_scientific_execution_authority :
     boundedProgramState = "UNINSTALLED" ∧
-    currentTargetPhase = "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
-    boundedAttemptNumber = 0 ∧ proposalPreparationAuthorized = true ∧
+    currentTargetPhase =
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
+    boundedAttemptNumber = 0 ∧ proposalPrepared = true ∧
+    independentReviewAccepted = true ∧
     programInstalled = false ∧ scientificStageOpened = false ∧
     principleInventoryExecuted = false ∧
-    nativeGravitationalPrincipleSelectedOrDerived = false ∧
-    gravitationalActionSelectedConstructedOrVaried = false ∧
+    nativeGravitationalPrincipleDerived = false ∧
+    gravitationalActionConstructedOrSelected = false ∧
     gravitationalCalculationExecuted = false ∧ evidencePromoted = false ∧
-    scientificSuccessorAuthorized = false := by
+    automaticSuccessorSelected = false := by
   native_decide
 
 end CurrentAuthority
