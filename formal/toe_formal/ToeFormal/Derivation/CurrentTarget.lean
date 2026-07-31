@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeHypothesisSourceLineageReconstructionAttemptOpen
+import ToeFormal.Derivation.ToeNativeHypothesisSourceLineageReconstructionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusResult
 
 /-
@@ -11,61 +11,58 @@ namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeNativeHypothesisSourceLineageReconstructionAttemptOpen
+open ToeNativeHypothesisSourceLineageReconstructionResult
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeHypothesisSourceLineageReconstructionAttemptOpen.target
+  ToeNativeHypothesisSourceLineageReconstructionResult.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeHypothesisSourceLineageReconstructionAttemptOpen.evidenceId
+  ToeNativeHypothesisSourceLineageReconstructionResult.reviewId
 
 def currentBoundedProgramId : String :=
-  ToeNativeHypothesisSourceLineageReconstructionAttemptOpen.programId
+  ToeNativeHypothesisSourceLineageReconstructionResult.programId
 
-def currentBoundedProgramState : String := "OPEN"
+def currentBoundedProgramState : String := "CLOSED"
 
 def currentTargetPhase : String :=
-  "STAGE_2_OPEN_AWAITING_SOURCE_LINEAGE_RECONSTRUCTION_RESULT"
+  "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY"
 
 def currentBoundedAttemptNumber : Nat :=
-  ToeNativeHypothesisSourceLineageReconstructionAttemptOpen.attemptSequenceNumber
+  ToeNativeHypothesisSourceLineageReconstructionResult.attemptSequenceNumber
 
 def currentBoundedSemanticStage : String :=
-  ToeNativeHypothesisSourceLineageReconstructionAttemptOpen.semanticStageId
+  ToeNativeHypothesisSourceLineageReconstructionResult.semanticStageId
 
 def lastClosedBoundedSemanticStage : String :=
-  "REPOSITORY_WIDE_SOURCE_CENSUS"
+  "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION"
 
 def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_opens_source_lineage_stage :
+theorem current_target_selects_unopened_claim_extraction_stage :
     currentLiveTarget =
-      "reconstruct_toe_native_hypothesis_source_lineages_v0" := by
+      "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0" := by
   rfl
 
-theorem source_lineage_stage_is_open_after_source_census_close :
+theorem source_lineage_stage_is_closed_passed_without_claim_extraction :
     currentBoundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧
+    currentBoundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_2_OPEN_AWAITING_SOURCE_LINEAGE_RECONSTRUCTION_RESULT" ∧
+      "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY" ∧
     currentBoundedAttemptNumber = 2 ∧
     currentBoundedSemanticStage =
       "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION" ∧
-    lastClosedBoundedSemanticStage = "REPOSITORY_WIDE_SOURCE_CENSUS" ∧
+    lastClosedBoundedSemanticStage =
+      "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION" ∧
     lastBoundedTerminalResult = "PASSED" ∧
-    scientificOutputPresent = false ∧
-    lineageResultProduced = false ∧
-    claimExtractionPerformed = false ∧
+    documentaryLineageResultProduced = true ∧
+    scientificClaimsExtracted = false ∧
+    scientificClaimsAdjudicated = false ∧
     evidencePromoted = false ∧
     nativeFrontierSelected = false ∧
-    stageThreeOpened = false ∧
-    ToeRepositoryWideNativeHypothesisSourceCensusResult.claimExtractionPerformed =
-      false ∧
-    ToeRepositoryWideNativeHypothesisSourceCensusResult.lineageConclusionProduced =
-      false := by
+    stageThreeOpened = false := by
   decide
 
 end CurrentTarget

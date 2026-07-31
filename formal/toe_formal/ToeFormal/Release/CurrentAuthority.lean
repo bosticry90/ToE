@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeNativeHypothesisSourceLineageReconstructionAttemptOpen
+open Derivation.ToeNativeHypothesisSourceLineageReconstructionResult
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,9 +34,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_lineage_stage :
+theorem current_authority_tracks_selected_unopened_claim_extraction_stage :
     currentTarget =
-      "reconstruct_toe_native_hypothesis_source_lineages_v0" := by
+      "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -51,15 +51,16 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem census_program_stage_2_is_open :
+theorem census_program_stage_2_is_closed_passed :
     boundedProgramId =
       "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_2_OPEN_AWAITING_SOURCE_LINEAGE_RECONSTRUCTION_RESULT" ∧
+      "STAGE_2_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY" ∧
     boundedAttemptNumber = 2 ∧
-    lineageResultProduced = false ∧
-    claimExtractionPerformed = false ∧
+    documentaryLineageResultProduced = true ∧
+    scientificClaimsExtracted = false ∧
+    scientificClaimsAdjudicated = false ∧
     evidencePromoted = false ∧
     stageThreeOpened = false := by
   native_decide
