@@ -12,7 +12,7 @@ namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
 
-open Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyPreparationAuthorityV0
+open Derivation.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyBoundedProgramPreparationResultReview
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -34,7 +34,7 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_gravitational_survey_proposal_preparation :
+theorem current_authority_tracks_prepared_gravitational_survey_program_proposal :
     currentTarget =
       "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0" := by
   native_decide
@@ -51,20 +51,22 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem gravitational_survey_preparation_has_no_scientific_execution_authority :
+theorem prepared_gravitational_survey_program_remains_uninstalled :
     boundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
     boundedProgramState = "UNINSTALLED" ∧
     currentTargetPhase =
-      "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
     boundedAttemptNumber = 0 ∧
-    proposalPreparationAuthorized = true ∧
+    proposalPrepared = true ∧
+    independentReviewAccepted = true ∧
     programInstalled = false ∧
     scientificStageOpened = false ∧
-    compatibilityCellsAdjudicated = false ∧
+    compatibilitySurveyExecuted = false ∧
     gravitationalActionSelected = false ∧
     evidencePromoted = false ∧
-    scientificSuccessorAuthorized = false := by
+    automaticSuccessorSelected = false ∧
+    closedV2MatrixPopulationPermitted = false := by
   native_decide
 
 end CurrentAuthority
