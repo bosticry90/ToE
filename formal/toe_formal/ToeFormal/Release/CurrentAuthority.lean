@@ -1,8 +1,6 @@
 import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
-import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0
-import ToeFormal.Release.ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0
 
 /-
 Release-facing current-authority aggregate for tiered validation. It is a small
@@ -13,8 +11,6 @@ does not replace the full ToeFormal release aggregate.
 namespace ToeFormal
 namespace Release
 namespace CurrentAuthority
-
-open Derivation.ToeNativeGravitationalRequirementInventoryAttemptOpen
 
 def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
 
@@ -36,9 +32,9 @@ def currentTargetPhase : String :=
 def boundedAttemptNumber : Nat :=
   Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_gravitational_requirement_inventory :
+theorem current_authority_tracks_selected_unopened_candidate_action_family_inventory :
     currentTarget =
-      "inventory_toe_native_gravitational_requirements_v0" := by
+      "inventory_toe_candidate_gravitational_action_families_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -53,27 +49,23 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem gravitational_requirement_inventory_attempt_is_open_without_result :
+theorem gravitational_requirement_inventory_stage_is_closed_passed :
     boundedProgramId =
       "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0" ∧
-    boundedProgramState = "OPEN" ∧
+    boundedProgramState = "CLOSED" ∧
     currentTargetPhase =
-      "STAGE_1_SCIENTIFIC_ATTEMPT_OPEN" ∧
+      "STAGE_1_CLOSED_PASSED_AWAITING_SEPARATE_STAGE_2_AUTHORITY" ∧
     boundedAttemptNumber = 1 ∧
-    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programInstalled =
+    Derivation.ToeNativeGravitationalRequirementInventoryResult.reviewAccepted =
       true ∧
-    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.programOpened = false ∧
-    ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationResultReviewV0.installationAccepted =
-      true ∧
-    programOpen = true ∧
-    scientificResultCreated = false ∧
-    requirementRowsAdjudicated = 0 ∧
-    actionFamiliesCompared = false ∧
-    evidencePromoted = false ∧
-    gravitationalActionSelected = false ∧
-    nativeGravitationalPrincipleSelected = false ∧
-    gravitationalCalculationStarted = false ∧
-    stageTwoAuthorized = false := by
+    Derivation.ToeNativeGravitationalRequirementInventoryResult.actionFamiliesCompared =
+      false ∧
+    Derivation.ToeNativeGravitationalRequirementInventoryResult.gravitationalActionSelected =
+      false ∧
+    Derivation.ToeNativeGravitationalRequirementInventoryResult.stageTwoAuthorized =
+      false ∧
+    Derivation.ToeNativeGravitationalRequirementInventoryResult.stageTwoOpened =
+      false := by
   native_decide
 
 end CurrentAuthority
