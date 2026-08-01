@@ -826,6 +826,7 @@ import ToeFormal.Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult
 import ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen
 import ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult
 import ToeFormal.Derivation.ToeMinimalClosedCCFTCoreDecisionAttemptOpen
+import ToeFormal.Derivation.ToeMinimalClosedCCFTCoreDecisionResult
 import ToeFormal.Derivation.ToeNativeABridgeAdmissibilityCKAdmissibilityRuleCloseout
 import ToeFormal.Derivation.ToeNativeABridgeAdmissibilityCKConstraintCandidatePacket
 import ToeFormal.Derivation.ToeNativeABridgeAdmissibilityCKConstraintCandidatePacketResultReview
@@ -1391,6 +1392,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1384
+def committedModuleCount : Nat := 1385
 
 end ToeFormalAll
