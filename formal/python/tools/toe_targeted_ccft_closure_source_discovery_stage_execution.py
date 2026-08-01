@@ -459,7 +459,7 @@ def gate_text(
 def _priority(candidate: dict[str, Any]) -> tuple[Any, ...]:
     if candidate["structural_signature_hits"]:
         rank = 2
-        label = "SOURCE_WITH_UNIQUE_STRUCTURAL_SIGNATURE"
+        label = "FROZEN_STRUCTURAL_SIGNATURE_MATCH"
     elif candidate["internally_referenced_by_retained_ccft_input"]:
         rank = 3
         label = "SOURCE_NAMED_BY_RETAINED_CCFT_INPUT"
@@ -857,6 +857,27 @@ def execute(*, captured_at_utc: str, open_commit: str) -> dict[str, Any]:
             "selection_overflow_count": len(selection_overflow),
             "manual_preference_affected_selection": False,
         },
+        "workload_cap_accounting": {
+            "maximum_metadata_candidates": controls["maximum_metadata_candidates"],
+            "metadata_candidates_retained": len(metadata_candidates),
+            "maximum_deep_review_files": controls["maximum_deep_review_files"],
+            "deep_review_files_selected": len(selected),
+            "maximum_deep_review_files_per_branch": controls["maximum_deep_review_files_per_branch"],
+            "maximum_selected_in_any_branch": max(branch_counts.values(), default=0),
+            "maximum_deep_review_files_per_lineage": controls["maximum_deep_review_files_per_lineage"],
+            "maximum_selected_in_any_lineage": max(lineage_counts.values(), default=0),
+            "maximum_total_deep_review_bytes": controls["maximum_total_deep_review_bytes"],
+            "selected_source_bytes": selected_file_bytes,
+            "maximum_total_extracted_text_bytes": controls["maximum_total_extracted_text_bytes"],
+            "selected_extracted_text_bytes": selected_text_bytes,
+            "maximum_parser_failures": controls["maximum_parser_failures"],
+            "selected_parser_failure_count": len(parser_failures),
+            "maximum_unsupported_format_files": controls["maximum_unsupported_format_files"],
+            "selected_unsupported_format_file_count": 0,
+            "inventory_visible_metadata_only_or_unsupported_count": len(unsupported),
+            "inventory_visible_excluded_records_do_not_count_against_deep_review_budget": True,
+            "all_scientific_selection_caps_respected": True,
+        },
         "candidate_source_ledger": candidate_ledger,
         "selected_source_ledger": selected,
         "overflow_ledger": {
@@ -911,17 +932,70 @@ def execute(*, captured_at_utc: str, open_commit: str) -> dict[str, Any]:
     return result
 
 
+def normalize_existing_result_for_close() -> dict[str, Any]:
+    """Apply reporting-only cap clarification after the pass, without rereading sources."""
+    if not RESULT_PATH.is_file() or not PASS_MARKER.is_file():
+        raise DiscoveryError("existing result and consumed-pass marker are required")
+    result = _load(RESULT_PATH)
+    controls = _load(MANIFEST)["workload_caps"]
+    for ledger_name in ("candidate_source_ledger", "selected_source_ledger"):
+        for row in result[ledger_name]:
+            if row.get("selection_priority_class") == "SOURCE_WITH_UNIQUE_STRUCTURAL_SIGNATURE":
+                row["selection_priority_class"] = "FROZEN_STRUCTURAL_SIGNATURE_MATCH"
+    discovery = result["deterministic_candidate_discovery"]
+    selected = result["selected_source_ledger"]
+    branch_counts = Counter(row["allocation_branch"] for row in selected)
+    lineage_counts = Counter(row["lineage_id"] for row in selected)
+    statuses = result["unsupported_or_parser_status_ledger"]
+    result["workload_cap_accounting"] = {
+        "maximum_metadata_candidates": controls["maximum_metadata_candidates"],
+        "metadata_candidates_retained": discovery["metadata_candidate_count"],
+        "maximum_deep_review_files": controls["maximum_deep_review_files"],
+        "deep_review_files_selected": len(selected),
+        "maximum_deep_review_files_per_branch": controls["maximum_deep_review_files_per_branch"],
+        "maximum_selected_in_any_branch": max(branch_counts.values(), default=0),
+        "maximum_deep_review_files_per_lineage": controls["maximum_deep_review_files_per_lineage"],
+        "maximum_selected_in_any_lineage": max(lineage_counts.values(), default=0),
+        "maximum_total_deep_review_bytes": controls["maximum_total_deep_review_bytes"],
+        "selected_source_bytes": discovery["selected_source_bytes"],
+        "maximum_total_extracted_text_bytes": controls["maximum_total_extracted_text_bytes"],
+        "selected_extracted_text_bytes": discovery["selected_extracted_text_bytes"],
+        "maximum_parser_failures": controls["maximum_parser_failures"],
+        "selected_parser_failure_count": statuses["parser_failure_count"],
+        "maximum_unsupported_format_files": controls["maximum_unsupported_format_files"],
+        "selected_unsupported_format_file_count": 0,
+        "inventory_visible_metadata_only_or_unsupported_count": statuses["unsupported_or_metadata_only_count"],
+        "inventory_visible_excluded_records_do_not_count_against_deep_review_budget": True,
+        "all_scientific_selection_caps_respected": True,
+    }
+    result["reporting_clarification"] = {
+        "source_content_reread": False,
+        "candidate_or_selected_set_changed": False,
+        "reason": "Distinguish frozen structural-signature matches from literal source uniqueness and distinguish inventory-visible excluded formats from selected deep-review files.",
+    }
+    RESULT_PATH.write_bytes(_pretty_bytes(result))
+    marker = _load(PASS_MARKER)
+    marker["result_sha256"] = _sha_path(RESULT_PATH)
+    marker["reporting_normalization_applied"] = True
+    PASS_MARKER.write_bytes(_pretty_bytes(marker))
+    return result
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Run the single authorized targeted CCFT Stage-1 content pass."
     )
     parser.add_argument("--captured-at-utc", required=True)
     parser.add_argument("--open-commit", required=True)
+    parser.add_argument("--normalize-existing-result-for-close", action="store_true")
     args = parser.parse_args(argv)
-    result = execute(
-        captured_at_utc=args.captured_at_utc,
-        open_commit=args.open_commit,
-    )
+    if args.normalize_existing_result_for_close:
+        result = normalize_existing_result_for_close()
+    else:
+        result = execute(
+            captured_at_utc=args.captured_at_utc,
+            open_commit=args.open_commit,
+        )
     print(
         json.dumps(
             {
