@@ -14,8 +14,8 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_ccft_object_operationalization :
-    currentTarget = "operationalize_toe_retained_ccft_mathematical_objects_v0" := by
+theorem current_authority_tracks_selected_unopened_minimal_ccft_core_decision :
+    currentTarget = "select_or_reject_toe_minimal_closed_ccft_core_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -29,19 +29,23 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem ccft_object_operationalization_stage_three_is_open_without_scientific_result :
+theorem ccft_object_operationalization_stage_three_is_closed_surrogate_only :
     boundedProgramId =
       "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    boundedProgramState = "OPEN" ∧
-    currentTargetPhase = "STAGE_3_OPEN_NO_SCIENTIFIC_RESULT" ∧
+    boundedProgramState = "CLOSED" ∧
+    currentTargetPhase =
+      "STAGE_3_CLOSED_PASSED_BOUNDED_SURROGATES_AWAITING_SEPARATE_STAGE_4_AUTHORITY" ∧
     boundedAttemptNumber = 3 ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.operationalRecordsCreatedAtOpen = 0 ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.objectsOperationallyDefinedAtOpen = 0 ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.boundedSurrogateInterpretationsAdoptedAtOpen = 0 ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.preferredFormulationOrMinimalCoreSelected = false ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.representationFieldActionSeamOrObservableSelected = false ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.evidencePromoted = false ∧
-    Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen.stageFourAuthorized = false := by
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.operationalizationCompleted = true ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.fullyPhysicallyOperationalObjectCount = 0 ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.boundedSurrogateRecordCount = 5 ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.distinctivePhysicalCCFTQuantityEstablished = false ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.preferredFormulationSelected = false ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.minimalCoreSelected = false ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.ccftActionConstructed = false ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.seamOrObservableDefined = false ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.stageFourAuthorized = false ∧
+    Derivation.ToeCCFTMathematicalObjectOperationalizationResult.stageFourOpened = false := by
   native_decide
 
 end CurrentAuthority

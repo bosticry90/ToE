@@ -807,6 +807,7 @@ import ToeFormal.Derivation.TOEPostWitnessMaturationArtifacts
 import ToeFormal.Derivation.ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen
 import ToeFormal.Derivation.ToeCCFTMathematicalLineageAndConflictReconciliationResult
 import ToeFormal.Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOpen
+import ToeFormal.Derivation.ToeCCFTMathematicalObjectOperationalizationResult
 import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeCCFTPrimaryNativePositiveContentFrontierSelectionAuthority
@@ -1387,6 +1388,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1380
+def committedModuleCount : Nat := 1381
 
 end ToeFormalAll
