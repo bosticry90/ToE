@@ -810,6 +810,7 @@ import ToeFormal.Derivation.ToeCCFTMathematicalObjectOperationalizationAttemptOp
 import ToeFormal.Derivation.ToeCCFTMathematicalObjectOperationalizationResult
 import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout
 import ToeFormal.Derivation.ToeCCFTPrimaryNativePositiveContentFrontierSelectionAuthority
 import ToeFormal.Derivation.ToeCCFTPrimaryNativePositiveContentFrontierSelectionResult
 import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
@@ -1392,6 +1393,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1385
+def committedModuleCount : Nat := 1386
 
 end ToeFormalAll

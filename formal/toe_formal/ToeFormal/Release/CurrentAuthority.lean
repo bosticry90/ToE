@@ -14,7 +14,7 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_mandatory_ccft_core_program_exit :
+theorem current_authority_tracks_terminal_ccft_core_program_exit :
     currentTarget =
       "close_toe_ccft_native_mathematical_core_and_operationalization_v0_after_bounded_result_v0" := by
   native_decide
@@ -30,24 +30,20 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem minimal_ccft_surrogate_core_stage_four_is_closed_and_blocked :
+theorem ccft_core_program_is_terminal_after_stage_four_block :
     boundedProgramId =
       "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
     boundedProgramState = "CLOSED" ∧
-    currentTargetPhase = "STAGE_4_CLOSED_BLOCKED_AWAITING_MANDATORY_EXIT" ∧
+    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
     boundedAttemptNumber = 4 ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.candidateCount = 2 ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.closureCellCount = 24 ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.minimalCoreSelected = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.cpNlseCoreSelected = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.lcrdV3CoreSelected = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.newPostulateInserted = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.physicalCCFTModelEstablished = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.actionSeamObservableOrViabilityTestCreated = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.evidencePromoted = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.stageBlocked = true ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.mandatoryExitCompleted = false ∧
-    Derivation.ToeMinimalClosedCCFTCoreDecisionResult.stageFiveAuthorized = false := by
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.terminalOutcome =
+      "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED" ∧
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.mandatoryExitCompleted = true ∧
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.stageFourBlocked = true ∧
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.stageFiveAttempted = false ∧
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.closedSourceBoundSurrogateCoreRecovered = false ∧
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.newCCFTPostulateInserted = false ∧
+    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.successorProgramAuthorized = false := by
   native_decide
 
 end CurrentAuthority
