@@ -1,36 +1,38 @@
-import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
+import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
+open ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := authorizedTarget
+def currentLiveTarget : String := executionTarget
 def currentEvidencePacketId : String := reviewId
-def currentBoundedProgramId : String := "NONE"
-def currentBoundedProgramState : String := "NOT_APPLICABLE"
+def currentBoundedProgramId : String := proposedProgramId
+def currentBoundedProgramState : String := "PROPOSAL_PREPARED_UNINSTALLED"
 def currentTargetPhase : String :=
-  "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AUTHORIZED_NOT_EXECUTED"
+  "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
 def currentBoundedAttemptNumber : Nat := 0
 def lastClosedBoundedSemanticStage : String := "MINIMAL_CLOSED_CCFT_CORE_DECISION"
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_records_targeted_recovery_preparation_authority :
+theorem current_target_records_prepared_targeted_recovery_program_proposal :
     currentLiveTarget =
       "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0" := by
   rfl
 
-theorem proposal_preparation_authority_is_nonexecuting :
-    currentBoundedProgramState = "NOT_APPLICABLE" ∧
+theorem prepared_proposal_is_bounded_uninstalled_and_nonexecuting :
+    currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
+    currentBoundedProgramState = "PROPOSAL_PREPARED_UNINSTALLED" ∧
     currentTargetPhase =
-      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
-    currentBoundedAttemptNumber = 0 ∧ proposalPreparationAuthorized = true ∧
-    targetedRecoveryPassLimit = 1 ∧ archiveTraversalAuthorized = false ∧
-    targetedRecoveryProgramInstalled = false ∧ scientificStageOpened = false ∧
+      "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY" ∧
+    currentBoundedAttemptNumber = 0 ∧ proposedStageCount = 4 ∧
+    searchPassLimit = 1 ∧ repairAttemptCount = 0 ∧ programInstalled = false ∧
+    scientificStageOpened = false ∧ archiveSearchExecuted = false ∧
+    contractRecovered = false ∧
     ccftEquationRepairedOrSelected = false ∧ newCCFTPostulateInserted = false ∧
-    ccftV0ConstructionPreparationAuthorized = false := by
+    ccftV0Constructed = false ∧ constructionPreparationAuthorized = false := by
   decide
 
 end CurrentTarget

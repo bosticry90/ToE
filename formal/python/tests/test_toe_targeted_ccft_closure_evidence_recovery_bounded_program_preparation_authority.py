@@ -70,12 +70,14 @@ def test_independent_review_accepts_only_preparation() -> None:
     assert all(review["checks"].values())
 
 
-def test_registry_marks_preparation_authorized_without_execution() -> None:
+def test_registry_preserves_target_after_proposal_preparation_completes() -> None:
     registry = read(REGISTRY)
     projection = registry["current_projection_v0"]
     assert projection["current_target"] == TARGET
-    assert projection["current_target_kind"] == "toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation_authorized_not_executed_v0"
-    assert projection["current_target_report"] == REVIEW.relative_to(REPO_ROOT).as_posix()
+    assert projection["current_target_kind"] == "toe_targeted_ccft_closure_evidence_recovery_bounded_program_proposal_prepared_uninstalled_v0"
+    assert projection["current_target_report"].endswith(
+        "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json"
+    )
     rows = [row for row in registry["workstreams"] if row.get("workstream_id") == TARGET]
     assert len(rows) == 1
     assert rows[0]["status"] == "active"

@@ -1,0 +1,43 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+  "schema_id": "toe.targeted_ccft_closure_evidence_recovery.bounded_program_preparation_result_review.v0",
+  "captured_at_utc": "2026-08-01T03:01:00Z",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+    "sha256": "82e9ad6954b365228cfdfbebf018ada2176ec4e326ecff9733947c1fad4a3bf2"
+  },
+  "checks": {
+    "proposal_authority_is_hash_bound": true,
+    "eight_existing_custody_roots_are_frozen_without_preview_search": true,
+    "reddit_and_non_scientific_classes_are_excluded": true,
+    "branch_and_contract_terms_require_a_two_axis_or_structural_match": true,
+    "selection_is_deterministic_outcome_blind_and_lineage_aware": true,
+    "one_content_pass_is_reused_by_later_stages": true,
+    "one_pass_and_zero_repair_controls_are_frozen": true,
+    "deep_review_file_byte_text_record_conflict_parser_and_mutation_budgets_are_numeric": true,
+    "duplicates_do_not_add_independent_support": true,
+    "passive_parser_resource_and_hostile_content_controls_are_frozen": true,
+    "two_pass_root_snapshot_mutation_detection_is_required": true,
+    "cp_nlse_and_lcrd_v3_missing_contract_checklists_are_exact": true,
+    "seven_evidence_strength_classes_are_frozen": true,
+    "a_positive_result_requires_material_explicit_conflict_free_contract_recovery": true,
+    "partial_conflicting_summary_default_and_heuristic_material_cannot_trigger_positive_recovery": true,
+    "exact_four_stage_sequence_is_frozen": true,
+    "exactly_two_scientific_program_outcomes_are_frozen": true,
+    "both_scientific_outcomes_map_to_pass_without_equating_no_evidence_with_failure": true,
+    "blocked_or_failed_stage_has_no_retry_or_repair": true,
+    "mandatory_exit_is_frozen": true,
+    "ccft_v0_construction_preparation_handoff_is_required_after_either_outcome_but_not_authorized": true,
+    "no_additional_historical_recovery_follows_the_handoff": true,
+    "program_is_uninstalled_and_scientifically_unopened": true,
+    "no_archive_search_contract_recovery_equation_repair_postulate_model_or_promotion_occurred": true
+  },
+  "failed_checks": [],
+  "accepted": true,
+  "proposal_only": true,
+  "program_installed": false,
+  "scientific_stage_opened": false,
+  "archive_search_executed": false,
+  "decision": "ACCEPT_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PROPOSAL_AWAIT_SEPARATE_INSTALLATION_AUTHORITY",
+  "status": "PASS"
+}
