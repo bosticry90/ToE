@@ -1,49 +1,39 @@
-import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
-import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0
-import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0
+import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
+open ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := executionTarget
-def currentEvidencePacketId : String :=
-  "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0"
-def currentBoundedProgramId : String := proposedProgramId
-def currentBoundedProgramState : String := "UNOPENED"
+def currentLiveTarget : String := scientificTarget
+def currentEvidencePacketId : String := eventId
+def currentBoundedProgramId : String := programId
+def currentBoundedProgramState : String := "OPEN"
 def currentTargetPhase : String :=
-  "TARGETED_CCFT_RECOVERY_PROGRAM_INSTALLED_UNOPENED"
-def currentBoundedAttemptNumber : Nat := 0
+  "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN"
+def currentBoundedAttemptNumber : Nat := attemptNumber
 def lastClosedBoundedSemanticStage : String := "MINIMAL_CLOSED_CCFT_CORE_DECISION"
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_records_installed_targeted_recovery_program :
+theorem current_target_records_open_targeted_source_discovery_stage :
     currentLiveTarget =
-      "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0" := by
+      "discover_toe_targeted_ccft_closure_evidence_sources_v0" := by
   rfl
 
-theorem targeted_recovery_program_is_installed_but_unopened :
+theorem targeted_source_discovery_stage_is_open_without_output :
     currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    currentBoundedProgramState = "UNOPENED" ∧
+    currentBoundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "TARGETED_CCFT_RECOVERY_PROGRAM_INSTALLED_UNOPENED" ∧
-    currentBoundedAttemptNumber = 0 ∧ proposedStageCount = 4 ∧
-    searchPassLimit = 1 ∧ repairAttemptCount = 0 ∧
-    Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programInstalled =
-      true ∧
-    Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programOpened =
-      false ∧
-    Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0.installationAccepted =
-      true ∧
-    Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.archiveTraversalExecuted =
-      false ∧
-    scientificStageOpened = false ∧ archiveSearchExecuted = false ∧
-    contractRecovered = false ∧ ccftEquationRepairedOrSelected = false ∧
-    newCCFTPostulateInserted = false ∧ ccftV0Constructed = false ∧
-    constructionPreparationAuthorized = false := by
+      "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN" ∧
+    currentBoundedAttemptNumber = 1 ∧ programOpen = true ∧
+    scientificResultCreated = false ∧ rootsTraversed = 0 ∧
+    candidateFilesDiscovered = 0 ∧ deepReviewFilesSelected = 0 ∧
+    contentPassesConsumed = 0 ∧ closureContractRecoveredOrRejected = false ∧
+    equationRepairedOrSelected = false ∧ newCCFTPostulateInserted = false ∧
+    ccftV0Constructed = false ∧ evidencePromoted = false ∧
+    stageTwoAuthorized = false := by
   decide
 
 end CurrentTarget

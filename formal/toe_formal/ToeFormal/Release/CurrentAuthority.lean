@@ -1,8 +1,8 @@
 import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
-import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0
-import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0
+import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0
+import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0
 
 namespace ToeFormal
 namespace Release
@@ -16,9 +16,9 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_installed_targeted_recovery_program :
+theorem current_authority_tracks_open_targeted_source_discovery_stage :
     currentTarget =
-      "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0" := by
+      "discover_toe_targeted_ccft_closure_evidence_sources_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -32,22 +32,24 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem targeted_recovery_program_is_installed_and_remains_unopened :
+theorem targeted_source_discovery_stage_is_open_without_scientific_output :
     boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    boundedProgramState = "UNOPENED" ∧
+    boundedProgramState = "OPEN" ∧
     currentTargetPhase =
-      "TARGETED_CCFT_RECOVERY_PROGRAM_INSTALLED_UNOPENED" ∧
-    boundedAttemptNumber = 0 ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.authorizedStageCount = 4 ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.targetedContentSearchPassLimit = 1 ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.repairAttemptCount = 0 ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programInstalled = true ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programOpened = false ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN" ∧
+    boundedAttemptNumber = 1 ∧
+    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0.stageOneOpenAuthorized =
       true ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.scientificOutputCreated = false ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.archiveTraversalExecuted = false ∧
-    ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.closureContractRecoveredOrRejected = false := by
+    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0.accepted =
+      true ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.programOpen = true ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.scientificResultCreated =
+      false ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.rootsTraversed = 0 ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.contentPassesConsumed =
+      0 ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.stageTwoAuthorized =
+      false := by
   native_decide
 
 end CurrentAuthority
