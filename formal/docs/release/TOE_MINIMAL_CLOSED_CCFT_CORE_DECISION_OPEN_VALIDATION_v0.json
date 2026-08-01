@@ -1,0 +1,52 @@
+{
+  "artifact_id": "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_OPEN_v0.json",
+    "formal/python/tools/toe_minimal_closed_ccft_core_decision_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeMinimalClosedCCFTCoreDecisionAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 4,
+  "authority_decision": "AUTHORIZE_MINIMAL_CLOSED_CCFT_SURROGATE_CORE_DECISION_STAGE_4_OPEN",
+  "captured_at_utc": "2026-08-01T01:12:00Z",
+  "event_hash": "1042769e00fc09017e2cbcc1c2842a37f1da21820731fa7021733b62ff11a782",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_OPEN_v0.json",
+  "event_sequence_number": 7,
+  "event_sha256": "10cbc7156d7e58fd6d3cff29d53f5230175d9a45f9ebf44243424267fbad556e",
+  "opened_from_commit": "92d2b355a1c134d5267d23bfc84bbc03db9993cc",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "19598092115c0ef91137d8e88b1cb44ace4a5013340e186191359ff8abbbf46d",
+  "schema_id": "toe.ccft.minimal_closed_core_decision.stage_4_open_validation.v0",
+  "scientific_output_at_open": {
+    "action_seam_observable_or_viability_test_created": false,
+    "candidate_core_rows_evaluated": 0,
+    "closure_matrix_cells_populated": 0,
+    "evidence_promoted": false,
+    "minimal_core_selected": false,
+    "new_postulate_inserted": false,
+    "physical_ccft_model_established": false,
+    "preferred_formulation_selected": false,
+    "stage_5_output_created": false
+  },
+  "scope_hash": "e8bd8faac099a9b1c9e759bfae544bbe8eb56ad631959b369dc595b9f9901adf",
+  "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+  "status": "STAGE_4_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "select_or_reject_toe_minimal_closed_ccft_core_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "combined_wave_rotor_candidate_is_unauthorized": true,
+    "cp_nlse_and_lcrd_candidates_are_separate": true,
+    "event_and_registry_projection_match": true,
+    "generic_linear_baseline_is_comparator_only": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_3_result_review_validation_and_close_hashes_match": true,
+    "stage_5_remains_unauthorized": true,
+    "twenty_records_five_surrogates_six_generic_and_zero_physical_objects_are_bound": true
+  }
+}
