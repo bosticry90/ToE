@@ -14,9 +14,8 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_terminal_ccft_core_program_exit :
-    currentTarget =
-      "close_toe_ccft_native_mathematical_core_and_operationalization_v0_after_bounded_result_v0" := by
+theorem current_authority_tracks_post_ccft_recovery_route_selection :
+    currentTarget = "select_post_ccft_core_recovery_development_route_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -30,20 +29,15 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem ccft_core_program_is_terminal_after_stage_four_block :
-    boundedProgramId =
-      "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0" ∧
-    boundedProgramState = "CLOSED" ∧
-    currentTargetPhase = "PROGRAM_CLOSED_AFTER_MANDATORY_EXIT" ∧
-    boundedAttemptNumber = 4 ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.terminalOutcome =
-      "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED" ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.mandatoryExitCompleted = true ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.stageFourBlocked = true ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.stageFiveAttempted = false ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.closedSourceBoundSurrogateCoreRecovered = false ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.newCCFTPostulateInserted = false ∧
-    Derivation.ToeCCFTNativeMathematicalCoreAndOperationalizationV0BoundedCloseout.successorProgramAuthorized = false := by
+theorem post_ccft_recovery_route_selection_is_authorized_without_execution :
+    boundedProgramId = "NONE" ∧ boundedProgramState = "NOT_APPLICABLE" ∧
+    currentTargetPhase =
+      "POST_CCFT_CORE_RECOVERY_ROUTE_SELECTION_AUTHORIZED_NOT_EXECUTED" ∧
+    boundedAttemptNumber = 0 ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.candidateRouteCount = 3 ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.archiveTraversalAuthorized = false ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.ccftV0ProgramPreparationAuthorized = false ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.newCCFTPostulateAuthorized = false := by
   native_decide
 
 end CurrentAuthority

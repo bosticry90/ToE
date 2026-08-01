@@ -1,0 +1,92 @@
+{
+  "authority_id": "TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_AUTHORITY_v0",
+  "authorized_at_utc": "2026-08-01T02:11:20Z",
+  "authorized_target": "select_post_ccft_core_recovery_development_route_v0",
+  "authorization_status": "AUTHORIZED_NOT_EXECUTED",
+  "authority_basis": "USER_DIRECTED_POST_CLOSEOUT_CCFT_DEVELOPMENT_ROUTE_DECISION",
+  "parent_head": "40a7d472029fb556ac80eee74d9bde13afb23692",
+  "consumed_target": "close_toe_ccft_native_mathematical_core_and_operationalization_v0_after_bounded_result_v0",
+  "decision_question": "After source-bound CCFT core recovery closed without a model, should the project perform one targeted closure-evidence pass, begin bounded CCFT-v0 theory construction immediately, or defer CCFT development?",
+  "authorized_routes": [
+    "SELECT_ONE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY",
+    "SELECT_BOUNDED_CCFT_V0_THEORY_CONSTRUCTION",
+    "DEFER_CCFT_DEVELOPMENT"
+  ],
+  "authorized_inputs": [
+    {
+      "path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "cff4421c88db4f6bfc5a372ea7008fe9fbff43d61e665c0979400fd2fe047e57",
+      "role": "TERMINAL_CCFT_RECOVERY_RESULT"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+      "sha256": "5765ba81e43dc09c80eb3ae377e4aaf8430ffb54cf782cb04b96a05b61a10a1d",
+      "role": "INDEPENDENT_TERMINAL_CLOSEOUT_REVIEW"
+    },
+    {
+      "path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0.json",
+      "sha256": "b731508223914d3c2172bd7e6a60c43f1bb85c7c2653c1775f2d63fff09a69bd",
+      "role": "TWO_CANDIDATE_CLOSURE_MATRIX_AND_STAGE_4_BLOCK"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34",
+      "role": "CUSTODY_SCOPE_AND_UNREVIEWED_OVERFLOW_BOUNDARY"
+    }
+  ],
+  "frozen_route_requirements": {
+    "targeted_recovery": {
+      "one_pass_only": true,
+      "general_repository_census_prohibited": true,
+      "scope": [
+        "NONLINEAR_CP_NLSE_COMPLETE_EQUATION_AND_COEFFICIENT_CONTRACT",
+        "NONLINEAR_CP_NLSE_INITIAL_BOUNDARY_NORMALIZATION_INVARIANT_FAILURE_AND_IMPLEMENTATION_CONTRACT",
+        "NONLINEAR_CP_NLSE_INTERACTION_DISPERSION_CONFLICT_RESOLUTION_EVIDENCE",
+        "LCRD_V3_DATA_PARAMETER_NORMALIZATION_CONSTITUTIVE_AND_IMPLEMENTATION_CONTRACT",
+        "LCRD_V3_ROTOR_CURVATURE_LSDA_OR_VARIATIONAL_DERIVATION_EVIDENCE"
+      ],
+      "terminal_outcomes": [
+        "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+        "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+      ],
+      "automatic_second_search_prohibited": true
+    },
+    "theory_construction": {
+      "required_provenance_classes": [
+        "SOURCE_RECOVERED",
+        "KNOWN_PHYSICS_BASELINE",
+        "NEW_CCFT_POSTULATE",
+        "NUMERICAL_CONVENTION",
+        "MATHEMATICAL_CONTROL"
+      ],
+      "default_core_candidate": "NONLINEAR_CP_NLSE",
+      "default_is_rebuttable_by_targeted_recovery": true,
+      "lcrd_v3_role": "LATER_EXTENSION_UNLESS_STRONGER_RECOVERED_EVIDENCE_JUSTIFIES_RECLASSIFICATION",
+      "physical_theory_claim_permitted": false
+    }
+  },
+  "permitted_actions": [
+    "COMPARE_THE_THREE_FROZEN_POST_RECOVERY_ROUTES",
+    "SELECT_EXACTLY_ONE_ROUTE",
+    "NAME_ONE_SEPARATELY_AUTHORIZABLE_PROGRAM_PREPARATION_TARGET",
+    "BIND_A_POST_RECOVERY_HANDOFF_TO_CCFT_V0_PROGRAM_PREPARATION_WITHOUT_AUTHORIZING_IT",
+    "PRESERVE_ALL_PRIOR_BLOCKS_CONFLICTS_AND_SCOPE_LIMITATIONS"
+  ],
+  "prohibited_actions": [
+    "TRAVERSE_OR_PARSE_UNREVIEWED_ARCHIVE_CONTENT",
+    "PREPARE_INSTALL_OR_OPEN_A_TARGETED_RECOVERY_OR_CCFT_V0_PROGRAM",
+    "SELECT_OR_REPAIR_A_CCFT_EQUATION_REPRESENTATION_OR_PARAMETER",
+    "INSERT_A_NEW_CCFT_POSTULATE",
+    "CONSTRUCT_OR_EXECUTE_A_CCFT_MODEL",
+    "SELECT_A_PHYSICAL_BEARER_SCALE_SEAM_ACTION_OR_OBSERVABLE",
+    "PROMOTE_ARCHIVED_EVIDENCE",
+    "CLAIM_CCFT_VALIDATION_NOVELTY_OR_PHYSICAL_REALITY",
+    "AUTHORIZE_AN_AUTOMATIC_SECOND_ARCHIVE_SEARCH"
+  ],
+  "allowed_terminal_outcomes": [
+    "SELECT_ONE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY",
+    "SELECT_BOUNDED_CCFT_V0_THEORY_CONSTRUCTION",
+    "DEFER_CCFT_DEVELOPMENT"
+  ],
+  "strict_boundary": "ONE_NONEXECUTING_POST_RECOVERY_ROUTE_SELECTION_ONLY_NO_ARCHIVE_TRAVERSAL_PROGRAM_PREPARATION_INSTALLATION_OPEN_MODEL_POSTULATE_EQUATION_PHYSICAL_INTERPRETATION_PROMOTION_OR_CALCULATION"
+}
