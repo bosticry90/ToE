@@ -1,0 +1,32 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_STAGE_4_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-08-01T00:44:38Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_passed_stage_3_result_review_validation_and_close_event": true,
+    "authority_binds_zero_physically_operational_objects_and_five_bounded_surrogates": true,
+    "authority_compares_cp_nlse_and_lcrd_candidates_separately": true,
+    "authority_excludes_combined_wave_rotor_assembly": true,
+    "authority_keeps_generic_linear_dispersion_as_comparator_only": true,
+    "authority_requires_complete_state_evolution_data_parameter_domain_output_and_failure_contracts": true,
+    "authority_may_identify_but_not_insert_a_new_postulate": true,
+    "authority_does_not_invent_physical_meaning_units_scale_operations_or_measurements": true,
+    "authority_does_not_repair_dispersion_chi_rotor_or_lsda_gaps": true,
+    "authority_does_not_construct_an_action_seam_observable_or_phenomenology": true,
+    "authority_does_not_promote_evidence_or_validate_ccft": true,
+    "authority_preserves_stage_5_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "source_hashes_reproduce": true
+  },
+  "core_selection_result_created": false,
+  "decision": "AUTHORIZE_MINIMAL_CLOSED_CCFT_SURROGATE_CORE_DECISION_STAGE_4_OPEN",
+  "failed_checks": [],
+  "minimal_core_selected": false,
+  "physical_ccft_model_or_claim_established": false,
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "schema_id": "toe.ccft.minimal_closed_core_decision.stage_4_open_authority_review.v0",
+  "stage_4_scientific_result_created": false,
+  "stage_5_authorized": false,
+  "status": "STAGE_4_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}
