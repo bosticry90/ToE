@@ -16,9 +16,13 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_targeted_source_discovery_stage :
-    currentTarget =
-      "discover_toe_targeted_ccft_closure_evidence_sources_v0" := by
+theorem current_authority_tracks_selected_unopened_contract_extraction :
+    currentTarget = "extract_toe_targeted_ccft_closure_contracts_v0" ∧
+    boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧ boundedProgramState = "CLOSED" ∧
+    boundedAttemptNumber = 1 ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult.terminalOutcome =
+      "TARGETED_CCFT_SOURCE_SET_BOUND" ∧
+    Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult.stageTwoAuthorized = false := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -32,24 +36,11 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem targeted_source_discovery_stage_is_open_without_scientific_output :
-    boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    boundedProgramState = "OPEN" ∧
-    currentTargetPhase =
-      "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN" ∧
-    boundedAttemptNumber = 1 ∧
+theorem stage_one_authority_and_review_remain_bound :
     ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0.stageOneOpenAuthorized =
       true ∧
     ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0.accepted =
-      true ∧
-    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.programOpen = true ∧
-    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.scientificResultCreated =
-      false ∧
-    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.rootsTraversed = 0 ∧
-    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.contentPassesConsumed =
-      0 ∧
-    Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.stageTwoAuthorized =
-      false := by
+      true := by
   native_decide
 
 end CurrentAuthority

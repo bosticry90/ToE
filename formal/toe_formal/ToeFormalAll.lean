@@ -944,6 +944,7 @@ import ToeFormal.Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatib
 import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen
+import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollment
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollmentResultReview
 import ToeFormal.EM.U1.ObjectScaffold
@@ -1402,6 +1403,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1395
+def committedModuleCount : Nat := 1396
 
 end ToeFormalAll
