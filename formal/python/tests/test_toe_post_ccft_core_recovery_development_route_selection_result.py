@@ -81,5 +81,7 @@ def test_review_and_registry_accept_nonexecuting_handoff() -> None:
     registry = read(REGISTRY)
     projection = registry["current_projection_v0"]
     assert projection["current_target"] == NEXT_TARGET
-    assert projection["current_target_report"] == REVIEW.relative_to(REPO_ROOT).as_posix()
-    assert projection["current_target_kind"] == "toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation_awaiting_authority_v0"
+    assert projection["current_target_kind"] == "toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation_authorized_not_executed_v0"
+    rows = [row for row in registry["workstreams"] if row.get("workstream_id") == NEXT_TARGET]
+    assert len(rows) == 1
+    assert rows[0]["status"] == "active"

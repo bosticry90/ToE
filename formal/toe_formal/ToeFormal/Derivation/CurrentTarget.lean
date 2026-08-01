@@ -1,37 +1,36 @@
-import ToeFormal.Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult
+import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult
+open ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := executionTarget
+def currentLiveTarget : String := authorizedTarget
 def currentEvidencePacketId : String := reviewId
 def currentBoundedProgramId : String := "NONE"
 def currentBoundedProgramState : String := "NOT_APPLICABLE"
 def currentTargetPhase : String :=
-  "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AWAITING_AUTHORITY"
+  "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AUTHORIZED_NOT_EXECUTED"
 def currentBoundedAttemptNumber : Nat := 0
 def lastClosedBoundedSemanticStage : String := "MINIMAL_CLOSED_CCFT_CORE_DECISION"
 def lastBoundedTerminalResult : String := "BLOCKED"
 
-theorem current_target_is_targeted_recovery_program_preparation :
+theorem current_target_records_targeted_recovery_preparation_authority :
     currentLiveTarget =
       "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0" := by
   rfl
 
-theorem route_selection_does_not_execute_recovery_or_construction :
+theorem proposal_preparation_authority_is_nonexecuting :
     currentBoundedProgramState = "NOT_APPLICABLE" ∧
     currentTargetPhase =
-      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AWAITING_AUTHORITY" ∧
-    currentBoundedAttemptNumber = 0 ∧ targetedRecoveryPassLimit = 1 ∧
-    targetedRecoveryPreparationAuthorized = false ∧ archiveTraversalStarted = false ∧
-    automaticSecondSearchAuthorized = false ∧
-    constructionHandoffRequiredAfterEitherOutcome = true ∧
-    constructionPreparationAuthorizedNow = false ∧
-    closedCCFTModelConstructed = false := by
+      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AUTHORIZED_NOT_EXECUTED" ∧
+    currentBoundedAttemptNumber = 0 ∧ proposalPreparationAuthorized = true ∧
+    targetedRecoveryPassLimit = 1 ∧ archiveTraversalAuthorized = false ∧
+    targetedRecoveryProgramInstalled = false ∧ scientificStageOpened = false ∧
+    ccftEquationRepairedOrSelected = false ∧ newCCFTPostulateInserted = false ∧
+    ccftV0ConstructionPreparationAuthorized = false := by
   decide
 
 end CurrentTarget

@@ -941,6 +941,7 @@ import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusAttempt
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisSourceCensusResult
 import ToeFormal.Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen
 import ToeFormal.Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult
+import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollment
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollmentResultReview
 import ToeFormal.EM.U1.ObjectScaffold
@@ -1395,6 +1396,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1388
+def committedModuleCount : Nat := 1389
 
 end ToeFormalAll
