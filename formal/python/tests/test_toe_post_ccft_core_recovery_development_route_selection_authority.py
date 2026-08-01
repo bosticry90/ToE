@@ -56,10 +56,9 @@ def test_independent_review_accepts_every_check() -> None:
     assert all(review["checks"].values())
 
 
-def test_registry_rotates_only_to_route_selection() -> None:
+def test_registry_preserves_completed_route_selection_authority() -> None:
     registry = read(REGISTRY)
-    projection = registry["current_projection_v0"]
-    assert projection["current_target"] == TARGET
-    assert projection["current_target_kind"] == "toe_post_ccft_core_recovery_development_route_selection_authorized_v0"
-    assert projection["current_target_report"] == REVIEW.relative_to(REPO_ROOT).as_posix()
+    rows = [row for row in registry["workstreams"] if row.get("workstream_id") == TARGET]
+    assert len(rows) == 1
+    assert rows[0]["status"] == "completed"
     assert registry["bounded_programs_v1"]["TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0"]["mandatory_exit_completed"] is True

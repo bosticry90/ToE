@@ -1,0 +1,25 @@
+{
+  "review_id": "TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_RESULT_REVIEW_v0",
+  "reviewed_at_utc": "2026-08-01T02:19:00Z",
+  "result_path": "formal/docs/release/TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_RESULT_v0.json",
+  "result_sha256": "e5b7b9614532aa3d6e77a246db300039ba6f4f9365bda03db28f7af1f996a81e",
+  "review_result": "PASS",
+  "checks": {
+    "selection_was_preceded_by_separate_authority": true,
+    "all_three_frozen_routes_were_compared": true,
+    "exactly_one_immediate_route_was_selected": true,
+    "targeted_recovery_is_limited_to_one_exact_scope_pass": true,
+    "the_two_targeted_recovery_terminal_outcomes_are_fixed": true,
+    "automatic_second_archive_search_is_prohibited": true,
+    "ccft_v0_construction_preparation_is_required_after_either_recovery_outcome": true,
+    "post_recovery_handoff_is_not_currently_authorized": true,
+    "nonlinear_cp_nlse_is_only_a_rebuttable_future_default": true,
+    "lcrd_v3_is_retained_as_a_later_possible_extension": true,
+    "no_archive_traversal_program_preparation_model_postulate_or_calculation_occurred": true,
+    "no_closed_ccft_model_or_physical_interpretation_is_claimed": true,
+    "repository_claim_exhaustion_is_not_claimed": true
+  },
+  "failed_checks": [],
+  "accepted": true,
+  "independent_conclusion": "ONE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_VALIDLY_SELECTED_WITH_HARD_STOP_AND_REQUIRED_NONAUTOMATIC_CCFT_V0_CONSTRUCTION_HANDOFF"
+}

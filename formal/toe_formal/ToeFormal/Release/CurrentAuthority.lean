@@ -14,8 +14,9 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_post_ccft_recovery_route_selection :
-    currentTarget = "select_post_ccft_core_recovery_development_route_v0" := by
+theorem current_authority_tracks_targeted_ccft_recovery_program_preparation :
+    currentTarget =
+      "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0" := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -29,15 +30,19 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem post_ccft_recovery_route_selection_is_authorized_without_execution :
+theorem targeted_recovery_is_selected_but_its_preparation_is_unauthorized :
     boundedProgramId = "NONE" ∧ boundedProgramState = "NOT_APPLICABLE" ∧
     currentTargetPhase =
-      "POST_CCFT_CORE_RECOVERY_ROUTE_SELECTION_AUTHORIZED_NOT_EXECUTED" ∧
+      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_PREPARATION_AWAITING_AUTHORITY" ∧
     boundedAttemptNumber = 0 ∧
-    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.candidateRouteCount = 3 ∧
-    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.archiveTraversalAuthorized = false ∧
-    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.ccftV0ProgramPreparationAuthorized = false ∧
-    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority.newCCFTPostulateAuthorized = false := by
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.comparedRouteCount = 3 ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.targetedRecoveryPassLimit = 1 ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.targetedRecoveryPreparationAuthorized = false ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.archiveTraversalStarted = false ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.automaticSecondSearchAuthorized = false ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.constructionHandoffRequiredAfterEitherOutcome = true ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.constructionPreparationAuthorizedNow = false ∧
+    Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult.closedCCFTModelConstructed = false := by
   native_decide
 
 end CurrentAuthority

@@ -930,6 +930,7 @@ import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationBou
 import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout
 import ToeFormal.Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionAuthority
+import ToeFormal.Derivation.ToePostCCFTCoreRecoveryDevelopmentRouteSelectionResult
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionAttemptOpen
 import ToeFormal.Derivation.ToePostCensusNativeFrontierDecisionResult
 import ToeFormal.Derivation.ToeRepositoryWideNativeHypothesisClaimExtractionAttemptOpen
@@ -1394,6 +1395,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1387
+def committedModuleCount : Nat := 1388
 
 end ToeFormalAll
