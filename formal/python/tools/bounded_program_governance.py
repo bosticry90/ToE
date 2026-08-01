@@ -73,6 +73,10 @@ PROGRAM_MANIFEST_PATHS = {
         "formal/docs/release/bounded_program_manifests/"
         "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json"
     ),
+    "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0": (
+        "formal/docs/release/bounded_program_manifests/"
+        "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json"
+    ),
 }
 LEGACY_ATTESTATION_PATH = (
     "formal/docs/release/bounded_program_attestations/"
@@ -322,6 +326,12 @@ CCFT_CORE_PROGRAM_ID = (
 CCFT_CORE_PREPARATION_TARGET = (
     "prepare_toe_ccft_native_mathematical_core_and_operationalization_"
     "bounded_program_v0"
+)
+TARGETED_CCFT_RECOVERY_PROGRAM_ID = (
+    "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0"
+)
+TARGETED_CCFT_RECOVERY_PREPARATION_TARGET = (
+    "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0"
 )
 NATIVE_MANDATORY_EXIT = "close_toe_native_surrogate_v0_after_bounded_result_v0"
 NATIVE_STAGE_DEFINITIONS = (
@@ -1048,6 +1058,40 @@ def install_ccft_core_program(registry: dict[str, Any]) -> dict[str, Any]:
     migrated = json.loads(json.dumps(registry))
     migrated[PROGRAMS_KEY][CCFT_CORE_PROGRAM_ID] = _prospective_program_record(
         relative_path, manifest
+    )
+    migrated[REGISTRY_EXTENSION_KEY] = governance_contract()
+    migrated[ENFORCEMENT_EXTENSION_KEY] = enforcement_contract()
+    return migrated
+
+
+def install_targeted_ccft_recovery_program(
+    registry: dict[str, Any],
+) -> dict[str, Any]:
+    projection = registry.get("current_projection_v0")
+    if not isinstance(projection, dict):
+        raise BoundedProgramError("canonical current projection is missing")
+    if (
+        projection.get("current_target")
+        != TARGETED_CCFT_RECOVERY_PREPARATION_TARGET
+    ):
+        raise BoundedProgramError(
+            "targeted CCFT recovery preparation target is not authoritative"
+        )
+    programs = registry.get(PROGRAMS_KEY)
+    if not isinstance(programs, dict):
+        raise BoundedProgramError("bounded-program registry extension is missing")
+    if TARGETED_CCFT_RECOVERY_PROGRAM_ID in programs:
+        raise BoundedProgramError(
+            "targeted CCFT recovery program is already installed"
+        )
+    if ENFORCEMENT_EXTENSION_KEY not in registry:
+        raise BoundedProgramError("bounded-program enforcement is not installed")
+    relative_path, manifest = _load_authoritative_manifest(
+        TARGETED_CCFT_RECOVERY_PROGRAM_ID
+    )
+    migrated = json.loads(json.dumps(registry))
+    migrated[PROGRAMS_KEY][TARGETED_CCFT_RECOVERY_PROGRAM_ID] = (
+        _prospective_program_record(relative_path, manifest)
     )
     migrated[REGISTRY_EXTENSION_KEY] = governance_contract()
     migrated[ENFORCEMENT_EXTENSION_KEY] = enforcement_contract()
