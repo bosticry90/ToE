@@ -1,0 +1,92 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0",
+  "schema_id": "toe.targeted_ccft_closure_evidence_recovery.program_governance_installation_validation.v0",
+  "captured_at_utc": "2026-08-01T03:50:00Z",
+  "installation_commit": "fae55ff958d6ffc09aec7c9024494f95081233da",
+  "installation_commit_exact_path_count": 10,
+  "installation_commit_parent": "9fddeb077e1fecf7cc77bb4846bfe887773a5f8c",
+  "atomic_review_commit_expected_path_count": 7,
+  "atomic_review_commit_expected_paths": [
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_targeted_ccft_recovery_program_governance_installation.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "focused_python_validation": {
+    "passed": 40,
+    "status": "PASSED",
+    "suites": [
+      "test_toe_targeted_ccft_recovery_program_governance_installation.py",
+      "test_toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation.py",
+      "test_toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation_authority.py",
+      "test_loop_control_registry_envelope_integrity_gate.py",
+      "test_lean_all_modules_aggregate_coverage_gate.py",
+      "test_repository_canonical_text_integrity_gate.py"
+    ]
+  },
+  "focused_lean_validation": {
+    "jobs": 9,
+    "modules": [
+      "ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "status": "PASSED"
+  },
+  "full_lean_validation": {
+    "jobs": 9137,
+    "modules": 1392,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "deterministic_generation": {
+    "modules": 1392,
+    "scope": "committed",
+    "status": "PASSED"
+  },
+  "governance_validation": {
+    "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+    "program_state": "UNOPENED",
+    "attempt_count": 0,
+    "event_count": 0,
+    "stage_1_opened": false,
+    "scientific_execution_authorized": false,
+    "status": "PASSED"
+  },
+  "authority_consistency": {
+    "current_target": "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0",
+    "registry_and_evaluated_lean_agree": true,
+    "status": "PASSED"
+  },
+  "frozen_installation_controls": {
+    "authorized_stage_count": 4,
+    "targeted_content_search_pass_limit": 1,
+    "repair_attempt_count": 0,
+    "maximum_deep_review_files": 96,
+    "maximum_total_deep_review_bytes": 536870912,
+    "scientific_terminal_outcome_count": 2,
+    "parser_policy_and_scanner_source_hashes_bound": true,
+    "mandatory_construction_handoff_automatic_authority": false
+  },
+  "nonclaim_boundary": {
+    "archive_or_repository_content_searched": false,
+    "candidate_file_ranking_generated": false,
+    "closure_contract_recovered_or_rejected": false,
+    "ccft_equation_repaired_or_selected": false,
+    "new_ccft_postulate_inserted": false,
+    "ccft_v0_constructed": false,
+    "evidence_promoted": false
+  },
+  "installation_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+  "installation_sha256": "17ea00f2ca80e8809d166d45cc13b1ec9acffbb331a1823d4e1049cf6c3bd4be",
+  "review_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+  "review_sha256": "20681dc3c01bb45f9aecf9577ef80446fbda76d2632a9ba7b08d470dfa3feeb3",
+  "exhaustive_python_passage_claimed": false,
+  "legacy_authority_parser_and_freshness_debt_preserved": true,
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true,
+  "status": "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+}

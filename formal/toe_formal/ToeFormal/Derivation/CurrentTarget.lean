@@ -1,5 +1,6 @@
 import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
 import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Derivation
@@ -10,7 +11,7 @@ open ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 def currentLiveTarget : String := executionTarget
 def currentEvidencePacketId : String :=
-  "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_v0"
+  "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0"
 def currentBoundedProgramId : String := proposedProgramId
 def currentBoundedProgramState : String := "UNOPENED"
 def currentTargetPhase : String :=
@@ -35,6 +36,8 @@ theorem targeted_recovery_program_is_installed_but_unopened :
       true ∧
     Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programOpened =
       false ∧
+    Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.archiveTraversalExecuted =
       false ∧
     scientificStageOpened = false ∧ archiveSearchExecuted = false ∧

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 from formal.python.tools.bounded_program_governance import (
@@ -26,6 +27,11 @@ INSTALLATION_PATH = (
     RELEASE_ROOT
     / "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_"
     "PROGRAM_GOVERNANCE_INSTALLATION_v0.json"
+)
+REVIEW_PATH = (
+    RELEASE_ROOT
+    / "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_"
+    "PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json"
 )
 
 
@@ -117,3 +123,47 @@ def test_installation_is_governance_only_and_opens_no_stage() -> None:
     assert installation["new_ccft_postulate_inserted"] is False
     assert installation["ccft_v0_constructed"] is False
     assert installation["evidence_promoted"] is False
+
+
+def test_installation_commit_has_exact_envelope_and_parent() -> None:
+    installation = _read(INSTALLATION_PATH)
+    commit = "fae55ff958d6ffc09aec7c9024494f95081233da"
+    names = subprocess.run(
+        ["git", "show", "--format=", "--name-only", commit],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    assert sorted(path for path in names if path) == sorted(
+        INSTALLATION_COMMIT_EXACT_PATH_SET
+    )
+    parent = subprocess.run(
+        ["git", "rev-parse", f"{commit}^"],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    assert parent == installation["installed_from_commit"]
+
+
+def test_independent_review_accepts_only_the_unopened_installation() -> None:
+    review = _read(REVIEW_PATH)
+    assert review["accepted"] is True
+    assert review["status"] == (
+        "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+    )
+    assert review["program_state"] == "UNOPENED"
+    assert review["attempted_stage_count"] == 0
+    assert review["stage_1_opened"] is False
+    assert review["scientific_execution_authorized"] is False
+    assert review["scientific_output_created"] is False
+    assert review["archive_traversal_executed"] is False
+    assert review["closure_contract_recovered_or_rejected"] is False
+    assert review["ccft_equation_repaired_or_selected"] is False
+    assert review["new_ccft_postulate_inserted"] is False
+    assert review["ccft_v0_constructed"] is False
+    assert review["evidence_promoted"] is False
+    assert review["exhaustive_python_passage_established"] is False
+    assert all(review["checks"].values())

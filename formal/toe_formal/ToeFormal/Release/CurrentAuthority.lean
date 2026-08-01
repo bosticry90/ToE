@@ -2,6 +2,7 @@ import ToeFormal.Derivation.CurrentTarget
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
 import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0
 
 namespace ToeFormal
 namespace Release
@@ -42,6 +43,8 @@ theorem targeted_recovery_program_is_installed_and_remains_unopened :
     ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.repairAttemptCount = 0 ∧
     ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programInstalled = true ∧
     ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.programOpened = false ∧
+    ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0.installationAccepted =
+      true ∧
     ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.scientificOutputCreated = false ∧
     ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.archiveTraversalExecuted = false ∧
     ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.closureContractRecoveredOrRejected = false := by

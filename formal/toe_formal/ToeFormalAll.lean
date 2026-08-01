@@ -1159,6 +1159,7 @@ import ToeFormal.Release.ToeRepositoryWideNativeHypothesisSourceCensusStage1Open
 import ToeFormal.Release.ToeRepositoryWideNativeHypothesisSourceCensusStage1OpenAuthorityV0
 import ToeFormal.Release.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyStage4OpenAuthorityReviewV0
 import ToeFormal.Release.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyStage4OpenAuthorityV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0
 import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0
 import ToeFormal.Release.V01CriticizabilityReadinessAdjudicationResultReview
 import ToeFormal.Release.V01DependencyRemediationCloseoutAfterTranche004Movement
@@ -1398,6 +1399,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1391
+def committedModuleCount : Nat := 1392
 
 end ToeFormalAll
