@@ -945,6 +945,7 @@ import ToeFormal.Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen
 import ToeFormal.Derivation.ToeTargetedCCFTClosureContractExtractionResult
 import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview
+import ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryV0BoundedCloseout
 import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen
 import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult
 import ToeFormal.Derivation.ToeTargetedCCFTContractAdjudicationAttemptOpen
@@ -1415,6 +1416,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1408
+def committedModuleCount : Nat := 1409
 
 end ToeFormalAll

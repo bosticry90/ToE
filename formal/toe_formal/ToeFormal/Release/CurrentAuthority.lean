@@ -14,13 +14,12 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_mandatory_exit_without_successor_authority :
-    currentTarget = "close_toe_targeted_ccft_closure_evidence_recovery_v0_after_bounded_result_v0" ∧ boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    boundedProgramState = "CLOSED" ∧ boundedAttemptNumber = 4 ∧
-    Derivation.ToeTargetedCCFTRecoveryHandoffResult.historicalRecoveryComplete = true ∧
-    Derivation.ToeTargetedCCFTRecoveryHandoffResult.constructionPreparationAuthorized = false ∧
-    Derivation.ToeTargetedCCFTRecoveryHandoffResult.theoremDiscoveryAuthorized = false ∧
-    Derivation.ToeTargetedCCFTRecoveryHandoffResult.mandatoryExitCompleted = false := by
+theorem current_authority_tracks_terminal_closeout_without_construction_authority :
+    currentTarget = "close_toe_targeted_ccft_closure_evidence_recovery_v0_after_bounded_result_v0" ∧
+    boundedProgramState = "CLOSED_AFTER_MANDATORY_EXIT" ∧ boundedAttemptNumber = 4 ∧
+    Derivation.ToeTargetedCCFTClosureEvidenceRecoveryV0BoundedCloseout.recoveredContractCount = 4 ∧
+    Derivation.ToeTargetedCCFTClosureEvidenceRecoveryV0BoundedCloseout.constructionPreparationAuthorized = false ∧
+    Derivation.ToeTargetedCCFTClosureEvidenceRecoveryV0BoundedCloseout.theoremDiscoveryAuthorized = false := by
   native_decide
 
 theorem stage_four_authority_and_review_remain_bound :
