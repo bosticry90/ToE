@@ -1,0 +1,514 @@
+{
+  "attempt_cap": 5,
+  "authorized_stage_count": 5,
+  "automatic_successor": "NONE",
+  "director_decision_packet_binding": {
+    "option_selected": "NONE",
+    "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0.json",
+    "sha256": "28b0827797274df7307b59da8641778ff9e5da2ef72bc358d34a4b4a9fff731d"
+  },
+  "external_checks_are_not_action_terms": true,
+  "external_evaluation_checks": [
+    "C_FINITE_APPROXIMATION",
+    "C_IDENTIFIABILITY",
+    "C_COMPLEXITY"
+  ],
+  "independent_attack_lanes": [
+    "PROVE",
+    "DISPROVE",
+    "CONSTRUCT",
+    "FIND_COUNTEREXAMPLE"
+  ],
+  "installation_envelope": {
+    "commit_exact_path_set": [
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_v0.json",
+      "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_REVIEW_v0.json",
+      "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0.json",
+      "formal/docs/release/bounded_program_manifests/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1.json",
+      "formal/python/tests/test_toe_ccft_v0_theory_construction_program_governance_installation.py",
+      "formal/python/tools/bounded_program_governance.py",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+      "formal/toe_formal/ToeFormal/Release/ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.lean",
+      "formal/toe_formal/ToeFormal/Release/ToeCCFTV0TheoryConstructionProgramGovernanceInstallationReview.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "installed_from_commit": "396c829452eea0865e2b21fd8b4acd7b4bd2d769"
+  },
+  "mandatory_exit": {
+    "target": "close_toe_ccft_v0_theory_construction_and_theorem_discovery_v0_after_bounded_result_v0",
+    "terminal_outcomes": [
+      "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+      "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+      "CCFT_V0_INTERNALLY_INCONSISTENT",
+      "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+    ]
+  },
+  "manifest_hash": "520ce352a1697367bed93d2d1af0458efee65dccf6097488ef2de456ea574700",
+  "manifest_mode": "PROSPECTIVE_STATIC",
+  "maximum_frozen_model_versions": 1,
+  "maximum_new_ccft_postulates": 8,
+  "maximum_primary_theorem_packets": 1,
+  "native_hypothesis_tested": "HYP_TOE_CCFT_V0_CONSTRUCTED_SURROGATE_v0",
+  "native_relevance": {
+    "kind": "DIRECT_NATIVE_TEST",
+    "statement": "Constructs one provenance-labeled CCFT-v0 surrogate and subjects it to a decisive theorem or counterexample without physical promotion."
+  },
+  "no_subsidiary_scientific_targets": true,
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "program_terminal_outcomes": [
+    "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+    "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+    "CCFT_V0_INTERNALLY_INCONSISTENT",
+    "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+  ],
+  "provenance_vocabulary": [
+    "SOURCE_RECOVERED",
+    "KNOWN_PHYSICS_BASELINE",
+    "NEW_CCFT_POSTULATE",
+    "NUMERICAL_CONVENTION",
+    "MATHEMATICAL_CONTROL"
+  ],
+  "repair_attempt_count": 0,
+  "research_director_support_required": true,
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "stage_1_blocking_outcomes": [
+    "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+    "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+  ],
+  "stages": [
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+          "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "normalized_scientific_question": "Which frozen director option offers the greatest bounded decision value without treating convenience, completeness, or novelty as evidence?",
+        "prohibited_claims": [
+          "unlabeled scientific assumption insertion",
+          "historical or targeted archive recovery reopening",
+          "physical coherence bearer units scale preparation or measurement claim",
+          "matter gravity seam master-action or empirical construction",
+          "canonical evidence promotion",
+          "claiming a mathematical result establishes physical truth",
+          "automatic successor authorization",
+          "repository claim exhaustion",
+          "equation selection or repair",
+          "new postulate insertion",
+          "model construction",
+          "theorem-packet preparation or theorem execution"
+        ],
+        "required_outputs": [
+          "reviewed_research_director_decision_packet",
+          "option_by_option_postulate_and_conflict_burden",
+          "exactly_one_branch_route_or_honest_block_result"
+        ],
+        "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+        "terminal_outcome_vocabulary": [
+          "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+          "SELECT_LCRD_V3_AS_CCFT_V0_CORE",
+          "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+          "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+        ]
+      },
+      "canonical_scope_hash": "f23a5be55905604125cb2752cefde7df3f4aa4a6d493aaaea9fcd14559c2c5d4",
+      "canonical_target": "select_toe_ccft_v0_branch_after_research_director_decision_v0",
+      "conditional": false,
+      "lifecycle_rule": "PASSED_ONLY_FOR_SINGLE_BRANCH_SELECTION; RETAIN_TWO_OR_NO_BRANCH_BLOCKS_THE_SINGLE_MODEL_PROGRAM_AND_REQUIRES_MANDATORY_EXIT",
+      "mandatory_terminal_outcomes": [
+        "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+        "SELECT_LCRD_V3_AS_CCFT_V0_CORE",
+        "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+        "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0BranchReadinessResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_v0_branch_readiness_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0BranchReadinessAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+      "stage_number": 1
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+          "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION"
+        ],
+        "normalized_scientific_question": "What single explicit provenance-labeled model contract closes and freezes the selected branch within the eight-postulate ceiling?",
+        "prohibited_claims": [
+          "unlabeled scientific assumption insertion",
+          "historical or targeted archive recovery reopening",
+          "physical coherence bearer units scale preparation or measurement claim",
+          "matter gravity seam master-action or empirical construction",
+          "canonical evidence promotion",
+          "claiming a mathematical result establishes physical truth",
+          "automatic successor authorization",
+          "repository claim exhaustion",
+          "unlabeled assumption insertion",
+          "more than one frozen model",
+          "post-freeze feature expansion",
+          "theorem-packet preparation or theorem execution"
+        ],
+        "required_outputs": [
+          "immutable_model_version",
+          "complete_model_and_data_contract",
+          "component_provenance_ledger",
+          "reference_implementation_and_comparator_vectors",
+          "failure_contract"
+        ],
+        "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+        "terminal_outcome_vocabulary": [
+          "CCFT_V0_MODEL_CONTRACT_FROZEN",
+          "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET",
+          "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED",
+          "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE"
+        ]
+      },
+      "canonical_scope_hash": "b80489e0e609397bdc4b9d24c78a47f0f30578e124c67dcb47114d091e781f87",
+      "canonical_target": "complete_and_freeze_toe_ccft_v0_model_contract_v0",
+      "conditional": true,
+      "lifecycle_rule": "PASSED_CONTINUES; BLOCKED_OR_FAILED_REQUIRES_MANDATORY_EXIT",
+      "mandatory_terminal_outcomes": [
+        "CCFT_V0_MODEL_CONTRACT_FROZEN",
+        "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET",
+        "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED",
+        "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ModelContractFreezeResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_v0_model_contract_freeze_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ModelContractFreezeAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+      "stage_number": 2
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+          "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE"
+        ],
+        "normalized_scientific_question": "Which one theorem-grade question for the frozen model is well-defined, scientifically consequential, and maximally decision-enabling?",
+        "prohibited_claims": [
+          "unlabeled scientific assumption insertion",
+          "historical or targeted archive recovery reopening",
+          "physical coherence bearer units scale preparation or measurement claim",
+          "matter gravity seam master-action or empirical construction",
+          "canonical evidence promotion",
+          "claiming a mathematical result establishes physical truth",
+          "automatic successor authorization",
+          "repository claim exhaustion",
+          "proof disproof construction or counterexample execution",
+          "symbolic or numerical theorem-result generation",
+          "Lean theorem proof",
+          "frozen-model mutation"
+        ],
+        "required_outputs": [
+          "research_director_theorem_decision_packet",
+          "formal_proposition_and_negation",
+          "assumption_and_dependency_ledger",
+          "symbolic_numerical_and_Lean_execution_contracts"
+        ],
+        "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION",
+        "terminal_outcome_vocabulary": [
+          "PRIMARY_THEOREM_PACKET_FROZEN",
+          "THEOREM_PACKET_UNDERDEFINED",
+          "THEOREM_TARGET_LACKS_DECISION_VALUE"
+        ]
+      },
+      "canonical_scope_hash": "b0db245201d0fdc6edc15a8ac6028c01725ef4a0e2e87c53f9835094df1fe506",
+      "canonical_target": "prepare_toe_ccft_v0_primary_theorem_or_counterexample_packet_v0",
+      "conditional": true,
+      "lifecycle_rule": "PASSED_CONTINUES; BLOCKED_OR_FAILED_REQUIRES_MANDATORY_EXIT",
+      "mandatory_terminal_outcomes": [
+        "PRIMARY_THEOREM_PACKET_FROZEN",
+        "THEOREM_PACKET_UNDERDEFINED",
+        "THEOREM_TARGET_LACKS_DECISION_VALUE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0PrimaryTheoremPacketResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_03_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_v0_primary_theorem_packet_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0PrimaryTheoremPacketAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION",
+      "stage_number": 3
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+          "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION"
+        ],
+        "normalized_scientific_question": "What decisive proof, disproof, construction, counterexample, symbolic, numerical, or formal result follows from the frozen packet?",
+        "prohibited_claims": [
+          "unlabeled scientific assumption insertion",
+          "historical or targeted archive recovery reopening",
+          "physical coherence bearer units scale preparation or measurement claim",
+          "matter gravity seam master-action or empirical construction",
+          "canonical evidence promotion",
+          "claiming a mathematical result establishes physical truth",
+          "automatic successor authorization",
+          "repository claim exhaustion",
+          "changing the frozen model or theorem packet to rescue a result",
+          "collapsing mathematical and physical status",
+          "claiming failed proof attempts establish theorem falsehood"
+        ],
+        "required_outputs": [
+          "independent_proof_disproof_construction_and_counterexample_attempts",
+          "symbolic_and_numerical_checks",
+          "Lean_status_and_fidelity_review",
+          "adjudicated_mathematical_result"
+        ],
+        "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION",
+        "terminal_outcome_vocabulary": [
+          "THEOREM_GRADE_RESULT_ESTABLISHED",
+          "COUNTEREXAMPLE_OR_NO_GO_RESULT_ESTABLISHED",
+          "RESULT_CONDITIONALLY_SUPPORTED_NOT_FORMALIZED",
+          "MODEL_DEFINITION_INSUFFICIENT_FOR_THEOREM"
+        ]
+      },
+      "canonical_scope_hash": "7ff303d25def2c116cf548eaa5c0d3a08438c8c98a4a847323cac38bca0a9e15",
+      "canonical_target": "execute_toe_ccft_v0_primary_theorem_attack_lanes_v0",
+      "conditional": true,
+      "lifecycle_rule": "PASSED_CONTINUES; BLOCKED_OR_FAILED_REQUIRES_MANDATORY_EXIT",
+      "mandatory_terminal_outcomes": [
+        "THEOREM_GRADE_RESULT_ESTABLISHED",
+        "COUNTEREXAMPLE_OR_NO_GO_RESULT_ESTABLISHED",
+        "RESULT_CONDITIONALLY_SUPPORTED_NOT_FORMALIZED",
+        "MODEL_DEFINITION_INSUFFICIENT_FOR_THEOREM"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0PrimaryTheoremAttackResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_v0_primary_theorem_attack_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0PrimaryTheoremAttackAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION",
+      "stage_number": 4
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+          "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+          "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION"
+        ],
+        "normalized_scientific_question": "Does the frozen model survive internal and external checks and remain distinct from known generic systems enough for a later proposal?",
+        "prohibited_claims": [
+          "unlabeled scientific assumption insertion",
+          "historical or targeted archive recovery reopening",
+          "physical coherence bearer units scale preparation or measurement claim",
+          "matter gravity seam master-action or empirical construction",
+          "canonical evidence promotion",
+          "claiming a mathematical result establishes physical truth",
+          "automatic successor authorization",
+          "repository claim exhaustion",
+          "physical bearer assignment",
+          "seam gravity or master-action coupling",
+          "empirical promotion",
+          "automatic successor"
+        ],
+        "required_outputs": [
+          "mathematical_viability_status",
+          "numerical_reproducibility_status",
+          "finite_approximation_identifiability_and_complexity_audit",
+          "generic_model_equivalence_audit",
+          "nonautomatic_future_handoff"
+        ],
+        "semantic_stage_id": "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF",
+        "terminal_outcome_vocabulary": [
+          "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+          "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+          "CCFT_V0_INTERNALLY_INCONSISTENT",
+          "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+        ]
+      },
+      "canonical_scope_hash": "77f37cfde12e8a243aaace9e27fafbfa4611c11bc5f30918323f414b3c51f124",
+      "canonical_target": "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0",
+      "conditional": true,
+      "lifecycle_rule": "PASSED_CONTINUES; BLOCKED_OR_FAILED_REQUIRES_MANDATORY_EXIT",
+      "mandatory_terminal_outcomes": [
+        "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+        "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+        "CCFT_V0_INTERNALLY_INCONSISTENT",
+        "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ViabilityHandoffResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_v0_viability_handoff_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ViabilityHandoffAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF",
+      "stage_number": 5
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST",
+  "theorem_packet_required_fields": [
+    "exact_definitions",
+    "domains_and_regularity",
+    "assumptions",
+    "target_theorem",
+    "formal_negation",
+    "allowed_lemmas",
+    "forbidden_conclusions",
+    "known_examples",
+    "known_counterexamples",
+    "symbolic_test_suite",
+    "numerical_test_suite",
+    "Lean_theorem_signature",
+    "physical_claim_boundary"
+  ],
+  "theorem_status_dimensions_remain_separate": true
+}
