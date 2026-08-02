@@ -5,6 +5,8 @@ import ToeFormal.Release.ToeTargetedCCFTClosureContractExtractionStage2OpenAutho
 import ToeFormal.Release.ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0
 import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0
 import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0
+import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0
+import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0
 
 namespace ToeFormal
 namespace Release
@@ -18,11 +20,11 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_selected_unopened_contract_adjudication :
+theorem current_authority_tracks_open_stage_three_without_output :
     currentTarget = "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0" ∧ boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    boundedProgramState = "CLOSED" ∧ boundedAttemptNumber = 2 ∧
-    Derivation.ToeTargetedCCFTClosureContractExtractionResult.terminalOutcome = "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE" ∧
-    Derivation.ToeTargetedCCFTClosureContractExtractionResult.stageThreeAuthorized = false := by
+    boundedProgramState = "OPEN" ∧ boundedAttemptNumber = 3 ∧
+    Derivation.ToeTargetedCCFTContractAdjudicationAttemptOpen.adjudicationRecordsCreated = 0 ∧
+    Derivation.ToeTargetedCCFTContractAdjudicationAttemptOpen.stageFourAuthorized = false := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -36,11 +38,11 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem stage_one_and_stage_two_authorities_remain_bound :
+theorem all_three_stage_authorities_remain_bound :
     ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0.stageOneOpenAuthorized = true ∧
-    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0.accepted = true ∧
     ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0.stageTwoOpenAuthorized = true ∧
-    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityReviewV0.accepted = true := by
+    ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0.stageThreeOpenAuthorized = true ∧
+    ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0.accepted = true := by
   native_decide
 
 end CurrentAuthority
