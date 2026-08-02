@@ -1,0 +1,64 @@
+{
+  "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_VALIDATION_v0",
+  "schema_id": "toe.ccft_v0.research_director_branch_readiness_decision.validation.v0",
+  "captured_at_utc": "2026-08-02T04:36:56Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+  "terminal_outcome": "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+  "lifecycle_result": "PASSED",
+  "artifact_hashes": {
+    "result_sha256": "9c6df6aaee209de817da67cb90a99beffd5cc7c756af39a2e4db2b17168a5b78",
+    "review_sha256": "c7b52a0d38c0de191031db64ba34a5457cceb69a8d464dbdc0c27a184e6cade5",
+    "close_event_sha256": "5a325b81d800f4475ceee1da1b1e8ea6fe452c96ccc50830b32e0519496bb15b",
+    "close_event_hash": "0940185d0ac9974b9c387789d166c76856970bf8bd513c39a36f14fbd74bd380"
+  },
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0BranchReadinessResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "scientific_validation": {
+    "exactly_one_canonical_outcome_selected": true,
+    "cp_nlse_route_selected": true,
+    "governing_equation_conflict_preserved": true,
+    "lcrd_v3_preserved_as_future_competitor_or_extension": true,
+    "stage_2_named_but_not_authorized": true,
+    "equation_selected_or_repaired": false,
+    "new_postulate_created": false,
+    "model_constructed_or_frozen": false,
+    "theorem_selected_or_attempted": false,
+    "physical_interpretation_established": false,
+    "evidence_promoted": false
+  },
+  "focused_python": {
+    "passed": 44,
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "jobs": 9163,
+    "modules": 1418,
+    "status": "PASS"
+  },
+  "deterministic_generation": {
+    "module_count": 1418,
+    "scope": "committed-index",
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT"
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "exhaustive_python_status": "NOT_CLAIMED"
+  },
+  "status": "STAGE_1_ATOMIC_CLOSE_PRECOMMIT_VALIDATED"
+}

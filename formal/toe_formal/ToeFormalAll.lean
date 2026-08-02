@@ -816,6 +816,7 @@ import ToeFormal.Derivation.ToeCCFTPrimaryNativePositiveContentFrontierSelection
 import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryAttemptOpen
 import ToeFormal.Derivation.ToeCCFTSourceBoundMathematicalInventoryResult
 import ToeFormal.Derivation.ToeCCFTV0BranchReadinessAttemptOpen
+import ToeFormal.Derivation.ToeCCFTV0BranchReadinessResult
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionProgramInstallationAuthority
@@ -1424,6 +1425,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1417
+def committedModuleCount : Nat := 1418
 
 end ToeFormalAll
