@@ -1,0 +1,39 @@
+{
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_CCFT_V0_CONSTRUCTION_PROGRAM_INSTALLATION",
+  "authority_exact_path_set": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_AUTHORITY_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_AUTHORITY_v0.json",
+    "formal/python/tests/test_toe_ccft_v0_theory_construction_program_installation_authority.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0TheoryConstructionProgramInstallationAuthority.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "authorized_actions": [
+    "create immutable five-stage program manifest",
+    "register canonical scope hashes and prospective OPEN/CLOSE envelopes",
+    "register five-attempt zero-repair and mandatory-exit controls",
+    "bind Research Director and theorem packet schemas",
+    "update registry generated and Lean authority mirrors",
+    "perform installation validation and independent review"
+  ],
+  "authorized_target": "install_toe_ccft_v0_theory_construction_and_theorem_discovery_bounded_program_v0",
+  "branch_selection_authorized": false,
+  "captured_at_utc": "2026-08-02T03:50:14Z",
+  "consumed_proposal": {
+    "path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+    "proposed_stage_count": 5,
+    "review_path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+    "review_sha256": "0a5604bd466bbbed4be38aa9701a5866551a6e291cc36634f233c31ed1b8ac5d",
+    "sha256": "f495413aa44b6ef2d4f569e8d182a4909ed7b8f909ccd8425ee6b780b9e4654b"
+  },
+  "installation_authorized": true,
+  "model_or_postulate_construction_authorized": false,
+  "physical_promotion_authorized": false,
+  "schema_id": "toe.ccft_v0.theory_construction.program_governance_installation_authority.v0",
+  "scientific_stage_open_authorized": false,
+  "status": "PROGRAM_INSTALLATION_AUTHORIZED_NOT_EXECUTED",
+  "theorem_execution_authorized": false
+}

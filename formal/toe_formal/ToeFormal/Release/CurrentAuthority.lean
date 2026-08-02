@@ -1,5 +1,4 @@
 import ToeFormal.Derivation.CurrentTarget
-import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
 
 namespace ToeFormal
 namespace Release
@@ -11,12 +10,10 @@ def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidence
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def currentBoundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
 
-theorem current_authority_tracks_prepared_uninstalled_ccft_v0_program :
-    currentTarget = "prepare_bounded_ccft_v0_theory_construction_program" ∧
-    Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview.programInstalled = false ∧
-    Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview.branchSelected = false ∧
-    Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview.theoremAttempted = false ∧
-    Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority.proposalPreparationAuthorized = true := by
+theorem current_authority_is_installation_only :
+    currentTarget = "install_toe_ccft_v0_theory_construction_and_theorem_discovery_bounded_program_v0" ∧
+    Derivation.ToeCCFTV0TheoryConstructionProgramInstallationAuthority.installationAuthorized = true ∧
+    Derivation.ToeCCFTV0TheoryConstructionProgramInstallationAuthority.scientificStageOpenAuthorized = false := by
   native_decide
 
 end CurrentAuthority
