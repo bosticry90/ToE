@@ -1,10 +1,9 @@
 import ToeFormal.Derivation.CurrentTarget
-import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
-import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
 import ToeFormal.Release.ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0
 import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0
-import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0
 import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryHandoffStage4OpenAuthorityReviewV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryHandoffStage4OpenAuthorityV0
 
 namespace ToeFormal
 namespace Release
@@ -18,27 +17,20 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_selected_unopened_stage_four :
+theorem current_authority_tracks_open_stage_four_without_result :
     currentTarget = "select_toe_post_targeted_ccft_recovery_construction_handoff_v0" ∧ boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    boundedProgramState = "CLOSED" ∧ boundedAttemptNumber = 3 ∧
-    Derivation.ToeTargetedCCFTContractAdjudicationResult.exactContractsRecovered = 4 ∧
-    Derivation.ToeTargetedCCFTContractAdjudicationResult.stageFourAuthorized = false := by
+    boundedProgramState = "OPEN" ∧ boundedAttemptNumber = 4 ∧
+    Derivation.ToeTargetedCCFTRecoveryHandoffAttemptOpen.programOutcomeSelected = false ∧
+    Derivation.ToeTargetedCCFTRecoveryHandoffAttemptOpen.constructionPreparationAuthorized = false ∧
+    Derivation.ToeTargetedCCFTRecoveryHandoffAttemptOpen.theoremDiscoveryAuthorized = false := by
   native_decide
 
-theorem bounded_program_governance_installation_preserved_its_then_current_target :
-    BoundedProgramGovernanceControlInstallationV0.scientificTarget =
-      "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" ∧
-    BoundedProgramGovernanceControlInstallationV0.scientificTargetRotated = false := by
-  native_decide
-
-theorem bounded_program_governance_review_preserved_its_then_current_target :
-    BoundedProgramGovernanceControlInstallationResultReviewV0.scientificTarget =
-      "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
-  native_decide
-
-theorem stage_three_authority_and_review_remain_bound :
+theorem all_four_stage_authorities_remain_bound :
+    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0.stageOneOpenAuthorized = true ∧
+    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0.stageTwoOpenAuthorized = true ∧
     ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0.stageThreeOpenAuthorized = true ∧
-    ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0.accepted = true := by
+    ToeTargetedCCFTRecoveryHandoffStage4OpenAuthorityV0.stageFourOpenAuthorized = true ∧
+    ToeTargetedCCFTRecoveryHandoffStage4OpenAuthorityReviewV0.accepted = true := by
   native_decide
 
 end CurrentAuthority

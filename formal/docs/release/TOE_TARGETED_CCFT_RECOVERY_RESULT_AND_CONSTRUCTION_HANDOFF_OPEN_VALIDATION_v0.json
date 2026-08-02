@@ -1,0 +1,49 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+    "formal/python/tools/toe_targeted_ccft_recovery_handoff_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTRecoveryHandoffAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 4,
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_OPEN",
+  "captured_at_utc": "2026-08-02T02:02:33Z",
+  "event_hash": "8a0188230098b3c2af176abd035381711aa7cbb9b0f8c6d22b04786790472e52",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+  "event_sha256": "f33eb48278c4f0fdf3cb3d6d91a373291f5344912ab47bfceb6f02cf7e9f265e",
+  "opened_from_commit": "4499bdaebbce6394c7aef3c35a8bf02700fbc29a",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "registry_snapshot_hash": "2095c807401c37c56370f31f352293a6a4c9e13c8c83bc57ad66591856a7fd2f",
+  "schema_id": "toe.targeted_ccft.recovery_handoff.stage_4_open_validation.v0",
+  "scientific_output_at_open": {
+    "branch_selected": false,
+    "ccft_v0_constructed": false,
+    "conflicts_preserved_input": 3,
+    "construction_preparation_authorized": false,
+    "exact_contracts_recovered_input": 4,
+    "historical_recovery_closed": false,
+    "mandatory_exit_executed": false,
+    "program_outcome_selected": false,
+    "theorem_discovery_authorized": false
+  },
+  "scope_hash": "f6e792eae759877e5e0e6a263834dbdfd96fa8b2a1918a8a038257ab767af254",
+  "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+  "status": "STAGE_4_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "select_toe_post_targeted_ccft_recovery_construction_handoff_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "construction_and_theorem_discovery_remain_unauthorized": true,
+    "event_and_registry_projection_match": true,
+    "four_exact_contracts_and_three_conflicts_match": true,
+    "mandatory_exit_not_executed": true,
+    "open_checkpoint_contains_no_handoff_or_model_output": true,
+    "program_state_is_open": true,
+    "stage_3_result_review_validation_and_close_hashes_match": true
+  }
+}
