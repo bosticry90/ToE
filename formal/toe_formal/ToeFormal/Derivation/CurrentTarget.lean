@@ -1,23 +1,24 @@
-import ToeFormal.Derivation.ToeCCFTV0ModelContractFreezeResult
+import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTV0ModelContractFreezeResult
+open ToeCCFTV0PrimaryTheoremPacketAttemptOpen
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := proposedStageThreeTarget
-def currentEvidencePacketId : String := resultId
-def currentTargetPhase : String := "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_CLOSED_PASSED"
-def currentBoundedProgramState : String := "CLOSED_AWAITING_SEPARATE_STAGE_3_AUTHORITY"
+def currentLiveTarget : String := target
+def currentEvidencePacketId : String := eventHash
+def currentTargetPhase : String := "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN"
+def currentBoundedProgramState : String := "OPEN_ATTEMPT_3"
 
-theorem current_target_is_nonautomatic_stage_three_preparation :
-    selectedBranch = "CP_NLSE" ∧ attemptSequenceNumber = 2 ∧
-    frozenModelCount = 1 ∧ governingEquationFrozen = true ∧
-    newPostulateCount = 5 ∧ referenceImplementationFrozen = true ∧
-    theoremPacketPrepared = false ∧ theoremAttempted = false ∧
-    stageThreeAuthorized = false ∧ mathematicalViabilityEstablished = false ∧
-    physicalInterpretationEstablished = false := by
+theorem current_target_is_empty_stage_three_open :
+    attemptNumber = 3 ∧ maximumPrimaryTheoremPackets = 1 ∧
+    proposedCompoundClaimCount = 4 ∧ frozenPacketCount = 0 ∧
+    frozenPropositionCount = 0 ∧ frozenFormalNegationCount = 0 ∧
+    executionContractCount = 0 ∧ theoremResultCount = 0 ∧
+    counterexampleCount = 0 ∧ modelMutated = false ∧
+    historicalFormulaClassified = false ∧ physicalPromotion = false ∧
+    stageFourAuthorized = false := by
   decide
 
 end CurrentTarget

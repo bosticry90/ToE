@@ -1,5 +1,5 @@
 import ToeFormal.Derivation.CurrentTarget
-import ToeFormal.Release.ToeCCFTV0ModelContractFreezeStage2OpenAuthorityReviewV0
+import ToeFormal.Release.ToeCCFTV0PrimaryTheoremPacketStage3OpenAuthorityReviewV0
 
 namespace ToeFormal
 namespace Release
@@ -11,17 +11,15 @@ def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidence
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def currentBoundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
 
-theorem current_authority_tracks_stage_two_freeze_without_stage_three_authority :
-    ToeCCFTV0ModelContractFreezeStage2OpenAuthorityReviewV0.reviewAccepted = true ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.selectedBranch = "CP_NLSE" ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.governingEquationFrozen = true ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.frozenModelCount = 1 ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.newPostulateCount = 5 ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.referenceImplementationFrozen = true ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.mathematicalViabilityEstablished = false ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.physicalInterpretationEstablished = false ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.theoremAttempted = false ∧
-    Derivation.ToeCCFTV0ModelContractFreezeResult.stageThreeAuthorized = false := by
+theorem current_authority_tracks_empty_bounded_stage_three_open :
+    ToeCCFTV0PrimaryTheoremPacketStage3OpenAuthorityReviewV0.reviewAccepted = true ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.attemptNumber = 3 ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.frozenPacketCount = 0 ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.frozenPropositionCount = 0 ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.theoremResultCount = 0 ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.modelMutated = false ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.physicalPromotion = false ∧
+    Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen.stageFourAuthorized = false := by
   native_decide
 
 end CurrentAuthority

@@ -819,6 +819,7 @@ import ToeFormal.Derivation.ToeCCFTV0BranchReadinessAttemptOpen
 import ToeFormal.Derivation.ToeCCFTV0BranchReadinessResult
 import ToeFormal.Derivation.ToeCCFTV0ModelContractFreezeAttemptOpen
 import ToeFormal.Derivation.ToeCCFTV0ModelContractFreezeResult
+import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionProgramInstallationAuthority
@@ -1431,6 +1432,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1424
+def committedModuleCount : Nat := 1425
 
 end ToeFormalAll
