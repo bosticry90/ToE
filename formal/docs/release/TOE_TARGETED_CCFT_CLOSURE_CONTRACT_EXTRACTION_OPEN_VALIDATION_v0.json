@@ -1,0 +1,53 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+    "formal/python/tools/toe_targeted_ccft_closure_contract_extraction_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureContractExtractionAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 2,
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_STAGE_2_OPEN",
+  "captured_at_utc": "2026-08-02T00:10:00Z",
+  "event_hash": "8915d1640b9eaabb4f9931f0465f54588d2cbbcbba9cb809a61dd9f0d83b9fd9",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+  "event_sequence_number": 3,
+  "event_sha256": "734e77735bfc3679d6eee36251e573807c61eac4a918a19ac4ffce077b77b5f5",
+  "opened_from_commit": "f93d609cfc7f369df06a3118f53a3c1be2020cf0",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "registry_snapshot_hash": "27087f5214c92821953599eb5da5ef58f7f17a182391baaac50ec81f84c23940",
+  "schema_id": "toe.targeted_ccft_closure_contract_extraction.stage_2_open_validation.v0",
+  "scientific_output_at_open": {
+    "captured_selected_sources_bound": 96,
+    "ccft_v0_constructed": false,
+    "closure_contracts_recovered_or_rejected": 0,
+    "content_search_passes_consumed": 1,
+    "contract_records_extracted": 0,
+    "equation_repaired_or_selected": false,
+    "evidence_promoted": false,
+    "evidence_strength_assignments_created": 0,
+    "new_archive_or_repository_traversal": false,
+    "new_ccft_postulate_inserted": false,
+    "physical_interpretation_established": false,
+    "stage_3_output_created": false
+  },
+  "scope_hash": "bf5a69abf0b8c49b1f5806afa6483a205201103126921af60fef6476348bb0e0",
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+  "status": "STAGE_2_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "extract_toe_targeted_ccft_closure_contracts_v0",
+  "validation_checks": {
+    "all_96_captured_text_hashes_and_git_portability_bindings_match": true,
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "one_pass_consumed_and_overflow_substitution_prohibited": true,
+    "open_checkpoint_contains_no_contract_extraction_output": true,
+    "program_state_is_open": true,
+    "stage_1_result_review_validation_and_close_hashes_match": true,
+    "stage_3_remains_unauthorized": true
+  }
+}

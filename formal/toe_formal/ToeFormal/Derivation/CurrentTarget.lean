@@ -1,29 +1,32 @@
-import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult
+import ToeFormal.Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeTargetedCCFTClosureSourceDiscoveryResult
+open ToeTargetedCCFTClosureContractExtractionAttemptOpen
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := selectedNextTarget
-def currentEvidencePacketId : String := resultId
+def currentLiveTarget : String := scientificTarget
+def currentEvidencePacketId : String := eventId
 def currentBoundedProgramId : String := programId
-def currentBoundedProgramState : String := "CLOSED"
+def currentBoundedProgramState : String := "OPEN"
 def currentTargetPhase : String :=
-  "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_CLOSED_PASSED"
-def currentBoundedAttemptNumber : Nat := attemptSequenceNumber
-def lastClosedBoundedSemanticStage : String := semanticStageId
-def lastBoundedTerminalResult : String := "PASSED"
+  "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_STAGE_2_OPEN"
+def currentBoundedAttemptNumber : Nat := attemptNumber
+def lastClosedBoundedSemanticStage : String :=
+  "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY"
+def lastBoundedTerminalResult : String := "TARGETED_CCFT_SOURCE_SET_BOUND"
 
-theorem current_target_selects_contract_extraction_without_authorizing_it :
+theorem current_target_opens_contract_extraction_without_scientific_output :
     currentLiveTarget = "extract_toe_targeted_ccft_closure_contracts_v0" ∧
     currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    currentBoundedProgramState = "CLOSED" ∧
-    currentBoundedAttemptNumber = 1 ∧ selectedSourceCount = 96 ∧
-    contentPassesConsumed = 1 ∧ contractRecoveryPerformed = false ∧
-    stageTwoAuthorized = false := by
+    currentBoundedProgramState = "OPEN" ∧ currentBoundedAttemptNumber = 2 ∧
+    selectedSourceCount = 96 ∧ contentSearchPassesConsumed = 1 ∧
+    contractRecordsExtracted = 0 ∧ contractRecoveredOrRejected = false ∧
+    newRootTraversalPerformed = false ∧ overflowSourceSubstituted = false ∧
+    equationRepairedOrSelected = false ∧ newCCFTPostulateInserted = false ∧
+    ccftV0Constructed = false ∧ stageThreeAuthorized = false := by
   decide
 
 end CurrentTarget
