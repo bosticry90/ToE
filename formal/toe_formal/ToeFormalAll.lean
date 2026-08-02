@@ -1171,6 +1171,8 @@ import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorit
 import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0
 import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0
 import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryHandoffStage4OpenAuthorityReviewV0
+import ToeFormal.Release.ToeTargetedCCFTRecoveryHandoffStage4OpenAuthorityV0
 import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationResultReviewV0
 import ToeFormal.Release.ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0
 import ToeFormal.Release.V01CriticizabilityReadinessAdjudicationResultReview
@@ -1411,6 +1413,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1404
+def committedModuleCount : Nat := 1406
 
 end ToeFormalAll
