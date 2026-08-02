@@ -1145,6 +1145,8 @@ import ToeFormal.Release.ToeCCFTV0BranchReadinessStage1OpenAuthorityReviewV0
 import ToeFormal.Release.ToeCCFTV0BranchReadinessStage1OpenAuthorityV0
 import ToeFormal.Release.ToeCCFTV0ModelContractFreezeStage2OpenAuthorityReviewV0
 import ToeFormal.Release.ToeCCFTV0ModelContractFreezeStage2OpenAuthorityV0
+import ToeFormal.Release.ToeCCFTV0PrimaryTheoremPacketStage3OpenAuthorityReviewV0
+import ToeFormal.Release.ToeCCFTV0PrimaryTheoremPacketStage3OpenAuthorityV0
 import ToeFormal.Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallation
 import ToeFormal.Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallationReview
 import ToeFormal.Release.ToeCandidateGravitationalActionFamilyInventoryStage2OpenAuthorityReviewV0
@@ -1429,6 +1431,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1422
+def committedModuleCount : Nat := 1424
 
 end ToeFormalAll
