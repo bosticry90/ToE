@@ -1,0 +1,161 @@
+{
+  "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_v0",
+  "schema_id": "toe.ccft_v0.model_contract_completion_and_freeze.stage_2_open_authority.v0",
+  "captured_at_utc": "2026-08-02T04:46:46Z",
+  "authority_commit_exact_path_set": [
+    "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_v0.json",
+    "formal/python/tests/test_toe_ccft_v0_model_contract_freeze_stage_2_authority.py",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0ModelContractFreezeStage2OpenAuthorityReviewV0.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0ModelContractFreezeStage2OpenAuthorityV0.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "authority_decision": "AUTHORIZE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN",
+  "authorized_stage": {
+    "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+    "stage_number": 2,
+    "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+    "canonical_target": "complete_and_freeze_toe_ccft_v0_model_contract_v0",
+    "canonical_scope_hash": "b80489e0e609397bdc4b9d24c78a47f0f30578e124c67dcb47114d091e781f87"
+  },
+  "selected_stage_1_route": {
+    "outcome": "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+    "branch": "CP_NLSE",
+    "governing_equation_selected": false,
+    "new_postulates_created": 0,
+    "model_constructed": false
+  },
+  "evidence_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1",
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1.json",
+      "sha256": "e0e89f235f1f80ab6f44f5db0bfff6adbaf1fa7679f0f5198b0ef4f371728eb6"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0.json",
+      "sha256": "9c6df6aaee209de817da67cb90a99beffd5cc7c756af39a2e4db2b17168a5b78"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_REVIEW_v0.json",
+      "sha256": "c7b52a0d38c0de191031db64ba34a5457cceb69a8d464dbdc0c27a184e6cade5"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_CLOSE_v0",
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+      "sha256": "5a325b81d800f4475ceee1da1b1e8ea6fe452c96ccc50830b32e0519496bb15b"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0.json",
+      "sha256": "28b0827797274df7307b59da8641778ff9e5da2ef72bc358d34a4b4a9fff731d"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+      "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20"
+    }
+  ],
+  "canonical_terminal_outcomes": [
+    "CCFT_V0_MODEL_CONTRACT_FROZEN",
+    "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET",
+    "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED",
+    "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE"
+  ],
+  "director_wording_normalization": {
+    "CCFT_V0_MODEL_CONTRACT_FROZEN_WITH_NEW_POSTULATES": {
+      "canonical_outcome": "CCFT_V0_MODEL_CONTRACT_FROZEN",
+      "required_qualifier": "NEW_POSTULATE_COUNT_GREATER_THAN_ZERO_AND_EVERY_NEW_ELEMENT_LABELED_NEW_CCFT_POSTULATE"
+    },
+    "BLOCKED_BY_GOVERNING_EQUATION_CONFLICT": {
+      "canonical_outcome": "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED"
+    },
+    "BLOCKED_BY_INCOMPLETE_MODEL_CONTRACT": {
+      "canonical_precedence": [
+        "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET_IF_POSTULATE_COUNT_EXCEEDS_8",
+        "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE_IF_ONLY_IMPLEMENTATION_CUSTODY_OR_REPRODUCIBILITY_FAILS",
+        "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED_OTHERWISE"
+      ]
+    }
+  },
+  "authorized_governing_equation_routes": [
+    "SELECT_ONE_IDENTIFIED_SOURCE_BRANCH_WITH_EXACT_SOURCE_BINDING",
+    "AUTHOR_ONE_NEW_CCFT_V0_EQUATION_LABELED_NEW_CCFT_POSTULATE",
+    "BLOCK_WITHOUT_EQUATION_OR_MODEL_IF_NO_ROUTE_IS_DEFENSIBLE"
+  ],
+  "required_model_contract": {
+    "state_and_dynamics": [
+      "exact evolved variable and mathematical codomain",
+      "one exact governing equation",
+      "definition of every derivative and nonlinear term",
+      "one spatial dimension",
+      "time domain"
+    ],
+    "data_and_domain": [
+      "source-recovered periodic one-dimensional domain",
+      "source-recovered periodic boundary conditions",
+      "admissible initial data",
+      "regularity",
+      "normalization or integral constraint"
+    ],
+    "parameters": [
+      "definition of every coefficient",
+      "fixed value or admissible range",
+      "dimensional or nondimensional status",
+      "provenance label",
+      "zero-coupling and other control surfaces"
+    ],
+    "conservation_and_failure": [
+      "norm status as postulated conjectured or derived",
+      "monitored versus proven quantities",
+      "blow-up or instability criteria",
+      "numerical failure thresholds",
+      "model-rejection conditions"
+    ],
+    "comparator": [
+      "linear or zero-coupling known-physics baseline or mathematical control",
+      "generic nonlinear-Schrodinger comparator"
+    ],
+    "reference_implementation": [
+      "spatial discretization",
+      "time integrator",
+      "resolution requirements",
+      "convergence tests",
+      "precision and reproducibility settings",
+      "test vectors"
+    ]
+  },
+  "provenance_vocabulary": [
+    "SOURCE_RECOVERED",
+    "KNOWN_PHYSICS_BASELINE",
+    "NEW_CCFT_POSTULATE",
+    "NUMERICAL_CONVENTION",
+    "MATHEMATICAL_CONTROL"
+  ],
+  "scientific_limits": {
+    "maximum_frozen_models": 1,
+    "maximum_new_ccft_postulates": 8,
+    "one_exact_governing_equation_required_for_pass": true,
+    "complete_model_contract_required_for_pass": true,
+    "reference_implementation_required_for_pass": true,
+    "historical_equation_blending_authorized": false,
+    "silent_equation_repair_authorized": false,
+    "unlabeled_assumption_insertion_authorized": false,
+    "lcrd_or_wave_rotor_combination_authorized": false,
+    "theorem_packet_preparation_authorized": false,
+    "proof_disproof_symbolic_numerical_or_Lean_theorem_execution_authorized": false,
+    "physical_promotion_authorized": false,
+    "stage_3_authorized": false
+  },
+  "scientific_output_at_authority": {
+    "governing_equation": "UNSELECTED",
+    "historical_equation_conflict": "PRESERVED",
+    "new_postulates": 0,
+    "ccft_v0_model": "NONE",
+    "reference_implementation": "NONE",
+    "primary_theorem": "NONE",
+    "scientific_attempts_completed": 1
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_2_OPEN_ONLY"
+}
