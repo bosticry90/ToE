@@ -1,0 +1,2423 @@
+{
+  "adjudication_boundary": {
+    "canonical_evidence_promoted": false,
+    "ccft_v0_constructed": false,
+    "conflicting_contract_selected_or_repaired": false,
+    "contract_recovery_or_rejection_established": false,
+    "cp_nlse_or_lcrd_v3_selected_for_ccft_v0": false,
+    "new_postulate_inserted": false,
+    "numerical_default_promoted_to_theory_contract": false,
+    "physical_operationalization_claimed": false,
+    "repository_claim_exhaustion_established": false
+  },
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0",
+  "attempt_sequence_number": 2,
+  "captured_at_utc": "2026-08-02T00:47:59Z",
+  "extraction_summary": {
+    "checklists_with_conflicts": 3,
+    "checklists_with_exact_candidates": 7,
+    "checklists_with_no_relevant_evidence": 1,
+    "checklists_with_only_nonexact_evidence": 7,
+    "record_count": 23,
+    "records_by_branch": {
+      "CP_NLSE": 14,
+      "LCRD_V3": 9
+    },
+    "records_by_evidence_class": {
+      "CONFLICTING_SOURCE_CONTRACTS": 7,
+      "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING": 2,
+      "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 7,
+      "HEURISTIC_NOT_A_CONTRACT": 2,
+      "NUMERICAL_DEFAULT_ONLY": 2,
+      "PARTIAL_CONTRACT_RECOVERED": 3
+    },
+    "sources_with_material_evidence": 10,
+    "sources_with_no_relevant_evidence": 86
+  },
+  "frozen_stage_1_input": {
+    "content_discovery_passes_consumed": 1,
+    "content_discovery_passes_remaining": 0,
+    "new_source_search_or_root_traversal_performed": false,
+    "overflow_source_count": 137,
+    "overflow_sources_used": 0,
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+    "selected_by_branch": {
+      "CP_NLSE": 48,
+      "LCRD_V3": 48
+    },
+    "selected_source_count": 96,
+    "sha256": "2c4a32b16dd35d798d95a14a3a0ac466b4fff5dbafd7ae0a70e0755cef9bb81f"
+  },
+  "lifecycle_result": "PASSED",
+  "missing_contract_checklist_ledger": [
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "CONFLICTING_SOURCE_CONTRACTS": 3
+      },
+      "extraction_status": "CONFLICTING_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "record_ids": [
+        "CP_EQ_001",
+        "CP_EQ_002",
+        "CP_EQ_003"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "PARTIAL_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "COEFFICIENT_DEFINITIONS_AND_ADMISSIBLE_RANGES",
+      "record_ids": [
+        "CP_COEFF_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "NUMERICAL_DEFAULT_ONLY": 1
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "INITIAL_DATA_RULES",
+      "record_ids": [
+        "CP_DATA_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "BOUNDARY_CONDITIONS",
+      "record_ids": [
+        "CP_BOUNDARY_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "PARTIAL_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "NONDIMENSIONALIZATION_OR_NORMALIZATION",
+      "record_ids": [
+        "CP_NORM_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "CONSERVED_OR_MONITORED_QUANTITIES",
+      "record_ids": [
+        "CP_CONSERVE_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "FAILURE_AND_INSTABILITY_CRITERIA",
+      "record_ids": [
+        "CP_FAILURE_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING": 1
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "NUMERICAL_IMPLEMENTATION_PROVENANCE",
+      "record_ids": [
+        "CP_IMPL_001"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "CONFLICTING_SOURCE_CONTRACTS": 2
+      },
+      "extraction_status": "CONFLICTING_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "record_ids": [
+        "CP_DISP_001",
+        "CP_DISP_002"
+      ]
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "CONFLICTING_SOURCE_CONTRACTS": 2
+      },
+      "extraction_status": "CONFLICTING_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION",
+      "record_ids": [
+        "CP_FREQ_001",
+        "CP_FREQ_002"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "record_ids": [
+        "LCRD_STATE_001"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "NUMERICAL_DEFAULT_ONLY": 1,
+        "PARTIAL_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "INITIAL_AND_BOUNDARY_DATA",
+      "record_ids": [
+        "LCRD_DATA_001",
+        "LCRD_DATA_002"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "PARAMETER_RANGES",
+      "record_ids": [
+        "LCRD_PARAM_001"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {},
+      "extraction_status": "NO_RELEVANT_EVIDENCE_IN_SELECTED_SET",
+      "missing_contract_id": "NORMALIZATION_CONVENTIONS",
+      "record_ids": []
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "record_ids": [
+        "LCRD_CLOSURE_001"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING": 1
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "REPRODUCIBLE_IMPLEMENTATION",
+      "record_ids": [
+        "LCRD_IMPL_001"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 1
+      },
+      "extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "missing_contract_id": "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "record_ids": [
+        "LCRD_COUPLING_001"
+      ]
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "contract_completeness_adjudicated": false,
+      "evidence_class_counts": {
+        "HEURISTIC_NOT_A_CONTRACT": 2
+      },
+      "extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "missing_contract_id": "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION",
+      "record_ids": [
+        "LCRD_LSDA_001",
+        "LCRD_LSDA_002"
+      ]
+    }
+  ],
+  "open_event_binding": {
+    "event_hash": "8915d1640b9eaabb4f9931f0465f54588d2cbbcbba9cb809a61dd9f0d83b9fd9",
+    "path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+    "sha256": "734e77735bfc3679d6eee36251e573807c61eac4a918a19ac4ffce077b77b5f5"
+  },
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "schema_id": "toe.targeted_ccft_closure.contract_extraction.result.v0",
+  "scientific_target": "extract_toe_targeted_ccft_closure_contracts_v0",
+  "scope_hash": "bf5a69abf0b8c49b1f5806afa6483a205201103126921af60fef6476348bb0e0",
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+  "source_bound_contract_record_ledger": [
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "4b7110b4cc5d1c9c67cb6cb318e471741785cc07e3098ec53527c6d3c21d58fb",
+        "line_end": 15,
+        "line_start": 10,
+        "text": "-- Canonical source: equations/ucff_core.py :: ucff_first_order_eom()\n--\n-- R1[phi] = i phi_t + (1/2) phi_xx - g|phi|^2 phi + lam phi_xxxx + beta phi_xxxxxx = 0\n\n-- Field phi(t,x) as a complex-valued function of (time, space).\nabbrev Field : Type := Real -> Real -> Complex"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_EQ_002",
+        "CP_EQ_003"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_EQ_001",
+      "definitions_of_all_symbols": [
+        "phi: complex field",
+        "g, lam, beta: real coefficients"
+      ],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "Explicit formal residual, but it conflicts with the background-shifted monograph equation and with the operational evolution contract.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "R1[phi] = i phi_t + (1/2) phi_xx - g|phi|^2 phi + lam phi_xxxx + beta phi_xxxxxx = 0",
+      "missing_contract_id": "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/FirstOrder.lean",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/FirstOrder.lean",
+        "passive_text_capture_sha256": "e041a9015cc073dbaad15556c4a0af908168a3400a577f74ef113524c7c39a46",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/FirstOrder.lean",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "e041a9015cc073dbaad15556c4a0af908168a3400a577f74ef113524c7c39a46"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "eed9cf80a3f1b431b59000a777bcd7e00d4d8e71c363bd807230d955a0f537c5",
+        "line_end": 446,
+        "line_start": 434,
+        "text": "\\## 2.1.1 Authoritative CP\u2013NLSE Equation\n\n\n\n\\\\\\[\n\ni\\\\,\\\\phi\\_t = -\\\\frac{1}{2}\\\\phi\\_{xx} + g\\_{\\\\text{eff}}\\\\left(|\\\\phi|^2 - \\\\rho\\_0\\\\right)\\\\phi.\n\n\\\\]\n\n\n\nThis equation governs the core coherence-carrying field \u03c6. It defines the primary nonlinear dispersive dynamics of CCFT."
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_EQ_001",
+        "CP_EQ_003"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_EQ_002",
+      "definitions_of_all_symbols": [
+        "phi: asserted coherence-carrying field",
+        "g_eff: effective nonlinear coefficient",
+        "rho0: background density"
+      ],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "Labeled authoritative in this source, but differs from the higher-derivative residual and operational equation.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "i phi_t = -(1/2) phi_xx + g_eff (|phi|^2-rho0) phi",
+      "missing_contract_id": "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/Monograph.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Monograph.md",
+        "passive_text_capture_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Monograph.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "a7cfdad43386662291f477c670f314ea0d61d07babe9073253965b6bc3d48a3b",
+        "line_end": 167,
+        "line_start": 155,
+        "text": "The operational numerics equation implemented by equations/phase13\\_second\\_order\\_numerics.py is:\n\n\n\ni \u03c6\\_t = - (1/2) \u03c6\\_xx + lam \u03c6\\_xxxx + beta \u03c6\\_xxxxxx + g |\u03c6|\u00b2 \u03c6\n\n\n\nThis equation is the equation that the numerical integrators step forward in time.\n\n\n\nThis is not the canonical time-domain second-order (\u03c6\\_tt) equation. This is an operational first-order-in-time evolution used for simulation and validated by test constraints listed in this lock."
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_EQ_001",
+        "CP_EQ_002"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_EQ_003",
+      "definitions_of_all_symbols": [
+        "phi: complex scalar field",
+        "g: cubic nonlinearity",
+        "lam: fourth-order dispersion",
+        "beta: sixth-order dispersion"
+      ],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "Exact operational numerical equation; the source expressly distinguishes it from a canonical second-order time-domain equation.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "i phi_t = -(1/2) phi_xx + lam phi_xxxx + beta phi_xxxxxx + g|phi|^2 phi",
+      "missing_contract_id": "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "8eb374864e13336c78c783811f971d40e28d595347df47f255da490e631c2996",
+        "line_end": 146,
+        "line_start": 125,
+        "text": "PARAMETERS (OPERATIONAL NUMERICS LAYER)\n\n\n\ng \u2014 cubic nonlinearity coefficient (can be positive or negative)\n\n\n\nlam \u2014 fourth-order dispersion coefficient\n\n\n\nbeta \u2014 sixth-order dispersion coefficient\n\n\n\nAll parameters are real-valued.\n\n\n\nNo assumptions about sign are imposed globally. Specific sign choices are enforced by specific behavioral tests where required.\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_COEFF_001",
+      "definitions_of_all_symbols": [
+        "g: cubic nonlinearity coefficient",
+        "lam: fourth-order dispersion coefficient",
+        "beta: sixth-order dispersion coefficient"
+      ],
+      "evidence_strength_classification": "PARTIAL_CONTRACT_RECOVERED",
+      "extraction_note": "Definitions and sign freedom are explicit, but a complete admissible parameter contract is absent.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "COEFFICIENT_DEFINITIONS_AND_ADMISSIBLE_RANGES",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": "All real; g may have either sign; no global admissible magnitude ranges are supplied.",
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "5dcd77051aeef08f9e6e60c9b00d31ba79216c8015df7aad81f408553361cfbc",
+        "line_end": 235,
+        "line_start": 215,
+        "text": "In the defocusing case (g > 0), the dark-soliton healing-length setting used for validation is:\n\n\n\nInitial condition (profile form):\n\n\n\n\u03c6(x,0) = sqrt(rho0) \\* tanh( sqrt(g rho0) \\* (x - x0) )\n\n\n\nThe corresponding theoretical healing length is:\n\n\n\n\u03be\\_theory = 1 / sqrt(g rho0)\n\n\n\nThe operational test suite enforces that, after evolution under the operational numerics integrator at lam = beta = 0, the numerically estimated healing length \u03be\\_num matches \u03be\\_theory to within 10%."
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_DATA_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "NUMERICAL_DEFAULT_ONLY",
+      "extraction_note": "A test example does not define the theory's freely admissible initial data.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": "One defocusing dark-soliton validation profile; no admissible initial-data class.",
+      "mathematical_transcription": null,
+      "missing_contract_id": "INITIAL_DATA_RULES",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "969dcd70f241fee3363370404835d3f5d04d219237a6d59ae08f6e30c7262306",
+        "line_end": 104,
+        "line_start": 91,
+        "text": "Domain:\n\n\n\n1D periodic domain of length L\n\n\n\nx is the spatial coordinate on \\[0, L) with periodic boundary conditions\n\n\n\nt is physical time used in numerical evolution\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_BOUNDARY_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "Complete boundary/domain contract for the operational numerical surrogate.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": "x in [0,L) with periodic boundary conditions.",
+      "mathematical_transcription": null,
+      "missing_contract_id": "BOUNDARY_CONDITIONS",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "0d8528b0122e652e50136185fcf5cd79550b21353a1d706bafdb9a90812185b8",
+        "line_end": 51,
+        "line_start": 41,
+        "text": "FORMAL CORRESPONDENCE (DIMENSIONLESS MATCH)\n\nUnder standard nondimensionalization, the GPE reduces to an NLSE of the form:\n\n&nbsp; i \u2202t \u03c8 = -(1/2) \u2207^2 \u03c8 + g (|\u03c8|^2 - \u03c10) \u03c8\n\nwhich matches the operational CP-NLSE used in this repository\n\n(up to choice of \u03c10 normalization and additive chemical-potential gauge).\n\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_NORM_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "PARTIAL_CONTRACT_RECOVERED",
+      "extraction_note": "Form is stated, normalization contract remains incomplete.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "NONDIMENSIONALIZATION_OR_NORMALIZATION",
+      "normalization_or_nondimensionalization": "The source asserts standard nondimensionalization but supplies no complete scaling map.",
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/notes/ANCHOR_BEC_GP.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/notes/ANCHOR_BEC_GP.md",
+        "passive_text_capture_sha256": "055e4c80bb2001a01773955e5b82712cc9a5e349c4612bd63d8321936adeab8d",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/notes/ANCHOR_BEC_GP.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "055e4c80bb2001a01773955e5b82712cc9a5e349c4612bd63d8321936adeab8d"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "20d8eaf7fa6c76c34f3f14a832ff8cc91b499f091b406bcc869a037c6d5d7b44",
+        "line_end": 477,
+        "line_start": 466,
+        "text": "\\- It contains the minimal gradient term needed to reproduce the LSDA dispersive correction.\n\n\\- It yields a conserved norm,\n\n\u00a0 \\\\\\[\n\n\u00a0 N = \\\\int |\\\\phi|^2\\\\, dx,\n\n\u00a0 \\\\]\n\n\u00a0 which corresponds to LSDA mass conservation.\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": "N = integral |phi|^2 dx is asserted conserved under global U(1) symmetry.",
+      "contract_record_id": "CP_CONSERVE_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "Explicit source-bound invariant claim; truth and applicability remain for later adjudication.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "CONSERVED_OR_MONITORED_QUANTITIES",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/Monograph.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Monograph.md",
+        "passive_text_capture_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Monograph.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "11504321d9d6841e7101ac1542c3419ea5548f67acf8c650a4eb789ffe590ec4",
+        "line_end": 293,
+        "line_start": 257,
+        "text": "(1) Linear dispersion agreement (frequency estimation)\n\n\n\nUnder plane-wave evolution with g = 0, the numerically estimated \u03c9 must match:\n\n\n\n\u03c9(k) = 0.5 k\u00b2 + lam k\u2074 + beta k\u2076\n\n\n\nwithin relative error < 1e-2.\n\n\n\n(2) Mass (L\u00b2 norm) drift as a stability proxy\n\n\n\nOver a moderate evolution window, the relative drift in mass:\n\n\n\nM = \u222b |\u03c6|\u00b2 dx\n\n\n\nmust remain below 5e-2 under the operational split-step integrator.\n\n\n\n(3) Split-step vs Crank\u2013Nicolson agreement in the linear regime\n\n\n\nWith g = 0 and a plane-wave initial condition (linear regime), the final states produced by:"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_FAILURE_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "Explicit numerical pass/failure thresholds for the operational surrogate.",
+      "failure_or_instability_criterion": "Dispersion relative error <1e-2 and mass drift <5e-2 in the stated operational tests.",
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "FAILURE_AND_INSTABILITY_CRITERIA",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "bb892ef520cebb1b6a86de8ece10d2d51def4b7b03c34c75d4f2eb57856f5f19",
+        "line_end": 393,
+        "line_start": 369,
+        "text": "The operational numerics lock is supported by the following passing tests:\n\n\n\npython -m pytest -q tests/test\\_phase13\\_second\\_order\\_numerics.py\n\n\n\n... \\[100%]\n\n\n\npython -m pytest -q tests/test\\_phase13\\_second\\_order\\_cn\\_vs\\_splitstep.py\n\n\n\n. \\[100%]\n\n\n\npython -m pytest -q tests/test\\_phase13\\_second\\_order\\_mi.py\n\n\n\n. \\[100%]"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_IMPL_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+      "extraction_note": "Implementation claims are review-layer statements rather than recovered primary code artifacts.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": "The lock names three historical test paths and reports passes; the fixed 96-source set does not include their primary implementation custody.",
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "NUMERICAL_IMPLEMENTATION_PROVENANCE",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "f48356c055e9bfb5be68d54fcf222a022d4e05648aa0b817241288c0efdb9270",
+        "line_end": 36,
+        "line_start": 17,
+        "text": "--   \u03c9\u00b2(k) = (k\u00b2/2)\u00b2 + (g \u03c10) k\u00b2 + lam k\u2074\n\n/-- Squared angular frequency \u03c9\u00b2(k) for the first-order UCFF dispersion (locked form). -/\ndef omegaSq (g rho0 lam : Real) (k : Real) : Real :=\n  (k^2 / 2)^2 + (g * rho0) * k^2 + lam * k^4\n\n/-- Expansion lemma: \u03c9\u00b2(k) is definitionally equal to the locked polynomial. -/\ntheorem omegaSq_expand (g rho0 lam : Real) (k : Real) :\n    omegaSq g rho0 lam k = (k^2 / 2)^2 + (g * rho0) * k^2 + lam * k^4 := by\n  rfl\n\n-- Locked limiting case (standard Bogoliubov / NLS\u2013GPE limit):\n--   lam = 0, beta = 0, lambda_coh = 0  \u21d2  \u03c9\u00b2(k) = (k\u00b2/2)\u00b2 + (g \u03c10) k\u00b2\n-- Note: beta and lambda_coh do not appear in omegaSq (absent at linear order).\n\ntheorem omegaSq_bogoliubov_limit (g rho0 : Real) (k : Real) :\n    omegaSq g rho0 0 k = (k^2 / 2)^2 + (g * rho0) * k^2 := by\n  simp [omegaSq]\n\nend"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_DISP_002"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_DISP_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "Formally encoded squared dispersion, but conflicts with stored additive-frequency formulas.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "omega^2 = (k^2/2)^2 + g rho0 k^2 + lam k^4",
+      "missing_contract_id": "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/FirstOrderDispersion.lean",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/FirstOrderDispersion.lean",
+        "passive_text_capture_sha256": "172e679e25ded2345e3933472949a8991e5750f7052287e7ea6e9ac959551d03",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/FirstOrderDispersion.lean",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "172e679e25ded2345e3933472949a8991e5750f7052287e7ea6e9ac959551d03"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "e08b5519c31817e625575d93209f8366ea171dbbb78bd509f6b9d5574a0e2ace",
+        "line_end": 1106,
+        "line_start": 1093,
+        "text": "---\n\n## **25.3 First-Order Plane-Wave Dispersion**\n\n**\u03c9 = \u00bd k\u00b2 + lam k\u2074 + g rho0**\n\n---\n\n## **25.4 Second-Order Plane-Wave Dispersion**\n\n**\u03c9 = \u00bd k\u00b2 + lam k\u2074 + beta k\u2076 + g rho0**\n\nTests ensure literal presence of k\u2076.\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_DISP_001"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_DISP_002",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "Explicit additive-frequency record is incompatible with the squared interaction dispersion as written.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "omega = (1/2)k^2 + lam k^4 + g rho0; second-order record adds beta k^6",
+      "missing_contract_id": "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/equation_inventory.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory.md",
+        "passive_text_capture_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "0710845d43f2537f5bdbf44ac895b3e671f2357a0f6d96977f866e4c8489067c",
+        "line_end": 1108,
+        "line_start": 1092,
+        "text": "\n---\n\n## **25.3 First-Order Plane-Wave Dispersion**\n\n**\u03c9 = \u00bd k\u00b2 + lam k\u2074 + g rho0**\n\n---\n\n## **25.4 Second-Order Plane-Wave Dispersion**\n\n**\u03c9 = \u00bd k\u00b2 + lam k\u2074 + beta k\u2076 + g rho0**\n\nTests ensure literal presence of k\u2076.\n\n---\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_FREQ_002"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_FREQ_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "The additive formula is explicit but no source-bound resolution is supplied.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "omega = (1/2)k^2 + lam k^4 + g rho0",
+      "missing_contract_id": "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/equation_inventory.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory.md",
+        "passive_text_capture_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "1f87d0ec5cd690b3cc9cfe6ed5a0cb9a9f6464080453afd83e42a38d70f53c6f",
+        "line_end": 45,
+        "line_start": 31,
+        "text": "The first-order UCFF dispersion relation is specified at the level of \u03c9\u00b2(k) as:\n\n\n\n\u03c9\u00b2(k) = (k\u00b2/2)\u00b2 + (g \u03c10) k\u00b2 + lam k\u2074. \n\n\n\nThis is a direct specification of the squared angular frequency as a function of spatial wavenumber. It is not an intermediate result derived from solving the first-order equation of motion for \u03c9(k). The project treats this \u03c9\u00b2(k) expression as the canonical dispersion specification for the first-order layer.\n\n\n\nLOCKED LIMITING CASE (STANDARD BOGOLIUBOV / NLS\u2013GPE LIMIT)\n\n"
+      },
+      "ccft_branch": "CP_NLSE",
+      "conflicting_source_records": [
+        "CP_FREQ_001"
+      ],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "CP_FREQ_002",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "CONFLICTING_SOURCE_CONTRACTS",
+      "extraction_note": "The lock explicitly treats omega-squared as the specification; it does not reconcile the additive historical record.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "omega^2 = (k^2/2)^2 + g rho0 k^2 + lam k^4",
+      "missing_contract_id": "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+        "passive_text_capture_sha256": "3ea712dab04bb790c63e64d826551a7637265530c09c5502a0c12df0881173de",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "3ea712dab04bb790c63e64d826551a7637265530c09c5502a0c12df0881173de"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "469f8cc36ed37dca44722f13bd958d1874c987623f72fb3441d14d311d200c7b",
+        "line_end": 75,
+        "line_start": 45,
+        "text": "\u03c1(x, t)\n\nMass or density-like scalar field.\n\n\n\nu(x, t)\n\nVelocity-like scalar field.\n\n\n\nR(x, t)\n\nRotor field encoding local rotational structure.\n\n\n\nK(x, t)\n\nCurvature field encoding higher-order spatial structure.\n\n\n\nThe state at time t is:\n\n\n\nstate(t) = (\u03c1(x, t), u(x, t), R(x, t), K(x, t))\n\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_STATE_001",
+      "definitions_of_all_symbols": [
+        "rho: density-like scalar",
+        "u: velocity-like scalar",
+        "R: rotor field",
+        "K: curvature field"
+      ],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "All four evolved state variables are explicitly named and described.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "state(t) = (rho(x,t), u(x,t), R(x,t), K(x,t))",
+      "missing_contract_id": "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "passive_text_capture_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "48fb3ee1be57c920f1e4064637d2b43a892ab7d8a9338172ec2540542306a7d2",
+        "line_end": 43,
+        "line_start": 17,
+        "text": "Spatial domain: 1D periodic interval x \u2208 [0, L].\n\nPrimary CRFT/LSDA variables:\n\n\u03c1(x,t) = |\u03c6|\u00b2\n\u03b8(x,t) = arg \u03c6\nu(x,t) = \u03b8_x\n\nNew mesoscopic LCRD variables:\n\nR(x,t) = rotor amplitude (mesoscopic coherence magnitude)\nK(x,t) = rotor curvature (mesoscopic gradient of coherence structure)\n\nInterpretation:\n\nR measures the strength of local micro-phase disorder beyond LSDA variance.\nK measures spatial variation (curvature) of that disorder.\n\nConstraints:\n\n\u03c1 \u2265 0\nR \u2265 0\nK \u2208 \u211d\nAll fields assumed periodic and differentiable.\n\n============================================================\n2. LCRD Rotor\u2013Curvature Energy Functional"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_DATA_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "PARTIAL_CONTRACT_RECOVERED",
+      "extraction_note": "Boundary and pointwise constraints are explicit, while initial-data closure remains incomplete.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": "One-dimensional periodic differentiable fields with rho>=0 and R>=0; no complete admissible initial-data class.",
+      "mathematical_transcription": null,
+      "missing_contract_id": "INITIAL_AND_BOUNDARY_DATA",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/LCRD_Reconstruction_v3.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "passive_text_capture_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "cda8bc76826fcfc060b1e7e32ccf057041522818950a2970b15560629a5fb9e5",
+        "line_end": 224,
+        "line_start": 209,
+        "text": "\nInitial condition:\n\n\u03c1 = rho0 (constant)\nu = 0\nK = 0\nR = R0 \u2260 0 (spatially uniform)\n\nParameters:\n\nb_R = 0\nd_R = 0\n\nDynamics:\n\nR_t = \u2212 \u03b1_R R"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_DATA_002",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "NUMERICAL_DEFAULT_ONLY",
+      "extraction_note": "This is a validation example, not a general initial-data contract.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": "A single rotor-isolation test initialization.",
+      "mathematical_transcription": null,
+      "missing_contract_id": "INITIAL_AND_BOUNDARY_DATA",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/LCRD_Reconstruction_v3.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "passive_text_capture_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "29ad2a67a88b51d0dc0f08055ab364eb32fa1a3698c4193d582dcdb57262796b",
+        "line_end": 106,
+        "line_start": 74,
+        "text": "u_t = \u2212 u u_x \u2212 g_eff \u03c1_x + Q_rotor + \u03bd_eff u_xx\n\nwhere:\n\nQ_rotor = c1 R_x + c2 K_xx\n\nParameters:\n\ng_eff = 9.8696\n\u03bd_eff = 0.46 \u03bd_code (when mapped from LSDA)\nlam = 0\nbeta = 0\n\n3.3 Rotor Evolution Equation\n\nR_t = \u2212 \u03b1_R R + b_R |u_x| + d_R K_x\n\n\u03b1_R, b_R, d_R > 0\n\nMeaning:\n\n\u2022 \u2212\u03b1_R R = relaxation of rotor amplitude\n\u2022 b_R |u_x| = production from local shear\n\u2022 d_R K_x = coupling to curvature gradient\n\n3.4 Curvature Evolution Equation\n\nK_t = \u2212 \u03b1_K K + b_K R_x\n\n\u03b1_K, b_K > 0\n\nMeaning:\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_PARAM_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "Explicit values and positivity ranges are present in the reconstruction source; their authority is deferred to Stage 3.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "PARAMETER_RANGES",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": "g_eff=9.8696; nu_eff=0.46 nu_code; lam=beta=0; alpha_R,b_R,d_R,alpha_K,b_K>0.",
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/LCRD_Reconstruction_v3.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "passive_text_capture_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "4f3bcef48aa06291982098a3d30d48b7026ef0769a60b93bd88ab474a2b9d2ff",
+        "line_end": 86,
+        "line_start": 70,
+        "text": "\u03c1_t = \u2212 \u2202x(\u03c1 u)\n\n3.2 Momentum Equation with Rotor\u2013Curvature Closure\n\nu_t = \u2212 u u_x \u2212 g_eff \u03c1_x + Q_rotor + \u03bd_eff u_xx\n\nwhere:\n\nQ_rotor = c1 R_x + c2 K_xx\n\nParameters:\n\ng_eff = 9.8696\n\u03bd_eff = 0.46 \u03bd_code (when mapped from LSDA)\nlam = 0\nbeta = 0\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_CLOSURE_001",
+      "definitions_of_all_symbols": [
+        "Q_rotor: rotor-curvature pressure correction",
+        "c1,c2: rotor and curvature stiffness coefficients"
+      ],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "Explicit source-bound closure inserted in the momentum equation.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "Q_rotor = c1 R_x + c2 K_xx; u_t = -u u_x - g_eff rho_x + Q_rotor + nu_eff u_xx",
+      "missing_contract_id": "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/LCRD_Reconstruction_v3.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "passive_text_capture_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "8c1bf67714c6527c720e5a258b147e7f55a4d96ff02ea2e3fb1d19c80581c769",
+        "line_end": 267,
+        "line_start": 247,
+        "text": "Numerical Implementation\n\n\n\nThe system is implemented in lcrd\\_v3.py using:\n\n\n\n\u2022 Spectral spatial differentiation on a periodic grid  \n\n\u2022 Explicit fourth-order Runge\u2013Kutta (RK4) time stepping  \n\n\u2022 Periodic boundary conditions  \n\n\u2022 Deterministic floating-point arithmetic  \n\n\n\nThe implementation is algebraically consistent with the governing equations above.\n\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_IMPL_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+      "extraction_note": "Reproducibility cannot be established from a documentary assertion alone.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": "The lock names lcrd_v3.py and RK4/spectral conventions, but the primary implementation is absent from the frozen set.",
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "REPRODUCIBLE_IMPLEMENTATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "passive_text_capture_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "ae819ac49a698d9d103533e523dc301569386dec59cdafb309c3e58602013e16",
+        "line_end": 232,
+        "line_start": 207,
+        "text": "\n\nRotor evolution:\n\n\n\n\u2202t R\n\n= \u2212alpha\\_R R\n\n&nbsp; + b\\_R |\u2202x u|\n\n&nbsp; + d\\_R \u2202x K\n\n\n\nCurvature evolution:\n\n\n\n\u2202t K\n\n= \u2212alpha\\_K K\n\n&nbsp; + b\\_K \u2202x R\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_COUPLING_001",
+      "definitions_of_all_symbols": [
+        "alpha_R,alpha_K: relaxation rates",
+        "b_R,b_K,d_R: source/coupling coefficients"
+      ],
+      "evidence_strength_classification": "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+      "extraction_note": "Both directed rotor-curvature evolution couplings are explicit.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "R_t=-alpha_R R+b_R|u_x|+d_R K_x; K_t=-alpha_K K+b_K R_x",
+      "missing_contract_id": "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "lineage_id": "SINGLETON:CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "passive_text_capture_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26",
+        "portable_in_normal_git_history": true,
+        "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+        "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER",
+        "verified_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "c7eb7787aa6ea9caae548d68d6b8826d475505b5d2e7a43868037b79fe88e929",
+        "line_end": 132,
+        "line_start": 111,
+        "text": "4. Origin of R and K from LSDA Micro-Structure\n\nLSDA defines the micro-field \u03c6 and its phase \u03b8. From LSDA:\n\nu = \u03b8_x\n\u03c3\u00b2 = phase-variance coarse-grained over a mesoscopic window\n\nRotor amplitude:\n\nR \u2248 \u03c3\n\nRotor curvature:\n\nK \u2248 \u03c3_x\n\nThus:\n\nc1 R\u00b2 represents micro-phase variance energy.\nc2 K\u00b2 represents spatial inhomogeneity of micro-phase variance.\n\nThis mapping preserves LSDA micro-structure and ensures that the LCRD energy functional is consistent with LSDA micro-diagnostics.\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_LSDA_001",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "HEURISTIC_NOT_A_CONTRACT",
+      "extraction_note": "Approximate identifications are asserted without a bounded coarse-graining operator or derivation.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": "sigma^2 = coarse-grained phase variance; R approximately sigma; K approximately sigma_x",
+      "missing_contract_id": "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/docs/LCRD_Reconstruction_v3.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "passive_text_capture_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    },
+    {
+      "bounded_supporting_excerpt_and_location": {
+        "excerpt_sha256": "074c27a55e8884baefcf9fa5805a1b607f48a4b7c0f32d3599c451d9d65457db",
+        "line_end": 258,
+        "line_start": 239,
+        "text": "&nbsp;    - `v(x) = d(theta)/dx` (e.g., spectral or finite-difference derivative).\n\n\n\n4\\. `compute\\_micro\\_invariants(state, config) -> dict`  \n\n&nbsp;  - Returns quantities like:\n\n&nbsp;    - total density \\\\(\\\\sum\\_j n\\_j\\\\),\n\n&nbsp;    - mean phase or circulation,\n\n&nbsp;    - any candidate-specific invariants.\n\n\n\nThese functions are conceptual; implementations can be in Python/NumPy or other languages as long as they obey these semantics.\n\n\n"
+      },
+      "ccft_branch": "LCRD_V3",
+      "conflicting_source_records": [],
+      "conservation_invariant_or_monitoring_rule": null,
+      "contract_record_id": "LCRD_LSDA_002",
+      "definitions_of_all_symbols": [],
+      "evidence_strength_classification": "HEURISTIC_NOT_A_CONTRACT",
+      "extraction_note": "The legacy harness explicitly characterizes its API as conceptual and implementation-variable.",
+      "failure_or_instability_criterion": null,
+      "implementation_provenance": null,
+      "initial_and_boundary_conditions": null,
+      "mathematical_transcription": null,
+      "missing_contract_id": "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION",
+      "normalization_or_nondimensionalization": null,
+      "parameter_values_or_ranges": null,
+      "portability_limitation": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "source_record_id_path_hash_lineage_and_custody": {
+        "custody_class": "GIT_TRACKED",
+        "custody_relative_path": "archive/lcrd_legacy_docs/ft_step4_coarse_graining_harness.md",
+        "lineage_id": "SINGLETON:EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step4_coarse_graining_harness.md",
+        "passive_text_capture_sha256": "8b4601f32a20d74b9a4be80eaeca2cd0f69b910cb5b86ad6ed0471e600b8337d",
+        "portable_in_normal_git_history": true,
+        "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step4_coarse_graining_harness.md",
+        "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES",
+        "verified_sha256": "8b4601f32a20d74b9a4be80eaeca2cd0f69b910cb5b86ad6ed0471e600b8337d"
+      },
+      "stage_3_eligibility": "ELIGIBLE_FOR_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+    }
+  ],
+  "source_review_ledger": [
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "Integration Proposal.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "7f61f98621d8f3da617cfc8cccc143d6a84dcfdc065dc9390a17f74b2acaac5a",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:Integration Proposal.txt",
+      "verified_sha256": "7f61f98621d8f3da617cfc8cccc143d6a84dcfdc065dc9390a17f74b2acaac5a"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "Legacy_Reintegration_Register.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "6d0e0561bfbb7e996058abf0634c0fa8191f9d2575b2629ad040e7afdea5360e",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:Legacy_Reintegration_Register.md",
+      "verified_sha256": "6d0e0561bfbb7e996058abf0634c0fa8191f9d2575b2629ad040e7afdea5360e"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "State_of_the_Theory.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "5257c6526841890fe40dad7fdcd04788ca9e70f809cd956d2ed4f9b3cac6ed57",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:State_of_the_Theory.md",
+      "verified_sha256": "5257c6526841890fe40dad7fdcd04788ca9e70f809cd956d2ed4f9b3cac6ed57"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "ToE_Repository_Comprehensive_Assessment_20260411.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "e220f33c4d33cdc0ed358e8e27df099007942fb503f428345aa56d27a33befa4",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:ToE_Repository_Comprehensive_Assessment_20260411.md",
+      "verified_sha256": "e220f33c4d33cdc0ed358e8e27df099007942fb503f428345aa56d27a33befa4"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/HOUSEKEEPING_LOG.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "faece52def6c70e740733378079f24bb931fe1e86918c1ed6828d9999fd5c0b0",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/HOUSEKEEPING_LOG.md",
+      "verified_sha256": "faece52def6c70e740733378079f24bb931fe1e86918c1ed6828d9999fd5c0b0"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "db93c7e200d5554b19d2c81d8d30ea12c3351b7584c3d23c5cbc3b088fa9c680",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md",
+      "verified_sha256": "db93c7e200d5554b19d2c81d8d30ea12c3351b7584c3d23c5cbc3b088fa9c680"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [
+        "LCRD_DATA_001",
+        "LCRD_DATA_002",
+        "LCRD_PARAM_001",
+        "LCRD_CLOSURE_001",
+        "LCRD_LSDA_001"
+      ],
+      "custody_relative_path": "archive/docs/LCRD_Reconstruction_v3.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+        "HEURISTIC_NOT_A_CONTRACT",
+        "NUMERICAL_DEFAULT_ONLY",
+        "PARTIAL_CONTRACT_RECOVERED"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/LCRD_Reconstruction_v3.md",
+      "verified_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/Monograph/CCFT Monograph.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ce666096b31e581b07371b034618992796df6fc531786db2504718107fc44ccf",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/Monograph/CCFT Monograph.md",
+      "verified_sha256": "ce666096b31e581b07371b034618992796df6fc531786db2504718107fc44ccf"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/Monograph/Monograph Development Framework for the Classical Coherence Field Theory (CCFT).md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "668590e88f9a1ff17a5b38d32c2695384ce30dcec693494eaa1e8f245264f42e",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/Monograph/Monograph Development Framework for the Classical Coherence Field Theory (CCFT).md",
+      "verified_sha256": "668590e88f9a1ff17a5b38d32c2695384ce30dcec693494eaa1e8f245264f42e"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/dev_notes/Powershell CMDs.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "531728173bdec71009b932f53cc6a1bb23697aac3dda9c7e3fe7fcd3a2cb6b1e",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/dev_notes/Powershell CMDs.txt",
+      "verified_sha256": "531728173bdec71009b932f53cc6a1bb23697aac3dda9c7e3fe7fcd3a2cb6b1e"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_DISP_002",
+        "CP_FREQ_001"
+      ],
+      "custody_relative_path": "archive/docs/equation_inventory.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "CONFLICTING_SOURCE_CONTRACTS"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory.md",
+      "verified_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_final.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "f1a37396d946c508541bdfdc7fd02e465cd763c5dbb2a281a61243f1a928b088",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_final.md",
+      "verified_sha256": "f1a37396d946c508541bdfdc7fd02e465cd763c5dbb2a281a61243f1a928b088"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv2.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "a62fdd3f7ba6e15962f3c4611f8009ef11bcbe26e68ec550f1a5002e1d5629dc",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv2.md",
+      "verified_sha256": "a62fdd3f7ba6e15962f3c4611f8009ef11bcbe26e68ec550f1a5002e1d5629dc"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv3.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "1d554343a29021891b8ecdbcc4d2c895272aff063e78d47ed5e1a625745fadae",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv3.md",
+      "verified_sha256": "1d554343a29021891b8ecdbcc4d2c895272aff063e78d47ed5e1a625745fadae"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv4.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "01a3666b5e71f1d03b4c1d4935389010135b787bbc0118ee4744e936a4c0a312",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv4.md",
+      "verified_sha256": "01a3666b5e71f1d03b4c1d4935389010135b787bbc0118ee4744e936a4c0a312"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv5.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "82d9192931ac5220b18cab94fcabcdbf4264c981d3710b5c6b64c0e614b63ed3",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv5.md",
+      "verified_sha256": "82d9192931ac5220b18cab94fcabcdbf4264c981d3710b5c6b64c0e614b63ed3"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv6.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "88f354f5a6a6afedd5be91e0e23ef6c0386272846ad3e4a2b9c4ffeffec03245",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv6.md",
+      "verified_sha256": "88f354f5a6a6afedd5be91e0e23ef6c0386272846ad3e4a2b9c4ffeffec03245"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv7.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "3f3960e70c3b018506d0548d8bafca047e8df6f55f008563754d902a341e6c84",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv7.md",
+      "verified_sha256": "3f3960e70c3b018506d0548d8bafca047e8df6f55f008563754d902a341e6c84"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/equation_inventory_finalv8.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "988edf247ef3703a516e577646b1075d7b91a54beaf42d1050b85ab516b40231",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/equation_inventory_finalv8.md",
+      "verified_sha256": "988edf247ef3703a516e577646b1075d7b91a54beaf42d1050b85ab516b40231"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theory_ARCHIVE.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "19362ddd16bac3243aea2fcfa5d49e7b4f6ddfc092a51864c537443e50424a21",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theory_ARCHIVE.md",
+      "verified_sha256": "19362ddd16bac3243aea2fcfa5d49e7b4f6ddfc092a51864c537443e50424a21"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theoryv2.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "e67b26f13a3566e41831208f49af0838aeb3106aa28d1b7ff821fbd853540acc",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theoryv2.md",
+      "verified_sha256": "e67b26f13a3566e41831208f49af0838aeb3106aa28d1b7ff821fbd853540acc"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theoryv3.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "7c32be40f2af8ad58192e40dca53efe678fdb7a9736577de86a92befe1c9b032",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theoryv3.md",
+      "verified_sha256": "7c32be40f2af8ad58192e40dca53efe678fdb7a9736577de86a92befe1c9b032"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theoryv4.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "79c40870c5a0f535bd7f15c6fa97e4c778ffc10d91a0c8d436ffce6ec99eb0a9",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theoryv4.md",
+      "verified_sha256": "79c40870c5a0f535bd7f15c6fa97e4c778ffc10d91a0c8d436ffce6ec99eb0a9"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theoryv6.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "1730279477c88ff69f403c64c7de38363e440826289369c898de75c5617a1f2e",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theoryv6.md",
+      "verified_sha256": "1730279477c88ff69f403c64c7de38363e440826289369c898de75c5617a1f2e"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theoryv7.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ff1371e65ae6116f6fe945da598992285f7864f25737953d6638f2867517a46f",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theoryv7.md",
+      "verified_sha256": "ff1371e65ae6116f6fe945da598992285f7864f25737953d6638f2867517a46f"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/docs/state_of_the_theoryv8.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "6906d391569d705607691515c7ceda679f1b5580fea20f7096292e5da97f06e1",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/docs/state_of_the_theoryv8.md",
+      "verified_sha256": "6906d391569d705607691515c7ceda679f1b5580fea20f7096292e5da97f06e1"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/field_theory/docs/dev_notes/equation_inventory_master.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "bb6dd269e50c5a2a2ec6af723bc34c072ace16e121bd12a42061c17bbe4b5022",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/field_theory/docs/dev_notes/equation_inventory_master.md",
+      "verified_sha256": "bb6dd269e50c5a2a2ec6af723bc34c072ace16e121bd12a42061c17bbe4b5022"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/field_theory/docs/dev_notes/test_inventory_master.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "bb74c805ad390a561b77db4c72c1d695613544a130e6b75b2c290d3fb7483e0b",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/field_theory/docs/dev_notes/test_inventory_master.md",
+      "verified_sha256": "bb74c805ad390a561b77db4c72c1d695613544a130e6b75b2c290d3fb7483e0b"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_discrete_mapping.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "e49ffdf3dafda767f3e470ac1f75a668e94fc316d1ceed166785614f96fa1a14",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_01_discrete_mapping.md",
+      "verified_sha256": "e49ffdf3dafda767f3e470ac1f75a668e94fc316d1ceed166785614f96fa1a14"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_dispersion_calibration.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "2b2d5db116357d2ee82fc0647ca9c0486d05d61269f6ffcacc56871fc4da1858",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_01_dispersion_calibration.md",
+      "verified_sha256": "2b2d5db116357d2ee82fc0647ca9c0486d05d61269f6ffcacc56871fc4da1858"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_dispersion_matching_derivation.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ac412bbc20e646d9b6f2290e6d38227c926eff40a7e5916758e9f175f8a26db0",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_01_dispersion_matching_derivation.md",
+      "verified_sha256": "ac412bbc20e646d9b6f2290e6d38227c926eff40a7e5916758e9f175f8a26db0"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_dynamics.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ee6678859aaaa020fa430df2c9b435bbe9546ceb468ac1615c78f5858dbea97b",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_01_dynamics.md",
+      "verified_sha256": "ee6678859aaaa020fa430df2c9b435bbe9546ceb468ac1615c78f5858dbea97b"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_local_rotor_density.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "1df7d4093461365de9e465d789b80b364431d733af20f8dde83661866ff4cc3e",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_01_local_rotor_density.md",
+      "verified_sha256": "1df7d4093461365de9e465d789b80b364431d733af20f8dde83661866ff4cc3e"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_numerics.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ca370dbeeffb4e52afcf601090a6661d50b994b12f520a3b729b2f9bc9a5544c",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_01_numerics.md",
+      "verified_sha256": "ca370dbeeffb4e52afcf601090a6661d50b994b12f520a3b729b2f9bc9a5544c"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_candidate_algebra_02_local_spinor_density.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "f9c0e2b9d0734a7a333ef83e6835546e95d330fcbf3880e8d4baffb3458b5ae7",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_candidate_algebra_02_local_spinor_density.md",
+      "verified_sha256": "f9c0e2b9d0734a7a333ef83e6835546e95d330fcbf3880e8d4baffb3458b5ae7"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [
+        "LCRD_LSDA_002"
+      ],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step4_coarse_graining_harness.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "HEURISTIC_NOT_A_CONTRACT"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "8b4601f32a20d74b9a4be80eaeca2cd0f69b910cb5b86ad6ed0471e600b8337d",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step4_coarse_graining_harness.md",
+      "verified_sha256": "8b4601f32a20d74b9a4be80eaeca2cd0f69b910cb5b86ad6ed0471e600b8337d"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step5_lcrd_simulation_engine.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "11c838f176d116d4e6c197ec057a4eff52fc984eb63d14eaee597250cb257813",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step5_lcrd_simulation_engine.md",
+      "verified_sha256": "11c838f176d116d4e6c197ec057a4eff52fc984eb63d14eaee597250cb257813"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step5_status.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "7c47d6774a6c2eb4c4a91f3dbcc822fb9dc9202a336037ef94d150d54dbbfedb",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step5_status.md",
+      "verified_sha256": "7c47d6774a6c2eb4c4a91f3dbcc822fb9dc9202a336037ef94d150d54dbbfedb"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_design.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "b118435955fea444823f08f34ef3dfce978c92d0248807d93473c5ed0a787872",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step7_lcrd_v2_design.md",
+      "verified_sha256": "b118435955fea444823f08f34ef3dfce978c92d0248807d93473c5ed0a787872"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_dynamics.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "268aed01ada2e18a51cb5381f8ffafe4f9b43a95df80936cf2b2f0ad0aa4ec13",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step7_lcrd_v2_dynamics.md",
+      "verified_sha256": "268aed01ada2e18a51cb5381f8ffafe4f9b43a95df80936cf2b2f0ad0aa4ec13"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_test_plan.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "484f3fe8ed22aa44e7ef0ab4637c996742bd86ada7c55976e45b8621e33e7a6f",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step7_lcrd_v2_test_plan.md",
+      "verified_sha256": "484f3fe8ed22aa44e7ef0ab4637c996742bd86ada7c55976e45b8621e33e7a6f"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_test_runner.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "a850d2915fc49b796a6d78fcdf9f00db10b7f49150ed6af75bec8ebf55ee20d5",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/ft_step7_lcrd_v2_test_runner.md",
+      "verified_sha256": "a850d2915fc49b796a6d78fcdf9f00db10b7f49150ed6af75bec8ebf55ee20d5"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/lcrd_legacy_docs/tests_filelist.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ee610de9a4f7ce8854d8178897d681ffb78fb757696429c59bf5aef33ae739bb",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/lcrd_legacy_docs/tests_filelist.txt",
+      "verified_sha256": "ee610de9a4f7ce8854d8178897d681ffb78fb757696429c59bf5aef33ae739bb"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/repo_all_import_lines.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "67c652275f75fb4e7d5bd0d5443a56f87ab5359257a8e3b281f452ffd193ec5e",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/repo_all_import_lines.txt",
+      "verified_sha256": "67c652275f75fb4e7d5bd0d5443a56f87ab5359257a8e3b281f452ffd193ec5e"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/repo_all_py_files.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "416c2cb8afb5fce310a8bf57ac16bcf4c18d5396698dd4ff248a20e084d80232",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/repo_all_py_files.txt",
+      "verified_sha256": "416c2cb8afb5fce310a8bf57ac16bcf4c18d5396698dd4ff248a20e084d80232"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "archive/unused_py_outside_archive.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "cacdf721764aced75ed7dd5833708166eb9dfc266ed8182651ffc884e914e727",
+      "record_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES:archive/unused_py_outside_archive.txt",
+      "verified_sha256": "cacdf721764aced75ed7dd5833708166eb9dfc266ed8182651ffc884e914e727"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "backup/canonical_backup_20260118/State_of_the_Theory.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "3c9ff5b47f1938327440106c8f5f0c578a951a4720bb2a13c5db014f13e5dfc6",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:backup/canonical_backup_20260118/State_of_the_Theory.md",
+      "verified_sha256": "3c9ff5b47f1938327440106c8f5f0c578a951a4720bb2a13c5db014f13e5dfc6"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "backup/canonical_backup_20260118/formal/markdown locks/derivations/DR01_redundant_derivations.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "64bef0d0298f9db62d9530008c430e8bc6659fa5670cf5a30d95454e9ab3d54a",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:backup/canonical_backup_20260118/formal/markdown locks/derivations/DR01_redundant_derivations.md",
+      "verified_sha256": "64bef0d0298f9db62d9530008c430e8bc6659fa5670cf5a30d95454e9ab3d54a"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/Neuro-Symbolic AI Workflow Thread.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "d29710101150cef71f9e26bfe75924487654498fce27f4b1de0c8a08e6598fb5",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/Neuro-Symbolic AI Workflow Thread.txt",
+      "verified_sha256": "d29710101150cef71f9e26bfe75924487654498fce27f4b1de0c8a08e6598fb5"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/Physical Derivation Thread.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ea4acb2b8235f98b8eccd39d0fc7c5449f7338497674ee639565af68b68555b1",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/Physical Derivation Thread.txt",
+      "verified_sha256": "ea4acb2b8235f98b8eccd39d0fc7c5449f7338497674ee639565af68b68555b1"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/aristotle/claim_registry.yaml",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ffb127b5a1e937974bc4f87b83e4969973e315d645b668b460cb5fc9c43d2cac",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/aristotle/claim_registry.yaml",
+      "verified_sha256": "ffb127b5a1e937974bc4f87b83e4969973e315d645b668b460cb5fc9c43d2cac"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/docs/crft_validation_queue_protocol.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "bbc285b1fe0acf857814b16e5434f6ef12aa5dc809a39ced1063dc53cc0038a5",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/docs/crft_validation_queue_protocol.md",
+      "verified_sha256": "bbc285b1fe0acf857814b16e5434f6ef12aa5dc809a39ced1063dc53cc0038a5"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
+      "record_id": "FORMAL_OUTPUTS_AND_RELEASE_RECORDS:formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+      "verified_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "a15b323953eb2e27de531dff9a094944ca398e80ddd1fe7bb04015c2889766ce",
+      "record_id": "FORMAL_OUTPUTS_AND_RELEASE_RECORDS:formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v1.json",
+      "verified_sha256": "a15b323953eb2e27de531dff9a094944ca398e80ddd1fe7bb04015c2889766ce"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/docs/ucff_core_front_door_contract.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "4785d4df51b77f386f9bf11ce6e01b050dc5b0da3caa03f884fd664d94112366",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/docs/ucff_core_front_door_contract.md",
+      "verified_sha256": "4785d4df51b77f386f9bf11ce6e01b050dc5b0da3caa03f884fd664d94112366"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/docs/ucff_core_front_door_spec.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "ab90cbd93dc22c889e3d22ea5266b557a0f0d04bbcda9d0251b2b33c884f25a6",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/docs/ucff_core_front_door_spec.md",
+      "verified_sha256": "ab90cbd93dc22c889e3d22ea5266b557a0f0d04bbcda9d0251b2b33c884f25a6"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/markdown locks/gates/admissibility_manifest.json",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "bf44287823ccbff8dc66260fb95611e5c44f4b8076d33a6d6e2072dc95be1a19",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/markdown locks/gates/admissibility_manifest.json",
+      "verified_sha256": "bf44287823ccbff8dc66260fb95611e5c44f4b8076d33a6d6e2072dc95be1a19"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_NORM_001"
+      ],
+      "custody_relative_path": "formal/notes/ANCHOR_BEC_GP.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "PARTIAL_CONTRACT_RECOVERED"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "055e4c80bb2001a01773955e5b82712cc9a5e349c4612bd63d8321936adeab8d",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/notes/ANCHOR_BEC_GP.md",
+      "verified_sha256": "055e4c80bb2001a01773955e5b82712cc9a5e349c4612bd63d8321936adeab8d"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "2384951f7526ac862638e414775afe47220069e4ae15b7e7142c8f4e6e325baa",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+      "verified_sha256": "2384951f7526ac862638e414775afe47220069e4ae15b7e7142c8f4e6e325baa"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Dispersion.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "3bb37e035c6ec0b762a3694057d7d4dbe31bf3994531fd924fa79927aa863a36",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Dispersion.lean",
+      "verified_sha256": "3bb37e035c6ec0b762a3694057d7d4dbe31bf3994531fd924fa79927aa863a36"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_EQ_001"
+      ],
+      "custody_relative_path": "formal/proving docs/FirstOrder.lean",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "CONFLICTING_SOURCE_CONTRACTS"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "e041a9015cc073dbaad15556c4a0af908168a3400a577f74ef113524c7c39a46",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/FirstOrder.lean",
+      "verified_sha256": "e041a9015cc073dbaad15556c4a0af908168a3400a577f74ef113524c7c39a46"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_DISP_001"
+      ],
+      "custody_relative_path": "formal/proving docs/FirstOrderDispersion.lean",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "CONFLICTING_SOURCE_CONTRACTS"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "172e679e25ded2345e3933472949a8991e5750f7052287e7ea6e9ac959551d03",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/FirstOrderDispersion.lean",
+      "verified_sha256": "172e679e25ded2345e3933472949a8991e5750f7052287e7ea6e9ac959551d03"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_FREQ_002"
+      ],
+      "custody_relative_path": "formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "CONFLICTING_SOURCE_CONTRACTS"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "3ea712dab04bb790c63e64d826551a7637265530c09c5502a0c12df0881173de",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+      "verified_sha256": "3ea712dab04bb790c63e64d826551a7637265530c09c5502a0c12df0881173de"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [
+        "LCRD_STATE_001",
+        "LCRD_IMPL_001",
+        "LCRD_COUPLING_001"
+      ],
+      "custody_relative_path": "formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "verified_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_EQ_003",
+        "CP_COEFF_001",
+        "CP_DATA_001",
+        "CP_BOUNDARY_001",
+        "CP_FAILURE_001",
+        "CP_IMPL_001"
+      ],
+      "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "CONFLICTING_SOURCE_CONTRACTS",
+        "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+        "NUMERICAL_DEFAULT_ONLY",
+        "PARTIAL_CONTRACT_RECOVERED"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+      "verified_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/LOCK_SECOND_ORDER_TIME_DOMAIN.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "9563c2906b9dc7b98fc26393be5344af9ca2d1c2aa23aa040d940c3241a770d6",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/LOCK_SECOND_ORDER_TIME_DOMAIN.md",
+      "verified_sha256": "9563c2906b9dc7b98fc26393be5344af9ca2d1c2aa23aa040d940c3241a770d6"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [
+        "CP_EQ_002",
+        "CP_CONSERVE_001"
+      ],
+      "custody_relative_path": "formal/proving docs/Monograph.md",
+      "disposition": "MATERIAL_EVIDENCE_EXTRACTED",
+      "evidence_strength_classifications": [
+        "CONFLICTING_SOURCE_CONTRACTS",
+        "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Monograph.md",
+      "verified_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Monograph_aristotle.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "8eb342be5179f787024c507d71fe5678950ee4a8c6524527fad8eeb7079b2c94",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Monograph_aristotle.lean",
+      "verified_sha256": "8eb342be5179f787024c507d71fe5678950ee4a8c6524527fad8eeb7079b2c94"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/P1_NLS_EFT.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "c6a564668f32284ed1c29094c0d1dc0127a4fcf81e0c24b08a0ddaad8139c072",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/P1_NLS_EFT.lean",
+      "verified_sha256": "c6a564668f32284ed1c29094c0d1dc0127a4fcf81e0c24b08a0ddaad8139c072"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part 0 - Front Matter.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "146a2eeda206a0ce38b820ba9f072958fd1ad8f318b2f2e4ad87269e128420ac",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part 0 - Front Matter.md",
+      "verified_sha256": "146a2eeda206a0ce38b820ba9f072958fd1ad8f318b2f2e4ad87269e128420ac"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part I - Conceptual Foundations.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "8a31a636b20a716d1f4c36d8f0664100606c43118f24b6c91becc88ce7cf46ed",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part I - Conceptual Foundations.md",
+      "verified_sha256": "8a31a636b20a716d1f4c36d8f0664100606c43118f24b6c91becc88ce7cf46ed"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part II - Mathematical Structure and Derivations.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "d8f1ad4b7f4ecadf6b7cdd57f9eed03e88242a38a0c463ec1fdca8385b298a5c",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part II - Mathematical Structure and Derivations.md",
+      "verified_sha256": "d8f1ad4b7f4ecadf6b7cdd57f9eed03e88242a38a0c463ec1fdca8385b298a5c"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part III - Functional Principles.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "19aabcd71e112b6a9b1c30c992199ee5e2564f8d13a0b7d26b9e080a115cc391",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part III - Functional Principles.md",
+      "verified_sha256": "19aabcd71e112b6a9b1c30c992199ee5e2564f8d13a0b7d26b9e080a115cc391"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part IV - Numerical Implementation.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "70e3408e5d4c6b539fb03c420f0e0f4e9c1482e2d5351e479699df2c605985d4",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part IV - Numerical Implementation.md",
+      "verified_sha256": "70e3408e5d4c6b539fb03c420f0e0f4e9c1482e2d5351e479699df2c605985d4"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part V - Validation and Verification.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "51e139058296cd58c4aff8fdc5539da38af15a2c1eae7602d9428e10e76917a7",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part V - Validation and Verification.md",
+      "verified_sha256": "51e139058296cd58c4aff8fdc5539da38af15a2c1eae7602d9428e10e76917a7"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part VI - Physical Interpretation and Applications.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "fc4910aca96951a920389849c4e9fa031ccacf50704adbb451da879872ff366a",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part VI - Physical Interpretation and Applications.md",
+      "verified_sha256": "fc4910aca96951a920389849c4e9fa031ccacf50704adbb451da879872ff366a"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/Part VIII - Appendices.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "4249c5720b31e0275ea613f9db3982865abc8e548d2c8bac05ff9360ed0206c0",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/Part VIII - Appendices.md",
+      "verified_sha256": "4249c5720b31e0275ea613f9db3982865abc8e548d2c8bac05ff9360ed0206c0"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/SecondOrderNumerics.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "cdcd584506fb97922466802684ae663379cfb82f9d8fc9d1db63c0babee7d705",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/SecondOrderNumerics.lean",
+      "verified_sha256": "cdcd584506fb97922466802684ae663379cfb82f9d8fc9d1db63c0babee7d705"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/proving docs/SecondOrderTimeDomain.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "68a352d307c82a320d4c2831599cfe8b124252987459f7119d0ce56c5b9cb4ad",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/proving docs/SecondOrderTimeDomain.lean",
+      "verified_sha256": "68a352d307c82a320d4c2831599cfe8b124252987459f7119d0ce56c5b9cb4ad"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/python/tests/test_lcrd_u1_weighted_rotor_coarse_grain_phase_gate.py",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "a7befc57169a947bc84efc735415396dc574ce925e03b959bcc3a2e127e747c8",
+      "record_id": "PYTHON_AND_LEAN_SCIENTIFIC_SOURCES:formal/python/tests/test_lcrd_u1_weighted_rotor_coarse_grain_phase_gate.py",
+      "verified_sha256": "a7befc57169a947bc84efc735415396dc574ce925e03b959bcc3a2e127e747c8"
+    },
+    {
+      "allocation_branch": "LCRD_V3",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/toe_formal/ToeFormalAll.lean",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "a8ef2148e0875e981407539e9cb3311992a0c499e58847a7e7f1fb0fab4a2ff1",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/toe_formal/ToeFormalAll.lean",
+      "verified_sha256": "a8ef2148e0875e981407539e9cb3311992a0c499e58847a7e7f1fb0fab4a2ff1"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "7354628347eef5931a9164e86ed355f0775793ad2efcaa9773a19b282cd86eaa",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257.txt",
+      "verified_sha256": "2b6860d1cd25c6e1f4344418a3f3d3bdcbc938165f3e792d3f8be1ccfa1ab940"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257_ignore_quarantine.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "90b27dd39c1f7ed1625b1b03050b3d539c412fe44cfbde4fd596175a411f77bc",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257_ignore_quarantine.txt",
+      "verified_sha256": "90b27dd39c1f7ed1625b1b03050b3d539c412fe44cfbde4fd596175a411f77bc"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257_ignore_quarantine_and_caches.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "26a623ff6294024dce0925b16beb88bf7c4fa7dea5bedff1e6670a0eb7dc574b",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/tooling_snapshots/diff_baseline_vs_post_20260118_101257_ignore_quarantine_and_caches.txt",
+      "verified_sha256": "26a623ff6294024dce0925b16beb88bf7c4fa7dea5bedff1e6670a0eb7dc574b"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "formal/tooling_snapshots/diff_baseline_vs_post_20260118_101956_clean.txt",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "7de8eda5f6a9d16fcd58f1ca2ab8ed1672385d323a7cfbc504d2c71567836056",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:formal/tooling_snapshots/diff_baseline_vs_post_20260118_101956_clean.txt",
+      "verified_sha256": "7de8eda5f6a9d16fcd58f1ca2ab8ed1672385d323a7cfbc504d2c71567836056"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/migrate_final_comparators.ps1",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "25be8453494d451b6e3db7c900b10e475591cade1c032cec14b14dcd342d5e66",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/migrate_final_comparators.ps1",
+      "verified_sha256": "25be8453494d451b6e3db7c900b10e475591cade1c032cec14b14dcd342d5e66"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/sot_head.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "9ac8d5cdd87710bcdb387781815d12049a1973cde418ca4ef6807e56e6393d1e",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/sot_head.md",
+      "verified_sha256": "9ac8d5cdd87710bcdb387781815d12049a1973cde418ca4ef6807e56e6393d1e"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/sot_target.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "5c3eb69733e0f721a0dc3978060dc4331335b3c928655809c7e926b7a0e3aefe",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/sot_target.md",
+      "verified_sha256": "5c3eb69733e0f721a0dc3978060dc4331335b3c928655809c7e926b7a0e3aefe"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/staged_state.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "4b66ab0ad6a24cee0d447465bda4948b11689a2f8edfddcaf23adc535edfbe60",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/staged_state.md",
+      "verified_sha256": "4b66ab0ad6a24cee0d447465bda4948b11689a2f8edfddcaf23adc535edfbe60"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/staged_state_fixed.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "932d14905c14815dd655bbc5263476a4b3baec403a11626be4549bb6c28256b5",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/staged_state_fixed.md",
+      "verified_sha256": "932d14905c14815dd655bbc5263476a4b3baec403a11626be4549bb6c28256b5"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/state_after_comp03_commit.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "d513b95f60c3d2ef2b15e29df448d0dbdf12d103d25925ed217555d76f1c8f57",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/state_after_comp03_commit.md",
+      "verified_sha256": "d513b95f60c3d2ef2b15e29df448d0dbdf12d103d25925ed217555d76f1c8f57"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/state_backup_pre_comp03_comp05_governance_commit.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "fc9b7566b2e212a24a1584f16eae9f7f48365fdfe19439ea8b65313a374968d8",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/state_backup_pre_comp03_comp05_governance_commit.md",
+      "verified_sha256": "fc9b7566b2e212a24a1584f16eae9f7f48365fdfe19439ea8b65313a374968d8"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/state_backup_pre_comp_evol_link_commit.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "1ec795d4ffb31313ac924f5621a812e0df74a25c9c66f46a2fa52c4253b058da",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/state_backup_pre_comp_evol_link_commit.md",
+      "verified_sha256": "1ec795d4ffb31313ac924f5621a812e0df74a25c9c66f46a2fa52c4253b058da"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/state_base_pre_comp03_commit.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "f96bbf14aca351d676e2ac6c90e3e4dbac0ed11c40adfac0f62f08f045ba49ba",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/state_base_pre_comp03_commit.md",
+      "verified_sha256": "f96bbf14aca351d676e2ac6c90e3e4dbac0ed11c40adfac0f62f08f045ba49ba"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/state_head.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "348ef4b577ec23b0b7222a0296307a37b3187cb32fa7e411347b68fd251f112e",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/state_head.md",
+      "verified_sha256": "348ef4b577ec23b0b7222a0296307a37b3187cb32fa7e411347b68fd251f112e"
+    },
+    {
+      "allocation_branch": "CP_NLSE",
+      "contract_record_ids": [],
+      "custody_relative_path": "scratch/state_head_cv01.md",
+      "disposition": "NO_RELEVANT_EVIDENCE",
+      "evidence_strength_classifications": [
+        "NO_RELEVANT_EVIDENCE"
+      ],
+      "new_root_traversal_performed": false,
+      "passive_text_capture_sha256": "5fe088e5332320b3d6f0b2dbc376b06658adea7fb0089d6152f52706afaf1667",
+      "record_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER:scratch/state_head_cv01.md",
+      "verified_sha256": "5fe088e5332320b3d6f0b2dbc376b06658adea7fb0089d6152f52706afaf1667"
+    }
+  ],
+  "stage_3_handoff": {
+    "purpose": "adjudicate completeness and compatibility of extracted contract evidence without equation repair or model construction",
+    "required_decision": "SEPARATE_STAGE_3_SCIENTIFIC_AUTHORITY_DECISION",
+    "selected_target": "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0",
+    "stage_3_authorized": false
+  },
+  "status": "STAGE_2_CLOSED_RESULT_READY_FOR_INDEPENDENT_REVIEW",
+  "terminal_outcome": "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE",
+  "workload_cap_accounting": {
+    "conflicting_record_cap": 32,
+    "conflicting_records_extracted": 7,
+    "contract_record_cap": 192,
+    "contract_records_extracted": 23,
+    "frozen_capture_text_bytes": 11376563,
+    "largest_records_for_one_missing_contract": 3,
+    "maximum_records_per_missing_contract": 12,
+    "maximum_total_extracted_text_bytes": 33554432,
+    "parser_failure_cap": 8,
+    "parser_failures": 0
+  }
+}

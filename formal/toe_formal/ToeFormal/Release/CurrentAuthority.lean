@@ -18,15 +18,11 @@ def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgr
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
 
-theorem current_authority_tracks_open_contract_extraction_without_output :
-    currentTarget = "extract_toe_targeted_ccft_closure_contracts_v0" ∧
-    boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    boundedProgramState = "OPEN" ∧ boundedAttemptNumber = 2 ∧
-    Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen.selectedSourceCount = 96 ∧
-    Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen.contractRecordsExtracted = 0 ∧
-    Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen.contractRecoveredOrRejected =
-      false ∧
-    Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen.stageThreeAuthorized = false := by
+theorem current_authority_tracks_selected_unopened_contract_adjudication :
+    currentTarget = "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0" ∧ boundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
+    boundedProgramState = "CLOSED" ∧ boundedAttemptNumber = 2 ∧
+    Derivation.ToeTargetedCCFTClosureContractExtractionResult.terminalOutcome = "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE" ∧
+    Derivation.ToeTargetedCCFTClosureContractExtractionResult.stageThreeAuthorized = false := by
   native_decide
 
 theorem bounded_program_governance_installation_preserved_its_then_current_target :
@@ -40,19 +36,11 @@ theorem bounded_program_governance_review_preserved_its_then_current_target :
       "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
   native_decide
 
-theorem stage_one_authority_and_review_remain_bound :
-    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0.stageOneOpenAuthorized =
-      true ∧
-    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0.accepted =
-      true := by
-  native_decide
-
-theorem stage_two_authority_and_review_are_current :
-    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0.stageTwoOpenAuthorized =
-      true ∧
-    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityReviewV0.accepted = true ∧
-    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0.stageThreeAuthorized =
-      false := by
+theorem stage_one_and_stage_two_authorities_remain_bound :
+    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0.stageOneOpenAuthorized = true ∧
+    ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityReviewV0.accepted = true ∧
+    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0.stageTwoOpenAuthorized = true ∧
+    ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityReviewV0.accepted = true := by
   native_decide
 
 end CurrentAuthority

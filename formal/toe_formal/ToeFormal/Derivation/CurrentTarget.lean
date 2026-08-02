@@ -1,32 +1,26 @@
-import ToeFormal.Derivation.ToeTargetedCCFTClosureContractExtractionAttemptOpen
+import ToeFormal.Derivation.ToeTargetedCCFTClosureContractExtractionResult
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeTargetedCCFTClosureContractExtractionAttemptOpen
+open ToeTargetedCCFTClosureContractExtractionResult
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := scientificTarget
-def currentEvidencePacketId : String := eventId
+def currentLiveTarget : String := selectedNextTarget
+def currentEvidencePacketId : String := resultId
 def currentBoundedProgramId : String := programId
-def currentBoundedProgramState : String := "OPEN"
-def currentTargetPhase : String :=
-  "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_STAGE_2_OPEN"
-def currentBoundedAttemptNumber : Nat := attemptNumber
-def lastClosedBoundedSemanticStage : String :=
-  "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY"
-def lastBoundedTerminalResult : String := "TARGETED_CCFT_SOURCE_SET_BOUND"
+def currentBoundedProgramState : String := "CLOSED"
+def currentTargetPhase : String := "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_STAGE_2_CLOSED_PASSED"
+def currentBoundedAttemptNumber : Nat := attemptSequenceNumber
+def lastClosedBoundedSemanticStage : String := semanticStageId
+def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_opens_contract_extraction_without_scientific_output :
-    currentLiveTarget = "extract_toe_targeted_ccft_closure_contracts_v0" ∧
-    currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧ currentBoundedAttemptNumber = 2 ∧
-    selectedSourceCount = 96 ∧ contentSearchPassesConsumed = 1 ∧
-    contractRecordsExtracted = 0 ∧ contractRecoveredOrRejected = false ∧
-    newRootTraversalPerformed = false ∧ overflowSourceSubstituted = false ∧
-    equationRepairedOrSelected = false ∧ newCCFTPostulateInserted = false ∧
-    ccftV0Constructed = false ∧ stageThreeAuthorized = false := by
+theorem current_target_selects_adjudication_without_authorizing_it :
+    currentLiveTarget = "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0" ∧ currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
+    currentBoundedProgramState = "CLOSED" ∧ currentBoundedAttemptNumber = 2 ∧
+    frozenSourceCount = 96 ∧ contractRecordCount > 0 ∧
+    contractAdjudicationPerformed = false ∧ stageThreeAuthorized = false := by
   decide
 
 end CurrentTarget
