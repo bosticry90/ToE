@@ -1,20 +1,20 @@
-import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
+import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
+open ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := authorizedTarget
+def currentLiveTarget : String := preparationTarget
 def currentEvidencePacketId : String := reviewId
-def currentTargetPhase : String := "CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_PREPARATION_AUTHORIZED"
-def currentBoundedProgramState : String := "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED"
+def currentTargetPhase : String := "CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_PROPOSAL_PREPARED"
+def currentBoundedProgramState : String := "PROPOSAL_PREPARED_UNINSTALLED"
 
-theorem current_target_authorizes_preparation_without_scientific_execution :
-    currentLiveTarget = "prepare_bounded_ccft_v0_theory_construction_program" ∧ proposalPreparationAuthorized = true ∧
-    programInstallationAuthorized = false ∧ branchSelectionAuthorized = false ∧
-    newPostulateAuthorized = false ∧ theoremDiscoveryAuthorized = false := by
+theorem current_target_preserves_uninstalled_nonselecting_proposal :
+    currentLiveTarget = "prepare_bounded_ccft_v0_theory_construction_program" ∧ proposedStageCount = 5 ∧
+    programInstalled = false ∧ stageOneOpened = false ∧ branchSelected = false ∧
+    ccftV0Constructed = false ∧ theoremAttempted = false := by
   decide
 
 end CurrentTarget
