@@ -1,21 +1,20 @@
-import ToeFormal.Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallationReview
+import ToeFormal.Derivation.ToeCCFTV0BranchReadinessAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
+open ToeCCFTV0BranchReadinessAttemptOpen
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := "install_toe_ccft_v0_theory_construction_and_theorem_discovery_bounded_program_v0"
-def currentEvidencePacketId : String := "TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_REVIEW_v0"
-def currentTargetPhase : String := "CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_INSTALLED_UNOPENED"
-def currentBoundedProgramState : String := "INSTALLED_UNOPENED"
+def currentLiveTarget : String := target
+def currentEvidencePacketId : String := eventHash
+def currentTargetPhase : String := "CCFT_V0_BRANCH_READINESS_STAGE_1_OPEN"
+def currentBoundedProgramState : String := "OPEN_ATTEMPT_1"
 
-theorem current_target_preserves_unopened_installation :
-    Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.installedUnopened = true ∧
-    Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.scientificAttempts = 0 ∧
-    Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.branchSelected = false ∧
-    Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.modelConstructed = false ∧
-    Release.ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.theoremAttempted = false := by
+theorem current_target_is_nonselecting_stage_one_open :
+    attemptNumber = 1 ∧ branchSelected = false ∧ modelConstructed = false ∧
+    postulateCreated = false ∧ theoremPacketPrepared = false ∧
+    theoremAttempted = false ∧ stageTwoAuthorized = false := by
   decide
 
 end CurrentTarget

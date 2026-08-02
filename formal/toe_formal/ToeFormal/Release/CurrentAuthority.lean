@@ -1,4 +1,5 @@
 import ToeFormal.Derivation.CurrentTarget
+import ToeFormal.Release.ToeCCFTV0BranchReadinessStage1OpenAuthorityReviewV0
 
 namespace ToeFormal
 namespace Release
@@ -10,11 +11,12 @@ def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidence
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def currentBoundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
 
-theorem current_authority_tracks_unopened_ccft_v0_program :
-    currentTarget = "install_toe_ccft_v0_theory_construction_and_theorem_discovery_bounded_program_v0" ∧ currentBoundedProgramState = "INSTALLED_UNOPENED" ∧
-    ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.installedUnopened = true ∧
-    ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.branchSelected = false ∧
-    ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.theoremAttempted = false := by
+theorem current_authority_tracks_valid_nonselecting_open :
+    ToeCCFTV0BranchReadinessStage1OpenAuthorityReviewV0.reviewAccepted = true ∧
+    Derivation.ToeCCFTV0BranchReadinessAttemptOpen.attemptNumber = 1 ∧
+    Derivation.ToeCCFTV0BranchReadinessAttemptOpen.branchSelected = false ∧
+    Derivation.ToeCCFTV0BranchReadinessAttemptOpen.modelConstructed = false ∧
+    Derivation.ToeCCFTV0BranchReadinessAttemptOpen.stageTwoAuthorized = false := by
   native_decide
 
 end CurrentAuthority
