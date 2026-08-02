@@ -1,0 +1,72 @@
+{
+  "artifact_hashes": {
+    "close_event_hash": "26607fcf71a9a4877ac65649b3bbf2a2e5ec9488f2bb2e721ab89c5265dce108",
+    "close_event_sha256": "92359ae42287d2710888c2a7d989c5f202e864afa4227cc3c83ad9d7072756b3",
+    "result_sha256": "79acfadda56d2ef75ad3c061309c0bc5dbbf48c2366aa1f946ef3bd3208b4782",
+    "review_sha256": "a5e15aff904fefd113ab2a79d23eb3f63e066be8a7d47fbd3fc8de0c7c43c343"
+  },
+  "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_VALIDATION_v0",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTRecoveryHandoffResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-08-02T02:10:31Z",
+  "deterministic_generation": {
+    "module_count": 1408,
+    "scope": "committed",
+    "status": "PASS"
+  },
+  "focused_lean": {
+    "included_in_full_aggregate": true,
+    "status": "PASS"
+  },
+  "focused_python": {
+    "governance_passed": 38,
+    "stage_scoped_passed": 10,
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "job_count": 8880,
+    "module_count": 1408,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "precommit_full_history_validator_result": "EXPECTED_SINGLE_FAILURE_CLOSE_ARTIFACT_HAS_ZERO_INTRODUCTION_COMMITS"
+  },
+  "lifecycle_result": "PASSED",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "repository_validation": {
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "git_diff_check": "PASS",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT"
+  },
+  "schema_id": "toe.targeted_ccft.recovery_handoff.validation.v0",
+  "scientific_validation": {
+    "attempt_four_open_event_is_bound": true,
+    "construction_handoff_is_named_but_not_authorized": true,
+    "contract_summary_closes_all_18_checklist_items": true,
+    "exactly_one_positive_program_outcome_is_selected": true,
+    "four_exact_contracts_materially_exceed_threshold": true,
+    "historical_recovery_is_complete_without_exhaustion_claim": true,
+    "immutable_stage_three_result_is_bound": true,
+    "mandatory_exit_is_the_only_immediate_successor": true,
+    "no_branch_or_combined_model_is_selected": true,
+    "no_model_theorem_postulate_promotion_or_physical_claim_occurred": true,
+    "postulate_reduction_matches_the_four_stage_three_contracts": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "terminal_lifecycle_result_passes": true
+  },
+  "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+  "status": "STAGE_4_ATOMIC_CLOSE_VALIDATED_READY_FOR_COMMIT",
+  "terminal_outcome": "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED"
+}

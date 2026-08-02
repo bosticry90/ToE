@@ -950,6 +950,7 @@ import ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult
 import ToeFormal.Derivation.ToeTargetedCCFTContractAdjudicationAttemptOpen
 import ToeFormal.Derivation.ToeTargetedCCFTContractAdjudicationResult
 import ToeFormal.Derivation.ToeTargetedCCFTRecoveryHandoffAttemptOpen
+import ToeFormal.Derivation.ToeTargetedCCFTRecoveryHandoffResult
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollment
 import ToeFormal.Derivation.V01AlphaGovernanceManifestEnrollmentResultReview
 import ToeFormal.EM.U1.ObjectScaffold
@@ -1414,6 +1415,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1407
+def committedModuleCount : Nat := 1408
 
 end ToeFormalAll

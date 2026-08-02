@@ -1,27 +1,27 @@
-import ToeFormal.Derivation.ToeTargetedCCFTRecoveryHandoffAttemptOpen
+import ToeFormal.Derivation.ToeTargetedCCFTRecoveryHandoffResult
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeTargetedCCFTRecoveryHandoffAttemptOpen
+open ToeTargetedCCFTRecoveryHandoffResult
 
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := scientificTarget
-def currentEvidencePacketId : String := eventId
+def currentLiveTarget : String := mandatoryExitTarget
+def currentEvidencePacketId : String := resultId
 def currentBoundedProgramId : String := programId
-def currentBoundedProgramState : String := "OPEN"
-def currentTargetPhase : String := "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_OPEN"
-def currentBoundedAttemptNumber : Nat := attemptNumber
-def lastClosedBoundedSemanticStage : String := "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
-def lastBoundedTerminalResult : String := "ONE_OR_MORE_EXACT_CCFT_CLOSURE_CONTRACTS_RECOVERED"
+def currentBoundedProgramState : String := "CLOSED"
+def currentTargetPhase : String := "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_CLOSED_PASSED"
+def currentBoundedAttemptNumber : Nat := attemptSequenceNumber
+def lastClosedBoundedSemanticStage : String := semanticStageId
+def lastBoundedTerminalResult : String := "PASSED"
 
-theorem current_target_opens_handoff_without_result :
-    currentLiveTarget = "select_toe_post_targeted_ccft_recovery_construction_handoff_v0" ∧ currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
-    currentBoundedProgramState = "OPEN" ∧ currentBoundedAttemptNumber = 4 ∧
-    exactContractsRecovered = 4 ∧ programOutcomeSelected = false ∧
-    branchSelected = false ∧ ccftV0Constructed = false ∧
-    constructionPreparationAuthorized = false ∧ theoremDiscoveryAuthorized = false := by
+theorem current_target_is_mandatory_exit_not_construction :
+    currentLiveTarget = "close_toe_targeted_ccft_closure_evidence_recovery_v0_after_bounded_result_v0" ∧ currentBoundedProgramId = "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0" ∧
+    currentBoundedProgramState = "CLOSED" ∧ currentBoundedAttemptNumber = 4 ∧
+    exactContractsRecovered = 4 ∧ historicalRecoveryComplete = true ∧
+    constructionPreparationAuthorized = false ∧ theoremDiscoveryAuthorized = false ∧
+    mandatoryExitSelected = true ∧ mandatoryExitCompleted = false := by
   decide
 
 end CurrentTarget
