@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 4,
+  "closed_from_commit": "f8ce5ed160958a98dfc4aa4d8a0b25aab4de1fef",
+  "event_hash": "0e449c9477fe94f2e174b7b29098a70e4fb43ac018551fe9b61012249215aedd",
+  "event_sequence_number": 8,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "9a21cb1508ced6573bbdfa2b7a3fdc9d9517e7c6f9a8074d47448d40dfdade8b",
+  "previous_event_hash": "9a21cb1508ced6573bbdfa2b7a3fdc9d9517e7c6f9a8074d47448d40dfdade8b",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "result_artifact_hash": "3cd01d459622de9f2bf2de13ce586150a55c5e7e3c0b2cd0e61b744a8315261a",
+  "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0.json",
+  "review_artifact_hash": "08663516a12241fd68d75e602bfdbeaffe6b9835f82fcd5315fea71970471d41",
+  "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}
