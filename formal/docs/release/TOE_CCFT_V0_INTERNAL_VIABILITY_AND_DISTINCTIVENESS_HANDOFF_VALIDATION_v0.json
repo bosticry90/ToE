@@ -1,0 +1,62 @@
+{
+  "artifact_id": "TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_VALIDATION_v0",
+  "schema_id": "toe.ccft_v0.internal_viability_and_distinctiveness_handoff.validation.v0",
+  "captured_at_utc": "2026-08-03T04:36:00Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "attempt_sequence_number": 5,
+  "semantic_stage_id": "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF",
+  "target": "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0",
+  "scope_hash": "77f37cfde12e8a243aaace9e27fafbfa4611c11bc5f30918323f414b3c51f124",
+  "result_artifact": {
+    "path": "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_v0.json",
+    "sha256": "66fe75252c1e03f8a238bd6f38fbe2ea83f7b5e1415be23d471ea0502241f71a"
+  },
+  "review_artifact": {
+    "path": "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_REVIEW_v0.json",
+    "sha256": "ea338fdf80989759b7f3df24b8ed5c739bb7278830603294caf1979b9472af5c"
+  },
+  "close_event": {
+    "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_CLOSE_v0.json",
+    "sha256": "328d550672cb0a806232b2cb4a97d7c7d3c4b16998925b5c76b40433d18a6e8b",
+    "event_hash": "de14cf843120b31f8b303191c9c18ca86c693808965a743e2a59a6aa79bf2372",
+    "closed_from_commit": "4f38e29e3bb26bd27c5d6d7b302507d62845290b",
+    "terminal_result": "PASSED"
+  },
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ViabilityHandoffResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "validated_result_summary": {
+    "terminal_outcome": "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+    "lifecycle_result": "PASSED",
+    "earned_role": "KNOWN_MODEL_EQUIVALENT_CCFT_COMPUTATIONAL_BASELINE",
+    "full_PDE_viability": "NOT_INDEPENDENTLY_ADJUDICATED",
+    "finite_approximation": "SUPPORTED_ONLY_FOR_FROZEN_TESTS_AND_TESTED_REFINEMENTS",
+    "identifiability": "NOT_IDENTIFIABLE_AS_DISTINCT_ISOLATED_DYNAMICS",
+    "complexity": "FROZEN_REFERENCE_COMPUTATIONS_TRACTABLE_GENERAL_COMPLEXITY_UNESTABLISHED",
+    "physical_promotion": "NONE",
+    "scientific_successor": "NONE_AUTHORIZED"
+  },
+  "validation_checks": {
+    "result_and_review_hashes_reproduce": true,
+    "close_event_binds_result_review_open_event_and_parent_commit": true,
+    "manifest_scope_outputs_outcomes_and_close_envelope_match": true,
+    "all_six_assessment_surfaces_are_adjudicated": true,
+    "known_model_equivalence_is_bound_to_the_accepted_stage_4_bijection": true,
+    "numerical_claims_match_the_frozen_reference_and_attack_results": true,
+    "full_PDE_finite_approximation_identifiability_and_complexity_limits_are_explicit": true,
+    "frozen_model_and_packet_are_unchanged": true,
+    "broader_CCFT_and_LCRD_are_preserved_without_promotion": true,
+    "mandatory_exit_is_current_and_not_completed": true,
+    "no_CCFT_v1_physical_empirical_GUT_ToE_or_other_scientific_successor_is_authorized": true,
+    "registry_program_state_is_closed_after_attempt_5": true
+  },
+  "status": "STAGE_5_ATOMIC_CLOSE_PRECOMMIT_VALIDATED"
+}

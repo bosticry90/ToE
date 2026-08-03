@@ -11,17 +11,17 @@ def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidence
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def currentBoundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
 
-theorem current_authority_tracks_empty_bounded_stage_five_open :
+theorem current_authority_tracks_closed_stage_five_and_mandatory_exit :
     ToeCCFTV0ViabilityHandoffStage5OpenAuthorityReviewV0.reviewAccepted = true ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.attemptNumber = 5 ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.frozenModelCount = 1 ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.assessmentSurfaceCount = 6 ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.assessmentResultCount = 0 ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.selectedFutureRoleCount = 0 ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.modelMutated = false ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.CCFTV1Constructed = false ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.physicalPromotion = false ∧
-    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.successorAuthorized = false := by
+    Derivation.ToeCCFTV0ViabilityHandoffResult.attemptSequenceNumber = 5 ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.knownModelEquivalent = true ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.mathematicallyDistinctive = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.modelPreserved = true ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.mandatoryExitSelected = true ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.mandatoryExitCompleted = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.physicalBearerAssigned = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.empiricalClaimCreated = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffResult.scientificSuccessorAuthorized = false := by
   native_decide
 
 end CurrentAuthority
