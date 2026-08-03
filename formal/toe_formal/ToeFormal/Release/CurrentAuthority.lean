@@ -1,5 +1,5 @@
 import ToeFormal.Derivation.CurrentTarget
-import ToeFormal.Release.ToeCCFTV0PrimaryTheoremAttackStage4OpenAuthorityReviewV0
+import ToeFormal.Release.ToeCCFTV0ViabilityHandoffStage5OpenAuthorityReviewV0
 
 namespace ToeFormal
 namespace Release
@@ -11,15 +11,17 @@ def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidence
 def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
 def currentBoundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
 
-theorem current_authority_tracks_closed_stage_four_without_stage_five_authority :
-    ToeCCFTV0PrimaryTheoremAttackStage4OpenAuthorityReviewV0.reviewAccepted = true ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.linkedClaimCount = 4 ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.theoremGradeClaimsEstablished = 3 ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.historicalRecordsClassified = 2 ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.frozenModelMutated = false ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.frozenPacketMutated = false ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.physicalPromotionPerformed = false ∧
-    Derivation.ToeCCFTV0PrimaryTheoremAttackResult.stageFiveAuthorized = false := by
+theorem current_authority_tracks_empty_bounded_stage_five_open :
+    ToeCCFTV0ViabilityHandoffStage5OpenAuthorityReviewV0.reviewAccepted = true ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.attemptNumber = 5 ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.frozenModelCount = 1 ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.assessmentSurfaceCount = 6 ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.assessmentResultCount = 0 ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.selectedFutureRoleCount = 0 ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.modelMutated = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.CCFTV1Constructed = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.physicalPromotion = false ∧
+    Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen.successorAuthorized = false := by
   native_decide
 
 end CurrentAuthority

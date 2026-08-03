@@ -1,24 +1,23 @@
-import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremAttackResult
+import ToeFormal.Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTV0PrimaryTheoremAttackResult
+open ToeCCFTV0ViabilityHandoffAttemptOpen
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String :=
-  "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0"
-def currentEvidencePacketId : String := resultId
-def currentTargetPhase : String :=
-  "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_CLOSED_PASSED"
-def currentBoundedProgramState : String :=
-  "CLOSED_AWAITING_SEPARATE_STAGE_5_AUTHORITY"
+def currentLiveTarget : String := target
+def currentEvidencePacketId : String := eventHash
+def currentTargetPhase : String := "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_OPEN"
+def currentBoundedProgramState : String := "OPEN_ATTEMPT_5"
 
-theorem current_target_records_bounded_stage_four_result :
-    linkedClaimCount = 4 ∧ theoremGradeClaimsEstablished = 3 ∧
-    historicalRecordsClassified = 2 ∧ frozenModelMutated = false ∧
-    frozenPacketMutated = false ∧ newPostulateAdded = false ∧
-    physicalPromotionPerformed = false ∧ stageFiveAuthorized = false := by
+theorem current_target_is_empty_stage_five_open :
+    attemptNumber = 5 ∧ frozenModelCount = 1 ∧ assessmentSurfaceCount = 6 ∧
+    assessmentResultCount = 0 ∧ selectedFutureRoleCount = 0 ∧
+    modelMutated = false ∧ packetMutated = false ∧
+    newPostulateAdded = false ∧ CCFTV1Constructed = false ∧
+    physicalPromotion = false ∧ empiricalPromotion = false ∧
+    successorAuthorized = false := by
   decide
 
 end CurrentTarget

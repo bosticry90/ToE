@@ -826,6 +826,7 @@ import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremPacketResult
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionProgramInstallationAuthority
+import ToeFormal.Derivation.ToeCCFTV0ViabilityHandoffAttemptOpen
 import ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryAttemptOpen
 import ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryResult
 import ToeFormal.Derivation.ToeCandidateMasterActionCKFirewallAuthorityReconciliationPacketReviewV0
@@ -1439,6 +1440,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1432
+def committedModuleCount : Nat := 1433
 
 end ToeFormalAll
