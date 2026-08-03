@@ -1,0 +1,63 @@
+{
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0",
+  "atomic_closeout_commit_expected_path_count": 9,
+  "atomic_closeout_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_ccft_v0_theory_construction_and_theorem_discovery_v0_bounded_closeout.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0TheoryConstructionAndTheoremDiscoveryV0BoundedCloseout.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-08-03T03:15:24Z",
+  "deterministic_generation": {
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "committed_scope_module_count": 1435,
+    "status": "PASSED"
+  },
+  "focused_lean_validation": {
+    "included_in_full_aggregate": true,
+    "status": "PASSED"
+  },
+  "focused_python_validation": {
+    "passed": 27,
+    "status": "PASSED"
+  },
+  "full_lean_validation": {
+    "jobs": 9180,
+    "modules": 1435,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "governance_validation": {
+    "event_chain_changed": false,
+    "event_count": 10,
+    "mandatory_exit_commit_chronology": "REQUIRED_POST_COMMIT",
+    "mandatory_exit_completed": true,
+    "repair_attempt_count": 0,
+    "status": "PASSED_PRECOMMIT_EVENT_HISTORY_UNCHANGED"
+  },
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "result_path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+  "result_sha256": "d726072593c82dab59a6f3203a9283bdd4158a073d961d48f72e80d699356db1",
+  "review_path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+  "review_sha256": "4cc24c53471509a2da63435b5ab577e840a7e67f1b4d47b6a25ceeb375c38b6d",
+  "schema_id": "toe.ccft_v0.theory_construction_and_theorem_discovery.bounded_closeout_validation.v0",
+  "scientific_boundary": {
+    "CCFT_v1_constructed": false,
+    "LCRD_v3_adjudicated_or_promoted": false,
+    "broader_CCFT_refuted_or_promoted": false,
+    "empirical_promotion_performed": false,
+    "frozen_model_preserved": true,
+    "known_model_equivalence_preserved": true,
+    "mathematical_novelty_established": false,
+    "physical_interpretation_established": false,
+    "scientific_successor_selected_or_authorized": false
+  },
+  "status": "MANDATORY_EXIT_CLOSEOUT_READY_FOR_ATOMIC_COMMIT",
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true
+}

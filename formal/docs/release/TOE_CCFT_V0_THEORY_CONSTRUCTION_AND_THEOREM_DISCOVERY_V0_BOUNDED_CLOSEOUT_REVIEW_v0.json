@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+  "automatic_successor_selected": false,
+  "captured_at_utc": "2026-08-03T03:15:24Z",
+  "checks": {
+    "all_five_scientific_stages_are_closed": true,
+    "all_stage_result_review_and_close_event_hashes_are_preserved": true,
+    "broader_CCFT_and_LCRD_remain_unadjudicated": true,
+    "event_chain_has_five_matched_open_close_pairs": true,
+    "event_chain_is_unchanged_by_mandatory_exit": true,
+    "gauge_and_dispersion_results_are_preserved": true,
+    "known_model_equivalence_outcome_is_preserved": true,
+    "mandatory_exit_completes_the_program": true,
+    "mathematical_novelty_and_full_PDE_viability_are_not_overclaimed": true,
+    "no_model_physical_gravity_GUT_ToE_or_automatic_promotion_occurred": true,
+    "no_scientific_successor_is_selected_or_authorized": true,
+    "physical_and_empirical_promotion_remain_absent": true,
+    "repair_attempt_count_remains_zero": true,
+    "v0_is_preserved_in_its_earned_baseline_role": true
+  },
+  "failed_checks": [],
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "program_terminal": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "sha256": "d726072593c82dab59a6f3203a9283bdd4158a073d961d48f72e80d699356db1"
+  },
+  "schema_id": "toe.ccft_v0.theory_construction_and_theorem_discovery.bounded_closeout_review.v0",
+  "terminal_status": {
+    "LCRD_v3": "PRESERVED_INCOMPLETE_UNADJUDICATED",
+    "broader_CCFT": "UNREFUTED_BUT_UNESTABLISHED",
+    "earned_role": "KNOWN_MODEL_EQUIVALENT_CCFT_COMPUTATIONAL_BASELINE",
+    "program": "CLOSED_AFTER_MANDATORY_EXIT",
+    "scientific_outcome": "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+    "scientific_successor": "NONE_AUTHORIZED"
+  },
+  "verdict": "ACCEPT_CCFT_V0_PROGRAM_TERMINAL_CLOSEOUT_V0_PRESERVED_AS_KNOWN_MODEL_BASELINE_NO_PHYSICAL_PROMOTION_OR_SCIENTIFIC_SUCCESSOR"
+}

@@ -1,25 +1,26 @@
-import ToeFormal.Derivation.ToeCCFTV0ViabilityHandoffResult
+import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionAndTheoremDiscoveryV0BoundedCloseout
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
-open ToeCCFTV0ViabilityHandoffResult
-def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
-def currentLiveTarget : String := mandatoryExitTarget
-def currentEvidencePacketId : String := resultId
-def currentTargetPhase : String :=
-  "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_CLOSED_PASSED"
-def currentBoundedProgramState : String := "CLOSED_AWAITING_MANDATORY_EXIT"
+open ToeCCFTV0TheoryConstructionAndTheoremDiscoveryV0BoundedCloseout
 
-theorem current_target_is_mandatory_exit_after_bounded_stage_five_result :
-    attemptSequenceNumber = 5 ∧ frozenModelCount = 1 ∧ assessmentSurfaceCount = 6 ∧
-    knownModelEquivalent = true ∧ mathematicallyDistinctive = false ∧
-    reproducibleInFrozenTestRegime = true ∧
-    fullPDEViabilityIndependentlyAdjudicated = false ∧
-    identifiableAsDistinctIsolatedDynamics = false ∧
-    frozenReferenceComputationsTractable = true ∧ modelPreserved = true ∧
-    mandatoryExitSelected = true ∧ mandatoryExitCompleted = false ∧
+def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
+def currentLiveTarget : String := executionTarget
+def currentEvidencePacketId : String := reviewId
+def currentBoundedProgramId : String := programId
+def currentBoundedProgramState : String := programTerminalStatus
+def currentTargetPhase : String := "CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANDATORY_EXIT_COMPLETE"
+def currentBoundedAttemptNumber : Nat := attemptedStageCount
+def lastClosedBoundedSemanticStage : String := "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF"
+def lastBoundedTerminalResult : String := terminalOutcome
+
+theorem current_target_is_terminal_closeout_without_successor :
+    currentLiveTarget = "close_toe_ccft_v0_theory_construction_and_theorem_discovery_v0_after_bounded_result_v0" ∧
+    currentBoundedProgramState = "CLOSED_AFTER_MANDATORY_EXIT" ∧
+    frozenModelPreserved = true ∧ mathematicalNoveltyEstablished = false ∧
+    physicalInterpretationEstablished = false ∧ broaderCCFTRefuted = false ∧
     scientificSuccessorAuthorized = false := by
   decide
 

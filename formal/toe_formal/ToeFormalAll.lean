@@ -823,6 +823,7 @@ import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremAttackAttemptOpen
 import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremAttackResult
 import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremPacketAttemptOpen
 import ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremPacketResult
+import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionAndTheoremDiscoveryV0BoundedCloseout
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationAuthority
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionBoundedProgramPreparationResultReview
 import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionProgramInstallationAuthority
@@ -1441,6 +1442,6 @@ import ToeFormal.Variational.WeakFieldPoissonLimit
 
 namespace ToeFormalAll
 
-def committedModuleCount : Nat := 1434
+def committedModuleCount : Nat := 1435
 
 end ToeFormalAll
