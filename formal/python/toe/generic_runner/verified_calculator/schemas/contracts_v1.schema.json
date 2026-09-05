@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:toe:verified-calculator:contracts:v1",
+  "title": "Verified Physics Calculator v1 contracts",
+  "oneOf": [
+    {"$ref": "#/$defs/PhysicsProfileV1"},
+    {"$ref": "#/$defs/VerificationPolicyV1"},
+    {"$ref": "#/$defs/CalculationRequestV1"},
+    {"$ref": "#/$defs/CandidatePacketV1"},
+    {"$ref": "#/$defs/ChallengeSpecV1"},
+    {"$ref": "#/$defs/ScientificAuthorityBindingV1"},
+    {"$ref": "#/$defs/VerificationReceiptV1"},
+    {"$ref": "#/$defs/FrozenEvidenceBundleV1"}
+  ],
+  "$defs": {
+    "Sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "Identifier": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{0,127}$"},
+    "AlgebraicFieldV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "field_id", "primitive_element", "minimal_polynomial", "embedding", "ordered_power_basis"],
+      "properties": {
+        "schema_id": {"const": "AlgebraicFieldV1"}, "field_id": {"$ref": "#/$defs/Identifier"},
+        "primitive_element": {"$ref": "#/$defs/Identifier"},
+        "minimal_polynomial": {"type": "array", "minItems": 2, "maxItems": 65, "items": {"type": "string"}},
+        "embedding": {"type": "object"}, "ordered_power_basis": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"type": "string"}}
+      }
+    },
+    "PhysicsProfileV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "profile_id", "symbols", "algebraic_field", "dimensions", "unit_conventions", "semantic_types", "index_spaces", "representation_tags", "source_declarations", "permitted_operations", "output_roots", "output_claims"],
+      "properties": {
+        "schema_id": {"const": "PhysicsProfileV1"}, "profile_id": {"$ref": "#/$defs/Identifier"},
+        "symbols": {"type": "array", "maxItems": 256, "uniqueItems": true, "items": {"$ref": "#/$defs/Identifier"}},
+        "algebraic_field": {"$ref": "#/$defs/AlgebraicFieldV1"},
+        "dimensions": {"type": "object", "additionalProperties": false, "required": ["basis", "exponent_domain", "quotient_relations"], "properties": {"basis": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "exponent_domain": {"enum": ["INTEGER", "RATIONAL"]}, "quotient_relations": {"type": "array", "items": {"type": "array", "items": {"type": "string"}}}}},
+        "unit_conventions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "semantic_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "index_spaces": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+        "representation_tags": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "source_declarations": {"type": "array", "items": {"$ref": "#/$defs/SourceDeclaration"}},
+        "permitted_operations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "output_roots": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "output_claims": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "SourceDeclaration": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256", "byte_size", "media_type"],
+      "properties": {"path": {"type": "string"}, "sha256": {"$ref": "#/$defs/Sha256"}, "byte_size": {"type": "integer", "minimum": 1}, "media_type": {"const": "application/json"}}
+    },
+    "ResourceLimitsV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["bundle_bytes", "json_depth", "string_bytes", "scalar_text_chars", "container_members", "tensor_entries", "dag_nodes", "expression_nodes", "symbols", "input_integer_bits", "intermediate_integer_bits", "algebraic_degree", "numerical_precision_bits", "trusted_route_seconds", "trusted_total_seconds", "evidence_bytes", "plugin_seconds", "plugin_output_bytes"],
+      "properties": {
+        "bundle_bytes": {"type": "integer", "minimum": 1}, "json_depth": {"type": "integer", "minimum": 1}, "string_bytes": {"type": "integer", "minimum": 1},
+        "scalar_text_chars": {"type": "integer", "minimum": 1}, "container_members": {"type": "integer", "minimum": 1}, "tensor_entries": {"type": "integer", "minimum": 1},
+        "dag_nodes": {"type": "integer", "minimum": 1}, "expression_nodes": {"type": "integer", "minimum": 1}, "symbols": {"type": "integer", "minimum": 1},
+        "input_integer_bits": {"type": "integer", "minimum": 1}, "intermediate_integer_bits": {"type": "integer", "minimum": 1}, "algebraic_degree": {"type": "integer", "minimum": 1},
+        "numerical_precision_bits": {"type": "integer", "minimum": 1}, "trusted_route_seconds": {"type": "integer", "minimum": 1}, "trusted_total_seconds": {"type": "integer", "minimum": 1},
+        "evidence_bytes": {"type": "integer", "minimum": 1}, "plugin_seconds": {"type": "integer", "minimum": 1}, "plugin_output_bytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "VerificationPolicyV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "policy_id", "freeze_timestamp", "python_verifier", "julia_verifier", "lean_verifier", "mandatory_challenge_hashes", "numerical_policy", "qmc_policy", "resource_limits", "trusted_network_access"],
+      "properties": {
+        "schema_id": {"const": "VerificationPolicyV1"}, "policy_id": {"$ref": "#/$defs/Identifier"}, "freeze_timestamp": {"type": "string"},
+        "python_verifier": {"type": "string"}, "julia_verifier": {"type": "string"}, "lean_verifier": {"type": "string"},
+        "mandatory_challenge_hashes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/Sha256"}},
+        "numerical_policy": {"type": "object"}, "qmc_policy": {"type": "object"}, "resource_limits": {"$ref": "#/$defs/ResourceLimitsV1"},
+        "trusted_network_access": {"const": "FORBIDDEN"}
+      }
+    },
+    "CalculationRequestV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "physics_profile_hash", "verification_policy_hash", "inputs", "requested_roots", "execution_budgets", "stochastic_experiments"],
+      "properties": {
+        "schema_id": {"const": "CalculationRequestV1"}, "physics_profile_hash": {"$ref": "#/$defs/Sha256"}, "verification_policy_hash": {"$ref": "#/$defs/Sha256"},
+        "inputs": {"type": "object"}, "requested_roots": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "execution_budgets": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}}, "stochastic_experiments": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "CandidatePacketV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "computation_id", "producer", "graph", "claimed_outputs", "source_bindings"],
+      "properties": {
+        "schema_id": {"const": "CandidatePacketV1"}, "computation_id": {"$ref": "#/$defs/Sha256"},
+        "producer": {"type": "object", "required": ["trust"], "properties": {"trust": {"const": "UNTRUSTED_PROPOSAL"}}},
+        "graph": {"type": "object", "additionalProperties": false, "required": ["nodes", "edges"], "properties": {"nodes": {"type": "array", "minItems": 1, "maxItems": 4096, "items": {"type": "object"}}, "edges": {"type": "array", "items": {"type": "array", "prefixItems": [{"type": "string"}, {"type": "string"}], "items": false}}}},
+        "claimed_outputs": {"type": "object"}, "source_bindings": {"type": "array", "items": {"type": "object"}}, "generator_provenance": {"type": "object"}
+      }
+    },
+    "ChallengeSpecV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "challenge_id", "semantic_target", "mutation_rule", "attacked_invariant", "required_consequence", "applicability_selector", "descendant_confinement_rule", "seed_policy", "origin", "accepted_on", "mandatory"],
+      "properties": {
+        "schema_id": {"const": "ChallengeSpecV1"}, "challenge_id": {"type": "string"}, "semantic_target": {"type": "object"}, "mutation_rule": {"type": "object"},
+        "attacked_invariant": {"type": "string"}, "required_consequence": {"enum": ["VERIFIER_REJECTS", "AFFECTED_ROOT_VALUE_CHANGES"]},
+        "applicability_selector": {"type": "object"}, "descendant_confinement_rule": {"const": "FROZEN_BASELINE_DESCENDANTS_ONLY"},
+        "seed_policy": {"type": "object"}, "origin": {"type": "string"}, "accepted_on": {"type": ["string", "null"]}, "mandatory": {"type": "boolean"}
+      }
+    },
+    "ScientificAuthorityBindingV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "profile_hash", "claim_bindings", "calculator_profile_review_status"],
+      "properties": {"schema_id": {"const": "ScientificAuthorityBindingV1"}, "profile_hash": {"$ref": "#/$defs/Sha256"}, "claim_bindings": {"type": "object", "additionalProperties": {"type": "object"}}, "calculator_profile_review_status": {"enum": ["NOT_REVIEWED", "SCIENTIFIC_REQUALIFICATION_NOT_EARNED", "REQUALIFIED", "WITHHELD"]}}
+    },
+    "VerificationReceiptV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "computation_id", "candidate_hash", "physics_profile_hash", "verification_policy_hash", "execution_status", "replay_status", "environment", "source_evidence", "outputs", "challenge_results", "runtime_certificate_hash", "claim_ledger", "scientific_promotion", "product_v1_release", "production_activation"],
+      "properties": {
+        "schema_id": {"const": "VerificationReceiptV1"}, "computation_id": {"$ref": "#/$defs/Sha256"}, "candidate_hash": {"$ref": "#/$defs/Sha256"},
+        "physics_profile_hash": {"$ref": "#/$defs/Sha256"}, "verification_policy_hash": {"$ref": "#/$defs/Sha256"},
+        "execution_status": {"enum": ["NOT_RUN", "SUCCEEDED", "REJECTED", "ERROR"]}, "replay_status": {"enum": ["NOT_RUN", "MATCHED", "MISMATCHED"]},
+        "environment": {"type": "object"}, "source_evidence": {"type": "array"}, "outputs": {"type": "array", "minItems": 1}, "challenge_results": {"type": "array"},
+        "runtime_certificate_hash": {"$ref": "#/$defs/Sha256"}, "claim_ledger": {"type": "array", "minItems": 1},
+        "scientific_promotion": {"const": false}, "product_v1_release": {"type": "boolean"}, "production_activation": {"const": false}
+      }
+    },
+    "FrozenEvidenceBundleV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_id", "request", "candidate", "verification_receipt", "runtime_certificate", "authority_bindings", "authority_attachments", "dependency_manifests", "challenge_specs", "challenge_packets", "verifier_evidence", "frozen_semantics"],
+      "properties": {
+        "schema_id": {"const": "FrozenEvidenceBundleV1"}, "request": {"type": "object"}, "candidate": {"type": "object"}, "verification_receipt": {"type": "object"},
+        "runtime_certificate": {"type": "object"}, "authority_bindings": {"type": "array"}, "authority_attachments": {"type": "array"}, "dependency_manifests": {"type": "array"},
+        "challenge_specs": {"type": "array"}, "challenge_packets": {"type": "array"}, "verifier_evidence": {"type": "array"},
+        "frozen_semantics": {"const": "CONTENT_ADDRESSED_HASH_BOUND_NOT_FILESYSTEM_IMMUTABLE"}
+      }
+    }
+  }
+}

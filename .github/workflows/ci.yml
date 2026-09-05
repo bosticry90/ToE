@@ -197,6 +197,63 @@ jobs:
           python3 -m formal.python.tools.lean_bounded_lake
           --jobs 1 --target ToeFormal --target ToeFormalAll
 
+  verified-calculator-v1:
+    name: Verified Calculator (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    needs: [governance, dependency-security]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v3
+        with:
+          version: "1.12.6"
+
+      - name: Setup and build Lean runtime-certificate checker
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal/toe_formal
+          auto-config: false
+          build: true
+          build-args: vpc_certificate_checker
+          test: false
+          lint: false
+          use-mathlib-cache: true
+
+      - name: Create venv
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then PYTHON=.venv/Scripts/python.exe; else PYTHON=.venv/bin/python; fi
+          "$PYTHON" -m pip install --upgrade pip==26.0
+          "$PYTHON" -m pip install -r requirements.ci.lock
+
+      - name: Instantiate frozen Julia environment
+        run: julia --startup-file=no --project=formal/tooling/scientific_compute/julia -e 'using Pkg; Pkg.instantiate()'
+
+      - name: Run generated calculator closure tests
+        shell: bash
+        env:
+          VPC_REQUIRE_CROSS_LANGUAGE: "1"
+          JULIA_PKG_OFFLINE: "true"
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then PYTHON=.venv/Scripts/python.exe; else PYTHON=.venv/bin/python; fi
+          "$PYTHON" -m pytest -q formal/python/tests/test_verified_calculator_v1.py formal/python/tests/test_typed_provenance_kernel_v1.py formal/python/tests/test_runner_provenance_verifier_v4.py formal/python/tests/test_c03_normalization_v1.py formal/python/tests/test_seven_record_source_candidate_v4.py formal/python/tests/test_rv_source_derivation_v2.py formal/python/tests/test_c03_physical_dag_v1.py
+
   orchestration-smoke:
     name: Async Orchestration Smoke
     runs-on: windows-latest

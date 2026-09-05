@@ -1,0 +1,79 @@
+{
+  "schema_id": "VERIFIED_CALCULATOR_V1_IMPLEMENTATION_STATUS_v1",
+  "as_of": "2026-09-05",
+  "preservation_checkpoint": {
+    "commit": "404b36e0e747",
+    "artifact": "formal/docs/release/VERIFIED_CALCULATOR_REPAIR_CORPUS_PRESERVATION_20260905_v1.json",
+    "scope": "C03/RV repair modules and their pre-existing 228-test regression corpus"
+  },
+  "implemented_surfaces": [
+    "versioned computation, authority, challenge, receipt, and frozen-evidence contracts",
+    "bounded strict JSON parsing and content-addressed canonical serialization",
+    "canonical rational-function and profile-wide algebraic-field exact IR",
+    "typed hash-bound source resolution",
+    "semantic, index-space, representation, domain, dimension-quotient, and unit-convention checks",
+    "declarative exact DAG recomputation with per-output evidence",
+    "independent Julia/Nemo exact recomputation",
+    "Lean runtime-certificate parser, structural checks, non-promotion theorems, and independent certificate-file hash binding",
+    "graph-independent challenge specifications and frozen-baseline challenge packets",
+    "per-output mandatory and optional challenge coverage",
+    "exact-rational and directed-rounding decimal interval certificate checking in Python and Julia",
+    "declarative ODE/RGE crosschecking with SciPy and OrdinaryDiffEq",
+    "local-linear covariance and deterministic Sobol QMC uncertainty routes",
+    "unsafe candidate-only plugin execution with bounded live output capture",
+    "Python API, CLI, evidence freeze/replay, and authority attachment",
+    "generated transitive calculator dependency closure",
+    "Windows/Linux CI matrix definition for the calculator closure",
+    "synthetic non-physics extension profile test"
+  ],
+  "local_validation": {
+    "platform": "windows",
+    "python_test_result": "257 passed",
+    "new_calculator_tests": 29,
+    "preserved_repair_tests": 228,
+    "lean_target": "vpc_certificate_checker",
+    "lean_build": "PASSED",
+    "lean_version": "4.27.0-rc1",
+    "julia_version": "1.12.6",
+    "dependency_closure_hash": "22d2a6e62f7ebbc8844b000efb8530547f338be810bc87a924cbd317cffa44da",
+    "dependency_closure_counts": {
+      "python_files": 43,
+      "julia_files": 4,
+      "lean_files": 4,
+      "fixed_contract_artifacts": 8
+    },
+    "unresolved_dynamic_imports": [],
+    "unresolved_runtime_requirements": [],
+    "manually_excluded_dependencies": []
+  },
+  "c03_rv_profile": {
+    "authoritative_roots": 16,
+    "source_nodes_censused": 31,
+    "derived_nodes_requiring_lowering": 160,
+    "historical_physics_operations_requiring_lowering": 19,
+    "mandatory_challenge_specifications": 10,
+    "accepted_falsifiers_unclassified": [],
+    "claim_authority_bindings": 16,
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED"
+  },
+  "milestones": {
+    "C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE": "NOT_EARNED",
+    "interval_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
+    "ode_rge_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
+    "uncertainty_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
+    "unsafe_plugin_boundary_frozen_acceptance": "NOT_YET_FROZEN",
+    "synthetic_profile_frozen_acceptance": "NOT_YET_FROZEN",
+    "product_v1": "NOT_RELEASED"
+  },
+  "remaining_release_work": [
+    "Lower all 160 historical C03/RV derived nodes from 19 physics operations into the domain-neutral trusted IR without importing historical execution code into the trusted package.",
+    "Implement and review the independent Julia/Nemo source-to-result route for all 16 C03/RV authoritative roots.",
+    "Execute every frozen challenge instance, including the full derived-node corruption census, on the lowered 16-root graph.",
+    "Produce two isolated offline exact replays with matching canonical receipts.",
+    "Run and preserve the Windows and Linux CI matrix results; canonical release evidence additionally requires executor-level egress denial.",
+    "Freeze actual subsystem acceptance records and assemble the all-or-nothing product release only after every gate passes."
+  ],
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

@@ -104,6 +104,14 @@ formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingGuardrailPacket.l
 formal/toe_formal/ToeFormal/Release/LoopControlRegistryShardingGuardrailIndependentReview.lean text eol=lf
 formal/toe_formal/ToeFormal/Release/TechnicalDebtBaselineCorrectionV1.lean text eol=lf
 
+# Verified Physics Calculator v1 trusted and cross-language surfaces.
+formal/docs/release/VERIFIED_CALCULATOR_*.json text eol=lf
+formal/python/tests/test_verified_calculator_v1.py text eol=lf
+formal/python/toe/generic_runner/verified_calculator/** text eol=lf
+formal/python/toe/generic_runner/verified_calculator_c03_rv_census_v1.py text eol=lf
+formal/toe_formal/ToeFormal/VerifiedCalculator/** text eol=lf
+formal/tooling/scientific_compute/julia/* text eol=lf
+
 # Current bounded-governance and canonical-text maintenance surfaces. Immutable
 # event and custody records retain their exact produced bytes.
 formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_20260729_v0.json text eol=lf
