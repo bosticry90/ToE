@@ -62,11 +62,11 @@
     "frozen_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
     "independent_non_author_review": "COMPLETED_SUPPORTED_WITH_REQUIRED_AMENDMENTS",
     "non_author_review_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
-    "non_author_review_repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v4.json"
+    "non_author_review_repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v5.json"
   },
   "post_milestone_qualification": {
     "linux_egress_denied_test": {
-      "status": "V1_INCONCLUSIVE__V2_INCONCLUSIVE__V3_INCONCLUSIVE__V4_INCONCLUSIVE__V5_DEFINED_NOT_EXECUTED",
+      "status": "V1_INCONCLUSIVE__V2_INCONCLUSIVE__V3_INCONCLUSIVE__V4_INCONCLUSIVE__V5_FAIL",
       "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v5.json",
       "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v5.md",
       "workflow": ".github/workflows/verified-calculator-linux-egress-denied.yml",
@@ -99,6 +99,13 @@
           "workflow_run_id": 34010749703,
           "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v4.json",
           "reason": "The 25-file source-custody and isolation gates passed, but three required authority attachment records were absent from the clean Git checkout; no complete result or bundle was emitted."
+        },
+        {
+          "version": 5,
+          "status": "FAIL",
+          "workflow_run_id": 34012192493,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v5.json",
+          "reason": "The clean-commit frozen dependency-closure gate found that three Lean environment files had raw line-ending-sensitive frozen hashes different from their tested Git blobs. The first mismatch failed closed before network isolation or trusted qualification."
         }
       ],
       "successful_result_artifact": null
@@ -110,7 +117,7 @@
       "evidence_matrix": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md",
       "result_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
       "accepted_result_artifact": null,
-      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v4.json",
+      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v5.json",
       "material_defects": [
         "D-01_LEAN_CERTIFICATE_IDENTITY_NOT_INDEPENDENTLY_BOUND",
         "D-02_COMPLETE_VALUE_TYPE_METADATA_NOT_ENFORCED"
@@ -128,7 +135,7 @@
   },
   "remaining_release_work": [
     "Implement the two material amendments required by the completed non-author review in a new exact-profile lineage, then regenerate and independently review the affected evidence; calculator-profile scientific requalification remains unearned.",
-    "Execute and preserve Linux kernel-egress-denied exact-profile workflow v5 after the complete runtime-custody repair, then review its cross-platform comparison evidence; v1 through v4 remain preserved as inconclusive attempts.",
+    "Repair raw dependency-hash portability in a new versioned exact evidence lineage, regenerate from clean canonical Git bytes, independently review the affected closure and receipts, and only then repeat Linux egress-denied qualification; frozen v1 remains preserved and v5 remains FAIL.",
     "Freeze interval, ODE/RGE, uncertainty, unsafe-plugin-boundary, and synthetic-profile subsystem acceptance records.",
     "Assemble the all-or-nothing product release only after every remaining gate passes."
   ],
