@@ -1,0 +1,111 @@
+{
+  "adjudication": {
+    "case_id": "ROUTE-C-03",
+    "corrected_native_evanescent": {
+      "generic_nonzero_coordinates": 14,
+      "physical_projection": "ZERO",
+      "quotient_dimension": 14,
+      "status": "EVALUATED_NONZERO",
+      "unexplained_residual": "ZERO",
+      "xi1_equals_1_nonzero_coordinates": 4
+    },
+    "historical_evanescent_support": "QUALITATIVELY_NONEMPTY_ONLY",
+    "historical_native_exact_identity": {
+      "HAT1": "16_AMBIENT_TO_7_INEQUIVALENT_QUOTIENT_CLASSES",
+      "HAT2": "8_AMBIENT_TO_4_INEQUIVALENT_QUOTIENT_CLASSES",
+      "selected_representative": null,
+      "status": "CORPUS_BOUNDED_UNDERDEFINED"
+    },
+    "modern_evanescent": "EMPTY_CLAIM_INVALID__REOPENED__OLD_STATE_NOT_EVALUATED",
+    "modern_remediation": "OPEN_VERSIONED_REPAIR_REQUIRED",
+    "physical": {
+      "corrected_route_c_common_kernel": "xi1-1",
+      "historical_common_kernel": "xi1-1",
+      "modern_common_kernel": "xi1+3",
+      "operator": "Q_DUUE",
+      "status": "HISTORICAL_UPHELD__CORRECTED_ROUTE_C_CONFIRMED__MODERN_REOPENED"
+    },
+    "review_scope": "INDEPENDENT_COMPUTATIONAL_AI_TRIANGULATION__NO_EXTERNAL_HUMAN_EXPERT_REVIEW",
+    "schema_id": "STRICT_MODEL1_C03_TERMINAL_SECTORIZED_ADJUDICATION_PASS_0275_v0",
+    "status": "TERMINAL_SECTORIZED_ADJUDICATION"
+  },
+  "authority": {
+    "as_of_pass": "0275",
+    "c03": "TERMINAL_SECTORIZED_ADJUDICATION",
+    "ccft_promotion": false,
+    "contingency_gate_v1": "PERMANENTLY_FAILED",
+    "modern_runner_repair": "CONTRACT_FROZEN__NOT_IMPLEMENTED__NOT_ACTIVATED",
+    "production": "76/1188",
+    "replacement_migration_qualification": "OPEN",
+    "route_c": "2/4",
+    "route_c_score_semantics": "TERMINALLY_ADJUDICATED_DISAGREEMENT_DOSSIERS",
+    "rows77_to96": "CLOSED",
+    "schema_id": "STRICT_MODEL1_ROUTE_C_CURRENT_AUTHORITY_v0",
+    "semantic_core_v0_2": "INTERNALLY_RELEASED_BOUNDED_INTEROPERABILITY_PROTOTYPE",
+    "strict_exact_historical_native_equivalence": "1/4",
+    "terminally_adjudicated_cases": [
+      "C01",
+      "C03"
+    ],
+    "toe_promotion": false,
+    "unadjudicated_cases": [
+      "C02",
+      "C04"
+    ]
+  },
+  "bindings": {
+    "corrected_route_c03_measurement": {
+      "byte_size": 82376,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/contingency_gate_v1_route_c03_corrected_orbit_measurement_evidence_v1/corrected_route_c03_native_projection_measurement.json",
+      "sha256": "3a430772b672cbbda9fc82ec41c3e0f14d80667d772f2bd7745398c97a6cbc82"
+    },
+    "historical_search": {
+      "byte_size": 11738,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/contingency_gate_v1_route_c03_two_lane_execution_evidence_v1/rc03_e/e1_historical_evidence_search_and_exhaustion.json",
+      "sha256": "ef1f60c628967af6e2677f9191f9529020cadd5935235009e88d38005e2f3b0c"
+    },
+    "historical_terminal_evidence": {
+      "byte_size": 6358,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/contingency_gate_v1_route_c03_two_lane_execution_evidence_v1/rc03_e/e7_frozen_rc03_e_terminal_output.json",
+      "sha256": "b7634d0db851bbeddc5daab689466c41ea7b53f7ab4902313af76f55172ce54e"
+    },
+    "pass0272_damage_matrix": {
+      "byte_size": 101803,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_values_pass_0272_v0/closeout/six_record_value_damage_matrix.json",
+      "sha256": "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+    },
+    "pass0273_draft_packet": {
+      "byte_size": 90453,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_repair_requirements_pass_0273_v0/draft_packet.json",
+      "sha256": "c2ce5b32378fdd1a4703c2d8b64980a0a336cdea3bd938449b7b80f0ed930b4c"
+    },
+    "pass0274_independent_confirmation": {
+      "byte_size": 4121,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_independent_confirmation_pass_0274_v0/closeout/independent_confirmation_result.json",
+      "sha256": "07c64bc3d95de6a6e549b0d320f5c2e26fdc99ed9f0cb0598d156f8ebc950f1b"
+    }
+  },
+  "policy": {
+    "adoption_basis": "EXPLICIT_PROJECT_OWNER_INSTRUCTION_PASS_0275",
+    "criteria_count": 8,
+    "first_application": "ROUTE-C-03/HISTORICAL_EVANESCENT_NATIVE_IDENTITY",
+    "forbidden_inferences": [
+      "EXACT_EQUIVALENCE",
+      "TRUE",
+      "FALSE",
+      "ZERO",
+      "UNIVERSALLY_UNKNOWABLE",
+      "NO_EVIDENCE_OUTSIDE_FROZEN_CORPUS"
+    ],
+    "meaning": "PRESERVED_ADMISSIBLE_CORPUS_EXHAUSTED__NO_UNIQUE_COMPLETION",
+    "reopening_triggers": [
+      "NEW_ADMISSIBLE_PRIMARY_SOURCE",
+      "CORPUS_OMISSION",
+      "INVALIDATED_EXHAUSTION_OR_INEQUIVALENCE_WITNESS",
+      "CERTIFIED_RESOLVING_MAP",
+      "CONTRARY_INDEPENDENT_PHYSICS"
+    ],
+    "schema_id": "CORPUS_BOUNDED_TERMINAL_UNDERDEFINITION_POLICY_PASS_0275_v0",
+    "status": "ADOPTED"
+  }
+}
