@@ -1,0 +1,88 @@
+{
+  "contract_delta_scope": "Only the C03 normalization source/derived-node seam. Other Pass0280 requirements, seven records, oracle and scientific limits remain binding.",
+  "governance_basis": "OWNER_APPROVED_BOUNDED_NORMALIZATION_SOURCE_CONTRACT_AMENDMENT",
+  "node_replacement": {
+    "convention_nodes": [
+      "C03.CONVENTION.WILSON_SYMBOL"
+    ],
+    "derived_nodes": [
+      "C03.DERIVED.REMOVED_MONOMIAL",
+      "C03.DERIVED.REFERENCE_SCALAR",
+      "C03.DERIVED.TARGET_NORMALIZATION_SCALE"
+    ],
+    "normalized_output_inputs": [
+      "C03.DERIVED.RAW_GRAPH",
+      "C03.DERIVED.TARGET_NORMALIZATION_SCALE",
+      "C03.DERIVED.REFERENCE_SCALAR"
+    ],
+    "reason": "The reciprocal scale is derived, not decoded from the generic target-vertex row.",
+    "retired": "C03.SOURCE.TARGET_NORMALIZATION",
+    "source_nodes": [
+      "C03.SOURCE.COMMON_PREFACTOR",
+      "C03.SOURCE.COUPLING_MONOMIAL"
+    ]
+  },
+  "operation_signatures": {
+    "INVERTIBLE_NORMALIZATION": "Existing value, scale, inverse signature; verify scale*inverse=1",
+    "NORMALIZATION_MONOMIAL": "Product of decoded gauge symbols and declared Wilson symbol; no coefficient literals",
+    "NORMALIZATION_RECIPROCAL": "Exact reciprocal of the derived reference scalar",
+    "NORMALIZATION_REFERENCE_SCALAR": "Exact quotient prefactor/monomial; reject zero, residual symbols and nonrational values"
+  },
+  "parent_allowlist": {
+    "byte_size": 6628,
+    "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_runner_acceptance_pass_0276_v0/source_only_allowlist.json",
+    "sha256": "5082334122c3a0f381ff4f75f2ddd70076a61b293ceed699794d97ddb6a83104"
+  },
+  "parent_dag_contract": {
+    "byte_size": 9455,
+    "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json",
+    "sha256": "e5177e9b4931d9ad0223fb74488592de0bd496c205d6285e62e45a2644f51aa8"
+  },
+  "pending_full_dag_integration": true,
+  "reference_policy": {
+    "changes_in_current_action_charges": "Do not implicitly change p_ref. Either propagate the changed raw value at the fixed reference, or fail another source-consistency gate.",
+    "common_kernel": "Coefficient after division by the scalar part of the explicitly source-recorded common prefactor; not the directly action-normalized full-graph coefficient.",
+    "domain": "p_ref is a nonzero exact rational; extracted expression has no other free symbols",
+    "equations": [
+      "M = coupling_monomial * Wilson_symbol",
+      "p_ref = source_common_prefactor / M",
+      "s_ref = reciprocal(p_ref)",
+      "K = s_ref * R",
+      "R = p_ref * K"
+    ],
+    "explicit_reference_change": "Requires a separately bound changed-source/reference identity; correlated raw/reference changes may legitimately leave K unchanged.",
+    "id": "FIXED_SOURCE_RECORDED_PREFACTOR",
+    "loop_measure": "The conventional i/(16*pi^2*epsilon) factor is common to R and K and is not recomputed by this map.",
+    "nonclaims": [
+      "No new phase-ledger derivation",
+      "No upstream raw coefficient derivation",
+      "No evanescent-coordinate rescaling",
+      "No runner qualification"
+    ],
+    "raw_coefficient": "Full graph coefficient with the common gauge-coupling monomial and Wilson coefficient factored, before this scalar normalization.",
+    "removable_gauge_monomial": "Product of the topology coupling_monomial entries",
+    "wilson_symbol": "C_duue",
+    "wilson_symbol_role": "Declared notation mapping for the source insertion, not a numerical target",
+    "zero_reference": "FAIL_CLOSED_NONINVERTIBLE_NORMALIZATION"
+  },
+  "schema_id": "C03_NORMALIZATION_SOURCE_CONTRACT_AMENDMENT_v1",
+  "scientific_authority_effect": "NONE",
+  "scientific_source_set": "UNCHANGED_21_PASS0276_FILES",
+  "semantic_locators": {
+    "prefactor": "/common_prefactor_factored",
+    "repeated_prefactors": "/typed_tensor_occurrences/*/factored_scientific_prefactors/common",
+    "topology": "/rows[source_insertion_id=D6-PSI4-DUUE]"
+  },
+  "source_bindings": {
+    "topologies": {
+      "byte_size": 14934,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_revalidation_pass_0270_v0/source_only_topology_extract.json",
+      "sha256": "d205c833592a57d4f43243445ec4ab3ee16b495aa0cd55dfcd3f2ad36b8aa523"
+    },
+    "universe": {
+      "byte_size": 440237,
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/contingency_gate_v1_route_c03_duue_d1_v2_evidence_v1/duue_d1_v2_raw_typed_tensor_universe.json",
+      "sha256": "6e491932e709d29395c98a5f74e40d39be4f1d0cb5915cc04416d5a13ccf3750"
+    }
+  }
+}

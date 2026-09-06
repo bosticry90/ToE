@@ -1,0 +1,225 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D5_EOM_REDUCTION_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D5_EOM_REDUCTION_PASS_0004",
+  "date": "2026-08-20",
+  "status": "MANDATORY_SM_PLUS_X_D5_DERIVATIVE_FAMILY_EOM_REDUCED_TO_EXISTING_NONDERIVATIVE_SPAN_WITHOUT_GLOBAL_BASIS_PROMOTION",
+  "authority": {
+    "native_basis_derivation": "PROVISIONAL_AUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "full_adm_calculation": "UNAUTHORIZED",
+    "matching_or_rge_execution": "UNAUTHORIZED",
+    "parameter_evaluation": "UNAUTHORIZED",
+    "literature_absence": "NOT_ESTABLISHED",
+    "novelty": "UNKNOWN"
+  },
+  "frozen_inputs": [
+    {
+      "role": "NATIVE_D5_NONDERIVATIVE_RECONCILIATION_PASS",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d5_reconciliation_pass_0002_v0.json",
+      "bytes": 14480,
+      "sha256": "83a50263d089810fd1cd21711b3a2b5691ed2ca816ce3d8c4fcc1675f9b38fc8"
+    },
+    {
+      "role": "NATIVE_D5_DERIVATIVE_SKELETON_SCREEN_PASS",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_scalar_potential_and_bnv_d5_derivative_screen_pass_0003_v0.json",
+      "bytes": 9326,
+      "sha256": "05eb7ce51e96b9a914c5980925ef3ce7a584d52d3107310b16d5e7b401dfc5dc"
+    },
+    {
+      "role": "FROZEN_STRICT_MODEL1_COMPONENT_AND_YLQ_PROJECTION_CONTRACT",
+      "path": "formal/docs/release/STRICT_NONSUPERSYMMETRIC_SU5_MODEL_1_COMPONENT_EMBEDDING_SCALAR_TRILINEAR_AND_CHANNEL_OPERATOR_COMPLETION_CONTRACT_20260805_v0.md",
+      "bytes": 10584,
+      "sha256": "cf593380e1b7eb637e7e7176c3515119e5d0ee4c4df9df5406247e308908d2b6"
+    },
+    {
+      "role": "PARALLEL_PROVENANCE_TRANCHE_CHECKPOINT",
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0119-arxiv-2405-18017.json",
+      "bytes": 73833,
+      "sha256": "818707bd9f1c0f21b393dfdcf04597e8502cd8d694a4779fa294aa6b9749e8c5"
+    }
+  ],
+  "bounded_domain": {
+    "gauge_group": "SU(3)c x SU(2)L x U(1)Y",
+    "mandatory_active_fields": [
+      "ALL_SM_FIELDS",
+      "X=R2tilde=(3,2,1/6)"
+    ],
+    "orientation": "DeltaB=+1; hermitian conjugates implicit",
+    "operator_dimension": 5,
+    "scope": "FOUR_DIMENSIONAL_PHYSICAL_IBP_EOM_REDUCTION_OF_THE_SINGLE_PASS_0003_DERIVATIVE_FAMILY",
+    "not_constructed": [
+      "DIMENSIONAL_REGULARIZATION_RENORMALIZATION_BASIS",
+      "EVANESCENT_OPERATOR_BASIS",
+      "ONE_LOOP_COUNTERTERMS",
+      "ANOMALOUS_DIMENSION_MATRIX"
+    ]
+  },
+  "eom_convention_contract": {
+    "epsilon_weak": "epsilon_12=epsilon^12=+1",
+    "tilde_higgs": "tilde_H^i=epsilon^(i j) H_dagger_j",
+    "charge_conjugation": "C^T=-C",
+    "gamma_charge_conjugation_identity": "gamma_mu^T C=-C gamma_mu",
+    "component_yukawa_lagrangian_slice": "L_Y=-bar(q_L)^i (Y_d) H_i d_R-bar(q_L)^i (Y_u) tilde_H_i u_R-bar(d_R) (Y_X) X^i epsilon_(i j) l_L^j+h.c.",
+    "model1_component_identification": "Y_X is the exact coefficient YLQ=Coeff[Dc L R2_tilde] produced by the frozen SU5 component projector; this pass defines no new coordinate or normalization",
+    "fermion_eom": {
+      "q_L": "i slash(D) q_(L,p)^(A i)=(Y_d)_(p s) H^i d_(R,s)^A+(Y_u)_(p s) tilde_H^i u_(R,s)^A",
+      "d_R": "i slash(D) d_(R,r)^B=(Y_d_dagger)_(r s) H_dagger_k q_(L,s)^(B k)+(Y_X)_(r t) epsilon_(k l) X^(B k) l_(L,t)^l"
+    },
+    "derivative_placements": {
+      "O_q": "epsilon_ABC epsilon_ij ((D_mu q_(L,p)^(A i))^T C gamma^mu d_(R,r)^B) X^(C j)",
+      "O_d": "epsilon_ABC epsilon_ij (q_(L,p)^(A i T) C gamma^mu D_mu d_(R,r)^B) X^(C j)",
+      "O_X": "epsilon_ABC epsilon_ij (q_(L,p)^(A i T) C gamma^mu d_(R,r)^B) D_mu X^(C j)"
+    },
+    "ibp_identity": "O_q+O_d+O_X=total_derivative",
+    "eom_sign_identities": {
+      "O_q": "O_q=-(slash(D)q)^T C d=+i F_q^T C d",
+      "O_d": "O_d=q^T C slash(D)d=-i q^T C F_d",
+      "O_X": "O_X=-O_q-O_d modulo total derivatives"
+    },
+    "normalization_boundary": "The coefficient map below uses the unit invariant-tensor representatives frozen in pass 0002. Rephasing every dependent coefficient consistently is equivalent; the eventual ADM orientation and evanescent conventions remain unfrozen."
+  },
+  "exact_weak_tensor_reduction": {
+    "qq_index_order": "(q1,q2,X,Hdag)",
+    "qq_raw_tensors": {
+      "A": "epsilon_ij delta_kl",
+      "B": "delta_il epsilon_jk",
+      "C": "delta_jl epsilon_ik"
+    },
+    "qq_identity": "A+B-C=0",
+    "qq_pass_0002_basis": {
+      "S": "A",
+      "A_flavor": "B+C"
+    },
+    "qq_eom_tensor": "C=1/2[S+A_flavor]",
+    "qlxx_index_order": "(q,l,X_B,X_C)",
+    "qlxx_raw_tensors": {
+      "A": "epsilon_ij epsilon_kl",
+      "B": "epsilon_ik epsilon_jl",
+      "C": "epsilon_il epsilon_jk"
+    },
+    "qlxx_identity": "A-B+C=0",
+    "identical_x_color_antisymmetric_projection": "P(T)_ijkl=T_ijkl-T_ijlk",
+    "qlxx_projection": [
+      "P(A)=2A",
+      "P(B)=A",
+      "P(C)=-A"
+    ],
+    "qlxx_eom_tensor": "-C projects to +1/2 of the unit A representative after the automatic color-antisymmetric X-pair projection"
+  },
+  "exact_eom_reduction": {
+    "placement_rank_before_eom": 2,
+    "coefficient_map_mod_eom_and_total_derivatives": {
+      "O_q": "+i (Y_d)_(p s) O_DD^(s r) +i (Y_u)_(p s) O_UD^(s r)",
+      "O_d": "-i/2 (Y_d_dagger)_(r s) [O_QQ_S^(p s)+O_QQ_A^(p s)] -i/2 (Y_X)_(r t) O_QL^(p t)",
+      "O_X": "-i (Y_d)_(p s) O_DD^(s r) -i (Y_u)_(p s) O_UD^(s r) +i/2 (Y_d_dagger)_(r s) [O_QQ_S^(p s)+O_QQ_A^(p s)] +i/2 (Y_X)_(r t) O_QL^(p t)"
+    },
+    "ibp_consistency": "THE_THREE_DISPLAYED_EOM_IMAGES_SUM_TO_ZERO_EXACTLY",
+    "existing_nonderivative_families_in_eom_image": [
+      "D5-QQ-X-HDAG-S",
+      "D5-QQ-X-HDAG-A",
+      "D5-UD-X-HDAG",
+      "D5-DD-X-H-A",
+      "D5-QL-X-X"
+    ],
+    "existing_nonderivative_family_not_in_eom_image": [
+      "D5-UE-X-X"
+    ],
+    "placement_rank_after_eom_mod_existing_span": 0,
+    "new_physical_derivative_family_count": 0,
+    "disposition": "VALID_RAW_DERIVATIVE_FAMILY_BUT_EOM_REDUNDANT_IN_THE_MANDATORY_SM_PLUS_X_FOUR_DIMENSIONAL_PHYSICAL_BASIS"
+  },
+  "relevant_renormalizable_coupling_ledger": {
+    "status_for_this_eom_reduction": "CLOSED",
+    "required_couplings": [
+      "Y_u",
+      "Y_d",
+      "Y_X=YLQ"
+    ],
+    "couplings_not_entering_this_first_order_fermion_eom_reduction": [
+      "Y_e",
+      "SCALAR_QUARTICS",
+      "SCALAR_TRILINEARS"
+    ],
+    "x_scalar_eom_used": false,
+    "complete_model1_scalar_potential_ledger_closed": false,
+    "complete_active_theory_coupling_ledger_closed": false
+  },
+  "mandatory_stratum_d5_reconciliation": {
+    "nonderivative_family_count_carried_forward": 6,
+    "raw_derivative_family_count": 1,
+    "ibp_independent_derivative_placement_count_before_eom": 2,
+    "new_derivative_family_count_after_eom": 0,
+    "field_strength_family_count": 0,
+    "mandatory_stratum_4d_eom_reduced_basis_candidate_count": 6,
+    "candidate_family_ids": [
+      "D5-QQ-X-HDAG-S",
+      "D5-QQ-X-HDAG-A",
+      "D5-UD-X-HDAG",
+      "D5-DD-X-H-A",
+      "D5-QL-X-X",
+      "D5-UE-X-X"
+    ],
+    "eom_relations_create_relation_among_the_six_nonderivative_representatives": false,
+    "reason": "Each derivative placement is eliminated into the existing span and the IBP relation is identically respected by its EOM images; it does not impose an additional zero relation on the six nonderivative representatives.",
+    "global_basis_validated": false,
+    "remaining_gates": [
+      "INDEPENDENT_RECONSTRUCTION_OF_THE_MANDATORY_STRATUM_D5_BASIS",
+      "EXTERNAL_COMPARATOR_OR_HILBERT_SERIES_RECONCILIATION",
+      "POINT_DEPENDENT_ACTIVE_FIELD_STRATA_D5_SCREEN",
+      "FULL_ACTIVE_FIELD_D6_RAW_INVENTORY",
+      "DIMENSIONAL_REGULARIZATION_AND_EVANESCENT_COMPLETION",
+      "ONE_LOOP_CLOSURE_PROOF"
+    ]
+  },
+  "comparator_reconciliation": {
+    "comparator": "ARXIV:1304.6119",
+    "comparator_listed_d5_operator_count_for_X_3_2_1_6": 2,
+    "native_mandatory_stratum_4d_candidate_family_count": 6,
+    "immediate_matches": [
+      "D5-UD-X-HDAG",
+      "D5-UE-X-X"
+    ],
+    "unlisted_native_families": [
+      "D5-QQ-X-HDAG-S",
+      "D5-QQ-X-HDAG-A",
+      "D5-DD-X-H-A",
+      "D5-QL-X-X"
+    ],
+    "effect_of_derivative_eom_reduction_on_mismatch": "NONE_OF_THE_FOUR_UNLISTED_NONDERIVATIVE_FAMILIES_IS_ELIMINATED; THE_DERIVATIVE_FAMILY_ITSELF_IS_ELIMINATED",
+    "omission_reason": "UNRESOLVED; THE_COMPARATOR_DOES_NOT_CLAIM_AN_EXHAUSTIVE_ACTIVE_FIELD_EFT_BASIS_CONSTRUCTION",
+    "novelty_claim": false
+  },
+  "provenance_lane": {
+    "latest_completed_tranche": "TRANCHE_0119_ARXIV_2405_18017",
+    "tranche_path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0119-arxiv-2405-18017.json",
+    "source_role": "ACTIVE_HEAVY_NEUTRINO_D5_EFT_THRESHOLD_RGE_AND_EOM_METHODOLOGY_WITH_HARD_TARGET_FIELD_AND_BNV_EXCLUSION",
+    "disposition_counts": {
+      "PARTIAL_SUPPORT": 37,
+      "CONTRARY_SCOPE_EVIDENCE": 12,
+      "NOT_APPLICABLE_OR_INSUFFICIENT": 5,
+      "closures": 0
+    },
+    "next_frozen_source": "ARXIV:2012.05883"
+  },
+  "hard_nonclaims": {
+    "full_active_theory_raw_inventory_complete": false,
+    "all_point_dependent_strata_screened": false,
+    "global_nonredundant_basis_claimed": false,
+    "basis_validated": false,
+    "comparator_mismatch_resolved": false,
+    "three_comparator_unlisted_multisets_claimed_novel": false,
+    "adm_calculation_started": false,
+    "adm_calculation_authorized": false,
+    "kernel_entries_present": false,
+    "model1_rge_executed": false,
+    "parameter_evaluation_count": 0,
+    "physics_result": "NONE"
+  },
+  "next_native_actions": [
+    "INDEPENDENTLY_RECONSTRUCT_THE_SIX_FAMILY_MANDATORY_STRATUM_D5_CANDIDATE_WITHOUT_READING_THE_PASS_0002_FINAL_LIST",
+    "RECONCILE_THE_FOUR_COMPARATOR_UNLISTED_FAMILIES_USING_AN_INDEPENDENT_COMPLETE_CLASSIFICATION_WITHOUT_NOVELTY_PREJUDGMENT",
+    "SCREEN_CONDITIONAL_POINT_DEPENDENT_ACTIVE_FIELD_STRATA_AT_DIMENSION_FIVE",
+    "ONLY_THEN_EXPAND_THE_COMPLETE_ACTIVE_FIELD_DIMENSION_SIX_RAW_INVENTORY"
+  ]
+}

@@ -1,4 +1,4 @@
-name: Verified Calculator Linux Egress-Denied Exact Reproduction v3
+name: Verified Calculator Linux Egress-Denied Exact Reproduction v4
 
 on:
   workflow_dispatch:
@@ -35,14 +35,14 @@ jobs:
       - name: Initialize qualification-attempt evidence
         shell: bash
         run: |
-          mkdir -p formal/output/verified_calculator_linux_egress_denied_v3
-          python3 - <<'PY' > formal/output/verified_calculator_linux_egress_denied_v3/attempt.json
+          mkdir -p formal/output/verified_calculator_linux_egress_denied_v4
+          python3 - <<'PY' > formal/output/verified_calculator_linux_egress_denied_v4/attempt.json
           from datetime import datetime, timezone
           import json
           import os
 
           print(json.dumps({
-              "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptV3",
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptV4",
               "started_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
               "git_commit": os.environ.get("GITHUB_SHA", ""),
               "workflow_run": {
@@ -89,10 +89,10 @@ jobs:
       - name: Capture provisioned dependency identities before isolation
         shell: bash
         run: |
-          mkdir -p formal/output/verified_calculator_linux_egress_denied_v3
+          mkdir -p formal/output/verified_calculator_linux_egress_denied_v4
           export VPC_PROVISION_JULIA="$(command -v julia)"
           export VPC_PROVISION_IP="$(command -v ip)"
-          ./.venv/bin/python - <<'PY' > formal/output/verified_calculator_linux_egress_denied_v3/provisioning.json
+          ./.venv/bin/python - <<'PY' > formal/output/verified_calculator_linux_egress_denied_v4/provisioning.json
           from __future__ import annotations
 
           from datetime import datetime, timezone
@@ -123,19 +123,75 @@ jobs:
               "formal/toe_formal/lean-toolchain",
               "formal/toe_formal/lakefile.toml",
               "formal/toe_formal/lake-manifest.json",
-              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v3.json",
-              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v3.md",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v4.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v4.md",
               "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json",
               "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v2.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v3.json",
               "formal/output/verified_calculator_linux_egress_denied_run_34007693980/artifact.zip",
               "formal/output/verified_calculator_linux_egress_denied_run_34008583231/artifact.zip",
+              "formal/output/verified_calculator_linux_egress_denied_run_34009722386/artifact.zip",
           ]
           test_contract = json.loads(
-              (repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v3.json").read_text(encoding="utf-8")
+              (repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v4.json").read_text(encoding="utf-8")
           )
           frozen_reference_path = (repository_root / test_contract["frozen_reference"]["bundle_path"]).resolve(strict=True)
           frozen_reference = json.loads(frozen_reference_path.read_text(encoding="utf-8"))
           frozen_dependency_closure = frozen_reference["dependency_manifests"][0]
+          source_profile_relative = "formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/source_profile_v1.json"
+          source_profile_expected_sha256 = "6ba34bcfd572d50842d32cb3995dca131f8aba153597fadbd06b09ca0e8af2c9"
+          material_contract_relative = "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_SOURCE_MATERIAL_CONTRACT_20260905_v1.json"
+          material_contract_expected_sha256 = "b550bf1269092538cd2b43bd655ac275e7ca654d18631bb386a29286cefe42c2"
+          git_commit = os.environ.get("GITHUB_SHA", "")
+          tracked_paths = set(
+              subprocess.check_output(
+                  ["git", "ls-tree", "-r", "--name-only", git_commit],
+                  cwd=repository_root,
+                  text=True,
+              ).splitlines()
+          )
+
+          def checked_source_row(role: str, relative: str, expected_sha256: str, expected_size: int | None = None):
+              if not relative or ":" in relative or "\\" in relative or ".." in Path(relative).parts:
+                  raise RuntimeError(f"unsafe source-custody path: {relative!r}")
+              resolved = (repository_root / relative).resolve(strict=True)
+              if repository_root not in resolved.parents:
+                  raise RuntimeError(f"source-custody path escapes repository: {relative}")
+              actual_sha256 = sha256_file(resolved)
+              actual_size = resolved.stat().st_size
+              row = {
+                  "role": role,
+                  "path": relative,
+                  "declared_sha256": expected_sha256,
+                  "actual_sha256": actual_sha256,
+                  "byte_size": actual_size,
+                  "git_tracked_at_commit": relative in tracked_paths,
+                  "hash_matched": actual_sha256 == expected_sha256,
+                  "size_matched": expected_size is None or actual_size == expected_size,
+              }
+              if not row["git_tracked_at_commit"] or not row["hash_matched"] or not row["size_matched"]:
+                  raise RuntimeError(f"source-custody failure: {canonical_json(row)}")
+              return row
+
+          source_profile_path = (repository_root / source_profile_relative).resolve(strict=True)
+          if sha256_file(source_profile_path) != source_profile_expected_sha256:
+              raise RuntimeError("source-profile descriptor hash mismatch")
+          source_profile = json.loads(source_profile_path.read_text(encoding="utf-8"))
+          source_rows = [
+              checked_source_row("PROFILE_DESCRIPTOR", source_profile_relative, source_profile_expected_sha256),
+              checked_source_row("NORMALIZATION_CONTRACT", source_profile["contract"]["path"], source_profile["contract"]["sha256"], source_profile["contract"]["byte_size"]),
+              checked_source_row("PARENT_ALLOWLIST", source_profile["parent_allowlist"]["path"], source_profile["parent_allowlist"]["sha256"], source_profile["parent_allowlist"]["byte_size"]),
+          ]
+          source_rows.extend(
+              checked_source_row("ALLOWED_INPUT", row["path"], row["sha256"], row["byte_size"])
+              for row in source_profile["allowed_inputs"]
+          )
+          source_rows.append(
+              checked_source_row("SOURCE_MATERIAL_CONTRACT", material_contract_relative, material_contract_expected_sha256)
+          )
+          source_rows = sorted(source_rows, key=lambda row: row["path"])
+          if len(source_rows) != 25 or len({row["path"] for row in source_rows}) != 25:
+              raise RuntimeError(f"source-custody census mismatch: {len(source_rows)}")
           executable_paths = {
               "python": Path(sys.executable).resolve(strict=True),
               "julia": Path(os.environ["VPC_PROVISION_JULIA"]).resolve(strict=True),
@@ -145,7 +201,7 @@ jobs:
               ).resolve(strict=True),
           }
           body = {
-              "schema_id": "VerifiedCalculatorProvisioningManifestV3",
+              "schema_id": "VerifiedCalculatorProvisioningManifestV4",
               "phase": "ONLINE_PROVISIONING_COMPLETE_BEFORE_NETWORK_ISOLATION",
               "captured_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
               "git_commit": os.environ.get("GITHUB_SHA", ""),
@@ -164,6 +220,16 @@ jobs:
                   "bundle_raw_sha256": sha256_file(frozen_reference_path),
                   "dependency_closure_manifest": frozen_dependency_closure,
               },
+              "source_custody": {
+                  "derivation": "FIXED_PROFILE_DESCRIPTOR_PLUS_DECLARED_CONTRACT_PARENT_ALLOWED_INPUTS_AND_MATERIAL_CONTRACT",
+                  "git_commit": git_commit,
+                  "artifact_count": len(source_rows),
+                  "artifacts": source_rows,
+                  "all_git_tracked_and_hash_bound": all(
+                      row["git_tracked_at_commit"] and row["hash_matched"] and row["size_matched"]
+                      for row in source_rows
+                  ),
+              },
               "executables": {
                   name: {"path": str(path), "sha256": sha256_file(path)}
                   for name, path in executable_paths.items()
@@ -177,11 +243,11 @@ jobs:
                   if line.strip()
               ),
           }
-          body["provisioning_manifest_hash"] = digest(body, "VerifiedCalculatorProvisioningManifestV3")
+          body["provisioning_manifest_hash"] = digest(body, "VerifiedCalculatorProvisioningManifestV4")
           print(canonical_json(body))
           PY
-          echo "VPC_PROVISIONING_MANIFEST=formal/output/verified_calculator_linux_egress_denied_v3/provisioning.json" >> "$GITHUB_ENV"
-          echo "VPC_PROVISIONING_MANIFEST_SHA256=$(sha256sum formal/output/verified_calculator_linux_egress_denied_v3/provisioning.json | cut -d' ' -f1)" >> "$GITHUB_ENV"
+          echo "VPC_PROVISIONING_MANIFEST=formal/output/verified_calculator_linux_egress_denied_v4/provisioning.json" >> "$GITHUB_ENV"
+          echo "VPC_PROVISIONING_MANIFEST_SHA256=$(sha256sum formal/output/verified_calculator_linux_egress_denied_v4/provisioning.json | cut -d' ' -f1)" >> "$GITHUB_ENV"
           echo "VPC_IP_EXE=$VPC_PROVISION_IP" >> "$GITHUB_ENV"
 
       - name: Create ephemeral egress-denied qualification driver
@@ -352,7 +418,7 @@ jobs:
           provisioning = strict_json_file(provisioning_path)
           declared_provisioning_hash = provisioning.pop("provisioning_manifest_hash")
           require(
-              digest(provisioning, "VerifiedCalculatorProvisioningManifestV3") == declared_provisioning_hash,
+              digest(provisioning, "VerifiedCalculatorProvisioningManifestV4") == declared_provisioning_hash,
               "LINUX_PROVISIONING_MANIFEST_HASH",
           )
           provisioning["provisioning_manifest_hash"] = declared_provisioning_hash
@@ -368,15 +434,38 @@ jobs:
               hashlib.sha256(ip_executable.read_bytes()).hexdigest() == provisioning["executables"]["iproute2"]["sha256"],
               "LINUX_IPROUTE2_HASH_BINDING",
           )
+          source_custody = provisioning["source_custody"]
+          require(source_custody["artifact_count"] == len(source_custody["artifacts"]) == 25, "LINUX_SOURCE_CUSTODY_CENSUS")
+          require(source_custody["all_git_tracked_and_hash_bound"] is True, "LINUX_SOURCE_CUSTODY_PROVISIONING_GATE")
+          require(len({row["path"] for row in source_custody["artifacts"]}) == 25, "LINUX_SOURCE_CUSTODY_DUPLICATE")
+          for row in source_custody["artifacts"]:
+              source_path = (repository_root / row["path"]).resolve(strict=True)
+              require(repository_root in source_path.parents, "LINUX_SOURCE_CUSTODY_PATH_ESCAPE", detail=row["path"])
+              require(row["git_tracked_at_commit"] is True, "LINUX_SOURCE_NOT_GIT_TRACKED", detail=row["path"])
+              require(row["hash_matched"] is True and row["size_matched"] is True, "LINUX_SOURCE_PROVISIONING_MISMATCH", detail=row["path"])
+              require(hashlib.sha256(source_path.read_bytes()).hexdigest() == row["declared_sha256"] == row["actual_sha256"], "LINUX_SOURCE_RUNTIME_HASH", detail=row["path"])
+              require(source_path.stat().st_size == row["byte_size"], "LINUX_SOURCE_RUNTIME_SIZE", detail=row["path"])
           provisioning_time = datetime.fromisoformat(provisioning["captured_at_utc"].replace("Z", "+00:00"))
           isolation_time = datetime.fromisoformat(isolation_observed_at.replace("Z", "+00:00"))
           require(provisioning_time <= isolation_time, "LINUX_PROVISIONING_AFTER_ISOLATION")
 
           contract_path = repository_root / os.environ["VPC_EGRESS_TEST_CONTRACT"]
           contract = strict_json_file(contract_path)
-          require(contract["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedTestV3", "LINUX_EGRESS_TEST_CONTRACT")
+          require(contract["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedTestV4", "LINUX_EGRESS_TEST_CONTRACT")
           require(contract["definition_status"] == "DEFINED_NOT_EXECUTED", "LINUX_EGRESS_TEST_DEFINITION_STATUS")
-          v2_result = strict_json_file(repository_root / contract["repairs_result"])
+          v3_result = strict_json_file(repository_root / contract["repairs_result"])
+          require(v3_result["attempt"]["disposition"] == "INCONCLUSIVE", "LINUX_V3_RESULT_NOT_PRESERVED")
+          require(v3_result["github"]["workflow_run_id"] == 34009722386, "LINUX_V3_RUN_ID")
+          require(
+              v3_result["preserved_artifact"]["archive_sha256"] == "fd6d30615610d000048dc6bc1a5f753020982cbc25e59f69decf66f21dd168e4",
+              "LINUX_V3_ARTIFACT_HASH",
+          )
+          v3_archive_path = repository_root / v3_result["preserved_artifact"]["local_explicit_preservation_path"]
+          require(
+              hashlib.sha256(v3_archive_path.read_bytes()).hexdigest() == v3_result["preserved_artifact"]["archive_sha256"],
+              "LINUX_V3_PRESERVED_ARCHIVE_SHA256",
+          )
+          v2_result = strict_json_file(repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v2.json")
           require(v2_result["attempt"]["disposition"] == "INCONCLUSIVE", "LINUX_V2_RESULT_NOT_PRESERVED")
           require(v2_result["github"]["workflow_run_id"] == 34008583231, "LINUX_V2_RUN_ID")
           require(
@@ -452,6 +541,7 @@ jobs:
           require(all(row.verification_class == VerificationClass.VERIFIED_EXACT for row in linux_receipt.outputs), "LINUX_OUTPUT_NOT_VERIFIED_EXACT")
 
           gates = {
+              "all_frozen_source_custody_files_git_tracked_and_hash_bound": source_custody["artifact_count"] == 25 and source_custody["all_git_tracked_and_hash_bound"] is True and all(hashlib.sha256((repository_root / row["path"]).read_bytes()).hexdigest() == row["declared_sha256"] for row in source_custody["artifacts"]),
               "fresh_linux_network_namespace_only_loopback": initial_network_state["socket_if_nameindex_interfaces"] == initial_network_state["proc_net_dev_interfaces"] == final_network_state["socket_if_nameindex_interfaces"] == final_network_state["proc_net_dev_interfaces"] == ["lo"],
               "namespace_aware_interface_censuses_agree": initial_network_state["socket_if_nameindex_interfaces"] == initial_network_state["proc_net_dev_interfaces"] and final_network_state["socket_if_nameindex_interfaces"] == final_network_state["proc_net_dev_interfaces"],
               "no_usable_forwarding_default_route": all(
@@ -471,7 +561,7 @@ jobs:
               "dependency_provisioning_completed_before_denied_phase": provisioning_time <= isolation_time,
               "isolation_observed_before_qualification": isolation_observed_at <= qualification_started_at,
               "isolation_maintained_after_qualification": qualification_completed_at <= final_network_state["observed_at_utc"],
-              "v1_and_v2_inconclusive_attempts_preserved": v1_result["attempt"]["disposition"] == v2_result["attempt"]["disposition"] == "INCONCLUSIVE" and v1_result["github"]["workflow_run_id"] == 34007693980 and v2_result["github"]["workflow_run_id"] == 34008583231 and hashlib.sha256(v1_archive_path.read_bytes()).hexdigest() == v1_result["preserved_artifact"]["archive_sha256"] and hashlib.sha256(v2_archive_path.read_bytes()).hexdigest() == v2_result["preserved_artifact"]["archive_sha256"],
+              "v1_v2_and_v3_inconclusive_attempts_preserved": v1_result["attempt"]["disposition"] == v2_result["attempt"]["disposition"] == v3_result["attempt"]["disposition"] == "INCONCLUSIVE" and v1_result["github"]["workflow_run_id"] == 34007693980 and v2_result["github"]["workflow_run_id"] == 34008583231 and v3_result["github"]["workflow_run_id"] == 34009722386 and hashlib.sha256(v1_archive_path.read_bytes()).hexdigest() == v1_result["preserved_artifact"]["archive_sha256"] and hashlib.sha256(v2_archive_path.read_bytes()).hexdigest() == v2_result["preserved_artifact"]["archive_sha256"] and hashlib.sha256(v3_archive_path.read_bytes()).hexdigest() == v3_result["preserved_artifact"]["archive_sha256"],
               "frozen_windows_reference_replayed": reference.bundle_hash == expected["bundle_hash"],
               "all_exact_identifiers_match_reference": all(summary[field] == expected[field] for field in ("computation_id", "candidate_hash", "profile_hash", "policy_hash", "graph_hash", "runtime_certificate_hash", "dependency_closure_hash")),
               "all_receipt_fields_except_environment_match": reference_body == linux_body,
@@ -482,8 +572,8 @@ jobs:
           }
           require(all(gates.values()), "LINUX_EGRESS_TEST_GATE")
           result = {
-              "schema_id": "VerifiedCalculatorLinuxEgressDeniedResultV3",
-              "definition_hash": digest(contract, "VerifiedCalculatorLinuxEgressDeniedTestV3"),
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedResultV4",
+              "definition_hash": digest(contract, "VerifiedCalculatorLinuxEgressDeniedTestV4"),
               "git_commit": os.environ.get("GITHUB_SHA", ""),
               "workflow_run": {
                   "run_id": os.environ.get("GITHUB_RUN_ID", ""),
@@ -502,6 +592,7 @@ jobs:
                   "manifest_sha256": provisioning_sha256,
                   "manifest": provisioning,
               },
+              "source_custody": source_custody,
               "network_isolation": {
                   "mechanism": "LINUX_NEW_NETWORK_NAMESPACE",
                   "interface_gate_sources": ["socket.if_nameindex()", "/proc/net/dev"],
@@ -529,15 +620,15 @@ jobs:
               "product_v1_release": False,
               "production_activation": False,
           }
-          result["result_hash"] = digest(result, "VerifiedCalculatorLinuxEgressDeniedResultV3")
+          result["result_hash"] = digest(result, "VerifiedCalculatorLinuxEgressDeniedResultV4")
           print(canonical_json(result))
           PY
 
       - name: Run exact qualification with kernel-enforced egress denial
         shell: bash
         env:
-          VPC_EGRESS_TEST_CONTRACT: formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v3.json
-          VPC_EGRESS_TEST_OUTPUT: formal/output/verified_calculator_linux_egress_denied_v3
+          VPC_EGRESS_TEST_CONTRACT: formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v4.json
+          VPC_EGRESS_TEST_OUTPUT: formal/output/verified_calculator_linux_egress_denied_v4
         run: |
           mkdir -p "$VPC_EGRESS_TEST_OUTPUT"
           VPC_PYTHON="$GITHUB_WORKSPACE/.venv/bin/python"
@@ -578,10 +669,10 @@ jobs:
           import os
           from pathlib import Path
 
-          output = Path("formal/output/verified_calculator_linux_egress_denied_v3")
+          output = Path("formal/output/verified_calculator_linux_egress_denied_v4")
           stderr_path = output / "execution.stderr.log"
           print(json.dumps({
-              "schema_id": "VerifiedCalculatorLinuxEgressDeniedFailureV3",
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedFailureV4",
               "recorded_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
               "git_commit": os.environ.get("GITHUB_SHA", ""),
               "exit_code": int(os.environ["VPC_QUALIFICATION_EXIT_CODE"]),
@@ -603,8 +694,8 @@ jobs:
           import json
           from pathlib import Path
 
-          result = json.loads(Path("formal/output/verified_calculator_linux_egress_denied_v3/result.json").read_text(encoding="utf-8"))
-          assert result["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedResultV3"
+          result = json.loads(Path("formal/output/verified_calculator_linux_egress_denied_v4/result.json").read_text(encoding="utf-8"))
+          assert result["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedResultV4"
           assert result["network_isolation"]["before"]["socket_if_nameindex_interfaces"] == ["lo"]
           assert result["network_isolation"]["before"]["proc_net_dev_interfaces"] == ["lo"]
           assert result["network_isolation"]["after"]["socket_if_nameindex_interfaces"] == ["lo"]
@@ -637,14 +728,14 @@ jobs:
           import os
           from pathlib import Path
 
-          output = Path("formal/output/verified_calculator_linux_egress_denied_v3")
+          output = Path("formal/output/verified_calculator_linux_egress_denied_v4")
           output.mkdir(parents=True, exist_ok=True)
           retained = {}
           for path in sorted(output.rglob("*")):
               if path.is_file() and path.name != "workflow_disposition.json":
                   retained[path.relative_to(output).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
           record = {
-              "schema_id": "VerifiedCalculatorLinuxEgressDeniedWorkflowDispositionV3",
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedWorkflowDispositionV4",
               "recorded_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
               "git_commit": os.environ.get("GITHUB_SHA", ""),
               "workflow_run": {
@@ -669,7 +760,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: verified-calculator-linux-egress-denied-v3-${{ github.sha }}
-          path: formal/output/verified_calculator_linux_egress_denied_v3/
+          name: verified-calculator-linux-egress-denied-v4-${{ github.sha }}
+          path: formal/output/verified_calculator_linux_egress_denied_v4/
           if-no-files-found: error
           retention-days: 30
